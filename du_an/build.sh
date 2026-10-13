@@ -14,7 +14,7 @@ cp build/hook/VH.class build/stage/
 mkdir -p build/stage/font && cp work/tools/fonts/f12.bin build/stage/font/
 [ -d res_vi ] && cp -r res_vi/. build/stage/
 # go tai nguyen nha mang khong con dung: anh hoi am thanh, logo 移动圈圈, may quay so CMCC/Sohu, nhac hieu, logo link, SDK
-rm -f build/stage/p1 build/stage/p2 build/stage/p3 build/stage/logo_G build/stage/BG build/stage/m0 build/stage/m1 build/stage/m2 build/stage/m3 build/stage/m4 build/stage/m5 build/stage/m6 build/stage/sound.mid build/stage/link
+rm -f build/stage/p1 build/stage/p2 build/stage/p3 build/stage/logo_G build/stage/BG build/stage/m0 build/stage/m1 build/stage/m2 build/stage/m3 build/stage/m4 build/stage/m5 build/stage/m6 build/stage/sound.mid
 rm -rf build/stage/res
 mkdir -p build/stage/META-INF && cp manifest/MANIFEST.MF build/stage/META-INF/MANIFEST.MF
 rm -f build/raw.jar out_game.jar

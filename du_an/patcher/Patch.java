@@ -199,6 +199,7 @@ public class Patch {
         patchBoot(cn);
         patchMenu(cn);
         patchStrings(cn);
+        patchReadFully(cn);
 
         // 5) Moi lenh ve/do chu con lai
         expect("c: Graphics.drawString", redirectCalls(cn, G, "drawString", "(Ljava/lang/String;III)V", "drawString"), 5);
@@ -393,6 +394,31 @@ public class Patch {
         }
         for (String[] p : STR) if (!used.contains(p[0])) log.println("CHUA DUNG: " + p[1]);
         expect("c: chuoi hien thi trong class da Viet hoa (so cho LDC)", n, 30);
+    }
+
+    /**
+     * DataInputStream.read(byte[]...) co the tra ve it byte hon yeu cau tren KVM (luong giai nen tu jar);
+     * game bo qua gia tri tra ve (pop). Doi thanh readFully (cung ngoai le IOException, du lieu doc du).
+     */
+    static void patchReadFully(ClassNode cn) {
+        int n = 0;
+        for (MethodNode m : cn.methods) {
+            for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+                if (x.getOpcode() != Opcodes.INVOKEVIRTUAL) continue;
+                MethodInsnNode mi = (MethodInsnNode) x;
+                if (!mi.owner.equals("java/io/DataInputStream") || !mi.name.equals("read")) continue;
+                String nd = mi.desc.equals("([B)I") ? "([B)V" : mi.desc.equals("([BII)I") ? "([BII)V" : null;
+                AbstractInsnNode nx = next(x);
+                if (nd != null && nx != null && nx.getOpcode() == Opcodes.POP) {
+                    MethodInsnNode r = new MethodInsnNode(Opcodes.INVOKEVIRTUAL, "java/io/DataInputStream", "readFully", nd, false);
+                    m.instructions.remove(nx);
+                    m.instructions.set(x, r);
+                    x = r;
+                    n++;
+                }
+            }
+        }
+        expect("c: DataInputStream.read(...) + pop -> readFully", n, 5);
     }
 
     // ===================================================================== i (Const)

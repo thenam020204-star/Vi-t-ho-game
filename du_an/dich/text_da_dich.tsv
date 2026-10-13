@@ -1214,7 +1214,7 @@ t0_1211	string.pak	EFFORT_GET_ITEM	获得	Nhận	HT:EFFORT_GET_ITEM	10
 t0_1212	string.pak	EFFORT_STATUS	状态：	Trạng thái:	HT:EFFORT_STATUS	10
 t0_1213	string.pak	EFFORT_COMPLETE	完成	Xong	HT:EFFORT_COMPLETE	10
 t0_1214	string.pak	EFFORT_UNFINISHED	未完成	Chưa xong	HT:EFFORT_UNFINISHED	10
-t0_1215	string.pak	GS_HELP_TITLE	游戏简介	Giới thiệu	HT:GS_HELP_TITLE	
+t0_1215	string.pak	GS_HELP_TITLE	游戏简介	Hướng dẫn	HT:GS_HELP_TITLE	
 t0_1216	string.pak	GS_HELP_NAME_0	游戏操作	Thao tác	HT:GS_HELP_NAME_0	
 t0_1217	string.pak	GS_HELP_NAME_1	左软键:	Phím mềm trái:	HT:GS_HELP_NAME_1	
 t0_1218	string.pak	GS_HELP_NAME_2	确定 呼出菜单	Xác nhận, mở menu	HT:GS_HELP_NAME_2	
@@ -2783,7 +2783,7 @@ t13_208	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT208	你这人好不讲理，明明�
 t13_209	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT209	独孤小艺	Độc Cô Tiểu Nghệ	GAMBLINGHOUSE	
 t13_210	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT210	大伙上，教训教训他们！	Mọi người xông lên, dạy cho chúng một bài học!	GAMBLINGHOUSE	
 t13_211	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT211	李峰	Lý Phong	GAMBLINGHOUSE	
-t13_212	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT212	提示：战斗中可使用物品进行各种补给。在指令菜单中选择“物”，即可使用携带的物品。想临时添购物品时，可在指令菜单中选择“商”。	Gợi ý: trong trận có thể dùng vật phẩm để tiếp tế. Trong menu lệnh chọn "Vật" là dùng được vật phẩm mang theo. Muốn mua thêm vật phẩm tạm thời thì chọn "Thương" trong menu lệnh.	GAMBLINGHOUSE	
+t13_212	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT212	提示：战斗中可使用物品进行各种补给。在指令菜单中选择“物”，即可使用携带的物品。想临时添购物品时，可在指令菜单中选择“商”。	Gợi ý: trong trận có thể dùng vật phẩm để tiếp tế. Trong menu lệnh chọn "Vật" là dùng được vật phẩm mang theo. Muốn mua thêm vật phẩm tạm thời thì chọn "Mua" trong menu lệnh.	GAMBLINGHOUSE	
 t13_213	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT213	哼，跟老子动手？	Hừ, động thủ với lão tử?	GAMBLINGHOUSE	
 t13_214	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT214	君莫邪	Quân Mạc Tà	GAMBLINGHOUSE	
 t13_215	string.pak	SCENE_GAMBLINGHOUSE_SCRIPT215	是非之地不宜久留，暂且先打晕了他们。我们快走吧。	Nơi thị phi không nên ở lâu, tạm đánh ngất bọn chúng đã. Chúng ta mau đi thôi.	GAMBLINGHOUSE	
