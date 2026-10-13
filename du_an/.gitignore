@@ -1,0 +1,9 @@
+build/
+config/
+freej2me_system/
+jar_x/
+work/
+rms/
+game.jar
+out_game.jar
+__pycache__/

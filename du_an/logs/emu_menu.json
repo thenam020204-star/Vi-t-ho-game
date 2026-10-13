@@ -1,0 +1,15 @@
+{
+ "shots": [
+  "logs/emu_menu/m_caidat.png",
+  "logs/emu_menu/w_caidat.png",
+  "logs/emu_menu/w_huongdan.png",
+  "logs/emu_menu/w_huongdan2.png",
+  "logs/emu_menu/w_gioithieu.png",
+  "logs/emu_menu/w_gioithieu2.png"
+ ],
+ "emu_alive_at_end": true,
+ "exceptions": [
+  "java.lang.NullPointerException: Cannot invoke \"javax.sound.midi.Sequencer.isRunning()\" because \"javax.microedition.media.Manager.exclusiveSequencers[<local0>]\" is null"
+ ],
+ "log": "logs/emu_menu/emu.log"
+}

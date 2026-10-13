@@ -1,0 +1,67 @@
+[INFO] org.recompile.mobile.MobilePlatform: Accompanying JAD found! Parsing additional MIDlet properties.
+[INFO] Loading MIDlet: Dá» Tháº¿ TÃ  QuÃ¢n | Main Class: IMARPG22
+[ERROR] javax.microedition.media.Manager: Couldn't open Tone Player: Can not open line
+[INFO] javax.microedition.midlet.MIDlet: Create MIDlet
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+s_loadProgress=0
+s_loadProgress=1
+s_loadProgress=2
+s_loadProgress=3
+s_loadProgress=4
+s_loadProgress=5
+s_loadProgress=6
+s_loadProgress=7
+载入DB数据库
+s_loadProgress=8
+s_loadProgress=9
+s_loadProgress=10
+s_loadProgress=11
+s_loadProgress=12
+s_loadProgress=13
+s_loadProgress=14
+s_loadProgress=15
+s_loadProgress=16
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at c.r(Unknown Source)
+	at c.C(Unknown Source)
+	at c.ak(Unknown Source)
+	at c.paint(Unknown Source)
+	at javax.microedition.lcdui.Canvas.repaintRequest(Unknown Source)
+	at javax.microedition.lcdui.Canvas$2.run(Unknown Source)
+	at javax.microedition.lcdui.Display.processEvents(Unknown Source)
+	at javax.microedition.lcdui.Display.access$000(Unknown Source)
+	at javax.microedition.lcdui.Display$1.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+释放资源
+释放资源 
+初始化新游戏 
+初始化主角 
+初始化场景actor 
+载入地图
+载入tile资源
+载入图片资源
+初始化镜头
+载入场景文字
+初始化战斗actor
+运行初始化脚本
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at c.r(Unknown Source)
+	at c.C(Unknown Source)
+	at c.ao(Unknown Source)
+	at c.paint(Unknown Source)
+	at javax.microedition.lcdui.Canvas.repaintRequest(Unknown Source)
+	at javax.microedition.lcdui.Canvas$2.run(Unknown Source)
+	at javax.microedition.lcdui.Display.processEvents(Unknown Source)
+	at javax.microedition.lcdui.Display.access$000(Unknown Source)
+	at javax.microedition.lcdui.Display$1.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
