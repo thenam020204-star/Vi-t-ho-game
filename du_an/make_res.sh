@@ -1,8 +1,9 @@
 #!/bin/bash
 # Sinh lai toan bo tai nguyen Viet hoa vao res_vi/ tu jar goc (jar_x/) + ban dich
-set -e
+set -e -o pipefail
 cd "$(dirname "$0")"
-DP="python3 $(realpath ${SKILL_SCRIPTS:-scripts_skill})/dp.py"
+mkdir -p build
+DP="python3 $(realpath scripts_skill)/dp.py"
 (cd dich && $DP check | tail -1 && $DP merge > /dev/null)
 python3 -I scripts/apply_tl.py dich/dp_work/final/text_can_dich.tsv dich/overrides.tsv dich/charset_f12.txt dich/text_da_dich.tsv
 python3 -I scripts/repack.py jar_x/string.pak dich/text_da_dich.tsv res_vi/string.pak

@@ -1,9 +1,9 @@
 #!/bin/bash
 # Build jar Viet hoa: patch -> dong jar -> preverify -> jar_check
-set -e
+set -e -o pipefail
 cd "$(dirname "$0")"
 source work/tools/env.sh
-S=${SKILL_SCRIPTS:-scripts_skill}
+S=scripts_skill
 ./build_hook.sh
 rm -rf build/patched build/stage && mkdir -p build/patched build/stage
 env -u JAVA_TOOL_OPTIONS java -cp work/lib/asm-9.8.jar:work/lib/asm-tree-9.7.1.jar:build/patcher Patch jar_x build/patched build/patch.log
