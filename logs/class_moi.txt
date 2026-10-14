@@ -1,0 +1,2 @@
+NampMIDlet$Splash.class:  major version: 47 StackMap=3 StackMapTable=0
+NampMIDlet.class:  major version: 47 StackMap=2 StackMapTable=0

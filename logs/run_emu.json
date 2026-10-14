@@ -1,0 +1,20 @@
+{
+ "shots": [
+  "out/shots/00_splash.png",
+  "out/shots/01_bat_am_thanh.png",
+  "out/shots/02_tieu_de.png",
+  "out/shots/03_menu_chinh.png",
+  "out/shots/04_choi_moi.png",
+  "out/shots/05_chon_chuong.png",
+  "out/shots/06_briefing.png",
+  "out/shots/07_briefing2.png",
+  "out/shots/08_trong_tran.png",
+  "out/shots/10_tam_dung.png",
+  "out/shots/11_tuy_chon.png"
+ ],
+ "emu_alive_at_end": true,
+ "exceptions": [
+  "java.lang.NullPointerException: Cannot invoke \"javax.sound.midi.Sequencer.isRunning()\" because \"javax.microedition.media.Manager.exclusiveSequencers[<local0>]\" is null"
+ ],
+ "log": "out/shots/emu.log"
+}

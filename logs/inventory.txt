@@ -1,0 +1,8 @@
+MIDlet: C&C: Red Alert Mobile by blizzi & OXitON | MIDP-2.0 | CLDC-1.1
+Class versions: {'45.3': 23, '46.0': 10} | chưa preverify: không
+API MIDP2/MMAPI/hãng đang dùng: ['Graphics.drawRGB', 'Graphics.drawRegion', 'Image.createRGBImage', 'Manager.createPlayer', 'Manager.getSupportedContentTypes', 'Player.deallocate', 'Player.getControl', 'Player.getState', 'Player.realize', 'Player.setLoopCount', 'Player.setMediaTime', 'Player.start', 'Player.stop', 'SDKMIDlet.a', 'SDKMIDlet.b', 'SDKMIDlet.c', 'SDKMIDlet.d', 'SDKMIDlet.destroyApp', 'SDKMIDlet.e', 'SDKMIDlet.getAppProperty', 'SDKMIDlet.notifyDestroyed', 'VolumeControl.setLevel']
+Class vẽ chữ: {}
+Nghi font bitmap riêng: {}
+Resource có CJK (số ký tự): {"df5_0": "10715 (gbk)", "t_ru": "9074 (gbk)", "df1_0": "130 (utf-16-be)", "df3_0": "55 (gbk)", "df7_0": "35 (gbk)", "t_pt": "32 (utf-16-le)", "df2_0": "27 (utf-16-be)", "t_pl": "25 (utf-16-be)", "df4_0": "23 (gbk)", "t_tr": "22 (utf-16-be)", "t_cs": "14 (utf-16-be)", "df0_0": "9 (utf-16-be)", "charmap": "4 (utf-16-le)"}
+Chuỗi CJK trong .class: {}
+Ảnh PNG: 1 (soát bằng mắt ảnh nào có chữ)
