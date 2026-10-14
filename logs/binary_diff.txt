@@ -1,0 +1,10 @@
+class goc giu nguyen byte-for-byte: 33/33
+META-INF/MANIFEST.MF              725 ->      731
+NampMIDlet$Splash.class             - ->     1599
+NampMIDlet.class                    - ->     1023
+df0_0                           95208 ->   106444
+index                            1655 ->     1655
+namp.png                            - ->    35369
+t_pt                            32066 ->        -
+t_vi                                - ->    53790
+resource df doi: [0, 4, 7, 9, 10, 11, 16]

@@ -1,0 +1,19 @@
+MIDlet-Name: C&C: Red Alert Mobile by blizzi & OXitON
+MIDlet-Version: 4.15.48
+MIDlet-Vendor: Electronic Arts / retail blizzi
+MIDlet-1: C&C: Red Alert Mobile, /icon.png, NampMIDlet
+MicroEdition-Profile: MIDP-2.0
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Icon: /icon.png
+MoreGames_Impl: wap
+MG_Impl: wapstatic
+Content-Folder: Games
+MG_CATURI_MHA: http://wap.wapster.pl/adv/devgames.aspx?did=3438
+MG_CATURI_TET: http://wap.wapster.pl/adv/devgames.aspx?did=3438
+MG_CATURI_LOG: http://wap.wapster.pl/adv/devgames.aspx?did=3438
+MG_PRODUCTS: MHA,TET,FNR,LOG
+JAMDAT-BUILD: 4.15.48.reeu.sek800i
+MG_CATURI_FNR: http://wap.wapster.pl/adv/devgames.aspx?did=3438
+Force-Locale: vi
+MIDlet-Jar-URL: cnc_vi.jar
+MIDlet-Jar-Size: 879351

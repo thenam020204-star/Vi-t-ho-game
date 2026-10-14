@@ -1,0 +1,8 @@
+work/
+__pycache__/
+*.pyc
+out/*_du_an.zip
+rms/
+config/
+freej2me_system/
+shots/

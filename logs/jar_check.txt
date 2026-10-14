@@ -1,0 +1,5 @@
+Thêm: ['NampMIDlet$Splash.class', 'NampMIDlet.class', 'namp.png', 't_vi']
+Xoá: ['t_pt']
+Đổi: ['META-INF/MANIFEST.MF', 'df0_0', 'index']
+WARN NampMIDlet$Splash.class: API mới so với bản gốc: javax/microedition/lcdui/Image.createImage(Ljava/lang/String;)Ljavax/microedition/lcdui/Image; (xác nhận máy đích có)
+RESULT: PASS
