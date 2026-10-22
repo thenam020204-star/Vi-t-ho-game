@@ -3,3 +3,5 @@ src_cfr/
 build/
 *.pyc
 __pycache__/
+config/
+freej2me_system/
