@@ -19,3 +19,7 @@ Jar tiếng Việt chạy trên KVM thật (N73, MIDP2/CLDC1.0, 240×320). Chi t
 ## Cách chạy
 - `source work/tools/env.sh` từ gốc repo; skill scripts ở thư mục skill j2me-viet-hoa/scripts.
 - `work/` không có trong git: chạy lại `setup_tools.sh Tool_Viet_Hoa_NAM_P.zip work` rồi sửa env.sh nếu mất.
+
+## Tạm dừng (theo yêu cầu người dùng)
+- A1 bị dừng lúc mới bắt đầu T1 (thăm dò emu). Có sẵn: `scripts/run_emu.py` (bản sao), `logs/shots_goc/` (ảnh thăm dò). T1–T3 chưa tick.
+- Tiếp tục: giao lại T1–T3 cho A1 theo PLAN.md.
