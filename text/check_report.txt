@@ -1,7 +1,7 @@
-text_check: 759/1904 key da dich, 1145 chua dich
+text_check: 1099/1904 key da dich, 805 chua dich
 LOI: 0 {}
-CANH BAO: 155 {'RONG': 155}
-ty le rong VI/EN: trung binh 100%, max 287%
+CANH BAO: 188 {'RONG': 188}
+ty le rong VI/EN: trung binh 97%, max 287%
 
 CANH BAO [RONG] #3 Class | 214% (EN 63px, VI 135px, nguong 115%)
 CANH BAO [RONG] #4 Enter Area | 116% (EN 120px, VI 139px, nguong 115%)
@@ -158,3 +158,36 @@ CANH BAO [RONG] #751 Arc | 287% (EN 39px, VI 112px, nguong 115%)
 CANH BAO [RONG] #753 Giant Impact | 139% (EN 150px, VI 209px, nguong 115%)
 CANH BAO [RONG] #755 Meisner Effect | 119% (EN 170px, VI 202px, nguong 115%)
 CANH BAO [RONG] #758 Buster Beam | 115% (EN 143px, VI 165px, nguong 115%)
+CANH BAO [RONG] #760 Teleport | 146% (EN 96px, VI 140px, nguong 115%)
+CANH BAO [RONG] #767 Ascension | 116% (EN 116px, VI 134px, nguong 115%)
+CANH BAO [RONG] #772 Phoenix | 185% (EN 89px, VI 165px, nguong 115%)
+CANH BAO [RONG] #773 Brandish | 129% (EN 101px, VI 130px, nguong 115%)
+CANH BAO [RONG] #775 Genesis | 162% (EN 89px, VI 144px, nguong 115%)
+CANH BAO [RONG] #778 Supernova | 125% (EN 119px, VI 149px, nguong 115%)
+CANH BAO [RONG] #780 Hellfire | 158% (EN 93px, VI 147px, nguong 115%)
+CANH BAO [RONG] #782 Age of the Sun | 138% (EN 165px, VI 227px, nguong 115%)
+CANH BAO [RONG] #784 Destroyer | 121% (EN 115px, VI 139px, nguong 115%)
+CANH BAO [RONG] #786 Genocide | 119% (EN 104px, VI 124px, nguong 115%)
+CANH BAO [RONG] #790 Soul Blade | 138% (EN 120px, VI 166px, nguong 115%)
+CANH BAO [RONG] #799 Increase Spirit Damage by 3X | 117% (EN 338px, VI 394px, nguong 115%)
+CANH BAO [RONG] #803 Increase Energy Bolt Damage by 10X | 115% (EN 421px, VI 486px, nguong 115%)
+CANH BAO [RONG] #815 Increase Meteor Damage by 6X | 120% (EN 352px, VI 424px, nguong 115%)
+CANH BAO [RONG] #838 Increase Energy Bolt Damage by 9X | 116% (EN 408px, VI 473px, nguong 115%)
+CANH BAO [RONG] #891 Increase Lava Zone Damage by 10X | 125% (EN 398px, VI 496px, nguong 115%)
+CANH BAO [RONG] #892 Increase Lava Zone Duration by 30% | 119% (EN 416px, VI 495px, nguong 115%)
+CANH BAO [RONG] #912 Amplify ATK by 1.5% | 124% (EN 236px, VI 293px, nguong 115%)
+CANH BAO [RONG] #923 Increase Energy Bolt Damage by 12X | 116% (EN 419px, VI 484px, nguong 115%)
+CANH BAO [RONG] #952 Increase Meteor Damage by 12X | 120% (EN 362px, VI 434px, nguong 115%)
+CANH BAO [RONG] #956 Electric Zone briefly [Freezes] enemies | 116% (EN 433px, VI 502px, nguong 115%)
+CANH BAO [RONG] #962 Amplify ATK by 25% | 125% (EN 231px, VI 288px, nguong 115%)
+CANH BAO [RONG] #983 Increase Meteor Damage by 10X | 120% (EN 364px, VI 436px, nguong 115%)
+CANH BAO [RONG] #990 Increase Spirit Damage by 10X | 116% (EN 350px, VI 406px, nguong 115%)
+CANH BAO [RONG] #1020 Cyclone is [Unified] into one | 128% (EN 313px, VI 402px, nguong 115%)
+CANH BAO [RONG] #1036 Increase Spirit Damage by 24X | 116% (EN 351px, VI 407px, nguong 115%)
+CANH BAO [RONG] #1048 Increase Lava Zone Damage by 15X | 125% (EN 394px, VI 492px, nguong 115%)
+CANH BAO [RONG] #1079 Spirit | 157% (EN 65px, VI 102px, nguong 115%)
+CANH BAO [RONG] #1085 Tsunami | 121% (EN 95px, VI 115px, nguong 115%)
+CANH BAO [RONG] #1086 Meteor | 167% (EN 79px, VI 132px, nguong 115%)
+CANH BAO [RONG] #1092 Energy Bolt | 134% (EN 136px, VI 182px, nguong 115%)
+CANH BAO [RONG] #1093 Blizzard | 119% (EN 96px, VI 114px, nguong 115%)
+CANH BAO [RONG] #1096 Lava Zone | 170% (EN 113px, VI 192px, nguong 115%)

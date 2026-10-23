@@ -758,3 +758,343 @@ Lockdown	Phong Tỏa
 Energy Bombardment	Pháo Kích Năng Lượng
 Buster Beam	Chùm Phá Hủy
 Super Cyclone	Siêu Lốc Xoáy
+Teleport	Dịch Chuyển
+Hallucination	Ảo Giác
+Flame Storm	Bão Lửa
+Pyrotechnics	Pháo Hoa
+Mana Spear	Thương Mana
+Valkyrie	Valkyrie
+Gate	Cổng
+Ascension	Thăng Thiên
+Magnetic Field	Từ Trường
+Core	Lõi
+Black Death	Cái Chết Đen
+Lightning Breath	Hơi Thở Sét
+Phoenix	Phượng Hoàng
+Brandish	Vung Gươm
+Black Hole	Hố Đen
+Genesis	Khởi Nguyên
+Cosmos	Vũ Trụ
+Astrape	Astrape
+Supernova	Siêu Tân Tinh
+Blaster	Blaster
+Hellfire	Lửa Địa Ngục
+Brimstone	Diêm Sinh
+Age of the Sun	Kỷ Nguyên Mặt Trời
+Overload	Quá Tải
+Destroyer	Kẻ Hủy Diệt
+Terminator	Kẻ Kết Liễu
+Genocide	Diệt Chủng
+Exidium	Exidium
+Deus Ex Machina	Deus Ex Machina
+Glacium	Glacium
+Soul Blade	Kiếm Linh Hồn
+Discharge	Phóng Điện
+The Thunderstorm's explosion covers a wider range but does not expand.	Vụ nổ của Bão Sấm có tầm rộng hơn nhưng không lan ra.
+Increase Thunderstorm Damage by 5X	Tăng sát thương Bão Sấm thêm 5X
+Increase the number of Thunderstorms by 3X	Tăng số lượng Bão Sấm thêm 3X
+Thunderstorm strikes instantly.	Bão Sấm đánh xuống tức thì.
+Spirit projectiles cut through enemies faster and become longer	Đạn Tinh Linh xuyên kẻ địch nhanh hơn và dài hơn
+For every [0.15 seconds] reduction in Spirit cooldown, [Damage Multiplier] increases by 〈1〉	Mỗi khi giảm [0.15 giây] hồi chiêu Tinh Linh, [Hệ số sát thương] tăng 〈1〉
+For every [0.15 seconds] reduction in Spirit cooldown, [Attack Count] increases by 〈1〉	Mỗi khi giảm [0.15 giây] hồi chiêu Tinh Linh, [Số lần đánh] tăng 〈1〉
+Increase Spirit Damage by 3X	Tăng sát thương Tinh Linh thêm 3X
+Spirit projectiles have a low chance to greatly amplify their power and are strengthened in proportion to Critical Rate.	Đạn Tinh Linh có tỉ lệ thấp khuếch đại mạnh uy lực và mạnh hơn theo tỉ lệ chí mạng.
+Energy Bolts split into [4] and fire in all directions	Đạn Năng Lượng tách thành [4] và bắn mọi hướng
+Energy Bolt projectiles continue moving forwards.	Đạn Năng Lượng tiếp tục bay thẳng về phía trước.
+Increase Energy Bolt Damage by 10X	Tăng sát thương Đạn Năng Lượng thêm 10X
+Increase the number of Energy Bolts by 3X	Tăng số lượng Đạn Năng Lượng thêm 3X
+Increase Energy Bolt Duration by 30%	Tăng thời lượng Đạn Năng Lượng thêm 30%
+Energy Bolt Cooldown is reduced, and its Generation Interval becomes equal to its Cooldown.	Hồi chiêu Đạn Năng Lượng giảm, nhịp tạo bằng với hồi chiêu.
+Arcane Rays can attack targets in a wider range.	Tia Bí Thuật đánh được mục tiêu trong tầm rộng hơn.
+Arcane Rays switch directions every 〈0.5 seconds〉.	Tia Bí Thuật đổi hướng mỗi 〈0.5 giây〉.
+Arcane Ray gains 〈1X〉 [Damage Multiplier] for every [1 sec] of duration	Tia Bí Thuật nhận 〈1X〉 [Hệ số sát thương] mỗi [1 giây] thời lượng
+Increase Arcane Ray Damage by 4X	Tăng sát thương Tia Bí Thuật thêm 4X
+Decrease Arcane Ray Cooldown by 50%	Giảm hồi chiêu Tia Bí Thuật 50%
+Meteor [Cooldown] becomes faster depending on the number of Meteors,	[Hồi chiêu] Thiên Thạch nhanh hơn theo số lượng Thiên Thạch,
+and they are also created over the same [interval] as its [Cooldown].	và chúng cũng được tạo theo cùng [nhịp] với [Hồi chiêu] của nó.
+Meteor [Cooldown] is also decreased by 〈0 to 80%〉 for each Meteor.	[Hồi chiêu] Thiên Thạch còn giảm 〈0 đến 80%〉 cho mỗi Thiên Thạch.
+Increase Meteor Damage by 6X	Tăng sát thương Thiên Thạch thêm 6X
+Meteor becomes massive and bombards the entire field.	Thiên Thạch to lớn và dội bom cả chiến trường.
+Fireballs are launched at the same time in multiple directions	Cầu Lửa được bắn cùng lúc theo nhiều hướng
+and the attribute effect 《Big Bang》 will no longer be active.	và hiệu ứng thuộc tính 《Vụ Nổ Lớn》 không còn kích hoạt.
+Increase Fireball Damage by 6.66X	Tăng sát thương Cầu Lửa thêm 6.66X
+Increase Fireball Penetration by 2	Tăng độ xuyên Cầu Lửa thêm 2
+Increase the number of Fireballs by 4X	Tăng số lượng Cầu Lửa thêm 4X
+Increase Fireball Cooldown by 3.3X	Tăng hồi chiêu Cầu Lửa thêm 3.3X
+Fireball Damage increases with each consecutive explosion.	Sát thương Cầu Lửa tăng sau mỗi vụ nổ liên tiếp.
+Flash Shock generates faster and farther	Chớp Giật tạo ra nhanh hơn và xa hơn
+Casting Count Stacks start at 〈3〉 and reset at 〈7〉; for each cooldown reduction from [5 seconds] to [0.5 seconds], [Casting Count Stack] increases by 〈1〉	Chồng số lần thi triển bắt đầu 〈3〉 và đặt lại ở 〈7〉; mỗi lần hồi chiêu giảm từ [5 giây] xuống [0.5 giây], [Chồng số lần thi triển] tăng 〈1〉
+Increase Flash Shock Damage by 7X	Tăng sát thương Chớp Giật thêm 7X
+Decrease Flash Shock Cooldown by 50%	Giảm hồi chiêu Chớp Giật 50%
+Flash Shock cast count stacks are always maintained at the maximum,	Chồng số lần thi triển Chớp Giật luôn giữ ở mức tối đa,
+and the maximum stack count increases in proportion to Critical Rate.	và số lần chồng tối đa tăng theo tỉ lệ chí mạng.
+Fireball [Pierces] all enemies and moves randomly	Cầu Lửa [Xuyên thấu] mọi kẻ địch và di chuyển ngẫu nhiên
+Fireball explodes with 〈3X〉 power only when it disappears	Cầu Lửa nổ với uy lực 〈3X〉 chỉ khi biến mất
+Fireball Damage increases proportionally to its duration	Sát thương Cầu Lửa tăng theo thời lượng
+Fireball [Pierce] value [1] increases [Damage Multiplier] by 〈3〉	Mỗi [1] điểm [Xuyên thấu] của Cầu Lửa tăng [Hệ số sát thương] 〈3〉
+Increase Fireball Damage by 4X	Tăng sát thương Cầu Lửa thêm 4X
+Decrease Fireball Cooldown by 33%	Giảm hồi chiêu Cầu Lửa 33%
+Energy Bolts are generated in all directions.	Đạn Năng Lượng được tạo ra mọi hướng.
+Energy Bolts explode at intervals of 〈0.5 seconds〉, and each explosion increases their power by 〈20%〉.	Đạn Năng Lượng nổ mỗi 〈0.5 giây〉, mỗi vụ nổ tăng uy lực thêm 〈20%〉.
+Increase Energy Bolt Damage by 9X	Tăng sát thương Đạn Năng Lượng thêm 9X
+Decrease the number of Energy Bolts by 50%	Giảm số lượng Đạn Năng Lượng 50%
+Cyclones are created nearby the character and rotate.	Lốc Xoáy xuất hiện gần nhân vật và xoay quanh.
+Cyclones gradually [shrink] in size.	Lốc Xoáy dần [thu nhỏ] về cỡ.
+Increase Cyclone Damage by 9X	Tăng sát thương Lốc Xoáy thêm 9X
+Increase Cyclone Duration by 9X	Tăng thời lượng Lốc Xoáy thêm 9X
+Decrease Cyclone Cooldown by 50%	Giảm hồi chiêu Lốc Xoáy 50%
+Cyclone occasionally manifests in an intensified, unified form.	Lốc Xoáy đôi khi hiện ra ở dạng hợp nhất, mạnh hơn.
+Incineration no longer fires sideways from the character	Thiêu Rụi không còn bắn ngang từ nhân vật
+but to [five directions] outwards from the character.	mà bắn ra [năm hướng] từ nhân vật.
+Incinerations are created with longer range and at a faster speed.	Thiêu Rụi có tầm xa hơn và tốc độ nhanh hơn.
+Increase Incineration Damage by 6X	Tăng sát thương Thiêu Rụi thêm 6X
+Increase the number of Incinerations by 30%	Tăng số lượng Thiêu Rụi thêm 30%
+Each Blizzard explosion splits into 〈2〉.	Mỗi vụ nổ Bão Tuyết tách thành 〈2〉.
+Increase Blizzard Damage by 8X	Tăng sát thương Bão Tuyết thêm 8X
+Increase Blizzard Size by 20%	Tăng cỡ Bão Tuyết thêm 20%
+Decrease Blizzard Interval by 30%	Giảm nhịp Bão Tuyết 30%
+Thunderstorms are quickly generated near a set location.	Bão Sấm được tạo ra nhanh quanh một vị trí cố định.
+Increase Thunderstorm Damage by 9X	Tăng sát thương Bão Sấm thêm 9X
+Increase Thunderstorm Size by 30%	Tăng cỡ Bão Sấm thêm 30%
+Increase Thunderstorm Cooldown by 30X	Tăng hồi chiêu Bão Sấm thêm 30X
+All Cyclones are [combined] into one.	Mọi Lốc Xoáy được [gộp] thành một.
+Cyclones no longer fire projectiles,	Lốc Xoáy không còn bắn đạn,
+but rapidly [expand] and their speed decreases gradually.	mà [nở rộng] nhanh và tốc độ giảm dần.
+Each Cyclone increases the [Size] of the new Cyclone by 〈25%〉.	Mỗi Lốc Xoáy tăng [Cỡ] của Lốc Xoáy mới 〈25%〉.
+Increase Cyclone Damage by 10X	Tăng sát thương Lốc Xoáy thêm 10X
+Cyclone Duration is converted into Damage, and it explodes upon expiration.	Thời lượng Lốc Xoáy chuyển thành sát thương và nổ khi hết hạn.
+Blizzard explosions [expand].	Vụ nổ Bão Tuyết [nở rộng].
+Increase Blizzard Size by 25%	Tăng cỡ Bão Tuyết thêm 25%
+Decrease the number of Blizzards by 25%	Giảm số lượng Bão Tuyết 25%
+Arcane Ray is [Fixed] at 〈4〉 and becomes [Permanent]; for each [1-second] reduction from [4 seconds] cooldown, 〈1〉 [Ray] is added	Tia Bí Thuật [Cố định] ở 〈4〉 và [Vĩnh viễn]; mỗi khi hồi chiêu [4 giây] giảm [1 giây], thêm 〈1〉 [Tia]
+Arcane Ray [Size] and [Duration] are {converted} into [Damage]	[Cỡ] và [Thời lượng] của Tia Bí Thuật được {chuyển hóa} thành [Sát thương]
+Arcane Ray deals damage every 〈0.25 seconds〉	Tia Bí Thuật gây sát thương mỗi 〈0.25 giây〉
+Arcane Ray Damage Multiplier increases by 1 per count	Hệ số sát thương Tia Bí Thuật tăng 1 theo số lần
+Arcane Ray increases in power and rotates faster in proportion to the number of active rays.	Tia Bí Thuật tăng uy lực và xoay nhanh hơn theo số lượng tia đang kích hoạt.
+〈5〉 Thunderstorms are created in a row at random locations.	〈5〉 Bão Sấm liên tiếp xuất hiện ở các vị trí ngẫu nhiên.
+Each Thunderstorm increases the new Thunderstorm's [Creation Radius] and [Number] by 〈30%〉.	Mỗi Bão Sấm tăng [Bán kính tạo] và [Số lượng] của Bão Sấm mới 〈30%〉.
+Increase Thunderstorm Damage by 12X	Tăng sát thương Bão Sấm thêm 12X
+Thunderstorm increases its consecutive cast count and is generated faster.	Bão Sấm tăng số lần thi triển liên tiếp và tạo ra nhanh hơn.
+The Shield explodes instead of charging up.	Khiên nổ thay vì tích năng.
+[Damage] and [Size] of Shields increase by 〈33%〉 per Shield	[Sát thương] và [Cỡ] của Khiên tăng 〈33%〉 mỗi Khiên
+[Damage] increases in relation to [All Magic Size Increase]	[Sát thương] tăng theo [Mức tăng cỡ mọi phép]
+Decrease Shield Cooldown by 70%	Giảm hồi chiêu Khiên 70%
+Incineration generates faster and increases [Max Multiplier]	Thiêu Rụi tạo ra nhanh hơn và tăng [Hệ số tối đa]
+(Max Multiplier: Damage X30, Size X2)	(Hệ số tối đa: Sát thương X30, Cỡ X2)
+Decrease Incineration Cooldown by 25%	Giảm hồi chiêu Thiêu Rụi 25%
+Incineration erupts explosively in an instant.	Thiêu Rụi bùng nổ tức thì.
+Electric Zones rotate around the character as multiple [projectiles].	Vùng Điện xoay quanh nhân vật dưới dạng nhiều [đạn].
+Electric Zones no longer have a [Damage Interval] but have increased [Rotation Speed].	Vùng Điện không còn [Nhịp sát thương] mà tăng [Tốc độ xoay].
+Increase Electric Zone Damage by 10X	Tăng sát thương Vùng Điện thêm 10X
+Increase Electric Zone Size by 30%	Tăng cỡ Vùng Điện thêm 30%
+Lava Zones gradually [expand].	Vùng Dung Nham dần [nở rộng].
+[Damage] increases in relation to Lava Zone’s duration.	[Sát thương] tăng theo thời lượng Vùng Dung Nham.
+Increase Lava Zone Damage by 10X	Tăng sát thương Vùng Dung Nham thêm 10X
+Increase Lava Zone Duration by 30%	Tăng thời lượng Vùng Dung Nham thêm 30%
+Decrease Lava Zone Cooldown by 30%	Giảm hồi chiêu Vùng Dung Nham 30%
+Electric Shocks no longer chain, but are created 〈3 to 7 times〉 in a row.	Giật Điện không còn lan chuyền mà tạo liên tiếp 〈3 đến 7 lần〉.
+Electric Shock has longer [range].	Giật Điện có [tầm] xa hơn.
+Increase Electric Shock Damage by 8X	Tăng sát thương Giật Điện thêm 8X
+〈2〉 additional Tsunamis are created on each side of the Tsunami.	〈2〉 Sóng Thần phụ xuất hiện ở mỗi bên Sóng Thần.
+Tsunamis are always created at the back of the character.	Sóng Thần luôn xuất hiện phía sau nhân vật.
+Increase Tsunami Damage by 8X	Tăng sát thương Sóng Thần thêm 8X
+Increase Tsunami Cooldown by 50%	Tăng hồi chiêu Sóng Thần thêm 50%
+Tsunami occurs simultaneously across a wide area.	Sóng Thần xảy ra đồng thời trên khu vực rộng.
+Frost Nova explodes consecutively 〈24 times〉 near enemies, reducing [Damage] and [Size] by 〈2%〉 per explosion	Nova Băng nổ liên tiếp 〈24 lần〉 gần kẻ địch, giảm [Sát thương] và [Cỡ] 〈2%〉 mỗi vụ nổ
+Increase Frost Nova Damage by 24X	Tăng sát thương Nova Băng thêm 24X
+Decrease Frost Nova Cooldown by 30%	Giảm hồi chiêu Nova Băng 30%
+Frost Nova explosions are generated rapidly in large quantities.	Vụ nổ Nova Băng được tạo ra nhanh với số lượng lớn.
+〈3〉 Cyclones are created in a row in multiple directions.	〈3〉 Lốc Xoáy liên tiếp xuất hiện theo nhiều hướng.
+The Cyclones’ [Movement Speed] increases and then decreases gradually.	[Tốc độ chạy] của Lốc Xoáy tăng rồi giảm dần.
+Increase Cyclone Size by 20%	Tăng cỡ Lốc Xoáy thêm 20%
+Decrease Cyclone Duration by 50%	Giảm thời lượng Lốc Xoáy 50%
+Only [Combined Spells] can be cast	Chỉ thi triển được [Phép hợp nhất]
+For each level of acquired [Active Magic], the following stats are enhanced	Mỗi cấp [Phép chủ động] đã nhận, các chỉ số sau được cường hóa
+Amplify ATK by 1.5%	Khuếch đại ATK thêm 1.5%
+Increase All Magic Size by 0.5%	Tăng cỡ mọi phép thêm 0.5%
+Decrease All Magic Cooldown by 0.3%	Giảm hồi chiêu mọi phép 0.3%
+Magic Circles are [permanent].	Ma Pháp Trận [tồn tại vĩnh viễn].
+The Magic Circle’s [Effect] is increased by 〈1%〉 for every [3%] of its Duration.	[Hiệu ứng] của Ma Pháp Trận tăng 〈1%〉 cho mỗi [3%] Thời lượng.
+The Magic Circle’s [Effect] is increased by 〈1%〉 for every [3%] of its Cooldown Decrease.	[Hiệu ứng] của Ma Pháp Trận tăng 〈1%〉 cho mỗi [3%] Hồi chiêu giảm.
+For each activated [Combination Magic], [ATK] is {Amplified} by 〈20%〉.	Mỗi [phép hợp thể] đang kích hoạt, [ATK] được {khuếch đại} 〈20%〉.
+Gain 〈2〉 more [Magic Combination] chance.	Thêm 〈2〉 cơ hội [Phép hợp thể].
+Increase [Max Level] by 〈5〉.	Tăng [Cấp tối đa] thêm 〈5〉.
+Energy Bolts immediately [explode] after spreading in all directions.	Đạn Năng Lượng [nổ] ngay sau khi tỏa ra mọi hướng.
+[Damage] and [Quantity] of Energy Bolts increase based on their duration.	[Sát thương] và [Số lượng] Đạn Năng Lượng tăng theo thời lượng.
+Increase Energy Bolt Damage by 12X	Tăng sát thương Đạn Năng Lượng thêm 12X
+Increase Energy Bolt Explosion Size by 50%	Tăng cỡ vụ nổ Đạn Năng Lượng thêm 50%
+Increase Energy Bolt Cooldown by 75%	Tăng hồi chiêu Đạn Năng Lượng thêm 75%
+Energy Bolt splits consecutively two times.	Đạn Năng Lượng tách liên tiếp hai lần.
+Instead of creating Arcane Rays on the opposite side,	Thay vì tạo Tia Bí Thuật ở phía đối diện,
+they are created [at the same time] in random directions 〈5 times〉 in a row.	chúng xuất hiện [cùng lúc] theo hướng ngẫu nhiên 〈5 lần〉 liên tiếp.
+The Arcane Ray's [Duration] is {converted} into its [Damage].	[Thời lượng] của Tia Bí Thuật được {chuyển hóa} thành [Sát thương] của nó.
+Increase Arcane Ray Damage by 7X	Tăng sát thương Tia Bí Thuật thêm 7X
+Decrease Arcane Ray Cooldown by 25%	Giảm hồi chiêu Tia Bí Thuật 25%
+Enemies hit by Frost Nova are all [Knocked Back]	Kẻ địch trúng Nova Băng đều bị [Đẩy lùi]
+Frost Nova Damage increases proportionally to its Size	Sát thương Nova Băng tăng theo cỡ của nó
+Increase Frost Nova Damage by 10X	Tăng sát thương Nova Băng thêm 10X
+Increase Frost Nova Size by 50%	Tăng cỡ Nova Băng thêm 50%
+Increase Frost Nova Cooldown by 50%	Tăng hồi chiêu Nova Băng thêm 50%
+An integrated Satellite is additionally generated on the opposite side; its [Damage] is 【20%】 lower but causes {Freeze} on the first hit.	Một Vệ Tinh hợp nhất được tạo thêm ở phía đối diện; [Sát thương] thấp hơn 【20%】 nhưng gây {Đóng băng} ở đòn đầu.
+[Damage] increases proportionally to Satellite size.	[Sát thương] tăng theo cỡ Vệ Tinh.
+Increase Satellite Damage Multiplier by 50%	Tăng hệ số sát thương Vệ Tinh thêm 50%
+Satellites merge into a single sun, dealing 33% damage to all enemies across the field.	Vệ Tinh hợp thành một mặt trời, gây 33% sát thương lên mọi kẻ địch trên chiến trường.
+Summon 〈3〉 additional [Mirages] that fire Magic Bolts.	Triệu hồi thêm 〈3〉 [Ảo Ảnh] bắn Đạn Phép.
+Mirages only fire [1] Magic Bolt at a time.	Ảo Ảnh mỗi lần chỉ bắn [1] Đạn Phép.
+Each Magic Bolt increases [Damage] by 〈33%〉.	Mỗi Đạn Phép tăng [Sát thương] 〈33%〉.
+Increase Magic Bolt Damage by 9.99X	Tăng sát thương Đạn Phép thêm 9.99X
+Decrease Magic Bolt Cooldown by 33%	Giảm hồi chiêu Đạn Phép 33%
+Doppelganger creates 3 additional clones.	Doppelganger tạo thêm 3 bản sao.
+Every time Electric Shock is chained, the projectile splits in 〈2〉	Mỗi lần Giật Điện lan chuyền, đạn tách làm 〈2〉
+and their [Damage] and [Size] is decreased by 【20%】.	và [Sát thương] cùng [Cỡ] của chúng giảm 【20%】.
+Electric Shock is [chained] at a higher speed.	Giật Điện [lan chuyền] với tốc độ cao hơn.
+Electric Shock is enhanced; projectiles no longer split during chains but do not lose power.	Giật Điện được cường hóa; đạn không còn tách khi lan chuyền nhưng cũng không mất uy lực.
+Meteor is generated consecutively 〈3 times〉, and the first Meteor's [Power] is increased by 〈50%〉.	Thiên Thạch xuất hiện liên tiếp 〈3 lần〉, và [Uy lực] của Thiên Thạch đầu tiên tăng 〈50%〉.
+Increase Meteor Damage by 12X	Tăng sát thương Thiên Thạch thêm 12X
+Decrease Meteor Cooldown by 30%	Giảm hồi chiêu Thiên Thạch 30%
+Decrease Meteor Size by 30%	Giảm cỡ Thiên Thạch 30%
+Meteor Fall unifies into a single impact, stunning all nearby enemies upon explosion.	Thiên Thạch rơi hợp thành một cú va chạm, gây choáng mọi kẻ địch gần đó khi vụ nổ xảy ra.
+Electric Zone briefly [Freezes] enemies	Vùng Điện [Đóng băng] kẻ địch trong chốc lát
+Each activation of Electric Zone increases [Damage] and [Size] multiplier by 〈1〉 and resets at 〈4〉 activations	Mỗi lần kích hoạt Vùng Điện tăng hệ số [Sát thương] và [Cỡ] thêm 〈1〉 và đặt lại sau 〈4〉 lần kích hoạt
+Increase Electric Zone Damage by 20X	Tăng sát thương Vùng Điện thêm 20X
+When 《EMP》 stuns a target, [knock it back] and deal 〈10X〉 {additional damage}.	Khi 《EMP》 làm choáng mục tiêu, [đẩy lùi] nó và gây 〈10X〉 {sát thương cộng thêm}.
+Increase Electric Zone Damage by 6X	Tăng sát thương Vùng Điện thêm 6X
+Increase Electric Zone Size by 100%	Tăng cỡ Vùng Điện thêm 100%
+Amplify ATK by 25%	Khuếch đại ATK thêm 25%
+Electric Zone is generated as waves, and the interval becomes faster in proportion to Cooldown.	Vùng Điện tạo thành từng đợt, và nhịp nhanh hơn theo hồi chiêu.
+Multiple Arcane Rays are created in random directions at once.	Nhiều Tia Bí Thuật xuất hiện cùng lúc theo hướng ngẫu nhiên.
+Arcane Rays do not rotate anymore.	Tia Bí Thuật không còn xoay.
+Increase Arcane Ray Damage by 20X	Tăng sát thương Tia Bí Thuật thêm 20X
+Increase Arcane Ray Size by 5X	Tăng cỡ Tia Bí Thuật thêm 5X
+Decrease Arcane Ray Duration by 75%	Giảm thời lượng Tia Bí Thuật 75%
+Arcane Ray deals damage periodically,	Tia Bí Thuật gây sát thương theo chu kỳ,
+Duration is converted into Damage and gradually increases in size.	Thời lượng chuyển thành sát thương và dần tăng cỡ.
+Cyclones persist and follow the character.	Lốc Xoáy tồn tại và đi theo nhân vật.
+[Damage Multiplier] increases in relation to how long Cyclones persist.	[Hệ số sát thương] tăng theo thời gian Lốc Xoáy tồn tại.
+[Cooldown] starts when Cyclone’s duration is over.	[Hồi chiêu] bắt đầu khi hết thời lượng Lốc Xoáy.
+Each Cyclone increases the [Size] of the new Cyclone by 〈20%〉.	Mỗi Lốc Xoáy tăng [Cỡ] của Lốc Xoáy mới 〈20%〉.
+Increase Cyclone Duration and Cooldown by 100%	Tăng thời lượng và hồi chiêu Lốc Xoáy thêm 100%
+Cast Cloaking 〈7 times〉 in succession to teleport randomly and return to the original position at the end.	Thi triển Tàng Hình 〈7 lần〉 liên tiếp để dịch chuyển ngẫu nhiên và quay lại vị trí ban đầu khi kết thúc.
+[Cast Count] and [Damage Multiplier] of Cloaking increase based on its duration.	[Số lần thi triển] và [Hệ số sát thương] của Tàng Hình tăng theo thời lượng.
+Increase Cloaking Damage by 3X	Tăng sát thương Tàng Hình thêm 3X
+Reduce Cloaking cooldown by 70%	Giảm hồi chiêu Tàng Hình 70%
+Etherealization explosions chain 5 times.	Vụ nổ Hư Thể Hóa nối chuỗi 5 lần.
+Meteor Craters no longer deal damage.	Hố Thiên Thạch không còn gây sát thương.
+Meteors are generated in a line from the character in [five directions], and their size changes; at each of {33%}, {66%}, and {99%}, increase [Direction Count] by 〈1〉 and [Damage Multiplier] by 〈5〉.	Thiên Thạch tạo thành hàng từ nhân vật theo [năm hướng], cỡ thay đổi; ở mỗi mốc {33%}, {66%} và {99%}, tăng [Số hướng] thêm 〈1〉 và [Hệ số sát thương] thêm 〈5〉.
+Increase Meteor Damage by 10X	Tăng sát thương Thiên Thạch thêm 10X
+Magic Bolt explodes at random locations	Đạn Phép nổ ở vị trí ngẫu nhiên
+Magic Bolt explosions [Expand], dealing 〈1~9X〉 power	Vụ nổ Đạn Phép [Nở rộng], với uy lực 〈1~9X〉
+Increase Magic Bolt Damage by 5X	Tăng sát thương Đạn Phép thêm 5X
+Magic Bolt Size increases by 50%	Cỡ Đạn Phép tăng 50%
+The Spirit now uses its default [Cooldown] and [Launch Interval].	Tinh Linh nay dùng [Hồi chiêu] và [Nhịp bắn] mặc định.
+Spirit [Projectile Speed] and [Range] is increased dramatically.	[Tốc độ đạn] và [Tầm] của Tinh Linh tăng vọt.
+Increase Spirit Damage by 10X	Tăng sát thương Tinh Linh thêm 10X
+Increase Spirit Size by 200%	Tăng cỡ Tinh Linh thêm 200%
+Increase Spirit Cooldown by 2X	Tăng hồi chiêu Tinh Linh thêm 2X
+Spirits are generated twice as many and fired simultaneously.	Tinh Linh được tạo ra gấp đôi và bắn đồng thời.
+Flash Shock [Size Increase] is {converted} into [Damage]	[Mức tăng cỡ] Chớp Giật được {chuyển hóa} thành [Sát thương]
+Increase Flash Shock Damage by 12X	Tăng sát thương Chớp Giật thêm 12X
+Increase the number of Flash Shocks by 6X	Tăng số lượng Chớp Giật thêm 6X
+Flash Shock is generated without limit and accelerates proportionally to Cooldown and Quantity.	Chớp Giật tạo ra không giới hạn và tăng tốc theo hồi chiêu và số lượng.
+The [Rotation Speed] bonus of 《Anti-Gravity》 is fixed to 〈2x〉.	Thưởng [Tốc độ xoay] của 《Phản Trọng Lực》 được cố định ở 〈2x〉.
+Increase Satellite Damage by 7X	Tăng sát thương Vệ Tinh thêm 7X
+Increase Satellite Size by 100%	Tăng cỡ Vệ Tinh thêm 100%
+Satellites rotate rapidly across a wide radius with increased power.	Vệ Tinh xoay nhanh trên bán kính rộng với uy lực tăng.
+Fireballs [instantly] explode at random locations, dealing damage 〈4 times〉.	Cầu Lửa [tức thì] nổ ở vị trí ngẫu nhiên, gây sát thương 〈4 lần〉.
+[Damage] increases proportionally to Fireball size.	[Sát thương] tăng theo cỡ Cầu Lửa.
+Convert Fireball Piercing to 〈50%〉 of [Count]	Đổi độ xuyên Cầu Lửa thành 〈50%〉 [Số lần]
+Increase Fireball Damage by 20X	Tăng sát thương Cầu Lửa thêm 20X
+Increase Fireball Size by 100%	Tăng cỡ Cầu Lửa thêm 100%
+Increase Fireball Cooldown by 2X	Tăng hồi chiêu Cầu Lửa thêm 2X
+Electric shocks are generated in front of the character by 〈3〉.	Giật Điện xuất hiện 〈3〉 lần phía trước nhân vật.
+Increase Electric Shock Damage by 7X	Tăng sát thương Giật Điện thêm 7X
+Electric shock number increased by 2X	Số lượng Giật Điện tăng 2X
+Increase Electric shock Cooldown by 50%	Tăng hồi chiêu Giật Điện thêm 50%
+Tsunami is generated behind the character	Sóng Thần xuất hiện phía sau nhân vật
+Tsunami leaves behind [Flames] along its path	Sóng Thần để lại [Lửa] dọc đường đi
+Increase Tsunami Damage by 24X	Tăng sát thương Sóng Thần thêm 24X
+Decrease Tsunami Cooldown by 30%	Giảm hồi chiêu Sóng Thần 30%
+Decrease the number of Tsunamis by 50%	Giảm số lượng Sóng Thần 50%
+Revival count increases by 1	Số lần hồi sinh tăng 1
+Flash Shock generates consecutively 〈7 times〉 in all directions; for each cooldown reduction from [5 seconds] to [0.5 seconds], [Count] increases by 〈1〉	Chớp Giật tạo ra liên tiếp 〈7 lần〉 mọi hướng; mỗi lần hồi chiêu giảm từ [5 giây] xuống [0.5 giây], [Số lần] tăng 〈1〉
+Flash Shock deals damage only at the [Core]	Chớp Giật chỉ gây sát thương ở [Lõi]
+Cyclone is [Unified] into one	Lốc Xoáy được [Hợp nhất] thành một
+Enemies hit by Cyclone become [Staggered]	Kẻ địch trúng Lốc Xoáy bị [Loạng choạng]
+Cyclone cooldown starts after its duration ends	Hồi chiêu Lốc Xoáy bắt đầu sau khi hết thời lượng
+Cyclone [Duration Increase] is {converted} into [Damage] 〈3X〉	[Mức tăng thời lượng] Lốc Xoáy được {chuyển hóa} thành [Sát thương] 〈3X〉
+Cyclone [Count] increases [Damage Multiplier] by 〈3〉	[Số lần] Lốc Xoáy tăng [Hệ số sát thương] 〈3〉
+Increase Cyclone Damage by 8X	Tăng sát thương Lốc Xoáy thêm 8X
+Blizzard [Cooldown] becomes faster in proportion to the number,	[Hồi chiêu] Bão Tuyết nhanh hơn theo số lượng,
+and the [Generation Interval] becomes equal to the [Cooldown].	và [Nhịp tạo ra] bằng [Hồi chiêu].
+Increase Blizzard Damage by 30X	Tăng sát thương Bão Tuyết thêm 30X
+Decrease Blizzard Cooldown by 30%	Giảm hồi chiêu Bão Tuyết 30%
+Blizzard occurs simultaneously over a wide area.	Bão Tuyết xảy ra đồng thời trên khu vực rộng.
+When a Thunderstorm explodes, it releases a [shock wave] around the area, dealing [half] damage to nearby enemies and [stunning] them.	Khi Bão Sấm nổ, nó tỏa [sóng xung kích] quanh khu vực, gây [một nửa] sát thương lên kẻ địch gần đó và [làm choáng] chúng.
+Increase Thunderstorm Damage by 7X	Tăng sát thương Bão Sấm thêm 7X
+Increase Thunderstorm Size by 25%	Tăng cỡ Bão Sấm thêm 25%
+Increase Thunderstorm Cooldown by 25X	Tăng hồi chiêu Bão Sấm thêm 25X
+Fires Spirit projectiles at once.	Bắn đồng loạt đạn Tinh Linh.
+Increase Spirit Damage by 24X	Tăng sát thương Tinh Linh thêm 24X
+Increase Spirit Size by 100%	Tăng cỡ Tinh Linh thêm 100%
+Spirit launch count decreased by 75%	Số lần bắn Tinh Linh giảm 75%
+The [6th] Magic Bolt fired has 〈7X〉 power	Đạn Phép bắn lần thứ [6] có uy lực 〈7X〉
+Incineration generates 〈2X〉	Thiêu Rụi tạo ra 〈2X〉
+Incineration [Flames] explode consecutively 〈2~3 times〉	[Lửa] Thiêu Rụi nổ liên tiếp 〈2~3 lần〉
+Increase Incineration Damage by 12X	Tăng sát thương Thiêu Rụi thêm 12X
+Increase Incineration Size by 100%	Tăng cỡ Thiêu Rụi thêm 100%
+Increase Incineration Cooldown by 50%	Tăng hồi chiêu Thiêu Rụi thêm 50%
+Incineration is cast permanently, and Damage increases in proportion to Cooldown and Quantity.	Thiêu Rụi được thi triển vĩnh viễn, và sát thương tăng theo hồi chiêu và số lượng.
+Lava Zones are simultaneously generated in all directions and move outward.	Vùng Dung Nham xuất hiện đồng thời mọi hướng và di chuyển ra ngoài.
+Convert Lava Zone duration per [1s] into [Damage Multiplier] 〈x3〉.	Đổi thời lượng Vùng Dung Nham mỗi [1s] thành [Hệ số sát thương] 〈x3〉.
+Increase Lava Zone Damage by 15X	Tăng sát thương Vùng Dung Nham thêm 15X
+Lava Zone is enhanced and generates faster.	Vùng Dung Nham được cường hóa và tạo ra nhanh hơn.
+Electric Zone is given a [Cooldown] of 〈5 seconds〉	Vùng Điện có [Hồi chiêu] 〈5 giây〉
+Electric Zone is given a [Duration] of 〈3 seconds〉	Vùng Điện có [Thời lượng] 〈3 giây〉
+Increase Electric Zone Damage by 99X	Tăng sát thương Vùng Điện thêm 99X
+Increase Electric Zone Size by 99%	Tăng cỡ Vùng Điện thêm 99%
+Decrease HP Regen per sec. by 0.1%	Giảm hồi HP mỗi giây 0.1%
+Electric Zone is cast at shorter intervals with heightened destructive force.	Vùng Điện thi triển với nhịp ngắn hơn và sức hủy diệt cao hơn.
+Arcane Rays are [Unified] into one and spin faster	Tia Bí Thuật được [Hợp nhất] thành một và xoay nhanh hơn
+Arcane Ray [Size Increase] is {converted} into [Damage]	[Mức tăng cỡ] Tia Bí Thuật được {chuyển hóa} thành [Sát thương]
+Arcane Ray [Count] increases [Damage Multiplier] by 〈4〉 each	Mỗi [Số lần] Tia Bí Thuật tăng [Hệ số sát thương] 〈4〉
+Decrease Arcane Ray Duration by 33%	Giảm thời lượng Tia Bí Thuật 33%
+Increase Arcane Ray Cooldown by 33%	Tăng hồi chiêu Tia Bí Thuật thêm 33%
+Flash Shock core size increases	Cỡ lõi Chớp Giật tăng
+Increase Flash Shock Size by 100%	Tăng cỡ Chớp Giật thêm 100%
+Magic Combination is no longer possible	Không thể dùng phép hợp thể nữa
+Increase [Max Level] by 〈10〉.	Tăng [Cấp tối đa] thêm 〈10〉.
+All Magic Damage Multiplier increases by 0.01	Hệ số sát thương mọi phép tăng 0.01
+Decrease All Magic Cooldown by 0.1%	Giảm hồi chiêu mọi phép 0.1%
+Tsunami spreads outward in all directions from the character.	Sóng Thần lan ra mọi hướng từ nhân vật.
+Increase Tsunami Damage by 30X	Tăng sát thương Sóng Thần thêm 30X
+Increase the number of Tsunamis by 25%	Tăng số lượng Sóng Thần thêm 25%
+Increase Tsunami Cooldown by 25%	Tăng hồi chiêu Sóng Thần thêm 25%
+Satellite transforms into a blade and rotates much faster.	Vệ Tinh hóa thành lưỡi kiếm và xoay nhanh hơn nhiều.
+[Damage Multiplier] and [Rotation Speed] increase in proportion to Satellite [Critical Rate].	[Hệ số sát thương] và [Tốc độ xoay] tăng theo [Tỉ lệ chí mạng] của Vệ Tinh.
+Increase Satellite Damage by 5X	Tăng sát thương Vệ Tinh thêm 5X
+When Electric Shock explodes, its size increases and it releases [Projectiles].	Khi Giật Điện nổ, cỡ của nó tăng và phóng ra [Đạn].
+Increase Electric Shock Damage by 12X	Tăng sát thương Giật Điện thêm 12X
+Increase Electric shock Cooldown by 33%	Tăng hồi chiêu Giật Điện thêm 33%
+Magic Bolt	Đạn Phép
+Fireball	Cầu Lửa
+Spirit	Tinh Linh
+Satellite	Vệ Tinh
+Frost Nova	Nova Băng
+Shield	Khiên
+Thunderstorm	Bão Sấm
+Electric Zone	Vùng Điện
+Tsunami	Sóng Thần
+Meteor	Thiên Thạch
+Cloaking	Tàng Hình
+Cyclone	Lốc Xoáy
+Electric Shock	Giật Điện
+Armageddon	Armageddon
+Incineration	Thiêu Rụi
+Energy Bolt	Đạn Năng Lượng
+Blizzard	Bão Tuyết
+Arcane Ray	Tia Bí Thuật
+Magic Circle	Ma Pháp Trận
+Lava Zone	Vùng Dung Nham
+Flash Shock	Chớp Giật
+Advanced Magic	Phép Nâng Cao
+Intelligence	Trí Tuệ

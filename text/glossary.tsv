@@ -104,7 +104,7 @@ Amplification Effect	Hiệu ứng khuếch đại	Stat
 Amplify	Khuếch đại	Stat	
 Amplified	Khuếch đại	Stat	
 Number	Số lượng	Stat	"the number of" -> "số lượng"
-Count	Số lần	Stat	
+Count	Số lần|Số hướng	Stat	
 Multiplier	Hệ số	Stat	
 Crit. Multiplier	Hệ số chí mạng	Stat	
 Critical Strike Rate	Tỉ lệ chí mạng	Stat	
