@@ -32,7 +32,7 @@ No	Không	UI	Chỉ khi "No" đứng riêng (nút); trong câu giữ tự nhiên
 ON	BẬT	UI	
 OFF	TẮT	UI	
 Return	Quay lại	UI	
-Give Up	Bỏ cuộc	UI	
+Give Up	Bỏ cuộc|Từ bỏ	UI	
 Quit	Thoát	UI	
 Pause	Tạm dừng	UI	
 Revive	Hồi sinh	UI	
@@ -254,3 +254,7 @@ Cambion	Cambion	Area	Giữ nguyên
 Magic Survival	Magic Survival	UI	Tên game, giữ nguyên
 Golem	Golem	Misc	Giữ nguyên
 Virus	Virus	Misc	
+Mirage	Ảo Ảnh	Spell	T7
+Crater	Hố va chạm	Misc	T7
+Elite Monster	Quái vật Tinh anh	Misc	T7
+Critical Strike Multiplier	Hệ số đòn chí mạng	Stat	T7

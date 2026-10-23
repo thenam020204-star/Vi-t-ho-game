@@ -93,8 +93,8 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Agent: A1 (phụ thuộc T2)
   - Làm: `tools/text_extract.py`: từ `text/eng/*.txt` (bản gốc, chép vào repo) xuất `text/segments.tsv` (id ổn định `file:row:col:seg`, nguồn EN, đã dedupe theo chuỗi, đánh dấu thẻ/placeholder) — chỉ ô chứa chữ Latin, bỏ ô số/khoá Hàn. `text/glossary.tsv`: tên phép, thuộc tính, chỉ số, UI (≥150 mục, có cột ghi chú/độ dài).
   - Hoàn thành khi: round-trip (inject bản EN vào chính nó) ra byte-giống 6 file gốc; số segment duy nhất ghi vào Nhật ký.
-- [ ] T7. Dịch toàn bộ `text/segments.tsv` (1 công nhân, tuần tự từ đầu đến cuối) — 1904 key duy nhất, 61602 ký tự EN
-  - Tiến độ: đã dịch no 1..1579
+- [x] T7. Dịch toàn bộ `text/segments.tsv` (1 công nhân, tuần tự từ đầu đến cuối) — 1904 key duy nhất, 61602 ký tự EN
+  - Tiến độ: đã dịch no 1..1904 (xong)
   - Agent: A1. Đầu ra: `text/vi/vi.tsv` (cột `key`, `vi`; key = chuỗi EN y nguyên). Thứ tự dịch = cột `no` (Name, Explain, Class, Synergy, MagicCom, Ability; trong nhóm tên/UI trước, mô tả sau).
   - Quy tắc: dịch tay theo `text/glossary.tsv`; giữ ngoặc màu/`##id##`/số/%/`□`/`ㅁ`; chỉ dịch phần chữ (không có `@ ^` trong key); không `"` `\`.
   - Hoàn thành khi: `python3 -I tools/text_check.py --strict` không lỗi (cảnh báo độ rộng D11 thì rút gọn); `tools/text_inject.py` chạy ra 6 file.
@@ -130,3 +130,4 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 quản đốc: nghiệm thu T4b + T5 đạt (xem compare_i_d.png, sample_24.png). Bước tiếp: T6.
 - 2026-10-23 A1: T6 xong. text/eng/ (6 file byte-giống gốc), tools/text_{common,extract,inject,check}.py, text/segments.tsv = 1904 key duy nhất (2304 lần xuất hiện, 61602 ký tự EN: Name 259, Explain 101, Class 195, Synergy 145, MagicCom 376, Ability 828), text/glossary.tsv 255 mục. Round-trip inject(vi=en) = 6 file byte-giống. Bỏ qua: hàng ID 0 (marker Name/Type/Explain), hàng tiêu đề giữa file (ID,...), cột 특성ID ("a"). Chưa chắc hiển thị: Explain "일지 조건 이름" và "구역 효과" (đã gắn `?` ở note). T7 gộp thành 1 task theo yêu cầu người dùng.
 - 2026-10-23 quản đốc: người dùng chọn thử font f18-B (D12); Jeju-VI làm dự phòng.
+- 2026-10-23 A1: T7 xong. text/vi/vi.tsv 1904/1904 key (2 cột key,vi); text_check --strict 0 lỗi, 263 cảnh báo độ rộng D11 (chủ yếu từ ngắn bắt buộc theo glossary: Trường phái, Cửa hàng, tên Class/Spell/Artifact); text_inject ra 6 file ở work/text_vi. Sửa tools/text_check.py: thuật ngữ viết HOA (ON/OFF) khớp phân biệt hoa thường; ngoặc không cân bằng chỉ báo lỗi khi key cân bằng (key 《...》 bị tách qua " @ "). Glossary: thêm Mirage, Crater, Elite Monster, Critical Strike Multiplier (T7) + phương án phụ cho Active/Center/Left/Count/Give Up.
