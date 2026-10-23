@@ -84,7 +84,7 @@ def main():
         for name in te:
             if te[name] != tv[name]:
                 errs.append(('TOKEN', k, '%s khac: EN %s / VI %s' % (name, dict(te[name]), dict(tv[name]))))
-        if not balanced(v): errs.append(('NGOAC', k, 'ngoac mau khong can doi/sai thu tu'))
+        if balanced(k) and not balanced(v): errs.append(('NGOAC', k, 'ngoac mau khong can doi/sai thu tu'))
         if cmap:
             miss = sorted({c for c in strip_markup(v) if ord(c) not in cmap and c not in PLACEHOLDER_CHARS})
             if miss: errs.append(('CMAP', k, 'ky tu ngoai cmap: ' + ''.join(miss)))

@@ -90,7 +90,7 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Làm: `tools/text_extract.py`: từ `text/eng/*.txt` (bản gốc, chép vào repo) xuất `text/segments.tsv` (id ổn định `file:row:col:seg`, nguồn EN, đã dedupe theo chuỗi, đánh dấu thẻ/placeholder) — chỉ ô chứa chữ Latin, bỏ ô số/khoá Hàn. `text/glossary.tsv`: tên phép, thuộc tính, chỉ số, UI (≥150 mục, có cột ghi chú/độ dài).
   - Hoàn thành khi: round-trip (inject bản EN vào chính nó) ra byte-giống 6 file gốc; số segment duy nhất ghi vào Nhật ký.
 - [ ] T7. Dịch toàn bộ `text/segments.tsv` (1 công nhân, tuần tự từ đầu đến cuối) — 1904 key duy nhất, 61602 ký tự EN
-  - Tiến độ: đã dịch no 1..1099
+  - Tiến độ: đã dịch no 1..1579
   - Agent: A1. Đầu ra: `text/vi/vi.tsv` (cột `key`, `vi`; key = chuỗi EN y nguyên). Thứ tự dịch = cột `no` (Name, Explain, Class, Synergy, MagicCom, Ability; trong nhóm tên/UI trước, mô tả sau).
   - Quy tắc: dịch tay theo `text/glossary.tsv`; giữ ngoặc màu/`##id##`/số/%/`□`/`ㅁ`; chỉ dịch phần chữ (không có `@ ^` trong key); không `"` `\`.
   - Hoàn thành khi: `python3 -I tools/text_check.py --strict` không lỗi (cảnh báo độ rộng D11 thì rút gọn); `tools/text_inject.py` chạy ra 6 file.
