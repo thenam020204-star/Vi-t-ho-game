@@ -139,6 +139,7 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 A2: T10 xong. tools/build_apk.{sh,py}, tools/apk_diff.py; khoá thử nghiệm work/keys/ms-vi.jks (mk trong tools/README.md). Ra out/: MagicSurvival_VI_f18.apks 179.198.831 B, _f18_merged.apk 169.236.965 B; MagicSurvival_VI_jeju.apks 179.190.639 B, _jeju_merged.apk 169.228.773 B. Cả 4 + base/split: apksigner verify OK (v2+v3, cùng cert SHA-256 410bf8a0...), zipalign -c -p 4 OK, aapt2 badging com.vkslrzm.Zombie 612/0.9941 (split=config.arm64_v8a). apk_diff: base chỉ khác data.unity3d (+ bỏ stamp-cert-sha256), split chỉ bỏ chữ ký v1/stamp, merged so với APKEditor-merge bản gốc chỉ data.unity3d + chữ ký; bundle_diff trích từ APK gộp: đúng 1 Font + 6 TextAsset + 18 UI.Text. APKEditor merge chạy được (extractNativeLibs=true do manifest; zipalign in 'header mismatch' vô hại). Chưa test trên thiết bị (T11). Lưu ý: khác khoá ký gốc -> gỡ bản gốc trước khi cài; chữ ký v1 của split bỏ, chỉ v2+v3 (minSdk base 24).
 - 2026-10-23 quản đốc: nghiệm thu T8–T10 (tự kiểm: f18 dùng glyph pixel, jeju nét gốc, text tiếng Việt trong bundle). T11: docs/REPORT.md; chưa test thiết bị — chờ người dùng cài thử.
 - 2026-10-23 quản đốc: mở GĐ2 (mod offline) theo yêu cầu người dùng; người dùng chọn bản f18.
+- 2026-10-23 A1: T12 xong (chờ quản đốc nghiệm thu), docs/mod_analysis.md. QC: chỉ AdMob+UMP, cổng IsGDPR_ON (W_GDPR_Manager.Start 0x113FFCC ret) + rewarded duy nhất = hồi sinh (ShowRewardedAd 0x113F3BC -> Unit_RevivalON 0x1045070; cần bỏ 2 cổng internetReachability 0x1044C98/0x108B934); GPGS: callback đăng nhập chỉ log, chặn AuthenticateUser 0x114C180 + đuôi LoadLocalData 0x1171434 + 7 nút cloud; IAP là IAPButton Codeless (ret 7 hàm BaseIAPButton/CodelessIAPStoreListener, KHÔNG bật IAP_DestroyAD vì nó kích hoạt hồi sinh tự động); không có kiểm tra bản quyền/chữ ký; HP = static C_Battle_AllyUnit +0x38, hook Unit_Damage 0x1048858/Unit_Death 0x10449F0; EXP = "Mana" static Z_Database +0x9E4/+0x9E8, lên cấp = V_Ability_Manager.ManaGain 0x10FC64C, Update hook C_Battle_Manager 0x109CBF8; launcher UnityPlayerActivity (classes2.dex), minSdk 24/target 36, 2 dex, arm64 only; NDK r27c, Dobby (git clone được), platform-36 android.jar.
 
 ---
 # GIAI ĐOẠN 2: Mod chơi offline (người dùng yêu cầu 2026-10-23)
@@ -167,7 +168,7 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
   `apk_diff` chỉ được khác: `data.unity3d`, `libil2cpp.so`, `classes*.dex`/smali Activity, `lib/arm64-v8a/libmsmod.so`, chữ ký.
 
 ## Checklist GĐ2
-- [ ] T12. Phân tích mod — **Quản đốc nghiệm thu**
+- [x] T12. Phân tích mod — **Quản đốc nghiệm thu** (chờ quản đốc nghiệm thu)
   - Agent: A1
   - Làm: từ dump.cs + disasm (capstone) tìm, có bằng chứng RVA: (a) mọi điểm khởi tạo/hiện quảng cáo + callback thưởng (hồi sinh, x2 thưởng, khác);
     (b) luồng GPGS login/cloud save + chuyện gì xảy ra khi không đăng nhập; (c) IAP init + nút shop + kiểm tra "No Ads"; (d) kiểm tra bản quyền/chữ ký/integrity nếu có;
