@@ -1,0 +1,105 @@
+# PLAN: Việt hoá Magic Survival 0.9941 (Android/Unity) — font JejuHallasan theo nét f18
+
+## Mục tiêu
+Game hiển thị tiếng Việt đầy đủ khi chọn **English**. Chữ Việt có dấu được **vẽ tay lại dạng vector theo nét f18.bin**
+và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng Anh được dịch tay sang tiếng Việt.
+Đầu ra: APK cài được (bản `.apks` + bản APK gộp), ký lại.
+
+## Kết quả kiểm kê (quản đốc, 2026-10-23)
+- Nguồn: `Magic_Survival_0.9941.zip/.z01–.z06` (zip chia phần) → `Magic Survival_0.9941.apks` → `base.apk` (194 MB) + `split_config.arm64_v8a.apk`.
+  - `zip -s 0` báo lỗi giả; dữ liệu **nguyên vẹn** (inflate nối 7 phần, CRC 63ccbe18 khớp). Giải nén bằng Python zlib (xem T1).
+- Unity **2022.3.62f3**, IL2CPP arm64. Tài nguyên trong `assets/bin/Data/data.unity3d` (UnityPy đọc được).
+- 7 Font TTF động trong `sharedassets0.assets` (path_id): 30 NotoSansJP-Medium, 31 NotoSansSC-Medium, 32 NotoSansDisplay-Medium,
+  **33 JejuHallasan**, 34 NotoSansSC-Regular, 35 NotoSansDisplay-Bold, 36 NotoSansJP-Regular.
+  - 6 font Noto **đã đủ** chữ Việt. **JejuHallasan thiếu 133/134 chữ Việt** (có `đ`, `Ð`, `ı`; không có Latin-1 có dấu, không có dấu tổ hợp U+03xx).
+  - Jeju: UPM 1000, ascent 800, descent -200, x-height ≈500, cap ≈653–668, có hinting TT (fpgm/prep/cvt).
+- UI: 654 `UnityEngine.UI.Text`, **639 dùng JejuHallasan** (cỡ 17–30), 9 NotoDisplay-M, 4 SC-M, 2 JP-M. Không dùng TMP font asset.
+- `Z_Database` (level0 path 110, level1 path 7628) giữ mảng font theo thứ tự [33,35,32,30,36,31,34] → **code đổi font theo ngôn ngữ lúc chạy** (chưa biết English dùng font nào → T2).
+- Text: 59 TextAsset; 6 file tiếng Anh `eng_Dictionary_{Ability,Class,Explain,MagicCom,Name,Synergy}` (≈335 KB, CSV, UTF-8 BOM, LF).
+  Ô có thẻ `<color=#...>`, `{0}`, phân cách `@` `^` `《》` `` ` ``; có ô tiếng Hàn là **khoá dữ liệu** (vd `마법`, `성장`) — không được dịch.
+- f18.bin: `writeUTF(charset 227)` · `byte height=18` · `byte width[227]` · atlas 1bpp LSB-first. Có đủ 134 chữ Việt + `…`.
+- Mạng: GitHub releases, Maven, dl.google.com dùng được.
+
+## Phạm vi
+- Trong phạm vi: font Jeju (+ đảm bảo font English thực dùng có chữ Việt), dịch 6 file eng_*, chuỗi tiếng Anh cứng trong scene/IL2CPP nếu có (T2 kiểm kê, quản đốc chốt), đóng gói APK.
+- Ngoài phạm vi: Hàn/Nhật/Trung/Nga…; ảnh có chữ (nếu T2 thấy nhiều thì ghi Vướng mắc); sửa logic game; Google Play/IAP/GPGS sau khi ký lại.
+
+## Quyết định thiết kế (KHÔNG tự đổi khi implement)
+- D1. Thay slot **English**. Không đổi tên file/TextAsset, không đổi số dòng/số cột/ID; chỉ thay nội dung ô dịch được.
+- D2. Glyph: **vẽ tay vector theo nét f18**, KHÔNG vector hoá ô pixel. Cụ thể:
+  - Thân chữ = glyph gốc của Jeju (a e i o u y A E I O U Y, `ı` cho i có dấu, `Ð` cho `Đ`, `d`+gạch → Jeju đã có `đ`).
+  - Dấu (sắc, huyền, hỏi, ngã, nặng, mũ, trăng, móc ơ/ư) = contour vector vẽ tay (điểm on/off-curve quadratic, ghi trong `font/marks.py`),
+    hình dáng, độ nghiêng, độ cao tương đối và **bố cục dấu kép (mũ+sắc, trăng+ngã…) lấy theo f18** (đọc bằng `tools/f18.py`).
+    Độ dày nét dấu ăn theo độ dày nét Jeju (đo thân `l`/`i`).
+  - "Từng cỡ" = bố cục riêng cho **chữ thường / chữ hoa / dấu kép** như f18 (chữ hoa dấu ép sát vì chỉ còn ~147 đơn vị trên cap).
+  - Glyph mới = **composite** (component thân Jeju + component dấu) → giữ nguyên nét gốc, file nhỏ.
+- D3. **Không đổi metrics dọc** (hhea/OS2 ascent/descent/lineGap, UPM) để không xô layout. Không đổi glyph/cmap có sẵn.
+- D4. Chỉ thay `m_FontData` của Font path 33 (và font khác nếu T2 chứng minh English dùng font thiếu glyph). Không đổi path_id, tên, fallback.
+- D5. Text NFC (dựng sẵn), không dùng dấu tổ hợp. Cách xử lý dấu phẩy/ngoặc kép theo **parser thật** của game (T2 xác định); trước khi biết, không chèn `,` `"` mới.
+- D6. Không sửa `libil2cpp.so`. Nếu phải sửa chuỗi cứng thì sửa `global-metadata.dat` (string literal), cần quản đốc duyệt.
+- D7. Đóng gói: UnityPy save bundle (giữ kiểu nén gốc), thay entry trong base.apk **giữ nguyên cách lưu (stored/deflate) và căn lề** như gốc, xoá chữ ký cũ, `zipalign -p 4`, `apksigner` v2+v3, **cùng một khoá** cho base + split. Thêm APK gộp bằng APKEditor (REAndroid).
+- D8. Cấu trúc repo:
+  - `tools/` script Python/Shell (chạy `python3 -I`), `font/` nguồn glyph + ảnh preview, `text/eng/` gốc, `text/vi/` bản dịch, `docs/` báo cáo/mapping.
+  - `work/` (game giải nén, bản build trung gian) và `out/` (APK) **gitignore** — quá lớn cho git.
+- D9. Mỗi thay đổi nhị phân phải có diff: font (cmap/glyph thêm, không đổi glyph cũ), bundle (chỉ object thay đổi đúng như dự kiến), APK (danh sách entry khác nhau).
+- D10. Dịch tay (Sonnet 5.5), không dịch máy; bảng thuật ngữ `text/glossary.tsv` bắt buộc dùng thống nhất.
+
+## Ràng buộc và edge case
+- Nguồn upload: `/root/.claude/uploads/9e39a733-fcc8-5d12-bac4-5922f80b6e8d/` (tên file có tiền tố hash; tên thật sau dấu `-`).
+- Không đụng cột số, ID, khoá tiếng Hàn, thẻ `<color=…>`, `{n}`, `@ ^ 《 》 \``, khoảng trắng đuôi kiểu `0 ` (giữ nguyên byte).
+- Chuỗi tiếng Việt dài hơn tiếng Anh → nút/ô chật: dùng từ ngắn gọn; Unity Text có thể Best Fit/overflow (T2 ghi lại thiết lập).
+- Dấu chữ hoa vượt ascent 800 → không bị clip trong UI Text nhưng có thể chạm dòng trên: giữ trong ≤ ~950 đơn vị.
+- Game có thể kiểm tra chữ ký / Play Integrity: nếu ký lại làm game thoát thì ghi Vướng mắc.
+- Ký tự thật dùng trong bản dịch phải ⊆ cmap font English thực dùng (script kiểm tra T9).
+
+## Checklist
+- [ ] T1. Dựng môi trường + giải nén chuẩn
+  - Agent: A1
+  - Làm: `.gitignore` (`work/ out/ *.apk *.apks`); `tools/unpack.py` nối 7 phần → inflate → `work/game.apks` → `work/base.apk`, `work/split_config.arm64_v8a.apk`, giải `assets/` ra `work/ex/`. Cài `UnityPy fonttools freetype-py`; tải `apktool`/`APKEditor`, Android build-tools (`zipalign`, `apksigner`), Il2CppDumper (hoặc Cpp2IL) vào `work/tools/`. Ghi `tools/README.md` (lệnh tái lập).
+  - Hoàn thành khi: chạy lại `tools/unpack.py` ra đúng CRC 63ccbe18; `zipalign`/`apksigner`/dumper chạy được `--help`.
+- [ ] T2. Phân tích IL2CPP + scene — **Quản đốc nghiệm thu**
+  - Agent: A1
+  - Làm: dump IL2CPP (dump.cs + script.json). Tìm trong `Z_Database` / code đổi ngôn ngữ: **English dùng font index nào**; cách đọc CSV (split `,`? xử lý `"`? `\n`?); ý nghĩa `@ ^ 《》 \``; Text có `resizeTextForBestFit`/overflow không. Kiểm kê chuỗi tiếng Anh cứng: m_Text trong scene (UI.Text) và string literal trong metadata xuất hiện trên UI. Đếm ảnh (Texture/Sprite) có chữ tiếng Anh (chỉ liệt kê tên).
+  - File: `docs/analysis.md` (có bằng chứng: tên method/RVA, offset), `tools/dump_texts.py`.
+  - Hoàn thành khi: `docs/analysis.md` trả lời đủ 5 câu trên kèm bằng chứng; ghi "đề xuất" cho D4/D5/D6 nếu cần đổi (không tự đổi).
+- [ ] T3. Đọc f18 + đo Jeju + tách dấu
+  - Agent: A1 (phụ thuộc T1)
+  - Làm: `tools/f18.py` (đọc .bin, in ASCII từng glyph, hàm lấy bitmap theo ký tự); `tools/marks_from_f18.py`: với mỗi chữ Việt, trừ bitmap thân chữ → bitmap dấu + vị trí (hàng/cột so với thân); xuất `docs/f18_marks.md` (ASCII từng loại dấu, bảng vị trí chữ thường/hoa/dấu kép). `tools/jeju_metrics.py`: stem width, x-height, cap, yMax a/e/o/u/y/A…, bbox `ı`, `Ð`.
+  - Hoàn thành khi: `docs/f18_marks.md` đủ 8 loại dấu + mọi tổ hợp kép có trong f18; số liệu Jeju in ra file.
+- [ ] T4. Vẽ tay contour dấu theo nét f18 — **Quản đốc nghiệm thu**
+  - Agent: A1 (phụ thuộc T3)
+  - Làm: `font/marks.py` khai báo contour vector (đơn vị font, quadratic) cho: acute, grave, hook, tilde, dotbelow, circumflex, breve, horn_o, horn_u, và biến thể hẹp/thấp cho chữ hoa + tổ hợp kép (vd circumflex_acute) đúng bố cục f18. Nét dày theo stem Jeju. `font/layout.py`: bảng ký tự → (thân, [dấu, dx, dy]).
+  - Hoàn thành khi: `tools/preview_marks.py` xuất `font/preview/marks.png` (dấu f18 phóng to cạnh dấu vector) để quản đốc so.
+- [ ] T5. Build JejuHallasan-VI.ttf
+  - Agent: A1 (phụ thuộc T4)
+  - Làm: `tools/build_font.py`: thêm glyph dấu + 133 glyph composite + cmap (cả `Đ`→ composite từ `Ð`), hmtx (advance = advance thân chữ), giữ nguyên mọi glyph/metrics cũ; `fontTools` lưu → `work/font/JejuHallasan-VI.ttf`; kiểm tra bằng `ttx`/FreeType load OK. `tools/font_diff.py`: liệt kê glyph/cmap thêm, xác nhận glyph cũ byte-giống.
+  - Hoàn thành khi: 134/134 chữ Việt có trong cmap; font_diff "0 glyph cũ thay đổi"; `font/preview/sample_{17,18,24,30}.png` render câu mẫu (FreeType, như Unity) + bản so Jeju gốc vs NotoDisplay.
+- [ ] T6. Bảng thuật ngữ + trích text
+  - Agent: A1 (phụ thuộc T2)
+  - Làm: `tools/text_extract.py`: từ `text/eng/*.txt` (bản gốc, chép vào repo) xuất `text/segments.tsv` (id ổn định `file:row:col:seg`, nguồn EN, đã dedupe theo chuỗi, đánh dấu thẻ/placeholder) — chỉ ô chứa chữ Latin, bỏ ô số/khoá Hàn. `text/glossary.tsv`: tên phép, thuộc tính, chỉ số, UI (≥150 mục, có cột ghi chú/độ dài).
+  - Hoàn thành khi: round-trip (inject bản EN vào chính nó) ra byte-giống 6 file gốc; số segment duy nhất ghi vào Nhật ký.
+- [ ] T7a–T7n. Dịch tay theo lô (Sonnet 5.5) — mỗi lô ≈ 250 segment duy nhất
+  - Agent: A1 (tuần tự từng lô); quản đốc tạo danh sách lô cụ thể sau T6 (theo file: Name, Explain, Class, Synergy, MagicCom, Ability).
+  - File: `text/vi/batch_XX.tsv` (id, en, vi).
+  - Hoàn thành khi: `tools/text_check.py` qua: giữ nguyên thẻ/placeholder/phân cách, không ký tự ngoài cmap, NFC, đúng glossary, không ô rỗng.
+- [ ] T8. Chuỗi cứng scene/metadata (theo kết luận T2, nếu quản đốc duyệt)
+  - Agent: A1
+  - Hoàn thành khi: chuỗi dịch nằm trong `text/vi/hardcoded.tsv` và tool patch có diff.
+- [ ] T9. Patch bundle — **Quản đốc nghiệm thu**
+  - Agent: A1 (phụ thuộc T5, T7, T8)
+  - Làm: `tools/patch_bundle.py`: thay `m_FontData` font 33 (+ font khác theo T2), thay 6 TextAsset eng_* bằng bản `text_inject.py`; save `work/build/data.unity3d`. `tools/bundle_diff.py`: liệt kê object đổi (phải đúng 1 Font + 6 TextAsset [+ T8]).
+  - Hoàn thành khi: UnityPy mở lại bundle mới, đọc font/text đúng; bundle_diff khớp dự kiến.
+- [ ] T10. Đóng gói APK + ký — **Quản đốc nghiệm thu**
+  - Agent: A1 (phụ thuộc T9)
+  - Làm: `tools/build_apk.sh` theo D7 → `out/MagicSurvival_VI.apks` (base+split ký cùng khoá) và `out/MagicSurvival_VI_merged.apk`. `apk_diff`: chỉ `data.unity3d` (+metadata nếu T8) và META-INF khác.
+  - Hoàn thành khi: `apksigner verify --verbose` OK cả 2; `zipalign -c -p 4` OK; `aapt2 dump badging` OK.
+- [ ] T11. Kiểm thử cuối + báo cáo
+  - Agent: A1
+  - Làm: nếu có thể chạy Android emulator headless (x86_64 không chạy arm64 IL2CPP → nhiều khả năng không) thì thử; nếu không, ghi rõ "chưa test thiết bị". `docs/REPORT.md`: thay đổi, cách cài (SAI / APK gộp), lưu ý ký lại.
+  - Hoàn thành khi: REPORT.md đủ; commit + push nhánh `ccr-1124ae01-q5nel0` (không push APK/work).
+
+## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
+- (trống)
+
+## Nhật ký
+- 2026-10-23 quản đốc: kiểm kê xong, lập PLAN.md. Người dùng chốt: glyph vẽ tay theo nét f18; thay English; font + dịch toàn bộ.
