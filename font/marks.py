@@ -20,25 +20,60 @@ Dau cam ngoai khung: dau sac nghieng '/', huyen '\\' ; dau sac/huyen o f18 rong 
 """
 
 # ----------------------------------------------------------------------------------------------------------------
-# SAC (acute): net nghieng /, day nho, dau to, dau cat bang nhu net co Jeju.
-ACUTE = {
-    'R': [[(-62, 12), (-34, 100, 0), (-4, 166), (2, 178, 0), (16, 176), (60, 176), (82, 176, 0), (82, 158), (64, 86, 0),
-         (22, 6), (12, -3, 0), (-4, 0), (-50, 2), (-68, 4, 0)]],
-    'C': [[(-51, 10), (-28, 82, 0), (-3, 136), (2, 146, 0), (13, 144), (49, 144), (67, 144, 0), (67, 130), (52, 71, 0),
-         (18, 5), (10, -2, 0), (-3, 0), (-41, 2), (-56, 3, 0)]],
-    'S': [[(-45, 9), (-24, 72, 0), (-3, 120), (1, 128, 0), (12, 127), (43, 127), (59, 127, 0), (59, 114), (46, 62, 0),
-         (16, 4), (9, -2, 0), (-3, 0), (-36, 1), (-49, 3, 0)]],
-}
+# SAC (acute): net co thuon: dau tren to bo tron, duoi nhon dan.
+import math
 
-# HUYEN (grave): doi xung sac, hai dau lech nhe.
-GRAVE = {
-    'R': [[(64, 12), (36, 100, 0), (6, 166), (0, 178, 0), (-14, 176), (-62, 176), (-86, 176, 0), (-84, 156), (-66, 86,
-         0), (-24, 6), (-14, -3, 0), (2, 0), (52, 2), (70, 4, 0)]],
-    'C': [[(52, 10), (30, 82, 0), (5, 136), (0, 146, 0), (-11, 144), (-51, 144), (-71, 144, 0), (-69, 128), (-54, 71, 0),
-         (-20, 5), (-11, -2, 0), (2, 0), (43, 2), (57, 3, 0)]],
-    'S': [[(46, 9), (26, 72, 0), (4, 120), (0, 128, 0), (-10, 127), (-45, 127), (-62, 127, 0), (-60, 112), (-48, 62, 0),
-         (-17, 4), (-10, -2, 0), (1, 0), (37, 1), (50, 3, 0)]],
-}
+
+def _arc_pts(c, r, a0, a1):
+    """Cung tron tam c, ban kinh r, goc a0..a1 (do), buoc <= 90: [on, off, on, ..., on] (quadratic)."""
+    n = max(1, int(math.ceil(abs(a1 - a0) / 90.0 - 1e-9)))
+    out = []
+    for i in range(n):
+        t0 = math.radians(a0 + (a1 - a0) * i / n)
+        t1 = math.radians(a0 + (a1 - a0) * (i + 1) / n)
+        tm = (t0 + t1) / 2
+        k = r / math.cos((t1 - t0) / 2)
+        if i == 0:
+            out.append((c[0] + r * math.cos(t0), c[1] + r * math.sin(t0)))
+        out.append((c[0] + k * math.cos(tm), c[1] + k * math.sin(tm), 0))
+        out.append((c[0] + r * math.cos(t1), c[1] + r * math.sin(t1)))
+    return out
+
+
+def _rnd(pts):
+    return [tuple(round(v) for v in p[:2]) + tuple(p[2:]) for p in pts]
+
+
+def brush(t, c, r, tw=7, belly=8):
+    """Net co thuon: duoi nhon t (nua be rong tw), dau tron tam c ban kinh r; belly = do phinh canh."""
+    ux, uy = c[0] - t[0], c[1] - t[1]
+    L = math.hypot(ux, uy)
+    ux, uy = ux / L, uy / L
+    nx, ny = -uy, ux
+    ang = math.degrees(math.atan2(uy, ux))
+    tl = (t[0] + nx * tw, t[1] + ny * tw)
+    tr = (t[0] - nx * tw, t[1] - ny * tw)
+    pr = (c[0] - nx * r, c[1] - ny * r)
+    pl = (c[0] + nx * r, c[1] + ny * r)
+    mr = ((tr[0] + pr[0]) / 2 - nx * belly, (tr[1] + pr[1]) / 2 - ny * belly, 0)
+    ml = ((tl[0] + pl[0]) / 2 + nx * belly, (tl[1] + pl[1]) / 2 + ny * belly, 0)
+    arc = _arc_pts(c, r, ang - 90, ang + 90)
+    return _rnd([tr, mr] + arc + [ml, tl])
+
+
+def _scale(c, sx, sy):
+    return [(round(p[0] * sx), round(p[1] * sy)) + tuple(p[2:]) for p in c]
+
+
+def _mirror(c):
+    return [(-p[0],) + tuple(p[1:]) for p in c]
+
+
+_AC = brush((-58, 4), (36, 132), 46)
+ACUTE = {'R': [_AC], 'C': [_scale(_AC, .82, .82)], 'S': [_scale(_AC, .72, .72)]}
+
+# HUYEN (grave): doi xung sac.
+GRAVE = {k: [_mirror(c) for c in v] for k, v in ACUTE.items()}
 
 # HOI (hook): cung cuon len roi quay xuong, duoi huong xuong (f18 `##. / ..# / .#.`).
 HOOK = {
@@ -53,6 +88,23 @@ HOOK = {
          (21, 49, 0), (24, 26), (24, 11, 0), (11, 1), (3, -3, 0), (-8, 4), (-18, 16, 0), (-18, 36), (-18, 60,
          0), (6, 61), (21, 74, 0), (21, 91), (20, 104, 0), (6, 106), (-6, 104, 0), (-10, 96), (-10, 89)]],
 }
+
+def _round_cap(c):
+    """Bo tron dau cat thang (diem dau <-> diem cuoi) thanh nua tron huong xuong."""
+    A, B = c[0], c[-1]
+    mx, my = (A[0] + B[0]) / 2, (A[1] + B[1]) / 2
+    ex, ey = B[0] - A[0], B[1] - A[1]
+    r = math.hypot(ex, ey) / 2
+    nx, ny = ey, -ex
+    if ny > 0:
+        nx, ny = -nx, -ny
+    k = math.hypot(nx, ny)
+    nx, ny = nx / k * r * 0.85, ny / k * r * 0.85
+    return _rnd(c + [(B[0] + nx, B[1] + ny, 0), (mx + nx, my + ny), (A[0] + nx, A[1] + ny, 0)])
+
+
+for _k, _c in HOOK.items():
+    HOOK[_k] = [_round_cap(_c[0])]
 
 # NGA (tilde): song 2 nhip, dau trai thap, dau phai cao, net deu (f18 `.#.# / #.#.`).
 TILDE = {
@@ -96,12 +148,9 @@ BREVE = {
 }
 
 # MOC (horn): goc (0,0) = diem tren mep phai-tren than o/u; phan am nam trong than chu de dinh lien.
-HORN = {
-    'R': [[(-50, -42), (20, -46, 0), (54, -22), (84, 10, 0), (90, 58), (92, 100, 0), (70, 122), (52, 108, 0), (38, 70),
-         (22, 40, 0), (-50, 36)]],
-    'C': [[(-46, -39), (19, -43, 0), (50, -20), (78, 9, 0), (84, 54), (86, 93, 0), (65, 113), (48, 100, 0), (35, 65),
-         (20, 37, 0), (-46, 33)]],
-}
+_HR = _rnd([(-72, -44), (20, -54, 0), (62, -28), (94, 6, 0), (98, 58)] + _arc_pts((74, 104), 24, 0, 180)
+           + [(44, 60, 0), (14, 40), (-20, 30, 0), (-72, 28)])
+HORN = {'R': [_HR], 'C': [_scale(_HR, .94, .94)]}
 HORN['S'] = HORN['C']
 
 MARKS = {
@@ -125,9 +174,42 @@ def orient(c):
     return c if a < 0 else c[::-1]
 
 
+def _curve_pts(c, n=12):
+    """Diem tren duong cong that (lay mau quadratic) cua contour c."""
+    pts = [(p[0], p[1], len(p) < 3) for p in c]
+    k = next(i for i, p in enumerate(pts) if p[2])
+    pts = pts[k:] + pts[:k]
+    out, cur, offs = [pts[0][:2]], pts[0][:2], []
+    for p in pts[1:] + [pts[0]]:
+        if not p[2]:
+            offs.append(p[:2])
+            continue
+        q0 = cur
+        for j, o in enumerate(offs):
+            q2 = p[:2] if j == len(offs) - 1 else ((o[0] + offs[j + 1][0]) / 2, (o[1] + offs[j + 1][1]) / 2)
+            for t in range(1, n + 1):
+                u = t / n
+                out.append(((1 - u) ** 2 * q0[0] + 2 * (1 - u) * u * o[0] + u * u * q2[0],
+                            (1 - u) ** 2 * q0[1] + 2 * (1 - u) * u * o[1] + u * u * q2[1]))
+            q0 = q2
+        offs = []
+        out.append(p[:2])
+        cur = p[:2]
+    return out
+
+
 def bbox(name, variant):
+    """Khung bao theo moi diem (ke ca off-curve): layout dung de xep dau chong (giu nguyen bo cuc T4)."""
     xs = [p[0] for c in contours(name, variant) for p in c]
     ys = [p[1] for c in contours(name, variant) for p in c]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def true_bbox(name, variant):
+    """Khung bao that cua duong cong (khong tinh diem dieu khien off-curve)."""
+    pts = [q for c in contours(name, variant) for q in _curve_pts(c)]
+    xs = [p[0] for p in pts]
+    ys = [p[1] for p in pts]
     return min(xs), min(ys), max(xs), max(ys)
 
 

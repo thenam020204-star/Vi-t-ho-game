@@ -9,9 +9,12 @@ Tam ngang: tam bbox than chu + lech quang hoc (f18: sac/huyen lech +0..0.5px pha
 """
 import json
 import os
+import sys
 import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from extra import IDOTLESS, IDOTLESS_BBOX   # noqa: E402
 M = json.load(open(os.path.join(HERE, '..', 'docs', 'jeju_metrics.json')))
 
 # --- hang so quy doi (don vi font) --------------------------------------------------------------------------------
@@ -29,6 +32,8 @@ COMB = {0x300: 'grave', 0x301: 'acute', 0x303: 'tilde', 0x309: 'hook', 0x323: 'd
 
 
 def _bb(ch):
+    if ch == IDOTLESS:
+        return IDOTLESS_BBOX
     return M[ch]['bbox']      # xmin, ymin, xmax, ymax
 
 
@@ -36,12 +41,10 @@ def body_of(ch):
     """Ky tu Jeju dung lam than."""
     d = unicodedata.normalize('NFD', ch)
     base = d[0]
-    if ch == 'Đ':
-        return 'Ð'
-    if ch == 'đ':
-        return 'đ'
+    if ch in 'đĐ':
+        return 'd' if ch == 'đ' else 'D'      # D3a: gach vector (extra.py) thay glyph Jeju lac phong cach
     if base == 'i':
-        return 'ı'
+        return IDOTLESS                        # D3a: i Jeju bo cham, khong dung ı
     return base
 
 
@@ -50,6 +53,8 @@ def place(ch):
     d = unicodedata.normalize('NFD', ch)
     ms = [COMB[ord(c)] for c in d[1:]]
     body = body_of(ch)
+    if ch in 'đĐ':
+        return body, [('dbar' if ch == 'đ' else 'Dbar', 'R', 0, 0)]
     if not ms:
         return body, []
     upper = d[0].isupper()

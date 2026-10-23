@@ -77,11 +77,11 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Agent: A1 (phụ thuộc T3)
   - Làm: `font/marks.py` khai báo contour vector (đơn vị font, quadratic) cho: acute, grave, hook, tilde, dotbelow, circumflex, breve, horn_o, horn_u, và biến thể hẹp/thấp cho chữ hoa + tổ hợp kép (vd circumflex_acute) đúng bố cục f18. Nét dày theo stem Jeju. `font/layout.py`: bảng ký tự → (thân, [dấu, dx, dy]).
   - Hoàn thành khi: `tools/preview_marks.py` xuất `font/preview/marks.png` (dấu f18 phóng to cạnh dấu vector) để quản đốc so.
-- [ ] T4b. Sửa sau nghiệm thu T4 — **Quản đốc nghiệm thu**
+- [x] T4b. Sửa sau nghiệm thu T4 — **Quản đốc nghiệm thu** (chờ quản đốc nghiệm thu)
   - Agent: A1
   - Làm: (1) glyph mới `idotless.jeju` = contour của `i` Jeju bỏ contour chấm (contour có yMin cao nhất), dùng làm thân `í ì ỉ ĩ ị Í…` thay `ı` (chữ hoa vẫn dùng `I`); (2) `đ` = `d` Jeju + gạch vector nét cọ đặt qua thân phải ở vùng ascender như f18; `Đ` = `D` Jeju + gạch ngang qua thân trái; (3) gọt dấu sắc/huyền thành nét cọ thuôn (đầu trên to bo tròn, đuôi dưới nhọn), móc hỏi bo đầu trái, móc ơ/ư nối thuôn vào thân (không đầu vuông), giữ kích thước/vị trí f18.
   - Hoàn thành khi: preview cập nhật (`glyphs_all.png`, `marks.png`) + thêm `font/preview/compare_i_d.png` (trước/sau cho i có dấu, đ, Đ).
-- [ ] T5. Build JejuHallasan-VI.ttf
+- [x] T5. Build JejuHallasan-VI.ttf
   - Agent: A1 (phụ thuộc T4)
   - Làm: `tools/build_font.py`: thêm glyph dấu + 133 glyph composite + cmap (cả `Đ`→ composite từ `Ð`), hmtx (advance = advance thân chữ), giữ nguyên mọi glyph/metrics cũ; `fontTools` lưu → `work/font/JejuHallasan-VI.ttf`; kiểm tra bằng `ttx`/FreeType load OK. `tools/font_diff.py`: liệt kê glyph/cmap thêm, xác nhận glyph cũ byte-giống.
   - Hoàn thành khi: 134/134 chữ Việt có trong cmap; font_diff "0 glyph cũ thay đổi"; `font/preview/sample_{17,18,24,30}.png` render câu mẫu (FreeType, như Unity) + bản so Jeju gốc vs NotoDisplay.
@@ -120,3 +120,5 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 A1: T3 xong. tools/f18.py, tools/marks_from_f18.py -> docs/f18_marks.md/.json (132 chữ tách dấu OK, đ/Đ có thân riêng); tools/jeju_metrics.py -> docs/jeju_metrics.txt/.json. Jeju: x-height 500 (a cao 556), cap 627-688, stem ~100-148, ı bbox -52..457 (hình chữ nhật hình học, KHÔNG cùng phong cách Jeju), Ð cũng nét đơn hình học.
 - 2026-10-23 A1: T4 xong (chờ quản đốc nghiệm thu). font/marks.py (8 dấu x 3 cỡ R/C/S, vẽ tay), font/layout.py (134 chữ), tools/preview_marks.py -> font/preview/{marks,marks_context,glyphs_all}.png. Dấu hoa kép max 949, nặng min -198. Lưu ý: ı và Ð lệch phong cách Jeju (i có dấu, Đ hiện rõ) — đề xuất vẽ Đ = D Jeju + gạch vector, i = thân l cắt; chờ quyết.
 - 2026-10-23 quản đốc: nghiệm thu T4: đạt bố cục; yêu cầu sửa T4b (thân i, đ/Đ, gọt nét dấu). Thêm D3a.
+- 2026-10-23 A1: T4b xong (chờ quản đốc nghiệm thu). font/extra.py (idotless.jeju từ contour thân i Jeju bỏ chấm; gạch đ/Đ nét cọ theo f18), marks.py: sắc/huyền = nét cọ thuôn (đầu tròn, đuôi nhọn), hỏi bo tròn đầu trái, móc ơ/ư thuôn đầu tròn; ảnh font/preview/{glyphs_all,marks,compare_i_d}.png (tools/compare_i_d.py).
+- 2026-10-23 A1: T5 xong. tools/build_font.py -> work/font/JejuHallasan-VI.ttf (6660012 -> 6667056 B, +158 glyph: 1 thân i, 22 dấu/gạch, 135 composite; cmap +133, đổi U+0111). font_diff: 0 glyph cũ đổi byte, 0 hmtx cũ đổi, kern/cvt/fpgm/prep/gasp/name/post/OS2 byte-giống; verify_font.py: 134/134, FreeType 17/18/24/30 (hinted+nohint) OK, ots PASS; ảnh font/preview/sample_{17,18,24,30}.png (tools/make_samples.py). post giữ format 3.0 (không lưu tên glyph); OS/2 unicode range không đổi.

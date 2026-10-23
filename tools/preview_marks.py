@@ -15,6 +15,7 @@ from fontTools import subset
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 
 import marks
+import extra
 import layout
 from f18 import F18
 
@@ -54,18 +55,23 @@ def build_preview_ttf():
             gname = 'mk_%s_%s' % (name, v)
             new[gname] = pen.glyph()
     cm = {}
+    idg = extra.make_idotless(f)
+    new[extra.IDOTLESS] = idg
+    cm0 = {}
     for ch, (body, ms) in layout.table().items():
         gname = 'u%04X' % ord(ch)
         pen = TTGlyphPen(_AnyGS())
-        pen.addComponent(cmap[ord(body)], (1, 0, 0, 1, 0, 0))
+        bn = body if body == extra.IDOTLESS else cmap[ord(body)]
+        cm0[ch] = bn
+        pen.addComponent(bn, (1, 0, 0, 1, 0, 0))
         for (m, v, dx, dy) in ms:
             pen.addComponent('mk_%s_%s' % (m, v if v in 'RCS' else 'R'), (1, 0, 0, 1, round(dx), round(dy)))
         new[gname] = pen.glyph()
-        cm[ord(ch)] = (gname, hmtx[cmap[ord(body)]][0])
+        cm[ord(ch)] = (gname, 352 if body == extra.IDOTLESS else hmtx[cmap[ord(body)]][0])
     for gname, g in new.items():
         order.append(gname)
         glyf.glyphs[gname] = g
-        hmtx.metrics[gname] = (0, 0)
+        hmtx.metrics[gname] = (352, 95) if gname == extra.IDOTLESS else (0, 0)
     for ch, (gname, adv) in cm.items():
         hmtx.metrics[gname] = (adv, 0)
     f.setGlyphOrder(order)
@@ -287,7 +293,7 @@ def make_glyphs_all():
             d.line([(x, yy + 110), (x + cell_w - 12, yy + 110)], fill=(235, 235, 245))
             draw_ttf_text(d, (x, yy), ch, SZ)
             body = layout.body_of(ch)
-            gc = {'ı': 'i'}.get(body, body)
+            gc = {extra.IDOTLESS: 'i'}.get(body, body)
             if gc != ch:
                 draw_ttf_text(d, (x + 100, yy), body, SZ, fill=(150, 150, 165))
             else:
