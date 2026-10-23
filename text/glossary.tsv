@@ -51,9 +51,9 @@ Master	Bậc thầy	UI	Nhãn cấp tinh thông tối đa
 Mastery	Tinh thông	UI	
 Rank	Hạng	UI	
 Tap	Chạm	UI	
-Left	Trái	UI	
+Left	Trái|Rời	UI	
 Right	Phải	UI	
-Center	Giữa	UI	
+Center	Giữa|Trung tâm	UI	
 Small	Nhỏ	UI	
 Medium	Vừa	UI	
 Big	Lớn	UI	
@@ -149,7 +149,7 @@ Combination Magic	Phép hợp thể	UI	Magic Combination dùng cùng bản dịc
 Magic Combination	Phép hợp thể	UI	
 Combination	Hợp thể	UI	
 Passive	Bị động	UI	
-Active	Chủ động	UI	
+Active	Chủ động|Kích hoạt	UI	
 Magic	Phép	UI	Danh từ chung: "phép thuật"; All Magic -> mọi phép
 All Magic	Mọi phép	Stat	
 Spell	Phép	UI	

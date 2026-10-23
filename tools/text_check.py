@@ -22,7 +22,7 @@ def gloss_hits(en, terms):
     """cac thuat ngu glossary xuat hien trong EN (khop tu nguyen, cho phep s/es; thuat ngu dai che thuat ngu ngan)"""
     s = en; hits = []
     for t, vi in terms:
-        pat = re.compile(r'(?<![A-Za-z])' + re.escape(t) + r'(?:e?s)?(?![A-Za-z])', re.I)
+        pat = re.compile(r'(?<![A-Za-z])' + re.escape(t) + r'(?:e?s)?(?![A-Za-z])', 0 if (t.isupper() and len(t) > 1 and t not in ('HP', 'ATK')) else re.I)
         if pat.search(s):
             hits.append((t, vi))
             s = pat.sub(' ' * 3, s)
