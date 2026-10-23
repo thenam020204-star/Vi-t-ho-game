@@ -40,6 +40,7 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   **cấm** `"` lẻ và `\` trong bản dịch (parser xoá `\`); không xuống dòng thật — xuống dòng dùng ` @ `; giữ nguyên số lượng `^`, `` ` ``,
   các cặp ngoặc màu `[] 【】 〈〉 『』 《》 〔〕 {}` và `##id##`; không thêm cặp ngoặc màu mới (dùng `( )` thường thay cho ngoặc vuông).
   Không sửa dòng header (khoá Hàn), không dịch ô khoá Hàn.
+- D6b. (người dùng, 2026-10-23) **KHÔNG sửa chuỗi trong code**: không đụng `global-metadata.dat` lẫn `libil2cpp.so`; các chuỗi cứng (Loading…, thông báo cập nhật, Please update) giữ tiếng Anh. Phần duyệt metadata ở D6 bị huỷ; chỉ còn sửa `m_Text` scene.
 - D6. (chốt sau T2) Không sửa `libil2cpp.so`. **Duyệt** sửa các chuỗi cứng tiếng Anh hiển thị (Loading/Uninstalling, thông báo cập nhật…) trong
   `global-metadata.dat` string literal (T8) với điều kiện: chỉ đổi literal data/bảng literal, mọi phần khác byte-giống, có diff. **Duyệt** sửa `m_Text`
   của các UI.Text có chữ Latin trong scene (vô hại nếu bị ghi đè lúc chạy).
@@ -132,3 +133,4 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 quản đốc: người dùng chọn thử font f18-B (D12); Jeju-VI làm dự phòng.
 - 2026-10-23 A1: T7 xong. text/vi/vi.tsv 1904/1904 key (2 cột key,vi); text_check --strict 0 lỗi, 263 cảnh báo độ rộng D11 (chủ yếu từ ngắn bắt buộc theo glossary: Trường phái, Cửa hàng, tên Class/Spell/Artifact); text_inject ra 6 file ở work/text_vi. Sửa tools/text_check.py: thuật ngữ viết HOA (ON/OFF) khớp phân biệt hoa thường; ngoặc không cân bằng chỉ báo lỗi khi key cân bằng (key 《...》 bị tách qua " @ "). Glossary: thêm Mirage, Crater, Elite Monster, Critical Strike Multiplier (T7) + phương án phụ cho Active/Center/Left/Count/Give Up.
 - 2026-10-23 quản đốc: nghiệm thu T7 (người dùng đã duyệt bản dịch). 264 cảnh báo độ rộng chấp nhận, kiểm trên máy thật ở T11. A1 kết thúc; A2 được phép implement T8–T10 sau khi nộp bản đọc trước.
+- 2026-10-23 quản đốc: người dùng bỏ chuỗi trong code (D6b). T8 chỉ còn m_Text scene.
