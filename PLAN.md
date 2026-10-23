@@ -15,7 +15,7 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Jeju: UPM 1000, ascent 800, descent -200, x-height ≈500, cap ≈653–668, có hinting TT (fpgm/prep/cvt).
 - UI: 654 `UnityEngine.UI.Text`, **639 dùng JejuHallasan** (cỡ 17–30), 9 NotoDisplay-M, 4 SC-M, 2 JP-M. Không dùng TMP font asset.
 - `Z_Database` (level0 path 110, level1 path 7628) giữ mảng font theo thứ tự [33,35,32,30,36,31,34] → **code đổi font theo ngôn ngữ lúc chạy** (chưa biết English dùng font nào → T2).
-- Text: 59 TextAsset; 6 file tiếng Anh `eng_Dictionary_{Ability,Class,Explain,MagicCom,Name,Synergy}` (≈335 KB, CSV, UTF-8 BOM, LF).
+- Text: 59 TextAsset; 6 file tiếng Anh `eng_Dictionary_{Ability,Class,Explain,MagicCom,Name,Synergy}` (≈335 KB, CSV, UTF-8 BOM, **CRLF** — sửa theo T2).
   Ô có thẻ `<color=#...>`, `{0}`, phân cách `@` `^` `《》` `` ` ``; có ô tiếng Hàn là **khoá dữ liệu** (vd `마법`, `성장`) — không được dịch.
 - f18.bin: `writeUTF(charset 227)` · `byte height=18` · `byte width[227]` · atlas 1bpp LSB-first. Có đủ 134 chữ Việt + `…`.
 - Mạng: GitHub releases, Maven, dl.google.com dùng được.
@@ -35,8 +35,14 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Glyph mới = **composite** (component thân Jeju + component dấu) → giữ nguyên nét gốc, file nhỏ.
 - D3. **Không đổi metrics dọc** (hhea/OS2 ascent/descent/lineGap, UPM) để không xô layout. Không đổi glyph/cmap có sẵn.
 - D4. Chỉ thay `m_FontData` của Font path 33 (và font khác nếu T2 chứng minh English dùng font thiếu glyph). Không đổi path_id, tên, fallback.
-- D5. Text NFC (dựng sẵn), không dùng dấu tổ hợp. Cách xử lý dấu phẩy/ngoặc kép theo **parser thật** của game (T2 xác định); trước khi biết, không chèn `,` `"` mới.
-- D6. Không sửa `libil2cpp.so`. Nếu phải sửa chuỗi cứng thì sửa `global-metadata.dat` (string literal), cần quản đốc duyệt.
+- D5. (chốt sau T2) Text NFC (dựng sẵn), không dùng dấu tổ hợp. File giữ **BOM UTF-8 + CRLF** như gốc. Ô có dấu `,` → bọc cả ô bằng `"..."` (ngoặc cân bằng);
+  **cấm** `"` lẻ và `\` trong bản dịch (parser xoá `\`); không xuống dòng thật — xuống dòng dùng ` @ `; giữ nguyên số lượng `^`, `` ` ``,
+  các cặp ngoặc màu `[] 【】 〈〉 『』 《》 〔〕 {}` và `##id##`; không thêm cặp ngoặc màu mới (dùng `( )` thường thay cho ngoặc vuông).
+  Không sửa dòng header (khoá Hàn), không dịch ô khoá Hàn.
+- D6. (chốt sau T2) Không sửa `libil2cpp.so`. **Duyệt** sửa các chuỗi cứng tiếng Anh hiển thị (Loading/Uninstalling, thông báo cập nhật…) trong
+  `global-metadata.dat` string literal (T8) với điều kiện: chỉ đổi literal data/bảng literal, mọi phần khác byte-giống, có diff. **Duyệt** sửa `m_Text`
+  của các UI.Text có chữ Latin trong scene (vô hại nếu bị ghi đè lúc chạy).
+- D11. (sau T2) Mọi UI.Text: BestFit=0, cắt dọc (Truncate) → bản dịch phải đo độ rộng bằng Jeju-VI theo cỡ chữ; dài hơn EN quá 15% thì rút gọn.
 - D7. Đóng gói: UnityPy save bundle (giữ kiểu nén gốc), thay entry trong base.apk **giữ nguyên cách lưu (stored/deflate) và căn lề** như gốc, xoá chữ ký cũ, `zipalign -p 4`, `apksigner` v2+v3, **cùng một khoá** cho base + split. Thêm APK gộp bằng APKEditor (REAndroid).
 - D8. Cấu trúc repo:
   - `tools/` script Python/Shell (chạy `python3 -I`), `font/` nguồn glyph + ảnh preview, `text/eng/` gốc, `text/vi/` bản dịch, `docs/` báo cáo/mapping.
@@ -47,7 +53,7 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 ## Ràng buộc và edge case
 - Nguồn upload: `/root/.claude/uploads/9e39a733-fcc8-5d12-bac4-5922f80b6e8d/` (tên file có tiền tố hash; tên thật sau dấu `-`).
 - Không đụng cột số, ID, khoá tiếng Hàn, thẻ `<color=…>`, `{n}`, `@ ^ 《 》 \``, khoảng trắng đuôi kiểu `0 ` (giữ nguyên byte).
-- Chuỗi tiếng Việt dài hơn tiếng Anh → nút/ô chật: dùng từ ngắn gọn; Unity Text có thể Best Fit/overflow (T2 ghi lại thiết lập).
+- Chuỗi tiếng Việt dài hơn tiếng Anh → nút/ô chật: dùng từ ngắn gọn (xem D11).
 - Dấu chữ hoa vượt ascent 800 → không bị clip trong UI Text nhưng có thể chạm dòng trên: giữ trong ≤ ~950 đơn vị.
 - Game có thể kiểm tra chữ ký / Play Integrity: nếu ký lại làm game thoát thì ghi Vướng mắc.
 - Ký tự thật dùng trong bản dịch phải ⊆ cmap font English thực dùng (script kiểm tra T9).
@@ -105,3 +111,4 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 quản đốc: kiểm kê xong, lập PLAN.md. Người dùng chốt: glyph vẽ tay theo nét f18; thay English; font + dịch toàn bộ.
 - 2026-10-23 A1: T1 xong. unpack.py ra CRC 63ccbe18 (3.9s); tools: dotnet 8 runtime (+ROLL_FORWARD=Major), Il2CppDumper 6.7.46, build-tools r35, APKEditor 1.4.9, apktool 2.12.0 đều chạy. GitHub API bị chặn, chỉ tải releases/download trực tiếp.
 - 2026-10-23 A1: T2 xong, docs/analysis.md. English=Jeju (Awake 0x114B208); CSV = Regex split (dấu phẩy trong "..."), xoá mọi `\`; ` @ `=xuống dòng, `^`=ngăn cấp trong 효과 설명줄06, `[]{}〈〉《》`... = màu; Text 654/654 Wrap+Truncate, không best-fit; ảnh có chữ chỉ logo; vài chuỗi cứng EN trong metadata. File thật CRLF+BOM (PLAN ghi LF).
+- 2026-10-23 quản đốc: nghiệm thu T2 đạt (English = Font 33 Jeju, bằng chứng Z_Database$$Awake 0x114B208). Chốt D5, D6, thêm D11.
