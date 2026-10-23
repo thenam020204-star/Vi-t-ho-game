@@ -1,0 +1,4 @@
+text_check: 0/1904 key da dich, 1904 chua dich
+LOI: 0 {}
+CANH BAO: 0 {}
+

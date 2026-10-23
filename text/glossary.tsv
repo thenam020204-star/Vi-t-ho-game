@@ -1,0 +1,256 @@
+en	vi	loại	ghi chú
+Class	Trường phái	UI	"Class" = 학파 (trường phái). Select a Class -> Chọn trường phái
+Test Subject	Thể thí nghiệm	UI	Nút chính, ngắn
+Experiment	Thí nghiệm	UI	
+Research Points	Điểm nghiên cứu	UI	
+Research Material	Tài liệu nghiên cứu	UI	
+Research	Nghiên cứu	UI	
+Start Game	Bắt đầu	UI	Nút; cắt chữ "game" cho gọn
+Resume Game	Tiếp tục	UI	
+Quit Game	Thoát game	UI	
+Settings	Cài đặt	UI	
+Options	Tùy chọn	UI	
+Shop	Cửa hàng	UI	
+Encyclopedia	Bách khoa	UI	
+Diary	Nhật ký	UI	
+Enter Area	Vào khu vực	UI	
+Area	Khu vực	UI	
+Load	Tải	UI	Tải dữ liệu
+Save	Lưu	UI	
+Cloud Save	Lưu đám mây	UI	
+Google Cloud	Google Cloud	UI	Giữ nguyên tên dịch vụ
+Google Play	Google Play	UI	Giữ nguyên
+Language	Ngôn ngữ	UI	
+Sound	Âm thanh	UI	
+Joystick	Cần điều khiển	UI	
+Confirm	Xác nhận	UI	
+Cancel	Hủy	UI	
+Select	Chọn	UI	
+Selected	Đã chọn	UI	
+Yes	Có	UI	
+No	Không	UI	Chỉ khi "No" đứng riêng (nút); trong câu giữ tự nhiên
+ON	BẬT	UI	
+OFF	TẮT	UI	
+Return	Quay lại	UI	
+Give Up	Bỏ cuộc	UI	
+Quit	Thoát	UI	
+Pause	Tạm dừng	UI	
+Revive	Hồi sinh	UI	
+Reroll	Đổi lại	UI	
+Revert	Hoàn tác	UI	
+Discard	Bỏ	UI	
+Purchase	Mua	UI	
+Buy	Mua	UI	
+Pay	Trả	UI	
+Unlock	Mở khóa	UI	
+Learn	Học	UI	
+Acquire	Nhận	UI	
+Obtain	Nhận	UI	Cũng dùng cho Obtained -> Đã nhận
+Equip	Trang bị	UI	
+Master	Bậc thầy	UI	Nhãn cấp tinh thông tối đa
+Mastery	Tinh thông	UI	
+Rank	Hạng	UI	
+Tap	Chạm	UI	
+Left	Trái	UI	
+Right	Phải	UI	
+Center	Giữa	UI	
+Small	Nhỏ	UI	
+Medium	Vừa	UI	
+Big	Lớn	UI	
+Fixed	Cố định	UI	
+Hard Mode	Chế độ khó	UI	
+Infinite Mode	Chế độ vô hạn	UI	
+Network Error	Lỗi mạng	UI	
+Processing	Đang xử lý	UI	
+Survival Record	Kỷ lục sống sót	UI	
+Combat Record	Chiến tích	UI	
+Time Survived	Thời gian sống sót	UI	
+Enemies killed	Địch đã diệt	UI	
+Current Level	Cấp hiện tại	UI	
+Character Level	Cấp nhân vật	UI	
+Character	Nhân vật	UI	
+Owned Magic	Phép đang có	UI	
+Owned Artifact	Cổ vật đang có	UI	
+Special Effect	Hiệu ứng đặc biệt	UI	
+Level	Cấp	Stat	Lv -> Cấp
+Lv	Cấp	Stat	Viết tắt: "Magic Bolt Lv +1" -> "Đạn Phép Cấp +1"
+Max Level	Cấp tối đa	Stat	
+Gold	Vàng	UI	Tiền tệ
+Gem	Ngọc	UI	Tiền tệ cao cấp
+Mana Orb Currency	Xu Mana	UI	Tiền tệ trong trận
+Damage	Sát thương	Stat	
+Damage Taken	Sát thương nhận	Stat	
+Damage Interval	Nhịp sát thương	Stat	
+Damage Multiplier	Hệ số sát thương	Stat	
+Additional Damage	Sát thương cộng thêm	Stat	
+Bonus Damage	Sát thương thưởng	Stat	
+Explosion Damage	Sát thương nổ	Stat	
+Explosion Range	Tầm nổ	Stat	
+Explosion	Vụ nổ	Stat	Động từ explode -> nổ
+Cooldown	Hồi chiêu	Stat	Thuật ngữ game quen thuộc
+Duration	Thời lượng	Stat	
+Invincibility Duration	Thời gian bất tử	Stat	
+Size	Cỡ	Stat	Ngắn gọn
+Range	Tầm	Stat	
+Aura Range	Tầm hào quang	Stat	
+Speed	Tốc độ	Stat	
+Movement Speed	Tốc độ chạy	Stat	
+Rotation Speed	Tốc độ xoay	Stat	
+Launch Speed	Tốc độ bắn	Stat	
+Launch Interval	Nhịp bắn	Stat	
+Projectile Speed	Tốc độ đạn	Stat	
+Projectile	Đạn	Stat	"Đạn phép" khi cần rõ nghĩa
+Amplification Effect	Hiệu ứng khuếch đại	Stat	
+Amplify	Khuếch đại	Stat	
+Amplified	Khuếch đại	Stat	
+Number	Số lượng	Stat	"the number of" -> "số lượng"
+Count	Số lần	Stat	
+Multiplier	Hệ số	Stat	
+Crit. Multiplier	Hệ số chí mạng	Stat	
+Critical Strike Rate	Tỉ lệ chí mạng	Stat	
+Critical Rate	Tỉ lệ chí mạng	Stat	
+Critical Strike	Đòn chí mạng	Stat	
+Evasion	Né tránh	Stat	
+Evade	Né	Stat	
+HP	HP	Stat	Giữ nguyên
+Max HP	HP tối đa	Stat	
+HP Regen per sec	Hồi HP mỗi giây	Stat	Bản có dấu chấm sau "sec." cũng khớp
+Life Orb HP Recovery	Hồi HP từ Cầu Sinh Lực	Stat	
+Life Orb	Cầu Sinh Lực	Item	
+Mana Orb	Cầu Mana	Item	
+Mana Acquisition	Thu Mana	Stat	
+Mana Retrieval	Thu hồi Mana	Stat	
+Mana	Mana	Stat	Giữ nguyên
+ATK	ATK	Stat	Giữ nguyên
+Item Pickup Range	Tầm nhặt đồ	Stat	
+Recovery	Hồi phục	Stat	
+Regen	Hồi	Stat	
+Rune	Rune	Item	Giữ nguyên (đạo cụ trong trận)
+Treasure Chest	Rương báu	Item	
+Relic Chest	Rương di vật	Item	
+Black Chest	Rương đen	Item	
+Chest	Rương	Item	
+Artifact	Cổ vật	Item	
+Normal Artifact	Cổ vật thường	Item	
+Rare Artifact	Cổ vật hiếm	Item	
+Epic Artifact	Cổ vật sử thi	Item	
+Legendary Artifact	Cổ vật huyền thoại	Item	
+Special Artifact	Cổ vật đặc biệt	Item	
+Normal	Thường	Rarity	
+Rare	Hiếm	Rarity	
+Epic	Sử thi	Rarity	
+Legendary	Huyền thoại	Rarity	
+Special	Đặc biệt	Rarity	
+Attribute	Thuộc tính	Stat	
+Specialization	Chuyên môn	Stat	
+Synergy	Cộng hưởng	UI	
+Ultimate	Tuyệt kỹ	UI	
+Combination Magic	Phép hợp thể	UI	Magic Combination dùng cùng bản dịch
+Magic Combination	Phép hợp thể	UI	
+Combination	Hợp thể	UI	
+Passive	Bị động	UI	
+Active	Chủ động	UI	
+Magic	Phép	UI	Danh từ chung: "phép thuật"; All Magic -> mọi phép
+All Magic	Mọi phép	Stat	
+Spell	Phép	UI	
+Buff	Cường hóa	Status	
+Debuff	Suy yếu	Status	
+Freeze	Đóng băng	Status	
+Stun	Choáng	Status	
+Burn	Thiêu đốt	Status	
+Slow	Làm chậm	Status	
+Poison	Nhiễm độc	Status	
+Knockback	Đẩy lùi	Status	
+Pierce	Xuyên thấu	Status	
+Pass through	Xuyên qua	Status	
+Invincible State	Trạng thái bất tử	Status	
+Invincible	Bất tử	Status	
+Execute	Hành quyết	Status	Ngưỡng hành quyết
+Enhanced	Cường hóa	Status	
+Discounted	Giảm giá	Status	
+Increase	Tăng	Verb	Tăng/giảm dùng thống nhất
+Decrease	Giảm	Verb	
+Reduce	Giảm	Verb	
+Summon	Triệu hồi	Verb	
+Deal	Gây	Verb	
+Generate	Tạo ra	Verb	
+Create	Tạo	Verb	
+Explode	Nổ	Verb	
+Enemy	Kẻ địch	Misc	
+Monster	Quái vật	Misc	
+Elite	Tinh anh	Misc	
+Boss	Trùm	Misc	
+Stack	Chồng	Misc	
+Merchant	Thương nhân	Misc	
+Obelisk	Tháp bia	Misc	
+Broken Obelisk	Tháp bia vỡ	Misc	
+Save Point	Điểm lưu	Misc	
+Magic Bolt	Đạn Phép	Spell	Phép khởi đầu
+Fireball	Cầu Lửa	Spell	
+Spirit	Tinh Linh	Spell	Cũng chỉ sinh vật tinh linh trong cốt truyện
+Satellite	Vệ Tinh	Spell	
+Frost Nova	Nova Băng	Spell	
+Shield	Khiên	Spell	
+Thunderstorm	Bão Sấm	Spell	
+Electric Zone	Vùng Điện	Spell	
+Tsunami	Sóng Thần	Spell	
+Meteor	Thiên Thạch	Spell	
+Cloaking	Tàng Hình	Spell	
+Cyclone	Lốc Xoáy	Spell	
+Electric Shock	Giật Điện	Spell	
+Armageddon	Armageddon	Spell	Giữ nguyên tên riêng
+Incineration	Thiêu Rụi	Spell	
+Energy Bolt	Đạn Năng Lượng	Spell	
+Blizzard	Bão Tuyết	Spell	
+Arcane Ray	Tia Bí Thuật	Spell	
+Magic Circle	Ma Pháp Trận	Spell	
+Lava Zone	Vùng Dung Nham	Spell	
+Flash Shock	Chớp Giật	Spell	
+Wizard	Pháp Sư	Class	
+Astronomer	Chiêm Tinh Gia	Class	
+Cryomancer	Băng Pháp Sư	Class	
+Shaman	Shaman	Class	Giữ nguyên (quen thuộc với game thủ)
+Warlock	Hắc Thuật Sư	Class	
+Arcanist	Bí Pháp Sư	Class	
+Summoner	Triệu Hồi Sư	Class	
+Bishop	Giám Mục	Class	
+Occultist	Huyền Bí Sư	Class	
+Druid	Druid	Class	Giữ nguyên
+Pyromancer	Hỏa Pháp Sư	Class	
+Sorcerer	Phù Thủy	Class	
+Alchemist	Nhà Giả Kim	Class	
+Scholar	Học Giả	Class	
+Witch	Nữ Phù Thủy	Class	
+Electromancer	Lôi Pháp Sư	Class	
+Arbiter	Thẩm Phán	Class	
+Archmage	Đại Pháp Sư	Class	
+Archaeologist	Nhà Khảo Cổ	Class	
+Magician	Ảo Thuật Gia	Class	
+Mage	Ma Đạo Sư	Class	
+Battlemage	Chiến Pháp Sư	Class	
+Warlord	Chiến Tướng	Class	
+Black Mage	Hắc Pháp Sư	Class	
+Arrays	Trận Đồ	Area	Tên khu vực 1
+Laboratory	Phòng Thí Nghiệm	Area	
+Sewage System	Hệ Thống Cống	Area	
+City Outskirts	Ngoại Ô Thành Phố	Area	
+Arboretum	Vườn Thực Vật	Area	
+Academy	Học Viện	Area	
+Power Plant	Nhà Máy Điện	Area	
+Clean Room	Phòng Sạch	Area	
+Reservoir	Hồ Chứa	Area	
+Forest	Rừng	Area	
+City	Thành Phố	Area	
+Depths	Vực Sâu	Area	
+Boundary	Ranh Giới	Area	
+Terra	Terra	Area	Giữ nguyên
+The Golden Age	Kỷ Nguyên Vàng	Area	
+Summoners’ War	Chiến Tranh Triệu Hồi	Area	Tên nhật ký
+Homunculus	Homunculus	Area	Giữ nguyên (người nhân tạo trong cốt truyện)
+Swarm	Bầy Đàn	Area	
+Pollution	Ô Nhiễm	Area	
+Classification	Phân Loại	Area	
+Cambion	Cambion	Area	Giữ nguyên
+Magic Survival	Magic Survival	UI	Tên game, giữ nguyên
+Golem	Golem	Misc	Giữ nguyên
+Virus	Virus	Misc	

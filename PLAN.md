@@ -85,14 +85,14 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Agent: A1 (phụ thuộc T4)
   - Làm: `tools/build_font.py`: thêm glyph dấu + 133 glyph composite + cmap (cả `Đ`→ composite từ `Ð`), hmtx (advance = advance thân chữ), giữ nguyên mọi glyph/metrics cũ; `fontTools` lưu → `work/font/JejuHallasan-VI.ttf`; kiểm tra bằng `ttx`/FreeType load OK. `tools/font_diff.py`: liệt kê glyph/cmap thêm, xác nhận glyph cũ byte-giống.
   - Hoàn thành khi: 134/134 chữ Việt có trong cmap; font_diff "0 glyph cũ thay đổi"; `font/preview/sample_{17,18,24,30}.png` render câu mẫu (FreeType, như Unity) + bản so Jeju gốc vs NotoDisplay.
-- [ ] T6. Bảng thuật ngữ + trích text
+- [x] T6. Bảng thuật ngữ + trích text
   - Agent: A1 (phụ thuộc T2)
   - Làm: `tools/text_extract.py`: từ `text/eng/*.txt` (bản gốc, chép vào repo) xuất `text/segments.tsv` (id ổn định `file:row:col:seg`, nguồn EN, đã dedupe theo chuỗi, đánh dấu thẻ/placeholder) — chỉ ô chứa chữ Latin, bỏ ô số/khoá Hàn. `text/glossary.tsv`: tên phép, thuộc tính, chỉ số, UI (≥150 mục, có cột ghi chú/độ dài).
   - Hoàn thành khi: round-trip (inject bản EN vào chính nó) ra byte-giống 6 file gốc; số segment duy nhất ghi vào Nhật ký.
-- [ ] T7a–T7n. Dịch tay theo lô (Sonnet 5.5) — mỗi lô ≈ 250 segment duy nhất
-  - Agent: A1 (tuần tự từng lô); quản đốc tạo danh sách lô cụ thể sau T6 (theo file: Name, Explain, Class, Synergy, MagicCom, Ability).
-  - File: `text/vi/batch_XX.tsv` (id, en, vi).
-  - Hoàn thành khi: `tools/text_check.py` qua: giữ nguyên thẻ/placeholder/phân cách, không ký tự ngoài cmap, NFC, đúng glossary, không ô rỗng.
+- [ ] T7. Dịch toàn bộ `text/segments.tsv` (1 công nhân, tuần tự từ đầu đến cuối) — 1904 key duy nhất, 61602 ký tự EN
+  - Agent: A1. Đầu ra: `text/vi/vi.tsv` (cột `key`, `vi`; key = chuỗi EN y nguyên). Thứ tự dịch = cột `no` (Name, Explain, Class, Synergy, MagicCom, Ability; trong nhóm tên/UI trước, mô tả sau).
+  - Quy tắc: dịch tay theo `text/glossary.tsv`; giữ ngoặc màu/`##id##`/số/%/`□`/`ㅁ`; chỉ dịch phần chữ (không có `@ ^` trong key); không `"` `\`.
+  - Hoàn thành khi: `python3 -I tools/text_check.py --strict` không lỗi (cảnh báo độ rộng D11 thì rút gọn); `tools/text_inject.py` chạy ra 6 file.
 - [ ] T8. Chuỗi cứng scene/metadata (theo kết luận T2, nếu quản đốc duyệt)
   - Agent: A1
   - Hoàn thành khi: chuỗi dịch nằm trong `text/vi/hardcoded.tsv` và tool patch có diff.
@@ -123,3 +123,4 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 A1: T4b xong (chờ quản đốc nghiệm thu). font/extra.py (idotless.jeju từ contour thân i Jeju bỏ chấm; gạch đ/Đ nét cọ theo f18), marks.py: sắc/huyền = nét cọ thuôn (đầu tròn, đuôi nhọn), hỏi bo tròn đầu trái, móc ơ/ư thuôn đầu tròn; ảnh font/preview/{glyphs_all,marks,compare_i_d}.png (tools/compare_i_d.py).
 - 2026-10-23 A1: T5 xong. tools/build_font.py -> work/font/JejuHallasan-VI.ttf (6660012 -> 6667056 B, +158 glyph: 1 thân i, 22 dấu/gạch, 135 composite; cmap +133, đổi U+0111). font_diff: 0 glyph cũ đổi byte, 0 hmtx cũ đổi, kern/cvt/fpgm/prep/gasp/name/post/OS2 byte-giống; verify_font.py: 134/134, FreeType 17/18/24/30 (hinted+nohint) OK, ots PASS; ảnh font/preview/sample_{17,18,24,30}.png (tools/make_samples.py). post giữ format 3.0 (không lưu tên glyph); OS/2 unicode range không đổi.
 - 2026-10-23 quản đốc: nghiệm thu T4b + T5 đạt (xem compare_i_d.png, sample_24.png). Bước tiếp: T6.
+- 2026-10-23 A1: T6 xong. text/eng/ (6 file byte-giống gốc), tools/text_{common,extract,inject,check}.py, text/segments.tsv = 1904 key duy nhất (2304 lần xuất hiện, 61602 ký tự EN: Name 259, Explain 101, Class 195, Synergy 145, MagicCom 376, Ability 828), text/glossary.tsv 255 mục. Round-trip inject(vi=en) = 6 file byte-giống. Bỏ qua: hàng ID 0 (marker Name/Type/Explain), hàng tiêu đề giữa file (ID,...), cột 특성ID ("a"). Chưa chắc hiển thị: Explain "일지 조건 이름" và "구역 효과" (đã gắn `?` ở note). T7 gộp thành 1 task theo yêu cầu người dùng.
