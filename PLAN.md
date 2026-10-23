@@ -138,3 +138,55 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 A2: T9 xong. tools/patch_bundle.py (--font --out; font tham số) + tools/bundle_diff.py. Lưu packer='original': mở lại cờ 0x243, khối 0x2 như gốc (5621 khối 128KB; gốc 98 khối stored, mới 1; kích thước 135 MB vs 169 MB do nén tốt hơn). bundle_diff (bản jeju): đúng 25 object đổi = 1 Font(33) + 6 TextAsset + 18 UI.Text, tập object/externals/cờ bằng nhau. patch_bundle ~1 phút. build_font_f18px.py: mặc định --px 75, thêm --variants. text_common.load_vi bỏ qua scene.tsv.
 - 2026-10-23 A2: T10 xong. tools/build_apk.{sh,py}, tools/apk_diff.py; khoá thử nghiệm work/keys/ms-vi.jks (mk trong tools/README.md). Ra out/: MagicSurvival_VI_f18.apks 179.198.831 B, _f18_merged.apk 169.236.965 B; MagicSurvival_VI_jeju.apks 179.190.639 B, _jeju_merged.apk 169.228.773 B. Cả 4 + base/split: apksigner verify OK (v2+v3, cùng cert SHA-256 410bf8a0...), zipalign -c -p 4 OK, aapt2 badging com.vkslrzm.Zombie 612/0.9941 (split=config.arm64_v8a). apk_diff: base chỉ khác data.unity3d (+ bỏ stamp-cert-sha256), split chỉ bỏ chữ ký v1/stamp, merged so với APKEditor-merge bản gốc chỉ data.unity3d + chữ ký; bundle_diff trích từ APK gộp: đúng 1 Font + 6 TextAsset + 18 UI.Text. APKEditor merge chạy được (extractNativeLibs=true do manifest; zipalign in 'header mismatch' vô hại). Chưa test trên thiết bị (T11). Lưu ý: khác khoá ký gốc -> gỡ bản gốc trước khi cài; chữ ký v1 của split bỏ, chỉ v2+v3 (minSdk base 24).
 - 2026-10-23 quản đốc: nghiệm thu T8–T10 (tự kiểm: f18 dùng glyph pixel, jeju nét gốc, text tiếng Việt trong bundle). T11: docs/REPORT.md; chưa test thiết bị — chờ người dùng cài thử.
+- 2026-10-23 quản đốc: mở GĐ2 (mod offline) theo yêu cầu người dùng; người dùng chọn bản f18.
+
+---
+# GIAI ĐOẠN 2: Mod chơi offline (người dùng yêu cầu 2026-10-23)
+
+## Mục tiêu GĐ2
+Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng nhập GPGS, cloud save, IAP) để chơi một mình offline
++ menu mod trong game: **Bất tử (god mode)** và **Lên cấp ngay** trong trận.
+
+## Quyết định thiết kế GĐ2 (KHÔNG tự đổi)
+- M1. Chỉ build biến thể font **f18**. Mọi bước GĐ1 giữ nguyên (bundle T9 dùng lại).
+- M2. Sửa code = **vá byte trong `libil2cpp.so` arm64** theo RVA từ dump (Il2CppDumper, T2). Mỗi vá ghi trong `mods/patches.json`
+  (`rva`, `orig` hex, `new` hex, `method`, `lý do`); `tools/patch_so.py` **kiểm byte gốc trước khi vá**, lệch là dừng. Không đổi kích thước file, không đổi bảng symbol/section.
+  `global-metadata.dat` vẫn không đụng (D6b).
+- M3. Quảng cáo: không khởi tạo SDK quảng cáo (AdMob/GDPR consent), không hiện banner/interstitial; quảng cáo có thưởng (hồi sinh, nhân thưởng…)
+  → **trao thưởng ngay** bằng cách gọi đúng hàm callback thưởng của game, không gọi SDK.
+- M4. Google Play: bỏ đăng nhập GPGS (game chạy như chưa đăng nhập, không văng/treo), nút cloud save không làm gì; **IAP: không khởi tạo
+  Unity Purchasing, gói nạp trong cửa hàng vô hiệu** (KHÔNG mở khoá gói trả phí miễn phí). Gói "No Ads" coi như đã có (vì M3).
+  Có kiểm tra bản quyền/Play Integrity/chữ ký thì vô hiệu để chạy được khi ký lại. Manifest giữ nguyên trừ khi bắt buộc (ghi lý do).
+- M5. Menu mod: **nút nổi trong Activity** (Java, thêm dex mới, gắn vào DecorView của UnityPlayerActivity — không cần quyền overlay),
+  bảng tiếng Việt: công tắc `Bất tử`, nút `Lên 1 cấp`, `Lên 5 cấp`. Java gọi JNI vào `libmsmod.so` (C, NDK, arm64).
+  `libmsmod.so` dùng **Dobby** (inline hook) để hook hàm nhận sát thương của nhân vật (bật bất tử → bỏ qua) và gọi hàm lên cấp/cộng EXP
+  của game trên đúng luồng Unity (đặt cờ, thực thi trong hook Update của battle manager — không gọi Unity API từ luồng UI Android).
+  Nạp lib: smali `System.loadLibrary("msmod")` trong `onCreate` của Activity launcher (apktool `-r`, không decode resource).
+- M6. Lên cấp = **cấp trong trận** (nhận EXP đủ lên cấp → game tự hiện bảng chọn kỹ năng như bình thường). Ngoài trận nút bị mờ.
+- M7. Đầu ra: `out/MagicSurvival_VI_f18_mod.apks` + `out/MagicSurvival_VI_f18_mod_merged.apk`, cùng khoá `work/keys/ms-vi.jks`.
+  `apk_diff` chỉ được khác: `data.unity3d`, `libil2cpp.so`, `classes*.dex`/smali Activity, `lib/arm64-v8a/libmsmod.so`, chữ ký.
+
+## Checklist GĐ2
+- [ ] T12. Phân tích mod — **Quản đốc nghiệm thu**
+  - Agent: A1
+  - Làm: từ dump.cs + disasm (capstone) tìm, có bằng chứng RVA: (a) mọi điểm khởi tạo/hiện quảng cáo + callback thưởng (hồi sinh, x2 thưởng, khác);
+    (b) luồng GPGS login/cloud save + chuyện gì xảy ra khi không đăng nhập; (c) IAP init + nút shop + kiểm tra "No Ads"; (d) kiểm tra bản quyền/chữ ký/integrity nếu có;
+    (e) hàm nhân vật nhận sát thương/chết, nơi lưu HP; (f) EXP/cấp trong trận, hàm lên cấp, instance tĩnh của battle manager/player, hàm Update để gắn hook;
+    (g) Activity launcher (AndroidManifest), có sẵn libDobby/NDK cần tải gì.
+  - File: `docs/mod_analysis.md`. Không vá gì.
+  - Hoàn thành khi: mỗi mục có RVA + đoạn lệnh/IL làm bằng chứng và đề xuất vá cụ thể; chỗ chưa chắc ghi CHƯA XÁC ĐỊNH.
+- [ ] T13. Khung vá + vá quảng cáo/Play (M2–M4) — **Quản đốc nghiệm thu**
+  - Agent: A1 (phụ thuộc T12)
+  - File: `tools/patch_so.py`, `mods/patches.json`, `tools/disasm_patch.py` (in trước/sau từng điểm vá).
+  - Hoàn thành khi: vá áp được lên libil2cpp gốc, kiểm lại byte gốc OK, disasm trước/sau hợp lệ (nhánh/ret/ABI đúng, không vỡ stack frame).
+- [ ] T14. Toolchain + `libmsmod.so` + menu Java (M5, M6)
+  - Agent: A1 (phụ thuộc T12)
+  - Làm: tải NDK, Dobby (build arm64 static), android.jar, d8; `mods/native/` (C + CMake/ndk-build), `mods/java/` (menu), script build ra `work/mod/libmsmod.so`, `work/mod/classes_mod.dex`.
+  - Hoàn thành khi: build sạch; `readelf` lib arm64, chỉ phụ thuộc libc/liblog/libdl/libandroid; dex qua `dexdump`.
+- [ ] T15. Ráp APK mod + ký + kiểm (M7) — **Quản đốc nghiệm thu**
+  - Agent: A1 (phụ thuộc T13, T14)
+  - Hoàn thành khi: apksigner/zipalign/aapt2 OK; apk_diff đúng M7; nếu có `/dev/kvm` + emulator arm64-translation thì chạy thử, không thì ghi rõ chưa test.
+- [ ] T16. Cập nhật `docs/REPORT.md` (phần mod), commit + push.
+
+## Vướng mắc GĐ2
+- (trống)
