@@ -44,3 +44,10 @@ java -jar work/tools/apktool_2.12.0.jar d -r -f work/base.apk -o ap      # sua s
                                                                          #   invoke-static {p0}, Lcom/msmod/Mod;->onCreate(Landroid/app/Activity;)V ; apktool b ; lay classes2.dex
 source tools/env.sh; python3 -I tools/build_apk_mod.py --dex2 <classes2.dex>   # -> out/MagicSurvival_VI_f18_mod.apks + _mod_merged.apk
 ```
+
+## Chan doan / fix man den (T17)
+```
+python3 -I tools/patch_so.py --patches mods/patches_fix.json -o work/mod/libil2cpp_fix.so      # B2fix
+bash tools/build_mod.sh all                                                                    # libmsmod (co log) + dex (nut Luu log)
+python3 -I tools/build_apk_diag.py --dex2 work/diag/classes2.dex                               # out/..._f18_{diag_patch,diag_menu,diag_full,fix}_merged.apk
+```

@@ -3,6 +3,7 @@ package com.msmod;
 import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.TypedValue;
@@ -15,8 +16,16 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Menu mod Magic Survival: nut noi "MOD" keo duoc + bang Bat tu / Len cap.
@@ -37,25 +46,100 @@ public final class Mod {
 
     private Mod() {}
 
-    /** Diem vao duy nhat; an toan khi goi nhieu lan / khi thieu libmsmod.so (khi do khong them menu). */
+    /** Diem vao duy nhat; an toan khi goi nhieu lan. Thieu libmsmod.so (ban chan doan "vá-only") van hien menu chi co "Luu log". */
     public static void onCreate(final Activity activity) {
+        android.util.Log.i(TAG, "Mod.onCreate (java) pid=" + android.os.Process.myPid());
         try {
             System.loadLibrary("msmod");
             nativeOk = true;
+            android.util.Log.i(TAG, "System.loadLibrary(msmod) OK");
         } catch (Throwable t) {
-            android.util.Log.e(TAG, "khong nap duoc libmsmod.so", t);
-            return;
+            nativeOk = false;
+            android.util.Log.e(TAG, "khong nap duoc libmsmod.so (menu chi con Luu log)", t);
         }
-        try { setGodMode(god); } catch (Throwable ignored) { }
+        if (nativeOk) { try { setGodMode(god); } catch (Throwable ignored) { } }
         activity.runOnUiThread(new Runnable() {
             @Override public void run() {
                 try {
                     new Ui(activity).attach();
+                    android.util.Log.i(TAG, "menu da gan");
                 } catch (Throwable t) {
                     android.util.Log.e(TAG, "loi tao menu", t);
                 }
             }
         });
+    }
+
+    // ---- luu log (T17): logcat cua chinh app, khong can quyen ----
+    static final int MAX_LINES = 2000;
+
+    /** Chay logcat -d cho pid cua minh; doc stream tren luong phu. Tra ve toi da MAX_LINES dong cuoi. */
+    static List<String> collectLog() {
+        final int pid = android.os.Process.myPid();
+        String[][] tries = {
+            {"logcat", "-d", "-v", "time", "-b", "main,crash", "--pid=" + pid},
+            {"logcat", "-d", "-v", "time", "--pid=" + pid},
+            {"logcat", "-d", "-v", "time"},
+        };
+        List<String> best = new ArrayList<String>();
+        for (String[] cmd : tries) {
+            final List<String> lines = new ArrayList<String>();
+            try {
+                final Process p = Runtime.getRuntime().exec(cmd);
+                Thread rd = new Thread(new Runnable() {
+                    @Override public void run() {
+                        try {
+                            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream(), "UTF-8"));
+                            String l;
+                            while ((l = br.readLine()) != null) {
+                                synchronized (lines) { lines.add(l); if (lines.size() > MAX_LINES * 2) lines.subList(0, MAX_LINES).clear(); }
+                            }
+                        } catch (Throwable ignored) { }
+                    }
+                });
+                rd.start();
+                // doc loi (stderr) de khong bi nghen pipe
+                Thread er = new Thread(new Runnable() {
+                    @Override public void run() {
+                        try { BufferedReader br = new BufferedReader(new InputStreamReader(p.getErrorStream())); while (br.readLine() != null) { } } catch (Throwable ignored) { }
+                    }
+                });
+                er.start();
+                rd.join(15000);
+                try { p.destroy(); } catch (Throwable ignored) { }
+            } catch (Throwable t) {
+                synchronized (lines) { lines.add("[msmod] exec logcat loi: " + t); }
+            }
+            synchronized (lines) {
+                if (lines.size() > MAX_LINES) lines.subList(0, lines.size() - MAX_LINES).clear();
+                if (lines.size() > best.size()) best = new ArrayList<String>(lines);
+            }
+            if (best.size() > 3) break;
+        }
+        return best;
+    }
+
+    /** Ghi msmod_log.txt vao getExternalFilesDir(null) (fallback getFilesDir). Tra ve file, hoac null. */
+    static File saveLog(Activity a, List<String> lines) {
+        File dir = null;
+        try { dir = a.getExternalFilesDir(null); } catch (Throwable ignored) { }
+        if (dir == null) dir = a.getFilesDir();
+        try {
+            dir.mkdirs();
+            File f = new File(dir, "msmod_log.txt");
+            FileOutputStream o = new FileOutputStream(f);
+            StringBuilder sb = new StringBuilder();
+            sb.append("# msmod log pid=").append(android.os.Process.myPid()).append(" android=").append(android.os.Build.VERSION.RELEASE)
+              .append(" sdk=").append(android.os.Build.VERSION.SDK_INT).append(" ").append(android.os.Build.MANUFACTURER).append(" ")
+              .append(android.os.Build.MODEL).append(" abi=").append(android.os.Build.SUPPORTED_ABIS[0]).append(" nativeOk=").append(nativeOk).append("\n");
+            for (String l : lines) sb.append(l).append('\n');
+            o.write(sb.toString().getBytes("UTF-8"));
+            o.close();
+            return f;
+        } catch (Throwable t) {
+            android.util.Log.e(TAG, "ghi log loi", t);
+            return null;
+        }
     }
 
     // ------------------------------------------------------------------------------------------------
@@ -69,7 +153,9 @@ public final class Mod {
         private LinearLayout panel;
         private Switch swGod;
         private Button btn1, btn5;
-        private TextView status;
+        private TextView status, logView;
+        private List<String> lastLog = new ArrayList<String>();
+        private File lastFile;
 
         Ui(Activity a) {
             act = a;
@@ -159,6 +245,29 @@ public final class Mod {
             stl.topMargin = px(6);
             p.addView(status, stl);
 
+            Button save = new Button(act);
+            save.setText("Lưu log");
+            save.setAllCaps(false);
+            save.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) { doSaveLog(); }
+            });
+            p.addView(save, rowLp());
+            Button share = new Button(act);
+            share.setText("Gửi log (chia sẻ)");
+            share.setAllCaps(false);
+            share.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) { doShareLog(); }
+            });
+            p.addView(share, rowLp());
+            logView = new TextView(act);
+            logView.setTextColor(0xFFA0FFA0);
+            logView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 8);
+            logView.setTypeface(android.graphics.Typeface.MONOSPACE);
+            logView.setText("(chưa lưu log)");
+            ScrollView sv = new ScrollView(act);
+            sv.addView(logView);
+            p.addView(sv, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, px(150)));
+
             Button close = new Button(act);
             close.setText("Đóng");
             close.setAllCaps(false);
@@ -188,6 +297,41 @@ public final class Mod {
                 }
             });
             return b;
+        }
+
+        private void doSaveLog() {
+            logView.setText("Đang lấy log...");
+            new Thread(new Runnable() {
+                @Override public void run() {
+                    final List<String> lines = collectLog();
+                    final File f = saveLog(act, lines);
+                    act.runOnUiThread(new Runnable() {
+                        @Override public void run() {
+                            lastLog = lines; lastFile = f;
+                            StringBuilder sb = new StringBuilder();
+                            sb.append(f != null ? "Đã lưu: " + f.getAbsolutePath() : "KHÔNG ghi được file").append("\n")
+                              .append(lines.size()).append(" dòng. 30 dòng cuối:\n");
+                            for (int i = Math.max(0, lines.size() - 30); i < lines.size(); i++) sb.append(lines.get(i)).append('\n');
+                            logView.setText(sb.toString());
+                        }
+                    });
+                }
+            }).start();
+        }
+
+        private void doShareLog() {
+            if (lastLog.isEmpty()) { Toast.makeText(act, "Bấm Lưu log trước", Toast.LENGTH_SHORT).show(); return; }
+            StringBuilder sb = new StringBuilder();
+            for (String l : lastLog) sb.append(l).append('\n');
+            String t = sb.toString();
+            if (t.length() > 200000) t = t.substring(t.length() - 200000);
+            try {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "msmod log");
+                i.putExtra(Intent.EXTRA_TEXT, t);
+                act.startActivity(Intent.createChooser(i, "Gửi log"));
+            } catch (Throwable e) { android.util.Log.e(TAG, "share", e); }
         }
 
         private void showPanel(boolean show) {
@@ -223,7 +367,8 @@ public final class Mod {
             btn1.setEnabled(battle);
             btn5.setEnabled(battle);
             String s;
-            if (!ready) s = "Đang cài hook...";
+            if (!nativeOk) s = "Bản chẩn đoán: không có libmsmod";
+            else if (!ready) s = "Đang cài hook...";
             else if (!battle) s = "Chỉ dùng được khi đang trong trận";
             else if (pending > 0) s = "Đang chờ lên cấp: " + pending;
             else s = "Sẵn sàng";

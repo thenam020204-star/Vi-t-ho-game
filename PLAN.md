@@ -200,7 +200,7 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
 
 ## GĐ2b: Sửa màn đen (người dùng báo 2026-10-23: bản mod màn đen, nút MOD hiện, không văng)
 - Bản f18 không mod đã chạy trên máy người dùng (còn quảng cáo) → lỗi nằm ở phần mod (vá libil2cpp / dex / libmsmod).
-- [ ] T17. Bản chẩn đoán + chia đôi lỗi
+- [x] T17. Bản chẩn đoán + chia đôi lỗi
   - Agent: A1
   - Làm: (1) Mod.java thêm nút "Lưu log" trong menu: chạy `logcat -d -v time --pid=<pid của mình>` (app đọc log của chính nó không cần quyền), ghi `getExternalFilesDir(null)/msmod_log.txt` và hiện 30 dòng cuối trong menu (cuộn được); native ghi log tag `msmod` mọi bước (base, từng hook OK/FAIL, byte đầu). (2) Build 3 APK gộp cùng khoá để người dùng cài đè lần lượt:
     `..._diag_patch.apk` = f18 + 22 vá libil2cpp, KHÔNG dex/lib mod;
@@ -213,3 +213,4 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
   - Agent: A1 (sau T17)
   - Làm: Android emulator chạy TCG (không tăng tốc): ưu tiên system image arm64-v8a (API 24–30) qua qemu-system-aarch64 của emulator, hoặc x86_64 API 30+ có ndk_translation với `-accel off`; GPU `swiftshader_indirect`; headless (`-no-window`), adb. Cài APK, chạy, thu logcat + screencap. Ghi script `tools/emu.sh` (cài, khởi động, chờ boot, install, start, logcat, screenshot).
   - Hoàn thành khi: chạy được bản f18 không mod tới màn hình chính (screencap) hoặc báo rõ giới hạn (lý do không chạy được, thời gian boot).
+- 2026-10-23 A1: T17 xong. Thủ phạm màn đen (bằng chứng tĩnh): vá B2 bỏ `Show_CloudResult(-1)` => không ai đặt `Z_Database.Game_LoadON=1` (static +0x818) => `Z_Database.<Move_MainMenu>` (0x1174BC0) đợi vô hạn. Sửa B2fix (`mods/patches_fix.json`, 0x117144C cbz->b). 4 APK gộp: out/MagicSurvival_VI_f18_{diag_patch,diag_menu,diag_full,fix}_merged.apk (tools/build_apk_diag.py); chi tiết docs/mod_analysis.md "T17 màn đen". Chưa test thiết bị.

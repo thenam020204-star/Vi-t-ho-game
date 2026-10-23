@@ -371,3 +371,35 @@ Không có nhánh nào trong thân hàm nhảy vào 20 byte đầu của 5 hàm 
 Khác với đề bài (có chủ đích): điều kiện là `timeScale > 0.01` chứ không `== 1` (người chơi có thể bật tốc độ x2 - khi đó `==1` sẽ không bao giờ thoả); thêm hook `C_Battle_Manager$$Start` (xoá con trỏ cũ) và 2 JNI phụ `getPendingLevelUps/isReady` để menu hiện trạng thái.
 Không cấp phát/khoá trong hook: chỉ `atomic_*`, `clock_gettime` (vDSO) và đọc bộ nhớ; `static int fails` chỉ luồng Unity đụng.
 Hạn chế đã biết: (1) `this` của V_Ability_Manager chỉ có sau lần `ManaGain` đầu tiên của trận (nhặt viên EXP đầu tiên, hoặc kẻ địch chết) - bấm "Lên cấp" trước đó thì yêu cầu được giữ và thực hiện ngay khi có `this` (menu hiện "Đang chờ lên cấp: N"); (2) hook cài từ luồng nền ~ngay khi `libil2cpp.so` xuất hiện trong `dl_iterate_phdr` (thăm dò 20 ms, tối đa 120 s) - nếu hook bị cài đúng lúc luồng khác đang chạy chính hàm đó (không xảy ra ở giai đoạn khởi động vì `Update` chỉ chạy ở cảnh trận) thì có race, chấp nhận; (3) `Unit_Death` bị chặn chỉ khi bất tử bật; coroutine `Play_Unit_Death` đã bắt đầu trước đó vẫn chạy; (4) SELinux/W^X: Dobby `mprotect` RWX trang `.text` của libil2cpp (extractNativeLibs=true, file riêng tư) - cách phổ biến, chưa thử thật.
+
+---------------------------------------------------------------------------------------------------
+
+## T17 màn đen (loading hiện, xong loading thì đen)
+
+Triệu chứng người dùng: màn LOADING hiện bình thường, hết loading thì đen; nút MOD (Java) vẫn hiện; không văng. Bản f18 không mod chạy tốt.
+
+### Kết luận (bằng chứng tĩnh, chưa chạy thiết bị): thủ phạm là vá **B2** (`Z_GPGSManager$$LoadLocalData` 0x1171434 `b 0x1171538`)
+1. **Cổng chuyển cảnh nằm trong `Z_Database.<Move_MainMenu>d__837$$MoveNext` (0x1174BC0)** (scene 0 -> `A_MainMenu`). Coroutine này do `Z_Database.<Play_LoadingBar>d__836$$MoveNext` (0x1174D78) khởi động khi thanh loading chạy xong (chuỗi `Move_MainMenu` + `StartCoroutine`). Disasm 0x1174C38-0x1174CEC:
+   ```
+   ldr x0,[Z_Database statics+0x818]; ldr x1,[+0x820]; bl ObscuredInt::op_Implicit ; cmp w0,#1 ; b.ne -> WaitForSeconds(lặp lại)
+   Z_GPGSManager statics +0x24 (ApplyRestoreID) : cmp w0,#0x3e7 ; b.ne -> Z_Database$$Scene_Moving("A_MainMenu","")
+   ```
+   Tức là **chỉ chuyển sang main menu khi `Z_Database.Game_LoadON` (static +0x818, ObscuredInt) == 1** (và `ApplyRestoreID != 999`, mặc định 0). Nếu không thì đợi 1 nhịp WaitForSeconds rồi lặp mãi: loading xong mà không vào menu, UI loading bị ẩn/fade -> màn đen, không văng. Đúng triệu chứng.
+2. **Ai đặt `Game_LoadON = 1`?** Quét toàn `.text` mọi lệnh `str ..., [.., #0x818]` (capstone): chỉ `Z_GPGSManager$$Show_CloudResult` (0x115C248: `mov w0,#1; ObscuredInt(1)` -> `[statics+0x818]`; 0x115CCD0 ghi giá trị 0 ở nhánh khác), `Button_CloudResult` (0x115DB54), `OnSavedGameOpenedToSave` (0x115EEC8). Đường khởi động duy nhất tới đó (bản gốc, **không đăng nhập được / không mạng**): `LoadLocalData` đuôi 0x11714D8 -> `Game_CloudID = 15` -> `Show_CloudResult(-1)` (0x1171514) -> vì `Game_CloudID == 15` reset về 0, in "인터넷 연결 실패", rơi xuống 0x115C21C và **đặt `Game_LoadON = 1`**. Đường có mạng: `Social.localUser.Authenticate(b__115_0)` -> callback -> `LoadFromCloud_Start`... -> `Show_CloudResult` cũng đặt `Game_LoadON = 1`.
+3. **Vá B2 cũ nhảy thẳng tới epilogue (0x1171538) và bỏ luôn cả `Show_CloudResult(-1)`** => không còn đường nào đặt `Game_LoadON = 1` (B1 làm `AuthenticateUser` rỗng nên cũng không có callback nào; B3 `ret` các nút cloud). Kết quả: `Move_MainMenu` đợi vô hạn. **Sai sót ở T13**: mục "2. B2" chỉ kiểm "đuôi mạng không có Save*" và đọc `Game_CloudID` (chỉ `Show_CloudResult`), nhưng không kiểm hiệu ứng phụ của `Show_CloudResult` (ghi `Game_LoadON`) và người đọc `Game_LoadON` (`Move_MainMenu`).
+4. Các nghi phạm khác đã loại: `W_GDPR_Manager.Start`/`W_AdMobAD_*.Start` (A1, không ghi cờ nào mà cổng đọc: T13 mục 1); `AuthenticateUser` (B1) chỉ gọi từ `Z_Database.Awake` bỏ qua kết quả; IAP (C1) không nằm trong luồng vào menu (nút `IAPButton` ở scene menu/shop); `ShowInterstitial` (A4) chỉ gọi từ `Button_SceneMove` (0x10BC108) và `Fade_RewardClass.MoveNext` (0x10EF67C) - luồng kết thúc trận/nút chuyển cảnh, không phải luồng loading -> menu. Hook C (`libmsmod`) chỉ hook hàm trong trận (`C_Battle_*`), không chạy ở loading.
+
+### Sửa (APK `_fix`): `mods/patches_fix.json` thay B2 bằng **B2fix**
+`0x117144C` (`Z_GPGSManager$$LoadLocalData`): `cbz w0, 0x11714d8` (60040034) -> `b 0x11714d8` (23000014). Luôn đi nhánh "không mạng": **vẫn bỏ `Social.localUser.Authenticate`** (không đụng GPGS), nhưng chạy `Game_CloudID=15; Show_CloudResult(-1)` đúng như bản gốc khi offline => `Game_LoadON = 1` => `Move_MainMenu` chuyển cảnh. Mọi thanh ghi của nhánh này (x28 this, x25 TypeInfo Z_Database) đã được nạp trước 0x1171434 như đường offline gốc. 21 vá còn lại giữ nguyên, kích thước file không đổi. (`mods/patches.json` giữ nguyên chờ quản đốc/bằng chứng chạy thật.)
+Rủi ro còn lại: `Show_CloudResult` ghi chữ vào `Text_GameState` (this+0x188): đường offline gốc cũng làm vậy nên field đã gán trong scene; nếu thật sự null thì NullReference ở `Move_MainMenu`? (không: ném trong `LoadLocalData`, sau khi đã đọc xong save) - bản diag log sẽ cho thấy.
+
+### Bản chẩn đoán đã build (cùng khoá ký, cài đè lần lượt; gỡ bản cũ nếu khác khoá)
+| APK (`out/`, không commit) | libil2cpp | dex menu | libmsmod |
+|---|---|---|---|
+| `MagicSurvival_VI_f18_diag_patch_merged.apk` | 22 vá (patches.json) | có (chỉ Lưu log) | KHÔNG |
+| `MagicSurvival_VI_f18_diag_menu_merged.apk` | GỐC | có | có |
+| `MagicSurvival_VI_f18_diag_full_merged.apk` | 22 vá | có | có (= bản mod cũ + Lưu log) |
+| `MagicSurvival_VI_f18_fix_merged.apk` | 22 vá, B2 -> B2fix | có | có |
+Cách gửi log: mở game, chờ tới lúc đen, chạm nút **MOD** -> **Lưu log** (file `Android/data/com.vkslrzm.Zombie/files/msmod_log.txt`, 30 dòng cuối hiện trong menu, cuộn được) -> **Gửi log (chia sẻ)** để gửi nội dung qua ứng dụng nhắn tin/mail.
+Dự đoán: diag_patch đen (vá B2 gây ra), diag_menu chạy bình thường (menu không phá), diag_full đen, **fix vào được main menu**.
+Build: `python3 -I tools/build_apk_diag.py --dex2 work/diag/classes2.dex` (classes2.dex = bản đã sửa smali, lấy từ `out/MagicSurvival_VI_f18_mod.apks`/base.apk).

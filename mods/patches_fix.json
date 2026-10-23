@@ -1,0 +1,178 @@
+[
+ {
+  "id": "A1_gdpr_start",
+  "rva": "0x113FFCC",
+  "orig": "fe0f1df8",
+  "new": "c0035fd6",
+  "method": "W_GDPR_Manager$$Start",
+  "reason": "void, Unity Start. Bo UMP ConsentInformation.Update + MobileAds flag; ham chi ghi static/log, khong LoadScene/SetActive. IsGDPR_ON giu 0 -> hai W_AdMobAD_*.Start tu thoat som (cbz)."
+ },
+ {
+  "id": "A3_rewarded_show",
+  "rva": "0x113F3BC",
+  "orig": "fe57bea9f44f01a9",
+  "new": "e1031faad5010014",
+  "method": "W_AdMobAD_Reward$$ShowRewardedAd",
+  "reason": "void. Thay ban dau bang mov x1,xzr; b <ShowRewardedAd>b__7_0 (tail-call, x0=this giu nguyen, lr=caller): trao thuong hoi sinh ngay (Unit_RevivalON), reward=null."
+ },
+ {
+  "id": "A3b_rewarded_cb_null",
+  "rva": "0x113FB6C",
+  "orig": "140500b4",
+  "new": "740300b4",
+  "method": "W_AdMobAD_Reward$$<ShowRewardedAd>b__7_0",
+  "reason": "cbz x20 (reward==null) tro toi 0x113FBD8 (doan GetComponent<C_Battle_AllyUnit>->Unit_RevivalON) thay vi 0x113FC0C (NullReference); bo qua Debug.Log dung reward.Amount/Type."
+ },
+ {
+  "id": "A4_interstitial_show",
+  "rva": "0x113E1F0",
+  "orig": "fe57bea9",
+  "new": "48010014",
+  "method": "W_AdMobAD_Interstitial$$ShowInterstitial",
+  "reason": "void. Nhay toi W_AdMobAD_Interstitial$$Button_Scene_Moving(this) -> Scene_Moving(\"A_MainMenu\"): bo quang cao xen ke, ve menu ngay."
+ },
+ {
+  "id": "A5_revival_net_gate",
+  "rva": "0x1044C98",
+  "orig": "e0070034",
+  "new": "1f2003d5",
+  "method": "C_Battle_AllyUnit$$Button_RevivalSelect",
+  "reason": "nop cbz w0 sau Application.internetReachability: khong thoat tran khi offline o nut hoi sinh."
+ },
+ {
+  "id": "A6_death_net_gate",
+  "rva": "0x108B934",
+  "orig": "000e0034",
+  "new": "1f2003d5",
+  "method": "C_Battle_AllyUnit.<Play_Unit_Death>d__1045$$MoveNext",
+  "reason": "nop cbz w0 sau Application.internetReachability: van hien bang hoi sinh khi offline."
+ },
+ {
+  "id": "B1_gpgs_authenticate",
+  "rva": "0x114C180",
+  "orig": "fe0f1df8",
+  "new": "c0035fd6",
+  "method": "Z_Database$$AuthenticateUser",
+  "reason": "void private, goi tu Z_Database$$Awake (bl, bo qua ket qua). Khong goi PlayGamesPlatform.Authenticate; callback cu chi Debug.Log."
+ },
+ {
+  "id": "B2fix_loadlocal_offline_path",
+  "rva": "0x117144C",
+  "orig": "60040034",
+  "new": "23000014",
+  "method": "Z_GPGSManager$$LoadLocalData",
+  "reason": "T17 fix: cbz w0,0x11714d8 (khong mang -> Game_CloudID=15 + Show_CloudResult(-1)) thanh b 0x11714d8 luon: bo Social.localUser.Authenticate nhung VAN chay Show_CloudResult(-1) de dat Z_Database.Game_LoadON=1 (cong chan Z_Database.Move_MainMenu)."
+ },
+ {
+  "id": "B3_Button_CloudSave_Option",
+  "rva": "0x115BB60",
+  "orig": "fe0f1ef8",
+  "new": "c0035fd6",
+  "method": "Z_GPGSManager$$Button_CloudSave_Option",
+  "reason": "void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi."
+ },
+ {
+  "id": "B3_Button_CloudSave_Apply",
+  "rva": "0x115BC50",
+  "orig": "fe57bea9",
+  "new": "c0035fd6",
+  "method": "Z_GPGSManager$$Button_CloudSave_Apply",
+  "reason": "void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi."
+ },
+ {
+  "id": "B3_Button_CloudLoad_Option",
+  "rva": "0x115CCE4",
+  "orig": "fe0f1df8",
+  "new": "c0035fd6",
+  "method": "Z_GPGSManager$$Button_CloudLoad_Option",
+  "reason": "void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi."
+ },
+ {
+  "id": "B3_Button_CloudLoad_Apply",
+  "rva": "0x115CF3C",
+  "orig": "fe57bea9",
+  "new": "c0035fd6",
+  "method": "Z_GPGSManager$$Button_CloudLoad_Apply",
+  "reason": "void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi."
+ },
+ {
+  "id": "B3_Button_CloudLoadAuto_Apply",
+  "rva": "0x115D0E8",
+  "orig": "fe0f1af8",
+  "new": "c0035fd6",
+  "method": "Z_GPGSManager$$Button_CloudLoadAuto_Apply",
+  "reason": "void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi."
+ },
+ {
+  "id": "B3_Button_CloudLoadCheck",
+  "rva": "0x115D644",
+  "orig": "fe57bea9",
+  "new": "c0035fd6",
+  "method": "Z_GPGSManager$$Button_CloudLoadCheck",
+  "reason": "void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi."
+ },
+ {
+  "id": "B3_OnLogin",
+  "rva": "0x1173AC8",
+  "orig": "fe0f1cf8",
+  "new": "c0035fd6",
+  "method": "Z_GPGSManager$$OnLogin",
+  "reason": "void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi."
+ },
+ {
+  "id": "C1_Start",
+  "rva": "0x21DF7C4",
+  "orig": "fe0f1df8",
+  "new": "c0035fd6",
+  "method": "UnityEngine.Purchasing.BaseIAPButton$$Start",
+  "reason": "void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi."
+ },
+ {
+  "id": "C1_OnEnable",
+  "rva": "0x21DFDB4",
+  "orig": "fe0f1ef8",
+  "new": "c0035fd6",
+  "method": "UnityEngine.Purchasing.BaseIAPButton$$OnEnable",
+  "reason": "void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi."
+ },
+ {
+  "id": "C1_OnDisable",
+  "rva": "0x21DFE40",
+  "orig": "fe4fbfa9",
+  "new": "c0035fd6",
+  "method": "UnityEngine.Purchasing.BaseIAPButton$$OnDisable",
+  "reason": "void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi."
+ },
+ {
+  "id": "C1_PurchaseProduct",
+  "rva": "0x21DFE74",
+  "orig": "fe0f1ef8",
+  "new": "c0035fd6",
+  "method": "UnityEngine.Purchasing.BaseIAPButton$$PurchaseProduct",
+  "reason": "void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi."
+ },
+ {
+  "id": "C1_Restore",
+  "rva": "0x21E0010",
+  "orig": "ff0301d1",
+  "new": "c0035fd6",
+  "method": "UnityEngine.Purchasing.BaseIAPButton$$Restore",
+  "reason": "void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi."
+ },
+ {
+  "id": "C1_InitializeCodelessPurchasingOnLoad",
+  "rva": "0x21E0A60",
+  "orig": "fe4fbfa9",
+  "new": "c0035fd6",
+  "method": "UnityEngine.Purchasing.CodelessIAPStoreListener$$InitializeCodelessPurchasingOnLoad",
+  "reason": "void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi."
+ },
+ {
+  "id": "C1_CreateCodelessIAPStoreListenerInstance",
+  "rva": "0x21E0AD0",
+  "orig": "ffc301d1",
+  "new": "c0035fd6",
+  "method": "UnityEngine.Purchasing.CodelessIAPStoreListener$$CreateCodelessIAPStoreListenerInstance",
+  "reason": "void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi."
+ }
+]

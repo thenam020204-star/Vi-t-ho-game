@@ -38,6 +38,10 @@ static void (*orig_Start)(void *, const void *);
 static void (*orig_ManaGain)(void *, float, const void *);
 static float (*fn_get_timeScale)(const void *);
 
+/* log mot lan cho moi diem (chan doan T17): tra true o lan dau */
+static bool once(atomic_int *f) { return atomic_exchange_explicit(f, 1, memory_order_relaxed) == 0; }
+static atomic_int o_dmg, o_death, o_start, o_mana, o_upd, o_live;
+
 static inline long long now_ns(void) {
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);
@@ -57,28 +61,33 @@ static uint8_t *statics_of(uint32_t slot_rva) {
 
 /* ---- hook ------------------------------------------------------------------------------------------------- */
 static void hook_Unit_Damage(void *self, float dmg, float special, int32_t type, const void *mi) {
+    if (once(&o_dmg)) LOGI("hook_Unit_Damage lan dau (god=%d)", atomic_load(&g_god));
     if (atomic_load_explicit(&g_god, memory_order_relaxed)) return;
     orig_Unit_Damage(self, dmg, special, type, mi);
 }
 
 static void hook_Unit_Death(void *self, const void *mi) {
+    if (once(&o_death)) LOGI("hook_Unit_Death lan dau (god=%d)", atomic_load(&g_god));
     if (atomic_load_explicit(&g_god, memory_order_relaxed)) return;
     orig_Unit_Death(self, mi);
 }
 
 static void hook_Start(void *self, const void *mi) {
     /* Vao tran moi: V_Ability_Manager cu da bi huy => bo con tro cu, bo yeu cau len cap con lai. */
+    if (once(&o_start)) LOGI("hook C_Battle_Manager.Start lan dau");
     atomic_store(&g_mana_this, NULL);
     atomic_store(&g_pending, 0);
     orig_Start(self, mi);
 }
 
 static void hook_ManaGain(void *self, float mana, const void *mi) {
+    if (once(&o_mana)) LOGI("hook ManaGain lan dau");
     atomic_store_explicit(&g_mana_this, self, memory_order_relaxed);
     orig_ManaGain(self, mana, mi);
 }
 
 static void hook_Update(void *self, const void *mi) {
+    if (once(&o_upd)) LOGI("hook C_Battle_Manager.Update lan dau (tran dau bat dau)");
     orig_Update(self, mi);
     atomic_store_explicit(&g_last_update_ns, now_ns(), memory_order_relaxed);
 
@@ -86,6 +95,7 @@ static void hook_Update(void *self, const void *mi) {
     if (!ally) { atomic_store_explicit(&g_live, 0, memory_order_relaxed); return; }
     int live = ally[ALLY_UNIT_IS_LIVE] != 0;
     atomic_store_explicit(&g_live, live, memory_order_relaxed);
+    if (live && once(&o_live)) LOGI("Unit_IsLive = 1 lan dau");
     if (!live) return;
 
     /* Bat tu: giu HP day moi frame (phong ky nang tu tru mau khong qua Unit_Damage). */
@@ -153,10 +163,12 @@ static bool check_prologue(uint32_t rva, const uint32_t want[4], const char *nam
 }
 
 static bool hook_one(uint32_t rva, const uint32_t want[4], void *repl, void **orig, const char *name) {
+    const uint32_t *pp = (const uint32_t *)(g_base + rva);
+    LOGI("hook %s rva=0x%x addr=%p bytes=%08x %08x %08x %08x", name, rva, (const void *)pp, pp[0], pp[1], pp[2], pp[3]);
     if (!check_prologue(rva, want, name)) return false;
     int r = DobbyHook((void *)(g_base + rva), repl, orig);
-    if (r != 0) { LOGE("DobbyHook %s that bai (%d)", name, r); return false; }
-    LOGI("hooked %s @ %p", name, (void *)(g_base + rva));
+    if (r != 0) { LOGE("DobbyHook %s FAIL (%d)", name, r); return false; }
+    LOGI("hooked OK %s @ %p (orig tramp=%p)", name, (void *)(g_base + rva), *orig);
     return true;
 }
 
@@ -167,6 +179,7 @@ static void *installer(void *arg) {
         dl_iterate_phdr(find_il2cpp_cb, &base);
         if (!base) usleep(20000);
     }
+    LOGI("installer: tim libil2cpp.so %s", base ? "thay" : "KHONG thay");
     if (!base) { LOGE("khong thay libil2cpp.so"); return NULL; }
     g_base = base;
     LOGI("libil2cpp.so base=%p", (void *)base);
@@ -192,6 +205,7 @@ static void *installer(void *arg) {
 
 __attribute__((constructor)) static void msmod_init(void) {
     pthread_t t;
+    LOGI("constructor: libmsmod.so nap xong, pid=%d", (int)getpid());
     if (pthread_create(&t, NULL, installer, NULL) == 0) pthread_detach(t);
 }
 
