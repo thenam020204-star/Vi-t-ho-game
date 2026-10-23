@@ -33,6 +33,7 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
     Độ dày nét dấu ăn theo độ dày nét Jeju (đo thân `l`/`i`).
   - "Từng cỡ" = bố cục riêng cho **chữ thường / chữ hoa / dấu kép** như f18 (chữ hoa dấu ép sát vì chỉ còn ~147 đơn vị trên cap).
   - Glyph mới = **composite** (component thân Jeju + component dấu) → giữ nguyên nét gốc, file nhỏ.
+- D3a. (quản đốc, sau T4) Ngoại lệ D3: glyph `đ` (U+0111) có sẵn của Jeju lạc phong cách → thay bằng composite `d` Jeju + gạch vector; `Đ` = `D` Jeju + gạch (không dùng `Ð`); thân `i` có dấu = glyph mới dựng từ contour `i` Jeju bỏ chấm (không dùng `ı`). Không đổi glyph nào khác.
 - D3. **Không đổi metrics dọc** (hhea/OS2 ascent/descent/lineGap, UPM) để không xô layout. Không đổi glyph/cmap có sẵn.
 - D4. Chỉ thay `m_FontData` của Font path 33 (và font khác nếu T2 chứng minh English dùng font thiếu glyph). Không đổi path_id, tên, fallback.
 - D5. (chốt sau T2) Text NFC (dựng sẵn), không dùng dấu tổ hợp. File giữ **BOM UTF-8 + CRLF** như gốc. Ô có dấu `,` → bọc cả ô bằng `"..."` (ngoặc cân bằng);
@@ -76,6 +77,10 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Agent: A1 (phụ thuộc T3)
   - Làm: `font/marks.py` khai báo contour vector (đơn vị font, quadratic) cho: acute, grave, hook, tilde, dotbelow, circumflex, breve, horn_o, horn_u, và biến thể hẹp/thấp cho chữ hoa + tổ hợp kép (vd circumflex_acute) đúng bố cục f18. Nét dày theo stem Jeju. `font/layout.py`: bảng ký tự → (thân, [dấu, dx, dy]).
   - Hoàn thành khi: `tools/preview_marks.py` xuất `font/preview/marks.png` (dấu f18 phóng to cạnh dấu vector) để quản đốc so.
+- [ ] T4b. Sửa sau nghiệm thu T4 — **Quản đốc nghiệm thu**
+  - Agent: A1
+  - Làm: (1) glyph mới `idotless.jeju` = contour của `i` Jeju bỏ contour chấm (contour có yMin cao nhất), dùng làm thân `í ì ỉ ĩ ị Í…` thay `ı` (chữ hoa vẫn dùng `I`); (2) `đ` = `d` Jeju + gạch vector nét cọ đặt qua thân phải ở vùng ascender như f18; `Đ` = `D` Jeju + gạch ngang qua thân trái; (3) gọt dấu sắc/huyền thành nét cọ thuôn (đầu trên to bo tròn, đuôi dưới nhọn), móc hỏi bo đầu trái, móc ơ/ư nối thuôn vào thân (không đầu vuông), giữ kích thước/vị trí f18.
+  - Hoàn thành khi: preview cập nhật (`glyphs_all.png`, `marks.png`) + thêm `font/preview/compare_i_d.png` (trước/sau cho i có dấu, đ, Đ).
 - [ ] T5. Build JejuHallasan-VI.ttf
   - Agent: A1 (phụ thuộc T4)
   - Làm: `tools/build_font.py`: thêm glyph dấu + 133 glyph composite + cmap (cả `Đ`→ composite từ `Ð`), hmtx (advance = advance thân chữ), giữ nguyên mọi glyph/metrics cũ; `fontTools` lưu → `work/font/JejuHallasan-VI.ttf`; kiểm tra bằng `ttx`/FreeType load OK. `tools/font_diff.py`: liệt kê glyph/cmap thêm, xác nhận glyph cũ byte-giống.
@@ -114,3 +119,4 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 quản đốc: nghiệm thu T2 đạt (English = Font 33 Jeju, bằng chứng Z_Database$$Awake 0x114B208). Chốt D5, D6, thêm D11.
 - 2026-10-23 A1: T3 xong. tools/f18.py, tools/marks_from_f18.py -> docs/f18_marks.md/.json (132 chữ tách dấu OK, đ/Đ có thân riêng); tools/jeju_metrics.py -> docs/jeju_metrics.txt/.json. Jeju: x-height 500 (a cao 556), cap 627-688, stem ~100-148, ı bbox -52..457 (hình chữ nhật hình học, KHÔNG cùng phong cách Jeju), Ð cũng nét đơn hình học.
 - 2026-10-23 A1: T4 xong (chờ quản đốc nghiệm thu). font/marks.py (8 dấu x 3 cỡ R/C/S, vẽ tay), font/layout.py (134 chữ), tools/preview_marks.py -> font/preview/{marks,marks_context,glyphs_all}.png. Dấu hoa kép max 949, nặng min -198. Lưu ý: ı và Ð lệch phong cách Jeju (i có dấu, Đ hiện rõ) — đề xuất vẽ Đ = D Jeju + gạch vector, i = thân l cắt; chờ quyết.
+- 2026-10-23 quản đốc: nghiệm thu T4: đạt bố cục; yêu cầu sửa T4b (thân i, đ/Đ, gọt nét dấu). Thêm D3a.
