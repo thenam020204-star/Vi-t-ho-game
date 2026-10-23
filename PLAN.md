@@ -196,3 +196,4 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
 - 2026-10-23 quản đốc: nghiệm thu T12 đạt (kiểm 0x113FB14: callback dùng Obj_AllyUnit +0x30 là field public scene). Điều kiện T13: chứng minh W_GDPR_Manager.Start không điều khiển flow/scene trước khi vá ret; disasm 0x1171434; xác nhận Dobby relocate Unit_Death.
 - 2026-10-23 quản đốc: nghiệm thu T13 (22 vá, 3 điều kiện chứng minh) + T14 (offsets.h có nguồn RVA/dump, kiểm byte gốc trước hook) đạt. Giao T15+T16.
 - 2026-10-23 A1: T15 xong (out/MagicSurvival_VI_f18_mod{.apks,_merged.apk}, tools/build_apk_mod.py, chưa test runtime); T16 xong (docs/REPORT.md phần Bản mod).
+- 2026-10-23 quản đốc: nghiệm thu T15 (tự kiểm APK gộp: classes3, libmsmod, libil2cpp --check 22/22). GĐ2 xong phần build; chờ người dùng test runtime.
