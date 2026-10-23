@@ -57,7 +57,7 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Agent: A1
   - Làm: `.gitignore` (`work/ out/ *.apk *.apks`); `tools/unpack.py` nối 7 phần → inflate → `work/game.apks` → `work/base.apk`, `work/split_config.arm64_v8a.apk`, giải `assets/` ra `work/ex/`. Cài `UnityPy fonttools freetype-py`; tải `apktool`/`APKEditor`, Android build-tools (`zipalign`, `apksigner`), Il2CppDumper (hoặc Cpp2IL) vào `work/tools/`. Ghi `tools/README.md` (lệnh tái lập).
   - Hoàn thành khi: chạy lại `tools/unpack.py` ra đúng CRC 63ccbe18; `zipalign`/`apksigner`/dumper chạy được `--help`.
-- [ ] T2. Phân tích IL2CPP + scene — **Quản đốc nghiệm thu**
+- [x] T2. Phân tích IL2CPP + scene — **Quản đốc nghiệm thu**
   - Agent: A1
   - Làm: dump IL2CPP (dump.cs + script.json). Tìm trong `Z_Database` / code đổi ngôn ngữ: **English dùng font index nào**; cách đọc CSV (split `,`? xử lý `"`? `\n`?); ý nghĩa `@ ^ 《》 \``; Text có `resizeTextForBestFit`/overflow không. Kiểm kê chuỗi tiếng Anh cứng: m_Text trong scene (UI.Text) và string literal trong metadata xuất hiện trên UI. Đếm ảnh (Texture/Sprite) có chữ tiếng Anh (chỉ liệt kê tên).
   - File: `docs/analysis.md` (có bằng chứng: tên method/RVA, offset), `tools/dump_texts.py`.
@@ -104,3 +104,4 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 ## Nhật ký
 - 2026-10-23 quản đốc: kiểm kê xong, lập PLAN.md. Người dùng chốt: glyph vẽ tay theo nét f18; thay English; font + dịch toàn bộ.
 - 2026-10-23 A1: T1 xong. unpack.py ra CRC 63ccbe18 (3.9s); tools: dotnet 8 runtime (+ROLL_FORWARD=Major), Il2CppDumper 6.7.46, build-tools r35, APKEditor 1.4.9, apktool 2.12.0 đều chạy. GitHub API bị chặn, chỉ tải releases/download trực tiếp.
+- 2026-10-23 A1: T2 xong, docs/analysis.md. English=Jeju (Awake 0x114B208); CSV = Regex split (dấu phẩy trong "..."), xoá mọi `\`; ` @ `=xuống dòng, `^`=ngăn cấp trong 효과 설명줄06, `[]{}〈〉《》`... = màu; Text 654/654 Wrap+Truncate, không best-fit; ảnh có chữ chỉ logo; vài chuỗi cứng EN trong metadata. File thật CRLF+BOM (PLAN ghi LF).
