@@ -35,3 +35,12 @@ python3 -I tools/apk_diff.py work/base.apk <base.apk moi>                       
 Khoa ky THU NGHIEM (khong commit): `work/keys/ms-vi.jks`, alias `msvi`, mat khau store/key `msviviet`; tu tao neu chua co. Doi khoa so voi ban goc => phai go ban goc truoc khi cai.
 Kiem tra: `apksigner verify --verbose --min-sdk-version 24 --print-certs X.apk`, `zipalign -c -p 4 X.apk`, `aapt2 dump badging X.apk`
 (split khong co minSdk nen can `--min-sdk-version 24`, neu khong apksigner doi v1). `zipalign` in "header mismatch" khi xu ly APK do APKEditor tao: vo hai.
+
+## Ban mod (T15)
+```
+python3 -I tools/patch_so.py && python3 -I tools/patch_so.py --check     # work/mod/libil2cpp.so
+bash tools/build_mod.sh                                                  # work/mod/libmsmod.so, classes_mod.dex
+java -jar work/tools/apktool_2.12.0.jar d -r -f work/base.apk -o ap      # sua smali_classes2/.../UnityPlayerActivity.smali: truoc return-void cua onCreate chen
+                                                                         #   invoke-static {p0}, Lcom/msmod/Mod;->onCreate(Landroid/app/Activity;)V ; apktool b ; lay classes2.dex
+source tools/env.sh; python3 -I tools/build_apk_mod.py --dex2 <classes2.dex>   # -> out/MagicSurvival_VI_f18_mod.apks + _mod_merged.apk
+```

@@ -186,12 +186,13 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
   - Agent: A1 (phụ thuộc T12)
   - Làm: tải NDK, Dobby (build arm64 static), android.jar, d8; `mods/native/` (C + CMake/ndk-build), `mods/java/` (menu), script build ra `work/mod/libmsmod.so`, `work/mod/classes_mod.dex`.
   - Hoàn thành khi: build sạch; `readelf` lib arm64, chỉ phụ thuộc libc/liblog/libdl/libandroid; dex qua `dexdump`.
-- [ ] T15. Ráp APK mod + ký + kiểm (M7) — **Quản đốc nghiệm thu**
+- [x] T15. Ráp APK mod + ký + kiểm (M7) — **Quản đốc nghiệm thu** (chờ quản đốc nghiệm thu)
   - Agent: A1 (phụ thuộc T13, T14)
   - Hoàn thành khi: apksigner/zipalign/aapt2 OK; apk_diff đúng M7; nếu có `/dev/kvm` + emulator arm64-translation thì chạy thử, không thì ghi rõ chưa test.
-- [ ] T16. Cập nhật `docs/REPORT.md` (phần mod), commit + push.
+- [x] T16. Cập nhật `docs/REPORT.md` (phần mod), commit + push.
 
 ## Vướng mắc GĐ2
 - (trống)
 - 2026-10-23 quản đốc: nghiệm thu T12 đạt (kiểm 0x113FB14: callback dùng Obj_AllyUnit +0x30 là field public scene). Điều kiện T13: chứng minh W_GDPR_Manager.Start không điều khiển flow/scene trước khi vá ret; disasm 0x1171434; xác nhận Dobby relocate Unit_Death.
 - 2026-10-23 quản đốc: nghiệm thu T13 (22 vá, 3 điều kiện chứng minh) + T14 (offsets.h có nguồn RVA/dump, kiểm byte gốc trước hook) đạt. Giao T15+T16.
+- 2026-10-23 A1: T15 xong (out/MagicSurvival_VI_f18_mod{.apks,_merged.apk}, tools/build_apk_mod.py, chưa test runtime); T16 xong (docs/REPORT.md phần Bản mod).
