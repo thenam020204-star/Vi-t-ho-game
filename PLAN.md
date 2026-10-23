@@ -197,3 +197,19 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
 - 2026-10-23 quản đốc: nghiệm thu T13 (22 vá, 3 điều kiện chứng minh) + T14 (offsets.h có nguồn RVA/dump, kiểm byte gốc trước hook) đạt. Giao T15+T16.
 - 2026-10-23 A1: T15 xong (out/MagicSurvival_VI_f18_mod{.apks,_merged.apk}, tools/build_apk_mod.py, chưa test runtime); T16 xong (docs/REPORT.md phần Bản mod).
 - 2026-10-23 quản đốc: nghiệm thu T15 (tự kiểm APK gộp: classes3, libmsmod, libil2cpp --check 22/22). GĐ2 xong phần build; chờ người dùng test runtime.
+
+## GĐ2b: Sửa màn đen (người dùng báo 2026-10-23: bản mod màn đen, nút MOD hiện, không văng)
+- Bản f18 không mod đã chạy trên máy người dùng (còn quảng cáo) → lỗi nằm ở phần mod (vá libil2cpp / dex / libmsmod).
+- [ ] T17. Bản chẩn đoán + chia đôi lỗi
+  - Agent: A1
+  - Làm: (1) Mod.java thêm nút "Lưu log" trong menu: chạy `logcat -d -v time --pid=<pid của mình>` (app đọc log của chính nó không cần quyền), ghi `getExternalFilesDir(null)/msmod_log.txt` và hiện 30 dòng cuối trong menu (cuộn được); native ghi log tag `msmod` mọi bước (base, từng hook OK/FAIL, byte đầu). (2) Build 3 APK gộp cùng khoá để người dùng cài đè lần lượt:
+    `..._diag_patch.apk` = f18 + 22 vá libil2cpp, KHÔNG dex/lib mod;
+    `..._diag_menu.apk` = f18 + dex menu + libmsmod (đã thêm Lưu log), libil2cpp GỐC;
+    `..._diag_full.apk` = như bản mod hiện tại + Lưu log.
+    Bản diag_patch không có menu → thêm vào nó lib/dex chỉ có nút "Lưu log" (không hook) nếu làm được gọn; không thì bỏ.
+  - Song song phân tích tĩnh: luồng khởi động (scene 0 → main menu) có chờ callback GDPR/UMP, GPGS Authenticate, UGS, IAP init hay không — nghi phạm số 1 cho màn đen là vá A1/B1/B2/C1 làm một coroutine chờ mãi. Ghi vào docs/mod_analysis.md mục "T17 màn đen".
+  - Hoàn thành khi: 3 APK verify OK; ghi rõ cách người dùng gửi log.
+- [ ] T18. Môi trường chạy thử không KVM
+  - Agent: A1 (sau T17)
+  - Làm: Android emulator chạy TCG (không tăng tốc): ưu tiên system image arm64-v8a (API 24–30) qua qemu-system-aarch64 của emulator, hoặc x86_64 API 30+ có ndk_translation với `-accel off`; GPU `swiftshader_indirect`; headless (`-no-window`), adb. Cài APK, chạy, thu logcat + screencap. Ghi script `tools/emu.sh` (cài, khởi động, chờ boot, install, start, logcat, screenshot).
+  - Hoàn thành khi: chạy được bản f18 không mod tới màn hình chính (screencap) hoặc báo rõ giới hạn (lý do không chạy được, thời gian boot).
