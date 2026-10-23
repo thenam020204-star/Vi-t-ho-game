@@ -43,6 +43,10 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - D6. (chốt sau T2) Không sửa `libil2cpp.so`. **Duyệt** sửa các chuỗi cứng tiếng Anh hiển thị (Loading/Uninstalling, thông báo cập nhật…) trong
   `global-metadata.dat` string literal (T8) với điều kiện: chỉ đổi literal data/bảng literal, mọi phần khác byte-giống, có diff. **Duyệt** sửa `m_Text`
   của các UI.Text có chữ Latin trong scene (vô hại nếu bị ghi đè lúc chạy).
+- D12. (người dùng, sau thử nghiệm f18px) Bản build THỬ dùng font **f18-B**: `tools/build_font_f18px.py --px 75` → `work/font_px/JejuHallasan-f18B.ttf`
+  (toàn bộ 227 ký tự f18 — Latin, số, dấu câu, chữ Việt — là ô pixel vector, 1 ô = 75 đơn vị; chữ Hàn và ký tự ngoài f18 như `= _ ~` giữ Jeju).
+  **Phương án dự phòng**: `work/font/JejuHallasan-VI.ttf` (vẽ tay, T5). T9/T10 phải nhận đường dẫn font làm tham số và build được cả 2 bản
+  (`out/MagicSurvival_VI_f18.*` và `out/MagicSurvival_VI_jeju.*`) để người dùng thử, không tốt thì dùng bản jeju.
 - D11. (sau T2) Mọi UI.Text: BestFit=0, cắt dọc (Truncate) → bản dịch phải đo độ rộng bằng Jeju-VI theo cỡ chữ; dài hơn EN quá 15% thì rút gọn.
 - D7. Đóng gói: UnityPy save bundle (giữ kiểu nén gốc), thay entry trong base.apk **giữ nguyên cách lưu (stored/deflate) và căn lề** như gốc, xoá chữ ký cũ, `zipalign -p 4`, `apksigner` v2+v3, **cùng một khoá** cho base + split. Thêm APK gộp bằng APKEditor (REAndroid).
 - D8. Cấu trúc repo:
@@ -125,3 +129,4 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 A1: T5 xong. tools/build_font.py -> work/font/JejuHallasan-VI.ttf (6660012 -> 6667056 B, +158 glyph: 1 thân i, 22 dấu/gạch, 135 composite; cmap +133, đổi U+0111). font_diff: 0 glyph cũ đổi byte, 0 hmtx cũ đổi, kern/cvt/fpgm/prep/gasp/name/post/OS2 byte-giống; verify_font.py: 134/134, FreeType 17/18/24/30 (hinted+nohint) OK, ots PASS; ảnh font/preview/sample_{17,18,24,30}.png (tools/make_samples.py). post giữ format 3.0 (không lưu tên glyph); OS/2 unicode range không đổi.
 - 2026-10-23 quản đốc: nghiệm thu T4b + T5 đạt (xem compare_i_d.png, sample_24.png). Bước tiếp: T6.
 - 2026-10-23 A1: T6 xong. text/eng/ (6 file byte-giống gốc), tools/text_{common,extract,inject,check}.py, text/segments.tsv = 1904 key duy nhất (2304 lần xuất hiện, 61602 ký tự EN: Name 259, Explain 101, Class 195, Synergy 145, MagicCom 376, Ability 828), text/glossary.tsv 255 mục. Round-trip inject(vi=en) = 6 file byte-giống. Bỏ qua: hàng ID 0 (marker Name/Type/Explain), hàng tiêu đề giữa file (ID,...), cột 특성ID ("a"). Chưa chắc hiển thị: Explain "일지 조건 이름" và "구역 효과" (đã gắn `?` ở note). T7 gộp thành 1 task theo yêu cầu người dùng.
+- 2026-10-23 quản đốc: người dùng chọn thử font f18-B (D12); Jeju-VI làm dự phòng.
