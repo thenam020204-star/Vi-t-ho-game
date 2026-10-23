@@ -140,6 +140,8 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 quản đốc: nghiệm thu T8–T10 (tự kiểm: f18 dùng glyph pixel, jeju nét gốc, text tiếng Việt trong bundle). T11: docs/REPORT.md; chưa test thiết bị — chờ người dùng cài thử.
 - 2026-10-23 quản đốc: mở GĐ2 (mod offline) theo yêu cầu người dùng; người dùng chọn bản f18.
 - 2026-10-23 A1: T12 xong (chờ quản đốc nghiệm thu), docs/mod_analysis.md. QC: chỉ AdMob+UMP, cổng IsGDPR_ON (W_GDPR_Manager.Start 0x113FFCC ret) + rewarded duy nhất = hồi sinh (ShowRewardedAd 0x113F3BC -> Unit_RevivalON 0x1045070; cần bỏ 2 cổng internetReachability 0x1044C98/0x108B934); GPGS: callback đăng nhập chỉ log, chặn AuthenticateUser 0x114C180 + đuôi LoadLocalData 0x1171434 + 7 nút cloud; IAP là IAPButton Codeless (ret 7 hàm BaseIAPButton/CodelessIAPStoreListener, KHÔNG bật IAP_DestroyAD vì nó kích hoạt hồi sinh tự động); không có kiểm tra bản quyền/chữ ký; HP = static C_Battle_AllyUnit +0x38, hook Unit_Damage 0x1048858/Unit_Death 0x10449F0; EXP = "Mana" static Z_Database +0x9E4/+0x9E8, lên cấp = V_Ability_Manager.ManaGain 0x10FC64C, Update hook C_Battle_Manager 0x109CBF8; launcher UnityPlayerActivity (classes2.dex), minSdk 24/target 36, 2 dex, arm64 only; NDK r27c, Dobby (git clone được), platform-36 android.jar.
+- 2026-10-23 A1: T13 xong (chờ quản đốc nghiệm thu). tools/patch_so.py (PT_LOAD, kiểm orig, --check/--revert), mods/patches.json (22 vá, bỏ A2 vì dư), tools/disasm_patch.py -> docs/patch_disasm.txt (0 lỗi), docs/mod_analysis.md mục "T13 kiểm chứng": GDPR.Start không điều khiển flow (ret OK), B2 đúng epilogue/frame 0xC0 duy nhất, mọi ret là void. Bản vá sha256 2e4dd130...0e0e; revert = gốc.
+- 2026-10-23 A1: T14 xong. tools/build_mod.sh -> work/mod/libmsmod.so (NDK r27c + Dobby e9fe7fb, master hỏng; NEEDED libc/libm/libdl/liblog) + classes_mod.dex (com.msmod.Mod); mods/native/{msmod.c,offsets.h,CMakeLists.txt}, mods/java/com/msmod/Mod.java, tools/check_hooks.py. Phát hiện: slot TypeInfo chứa token mã hoá (<2^32) tới khi game chạm lớp, không phải NULL. Chưa chạy thiết bị.
 
 ---
 # GIAI ĐOẠN 2: Mod chơi offline (người dùng yêu cầu 2026-10-23)
@@ -180,7 +182,7 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
   - Agent: A1 (phụ thuộc T12)
   - File: `tools/patch_so.py`, `mods/patches.json`, `tools/disasm_patch.py` (in trước/sau từng điểm vá).
   - Hoàn thành khi: vá áp được lên libil2cpp gốc, kiểm lại byte gốc OK, disasm trước/sau hợp lệ (nhánh/ret/ABI đúng, không vỡ stack frame).
-- [ ] T14. Toolchain + `libmsmod.so` + menu Java (M5, M6)
+- [x] T14. Toolchain + `libmsmod.so` + menu Java (M5, M6)
   - Agent: A1 (phụ thuộc T12)
   - Làm: tải NDK, Dobby (build arm64 static), android.jar, d8; `mods/native/` (C + CMake/ndk-build), `mods/java/` (menu), script build ra `work/mod/libmsmod.so`, `work/mod/classes_mod.dex`.
   - Hoàn thành khi: build sạch; `readelf` lib arm64, chỉ phụ thuộc libc/liblog/libdl/libandroid; dex qua `dexdump`.
@@ -192,4 +194,3 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
 ## Vướng mắc GĐ2
 - (trống)
 - 2026-10-23 quản đốc: nghiệm thu T12 đạt (kiểm 0x113FB14: callback dùng Obj_AllyUnit +0x30 là field public scene). Điều kiện T13: chứng minh W_GDPR_Manager.Start không điều khiển flow/scene trước khi vá ret; disasm 0x1171434; xác nhận Dobby relocate Unit_Death.
-- 2026-10-23 A1: T13 xong (chờ quản đốc nghiệm thu). tools/patch_so.py (PT_LOAD, kiểm orig, --check/--revert), mods/patches.json (22 vá, bỏ A2 vì dư), tools/disasm_patch.py -> docs/patch_disasm.txt (0 lỗi), docs/mod_analysis.md mục "T13 kiểm chứng": GDPR.Start không điều khiển flow (ret OK), B2 đúng epilogue/frame 0xC0 duy nhất, mọi ret là void. Bản vá sha256 2e4dd130...0e0e; revert = gốc.

@@ -333,3 +333,41 @@ Chữ ký lấy từ `dump.cs` (khớp RVA). `ret` đặt tại **entry hàm** (
 | A4 `ShowInterstitial` (thay 1 lệnh) | `public void` | `Button_SceneMove` (0x10BC108), `Fade_RewardClass.MoveNext` (0x10EF67C): gọi rồi đi tiếp | tail `b` tới `Button_Scene_Moving` (void) |
 Code game không gọi trực tiếp bất kỳ hàm `UnityEngine.Purchasing` nào (scan.json: 0 lời gọi) và không có hàm nào trả bool/obj bị vá (nên không cần `mov w0/x0`). Không IAP_DestroyAD, không vá bất tử/lên cấp (T14 dùng hook).
 Phần chưa kiểm được ngoài tĩnh: hành vi chạy thật (xem mục 6 ở "Điểm CHƯA XÁC ĐỊNH").
+
+---------------------------------------------------------------------------------------------------
+
+## T14 - libmsmod.so + menu Java (kết quả build và kiểm chứng)
+
+Build: `tools/build_mod.sh [native|java|all]` (tự tải toolchain vào `work/tools` nếu thiếu) -> `work/mod/libmsmod.so` (236.776 B, đã strip) và `work/mod/classes_mod.dex` (10.368 B, DEX 037, min-api 24).
+Toolchain: NDK r27c (27.2.12479018), `-DANDROID_PLATFORM=android-24`, `-Wl,-z,max-page-size=16384`; android.jar = platform-36_r02; javac 21 `--release 8`; d8 build-tools r35 `--release --min-api 24`.
+**Dobby**: dùng commit `e9fe7fb` (2023-04-21), KHÔNG dùng master `5dfc854` (đã thử: master đang dở refactor, `ProcessRuntime.cc`/`os_arch_features.h` không biên dịch được). Build tĩnh `dobby_static`, tắt `Plugin.SymbolResolver/ImportTableReplace/Android.BionicLinkerUtil`, `DOBBY_DEBUG=OFF`;
+một sửa nhỏ do script áp (sed): `logging.h` định nghĩa `Logger::Shared()` trong header thiếu `inline` => trùng ký hiệu khi link static.
+Kiểm: `readelf -d` NEEDED = `liblog.so libm.so libdl.so libc.so` (không libc++_shared, không libandroid); LOAD căn 0x4000; `GNU_STACK` RW (noexecstack); không TEXTREL.
+`dexdump`: lớp `Lcom/msmod/Mod;` (+ `Mod$Ui`, `Mod$Ui$1..4`, `Mod$Ui$DragListener`, `Mod$1`).
+
+### Chữ ký JNI (build_mod.sh tự kiểm: native trong dex == ký hiệu xuất trong .so)
+| Java (`com.msmod.Mod`, static native) | Ký hiệu C |
+|---|---|
+| `void setGodMode(boolean)` | `Java_com_msmod_Mod_setGodMode(JNIEnv*, jclass, jboolean)` |
+| `void requestLevelUp(int)` | `Java_com_msmod_Mod_requestLevelUp(JNIEnv*, jclass, jint)` |
+| `boolean isInBattle()` | `Java_com_msmod_Mod_isInBattle(JNIEnv*, jclass)` (Update chạy trong <1 s và Unit_IsLive) |
+| `int getPendingLevelUps()` (thêm) | `Java_com_msmod_Mod_getPendingLevelUps` |
+| `boolean isReady()` (thêm) | `Java_com_msmod_Mod_isReady` (đã cài xong cả 5 hook) |
+Java: `Mod.onCreate(Activity)` (public static) = `System.loadLibrary("msmod")` + dựng nút nổi "MOD" (kéo được, chạm để mở bảng) trên UI thread bằng `addContentView`; bảng: Switch "Bất tử", nút "Lên 1 cấp", "Lên 5 cấp" (mờ + vô hiệu khi `!isInBattle()`, làm mới mỗi 500 ms bằng `Handler` chỉ khi bảng đang mở), "Đóng". Không cần quyền. T15 chèn `invoke-static {p0}, Lcom/msmod/Mod;->onCreate(Landroid/app/Activity;)V` trước `return-void` của `UnityPlayerActivity.onCreate` như mục (g).
+
+### Hook (mods/native/msmod.c, offsets.h)
+| Hook | RVA | Chữ ký (kèm MethodInfo* cuối) | Hành vi |
+|---|---|---|---|
+| `C_Battle_AllyUnit$$Unit_Damage` | 0x1048858 | `void(this, float, float, int32, MethodInfo*)` | bất tử bật -> return, ngược lại gọi gốc |
+| `C_Battle_AllyUnit$$Unit_Death` | 0x10449F0 | `void(this, MethodInfo*)` | bất tử bật -> return |
+| `C_Battle_Manager$$Update` | 0x109CBF8 | `void(this, MethodInfo*)` | gọi gốc; ghi mốc thời gian + `Unit_IsLive`; bất tử: `Unit_Hp=UnitApply_HpMax` nếu thấp hơn; lên cấp (xem dưới) |
+| `V_Ability_Manager$$ManaGain` | 0x10FC64C | `void(this, float, MethodInfo*)` | lưu `this` rồi gọi gốc |
+| `C_Battle_Manager$$Start` (thêm) | 0x109E444 | `void(this, MethodInfo*)` | xoá `this` V_Ability_Manager cũ + bộ đếm lên cấp khi vào trận mới (tránh dùng con trỏ đã bị huỷ), rồi gọi gốc |
+Trước khi hook, `installer` so 16 byte đầu mỗi hàm với giá trị trong `msmod.c` (không khớp -> không hook, ghi log `msmod`); `tools/check_hooks.py` (chạy trong build) đã so các giá trị này với `libil2cpp.so` gốc: KHỚP cả 5.
+**Dobby relocate 16 byte đầu**: 4/5 hàm không có lệnh PC-relative trong 16 byte đầu. `Unit_Death` có 2 `adrp` (x21, x20): `InstructionRelocationARM64.cc` (`inst_is_adrp`, dòng ~223) dịch `adrp Rd, page` thành `Mov Xd, <địa chỉ trang tuyệt đối tính theo địa chỉ nguồn>` nên relocate đúng; `b/bl/ldr literal/adr/b.cond/cbz/tbz` cũng được xử lý (không có trong 16 byte đầu của 5 hàm).
+Không có nhánh nào trong thân hàm nhảy vào 20 byte đầu của 5 hàm (check_hooks) nên trampoline (4 byte near-branch hoặc 16 byte `ldr x17; br x17`) không cắt ngang đích nhảy. Chưa chạy trên thiết bị (không có arm64/KVM) - CHƯA XÁC ĐỊNH ở runtime.
+**Truy cập static**: `klass = *(base + slot)`, `static_fields = *(klass + 0xB8)` (đúng mẫu `ldr x0,[slot]; ldr x8,[x0,#0xb8]` của game). Phát hiện khi viết: **slot chưa phải con trỏ cho tới khi game chạy stub khởi tạo metadata (`bl 0xf158e4` với x0 = địa chỉ slot, đầu mỗi hàm, cờ `tbnz` lần đầu) cho lớp đó** - giá trị khởi tạo trong file là token mã hoá nhỏ (vd slot `C_Battle_AllyUnit_TypeInfo` 0x259EE58 = 0x200047ED; `Z_Database_TypeInfo` 0x25A4B48 = 0x200089C9, đọc thẳng từ file) chứ KHÔNG phải 0. Vì vậy code chỉ coi là con trỏ khi `>= 2^32` và căn 8, sau đó kiểm `static_fields` tương tự (nếu không -> bỏ qua frame đó). Offsets/field (bảng ở mục e/f) đã chép vào `offsets.h` kèm RVA/dòng dump.cs nguồn.
+**Lên cấp**: `pending` (atomic, tối đa 99) do Java đặt; trong Update (luồng Unity) khi `pending>0`, `Unit_IsLive`, có `this` V_Ability_Manager, `Time.timeScale > 0.01` (gọi `get_timeScale` 0x219AB34 với MethodInfo=NULL) và còn cấp để lên (`Level<ApplyLevelMax || LevelAdd<ApplyLevelAddMax`) thì gọi **bản gốc** `ManaGain(this, max(ManaCost-ManaStock,0)+0.01f)`; giảm `pending` khi `Level+LevelAdd` tăng; tối đa 1 cấp/frame; sau 120 frame liên tiếp không lên được (vd bảng artifact đang mở) thì huỷ yêu cầu. Bảng chọn kỹ năng của game tự hiện (timeScale=0) nên frame sau tự chờ.
+Khác với đề bài (có chủ đích): điều kiện là `timeScale > 0.01` chứ không `== 1` (người chơi có thể bật tốc độ x2 - khi đó `==1` sẽ không bao giờ thoả); thêm hook `C_Battle_Manager$$Start` (xoá con trỏ cũ) và 2 JNI phụ `getPendingLevelUps/isReady` để menu hiện trạng thái.
+Không cấp phát/khoá trong hook: chỉ `atomic_*`, `clock_gettime` (vDSO) và đọc bộ nhớ; `static int fails` chỉ luồng Unity đụng.
+Hạn chế đã biết: (1) `this` của V_Ability_Manager chỉ có sau lần `ManaGain` đầu tiên của trận (nhặt viên EXP đầu tiên, hoặc kẻ địch chết) - bấm "Lên cấp" trước đó thì yêu cầu được giữ và thực hiện ngay khi có `this` (menu hiện "Đang chờ lên cấp: N"); (2) hook cài từ luồng nền ~ngay khi `libil2cpp.so` xuất hiện trong `dl_iterate_phdr` (thăm dò 20 ms, tối đa 120 s) - nếu hook bị cài đúng lúc luồng khác đang chạy chính hàm đó (không xảy ra ở giai đoạn khởi động vì `Update` chỉ chạy ở cảnh trận) thì có race, chấp nhận; (3) `Unit_Death` bị chặn chỉ khi bất tử bật; coroutine `Play_Unit_Death` đã bắt đầu trước đó vẫn chạy; (4) SELinux/W^X: Dobby `mprotect` RWX trang `.text` của libil2cpp (extractNativeLibs=true, file riêng tư) - cách phổ biến, chưa thử thật.
