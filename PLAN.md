@@ -99,10 +99,10 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Agent: A1. Đầu ra: `text/vi/vi.tsv` (cột `key`, `vi`; key = chuỗi EN y nguyên). Thứ tự dịch = cột `no` (Name, Explain, Class, Synergy, MagicCom, Ability; trong nhóm tên/UI trước, mô tả sau).
   - Quy tắc: dịch tay theo `text/glossary.tsv`; giữ ngoặc màu/`##id##`/số/%/`□`/`ㅁ`; chỉ dịch phần chữ (không có `@ ^` trong key); không `"` `\`.
   - Hoàn thành khi: `python3 -I tools/text_check.py --strict` không lỗi (cảnh báo độ rộng D11 thì rút gọn); `tools/text_inject.py` chạy ra 6 file.
-- [ ] T8. Chuỗi cứng scene/metadata (theo kết luận T2, nếu quản đốc duyệt)
+- [x] T8. Chuỗi cứng scene (UI.Text m_Text; D6b: không đụng metadata/code)
   - Agent: A1
   - Hoàn thành khi: chuỗi dịch nằm trong `text/vi/hardcoded.tsv` và tool patch có diff.
-- [ ] T9. Patch bundle — **Quản đốc nghiệm thu**
+- [x] T9. Patch bundle — **Quản đốc nghiệm thu** (chờ quản đốc nghiệm thu)
   - Agent: A1 (phụ thuộc T5, T7, T8)
   - Làm: `tools/patch_bundle.py`: thay `m_FontData` font 33 (+ font khác theo T2), thay 6 TextAsset eng_* bằng bản `text_inject.py`; save `work/build/data.unity3d`. `tools/bundle_diff.py`: liệt kê object đổi (phải đúng 1 Font + 6 TextAsset [+ T8]).
   - Hoàn thành khi: UnityPy mở lại bundle mới, đọc font/text đúng; bundle_diff khớp dự kiến.
@@ -134,3 +134,5 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 A1: T7 xong. text/vi/vi.tsv 1904/1904 key (2 cột key,vi); text_check --strict 0 lỗi, 263 cảnh báo độ rộng D11 (chủ yếu từ ngắn bắt buộc theo glossary: Trường phái, Cửa hàng, tên Class/Spell/Artifact); text_inject ra 6 file ở work/text_vi. Sửa tools/text_check.py: thuật ngữ viết HOA (ON/OFF) khớp phân biệt hoa thường; ngoặc không cân bằng chỉ báo lỗi khi key cân bằng (key 《...》 bị tách qua " @ "). Glossary: thêm Mirage, Crater, Elite Monster, Critical Strike Multiplier (T7) + phương án phụ cho Active/Center/Left/Count/Give Up.
 - 2026-10-23 quản đốc: nghiệm thu T7 (người dùng đã duyệt bản dịch). 264 cảnh báo độ rộng chấp nhận, kiểm trên máy thật ở T11. A1 kết thúc; A2 được phép implement T8–T10 sau khi nộp bản đọc trước.
 - 2026-10-23 quản đốc: người dùng bỏ chuỗi trong code (D6b). T8 chỉ còn m_Text scene.
+- 2026-10-23 A2: T8 xong. text/vi/scene.tsv (level,path_id,en,vi) = 18 UI.Text: ERROR->LỖI (5), ERROR 255, error code (2), Point->Điểm (2), ON->BẬT (2), SAVE->LƯU, LOAD->TẢI, Master->Bậc thầy (3), No Ads->Không QC. Bỏ `(Max)` (VI 133–155% EN ở cỡ 16, giữ EN). Còn vượt 15%: ON/BẬT 138–150%, Master/Bậc thầy 129%, No Ads/Không QC 135–139% (quản đốc cho phép; theo glossary; nhãn ngắn, có thể bị code ghi đè). Chuỗi Hàn tĩnh giữ nguyên (không T8b).
+- 2026-10-23 A2: T9 xong. tools/patch_bundle.py (--font --out; font tham số) + tools/bundle_diff.py. Lưu packer='original': mở lại cờ 0x243, khối 0x2 như gốc (5621 khối 128KB; gốc 98 khối stored, mới 1; kích thước 135 MB vs 169 MB do nén tốt hơn). bundle_diff (bản jeju): đúng 25 object đổi = 1 Font(33) + 6 TextAsset + 18 UI.Text, tập object/externals/cờ bằng nhau. patch_bundle ~1 phút. build_font_f18px.py: mặc định --px 75, thêm --variants. text_common.load_vi bỏ qua scene.tsv.

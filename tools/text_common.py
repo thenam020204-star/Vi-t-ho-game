@@ -143,6 +143,7 @@ def load_vi(vi_dir=VI_DIR):
         with open(p, encoding='utf-8', newline='') as f:
             rows = f.read().split('\n')
         hdr = rows[0].rstrip('\r').split('\t')
+        if os.path.basename(p) == 'scene.tsv': continue   # nhan UI.Text trong scene (patch_bundle.py), khong phai CSV
         if 'key' not in hdr or 'vi' not in hdr:
             warn.append('%s: thieu cot key/vi' % os.path.basename(p)); continue
         ki, vi = hdr.index('key'), hdr.index('vi')

@@ -117,8 +117,9 @@ def build(variant, px):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument('--px', type=int, default=80, help='don vi font cho 1 o pixel (UPM 1000)')
+    ap.add_argument('--px', type=int, default=75, help='don vi font cho 1 o pixel (UPM 1000)')
+    ap.add_argument('--variants', default='ABC', help='vd B de chi build f18B')
     a = ap.parse_args()
-    for v in 'ABC':
+    for v in a.variants:
         dst, n = build(v, a.px)
         print(v, dst, n, 'glyph', os.path.getsize(dst), 'byte')

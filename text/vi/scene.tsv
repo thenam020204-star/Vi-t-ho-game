@@ -1,0 +1,19 @@
+level	path_id	en	vi
+level0	100	ERROR	LỖI
+level0	108	ERROR	LỖI
+level0	123	ERROR	LỖI
+level1	6067	ERROR	LỖI
+level1	6736	ERROR	LỖI
+level0	120	ERROR 255	LỖI 255
+level0	113	error code : tp801105	mã lỗi : tp801105
+level1	7164	error code : tp801105	mã lỗi : tp801105
+level1	5999	Point	Điểm
+level2	8031	Point	Điểm
+level1	6580	ON	BẬT
+level2	8420	ON	BẬT
+level1	8018	SAVE	LƯU
+level1	7375	LOAD	TẢI
+level1	7437	Master	Bậc thầy
+level2	7510	Master	Bậc thầy
+level2	8606	Master	Bậc thầy
+level2	7797	No Ads	Không QC
