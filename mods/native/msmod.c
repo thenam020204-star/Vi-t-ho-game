@@ -105,12 +105,19 @@ static void hook_Update(void *self, const void *mi) {
         if (mx > 0.0f && *hp < mx) *hp = mx;
     }
 
-    /* Len cap: toi da 1 cap / frame, chi khi khong dang hien bang chon ky nang (timeScale > 0). */
+    /* Len cap (T19): ManaGain KHONG ghi Level/LevelAdd (chi doc) - Level tang sau khi nguoi choi chon ky nang.
+     * Coi 1 lan goi la "da len cap" khi ManaCost doi, hoac ManaStock bi tru (< stock+need), hoac timeScale<=0.01 (bang da mo).
+     * Thanh cong -> giam pending ngay, roi cho timeScale>0.01 tro lai + ~10 frame truoc khi goi tiep. */
+    static int wait_resume, settle, fails, blocked;
     int pend = atomic_load_explicit(&g_pending, memory_order_relaxed);
-    if (pend <= 0) return;
+    if (pend <= 0) { wait_resume = 0; settle = 0; fails = 0; blocked = 0; return; }
     void *mgr = atomic_load_explicit(&g_mana_this, memory_order_relaxed);
     if (!mgr) return;                          /* chua nhat vien EXP nao => chua co this; giu yeu cau */
     if (fn_get_timeScale(NULL) <= 0.01f) return; /* bang chon ky nang / tam dung dang mo */
+    if (wait_resume) {                         /* bang vua dong: cho game xu ly xong lua chon */
+        if (++settle < 10) return;
+        wait_resume = 0;
+    }
     uint8_t *zdb = statics_of(SLOT_Z_DATABASE);
     if (!zdb) return;
 
@@ -122,17 +129,23 @@ static void hook_Update(void *self, const void *mi) {
 
     float cost = *(volatile float *)(zdb + ZDB_MANA_COST);
     float stock = *(volatile float *)(zdb + ZDB_MANA_STOCK);
+    if (stock >= cost) {                       /* game dang tu xu ly EXP tran (vd bang artifact mo): khong chen vao */
+        if (++blocked >= 600) { blocked = 0; atomic_store(&g_pending, 0); }
+        return;
+    }
+    blocked = 0;
     float need = cost - stock;
-    if (need < 0.0f) need = 0.0f;
     orig_ManaGain(mgr, need + 0.01f, NULL);
 
-    int lv2 = *(volatile int *)(zdb + ZDB_LEVEL);
-    int la2 = *(volatile int *)(zdb + ZDB_LEVEL_ADD);
-    static int fails; /* chi luong Unity dung */
-    if (lv2 + la2 > lv + la) {
-        fails = 0;
+    float cost2 = *(volatile float *)(zdb + ZDB_MANA_COST);
+    float stock2 = *(volatile float *)(zdb + ZDB_MANA_STOCK);
+    int lv2 = *(volatile int *)(zdb + ZDB_LEVEL), la2 = *(volatile int *)(zdb + ZDB_LEVEL_ADD);
+    bool ok = (cost2 != cost) || (stock2 < stock + need - 0.005f) || (fn_get_timeScale(NULL) <= 0.01f) || (lv2 + la2 > lv + la);
+    LOGI("levelup: ok=%d cost %.1f->%.1f stock %.1f->%.1f lv %d+%d->%d+%d pend=%d", ok, cost, cost2, stock, stock2, lv, la, lv2, la2, pend);
+    if (ok) {
+        fails = 0; settle = 0; wait_resume = 1;
         atomic_fetch_sub(&g_pending, 1);
-    } else if (++fails >= 120) { /* ManaGain khong len cap (vd bang vat pham dang mo) qua lau => bo */
+    } else if (++fails >= 30) {
         fails = 0;
         atomic_store(&g_pending, 0);
     }
