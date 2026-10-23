@@ -68,11 +68,11 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
   - Làm: dump IL2CPP (dump.cs + script.json). Tìm trong `Z_Database` / code đổi ngôn ngữ: **English dùng font index nào**; cách đọc CSV (split `,`? xử lý `"`? `\n`?); ý nghĩa `@ ^ 《》 \``; Text có `resizeTextForBestFit`/overflow không. Kiểm kê chuỗi tiếng Anh cứng: m_Text trong scene (UI.Text) và string literal trong metadata xuất hiện trên UI. Đếm ảnh (Texture/Sprite) có chữ tiếng Anh (chỉ liệt kê tên).
   - File: `docs/analysis.md` (có bằng chứng: tên method/RVA, offset), `tools/dump_texts.py`.
   - Hoàn thành khi: `docs/analysis.md` trả lời đủ 5 câu trên kèm bằng chứng; ghi "đề xuất" cho D4/D5/D6 nếu cần đổi (không tự đổi).
-- [ ] T3. Đọc f18 + đo Jeju + tách dấu
+- [x] T3. Đọc f18 + đo Jeju + tách dấu
   - Agent: A1 (phụ thuộc T1)
   - Làm: `tools/f18.py` (đọc .bin, in ASCII từng glyph, hàm lấy bitmap theo ký tự); `tools/marks_from_f18.py`: với mỗi chữ Việt, trừ bitmap thân chữ → bitmap dấu + vị trí (hàng/cột so với thân); xuất `docs/f18_marks.md` (ASCII từng loại dấu, bảng vị trí chữ thường/hoa/dấu kép). `tools/jeju_metrics.py`: stem width, x-height, cap, yMax a/e/o/u/y/A…, bbox `ı`, `Ð`.
   - Hoàn thành khi: `docs/f18_marks.md` đủ 8 loại dấu + mọi tổ hợp kép có trong f18; số liệu Jeju in ra file.
-- [ ] T4. Vẽ tay contour dấu theo nét f18 — **Quản đốc nghiệm thu**
+- [x] T4. Vẽ tay contour dấu theo nét f18 — **Quản đốc nghiệm thu** (chờ quản đốc nghiệm thu)
   - Agent: A1 (phụ thuộc T3)
   - Làm: `font/marks.py` khai báo contour vector (đơn vị font, quadratic) cho: acute, grave, hook, tilde, dotbelow, circumflex, breve, horn_o, horn_u, và biến thể hẹp/thấp cho chữ hoa + tổ hợp kép (vd circumflex_acute) đúng bố cục f18. Nét dày theo stem Jeju. `font/layout.py`: bảng ký tự → (thân, [dấu, dx, dy]).
   - Hoàn thành khi: `tools/preview_marks.py` xuất `font/preview/marks.png` (dấu f18 phóng to cạnh dấu vector) để quản đốc so.
@@ -112,3 +112,5 @@ và nhét vào font gốc **JejuHallasan** của game. Toàn bộ text tiếng A
 - 2026-10-23 A1: T1 xong. unpack.py ra CRC 63ccbe18 (3.9s); tools: dotnet 8 runtime (+ROLL_FORWARD=Major), Il2CppDumper 6.7.46, build-tools r35, APKEditor 1.4.9, apktool 2.12.0 đều chạy. GitHub API bị chặn, chỉ tải releases/download trực tiếp.
 - 2026-10-23 A1: T2 xong, docs/analysis.md. English=Jeju (Awake 0x114B208); CSV = Regex split (dấu phẩy trong "..."), xoá mọi `\`; ` @ `=xuống dòng, `^`=ngăn cấp trong 효과 설명줄06, `[]{}〈〉《》`... = màu; Text 654/654 Wrap+Truncate, không best-fit; ảnh có chữ chỉ logo; vài chuỗi cứng EN trong metadata. File thật CRLF+BOM (PLAN ghi LF).
 - 2026-10-23 quản đốc: nghiệm thu T2 đạt (English = Font 33 Jeju, bằng chứng Z_Database$$Awake 0x114B208). Chốt D5, D6, thêm D11.
+- 2026-10-23 A1: T3 xong. tools/f18.py, tools/marks_from_f18.py -> docs/f18_marks.md/.json (132 chữ tách dấu OK, đ/Đ có thân riêng); tools/jeju_metrics.py -> docs/jeju_metrics.txt/.json. Jeju: x-height 500 (a cao 556), cap 627-688, stem ~100-148, ı bbox -52..457 (hình chữ nhật hình học, KHÔNG cùng phong cách Jeju), Ð cũng nét đơn hình học.
+- 2026-10-23 A1: T4 xong (chờ quản đốc nghiệm thu). font/marks.py (8 dấu x 3 cỡ R/C/S, vẽ tay), font/layout.py (134 chữ), tools/preview_marks.py -> font/preview/{marks,marks_context,glyphs_all}.png. Dấu hoa kép max 949, nặng min -198. Lưu ý: ı và Ð lệch phong cách Jeju (i có dấu, Đ hiện rõ) — đề xuất vẽ Đ = D Jeju + gạch vector, i = thân l cắt; chờ quyết.
