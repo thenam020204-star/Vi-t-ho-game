@@ -288,3 +288,48 @@ Quyền: INTERNET, ACCESS_NETWORK_STATE, WRITE/READ_EXTERNAL_STORAGE, FOREGROUND
 4. `V_Ability_Manager` và `C_Battle_Manager` có chung GameObject hay không (dùng hook `ManaGain` để lấy `this`).
 5. UGS Core / `UnityServicesInitializer` có làm chậm hoặc treo khi offline hay không (chưa thấy mã game chờ nó).
 6. Hành vi runtime thật (chưa chạy thử; không có `/dev/kvm`/thiết bị): toàn bộ đề xuất vá dựa trên disasm tĩnh. Kiểm bằng thử máy thật ở T15/T16.
+
+---------------------------------------------------------------------------------------------------
+
+## T13 kiểm chứng (điều kiện quản đốc)
+
+Công cụ: `tools/patch_so.py` (áp/kiểm/trả), `mods/patches.json` (22 điểm vá), `tools/disasm_patch.py` -> `docs/patch_disasm.txt` (trước/sau + tự kiểm, 0 lỗi).
+Kết quả chạy: áp lên `libil2cpp.so` gốc (sha256 `61546e52...e9b326`) -> `work/mod/libil2cpp.so` sha256 `2e4dd130c472ab58388b8498d3221ee8600f4097a493c0ec75d04b1844040e0e`
+(22 điểm, 40.523.040 B, đúng kích thước gốc); `--check` bản vá OK 22/22; `--check` bản gốc với `--expect orig` OK 22/22; `--revert` ra sha256 trùng gốc;
+byte gốc sai -> thoát mã 2, không ghi file. Quy đổi RVA->offset qua PT_LOAD có quyền X (mọi điểm: off = RVA - 0x4000).
+Danh sách vá có đổi so với bảng T12: **bỏ A2** (hai `W_AdMobAD_*.Start`), vì dư thừa (xem 1.c); còn lại giữ nguyên.
+
+### 1. `W_GDPR_Manager$$Start` có điều khiển flow game không? -> KHÔNG, nên `ret` cả hàm là an toàn
+
+a) Toàn hàm `Start` (0x113FFCC..0x1140188, đã disasm) chỉ làm: khởi tạo metadata IL2CPP (cờ 0x26b1397), `IsFirstStart` (static +1) = 1 nếu chưa (0x1140058-0x114007C),
+`MobileAds.RaiseAdEventsOnUnityMainThread = true` (0x11400D4), `IsGDPR_ON = 0` (0x11400E0), 2 lần `Debug.Log`, rồi tail `ConsentInformation.Update(new ConsentRequestParameters(), new Action<FormError>(OnConsentInfoUpdated))` (0x1140184).
+Các hàm nó gọi: `OnConsentInfoUpdated` (0x1140188): chỉ `Debug.Log` + tail `ConsentForm.LoadAndShowConsentFormIfRequired(cb)` (form UMP native của Google, không phải UI/scene của game);
+callback `<OnConsentInfoUpdated>b__0` (0x1140330, 0x3F4 B): `Debug.Log`, `Boolean.ToString`, `String.Concat`, `W_GDPR_Setting$$CanAdShow` / `CanShowPersonalizedAds` (đọc PlayerPrefs IABTCF), `ConsentInformation.CanRequestAds`,
+ghi `W_GDPR_Manager.isNoAd` (this+0x20) và `IsGDPR_ON` (0x11406D0 / 0x1140708). **Không có `SceneManager.LoadScene`, `SetActive`, `StartCoroutine`, `Time.timeScale`, khởi tạo nào khác** (danh sách `bl` trong 3 hàm: Debug.Log, String.Concat/ToString, W_GDPR_Setting.*, ConsentInformation/ConsentForm/ConsentRequestParameters ctor, Action ctor, il2cpp class-init stub 0xf158e4/0xf159ec/0xf15b00).
+b) Ai đọc kết quả của nó (quét toàn `.text` các tham chiếu `W_GDPR_Manager_TypeInfo`, slot 0x250F040): chỉ `W_AdMobAD_Reward$$Start`, `W_AdMobAD_Interstitial$$Start` (đọc `IsGDPR_ON`, static +0 : `ldrb w8,[x8]; cbz w8,<ret>`, 0x113F110-0x113F114 và 0x113DF60-0x113DF64) và chính các hàm của `W_GDPR_Manager`. `IsFirstStart` chỉ `Start` đọc. `isNoAd` không ai đọc (field private, 3 hàm của lớp không đọc nó). `W_GDPR_Setting` chỉ được `b__0` dùng (các hàm khác của nó chỉ gọi nhau). Không có UnityEvent trong scene trỏ tới `W_GDPR_*` (UnityPy level0/1/2: không có `m_MethodName` nào của lớp này).
+c) **Hai `W_AdMobAD_*.Start` thoát sớm an toàn khi `IsGDPR_ON == 0`**: sau khi `W_GDPR_Manager.Start` bị vá, `IsGDPR_ON` giữ giá trị mặc định 0 (static của lớp không có `.cctor`; IL2CPP zero-init), nên cả hai `Start` chạy `cbz -> ldp...; ret` (0x113F1E0-0x113F1EC / 0x113E030-0x113E03C) mà không gọi `MobileAds.Initialize` hay `LoadAd`. Đây cũng chính là đường game tự đi khi người dùng từ chối đồng ý/UMP lỗi, nên là đường có sẵn trong mã gốc. => **không cần vá riêng `W_AdMobAD_*.Start`** (đã bỏ A2).
+Hậu quả: `_rewardedAd` (Reward +0x20) và `_interstitialAd` (Interstitial +0x20) luôn null. Mọi chỗ đọc hai field này (đã disasm toàn bộ method của hai lớp):
+ - `ShowRewardedAd` 0x113F3BC: `ldr x0,[x19,#0x20]; cbz x0,<LogError>` (0x113F41C-0x113F424) - **được vá A3 bỏ qua hẳn**; không còn ai dùng. `ShowInterstitial` 0x113E1F0: `cbz x0,<StartCoroutine Play_NoAdField>` (0x113E244-0x113E24C) - bản gốc đã null-safe và được vá A4 rẽ sang `Button_Scene_Moving`.
+ - `DestroyAd` (Reward 0x113F348-0x113F380, Interstitial 0x113E198-0x113E1D0), `LogResponseInfo` (Reward 0x113F500, Interstitial 0x113E30C), `LoadAd` (0x113F264 / 0x113E0B4): đều `ldr ...,[this,#0x20]; cbz` trước khi deref. `LoadAd`/`RegisterEventHandlers`/`<LoadAd>b__*` chỉ được gọi từ `Start`(đã thoát) và callback của chính SDK (không bao giờ chạy). Không lớp ngoài nào đọc (private); `scan.json`: lời gọi tới hai lớp từ code game chỉ có `ShowInterstitial` (2 chỗ) và tail `ShowRewardedAd`; UnityEvent scene chỉ gọi `Button_Scene_Moving` của Interstitial (an toàn, không đụng field).
+d) Kết luận: `ret` ở entry (lệnh gốc `str x30,[sp,#-0x30]!` -> chưa có frame) là an toàn. Phần "flow" duy nhất (hiện form đồng ý) đúng là thứ cần bỏ.
+
+### 2. B2 `b 0x1171538` tại 0x1171434 (`Z_GPGSManager$$LoadLocalData` đuôi)
+Disasm 0x1171378..0x11715C8 xem `docs/patch_disasm.txt` (mục B2) và đoạn dưới.
+- 0x1171434 là **lệnh đầu của "đuôi mạng"** sau khi toàn bộ phần đọc/giải mã save cục bộ đã xong: nó được tới từ 0x116FC7C/0x116FC98 (không có file autosave), 0x1171258, 0x1171378 (hết vòng đọc), 0x117141C (hết vòng cuối) và rơi xuống từ 0x1171430. Từ 0x1171434 đến epilogue chỉ có: `Application.internetReachability`; có mạng -> `Social.localUser` + `new Action<bool>(<LoadLocalData>b__115_0)` + gọi `ILocalUser.Authenticate` (interface call 0x1171490-0x1171534); không mạng -> `ObscuredInt(15)` ghi `Z_Database.Game_CloudID` (static +0x808/+0x810) rồi `Show_CloudResult(-1)`. **Không có lệnh `Save*`, `File.Write*`, hay ghi trường save nào khác.**
+- Callback `<LoadLocalData>b__115_0` (0x1174628) chỉ đặt `this.StartCloudLoadID(+0x24C)=1`, `Game_CloudID=15` rồi tail `LoadFromCloud_Start`. Đọc `StartCloudLoadID`: duy nhất `OnSavedGameDataRead` (0x115F6DC, luồng cloud); đọc `Game_CloudID`: duy nhất `Show_CloudResult` (0x115BF28, so với 15 = "đang ở bước khởi động": chỉ reset về 0 và ghi chữ vào `Text_GameState`). Bỏ qua = trạng thái cloud không bao giờ khởi tạo, các nút cloud đã `ret` => không ai chạm.
+- Stack/epilogue: hàm có **đúng một** `sub sp,sp,#0xC0` (0x11621F0) và **một** `add sp,sp,#0xC0` (0x1171558), không có thay đổi sp nào khác trong 0xF3D8 B (tự kiểm trong disasm_patch). Prologue lưu d10@0x40, d9/d8@0x50, x29/x30@0x60, x28/x27@0x70, x26/x25@0x80, x24/x23@0x90, x22/x21@0xA0, x20/x19@0xB0; epilogue 0x1171538-0x117155C khôi phục đúng các ô đó (`ldp x20,x19,[sp,#0xb0]` ... `ldr d10,[sp,#0x40]; add sp,sp,#0xc0; ret`) và là epilogue dùng chung của nhánh Authenticate (0x1171518 `b 0x1171538`). Mọi thanh ghi callee-saved (kể cả x29 mà hàm dùng như thanh ghi thường) được nạp từ ô lưu, nên nhảy từ giữa hàm là đúng ABI; hàm `void` nên không cần x0.
+- Giá trị `w19` (cờ `[static+0x83b]`) tại 0x1171430 rơi sang 0x1171434 khi = 0: không có tác dụng phụ ở nhánh bị bỏ.
+
+### 3. Mọi vá `ret`/`nop`/`b` thoát: kiểu trả về và trạng thái chờ
+Chữ ký lấy từ `dump.cs` (khớp RVA). `ret` đặt tại **entry hàm** (lệnh gốc là lệnh đẩy frame, đã tự kiểm) nên x30/sp nguyên vẹn.
+| Vá | Chữ ký | Ai gọi / ai chờ | Kết luận |
+|---|---|---|---|
+| A1 `W_GDPR_Manager$$Start` | `private void Start()` | Unity message | void, không ai chờ |
+| B1 `Z_Database$$AuthenticateUser` | `private void` | chỉ `Z_Database$$Awake` (`bl` 0x114BD04, bỏ qua kết quả); callback gốc chỉ `Debug.Log` | void, không ai chờ đăng nhập |
+| B3 7 hàm `Z_GPGSManager$$Button_Cloud*`, `OnLogin` | `public void` | chỉ UnityEvent scene (không có `bl` nào trong code game; scan.json) | void; UnityEvent bỏ qua kết quả; không coroutine |
+| C1 `BaseIAPButton$$Start/OnEnable/OnDisable/PurchaseProduct/Restore` | `private void` | Unity message / onClick (onClick chưa được gắn vì `Start` ret) | void |
+| C1 `CodelessIAPStoreListener$$InitializeCodelessPurchasingOnLoad`, `...CreateCodelessIAPStoreListenerInstance` | `private static void` | `[RuntimeInitializeOnLoadMethod]` / nội bộ | void; không `async`/coroutine (không phải iterator) |
+| A3 `ShowRewardedAd` (thay 2 lệnh) | `public void` | tail-call từ `Button_RevivalSelect` (0x1044E68) | tail `b` tới callback: x0=this, lr=caller; callback trả void |
+| A4 `ShowInterstitial` (thay 1 lệnh) | `public void` | `Button_SceneMove` (0x10BC108), `Fade_RewardClass.MoveNext` (0x10EF67C): gọi rồi đi tiếp | tail `b` tới `Button_Scene_Moving` (void) |
+Code game không gọi trực tiếp bất kỳ hàm `UnityEngine.Purchasing` nào (scan.json: 0 lời gọi) và không có hàm nào trả bool/obj bị vá (nên không cần `mov w0/x0`). Không IAP_DestroyAD, không vá bất tử/lên cấp (T14 dùng hook).
+Phần chưa kiểm được ngoài tĩnh: hành vi chạy thật (xem mục 6 ở "Điểm CHƯA XÁC ĐỊNH").

@@ -176,7 +176,7 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
     (g) Activity launcher (AndroidManifest), có sẵn libDobby/NDK cần tải gì.
   - File: `docs/mod_analysis.md`. Không vá gì.
   - Hoàn thành khi: mỗi mục có RVA + đoạn lệnh/IL làm bằng chứng và đề xuất vá cụ thể; chỗ chưa chắc ghi CHƯA XÁC ĐỊNH.
-- [ ] T13. Khung vá + vá quảng cáo/Play (M2–M4) — **Quản đốc nghiệm thu**
+- [x] T13. Khung vá + vá quảng cáo/Play (M2–M4) — **Quản đốc nghiệm thu** (chờ quản đốc nghiệm thu)
   - Agent: A1 (phụ thuộc T12)
   - File: `tools/patch_so.py`, `mods/patches.json`, `tools/disasm_patch.py` (in trước/sau từng điểm vá).
   - Hoàn thành khi: vá áp được lên libil2cpp gốc, kiểm lại byte gốc OK, disasm trước/sau hợp lệ (nhánh/ret/ABI đúng, không vỡ stack frame).
@@ -192,3 +192,4 @@ Bản **f18** (D12) + bỏ quảng cáo + gỡ phụ thuộc Google Play (đăng
 ## Vướng mắc GĐ2
 - (trống)
 - 2026-10-23 quản đốc: nghiệm thu T12 đạt (kiểm 0x113FB14: callback dùng Obj_AllyUnit +0x30 là field public scene). Điều kiện T13: chứng minh W_GDPR_Manager.Start không điều khiển flow/scene trước khi vá ret; disasm 0x1171434; xác nhận Dobby relocate Unit_Death.
+- 2026-10-23 A1: T13 xong (chờ quản đốc nghiệm thu). tools/patch_so.py (PT_LOAD, kiểm orig, --check/--revert), mods/patches.json (22 vá, bỏ A2 vì dư), tools/disasm_patch.py -> docs/patch_disasm.txt (0 lỗi), docs/mod_analysis.md mục "T13 kiểm chứng": GDPR.Start không điều khiển flow (ret OK), B2 đúng epilogue/frame 0xC0 duy nhất, mọi ret là void. Bản vá sha256 2e4dd130...0e0e; revert = gốc.

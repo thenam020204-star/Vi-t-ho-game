@@ -1,0 +1,564 @@
+# Disasm truoc/sau cac diem va libil2cpp.so (T13). Sinh boi tools/disasm_patch.py. ">>" = lenh bi thay.
+# so goc: work/il2/lib/arm64-v8a/libil2cpp.so
+# 22 diem va
+
+====================================================================================================
+A1_gdpr_start | W_GDPR_Manager$$Start | RVA 0x113FFCC off 0x113BFCC | 4 byte
+ly do: void, Unity Start. Bo UMP ConsentInformation.Update + MobileAds flag; ham chi ghi static/log, khong LoadScene/SetActive. IsGDPR_ON giu 0 -> hai W_AdMobAD_*.Start tu thoat som (cbz).
+--- TRUOC
+   0x0113ffbc: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x0113ffc0: e1031faa mov    x1, xzr                       
+   0x0113ffc4: fe57c2a8 ldp    x30, x21, [sp], #0x20         
+   0x0113ffc8: 01d94014 b      #0x21763cc                      ; -> UnityEngine.Debug$$LogError
+>> 0x0113ffcc: fe0f1df8 str    x30, [sp, #-0x30]!              ; === W_GDPR_Manager$$Start
+   0x0113ffd0: f65701a9 stp    x22, x21, [sp, #0x10]         
+   0x0113ffd4: f44f02a9 stp    x20, x19, [sp, #0x20]         
+   0x0113ffd8: 95ab00d0 adrp   x21, #0x26b1000               
+   0x0113ffdc: 949e0090 adrp   x20, #0x250f000               
+--- SAU
+   0x0113ffbc: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x0113ffc0: e1031faa mov    x1, xzr                       
+   0x0113ffc4: fe57c2a8 ldp    x30, x21, [sp], #0x20         
+   0x0113ffc8: 01d94014 b      #0x21763cc                      ; -> UnityEngine.Debug$$LogError
+>> 0x0113ffcc: c0035fd6 ret                                    ; === W_GDPR_Manager$$Start
+   0x0113ffd0: f65701a9 stp    x22, x21, [sp, #0x10]         
+   0x0113ffd4: f44f02a9 stp    x20, x19, [sp, #0x20]         
+   0x0113ffd8: 95ab00d0 adrp   x21, #0x26b1000               
+   0x0113ffdc: 949e0090 adrp   x20, #0x250f000               
+KIEM: ret tai entry ham (RVA == dau ham W_GDPR_Manager$$Start), lenh goc la push frame (str x30, [sp, #-0x30]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+A3_rewarded_show | W_AdMobAD_Reward$$ShowRewardedAd | RVA 0x113F3BC off 0x113B3BC | 8 byte
+ly do: void. Thay ban dau bang mov x1,xzr; b <ShowRewardedAd>b__7_0 (tail-call, x0=this giu nguyen, lr=caller): trao thuong hoi sinh ngay (Unit_RevivalON), reward=null.
+--- TRUOC
+   0x0113f3ac: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x0113f3b0: fe0742f8 ldr    x30, [sp], #0x20              
+   0x0113f3b4: c0035fd6 ret                                  
+   0x0113f3b8: d459f797 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0113f3bc: fe57bea9 stp    x30, x21, [sp, #-0x20]!         ; === W_AdMobAD_Reward$$ShowRewardedAd
+>> 0x0113f3c0: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0113f3c4: 94ab00d0 adrp   x20, #0x26b1000               
+   0x0113f3c8: 88224e39 ldrb   w8, [x20, #0x388]             
+   0x0113f3cc: f30300aa mov    x19, x0                       
+   0x0113f3d0: 48020037 tbnz   w8, #0, #0x113f418              ; -> W_AdMobAD_Reward$$ShowRewardedAd+0x5c
+--- SAU
+   0x0113f3ac: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x0113f3b0: fe0742f8 ldr    x30, [sp], #0x20              
+   0x0113f3b4: c0035fd6 ret                                  
+   0x0113f3b8: d459f797 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0113f3bc: e1031faa mov    x1, xzr                         ; === W_AdMobAD_Reward$$ShowRewardedAd
+>> 0x0113f3c0: d5010014 b      #0x113fb14                      ; -> W_AdMobAD_Reward$$<ShowRewardedAd>b__7_0
+   0x0113f3c4: 94ab00d0 adrp   x20, #0x26b1000               
+   0x0113f3c8: 88224e39 ldrb   w8, [x20, #0x388]             
+   0x0113f3cc: f30300aa mov    x19, x0                       
+   0x0113f3d0: 48020037 tbnz   w8, #0, #0x113f418              ; -> W_AdMobAD_Reward$$ShowRewardedAd+0x5c
+KIEM: b -> 0x113fb14 = dau ham W_AdMobAD_Reward$$<ShowRewardedAd>b__7_0 (tail-call; x0 giu nguyen, lr=caller). Lenh thay nam o entry ham chua push frame: OK
+KIEM:    prologue dich: str x30, [sp, #-0x30]!; stp x22, x21, [sp, #0x10]; stp x20, x19, [sp, #0x20]; adrp x21, #0x26b1000
+
+====================================================================================================
+A3b_rewarded_cb_null | W_AdMobAD_Reward$$<ShowRewardedAd>b__7_0 | RVA 0x113FB6C off 0x113BB6C | 4 byte
+ly do: cbz x20 (reward==null) tro toi 0x113FBD8 (doan GetComponent<C_Battle_AllyUnit>->Unit_RevivalON) thay vi 0x113FC0C (NullReference); bo qua Debug.Log dung reward.Amount/Type.
+--- TRUOC
+   0x0113fb5c: 000041f9 ldr    x0, [x0, #0x200]              
+   0x0113fb60: 6157f797 bl     #0xf158e4                       ; -> 0xf158e4 (thunk/runtime)
+   0x0113fb64: 28008052 mov    w8, #1                        
+   0x0113fb68: a83a0e39 strb   w8, [x21, #0x38e]             
+>> 0x0113fb6c: 140500b4 cbz    x20, #0x113fc0c                 ; -> W_AdMobAD_Reward$$<ShowRewardedAd>b__7_0+0xf8
+   0x0113fb70: 489e00f0 adrp   x8, #0x250a000                
+   0x0113fb74: 08c542f9 ldr    x8, [x8, #0x588]              
+   0x0113fb78: 800e40fd ldr    d0, [x20, #0x18]              
+   0x0113fb7c: 959e0090 adrp   x21, #0x250f000               
+--- SAU
+   0x0113fb5c: 000041f9 ldr    x0, [x0, #0x200]              
+   0x0113fb60: 6157f797 bl     #0xf158e4                       ; -> 0xf158e4 (thunk/runtime)
+   0x0113fb64: 28008052 mov    w8, #1                        
+   0x0113fb68: a83a0e39 strb   w8, [x21, #0x38e]             
+>> 0x0113fb6c: 740300b4 cbz    x20, #0x113fbd8                 ; -> W_AdMobAD_Reward$$<ShowRewardedAd>b__7_0+0xc4
+   0x0113fb70: 489e00f0 adrp   x8, #0x250a000                
+   0x0113fb74: 08c542f9 ldr    x8, [x8, #0x588]              
+   0x0113fb78: 800e40fd ldr    d0, [x20, #0x18]              
+   0x0113fb7c: 959e0090 adrp   x21, #0x250f000               
+KIEM: cbz x20, #0x113fbd8 -> 0x113fbd8 (W_AdMobAD_Reward$$<ShowRewardedAd>b__7_0+0xc4) : cung ham OK
+
+====================================================================================================
+A4_interstitial_show | W_AdMobAD_Interstitial$$ShowInterstitial | RVA 0x113E1F0 off 0x113A1F0 | 4 byte
+ly do: void. Nhay toi W_AdMobAD_Interstitial$$Button_Scene_Moving(this) -> Scene_Moving("A_MainMenu"): bo quang cao xen ke, ve menu ngay.
+--- TRUOC
+   0x0113e1e0: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x0113e1e4: fe0742f8 ldr    x30, [sp], #0x20              
+   0x0113e1e8: c0035fd6 ret                                  
+   0x0113e1ec: 475ef797 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0113e1f0: fe57bea9 stp    x30, x21, [sp, #-0x20]!         ; === W_AdMobAD_Interstitial$$ShowInterstitial
+   0x0113e1f4: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0113e1f8: 94ab00f0 adrp   x20, #0x26b1000               
+   0x0113e1fc: 88d64d39 ldrb   w8, [x20, #0x375]             
+   0x0113e200: f30300aa mov    x19, x0                       
+--- SAU
+   0x0113e1e0: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x0113e1e4: fe0742f8 ldr    x30, [sp], #0x20              
+   0x0113e1e8: c0035fd6 ret                                  
+   0x0113e1ec: 475ef797 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0113e1f0: 48010014 b      #0x113e710                      ; -> W_AdMobAD_Interstitial$$Button_Scene_Moving  ; === W_AdMobAD_Interstitial$$ShowInterstitial
+   0x0113e1f4: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0113e1f8: 94ab00f0 adrp   x20, #0x26b1000               
+   0x0113e1fc: 88d64d39 ldrb   w8, [x20, #0x375]             
+   0x0113e200: f30300aa mov    x19, x0                       
+KIEM: b -> 0x113e710 = dau ham W_AdMobAD_Interstitial$$Button_Scene_Moving (tail-call; x0 giu nguyen, lr=caller). Lenh thay nam o entry ham chua push frame: OK
+KIEM:    prologue dich: stp x30, x21, [sp, #-0x20]!; stp x20, x19, [sp, #0x10]; adrp x19, #0x26b1000; adrp x20, #0x250e000
+
+====================================================================================================
+A5_revival_net_gate | C_Battle_AllyUnit$$Button_RevivalSelect | RVA 0x1044C98 off 0x1040C98 | 4 byte
+ly do: nop cbz w0 sau Application.internetReachability: khong thoat tran khi offline o nut hoi sinh.
+--- TRUOC
+   0x01044c88: 48000035 cbnz   w8, #0x1044c90                  ; -> C_Battle_AllyUnit$$Button_RevivalSelect+0xbc
+   0x01044c8c: 5843fb97 bl     #0xf159ec                       ; -> 0xf159ec (thunk/runtime)
+   0x01044c90: e0031faa mov    x0, xzr                       
+   0x01044c94: 25bb4494 bl     #0x2173928                      ; -> UnityEngine.Application$$get_internetReachability
+>> 0x01044c98: e0070034 cbz    w0, #0x1044d94                  ; -> C_Battle_AllyUnit$$Button_RevivalSelect+0x1c0
+   0x01044c9c: 682248b9 ldr    w8, [x19, #0x820]             
+   0x01044ca0: 08050011 add    w8, w8, #1                    
+   0x01044ca4: 1f050071 cmp    w8, #1                        
+   0x01044ca8: 682208b9 str    w8, [x19, #0x820]             
+--- SAU
+   0x01044c88: 48000035 cbnz   w8, #0x1044c90                  ; -> C_Battle_AllyUnit$$Button_RevivalSelect+0xbc
+   0x01044c8c: 5843fb97 bl     #0xf159ec                       ; -> 0xf159ec (thunk/runtime)
+   0x01044c90: e0031faa mov    x0, xzr                       
+   0x01044c94: 25bb4494 bl     #0x2173928                      ; -> UnityEngine.Application$$get_internetReachability
+>> 0x01044c98: 1f2003d5 nop                                  
+   0x01044c9c: 682248b9 ldr    w8, [x19, #0x820]             
+   0x01044ca0: 08050011 add    w8, w8, #1                    
+   0x01044ca4: 1f050071 cmp    w8, #1                        
+   0x01044ca8: 682208b9 str    w8, [x19, #0x820]             
+KIEM: nop thay cbz w0, #0x1044d94; lenh ngay truoc: bl #0x2173928
+
+====================================================================================================
+A6_death_net_gate | C_Battle_AllyUnit.<Play_Unit_Death>d__1045$$MoveNext | RVA 0x108B934 off 0x1087934 | 4 byte
+ly do: nop cbz w0 sau Application.internetReachability: van hien bang hoi sinh khi offline.
+--- TRUOC
+   0x0108b924: 48000035 cbnz   w8, #0x108b92c                  ; -> C_Battle_AllyUnit.<Play_Unit_Death>d__1045$$MoveNext+0x48c
+   0x0108b928: 3128fa97 bl     #0xf159ec                       ; -> 0xf159ec (thunk/runtime)
+   0x0108b92c: e0031faa mov    x0, xzr                       
+   0x0108b930: fe9f4394 bl     #0x2173928                      ; -> UnityEngine.Application$$get_internetReachability
+>> 0x0108b934: 000e0034 cbz    w0, #0x108baf4                  ; -> C_Battle_AllyUnit.<Play_Unit_Death>d__1045$$MoveNext+0x654
+   0x0108b938: e003271e fmov   s0, wzr                       
+   0x0108b93c: e0031faa mov    x0, xzr                       
+   0x0108b940: 873c4494 bl     #0x219ab5c                      ; -> UnityEngine.Time$$set_timeScale
+   0x0108b944: 800240f9 ldr    x0, [x20]                     
+--- SAU
+   0x0108b924: 48000035 cbnz   w8, #0x108b92c                  ; -> C_Battle_AllyUnit.<Play_Unit_Death>d__1045$$MoveNext+0x48c
+   0x0108b928: 3128fa97 bl     #0xf159ec                       ; -> 0xf159ec (thunk/runtime)
+   0x0108b92c: e0031faa mov    x0, xzr                       
+   0x0108b930: fe9f4394 bl     #0x2173928                      ; -> UnityEngine.Application$$get_internetReachability
+>> 0x0108b934: 1f2003d5 nop                                  
+   0x0108b938: e003271e fmov   s0, wzr                       
+   0x0108b93c: e0031faa mov    x0, xzr                       
+   0x0108b940: 873c4494 bl     #0x219ab5c                      ; -> UnityEngine.Time$$set_timeScale
+   0x0108b944: 800240f9 ldr    x0, [x20]                     
+KIEM: nop thay cbz w0, #0x108baf4; lenh ngay truoc: bl #0x2173928
+
+====================================================================================================
+B1_gpgs_authenticate | Z_Database$$AuthenticateUser | RVA 0x114C180 off 0x1148180 | 4 byte
+ly do: void private, goi tu Z_Database$$Awake (bl, bo qua ket qua). Khong goi PlayGamesPlatform.Authenticate; callback cu chi Debug.Log.
+--- TRUOC
+   0x0114c170: e17bff54 b.ne   #0x114b0ec                    
+   0x0114c174: 2a018052 mov    w10, #9                       
+   0x0114c178: 08fcff17 b      #0x114b198                      ; -> Z_Database$$Awake+0x688
+   0x0114c17c: 6526f797 bl     #0xf15b10                       ; -> 0xf15b10 (thunk/runtime)
+>> 0x0114c180: fe0f1df8 str    x30, [sp, #-0x30]!              ; === Z_Database$$AuthenticateUser
+   0x0114c184: f65701a9 stp    x22, x21, [sp, #0x10]         
+   0x0114c188: f44f02a9 stp    x20, x19, [sp, #0x20]         
+   0x0114c18c: 33ab00b0 adrp   x19, #0x26b1000               
+   0x0114c190: 169e00f0 adrp   x22, #0x250f000               
+--- SAU
+   0x0114c170: e17bff54 b.ne   #0x114b0ec                    
+   0x0114c174: 2a018052 mov    w10, #9                       
+   0x0114c178: 08fcff17 b      #0x114b198                      ; -> Z_Database$$Awake+0x688
+   0x0114c17c: 6526f797 bl     #0xf15b10                       ; -> 0xf15b10 (thunk/runtime)
+>> 0x0114c180: c0035fd6 ret                                    ; === Z_Database$$AuthenticateUser
+   0x0114c184: f65701a9 stp    x22, x21, [sp, #0x10]         
+   0x0114c188: f44f02a9 stp    x20, x19, [sp, #0x20]         
+   0x0114c18c: 33ab00b0 adrp   x19, #0x26b1000               
+   0x0114c190: 169e00f0 adrp   x22, #0x250f000               
+KIEM: ret tai entry ham (RVA == dau ham Z_Database$$AuthenticateUser), lenh goc la push frame (str x30, [sp, #-0x30]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+B2_loadlocal_tail | Z_GPGSManager$$LoadLocalData | RVA 0x1171434 off 0x116D434 | 4 byte
+ly do: Duoi ham: bo Social.localUser.Authenticate/Show_CloudResult(-1), nhay vao epilogue chung (0x1171538, frame sp+0xC0 duy nhat). Phan doc file save cuc bo da chay xong truoc 0x1171434.
+--- TRUOC
+   0x01171424: 280340f9 ldr    x8, [x25]                     
+   0x01171428: 085d40f9 ldr    x8, [x8, #0xb8]               
+   0x0117142c: 13ed6039 ldrb   w19, [x8, #0x83b]             
+   0x01171430: 7343ff35 cbnz   w19, #0x116fc9c                 ; -> Z_GPGSManager$$LoadLocalData+0xdaac
+>> 0x01171434: a00340f9 ldr    x0, [x29]                     
+   0x01171438: 08e040b9 ldr    w8, [x0, #0xe0]               
+   0x0117143c: 48000035 cbnz   w8, #0x1171444                  ; -> Z_GPGSManager$$LoadLocalData+0xf254
+   0x01171440: 6b91f697 bl     #0xf159ec                       ; -> 0xf159ec (thunk/runtime)
+   0x01171444: e0031faa mov    x0, xzr                       
+--- SAU
+   0x01171424: 280340f9 ldr    x8, [x25]                     
+   0x01171428: 085d40f9 ldr    x8, [x8, #0xb8]               
+   0x0117142c: 13ed6039 ldrb   w19, [x8, #0x83b]             
+   0x01171430: 7343ff35 cbnz   w19, #0x116fc9c                 ; -> Z_GPGSManager$$LoadLocalData+0xdaac
+>> 0x01171434: 41000014 b      #0x1171538                      ; -> Z_GPGSManager$$LoadLocalData+0xf348
+   0x01171438: 08e040b9 ldr    w8, [x0, #0xe0]               
+   0x0117143c: 48000035 cbnz   w8, #0x1171444                  ; -> Z_GPGSManager$$LoadLocalData+0xf254
+   0x01171440: 6b91f697 bl     #0xf159ec                       ; -> 0xf159ec (thunk/runtime)
+   0x01171444: e0031faa mov    x0, xzr                       
+KIEM: b -> 0x1171538 nam trong Z_GPGSManager$$LoadLocalData (CUNG ham)
+KIEM:    lenh doi sp trong ham: 0x11621f0 sub sp, sp, #0xc0; 0x1171558 add sp, sp, #0xc0
+KIEM:    frame co dinh (1 push + 1 pop, khong doi giua chung): OK
+KIEM:    epilogue tai dich: 0x1171538 ldp x20, x19, [sp, #0xb0] | 0x117153c ldp x22, x21, [sp, #0xa0] | 0x1171540 ldp x24, x23, [sp, #0x90] | 0x1171544 ldp x26, x25, [sp, #0x80] | 0x1171548 ldp x28, x27, [sp, #0x70] | 0x117154c ldp x29, x30, [sp, #0x60] | 0x1171550 ldp d9, d8, [sp, #0x50] | 0x1171554 ldr d10, [sp, #0x40] | 0x1171558 add sp, sp, #0xc0 | 0x117155c ret 
+KIEM:    prologue ham: sub sp, sp, #0xc0 | str d10, [sp, #0x40] | stp d9, d8, [sp, #0x50] | stp x29, x30, [sp, #0x60] | stp x28, x27, [sp, #0x70] | stp x26, x25, [sp, #0x80] | stp x24, x23, [sp, #0x90] | stp x22, x21, [sp, #0xa0] | stp x20, x19, [sp, #0xb0] | adrp x19, #0x26b1000
+KIEM:    epilogue ket thuc bang ret sau add sp: OK
+
+====================================================================================================
+B3_Button_CloudSave_Option | Z_GPGSManager$$Button_CloudSave_Option | RVA 0x115BB60 off 0x1157B60 | 4 byte
+ly do: void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi.
+--- TRUOC
+   0x0115bb50: e2031faa mov    x2, xzr                       
+   0x0115bb54: ed33c56c ldp    d13, d12, [sp], #0x50         
+   0x0115bb58: 21e74014 b      #0x21957dc                      ; -> UnityEngine.GameObject$$SetActive
+   0x0115bb5c: ebe7f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0115bb60: fe0f1ef8 str    x30, [sp, #-0x20]!              ; === Z_GPGSManager$$Button_CloudSave_Option
+   0x0115bb64: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0115bb68: b4aa00d0 adrp   x20, #0x26b1000               
+   0x0115bb6c: 88924f39 ldrb   w8, [x20, #0x3e4]             
+   0x0115bb70: f30300aa mov    x19, x0                       
+--- SAU
+   0x0115bb50: e2031faa mov    x2, xzr                       
+   0x0115bb54: ed33c56c ldp    d13, d12, [sp], #0x50         
+   0x0115bb58: 21e74014 b      #0x21957dc                      ; -> UnityEngine.GameObject$$SetActive
+   0x0115bb5c: ebe7f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0115bb60: c0035fd6 ret                                    ; === Z_GPGSManager$$Button_CloudSave_Option
+   0x0115bb64: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0115bb68: b4aa00d0 adrp   x20, #0x26b1000               
+   0x0115bb6c: 88924f39 ldrb   w8, [x20, #0x3e4]             
+   0x0115bb70: f30300aa mov    x19, x0                       
+KIEM: ret tai entry ham (RVA == dau ham Z_GPGSManager$$Button_CloudSave_Option), lenh goc la push frame (str x30, [sp, #-0x20]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+B3_Button_CloudSave_Apply | Z_GPGSManager$$Button_CloudSave_Apply | RVA 0x115BC50 off 0x1157C50 | 4 byte
+ly do: void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi.
+--- TRUOC
+   0x0115bc40: e2031faa mov    x2, xzr                       
+   0x0115bc44: fe0742f8 ldr    x30, [sp], #0x20              
+   0x0115bc48: e5e64014 b      #0x21957dc                      ; -> UnityEngine.GameObject$$SetActive
+   0x0115bc4c: afe7f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0115bc50: fe57bea9 stp    x30, x21, [sp, #-0x20]!         ; === Z_GPGSManager$$Button_CloudSave_Apply
+   0x0115bc54: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0115bc58: b4aa00d0 adrp   x20, #0x26b1000               
+   0x0115bc5c: 889a4f39 ldrb   w8, [x20, #0x3e6]             
+   0x0115bc60: f30300aa mov    x19, x0                       
+--- SAU
+   0x0115bc40: e2031faa mov    x2, xzr                       
+   0x0115bc44: fe0742f8 ldr    x30, [sp], #0x20              
+   0x0115bc48: e5e64014 b      #0x21957dc                      ; -> UnityEngine.GameObject$$SetActive
+   0x0115bc4c: afe7f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0115bc50: c0035fd6 ret                                    ; === Z_GPGSManager$$Button_CloudSave_Apply
+   0x0115bc54: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0115bc58: b4aa00d0 adrp   x20, #0x26b1000               
+   0x0115bc5c: 889a4f39 ldrb   w8, [x20, #0x3e6]             
+   0x0115bc60: f30300aa mov    x19, x0                       
+KIEM: ret tai entry ham (RVA == dau ham Z_GPGSManager$$Button_CloudSave_Apply), lenh goc la push frame (stp x30, x21, [sp, #-0x20]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+B3_Button_CloudLoad_Option | Z_GPGSManager$$Button_CloudLoad_Option | RVA 0x115CCE4 off 0x1158CE4 | 4 byte
+ly do: void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi.
+--- TRUOC
+   0x0115ccd4: 011104f9 str    x1, [x8, #0x820]              
+   0x0115ccd8: 5efdff17 b      #0x115c250                      ; -> Z_GPGSManager$$Show_CloudResult+0x484
+   0x0115ccdc: 8be3f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+   0x0115cce0: 8ce3f697 bl     #0xf15b10                       ; -> 0xf15b10 (thunk/runtime)
+>> 0x0115cce4: fe0f1df8 str    x30, [sp, #-0x30]!              ; === Z_GPGSManager$$Button_CloudLoad_Option
+   0x0115cce8: f65701a9 stp    x22, x21, [sp, #0x10]         
+   0x0115ccec: f44f02a9 stp    x20, x19, [sp, #0x20]         
+   0x0115ccf0: b4aa00b0 adrp   x20, #0x26b1000               
+   0x0115ccf4: 889e4f39 ldrb   w8, [x20, #0x3e7]             
+--- SAU
+   0x0115ccd4: 011104f9 str    x1, [x8, #0x820]              
+   0x0115ccd8: 5efdff17 b      #0x115c250                      ; -> Z_GPGSManager$$Show_CloudResult+0x484
+   0x0115ccdc: 8be3f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+   0x0115cce0: 8ce3f697 bl     #0xf15b10                       ; -> 0xf15b10 (thunk/runtime)
+>> 0x0115cce4: c0035fd6 ret                                    ; === Z_GPGSManager$$Button_CloudLoad_Option
+   0x0115cce8: f65701a9 stp    x22, x21, [sp, #0x10]         
+   0x0115ccec: f44f02a9 stp    x20, x19, [sp, #0x20]         
+   0x0115ccf0: b4aa00b0 adrp   x20, #0x26b1000               
+   0x0115ccf4: 889e4f39 ldrb   w8, [x20, #0x3e7]             
+KIEM: ret tai entry ham (RVA == dau ham Z_GPGSManager$$Button_CloudLoad_Option), lenh goc la push frame (str x30, [sp, #-0x30]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+B3_Button_CloudLoad_Apply | Z_GPGSManager$$Button_CloudLoad_Apply | RVA 0x115CF3C off 0x1158F3C | 4 byte
+ly do: void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi.
+--- TRUOC
+   0x0115cf2c: e2031faa mov    x2, xzr                       
+   0x0115cf30: fe0742f8 ldr    x30, [sp], #0x20              
+   0x0115cf34: 2ae24014 b      #0x21957dc                      ; -> UnityEngine.GameObject$$SetActive
+   0x0115cf38: f4e2f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0115cf3c: fe57bea9 stp    x30, x21, [sp, #-0x20]!         ; === Z_GPGSManager$$Button_CloudLoad_Apply
+   0x0115cf40: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0115cf44: b4aa00b0 adrp   x20, #0x26b1000               
+   0x0115cf48: 88a64f39 ldrb   w8, [x20, #0x3e9]             
+   0x0115cf4c: f30300aa mov    x19, x0                       
+--- SAU
+   0x0115cf2c: e2031faa mov    x2, xzr                       
+   0x0115cf30: fe0742f8 ldr    x30, [sp], #0x20              
+   0x0115cf34: 2ae24014 b      #0x21957dc                      ; -> UnityEngine.GameObject$$SetActive
+   0x0115cf38: f4e2f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x0115cf3c: c0035fd6 ret                                    ; === Z_GPGSManager$$Button_CloudLoad_Apply
+   0x0115cf40: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0115cf44: b4aa00b0 adrp   x20, #0x26b1000               
+   0x0115cf48: 88a64f39 ldrb   w8, [x20, #0x3e9]             
+   0x0115cf4c: f30300aa mov    x19, x0                       
+KIEM: ret tai entry ham (RVA == dau ham Z_GPGSManager$$Button_CloudLoad_Apply), lenh goc la push frame (stp x30, x21, [sp, #-0x20]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+B3_Button_CloudLoadAuto_Apply | Z_GPGSManager$$Button_CloudLoadAuto_Apply | RVA 0x115D0E8 off 0x11590E8 | 4 byte
+ly do: void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi.
+--- TRUOC
+   0x0115d0d8: c1e14014 b      #0x21957dc                      ; -> UnityEngine.GameObject$$SetActive
+   0x0115d0dc: 8be2f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+   0x0115d0e0: e00308aa mov    x0, x8                        
+   0x0115d0e4: 70e3f697 bl     #0xf15ea4                       ; -> 0xf15ea4 (thunk/runtime)
+>> 0x0115d0e8: fe0f1af8 str    x30, [sp, #-0x60]!              ; === Z_GPGSManager$$Button_CloudLoadAuto_Apply
+   0x0115d0ec: fc6f01a9 stp    x28, x27, [sp, #0x10]         
+   0x0115d0f0: fa6702a9 stp    x26, x25, [sp, #0x20]         
+   0x0115d0f4: f85f03a9 stp    x24, x23, [sp, #0x30]         
+   0x0115d0f8: f65704a9 stp    x22, x21, [sp, #0x40]         
+--- SAU
+   0x0115d0d8: c1e14014 b      #0x21957dc                      ; -> UnityEngine.GameObject$$SetActive
+   0x0115d0dc: 8be2f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+   0x0115d0e0: e00308aa mov    x0, x8                        
+   0x0115d0e4: 70e3f697 bl     #0xf15ea4                       ; -> 0xf15ea4 (thunk/runtime)
+>> 0x0115d0e8: c0035fd6 ret                                    ; === Z_GPGSManager$$Button_CloudLoadAuto_Apply
+   0x0115d0ec: fc6f01a9 stp    x28, x27, [sp, #0x10]         
+   0x0115d0f0: fa6702a9 stp    x26, x25, [sp, #0x20]         
+   0x0115d0f4: f85f03a9 stp    x24, x23, [sp, #0x30]         
+   0x0115d0f8: f65704a9 stp    x22, x21, [sp, #0x40]         
+KIEM: ret tai entry ham (RVA == dau ham Z_GPGSManager$$Button_CloudLoadAuto_Apply), lenh goc la push frame (str x30, [sp, #-0x60]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+B3_Button_CloudLoadCheck | Z_GPGSManager$$Button_CloudLoadCheck | RVA 0x115D644 off 0x1159644 | 4 byte
+ly do: void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi.
+--- TRUOC
+   0x0115d634: e00302aa mov    x0, x2                        
+   0x0115d638: 1be2f697 bl     #0xf15ea4                       ; -> 0xf15ea4 (thunk/runtime)
+   0x0115d63c: e00309aa mov    x0, x9                        
+   0x0115d640: 19e2f697 bl     #0xf15ea4                       ; -> 0xf15ea4 (thunk/runtime)
+>> 0x0115d644: fe57bea9 stp    x30, x21, [sp, #-0x20]!         ; === Z_GPGSManager$$Button_CloudLoadCheck
+   0x0115d648: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0115d64c: b4aa0090 adrp   x20, #0x26b1000               
+   0x0115d650: 88ae4f39 ldrb   w8, [x20, #0x3eb]             
+   0x0115d654: f30300aa mov    x19, x0                       
+--- SAU
+   0x0115d634: e00302aa mov    x0, x2                        
+   0x0115d638: 1be2f697 bl     #0xf15ea4                       ; -> 0xf15ea4 (thunk/runtime)
+   0x0115d63c: e00309aa mov    x0, x9                        
+   0x0115d640: 19e2f697 bl     #0xf15ea4                       ; -> 0xf15ea4 (thunk/runtime)
+>> 0x0115d644: c0035fd6 ret                                    ; === Z_GPGSManager$$Button_CloudLoadCheck
+   0x0115d648: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x0115d64c: b4aa0090 adrp   x20, #0x26b1000               
+   0x0115d650: 88ae4f39 ldrb   w8, [x20, #0x3eb]             
+   0x0115d654: f30300aa mov    x19, x0                       
+KIEM: ret tai entry ham (RVA == dau ham Z_GPGSManager$$Button_CloudLoadCheck), lenh goc la push frame (stp x30, x21, [sp, #-0x20]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+B3_OnLogin | Z_GPGSManager$$OnLogin | RVA 0x1173AC8 off 0x116FAC8 | 4 byte
+ly do: void public, chi goi tu UnityEvent scene (khong co bl goi). ret ngay dau ham: nut cloud/xep hang khong lam gi.
+--- TRUOC
+   0x01173ab8: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x01173abc: fe57c2a8 ldp    x30, x21, [sp], #0x20         
+   0x01173ac0: c0035fd6 ret                                  
+   0x01173ac4: 1188f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x01173ac8: fe0f1cf8 str    x30, [sp, #-0x40]!              ; === Z_GPGSManager$$OnLogin
+   0x01173acc: f85f01a9 stp    x24, x23, [sp, #0x10]         
+   0x01173ad0: f65702a9 stp    x22, x21, [sp, #0x20]         
+   0x01173ad4: f44f03a9 stp    x20, x19, [sp, #0x30]         
+   0x01173ad8: f4a900d0 adrp   x20, #0x26b1000               
+--- SAU
+   0x01173ab8: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x01173abc: fe57c2a8 ldp    x30, x21, [sp], #0x20         
+   0x01173ac0: c0035fd6 ret                                  
+   0x01173ac4: 1188f697 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x01173ac8: c0035fd6 ret                                    ; === Z_GPGSManager$$OnLogin
+   0x01173acc: f85f01a9 stp    x24, x23, [sp, #0x10]         
+   0x01173ad0: f65702a9 stp    x22, x21, [sp, #0x20]         
+   0x01173ad4: f44f03a9 stp    x20, x19, [sp, #0x30]         
+   0x01173ad8: f4a900d0 adrp   x20, #0x26b1000               
+KIEM: ret tai entry ham (RVA == dau ham Z_GPGSManager$$OnLogin), lenh goc la push frame (str x30, [sp, #-0x40]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+C1_Start | UnityEngine.Purchasing.BaseIAPButton$$Start | RVA 0x21DF7C4 off 0x21DB7C4 | 4 byte
+ly do: void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi.
+--- TRUOC
+   0x021df7b4: fe5fc3a8 ldp    x30, x23, [sp], #0x30         
+   0x021df7b8: c0035fd6 ret                                  
+   0x021df7bc: e1031faa mov    x1, xzr                         ; === UnitySourceGeneratedAssemblyMonoScriptTypes_v1$$.ctor
+   0x021df7c0: 16e3ea17 b      #0x1c98418                      ; -> System.Object$$.ctor
+>> 0x021df7c4: fe0f1df8 str    x30, [sp, #-0x30]!              ; === UnityEngine.Purchasing.BaseIAPButton$$Start
+   0x021df7c8: f65701a9 stp    x22, x21, [sp, #0x10]         
+   0x021df7cc: f44f02a9 stp    x20, x19, [sp, #0x20]         
+   0x021df7d0: d42600b0 adrp   x20, #0x26b8000               
+   0x021df7d4: 889e6539 ldrb   w8, [x20, #0x967]             
+--- SAU
+   0x021df7b4: fe5fc3a8 ldp    x30, x23, [sp], #0x30         
+   0x021df7b8: c0035fd6 ret                                  
+   0x021df7bc: e1031faa mov    x1, xzr                         ; === UnitySourceGeneratedAssemblyMonoScriptTypes_v1$$.ctor
+   0x021df7c0: 16e3ea17 b      #0x1c98418                      ; -> System.Object$$.ctor
+>> 0x021df7c4: c0035fd6 ret                                    ; === UnityEngine.Purchasing.BaseIAPButton$$Start
+   0x021df7c8: f65701a9 stp    x22, x21, [sp, #0x10]         
+   0x021df7cc: f44f02a9 stp    x20, x19, [sp, #0x20]         
+   0x021df7d0: d42600b0 adrp   x20, #0x26b8000               
+   0x021df7d4: 889e6539 ldrb   w8, [x20, #0x967]             
+KIEM: ret tai entry ham (RVA == dau ham UnityEngine.Purchasing.BaseIAPButton$$Start), lenh goc la push frame (str x30, [sp, #-0x30]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+C1_OnEnable | UnityEngine.Purchasing.BaseIAPButton$$OnEnable | RVA 0x21DFDB4 off 0x21DBDB4 | 4 byte
+ly do: void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi.
+--- TRUOC
+   0x021dfda4: 09aeb797 bl     #0xfcb5c8                       ; -> 0xfcb5c8 (thunk/runtime)
+   0x021dfda8: e00314aa mov    x0, x20                       
+   0x021dfdac: abb6b497 bl     #0xf0d858                       ; -> 0xf0d858 (thunk/runtime)
+   0x021dfdb0: 11cdae97 bl     #0xd931f4                       ; -> 0xd931f4 (thunk/runtime)
+>> 0x021dfdb4: fe0f1ef8 str    x30, [sp, #-0x20]!              ; === UnityEngine.Purchasing.BaseIAPButton$$OnEnable
+   0x021dfdb8: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x021dfdbc: d42600b0 adrp   x20, #0x26b8000               
+   0x021dfdc0: 88a26539 ldrb   w8, [x20, #0x968]             
+   0x021dfdc4: f30300aa mov    x19, x0                       
+--- SAU
+   0x021dfda4: 09aeb797 bl     #0xfcb5c8                       ; -> 0xfcb5c8 (thunk/runtime)
+   0x021dfda8: e00314aa mov    x0, x20                       
+   0x021dfdac: abb6b497 bl     #0xf0d858                       ; -> 0xf0d858 (thunk/runtime)
+   0x021dfdb0: 11cdae97 bl     #0xd931f4                       ; -> 0xd931f4 (thunk/runtime)
+>> 0x021dfdb4: c0035fd6 ret                                    ; === UnityEngine.Purchasing.BaseIAPButton$$OnEnable
+   0x021dfdb8: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x021dfdbc: d42600b0 adrp   x20, #0x26b8000               
+   0x021dfdc0: 88a26539 ldrb   w8, [x20, #0x968]             
+   0x021dfdc4: f30300aa mov    x19, x0                       
+KIEM: ret tai entry ham (RVA == dau ham UnityEngine.Purchasing.BaseIAPButton$$OnEnable), lenh goc la push frame (str x30, [sp, #-0x20]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+C1_OnDisable | UnityEngine.Purchasing.BaseIAPButton$$OnDisable | RVA 0x21DFE40 off 0x21DBE40 | 4 byte
+ly do: void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi.
+--- TRUOC
+   0x021dfe30: 40001fd6 br     x2                            
+   0x021dfe34: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x021dfe38: fe0742f8 ldr    x30, [sp], #0x20              
+   0x021dfe3c: c0035fd6 ret                                  
+>> 0x021dfe40: fe4fbfa9 stp    x30, x19, [sp, #-0x10]!         ; === UnityEngine.Purchasing.BaseIAPButton$$OnDisable
+   0x021dfe44: 080040f9 ldr    x8, [x0]                      
+   0x021dfe48: f30300aa mov    x19, x0                       
+   0x021dfe4c: 09855fa9 ldp    x9, x1, [x8, #0x1f8]          
+   0x021dfe50: 20013fd6 blr    x9                            
+--- SAU
+   0x021dfe30: 40001fd6 br     x2                            
+   0x021dfe34: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x021dfe38: fe0742f8 ldr    x30, [sp], #0x20              
+   0x021dfe3c: c0035fd6 ret                                  
+>> 0x021dfe40: c0035fd6 ret                                    ; === UnityEngine.Purchasing.BaseIAPButton$$OnDisable
+   0x021dfe44: 080040f9 ldr    x8, [x0]                      
+   0x021dfe48: f30300aa mov    x19, x0                       
+   0x021dfe4c: 09855fa9 ldp    x9, x1, [x8, #0x1f8]          
+   0x021dfe50: 20013fd6 blr    x9                            
+KIEM: ret tai entry ham (RVA == dau ham UnityEngine.Purchasing.BaseIAPButton$$OnDisable), lenh goc la push frame (stp x30, x19, [sp, #-0x10]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+C1_PurchaseProduct | UnityEngine.Purchasing.BaseIAPButton$$PurchaseProduct | RVA 0x21DFE74 off 0x21DBE74 | 4 byte
+ly do: void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi.
+--- TRUOC
+   0x021dfe64: fe4fc1a8 ldp    x30, x19, [sp], #0x10         
+   0x021dfe68: 40001fd6 br     x2                            
+   0x021dfe6c: fe4fc1a8 ldp    x30, x19, [sp], #0x10         
+   0x021dfe70: c0035fd6 ret                                  
+>> 0x021dfe74: fe0f1ef8 str    x30, [sp, #-0x20]!              ; === UnityEngine.Purchasing.BaseIAPButton$$PurchaseProduct
+   0x021dfe78: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x021dfe7c: 080040f9 ldr    x8, [x0]                      
+   0x021dfe80: f30300aa mov    x19, x0                       
+   0x021dfe84: 09855fa9 ldp    x9, x1, [x8, #0x1f8]          
+--- SAU
+   0x021dfe64: fe4fc1a8 ldp    x30, x19, [sp], #0x10         
+   0x021dfe68: 40001fd6 br     x2                            
+   0x021dfe6c: fe4fc1a8 ldp    x30, x19, [sp], #0x10         
+   0x021dfe70: c0035fd6 ret                                  
+>> 0x021dfe74: c0035fd6 ret                                    ; === UnityEngine.Purchasing.BaseIAPButton$$PurchaseProduct
+   0x021dfe78: f44f01a9 stp    x20, x19, [sp, #0x10]         
+   0x021dfe7c: 080040f9 ldr    x8, [x0]                      
+   0x021dfe80: f30300aa mov    x19, x0                       
+   0x021dfe84: 09855fa9 ldp    x9, x1, [x8, #0x1f8]          
+KIEM: ret tai entry ham (RVA == dau ham UnityEngine.Purchasing.BaseIAPButton$$PurchaseProduct), lenh goc la push frame (str x30, [sp, #-0x20]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+C1_Restore | UnityEngine.Purchasing.BaseIAPButton$$Restore | RVA 0x21E0010 off 0x21DC010 | 4 byte
+ly do: void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi.
+--- TRUOC
+   0x021e0000: 00010012 and    w0, w8, #1                    
+   0x021e0004: fe4fc1a8 ldp    x30, x19, [sp], #0x10         
+   0x021e0008: c0035fd6 ret                                  
+   0x021e000c: bfd6b497 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x021e0010: ff0301d1 sub    sp, sp, #0x40                   ; === UnityEngine.Purchasing.BaseIAPButton$$Restore
+   0x021e0014: fe5702a9 stp    x30, x21, [sp, #0x20]         
+   0x021e0018: f44f03a9 stp    x20, x19, [sp, #0x30]         
+   0x021e001c: d4260090 adrp   x20, #0x26b8000               
+   0x021e0020: 88a66539 ldrb   w8, [x20, #0x969]             
+--- SAU
+   0x021e0000: 00010012 and    w0, w8, #1                    
+   0x021e0004: fe4fc1a8 ldp    x30, x19, [sp], #0x10         
+   0x021e0008: c0035fd6 ret                                  
+   0x021e000c: bfd6b497 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x021e0010: c0035fd6 ret                                    ; === UnityEngine.Purchasing.BaseIAPButton$$Restore
+   0x021e0014: fe5702a9 stp    x30, x21, [sp, #0x20]         
+   0x021e0018: f44f03a9 stp    x20, x19, [sp, #0x30]         
+   0x021e001c: d4260090 adrp   x20, #0x26b8000               
+   0x021e0020: 88a66539 ldrb   w8, [x20, #0x969]             
+KIEM: ret tai entry ham (RVA == dau ham UnityEngine.Purchasing.BaseIAPButton$$Restore), lenh goc la push frame (sub sp, sp, #0x40) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+C1_InitializeCodelessPurchasingOnLoad | UnityEngine.Purchasing.CodelessIAPStoreListener$$InitializeCodelessPurchasingOnLoad | RVA 0x21E0A60 off 0x21DCA60 | 4 byte
+ly do: void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi.
+--- TRUOC
+   0x021e0a50: e00313aa mov    x0, x19                       
+   0x021e0a54: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x021e0a58: fe57c2a8 ldp    x30, x21, [sp], #0x20         
+   0x021e0a5c: 3abfdc17 b      #0x1910744                      ; -> UnityEngine.Events.UnityEvent<bool, object>$$.ctor
+>> 0x021e0a60: fe4fbfa9 stp    x30, x19, [sp, #-0x10]!         ; === UnityEngine.Purchasing.CodelessIAPStoreListener$$InitializeCodelessPurchasingOnLoad
+   0x021e0a64: d3260090 adrp   x19, #0x26b8000               
+   0x021e0a68: 68ca6539 ldrb   w8, [x19, #0x972]             
+   0x021e0a6c: c8000037 tbnz   w8, #0, #0x21e0a84              ; -> UnityEngine.Purchasing.CodelessIAPStoreListener$$InitializeCodelessPurchasingOnLoad+0x24
+   0x021e0a70: e01a00f0 adrp   x0, #0x253f000                
+--- SAU
+   0x021e0a50: e00313aa mov    x0, x19                       
+   0x021e0a54: f44f41a9 ldp    x20, x19, [sp, #0x10]         
+   0x021e0a58: fe57c2a8 ldp    x30, x21, [sp], #0x20         
+   0x021e0a5c: 3abfdc17 b      #0x1910744                      ; -> UnityEngine.Events.UnityEvent<bool, object>$$.ctor
+>> 0x021e0a60: c0035fd6 ret                                    ; === UnityEngine.Purchasing.CodelessIAPStoreListener$$InitializeCodelessPurchasingOnLoad
+   0x021e0a64: d3260090 adrp   x19, #0x26b8000               
+   0x021e0a68: 68ca6539 ldrb   w8, [x19, #0x972]             
+   0x021e0a6c: c8000037 tbnz   w8, #0, #0x21e0a84              ; -> UnityEngine.Purchasing.CodelessIAPStoreListener$$InitializeCodelessPurchasingOnLoad+0x24
+   0x021e0a70: e01a00f0 adrp   x0, #0x253f000                
+KIEM: ret tai entry ham (RVA == dau ham UnityEngine.Purchasing.CodelessIAPStoreListener$$InitializeCodelessPurchasingOnLoad), lenh goc la push frame (stp x30, x19, [sp, #-0x10]!) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+====================================================================================================
+C1_CreateCodelessIAPStoreListenerInstance | UnityEngine.Purchasing.CodelessIAPStoreListener$$CreateCodelessIAPStoreListenerInstance | RVA 0x21E0AD0 off 0x21DCAD0 | 4 byte
+ly do: void. Khong khoi tao Unity Purchasing / khong gan listener nut mua; khong mo khoa goi tra phi.
+--- TRUOC
+   0x021e0ac0: c0035fd6 ret                                  
+   0x021e0ac4: fe4fc1a8 ldp    x30, x19, [sp], #0x10         
+   0x021e0ac8: 02000014 b      #0x21e0ad0                      ; -> UnityEngine.Purchasing.CodelessIAPStoreListener$$CreateCodelessIAPStoreListenerInstance
+   0x021e0acc: 0fd4b497 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x021e0ad0: ffc301d1 sub    sp, sp, #0x70                   ; === UnityEngine.Purchasing.CodelessIAPStoreListener$$CreateCodelessIAPStoreListenerInstance
+   0x021e0ad4: fe2b00f9 str    x30, [sp, #0x50]              
+   0x021e0ad8: f44f06a9 stp    x20, x19, [sp, #0x60]         
+   0x021e0adc: d4260090 adrp   x20, #0x26b8000               
+   0x021e0ae0: f31a00f0 adrp   x19, #0x253f000               
+--- SAU
+   0x021e0ac0: c0035fd6 ret                                  
+   0x021e0ac4: fe4fc1a8 ldp    x30, x19, [sp], #0x10         
+   0x021e0ac8: 02000014 b      #0x21e0ad0                      ; -> UnityEngine.Purchasing.CodelessIAPStoreListener$$CreateCodelessIAPStoreListenerInstance
+   0x021e0acc: 0fd4b497 bl     #0xf15b08                       ; -> 0xf15b08 (thunk/runtime)
+>> 0x021e0ad0: c0035fd6 ret                                    ; === UnityEngine.Purchasing.CodelessIAPStoreListener$$CreateCodelessIAPStoreListenerInstance
+   0x021e0ad4: fe2b00f9 str    x30, [sp, #0x50]              
+   0x021e0ad8: f44f06a9 stp    x20, x19, [sp, #0x60]         
+   0x021e0adc: d4260090 adrp   x20, #0x26b8000               
+   0x021e0ae0: f31a00f0 adrp   x19, #0x253f000               
+KIEM: ret tai entry ham (RVA == dau ham UnityEngine.Purchasing.CodelessIAPStoreListener$$CreateCodelessIAPStoreListenerInstance), lenh goc la push frame (sub sp, sp, #0x70) => chua co frame/thanh ghi nao bi doi, x30 con nguyen: OK
+
+TONG: 22 diem va, 0 loi tu kiem
