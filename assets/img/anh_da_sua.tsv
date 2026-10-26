@@ -1,0 +1,42 @@
+file	box	goc	dich	font	mau_than	mau_vien	ghi_chu
+bin/MMchar.png	0,0,116,26	开始游戏	Bắt đầu	18	#ffffff	#28dce4	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (34, 5, 48, 14)
+bin/MMchar.png	0,27,116,26	继续游戏	Chơi tiếp	18	#ffffff	#28dce4	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (27, 32, 62, 17)
+bin/MMchar.png	0,54,116,26	QQ游戏中心	QQ Game	18	#ffffff	#eb2832	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (34, 61, 48, 13)
+bin/MMchar.png	0,81,116,26	QQ社区	Cộng đồng QQ	18	#ffffff	#eb2832	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (17, 86, 81, 17)
+bin/MMchar.png	0,108,116,26	设置	Cài đặt	18	#ffffff	#28dce4	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (34, 115, 48, 14)
+bin/MMchar.png	0,135,116,26	帮助	Trợ giúp	18	#ffffff	#28dce4	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (30, 142, 55, 15)
+bin/MMchar.png	0,162,116,26	关于	Giới thiệu	18	#ffffff	#28dce4	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (23, 169, 69, 14)
+bin/MMchar.png	0,189,116,26	退出	Thoát	18	#ffffff	#28dce4	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (40, 196, 36, 12)
+bin/MMchar.png	0,216,116,26	精彩推荐	Game hay	18	#ffffff	#eb2832	nền dựng lại: consensus 9 dòng + tổng hợp; ink bbox (30, 223, 55, 15)
+bin/tishiwenzi.png	0,0,24,13	生命+	HP	12	#60ff00	#345003	ink (5, 2, 14, 9); giữ nguyên ký hiệu +
+bin/tishiwenzi.png	0,13,24,13	怒气+	MP	12	#ffb400	#640f03	ink (5, 15, 13, 9); giữ nguyên ký hiệu +
+bin/tishiwenzi.png	0,26,24,13	经验+	EXP	12	#60ff00	#345003	ink (2, 28, 19, 9); giữ nguyên ký hiệu +
+bin/tishiwenzi.png	0,39,24,13	金钱+	Xu	12	#ffb400	#640f03	ink (5, 41, 14, 9); giữ nguyên ký hiệu +
+bin/tishiwenzi.png	0,52,51,13	得到物品:	Đồ mới	12	#ff51f1	#5c0537	ink (0, 52, 35, 12); giữ nguyên ký hiệu :/!
+bin/tishiwenzi.png	0,65,51,13	得到装备:	Trang bị	12	#51bbff	#051c5c	ink (0, 66, 48, 12); giữ nguyên ký hiệu :/!
+bin/tishiwenzi.png	0,78,49,13	红药不足!	Hết đỏ	12	#ff4b21	#480315	ink (0, 78, 36, 12); giữ nguyên ký hiệu :/!
+bin/tishiwenzi.png	0,91,49,13	蓝药不足!	Hết xanh	12	#ffb400	#640f03	ink (0, 91, 49, 12); giữ nguyên ký hiệu :/!
+bin/tishiwenzi.png	0,104,49,13	生命不足!	HP cạn	12	#ff0200	#480315	ink (0, 106, 36, 11); giữ nguyên ký hiệu :/!
+bin/tishiwenzi.png	0,117,49,13	怒气不足!	MP cạn	12	#ffb400	#640f03	ink (0, 119, 35, 11); giữ nguyên ký hiệu :/!
+bin/tishiwenzi.png	0,130,28,13	接到:	Nhận	12	#ffb400	#640f03	ink (0, 131, 28, 12); giữ nguyên ký hiệu :/!
+bin/tishiwenzi.png	0,143,28,13	完成:	Xong	12	#ffb400	#640f03	ink (0, 145, 26, 11); giữ nguyên ký hiệu :/!
+bin/tishiwenzi.png	0,156,28,13	提交:	Nộp	12	#ffb400	#640f03	ink (0, 157, 20, 12); giữ nguyên ký hiệu :/!
+bin/uitishi.png	0,0,240,18	2468:移动 5/左软键:确认 右软键:返回	2468:Di chuyển 5/Trái:Chọn Phải:Quay lại	12	#51bfff	#02284b	nền = 000000 alpha 179 phẳng; ink (5, 1, 229, 14)
+bin/caidan.png	5,3,26,15	菜单	Menu	12	#15e0e8	#27293d	ink (4, 6, 27, 9); gốc không viền? có viền #27293d
+bin/shop.png	5,3,26,15	商店	Shop	12	#ffae00	#5b1313	ink (5, 5, 26, 12); gốc không viền? có viền #5b1313
+bin/diui.png	4,14,41,16	商店	Shop	12	#ff92fd	#25080c	xoá glow về nền thanh 010000; giữ pixel trong suốt; ink (11, 17, 26, 12)
+bin/diui.png	199,13,38,16	菜单	Menu	12	#fcff69	#313103	xoá glow về nền thanh 010000; giữ pixel trong suốt; ink (204, 17, 27, 9)
+bin/pause.png	8,3,112,30	游戏暂停	Tạm dừng	18	#00f4f6	#0e4b4b	nền phẳng 262325; ink (36, 12, 55, 15)
+bin/yes.png	0,0,36,32	是	Có	15c	#ffffff	#1665ab	nền đen 000000 (quầng sáng gốc là halo của chữ nên xoá hết); ink (12, 11, 12, 10)
+bin/no.png	0,0,35,33	否	Không	15c	#ffffff	#1665ab	nền đen 000000 (quầng sáng gốc là halo của chữ nên xoá hết); ink (4, 11, 27, 12)
+bin/music.png	8,4,177,36	是否开启音乐?	Bật âm nhạc?	18	#d2fdc5	#2f78b4	nền: inpaint+làm mượt quầng sáng xanh; ink (56, 15, 81, 14)
+bin/music.png	2,46,188,19	建议您关闭音乐会使游戏更加流畅	Tắt nhạc giúp game mượt hơn	12	#1fffd7	#080206	nền: inpaint trong pill hồng; ink (17, 48, 157, 14)
+bin/battle/battle1.png	10,4,93,15	讨逆董卓	Thảo phạt Đổng Trác	13c	#5adebb	#002f42	nền: inpaint dưới chữ cũ (mask=viền gốc giãn 2px); căn trái tại x=10 như gốc; không có khung nhãn nên không mở rộng
+bin/battle/battle2.png	10,4,76,15	官渡拉锯	Quan Độ giằng co	13c	#17e2ff	#091741	nền: inpaint dưới chữ cũ (mask=viền gốc giãn 2px); căn trái tại x=10 như gốc; không có khung nhãn nên không mở rộng
+bin/battle/battle3.png	10,6,88,11	火烧赤壁	Hỏa thiêu Xích Bích	13c	#f85422	#490202	nền: inpaint dưới chữ cũ (mask=viền gốc giãn 2px); căn trái tại x=10 như gốc; không có khung nhãn nên không mở rộng
+bin/battle/battle4.png	10,4,77,13	樊城之战	Phàn Thành chiến	13c	#fff32f	#4e2c0f	nền: inpaint dưới chữ cũ (mask=viền gốc giãn 2px); căn trái tại x=10 như gốc; không có khung nhãn nên không mở rộng
+bin/battle/battle5.png	10,4,49,15	特殊关卡	Ải đặc biệt	13c	#ee8597	#270114	nền: inpaint dưới chữ cũ (mask=viền gốc giãn 2px); căn trái tại x=10 như gốc; không có khung nhãn nên không mở rộng
+bin/fengmian.png	31,57,173,188	雄霸三国 / 之 / 天降女神 (xoá)	xoá chữ Hán + vẽ lại (xem 3 dòng dưới)	-	-	-	nền: mask theo màu + Telea inpaint + dither bảng màu gốc; ebox=vùng xoá
+bin/fengmian.png	94,107,48,15	雄霸三国 (1/2)	HÙNG BÁ	18	#e10301	#fdfcf4	
+bin/fengmian.png	90,128,55,18	雄霸三国 (2/2)	TAM QUỐC	18	#e10301	#fdfcf4	bỏ chữ 之 (liên từ), không vẽ lại
+bin/fengmian.png	60,210,128,17	天降女神	Thiên Giáng Nữ Thần	18	#f3a605	#040101	
