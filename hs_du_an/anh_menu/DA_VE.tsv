@@ -1,0 +1,129 @@
+phan	file	chu_viet	co_chu	ghi_chu
+1	b.pak/a.png	A	15c	15c; ATK 1 chữ (ô 13x13) | gốc: 攻
+1	b.pak/angry.png	Nộ	15c	15c; đỏ viền kem | gốc: 怒
+1	b.pak/cri.png	Crit	13c	13c; Chí mạng rút gọn (ô 26px) | gốc: 爆击
+1	b.pak/d.png	D	15c	15c; DEF 1 chữ (ô 13x13) | gốc: 防
+1	b.pak/miss.png	Trật	13c	13c; Trượt rút gọn (ô 26px) | gốc: 失误
+1	b.pak/s.png	S	15c	15c; SPD 1 chữ (ô 13x13) | gốc: 敏
+1	c.pak/help.png	Trợ giúp	15c	15c metric | gốc: 帮助
+1	c.pak/load.png	Tải	15c	15c metric | gốc: 读取
+1	c.pak/mmtext.png	Kỳ thuật · Vật phẩm · Trang bị · Nhân vật · Thiên Thư	13c	13c, 2 dòng so le; 2 dòng so le; Thiên Thư theo thuật ngữ | gốc: 奇术 物品 装备 人物 (任务) 天书
+1	c.pak/pt0.png	ATK · Hệ · Lực · Bền · Trí · SPD	13c	13c bevel; Hệ = Thuộc tính (ô 36px); SPD thay Nhanh | gốc: 攻击 属性 力量 耐力 智慧 敏捷
+1	c.pak/pt1.png	DEF · Kim · Mộc · Thủy · Hỏa · Thổ	13c	13c bevel | gốc: 防御 金 木 水 火 土
+1	c.pak/s0.png	Mua	15c	15c metric | gốc: 购买
+1	c.pak/s1.png	Bán	15c	15c metric | gốc: 贩卖
+1	c.pak/save.png	Lưu	15c	15c metric | gốc: 存档
+1	c.pak/set.png	Cài đặt	15c	15c metric | gốc: 设置
+1	goc_jar/tt.png	Bắt đầu · Tải game · Cộng đồng · Tùy chọn · Trợ giúp · Giới thiệu · Thoát	13c	13c; mỗi mục 2 dòng so le; ô 35px/mục | gốc: 起始 读取 社区 选项 帮助 关于 退出 (P3+: 下载其它章节)
+1	ic.pak/elements.png	Kim Mộc Thủy Hỏa Thổ	13c	13c bevel 5 ô 18px | gốc: 金木水火土
+1	ic.pak/i0.png	Tất cả	13c	13c metric | gốc: 全部
+1	ic.pak/i1.png	Hồi phục	13c	13c metric | gốc: 恢复
+1	ic.pak/i2.png	Hỗ trợ	13c	13c metric | gốc: 辅助
+1	ic.pak/i3.png	Pháp bảo	13c	13c metric | gốc: 法宝
+1	ic.pak/i4.png	Trang bị	13c	13c metric | gốc: 装备
+1	ic.pak/i5.png	Vật sống	13c	13c metric | gốc: 活物
+1	ic.pak/i6.png	Khác	13c	13c metric | gốc: 其它
+1	ic.pak/n0.png	Cừu	13c	13c; bóng xanh; chỉ tên cuối (ô 36px) | gốc: 靖仇
+1	ic.pak/n1.png	Tuyết	13c	13c; bóng xanh; chỉ tên cuối (ô 36px) | gốc: 如雪 / 小雪
+1	ic.pak/n2.png	Nhi	13c	13c; bóng xanh; chỉ tên cuối (ô 36px) | gốc: 玉儿
+1	ic.pak/n3.png	Liệt	13c	13c; bóng xanh; chỉ tên cuối (ô 36px) | gốc: 张烈
+1	ic.pak/sign.png	/ % Cấp Giờ Ph	13c	13c; giữ nguyên / và %; 13c; Phút rút gọn Ph (ô 18px) | gốc: / % 级 时 分
+1	ic.pak/text.png	HP · MP · TL	13c	13c, viền kem | gốc: 命 灵 体
+1	mm.pak/cr.png	©2008 Lakoo	13c	13c; giữ ©2008; Lakoo 13c đen | gốc: ©2008 拉阔游戏
+2	b.pak/a.png	A	15c	15c; ATK 1 chữ (ô 13x13) | gốc: 攻
+2	b.pak/angry.png	Nộ	15c	15c; đỏ viền kem | gốc: 怒
+2	b.pak/cri.png	Crit	13c	13c; Chí mạng rút gọn (ô 26px) | gốc: 爆击
+2	b.pak/d.png	D	15c	15c; DEF 1 chữ (ô 13x13) | gốc: 防
+2	b.pak/miss.png	Trật	13c	13c; Trượt rút gọn (ô 26px) | gốc: 失误
+2	b.pak/s.png	S	15c	15c; SPD 1 chữ (ô 13x13) | gốc: 敏
+2	c.pak/help.png	Trợ giúp	15c	15c metric | gốc: 帮助
+2	c.pak/load.png	Tải	15c	15c metric | gốc: 读取
+2	c.pak/mmtext.png	Kỳ thuật · Vật phẩm · Trang bị · Nhân vật · Thiên Thư	13c	13c, 2 dòng so le; 2 dòng so le; Thiên Thư theo thuật ngữ | gốc: 奇术 物品 装备 人物 (任务) 天书
+2	c.pak/pt0.png	ATK · Hệ · Lực · Bền · Trí · SPD	13c	13c bevel; Hệ = Thuộc tính (ô 36px); SPD thay Nhanh | gốc: 攻击 属性 力量 耐力 智慧 敏捷
+2	c.pak/pt1.png	DEF · Kim · Mộc · Thủy · Hỏa · Thổ	13c	13c bevel | gốc: 防御 金 木 水 火 土
+2	c.pak/s0.png	Mua	15c	15c metric | gốc: 购买
+2	c.pak/s1.png	Bán	15c	15c metric | gốc: 贩卖
+2	c.pak/save.png	Lưu	15c	15c metric | gốc: 存档
+2	c.pak/set.png	Cài đặt	15c	15c metric | gốc: 设置
+2	goc_jar/about.png	Giới thiệu	15c	15c tight (khít ô); Giới thiệu | gốc: 关于
+2	goc_jar/tt.png	Bắt đầu · Tải game · Chương một · Cộng đồng · Tùy chọn · Trợ giúp · Giới thiệu · Thoát	15c	15c; mỗi mục 2 dòng so le; ô 35px/mục | gốc: 起始 读取 社区 选项 帮助 关于 退出 (P3+: 下载其它章节)
+2	ic.pak/elements.png	Kim Mộc Thủy Hỏa Thổ	13c	13c bevel 5 ô 18px | gốc: 金木水火土
+2	ic.pak/i0.png	Tất cả	13c	13c metric | gốc: 全部
+2	ic.pak/i1.png	Hồi phục	13c	13c metric | gốc: 恢复
+2	ic.pak/i2.png	Hỗ trợ	13c	13c metric | gốc: 辅助
+2	ic.pak/i3.png	Pháp bảo	13c	13c metric | gốc: 法宝
+2	ic.pak/i4.png	Trang bị	13c	13c metric | gốc: 装备
+2	ic.pak/i5.png	Vật sống	13c	13c metric | gốc: 活物
+2	ic.pak/i6.png	Khác	13c	13c metric | gốc: 其它
+2	ic.pak/n0.png	Cừu	13c	13c; bóng xanh; chỉ tên cuối (ô 36px) | gốc: 靖仇
+2	ic.pak/n1.png	Tuyết	13c	13c; bóng xanh; chỉ tên cuối (ô 36px) | gốc: 如雪 / 小雪
+2	ic.pak/n2.png	Nhi	13c	13c; bóng xanh; chỉ tên cuối (ô 36px) | gốc: 玉儿
+2	ic.pak/n3.png	Liệt	13c	13c; bóng xanh; chỉ tên cuối (ô 36px) | gốc: 张烈
+2	ic.pak/sign.png	/ % Cấp Giờ Ph	13c	13c; giữ nguyên / và %; 13c; Phút rút gọn Ph (ô 18px) | gốc: / % 级 时 分
+2	ic.pak/text.png	HP · MP · TL	13c	13c, viền kem | gốc: 命 灵 体
+3	b.pak/a.png	A	15c	15c; ATK 1 chữ (ô 13x13) | gốc: 攻
+3	b.pak/angry.png	Nộ	15c	15c; đỏ viền kem | gốc: 怒
+3	b.pak/cri.png	Crit	13c	13c; Chí mạng rút gọn (ô 26px) | gốc: 爆击
+3	b.pak/d.png	D	15c	15c; DEF 1 chữ (ô 13x13) | gốc: 防
+3	b.pak/miss.png	Trật	13c	13c; Trượt rút gọn (ô 26px) | gốc: 失误
+3	b.pak/s.png	S	15c	15c; SPD 1 chữ (ô 13x13) | gốc: 敏
+3	c.pak/mmtext.png	Kỳ thuật · Vật phẩm · Trang bị · Nhân vật · Nhiệm vụ · Thiên Thư	13c	13c, 2 dòng so le; 2 dòng so le; Thiên Thư theo thuật ngữ | gốc: 奇术 物品 装备 人物 (任务) 天书
+3	goc_jar/tt.png	Bắt đầu · Tải game · Tải thêm · Cộng đồng · Tùy chọn · Trợ giúp · Giới thiệu · Thoát	15c	15c; mỗi mục 2 dòng so le; ô 35px/mục | gốc: 起始 读取 社区 选项 帮助 关于 退出 (P3+: 下载其它章节)
+3	ic.pak/atk.png	ATK	13c	13c bevel | gốc: 攻击
+3	ic.pak/def.png	DEF	13c	13c bevel | gốc: 防御
+3	ic.pak/int.png	Trí	13c	13c bevel | gốc: 智慧
+3	ic.pak/ph0.png	Kim	13c	13c bevel | gốc: 金
+3	ic.pak/ph1.png	Mộc	13c	13c bevel | gốc: 木
+3	ic.pak/ph2.png	Thủy	13c	13c bevel | gốc: 水
+3	ic.pak/ph3.png	Hỏa	13c	13c bevel | gốc: 火
+3	ic.pak/ph4.png	Thổ	13c	13c bevel | gốc: 土
+3	ic.pak/phase.png	Hệ	13c	13c bevel; Hệ = Thuộc tính (ô 36px) | gốc: 属性
+3	ic.pak/sign.png	/ % Cấp Giờ Ph	13c	13c; giữ nguyên / và %; 13c; Phút rút gọn Ph (ô 18px) | gốc: / % 级 时 分
+3	ic.pak/spd.png	SPD	13c	13c bevel | gốc: 敏捷
+3	ic.pak/sta.png	Bền	13c	13c bevel | gốc: 耐力
+3	ic.pak/str.png	Lực	13c	13c bevel | gốc: 力量
+3	ic.pak/text.png	HP · MP · TL	13c	13c, viền kem | gốc: 命 灵 体
+4	b.pak/a.png	A	15c	15c; ATK 1 chữ (ô 13x13) | gốc: 攻
+4	b.pak/angry.png	Nộ	15c	15c; đỏ viền kem | gốc: 怒
+4	b.pak/cri.png	Crit	13c	13c; Chí mạng rút gọn (ô 26px) | gốc: 爆击
+4	b.pak/d.png	D	15c	15c; DEF 1 chữ (ô 13x13) | gốc: 防
+4	b.pak/miss.png	Trật	13c	13c; Trượt rút gọn (ô 26px) | gốc: 失误
+4	b.pak/s.png	S	15c	15c; SPD 1 chữ (ô 13x13) | gốc: 敏
+4	c.pak/mmtext.png	Kỳ thuật · Vật phẩm · Trang bị · Nhân vật · Nhiệm vụ · Thiên Thư	13c	13c, 2 dòng so le; 2 dòng so le; Thiên Thư theo thuật ngữ | gốc: 奇术 物品 装备 人物 (任务) 天书
+4	goc_jar/tt.png	Bắt đầu · Tải game · Tải thêm · Cộng đồng · Tùy chọn · Trợ giúp · Giới thiệu · Thoát	15c	15c; mỗi mục 2 dòng so le; ô 35px/mục | gốc: 起始 读取 社区 选项 帮助 关于 退出 (P3+: 下载其它章节)
+4	ic.pak/atk.png	ATK	13c	13c bevel | gốc: 攻击
+4	ic.pak/def.png	DEF	13c	13c bevel | gốc: 防御
+4	ic.pak/int.png	Trí	13c	13c bevel | gốc: 智慧
+4	ic.pak/ph0.png	Kim	13c	13c bevel | gốc: 金
+4	ic.pak/ph1.png	Mộc	13c	13c bevel | gốc: 木
+4	ic.pak/ph2.png	Thủy	13c	13c bevel | gốc: 水
+4	ic.pak/ph3.png	Hỏa	13c	13c bevel | gốc: 火
+4	ic.pak/ph4.png	Thổ	13c	13c bevel | gốc: 土
+4	ic.pak/phase.png	Hệ	13c	13c bevel; Hệ = Thuộc tính (ô 36px) | gốc: 属性
+4	ic.pak/sign.png	/ % Cấp Giờ Ph	13c	13c; giữ nguyên / và %; 13c; Phút rút gọn Ph (ô 18px) | gốc: / % 级 时 分
+4	ic.pak/spd.png	SPD	13c	13c bevel | gốc: 敏捷
+4	ic.pak/sta.png	Bền	13c	13c bevel | gốc: 耐力
+4	ic.pak/str.png	Lực	13c	13c bevel | gốc: 力量
+4	ic.pak/text.png	HP · MP · TL	13c	13c, viền kem | gốc: 命 灵 体
+5	b.pak/a.png	A	15c	15c; ATK 1 chữ (ô 13x13) | gốc: 攻
+5	b.pak/angry.png	Nộ	15c	15c; đỏ viền kem | gốc: 怒
+5	b.pak/cri.png	Crit	13c	13c; Chí mạng rút gọn (ô 26px) | gốc: 爆击
+5	b.pak/d.png	D	15c	15c; DEF 1 chữ (ô 13x13) | gốc: 防
+5	b.pak/miss.png	Trật	13c	13c; Trượt rút gọn (ô 26px) | gốc: 失误
+5	b.pak/s.png	S	15c	15c; SPD 1 chữ (ô 13x13) | gốc: 敏
+5	c.pak/mmtext.png	Kỳ thuật · Vật phẩm · Trang bị · Nhân vật · Nhiệm vụ · Thiên Thư	13c	13c, 2 dòng so le; 2 dòng so le; Thiên Thư theo thuật ngữ | gốc: 奇术 物品 装备 人物 (任务) 天书
+5	goc_jar/tt.png	Bắt đầu · Tải game · Tải thêm · Cộng đồng · Tùy chọn · Trợ giúp · Giới thiệu · Thoát	15c	15c; mỗi mục 2 dòng so le; ô 35px/mục | gốc: 起始 读取 社区 选项 帮助 关于 退出 (P3+: 下载其它章节)
+5	ic.pak/atk.png	ATK	13c	13c bevel | gốc: 攻击
+5	ic.pak/def.png	DEF	13c	13c bevel | gốc: 防御
+5	ic.pak/int.png	Trí	13c	13c bevel | gốc: 智慧
+5	ic.pak/ph0.png	Kim	13c	13c bevel | gốc: 金
+5	ic.pak/ph1.png	Mộc	13c	13c bevel | gốc: 木
+5	ic.pak/ph2.png	Thủy	13c	13c bevel | gốc: 水
+5	ic.pak/ph3.png	Hỏa	13c	13c bevel | gốc: 火
+5	ic.pak/ph4.png	Thổ	13c	13c bevel | gốc: 土
+5	ic.pak/phase.png	Hệ	13c	13c bevel; Hệ = Thuộc tính (ô 36px) | gốc: 属性
+5	ic.pak/sign.png	/ % Cấp Giờ Ph	13c	13c; giữ nguyên / và %; 13c; Phút rút gọn Ph (ô 18px) | gốc: / % 级 时 分
+5	ic.pak/spd.png	SPD	13c	13c bevel | gốc: 敏捷
+5	ic.pak/sta.png	Bền	13c	13c bevel | gốc: 耐力
+5	ic.pak/str.png	Lực	13c	13c bevel | gốc: 力量
+5	ic.pak/text.png	HP · MP · TL	13c	13c, viền kem | gốc: 命 灵 体

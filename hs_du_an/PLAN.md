@@ -69,7 +69,7 @@
   - File: `$P/docs/render_p1.md`
   - Hoàn thành khi: tài liệu liệt kê đủ (kiểm bằng grep `invokevirtual javax/microedition/lcdui/(Graphics|Font)` trên toàn bộ class P1) và đề xuất điểm hook tối thiểu.
 
-- [ ] T7. Vẽ lại ảnh có chữ Hán (5 phần) — **Quản đốc nghiệm thu** (chỉ giao SAU khi text dịch xong; người dùng yêu cầu tự động)
+- [x] T7. Vẽ lại ảnh có chữ Hán (5 phần) — **Quản đốc nghiệm thu** (chỉ giao SAU khi text dịch xong; người dùng yêu cầu tự động)
   - Agent: A1 (Sonnet 5.5, một công nhân). Không chạm `dich/`, `out/`, class, script build.
   - Đầu vào: `anh_menu/DANH_SACH_CO_CHU.tsv` (149 dòng, 87 `nhom_trung` khác nhau), `anh_menu/README_VE_ANH.md`, ảnh gốc ở `anh_menu/pN/...` (KHÔNG sửa). Nhãn chữ phải khớp bản dịch text: tra `dich/dp_work/thuat-ngu.tsv` và `dich/dp_work/out.tsv` (cùng chữ Hán trong `t.dat`, ví dụ 奇术, 物品, 装备 → dùng đúng bản dịch đó, rút gọn nếu ô nhỏ).
   - BỎ QUA (giữ nguyên): `mm.pak/title.png` và `title_p*.png` (ảnh người dùng vẽ), `goc_jar/icon.png`, `goc_jar/logo0.png`, `goc_jar/logo2.png`, `goc_jar/sns_logo.png` (logo hãng). `mm.pak/cr.png` → "(c)2008 Lakoo".
@@ -88,3 +88,5 @@
 - A1 T3: scripts/formats_p1.py + docs/formats_p1.md; 8 file text/dữ liệu đọc hết đúng byte, tập chuỗi = utfscan; 11 `.pak` chỉ chứa PNG/.fra (XOR 1), không text.
 - A1 T4: scripts/{textfmt,extract,repack,test_fake}.py, p1/text_can_dich.tsv (3924 chuỗi, 65 file); round-trip giống hệt byte; dịch giả OK harness 1113/1113 + loader game 7/7.
 - A1 T4b: P2–P5 cùng bộ công cụ (P3–5 dùng `.m2`: tên bản đồ + kịch bản + danh sách NPC, có thêm kiểu 'm2'); p2..p5/text_can_dich.tsv (5189/3801/2860/3114 chuỗi), all/text_can_dich.tsv (18888 dòng, 9192 chuỗi gốc duy nhất); logs/verify_p*.txt, verify_files_p*.txt; docs/formats_p2..p5.md. Bỏ qua (không loader): lk_tips.dat P4/P5, ii.dat P4; ngoài phạm vi: payInfo.ini/snsInfo.ini.
+- A1 T7: vẽ xong 128 ảnh (hết 87 nhóm trừ mục BỎ QUA; ảnh cùng nhóm vẽ giống hệt) vào `anh_menu/can_ve/pN/`, bảng `anh_menu/DA_VE.tsv`, xem nhanh `shots/anh_vi/pN.png` (cũng ghi đè `can_ve/pN/_xem_nhanh.png`); script ở `$WS/t7/` (draw_all.py, verify.py): W×H/alpha khớp gốc. Rút gọn do ô nhỏ: a/d/s 13×13 = A/D/S, Crit, Trật, tên nhân vật chỉ tên cuối (Cừu/Tuyết/Nhi/Liệt), Thuộc tính = Hệ, Phút = Ph (ô 18px), Thủy khít ô 18px; tt P2 ô 3 = "Chương/một", P3+ ô 3 = "Tải/thêm". Chưa chụp trong game (quản đốc rebuild).
+- Quản đốc nghiệm thu T7: xem 5 bảng shots/anh_vi + phóng to dải tt/mmtext; rebuild_all 5/5 PASS; FreeJ2ME P1/P3 menu chính + menu trong game hiện ảnh Việt, không exception (shots/anh_trong_game.png).
