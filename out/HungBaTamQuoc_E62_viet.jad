@@ -1,0 +1,9 @@
+MIDlet-Vendor: Joymeng
+MIDlet-Version: 1.0.0
+MIDlet-Name: 雄霸三国之天降女神
+MIDlet-1: 雄霸三国之天降女神, bin/icon.png, CMIDlet
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Icon: bin/icon.png
+MicroEdition-Profile: MIDP-1.0
+MIDlet-Jar-URL: HungBaTamQuoc_E62_viet.jar
+MIDlet-Jar-Size: 1394562

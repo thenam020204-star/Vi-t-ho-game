@@ -1,0 +1,46 @@
+# gốc	dịch	loại(~ = không ép kiểm tra)	ghi chú
+司马懿	Tư Mã Ý	nhân vật
+诸葛亮	Gia Cát Lượng	nhân vật
+关羽	Quan Vũ	nhân vật
+吕布	Lữ Bố	nhân vật
+曹操	Tào Tháo	nhân vật
+汜水关	Tỵ Thủy Quan	địa danh
+乌巢	Ô Sào	địa danh
+官渡	Quan Độ	địa danh
+樊城	Phàn Thành	địa danh
+新野	Tân Dã	địa danh
+麦城	Mạch Thành	địa danh
+荆州	Kinh Châu	địa danh
+华容道	Hoa Dung Đạo	địa danh
+青龙偃月刀	Thanh Long Yển Nguyệt Đao	vật phẩm
+百夫长	Bách phu trưởng	chức
+怒气	MP	chỉ số
+虎牢关	Hổ Lao Quan	địa danh
+洛阳	Lạc Dương	địa danh
+长安	Trường An	địa danh
+刘备	Lưu Bị	nhân vật
+张飞	Trương Phi	nhân vật
+董卓	Đổng Trác	nhân vật
+袁绍	Viên Thiệu	nhân vật
+孙权	Tôn Quyền	nhân vật
+生命值	HP	chỉ số
+最大生命值	HP tối đa	chỉ số
+怒气值	MP	chỉ số
+最大怒气值	MP tối đa	chỉ số
+攻击力	ATK	chỉ số
+防御力	DEF	chỉ số
+暴击率	Chí mạng	chỉ số
+幸运	May mắn	chỉ số
+技巧值	Kỹ xảo	chỉ số
+升级经验	EXP lên cấp	chỉ số
+商店	Shop	UI
+是	Có	UI
+否	Không	UI
+港币	Xu	tiền
+素材	nguyên liệu	vật phẩm
+宝箱	rương	vật phẩm
+宝箱之石	Đá Rương	vật phẩm
+攻击石	Đá Công	vật phẩm
+防御石	Đá Thủ	vật phẩm
+暴击石	Đá Chí Mạng	vật phẩm
+幸运石	Đá May Mắn	vật phẩm

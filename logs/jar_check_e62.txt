@@ -1,0 +1,8 @@
+Thêm: ['bin/fw.bin', 'vh.class']
+Xoá: []
+Đổi: ['ad.class', 'ag.class', 'al.class', 'am.class', 'as.class', 'au.class', 'az.class', 'bb.class', 'bf.class', 'bin/MMchar.png', 'bin/animation.bin', 'bin/battle/battle1.png', 'bin/battle/battle2.png', 'bin/battle/battle3.png', 'bin/battle/battle4.png', 'bin/battle/battle5.png', 'bin/caidan.png', 'bin/choice.bin', 'bin/diui.png', 'bin/font.bin', 'bin/gameData.bin', 'bin/help_about.bin', 'bin/l1.bin', 'bin/music.png', 'bin/no.png', 'bin/pause.png', 'bin/script.bin', 'bin/shop.png', 'bin/string.bin', 'bin/tishiwenzi.png', 'bin/uiform.bin', 'bin/uires.bin', 'bin/uitishi.png', 'bin/yes.png', 'bm.class', 'bo.class', 'bp.class', 'br.class', 'bs.class', 'bu.class', 'by.class', 'bz.class', 'cb.class', 'cg.class', 'h.class', 'n.class', 't.class', 'y.class', 'z.class']
+WARN bs.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN vh.class: API mới so với bản gốc: java/lang/Integer.<init>(I)V (xác nhận máy đích có)
+WARN vh.class: API mới so với bản gốc: java/lang/Integer.intValue()I (xác nhận máy đích có)
+WARN vh.class: API mới so với bản gốc: java/util/Vector.copyInto([Ljava/lang/Object;)V (xác nhận máy đích có)
+RESULT: PASS
