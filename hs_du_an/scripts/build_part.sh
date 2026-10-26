@@ -17,6 +17,9 @@ if [ -n "$CT" ] && [ -f "$CT" ]; then python3 -I "$P/scripts/class_text.py" patc
 python3 -I "$P/scripts/cp_redirect.py" "$P/p$N/font_rules.tsv" "$T/src" "$T/cls" --report "$T/redirect.txt"
 cp -r "$T/src/." "$T/jar/"; cp -r "$T/cls/." "$T/jar/"
 if [ -d "$P/p$N/classes" ]; then cp -r "$P/p$N/classes/." "$T/jar/"; fi
+# 1b) màn logo chỉ còn logo2.png (pN/logo_class.txt = đường dẫn class logo); bỏ resource không còn dùng
+if [ -f "$P/p$N/logo_class.txt" ]; then LC=$T/jar/$(cat "$P/p$N/logo_class.txt"); python3 -I "$P/scripts/logo_patch.py" "$LC" "$LC"; fi
+if [ -f "$P/p$N/xoa_file.txt" ]; then while read -r f; do [ -n "$f" ] && rm -f "$T/jar/$f"; done < "$P/p$N/xoa_file.txt"; fi
 # 2) class mới + font
 env -u JAVA_TOOL_OPTIONS java -cp "$WS/work/lib/ecj-3.26.0.jar" org.eclipse.jdt.internal.compiler.batch.Main \
   -source 1.3 -target 1.3 -encoding UTF-8 -nowarn -bootclasspath "$WS/work/lib/jbase/classes" \

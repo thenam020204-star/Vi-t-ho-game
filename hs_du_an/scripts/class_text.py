@@ -119,7 +119,8 @@ def patch(src, tsv, dst):
         c = ln.split('\t')
         if not c[1].startswith('class/') or c[4] == '':
             continue
-        repl.setdefault(c[1][6:], {})[int(c[2])] = unesc(c[4])
+        # <EMPTY> = chuỗi rỗng có chủ ý (ô dịch trống nghĩa là "giữ gốc")
+        repl.setdefault(c[1][6:], {})[int(c[2])] = '' if c[4] == '<EMPTY>' else unesc(c[4])
     n = 0
     for rel, rp in repl.items():
         data = open(os.path.join(src, rel), 'rb').read()
