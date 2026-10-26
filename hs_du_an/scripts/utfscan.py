@@ -37,6 +37,14 @@ def scan(b, start=0, end=None):
     while o < end - 2:
         s = try_utf(b, o)
         if s is not None and o + 2 + ((b[o] << 8) | b[o + 1]) <= end:
+            # giả dương: byte cuối của u2 độ dài thật lọt vào làm ký tự ASCII đầu (u2 bắt đầu sớm 1 byte).
+            # Nếu cách 1 byte cũng là chuỗi hợp lệ, kết thúc muộn hơn và chuỗi hiện tại bắt đầu bằng ASCII -> lấy chuỗi sau.
+            if ord(s[0]) < 0x80 and o + 1 < end:
+                s2 = try_utf(b, o + 1)
+                if s2 is not None and o + 3 + ((b[o + 1] << 8) | b[o + 2]) <= end and \
+                   o + 3 + ((b[o + 1] << 8) | b[o + 2]) > o + 2 + ((b[o] << 8) | b[o + 1]):
+                    o += 1
+                    continue
             out.append((o, s))
             o += 2 + ((b[o] << 8) | b[o + 1])
         else:
