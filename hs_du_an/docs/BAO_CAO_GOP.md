@@ -19,6 +19,7 @@ Cả 5 phần cùng một engine (Gameislive/Softstar Mobile), cùng cách tổ 
 Liên kết giữa các phần:
 - **Không phần nào đọc save của phần trước.** Mỗi phần mở RMS riêng (`sword`…`sword5`). Các lời gọi `openRecordStore(name, vendor, suite)` chỉ thuộc SDK thanh toán wappay.
 - Chuỗi `/sword_`, `/sword2_`… ở P3–P5 chỉ là link quảng cáo tải chương khác (`http://lakoo.cn/portal/.../swordN_x.jad`). Không phải cơ chế kế thừa.
+- **Có chuyển save giữa chương, nhưng chỉ qua mạng:** class P3–P5 có các mục menu `下载第二章存档` / `下载第三章存档` / `下载第四章存档` (Tải save chương trước) và `上传存档` (Tải save lên). Save đi qua server Lakoo/Gameislive, không đọc RMS của chương khác trên máy. Server đó đã ngừng hoạt động, nên trên thực tế các phần là độc lập. Muốn chuyển save offline thì phải viết bộ đọc save cục bộ thay cho đường mạng (xem phương án C).
 - Câu kết P1 (`map/19.m`: 《轩辕剑-天之痕》首章至此结束) xác nhận mỗi phần là một game độc lập, nhân vật bắt đầu lại từ đầu.
 
 ## 2. Các phương án
