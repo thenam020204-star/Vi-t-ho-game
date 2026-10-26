@@ -141,6 +141,14 @@ public final class bs {
         bs.a(graphics, f, 0, w, n2, n3, w, (int)a);
     }
 
+    /* Do rong 1 ky tu (dung cho ngat dong trong vh). */
+    public static final int w(char ch) {
+        if (!r.a) {
+            return az.a.charWidth(ch);
+        }
+        return bs.c(bs.b(ch), ch);
+    }
+
     /* Tim glyph cua ky tu; -1 neu font khong co. */
     private static int b(char ch) {
         short s2 = (short)ch;

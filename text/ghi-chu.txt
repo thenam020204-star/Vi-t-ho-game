@@ -1,0 +1,8 @@
+- Chuỗi gameData/class có placeholder M K N D Y E Z B L G P S X: dùng chữ thường mp/hp/exp/công/thủ để tránh code thay nhầm chữ hoa (không dùng ATK/DEF/HP/MP in hoa ở đó).
+- Tên kỹ năng/vũ khí Hán Việt dài hơn giới hạn ô (4 chữ Hán -> ~100px); giữ Hán Việt đầy đủ theo phong cách đã chốt.
+- script 0.5/0.8/59 (gốc vô nghĩa: 成vbcvb, 风格的风格大方吧, 而对方水电费) dịch sát chữ.
+- 宝盒 (gameData) và 宝箱 (script) đều dịch "Rương".
+- class: 第/轮 (as.class) dịch "Đợt " và "." do không rõ ngữ cảnh ghép; các mảnh ghép có thêm khoảng trắng đầu/cuối cho tiếng Việt.
+- bz 204 gốc bị cụt ("励金钱") dịch đầy đủ "Thưởng ...".
+- 港币 và 金币/金钱 đều dịch "Xu"; 元 (phí SMS) dịch "tệ".
+- FONT HE THONG: ASCII không dấu.

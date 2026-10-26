@@ -1,0 +1,59 @@
+== 1. font 12px
+glyph goc 7045, thay 94, them 134 -> 7179; font.bin 186657 byte, fw.bin 7179 byte
+== 2. text resource
+ghi: script.bin 22948, string.bin 10693, help_about.bin 961, choice.bin 955, gameData.bin 22280, l1.bin 5318
+== 2b. bo cuc uiform (bang chon ai)
+uiform: form 19 da sua 10 phan tu
+== 3. anh
+== 4. chuoi trong .class
+ad.class: thay 26 chuoi
+al.class: thay 45 chuoi
+am.class: thay 3 chuoi
+as.class: thay 16 chuoi
+au.class: thay 8 chuoi
+az.class: thay 48 chuoi
+bf.class: thay 17 chuoi
+bm.class: thay 1 chuoi
+bo.class: thay 2 chuoi
+bp.class: thay 15 chuoi
+br.class: thay 6 chuoi
+bu.class: thay 2 chuoi
+by.class: thay 8 chuoi
+bz.class: thay 24 chuoi
+cg.class: thay 56 chuoi
+h.class: thay 3 chuoi
+n.class: thay 25 chuoi
+t.class: thay 13 chuoi
+y.class: thay 110 chuoi
+z.class: thay 5 chuoi
+== 5. sua bytecode (ASM) + class moi (ecj 1.3)
+z.a(Ljava/lang/String;Ljavax/microedition/lcdui/Font;I)[Ljava/lang/String; -> vh.a
+z.a(Ljava/lang/String;I)[Ljava/lang/String; -> vh.a
+z.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;I[SII)I -> vh.a
+z: drawString -> vh.ds x1
+z: Font.stringWidth -> vh.sw x2
+cb.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIIIIII)I -> vh.b
+cb.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIIIII)I -> vh.c
+cb.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;Lbn;II)V -> vh.m
+n.a(Ljavax/microedition/lcdui/Graphics;[SI[II)V -> vh.d (khung thoai)
+n: drawString -> vh.ds x3
+n: Font.stringWidth -> vh.sw x1
+n: String.length()*14 -> bs.a x2
+al: drawString -> vh.ds x14
+bb: drawString -> vh.ds x1
+bb: String.length()*12 -> bs.a x1
+ag: String.length()*14 -> bs.a x1
+TONG thay doi: 33
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36943 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+/home/user/Vi-t-ho-game/build/cls/bs.class: <clinit> flags = 0x0009
+== 6. preverify class da sua bytecode
+ProGuard, version 7.4.2
+== 7. dong jar
+thay 49, them 2: bin/fw.bin, vh.class
+== 8. jar_check
+Đổi: ['ad.class', 'ag.class', 'al.class', 'am.class', 'as.class', 'au.class', 'az.class', 'bb.class', 'bf.class', 'bin/MMchar.png', 'bin/animation.bin', 'bin/battle/battle1.png', 'bin/battle/battle2.png', 'bin/battle/battle3.png', 'bin/battle/battle4.png', 'bin/battle/battle5.png', 'bin/caidan.png', 'bin/choice.bin', 'bin/diui.png', 'bin/font.bin', 'bin/gameData.bin', 'bin/help_about.bin', 'bin/l1.bin', 'bin/music.png', 'bin/no.png', 'bin/pause.png', 'bin/script.bin', 'bin/shop.png', 'bin/string.bin', 'bin/tishiwenzi.png', 'bin/uiform.bin', 'bin/uires.bin', 'bin/uitishi.png', 'bin/yes.png', 'bm.class', 'bo.class', 'bp.class', 'br.class', 'bs.class', 'bu.class', 'by.class', 'bz.class', 'cb.class', 'cg.class', 'h.class', 'n.class', 't.class', 'y.class', 'z.class']
+WARN bs.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN vh.class: API mới so với bản gốc: java/lang/Integer.<init>(I)V (xác nhận máy đích có)
+WARN vh.class: API mới so với bản gốc: java/lang/Integer.intValue()I (xác nhận máy đích có)
+WARN vh.class: API mới so với bản gốc: java/util/Vector.copyInto([Ljava/lang/Object;)V (xác nhận máy đích có)
+RESULT: PASS

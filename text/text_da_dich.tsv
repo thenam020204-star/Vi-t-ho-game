@@ -1,0 +1,626 @@
+id	file	key	goc	dich	ghichu	gioihan
+script.bin|0.0	script.bin	0.0	欢迎激活正版游戏，请领取{c:1}免费礼包{/}。	Chào mừng kích hoạt game chính hãng, hãy nhận {c:1}quà miễn phí{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.1	script.bin	0.1	提示：当主角{c:1}血量{/}低于一半，系统将{c:1}自动使用{/}恢复血量药剂。	Gợi ý： khi {c:1}HP{/} của nhân vật chính xuống dưới một nửa, hệ thống sẽ {c:1}tự động dùng{/} thuốc hồi HP.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.2	script.bin	0.2	提示：试玩关仅供体验游戏，试玩关卡保存的所有的{c:1}数据{/}将会{c:1}清零{/}。	Gợi ý： màn chơi thử chỉ để trải nghiệm, toàn bộ {c:1}dữ liệu{/} lưu trong màn chơi thử sẽ bị {c:1}xoá sạch{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.3	script.bin	0.3	提示：{c:1}宠物系统{/}可在“{c:1}0{/}”键{c:1}游戏辅助{/}中开启。	Gợi ý： {c:1}hệ thống thú cưng{/} có thể bật trong {c:1}hỗ trợ game{/} ở phím \"{c:1}0{/}\".	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.4	script.bin	0.4	提示：你已升到2级，请{c:1}及时分配技能点{/}。	Gợi ý： bạn đã lên cấp 2, hãy {c:1}phân phối điểm kỹ năng ngay{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.5	script.bin	0.5	成vbcvb	Thànhvbcvb	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|5.0	script.bin	5.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|5.1	script.bin	5.1	{c:1}汜水守将{/}：若失了汜水关，我等皆有提头去见相国。	{c:1}Thủ tướng Tỵ Thủy{/}：Nếu để mất Tỵ Thủy Quan, bọn ta đều phải xách đầu đi gặp Tướng quốc.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|8.0	script.bin	8.0	风格的风格大方吧	Phong cách của phong cách đại phương nhỉ	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|11.0	script.bin	11.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|11.1	script.bin	11.1	{c:1}吕布{/}：神挡杀神，佛挡杀佛！	{c:1}Lữ Bố{/}：Thần cản giết thần, Phật cản giết Phật!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|14.0	script.bin	14.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|15.0	script.bin	15.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|15.1	script.bin	15.1	{c:1}乌巢守将{/}：乌巢有失，我等定是人头落地。众将士，随我背水一战！	{c:1}Thủ tướng Ô Sào{/}：Ô Sào mà mất thì bọn ta chắc chắn rơi đầu. Chư tướng sĩ, theo ta quyết một trận sống còn!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|18.0	script.bin	18.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|18.1	script.bin	18.1	{c:1}吕布{/}：欺人太甚，今日不是你死，便是我亡！	{c:1}Lữ Bố{/}：Ức hiếp người quá đáng! Hôm nay không phải ngươi chết thì cũng là ta vong!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|23.0	script.bin	23.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|23.1	script.bin	23.1	{c:1}袁将{/}：官渡实属侥幸，主公乃是天下雄主，其实曹贼匹夫所能相比？	{c:1}Tướng họ Viên{/}：Trận Quan Độ chỉ là may mắn thôi. Chủ công ta là bậc hùng chủ thiên hạ, tên giặc Tào kia sao sánh nổi?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|24.0	script.bin	24.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|24.1	script.bin	24.1	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|25.0	script.bin	25.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|26.0	script.bin	26.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|26.1	script.bin	26.1	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|26.2	script.bin	26.2	{c:1}曹军守将{/}：将军请回吧，无主公手谕，休得过关！	{c:1}Thủ tướng quân Tào{/}：Tướng quân xin hãy quay về, không có thủ dụ của chủ công thì không được qua ải!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|27.0	script.bin	27.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|30.0	script.bin	30.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|30.1	script.bin	30.1	{c:1}诸葛亮{/}：新野之地，即是尔等埋骨之所。	{c:1}Gia Cát Lượng{/}：Vùng đất Tân Dã này chính là nơi chôn xương của các ngươi.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|33.0	script.bin	33.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|34.0	script.bin	34.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|35.0	script.bin	35.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|35.1	script.bin	35.1	{c:1}司马懿{/}：哼，休伤我家主公性命！	{c:1}Tư Mã Ý{/}：Hừ, không được làm hại chủ công nhà ta!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|38.0	script.bin	38.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|38.1	script.bin	38.1	{c:1}曹操{/}：今日华容道之败，我曹操，他日定亲率大军雪耻！	{c:1}Tào Tháo{/}：Hôm nay bại ở Hoa Dung Đạo, Tào Tháo ta ngày khác nhất định đích thân dẫn đại quân rửa hận!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|39.0	script.bin	39.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|41.0	script.bin	41.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|41.1	script.bin	41.1	{c:1}樊城守将{/}：尔等匹夫，竟敢袭扰我家丞相！	{c:1}Thủ tướng Phàn Thành{/}：Lũ thất phu các ngươi, dám quấy nhiễu thừa tướng nhà ta!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|44.0	script.bin	44.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|44.1	script.bin	44.1	{c:1}司马懿{/}：嘻嘻，有我在此，尔等定是有去无回。	{c:1}Tư Mã Ý{/}：Hì hì, có ta ở đây, các ngươi có đi không có về.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|47.0	script.bin	47.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|47.1	script.bin	47.1	{c:1}诸葛亮{/}：袭我荆州系小人所为，尔等定遭天谴！	{c:1}Gia Cát Lượng{/}：Đánh úp Kinh Châu của ta là việc của kẻ tiểu nhân, các ngươi nhất định bị trời phạt!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|48.0	script.bin	48.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|49.0	script.bin	49.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|50.0	script.bin	50.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|50.1	script.bin	50.1	{c:1}诸葛亮{/}：麦城！这...这就是麦城！！	{c:1}Gia Cát Lượng{/}：Mạch Thành! Đây... đây chính là Mạch Thành!!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|51.0	script.bin	51.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|51.1	script.bin	51.1	{c:1}樊城守将{/}：有俺在此镇守，樊城便是丞相的！	{c:1}Thủ tướng Phàn Thành{/}：Có lão tử trấn giữ ở đây, Phàn Thành là của thừa tướng!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|52.0	script.bin	52.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。	Gợi ý： màn này là {c:1}màn giới hạn thời gian{/}, hãy vượt qua trong {c:1}thời gian quy định{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|52.1	script.bin	52.1	{c:1}司马懿{/}：丞相天恩，我唯有以死相报！	{c:1}Tư Mã Ý{/}：Thừa tướng ban ơn trời biển, ta chỉ có thể lấy cái chết để báo đáp!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|53.0	script.bin	53.0	恭喜主战役通关，挑战关卡已免费开启！	Chúc mừng đã thông quan chiến dịch chính, các màn thử thách được mở miễn phí!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|53.1	script.bin	53.1	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。	Gợi ý： màn này là {c:1}trận đầu mục{/}, hãy {c:1}kiểm tra trang bị{/} và {c:1}bổ sung thuốc{/}. Vật phẩm cần thiết có thể mua trong {c:1}cửa hàng{/} bằng {c:1}phím mềm trái{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|53.2	script.bin	53.2	{c:1}曹操{/}：天下尽骂我曹操，却不知，若无我，岂有汉室延续！	{c:1}Tào Tháo{/}：Thiên hạ đều chửi Tào Tháo ta, nào biết nếu không có ta thì làm sao nhà Hán còn nối dõi!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.0	script.bin	54.0	诸葛亮：呵呵，姐姐好久不见。	Gia Cát Lượng： Hì hì, tỷ tỷ lâu rồi không gặp.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.1	script.bin	54.1	司马懿：嘻嘻，劳烦妹妹挂念了。只是妹妹此番前来，途中伤了我无数军士。我这做姐姐的，少不得要责备你几句了。	Tư Mã Ý： Hì hì, làm muội muội phải bận lòng rồi. Chỉ là chuyến này muội đến, dọc đường làm bị thương vô số quân sĩ của ta. Làm tỷ tỷ, ta đành phải trách muội vài câu thôi.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.2	script.bin	54.2	诸葛亮：这说起来，还是姐姐的不是呢。妹妹数次登门拜访，却总是紧闭门户，莫非姐姐讨厌不成？	Gia Cát Lượng： Nói ra thì vẫn là lỗi của tỷ tỷ đấy. Muội mấy lần đến thăm mà tỷ cứ đóng chặt cửa, chẳng lẽ tỷ tỷ ghét muội sao?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.3	script.bin	54.3	司马懿：嘻嘻，那还是姐姐的不是了。哎，我一直公务缠身，不曾听得妹妹要来。今日才得知，不就来相迎了么。	Tư Mã Ý： Hì hì, vậy thì vẫn là lỗi của tỷ rồi. Ôi, ta mãi bận công vụ, không nghe nói muội muốn đến. Hôm nay mới biết nên chẳng phải ra đón đây sao.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.4	script.bin	54.4	诸葛亮：既是贵客，又何必这般戒备森严，莫非怕妹妹趁机夺了姐姐的营寨？	Gia Cát Lượng： Đã là khách quý, sao còn phòng bị nghiêm ngặt thế này, chẳng lẽ sợ muội nhân cơ hội đoạt doanh trại của tỷ?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.5	script.bin	54.5	司马懿：哈哈，既是姐姐有心相送，恐怕我手下这些军士也不能答应呢。	Tư Mã Ý： Haha, tỷ có lòng tiễn khách, e rằng đám quân sĩ dưới trướng ta cũng không chịu đâu.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.6	script.bin	54.6	诸葛亮：咱们姐妹说话，这些军士好是吵闹。我这做妹妹的，就替姐姐教训下他们吧。	Gia Cát Lượng： Tỷ muội mình nói chuyện mà đám quân sĩ này ồn ào quá. Làm muội muội, để muội dạy dỗ họ thay tỷ vậy.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.7	script.bin	54.7	司马懿：呵呵，妹妹有心了，你远道而来，还是姐姐替你吧。	Tư Mã Ý： Hì hì, muội có lòng rồi, đường xa đến đây, vẫn là để tỷ làm thay muội thôi.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.8	script.bin	54.8	诸葛亮：不分敌我，姐姐还是老样子。	Gia Cát Lượng： Không phân địch ta, tỷ tỷ vẫn y như cũ.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.9	script.bin	54.9	司马懿：嘻嘻，这不省去妹妹动手的麻烦？	Tư Mã Ý： Hì hì, thế chẳng phải đỡ cho muội phải động thủ sao?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.10	script.bin	54.10	司马懿：哎呀，你瞧姐姐，和妹妹聊的投机，竟然忘了规矩。不如现在随我进营寨，我与妹妹聊个痛快？	Tư Mã Ý： Ôi chao, nhìn tỷ này, nói chuyện với muội hợp ý quá nên quên cả quy củ. Hay là giờ muội theo ta vào doanh trại, hai tỷ muội trò chuyện cho thoả thích nhé?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.11	script.bin	54.11	诸葛亮：你！	Gia Cát Lượng： Ngươi!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.12	script.bin	54.12	司马懿：嘻嘻，怎么，妹妹不敢了么？	Tư Mã Ý： Hì hì, sao thế, muội không dám à?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.13	script.bin	54.13	？？？：我愿替军师走这一趟！	???： Ta xin thay quân sư đi chuyến này!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.14	script.bin	54.14	司马懿：关羽！	Tư Mã Ý： Quan Vũ!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.15	script.bin	54.15	关羽：大哥还有要事找我家军师。妹妹既然盛情相邀，就让关某替军师走这一遭。	Quan Vũ： Đại ca còn việc cần tìm quân sư nhà ta. Muội muội đã có lòng mời, vậy để Quan mỗ thay quân sư đi một chuyến.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.16	script.bin	54.16	司马懿：哼！姐姐有这心，妹妹也拦不住你。	Tư Mã Ý： Hừ! Tỷ đã có ý này thì muội cũng không cản được tỷ.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.17	script.bin	54.17	司马懿：只怕军中刀剑无眼，恐怕伤了姐姐。	Tư Mã Ý： Chỉ e trong quân đao kiếm vô tình, lỡ làm tỷ bị thương.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.18	script.bin	54.18	关羽：哈哈，多谢妹妹有心了。	Quan Vũ： Haha, đa tạ muội có lòng.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.19	script.bin	54.19	司马懿：哼！那妹妹就在大营恭候了。	Tư Mã Ý： Hừ! Vậy muội chờ tỷ ở đại doanh.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.20	script.bin	54.20	诸葛亮：关将军小心。	Gia Cát Lượng： Quan tướng quân cẩn thận.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.0	script.bin	55.0	提示：教学关卡，主角{c:1}{/}不会死亡！{c:0}{/}	Gợi ý： màn hướng dẫn, nhân vật chính {c:1}{/}sẽ không chết!{c:0}{/}	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.1	script.bin	55.1	提示：教学关卡{c:1}仅供试玩{/}，{c:1}商店系统无法开启{/}。	Gợi ý： màn hướng dẫn {c:1}chỉ để chơi thử{/}, {c:1}không mở được cửa hàng{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.2	script.bin	55.2	提示：刀剑无情，未雨绸缪，{c:1}{/}装备{c:0}{/}将是三国乱世中生存的重要法则！	Gợi ý： đao kiếm vô tình, phòng bị từ sớm, {c:1}{/}trang bị{c:0}{/} là quy tắc sinh tồn quan trọng thời loạn Tam Quốc!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.3	script.bin	55.3	提示：装备可以通过{c:1}{/}开启宝箱{c:0}{/}、{c:1}{/}商店购买{c:0}{/}、{c:1}{/}随机掉落{c:0}{/}获得。	Gợi ý： trang bị có thể có được qua {c:1}{/}mở rương{c:0}{/}, {c:1}{/}mua ở cửa hàng{c:0}{/}, {c:1}{/}rơi ngẫu nhiên{c:0}{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.4	script.bin	55.4	提示：获得极品装备{c:1}{/}青龙偃月刀{c:0}{/}！	Gợi ý： nhận được trang bị cực phẩm {c:1}{/}Thanh Long Yển Nguyệt Đao{c:0}{/}!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.5	script.bin	55.5	提示：进入{c:1}{/}装备系统{c:0}{/}教学！	Gợi ý： vào hướng dẫn {c:1}{/}hệ thống trang bị{c:0}{/}!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.6	script.bin	55.6	提示：武器已装备。	Gợi ý： đã trang bị vũ khí.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.7	script.bin	55.7	提示：游戏中的{c:1}{/}攻击石、防御石、暴击石和幸运石{c:0}{/}可以附加装备属性，及时{c:1}{/}升级装备{c:0}{/}可以很好的降低游戏难度！	Gợi ý： {c:1}{/}đá công, đá thủ, đá chí mạng và đá may mắn{c:0}{/} trong game có thể thêm thuộc tính cho trang bị, kịp thời {c:1}{/}nâng cấp trang bị{c:0}{/} sẽ giảm độ khó rất nhiều!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.8	script.bin	55.8	提示：获得{c:1}{/}攻击石{c:0}{/}。	Gợi ý： nhận được {c:1}{/}đá công{c:0}{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.9	script.bin	55.9	提示：进入{c:1}{/}装备升级{c:0}{/}教学！	Gợi ý： vào hướng dẫn {c:1}{/}nâng cấp trang bị{c:0}{/}!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.10	script.bin	55.10	提示：击败场景中所有敌军后，会出现{c:1}传送点{/}，在传送点附近{c:1}按5键{/}，可以进入下一个场景。	Gợi ý： sau khi hạ hết quân địch trong cảnh, sẽ xuất hiện {c:1}điểm dịch chuyển{/}, đứng gần điểm đó {c:1}nhấn phím 5{/} để vào cảnh kế tiếp.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.0	script.bin	56.0	而对方水电费	Mà đối phương thủy điện phí	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.1	script.bin	56.1	提示：升级可以得到{c:1}{/}技能点{c:0}{/}，使用技能点{c:1}{/}开启技能{c:0}{/}，可以更快速的击杀敌人。	Gợi ý： lên cấp sẽ nhận {c:1}{/}điểm kỹ năng{c:0}{/}, dùng điểm để {c:1}{/}mở kỹ năng{c:0}{/} giúp diệt địch nhanh hơn.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.2	script.bin	56.2	提示：教学关卡，{c:1}{/}技能系统开放{c:0}{/}。	Gợi ý： màn hướng dẫn, {c:1}{/}mở hệ thống kỹ năng{c:0}{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.3	script.bin	56.3	提示：进入{c:1}{/}技能教学{c:0}{/}！	Gợi ý： vào hướng dẫn {c:1}{/}kỹ năng{c:0}{/}!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.4	script.bin	56.4	提示：可以使用{c:1}{/}1、3、7、9键{c:0}{/}释放技能。	Gợi ý： có thể dùng {c:1}{/}phím 1, 3, 7, 9{c:0}{/} để tung kỹ năng.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.5	script.bin	56.5	提示：连续攻击可以形成连击，{c:1}{/}高连击{c:0}{/}会有很好的属性加成！	Gợi ý： đánh liên tục sẽ tạo {c:1}{/}combo{c:0}{/}, combo cao sẽ được cộng thuộc tính rất tốt!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.6	script.bin	56.6	提示：击杀敌人的同时注意收集掉落的{c:1}{/}素材{c:0}{/}，素材可以{c:1}{/}兑换金钱{c:0}{/}！	Gợi ý： khi hạ địch nhớ nhặt {c:1}{/}nguyên liệu{c:0}{/} rơi ra, nguyên liệu có thể {c:1}{/}đổi lấy tiền{c:0}{/}!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.7	script.bin	56.7	提示：接下来你将学习如何{c:1}{/}升级宝箱{c:0}{/}！	Gợi ý： tiếp theo bạn sẽ học cách {c:1}{/}nâng cấp rương{c:0}{/}!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.8	script.bin	56.8	提示：游戏中共有{c:1}{/}五种不同等级宝箱{c:0}{/}，可以随机开启{c:1}{/}属性得到加成的装备{c:0}{/}。宝箱等级越高，装备和附加属性越好。	Gợi ý： trong game có {c:1}{/}năm cấp rương khác nhau{c:0}{/}, mở ngẫu nhiên ra {c:1}{/}trang bị được cộng thuộc tính{c:0}{/}. Rương cấp càng cao, trang bị và thuộc tính thêm càng tốt.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.9	script.bin	56.9	提示：获得{c:1}{/}太极宝箱{c:0}{/}和{c:1}{/}宝箱之石。	Gợi ý： nhận được {c:1}{/}Rương Thái Cực{c:0}{/} và {c:1}{/}Đá Rương.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.10	script.bin	56.10	提示：进入{c:1}{/}宝箱升级{c:0}{/}教学！	Gợi ý： vào hướng dẫn {c:1}{/}nâng cấp rương{c:0}{/}!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.11	script.bin	56.11	百夫长：哈哈，瞧我看见什么了，兄弟们。咱们军营来了个漂亮的娘们儿。	Bách phu trưởng： Haha, xem ta thấy gì này, các huynh đệ. Doanh trại ta có một nương tử xinh đẹp đến.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.12	script.bin	56.12	关羽：恶心的家伙。	Quan Vũ： Đồ ghê tởm.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.13	script.bin	56.13	百夫长：嘿嘿，听逃回来的人说你打杀了我不少兄弟。	Bách phu trưởng： Hì hì, nghe kẻ chạy về nói ngươi giết không ít huynh đệ của ta.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.14	script.bin	56.14	百夫长：我本该带着兄弟杀了此人。不过不曾想是这样的美人儿。嘿嘿，不过陪兄弟们喝个酒，就算赔罪了吧。	Bách phu trưởng： Lẽ ra ta phải dẫn huynh đệ giết ngươi. Không ngờ lại là mỹ nhân thế này. Hì hì, chỉ cần uống rượu với huynh đệ là coi như tạ tội rồi.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.15	script.bin	56.15	关羽：哼！连你家元帅见我也称一声姐姐，尔等鼠辈，还敢放肆，速速让开。	Quan Vũ： Hừ! Ngay cả nguyên soái nhà ngươi gặp ta cũng gọi một tiếng tỷ tỷ, lũ chuột nhắt các ngươi còn dám càn rỡ, mau tránh ra.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.16	script.bin	56.16	百夫长：哈哈，好辣的美人，我喜欢！美人儿，就是想走，恐怕我这般兄弟也不答应呢。	Bách phu trưởng： Haha, mỹ nhân cay thật, ta thích! Mỹ nhân à, muốn đi thì e là huynh đệ ta không chịu đâu.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.17	script.bin	56.17	百夫长：嘿嘿，美人，想清楚了？	Bách phu trưởng： Hì hì, mỹ nhân, nghĩ kỹ chưa?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.18	script.bin	56.18	关羽：哼！找死！！	Quan Vũ： Hừ! Muốn chết!!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.19	script.bin	56.19	关羽：还有什么要说？	Quan Vũ： Còn gì muốn nói nữa không?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.20	script.bin	56.20	百夫长：青龙偃月刀！你......你是！！	Bách phu trưởng： Thanh Long Yển Nguyệt Đao! Ngươi... ngươi là!!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.21	script.bin	56.21	百夫长：御敌！左右，随我拿下敌将！	Bách phu trưởng： Nghênh địch! Người đâu, theo ta bắt tướng địch!	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.22	script.bin	56.22	提示：{c:1}宠物{/}烈鹰，可以自动帮你{c:1}拾取物品{/}。	Gợi ý： {c:1}thú cưng{/} Liệt Ưng có thể tự động giúp bạn {c:1}nhặt vật phẩm{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.23	script.bin	56.23	提示：{c:1}宠物系统已开启{/}。	Gợi ý： {c:1}đã mở hệ thống thú cưng{/}.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.0	script.bin	57.0	司马懿：嘻嘻，妹妹等候多时了。那些将士没有为难姐姐吧？	Tư Mã Ý： Hì hì, muội đã chờ tỷ lâu rồi. Đám tướng sĩ kia không làm khó tỷ chứ?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.1	script.bin	57.1	关羽：哼，随我去见我家大哥和军师。	Quan Vũ： Hừ, theo ta đi gặp đại ca và quân sư nhà ta.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.2	script.bin	57.2	司马懿：礼尚往来，做妹妹的去看望各位姐姐，那是应该的。	Tư Mã Ý： Có đi có lại, muội đi thăm các tỷ tỷ là điều nên làm.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.3	script.bin	57.3	司马懿：不过姐姐一路辛苦，不然先住下几日？	Tư Mã Ý： Nhưng tỷ đi đường vất vả, hay là ở lại vài hôm?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.4	script.bin	57.4	关羽：不必，关某不觉劳累，妹妹还是随我启程吧。	Quan Vũ： Không cần, Quan mỗ không thấy mệt, muội muội vẫn nên theo ta lên đường đi.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.5	script.bin	57.5	司马懿：哎呀，姐姐这话说的就生分了，姐姐做客，不加款待，别人岂不说我不知礼数。	Tư Mã Ý： Ôi chao, tỷ nói vậy là xa lạ rồi, tỷ làm khách mà không tiếp đãi, người ta chẳng bảo muội không biết lễ số sao.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.6	script.bin	57.6	关羽：哈哈，妹妹有心了，关某谢过了。	Quan Vũ： Haha, muội có lòng, Quan mỗ xin đa tạ.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.7	script.bin	57.7	司马懿：嘻嘻，这是应当，左右，请姐姐稍作歇息。	Tư Mã Ý： Hì hì, thế mới phải, người đâu, mời tỷ tỷ nghỉ ngơi chút.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.8	script.bin	57.8	关羽：呵呵，我说妹妹身边怎么没人呢。	Quan Vũ： Hừ hừ, thảo nào ta thấy bên cạnh muội chẳng có ai.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.9	script.bin	57.9	关羽：呵呵，我若不领妹妹这个情呢？	Quan Vũ： Hừ hừ, nếu ta không nhận tình này của muội thì sao?	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.10	script.bin	57.10	司马懿：嘻嘻，那就莫怪妹妹失礼了。	Tư Mã Ý： Hì hì, vậy đừng trách muội thất lễ.	hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+string.bin|0.2	string.bin	0.2	目标完成	Hoàn thành mục tiêu		
+string.bin|0.4	string.bin	0.4	打开右软件，并选择打造	Mở phím mềm phải, rồi chọn Chế tạo		
+string.bin|0.6	string.bin	0.6	6键向右行走	Phím 6 đi sang phải		
+string.bin|2.0	string.bin	2.0	首先按右软件打开菜单。	Trước tiên nhấn phím mềm phải để mở menu.		
+string.bin|2.2	string.bin	2.2	按6键向右移动至背包。	Nhấn phím 6 sang phải tới Hành trang.		
+string.bin|2.4	string.bin	2.4	按5键确定进入背包选项。	Nhấn phím 5 để vào mục Hành trang.		
+string.bin|2.6	string.bin	2.6	这个是道具栏，选择道具按5键盘选择使用就可以了。	Đây là ô vật phẩm, chọn vật phẩm rồi nhấn phím 5 là dùng được.		
+string.bin|3.0	string.bin	3.0	按右软键打开菜单	Nhấn phím mềm phải để mở menu		
+string.bin|3.2	string.bin	3.2	按6键向右选择。	Nhấn phím 6 để chọn sang phải.		
+string.bin|3.4	string.bin	3.4	按5键。	Nhấn phím 5.		
+string.bin|3.6	string.bin	3.6	按5键确定进入选项。	Nhấn phím 5 để vào mục.		
+string.bin|3.8	string.bin	3.8	有4种选项，按8键向下选择加点。	Có 4 mục, nhấn phím 8 xuống dưới để chọn cộng điểm.		
+string.bin|3.10	string.bin	3.10	连续按右软键关闭菜单。	Nhấn liên tục phím mềm phải để đóng menu.		
+string.bin|3.11	string.bin	3.11	有4种选项，按8键向下选择升级。	Có 4 mục, nhấn phím 8 xuống dưới để chọn nâng cấp.		
+string.bin|3.12	string.bin	3.12	按6键向右选择特技栏	Nhấn phím 6 sang phải để chọn ô tuyệt kỹ		
+string.bin|3.14	string.bin	3.14	有4种选项，按8键向下选择装备。	Có 4 mục, nhấn phím 8 xuống dưới để chọn trang bị.		
+string.bin|3.15	string.bin	3.15	按6键向右选择装备栏	Nhấn phím 6 sang phải để chọn ô trang bị		
+string.bin|4.0	string.bin	4.0	11【群雄起义】董卓废少帝刘辩，立刘协为帝，把弄朝纲，手握大权，其众多群雄激愤。公元189年，曹操发布矫诏，袁绍等18路诸侯于关东起兵，拉开讨逆董卓的大幕。	11【Quần hùng khởi nghĩa】Đổng Trác phế Thiếu đế Lưu Biện, lập Lưu Hiệp làm đế, thao túng triều chính, nắm đại quyền, khiến quần hùng phẫn nộ. Năm 189, Tào Tháo ban chiếu giả, cùng Viên Thiệu và 18 lộ chư hầu khởi binh ở Quan Đông, mở màn cuộc thảo phạt Đổng Trác.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.1	string.bin	4.1	12【兵指洛阳】十八路诸侯联军讨伐董卓，立袁绍为盟主，拥兵数十万与董卓所部在各地展开厮杀，兵指当时朝廷所在的洛阳。	12【Binh chỉ Lạc Dương】Liên quân mười tám lộ chư hầu thảo phạt Đổng Trác, tôn Viên Thiệu làm minh chủ, hàng chục vạn quân giao chiến với quân Đổng Trác khắp nơi, tiến thẳng tới Lạc Dương, nơi triều đình đóng khi ấy.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.2	string.bin	4.2	13【大破汜水】汜水关由华雄把守，盟军孙坚部首战不利，后关羽温酒斩华雄，盟军士气大胜，趁势攻杀汜水关，由此落入盟军之手。	13【Đại phá Tỵ Thủy】Tỵ Thủy Quan do Hoa Hùng trấn giữ, quân Tôn Kiên của liên quân thất lợi trận đầu, sau Quan Vũ hâm rượu chém Hoa Hùng, sĩ khí liên quân dâng cao, thừa thế đánh chiếm Tỵ Thủy Quan, ải rơi vào tay liên quân.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.3	string.bin	4.3	14【进兵虎牢】虎牢关为长安屏障，董卓亲率大军御敌。刘关张为前锋攻杀，董卓不敌，迁都长安后撤退。盟军引军入关。	14【Tiến binh Hổ Lao】Hổ Lao Quan là bình phong của Trường An, Đổng Trác đích thân dẫn đại quân chống địch. Lưu Quan Trương làm tiên phong tấn công, Đổng Trác không địch nổi, dời đô về Trường An rồi rút lui. Liên quân tiến vào ải.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.4	string.bin	4.4	15【鏖战吕布】汜水关失守，虎牢关岌岌可危。董卓派遣手下大将吕布御敌。与袁绍军的刘备、关羽和张飞大战数百回合，吕布力不从心，虚晃一枪退走回营。	15【Khổ chiến Lữ Bố】Tỵ Thủy Quan thất thủ, Hổ Lao Quan nguy ngập. Đổng Trác phái đại tướng Lữ Bố chống địch. Giao chiến mấy trăm hiệp với Lưu Bị, Quan Vũ, Trương Phi bên quân Viên Thiệu, Lữ Bố lực bất tòng tâm, giả vờ đâm một thương rồi rút về doanh.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.5	string.bin	4.5	21【官渡拉锯】曹操挟持献帝，拥兵数万与袁绍隔江对峙。建安五年，陈琳写讨操檄文，终于兵戈相见，在官渡展开生死之战。	21【Quan Độ giằng co】Tào Tháo ép giữ Hiến đế, dẫn mấy vạn quân đối đầu Viên Thiệu cách sông. Năm Kiến An thứ năm, Trần Lâm viết hịch thảo Tháo, hai bên cuối cùng đao binh tương kiến, mở trận sinh tử ở Quan Độ.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.6	string.bin	4.6	22【火烧乌巢】建安五年十月，袁绍派遣淳于琼送军粮宿于乌巢，许攸因袁绍失去恩义转投曹操。曹操夜袭乌巢，火烧军粮，袁绍从此陷入被动局面。	22【Hỏa thiêu Ô Sào】Tháng mười năm Kiến An thứ năm, Viên Thiệu phái Thuần Vu Quỳnh chở quân lương đóng ở Ô Sào, Hứa Du vì Viên Thiệu mất ân nghĩa nên đầu quân Tào Tháo. Tào Tháo đêm tập kích Ô Sào, đốt quân lương, Viên Thiệu từ đó rơi vào thế bị động.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.7	string.bin	4.7	23【缢杀吕布】袁绍与曹操隔江对峙，两军摩擦不断，大战一触即发。为大战准备，曹操听从谋士消除不安因素的建议，与建安三年领军攻打徐州，白门楼前缢杀吕布。	23【Thắt cổ Lữ Bố】Viên Thiệu và Tào Tháo đối đầu cách sông, hai quân va chạm không ngừng, đại chiến sắp bùng nổ. Để chuẩn bị, Tào Tháo nghe mưu sĩ khuyên trừ yếu tố bất an, năm Kiến An thứ ba dẫn quân đánh Từ Châu, thắt cổ Lữ Bố trước Bạch Môn Lâu.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.8	string.bin	4.8	24【官渡决战】火烧乌巢之后，袁绍军优势尽去，死亡惨重，曹军兵锋所向，无人可挡。张颌、高览因谋士郭图进谗言率军叛逃，官渡一战胜败已定。	24【Quyết chiến Quan Độ】Sau trận hỏa thiêu Ô Sào, quân Viên Thiệu mất hết ưu thế, thương vong nặng nề, mũi nhọn quân Tào đi đến đâu không ai cản nổi. Trương Cáp, Cao Lãm bị mưu sĩ Quách Đồ gièm pha nên dẫn quân phản bỏ, thắng bại Quan Độ đã định.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.9	string.bin	4.9	25【仓亭之战】官渡决战后，于建安六年，双方再次发生仓亭之战，袁绍大败，从此元气大伤，再无力与之争衡。在两次战胜后，曹操威震天下，成就一方霸主。	25【Trận Thương Đình】Sau quyết chiến Quan Độ, năm Kiến An thứ sáu, hai bên lại giao chiến ở Thương Đình, Viên Thiệu đại bại, từ đó nguyên khí đại thương, không còn sức tranh hành. Sau hai lần thắng, Tào Tháo uy chấn thiên hạ, thành một phương bá chủ.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.10	string.bin	4.10	31【千里单骑】官渡之战结束后，身在曹营的关羽获闻刘备消息，决定回到故主身边。挂印封金，守关曹将却因为没有丞相谕令加以阻挡，关羽过五关，斩六将，留下了千里走单骑的千古美誉。	31【Thiên lý độc hành】Sau trận Quan Độ, Quan Vũ ở doanh Tào nghe tin Lưu Bị, quyết định trở về bên chủ cũ. Treo ấn niêm vàng, tướng giữ ải của Tào vì không có lệnh thừa tướng mà ngăn cản, Quan Vũ qua năm ải chém sáu tướng, để lại danh thơm thiên lý độc hành muôn đời.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.11	string.bin	4.11	32【兵发新野】建安十三年，曹操率大军南下荆州，派夏侯惇领兵十万伐新野。刘备军师诸葛亮设计火烧新野，曹军大败，又起兵五十万，誓必踏平江南。	32【Phát binh Tân Dã】Năm Kiến An thứ mười ba, Tào Tháo dẫn đại quân nam hạ Kinh Châu, sai Hạ Hầu Đôn dẫn mười vạn quân đánh Tân Dã. Quân sư Gia Cát Lượng của Lưu Bị bày kế hỏa thiêu Tân Dã, quân Tào đại bại, lại khởi năm mươi vạn quân, thề san bằng Giang Nam.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.12	string.bin	4.12	33【孙刘联盟】因荆州新主刘琮不战而降，刘备仓皇出逃，被曹操大军紧逼，刘备军只得向孙权求救。遣刘备军师诸葛亮前往柴桑游说，与孙权结成军事同盟，共同抗曹。	33【Liên minh Tôn Lưu】Vì chủ mới Kinh Châu là Lưu Tông không đánh mà hàng, Lưu Bị hoảng hốt chạy trốn, bị đại quân Tào Tháo truy ép gấp, quân Lưu Bị đành cầu cứu Tôn Quyền. Sai quân sư Gia Cát Lượng đến Sài Tang thuyết phục, kết đồng minh quân sự với Tôn Quyền, cùng chống Tào.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.13	string.bin	4.13	34【火烧赤壁】先是庞统献连环计，曹军用铁链横锁战船，后是黄盖苦肉计诈降，至战日火船攻营，顿时火烧赤壁数百里，曹军烧溺死者无数，至此再无如此大规模南下荆州。	34【Hỏa thiêu Xích Bích】Trước là Bàng Thống dâng kế Liên Hoàn, quân Tào dùng xích sắt khoá ngang chiến thuyền, sau là Hoàng Cái dùng khổ nhục kế trá hàng, đến ngày giao chiến hoả thuyền tấn công doanh trại, lửa thiêu Xích Bích mấy trăm dặm, quân Tào chết cháy chết đuối vô số, từ đó không còn cuộc nam hạ Kinh Châu quy mô lớn như vậy.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.14	string.bin	4.14	35【兵败华容】孙刘联军横渡长江，大败曹军，曹操见败局已无法挽救吗，当即自焚余船，引军退走，在华容道被关羽所释，退回江陵。	35【Bại binh Hoa Dung】Liên quân Tôn Lưu vượt Trường Giang, đại phá quân Tào, Tào Tháo thấy thế bại không thể cứu vãn, liền tự đốt số thuyền còn lại, dẫn quân rút lui, bị Quan Vũ tha ở Hoa Dung Đạo, lui về Giang Lăng.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.15	string.bin	4.15	41【水淹襄樊】建安二十四年，刘备已稳得汉中，荆州守将关羽率领部队北伐樊城，当时汉水暴涨，关羽顺势水淹樊城，杀敌无数。	41【Thuỷ yểm Tương Phàn】Năm Kiến An thứ hai mươi bốn, Lưu Bị đã vững vàng nắm Hán Trung, tướng giữ Kinh Châu là Quan Vũ dẫn quân bắc phạt Phàn Thành, khi ấy sông Hán nước dâng, Quan Vũ thừa thế dùng nước ngập Phàn Thành, giết địch vô số.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.16	string.bin	4.16	42【兵发襄阳】樊城一张，关羽斩庞德，获于禁降军三万，一时威震华夏，气势锐不可当。关羽再次派兵围攻重镇襄阳，守将归降。	42【Phát binh Tương Dương】Trận Phàn Thành, Quan Vũ chém Bàng Đức, bắt ba vạn hàng quân của Vu Cấm, một thời uy chấn Hoa Hạ, khí thế không ai cản nổi. Quan Vũ lại phái binh vây trọng trấn Tương Dương, thủ tướng quy hàng.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.17	string.bin	4.17	43【白衣渡江】孙权集团气恼刘备占据荆州不还，下定决心夺回荆州。东吴大将吕蒙以数万精兵埋伏于船，假扮商贾奇袭荆州，夺取南郡、江陵。	43【Bạch y độ giang】Tập đoàn Tôn Quyền tức giận Lưu Bị chiếm Kinh Châu không trả, quyết tâm đoạt lại. Đại tướng Đông Ngô Lã Mông dùng mấy vạn tinh binh phục trong thuyền, giả làm thương nhân đánh úp Kinh Châu, chiếm Nam Quận, Giang Lăng.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.18	string.bin	4.18	44【生死麦城】关羽与曹魏援军徐晃交战，接连遭到击败，欲撤退时得知荆州已被孙权夺取，只得败走麦城，终于在章乡被马忠部所擒，不降被杀害。	44【Sinh tử Mạch Thành】Quan Vũ giao chiến với viện binh Tào Ngụy là Từ Hoảng, liên tiếp bại trận, khi định rút lui mới biết Kinh Châu đã bị Tôn Quyền chiếm, đành thua chạy về Mạch Thành, cuối cùng bị quân Mã Trung bắt ở Chương Hương, không hàng nên bị giết.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.19	string.bin	4.19	45【襄樊之战】建安二十四年，关羽北伐曹操，攻营拔寨，曹操欲迁都避其锋锐，终因大意失荆州，以蜀汉大败告终。此战使得蜀汉失荆州，并与东吴交恶，三国鼎足之势从此失衡。	45【Trận Tương Phàn】Năm Kiến An thứ hai mươi bốn, Quan Vũ bắc phạt Tào Tháo, đánh doanh nhổ trại, Tào Tháo định dời đô tránh mũi nhọn, cuối cùng vì sơ ý mất Kinh Châu, Thục Hán đại bại. Trận này khiến Thục Hán mất Kinh Châu, lại thất hoà với Đông Ngô, thế chân vạc Tam Quốc từ đó mất cân bằng.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.22	string.bin	4.22	53【】闻零陵桂阳先后被刘备所得，武陵人人自危，刘备手下大将张飞引三千兵士取武陵郡，太守金旋宁死不降，后主簿巩志联络张飞军诛杀金旋，献了武陵。	53【】Nghe Linh Lăng, Quế Dương lần lượt bị Lưu Bị chiếm, Vũ Lăng ai nấy lo sợ, đại tướng Trương Phi của Lưu Bị dẫn ba nghìn quân lấy quận Vũ Lăng, thái thú Kim Triền thà chết không hàng, sau chủ bạ Củng Chí liên lạc quân Trương Phi giết Kim Triền, dâng Vũ Lăng.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.23	string.bin	4.23	54【】刘备夺取了三郡，帐下关羽不甘落后，自告奋勇要用五百校刀手夺取长沙，与黄忠激战数日。最终在黄忠和魏延的归降下，顺利夺得长沙。	54【】Lưu Bị chiếm ba quận, Quan Vũ dưới trướng không chịu thua kém, xin dẫn năm trăm đao thủ lấy Trường Sa, giao chiến với Hoàng Trung mấy ngày. Cuối cùng Hoàng Trung và Ngụy Diên quy hàng, thuận lợi chiếm được Trường Sa.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.24	string.bin	4.24	55【】取荆南四郡之后，刘备率军扫平了零星抵抗，彻底在群雄争霸中站稳了脚跟，南郡一役，也意味着刘备军成为了逐鹿中原不可忽视的一股力量。	55【】Sau khi lấy bốn quận Kinh Nam, Lưu Bị dẫn quân quét sạch kháng cự lẻ tẻ, hoàn toàn đứng vững giữa cuộc tranh hùng, trận Nam Quận cũng có nghĩa quân Lưu Bị trở thành thế lực không thể xem thường trong cuộc trục lộc Trung Nguyên.	muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.27	string.bin	4.27	按右软键打开菜单	Nhấn phím mềm phải để mở menu		
+string.bin|4.29	string.bin	4.29	按6键选择物品栏	Nhấn phím 6 để chọn ô vật phẩm		
+string.bin|4.31	string.bin	4.31	按5键确认	Nhấn phím 5 để xác nhận		
+string.bin|4.33	string.bin	4.33	选择装备栏	Chọn ô trang bị		
+string.bin|4.34	string.bin	4.34	有4个选项，按8键向下选择装备	Có 4 mục, nhấn phím 8 xuống dưới để chọn trang bị		
+string.bin|4.35	string.bin	4.35	有4个选择，按8键向下选择升级	Có 4 mục, nhấn phím 8 xuống dưới để chọn nâng cấp		
+string.bin|4.37	string.bin	4.37	按6键选择潜能栏	Nhấn phím 6 để chọn ô tiềm năng		
+string.bin|4.38	string.bin	4.38	有3个选项，按8键向下选择加点	Có 3 mục, nhấn phím 8 xuống dưới để chọn cộng điểm		
+string.bin|4.39	string.bin	4.39	连续按右软键退出	Nhấn liên tục phím mềm phải để thoát		
+string.bin|4.40	string.bin	4.40	装备可以升级，按5键确定	Trang bị có thể nâng cấp, nhấn phím 5 để xác nhận		
+string.bin|4.41	string.bin	4.41	选择第一个技能，按5键确认	Chọn kỹ năng đầu tiên, nhấn phím 5 để xác nhận		
+string.bin|4.42	string.bin	4.42	技能加点可以升级，按5键确认	Cộng điểm kỹ năng để nâng cấp, nhấn phím 5 để xác nhận		
+string.bin|4.43	string.bin	4.43	按6键选择宝箱	Nhấn phím 6 để chọn rương		
+string.bin|4.44	string.bin	4.44	选择宝箱，按5键确认	Chọn rương, nhấn phím 5 để xác nhận		
+string.bin|4.45	string.bin	4.45	有3个选项，按8键向下升级	Có 3 mục, nhấn phím 8 xuống dưới để nâng cấp		
+string.bin|4.46	string.bin	4.46	有3个选项，按8键向下开启	Có 3 mục, nhấn phím 8 xuống dưới để mở		
+string.bin|4.47	string.bin	4.47	按2键向上移动	Nhấn phím 2 để đi lên		
+string.bin|4.48	string.bin	4.48	按4键向左移动	Nhấn phím 4 để đi sang trái		
+string.bin|4.49	string.bin	4.49	按6键向右移动	Nhấn phím 6 để đi sang phải		
+string.bin|4.50	string.bin	4.50	按8键向下移动	Nhấn phím 8 để đi xuống		
+string.bin|4.51	string.bin	4.51	按5键攻击	Nhấn phím 5 để tấn công		
+string.bin|4.54	string.bin	4.54	教学结束	Kết thúc hướng dẫn		
+string.bin|4.55	string.bin	4.55	按1键可释放飞龙在天	Nhấn phím 1 để tung Phi Long Tại Thiên		
+string.bin|4.56	string.bin	4.56	按住3键，可释放火龙吼	Giữ phím 3 để tung Hỏa Long Hống		
+string.bin|4.57	string.bin	4.57	按7键可释放天地龙吟	Nhấn phím 7 để tung Thiên Địa Long Ngâm		
+string.bin|4.58	string.bin	4.58	按9键可释放龙啸九天	Nhấn phím 9 để tung Long Khiếu Cửu Thiên		
+string.bin|4.63	string.bin	4.63	请按0键进入游戏辅助	Hãy nhấn phím 0 để vào hỗ trợ game		
+string.bin|4.64	string.bin	4.64	按8键向下选择	Nhấn phím 8 xuống dưới để chọn		
+string.bin|4.65	string.bin	4.65	按5键进入游戏辅助	Nhấn phím 5 để vào hỗ trợ game		
+string.bin|4.66	string.bin	4.66	按5键领取	Nhấn phím 5 để nhận		
+string.bin|4.68	string.bin	4.68	按5键选择免费礼包	Nhấn phím 5 để chọn quà miễn phí		
+string.bin|4.69	string.bin	4.69	按4键选择装备该物品	Nhấn phím 4 để chọn trang bị vật phẩm này		
+string.bin|4.70	string.bin	4.70	按6键选择升级该装备	Nhấn phím 6 để chọn nâng cấp trang bị này		
+string.bin|4.71	string.bin	4.71	按5键选择技能选项	Nhấn phím 5 để chọn mục kỹ năng		
+string.bin|4.72	string.bin	4.72	按4键选择修炼	Nhấn phím 4 để chọn tu luyện		
+string.bin|4.74	string.bin	4.74	按4键选择开启	Nhấn phím 4 để chọn mở		
+string.bin|4.75	string.bin	4.75	按6键选择升级	Nhấn phím 6 để chọn nâng cấp		
+help_about.bin|0.0	help_about.bin	0.0	【背景介绍】|巾帼不让须眉，三国武将化身妖娆美女，悉数强势登场，无数经典战役中掀起阵阵血雨腥风！三国无双式的激烈战斗，收复猛将与群雄逐鹿战场，谁能强势归来，问鼎中原？|【按键操作】导航键中键或5键，普通攻击；导航键上键，下键，左键，右键或2键，8键，4键，6键为主角上下左右移动.连续点击4键或6键：加速跑。1键，3键，7键，9键对应人物的4个技能。*,#键：加血加怒气值。	【Giới thiệu】|Nữ nhi không thua đấng mày râu, các võ tướng Tam Quốc hoá thân thành mỹ nữ yêu kiều, đồng loạt xuất trận, nổi lên mưa máu gió tanh trong vô số trận chiến kinh điển! Chiến đấu kịch liệt kiểu Tam Quốc Vô Song, thu phục mãnh tướng và quần hùng tranh đoạt thiên hạ, ai sẽ trở lại mạnh mẽ, vấn đỉnh Trung Nguyên?|【Điều khiển】Phím giữa hoặc phím 5 để đánh thường; phím lên, xuống, trái, phải hoặc 2, 8, 4, 6 để nhân vật chính di chuyển. Nhấn liên tục phím 4 hoặc 6：chạy nhanh. Phím 1, 3, 7, 9 ứng với 4 kỹ năng của nhân vật. Phím *, #：hồi HP và MP.	| = xuong dong	
+help_about.bin|1.0	help_about.bin	1.0	关于|游戏名称:雄霸三国之天降女神|版本号:1.0.0|厂商信息:乐堂动漫信息技术有限公司|客服电话:0551-5411794|E-mail:kf@joymeng.com	Giới thiệu|Tên game:Hùng Bá Tam Quốc: Thiên Giáng Nữ Thần|Phiên bản:1.0.0|Nhà phát hành:Công ty TNHH Công nghệ Thông tin Hoạt hình Lạc Đường|Hotline:0551-5411794|E-mail:kf@joymeng.com	| = xuong dong	
+choice.bin|0.q	choice.bin	0.q	商店	Shop		
+choice.bin|0.0	choice.bin	0.0	是	Có	lua chon	
+choice.bin|0.1	choice.bin	0.1	否	Không	lua chon	
+choice.bin|1.q	choice.bin	1.q	擂台模式1	Võ đài 1		
+choice.bin|1.0	choice.bin	1.0	单挑模式（1500港币）	Đấu đơn (1500 Xu)	lua chon	
+choice.bin|1.1	choice.bin	1.1	生存模式（2500港币）	Sinh tồn (2500 Xu)	lua chon	
+choice.bin|1.2	choice.bin	1.2	无限模式（3000港币）	Vô hạn (3000 Xu)	lua chon	
+choice.bin|1.3	choice.bin	1.3	算了。	Thôi.	lua chon	
+choice.bin|2.q	choice.bin	2.q	的士目的地	Taxi đi đâu		
+choice.bin|2.0	choice.bin	2.0	去离岛（800港币）	Đi đảo xa (800 Xu)	lua chon	
+choice.bin|2.1	choice.bin	2.1	去九龙（1000港币）	Đi Cửu Long (1000 Xu)	lua chon	
+choice.bin|2.2	choice.bin	2.2	暂时不走	Tạm chưa đi	lua chon	
+choice.bin|3.q	choice.bin	3.q	酒馆任务	Nhiệm vụ quán rượu		
+choice.bin|3.0	choice.bin	3.0	河东狮            *	Sư tử Hà Đông    *	lua chon	
+choice.bin|3.1	choice.bin	3.1	二把手           **	Tay nhì         **	lua chon	
+choice.bin|3.2	choice.bin	3.2	大开眼界      ***	Mở mang      ***	lua chon	
+choice.bin|3.3	choice.bin	3.3	保镖              ***	Vệ sĩ         ***	lua chon	
+choice.bin|3.4	choice.bin	3.4	金刚不坏！  ***	Kim Cang Bất Hoại! ***	lua chon	
+choice.bin|3.5	choice.bin	3.5	脱离苦海     ****	Thoát khổ hải  ****	lua chon	
+choice.bin|3.6	choice.bin	3.6	药师的委托 ****	Nhờ dược sư ****	lua chon	
+choice.bin|3.7	choice.bin	3.7	复仇铁匠    *****	Thợ rèn báo thù *****	lua chon	
+choice.bin|3.8	choice.bin	3.8	佩服佩服    *****	Khâm phục    *****	lua chon	
+choice.bin|3.9	choice.bin	3.9	武馆徽章    *****	Huy hiệu võ quán *****	lua chon	
+choice.bin|3.10	choice.bin	3.10	铁匠的报复*****	Thợ rèn trả thù*****	lua chon	
+choice.bin|3.11	choice.bin	3.11	实力派1      *****	Thực lực 1   *****	lua chon	
+choice.bin|3.12	choice.bin	3.12	实力派2     ******	Thực lực 2  ******	lua chon	
+choice.bin|4.q	choice.bin	4.q	是否传送到挑战关卡？	Dịch chuyển tới màn thử thách?		
+choice.bin|4.0	choice.bin	4.0	是，愿意支付1000金	Có, sẵn lòng trả 1000 Xu	lua chon	
+choice.bin|4.1	choice.bin	4.1	否，我再想想	Không, để ta nghĩ lại	lua chon	
+choice.bin|5.q	choice.bin	5.q	是否存档？	Lưu game không?		
+choice.bin|5.0	choice.bin	5.0	存档	Lưu	lua chon	
+choice.bin|5.1	choice.bin	5.1	不存档	Không lưu	lua chon	
+choice.bin|6.q	choice.bin	6.q	擂台模式3	Võ đài 3		
+choice.bin|6.0	choice.bin	6.0	单挑模式（1500港币）	Đấu đơn (1500 Xu)	lua chon	
+choice.bin|6.1	choice.bin	6.1	生存模式（2500港币）	Sinh tồn (2500 Xu)	lua chon	
+choice.bin|6.2	choice.bin	6.2	无限模式（3000港币）	Vô hạn (3000 Xu)	lua chon	
+choice.bin|6.3	choice.bin	6.3	噩梦模式（4000港币）	Ác mộng (4000 Xu)	lua chon	
+choice.bin|6.4	choice.bin	6.4	算了	Thôi	lua chon	
+choice.bin|7.q	choice.bin	7.q	？	？		
+choice.bin|8.0	choice.bin	8.0	是	Có	lua chon	
+choice.bin|8.1	choice.bin	8.1	否	Không	lua chon	
+gameData.bin|39	gameData.bin	39	生命值	HP		
+gameData.bin|50	gameData.bin	50	最大生命值	HP tối đa		
+gameData.bin|67	gameData.bin	67	怒气值	MP		
+gameData.bin|78	gameData.bin	78	最大怒气值	MP tối đa		
+gameData.bin|95	gameData.bin	95	攻击力	ATK		
+gameData.bin|106	gameData.bin	106	防御力	DEF		
+gameData.bin|117	gameData.bin	117	暴击率	Chí mạng		
+gameData.bin|128	gameData.bin	128	幸运	May mắn		
+gameData.bin|136	gameData.bin	136	技巧值	Kỹ xảo		
+gameData.bin|147	gameData.bin	147	攻击力(%)	ATK (%)		
+gameData.bin|161	gameData.bin	161	防御力(%)	DEF (%)		
+gameData.bin|175	gameData.bin	175	升级经验	EXP lên cấp		
+gameData.bin|190	gameData.bin	190	武器	Vũ khí		
+gameData.bin|198	gameData.bin	198	胸甲	Giáp ngực		
+gameData.bin|206	gameData.bin	206	鞋子	Giày		
+gameData.bin|214	gameData.bin	214	头部	Mũ		
+gameData.bin|222	gameData.bin	222	饰品	Trang sức		
+gameData.bin|231	gameData.bin	231	金	Kim		
+gameData.bin|236	gameData.bin	236	木	Mộc		
+gameData.bin|241	gameData.bin	241	水	Thủy		
+gameData.bin|246	gameData.bin	246	火	Hỏa		
+gameData.bin|251	gameData.bin	251	土	Thổ		
+gameData.bin|257	gameData.bin	257	眩晕	Choáng		
+gameData.bin|273	gameData.bin	273	爆炸	Nổ		
+gameData.bin|289	gameData.bin	289	吸血	Hút máu		
+gameData.bin|305	gameData.bin	305	中毒	Trúng độc		
+gameData.bin|322	gameData.bin	322	飞龙在天	Phi Long Tại Thiên		
+gameData.bin|336	gameData.bin	336	消耗怒气M，攻击加K%，附加攻击力+N。	Tốn M mp, công +K%, thêm công +N.		
+gameData.bin|441	gameData.bin	441	狂龙出海	Cuồng Long Xuất Hải		
+gameData.bin|455	gameData.bin	455	长按技能键可持续,持续消耗怒气M,攻击力+K%。	Ấn giữ phím kỹ năng để duy trì, liên tục tốn M mp, công +K%.		
+gameData.bin|570	gameData.bin	570	降龙摆尾	Hàng Long Bãi Vĩ		
+gameData.bin|584	gameData.bin	584	消耗怒气M,攻击力+K%。	Tốn M mp, công +K%.		
+gameData.bin|668	gameData.bin	668	亢龙有悔	Kháng Long Hữu Hối		
+gameData.bin|682	gameData.bin	682	消耗怒气M,攻击力+K%。	Tốn M mp, công +K%.		
+gameData.bin|766	gameData.bin	766	白虎啸	Bạch Hổ Khiếu		
+gameData.bin|777	gameData.bin	777	消耗怒气M，攻击加K%。	Tốn M mp, công +K%.		
+gameData.bin|862	gameData.bin	862	雷霆万钧	Lôi Đình Vạn Quân		
+gameData.bin|876	gameData.bin	876	长按技能键可持续,持续消耗怒气M,攻击力+K%。	Ấn giữ phím kỹ năng để duy trì, liên tục tốn M mp, công +K%.		
+gameData.bin|991	gameData.bin	991	天雷神罚	Thiên Lôi Thần Phạt		
+gameData.bin|1005	gameData.bin	1005	消耗怒气M,攻击力+K%。	Tốn M mp, công +K%.		
+gameData.bin|1089	gameData.bin	1089	五雷轰顶	Ngũ Lôi Oanh Đỉnh		
+gameData.bin|1103	gameData.bin	1103	消耗怒气M,攻击力+N。	Tốn M mp, công +N.		
+gameData.bin|1186	gameData.bin	1186	风云枪	Phong Vân Thương		
+gameData.bin|1197	gameData.bin	1197	消耗怒气M，攻击加K%。	Tốn M mp, công +K%.		
+gameData.bin|1282	gameData.bin	1282	天龙诀	Thiên Long Quyết		
+gameData.bin|1293	gameData.bin	1293	长按技能键可持续,持续消耗怒气M,攻击力+K%。	Ấn giữ phím kỹ năng để duy trì, liên tục tốn M mp, công +K%.		
+gameData.bin|1408	gameData.bin	1408	幻剑龙吟	Huyễn Kiếm Long Ngâm		
+gameData.bin|1422	gameData.bin	1422	消耗怒气M,攻击力+K%。	Tốn M mp, công +K%.		
+gameData.bin|1506	gameData.bin	1506	疯魔斩	Phong Ma Trảm		
+gameData.bin|1517	gameData.bin	1517	消耗怒气M,攻击力+N。	Tốn M mp, công +N.		
+gameData.bin|1600	gameData.bin	1600	力压千斤	Lực Áp Thiên Cân		
+gameData.bin|1614	gameData.bin	1614	消耗怒气M，攻击加K%。	Tốn M mp, công +K%.		
+gameData.bin|1699	gameData.bin	1699	霸王枪法	Bá Vương Thương Pháp		
+gameData.bin|1713	gameData.bin	1713	长按技能键可持续,持续消耗怒气M,攻击力+K%。	Ấn giữ phím kỹ năng để duy trì, liên tục tốn M mp, công +K%.		
+gameData.bin|1828	gameData.bin	1828	离魂夺魄	Ly Hồn Đoạt Phách		
+gameData.bin|1842	gameData.bin	1842	消耗怒气M,攻击力+K%。	Tốn M mp, công +K%.		
+gameData.bin|1926	gameData.bin	1926	神将天罚	Thần Tướng Thiên Phạt		
+gameData.bin|1940	gameData.bin	1940	消耗怒气M,攻击力+N。	Tốn M mp, công +N.		
+gameData.bin|2023	gameData.bin	2023	幽冥之火	U Minh Chi Hỏa		
+gameData.bin|2037	gameData.bin	2037	消耗怒气M，攻击加K%。	Tốn M mp, công +K%.		
+gameData.bin|2122	gameData.bin	2122	燃魂魅舞	Nhiên Hồn Mị Vũ		
+gameData.bin|2136	gameData.bin	2136	长按技能键可持续,持续消耗怒气M,攻击力+K%。	Ấn giữ phím kỹ năng để duy trì, liên tục tốn M mp, công +K%.		
+gameData.bin|2251	gameData.bin	2251	九幽烈焰	Cửu U Liệt Diễm		
+gameData.bin|2265	gameData.bin	2265	消耗怒气M,攻击力+K%。	Tốn M mp, công +K%.		
+gameData.bin|2349	gameData.bin	2349	冥火天袭	Minh Hỏa Thiên Tập		
+gameData.bin|2363	gameData.bin	2363	消耗怒气M,攻击力+N。	Tốn M mp, công +N.		
+gameData.bin|2446	gameData.bin	2446	攻击上升	Công tăng		
+gameData.bin|2460	gameData.bin	2460	攻击力+N	Công +N		
+gameData.bin|2536	gameData.bin	2536	防御上升	Thủ tăng		
+gameData.bin|2550	gameData.bin	2550	防御力+D	Thủ +D		
+gameData.bin|2626	gameData.bin	2626	生命上升	HP tăng		
+gameData.bin|2640	gameData.bin	2640	生命上限+Y	hp tối đa +Y		
+gameData.bin|2721	gameData.bin	2721	暴击上升	Chí mạng tăng		
+gameData.bin|2735	gameData.bin	2735	暴击率+E	Chí mạng +E		
+gameData.bin|2809	gameData.bin	2809	技能攻击上升	Công kỹ năng tăng		
+gameData.bin|2829	gameData.bin	2829	技能攻击力+Z%	Công kỹ năng +Z%		
+gameData.bin|2910	gameData.bin	2910	消耗怒气下降	Giảm tiêu hao MP		
+gameData.bin|2930	gameData.bin	2930	消耗怒气-B%	Tiêu hao mp -B%		
+gameData.bin|3008	gameData.bin	3008	经验上升	EXP tăng		
+gameData.bin|3022	gameData.bin	3022	获得经验值+L%	Được thêm exp +L%		
+gameData.bin|3103	gameData.bin	3103	金钱上升	Tiền tăng		
+gameData.bin|3117	gameData.bin	3117	获得金钱+G%	Được thêm tiền +G%		
+gameData.bin|3195	gameData.bin	3195	得分上升	Điểm tăng		
+gameData.bin|3209	gameData.bin	3209	最终得分+P%	Điểm cuối +P%		
+gameData.bin|3287	gameData.bin	3287	潜能点数上升	Tiềm năng tăng		
+gameData.bin|3307	gameData.bin	3307	最终获得潜能点数+S%	Điểm tiềm năng cuối +S%		
+gameData.bin|3397	gameData.bin	3397	鬼焰啸	Quỷ Diễm Khiếu		
+gameData.bin|3408	gameData.bin	3408	消耗怒气M,攻击力+K%。	Tốn M mp, công +K%.		
+gameData.bin|3492	gameData.bin	3492	冥焰乱舞	Minh Diễm Loạn Vũ		
+gameData.bin|3506	gameData.bin	3506	消耗怒气M,攻击力+N。	Tốn M mp, công +N.		
+gameData.bin|3589	gameData.bin	3589	怒气专精	Tinh thông MP		
+gameData.bin|3603	gameData.bin	3603	增加怒气上限.最大怒气值+Y。	Tăng giới hạn mp. mp tối đa +Y.		
+gameData.bin|3697	gameData.bin	3697	护甲专精	Tinh thông giáp		
+gameData.bin|3711	gameData.bin	3711	增加总体防御力.防御力+D%。对提升防御力的药物有同比例增强效果。	Tăng phòng thủ tổng thể. Thủ +D%. Có hiệu quả tăng tương ứng với thuốc nâng phòng thủ.		
+gameData.bin|3857	gameData.bin	3857	生命专精	Tinh thông HP		
+gameData.bin|3871	gameData.bin	3871	增加生命最大值,最大生命值+X。	Tăng hp tối đa, hp tối đa +X.		
+gameData.bin|3968	gameData.bin	3968	暴击专精	Tinh thông chí mạng		
+gameData.bin|3982	gameData.bin	3982	增加暴击比例,暴击率+E%。	Tăng tỉ lệ chí mạng. Chí mạng +E%.		
+gameData.bin|4071	gameData.bin	4071	空技能	Kỹ năng trống		
+gameData.bin|4082	gameData.bin	4082	无此技能。	Chưa có kỹ năng này.		
+gameData.bin|4153	gameData.bin	4153	青铜长刀	Thanh Đồng Trường Đao		
+gameData.bin|4167	gameData.bin	4167	关羽专用。	Dành riêng cho Quan Vũ.		
+gameData.bin|4234	gameData.bin	4234	蓝月弯刀	Lam Nguyệt Loan Đao		
+gameData.bin|4248	gameData.bin	4248	关羽专用。	Dành riêng cho Quan Vũ.		
+gameData.bin|4315	gameData.bin	4315	凤嘴刀	Phụng Chủy Đao		
+gameData.bin|4326	gameData.bin	4326	关羽专用。	Dành riêng cho Quan Vũ.		
+gameData.bin|4393	gameData.bin	4393	红魔炼狱刀	Hồng Ma Luyện Ngục Đao		
+gameData.bin|4410	gameData.bin	4410	关羽专用。	Dành riêng cho Quan Vũ.		
+gameData.bin|4477	gameData.bin	4477	赤炎屠龙刀	Xích Viêm Đồ Long Đao		
+gameData.bin|4494	gameData.bin	4494	关羽专用。	Dành riêng cho Quan Vũ.		
+gameData.bin|4561	gameData.bin	4561	百折扇	Bách Chiết Phiến		
+gameData.bin|4572	gameData.bin	4572	诸葛亮专用。	Dành riêng cho Gia Cát Lượng.		
+gameData.bin|4642	gameData.bin	4642	阴风扇	Âm Phong Phiến		
+gameData.bin|4653	gameData.bin	4653	诸葛亮专用。	Dành riêng cho Gia Cát Lượng.		
+gameData.bin|4723	gameData.bin	4723	神火扇	Thần Hỏa Phiến		
+gameData.bin|4734	gameData.bin	4734	诸葛亮专用。	Dành riêng cho Gia Cát Lượng.		
+gameData.bin|4804	gameData.bin	4804	劈水扇	Phích Thủy Phiến		
+gameData.bin|4815	gameData.bin	4815	诸葛亮专用。	Dành riêng cho Gia Cát Lượng.		
+gameData.bin|4885	gameData.bin	4885	逍遥扇	Tiêu Dao Phiến		
+gameData.bin|4896	gameData.bin	4896	诸葛亮专用。	Dành riêng cho Gia Cát Lượng.		
+gameData.bin|4966	gameData.bin	4966	精铁戟	Tinh Thiết Kích		
+gameData.bin|4977	gameData.bin	4977	吕布专用。	Dành riêng cho Lữ Bố.		
+gameData.bin|5044	gameData.bin	5044	画眉戟	Họa Mi Kích		
+gameData.bin|5055	gameData.bin	5055	吕布专用。	Dành riêng cho Lữ Bố.		
+gameData.bin|5122	gameData.bin	5122	噬龙戟	Phệ Long Kích		
+gameData.bin|5133	gameData.bin	5133	吕布专用。	Dành riêng cho Lữ Bố.		
+gameData.bin|5200	gameData.bin	5200	浑元画戟	Hồn Nguyên Họa Kích		
+gameData.bin|5214	gameData.bin	5214	吕布专用。	Dành riêng cho Lữ Bố.		
+gameData.bin|5281	gameData.bin	5281	方天画戟	Phương Thiên Họa Kích		
+gameData.bin|5295	gameData.bin	5295	吕布专用。	Dành riêng cho Lữ Bố.		
+gameData.bin|5362	gameData.bin	5362	阴火符咒	Âm Hỏa Phù Chú		
+gameData.bin|5376	gameData.bin	5376	司马懿专用。	Dành riêng cho Tư Mã Ý.		
+gameData.bin|5443	gameData.bin	5443	招魂符咒	Chiêu Hồn Phù Chú		
+gameData.bin|5457	gameData.bin	5457	司马懿专用。	Dành riêng cho Tư Mã Ý.		
+gameData.bin|5524	gameData.bin	5524	虎威符咒	Hổ Uy Phù Chú		
+gameData.bin|5538	gameData.bin	5538	司马懿专用。	Dành riêng cho Tư Mã Ý.		
+gameData.bin|5605	gameData.bin	5605	玄龟符咒	Huyền Quy Phù Chú		
+gameData.bin|5619	gameData.bin	5619	司马懿专用。	Dành riêng cho Tư Mã Ý.		
+gameData.bin|5689	gameData.bin	5689	太乙符咒	Thái Ất Phù Chú		
+gameData.bin|5703	gameData.bin	5703	司马懿专用。	Dành riêng cho Tư Mã Ý.		
+gameData.bin|5773	gameData.bin	5773	精铁剑	Tinh Thiết Kiếm		
+gameData.bin|5784	gameData.bin	5784	曹操专用。	Dành riêng cho Tào Tháo.		
+gameData.bin|5851	gameData.bin	5851	倚天剑	Ỷ Thiên Kiếm		
+gameData.bin|5862	gameData.bin	5862	曹操专用。	Dành riêng cho Tào Tháo.		
+gameData.bin|5929	gameData.bin	5929	青缸剑	Thanh Cang Kiếm		
+gameData.bin|5940	gameData.bin	5940	曹操专用。	Dành riêng cho Tào Tháo.		
+gameData.bin|6007	gameData.bin	6007	越女剑	Việt Nữ Kiếm		
+gameData.bin|6018	gameData.bin	6018	曹操专用。	Dành riêng cho Tào Tháo.		
+gameData.bin|6085	gameData.bin	6085	罗刹剑	La Sát Kiếm		
+gameData.bin|6096	gameData.bin	6096	曹操专用。	Dành riêng cho Tào Tháo.		
+gameData.bin|6163	gameData.bin	6163	奔狼战甲	Bôn Lang Chiến Giáp		
+gameData.bin|6177	gameData.bin	6177	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6250	gameData.bin	6250	奔狼战靴	Bôn Lang Chiến Ngoa		
+gameData.bin|6264	gameData.bin	6264	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6337	gameData.bin	6337	朱雀战甲	Chu Tước Chiến Giáp		
+gameData.bin|6351	gameData.bin	6351	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6424	gameData.bin	6424	朱雀战靴	Chu Tước Chiến Ngoa		
+gameData.bin|6438	gameData.bin	6438	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6511	gameData.bin	6511	雪貂战袍	Tuyết Điêu Chiến Bào		
+gameData.bin|6525	gameData.bin	6525	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6598	gameData.bin	6598	雪貂战靴	Tuyết Điêu Chiến Ngoa		
+gameData.bin|6612	gameData.bin	6612	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6685	gameData.bin	6685	黄金铠甲	Hoàng Kim Khải Giáp		
+gameData.bin|6699	gameData.bin	6699	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6772	gameData.bin	6772	黄金战靴	Hoàng Kim Chiến Ngoa		
+gameData.bin|6786	gameData.bin	6786	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6859	gameData.bin	6859	虎威战铠	Hổ Uy Chiến Khải		
+gameData.bin|6873	gameData.bin	6873	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|6946	gameData.bin	6946	虎威战靴	Hổ Uy Chiến Ngoa		
+gameData.bin|6960	gameData.bin	6960	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|7033	gameData.bin	7033	柳叶环	Liễu Diệp Hoàn		
+gameData.bin|7044	gameData.bin	7044	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|7117	gameData.bin	7117	红玉戒指	Hồng Ngọc Giới Chỉ		
+gameData.bin|7131	gameData.bin	7131	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|7204	gameData.bin	7204	玄风玉佩	Huyền Phong Ngọc Bội		
+gameData.bin|7218	gameData.bin	7218	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|7291	gameData.bin	7291	虚极项链	Hư Cực Hạng Liên		
+gameData.bin|7305	gameData.bin	7305	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|7378	gameData.bin	7378	伏魔戒指	Phục Ma Giới Chỉ		
+gameData.bin|7392	gameData.bin	7392	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|7465	gameData.bin	7465	纯银羽饰	Thuần Ngân Vũ Sức		
+gameData.bin|7479	gameData.bin	7479	任何武将通用。	Mọi võ tướng đều dùng được.		
+gameData.bin|7552	gameData.bin	7552	===以下不用===	===Dưới đây không dùng===		
+gameData.bin|7572	gameData.bin	7572	张颌专用。	Dành riêng cho Trương Cáp.		
+gameData.bin|7639	gameData.bin	7639	龙骑枪	Long Kỵ Thương		
+gameData.bin|7650	gameData.bin	7650	张颌专用。	Dành riêng cho Trương Cáp.		
+gameData.bin|7717	gameData.bin	7717	三尖锐枪	Tam Tiêm Nhuệ Thương		
+gameData.bin|7731	gameData.bin	7731	张颌专用。	Dành riêng cho Trương Cáp.		
+gameData.bin|7798	gameData.bin	7798	破邪旋风枪	Phá Tà Toàn Phong Thương		
+gameData.bin|7815	gameData.bin	7815	张颌专用。	Dành riêng cho Trương Cáp.		
+gameData.bin|7882	gameData.bin	7882	双极灭星枪	Song Cực Diệt Tinh Thương		
+gameData.bin|7899	gameData.bin	7899	张颌专用。	Dành riêng cho Trương Cáp.		
+gameData.bin|7966	gameData.bin	7966	长柄刀	Trường Bính Đao		
+gameData.bin|7977	gameData.bin	7977	夏侯渊专用。	Dành riêng cho Hạ Hầu Uyên.		
+gameData.bin|8047	gameData.bin	8047	火神刀	Hỏa Thần Đao		
+gameData.bin|8058	gameData.bin	8058	夏侯渊专用。	Dành riêng cho Hạ Hầu Uyên.		
+gameData.bin|8128	gameData.bin	8128	轰火神刀	Oanh Hỏa Thần Đao		
+gameData.bin|8142	gameData.bin	8142	夏侯渊专用。	Dành riêng cho Hạ Hầu Uyên.		
+gameData.bin|8212	gameData.bin	8212	神龙飞天刀	Thần Long Phi Thiên Đao		
+gameData.bin|8229	gameData.bin	8229	夏侯渊专用。	Dành riêng cho Hạ Hầu Uyên.		
+gameData.bin|8299	gameData.bin	8299	朱雀飞虹刀	Chu Tước Phi Hồng Đao		
+gameData.bin|8316	gameData.bin	8316	夏侯渊专用。	Dành riêng cho Hạ Hầu Uyên.		
+gameData.bin|8386	gameData.bin	8386	青铜长刀	Thanh Đồng Trường Đao		
+gameData.bin|8400	gameData.bin	8400	关羽、张辽专用。	Dành riêng cho Quan Vũ, Trương Liêu.		
+gameData.bin|8476	gameData.bin	8476	朔风朴刀	Sóc Phong Phác Đao		
+gameData.bin|8490	gameData.bin	8490	关羽、张辽专用。	Dành riêng cho Quan Vũ, Trương Liêu.		
+gameData.bin|8566	gameData.bin	8566	风嘴刀	Phong Chủy Đao		
+gameData.bin|8577	gameData.bin	8577	关羽、张辽专用。	Dành riêng cho Quan Vũ, Trương Liêu.		
+gameData.bin|8653	gameData.bin	8653	赤焰横刀	Xích Diễm Hoành Đao		
+gameData.bin|8667	gameData.bin	8667	关羽、张辽专用。	Dành riêng cho Quan Vũ, Trương Liêu.		
+gameData.bin|8743	gameData.bin	8743	黄龙钩镰刀	Hoàng Long Câu Liêm Đao		
+gameData.bin|8760	gameData.bin	8760	关羽、张辽专用。	Dành riêng cho Quan Vũ, Trương Liêu.		
+gameData.bin|8836	gameData.bin	8836	蛮妖符	Man Yêu Phù		
+gameData.bin|8847	gameData.bin	8847	张角专用。	Dành riêng cho Trương Giác.		
+gameData.bin|8914	gameData.bin	8914	洪荒兽符	Hồng Hoang Thú Phù		
+gameData.bin|8928	gameData.bin	8928	张角专用。	Dành riêng cho Trương Giác.		
+gameData.bin|8995	gameData.bin	8995	幻天神符	Huyễn Thiên Thần Phù		
+gameData.bin|9009	gameData.bin	9009	张角专用。	Dành riêng cho Trương Giác.		
+gameData.bin|9076	gameData.bin	9076	冥天摄命符	Minh Thiên Nhiếp Mệnh Phù		
+gameData.bin|9093	gameData.bin	9093	张角专用。	Dành riêng cho Trương Giác.		
+gameData.bin|9160	gameData.bin	9160	灭世修罗符	Diệt Thế Tu La Phù		
+gameData.bin|9177	gameData.bin	9177	张角专用。	Dành riêng cho Trương Giác.		
+gameData.bin|9244	gameData.bin	9244	青龙偃月刀	Thanh Long Yển Nguyệt Đao		
+gameData.bin|9261	gameData.bin	9261	关羽专用。	Dành riêng cho Quan Vũ.		
+gameData.bin|9325	gameData.bin	9325	时*空吊坠(QQ专属)	Mặt dây Thời*Không (QQ)		
+gameData.bin|9350	gameData.bin	9350	所有武将通用。孕育于时间和空间之中,是一切的起点又是一切的终点.	Mọi võ tướng đều dùng được. Sinh ra giữa thời gian và không gian, là khởi điểm và cũng là điểm cuối của vạn vật.		
+gameData.bin|9491	gameData.bin	9491	止血散(小)	Chỉ Huyết Tán (nhỏ)		
+gameData.bin|9507	gameData.bin	9507	小剂量，生命值+150。	Liều nhỏ, HP +150.		
+gameData.bin|9582	gameData.bin	9582	止血散(中)	Chỉ Huyết Tán (vừa)		
+gameData.bin|9598	gameData.bin	9598	中剂量，生命值+300。	Liều vừa, HP +300.		
+gameData.bin|9673	gameData.bin	9673	止血散(大)	Chỉ Huyết Tán (lớn)		
+gameData.bin|9689	gameData.bin	9689	大剂量，生命值+600。	Liều lớn, HP +600.		
+gameData.bin|9764	gameData.bin	9764	止血散(精炼)	Chỉ Huyết Tán (tinh)		
+gameData.bin|9783	gameData.bin	9783	提炼后的精华药剂，生命值+1200.	Tinh hoa dược tề đã tinh luyện, HP +1200.		
+gameData.bin|9872	gameData.bin	9872	活络散(小)	Hoạt Lạc Tán (nhỏ)		
+gameData.bin|9888	gameData.bin	9888	小剂量，怒气值+100。	Liều nhỏ, MP +100.		
+gameData.bin|9963	gameData.bin	9963	活络散(中)	Hoạt Lạc Tán (vừa)		
+gameData.bin|9979	gameData.bin	9979	中剂量，怒气值+200。	Liều vừa, MP +200.		
+gameData.bin|10054	gameData.bin	10054	活络散(大)	Hoạt Lạc Tán (lớn)		
+gameData.bin|10070	gameData.bin	10070	大剂量，怒气值+400。	Liều lớn, MP +400.		
+gameData.bin|10145	gameData.bin	10145	活络散(精炼)	Hoạt Lạc Tán (tinh)		
+gameData.bin|10164	gameData.bin	10164	提炼后的精华药剂，怒气值+600.	Tinh hoa dược tề đã tinh luyện, MP +600.		
+gameData.bin|10252	gameData.bin	10252	万灵散	Vạn Linh Tán		
+gameData.bin|10263	gameData.bin	10263	可治百病的神奇药物.生命值+500,怒气值+500	Thần dược chữa trăm bệnh. HP +500, MP +500		
+gameData.bin|10365	gameData.bin	10365	长生散	Trường Sinh Tán		
+gameData.bin|10376	gameData.bin	10376	传说长期服用能使人长生不老.生命值+1000,怒气值+1000	Tương truyền dùng lâu dài giúp người trường sinh bất lão. HP +1000, MP +1000		
+gameData.bin|10492	gameData.bin	10492	-素材 -	-Nguyên liệu -		
+gameData.bin|10503	gameData.bin	10503	任务1需要用	Cần cho nhiệm vụ 1		
+gameData.bin|10566	gameData.bin	10566	残破刀刃	Lưỡi Đao Tàn		
+gameData.bin|10580	gameData.bin	10580	素材，可以兑换大量金钱。刀刃似乎已经变钝了。	Nguyên liệu, đổi được nhiều Xu. Lưỡi đao dường như đã cùn.		
+gameData.bin|10692	gameData.bin	10692	冲阵心得	Tâm Đắc Xung Trận		
+gameData.bin|10706	gameData.bin	10706	素材，可以兑换大量金钱。长枪兵冲杀的阵法心得。	Nguyên liệu, đổi được nhiều Xu. Tâm đắc trận pháp xung sát của lính thương.		
+gameData.bin|10821	gameData.bin	10821	獠牙	Nanh Thú		
+gameData.bin|10829	gameData.bin	10829	素材，可以兑换大量金钱。野兽尖利的獠牙。	Nguyên liệu, đổi được nhiều Xu. Chiếc nanh nhọn của dã thú.		
+gameData.bin|10935	gameData.bin	10935	箭矢	Mũi Tên		
+gameData.bin|10943	gameData.bin	10943	素材，可以兑换大量金钱。被折断的箭矢。	Nguyên liệu, đổi được nhiều Xu. Mũi tên đã bị gãy.		
+gameData.bin|11046	gameData.bin	11046	箭术心得	Tâm Đắc Xạ Thuật		
+gameData.bin|11060	gameData.bin	11060	素材，可以兑换大量金钱。弓弩手连射箭矢的心得。	Nguyên liệu, đổi được nhiều Xu. Tâm đắc bắn liên tiếp của cung nỏ thủ.		
+gameData.bin|11175	gameData.bin	11175	暗杀名单	Danh Sách Ám Sát		
+gameData.bin|11189	gameData.bin	11189	素材，可以兑换大量金钱。上面记载着刺客暗杀任务的名单。	Nguyên liệu, đổi được nhiều Xu. Ghi danh sách các nhiệm vụ ám sát của thích khách.		
+gameData.bin|11316	gameData.bin	11316	士兵日记	Nhật Ký Binh Sĩ		
+gameData.bin|11330	gameData.bin	11330	素材，可以兑换大量金钱。似乎是普通士兵写的日记。	Nguyên liệu, đổi được nhiều Xu. Có vẻ là nhật ký của một binh sĩ thường.		
+gameData.bin|11448	gameData.bin	11448	破旧盾牌	Khiên Cũ Nát		
+gameData.bin|11462	gameData.bin	11462	素材，可以兑换大量金钱。已经残破不堪的盾牌。	Nguyên liệu, đổi được nhiều Xu. Chiếc khiên đã nát tả tơi.		
+gameData.bin|11574	gameData.bin	11574	铜制枪头	Mũi Thương Đồng		
+gameData.bin|11588	gameData.bin	11588	素材，可以兑换大量金钱。用铜制造的枪头，锋利无比。	Nguyên liệu, đổi được nhiều Xu. Mũi thương chế bằng đồng, sắc bén vô cùng.		
+gameData.bin|11709	gameData.bin	11709	兽皮	Da Thú		
+gameData.bin|11717	gameData.bin	11717	素材，可以兑换大量金钱。野兽完整的兽皮。	Nguyên liệu, đổi được nhiều Xu. Tấm da nguyên vẹn của dã thú.		
+gameData.bin|11823	gameData.bin	11823	攻击石	Đá Công		
+gameData.bin|11834	gameData.bin	11834	提升武器等级,每级提升10%的基础属性.	Nâng cấp vũ khí, mỗi cấp tăng 10% thuộc tính cơ bản.		
+gameData.bin|11931	gameData.bin	11931	防御石	Đá Thủ		
+gameData.bin|11942	gameData.bin	11942	提升防御装备的等级,每级+5点防御.	Nâng cấp trang bị phòng thủ, mỗi cấp +5 DEF.		
+gameData.bin|12035	gameData.bin	12035	暴击石	Đá Chí Mạng		
+gameData.bin|12046	gameData.bin	12046	提升饰品等级,每级提升1%.	Nâng cấp trang sức, mỗi cấp tăng 1%.		
+gameData.bin|12127	gameData.bin	12127	太极宝盒	Rương Thái Cực		
+gameData.bin|12141	gameData.bin	12141	有太极图案的盒子，不知道装着什么。	Chiếc rương có hoa văn Thái Cực, không biết bên trong chứa gì.		
+gameData.bin|12239	gameData.bin	12239	两仪宝盒	Rương Lưỡng Nghi		
+gameData.bin|12253	gameData.bin	12253	刻着阴阳图案的盒子。	Chiếc rương khắc hình âm dương.		
+gameData.bin|12330	gameData.bin	12330	三才宝盒	Rương Tam Tài		
+gameData.bin|12344	gameData.bin	12344	盒子上面画着天地人，是为三才。	Trên rương vẽ thiên địa nhân, gọi là tam tài.		
+gameData.bin|12436	gameData.bin	12436	四象宝盒	Rương Tứ Tượng		
+gameData.bin|12450	gameData.bin	12450	盒子的四面分别有描写春夏秋冬的画。	Bốn mặt rương vẽ tranh xuân hạ thu đông.		
+gameData.bin|12548	gameData.bin	12548	五方宝盒	Rương Ngũ Phương		
+gameData.bin|12562	gameData.bin	12562	东西南北中，五方行尽之宝盒，传说装着宝物。	Đông tây nam bắc trung, rương báu đi hết ngũ phương, tương truyền chứa bảo vật.		
+gameData.bin|12672	gameData.bin	12672	箱子6	Rương 6		
+gameData.bin|12681	gameData.bin	12681	似乎是可以使箱子变得更华丽的神奇结晶?	Có vẻ là tinh thể thần kỳ giúp rương thêm lộng lẫy?		
+gameData.bin|12782	gameData.bin	12782	宝箱之石	Đá Rương		
+gameData.bin|12796	gameData.bin	12796	可以升级宝箱的神秘石头。	Viên đá bí ẩn có thể nâng cấp rương.		
+gameData.bin|12879	gameData.bin	12879	固神丹	Cố Thần Đan		
+gameData.bin|12890	gameData.bin	12890	提高10点生命上限。	Tăng 10 HP tối đa.		
+gameData.bin|12962	gameData.bin	12962	固仙丹	Cố Tiên Đan		
+gameData.bin|12973	gameData.bin	12973	提高10点怒气上限。	Tăng 10 MP tối đa.		
+gameData.bin|13045	gameData.bin	13045	白虎翼	Bạch Hổ Dực		
+gameData.bin|13056	gameData.bin	13056	提高5点攻击力。	Tăng 5 ATK.		
+gameData.bin|13124	gameData.bin	13124	秘甲丸	Bí Giáp Hoàn		
+gameData.bin|13135	gameData.bin	13135	提高5点防御值。另外受护甲专精同比例的增强效果影响。	Tăng 5 DEF. Còn được tăng cường cùng tỉ lệ từ Tinh thông giáp.		
+gameData.bin|13257	gameData.bin	13257	盘龙散	Bàn Long Tán		
+gameData.bin|13268	gameData.bin	13268	提高暴击率1%。	Tăng 1% chí mạng.		
+gameData.bin|13334	gameData.bin	13334	幸运石	Đá May Mắn		
+gameData.bin|13345	gameData.bin	13345	提高掉落率，增加幸运值1。	Tăng tỉ lệ rơi đồ, thêm 1 điểm May mắn.		
+gameData.bin|13429	gameData.bin	13429	破旧长弓	Cung Dài Cũ		
+gameData.bin|13443	gameData.bin	13443	素材，可以兑换大量金钱。因为多次使用而失去韧性的长弓。	Nguyên liệu, đổi được nhiều Xu. Cây cung dài mất độ dẻo vì dùng nhiều lần.		
+gameData.bin|13570	gameData.bin	13570	木制弩机	Nỏ Gỗ		
+gameData.bin|13584	gameData.bin	13584	素材，可以兑换大量金钱。军队普及的远程武器。	Nguyên liệu, đổi được nhiều Xu. Vũ khí tầm xa phổ biến trong quân đội.		
+gameData.bin|13696	gameData.bin	13696	秘制毒药	Độc Dược Bí Chế		
+gameData.bin|13710	gameData.bin	13710	素材，可以兑换大量金钱。刺客必备的物品之一，剧毒无比。	Nguyên liệu, đổi được nhiều Xu. Vật không thể thiếu của thích khách, độc tính cực mạnh.		
+gameData.bin|13837	gameData.bin	13837	拳术心得	Tâm Đắc Quyền Thuật		
+gameData.bin|13851	gameData.bin	13851	素材，可以兑换大量金钱。擅长拳术的士兵总结的搏斗技巧。	Nguyên liệu, đổi được nhiều Xu. Kỹ xảo vật lộn do binh sĩ giỏi quyền thuật đúc kết.		
+gameData.bin|13979	gameData.bin	13979	关羽	Quan Vũ		
+gameData.bin|14085	gameData.bin	14085	诸葛亮	Gia Cát Lượng		
+gameData.bin|14192	gameData.bin	14192	司马懿	Tư Mã Ý		
+gameData.bin|14299	gameData.bin	14299	吕布	Lữ Bố		
+gameData.bin|14403	gameData.bin	14403	曹操	Tào Tháo		
+gameData.bin|14507	gameData.bin	14507	甘宁	Cam Ninh		
+gameData.bin|14605	gameData.bin	14605	张角	Trương Giác		
+gameData.bin|14703	gameData.bin	14703	吕布	Lữ Bố		
+gameData.bin|14801	gameData.bin	14801	士兵	Binh sĩ		
+gameData.bin|14890	gameData.bin	14890	关羽	Quan Vũ		
+gameData.bin|15049	gameData.bin	15049	诸葛亮	Gia Cát Lượng		
+gameData.bin|15203	gameData.bin	15203	司马懿	Tư Mã Ý		
+gameData.bin|15357	gameData.bin	15357	吕布	Lữ Bố		
+gameData.bin|15508	gameData.bin	15508	曹操	Tào Tháo		
+gameData.bin|15659	gameData.bin	15659	甘宁	Cam Ninh		
+gameData.bin|15810	gameData.bin	15810	张角	Trương Giác		
+gameData.bin|15961	gameData.bin	15961	吕布	Lữ Bố		
+gameData.bin|16112	gameData.bin	16112	朴刀兵	Lính phác đao		
+gameData.bin|16266	gameData.bin	16266	士兵	Binh sĩ		
+gameData.bin|16566	gameData.bin	16566	胖子	Béo		
+gameData.bin|16719	gameData.bin	16719	刺客	Thích khách		
+gameData.bin|16872	gameData.bin	16872	盾牌兵	Lính khiên		
+gameData.bin|17028	gameData.bin	17028	美人鱼	Mỹ nhân ngư		
+gameData.bin|17184	gameData.bin	17184	火龙	Hỏa long		
+gameData.bin|17337	gameData.bin	17337	火枪手	Lính hỏa thương		
+gameData.bin|17493	gameData.bin	17493	BOSS红胡子	BOSS Râu Đỏ		
+gameData.bin|17653	gameData.bin	17653	BOSS梅川酷子	BOSS Mai Xuyên Khốc Tử		
+gameData.bin|17816	gameData.bin	17816	BOSS刘疤	BOSS Lưu Ba		
+gameData.bin|17973	gameData.bin	17973	宠物蛋	Trứng thú cưng		
+gameData.bin|18127	gameData.bin	18127	毛毛	Mao Mao		
+gameData.bin|18289	gameData.bin	18289	箱子1	Rương 1		
+gameData.bin|18332	gameData.bin	18332	箱子2	Rương 2		
+gameData.bin|18371	gameData.bin	18371	箱子3	Rương 3		
+gameData.bin|18410	gameData.bin	18410	箱子4	Rương 4		
+gameData.bin|18449	gameData.bin	18449	箱子5	Rương 5		
+gameData.bin|18490	gameData.bin	18490	箱子6	Rương 6		
+gameData.bin|18499	gameData.bin	18499	终极装备	Trang bị tối thượng		
+gameData.bin|18523	gameData.bin	18523	总商店	Tổng shop		
+gameData.bin|18673	gameData.bin	18673	素材商店	Shop nguyên liệu		
+gameData.bin|18730	gameData.bin	18730	商店掉落1	Shop rơi 1		
+gameData.bin|18777	gameData.bin	18777	商店掉落2	Shop rơi 2		
+gameData.bin|18824	gameData.bin	18824	商店掉落3	Shop rơi 3		
+gameData.bin|18871	gameData.bin	18871	商店掉落4	Shop rơi 4		
+gameData.bin|18920	gameData.bin	18920	掉落商店5	Shop rơi 5		
+gameData.bin|18975	gameData.bin	18975	新NPC13	NPC mới 13		
+gameData.bin|18997	gameData.bin	18997	新NPC14	NPC mới 14		
+gameData.bin|19020	gameData.bin	19020	萨菲隆	Sa Phi Long		
+gameData.bin|19031	gameData.bin	19031	新怪物0描述	Mô tả quái mới 0		
+gameData.bin|19107	gameData.bin	19107	克尔苏加德 	Khắc Nhĩ Tô Gia Đức 		
+gameData.bin|19125	gameData.bin	19125	新怪物1描述	Mô tả quái mới 1		
+gameData.bin|19201	gameData.bin	19201	哈霍兰公主	Công chúa Cáp Hoắc Lan		
+gameData.bin|19218	gameData.bin	19218	新怪物2描述	Mô tả quái mới 2		
+l1.bin|428	l1.bin	428	。	。		
+l1.bin|437	l1.bin	437	★温馨提示★|为了获得更好的用户体验，游戏会提示您进行一次联网，以获取最佳的游戏配置，此过程不收取任何费用；您也可以选择不联网按默认配置进行游戏，但可能不能体验到最佳的游戏效果，谢谢您的支持！	★Lưu ý★|Để có trải nghiệm tốt hơn, game sẽ đề nghị bạn kết nối mạng một lần để lấy cấu hình game tối ưu, quá trình này không thu bất kỳ khoản phí nào; bạn cũng có thể chọn không kết nối mạng và chơi theo cấu hình mặc định, nhưng có thể không đạt hiệu quả tốt nhất, cảm ơn sự ủng hộ của bạn!		
+l1.bin|729	l1.bin	729	激活烈鹰为宠物,帮你轻松捡取物品!购买此道具,需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?	Kích hoạt Liệt Ưng làm thú cưng, giúp bạn nhặt vật phẩm dễ dàng! Mua vật phẩm này cần phí thông tin S tệ, cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|870	l1.bin	870	开启公共仓库,让你的装备可以分配给其他武将使用.需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?	Mở kho chung để trang bị của bạn có thể chia cho các võ tướng khác dùng. Cần phí thông tin S tệ, cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1016	l1.bin	1016	将素材兑换金钱,打怪赚钱,一举两得。购买此道具,需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?	Đổi nguyên liệu lấy Xu, đánh quái kiếm tiền, một công đôi việc. Mua vật phẩm này cần phí thông tin S tệ, cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1160	l1.bin	1160	一次性购买5个宝箱之石,升级宝箱,获得更高的装备.需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?	Mua một lần 5 Đá Rương, nâng cấp rương để nhận trang bị tốt hơn. Cần phí thông tin S tệ, cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1305	l1.bin	1305	当前人物升10级,(未买突破等级限制时,最高级99级),需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?	Tăng 10 cấp cho nhân vật hiện tại (khi chưa mua mở giới hạn cấp, tối đa cấp 99). Cần phí thông tin S tệ, cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1449	l1.bin	1449	立刻突破人物的等级上限,不再受等级约束!需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?	Vượt ngay giới hạn cấp của nhân vật, không còn bị ràng buộc cấp độ! Cần phí thông tin S tệ, cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1583	l1.bin	1583	著名武将角色自由挑选,超长游戏时间,成就称号,积分排名,需信息费S元,即可激活正版游戏,需发送N条短信,P元/条(不含通信费),是否发送?	Tự do chọn các võ tướng nổi tiếng, thời gian chơi siêu dài, danh hiệu thành tựu, xếp hạng điểm. Chỉ cần phí thông tin S tệ là kích hoạt game chính hãng, cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1762	l1.bin	1762	战役将要结束却命丧沙场,需信息费S元,即可原地复活,另赠送5000金钱,需发送N条短信,P元/条(不含通信费),是否发送?	Chiến dịch sắp kết thúc mà tử trận nơi sa trường. Chỉ cần phí thông tin S tệ là hồi sinh tại chỗ, tặng thêm 5000 Xu, cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1913	l1.bin	1913	需信息费S元,即可重置技能点!需发送N条短信,P元/条(不含通信费),是否发送?	Chỉ cần phí thông tin S tệ là đặt lại điểm kỹ năng! Cần gửi N tin nhắn, P tệ/tin (chưa gồm cước viễn thông), có gửi không?	S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|2017	l1.bin	2017	您已经购买了&宠物辅助！&游戏已存档！&现在宠物可以帮您自动拾取物品了！	Bạn đã mua &Thú cưng hỗ trợ!&Game đã lưu!&Giờ thú cưng có thể tự động nhặt vật phẩm giúp bạn!		
+l1.bin|2121	l1.bin	2121	您已经成功开启仓库！&游戏已存档！&所有武将均可使用，现在可以使用仓库和其他武将通用装备了！	Bạn đã mở kho thành công!&Game đã lưu!&Mọi võ tướng đều dùng được, giờ có thể dùng kho và trang bị chung với các võ tướng khác!		
+l1.bin|2257	l1.bin	2257	您已经成功激活素材兑换功能！&游戏已存档！&所有武将均可使用，现在可以将素材兑换成金钱了！	Bạn đã kích hoạt thành công chức năng đổi nguyên liệu!&Game đã lưu!&Mọi võ tướng đều dùng được, giờ có thể đổi nguyên liệu lấy Xu!		
+l1.bin|2390	l1.bin	2390	您获取了&宝箱之石*5！&游戏已存档！&现在可以去背包查看了	Bạn nhận được &Đá Rương*5!&Game đã lưu!&Giờ có thể vào hành trang để xem!		
+l1.bin|2472	l1.bin	2472	您的等级提升了10级！&游戏已存档！&现在可以去技能栏查看更新的潜能点了！	Cấp của bạn đã tăng 10 cấp!&Game đã lưu!&Giờ có thể vào ô kỹ năng xem điểm tiềm năng mới cập nhật!		
+l1.bin|2577	l1.bin	2577	您已经成功激活等级上限！&游戏已存档！&现在所有武将都不受等级上限的约束了！	Bạn đã kích hoạt thành công giới hạn cấp!&Game đã lưu!&Giờ mọi võ tướng không còn bị ràng buộc bởi giới hạn cấp!		
+l1.bin|2689	l1.bin	2689	您已经成功激活正版游戏&&游戏已存档！&现在可以继续后续的关卡了！	Bạn đã kích hoạt thành công game chính hãng&&Game đã lưu!&Giờ có thể tiếp tục các màn kế tiếp!		
+l1.bin|2784	l1.bin	2784	死亡复活购买成功!并赠送您5000金钱&游戏已存档！&主角将进入一段无敌时间，&现在您可以继续游戏了！	Mua hồi sinh thành công! Tặng bạn 5000 Xu&Game đã lưu!&Vai chính sẽ có một khoảng thời gian bất tử,&giờ bạn có thể tiếp tục chơi!		
+l1.bin|2923	l1.bin	2923	您已经成功开启洗点功能&游戏已存档！现在可以技能洗点了！	Bạn đã mở thành công chức năng tẩy điểm&Game đã lưu! Giờ có thể tẩy điểm kỹ năng!		
+l1.bin|3011	l1.bin	3011	QQ游戏中心	Trung tâm game QQ		
+l1.bin|3047	l1.bin	3047	QQ社区	Cộng đồng QQ		
+l1.bin|3077	l1.bin	3077	#游戏攻略	#Mẹo chơi		
+l1.bin|3140	l1.bin	3140	#退出链接	#Thoát liên kết		
+l1.bin|3203	l1.bin	3203	精彩推荐	Game hay		
+l1.bin|3237	l1.bin	3237	乐堂年度仙侠ARPG诚意巨献，百张地图、数万字剧情，展示人魔妖三族数十年的生死较量。五行法宝，数十套套装装备炼化，探索无限融合的游戏乐趣。独特的仙魔法术、麒麟坐骑，更有众多幻兽听从号令，锋芒所指，弑神诛仙！	Đại tác tiên hiệp ARPG của Lạc Đường năm nay, hàng trăm bản đồ, hàng vạn chữ cốt truyện, thể hiện cuộc tử chiến mấy chục năm của ba tộc người, ma, yêu. ngũ hành pháp bảo, hàng chục bộ trang bị luyện hoá, khám phá niềm vui dung hợp vô hạn. Tiên ma pháp thuật độc đáo, kỵ thú Kỳ Lân, lại có nhiều huyễn thú nghe lệnh, mũi nhọn chỉ đâu, diệt thần giết tiên!		
+l1.bin|3560	l1.bin	3560	核辐射危机，废弃城市惊天秘密。卧底阿龙独闯地下拳市粉碎黑帮邪恶计划，首次引入经脉必杀技打通经脉挑战人体极限获得强大技能。打造属于玩家自己的连击系统.	Khủng hoảng bức xạ hạt nhân, bí mật động trời của thành phố bỏ hoang. Mật thám A Long một mình xông vào chợ quyền anh ngầm, phá nát âm mưu xấu xa của băng đảng, lần đầu đưa vào tuyệt kỹ kinh mạch, khai thông kinh mạch thách thức giới hạn cơ thể để nhận kỹ năng mạnh. Tạo hệ thống combo riêng của người chơi.		

@@ -1,0 +1,112 @@
+container	offset_goc	index	box	module	dich	font	mau_than	mau_vien
+uires	60706	3	0,38,41,17	(module 2)	Chọn	15c	#feecf9	#111d1f
+uires	60706	3	0,55,40,17	(module 3)	Về	15c	#feecf9	#111d1f
+uires	60706	3	41,0,48,22	(module 12)	Hệ thống	15c	#ffbc53	#221b38
+uires	60706	3	40,22,49,20	(module 11)	Danh hiệu	15c	#ffac46	#221b38
+uires	60706	3	41,42,48,22	(module 10)	Tiềm năng	15c	#ffd467	#221b38
+uires	60706	3	41,64,48,18	(module 9)	Vật phẩm	15c	#ffca5f	#221b38
+uires	60706	3	41,82,48,22	(module 7)	Chỉ số	15c	#ffd86a	#221b38
+uires	76573	5	0,0,25,13	(module 0)	Dược	13c	#00f3eb	#1c3f84
+uires	76573	5	0,14,25,13	(module 1)	Dược	13c	#f5b626	#511c1b
+uires	76573	5	26,0,25,13	(module 2)	Đồ	12	#00f3eb	#1c3f84
+uires	76573	5	26,14,25,13	(module 3)	Đồ	12	#f5b626	#511c1b
+uires	76573	5	52,0,25,13	(module 4)	Đặc	12	#00f3eb	#1c3f84
+uires	76573	5	52,14,25,13	(module 5)	Đặc	12	#f5b626	#511c1b
+uires	76573	5	78,0,25,13	(module 6)	Việc	13c	#00f3eb	#1c3f84
+uires	76573	5	78,14,25,13	(module 7)	Việc	13c	#f5b626	#511c1b
+uires	76573	5	0,28,25,13	(module 16)	Lv	12	#ffd800	#1e1212
+uires	76573	5	26,28,25,13	(module 18)	EXP	12	#90ec45	#121e17
+uires	76573	5	52,28,25,13	(module 20)	HP	12	#90ec45	#121e17
+uires	76573	5	78,28,25,13	(module 22)	MP	12	#dee2d1	#121e17
+uires	76573	5	0,42,25,13	(module 24)	May	12	#dee2d1	#121e17
+uires	76573	5	26,42,25,13	(module 21)	ATK	12	#90ec45	#121e17
+uires	76573	5	52,42,25,13	(module 23)	DEF	12	#90ec45	#121e17
+uires	76573	5	78,42,25,13	(module 25)	Crit	12	#90ec45	#121e17
+uires	76573	5	0,56,25,13	(module 26)	Xu	12	#ffd800	#1e1212
+uires	76573	5	26,56,25,13	(module 14)	Chiêu	13c	#fcffd2	#620d02
+uires	76573	5	52,56,25,13	(module 15)	Lực	12	#ddffdd	#002ed9
+uires	76573	5	0,70,61,13	(module 12)	Điểm TN	12	#e3e7d8	#003698
+uires	76573	5	62,70,13,13	(module 37)	Mở	13c	#90ec45	#182c24
+uires	76573	5	76,70,13,13	(module 38)	Ko	13c	#90ec45	#182c24
+uires	76573	5	0,84,25,13	(module 27)	Đạt	12	#ffe270	#2e1b38
+uires	76573	5	25,84,25,13	(module 28)	Mô tả	13c	#e15438	#2e1b38
+uires	76573	5	51,84,25,13	(module 30)	Quà	12	#ffa842	#2e1b38
+uires	76573	5	0,98,49,13	(module 31)	Cá nhân	12	#90ec45	#182c24
+uires	76573	5	50,98,49,13	(module 32)	Gửi điểm	12	#ffd13d	#1e120f
+uires	76573	5	0,112,49,13	(module 33)	Thành tựu	13c	#dee2d1	#182c24
+uires	76573	5	50,112,50,13	(module 34)	Đánh liền	13c	#90ec45	#182c24
+uires	76573	5	0,126,25,13	(module 35)	Nhạc	13c	#dee2d1	#182c24
+uires	76573	5	27,126,48,13	(module 36)	Về menu	12	#90ec45	#182c24
+uires	76573	5	76,126,25,13	(module 29)	Danh	13c	#ffe270	#2e1b38
+uires	76573	5	79,57,11,11	(module 8)	Vũ	13c	#575355	-
+uires	76573	5	91,57,9,11	(module 9)	Gi	13c	#575355	-
+uires	76573	5	77,85,11,11	(module 10)	Hà	13c	#575355	-
+uires	76573	5	89,85,11,11	(module 11)	Sứ	13c	#575355	-
+uires	84345	7	0,0,24,13	(module 5)	Bán	12	#f5b626	#511c1b
+uires	84345	7	25,0,24,13	(module 4)	Bán	12	#00f3eb	#1c3f84
+uires	84345	7	50,0,25,13	(module 7)	Khác	13c	#fff883	#511c1b
+uires	84345	7	76,0,25,13	(module 6)	Khác	13c	#8bffe0	#1c3f84
+uires	84345	7	101,0,23,13	(module 11)	Giá	12	#f4f0e8	-
+uires	84345	7	124,0,25,13	(module 32)	Nâng	13c	#ffa842	#221b38
+uires	84345	7	0,14,70,16	(module 0)	Thành tựu	15c	#4dd59f	#082c4a
+uires	84345	7	71,13,72,18	(module [13, 12])	Thống kê	15c	#93ffe4	#18084a
+uires	84345	7	0,30,49,13	(module 17)	Combo max	13c	#90ec45	#182c24
+uires	84345	7	49,30,48,13	(module 18)	Thời gian	13c	#dee2d1	#182c24
+uires	84345	7	0,44,49,13	(module 19)	Thiệt hại	13c	#90ec45	#182c24
+uires	84345	7	49,44,24,13	(module [20])	Điểm	13c	#90ec45	#182c24
+uires	84345	7	73,44,25,13	(module [30])	cuối	13c	#90ec45	#182c24
+uires	84345	7	0,58,49,13	(module 21)	Nhận Xu	12	#dee2d1	#182c24
+uires	84345	7	49,58,49,13	(module 22)	Nhận TN	12	#90ec45	#182c24
+uires	84345	7	0,72,37,13	(module 23)	Hạ gục	12	#90ec45	#182c24
+uires	84345	7	98,58,25,13	(module 25)	Hạng	13c	#ffa842	#221b38
+uires	84345	7	98,30,25,13	(module 1)	Chọn	13c	#ffa842	#221b38
+uires	84345	7	98,44,25,13	(module 2)	Về	12	#ffe270	#221b38
+uires	84345	7	0,87,48,20	(module 14)	Shop	18	#ffb048	#221b38
+uires	84345	7	38,72,72,15	(module 24)	Lưu game	15c	#ffd667	#48203c
+uires	84345	7	100,87,23,11	(module 8)	Gửi	12	#f4f0e8	-
+uires	84345	7	74,101,23,11	(module 9)	Gửi	12	#908f8d	-
+uires	84345	7	97,99,22,11	(module 29)	Rút	12	#f4f0e8	-
+uires	84345	7	121,102,22,11	(module 10)	Rút	12	#908f8d	-
+uires	84345	7	0,108,73,18	(module 16)	Chọn tướng	15c	#f6ad1b	#690e07
+uires	84345	7	49,88,46,13	(module 31)	Độ khó	12	#90ec45	#182c24
+uires	84345	7	74,113,24,13	(module 26)	Dễ	12	#ffd88a	#221b38
+uires	84345	7	98,113,24,13	(module 27)	Vừa	12	#ffb453	#221b38
+uires	84345	7	122,113,22,13	(module 28)	Khó	12	#ff0000	#221b38
+uires	84345	7	123,31,20,71	(module 15)	Ải	12	#ffff26	#690e07
+uires	96468	13	0,0,23,11	(module 0)	Xem	12	#c0ff92	-
+uires	96468	13	24,0,22,11	(module 1)	Dùng	13c	#ffc047	-
+uires	96468	13	47,0,23,11	(module 2)	Bỏ	12	#979797	-
+uires	96468	13	71,0,23,11	(module 3)	Mặc	12	#ffc047	-
+uires	96468	13	0,12,23,11	(module 4)	Nâng	13c	#f4f0e8	-
+uires	96468	13	24,12,22,11	(module 5)	Mở	12	#ffc047	-
+uires	96468	13	47,12,23,11	(module 6)	Tập	12	#f4f0e8	-
+uires	96468	13	71,12,23,11	(module 7)	Quên	13c	#979797	-
+uires	97757	17	0,0,24,13	(module 0)	Có	12	#ffe270	#2e1b38
+uires	97757	17	1,13,21,12	(module 1)	(c)	13c	#ffe270	#2e1b38
+uires	97757	17	24,0,47,21	(module 3)	Đổi	18	#ffb24b	#221b38
+uires	98480	18	2,0,55,15	(module 0)	Mua đồ	15c	#ffae33	#150e0e
+uires	98480	18	3,15,55,15	(module 1)	Bán đồ	15c	#ffe460	#150e0e
+uires	98480	18	1,30,57,15	(module 2)	Đổi liệu	12	#ffd54b	#150e0e
+uires	98480	18	1,45,56,15	(module 3)	Gửi đồ	15c	#ffae33	#150e0e
+uires	98480	18	0,60,56,15	(module 4)	Rút đồ	15c	#ffe460	#150e0e
+uires	98480	18	1,75,56,15	(module 5)	Trợ giúp	15c	#ff0000	#24000c
+uires	99549	19	0,0,73,13	(module 0)	Chơi lại ải	12	#00f0f0	#132137
+uires	99549	19	0,13,73,13	(module 1)	Qua ải sau	12	#7bfff1	#132137
+uires	99549	19	0,26,73,13	(module 2)	Về màn ải	12	#e1fff0	#132137
+uires	100298	20	0,0,46,22	(module 0)	Kho	18	#ffc055	#221b38
+uires	100298	20	0,22,25,13	(module 2)	Đồ	12	#fff883	#511c1b
+uires	100298	20	0,35,25,13	(module 1)	Đồ	12	#8bffe0	#1c3f84
+uires	100298	20	26,22,25,13	(module 4)	Vũ	12	#fff883	#511c1b
+uires	100298	20	26,35,25,13	(module 3)	Vũ	12	#8bffe0	#1c3f84
+uires	100298	20	52,22,25,13	(module 6)	Giáp	12	#fff883	#511c1b
+uires	100298	20	52,35,25,13	(module 5)	Giáp	12	#8bffe0	#1c3f84
+uires	100298	20	49,0,23,11	(module 7)	Mua	12	#f4f0e8	-
+uires	100298	20	49,11,22,11	(module 8)	Bán	12	#f4f0e8	-
+uires	105157	24	0,0,49,13	(module 0)	Hồi sinh	12	#e1fff0	#132137
+animation	301320	21	0,3,55,29		Hạ gục	18	#fd6d00	#1e0808
+animation	351240	29	24,2,63,56		Liên trảm	18	#fee100	#1e0808
+animation	358141	30	10,7,67,41		Chí mạng	18	#fee200	#1e0808
+animation	374879	34	8,8,50,35		Lên cấp	18	#6ec86e	#1e0808
+animation	404761	52	0,0,110,47	module1	Đạt danh hiệu	18	#6eb9be	#120c0c+viền ngoài #d4fffb
+animation	404761	52	0,47,115,47	module0	Đạt thành tựu	18	#e18c73	#120c0c+viền ngoài #f8dbff
+animation	414838	53	0,0,115,94	mặt nạ	(silhouette alpha>0 của ảnh 52)	-	#ffffff	-

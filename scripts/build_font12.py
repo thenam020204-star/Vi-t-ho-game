@@ -60,6 +60,11 @@ def main():
         if u in tab: rep += 1
         else: add += 1
         tab[u] = (pack(size, bpr, rows), cw)
+    # Dau cau toan kho trong ban dich (bat buoc giu '：' U+FF1A vi code tach ten nguoi noi bang indexOf)
+    # -> dung glyph + do rong cua dau ASCII f12 tuong ung de khong ho khoang trang rong 12px.
+    for full, asc in ((0xFF1A, ':'), (0xFF0C, ','), (0xFF01, '!'), (0xFF1F, '?'), (0xFF08, '('), (0xFF09, ')')):
+        if asc in fv:
+            cw, rows = fv[asc]; tab[full] = (pack(size, bpr, rows), cw)
     keys = sorted(tab, key=lambda u: u - 0x10000 if u >= 0x8000 else u)   # thu tu short co dau
     os.makedirs(outd, exist_ok=True)
     o = bytearray([size]); o += struct.pack('>h', len(keys))

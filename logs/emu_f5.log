@@ -1,0 +1,101 @@
+[INFO] org.recompile.mobile.MobilePlatform: Accompanying JAD found! Parsing additional MIDlet properties.
+[INFO] Loading MIDlet: éé¸ä¸å½ä¹å¤©éå¥³ç¥ | Main Class: CMIDlet
+[ERROR] javax.microedition.media.Manager: Couldn't open Tone Player: Can not open line
+[INFO] javax.microedition.midlet.MIDlet: Create MIDlet
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[ERROR] org.recompile.mobile.players.WAVPlayer: Could not prepare wav stream:No line matching interface Clip supporting format PCM_SIGNED unknown sample rate, 16 bit, stereo, 4 bytes/frame, big-endian is supported.
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+
+
+
+
+
+
+
+
+
+
+
+
+
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: ChannelFirst
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: ChannelSecond
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: InterChannel
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: Term
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: QQ
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: FreeCode
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: FreeDest
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: SmsCode1
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: SmsCode2
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: SmsDest1
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: SmsDest2
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: LogoLinkReco
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: FeeMode
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: DoCode
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: DoDest
+
+
+
+
+
+
+
+
+
+strContents[0] 140 107 Z600 WEB CS IC N73 0 17 01 Z600
+strContents[1] 140 107 Z600 WEB CS IC N73 0 17 02 Z600
+strContents[2] 140 107 Z600 WEB CS IC N73 0 17 03 Z600
+strContents[3] 140 107 Z600 WEB CS IC N73 0 17 04 Z600
+strContents[4] 140 107 Z600 WEB CS IC N73 0 15 05 Z600
+strContents[5] 140 107 Z600 WEB CS IC N73 0 11 06 Z600
+strContents[6] 140 107 Z600 WEB CS IC N73 0 01 07 Z600
+strContents[7] 140 107 Z600 WEB CS IC N73 0 02 08 Z600
+strContents[8] 140 107 Z600 WEB CS IC N73 0 17 09 Z600
+texts[0]=Kích hoạt Liệt Ưng làm thú cưng, giúp bạn nhặt vật phẩm dễ dàng! Mua vật phẩm này cần phí thông tin 2 tệ, cần gửi 1 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+texts[1]=Mở kho chung để trang bị của bạn có thể chia cho các võ tướng khác dùng. Cần phí thông tin 2 tệ, cần gửi 1 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+texts[2]=Đổi nguyên liệu lấy Xu, đánh quái kiếm tiền, một công đôi việc. Mua vật phẩm này cần phí thông tin 2 tệ, cần gửi 1 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+texts[3]=Mua một lần 5 Đá Rương, nâng cấp rương để nhận trang bị tốt hơn. Cần phí thông tin 2 tệ, cần gửi 1 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+texts[4]=Tăng 10 cấp cho nhân vật hiện tại (khi chưa mua mở giới hạn cấp, tối đa cấp 99). Cần phí thông tin 2 tệ, cần gửi 1 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+texts[5]=Vượt ngay giới hạn cấp của nhân vật, không còn bị ràng buộc cấp độ! Cần phí thông tin 2 tệ, cần gửi 1 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+texts[6]=Tự do chọn các võ tướng nổi tiếng, thời gian chơi siêu dài, danh hiệu thành tựu, xếp hạng điểm. Chỉ cần phí thông tin 4 tệ là kích hoạt game chính hãng, cần gửi 2 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+texts[7]=Chiến dịch sắp kết thúc mà tử trận nơi sa trường. Chỉ cần phí thông tin 2 tệ là hồi sinh tại chỗ, tặng thêm 5000 Xu, cần gửi 1 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+texts[8]=Chỉ cần phí thông tin 2 tệ là đặt lại điểm kỹ năng! Cần gửi 1 tin nhắn, 2 tệ/tin (chưa gồm cước viễn thông), có gửi không?。
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'bin/logo_3.png' in jar: file:/home/user/Vi-t-ho-game/out/HungBaTamQuoc_N73_viet.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'bin/logo_3.png' in jar: file:/home/user/Vi-t-ho-game/out/HungBaTamQuoc_N73_viet.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'XMessage.class' in jar: file:/home/user/Vi-t-ho-game/out/HungBaTamQuoc_N73_viet.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Error Adapting Class XMessage
+[ERROR] org.recompile.mobile.MIDletLoader: java.io.IOException: Class not found
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'bin/buy_select.png' in jar: file:/home/user/Vi-t-ho-game/out/HungBaTamQuoc_N73_viet.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'bin/buy_select.png' in jar: file:/home/user/Vi-t-ho-game/out/HungBaTamQuoc_N73_viet.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'bin/buy_select.png' in jar: file:/home/user/Vi-t-ho-game/out/HungBaTamQuoc_N73_viet.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'bin/buy_select.png' in jar: file:/home/user/Vi-t-ho-game/out/HungBaTamQuoc_N73_viet.jar
+>>屏幕控制：type=4, value=1
+>>执行延时：pauseTime=1
+>>屏幕控制：type=5, value=1
+>>执行延时：pauseTime=1
+>>屏幕控制：type=2, value=50
+>>执行延时：pauseTime=50
+>>执行延时：pauseTime=1
+>>屏幕控制：type=4, value=300
+>>执行延时：pauseTime=300
+pointerFirstBornY==221
+pointerFirstBornY==230
+pointerFirstBornY==277
+pointerFirstBornY==220
+pointerFirstBornY==271
+pointerFirstBornY==219
+pointerFirstBornY==277
+pointerFirstBornY==241
+pointerFirstBornY==217
+pointerFirstBornY==260

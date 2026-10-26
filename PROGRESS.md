@@ -1,13 +1,13 @@
 # PROGRESS — Việt hoá 雄霸三国之天降女神 (N73)
 
-Quyết định: Hán Việt nhẹ · font game 12px (ghép f12 vào bin/font.bin) · ảnh: f12 ô nhỏ, f15c/f18 ô lớn, 1 màu + viền 1px · giữ nguyên logo/quảng cáo.
-Kế hoạch: /root/.claude/plans/streamed-snacking-forest.md (A ảnh → B font → C text → D code → test).
+Quyết định: Hán Việt nhẹ · 怒气=MP · font game 12px (ghép f12 vào bin/font.bin) · ảnh f12 / f15c / f18, 1 màu + viền 1px · giữ logo bìa + quảng cáo.
 
-- [x] Kiểm kê, decompile CFR, khảo sát đường đi chữ
-- [ ] A. Ảnh (công nhân Sonnet đang làm)
-- [x] B. Font 12px: scripts/build_font12.py (thay 94 ASCII, thêm 134 chữ Việt → 7179 glyph, bin/fw.bin advance), src_patch/bs.java (advance thật, buffer dùng lại, viền có lề 1px, readFully); preverify riêng bs + set_clinit_flags → jar_check PASS; FreeJ2ME: chữ Việt mẫu ở Trợ giúp hiển thị đúng
-- [ ] C. Trích/dịch text resource + class
-- [ ] D. Patch wrapper/dialogue/drawString
-- [ ] Test FreeJ2ME, jar_check, bàn giao
+- [x] Kiểm kê, decompile, đường đi chữ
+- [x] A. 16 PNG rời + 15 PNG nhúng (uires/animation)
+- [x] B. Font 12px + bs viết lại
+- [x] C. Trích/dịch 625 dòng resource + 433 chuỗi .class (kiem OK, placeholder kỹ năng OK)
+- [x] D. vh: ngắt dòng px, khung thoại 3 dòng, chữ chạy, drawString→bitmap; uiform bảng chọn ải
+- [x] jar_check PASS, FreeJ2ME các màn chính, rebuild tái lập (SHA-1 ổn định)
+- [ ] Soát: menu trong trận / shop / kho / kỹ năng (chưa đi tới bằng kịch bản phím); máy thật / KEmulator
 
-Ghi chú môi trường: freej2me_plus nhận tham số `jar [fullscreen] w h [scale]` → scripts/run_emu.py (bản sửa) truyền thêm '0'. Còn tồn ở D: wrapper z.a để dấu cách đầu dòng.
+Phiên sau: đọc BAO_CAO.md mục "Còn tồn"; sửa bản dịch ở text/*.tsv → `bash rebuild.sh` → `text/kiem.py` + `scripts/text/check_skill_ph.py`.

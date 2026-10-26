@@ -1,0 +1,626 @@
+id	file	key	goc	dich	ghichu	gioihan
+script.bin|0.0	script.bin	0.0	欢迎激活正版游戏，请领取{c:1}免费礼包{/}。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.1	script.bin	0.1	提示：当主角{c:1}血量{/}低于一半，系统将{c:1}自动使用{/}恢复血量药剂。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.2	script.bin	0.2	提示：试玩关仅供体验游戏，试玩关卡保存的所有的{c:1}数据{/}将会{c:1}清零{/}。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.3	script.bin	0.3	提示：{c:1}宠物系统{/}可在“{c:1}0{/}”键{c:1}游戏辅助{/}中开启。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.4	script.bin	0.4	提示：你已升到2级，请{c:1}及时分配技能点{/}。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|0.5	script.bin	0.5	成vbcvb		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|5.0	script.bin	5.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|5.1	script.bin	5.1	{c:1}汜水守将{/}：若失了汜水关，我等皆有提头去见相国。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|8.0	script.bin	8.0	风格的风格大方吧		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|11.0	script.bin	11.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|11.1	script.bin	11.1	{c:1}吕布{/}：神挡杀神，佛挡杀佛！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|14.0	script.bin	14.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|15.0	script.bin	15.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|15.1	script.bin	15.1	{c:1}乌巢守将{/}：乌巢有失，我等定是人头落地。众将士，随我背水一战！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|18.0	script.bin	18.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|18.1	script.bin	18.1	{c:1}吕布{/}：欺人太甚，今日不是你死，便是我亡！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|23.0	script.bin	23.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|23.1	script.bin	23.1	{c:1}袁将{/}：官渡实属侥幸，主公乃是天下雄主，其实曹贼匹夫所能相比？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|24.0	script.bin	24.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|24.1	script.bin	24.1	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|25.0	script.bin	25.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|26.0	script.bin	26.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|26.1	script.bin	26.1	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|26.2	script.bin	26.2	{c:1}曹军守将{/}：将军请回吧，无主公手谕，休得过关！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|27.0	script.bin	27.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|30.0	script.bin	30.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|30.1	script.bin	30.1	{c:1}诸葛亮{/}：新野之地，即是尔等埋骨之所。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|33.0	script.bin	33.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|34.0	script.bin	34.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|35.0	script.bin	35.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|35.1	script.bin	35.1	{c:1}司马懿{/}：哼，休伤我家主公性命！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|38.0	script.bin	38.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|38.1	script.bin	38.1	{c:1}曹操{/}：今日华容道之败，我曹操，他日定亲率大军雪耻！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|39.0	script.bin	39.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|41.0	script.bin	41.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|41.1	script.bin	41.1	{c:1}樊城守将{/}：尔等匹夫，竟敢袭扰我家丞相！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|44.0	script.bin	44.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|44.1	script.bin	44.1	{c:1}司马懿{/}：嘻嘻，有我在此，尔等定是有去无回。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|47.0	script.bin	47.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|47.1	script.bin	47.1	{c:1}诸葛亮{/}：袭我荆州系小人所为，尔等定遭天谴！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|48.0	script.bin	48.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|49.0	script.bin	49.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|50.0	script.bin	50.0	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|50.1	script.bin	50.1	{c:1}诸葛亮{/}：麦城！这...这就是麦城！！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|51.0	script.bin	51.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|51.1	script.bin	51.1	{c:1}樊城守将{/}：有俺在此镇守，樊城便是丞相的！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|52.0	script.bin	52.0	提示：此关卡为{c:1}限时关卡{/}，请在{c:1}规定时间{/}内通过关卡。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|52.1	script.bin	52.1	{c:1}司马懿{/}：丞相天恩，我唯有以死相报！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|53.0	script.bin	53.0	恭喜主战役通关，挑战关卡已免费开启！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|53.1	script.bin	53.1	提示：此关卡为{c:1}头目战{/}，请{c:1}检查装备{/}，{c:1}补充药品{/}。所需物品可以按{c:1}左软键{/}在{c:1}商城中{/}购买。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|53.2	script.bin	53.2	{c:1}曹操{/}：天下尽骂我曹操，却不知，若无我，岂有汉室延续！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.0	script.bin	54.0	诸葛亮：呵呵，姐姐好久不见。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.1	script.bin	54.1	司马懿：嘻嘻，劳烦妹妹挂念了。只是妹妹此番前来，途中伤了我无数军士。我这做姐姐的，少不得要责备你几句了。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.2	script.bin	54.2	诸葛亮：这说起来，还是姐姐的不是呢。妹妹数次登门拜访，却总是紧闭门户，莫非姐姐讨厌不成？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.3	script.bin	54.3	司马懿：嘻嘻，那还是姐姐的不是了。哎，我一直公务缠身，不曾听得妹妹要来。今日才得知，不就来相迎了么。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.4	script.bin	54.4	诸葛亮：既是贵客，又何必这般戒备森严，莫非怕妹妹趁机夺了姐姐的营寨？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.5	script.bin	54.5	司马懿：哈哈，既是姐姐有心相送，恐怕我手下这些军士也不能答应呢。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.6	script.bin	54.6	诸葛亮：咱们姐妹说话，这些军士好是吵闹。我这做妹妹的，就替姐姐教训下他们吧。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.7	script.bin	54.7	司马懿：呵呵，妹妹有心了，你远道而来，还是姐姐替你吧。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.8	script.bin	54.8	诸葛亮：不分敌我，姐姐还是老样子。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.9	script.bin	54.9	司马懿：嘻嘻，这不省去妹妹动手的麻烦？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.10	script.bin	54.10	司马懿：哎呀，你瞧姐姐，和妹妹聊的投机，竟然忘了规矩。不如现在随我进营寨，我与妹妹聊个痛快？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.11	script.bin	54.11	诸葛亮：你！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.12	script.bin	54.12	司马懿：嘻嘻，怎么，妹妹不敢了么？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.13	script.bin	54.13	？？？：我愿替军师走这一趟！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.14	script.bin	54.14	司马懿：关羽！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.15	script.bin	54.15	关羽：大哥还有要事找我家军师。妹妹既然盛情相邀，就让关某替军师走这一遭。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.16	script.bin	54.16	司马懿：哼！姐姐有这心，妹妹也拦不住你。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.17	script.bin	54.17	司马懿：只怕军中刀剑无眼，恐怕伤了姐姐。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.18	script.bin	54.18	关羽：哈哈，多谢妹妹有心了。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.19	script.bin	54.19	司马懿：哼！那妹妹就在大营恭候了。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|54.20	script.bin	54.20	诸葛亮：关将军小心。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.0	script.bin	55.0	提示：教学关卡，主角{c:1}{/}不会死亡！{c:0}{/}		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.1	script.bin	55.1	提示：教学关卡{c:1}仅供试玩{/}，{c:1}商店系统无法开启{/}。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.2	script.bin	55.2	提示：刀剑无情，未雨绸缪，{c:1}{/}装备{c:0}{/}将是三国乱世中生存的重要法则！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.3	script.bin	55.3	提示：装备可以通过{c:1}{/}开启宝箱{c:0}{/}、{c:1}{/}商店购买{c:0}{/}、{c:1}{/}随机掉落{c:0}{/}获得。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.4	script.bin	55.4	提示：获得极品装备{c:1}{/}青龙偃月刀{c:0}{/}！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.5	script.bin	55.5	提示：进入{c:1}{/}装备系统{c:0}{/}教学！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.6	script.bin	55.6	提示：武器已装备。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.7	script.bin	55.7	提示：游戏中的{c:1}{/}攻击石、防御石、暴击石和幸运石{c:0}{/}可以附加装备属性，及时{c:1}{/}升级装备{c:0}{/}可以很好的降低游戏难度！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.8	script.bin	55.8	提示：获得{c:1}{/}攻击石{c:0}{/}。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.9	script.bin	55.9	提示：进入{c:1}{/}装备升级{c:0}{/}教学！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|55.10	script.bin	55.10	提示：击败场景中所有敌军后，会出现{c:1}传送点{/}，在传送点附近{c:1}按5键{/}，可以进入下一个场景。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.0	script.bin	56.0	而对方水电费		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.1	script.bin	56.1	提示：升级可以得到{c:1}{/}技能点{c:0}{/}，使用技能点{c:1}{/}开启技能{c:0}{/}，可以更快速的击杀敌人。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.2	script.bin	56.2	提示：教学关卡，{c:1}{/}技能系统开放{c:0}{/}。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.3	script.bin	56.3	提示：进入{c:1}{/}技能教学{c:0}{/}！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.4	script.bin	56.4	提示：可以使用{c:1}{/}1、3、7、9键{c:0}{/}释放技能。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.5	script.bin	56.5	提示：连续攻击可以形成连击，{c:1}{/}高连击{c:0}{/}会有很好的属性加成！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.6	script.bin	56.6	提示：击杀敌人的同时注意收集掉落的{c:1}{/}素材{c:0}{/}，素材可以{c:1}{/}兑换金钱{c:0}{/}！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.7	script.bin	56.7	提示：接下来你将学习如何{c:1}{/}升级宝箱{c:0}{/}！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.8	script.bin	56.8	提示：游戏中共有{c:1}{/}五种不同等级宝箱{c:0}{/}，可以随机开启{c:1}{/}属性得到加成的装备{c:0}{/}。宝箱等级越高，装备和附加属性越好。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.9	script.bin	56.9	提示：获得{c:1}{/}太极宝箱{c:0}{/}和{c:1}{/}宝箱之石。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.10	script.bin	56.10	提示：进入{c:1}{/}宝箱升级{c:0}{/}教学！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.11	script.bin	56.11	百夫长：哈哈，瞧我看见什么了，兄弟们。咱们军营来了个漂亮的娘们儿。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.12	script.bin	56.12	关羽：恶心的家伙。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.13	script.bin	56.13	百夫长：嘿嘿，听逃回来的人说你打杀了我不少兄弟。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.14	script.bin	56.14	百夫长：我本该带着兄弟杀了此人。不过不曾想是这样的美人儿。嘿嘿，不过陪兄弟们喝个酒，就算赔罪了吧。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.15	script.bin	56.15	关羽：哼！连你家元帅见我也称一声姐姐，尔等鼠辈，还敢放肆，速速让开。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.16	script.bin	56.16	百夫长：哈哈，好辣的美人，我喜欢！美人儿，就是想走，恐怕我这般兄弟也不答应呢。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.17	script.bin	56.17	百夫长：嘿嘿，美人，想清楚了？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.18	script.bin	56.18	关羽：哼！找死！！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.19	script.bin	56.19	关羽：还有什么要说？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.20	script.bin	56.20	百夫长：青龙偃月刀！你......你是！！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.21	script.bin	56.21	百夫长：御敌！左右，随我拿下敌将！		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.22	script.bin	56.22	提示：{c:1}宠物{/}烈鹰，可以自动帮你{c:1}拾取物品{/}。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|56.23	script.bin	56.23	提示：{c:1}宠物系统已开启{/}。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.0	script.bin	57.0	司马懿：嘻嘻，妹妹等候多时了。那些将士没有为难姐姐吧？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.1	script.bin	57.1	关羽：哼，随我去见我家大哥和军师。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.2	script.bin	57.2	司马懿：礼尚往来，做妹妹的去看望各位姐姐，那是应该的。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.3	script.bin	57.3	司马懿：不过姐姐一路辛苦，不然先住下几日？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.4	script.bin	57.4	关羽：不必，关某不觉劳累，妹妹还是随我启程吧。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.5	script.bin	57.5	司马懿：哎呀，姐姐这话说的就生分了，姐姐做客，不加款待，别人岂不说我不知礼数。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.6	script.bin	57.6	关羽：哈哈，妹妹有心了，关某谢过了。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.7	script.bin	57.7	司马懿：嘻嘻，这是应当，左右，请姐姐稍作歇息。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.8	script.bin	57.8	关羽：呵呵，我说妹妹身边怎么没人呢。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.9	script.bin	57.9	关羽：呵呵，我若不领妹妹这个情呢？		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+script.bin|57.10	script.bin	57.10	司马懿：嘻嘻，那就莫怪妹妹失礼了。		hoi thoai; \"Ten：\" (U+FF1A) = nguoi noi	
+string.bin|0.2	string.bin	0.2	目标完成			
+string.bin|0.4	string.bin	0.4	打开右软件，并选择打造			
+string.bin|0.6	string.bin	0.6	6键向右行走			
+string.bin|2.0	string.bin	2.0	首先按右软件打开菜单。			
+string.bin|2.2	string.bin	2.2	按6键向右移动至背包。			
+string.bin|2.4	string.bin	2.4	按5键确定进入背包选项。			
+string.bin|2.6	string.bin	2.6	这个是道具栏，选择道具按5键盘选择使用就可以了。			
+string.bin|3.0	string.bin	3.0	按右软键打开菜单			
+string.bin|3.2	string.bin	3.2	按6键向右选择。			
+string.bin|3.4	string.bin	3.4	按5键。			
+string.bin|3.6	string.bin	3.6	按5键确定进入选项。			
+string.bin|3.8	string.bin	3.8	有4种选项，按8键向下选择加点。			
+string.bin|3.10	string.bin	3.10	连续按右软键关闭菜单。			
+string.bin|3.11	string.bin	3.11	有4种选项，按8键向下选择升级。			
+string.bin|3.12	string.bin	3.12	按6键向右选择特技栏			
+string.bin|3.14	string.bin	3.14	有4种选项，按8键向下选择装备。			
+string.bin|3.15	string.bin	3.15	按6键向右选择装备栏			
+string.bin|4.0	string.bin	4.0	11【群雄起义】董卓废少帝刘辩，立刘协为帝，把弄朝纲，手握大权，其众多群雄激愤。公元189年，曹操发布矫诏，袁绍等18路诸侯于关东起兵，拉开讨逆董卓的大幕。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.1	string.bin	4.1	12【兵指洛阳】十八路诸侯联军讨伐董卓，立袁绍为盟主，拥兵数十万与董卓所部在各地展开厮杀，兵指当时朝廷所在的洛阳。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.2	string.bin	4.2	13【大破汜水】汜水关由华雄把守，盟军孙坚部首战不利，后关羽温酒斩华雄，盟军士气大胜，趁势攻杀汜水关，由此落入盟军之手。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.3	string.bin	4.3	14【进兵虎牢】虎牢关为长安屏障，董卓亲率大军御敌。刘关张为前锋攻杀，董卓不敌，迁都长安后撤退。盟军引军入关。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.4	string.bin	4.4	15【鏖战吕布】汜水关失守，虎牢关岌岌可危。董卓派遣手下大将吕布御敌。与袁绍军的刘备、关羽和张飞大战数百回合，吕布力不从心，虚晃一枪退走回营。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.5	string.bin	4.5	21【官渡拉锯】曹操挟持献帝，拥兵数万与袁绍隔江对峙。建安五年，陈琳写讨操檄文，终于兵戈相见，在官渡展开生死之战。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.6	string.bin	4.6	22【火烧乌巢】建安五年十月，袁绍派遣淳于琼送军粮宿于乌巢，许攸因袁绍失去恩义转投曹操。曹操夜袭乌巢，火烧军粮，袁绍从此陷入被动局面。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.7	string.bin	4.7	23【缢杀吕布】袁绍与曹操隔江对峙，两军摩擦不断，大战一触即发。为大战准备，曹操听从谋士消除不安因素的建议，与建安三年领军攻打徐州，白门楼前缢杀吕布。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.8	string.bin	4.8	24【官渡决战】火烧乌巢之后，袁绍军优势尽去，死亡惨重，曹军兵锋所向，无人可挡。张颌、高览因谋士郭图进谗言率军叛逃，官渡一战胜败已定。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.9	string.bin	4.9	25【仓亭之战】官渡决战后，于建安六年，双方再次发生仓亭之战，袁绍大败，从此元气大伤，再无力与之争衡。在两次战胜后，曹操威震天下，成就一方霸主。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.10	string.bin	4.10	31【千里单骑】官渡之战结束后，身在曹营的关羽获闻刘备消息，决定回到故主身边。挂印封金，守关曹将却因为没有丞相谕令加以阻挡，关羽过五关，斩六将，留下了千里走单骑的千古美誉。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.11	string.bin	4.11	32【兵发新野】建安十三年，曹操率大军南下荆州，派夏侯惇领兵十万伐新野。刘备军师诸葛亮设计火烧新野，曹军大败，又起兵五十万，誓必踏平江南。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.12	string.bin	4.12	33【孙刘联盟】因荆州新主刘琮不战而降，刘备仓皇出逃，被曹操大军紧逼，刘备军只得向孙权求救。遣刘备军师诸葛亮前往柴桑游说，与孙权结成军事同盟，共同抗曹。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.13	string.bin	4.13	34【火烧赤壁】先是庞统献连环计，曹军用铁链横锁战船，后是黄盖苦肉计诈降，至战日火船攻营，顿时火烧赤壁数百里，曹军烧溺死者无数，至此再无如此大规模南下荆州。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.14	string.bin	4.14	35【兵败华容】孙刘联军横渡长江，大败曹军，曹操见败局已无法挽救吗，当即自焚余船，引军退走，在华容道被关羽所释，退回江陵。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.15	string.bin	4.15	41【水淹襄樊】建安二十四年，刘备已稳得汉中，荆州守将关羽率领部队北伐樊城，当时汉水暴涨，关羽顺势水淹樊城，杀敌无数。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.16	string.bin	4.16	42【兵发襄阳】樊城一张，关羽斩庞德，获于禁降军三万，一时威震华夏，气势锐不可当。关羽再次派兵围攻重镇襄阳，守将归降。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.17	string.bin	4.17	43【白衣渡江】孙权集团气恼刘备占据荆州不还，下定决心夺回荆州。东吴大将吕蒙以数万精兵埋伏于船，假扮商贾奇袭荆州，夺取南郡、江陵。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.18	string.bin	4.18	44【生死麦城】关羽与曹魏援军徐晃交战，接连遭到击败，欲撤退时得知荆州已被孙权夺取，只得败走麦城，终于在章乡被马忠部所擒，不降被杀害。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.19	string.bin	4.19	45【襄樊之战】建安二十四年，关羽北伐曹操，攻营拔寨，曹操欲迁都避其锋锐，终因大意失荆州，以蜀汉大败告终。此战使得蜀汉失荆州，并与东吴交恶，三国鼎足之势从此失衡。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.22	string.bin	4.22	53【】闻零陵桂阳先后被刘备所得，武陵人人自危，刘备手下大将张飞引三千兵士取武陵郡，太守金旋宁死不降，后主簿巩志联络张飞军诛杀金旋，献了武陵。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.23	string.bin	4.23	54【】刘备夺取了三郡，帐下关羽不甘落后，自告奋勇要用五百校刀手夺取长沙，与黄忠激战数日。最终在黄忠和魏延的归降下，顺利夺得长沙。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.24	string.bin	4.24	55【】取荆南四郡之后，刘备率军扫平了零星抵抗，彻底在群雄争霸中站稳了脚跟，南郡一役，也意味着刘备军成为了逐鹿中原不可忽视的一股力量。		muc 4: 2 ky tu dau = ma ai (giu), ky tu cuoi bi cat khi hien	
+string.bin|4.27	string.bin	4.27	按右软键打开菜单			
+string.bin|4.29	string.bin	4.29	按6键选择物品栏			
+string.bin|4.31	string.bin	4.31	按5键确认			
+string.bin|4.33	string.bin	4.33	选择装备栏			
+string.bin|4.34	string.bin	4.34	有4个选项，按8键向下选择装备			
+string.bin|4.35	string.bin	4.35	有4个选择，按8键向下选择升级			
+string.bin|4.37	string.bin	4.37	按6键选择潜能栏			
+string.bin|4.38	string.bin	4.38	有3个选项，按8键向下选择加点			
+string.bin|4.39	string.bin	4.39	连续按右软键退出			
+string.bin|4.40	string.bin	4.40	装备可以升级，按5键确定			
+string.bin|4.41	string.bin	4.41	选择第一个技能，按5键确认			
+string.bin|4.42	string.bin	4.42	技能加点可以升级，按5键确认			
+string.bin|4.43	string.bin	4.43	按6键选择宝箱			
+string.bin|4.44	string.bin	4.44	选择宝箱，按5键确认			
+string.bin|4.45	string.bin	4.45	有3个选项，按8键向下升级			
+string.bin|4.46	string.bin	4.46	有3个选项，按8键向下开启			
+string.bin|4.47	string.bin	4.47	按2键向上移动			
+string.bin|4.48	string.bin	4.48	按4键向左移动			
+string.bin|4.49	string.bin	4.49	按6键向右移动			
+string.bin|4.50	string.bin	4.50	按8键向下移动			
+string.bin|4.51	string.bin	4.51	按5键攻击			
+string.bin|4.54	string.bin	4.54	教学结束			
+string.bin|4.55	string.bin	4.55	按1键可释放飞龙在天			
+string.bin|4.56	string.bin	4.56	按住3键，可释放火龙吼			
+string.bin|4.57	string.bin	4.57	按7键可释放天地龙吟			
+string.bin|4.58	string.bin	4.58	按9键可释放龙啸九天			
+string.bin|4.63	string.bin	4.63	请按0键进入游戏辅助			
+string.bin|4.64	string.bin	4.64	按8键向下选择			
+string.bin|4.65	string.bin	4.65	按5键进入游戏辅助			
+string.bin|4.66	string.bin	4.66	按5键领取			
+string.bin|4.68	string.bin	4.68	按5键选择免费礼包			
+string.bin|4.69	string.bin	4.69	按4键选择装备该物品			
+string.bin|4.70	string.bin	4.70	按6键选择升级该装备			
+string.bin|4.71	string.bin	4.71	按5键选择技能选项			
+string.bin|4.72	string.bin	4.72	按4键选择修炼			
+string.bin|4.74	string.bin	4.74	按4键选择开启			
+string.bin|4.75	string.bin	4.75	按6键选择升级			
+help_about.bin|0.0	help_about.bin	0.0	【背景介绍】|巾帼不让须眉，三国武将化身妖娆美女，悉数强势登场，无数经典战役中掀起阵阵血雨腥风！三国无双式的激烈战斗，收复猛将与群雄逐鹿战场，谁能强势归来，问鼎中原？|【按键操作】导航键中键或5键，普通攻击；导航键上键，下键，左键，右键或2键，8键，4键，6键为主角上下左右移动.连续点击4键或6键：加速跑。1键，3键，7键，9键对应人物的4个技能。*,#键：加血加怒气值。		| = xuong dong	
+help_about.bin|1.0	help_about.bin	1.0	关于|游戏名称:雄霸三国之天降女神|版本号:1.0.0|厂商信息:乐堂动漫信息技术有限公司|客服电话:0551-5411794|E-mail:kf@joymeng.com		| = xuong dong	
+choice.bin|0.q	choice.bin	0.q	商店			
+choice.bin|0.0	choice.bin	0.0	是		lua chon	
+choice.bin|0.1	choice.bin	0.1	否		lua chon	
+choice.bin|1.q	choice.bin	1.q	擂台模式1			
+choice.bin|1.0	choice.bin	1.0	单挑模式（1500港币）		lua chon	
+choice.bin|1.1	choice.bin	1.1	生存模式（2500港币）		lua chon	
+choice.bin|1.2	choice.bin	1.2	无限模式（3000港币）		lua chon	
+choice.bin|1.3	choice.bin	1.3	算了。		lua chon	
+choice.bin|2.q	choice.bin	2.q	的士目的地			
+choice.bin|2.0	choice.bin	2.0	去离岛（800港币）		lua chon	
+choice.bin|2.1	choice.bin	2.1	去九龙（1000港币）		lua chon	
+choice.bin|2.2	choice.bin	2.2	暂时不走		lua chon	
+choice.bin|3.q	choice.bin	3.q	酒馆任务			
+choice.bin|3.0	choice.bin	3.0	河东狮            *		lua chon	
+choice.bin|3.1	choice.bin	3.1	二把手           **		lua chon	
+choice.bin|3.2	choice.bin	3.2	大开眼界      ***		lua chon	
+choice.bin|3.3	choice.bin	3.3	保镖              ***		lua chon	
+choice.bin|3.4	choice.bin	3.4	金刚不坏！  ***		lua chon	
+choice.bin|3.5	choice.bin	3.5	脱离苦海     ****		lua chon	
+choice.bin|3.6	choice.bin	3.6	药师的委托 ****		lua chon	
+choice.bin|3.7	choice.bin	3.7	复仇铁匠    *****		lua chon	
+choice.bin|3.8	choice.bin	3.8	佩服佩服    *****		lua chon	
+choice.bin|3.9	choice.bin	3.9	武馆徽章    *****		lua chon	
+choice.bin|3.10	choice.bin	3.10	铁匠的报复*****		lua chon	
+choice.bin|3.11	choice.bin	3.11	实力派1      *****		lua chon	
+choice.bin|3.12	choice.bin	3.12	实力派2     ******		lua chon	
+choice.bin|4.q	choice.bin	4.q	是否传送到挑战关卡？			
+choice.bin|4.0	choice.bin	4.0	是，愿意支付1000金		lua chon	
+choice.bin|4.1	choice.bin	4.1	否，我再想想		lua chon	
+choice.bin|5.q	choice.bin	5.q	是否存档？			
+choice.bin|5.0	choice.bin	5.0	存档		lua chon	
+choice.bin|5.1	choice.bin	5.1	不存档		lua chon	
+choice.bin|6.q	choice.bin	6.q	擂台模式3			
+choice.bin|6.0	choice.bin	6.0	单挑模式（1500港币）		lua chon	
+choice.bin|6.1	choice.bin	6.1	生存模式（2500港币）		lua chon	
+choice.bin|6.2	choice.bin	6.2	无限模式（3000港币）		lua chon	
+choice.bin|6.3	choice.bin	6.3	噩梦模式（4000港币）		lua chon	
+choice.bin|6.4	choice.bin	6.4	算了		lua chon	
+choice.bin|7.q	choice.bin	7.q	？			
+choice.bin|8.0	choice.bin	8.0	是		lua chon	
+choice.bin|8.1	choice.bin	8.1	否		lua chon	
+gameData.bin|39	gameData.bin	39	生命值			
+gameData.bin|50	gameData.bin	50	最大生命值			
+gameData.bin|67	gameData.bin	67	怒气值			
+gameData.bin|78	gameData.bin	78	最大怒气值			
+gameData.bin|95	gameData.bin	95	攻击力			
+gameData.bin|106	gameData.bin	106	防御力			
+gameData.bin|117	gameData.bin	117	暴击率			
+gameData.bin|128	gameData.bin	128	幸运			
+gameData.bin|136	gameData.bin	136	技巧值			
+gameData.bin|147	gameData.bin	147	攻击力(%)			
+gameData.bin|161	gameData.bin	161	防御力(%)			
+gameData.bin|175	gameData.bin	175	升级经验			
+gameData.bin|190	gameData.bin	190	武器			
+gameData.bin|198	gameData.bin	198	胸甲			
+gameData.bin|206	gameData.bin	206	鞋子			
+gameData.bin|214	gameData.bin	214	头部			
+gameData.bin|222	gameData.bin	222	饰品			
+gameData.bin|231	gameData.bin	231	金			
+gameData.bin|236	gameData.bin	236	木			
+gameData.bin|241	gameData.bin	241	水			
+gameData.bin|246	gameData.bin	246	火			
+gameData.bin|251	gameData.bin	251	土			
+gameData.bin|257	gameData.bin	257	眩晕			
+gameData.bin|273	gameData.bin	273	爆炸			
+gameData.bin|289	gameData.bin	289	吸血			
+gameData.bin|305	gameData.bin	305	中毒			
+gameData.bin|322	gameData.bin	322	飞龙在天			
+gameData.bin|336	gameData.bin	336	消耗怒气M，攻击加K%，附加攻击力+N。			
+gameData.bin|441	gameData.bin	441	狂龙出海			
+gameData.bin|455	gameData.bin	455	长按技能键可持续,持续消耗怒气M,攻击力+K%。			
+gameData.bin|570	gameData.bin	570	降龙摆尾			
+gameData.bin|584	gameData.bin	584	消耗怒气M,攻击力+K%。			
+gameData.bin|668	gameData.bin	668	亢龙有悔			
+gameData.bin|682	gameData.bin	682	消耗怒气M,攻击力+K%。			
+gameData.bin|766	gameData.bin	766	白虎啸			
+gameData.bin|777	gameData.bin	777	消耗怒气M，攻击加K%。			
+gameData.bin|862	gameData.bin	862	雷霆万钧			
+gameData.bin|876	gameData.bin	876	长按技能键可持续,持续消耗怒气M,攻击力+K%。			
+gameData.bin|991	gameData.bin	991	天雷神罚			
+gameData.bin|1005	gameData.bin	1005	消耗怒气M,攻击力+K%。			
+gameData.bin|1089	gameData.bin	1089	五雷轰顶			
+gameData.bin|1103	gameData.bin	1103	消耗怒气M,攻击力+N。			
+gameData.bin|1186	gameData.bin	1186	风云枪			
+gameData.bin|1197	gameData.bin	1197	消耗怒气M，攻击加K%。			
+gameData.bin|1282	gameData.bin	1282	天龙诀			
+gameData.bin|1293	gameData.bin	1293	长按技能键可持续,持续消耗怒气M,攻击力+K%。			
+gameData.bin|1408	gameData.bin	1408	幻剑龙吟			
+gameData.bin|1422	gameData.bin	1422	消耗怒气M,攻击力+K%。			
+gameData.bin|1506	gameData.bin	1506	疯魔斩			
+gameData.bin|1517	gameData.bin	1517	消耗怒气M,攻击力+N。			
+gameData.bin|1600	gameData.bin	1600	力压千斤			
+gameData.bin|1614	gameData.bin	1614	消耗怒气M，攻击加K%。			
+gameData.bin|1699	gameData.bin	1699	霸王枪法			
+gameData.bin|1713	gameData.bin	1713	长按技能键可持续,持续消耗怒气M,攻击力+K%。			
+gameData.bin|1828	gameData.bin	1828	离魂夺魄			
+gameData.bin|1842	gameData.bin	1842	消耗怒气M,攻击力+K%。			
+gameData.bin|1926	gameData.bin	1926	神将天罚			
+gameData.bin|1940	gameData.bin	1940	消耗怒气M,攻击力+N。			
+gameData.bin|2023	gameData.bin	2023	幽冥之火			
+gameData.bin|2037	gameData.bin	2037	消耗怒气M，攻击加K%。			
+gameData.bin|2122	gameData.bin	2122	燃魂魅舞			
+gameData.bin|2136	gameData.bin	2136	长按技能键可持续,持续消耗怒气M,攻击力+K%。			
+gameData.bin|2251	gameData.bin	2251	九幽烈焰			
+gameData.bin|2265	gameData.bin	2265	消耗怒气M,攻击力+K%。			
+gameData.bin|2349	gameData.bin	2349	冥火天袭			
+gameData.bin|2363	gameData.bin	2363	消耗怒气M,攻击力+N。			
+gameData.bin|2446	gameData.bin	2446	攻击上升			
+gameData.bin|2460	gameData.bin	2460	攻击力+N			
+gameData.bin|2536	gameData.bin	2536	防御上升			
+gameData.bin|2550	gameData.bin	2550	防御力+D			
+gameData.bin|2626	gameData.bin	2626	生命上升			
+gameData.bin|2640	gameData.bin	2640	生命上限+Y			
+gameData.bin|2721	gameData.bin	2721	暴击上升			
+gameData.bin|2735	gameData.bin	2735	暴击率+E			
+gameData.bin|2809	gameData.bin	2809	技能攻击上升			
+gameData.bin|2829	gameData.bin	2829	技能攻击力+Z%			
+gameData.bin|2910	gameData.bin	2910	消耗怒气下降			
+gameData.bin|2930	gameData.bin	2930	消耗怒气-B%			
+gameData.bin|3008	gameData.bin	3008	经验上升			
+gameData.bin|3022	gameData.bin	3022	获得经验值+L%			
+gameData.bin|3103	gameData.bin	3103	金钱上升			
+gameData.bin|3117	gameData.bin	3117	获得金钱+G%			
+gameData.bin|3195	gameData.bin	3195	得分上升			
+gameData.bin|3209	gameData.bin	3209	最终得分+P%			
+gameData.bin|3287	gameData.bin	3287	潜能点数上升			
+gameData.bin|3307	gameData.bin	3307	最终获得潜能点数+S%			
+gameData.bin|3397	gameData.bin	3397	鬼焰啸			
+gameData.bin|3408	gameData.bin	3408	消耗怒气M,攻击力+K%。			
+gameData.bin|3492	gameData.bin	3492	冥焰乱舞			
+gameData.bin|3506	gameData.bin	3506	消耗怒气M,攻击力+N。			
+gameData.bin|3589	gameData.bin	3589	怒气专精			
+gameData.bin|3603	gameData.bin	3603	增加怒气上限.最大怒气值+Y。			
+gameData.bin|3697	gameData.bin	3697	护甲专精			
+gameData.bin|3711	gameData.bin	3711	增加总体防御力.防御力+D%。对提升防御力的药物有同比例增强效果。			
+gameData.bin|3857	gameData.bin	3857	生命专精			
+gameData.bin|3871	gameData.bin	3871	增加生命最大值,最大生命值+X。			
+gameData.bin|3968	gameData.bin	3968	暴击专精			
+gameData.bin|3982	gameData.bin	3982	增加暴击比例,暴击率+E%。			
+gameData.bin|4071	gameData.bin	4071	空技能			
+gameData.bin|4082	gameData.bin	4082	无此技能。			
+gameData.bin|4153	gameData.bin	4153	青铜长刀			
+gameData.bin|4167	gameData.bin	4167	关羽专用。			
+gameData.bin|4234	gameData.bin	4234	蓝月弯刀			
+gameData.bin|4248	gameData.bin	4248	关羽专用。			
+gameData.bin|4315	gameData.bin	4315	凤嘴刀			
+gameData.bin|4326	gameData.bin	4326	关羽专用。			
+gameData.bin|4393	gameData.bin	4393	红魔炼狱刀			
+gameData.bin|4410	gameData.bin	4410	关羽专用。			
+gameData.bin|4477	gameData.bin	4477	赤炎屠龙刀			
+gameData.bin|4494	gameData.bin	4494	关羽专用。			
+gameData.bin|4561	gameData.bin	4561	百折扇			
+gameData.bin|4572	gameData.bin	4572	诸葛亮专用。			
+gameData.bin|4642	gameData.bin	4642	阴风扇			
+gameData.bin|4653	gameData.bin	4653	诸葛亮专用。			
+gameData.bin|4723	gameData.bin	4723	神火扇			
+gameData.bin|4734	gameData.bin	4734	诸葛亮专用。			
+gameData.bin|4804	gameData.bin	4804	劈水扇			
+gameData.bin|4815	gameData.bin	4815	诸葛亮专用。			
+gameData.bin|4885	gameData.bin	4885	逍遥扇			
+gameData.bin|4896	gameData.bin	4896	诸葛亮专用。			
+gameData.bin|4966	gameData.bin	4966	精铁戟			
+gameData.bin|4977	gameData.bin	4977	吕布专用。			
+gameData.bin|5044	gameData.bin	5044	画眉戟			
+gameData.bin|5055	gameData.bin	5055	吕布专用。			
+gameData.bin|5122	gameData.bin	5122	噬龙戟			
+gameData.bin|5133	gameData.bin	5133	吕布专用。			
+gameData.bin|5200	gameData.bin	5200	浑元画戟			
+gameData.bin|5214	gameData.bin	5214	吕布专用。			
+gameData.bin|5281	gameData.bin	5281	方天画戟			
+gameData.bin|5295	gameData.bin	5295	吕布专用。			
+gameData.bin|5362	gameData.bin	5362	阴火符咒			
+gameData.bin|5376	gameData.bin	5376	司马懿专用。			
+gameData.bin|5443	gameData.bin	5443	招魂符咒			
+gameData.bin|5457	gameData.bin	5457	司马懿专用。			
+gameData.bin|5524	gameData.bin	5524	虎威符咒			
+gameData.bin|5538	gameData.bin	5538	司马懿专用。			
+gameData.bin|5605	gameData.bin	5605	玄龟符咒			
+gameData.bin|5619	gameData.bin	5619	司马懿专用。			
+gameData.bin|5689	gameData.bin	5689	太乙符咒			
+gameData.bin|5703	gameData.bin	5703	司马懿专用。			
+gameData.bin|5773	gameData.bin	5773	精铁剑			
+gameData.bin|5784	gameData.bin	5784	曹操专用。			
+gameData.bin|5851	gameData.bin	5851	倚天剑			
+gameData.bin|5862	gameData.bin	5862	曹操专用。			
+gameData.bin|5929	gameData.bin	5929	青缸剑			
+gameData.bin|5940	gameData.bin	5940	曹操专用。			
+gameData.bin|6007	gameData.bin	6007	越女剑			
+gameData.bin|6018	gameData.bin	6018	曹操专用。			
+gameData.bin|6085	gameData.bin	6085	罗刹剑			
+gameData.bin|6096	gameData.bin	6096	曹操专用。			
+gameData.bin|6163	gameData.bin	6163	奔狼战甲			
+gameData.bin|6177	gameData.bin	6177	任何武将通用。			
+gameData.bin|6250	gameData.bin	6250	奔狼战靴			
+gameData.bin|6264	gameData.bin	6264	任何武将通用。			
+gameData.bin|6337	gameData.bin	6337	朱雀战甲			
+gameData.bin|6351	gameData.bin	6351	任何武将通用。			
+gameData.bin|6424	gameData.bin	6424	朱雀战靴			
+gameData.bin|6438	gameData.bin	6438	任何武将通用。			
+gameData.bin|6511	gameData.bin	6511	雪貂战袍			
+gameData.bin|6525	gameData.bin	6525	任何武将通用。			
+gameData.bin|6598	gameData.bin	6598	雪貂战靴			
+gameData.bin|6612	gameData.bin	6612	任何武将通用。			
+gameData.bin|6685	gameData.bin	6685	黄金铠甲			
+gameData.bin|6699	gameData.bin	6699	任何武将通用。			
+gameData.bin|6772	gameData.bin	6772	黄金战靴			
+gameData.bin|6786	gameData.bin	6786	任何武将通用。			
+gameData.bin|6859	gameData.bin	6859	虎威战铠			
+gameData.bin|6873	gameData.bin	6873	任何武将通用。			
+gameData.bin|6946	gameData.bin	6946	虎威战靴			
+gameData.bin|6960	gameData.bin	6960	任何武将通用。			
+gameData.bin|7033	gameData.bin	7033	柳叶环			
+gameData.bin|7044	gameData.bin	7044	任何武将通用。			
+gameData.bin|7117	gameData.bin	7117	红玉戒指			
+gameData.bin|7131	gameData.bin	7131	任何武将通用。			
+gameData.bin|7204	gameData.bin	7204	玄风玉佩			
+gameData.bin|7218	gameData.bin	7218	任何武将通用。			
+gameData.bin|7291	gameData.bin	7291	虚极项链			
+gameData.bin|7305	gameData.bin	7305	任何武将通用。			
+gameData.bin|7378	gameData.bin	7378	伏魔戒指			
+gameData.bin|7392	gameData.bin	7392	任何武将通用。			
+gameData.bin|7465	gameData.bin	7465	纯银羽饰			
+gameData.bin|7479	gameData.bin	7479	任何武将通用。			
+gameData.bin|7552	gameData.bin	7552	===以下不用===			
+gameData.bin|7572	gameData.bin	7572	张颌专用。			
+gameData.bin|7639	gameData.bin	7639	龙骑枪			
+gameData.bin|7650	gameData.bin	7650	张颌专用。			
+gameData.bin|7717	gameData.bin	7717	三尖锐枪			
+gameData.bin|7731	gameData.bin	7731	张颌专用。			
+gameData.bin|7798	gameData.bin	7798	破邪旋风枪			
+gameData.bin|7815	gameData.bin	7815	张颌专用。			
+gameData.bin|7882	gameData.bin	7882	双极灭星枪			
+gameData.bin|7899	gameData.bin	7899	张颌专用。			
+gameData.bin|7966	gameData.bin	7966	长柄刀			
+gameData.bin|7977	gameData.bin	7977	夏侯渊专用。			
+gameData.bin|8047	gameData.bin	8047	火神刀			
+gameData.bin|8058	gameData.bin	8058	夏侯渊专用。			
+gameData.bin|8128	gameData.bin	8128	轰火神刀			
+gameData.bin|8142	gameData.bin	8142	夏侯渊专用。			
+gameData.bin|8212	gameData.bin	8212	神龙飞天刀			
+gameData.bin|8229	gameData.bin	8229	夏侯渊专用。			
+gameData.bin|8299	gameData.bin	8299	朱雀飞虹刀			
+gameData.bin|8316	gameData.bin	8316	夏侯渊专用。			
+gameData.bin|8386	gameData.bin	8386	青铜长刀			
+gameData.bin|8400	gameData.bin	8400	关羽、张辽专用。			
+gameData.bin|8476	gameData.bin	8476	朔风朴刀			
+gameData.bin|8490	gameData.bin	8490	关羽、张辽专用。			
+gameData.bin|8566	gameData.bin	8566	风嘴刀			
+gameData.bin|8577	gameData.bin	8577	关羽、张辽专用。			
+gameData.bin|8653	gameData.bin	8653	赤焰横刀			
+gameData.bin|8667	gameData.bin	8667	关羽、张辽专用。			
+gameData.bin|8743	gameData.bin	8743	黄龙钩镰刀			
+gameData.bin|8760	gameData.bin	8760	关羽、张辽专用。			
+gameData.bin|8836	gameData.bin	8836	蛮妖符			
+gameData.bin|8847	gameData.bin	8847	张角专用。			
+gameData.bin|8914	gameData.bin	8914	洪荒兽符			
+gameData.bin|8928	gameData.bin	8928	张角专用。			
+gameData.bin|8995	gameData.bin	8995	幻天神符			
+gameData.bin|9009	gameData.bin	9009	张角专用。			
+gameData.bin|9076	gameData.bin	9076	冥天摄命符			
+gameData.bin|9093	gameData.bin	9093	张角专用。			
+gameData.bin|9160	gameData.bin	9160	灭世修罗符			
+gameData.bin|9177	gameData.bin	9177	张角专用。			
+gameData.bin|9244	gameData.bin	9244	青龙偃月刀			
+gameData.bin|9261	gameData.bin	9261	关羽专用。			
+gameData.bin|9325	gameData.bin	9325	时*空吊坠(QQ专属)			
+gameData.bin|9350	gameData.bin	9350	所有武将通用。孕育于时间和空间之中,是一切的起点又是一切的终点.			
+gameData.bin|9491	gameData.bin	9491	止血散(小)			
+gameData.bin|9507	gameData.bin	9507	小剂量，生命值+150。			
+gameData.bin|9582	gameData.bin	9582	止血散(中)			
+gameData.bin|9598	gameData.bin	9598	中剂量，生命值+300。			
+gameData.bin|9673	gameData.bin	9673	止血散(大)			
+gameData.bin|9689	gameData.bin	9689	大剂量，生命值+600。			
+gameData.bin|9764	gameData.bin	9764	止血散(精炼)			
+gameData.bin|9783	gameData.bin	9783	提炼后的精华药剂，生命值+1200.			
+gameData.bin|9872	gameData.bin	9872	活络散(小)			
+gameData.bin|9888	gameData.bin	9888	小剂量，怒气值+100。			
+gameData.bin|9963	gameData.bin	9963	活络散(中)			
+gameData.bin|9979	gameData.bin	9979	中剂量，怒气值+200。			
+gameData.bin|10054	gameData.bin	10054	活络散(大)			
+gameData.bin|10070	gameData.bin	10070	大剂量，怒气值+400。			
+gameData.bin|10145	gameData.bin	10145	活络散(精炼)			
+gameData.bin|10164	gameData.bin	10164	提炼后的精华药剂，怒气值+600.			
+gameData.bin|10252	gameData.bin	10252	万灵散			
+gameData.bin|10263	gameData.bin	10263	可治百病的神奇药物.生命值+500,怒气值+500			
+gameData.bin|10365	gameData.bin	10365	长生散			
+gameData.bin|10376	gameData.bin	10376	传说长期服用能使人长生不老.生命值+1000,怒气值+1000			
+gameData.bin|10492	gameData.bin	10492	-素材 -			
+gameData.bin|10503	gameData.bin	10503	任务1需要用			
+gameData.bin|10566	gameData.bin	10566	残破刀刃			
+gameData.bin|10580	gameData.bin	10580	素材，可以兑换大量金钱。刀刃似乎已经变钝了。			
+gameData.bin|10692	gameData.bin	10692	冲阵心得			
+gameData.bin|10706	gameData.bin	10706	素材，可以兑换大量金钱。长枪兵冲杀的阵法心得。			
+gameData.bin|10821	gameData.bin	10821	獠牙			
+gameData.bin|10829	gameData.bin	10829	素材，可以兑换大量金钱。野兽尖利的獠牙。			
+gameData.bin|10935	gameData.bin	10935	箭矢			
+gameData.bin|10943	gameData.bin	10943	素材，可以兑换大量金钱。被折断的箭矢。			
+gameData.bin|11046	gameData.bin	11046	箭术心得			
+gameData.bin|11060	gameData.bin	11060	素材，可以兑换大量金钱。弓弩手连射箭矢的心得。			
+gameData.bin|11175	gameData.bin	11175	暗杀名单			
+gameData.bin|11189	gameData.bin	11189	素材，可以兑换大量金钱。上面记载着刺客暗杀任务的名单。			
+gameData.bin|11316	gameData.bin	11316	士兵日记			
+gameData.bin|11330	gameData.bin	11330	素材，可以兑换大量金钱。似乎是普通士兵写的日记。			
+gameData.bin|11448	gameData.bin	11448	破旧盾牌			
+gameData.bin|11462	gameData.bin	11462	素材，可以兑换大量金钱。已经残破不堪的盾牌。			
+gameData.bin|11574	gameData.bin	11574	铜制枪头			
+gameData.bin|11588	gameData.bin	11588	素材，可以兑换大量金钱。用铜制造的枪头，锋利无比。			
+gameData.bin|11709	gameData.bin	11709	兽皮			
+gameData.bin|11717	gameData.bin	11717	素材，可以兑换大量金钱。野兽完整的兽皮。			
+gameData.bin|11823	gameData.bin	11823	攻击石			
+gameData.bin|11834	gameData.bin	11834	提升武器等级,每级提升10%的基础属性.			
+gameData.bin|11931	gameData.bin	11931	防御石			
+gameData.bin|11942	gameData.bin	11942	提升防御装备的等级,每级+5点防御.			
+gameData.bin|12035	gameData.bin	12035	暴击石			
+gameData.bin|12046	gameData.bin	12046	提升饰品等级,每级提升1%.			
+gameData.bin|12127	gameData.bin	12127	太极宝盒			
+gameData.bin|12141	gameData.bin	12141	有太极图案的盒子，不知道装着什么。			
+gameData.bin|12239	gameData.bin	12239	两仪宝盒			
+gameData.bin|12253	gameData.bin	12253	刻着阴阳图案的盒子。			
+gameData.bin|12330	gameData.bin	12330	三才宝盒			
+gameData.bin|12344	gameData.bin	12344	盒子上面画着天地人，是为三才。			
+gameData.bin|12436	gameData.bin	12436	四象宝盒			
+gameData.bin|12450	gameData.bin	12450	盒子的四面分别有描写春夏秋冬的画。			
+gameData.bin|12548	gameData.bin	12548	五方宝盒			
+gameData.bin|12562	gameData.bin	12562	东西南北中，五方行尽之宝盒，传说装着宝物。			
+gameData.bin|12672	gameData.bin	12672	箱子6			
+gameData.bin|12681	gameData.bin	12681	似乎是可以使箱子变得更华丽的神奇结晶?			
+gameData.bin|12782	gameData.bin	12782	宝箱之石			
+gameData.bin|12796	gameData.bin	12796	可以升级宝箱的神秘石头。			
+gameData.bin|12879	gameData.bin	12879	固神丹			
+gameData.bin|12890	gameData.bin	12890	提高10点生命上限。			
+gameData.bin|12962	gameData.bin	12962	固仙丹			
+gameData.bin|12973	gameData.bin	12973	提高10点怒气上限。			
+gameData.bin|13045	gameData.bin	13045	白虎翼			
+gameData.bin|13056	gameData.bin	13056	提高5点攻击力。			
+gameData.bin|13124	gameData.bin	13124	秘甲丸			
+gameData.bin|13135	gameData.bin	13135	提高5点防御值。另外受护甲专精同比例的增强效果影响。			
+gameData.bin|13257	gameData.bin	13257	盘龙散			
+gameData.bin|13268	gameData.bin	13268	提高暴击率1%。			
+gameData.bin|13334	gameData.bin	13334	幸运石			
+gameData.bin|13345	gameData.bin	13345	提高掉落率，增加幸运值1。			
+gameData.bin|13429	gameData.bin	13429	破旧长弓			
+gameData.bin|13443	gameData.bin	13443	素材，可以兑换大量金钱。因为多次使用而失去韧性的长弓。			
+gameData.bin|13570	gameData.bin	13570	木制弩机			
+gameData.bin|13584	gameData.bin	13584	素材，可以兑换大量金钱。军队普及的远程武器。			
+gameData.bin|13696	gameData.bin	13696	秘制毒药			
+gameData.bin|13710	gameData.bin	13710	素材，可以兑换大量金钱。刺客必备的物品之一，剧毒无比。			
+gameData.bin|13837	gameData.bin	13837	拳术心得			
+gameData.bin|13851	gameData.bin	13851	素材，可以兑换大量金钱。擅长拳术的士兵总结的搏斗技巧。			
+gameData.bin|13979	gameData.bin	13979	关羽			
+gameData.bin|14085	gameData.bin	14085	诸葛亮			
+gameData.bin|14192	gameData.bin	14192	司马懿			
+gameData.bin|14299	gameData.bin	14299	吕布			
+gameData.bin|14403	gameData.bin	14403	曹操			
+gameData.bin|14507	gameData.bin	14507	甘宁			
+gameData.bin|14605	gameData.bin	14605	张角			
+gameData.bin|14703	gameData.bin	14703	吕布			
+gameData.bin|14801	gameData.bin	14801	士兵			
+gameData.bin|14890	gameData.bin	14890	关羽			
+gameData.bin|15049	gameData.bin	15049	诸葛亮			
+gameData.bin|15203	gameData.bin	15203	司马懿			
+gameData.bin|15357	gameData.bin	15357	吕布			
+gameData.bin|15508	gameData.bin	15508	曹操			
+gameData.bin|15659	gameData.bin	15659	甘宁			
+gameData.bin|15810	gameData.bin	15810	张角			
+gameData.bin|15961	gameData.bin	15961	吕布			
+gameData.bin|16112	gameData.bin	16112	朴刀兵			
+gameData.bin|16266	gameData.bin	16266	士兵			
+gameData.bin|16566	gameData.bin	16566	胖子			
+gameData.bin|16719	gameData.bin	16719	刺客			
+gameData.bin|16872	gameData.bin	16872	盾牌兵			
+gameData.bin|17028	gameData.bin	17028	美人鱼			
+gameData.bin|17184	gameData.bin	17184	火龙			
+gameData.bin|17337	gameData.bin	17337	火枪手			
+gameData.bin|17493	gameData.bin	17493	BOSS红胡子			
+gameData.bin|17653	gameData.bin	17653	BOSS梅川酷子			
+gameData.bin|17816	gameData.bin	17816	BOSS刘疤			
+gameData.bin|17973	gameData.bin	17973	宠物蛋			
+gameData.bin|18127	gameData.bin	18127	毛毛			
+gameData.bin|18289	gameData.bin	18289	箱子1			
+gameData.bin|18332	gameData.bin	18332	箱子2			
+gameData.bin|18371	gameData.bin	18371	箱子3			
+gameData.bin|18410	gameData.bin	18410	箱子4			
+gameData.bin|18449	gameData.bin	18449	箱子5			
+gameData.bin|18490	gameData.bin	18490	箱子6			
+gameData.bin|18499	gameData.bin	18499	终极装备			
+gameData.bin|18523	gameData.bin	18523	总商店			
+gameData.bin|18673	gameData.bin	18673	素材商店			
+gameData.bin|18730	gameData.bin	18730	商店掉落1			
+gameData.bin|18777	gameData.bin	18777	商店掉落2			
+gameData.bin|18824	gameData.bin	18824	商店掉落3			
+gameData.bin|18871	gameData.bin	18871	商店掉落4			
+gameData.bin|18920	gameData.bin	18920	掉落商店5			
+gameData.bin|18975	gameData.bin	18975	新NPC13			
+gameData.bin|18997	gameData.bin	18997	新NPC14			
+gameData.bin|19020	gameData.bin	19020	萨菲隆			
+gameData.bin|19031	gameData.bin	19031	新怪物0描述			
+gameData.bin|19107	gameData.bin	19107	克尔苏加德 			
+gameData.bin|19125	gameData.bin	19125	新怪物1描述			
+gameData.bin|19201	gameData.bin	19201	哈霍兰公主			
+gameData.bin|19218	gameData.bin	19218	新怪物2描述			
+l1.bin|428	l1.bin	428	。			
+l1.bin|437	l1.bin	437	★温馨提示★|为了获得更好的用户体验，游戏会提示您进行一次联网，以获取最佳的游戏配置，此过程不收取任何费用；您也可以选择不联网按默认配置进行游戏，但可能不能体验到最佳的游戏效果，谢谢您的支持！			
+l1.bin|729	l1.bin	729	激活烈鹰为宠物,帮你轻松捡取物品!购买此道具,需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|870	l1.bin	870	开启公共仓库,让你的装备可以分配给其他武将使用.需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1016	l1.bin	1016	将素材兑换金钱,打怪赚钱,一举两得。购买此道具,需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1160	l1.bin	1160	一次性购买5个宝箱之石,升级宝箱,获得更高的装备.需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1305	l1.bin	1305	当前人物升10级,(未买突破等级限制时,最高级99级),需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1449	l1.bin	1449	立刻突破人物的等级上限,不再受等级约束!需信息费S元,需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1583	l1.bin	1583	著名武将角色自由挑选,超长游戏时间,成就称号,积分排名,需信息费S元,即可激活正版游戏,需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1762	l1.bin	1762	战役将要结束却命丧沙场,需信息费S元,即可原地复活,另赠送5000金钱,需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|1913	l1.bin	1913	需信息费S元,即可重置技能点!需发送N条短信,P元/条(不含通信费),是否发送?		S N P = placeholder, cam chu hoa S/N/P khac	
+l1.bin|2017	l1.bin	2017	您已经购买了&宠物辅助！&游戏已存档！&现在宠物可以帮您自动拾取物品了！			
+l1.bin|2121	l1.bin	2121	您已经成功开启仓库！&游戏已存档！&所有武将均可使用，现在可以使用仓库和其他武将通用装备了！			
+l1.bin|2257	l1.bin	2257	您已经成功激活素材兑换功能！&游戏已存档！&所有武将均可使用，现在可以将素材兑换成金钱了！			
+l1.bin|2390	l1.bin	2390	您获取了&宝箱之石*5！&游戏已存档！&现在可以去背包查看了			
+l1.bin|2472	l1.bin	2472	您的等级提升了10级！&游戏已存档！&现在可以去技能栏查看更新的潜能点了！			
+l1.bin|2577	l1.bin	2577	您已经成功激活等级上限！&游戏已存档！&现在所有武将都不受等级上限的约束了！			
+l1.bin|2689	l1.bin	2689	您已经成功激活正版游戏&&游戏已存档！&现在可以继续后续的关卡了！			
+l1.bin|2784	l1.bin	2784	死亡复活购买成功!并赠送您5000金钱&游戏已存档！&主角将进入一段无敌时间，&现在您可以继续游戏了！			
+l1.bin|2923	l1.bin	2923	您已经成功开启洗点功能&游戏已存档！现在可以技能洗点了！			
+l1.bin|3011	l1.bin	3011	QQ游戏中心			
+l1.bin|3047	l1.bin	3047	QQ社区			
+l1.bin|3077	l1.bin	3077	#游戏攻略			
+l1.bin|3140	l1.bin	3140	#退出链接			
+l1.bin|3203	l1.bin	3203	精彩推荐			
+l1.bin|3237	l1.bin	3237	乐堂年度仙侠ARPG诚意巨献，百张地图、数万字剧情，展示人魔妖三族数十年的生死较量。五行法宝，数十套套装装备炼化，探索无限融合的游戏乐趣。独特的仙魔法术、麒麟坐骑，更有众多幻兽听从号令，锋芒所指，弑神诛仙！			
+l1.bin|3560	l1.bin	3560	核辐射危机，废弃城市惊天秘密。卧底阿龙独闯地下拳市粉碎黑帮邪恶计划，首次引入经脉必杀技打通经脉挑战人体极限获得强大技能。打造属于玩家自己的连击系统.			
