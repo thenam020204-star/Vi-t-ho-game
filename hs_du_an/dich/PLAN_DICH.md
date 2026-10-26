@@ -42,3 +42,5 @@ Dịch toàn bộ text Trung → Việt của cả 5 phần trong một lô, n�
 - Quản đốc: prep 19614 dòng/9377 duy nhất, charset f15c, mã `{}`/`\n`; thuat-ngu 131 mục, vai.md.
 - Công nhân #1: 3105/9377, dừng theo lệnh quản đốc (xoay vòng). Lưu ý: k=42 nhãn "張烈" giới hạn ≤10 nhưng "Trương Liệt"=11 ký tự, đang để "TrươngLiệt" (không cách) - quản đốc quyết. Tên "Bến Lô Gia" (芦家渡, k~712,1272-1290) cần thống nhất với thuật ngữ 卢家渡=bến Lư Gia. Cảnh báo còn lại chỉ là thiếu glyph "~" (quản đốc xử lý khi ghép).
 - Quản đốc: nghiệm thu #1 (sample 12 đạt, 40 thuật ngữ mới hợp lý); sửa k=42 → "Trương Liệt", Lô Gia → Lư Gia. Mở công nhân #2.
+- Công nhân #2: 7203/9377, dừng để xoay vòng (16 lô; thuật ngữ mới đã thêm vào thuat-ngu.tsv, cột 4 = mới; cảnh báo còn lại chỉ thiếu glyph ~ và —).
+- Quản đốc: nghiệm thu #2 (không lỗi định dạng ngoài glyph `~`/`—`; 6 lệch thuật ngữ là diễn đạt hợp lý). Mở công nhân #3 từ k=7204.
