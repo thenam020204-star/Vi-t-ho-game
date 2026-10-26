@@ -30,10 +30,10 @@ Dịch toàn bộ text Trung → Việt của cả 5 phần trong một lô, n�
 
 ## Checklist
 - [x] T0. Quản đốc: prep, stats/peek, chốt bảng thuật ngữ + vai
-- [ ] T1. Dịch toàn bộ text (công nhân, xoay vòng theo luật trên)
+- [x] T1. Dịch toàn bộ text (công nhân, xoay vòng theo luật trên)
   - Đầu vào/đầu ra: `dich_tat_ca.tsv` → `dp_work/out.tsv`
   - Hoàn thành khi: `dp check` = OK, đã `dp sample 30` — **Quản đốc nghiệm thu**
-- [ ] T2. Ghép (`dp merge`), chuẩn hoá ký tự ngoài font, chia lại theo phần, repack + build 5 jar — quản đốc
+- [x] T2. Ghép (`dp merge`), chuẩn hoá ký tự ngoài font, chia lại theo phần, repack + build 5 jar — quản đốc
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
 - (trống)
@@ -44,3 +44,5 @@ Dịch toàn bộ text Trung → Việt của cả 5 phần trong một lô, n�
 - Quản đốc: nghiệm thu #1 (sample 12 đạt, 40 thuật ngữ mới hợp lý); sửa k=42 → "Trương Liệt", Lô Gia → Lư Gia. Mở công nhân #2.
 - Công nhân #2: 7203/9377, dừng để xoay vòng (16 lô; thuật ngữ mới đã thêm vào thuat-ngu.tsv, cột 4 = mới; cảnh báo còn lại chỉ thiếu glyph ~ và —).
 - Quản đốc: nghiệm thu #2 (không lỗi định dạng ngoài glyph `~`/`—`; 6 lệch thuật ngữ là diễn đạt hợp lý). Mở công nhân #3 từ k=7204.
+- Công nhân #3: 9377/9377 XONG (10 lô, k=7204-9377). `dp check`: chỉ còn thiếu glyph (`~` 190, `©` 6 ở k=9218/9219/9276/9349/9371/9376, `=` 1), k=42 dài 11>10 (đã duyệt), k=9201/9202 báo ký tự rộng (gốc có sẵn U+3000 đầu dòng, dp tự giữ), 6 lệch thuật ngữ của #1/#2 (diễn đạt). Đã `dp sample 30`. Thuật ngữ mới ghi `mới` trong thuat-ngu.tsv; ghi-chu.txt: mảnh ghép với số (k9199-9206, 9256-9267) cần khoảng trắng khi ghép, k9362 lẫn chữ Hán lạ, k8277 gốc 娘子{玉儿} có vẻ nhầm 月儿, k7565 浮云龙玉 dịch Phiếm Vân Long Ngọc.
+- Quản đốc: nghiệm thu #3; sửa mảnh ghép số (EDGE trong split_merged.py), k9199/9256/9210, "Nhạc " (t.dat). dp merge → split_merged (thiếu glyph: không) → rebuild_all: 5/5 PASS; FreeJ2ME 5 phần không exception, ảnh shots/dich_5phan.png.

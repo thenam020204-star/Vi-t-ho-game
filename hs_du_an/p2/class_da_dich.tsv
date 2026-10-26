@@ -1,0 +1,89 @@
+id	file	offset	goc	dich	ghi_chu	gioi_han
+p2:class/b/a#720	class/b/a.class	720	动态地图	Bản đồ động	code: ? <clinit>@156 → ps b/a.m[Ljava/lang/String; | ps b/a.n[Z | ps b/a.oZ | ps b/a.p[Ljava/lang/String; | Hasht	18
+p2:class/b/a#721	class/b/a.class	721	未知物品类型:	Loại vật phẩm không rõ:	code: HIEN b@119 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(I)Lj	
+p2:class/b/a#722	class/b/a.class	722	简单战斗	Đánh đơn giản	code: ? <clinit>@151 → ps b/a.m[Ljava/lang/String; | ps b/a.n[Z | ps b/a.oZ | ps b/a.p[Ljava/lang/String; | Hasht	18
+p2:class/b/a#723	class/b/a.class	723	音乐状态	Âm nhạc	code: ? <clinit>@146 → ps b/a.m[Ljava/lang/String; | ps b/a.n[Z | ps b/a.oZ | ps b/a.p[Ljava/lang/String; | Hasht	18
+p2:class/b/f#553	class/b/f.class	553	土	Thổ	code: ? m@64 → return	6
+p2:class/b/f#554	class/b/f.class	554	木	Mộc	code: ? m@55 → return	6
+p2:class/b/f#555	class/b/f.class	555	水	Thủy	code: ? m@58 → return	6
+p2:class/b/f#556	class/b/f.class	556	火	Hỏa	code: ? m@61 → return	6
+p2:class/b/f#557	class/b/f.class	557	金	Kim	code: ? m@52 → return	6
+p2:class/f/a#129	class/f/a.class	129	,并带有	,kèm theo	code: HIEN a@206 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.iS | StringBuffer	14
+p2:class/f/a#172	class/f/a.class	172	体	TL	code: HIEN a@812 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.lS | StringBuffer	6
+p2:class/f/a#173	class/f/a.class	173	像	tượng	code: HIEN c@149 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.m[S | StringBuffe	6
+p2:class/f/a#174	class/f/a.class	174	像攻击	tượng tấn công	code: HIEN a@227 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	14
+p2:class/f/a#175	class/f/a.class	175	命	HP	code: HIEN a@694 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.jS | StringBuffer	6
+p2:class/f/a#176	class/f/a.class	176	攻	ATK	code: HIEN a@871 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.aS | StringBuffer	6
+p2:class/f/a#177	class/f/a.class	177	敏	SPD	code: HIEN a@989 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.cS | StringBuffer	6
+p2:class/f/a#178	class/f/a.class	178	消耗	Tốn 	code: HIEN a@663 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.nS | StringBuffer	10
+p2:class/f/a#179	class/f/a.class	179	灵	MP	code: HIEN a@753 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.kS | StringBuffer	6
+p2:class/f/a#180	class/f/a.class	180	点	điểm	code: HIEN a@218 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(Ljav	6
+p2:class/f/a#181	class/f/a.class	181	点体力,	 điểm thể lực, 	code: HIEN a@675 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.jS | StringBuffer	14
+p2:class/f/a#182	class/f/a.class	182	防	DEF	code: HIEN a@930 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.bS | StringBuffer	6
+p2:class/f/c#234	class/f/c.class	234	伤害,	sát thương	code: HIEN a@708 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	10
+p2:class/f/c#235	class/f/c.class	235	体力	Thể lực	code: HIEN a@905 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.a[S | StringBuffe	10
+p2:class/f/c#236	class/f/c.class	236	体力 	Thể lực 	code: HIEN e@81 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	10
+p2:class/f/c#237	class/f/c.class	237	全体	Toàn đội	code: ? a@28 → return	10
+p2:class/f/c#238	class/f/c.class	238	加载物品出错!	Lỗi tải vật phẩm!	code: ? a@1133 → PrintStream.println(Ljava/lang/String;)V | return	
+p2:class/f/c#239	class/f/c.class	239	单体	Một người	code: ? a@31 → return	10
+p2:class/f/c#240	class/f/c.class	240	恢复	Hồi	code: HIEN a@788 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.vB | f/c.a(I)Ljav	10
+p2:class/f/c#241	class/f/c.class	241	最少	Tối thiểu	code: HIEN a@1060 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.a[S | StringBuffe	10
+p2:class/f/c#242	class/f/c.class	242	正常	Thường	code: HIEN a@670 → StringBuffer.<init>()V | StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; |	10
+p2:class/f/c#243	class/f/c.class	243	消耗	Tốn 	code: HIEN e@9 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.a[S | StringBuffe	10
+p2:class/f/c#244	class/f/c.class	244	灵力	MP	code: HIEN a@864 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.a[S | StringBuffe	10
+p2:class/f/c#245	class/f/c.class	245	灵力 	MP 	code: HIEN e@42 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	10
+p2:class/f/c#246	class/f/c.class	246	点	điểm	code: HIEN a@638 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	6
+p2:class/f/c#247	class/f/c.class	247	点,	điểm,	code: HIEN a@927 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | f/c.e()Ljava/lang/String	6
+p2:class/f/c#248	class/f/c.class	248	点以上的正常伤害	điểm trở lên sát thương thường	code: HIEN a@1079 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p2:class/f/c#249	class/f/c.class	249	生命	HP	code: HIEN a@823 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.a[S | StringBuffe	10
+p2:class/f/c#250	class/f/c.class	250	象	tượng	code: HIEN a@687 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	6
+p2:class/f/c#251	class/f/c.class	251	造成	Gây	code: HIEN a@602 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.vB | f/c.a(I)Ljav	10
+p2:class/c/f#217	class/c/f.class	217	赠送2个元宝(用于换高级装备),请记得存档!	Tặng 2 nguyên bảo (dùng đổi trang bị cao cấp), nhớ lưu game nhé!	code: HIEN a@22 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p2:class/c/i#113	class/c/i.class	113	　	 	code: HIEN b@29 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p2:class/c/i#117	class/c/i.class	117	　	 	code: HIEN b@29 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p2:class/c/i#159	class/c/i.class	159	两倍经验	EXP gấp đôi	code: ? <clinit>@75 → ps c/i.g[Ljava/lang/String; | ps c/i.l[Ljava/lang/String;	18
+p2:class/c/i#160	class/c/i.class	160	两倍金钱	Tiền gấp đôi	code: ? <clinit>@70 → ps c/i.g[Ljava/lang/String; | ps c/i.l[Ljava/lang/String;	18
+p2:class/c/i#161	class/c/i.class	161	你已经购买过两倍经验了	Bạn đã mua EXP gấp đôi rồi	code: ? c@147 → c/b.a(Ljava/lang/String;J)Lc/b; | c/j.f()I | return	
+p2:class/c/i#162	class/c/i.class	162	你已经购买过两倍金钱了	Bạn đã mua tiền gấp đôi rồi	code: ? c@116 → c/b.a(Ljava/lang/String;J)Lc/b; | c/j.f()I | return	
+p2:class/c/i#163	class/c/i.class	163	修改器	Bộ sửa đổi	code: ? <clinit>@80 → ps c/i.g[Ljava/lang/String; | ps c/i.l[Ljava/lang/String;	14
+p2:class/c/i#164	class/c/i.class	164	　	 	code: HIEN b@29 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p2:class/c/i#165	class/c/i.class	165	兑换3000银两,	Đổi 3000 bạc,	code: ? <clinit>@119 → ps c/i.h[Ljava/lang/String; | return	
+p2:class/c/i#166	class/c/i.class	166	兑换银两	Đổi bạc	code: ? <clinit>@65 → ps c/i.g[Ljava/lang/String; | ps c/i.l[Ljava/lang/String;	18
+p2:class/c/i#167	class/c/i.class	167	多好的东西,不买真是可惜!	Đồ tốt thế này, không mua thật đáng tiếc!	code: ? c@323 → c/b.a(Ljava/lang/String;J)Lc/b; | c/j.f()I | return	
+p2:class/c/i#168	class/c/i.class	168	激活修改器,本章游戏过程中可无限次使用所有增值服务.喜欢原汁原味的您,不再受任何影响尽情享受游戏.	Kích hoạt bộ sửa đổi, trong chương này có thể dùng vô hạn lần mọi dịch vụ giá trị gia tăng. Người thích nguyên bản như bạn sẽ không bị ảnh hưởng, cứ thoải mái tận hưởng game.	code: ? <clinit>@134 → ps c/i.h[Ljava/lang/String; | return	
+p2:class/c/i#169	class/c/i.class	169	激活永久两倍经验(所有存档),	Kích hoạt vĩnh viễn EXP gấp đôi (mọi bản lưu),	code: ? <clinit>@129 → ps c/i.h[Ljava/lang/String; | return	
+p2:class/c/i#170	class/c/i.class	170	激活永久两倍金钱(所有存档),	Kích hoạt vĩnh viễn tiền gấp đôi (mọi bản lưu),	code: ? <clinit>@124 → ps c/i.h[Ljava/lang/String; | return	
+p2:class/c/i#171	class/c/i.class	171	赠送2个元宝(用于换高级装备),请记得存档!	Tặng 2 nguyên bảo (dùng đổi trang bị cao cấp), nhớ lưu game nhé!	code: HIEN a@38 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p2:class/c/n#163	class/c/n.class	163	使用修改器,\n可打开本章所有剧情,超强装备,金钱完全免费用,\n还有更多惊喜等着你!\n按右键秘籍菜单可查看	Dùng bộ sửa đổi,\nmở được toàn bộ cốt truyện chương này, trang bị siêu mạnh, tiền dùng hoàn toàn miễn phí,\ncòn nhiều bất ngờ đang chờ bạn!\nBấm phím phải để xem menu bí kíp	code: ? a@428 → c/b.a(Ljava/lang/String;J)Lc/b; | c/j.f()I | gs main/b.aLmain/b; | gf main/b.iLd/a; | d/m.	
+p2:class/g/a/a#427	class/g/a/a.class	427	你正在发送第	Bạn đang gửi tin số 	code: HIEN keyPressed@104 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(I)Lj	
+p2:class/g/a/a#428	class/g/a/a.class	428	你需要发送	Bạn cần gửi 	code: không thấy ldc (hằng tĩnh?)	
+p2:class/g/a/a#429	class/g/a/a.class	429	元.	 tệ.	code: HIEN run@468 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	6
+p2:class/g/a/a#430	class/g/a/a.class	430	元/条(不含通信费)	 tệ/tin (chưa gồm cước)	code: HIEN keyPressed@130 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p2:class/g/a/a#431	class/g/a/a.class	431	元/条(不含通信费)\n\n按确定继续.	 tệ/tin (chưa gồm cước)\n\nBấm OK để tiếp tục.	code: HIEN run@427 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p2:class/g/a/a#432	class/g/a/a.class	432	元/条(不含通信费)\n按确定继续。	 tệ/tin (chưa gồm cước)\nBấm OK để tiếp tục.	code: không thấy ldc (hằng tĩnh?)	
+p2:class/g/a/a#433	class/g/a/a.class	433	取消	Hủy	code: ? a@46 → return	10
+p2:class/g/a/a#434	class/g/a/a.class	434	已发送	Đã gửi 	code: không thấy ldc (hằng tĩnh?)	14
+p2:class/g/a/a#435	class/g/a/a.class	435	扣费成功,已扣费	Trừ phí xong, đã trừ 	code: HIEN run@453 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf g/a/a.fI | StringBuff	
+p2:class/g/a/a#436	class/g/a/a.class	436	条,资费	 tin, cước 	code: HIEN run@412 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf g/a/a.mI | StringBuff	14
+p2:class/g/a/a#437	class/g/a/a.class	437	条,还需再发送	 tin, cần gửi thêm 	code: HIEN run@403 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(I)Lj	
+p2:class/g/a/a#438	class/g/a/a.class	438	条短信，你还需要发送	 tin nhắn, bạn cần gửi thêm 	code: không thấy ldc (hằng tĩnh?)	
+p2:class/g/a/a#439	class/g/a/a.class	439	条短信，资费	 tin nhắn, cước 	code: HIEN keyPressed@115 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf g/a/a.mI | StringBuff	
+p2:class/g/a/a#440	class/g/a/a.class	440	短信发送成功	Gửi tin nhắn xong	code: HIEN run@394 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(I)Lj	
+p2:class/g/a/a#441	class/g/a/a.class	441	确定	OK	code: ? a@39 → return	10
+p2:class/g/a/a#442	class/g/a/a.class	442	返回	Quay lại	code: ? a@32 → return	10
+p2:class/d/c#1045	class/d/c.class	1045	全体复活	Hồi sinh cả đội	code: ? a@3652 → c/b.a([Ljava/lang/String;BBZ)Lc/b; | c/j.f()I | c/b.d()Ljava/lang/String; | String.equals(	18
+p2:class/d/c#1046	class/d/c.class	1046	商店	Cửa hàng	code: KHOA a@143 → String.equals(Ljava/lang/Object;)Z | gs c/i.a[I | c/f.<init>([I)V | e/a/c.a(Ljava/lang/Str	10
+p2:class/d/c#1047	class/d/c.class	1047	复活成功!	Hồi sinh xong!	code: ? a@3789 → c/b.a(Ljava/lang/String;J)Lc/b; | c/j.f()I | return	18
+p2:class/d/c#1048	class/d/c.class	1048	是否全体复活?赠送2个元宝(用于换高级装备),请记得存档!	Hồi sinh toàn đội? Tặng 2 nguyên bảo (dùng đổi trang bị cao cấp), nhớ lưu game nhé!	code: ? a@3689 → gs b/a.aZ | gs main/MainMIDlet.aLmain/MainMIDlet; | gs main/b.aLmain/b; | g/a/a.a(Ljavax/m	
+p2:class/d/c#1049	class/d/c.class	1049	法宝经验值	Điểm EXP pháp bảo	code: HIEN a@87 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(C)Lj	
+p2:class/d/c#1050	class/d/c.class	1050	激活	Kích hoạt	code: KHOA a@55 → String.equals(Ljava/lang/Object;)Z | c/b.a(Ljava/lang/String;J)Lc/b; | c/j.f()I | gs d/c.Z	10
+p2:class/d/c#1051	class/d/c.class	1051	激活失败!	Kích hoạt lỗi!	code: ? m@73 → c/b.a(Ljava/lang/String;J)Lc/b; | c/j.f()I | return	18
+p2:class/d/c#1052	class/d/c.class	1052	激活成功,玉儿现在可以使用了!	Kích hoạt xong, Ngọc Nhi giờ có thể sử dụng!	code: ? m@52 → gf d/c.HLc/b; | d/a.e(Lc/k;)V | d/c.v()V | b/a.o()Z | c/b.a(Ljava/lang/String;J)Lc/b; | c/	
+p2:class/d/c#1053	class/d/c.class	1053	是否激活玉儿?赠送2个元宝(用于换高级装备),请记得存档!	Có kích hoạt Ngọc Nhi không? Tặng 2 nguyên bảo (dùng đổi trang bị cao cấp), nhớ lưu game nhé!	code: ? m@0 → b/a.n()Z | gs main/MainMIDlet.aLmain/MainMIDlet; | gs main/b.aLmain/b; | g/a/a.a(Ljavax/mi	
+p2:class/d/c#1054	class/d/c.class	1054	玉儿未被激活,目前只能防御!	Ngọc Nhi chưa được kích hoạt, hiện chỉ có thể phòng ngự!	code: ? a@63 → c/b.a(Ljava/lang/String;J)Lc/b; | c/j.f()I | gs d/c.Z[Ljava/lang/String; | gf d/a.eB | gf 	
+p2:class/d/c#1055	class/d/c.class	1055	返回	Quay lại	code: ? a@3657 → c/b.a([Ljava/lang/String;BBZ)Lc/b; | c/j.f()I | c/b.d()Ljava/lang/String; | String.equals(	10
+p2:class/d/e#375	class/d/e.class	375	© 2008 拉阔游戏	(c) 2008 Lạp Khoát Game	code: ? a@431 → gs main/b.fI | gs main/b.eI | Graphics.drawString(Ljava/lang/String;III)V | d/a.b(Ljavax/m	
+p2:class/d/e#376	class/d/e.class	376	下载轩辕剑第一章	Tải Hiên Viên Kiếm chương 1	code: ? a@426 → c/b.a([Ljava/lang/String;BBZ)Lc/b; | c/j.f()I | c/b.d()Ljava/lang/String; | String.equals(	
+p2:class/d/e#377	class/d/e.class	377	拉阔游戏出品\n© 2008 gameislive\n\n轩辕剑系列由台湾大宇正式授权\nsoftstar\n© 2008 Softstar Mobile\n\n邮箱:kefu@gameislive.com\n电话:020-88302012\n\n制作群:\n午时三刻工作室\n项目负责:飞鱼\n游戏策划:阿达,雷斯林,迪奇马丁\n主程序:飞鱼\n人物动画:桑尼\n地图制作:小荷轩轩\n技能效果/游戏界面:唐墨\n质量监控:文森特,赌后\n\n版本号:	Lạp Khoát Game phát hành\n(c) 2008 gameislive\n\nSeries Hiên Viên Kiếm do Đại Vũ Đài Loan chính thức ủy quyền\nsoftstar\n(c) 2008 Softstar Mobile\n\nEmail:kefu@gameislive.com\nĐiện thoại:020-88302012\n\nNhóm sản xuất:\nXưởng Ngọ Thời Tam Khắc\nPhụ trách dự án:Phi Ngư\nPhác thảo game:A Đạt,Lôi Tư Lâm,Địch Kỳ Mã Đinh\nLập trình chính:Phi Ngư\nHoạt họa nhân vật:Tang Ni\nChế tác bản đồ:Tiểu Hà Hiên Hiên\nHiệu ứng kỹ năng/giao diện game:Đường Mặc\nGiám sát chất lượng:Vincent,Đổ Hậu\n\nPhiên bản:	code: HIEN a@767 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gs b/a.alLjava/lang/Stri	
+p2:class/d/e#378	class/d/e.class	378	访问QQ游戏中心	Vào Trung tâm Game QQ	code: ? a@535 → c/b.a([Ljava/lang/String;BBZ)Lc/b; | c/j.f()I | c/b.d()Ljava/lang/String; | String.equals(	
+p2:class/d/e#379	class/d/e.class	379	返回	Quay lại	code: ? a@421 → c/b.a([Ljava/lang/String;BBZ)Lc/b; | c/j.f()I | c/b.d()Ljava/lang/String; | String.equals(	10

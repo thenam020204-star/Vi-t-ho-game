@@ -14,6 +14,29 @@ FIX = [
 ]
 
 
+# Mảnh câu game ghép với số trong code ("你正在激活" + n + "次"): dp ép khoảng trắng đầu/cuối theo gốc,
+# nên thêm dấu cách ở phía nối với số. Khoá = chuỗi gốc; giá trị = (cách đầu, cách cuối).
+EDGE = {
+    '你正在激活': (0, 1), '你需要激活': (0, 1), '已激活': (0, 1), '次': (1, 0),
+    '次,还需再激活': (1, 1), '次，你还需要激活': (1, 1),
+    '你正在发送第': (0, 1), '你需要发送': (0, 1), '已发送': (0, 1), '扣费成功,已扣费': (0, 1),
+    '元.': (1, 0), '元/条(不含通信费)': (1, 0), '元/条(不含通信费)\\n\\n按确定继续.': (1, 0),
+    '元/条(不含通信费)\\n按确定继续。': (1, 0),
+    '条,资费': (1, 1), '条,还需再发送': (1, 1), '条短信，你还需要发送': (1, 1), '条短信，资费': (1, 1),
+    '消耗': (0, 1), '点体力,': (1, 1),
+    '音乐': (0, 1),  # t.dat: "音乐" + "开"/"关" (tuỳ chọn nhạc lúc khởi động)
+}
+
+
+def edge(goc, s):
+    a, b = EDGE.get(goc, (0, 0))
+    if a and not s.startswith(' '):
+        s = ' ' + s
+    if b and not s.endswith(' '):
+        s = s + ' '
+    return s
+
+
 def norm(s):
     for a, b in FIX:
         s = a.sub(b, s) if hasattr(a, 'sub') else s.replace(a, b)
@@ -35,7 +58,7 @@ def main():
         d = c[4] if c[4] else c[3]          # chưa dịch / KHÔNG DỊCH -> gốc
         if not c[4]:
             empty += 1
-        n = norm(d)
+        n = edge(c[3], norm(d)) if c[4] else norm(d)
         for ch in set(d) - set(n):
             changed[ch] += 1
         for ch in n:
