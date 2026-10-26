@@ -116,16 +116,17 @@ public class Harness {
             Method m = null;
             for (Method x : c.getDeclaredMethods()) {  // trùng tên + số tham số: đối số toàn số -> ưu tiên tham số số, ngược lại String
                 if (!(x.getName().equals(p[2]) && Modifier.isStatic(x.getModifiers()) && x.getParameterTypes().length == p.length - 3)) continue;
-                boolean allNum = true, numArgs = true;
+                boolean okm = true;
                 for (int i = 0; i < x.getParameterTypes().length; i++) {
-                    Class<?> t = x.getParameterTypes()[i];
-                    if (t == String.class) allNum = false;
-                    if (!p[3 + i].matches("-?\\d+[sib]?")) numArgs = false;
-                    else if (p[3 + i].matches("-?\\d+s") && t != short.class) numArgs = false;   // hậu tố s/i/b = ép kiểu short/int/byte
-                    else if (p[3 + i].matches("-?\\d+i") && t != int.class) numArgs = false;
-                    else if (p[3 + i].matches("-?\\d+b") && t != byte.class) numArgs = false;
+                    Class<?> t = x.getParameterTypes()[i]; String ar = p[3 + i];
+                    boolean num = ar.matches("-?\\d+[sib]?");
+                    if (t == String.class) okm &= !num;
+                    else if (t == short.class) okm &= num && !ar.matches(".*[ib]$");
+                    else if (t == int.class) okm &= num && !ar.matches(".*[sb]$");
+                    else if (t == byte.class) okm &= num && !ar.matches(".*[si]$");
+                    else okm = false;
                 }
-                if (allNum == numArgs) { m = x; break; }
+                if (okm) { m = x; break; }
             }
             m.setAccessible(true);
             Object[] args = new Object[p.length - 3];
