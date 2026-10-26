@@ -332,7 +332,7 @@
 332	Là gì vậy?
 333	Hừ! Chẳng phải ta đã nói rồi sao, chỉ ăn con gái, không ăn con trai, sao còn đưa con trai đến!
 334	Ha ha ha!!
-335	A!～～～～～～
+335	A!......
 336	A! Ngươi! Sao ngươi nóng thế này!! Chuyện... chuyện này....
 337	Đáng ghét! Lũ dân quê này! Dám giăng bẫy hại ta!!
 338	Tiểu Tuyết... Tiểu Tuyết....
@@ -640,7 +640,7 @@
 640	Kẻ nào đã thả bọn trẻ!!!!!!
 641	Tư Đồ úy quan
 642	Hừ! Là chúng ta thả, tuyệt đối không để các ngươi làm hại trẻ con vô tội!
-643	Xem ra {Cao úy quan} ở {trấn Hắc Sơn} cũng do các ngươi giết rồi? Các ngươi phạm đại tội mưu phản! Còn không mau khoanh tay chịu trói!
+643	Xem ra Cao úy quan ở {trấn Hắc Sơn} cũng do các ngươi giết rồi? Các ngươi phạm đại tội mưu phản! Còn không mau khoanh tay chịu trói!
 644	Nằm mơ!
 645	Hừ! Đành phải cho các ngươi nếm mùi lợi hại thôi!
 646	Ha ha ha~~~~~ chết đi!!!
@@ -814,3 +814,235 @@
 814	Hôm qua {thần đỉnh} đó đã đưa lên long chu trên mặt sông ở cổng thành rồi, thật tiếc không được xem.
 815	{Thần đỉnh} quả nhiên đã chở lên long chu. Giờ trong thành Đại Lương hỏi thăm khắp nơi không có tin tức của {Ngọc Nhi}, chúng ta nên tìm cách lẻn lên long chu.
 816	Ừ! Ta cũng nghĩ vậy!
+817	Vậy chúng ta đến chỗ {bến tàu}, xem có cách nào lẻn lên long chu không.
+818	Đến thành Đại Lương và nói chuyện với ông lão xong
+819	Chúc mừng, bạn đã dò được tung tích thần đỉnh. Lạp Khoát Game tặng bạn 50 điểm thành tựu của game này, tổng điểm thành tựu của bạn đã đạt 750.
+820	{Thần đỉnh} đó đã đưa lên long chu trên mặt sông ở cổng thành rồi, thật tiếc không được xem.
+821	Thành Đại Lương
+822	Long chu của hoàng thượng đậu trước cổng thành Đại Lương. Để phòng ám sát, toàn bộ lò rèn trong thành đều không được mở cửa.
+823	Phương gia
+824	4 nguyên bảo đổi một bộ Giao Lân Y, mặc trên người, ATK+1, DEF+27
+825	8 nguyên bảo đổi một cây Hỗn Thiên Liên Châu Chùy, ATK+245, SPD-2
+826	Ngoài thành Đại Lương
+827	Oa~~ đây chính là Đại Lương sao? Tường thành cao quá....
+828	Chú ý khi lên thuyền đừng chạm vào binh sĩ. Đi vòng qua họ.
+829	Haizz.... làm thị tỳ của hoàng thượng thật mệt..... ta không muốn kéo thuyền nữa.
+830	Cung nữ Thanh Thanh
+831	Kéo thuyền thật mệt. Hiếm có hoàng thượng thương chúng ta, cho dân trồng nhiều liễu thế này để chúng ta hóng mát.
+832	Cung nữ Tiểu Nhã
+833	Đứng lại! Lùi ra!
+834	Long chu của hoàng đế bệ hạ, thảo dân không được đến gần!
+835	Bị phát hiện rồi, đành thử lại lần nữa!
+836	Chúng tôi là "điện cước nữ" của hoàng thượng. Không phải cung nữ lo việc vặt như dâng trà nước chén bát, mà là phụ trách kéo thuyền.
+837	Cung nữ Lệ Lệ
+838	Chương đầu của "Hiên Viên Kiếm - Thiên Chi Ngân" đến đây là hết. Cảm ơn các người chơi bản quyền đã ủng hộ nhiệt tình. Xin hãy lưu game, tiếp tục chơi ở chương sau.
+839	Boong long chu
+840	Long chu oai phong quá!!~~~~~
+841	Chúng ta vào khoang thuyền tìm đỉnh trước đã
+842	Vậy Thác Bạt cô nương thì sao?
+843	Ta nghĩ con nhóc đó chắc cũng đang tìm đỉnh, biết đâu tìm được đỉnh cũng sẽ thấy cô ấy.
+844	Ừ! Vậy chúng ta mau vào khoang thuyền.
+845	Trần đại ca, Thác Bạt tỷ, hai người cuối cùng cũng đến rồi!!!
+846	Tiểu Tuyết, có thấy Trương đại ca không?
+847	Anh rể... anh rể cũng đến sao?
+848	Phải, để cứu ngươi, Trương đại ca đã phóng hỏa, đục lỗ khắp khoang thuyền, nghi binh đánh lạc hướng. Khiến Ngự lâm quân đại loạn, ta mới nhân lúc loạn cứu ngươi ra.
+849	Được rồi, chúng ta mau nghĩ cách trốn thôi!
+850	Chương đầu của "Hiên Viên Kiếm - Thiên Chi Ngân" đến đây là hết. Cảm ơn các người chơi bản quyền đã ủng hộ nhiệt tình. Xin hãy đón chờ chương hai!
+851	Khách quan chào ngài
+852	Hạ lão bản
+853	Chào ông, tôi muốn trọ lại đây vài ngày.
+854	Được được, hoan nghênh, trọ một đêm ở đây chỉ cần {năm mươi lượng bạc} thôi.
+855	Không vấn đề, ngoài ra tôi còn muốn hỏi một chút....
+856	Sao vậy? Tiền lộ phí không đủ à?
+857	Ờ.. không phải....
+858	Tôi có việc gấp phải sang bờ bên kia, nhưng một đại ca giữ cầu lại không cho tôi qua...
+859	Ông có cách nào giúp tôi sang sông sớm một chút không?
+860	Ừm... câu hỏi này của cậu khó đấy.....
+861	Ngày mai làng tổ chức {lễ Hà Thần}, dân làng để tỏ lòng kính trọng nên mới phong tỏa cây cầu.
+862	Khúc sông này nước lại rất xiết, thuyền không đi được, thường ngày trong làng cũng nhờ cây cầu này, dân làng mới sang bờ bên kia được.
+863	Nhưng nếu cậu muốn đi vòng đến chỗ nước cạn có thuyền, có thể phải đi thêm nhiều ngày.
+864	Đau đầu quá, xem ra lần này thật tuyệt vọng rồi.
+865	Haizz... thôi vậy, đi vòng cũng tốn thời gian, hay là ta chờ ở đây vài ngày vậy.
+866	Đã vậy, ta tính rẻ hơn cho cậu, mỗi ngày {ba mươi lượng bạc}, có muốn trọ không?
+867	Trả 30 lượng để trọ
+868	Được, nhận ba mươi lượng bạc của cậu.
+869	Để tôi gọi người dẫn cậu đến phòng.
+870	Có khách quan đến! Mau ra giúp!
+871	Chào ngài, cảm ơn ngài đã ghé tiệm nhỏ của chúng tôi.....
+872	Tiểu Tuyết
+873	À... chào cô...
+874	Phòng của ngài ở trên lầu, mời ngài đi cùng tôi...
+875	Không trọ
+876	Khách quan mời lên phòng trên lầu nghỉ ngơi.....
+877	Chuyện gì vậy? Đứa bé ngoài cửa khóc thương tâm thế.....
+878	Haizz... tiểu khách quan, cậu còn chưa biết đã xảy ra chuyện gì nhỉ!
+879	Chị của nó, chính là cô bé tóc trắng hôm qua dẫn đường cho cậu. Vừa nãy đột nhiên chạy đi nói với thôn trưởng, cô ấy bằng lòng thay con gái Nhạc đại phu làm tế phẩm cho Hà Thần!
+880	Hả???!!!!!
+881	Hu hu~~~~~~ đều tại em không tốt!
+882	Tối qua em với chị cãi nhau, nói tại chị không chữa bệnh cho em nên em mới để lại bệnh gốc.
+883	Thằng bé ngốc này, lúc cháu bị bệnh, chị cháu sốt ruột đến phát điên rồi!
+884	Còn không phải vì không đủ tiền, ông đại phu thực dụng kia mới không chữa cho cháu, cháu mới để lại bệnh gốc. Thân thể cứ yếu mãi.
+885	Cháu biết, cháu đều biết.
+886	Vậy tối qua cháu còn nói với chị những lời bậy bạ đó, sao chị cháu không đau lòng cho được!
+887	Có lẽ chính vì cháu làm chị tổn thương, chị mới nghĩ đến chuyện thay con gái đại phu chết đi, để đổi tiền khám bệnh cho cháu.
+888	Hu hu~~~~~ em xin lỗi~~~~ đều là lỗi của em... đều là em không tốt...
+889	Hạ lão bá, cháu đại khái hiểu rồi.
+890	Nghi lễ hiến tế Hà Thần của làng ông, khi nào bắt đầu?
+891	Sáng sớm ngày mai, nhưng người ngoài tuyệt đối không được đến dự.
+892	Hạ lão bá, tục lệ này của làng ông thật quá đáng! Cháu nhất định phải đi ngăn cản!
+893	Đại ca ca.... anh.... anh bằng lòng đi cứu chị em sao??
+894	Tiểu khách quan, tấm lòng của cậu là tốt, nhưng người trong làng sẽ không nghe cậu đâu.
+895	Huống chi dù cậu cứu được Tiểu Tuyết nhà ta, dân làng sợ Hà Thần gia nổi giận, vẫn sẽ tìm cô gái khác hiến tế.
+896	Xin anh... đại ca ca.... dù thế nào cũng phải cứu chị em với...
+897	Tiểu Sóc! Không được nói nữa!
+898	Tiểu khách quan à, cậu cứ coi như không có chuyện này, về phòng nghỉ sớm đi.
+899	Ghét quá! Hạ lão bá, ông lại cũng thấy chị cháu sắp chết mà không cứu!!!
+900	Ghét quá! Các người đều thấy chết không cứu, em không thèm để ý các người nữa!!! hu hu~~~~~~~~
+901	Haizz... thằng bé Tiểu Sóc ngốc này, chẳng lẽ ta không đau như dao cắt giống nó sao!
+902	Ta nuôi Tiểu Tuyết bao nhiêu năm, con bé vừa ngoan vừa chu đáo, nay lại phải đi hiến tế cho Hà Thần, sao ta không đau lòng cho được.....
+903	Có trả 50 lượng để trọ không?
+904	Chủ quán trọ
+905	Trả 50 lượng để trọ
+906	Một đêm ngủ say, cơ thể sảng khoái hơn nhiều.
+907	Ngày hôm sau
+908	Xin lỗi, tiền của cậu không đủ 50 lượng.
+909	Không trọ
+910	Quán trọ thôn Nguyệt Hà
+911	Lạ thật, chủ quán không có đây.....
+912	Chẳng lẽ mặt trời lên cao ba sào rồi mà họ vẫn trùm chăn ngủ hết sao......
+913	Đây là phòng của ngài......
+914	Tuy có thể hơi đơn sơ, nhưng thường ngày tôi đều chăm chút quét dọn rất sạch, mong ngài thích.
+915	Ừ! Đúng là căn phòng rất sạch, cảm ơn cô!
+916	Đúng rồi! Cho tôi hỏi một chút, tại sao tóc cô.... lại màu trắng?
+917	A! Cái này.... cái này là bẩm sinh... lúc sinh ra tóc đã bạc trắng cả đầu.....
+918	Ồ, thì ra là bẩm sinh, đặc biệt thật...
+919	Dưới lầu vọng lên tiếng gọi của một cậu bé
+920	Xin lỗi, đó là em trai tôi, chân nó hơi bất tiện, chắc lại ngã rồi...
+921	Vậy cô mau xuống xem đi, ngã đau thì không tốt.
+922	Làm phiền ngài rồi, thật ngại quá, vậy tôi xin cáo lui trước.....
+923	Đúng là cô bé rất lễ phép...
+924	Vất vả bôn ba cả ngày, thật sự hơi mệt rồi.... ngủ một giấc ngon đã.
+925	Trần Tĩnh Cừu mệt mỏi nhanh chóng chìm vào giấc ngủ, một đêm ngủ say ......
+926	Sáng sớm hôm sau.....
+927	Lầu hai quán trọ thôn Nguyệt Hà
+928	Hu hu~~~~ đừng như vậy~~~ xin mọi người đừng như vậy~~~ trả con gái tôi về đây~~~~ làm ơn làm phước đi......
+929	Vợ đại phu
+930	Tôi chỉ có mỗi một đứa con gái này thôi mà.....
+931	Phải đó, xin mọi người, trả con gái chúng tôi về đây....
+932	Nhạc đại phu
+933	Đại phu, dùng cách bốc thăm để quyết định người hy sinh, là do ông và thôn trưởng cùng đề xuất, mọi người cũng đều đồng ý.... bây giờ sao ông lại tự mình đổi ý....
+934	Phải đó, năm ngoái cháu gái tôi không may bị bốc trúng, chúng tôi cũng rơi nước mắt giao nó ra, có nói gì đâu....
+935	Trần lão
+936	Các vị hương thân, tôi Nhạc Quần cả đời không con, đến già mới có được đứa con gái này,
+937	Giờ lại đem nó đi hiến tế cho Hà Thần... chuyện này... hai vợ chồng chúng tôi sao nỡ được.....
+938	Nhạc đại phu, không thể nói vậy... chúng tôi chẳng lẽ cam lòng để con gái mình bị đưa đi hiến tế uổng công....
+939	Lâm tẩu
+940	Phải đó, cách bốc thăm cũng là ông đề xuất, sao ông có thể tự đổi ý.....
+941	Dù sao con gái Nhạc đại phu cũng đã bị trói đi rồi, tôi thấy chúng ta đừng dây dưa nữa, để hai vợ chồng họ bình tĩnh lại đi....
+942	Phải đó... phải đó... chúng ta đều đồng bệnh tương liên.... haizz....
+943	Hu hu~~~~~~ con ơi~~~~~~ con ơi~~~~~~~ mẹ xin lỗi con....
+944	Ta hiểu rồi, thì ra mỗi năm đến lễ Hà Thần ở đây đều chọn một cô gái trong làng đưa cho Hà Thần làm tế phẩm sống!!
+945	Cách làm này quá đáng ghét, ta đi {hỏi những người khác trong làng}, xem có cách nào cứu cô gái đó không!
+946	Cách dùng con gái tế Hà Thần quá đáng ghét, ta đi {hỏi những người khác trong làng}, xem có cách nào cứu cô gái đó không!
+947	Nhà Nhạc đại phu
+948	Hoan nghênh quý khách ghé tiệm nhỏ, thật là rạng rỡ cho tệ xá....
+949	Lã Thuyên
+950	Tiệm tạp hóa
+951	Đại thẩm vì sao khóc vậy?
+952	Lễ tế năm ngoái, con tôi bị bốc trúng tế Hà Thần, từ đó không bao giờ về nữa.
+953	Không biết rốt cuộc nó ra sao rồi...
+954	Mỗi lần đến lễ tế Hà Thần, tôi lại nhớ đến con tôi. Hu hu~~~~~~~~
+955	Không biết nó có còn quay về nữa không......
+956	Nhà Trần Nguyệt
+957	Đáng hận! Đáng hận!
+958	Vị Hà Thần này bắt chúng ta dùng người sống hiến tế, quan phủ cũng chẳng quản.
+959	Lũ quan chó má này chỉ khi hoàng đế muốn đông chinh, xây hoàng cung, đào vận hà mới đến tìm chúng ta đòi thuế, đòi người.
+960	Ngày thường sống chết của chúng ta, họ có thèm quan tâm đâu.
+961	Nhà thôn trưởng
+962	Trần đại ca....
+963	Đừng xông bừa! Xin hỏi các vị tìm ai?
+964	Công Sơn bà bà
+965	Xin hỏi. Ở đây có một vị Công Sơn tiên sinh không?
+966	Xin hỏi công tử là....?
+967	Vãn bối là sư điệt của Công Sơn tiên sinh, Trần Tĩnh Cừu.
+968	Gia sư Trần Phụ đột nhiên gặp đại nạn, đặc biệt sai vãn bối đến cầu cứu Công Sơn tiên sinh...
+969	A Hàn~~~~ cho cậu ấy vào đi, là người nhà, không sao....
+970	Công Sơn tiên sinh
+971	Biết rồi, Thiết ca.
+972	Hai vị mời vào. Tĩnh Cừu, sư bá con ở ngay bên trong.
+973	Haizz... các con đến thật không đúng lúc.
+974	Nhìn sư bá con bệnh thế này, e cũng không giúp được gì cho con.
+975	Sư bá mẫu, sư bá rốt cuộc mắc bệnh gì?
+976	Hai năm trước, sư bá con vì thương cảm bách tính bị triều đình bạo chính bức hại, dẫn mọi người dựng cờ khởi nghĩa... bị quan binh trấn áp, bị thương nặng.
+977	Sư bá lại bị quan binh đánh bại? Đạo thuật của sư bá chẳng phải còn lợi hại hơn sư phụ sao?
+978	Phải, thực lực Quỷ Cốc đạo thuật của sư bá con có thể nói là mạnh nhất đương thế. Nhưng....
+979	Nhưng đối thủ ông ấy gặp không phải tướng lĩnh triều đình bình thường, mà là {Vũ Văn Thái sư} do hoàng đế đặc phái.
+980	{Vũ Văn Thái sư}?
+981	Phải, thực lực của Vũ Văn Thái sư mạnh hơn sư bá con rất nhiều. Sư bá con bị thương gắng gượng thoát ra, từ đó bệnh nặng triền miên.
+982	Thật khó tin, trên đời còn có người lợi hại thế.
+983	Vũ Văn Thái sư cũng là quốc sư của triều đình, ông ta có một thanh {Hoàng Kim Kiếm} đáng sợ, dùng thanh kiếm này, chỉ một người cũng địch nổi thiên quân vạn mã.
+984	Trước nay hễ Vũ Văn Thái sư trấn áp dân loạn, chưa lần nào không bị dẹp yên ngay lập tức. Thậm chí có nghĩa quân vừa nghe tên Vũ Văn Thái sư là không đánh mà tan.
+985	Đáng sợ vậy sao?!!
+986	Sư bá con chính là trúng một kiếm của Vũ Văn Thái sư, đến nay trong người vẫn còn kiếm khí, không thể trục ra.
+987	Vậy, cách cứu chữa sư bá mẫu vừa nói là....?
+988	Thanh Hoàng Kim Kiếm làm sư bá con bị thương đó, nghe nói cũng là một trong các thượng cổ thần khí, nên muốn trừ hại của kiếm khí nó, có lẽ cần sức mạnh của thượng cổ thần khí....
+989	Thượng cổ thần khí khác?
+990	Nếu tìm được {Thần Nông Đỉnh} trong truyền thuyết Viêm Đế luyện thuốc, dùng nó sắc thuốc cho sư bá con uống, thì kiếm khí hoàng kim sẽ tự nhiên tiêu trừ.
+991	Thì ra là vậy, có gì khó đâu, cái đỉnh gì đó giờ ở đâu?
+992	Haizz... đó chính là lý do sư bá con không muốn con biết chuyện này, cái đỉnh đó nghe nói hiện ở trong tay Vũ Văn Thái sư.
+993	Gì? Ở trong tay ông ta??!!
+994	Nhưng đây chỉ là lời đồn.
+995	Trước đây ta từng điều tra tin tức về {Thần Nông Đỉnh}, chỉ tra được chừng này, sau đó sư bá con bệnh nặng, ta đành quay về chăm sóc, chuyện cũng không điều tra tiếp.
+996	Sư bá mẫu! Để con tiếp tục điều tra, con nhất định phải lấy được cái đỉnh đó!
+997	Sư bá vì nghĩa mà ra tay nên mới bị thương nặng, hơn nữa phải để sư bá bình phục mới đi cứu sư phụ được.
+998	Con à, nói thật, ta vừa mong con đi, lại vừa không mong con đi....
+999	Sư bá mẫu đừng lo, con đã quyết định rồi!
+1000	Được rồi con, vậy ta nói hết những gì ta biết cho con.
+1001	Con có thể đi phương Bắc trước, tìm chủ nhân cũ của {Thần Nông Đỉnh}, {bộ lạc Thác Bạt} của tộc Tiên Ti. Xác nhận xem cái đỉnh này có thật bị {Vũ Văn Thái sư} cướp mất không.
+1002	{Bộ lạc Thác Bạt} của Tiên Ti phương Bắc, vâng, con biết rồi.
+1003	Nếu Thần Nông Đỉnh thật sự bị Vũ Văn Thái sư cướp mất, con nhất định không được liều mạng với Vũ Văn Thái sư đó, không thì ta không còn mặt mũi nào gặp sư bá và sư phụ con nữa
+1004	Con hiểu rồi, sư bá mẫu yên tâm, con sẽ cân nhắc kỹ. Việc không nên chậm trễ, con xin lên đường sớm..
+1005	Khoan đã con, mấy món đồ này tặng con
+1006	Nhận được Bản đồ Tái Bắc và Thần Nông dược phương
+1007	Thần Nông Đỉnh rất nặng, các con không cần mang đỉnh về, chỉ cần dùng đỉnh sắc thuốc, mang thuốc về là được..
+1008	Cảm ơn sư bá mẫu, vậy chúng con xin cáo từ, sư bá mẫu xin bảo trọng.
+1009	Haizz... sư bá con là người rất chính nghĩa, lúc trẻ chúng ta cùng nhau cứu giúp người nghèo, hành hiệp trượng nghĩa....
+1010	Không ngờ lần này lại bị tên giặc Vũ Văn làm cho thành ra thế này...
+1011	Khụ khụ~~~ khụ.... haizz...
+1012	Con chính là tiểu thiếu chủ nước Trần mà sư đệ {Tắc Nghiệp} năm xưa hy sinh tính mạng cháu nhỏ của mình để đổi lấy phải không?
+1013	Vâng, vãn bối Trần Tĩnh Cừu, bái kiến Công Sơn sư bá.
+1014	Khụ khụ~~~ vừa rồi nghe con nói bên ngoài sư đệ Tắc Nghiệp gặp nguy hiểm, rốt cuộc là chuyện gì?
+1015	Trần Tĩnh Cừu kể lại tường tận chuyện xảy ra ở hang Phục Ma Sơn......
+1016	Thì ra là vậy, lão phu hiểu rồi..
+1017	Con ma thú Thao Thiết đó là ma vật thượng cổ, ngay cả lão phu đối phó cũng rất vất vả, sư phụ con càng không phải đối thủ của nó.
+1018	Muốn cứu sư phụ con, chỉ có phong ấn lại Thao Thiết vào tấm ma kính đó mới được, khụ khụ~~~~
+1019	Tốt quá, vậy sư bá đồng ý đi cứu sư phụ rồi ạ?
+1020	Rất tiếc... con à, hiện giờ lão phu lực bất tòng tâm... khụ khụ!! khụ~~ khụ khụ~~~~
+1021	...khụ khụ!! khụ~~ khụ khụ~~~~...khụ khụ!! khụ~~ khụ khụ~~~~
+1022	Sư bá, người....
+1023	Như con thấy, lão phu giờ bệnh tật đầy mình, có lòng mà không có sức.... haizz.....
+1024	Nhưng... sư bá, vậy sư phụ chẳng phải là......
+1025	Con à.. muốn trấn Thao Thiết, không chỉ cần tấm thượng cổ ma kính đó, mà còn cần tiêu hao rất nhiều nguyên thần chi lực...
+1026	Nếu là mấy năm trước, lão phu còn đối phó được, nhưng giờ thì, khụ khụ khụ!! khụ~~~ khụ khụ~~~
+1027	Sư bá, người.... người có sao không??...
+1028	Con à, hai năm trước lão phu bị một người đánh trọng thương, trong người đến nay vẫn còn kiếm khí của kẻ đó, nên mới thành ra thế này.....
+1029	Sư bá..........
+1030	Xin lỗi con. Lão phu.. lão phu thật có lỗi với sư đệ Tắc Nghiệp và con....
+1031	Sư bá, người.... người không sao chứ...
+1032	Khụ khụ khụ~~~~ đừng lo cho lão phu....
+1033	Sư phụ con dùng băng ti, phong chính mình cùng Thao Thiết trong hang, chắc còn cầm cự được chừng nửa năm.
+1034	Trong nửa năm này, con có thể đi tìm cao thủ khác giúp đỡ, biết đâu trời phù hộ Tắc Nghiệp, sẽ có cao thủ giúp ông ấy thoát khốn....
+1035	Nhưng sư bá, con nên đi đâu tìm cao thủ đây....
+1036	Khụ khụ khụ~~~~ người địch nổi Thao Thiết trong thiên hạ đã hiếm như sao buổi sáng, lão phu cũng không biết tìm đâu ra...
+1037	Thiết ca, sao ông không nói cho đứa nhỏ cách đó?..
+1038	Khụ khụ khụ~~~~ A Hàn à. Bà đừng đùa nữa...
+1039	Đứa nhỏ này là thiếu chủ nước Trần mà Tắc Nghiệp năm xưa dùng mạng cháu mình để đổi lấy, ta sao có thể để nó dấn thân vào hiểm nguy lớn thế....
+1040	Sư bá, con nhất định phải cứu sư phụ con ra, xin hỏi cách sư bá và sư bá mẫu vừa nói là gì! Xin nói cho vãn bối biết!
+1041	Khụ khụ khụ~~~~ chuyện đó rất nguy hiểm... con không cần biết..
+1042	Ông bản thân chỉ còn nửa cái mạng, đến nước này còn cậy mạnh làm gì, đứa nhỏ này trông thiên phú không tệ, chi bằng để nó thử xem.
+1043	Khụ khụ khụ~~~~ không được đâu....
+1044	Các con! Lại đây, ta nói cho các con cách cứu sư phụ!
+1045	Khụ khụ khụ~~~~ A Hàn.... đừng nói... đừng nói...
+1046	Đừng để ý sư bá con, lại đây, ta nói cho các con....
+1047	Nhà Công Sơn
+1048	Quán trọ trấn Hắc Sơn
