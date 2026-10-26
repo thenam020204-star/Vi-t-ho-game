@@ -13,7 +13,7 @@ Bản game điện thoại do Softstar Mobile phát hành, chia thành 5 chươn
 - Tên vật phẩm, chiêu thức, quái vật, mô tả hiệu ứng, menu và hướng dẫn.
 - Văn phong Hán Việt nhẹ, dễ đọc. Tên người, chiêu thức và bảo vật giữ âm Hán Việt có dấu.
 - Font tiếng Việt có dấu đầy đủ, xuống dòng theo từ, khung thoại 3 dòng.
-- Màn hình tiêu đề vẽ lại.
+- Màn hình tiêu đề, menu và toàn bộ ảnh có chữ vẽ lại tiếng Việt.
 - Chạy trên máy Java thật màn 240x320 (Nokia S60 như N73…), không chỉ trên J2ME Loader.
 
 Việt hoá bởi **NAM.P**.
@@ -72,5 +72,3 @@ Năm thần khí tụ về, cánh cửa **Hư Không** mở ra. Từ **Ma Giới
 
 Đây là chương khép lại toàn bộ câu chuyện, với cái kết khác hẳn bản PC. Liệu loạn thế có kết thúc, và cái giá phải trả là gì? Hãy tự mình khám phá.
 
----
-*Ghi chú cho người đăng: số dòng lấy từ dữ liệu trích xuất (`dich/dich_tat_ca.tsv`, file `map/*.m`/`*.m2`). Bản dịch hiện đang làm dở (khoảng 33%). Nếu đăng trước khi xong, nên ghi "đang Việt hoá".*
