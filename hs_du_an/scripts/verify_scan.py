@@ -13,14 +13,19 @@ CFG = {  # phần -> (lớp+hàm .m, lớp+hàm i.dat, stub)
     5: (('a/d/b', 'a', 2), ('b/a', 'a', 1), 'b.a:o:512'),
 }
 
+TAIL = {3: 'b/c/c', 4: 'b/c/c', 5: 'a/b/a'}  # lớp có `private static X[] a(DataInputStream)` đọc danh sách đối tượng của .m2
+
 def build_input(ws, n, root=None):
     (mc, mm, mp), (ic, im, ip), _ = CFG[n]
     root = root or 'x/%d' % n
     lines = []
     for f in sorted(glob.glob(os.path.join(ws, root, 'map', '*.m*')), key=lambda s: int(os.path.basename(s).split('.')[0])):
         rel = os.path.relpath(f, ws)
-        for _, s, e in textfmt.m_parse(open(f, 'rb').read())[3]:
+        bb = open(f, 'rb').read(); p0, A, _, segs = textfmt.m_parse(bb)
+        for _, s, e in segs:
             lines.append((rel, s, e, mc, mm, mp))
+        if f.endswith('.m2'):  # tên bản đồ (tiền tố) + phần bản đồ + danh sách đối tượng/NPC: đo danh sách rồi cho game đọc
+            lines.append((rel, textfmt.m2_list_start(bb, p0 + 8 + A), len(bb), TAIL[n], 'a', 1))
     f = os.path.join(ws, root, 'i.dat')
     for s, e, _ in segments.idat_segments(f):
         lines.append((os.path.relpath(f, ws), s, e, ic, im, ip))
@@ -40,7 +45,7 @@ def has_cjk(s):
 def main():
     ws = sys.argv[1]; n = int(sys.argv[2]) if len(sys.argv) > 2 else 1
     logp = sys.argv[3] if len(sys.argv) > 3 else None
-    lines = build_input(ws, n)
+    lines = build_input(ws, n, sys.argv[4] if len(sys.argv) > 4 else None)
     out = run_harness(ws, n, lines)
     diff = []; ascii_only = []; ok = 0; derived_l = []; unread = []; scan_total = 0; cache = {}
     if len(out) != len(lines):

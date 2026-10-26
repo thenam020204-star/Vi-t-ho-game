@@ -35,7 +35,25 @@ def mkjar(src, dst):
             for f in fs:
                 p = os.path.join(r, f); z.write(p, os.path.relpath(p, src))
 
+import re
+def autostub(msg):
+    """Từ thông báo NullPointerException của JVM suy ra static cần dựng: 'X.y' là mảng (load/store/length) hoặc đối tượng."""
+    m = re.search(r'because "((?:[\w$]+\.)+[\w$]+)(?:\[|")', msg) or re.search(r'because "((?:[\w$]+\.)+[\w$]+)" is null', msg)
+    if not m or 'this.' in m.group(1): return None
+    cls, fld = m.group(1).rsplit('.', 1)
+    arr = re.search(r'(array|array length|object array)', msg.split('because')[0])
+    return '%s:%s:%s' % (cls, fld, '64' if arr else 'new')
+
 def run(ws, n, jar, lines, stub):
+    for _ in range(10):
+        out, err = run1(ws, n, jar, lines, stub)
+        bad = [o for o in out if o.startswith('ERR')]
+        add = autostub((bad[0] if bad else '') + ' ' + err)
+        if not add or add in stub: return out, err
+        stub += ',' + add
+    return out, err
+
+def run1(ws, n, jar, lines, stub):
     fj = os.path.join(ws, 'work/tools/freej2me_plus.jar')
     cmd = ['env', '-u', 'JAVA_TOOL_OPTIONS', 'java', '-Dfile.encoding=ISO_8859_1', '-Djava.awt.headless=true', '-Dharness.stub=' + stub,
            '-cp', os.path.join(ws, 'hc') + ':' + fj, 'Harness', jar, fj]

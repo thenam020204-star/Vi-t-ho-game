@@ -1,4 +1,4 @@
-"""Trích text: extract.py <thư mục giải nén> <out.tsv> [--prefix pN:] [--phan N] [--cfg json]
+"""Trích text: extract.py <thư mục giải nén> <out.tsv> [--prefix pN:] [--part N]
 Cột: id, file, offset, goc, dich, ghi_chu, gioi_han  (xuống dòng = \\n, tab = \\t, \\ = \\\\). dich để trống."""
 import sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -6,11 +6,11 @@ import textfmt
 
 def main():
     a = sys.argv[1:]; opt = {}
-    while '--prefix' in a or '--cfg' in a:
-        for k in ('--prefix', '--cfg'):
+    while '--prefix' in a or '--part' in a:
+        for k in ('--prefix', '--part'):
             if k in a: i = a.index(k); opt[k] = a[i + 1]; del a[i:i + 2]
     d, outp = a[0], a[1]
-    cfg = json.load(open(opt['--cfg'])) if '--cfg' in opt else None
+    cfg = int(opt['--part']) if '--part' in opt else 1
     pre = opt.get('--prefix', '')
     rows = ['\t'.join(['id', 'file', 'offset', 'goc', 'dich', 'ghi_chu', 'gioi_han'])]
     for rel, kind in textfmt.units(d, cfg):

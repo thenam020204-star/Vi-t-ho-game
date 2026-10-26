@@ -1,4 +1,4 @@
-"""Đóng gói lại: repack.py <thư mục gốc> <tsv> <thư mục ra> [--cfg json]
+"""Đóng gói lại: repack.py <thư mục gốc> <tsv> <thư mục ra> [--part N]
 Sao chép toàn bộ thư mục gốc, ghi lại các file text với cột `dich` (rỗng = giữ gốc), cập nhật bảng độ dài .m / offset i.dat."""
 import sys, os, json, shutil, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -6,7 +6,8 @@ import textfmt
 
 def main():
     a = sys.argv[1:]; cfg = None
-    if '--cfg' in a: i = a.index('--cfg'); cfg = json.load(open(a[i + 1])); del a[i:i + 2]
+    cfg = 1
+    if '--part' in a: i = a.index('--part'); cfg = int(a[i + 1]); del a[i:i + 2]
     d, tsv, out = a
     if os.path.exists(out): shutil.rmtree(out)
     shutil.copytree(d, out)

@@ -37,24 +37,27 @@
 - `.pak` bị inventory nghi có chữ (b.pak, c.pak, mi0..5.pak, mm.pak) — có thể chỉ là ảnh; T3 xác minh.
 
 ## Checklist
-- [ ] T1. Sửa harness không in ra gì
+- [x] T1. Sửa harness không in ra gì
   - Agent: A1
   - Hiện trạng: `java -cp $P/scripts/harness Harness $WS/jars/hs1.jar $FJ < $WS/logs/h1_in.txt` chạy rc=0 nhưng không in dòng nào (trước khi thêm khối init MobilePlatform thì in được, 91 ERR do `<clinit>` của `h/b` cần Font). Nghi FreeJ2ME đổi `System.out` hoặc gọi exit. Cách sửa gợi ý: ghi kết quả ra file (tham số thứ 3), hoặc giữ `PrintStream` gốc trước khi init.
   - File: `$P/scripts/harness/Harness.java`
   - Hoàn thành khi: chạy với `$WS/logs/h1_in.txt` (1113 đoạn: mọi kịch bản `.m` + mọi bản ghi `i.dat` của P1) cho 1113 dòng `OK`, `consumed == len`.
-- [ ] T2. Đối chiếu bộ quét với harness (P1) (phụ thuộc T1)
+- [x] T2. Đối chiếu bộ quét với harness (P1) (phụ thuộc T1)
   - Agent: A1
   - Viết `$P/scripts/verify_scan.py`: với mỗi đoạn, tập chuỗi `utfscan.scan` trong đoạn phải bằng tập chuỗi có ký tự CJK mà harness gom được; liệt kê riêng chuỗi harness thuần ASCII (để quản đốc xem có cần dịch không).
   - Hoàn thành khi: 0 sai khác trên P1; ghi số liệu vào `$P/logs/verify_p1.txt` (commit).
-- [ ] T3. Các file text đơn giản của P1
+- [x] T3. Các file text đơn giản của P1
   - Agent: A1
   - Đọc loader trong `$WS/src/1` (t.dat/t2.dat/tips.dat qua `h/b.b(String)`; map.dat ở `g/j`; c.dat, monster.dat, item15.dat, fb_skill.dat ở `d/a`) → viết parser Python chính xác theo code, đọc hết file đúng từng byte, đối chiếu với `utfscan`. Xác minh các `.pak` có chứa text hay không (xem class đọc chúng).
   - File: `$P/scripts/formats_p1.py`, `$P/docs/formats_p1.md`
   - Hoàn thành khi: mỗi file: parser đọc hết đúng độ dài, tập chuỗi = tập của utfscan; tài liệu ghi định dạng từng file + kết luận về `.pak`.
-- [ ] T4. Trích xuất / đóng gói lại P1 (phụ thuộc T2, T3)
+- [x] T4. Trích xuất / đóng gói lại P1 (phụ thuộc T2, T3)
   - Agent: A1
   - `$P/scripts/extract.py <dir giải nén> <out.tsv>` → cột `id, file, offset, goc, dich, ghi_chu, gioi_han` (id ổn định, ví dụ `map/11.m@1234`; ghi chú: id kịch bản / loại bản ghi / chuỗi liền trước làm ngữ cảnh). `$P/scripts/repack.py <dir gốc> <tsv> <dir ra>` ghi lại resource, cập nhật bảng độ dài `.m` và bảng offset `i.dat`, cột `dich` rỗng = giữ gốc. Trong TSV, xuống dòng viết `\n`.
   - Hoàn thành khi: (a) TSV chưa dịch → repack ra file giống hệt từng byte cho mọi file; (b) dịch giả (mọi chuỗi → `"Thử " + chuỗi gốc + " dài hơn"`) → harness OK toàn bộ trên file đã repack và chuỗi gom được = chuỗi giả; (c) `$P/p1/text_can_dich.tsv` được tạo và commit.
+- [x] T4b. Trích xuất text P2–P5 + gộp (mở rộng từ quản đốc)
+  - Agent: A1
+  - `extract.py/repack.py --part N`, `verify_scan.py`, `verify_files.py`, `test_fake.py`; `pN/text_can_dich.tsv` N=1..5; `all/text_can_dich.tsv` (thêm cột `phan`, id tiền tố `pN:`); `docs/formats_pN.md`. Đã đạt cả 3 tiêu chí cho P2–P5.
 - [ ] T5. Chuỗi CJK trong .class của P1 — **Quản đốc nghiệm thu**
   - Agent: A1
   - Liệt kê chuỗi CJK trong constant pool các class (`b/i, b/m, b/u, c/d, g/b, g/d, i/a` theo inventory; quét lại toàn bộ) kèm nơi dùng (`javap -c`): hiển thị / khoá / so sánh / tên RMS. Không sửa class.
@@ -67,7 +70,12 @@
   - Hoàn thành khi: tài liệu liệt kê đủ (kiểm bằng grep `invokevirtual javax/microedition/lcdui/(Graphics|Font)` trên toàn bộ class P1) và đề xuất điểm hook tối thiểu.
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
-- (trống)
+- (không)
 
 ## Nhật ký
 - Quản đốc: kiểm kê 5 jar (`$WS/logs/inv*.txt`), CFR `$WS/src/1..5`, sửa run_emu (FreeJ2ME args), viết utfscan.py, segments.py, Harness.java (chưa chạy được → T1). Chốt phong cách + font + gộp = chỉ báo cáo.
+- A1 T1: Harness im lặng do `MobilePlatform.checkFileEncoding` gọi `System.exit(0)` khi `file.encoding` != ISO_8859_1 -> chạy với `-Dfile.encoding=ISO_8859_1`; `setPlatform` nhận 2 tham số; `<clinit>` của `d.g` cần `d.a.q` -> thêm `-Dharness.stub=lớp:trường:cỡ`; ghi qua fd 1 gốc. Harness.java; 1113/1113 OK (consumed==len). Thêm chế độ `LOAD` (gọi loader game qua MIDletLoader của FreeJ2ME, cần FreeJ2ME trong -cp) và ghi offset các lần readUTF.
+- A1 T2: scripts/verify_scan.py; P1 1113 đoạn, 0 sai khác; 22 chuỗi "消耗N点体力..." trong i.dat là game tự ghép (không phải dữ liệu), 0 chuỗi harness thuần ASCII hiển thị; logs/verify_p1.txt. Sửa utfscan.scan (giả dương lệch 1 byte ở chuỗi dài, thấy ở P2 map/128.m).
+- A1 T3: scripts/formats_p1.py + docs/formats_p1.md; 8 file text/dữ liệu đọc hết đúng byte, tập chuỗi = utfscan; 11 `.pak` chỉ chứa PNG/.fra (XOR 1), không text.
+- A1 T4: scripts/{textfmt,extract,repack,test_fake}.py, p1/text_can_dich.tsv (3924 chuỗi, 65 file); round-trip giống hệt byte; dịch giả OK harness 1113/1113 + loader game 7/7.
+- A1 T4b: P2–P5 cùng bộ công cụ (P3–5 dùng `.m2`: tên bản đồ + kịch bản + danh sách NPC, có thêm kiểu 'm2'); p2..p5/text_can_dich.tsv (5189/3801/2860/3114 chuỗi), all/text_can_dich.tsv (18888 dòng, 9192 chuỗi gốc duy nhất); logs/verify_p*.txt, verify_files_p*.txt; docs/formats_p2..p5.md. Bỏ qua (không loader): lk_tips.dat P4/P5, ii.dat P4; ngoài phạm vi: payInfo.ini/snsInfo.ini.

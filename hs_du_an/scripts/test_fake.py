@@ -11,8 +11,8 @@ def sh(*a): return subprocess.run(['python3', '-I'] + list(a), capture_output=Tr
 def main():
     ws, n = sys.argv[1], int(sys.argv[2]); tdir = os.path.join(ws, 't4'); os.makedirs(tdir, exist_ok=True)
     src = os.path.join(ws, 'x', str(n)); tsv = os.path.join(tdir, 'p%d.tsv' % n)
-    r = sh(os.path.join(D, 'extract.py'), src, tsv); print(r.stdout.strip(), r.stderr[-300:])
-    r = sh(os.path.join(D, 'repack.py'), src, tsv, os.path.join(tdir, 'r%d' % n)); assert r.returncode == 0, r.stderr
+    r = sh(os.path.join(D, 'extract.py'), src, tsv, '--part', str(n)); print(r.stdout.strip(), r.stderr[-300:])
+    r = sh(os.path.join(D, 'repack.py'), src, tsv, os.path.join(tdir, 'r%d' % n), '--part', str(n)); assert r.returncode == 0, r.stderr
     cmp = subprocess.run(['diff', '-rq', src, os.path.join(tdir, 'r%d' % n)], capture_output=True, text=True)
     print('(a) round-trip byte-identical:', 'ĐẠT' if cmp.returncode == 0 else 'LỖI ' + cmp.stdout[:300])
     # (b)
@@ -22,7 +22,7 @@ def main():
         c = ln.split('\t'); g = textfmt.unesc(c[3]); f = 'Thử ' + g + ' dài hơn'; fake.add(f)
         c[4] = textfmt.esc(f); out.append('\t'.join(c))
     ftsv = os.path.join(tdir, 'p%d_fake.tsv' % n); open(ftsv, 'w', encoding='utf-8').write('\n'.join(out) + '\n')
-    r = sh(os.path.join(D, 'repack.py'), src, ftsv, os.path.join(tdir, 'f%d' % n)); assert r.returncode == 0, r.stderr
+    r = sh(os.path.join(D, 'repack.py'), src, ftsv, os.path.join(tdir, 'f%d' % n), '--part', str(n)); assert r.returncode == 0, r.stderr
     root = 't4/f%d' % n
     lines = verify_scan.build_input(ws, n, root); res = verify_scan.run_harness(ws, n, lines)
     assert len(res) == len(lines)
@@ -34,19 +34,26 @@ def main():
     gotc = set(s for s in got if verify_scan.has_cjk(s) or s.startswith('Thử '))
     # chuỗi giả của file đơn giản (không có harness) được kiểm riêng bằng utfscan trên file đã repack
     seqfake = set()
-    for rel, kind in textfmt.units(os.path.join(tdir, 'f%d' % n)):
+    for rel, kind in textfmt.units(os.path.join(tdir, 'f%d' % n), n):
         if kind in ('seq', 'off2'):
             seqfake |= set(s for _, s, _ in textfmt.strings(open(os.path.join(tdir, 'f%d' % n, rel), 'rb').read(), kind))
     hfake = set(s for s in gotc if s.startswith('Thử '))
     allscan = set()
-    for rel, kind in textfmt.units(os.path.join(tdir, 'f%d' % n)):
+    for rel, kind in textfmt.units(os.path.join(tdir, 'f%d' % n), n):
         allscan |= set(s for _, s, _ in textfmt.strings(open(os.path.join(tdir, 'f%d' % n, rel), 'rb').read(), kind))
     print('(b) harness OK %d/%d; chuỗi giả harness=%d; chuỗi giả quét lại=%d; harness⊄quét=%d' %
           (okc, len(lines), len(hfake), len(allscan), len(hfake - allscan)))
     ok = okc == len(lines) and not (hfake - allscan) and allscan == fake
     print('(b) fake == tập chuỗi quét lại:', allscan == fake, '=>', 'ĐẠT' if ok and cmp.returncode == 0 else 'LỖI')
+    r = sh(os.path.join(D, 'verify_scan.py'), ws, str(n), '/dev/null', 't4/f%d' % n)
+    print('(b) verify_scan trên bản giả (quét == game đọc, theo từng đoạn):', r.stdout.strip()[:150]); ok = ok and r.returncode == 0
+    import verify_files
+    g, b, rep = verify_files.check(ws, n, os.path.join(tdir, 'f%d' % n), quiet=True)
+    print('(b) loader game trên file giả: %d OK, %d lỗi' % (g, b)); print('\n'.join('    ' + x for x in rep))
+    ok = ok and b == 0
     if n == 1:
         r = sh(os.path.join(D, 'formats_p1.py'), os.path.join(tdir, 'f1'))
         print('(b) formats_p1 trên bản giả: rc=%d' % r.returncode); print(r.stdout[:900])
+    print('KẾT QUẢ P%d:' % n, 'ĐẠT' if ok and cmp.returncode == 0 else 'LỖI')
     sys.exit(0 if ok and cmp.returncode == 0 else 1)
 main()
