@@ -37,3 +37,4 @@ Dịch toàn bộ text Trung → Việt của cả 5 phần trong một lô, n�
 
 ## Nhật ký
 - Quản đốc: prep 19614 dòng/9377 duy nhất, charset f15c, mã `{}`/`\n`; thuat-ngu 131 mục, vai.md.
+- Công nhân #1: 3105/9377, dừng theo lệnh quản đốc (xoay vòng). Lưu ý: k=42 nhãn "張烈" giới hạn ≤10 nhưng "Trương Liệt"=11 ký tự, đang để "TrươngLiệt" (không cách) - quản đốc quyết. Tên "Bến Lô Gia" (芦家渡, k~712,1272-1290) cần thống nhất với thuật ngữ 卢家渡=bến Lư Gia. Cảnh báo còn lại chỉ là thiếu glyph "~" (quản đốc xử lý khi ghép).
