@@ -1,0 +1,18 @@
+bien the e62: field khung thoai [cY, er, ev, es, eu, eq, ew]
+z.a(Ljava/lang/String;Ljavax/microedition/lcdui/Font;I)[Ljava/lang/String; -> vh.a
+z.a(Ljava/lang/String;I)[Ljava/lang/String; -> vh.a
+z.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;I[SII)I -> vh.a
+z: drawString -> vh.ds x1
+z: Font.stringWidth -> vh.sw x2
+cb.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIIIIII)I -> vh.b
+cb.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIIIIII)I -> vh.c
+cb.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;Lbn;II)V -> vh.m
+n.a(Ljavax/microedition/lcdui/Graphics;[SI[II)V -> vh.d (khung thoai)
+n: drawString -> vh.ds x3
+n: Font.stringWidth -> vh.sw x1
+n: String.length()*14 -> bs.a x2
+al: drawString -> vh.ds x14
+bb: drawString -> vh.ds x1
+bb: String.length()*12 -> bs.a x1
+ag: String.length()*14 -> bs.a x1
+TONG thay doi: 33

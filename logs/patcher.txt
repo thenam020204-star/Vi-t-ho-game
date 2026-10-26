@@ -1,3 +1,4 @@
+bien the n73: field khung thoai [da, eu, ey, ev, ex, et, ez]
 z.a(Ljava/lang/String;Ljavax/microedition/lcdui/Font;I)[Ljava/lang/String; -> vh.a
 z.a(Ljava/lang/String;I)[Ljava/lang/String; -> vh.a
 z.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;I[SII)I -> vh.a

@@ -3,10 +3,11 @@
 ## Bản đồ thư mục
 | Thư mục | Nội dung |
 |---|---|
-| `goc/` | `game.jar` gốc, `text_goc.tsv` (625 dòng resource gốc), `class_goc.tsv` (433 chuỗi .class gốc) |
+| `goc/` | `game.jar` gốc N73, `game_e62.jar` gốc E62, `text_goc.tsv` (625 dòng resource gốc), `class_goc.tsv` (433 chuỗi .class gốc) |
 | `out/` | Jar + jad cuối, `shots/` ảnh chụp FreeJ2ME, `moc1/` mốc 1 |
 | `text/` | `text_da_dich.tsv`, `class_da_dich.tsv` (bản dịch — sửa ở đây rồi chạy `rebuild.sh`), `thuat-ngu.tsv`, `vai.md`, `ghi-chu.txt`, `kiem.py` |
 | `assets/img/` | 16 PNG rời đã Việt hoá + ảnh so sánh + `anh_da_sua.tsv` |
+| `assets/img_e62/` | Ảnh riêng bản E62 (`diui.png` 320×36) đè lên `assets/img` |
 | `assets/img2/` | `uires.bin`, `animation.bin` đã thay PNG nhúng + `compare/` + `anh_nhung.tsv` |
 | `src_patch/` | `bs.java` (renderer font, viết lại), `vh.java` (lớp mới: ngắt dòng, khung thoại, chữ chạy) |
 | `tools_src/Patcher.java` | Sửa bytecode tĩnh bằng ASM (danh sách chỗ sửa ở `logs/patcher.txt`) |
@@ -16,7 +17,8 @@
 
 ## Dựng lại
 ```bash
-bash rebuild.sh            # từ goc/game.jar → out/HungBaTamQuoc_N73_viet.jar (+jad), tự jar_check
+bash rebuild.sh all        # N73 + E62 → out/HungBaTamQuoc_{N73,E62}_viet.jar (+jad), tự jar_check
+bash rebuild.sh e62        # chỉ E62 (run_emu thêm --size 320x240)
 python3 -I scripts/run_emu.py --fj lib/NAM_P/freej2me/freej2me_plus.jar --jar out/HungBaTamQuoc_N73_viet.jar \
     --out shots --steps "wait 12; key w; wait 5; shot menu; key Return; wait 4; shot luu"
 ```

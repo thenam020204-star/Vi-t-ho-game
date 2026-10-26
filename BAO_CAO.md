@@ -1,7 +1,11 @@
 # BÁO CÁO — Việt hoá 雄霸三国之天降女神 (Hùng Bá Tam Quốc: Thiên Giáng Nữ Thần), Joymeng, bản N73 240×320
 
-Jar cuối: `out/HungBaTamQuoc_N73_viet.jar` (+ `.jad`, `MIDlet-Jar-Size: 1393703`).
-SHA-1: `7d1500e7be3739ce478fad097e370422283f27fd` — `rebuild.sh` chạy 2 lần cho ra cùng SHA-1.
+| Bản | Jar | MIDlet-Jar-Size | SHA-1 |
+|---|---|---|---|
+| N73 240×320 | `out/HungBaTamQuoc_N73_viet.jar` | 1393719 | `ab69d1618f19fa038f8cc1a750251fce44a81639` |
+| E62 320×240 | `out/HungBaTamQuoc_E62_viet.jar` | 1394562 | `5bcd06f483dcb3d176f3c4d8326d33b311b0a947` |
+
+`bash rebuild.sh all` dựng cả hai; build tái lập (cùng SHA-1 mỗi lần chạy).
 
 ## Quyết định đã chốt với người dùng
 - Văn phong: **Hán Việt nhẹ**; 怒气 = **MP**; chỉ số HP/MP/EXP/ATK/DEF.
@@ -38,6 +42,16 @@ SHA-1: `7d1500e7be3739ce478fad097e370422283f27fd` — `rebuild.sh` chạy 2 lầ
 - Tên người nói đổi màu theo chữ cuối trang trước (`da = ex` của bản gốc, lộ ra khi màu trải qua 2 trang) → `vh.d` tự giữ màu nối trang, trả `n.da` như cũ.
 - Bảng chọn ải chồng chữ (tên Việt 70–170px, ô 62px) → sửa `uiform.bin` + chữ chạy; chữ chạy gốc (`cb.a(..bn..)`) dùng 1 bộ đếm chung nên nhiều ô cùng khung hình không chạy → bộ đếm riêng từng chuỗi (so `equals` vì game tạo chuỗi mới bằng `substring` mỗi khung hình).
 - Dấu `：` (bắt buộc giữ) hiện rộng 12px → alias glyph `:` của f12.
+
+## Bản E62 (320×240)
+- So với N73: 148/182 entry giống từng byte; 118 hội thoại + sign và mọi file text khác giống hệt → dùng chung `text/*.tsv`.
+- Chuỗi `.class`: chỉ số constant pool khác → `classstr.py` khớp theo giá trị chuỗi gốc; E62 không có `战役说明`, `提示` trong `n.class` (bỏ qua, có cảnh báo trong `logs/rebuild.txt`).
+- Khung thoại: field bị obfuscator đặt tên khác (`da/eu/ey/ev/ex/et/ez` → `cY/er/ev/es/eu/eq/ew`) → `Patcher e62` dùng bảng tên riêng, kiểm field tồn tại; `vh.d` nhận `da` qua tham số.
+- Màn hình: `vh` dùng hằng `SW/SH` (rebuild thay 320×240); `uiform` bảng chọn ải giống N73.
+- Ảnh: `diui.png` 320×36 làm lại (`assets/img_e62`, `scripts/img/diui_e62.py`); `fengmian.png`/`logo_1.png` 320×240 giữ nguyên; các ảnh khác + `uires/animation.bin` dùng chung (rebuild kiểm kích thước ảnh khớp bản gốc).
+- `jar_check goc/game_e62.jar`: **PASS** (`logs/jar_check_e62.txt`), cùng 4 WARN API CLDC 1.0 như N73. Patcher: 33 chỗ vá như N73.
+- FreeJ2ME 320×240 (`out/shots_e62/`): hỏi nhạc → menu → Giới thiệu → lưu game → chọn ải (chữ chạy) → hội thoại 3 dòng nhiều trang → trận (thanh Shop/Menu) — không exception mới.
+- Sau khi tham số hoá `vh`, bản N73 đổi SHA-1 (bytecode `vh` khác); đã chạy lại FreeJ2ME N73 (`out/shots/tour_n73_sau_cap_nhat.png`), không lỗi.
 
 ## Còn tồn
 - f12 không có `'` → bản dịch không dùng; glyph `'` gốc giữ nguyên.

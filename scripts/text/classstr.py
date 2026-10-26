@@ -3,6 +3,7 @@
 
   python3 -I classstr.py list <class_dir> <src_dir> <out.tsv>   # kem dong code CFR de xet ngu canh
   python3 -I classstr.py patch <class_dir> <in.tsv> <out_dir>    # thay Utf8 duoc CONSTANT_String tro toi
+Khop theo chi so constant pool, sai thi theo gia tri chuoi goc (dung chung TSV cho N73/E62).
 Chi thay Utf8 ma MOI tham chieu toi no deu la CONSTANT_String (khong dung lam ten/descriptor).
 Doi do dai Utf8 khong anh huong bytecode (lenh chi tro chi so constant pool).
 """
@@ -61,10 +62,22 @@ def cmd_patch(cd, tsvp, outd):
     with open(tsvp, encoding='utf-8', newline='') as fi:
         rows = [r for r in csv.DictReader(fi, delimiter='\t', quoting=csv.QUOTE_NONE, escapechar='\\') if r.get('dich')]
     by = {}
-    for r in rows: by.setdefault(r['file'], {})[int(r['key'])] = (r['goc'], r['dich'])
+    for r in rows: by.setdefault(r['file'], []).append((int(r['key']), r['goc'], r['dich']))
     os.makedirs(outd, exist_ok=True)
-    for fn, m in sorted(by.items()):
+    for fn, lst in sorted(by.items()):
         b = open(os.path.join(cd, fn), 'rb').read(); ents, end = parse(b); su = string_utf(b)
+        # khoa = chi so constant pool cua ban lam TSV; ban khac (vd E62) chi so doi -> khop theo gia tri chuoi goc
+        m = {}
+        for k, goc, dich in lst:
+            if su.get(k) != goc:
+                hit = [i for i, v in su.items() if v == goc]
+                if not hit:
+                    print('  BO QUA %s: ban nay khong co chuoi %r' % (fn, goc)); continue
+                if len(hit) != 1:
+                    raise SystemExit('%s: chuoi goc %r khop %d vi tri' % (fn, goc, len(hit)))
+                k = hit[0]
+            assert k not in m, (fn, k)
+            m[k] = (goc, dich)
         out = bytearray(b[:10]); p = 10
         for i, e in enumerate(ents):
             if not e: continue
@@ -73,6 +86,7 @@ def cmd_patch(cd, tsvp, outd):
                 nb = mutf8_encode(m[i][1]); assert len(nb) <= 0xFFFF
                 out += b[p:e[1]] + bytes([1]) + struct.pack('>H', len(nb)) + nb; p = e[2]
         out += b[p:]
+        if not m: continue
         open(os.path.join(outd, fn), 'wb').write(bytes(out))
         print('%s: thay %d chuoi' % (fn, len(m)))
 

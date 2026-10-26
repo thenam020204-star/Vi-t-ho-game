@@ -8,6 +8,7 @@ Quyết định: Hán Việt nhẹ · 怒气=MP · font game 12px (ghép f12 và
 - [x] C. Trích/dịch 625 dòng resource + 433 chuỗi .class (kiem OK, placeholder kỹ năng OK)
 - [x] D. vh: ngắt dòng px, khung thoại 3 dòng, chữ chạy, drawString→bitmap; uiform bảng chọn ải
 - [x] jar_check PASS, FreeJ2ME các màn chính, rebuild tái lập (SHA-1 ổn định)
+- [x] Bản E62 320×240: rebuild.sh e62, jar_check PASS, FreeJ2ME các màn chính
 - [ ] Soát: menu trong trận / shop / kho / kỹ năng (chưa đi tới bằng kịch bản phím); máy thật / KEmulator
 
 Phiên sau: đọc BAO_CAO.md mục "Còn tồn"; sửa bản dịch ở text/*.tsv → `bash rebuild.sh` → `text/kiem.py` + `scripts/text/check_skill_ph.py`.

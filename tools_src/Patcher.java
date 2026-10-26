@@ -1,5 +1,5 @@
 // Patcher bytecode (chay tren JDK may tinh, dung ASM 9). Sua tinh class game truoc khi preverify.
-//   java -cp asm.jar:asm-tree.jar:. Patcher <in_class_dir> <out_dir>
+//   java -cp asm.jar:asm-tree.jar:. Patcher <in_class_dir> <out_dir> [n73|e62]
 import org.objectweb.asm.*;
 import org.objectweb.asm.tree.*;
 import java.io.*;
@@ -10,9 +10,16 @@ public class Patcher {
     static final String G = "javax/microedition/lcdui/Graphics";
     static final String S = "java/lang/String";
     static int total = 0;
+    static String[] F;
 
     public static void main(String[] a) throws Exception {
         String in = a[0], out = a[1];
+        String v = a.length > 2 ? a[2] : "n73";
+        // ten field khung thoai (obfuscator dat ten khac nhau moi ban): da, eu(String), ey(tu), ev(so sign),
+        // ex(mau), et(ae), ez(den) -- doi chieu tung lenh getstatic/putstatic cua n.a(Graphics,short[],int,int[],int)
+        F = v.equals("e62") ? new String[]{"cY", "er", "ev", "es", "eu", "eq", "ew"}
+                            : new String[]{"da", "eu", "ey", "ev", "ex", "et", "ez"};
+        System.out.println("bien the " + v + ": field khung thoai " + Arrays.toString(F));
         new File(out).mkdirs();
         patch(in, out, "z", cn -> {
             delegate(cn, "a", "(Ljava/lang/String;Ljavax/microedition/lcdui/Font;I)[Ljava/lang/String;", "a");
@@ -32,6 +39,7 @@ public class Patcher {
         patch(in, out, "bb", cn -> { drawString(cn); lenMul(cn, 12); });
         patch(in, out, "ag", cn -> lenMul(cn, 14));
         System.out.println("TONG thay doi: " + total);
+        if (total != 33) throw new RuntimeException("so cho va " + total + " != 33 (khac ban N73) -> kiem tra lai");
     }
 
     interface Fn { void run(ClassNode cn) throws Exception; }
@@ -76,6 +84,13 @@ public class Patcher {
     static void dialogue(ClassNode cn) {
         String d = "(L" + G + ";[SI[II)V";
         MethodNode m = find(cn, "a", d);
+        String[] want = {"I", "Ljava/lang/String;", "I", "I", "I", "Lae;", "I"};
+        for (int i = 0; i < F.length; i++) {
+            boolean ok = false;
+            for (FieldNode f : cn.fields)
+                if (f.name.equals(F[i]) && f.desc.equals(want[i]) && (f.access & Opcodes.ACC_STATIC) != 0) ok = true;
+            if (!ok) throw new RuntimeException("n khong co field static " + F[i] + " " + want[i]);
+        }
         clear(m);
         InsnList L = m.instructions;
         L.add(new VarInsnNode(Opcodes.ALOAD, 0));
@@ -83,17 +98,18 @@ public class Patcher {
         L.add(new VarInsnNode(Opcodes.ILOAD, 2));
         L.add(new VarInsnNode(Opcodes.ALOAD, 3));
         L.add(new VarInsnNode(Opcodes.ILOAD, 4));
-        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", "eu", "Ljava/lang/String;"));
-        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", "ey", "I"));
-        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", "ev", "I"));
-        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", "ex", "I"));
-        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", "et", "Lae;"));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", F[1], "Ljava/lang/String;"));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", F[2], "I"));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", F[3], "I"));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", F[4], "I"));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", F[5], "Lae;"));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "n", F[0], "I"));
         L.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "vh", "d",
-                "(L" + G + ";[SI[IILjava/lang/String;IIILae;)V", false));
+                "(L" + G + ";[SI[IILjava/lang/String;IIILae;I)V", false));
         L.add(new FieldInsnNode(Opcodes.GETSTATIC, "vh", "z", "I"));
-        L.add(new FieldInsnNode(Opcodes.PUTSTATIC, "n", "ez", "I"));
+        L.add(new FieldInsnNode(Opcodes.PUTSTATIC, "n", F[6], "I"));
         L.add(new FieldInsnNode(Opcodes.GETSTATIC, "vh", "x", "I"));
-        L.add(new FieldInsnNode(Opcodes.PUTSTATIC, "n", "ex", "I"));
+        L.add(new FieldInsnNode(Opcodes.PUTSTATIC, "n", F[4], "I"));
         L.add(new InsnNode(Opcodes.RETURN));
         System.out.println("n.a" + d + " -> vh.d (khung thoai)");
         total++;

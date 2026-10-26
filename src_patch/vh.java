@@ -12,6 +12,10 @@ public final class vh {
     public static int z;
     public static int x;
 
+    /* kich thuoc man hinh cua ban dang build (rebuild.sh thay 240/320 theo bien the) */
+    private static final int SW = 240;
+    private static final int SH = 320;
+
     private static final int CN = 8;
     private static final String[] cS = new String[CN];
     private static final int[] cW = new int[CN];
@@ -130,7 +134,7 @@ public final class vh {
             y = (short)(y + 24);
             last = y;
         }
-        g.setClip(0, 0, 240, 320);
+        g.setClip(0, 0, SW, SH);
         return last;
     }
 
@@ -242,8 +246,8 @@ public final class vh {
     private static int[] oA;      /* x, hoac offset sign */
     private static int[] oB;      /* y */
     private static int dEnd;
-    /* mau dau trang: goc lay n.da, ma n.da = ex sau moi lan lat trang lam ten nguoi noi (al ve bang
-       n.da) doi mau theo chu cuoi trang truoc. Giu mau noi tiep o day, tra n.da ve nhu cu. */
+    /* mau dau trang: goc lay da (field n.da; ban E62 ten n.cY), ma da = ex sau moi lan lat trang lam ten
+       nguoi noi (al ve bang da) doi mau theo chu cuoi trang truoc. Giu mau noi tiep o day, tra da ve nhu cu. */
     private static String pS;
     private static int pFrom;
     private static int pBase;
@@ -362,7 +366,7 @@ public final class vh {
         dEnd = end;
     }
 
-    public static void d(Graphics g, short[] sg, int lines, int[] box, int unused, String s, int from, int ns, int ex0, ae act) {
+    public static void d(Graphics g, short[] sg, int lines, int[] box, int unused, String s, int from, int ns, int ex0, ae act, int da) {
         int lh = 22;
         if (box.length > 4 && box[4] > 0) {
             int l3 = (box[4] - 15) / 18 + 1;
@@ -383,8 +387,8 @@ public final class vh {
         if (s != pS) {
             pS = s;
             pFrom = from;
-            pBase = n.da;
-            pCol = n.da;
+            pBase = da;
+            pCol = da;
         } else if (from != pFrom) {
             pFrom = from;
             pCol = pLast;

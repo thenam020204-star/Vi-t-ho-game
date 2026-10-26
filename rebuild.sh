@@ -1,16 +1,28 @@
 #!/usr/bin/env bash
-# Dung lai toan bo ban Viet hoa tu jar goc:  bash rebuild.sh [TOOLS_DIR]
+# Dung lai toan bo ban Viet hoa tu jar goc:  bash rebuild.sh [n73|e62|all] [TOOLS_DIR]
+#   n73 (mac dinh): goc/game.jar 240x320 -> out/HungBaTamQuoc_N73_viet.jar
+#   e62           : goc/game_e62.jar 320x240 -> out/HungBaTamQuoc_E62_viet.jar
+#   all           : ca hai
 #   TOOLS_DIR (tuy chon) = thu muc co freej2me_plus.jar, proguard.jar, fonts/f12.bin (vd work/tools cua skill).
 #   Khong truyen: tu giai nen Tool_Viet_Hoa_NAM_P.zip vao lib/ va tai ProGuard 7.4.2, ecj 3.26.0, ASM 9.7.
 #   Can: JDK 11+ day du (javac, jmod), python3, zip/unzip, curl.
-# Ket qua: out/HungBaTamQuoc_N73_viet.jar + .jad, logs/jar_check.txt
+# Ket qua: out/HungBaTamQuoc_<BAN>_viet.jar + .jad, logs/jar_check[_e62].txt
 set -e
 cd "$(dirname "$0")"
 D=$(pwd)
+V="${1:-n73}"
+if [ "$V" = all ]; then bash "$0" n73 "${@:2}" && bash "$0" e62 "${@:2}"; exit; fi
+shift || true
+case "$V" in
+  n73) GOC=goc/game.jar;     SW=240; SH=320; NAME=N73; SUF="" ;;
+  e62) GOC=goc/game_e62.jar; SW=320; SH=240; NAME=E62; SUF="_e62" ;;
+  *) echo "bien the khong ho tro: $V (n73|e62|all)"; exit 1 ;;
+esac
+echo "######## $NAME ($GOC, ${SW}x${SH})"
 LIB="$D/lib"; mkdir -p "$LIB"
 get() { [ -s "$LIB/$1" ] || curl -sSfL --retry 3 -o "$LIB/$1" "$2"; }
 if [ -n "$1" ]; then
-  TOOLS=$(realpath "$1"); FJ="$TOOLS/freej2me_plus.jar"; F12="$F12"; export PROGUARD="$TOOLS/proguard.jar"
+  TOOLS=$(realpath "$1"); FJ="$TOOLS/freej2me_plus.jar"; F12="$TOOLS/fonts/f12.bin"; export PROGUARD="$TOOLS/proguard.jar"
 else   # tu dung tu Tool_Viet_Hoa_NAM_P.zip trong du an + ProGuard 7.4.2
   T="$LIB/NAM_P"; [ -d "$T" ] || (cd "$LIB" && unzip -q "$D/Tool_Viet_Hoa_NAM_P.zip")
   FJ="$T/freej2me/freej2me_plus.jar"; F12="$T/fonts/f12.bin"
@@ -23,9 +35,9 @@ fi
 get ecj.jar https://repo1.maven.org/maven2/org/eclipse/jdt/ecj/3.26.0/ecj-3.26.0.jar
 get asm.jar https://repo1.maven.org/maven2/org/ow2/asm/asm/9.7/asm-9.7.jar
 get asm-tree.jar https://repo1.maven.org/maven2/org/ow2/asm/asm-tree/9.7/asm-tree-9.7.jar
-B="$D/build"; rm -rf "$B"; mkdir -p "$B"/{jx,ov/bin,str,cin,patched,cls,ptool,code} out logs
+B="$D/build/$V"; rm -rf "$B"; mkdir -p "$B"/{jx,ov/bin,str,cin,patched,cls,ptool,code} out logs
 PY="python3 -I"; JAVA="env -u JAVA_TOOL_OPTIONS java"; JAVAC="env -u JAVA_TOOL_OPTIONS javac"
-(cd "$B/jx" && unzip -q "$D/goc/game.jar")
+(cd "$B/jx" && unzip -q "$D/$GOC")
 
 echo "== 1. font 12px"
 $PY scripts/build_font12.py "$B/jx/bin/font.bin" "$F12" "$B/ov/bin"
@@ -40,6 +52,22 @@ $PY scripts/patch_uiform.py "$B/jx/bin/uiform.bin" "$B/ov/bin/uiform.bin"
 echo "== 3. anh"
 cp -r assets/img/bin/. "$B/ov/bin/"
 [ -d assets/img2/bin ] && cp -r assets/img2/bin/. "$B/ov/bin/"
+# anh rieng cua bien the (vd diui.png 320x36 ban E62) de len anh chung
+if [ "$V" != n73 ] && [ -d "assets/img_$V/bin" ]; then cp -r "assets/img_$V/bin/." "$B/ov/bin/"; fi
+# anh chung chi dung khi cung kich thuoc voi anh goc cua bien the (khac -> giu goc, bao loi)
+$PY - "$B/jx" "$B/ov" <<'P'
+import os, sys, struct
+jx, ov = sys.argv[1], sys.argv[2]
+bad = []
+for root, _, fs in os.walk(ov):
+    for f in fs:
+        if not f.endswith('.png'): continue
+        rel = os.path.relpath(os.path.join(root, f), ov); g = os.path.join(jx, rel)
+        a = open(g, 'rb').read(24); b = open(os.path.join(ov, rel), 'rb').read(24)
+        if a[16:24] != b[16:24]: bad.append(rel)
+if bad: sys.exit('LOI: anh khac kich thuoc ban goc: %s' % bad)
+print('  anh: kich thuoc khop ban goc')
+P
 
 echo "== 4. chuoi trong .class"
 cp "$B"/jx/*.class "$B/cin/"
@@ -50,24 +78,27 @@ fi
 
 echo "== 5. sua bytecode (ASM) + class moi (ecj 1.3)"
 $JAVAC -nowarn -cp "$LIB/asm.jar:$LIB/asm-tree.jar" -d "$B/ptool" tools_src/Patcher.java
-$JAVA -cp "$LIB/asm.jar:$LIB/asm-tree.jar:$B/ptool" Patcher "$B/cin" "$B/patched" | tee logs/patcher.txt
+$JAVA -cp "$LIB/asm.jar:$LIB/asm-tree.jar:$B/ptool" Patcher "$B/cin" "$B/patched" "$V" | tee "logs/patcher$SUF.txt"
+mkdir -p "$B/src"; cp src_patch/bs.java "$B/src/"
+sed -e "s/int SW = 240;/int SW = $SW;/" -e "s/int SH = 320;/int SH = $SH;/" src_patch/vh.java > "$B/src/vh.java"
+grep -q "int SW = $SW;" "$B/src/vh.java" && grep -q "int SH = $SH;" "$B/src/vh.java"
 JH=$(dirname "$(dirname "$(readlink -f "$(which javac)")")")
 [ -d "$B/jbase" ] || jmod extract --dir "$B/jbase" "$JH/jmods/java.base.jmod"
 $JAVA -cp "$LIB/ecj.jar" org.eclipse.jdt.internal.compiler.batch.Main -source 1.3 -target 1.3 -encoding UTF-8 -nowarn \
-  -bootclasspath "$B/jbase/classes" -cp "$B/cin:$FJ" -d "$B/cls" src_patch/bs.java src_patch/vh.java
+  -bootclasspath "$B/jbase/classes" -cp "$B/cin:$FJ" -d "$B/cls" "$B/src/bs.java" "$B/src/vh.java"
 $PY scripts/set_clinit_flags.py "$B/cls/bs.class" 0x0009
 
 echo "== 6. preverify class da sua bytecode"
 cp "$B"/patched/*.class "$B"/cls/*.class "$B/code/"
 (cd "$B/code" && zip -q ../code_in.jar *.class)
-bash scripts/preverify.sh "$B/code_in.jar" "$B/code_pv.jar" goc/game.jar "$FJ"
+bash scripts/preverify.sh "$B/code_in.jar" "$B/code_pv.jar" "$GOC" "$FJ"
 mkdir -p "$B/ovc" && (cd "$B/ovc" && unzip -q ../code_pv.jar)
 # class chi doi chuoi (khong sua bytecode) giu nguyen StackMap goc
 mkdir -p "$B/ovs"; for f in "$B"/str/*.class; do [ -e "$f" ] || continue; b=$(basename "$f"); [ -e "$B/ovc/$b" ] || cp "$f" "$B/ovs/"; done
 
 echo "== 7. dong jar"
-J=out/HungBaTamQuoc_N73_viet.jar
-$PY scripts/repack.py goc/game.jar "$J" "$B/ov" "$B/ovs" "$B/ovc"
+J=out/HungBaTamQuoc_${NAME}_viet.jar
+$PY scripts/repack.py "$GOC" "$J" "$B/ov" "$B/ovs" "$B/ovc"
 $PY - "$J" <<'P'
 import zipfile, os, sys
 j = sys.argv[1]
@@ -78,4 +109,4 @@ keep += ['MIDlet-Jar-URL: ' + os.path.basename(j), 'MIDlet-Jar-Size: %d' % os.pa
 open(j[:-4] + '.jad', 'w', encoding='utf-8').write('\n'.join(keep) + '\n')
 P
 echo "== 8. jar_check"
-$PY scripts/jar_check.py goc/game.jar "$J" | tee logs/jar_check.txt | tail -6
+$PY scripts/jar_check.py "$GOC" "$J" | tee "logs/jar_check$SUF.txt" | tail -6

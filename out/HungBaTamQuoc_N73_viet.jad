@@ -6,4 +6,4 @@ MicroEdition-Configuration: CLDC-1.0
 MIDlet-Icon: bin/icon.png
 MicroEdition-Profile: MIDP-1.0
 MIDlet-Jar-URL: HungBaTamQuoc_N73_viet.jar
-MIDlet-Jar-Size: 1393703
+MIDlet-Jar-Size: 1393719
