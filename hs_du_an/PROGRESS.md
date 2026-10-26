@@ -22,3 +22,9 @@
 ## Trích xuất text (A1, đã nghiệm thu)
 - `pN/text_can_dich.tsv` (P1 3924 · P2 5189 · P3 3801 · P4 2860 · P5 3114), `all/text_can_dich.tsv` 18888 dòng / 9192 chuỗi gốc duy nhất.
 - Tiếp: chuỗi CJK trong .class (T5) → chốt thuật ngữ + vai.md → 1 công nhân dịch cả lô (xoay vòng khi ngữ cảnh > 400k).
+
+## Tiêu đề + credit + tên game (theo người dùng)
+- 5 ảnh tiêu đề của người dùng → `anh_menu/can_ve/pN/mm.pak/title.png` (240x320, 256 màu; nguồn `anh_menu/nguon_tieu_de/`).
+- Vùng an toàn của title.png: y 0–220 (menu tt.png y 222–258, núi m.png y 251–320, 2 dòng copyright ~286–320).
+- Credit: chuỗi class dòng copyright dưới → "Việt hoá bởi NAM.P"; dòng trên "© …" → "(c) …" (`pN/class_override.tsv`, thắng bản dịch).
+- Tên game (manifest/JAD): "Xuan-Yuan Sword - The Scar of Sky I/II/III/IV/Final" (`pN/manifest_override.txt`, `scripts/manifest_edit.py`). Đổi MIDlet-Name → máy coi là game mới, save bản Trung không thấy.

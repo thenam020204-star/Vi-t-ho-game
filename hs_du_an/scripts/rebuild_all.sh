@@ -29,7 +29,9 @@ for N in $PARTS; do
     python3 -I "$P/scripts/pakimg.py" pack "$d" "$R/$(basename "$d")"
   done
   cp "$IMG"/goc_jar/*.png "$R/"
-  CT=$P/p$N/class_da_dich.tsv; [ -f "$CT" ] || CT=""
+  # chuỗi class: bản dịch + ghi đè của quản đốc (dòng sau thắng)
+  CT=$WS/class_p$N.tsv; printf 'id\tfile\toffset\tgoc\tdich\tghi_chu\tgioi_han\n' > "$CT"
+  for f in "$P/p$N/class_da_dich.tsv" "$P/p$N/class_override.tsv"; do [ -f "$f" ] && tail -n +2 "$f" >> "$CT"; done
   bash "$P/scripts/build_part.sh" "$N" "$R" "$P/out/hs${N}_vi.jar" $CT
   # JAD đi kèm
   SZ=$(stat -c%s "$P/out/hs${N}_vi.jar")

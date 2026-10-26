@@ -25,6 +25,7 @@ cp "$BITMAPFONT_CLASS" "$T/jar/"
 mkdir -p "$T/jar/font"; cp "$FONT_DIR/f15c.bin" "$T/jar/font/"
 # 3) manifest: MIDP-2.0 (BitmapFont dùng drawRegion/createRGBImage)
 sed -i 's/^MicroEdition-Profile: MIDP-1.0/MicroEdition-Profile: MIDP-2.0/' "$T/jar/META-INF/MANIFEST.MF"
+if [ -f "$P/p$N/manifest_override.txt" ]; then python3 -I "$P/scripts/manifest_edit.py" "$T/jar/META-INF/MANIFEST.MF" "$P/p$N/manifest_override.txt"; fi
 # 4) đóng jar (manifest đứng đầu), preverify, kiểm
 rm -f "$T/raw.jar"
 (cd "$T/jar" && zip -q -X -D "$T/raw.jar" META-INF/MANIFEST.MF && zip -q -X -D -r "$T/raw.jar" . -x META-INF/MANIFEST.MF)

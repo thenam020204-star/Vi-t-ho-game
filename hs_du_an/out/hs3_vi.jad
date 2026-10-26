@@ -1,13 +1,13 @@
 MIDlet-Vendor: Gameislive
 MIDlet-Version: 1.2.1
 MIDlet-Install-Notify: http://59.42.254.3:8081/pay/install.do?gameid=0110&ua=N73&gv=1.2.1&cpid=0
-MIDlet-Name: 轩辕剑-天之痕-三章
+MIDlet-Name: Xuan-Yuan Sword - The Scar of Sky III
 CP: 0
-MIDlet-1: 轩辕剑-天之痕-三章, icon.png, main.MainMIDlet
+MIDlet-1: Xuan-Yuan Sword - The Scar of Sky III, icon.png, main.MainMIDlet
 MicroEdition-Configuration: CLDC-1.0
 UA: N73
 MIDlet-Icon: icon.png
 MicroEdition-Profile: MIDP-2.0
-MIDlet-Description: 轩辕剑-天之痕-三章
+MIDlet-Description: Xuan-Yuan Sword - The Scar of Sky III
 MIDlet-Jar-URL: hs3_vi.jar
-MIDlet-Jar-Size: 1061833
+MIDlet-Jar-Size: 1061845
