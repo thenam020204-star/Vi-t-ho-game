@@ -69,6 +69,15 @@
   - File: `$P/docs/render_p1.md`
   - Hoàn thành khi: tài liệu liệt kê đủ (kiểm bằng grep `invokevirtual javax/microedition/lcdui/(Graphics|Font)` trên toàn bộ class P1) và đề xuất điểm hook tối thiểu.
 
+- [ ] T7. Vẽ lại ảnh có chữ Hán (5 phần) — **Quản đốc nghiệm thu** (chỉ giao SAU khi text dịch xong; người dùng yêu cầu tự động)
+  - Agent: A1 (Sonnet 5.5, một công nhân). Không chạm `dich/`, `out/`, class, script build.
+  - Đầu vào: `anh_menu/DANH_SACH_CO_CHU.tsv` (149 dòng, 87 `nhom_trung` khác nhau), `anh_menu/README_VE_ANH.md`, ảnh gốc ở `anh_menu/pN/...` (KHÔNG sửa). Nhãn chữ phải khớp bản dịch text: tra `dich/dp_work/thuat-ngu.tsv` và `dich/dp_work/out.tsv` (cùng chữ Hán trong `t.dat`, ví dụ 奇术, 物品, 装备 → dùng đúng bản dịch đó, rút gọn nếu ô nhỏ).
+  - BỎ QUA (giữ nguyên): `mm.pak/title.png` và `title_p*.png` (ảnh người dùng vẽ), `goc_jar/icon.png`, `goc_jar/logo0.png`, `goc_jar/logo2.png`, `goc_jar/sns_logo.png` (logo hãng). `mm.pak/cr.png` → "(c)2008 Lakoo".
+  - Cách vẽ: pixeltext (`source $WS/work/tools/env.sh`; `cd $WS && python3 -m pixeltext ...`, xem `$SK/references/toolkit.md` mục pixeltext). Xoá chữ Hán bằng màu nền/viền xung quanh (giữ khung, viền, nền trang trí), vẽ chữ Việt màu giống chữ gốc; chọn cỡ bằng `pixeltext fit` trong 15c/13c/13s; ô quá nhỏ (13×13, 20×20) dùng viết tắt ATK/DEF/SPD/Nộ… Dải nhiều ô (`tt.png`, `mmtext.png`, `pt0/pt1`, `n0..n3`, `text.png`) giữ đúng toạ độ từng ô (đo ô từ ảnh gốc). Chữ có dấu không được tràn ra ngoài ô.
+  - Ra: ghi đè ảnh trong `anh_menu/can_ve/pN/<cùng đường dẫn>`; ảnh cùng `nhom_trung` vẽ một lần rồi chép sang các phần ở cột `dung_chung_voi`. Giữ nguyên tên file, W×H, chế độ trong suốt (pixel trong suốt của gốc vẫn trong suốt). Ghi bảng `anh_menu/DA_VE.tsv` (phan, file, chu_viet, co_chu, ghi_chu).
+  - Hoàn thành khi: (1) script kiểm: mọi ảnh trong can_ve cùng W×H với gốc, ảnh có alpha vẫn có alpha; (2) `python3 -I scripts/contact_sheet.py` ra `shots/anh_vi/pN.png` cho 5 phần và công nhân đã tự xem từng ảnh (Read) — không còn chữ Hán, không tràn ô, dấu đọc được; (3) mỗi dòng DANH_SACH_CO_CHU (trừ mục BỎ QUA) có trong DA_VE.tsv.
+  - Sau đó quản đốc: `rebuild_all.sh`, chụp màn hình menu/chiến đấu/cửa hàng để nghiệm thu.
+
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
 - (không)
 
