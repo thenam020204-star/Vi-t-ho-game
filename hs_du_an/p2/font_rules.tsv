@@ -1,0 +1,7 @@
+# op_cu	owner	name	desc	op_moi	owner_moi	name_moi	desc_moi
+invokevirtual	javax/microedition/lcdui/Graphics	drawString	(Ljava/lang/String;III)V	invokestatic	VnFont	drawString	(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+invokevirtual	javax/microedition/lcdui/Graphics	drawChar	(CIII)V	invokestatic	VnFont	drawChar	(Ljavax/microedition/lcdui/Graphics;CIII)V
+invokevirtual	javax/microedition/lcdui/Font	charWidth	(C)I	invokestatic	VnFont	charWidth	(Ljavax/microedition/lcdui/Font;C)I
+invokevirtual	javax/microedition/lcdui/Font	stringWidth	(Ljava/lang/String;)I	invokestatic	VnFont	stringWidth	(Ljavax/microedition/lcdui/Font;Ljava/lang/String;)I
+invokevirtual	javax/microedition/lcdui/Font	getHeight	()I	invokestatic	VnFont	getHeight	(Ljavax/microedition/lcdui/Font;)I
+invokestatic	e/a/b	a	(Ljava/lang/String;Ljavax/microedition/lcdui/Font;I)[Ljava/lang/String;	invokestatic	VnFont	split	(Ljava/lang/String;Ljavax/microedition/lcdui/Font;I)[Ljava/lang/String;

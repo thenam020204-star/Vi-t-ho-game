@@ -1,0 +1,64 @@
+[INFO] org.recompile.mobile.MobilePlatform: Accompanying JAD found! Parsing additional MIDlet properties.
+[INFO] Loading MIDlet: Xuan-Yuan Sword - The Scar of Sky II | Main Class: main.MainMIDlet
+[ERROR] javax.microedition.media.Manager: Couldn't open Tone Player: Can not open line
+[INFO] javax.microedition.midlet.MIDlet: Create MIDlet
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: MIDlet-Version
+javax.microedition.rms.RecordStoreNotFoundException: Record Store Doesn't Exist: Xuan-Yuan Sword - The Scar of Sky II/bf31222a11c3dkxzjfcxffcgw_.rms
+	at javax.microedition.rms.RecordStore.loadRecordStore(Unknown Source)
+	at javax.microedition.rms.RecordStore.<init>(Unknown Source)
+	at javax.microedition.rms.RecordStore.openRecordStore(Unknown Source)
+	at e.a.b.c(Unknown Source)
+	at b.a.p(Unknown Source)
+	at d.k.a(Unknown Source)
+	at main.b.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at b.a.c(Unknown Source)
+	at d.e.a(Unknown Source)
+	at main.b.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at b.a.c(Unknown Source)
+	at main.c.a(Unknown Source)
+	at main.c.h(Unknown Source)
+	at main.c.a(Unknown Source)
+	at d.m.i(Unknown Source)
+	at d.m.a(Unknown Source)
+	at main.b.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at b.a.c(Unknown Source)
+	at main.c.a(Unknown Source)
+	at main.c.h(Unknown Source)
+	at main.c.a(Unknown Source)
+	at main.c.h(Unknown Source)
+	at main.c.a(Unknown Source)
+	at main.c.h(Unknown Source)
+	at main.c.a(Unknown Source)
+	at main.c.h(Unknown Source)
+	at main.c.a(Unknown Source)
+	at main.c.h(Unknown Source)
+	at main.c.a(Unknown Source)
+	at main.c.h(Unknown Source)
+	at main.c.a(Unknown Source)
+	at main.c.h(Unknown Source)
+	at main.c.a(Unknown Source)
+	at d.h.a(Unknown Source)
+	at main.b.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

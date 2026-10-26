@@ -1,0 +1,6 @@
+t.dat         OK  game_nạp=80 quét=80 thiếu=0 tự_ghép=0 quét_sót=0
+tips.dat      OK  game_nạp=10 quét=10 thiếu=0 tự_ghép=0 quét_sót=0
+help.dat      OK  game_nạp=9 quét=9 thiếu=0 tự_ghép=0 quét_sót=0
+c.dat         OK  game_nạp=11 quét=8 thiếu=0 tự_ghép=3 quét_sót=0
+item15.dat    OK  game_nạp=35 quét=16 thiếu=0 tự_ghép=19 quét_sót=0
+monster.dat   OK  game_nạp=60 quét=57 thiếu=0 tự_ghép=3 quét_sót=0
