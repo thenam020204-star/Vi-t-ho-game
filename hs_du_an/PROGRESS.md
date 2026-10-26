@@ -11,3 +11,14 @@
 - jar_check: PASS cả 5 (`pN/jar_check_font.txt`). FreeJ2ME: không exception, chữ Latin vẽ bằng f15c (`shots/font_test/pN`). Chữ Hán biến mất là đúng (font không có glyph Hán).
 - Khung thoại engine: `o = lineH*3 + 6` → 3 dòng sẵn; lineH = VnFont.getHeight (17px).
 - Còn chờ: text tiếng Việt (A1 trích xuất → công nhân dịch) để soát độ rộng/ngắt dòng thật.
+
+## Kiểm đầu-cuối P1 (text giả tiếng Việt, chỉ để thử bố cục)
+- repack 3924 chuỗi → build_part.sh → jar_check PASS → FreeJ2ME: chữ có dấu hiển thị đúng, ngắt tại dấu cách, khung thoại 3 dòng cuộn đúng, `{từ khoá}` đỏ giữ màu qua dòng (`shots/fakevi_p1/`).
+
+## Ảnh menu (người dùng tự vẽ)
+- `anh_menu/`: toàn bộ ảnh menu 5 phần (PNG gốc jar + giải nén b/c/ic/mm.pak), `can_ve/pN/` 149 ảnh có chữ (87 ảnh khác nhau), `DANH_SACH_CO_CHU.tsv`, `README_VE_ANH.md`.
+- `scripts/pakimg.py` unpack/pack (XOR 1), round-trip 41/41.
+
+## Trích xuất text (A1, đã nghiệm thu)
+- `pN/text_can_dich.tsv` (P1 3924 · P2 5189 · P3 3801 · P4 2860 · P5 3114), `all/text_can_dich.tsv` 18888 dòng / 9192 chuỗi gốc duy nhất.
+- Tiếp: chuỗi CJK trong .class (T5) → chốt thuật ngữ + vai.md → 1 công nhân dịch cả lô (xoay vòng khi ngữ cảnh > 400k).
