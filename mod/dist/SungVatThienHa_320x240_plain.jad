@@ -1,0 +1,10 @@
+MIDlet-Vendor: NAM.P
+MIDlet-Version: 1.1
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Icon: /icon.png
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Name: Sủng Vật Thiên Hạ – Truyền Thuyết Long Linh
+MIDlet-1: Sủng Vật Thiên Hạ – Truyền Thuyết Long Linh,/icon.png,Main
+cid: 73
+MIDlet-Jar-URL: SungVatThienHa_320x240_plain.jar
+MIDlet-Jar-Size: 1249339
