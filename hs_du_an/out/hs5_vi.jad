@@ -1,0 +1,14 @@
+MIDlet-Name: 轩辕剑-天之痕-终章
+CP: 0
+MIDlet-1: 轩辕剑-天之痕-终章, icon.png, main.MainMIDlet
+locale: cn
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Install-Notify: http://59.42.254.3:8081/pay/install.do?gameid=0118&ua=N73&gv=1.7.0&cpid=0
+MIDlet-Icon: icon.png
+MIDlet-Vendor: Gameislive
+UA: N73
+MIDlet-Version: 1.7.0
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Description: 轩辕剑-天之痕-终章
+MIDlet-Jar-URL: hs5_vi.jar
+MIDlet-Jar-Size: 1052095

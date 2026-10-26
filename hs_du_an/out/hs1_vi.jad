@@ -1,0 +1,21 @@
+InterChannel: ICID
+MIDlet-Vendor: Gameislive
+MIDlet-Version: 1.0.0
+MIDlet-Name: 轩辕剑-天之痕
+FreeCode: E707C28F72ADCEC13295c76acbf4caaed33c36b1b5fc2cb1
+SmsCode2: B1F5AACBDD5B36D2fa5199613525eb9f67ae6d8f3ca8db14
+SmsDest1: ADB0FFA03412F5D83A3D90D8567BBD4BDECF3661959E34A19df1cecc0ba82a85b84e6b119fa72380
+Term: N73
+FreeDest: 06818C025AF3AF5F2956709183A905BF92b6c67b5a38dbadcc18018f499f63b4
+SmsDest2: 06818C025AF3AF5F925E63EADCB7B083126a6b969b2b51d1d525e14c72303e28
+SmsCode1: D5931B5A5BB9B018d492cdd12598a14c861707400d416b48
+MIDlet-1: 轩辕剑-天之痕, icon.png, main.MainMIDlet
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Icon: icon.png
+QQ: 0
+ChannelSecond: SEC
+ChannelFirst: FR
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Description: 轩辕剑-天之痕
+MIDlet-Jar-URL: hs1_vi.jar
+MIDlet-Jar-Size: 861351
