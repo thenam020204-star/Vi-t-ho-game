@@ -151,7 +151,61 @@ public final class Interp {
     private static final int[] effA = new int[4];
     private static final int[] effB = new int[4];
 
+    // session 2c: adaptive number of display slots per tick. A ghost frame that misses its slot
+    // (Sink.late) leaves the previous image up for two slots then jumps: worse than an even lower
+    // rate. When ghosts keep missing, one slot fewer is used (66 -> 44 -> 22 fps, always evenly
+    // spaced); after a long run without misses, and when the measured ghost cost fits, one more.
+    private static int cap;
+    private static int capMax;
+    private static int lateHist;
+    private static int okRun;
+    private static int ghost16;
+    private static int lastPeriod;
+
     private Interp() {
+    }
+
+    // session 2c: GameCanvas.run, right after it computed slots from the tick period
+    public static int adaptSlots(int slots, int period) {
+        if (!on) {
+            return slots;
+        }
+        capMax = slots;
+        lastPeriod = period;
+        if (cap == 0) {
+            cap = slots;
+        }
+        int n = slots < cap ? slots : cap;
+        return n < 1 ? 1 : n;
+    }
+
+    private static void adaptAfter(boolean missed, int n) {
+        lateHist = (lateHist << 1 | (missed ? 1 : 0)) & 0xFFFF;
+        if (missed) {
+            okRun = 0;
+            int c = 0;
+            int h = lateHist;
+            while (h != 0) {
+                c += h & 1;
+                h >>>= 1;
+            }
+            if (c >= 3 && cap > 1) {
+                cap = n - 1 < 1 ? 1 : n - 1;
+                lateHist = 0;
+            }
+            return;
+        }
+        ++okRun;
+        if (cap < capMax) {
+            // the next level must fit one ghost (+50 %) per slot (checked after 64 quiet ticks);
+            // at 1 slot there is no fresh measurement, so probe again after 128 ticks (~3 s)
+            int budget16 = (lastPeriod << 4) / (cap + 1);
+            if (okRun >= 64 && cap > 1 && ghost16 * 3 / 2 <= budget16 || okRun >= 128 && cap == 1 || okRun >= 256) {
+                ++cap;
+                okRun = 0;
+                lateHist = 0;
+            }
+        }
     }
 
     private static void alloc() {
@@ -554,6 +608,9 @@ public final class Interp {
             Sink s = sink;
             int n = s == null ? 2 : s.slots();
             if (n < 2) {
+                if (s != null) {
+                    Interp.adaptAfter(false, n);   // session 2c: keep counting so the cap can come back
+                }
                 return;
             }
             if (s != null && !anim && !sc && !Interp.moved()) {
@@ -563,23 +620,32 @@ public final class Interp {
                 shot = new Frame(Gfx.scr.w, Gfx.scr.h);
             }
             Interp.saveAll();
+            boolean missed = false;
             try {
                 int i = 1;
                 while (i < n) {
                     if (s == null || !s.late(i)) {
+                        long t0 = System.currentTimeMillis();
                         Interp.ghostFrame(fh, 256 * i / n);
                         if (s != null) {
                             System.arraycopy(Gfx.scr.px, 0, shot.px, 0, shot.px.length);
                         }
                         Interp.restoreAll();
+                        int dt = (int) (System.currentTimeMillis() - t0);
+                        ghost16 += (dt * 16 - ghost16) / 8;
                         if (s != null) {
                             s.show(shot, i);
                         }
+                    } else {
+                        missed = true;
                     }
                     ++i;
                 }
             } finally {
                 Interp.restoreAll();
+            }
+            if (s != null) {
+                Interp.adaptAfter(missed, n);
             }
         } finally {
             Interp.scShift();

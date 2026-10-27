@@ -13,8 +13,9 @@ public class SeHarness implements Interp.Sink {
     public int slots() { return slots; }
     static long tickBase; static int curPeriod;
     // ghost i is rendered at the start of display slot i (see GameCanvas.show)
-    public boolean late(int n) { hl4.sys.Clock.setVirtual(tickBase - curPeriod + (long) curPeriod * n / slots); return false; }
-    public void show(Frame f, int n) { ghosts.add(f.px.clone()); if (n == slots - 1) hl4.sys.Clock.setVirtual(tickBase); }
+    static long tlate, tTickStart; static PrintWriter tlog;
+    public boolean late(int n) { tlate = System.nanoTime(); hl4.sys.Clock.setVirtual(tickBase - curPeriod + (long) curPeriod * n / slots); return false; }
+    public void show(Frame f, int n) { if (tlog != null) tlog.println("ghost " + tickNo + " " + n + " " + (System.nanoTime() - tlate) / 1000); ghosts.add(f.px.clone()); if (n == slots - 1) hl4.sys.Clock.setVirtual(tickBase); }
 
     static String out;
     static PrintWriter log;
@@ -30,6 +31,7 @@ public class SeHarness implements Interp.Sink {
         new File(out).mkdirs();
         log = new PrintWriter(new FileWriter(out + "/run.log"));
         hashLog = new PrintWriter(new FileWriter(out + "/hash.log"));
+        if (System.getProperty("timing") != null) tlog = new PrintWriter(new FileWriter(out + "/timing.log"));
         hl4.gfx.Vi.enable();
         Hud.ktf = true;
         hl4.sys.Debug.strict = false;
@@ -96,18 +98,19 @@ public class SeHarness implements Interp.Sink {
             int[] s = e.getValue();
             log.printf("%s ticks=%d changed=%d noGhost=%d stuck=%.1f%% early=%.1f%% mid=%.1f%%%n", e.getKey(), s[0], s[1], s[2], s[1] == 0 ? 0.0 : s[3] / 10.0 / s[1], s[1] == 0 ? 0.0 : s[4] / 10.0 / s[1], s[1] == 0 ? 0.0 : 100 - (s[3] + s[4]) / 10.0 / s[1]);
         }
-        log.close(); hashLog.close();
+        log.close(); hashLog.close(); if (tlog != null) tlog.close();
         System.exit(0);
     }
 
     void tick() throws IOException {
         int period = Engine.frameDelay + 15;
         slots = Math.min(4, (period * 60 + 500) / 1000);
-        ghosts.clear();
+        ghosts.clear(); long tk0 = System.nanoTime();
         tickBase = 1000000L + (long) tickNo * period; curPeriod = period;
         hl4.sys.Clock.setVirtual(tickBase);
         Engine.tick();
         tickNo++;
+        if (tlog != null) tlog.println("tick " + tickNo + " " + (System.nanoTime() - tk0) / 1000 + " " + Engine.cur.getClass().getSimpleName());
         short[] cur = Gfx.scr.px.clone();
         if (hashLog != null) { int hsh = java.util.Arrays.hashCode(cur); hashLog.println(tickNo + " " + Engine.cur.getClass().getSimpleName() + " " + Integer.toHexString(hsh) + " " + java.util.Arrays.hashCode(G.game) + " " + java.util.Arrays.hashCode(G.map) + " " + java.util.Arrays.hashCode(G.event) + " " + java.util.Arrays.hashCode(Pool.hero.m)); }
         String key = label + "/" + Engine.cur.getClass().getSimpleName() + "/g" + G.game[0];
@@ -143,6 +146,7 @@ public class SeHarness implements Interp.Sink {
             for (int i = 0; i < n; i++) if (sp[w][i] == Pool.hero.spr) sb.append(" a").append(k[w][i] >> 16 & 0xFF).append("/d").append(k[w][i] >> 8 & 0xFF).append("/f").append(k[w][i] & 0xFF);
             log.println(sb);
         } catch (Exception ex) { throw new RuntimeException(ex); }
+        if (System.getProperty("camlog") != null) log.println("cam " + tickNo + " cx=" + hl4.sys.Bytes.s32(G.map, 156) + " cy=" + hl4.sys.Bytes.s32(G.map, 160) + " hx=" + hl4.sys.Bytes.s32(Pool.hero.m, 8) + " hy=" + hl4.sys.Bytes.s32(Pool.hero.m, 12) + " ox=" + hl4.sys.Bytes.s32(Pool.hero.m, 32) + " oy=" + hl4.sys.Bytes.s32(Pool.hero.m, 36));
         if (System.getProperty("heroanim") != null) log.println("hero tick " + tickNo + " anim=" + Pool.hero.m[359] + " frame=" + Pool.hero.m[140] + " st=" + Pool.hero.m[358] + " dir=" + Pool.hero.m[360] + " cls=" + G.gameMenu[22]);
         if (Particles.curCount > 0 && System.getProperty("pc") != null) log.println("particles tick " + tickNo + " n=" + Particles.curCount);
     }

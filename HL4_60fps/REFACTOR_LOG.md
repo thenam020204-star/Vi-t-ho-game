@@ -1,5 +1,19 @@
 # REFACTOR_LOG — Heroes Lore 4: Phantasmal Mask (mod 60 fps)
 
+## Phiên 2c — 2026-10-27 (UTC+7): đòn chém "vẫn khựng" → chi phí vẽ + nhịp hiển thị
+
+**Bản build:** `dist/HL4.jar` **v1.0.4**; Verify 162 class (thêm `hl4/gfx/FastFx`), 0 lỗi trước/sau preverify.
+**Đo (JVM thông dịch `-Xint`, cùng save combat):** khung phụ lúc đứng ≈ 3,7 ms, lúc chém (tick 411–415) ≈ 12 ms, cả tick 33–36 ms (thường 13 ms). Slot hiển thị chỉ có 15 ms → trên máy thật khung phụ lúc chém trễ hạn, `late()` bỏ → ảnh đứng 2/3 tick rồi nhảy (giật hơn cả 22 fps đều). Không có hit-stop, camera/hero không nhảy quá ngưỡng (đẩy 4 px, đã nội suy).
+**Profile (JFR):** `Fx.scaled` 44 % (ảnh phóng to/xoay + blend: vệt chém 200–380 %), trong đó `colorRaw`/`blendPixel` gọi theo từng pixel.
+**Sửa:**
+| # | Thay đổi | Kiểm chứng |
+|---|---|---|
+| 1 | `Fx.scaled` → `FastFx.scaled`: cắt vùng hiển thị một lần theo clip, bảng cột tính sẵn, kiểm biên theo dòng, inline màu + blend, cùng thứ tự ghi pixel | test vi sai 100 000 lần (ảnh thật 4/8 bit, mọi lật/xoay/neo/clip/alpha/blend): 0 khác; khung thật trùng 1.01 ở 5 kịch bản (14 762 tick) |
+| 2 | Số khung phụ tự điều chỉnh: ≥3/16 tick trễ → bớt 1 slot (66→44→22 fps, luôn cách đều); 64 tick không trễ và chi phí đo được (+50 %) vừa slot → thêm 1 (không đo được thì thử lại sau 256 tick) | `GameCanvas.run`: `slots = Interp.adaptSlots(slots, period)` |
+**Kết quả đo `-Xint`:** khung phụ lúc chém 12 → 9 ms, tick 33–36 → 25–32 ms; hoà mờ chiếm ~1,5–3 ms trong đó.
+**Emulator (thời gian thật):** lần đầu phát hiện hồi quy — số slot bị hạ về 1 lúc khởi động (JIT nóng máy) và không hồi lại vì nhánh `n < 2` thoát trước bước tăng → 22 fps mọi màn. Đã sửa (đếm cả tick không có khung phụ, thử lại sau 128 tick). Sau sửa: FreeJ2ME tiêu đề 22 → 45 → 58 sau ~5 s khởi động, xác nhận NV 58, sự kiện 57,5–58,5; MicroEmulator tiêu đề 40 → 66,5, xác nhận NV 66, trong game 66–66,5; 0 ngoại lệ từ code game.
+**Bất định của harness:** `Vi.marqueeOff` (chữ dài chạy ngang) dùng `System.currentTimeMillis` → so khung giữa 2 lần chạy dùng bản test của cả 2 JAR đổi lời gọi này sang `Clock.now()` (`DetJar`, chỉ để test).
+
 ## Phiên 2b — 2026-10-27 (UTC+7): đòn chém còn khựng → ghép cell theo danh tính + hoà mờ
 
 **Bản build:** `dist/HL4.jar` **v1.0.3** (3 068 740 byte, 2 014 entry, md5 `f6cd53f336ee30ece34c4b111b9f499e`) + `.jad`; Verify 161 class, 0 lỗi trước/sau preverify. Mọi entry trừ manifest giống hệt bản đã test.

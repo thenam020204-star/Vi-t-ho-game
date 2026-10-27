@@ -18,6 +18,8 @@ import java.util.zip.*;
  *   hl4/game/Dialog.drawScriptWindow  : Interp.lp on window y/x/face y (locals 15/16/17).
  *   hl4/game/EventDraw      : Interp.lp on cinema bar height, subtitle and skip fade alpha.
  *   hl4/game/HudKtf/MainGameFrame.drawInfo : Interp.lp on the info box slide offset.
+ *   hl4/GameCanvas.run      : session 2c, slots = Interp.adaptSlots(slots, period) after the clamp to 4.
+ *   hl4/gfx/Fx.scaled       : session 2c, body forwards to hl4.gfx.FastFx.scaled (identical output).
  *
  * usage: Patch <in.jar> <outdir>   (writes only the patched classes)
  */
@@ -33,6 +35,8 @@ public class Patch {
             }
         }
         write(a[1], "hl4/gfx/Sprite.class", sprite(in.get("hl4/gfx/Sprite.class")));
+        write(a[1], "hl4/gfx/Fx.class", fx(in.get("hl4/gfx/Fx.class")));
+        write(a[1], "hl4/GameCanvas.class", canvas(in.get("hl4/GameCanvas.class")));
         write(a[1], "hl4/game/TitleFrame.class", title(in.get("hl4/game/TitleFrame.class")));
         write(a[1], "hl4/game/HeroDraw.class", heroDraw(in.get("hl4/game/HeroDraw.class")));
         write(a[1], "hl4/game/Effects.class", effects(in.get("hl4/game/Effects.class")));
@@ -332,6 +336,50 @@ public class Patch {
         }
         if (at == null) fail(cn.name + "." + name + " slide offset not found");
         m.instructions.insert(at, lpVar(13, ((VarInsnNode) at).var));
+        return emit(cn);
+    }
+
+    static byte[] canvas(byte[] b) {
+        ClassNode cn = read(b);
+        MethodNode m = method(cn, "run", "()V");
+        // "aload_0; getfield slots; iconst_4; if_icmple L; aload_0; iconst_4; putfield slots; L:"
+        LabelNode at = null;
+        for (AbstractInsnNode n : m.instructions) {
+            if (n instanceof FieldInsnNode && n.getOpcode() == Opcodes.GETFIELD && ((FieldInsnNode) n).name.equals("slots")
+                    && isInt(next(n), 4) && next(next(n)).getOpcode() == Opcodes.IF_ICMPLE) {
+                AbstractInsnNode p = next(next(next(n)));
+                if (p.getOpcode() == Opcodes.ALOAD && isInt(next(p), 4) && next(next(p)).getOpcode() == Opcodes.PUTFIELD
+                        && ((FieldInsnNode) next(next(p))).name.equals("slots")) at = ((JumpInsnNode) next(next(n))).label;
+            }
+        }
+        if (at == null) fail("GameCanvas.run slots clamp not found");
+        InsnList l = new InsnList();
+        l.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        l.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        l.add(new FieldInsnNode(Opcodes.GETFIELD, "hl4/GameCanvas", "slots", "I"));
+        l.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        l.add(new FieldInsnNode(Opcodes.GETFIELD, "hl4/GameCanvas", "period", "I"));
+        l.add(interp("adaptSlots", "(II)I"));
+        l.add(new FieldInsnNode(Opcodes.PUTFIELD, "hl4/GameCanvas", "slots", "I"));
+        m.instructions.insert(at, l);
+        return emit(cn);
+    }
+
+    static final String SCALED = "(Lhl4/gfx/Frame;Lhl4/gfx/Gbm;IIIIIIIIIIZII)V";
+
+    static byte[] fx(byte[] b) {
+        ClassNode cn = read(b);
+        MethodNode m = method(cn, "scaled", SCALED);
+        if ((m.access & Opcodes.ACC_STATIC) == 0) fail("Fx.scaled not static");
+        for (AbstractInsnNode n : m.instructions)
+            if (n instanceof MethodInsnNode && ((MethodInsnNode) n).owner.equals("hl4/gfx/FastFx")) fail("Fx already patched");
+        InsnList l = new InsnList();
+        l.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        l.add(new VarInsnNode(Opcodes.ALOAD, 1));
+        for (int v = 2; v <= 14; v++) l.add(new VarInsnNode(Opcodes.ILOAD, v));
+        l.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "hl4/gfx/FastFx", "scaled", SCALED, false));
+        l.add(new InsnNode(Opcodes.RETURN));
+        m.instructions.insert(l);
         return emit(cn);
     }
 

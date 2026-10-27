@@ -7,7 +7,7 @@ Công cụ: `tools/src/Compare.java` (ASM, bỏ debug/frame, so từng method sa
 - Tài nguyên khác: chỉ `META-INF/MANIFEST.MF` (`MIDlet-Version: 1.0.1` → `1.0.2`).
 - Class khác byte: 12. Trong đó 3 class chỉ khác do preverify lại (StackMap), mọi method tương đương: `hl4/sys/AudioPlayer`, `hl4/sys/Rms`, `hl4/game/Interp$Sink`.
 
-## Method khác (9 class)
+## Method khác (11 class + 1 class mới `hl4/gfx/FastFx`, v1.0.4)
 | Class | Method | Chủ đích |
 |---|---|---|
 | `hl4/gfx/Sprite` | `drawNpc(...)I` | hook `sprBegin` + `cellX/cellY` |
@@ -18,6 +18,8 @@ Công cụ: `tools/src/Compare.java` (ASM, bỏ debug/frame, so từng method sa
 | `hl4/game/HudKtf` | `drawInfo(Obj)V` | `lp` độ trượt |
 | `hl4/game/MainGameFrame` | `drawInfo()V` | `lp` độ trượt |
 | `hl4/game/TitleFrame` | `<header>` (cờ field `frameCnt`) | private → package |
+| `hl4/gfx/Fx` | `scaled(...)V` | 2c: chuyển sang `FastFx.scaled` (class mới) |
+| `hl4/GameCanvas` | `run()V` | 2c: `slots = Interp.adaptSlots(slots, period)` |
 | `hl4/game/Interp` | 29/31 method + header | viết lại (phiên 2) |
 
 152 class còn lại: tương đương bytecode từng method.

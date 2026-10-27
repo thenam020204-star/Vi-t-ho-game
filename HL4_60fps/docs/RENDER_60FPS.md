@@ -30,6 +30,10 @@ Làm tròn: các phần mới dùng `mix()` làm tròn đối xứng (bước 1 
 
 Đòn chém (hero anim 9, 8 frame; vệt chém anim 31): frame keyframe đổi số cell/thứ tự/góc ảnh (`Fx` chỉ xoay bội số 90°) nên không thể "xoay" kiếm giữa 2 tư thế; tư thế cơ thể trượt theo cell ghép được, kiếm & vệt chém chuyển bằng hoà mờ. Ảnh: `screenshots/session2/slash_crossfade.png`.
 
+## Hiệu năng (phiên 2c)
+- `Fx.scaled` (mọi cell mở rộng, số sát thương, hiệu ứng lớn) chạy qua `hl4.gfx.FastFx.scaled`: kết quả trùng từng pixel, ít việc hơn (clip theo vùng, bảng cột, inline).
+- `Interp.adaptSlots`: nếu khung phụ hay trễ thì giảm số slot/tick để nhịp hiển thị luôn đều (66 → 44 → 22 fps), tự tăng lại khi vẽ kịp.
+
 ## Không nội suy (có chủ đích)
 - Màn tĩnh: menu trong game (`GameMenuFrame`), cửa hàng/NPC (`NpcUi`), hộp xác nhận (`TState`), màn nạp (`LoadFrame`), logo — đo được hầu như không đổi giữa các tick (menu trong game: 8 lần đổi/262 tick, chỉ khi bấm phím). Ngoài ra `GMenuInv.paint` **chạy logic vật phẩm trong lúc vẽ** (`Items.setItem` → `Quest.check` → `Event`, `Sound`) nên vẽ lại nhiều lần là không an toàn.
 - Thay đổi rời rạc: chữ hiện dần theo từ, đổi ảnh/icon, xuất hiện object mới — khung phụ hiện trạng thái của tick mới (như phiên 1).
