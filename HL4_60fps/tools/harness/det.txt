@@ -1,0 +1,88 @@
+ticks 100
+press 49
+ticks 40
+press -5
+ticks 80
+press -5
+ticks 60
+press -5
+ticks 100
+press -5
+ticks 100
+press -5
+ticks 100
+press -5
+ticks 100
+press -5
+ticks 100
+press -5
+ticks 100
+press -5
+ticks 100
+skipevents 6000
+hold -4 30
+skipevents 6000
+hold -2 30
+skipevents 6000
+hold -3 20
+skipevents 3000
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6
+press -5
+ticks 8
+hold -1 6

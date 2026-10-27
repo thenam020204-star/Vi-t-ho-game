@@ -1,0 +1,22 @@
+wait 9000
+fps title 2
+press 49
+wait 1500
+fps title_agreed 2
+press 53
+wait 3000
+press 53
+wait 2500
+press 53
+wait 2500
+press 53
+wait 2500
+press 53
+wait 2500
+fps confirm 2
+press 53
+wait 9000
+press 53
+wait 12000
+fps ingame 3
+shot me1.png

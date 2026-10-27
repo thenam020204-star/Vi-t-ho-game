@@ -1,0 +1,23 @@
+ticks 100
+press 49
+ticks 40
+press -5
+ticks 80
+press -5
+ticks 80
+press -5
+label combat
+ticks 150
+press -5
+ticks 3
+press -5
+ticks 3
+press -5
+ticks 3
+press -5
+ticks 10
+hold -3 10
+press -5
+ticks 3
+press -5
+ticks 30

@@ -1,0 +1,19 @@
+ticks 100
+press 49
+ticks 40
+press -5
+ticks 80
+press -5
+ticks 80
+press -5
+ticks 150
+press -5
+ticks 2
+efftest
+ticks 3
+efftest
+press -5
+ticks 4
+efftest
+ticks 40
+efftest

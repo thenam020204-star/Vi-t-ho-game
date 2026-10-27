@@ -1,0 +1,26 @@
+wait 15000
+fps title_fadein 1
+fps title 2
+probe
+press 49 200
+wait 1000
+fps title_agreed 2
+press 53 200
+wait 3000
+fps mainmenu 1
+press 53 200
+wait 2500
+press 53 200
+wait 2500
+fps race 1
+press 53 200
+wait 2500
+fps class 2
+probe
+press 53 200
+wait 2500
+fps confirm 2
+press 53 200
+wait 7000
+fps intro 3
+probe
