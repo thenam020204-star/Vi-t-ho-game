@@ -11,7 +11,7 @@
 |---|---|---|
 | Cổng khung phụ | trước: chỉ khi có vật di chuyển; nay: di chuyển **hoặc** biến hiệu ứng đổi **hoặc** tick trước có sprite đổi frame | `Interp.renderBetween` |
 | Màn được bật | `MainGameFrame` (cũ) + `TitleFrame` + `MainMenuFrame` mode 0/1 (menu chính, tạo nhân vật) | `Interp.eligible` |
-| Nội suy hoạt ảnh sprite | log mọi lần vẽ sprite của render thật (sprite, anim, hàng, frame, x, y, lật). Khung phụ tìm lần vẽ cùng sprite/anim/hàng gần nhất của tick trước: frame tăng 1 (hoặc vòng về 0) và cùng bố cục cell → **trượt từng cell** giữa 2 frame; đổi frame khác → giữ frame cũ đến nửa tick (không hiện sớm) | `Sprite.drawNpc` → `Interp.sprBegin/cellX/cellY` |
+| Nội suy hoạt ảnh sprite | log mọi lần vẽ sprite của render thật (sprite, anim, hàng, frame, x, y, lật). Khung phụ tìm lần vẽ cùng sprite/anim/hàng gần nhất của tick trước; nếu frame tăng 1 (hoặc vòng về 0): **ghép cell theo danh tính** (lớp, ảnh, kiểu, góc, chế độ blend; cặp gần nhất ≤ 40 px) → cell có cặp trượt vị trí + tỉ lệ + alpha; cell không có cặp **hoà mờ** (frame cũ vẽ trước chỉ phần không có cặp, mờ dần theo 1−α; cell mới hiện dần theo α). Đổi frame khác (nhảy anim) → giữ frame cũ đến nửa tick | `Sprite.drawNpc` → `Interp.sprBegin/cellX/cellY/cellA/cellSX/cellSY/cellE/cellF` |
 | Biến hiệu ứng (giá trị trực tiếp) | fade màn hình `G.map[842]` (kiểu `[840]`), nháy `G.map[847]` (`[846]`), phủ màu sự kiện `G.event[1536]` (`[1516]`) | bảng `SC_*` |
 | Giá trị vẽ (bộ đếm bước 1 × px) | `Interp.lp(id, v)`: render thật ghi giá trị, khung phụ trộn với giá trị tick trước (nếu tick trước có vẽ, bước ≤ 96) | xem bảng dưới |
 | Hạt (particles) | `Particles.onIdle` chạy theo thời gian thật trong render; khung phụ mô phỏng thời gian đã trôi kể từ render thật trên mảng thật rồi khôi phục `Particles.particles/curCount/maxCount` | `HeroDraw.particleProcess` → `Interp.ghostParticles` |
@@ -28,12 +28,15 @@ Các điểm `lp`:
 
 Làm tròn: các phần mới dùng `mix()` làm tròn đối xứng (bước 1 px đổi ở nửa tick, trái/phải như nhau). Nội suy vị trí object/camera của phiên 1 giữ nguyên công thức cũ.
 
+Đòn chém (hero anim 9, 8 frame; vệt chém anim 31): frame keyframe đổi số cell/thứ tự/góc ảnh (`Fx` chỉ xoay bội số 90°) nên không thể "xoay" kiếm giữa 2 tư thế; tư thế cơ thể trượt theo cell ghép được, kiếm & vệt chém chuyển bằng hoà mờ. Ảnh: `screenshots/session2/slash_crossfade.png`.
+
 ## Không nội suy (có chủ đích)
 - Màn tĩnh: menu trong game (`GameMenuFrame`), cửa hàng/NPC (`NpcUi`), hộp xác nhận (`TState`), màn nạp (`LoadFrame`), logo — đo được hầu như không đổi giữa các tick (menu trong game: 8 lần đổi/262 tick, chỉ khi bấm phím). Ngoài ra `GMenuInv.paint` **chạy logic vật phẩm trong lúc vẽ** (`Items.setItem` → `Quest.check` → `Event`, `Sound`) nên vẽ lại nhiều lần là không an toàn.
 - Thay đổi rời rạc: chữ hiện dần theo từ, đổi ảnh/icon, xuất hiện object mới — khung phụ hiện trạng thái của tick mới (như phiên 1).
 - Thanh máu: gốc đổi tức thời, không thêm hiệu ứng trượt.
 
 ## Chi phí
-- Bộ nhớ thêm (cấp phát 1 lần): log sprite 2×320×(3 int + ref) ≈ 10 KB, bảng `lp` 128 B, bản sao mảng hạt (= `Particles.particles.length`). Không có `new` trong đường vẽ khung phụ (quét `javap`).
+- Bộ nhớ thêm (cấp phát 1 lần): bảng cell 19×64 int ≈ 5 KB, log sprite 2×320×(3 int + ref) ≈ 10 KB, bảng `lp` 128 B, bản sao mảng hạt (= `Particles.particles.length`). Không có `new` trong đường vẽ khung phụ (quét `javap`).
+- CPU: hoà mờ vẽ thêm phần không có cặp của frame cũ (gọi `drawNpc` lồng 1 cấp) và vẽ cell có alpha (đường blend chậm hơn đường thường) — chỉ ở khung phụ.
 - CPU: trong màn chơi gần như luôn có sprite hoạt ảnh → khung phụ vẽ mỗi tick (trước chỉ khi di chuyển). Máy không kịp thì `late()` bỏ khung phụ, nhịp logic giữ nguyên.
 - Tắt được: thuộc tính JAD `HL4-60fps: 0`.

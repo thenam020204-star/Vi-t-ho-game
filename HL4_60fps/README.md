@@ -1,6 +1,6 @@
 # HL4_60fps — Heroes Lore 4: Phantasmal Mask, mod 60 khung/giây
 
-Bản hiện tại: **v1.0.2** (`dist/HL4.jar`, `dist/HL4.jad`) — nội suy hiển thị ở mọi màn có chuyển động, logic giữ nhịp gốc. Chi tiết: `REFACTOR_LOG.md`, `docs/RENDER_60FPS.md`.
+Bản hiện tại: **v1.0.3** (`dist/HL4.jar`, `dist/HL4.jad`) — nội suy hiển thị ở mọi màn có chuyển động, logic giữ nhịp gốc. Chi tiết: `REFACTOR_LOG.md`, `docs/RENDER_60FPS.md`.
 
 ```
 base/       HL4_1.01.jar — JAR người dùng gửi (đầu vào build, có nội suy di chuyển phiên 1)

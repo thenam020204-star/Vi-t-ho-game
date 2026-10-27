@@ -1,8 +1,8 @@
-MIDlet-Version: 1.0.2
+MIDlet-Version: 1.0.3
 MIDlet-1: Heroes Lore - Phantasmal Mask,/icon.png,hl4.Main
 MIDlet-Name: Heroes Lore - Phantasmal Mask
 MIDlet-Vendor: NAM.P
 MicroEdition-Configuration: CLDC-1.1
 MicroEdition-Profile: MIDP-2.0
 MIDlet-Jar-URL: HL4.jar
-MIDlet-Jar-Size: 3067183
+MIDlet-Jar-Size: 3068740

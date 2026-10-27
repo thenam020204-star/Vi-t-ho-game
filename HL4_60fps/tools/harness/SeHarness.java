@@ -133,6 +133,17 @@ public class SeHarness implements Interp.Sink {
             }
         }
         prevTick = cur;
+        if (System.getProperty("herolog") != null) try {
+            java.lang.reflect.Field fs = Interp.class.getDeclaredField("lgSpr"), fk = Interp.class.getDeclaredField("lgKey"), fn = Interp.class.getDeclaredField("lgN"), fw = Interp.class.getDeclaredField("lgW");
+            for (java.lang.reflect.Field f : new java.lang.reflect.Field[]{fs, fk, fn, fw}) f.setAccessible(true);
+            int w = fw.getInt(null) ^ 1; // buffer written by the real render just done is lgW (swap happens next tick) -> use lgW
+            w = fw.getInt(null);
+            Object[][] sp = (Object[][]) fs.get(null); int[][] k = (int[][]) fk.get(null); int n = ((int[]) fn.get(null))[w];
+            StringBuilder sb = new StringBuilder("hspr " + tickNo);
+            for (int i = 0; i < n; i++) if (sp[w][i] == Pool.hero.spr) sb.append(" a").append(k[w][i] >> 16 & 0xFF).append("/d").append(k[w][i] >> 8 & 0xFF).append("/f").append(k[w][i] & 0xFF);
+            log.println(sb);
+        } catch (Exception ex) { throw new RuntimeException(ex); }
+        if (System.getProperty("heroanim") != null) log.println("hero tick " + tickNo + " anim=" + Pool.hero.m[359] + " frame=" + Pool.hero.m[140] + " st=" + Pool.hero.m[358] + " dir=" + Pool.hero.m[360] + " cls=" + G.gameMenu[22]);
         if (Particles.curCount > 0 && System.getProperty("pc") != null) log.println("particles tick " + tickNo + " n=" + Particles.curCount);
     }
 

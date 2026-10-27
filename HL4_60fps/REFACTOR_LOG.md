@@ -1,8 +1,23 @@
 # REFACTOR_LOG — Heroes Lore 4: Phantasmal Mask (mod 60 fps)
 
+## Phiên 2b — 2026-10-27 (UTC+7): đòn chém còn khựng → ghép cell theo danh tính + hoà mờ
+
+**Bản build:** `dist/HL4.jar` **v1.0.3** (3 068 740 byte, 2 014 entry, md5 `f6cd53f336ee30ece34c4b111b9f499e`) + `.jad`; Verify 161 class, 0 lỗi trước/sau preverify. Mọi entry trừ manifest giống hệt bản đã test.
+**Phản hồi người dùng:** "Hoạt ảnh chém vẫn khựng lắm" (ảnh: combat sa mạc, đòn chém thường).
+**Nguyên nhân (đo):** đòn chém thường của Warrior = anim 9 (8 frame, 1 frame/tick) + vệt chém anim 31 (4 frame, 2 lớp) trong `_H_001_CIF`. Giữa các frame, số cell, thứ tự cell, ảnh, góc (bội số 90°) và tỉ lệ đều đổi → bản 1.0.2 ghép cell theo **thứ tự** nên gần như không cặp nào khớp (anim 9: 3/21 cặp frame cùng bố cục) → chỉ đổi frame ở nửa tick = nhịp 22 fps.
+**Sửa:**
+| Điểm | Cách làm |
+|---|---|
+| Ghép cell | theo (lớp, ảnh, kiểu thường/mở rộng, góc, blend) + gần nhất ≤ 40 px, không phụ thuộc thứ tự |
+| Cell có cặp | nội suy vị trí, tỉ lệ (scale x/y), alpha riêng của cell |
+| Cell không có cặp | hoà mờ: frame cũ (chỉ cell không có cặp) vẽ trước với độ mờ 1−α qua `drawNpc` lồng 1 cấp; cell mới hiện dần theo α |
+| Hook mới trong `Sprite.drawNpc` | `sprBegin` nhận đủ tham số (để vẽ lồng frame cũ); `cellA/cellSX/cellSY` trên local 41/37/38 (cell mở rộng), `cellE/cellF` trên lần đọc đầu `f6e/f6f` (cell thường) |
+**Kiểm tra:** tất định 10 703/10 703 tick khung thật giống 1.01 (bật/tắt nội suy); khung phụ có giá trị trung gian trong combat 31,2% → 41,6% (`cb`), tấn công 40,8% (`atk`); số sát thương vẫn khớp pixel 60/60; 0 ngoại lệ ở 4 kịch bản SE; diff nhị phân: vẫn đúng 9 class/method như 1.0.2; quét cấp phát: chỉ `alloc()`/`<clinit>` (+≈5 KB bảng cell). FreeJ2ME: tiêu đề 58,5, xác nhận NV 58,5, sự kiện 57,5–58; MicroEmulator: 66–66,5 ở tiêu đề / xác nhận / trong game; 0 ngoại lệ từ code game (chỉ MIDI của container).
+**Giới hạn:** lưỡi kiếm không thể xoay dần giữa 2 tư thế (engine chỉ xoay 90°, frame là keyframe vẽ tay) → chuyển bằng hoà mờ (giống motion blur). Hoà mờ dùng đường vẽ alpha → tốn CPU hơn ở khung phụ.
+
 ## Phiên 2 — 2026-10-27 (UTC+7): 60 khung/giây ở mọi màn có chuyển động
 
-**Bản build:** `dist/HL4.jar` **v1.0.2** (3 067 183 byte, 2 014 entry) + `dist/HL4.jad`; preverified CLDC 1.1 / MIDP 2.0, class 45.3 — `Verify` 161 class, 0 lỗi trước và sau preverify (`--require-stackmap`), mọi entry Deflate. md5 `72ce40c96cb781a0aed8c2fb8595660f`.
+**Bản build:** `dist/HL4.jar` **v1.0.2** (2 014 entry) + `dist/HL4.jad`; preverified CLDC 1.1 / MIDP 2.0, class 45.3 — `Verify` 161 class, 0 lỗi trước và sau preverify (`--require-stackmap`), mọi entry Deflate. md5 `72ce40c96cb781a0aed8c2fb8595660f`.
 **Nền:** `base/HL4_1.01.jar` (bản người dùng gửi, md5 `597792f3…cb89`, đã có nội suy di chuyển của phiên 1). Không có chỉnh sửa tài nguyên nào: mọi entry không phải class giống hệt, trừ `MIDlet-Version`.
 **Cách hiểu yêu cầu:** "mọi chỗ 60 fps" = mọi màn **có chuyển động** hiển thị ≥ 60 khung/s, nhịp logic (22,2 tick/s) và gameplay giữ nguyên tuyệt đối. Màn tĩnh không có gì để nội suy.
 **Đường patch:** B (hook bytecode + class mới). Class gốc không biên dịch lại được tương đương (thử CFR → javac: 18/136 class giống bytecode), nên chỉ chèn lời gọi bằng ASM vào 8 method gốc, mã mới nằm trong `Interp` (viết lại toàn bộ từ bytecode phiên 1, giữ nguyên API).

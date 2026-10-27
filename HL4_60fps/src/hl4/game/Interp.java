@@ -8,6 +8,7 @@ import hl4.gfx.Gbm;
 import hl4.gfx.Hf;
 import hl4.gfx.Prim;
 import hl4.gfx.Sprite;
+import hl4.gfx.SpriteOut;
 import hl4.sys.Bytes;
 import hl4.sys.Clock;
 import hl4.sys.Rng;
@@ -90,15 +91,41 @@ public final class Interp {
     private static int lgW;
     private static boolean sprAnim;
     private static final int MATCH = 64;
-    private static final int CELLJUMP = 32;
 
-    // session 2: tween state of the sprite frame drawn right now (one drawNpc at a time)
+    // session 2: tween state of the sprite frame drawn right now. Cells of the previous and the
+    // current frame are paired by identity (layer, image, kind, angle); paired cells move/scale/fade
+    // between the two frames, unpaired ones cross-fade: TW_PREV draws only the unpaired cells of
+    // the previous frame fading out, TW_CUR draws the current frame (unpaired cells fading in).
     private static final int MAXCELL = 64;
-    private static boolean tw;
+    private static final int TW_OFF = 0;
+    private static final int TW_PREV = 1;
+    private static final int TW_CUR = 2;
+    private static int tw;
     private static int twN;
-    private static final boolean[] twOk = new boolean[MAXCELL];
-    private static final int[] twX = new int[MAXCELL];
-    private static final int[] twY = new int[MAXCELL];
+    private static int twPN;
+    private static final int[] twPair = new int[MAXCELL];     // cur cell -> prev cell, -1 = none
+    private static final boolean[] twUsed = new boolean[MAXCELL];
+    private static final int[] pB = new int[MAXCELL];          // per cell: flags byte, image, x, y,
+    private static final int[] pImg = new int[MAXCELL];        // ext: scale x/y, angle, alpha, blend
+    private static final int[] pX = new int[MAXCELL];
+    private static final int[] pY = new int[MAXCELL];
+    private static final int[] pSX = new int[MAXCELL];
+    private static final int[] pSY = new int[MAXCELL];
+    private static final int[] pRot = new int[MAXCELL];
+    private static final int[] pA = new int[MAXCELL];
+    private static final int[] pBl = new int[MAXCELL];
+    private static final int[] cB = new int[MAXCELL];
+    private static final int[] cImg = new int[MAXCELL];
+    private static final int[] cX = new int[MAXCELL];
+    private static final int[] cY = new int[MAXCELL];
+    private static final int[] cSX = new int[MAXCELL];
+    private static final int[] cSY = new int[MAXCELL];
+    private static final int[] cRot = new int[MAXCELL];
+    private static final int[] cA = new int[MAXCELL];
+    private static final int[] cBl = new int[MAXCELL];
+    private static int lastE;
+    private static final int PAIRDIST = 40;
+    private static final int OFFSCREEN = 30000;
 
     // session 2: drawn values (window position, bar height, fade alpha) of the last real render,
     // tweened in ghost frames by lp(); lpSer = serial of the real render that wrote the value
@@ -498,7 +525,7 @@ public final class Interp {
             fh.render();
         } finally {
             ghost = false;
-            tw = false;
+            tw = TW_OFF;
             Fx.ghostEnd();
         }
     }
@@ -564,16 +591,20 @@ public final class Interp {
     }
 
     /*
-     * session 2: hook in Sprite.drawNpc right before the frame data is selected (anim, direction
-     * row, validated frame index, screen position, flip inputs); returns the frame to draw.
+     * session 2: hook in Sprite.drawNpc right before the frame data is selected (all drawNpc
+     * arguments + the direction row it resolved); returns the frame to draw.
      * Real render: logs the draw, returns the frame unchanged. Ghost render: looks up the same
      * sprite/animation/row drawn last tick nearest to this position; when the frame advanced by
-     * one (or wrapped to 0) and both frames have the same cell layout, cell offsets are tweened
-     * (cellX/cellY); any other frame change is shown at the nearest tick (old frame for
-     * alpha < 1/2), like the original 1-tick step but never ahead of time.
+     * one (or wrapped to 0) the two frames are blended cell by cell (tweenSetup): the unpaired
+     * cells of the previous frame are drawn first (nested drawNpc, fading out), then the current
+     * frame. Any other frame change is shown at the nearest tick (old frame for alpha < 1/2).
      */
-    public static int sprBegin(Sprite s, int anim, int dir, int frame, int x, int y, int n8, int n4, int n3) {
-        tw = false;
+    public static int sprBegin(Sprite s, SpriteOut out, Frame fr, int anim, int n2, int n3, int n4, int frame,
+            int x, int y, int n8, int n9, int n10, int dir) {
+        if (tw == TW_PREV) {
+            return frame;           // nested call drawing the previous frame (tables already set)
+        }
+        tw = TW_OFF;
         if (!on) {
             return frame;
         }
@@ -641,43 +672,111 @@ public final class Interp {
             return frame;
         }
         if ((pf + 1 == f || f == 0 && pf == fs.length - 1 && pf > 0) && Interp.tweenSetup(c, fs[pf], fs[f])) {
+            boolean fade = false;
+            i = 0;
+            while (i < twPN) {
+                if (!twUsed[i] && pB[i] != 127) {
+                    fade = true;
+                    break;
+                }
+                ++i;
+            }
+            if (fade) {
+                tw = TW_PREV;
+                try {
+                    s.drawNpc(out, fr, anim, n2, n3, n4, pf, x, y, n8, n9, n10);
+                } finally {
+                    tw = TW_OFF;
+                }
+            }
+            tw = TW_CUR;
             return frame;
         }
         return alpha < 128 ? pf : frame;
     }
 
-    private static boolean tweenSetup(Cif c, int po, int co) {
+    // decode the cells of the frame record at o into the per-cell tables, returns the count
+    private static int cells(Cif c, int o, int[] b, int[] img, int[] x, int[] y, int[] sx, int[] sy, int[] rot, int[] a, int[] bl) {
         byte[] d = c.data;
-        int n = d[po];
-        if (n <= 0 || n != d[co] || n > MAXCELL) {
-            return false;
+        int n = d[o];
+        if (n <= 0 || n > MAXCELL) {
+            return -1;
         }
         int step = c.mode == 2 ? 5 : 4;
-        int p = po + 1;
-        int q = co + 1;
+        int p = o + 1;
         int i = 0;
         while (i < n) {
-            int pb = d[p] & 0xFF;
-            int qb = d[q] & 0xFF;
-            twOk[i] = pb != 127 && qb != 127 && (pb & 0x9F) == (qb & 0x9F);
-            if (twOk[i]) {
-                if (c.mode == 2) {
-                    int b2 = d[p + 2] & 0xFF;
-                    int b3 = d[p + 3] & 0xFF;
-                    int b4 = d[p + 4] & 0xFF;
-                    twX[i] = (short) ((b2 << 4 | b3 >> 4 | ((b2 & 0x80) != 0 ? 61440 : 0)) & 0xFFFF);
-                    twY[i] = (short) ((b4 | (b3 & 0xF) << 8 | ((b3 & 8) != 0 ? 61440 : 0)) & 0xFFFF);
-                } else {
-                    twX[i] = d[p + 2];
-                    twY[i] = d[p + 3];
-                }
+            int fb = d[p] & 0xFF;
+            b[i] = fb;
+            img[i] = d[p + 1] & 0xFF;
+            if (c.mode == 2) {
+                int b2 = d[p + 2] & 0xFF;
+                int b3 = d[p + 3] & 0xFF;
+                int b4 = d[p + 4] & 0xFF;
+                x[i] = (short) ((b2 << 4 | b3 >> 4 | ((b2 & 0x80) != 0 ? 61440 : 0)) & 0xFFFF);
+                y[i] = (short) ((b4 | (b3 & 0xF) << 8 | ((b3 & 8) != 0 ? 61440 : 0)) & 0xFFFF);
+            } else {
+                x[i] = d[p + 2];
+                y[i] = d[p + 3];
             }
-            p += pb == 127 ? step : ((pb & 0x80) != 0 ? step + 5 : step);
-            q += qb == 127 ? step : ((qb & 0x80) != 0 ? step + 5 : step);
+            if (fb != 127 && (fb & 0x80) != 0) {
+                int e = p + step;
+                sx[i] = d[e] & 0xFF;
+                sy[i] = d[e + 1] & 0xFF;
+                rot[i] = d[e + 2] & 0xFF;
+                a[i] = d[e + 3] & 0xFF;
+                bl[i] = d[e + 4] & 0xFF;
+            } else {
+                sx[i] = 10;
+                sy[i] = 10;
+                rot[i] = 0;
+                a[i] = 255;
+                bl[i] = 0;
+            }
+            p += fb == 127 ? step : ((fb & 0x80) != 0 ? step + 5 : step);
             ++i;
         }
-        twN = n;
-        tw = true;
+        return n;
+    }
+
+    // pair every current cell with the nearest unused previous cell of the same identity
+    private static boolean tweenSetup(Cif c, int po, int co) {
+        twPN = Interp.cells(c, po, pB, pImg, pX, pY, pSX, pSY, pRot, pA, pBl);
+        twN = Interp.cells(c, co, cB, cImg, cX, cY, cSX, cSY, cRot, cA, cBl);
+        if (twPN < 0 || twN < 0) {
+            return false;
+        }
+        int j = 0;
+        while (j < twPN) {
+            twUsed[j] = false;
+            ++j;
+        }
+        int i = 0;
+        while (i < twN) {
+            twPair[i] = -1;
+            int b = cB[i];
+            if (b != 127) {
+                int bestD = PAIRDIST + 1;
+                j = 0;
+                while (j < twPN) {
+                    if (!twUsed[j] && pB[j] != 127 && (pB[j] & 0x9F) == (b & 0x9F) && pImg[j] == cImg[i]
+                            && pRot[j] == cRot[i] && (pBl[j] & 3) == (cBl[i] & 3)) {
+                        int dx = pX[j] - cX[i];
+                        int dy = pY[j] - cY[i];
+                        int d = (dx < 0 ? -dx : dx) + (dy < 0 ? -dy : dy);
+                        if (d < bestD) {
+                            bestD = d;
+                            twPair[i] = j;
+                        }
+                    }
+                    ++j;
+                }
+                if (twPair[i] >= 0) {
+                    twUsed[twPair[i]] = true;
+                }
+            }
+            ++i;
+        }
         return true;
     }
 
@@ -688,25 +787,87 @@ public final class Interp {
 
     // session 2: hooks after Sprite.drawNpc decoded the offset of cell i (before flipping)
     public static int cellX(int i, int v) {
-        if (!tw || i >= twN || !twOk[i]) {
-            return v;
+        if (tw == TW_CUR) {
+            if (i < twN && twPair[i] >= 0) {
+                return Interp.mix(pX[twPair[i]], v);
+            }
+        } else if (tw == TW_PREV) {
+            if (i < twPN && twUsed[i]) {
+                return v - OFFSCREEN;   // paired: drawn by the current frame, keep it off screen here
+            }
         }
-        int d = v - twX[i];
-        if (d > CELLJUMP || d < -CELLJUMP) {
-            return v;
-        }
-        return Interp.mix(twX[i], v);
+        return v;
     }
 
     public static int cellY(int i, int v) {
-        if (!tw || i >= twN || !twOk[i]) {
+        if (tw == TW_CUR && i < twN && twPair[i] >= 0) {
+            return Interp.mix(pY[twPair[i]], v);
+        }
+        return v;
+    }
+
+    // opacity 0..256 applied to cell i on top of its own alpha, 256 = unchanged
+    private static int fade(int i) {
+        if (tw == TW_CUR) {
+            return i < twN && twPair[i] < 0 ? alpha : 256;
+        }
+        if (tw == TW_PREV) {
+            return 256 - alpha;
+        }
+        return 256;
+    }
+
+    // own alpha of cell i (0..255) mixed between the two frames when it is paired
+    private static int ownAlpha(int i, int a) {
+        if (tw == TW_CUR && i < twN && twPair[i] >= 0) {
+            return Interp.mix(pA[twPair[i]], a);
+        }
+        return a;
+    }
+
+    // session 2: extended cells: s8 alpha (-1 = opaque) right before the draw call is chosen
+    public static int cellA(int i, int v) {
+        if (tw == TW_OFF) {
             return v;
         }
-        int d = v - twY[i];
-        if (d > CELLJUMP || d < -CELLJUMP) {
-            return v;
+        int a = v == -1 ? 255 : v & 0xFF;
+        a = Interp.ownAlpha(i, a) * Interp.fade(i) >> 8;
+        return a >= 255 ? -1 : (byte) a;
+    }
+
+    public static int cellSX(int i, int v) {
+        if (tw == TW_CUR && i < twN && twPair[i] >= 0) {
+            return Interp.mix(pSX[twPair[i]], v);
         }
-        return Interp.mix(twY[i], v);
+        return v;
+    }
+
+    public static int cellSY(int i, int v) {
+        if (tw == TW_CUR && i < twN && twPair[i] >= 0) {
+            return Interp.mix(pSY[twPair[i]], v);
+        }
+        return v;
+    }
+
+    // session 2: plain cells: Sprite.f6e (blend on/off) and Sprite.f6f (blend alpha) as read by drawNpc
+    public static int cellE(int e, int i) {
+        lastE = e;
+        if (tw != TW_OFF && Interp.fade(i) < 256) {
+            return 1;
+        }
+        return e;
+    }
+
+    public static int cellF(int f, int i) {
+        if (tw == TW_OFF) {
+            return f;
+        }
+        int k = Interp.fade(i);
+        if (k >= 256) {
+            return f;
+        }
+        int base = lastE != 0 ? f & 0xFF : 255;
+        return base * k >> 8;
     }
 
     // session 2: hook on a drawn value; real render records it, ghost render mixes it with the

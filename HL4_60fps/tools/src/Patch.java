@@ -97,16 +97,13 @@ public class Patch {
         }
         if (sel == null) fail("frame select not found");
         InsnList begin = new InsnList();
-        begin.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        begin.add(new VarInsnNode(Opcodes.ILOAD, 3));   // anim
+        begin.add(new VarInsnNode(Opcodes.ALOAD, 0));   // this
+        begin.add(new VarInsnNode(Opcodes.ALOAD, 1));   // SpriteOut
+        begin.add(new VarInsnNode(Opcodes.ALOAD, 2));   // Frame
+        for (int v = 3; v <= 12; v++) begin.add(new VarInsnNode(Opcodes.ILOAD, v));   // anim .. n10 (7 = frame)
         begin.add(new VarInsnNode(Opcodes.ILOAD, 20));  // direction row
-        begin.add(new VarInsnNode(Opcodes.ILOAD, 7));   // frame (validated)
-        begin.add(new VarInsnNode(Opcodes.ILOAD, 8));   // x
-        begin.add(new VarInsnNode(Opcodes.ILOAD, 9));   // y
-        begin.add(new VarInsnNode(Opcodes.ILOAD, 10));  // n8 (flip when 1)
-        begin.add(new VarInsnNode(Opcodes.ILOAD, 6));   // n4 (flip when == n3)
-        begin.add(new VarInsnNode(Opcodes.ILOAD, 5));   // n3
-        begin.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "hl4/game/Interp", "sprBegin", "(Lhl4/gfx/Sprite;IIIIIIII)I", false));
+        begin.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "hl4/game/Interp", "sprBegin",
+                "(Lhl4/gfx/Sprite;Lhl4/gfx/SpriteOut;Lhl4/gfx/Frame;IIIIIIIIIII)I", false));
         begin.add(new VarInsnNode(Opcodes.ISTORE, 7));
         m.instructions.insertBefore(sel, begin);
 
@@ -138,6 +135,49 @@ public class Patch {
         cell.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "hl4/game/Interp", "cellY", "(II)I", false));
         cell.add(new VarInsnNode(Opcodes.ISTORE, 36));
         m.instructions.insertBefore(at, cell);
+
+        // 3. extended cells: "iload 37; bipush 10; imul; istore 46" (scale x * 10) right after the
+        //    alpha override by f6e: local 41 (s8 alpha), 37/38 (scale) pass through Interp
+        AbstractInsnNode sc = null;
+        for (AbstractInsnNode n : m.instructions)
+            if (isVar(n, Opcodes.ILOAD, 37) && isInt(next(n), 10) && next(next(n)).getOpcode() == Opcodes.IMUL
+                    && isVar(next(next(next(n))), Opcodes.ISTORE, 46)) { sc = n; break; }
+        if (sc == null) fail("ext scale computation not found");
+        AbstractInsnNode back = sc.getPrevious();
+        while (back.getOpcode() < 0) back = back.getPrevious();
+        if (!isVar(back, Opcodes.ISTORE, 41)) fail("ext alpha override not right before the scale");
+        InsnList ext = new InsnList();
+        int[][] hk = {{41, 0}, {37, 1}, {38, 2}};
+        String[] nm = {"cellA", "cellSX", "cellSY"};
+        for (int[] h : hk) {
+            ext.add(new VarInsnNode(Opcodes.ILOAD, 30));
+            ext.add(new VarInsnNode(Opcodes.ILOAD, h[0]));
+            ext.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "hl4/game/Interp", nm[h[1]], "(II)I", false));
+            ext.add(new VarInsnNode(Opcodes.ISTORE, h[0]));
+        }
+        m.instructions.insertBefore(sc, ext);
+
+        // 4. plain cells: the first reads of f6e / f6f (both before the extended-cell branch)
+        AbstractInsnNode e1 = null, f1 = null, extStart = null;
+        for (AbstractInsnNode n : m.instructions) {
+            if (extStart == null && isVar(n, Opcodes.ISTORE, 37) && n.getPrevious().getOpcode() == Opcodes.IAND
+                    && e1 != null) extStart = n;
+            if (n instanceof FieldInsnNode && ((FieldInsnNode) n).owner.equals("hl4/gfx/Sprite")) {
+                String f = ((FieldInsnNode) n).name;
+                if (f.equals("f6e") && e1 == null) e1 = n;
+                if (f.equals("f6f") && f1 == null) f1 = n;
+            }
+        }
+        if (e1 == null || f1 == null || extStart == null) fail("plain cell f6e/f6f reads not found");
+        if (m.instructions.indexOf(f1) > m.instructions.indexOf(extStart)) fail("f6f read is not in the plain-cell branch");
+        InsnList ce = new InsnList();
+        ce.add(new VarInsnNode(Opcodes.ILOAD, 30));
+        ce.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "hl4/game/Interp", "cellE", "(II)I", false));
+        m.instructions.insert(e1, ce);
+        InsnList cf = new InsnList();
+        cf.add(new VarInsnNode(Opcodes.ILOAD, 30));
+        cf.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "hl4/game/Interp", "cellF", "(II)I", false));
+        m.instructions.insert(f1, cf);
         return emit(cn);
     }
 
