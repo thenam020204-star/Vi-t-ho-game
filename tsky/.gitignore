@@ -3,7 +3,9 @@ src/
 build/
 *.pyc
 __pycache__/
-out/
+out/emu_rebuild/
+out/t7*.jar
+out/*.zip
 rms/
 config/
 freej2me_system/

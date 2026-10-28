@@ -68,7 +68,7 @@ def main():
     a = [x for x in sys.argv[1:] if not x.startswith('--')]
     src, tsv, out = a[0], a[1], (a[2] if len(a) > 2 else None)
     check = '--check' in sys.argv; force = '--force' in sys.argv
-    cs = f12_charset(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'work/tools/fonts/f12.bin')) if '--charset' not in sys.argv \
+    cs = f12_charset(os.path.join(os.environ.get('FONT_DIR') or os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'work/tools/fonts'), 'f12.bin')) if '--charset' not in sys.argv \
         else f12_charset(sys.argv[sys.argv.index('--charset') + 1])
     charset = set(cs)
     rows = read_tsv(tsv)

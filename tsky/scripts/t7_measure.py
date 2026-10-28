@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """T7: do do rong px (font f12) cua chuoi dich. Dung: t7_measure.py <tsv> [loc]"""
 import struct, sys, csv
-def load(path='work/tools/fonts/f12.bin'):
+def load(path=None):
+    import os
+    path = path or os.path.join(os.environ.get('FONT_DIR', 'work/tools/fonts'), 'f12.bin')
     b = open(path, 'rb').read()
     n = struct.unpack('>H', b[:2])[0]
     cs = b[2:2+n].decode('utf-8')

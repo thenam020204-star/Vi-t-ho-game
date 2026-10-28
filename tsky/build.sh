@@ -3,12 +3,11 @@
 #   TSV=duong_dan.tsv ./build.sh [ten_jar_ra]   (mac dinh dich/dp_work/final/text_can_dich.tsv, out/TienSungKyDuyen_240x320_vi.jar)
 set -e -o pipefail
 cd "$(dirname "$0")"
-source work/tools/env.sh
-S=/root/.claude/skills/synced/c7cebff6-afdc-419c-9062-179641ffc813_dd046f8a-671d-4e98-8dc1-6aad796e07ca/j2me-viet-hoa/scripts
+source scripts/env.sh
 TSV=${TSV:-dich/dp_work/final/text_can_dich.tsv}
 GOC=goc/TienSungKyDuyen_240x320.jar
 OUT=${1:-out/TienSungKyDuyen_240x320_vi.jar}
-L=work/lib
+L="$LIBS"
 mkdir -p build logs "$(dirname "$OUT")"
 ./build_hook.sh
 rm -rf build/x build/rp build/xr build/patched build/stage && mkdir -p build/x build/patched build/stage
@@ -20,7 +19,7 @@ env -u JAVA_TOOL_OPTIONS java -cp $L/asm-9.7.1.jar:$L/asm-tree-9.7.1.jar:build/p
 cp -r build/xr/. build/stage/ && rm -rf build/stage/META-INF
 cp -r build/patched/. build/stage/
 cp build/hook/VH.class build/stage/
-mkdir -p build/stage/font && cp work/tools/fonts/f12.bin build/stage/font/
+mkdir -p build/stage/font && cp "$FONT_DIR/f12.bin" build/stage/font/
 # logo nha phat hanh + hoat hinh khoi dong goc: chi Main/f.c() tham chieu (da bo, QD 9)
 for f in bg logo0 logo1 logo2 logo3 logo4 logo5 logo51 logo52; do rm -f build/stage/Image/$f.png; done
 [ -d res_vi ] && cp -r res_vi/. build/stage/
