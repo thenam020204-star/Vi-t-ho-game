@@ -1,0 +1,28 @@
+[INFO] Loading MIDlet: Tiên Sủng Kỳ Duyên | Main Class: Main.GameMidlet
+[ERROR] javax.microedition.media.Manager: Couldn't open Tone Player: Can not open line
+[INFO] javax.microedition.midlet.MIDlet: Create MIDlet
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: MIDlet-Description
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_choiser.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_choiser.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_uititle.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_uititle.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_playerface.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_playerface.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_blood.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_blood.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_choiser.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_choiser.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_uititle.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_uititle.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_playerface.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_playerface.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_blood.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/ui_blood.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/foot.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/foot.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/body.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/body.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/npc25.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'Image/npc25.png' in jar: file:/home/user/Vi-t-ho-game/tsky/out/TienSungKyDuyen_240x320_vi.jar

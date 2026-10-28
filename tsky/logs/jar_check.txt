@@ -1,0 +1,11 @@
+Thêm: ['VH.class', 'font/f12.bin']
+Xoá: []
+Đổi: ['Main/GameMidlet.class', 'Main/a.class', 'Main/b.class', 'Main/c.class', 'Main/e.class', 'Main/f.class', 'Main/g.class', 'Main/h.class', 'Main/j.class', 'Main/k.class', 'Main/l.class', 'rf/a.class', 'rf/b.class', 'rf/c.class', 'rf/d.class', 'rf/e.class', 'rf/f.class', 'rf/g.class', 'rf/h.class']
+WARN VH.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: java/io/InputStream.close()V (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: java/lang/Exception.printStackTrace()V (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: java/lang/String.indexOf(II)I (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: javax/microedition/lcdui/Image.createRGBImage([IIIZ)Ljavax/microedition/lcdui/Image; (xác nhận máy đích có)
+RESULT: PASS

@@ -163,3 +163,10 @@ Không tìm thấy: cắt `substring` theo chỉ số để xuống dòng (ngoà
 2. Thay thân 4 method bằng `invokestatic VH.*` (giữ descriptor): `Main/g.a(char[]…)`, `rf/b.a(String,I)V`, `rf/b.b(String,I)V`, `rf/b.a(G,String,IIIII)V` và `Main/f.a(G,String,IIIII)V`.
 3. Hook nhỏ: ánh xạ "空" khi vẽ; NOP `drawString(dk,0,0)` (bc `j.s@2388,2591`); nhãn góc phải (`j.y`, `j.z`); mũi tên menu chính (`j.f`); cột cửa hàng (`e.a(String[][])`).
 4. Đo ở T4/T7: neo mặt nhân vật (4.1), `LH` thực của f12, độ rộng tên Việt dài nhất của `E`, `z`, `F`.
+
+## 8. Kết quả T4 (VH + Patch)
+- Build: `./build.sh [jar_ra]` (`TSV=file.tsv` để thử bản dịch tạm; mặc định `dich/text_can_dich.tsv`). Thứ tự: giải nén goc → `repack` (chữ Việt vào pak/t/class) → `Patch` (ASM, in `logs/patch.log`, dừng nếu số call-site lệch) → + `VH.class` + `font/f12.bin` → zip → preverify → `jar_check`.
+- Số call-site thực thay: drawString 29, stringWidth 24, getHeight 4 (+ thân 5 method QĐ 2b: `Main/g.a`, `rf/b.a/b(String,int)`, `rf/b.a(G..)`, `Main/f.a(G..)` chứa 21 drawString, 2 charWidth, 2 substringWidth).
+- Màn CG (`j.java:5858,5879` `drawString(dk,0,0)`): trên jar gốc (`logs/shots_T4/goc_cg.png`) KHÔNG hiện chữ ở góc trái trên vì clip còn đặt từ `j.a(7 tham số)`; giữ nguyên, `VH.drawRange` bỏ qua phần ngoài clip nên không tốn chi phí vẽ.
+- VH: ký tự ngoài f12 — chữ Hán/dấu câu Hán (>= U+2E80) = ô trống rộng 12 (giữ bố cục), còn lại = rộng dấu cách. Thoại 4 dòng/trang (hằng `PAGE_LINES`), ngắt ở dấu cách theo px, lề phải 5 px như code gốc.
+- Chưa làm (T7): nhãn phím mềm căn `k.w*2`, mũi tên menu chính, cột cửa hàng, "更多游戏", hộp xác nhận 2 dòng.
