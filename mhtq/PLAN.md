@@ -27,7 +27,7 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
 - `jar_check.py` phải ra PASS. Lỗi MIDI headless `Sequencer ... is null` được bỏ qua.
 
 ## Checklist
-- [ ] T01. Setup tool + decompile
+- [x] T01. Setup tool + decompile
   - Agent: A1
   - Làm: `bash $SK/scripts/setup_tools.sh Tool_Viet_Hoa_NAM_P.zip mhtq/work`; `source mhtq/work/tools/env.sh`; giải nén `goc/MHTQ_K790.jar` vào `work/k790_raw/`; CFR decompile ra `src/k790_cfr/`; FernFlower (tải về nếu được, nếu không thì ghi vào Vướng mắc rồi đi tiếp) ra `src/k790_ff/`; `javap -c -p -constants` từng class ra `src/k790_javap/`. Lưu output của `inventory.py` vào `logs/inventory_k790.txt`.
   - Hoàn thành khi: `work/tools/check_all.sh` chạy OK (log ở `logs/check_all.txt`) và có đủ ba thư mục src.
@@ -56,10 +56,13 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
   - Hoàn thành khi: như T08 cho E62 (màn 320x240), `out/MHTQ_E62_du_an.zip`.
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
-- (trống)
+- T01 check_all.sh không OK hoàn toàn (log `logs/check_all.txt`), lỗi do chính bộ tool: (1) bước 1 đòi đúng 7 file font nhưng zip có thêm `f12.bin`; (2) bước 2 `pixeltext selftest` fail ở kiểm tra 15c (serif I i j l...), không liên quan f13c; (3) bước 1b fontgen không import được `pixeltext` khi chạy trong tmp (cần PYTHONPATH tuyệt đối; env.sh đã sửa thành đường dẫn tuyệt đối). Bước 3-6 OK. Chưa xác minh f13c sinh lại khớp f18. Đề nghị quản đốc quyết: chấp nhận hay đổi bộ tool.
+  - **Quản đốc quyết:** chấp nhận. Các lỗi đều nằm ở f12/f15c/selftest của bộ tool, không đụng f13c. Dự án dùng nguyên file `fonts/f13c.bin` trong zip, không sinh lại font. BAO_CAO sẽ ghi lại ba lỗi này. T01 tính là xong.
+- FernFlower: tải được windup-fernflower 1.0.0.20171018 từ Maven Central (`work/tools/fernflower.jar`).
 
 ## Bàn giao công nhân (trạng thái dở dang, cập nhật liên tục)
-- (trống)
+- A1: T01 làm xong phần decompile (src/k790_cfr, k790_ff, k790_javap đủ 27 class; logs/inventory_k790.txt; work/k790_raw đã giải nén). T01 đã tick. Tiếp theo: T02 viết logs/text_path.md; đọc javap src/k790_javap/{f,i,j,n,w,x,t,u}.txt, `source mhtq/work/tools/env.sh` từ gốc repo.
 
 ## Nhật ký
 - Quản đốc: kiểm kê xong, chốt phong cách + font, tạo PLAN.md, chép jar gốc vào `goc/`.
+- A1: T01 xong (tool setup, CFR/FernFlower/javap đủ 27 class, inventory); check_all lỗi do bộ tool đã được quản đốc chấp nhận.

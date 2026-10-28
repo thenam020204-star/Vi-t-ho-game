@@ -1,0 +1,16 @@
+1 font .bin hop le (7 file)       FAIL
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+AssertionError: ['f18.bin', 'f13s.bin', 'f15c.bin', 'f13.bin', 'f15s.bin', 'f12.bin', 'f15.bin', 'f13c.bin']
+1b f15/f13 = sinh lai tu f18      FAIL
+fonts/f15c.bin /tmp/tmp.yVCy2dbNeS/fonts/f15c.bin differ: char 1380, line 5
+2 pixeltext selftest              FAIL
+    ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/Vi-t-ho-game/mhtq/work/tools/pixeltext-kit/selftest.py", line 12, in T
+    assert cond, "FAIL: " + what
+           ^^^^
+AssertionError: FAIL: 15px chan chon loc: only I i j l J 1 4 keep serifs (14IJeijl,áạặậéèẻẽẹêếềểễệíìỉĩịÍÌỈĨỊ‚)
+3 pixeltext examples              OK
+4 BitmapFont.class = version 47   OK
+5 FontDemo 7 font (javac+java)    OK
+6 freej2me jar nguyen ven         OK
