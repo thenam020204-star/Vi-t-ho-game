@@ -97,7 +97,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 
 ### Giai đoạn 3 — Dịch (đúng MỘT công nhân Sonnet 5.5)
 - [x] T6a (quản đốc) `dp prep --charset` (charset f12), chốt `dich/thuat-ngu.tsv`, `dich/vai.md`.
-- [ ] T6b (công nhân dịch) — thư mục `dich/`, lệnh `dp` = `python3 $S/dp.py` (S = thư mục scripts skill). Độ khó: **Khó vừa** — 1573 dòng duy nhất / 41.5k ký tự Hán, 64% thoại, 47% có xưng hô, 163 dòng có giới hạn (nhỏ nhất ≤10). Lưu ý: token jN#/k0# (×1000+), `~~` giữ, `@` (cmd49) giữ; chuỗi trạng thái ×5 phải đúng thuật ngữ; 3 chuỗi danh sách rỗng chứa "没有" phải bắt đầu bằng "Không có"; dòng `CHI-DAU-CAU` (chỉ dấu câu) dịch sang ASCII ("……"→"...", "！"→"!"). Sau `dp check` OK chạy thêm `python3 scripts/repack.py --check` (xem docs) và sửa mọi lỗi nó báo.
+- [x] T6b (công nhân dịch) — thư mục `dich/`, lệnh `dp` = `python3 $S/dp.py` (S = thư mục scripts skill). Độ khó: **Khó vừa** — 1573 dòng duy nhất / 41.5k ký tự Hán, 64% thoại, 47% có xưng hô, 163 dòng có giới hạn (nhỏ nhất ≤10). Lưu ý: token jN#/k0# (×1000+), `~~` giữ, `@` (cmd49) giữ; chuỗi trạng thái ×5 phải đúng thuật ngữ; 3 chuỗi danh sách rỗng chứa "没有" phải bắt đầu bằng "Không có"; dòng `CHI-DAU-CAU` (chỉ dấu câu) dịch sang ASCII ("……"→"...", "！"→"!"). Sau `dp check` OK chạy thêm `python3 scripts/repack.py --check` (xem docs) và sửa mọi lỗi nó báo.
   - (gốc) dịch toàn bộ bằng `dp next/add/fix/check/sample`; `dp check` = OK; quản đốc `dp merge`.
 
 ### Giai đoạn 4 — Hoàn thiện (A1)
@@ -114,6 +114,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - Chỉ một công nhân chạy thật tại một thời điểm.
 
 ## Nhật ký
+- T6b (công nhân Sonnet): dịch tay 1573/1573 dòng, dp check OK, dp merge -> dich/dp_work/final/text_can_dich.tsv, repack --check OK (2158 hàng, 0 cảnh báo); thêm ~60 mục thuật ngữ `mới` (tên NPC/vật phẩm/tiên sủng); tên Phong Đại rút thành Phong Đại 1/2/3/4 vì giới hạn ≤12; chỗ mơ hồ ở dich/dp_work/ghi-chu.txt.
 - T6a (quản đốc): dp prep (charset f12), dich/dp_work/thuat-ngu.tsv 59 mục, vai.md; duyệt ảnh T4/T5 đạt (thoại 4 dòng vừa khung; CG kể chuyện tràn đáy → T7).
 - T0 (quản đốc): tạo .gitignore, PLAN.md, PROGRESS.md; goc/logo_namp_240x320.png.
 - T1 (A1): docs/script.md + scripts/dump_pak.py; 486 blob/1668 trường Hán, blob lớn nhất 14701 B (~20.7 KB sau dịch), 7 token tên Hán nằm trong Main/l, 3 nhóm chuỗi bị so sánh (trạng thái ×5, "没有", "空" lưu RMS).

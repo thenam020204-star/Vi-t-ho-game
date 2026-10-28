@@ -63,7 +63,7 @@
 63	j6#: Dạ nhớ rồi, j9#, ông dài dòng thật đấy!
 64	j6#: Thôi ạ... chuyện nhỏ này cháu biết rồi. j9#, ông dài dòng thật đấy!
 65	j9#: Ê, thằng nhóc này, lại dám chê ông dài dòng... Vậy con nói xem pháp bảo "Cam Lâm" này có tác dụng gì?
-66	j6#: Chẳng phải là giúp tiên sủng chưa đặt vị trí chiến, không ra trận cũng nhận được chút kinh nghiệm sao? Đơn giản thế mà cũng đem ra thi cháu...
+66	j6#: Chẳng phải là để tiên sủng chưa đặt vị trí chiến, không ra trận cũng nhận được chút EXP sao? Đơn giản thế mà cũng đem ra thi cháu...
 67	j4#: Haiz, thằng nhóc này, sao vẫn thiếu kiên nhẫn thế, ta thật không yên tâm để con đi một mình, nhưng kỳ hạn mười lăm năm sắp tới rồi, ta thấy con cốt cách phi phàm, là kỳ tài ngự yêu vạn người mới có một, lại từ nhỏ mang viên châu hệ Mộc, nên mới dám giao trọng trách tìm mấy vật chứa Ngũ Hành nguyên khí còn lại cho con!
 68	j6#: Ông đừng lo cho cháu nữa, nói chuyện có ích đi... Mấy món còn lại ở đâu vậy?
 69	j4#: Từ thôn Mộc Lỗi đi ra, hướng tây bắc có "trấn Sa Lĩnh", ta nghe nói trước đây không lâu ở đó có yêu sủng rất lợi hại quấy phá, ta mơ hồ thấy yêu sủng đó có thể liên quan đến vật chất hệ Thổ, không thì nó đã chẳng gây loạn dữ vậy, con có thể đến đó dò hỏi trước.
@@ -227,7 +227,7 @@
 227	j5#: Cảm ơn cháu nhiều, j6# của bà cuối cùng cũng về nhà rồi, hì hì.
 228	j6#: j5#, bà đừng để cháu với cún cưng trùng tên được không...
 229	j5#: "j6#" là tên thịnh hành mà, ai cũng thích đặt, hì hì. Thôi nào, bà tặng cháu hai cái Phong Đại này!
-230	Nhận được hai Bích Phong Đại!
+230	Nhận được hai Phong Đại 2!
 231	j6#: Thôi được, cảm ơn j5#...
 232	j5#: Chó con có thể ở núi sau.
 233	j5#: Nhóc j6#, cháu giúp bà một việc được không?
@@ -278,7 +278,7 @@
 278	j6#: Tạm thời không có gì nhé.
 279	j6#: Phù, may mà tiên sủng mang theo khá mạnh. Hả? Chị gái kia cũng biến mất rồi? Xem ra mình không lấy được bảo bối nữa... đúng là tham bỏ bé thiệt thân, suýt mất cả mạng.
 280	j6#: Đây là đâu vậy? Vừa giẫm vào xoáy nước là tới đây, hóa ra trong xoáy nước còn có động thiên khác.
-281	Nhận được Xích Phong Đại x2!
+281	Nhận được Phong Đại 1 x2!
 282	Nhận được Cam Lâm x1!
 283	Nhận được tiền vàng 2000!
 284	Đào Hoa Dao: Gió thu hiu hắt trời se lạnh, cỏ cây rụng lá, sương đọng thành giá. Chim én từ biệt, nhạn bay nam, nhớ chàng lữ khách lòng đứt ruột. Day dứt nhớ về cố hương, chàng sao nấn ná gửi nơi xa?
@@ -365,18 +365,18 @@
 365	j6#: Nhưng sao ngươi biết ta đến đây?
 366	Thần thú: Ít thấy nhiều lạ... Thần thú chúng ta rất có linh thông, ta thấy ngươi thuận mắt mới chào hỏi, người thường ta chưa chắc đã thèm để ý.
 367	j6#: Vậy ta phải cảm ơn ngươi đã coi trọng ta à?
-368	Thần thú: Không có chi, ta đi nam về bắc qua nhiều nơi, ta có thể dạy ngươi cách bắt sủng, lại làm người tốt đến cùng, ta còn tặng ngươi một Càn Phong Đại cực phẩm không thể thiếu khi bắt sủng! Thế nào, có muốn học không?
+368	Thần thú: Không có chi, ta đi nam về bắc qua nhiều nơi, ta có thể dạy ngươi cách bắt sủng, lại làm người tốt đến cùng, ta còn tặng ngươi một Phong Đại 4 cực phẩm không thể thiếu khi bắt sủng! Thế nào, có muốn học không?
 369	Muốn học bắt sủng!
 370	Không muốn học...
 371	j6#: Ta muốn học bắt sủng! Mau dạy ta đi!
-372	Thần thú: Được, vậy đấu với ta đi! Trước khi đấu ta tặng ngươi một Càn Phong Đại.
-373	Nhận được Càn Phong Đại x1!
+372	Thần thú: Được, vậy đấu với ta đi! Trước khi đấu ta tặng ngươi một Phong Đại 4.
+373	Nhận được Phong Đại 4 x1!
 374	j6#: Hả? Ta chỉ muốn hỏi cách bắt sủng, đâu cần đánh nhau?
 375	Thần thú: Thực hành mới ra chân tri, đến đây, anh hùng!
 376	j6#: Không muốn học...
 377	Thần thú: Chàng trai, ngươi định đi về làng phía trước à?
 378	Thần thú: Tiên sủng chia bốn hạng "Giáp", "Ất", "Bính", "Đinh", trong đó "Đinh" kém nhất, "Giáp" tốt nhất, cũng là tiên sủng quý hiếm nhất đấy!
-379	Thần thú: Muốn học cách bắt sủng không? Vậy đấu với ta đi! Ta còn tặng ngươi một Càn Phong Đại cực phẩm không thể thiếu khi bắt sủng.
+379	Thần thú: Muốn học cách bắt sủng không? Vậy đấu với ta đi! Ta còn tặng ngươi một Phong Đại 4 cực phẩm không thể thiếu khi bắt sủng.
 380	Thôi...
 381	j6#: Thôi... ta tự học thì hơn.
 382	Hỏa Hồng Hồng: Lần này là đồ đệ ta chưa chuẩn bị tốt, lần sau nhất định lấy mạng ngươi!
@@ -432,7 +432,7 @@
 432	Vương Đạo Linh: Trong đời này, ta cũng muốn đến Thiên Sơn xem thử.
 433	j6#: Cháu đi Thiên Sơn rồi, ở đó cũng thường thôi, ở Thiên Môn có một thần thú canh giữ, ông nói với nó, nó sẽ cho ông vào.
 434	Vương Đạo Linh: Vậy sao? Vậy ta có dịp nhất định phải đến đó xem! Tiểu ca, cậu giúp ta thực hiện tâm nguyện bấy lâu, đây là mấy cái Phong Đại ta dành dụm, xin tỏ chút lòng cảm tạ, không thành kính ý.
-435	Nhận được Càn Phong Đại x3!
+435	Nhận được Phong Đại 4 x3!
 436	j6#: Dễ thôi, dễ thôi.
 437	Vương Đạo Linh: Ta già thế này rồi mà còn muốn đi Thiên Sơn, đúng là lão phu "tuổi già chợt phát cuồng thiếu niên"...
 438	Vương Đạo Linh: Tiểu ca, cậu từng lên đỉnh Thiên Sơn chưa? Nghe nói ở đó mây tía lượn lờ, tiên khí vấn vương, ta từ nhỏ một lòng hướng đạo, thật muốn đến đó thanh tu, nhưng đạo hạnh không đủ, mãi chưa toại nguyện...
@@ -740,7 +740,7 @@
 740	j6#: Hả? Hình như ta từng gặp ngươi ở đâu?
 741	Hỏa Đồng Đồng: Hừ, kẻ ở trấn Sa Lĩnh là huynh trưởng của ta, lần trước ngươi làm huynh trưởng ta tức đến phun lửa, lần này để ta sai đồ đệ luyện với ngươi một trận, ngươi dám không?
 742	Cứ đến!
-743	Nhận được Xích Phong Đại x10!
+743	Nhận được Phong Đại 1 x10!
 744	j6#: Hừ! Thuộc hạ của Hạo Thiên cũng chỉ thế thôi.
 745	j8#: Trời sinh Du sao còn sinh Lượng, sao ngươi luôn giỏi hơn ta một chút chứ??
 746	j6#: Thôi được, ngươi khai thật đi, các Ngũ Hành thạch khác ở đâu?
@@ -898,7 +898,7 @@
 898	j6# đắp tro thảo mộc lên vết thương của hồ ly nhỏ, còn băng bó cho nó.
 899	j6#: Ha! Khỏi rồi nhé, sau này nhất định phải cẩn thận, đừng bị thương nữa! Ta còn việc, đi trước đây!
 900	Hồ ly nhỏ ngậm ống quần j6#, còn đặt xuống một viên châu bọc hơi lạnh.
-901	j6#: Ừm, viên châu này? Theo kinh nghiệm ta đã xem ba viên châu, đây chắc là châu Thủy rồi! Hồ ly nhỏ, ngươi muốn tặng ta cái này à?
+901	j6#: Ừm, viên châu này? Với EXP đã xem ba viên châu của ta thì đây hẳn là châu Thủy! Hồ ly nhỏ, ngươi muốn tặng ta cái này à?
 902	Hồ ly nhỏ vui vẻ kêu với j6# một tiếng.
 903	j6#: Được, vậy ta nhận nhé, đúng lúc ta đang tìm thứ này. Giờ ta đã tìm được bốn viên châu, về cho j9# xem, ông chắc chắn rất vui. Vậy ta về trước, hồ ly nhỏ, hẹn gặp lại!
 904	Tiểu Bạch: Gào~~ gào~~
@@ -973,3 +973,601 @@
 973	j6#: Được rồi! Tên này đã chết, ta về tìm k0# đây!
 974	Tiên nhân: Ừm, rảnh thì đến tìm ta đánh cờ nhé!
 975	j6#: Cuối cùng tên này cũng chết, ta cuối cùng đã báo thù cho k0#!
+976	Tiên nhân: Haiz, oan oan tương báo bao giờ mới dứt. Năm xưa Hạo Thiên tẩu hỏa nhập ma, làm loạn nhân gian, ta để phong ấn hắn đã sai cha mẹ ngươi đi ác chiến với hắn, sau đó cha mẹ ngươi không bao giờ trở về nữa... Mà Hạo Thiên lại có thể hồi sinh lần nữa, không ngờ hắn còn lúc bị phong ấn tìm được j8# làm thuộc hạ đi tìm Nữ Oa Thạch, thật ra chỉ cần gom năm viên châu về một chỗ, Nữ Oa Thạch sẽ tái hiện nhân gian, nên j8# cũng đang tìm. Tiếc là thần tiên cũng không thể nhúng tay quá nhiều vào chuyện nhân gian, nếu không thiên đạo sẽ đại loạn, nên để giúp ngươi tìm đủ Ngũ Hành Châu trước, ta chỉ có thể ngầm phái thần thú hỗ trợ ngươi, haiz, tiếc là dù ngươi tìm được Ngũ Hành thạch trước, j7# cũng khó thoát cái chết... mà nguyên thần Hạo Thiên chưa diệt, vẫn rất có thể hồi sinh.
+977	j6#: Ta mặc kệ nhiều thế, ta chỉ biết k0# vì ta mà chết, ta không thể để nàng chết uổng.
+978	Tiên nhân: Vậy ngươi có bằng lòng quay về quá khứ, dùng mạng mình đổi lấy mạng k0# không?
+979	Bằng lòng!
+980	Không bằng lòng!
+981	j6#: Ta đương nhiên bằng lòng! Ta muốn quay về cứu k0#!
+982	j6#: Thật sự hiệu nghiệm vậy sao?
+983	j6#: Thần tiên, ta lại đến rồi?
+984	Tiên nhân: Ừm.
+985	Tiên nhân: Ờ... để ta nghĩ, ừm, câu trả lời của ta là "đúng"!
+986	j6#: Hì hì, được, ta hiểu rồi, ngươi là thần tiên nói thật!
+987	Tử địch
+988	Cống Hoàn: Hừ, j6#, ta đợi ở đây đã lâu!
+989	j6#: Được, đến đây!
+990	j6#: Thần tiên, ngươi thật là thần tiên sao?
+991	Tiên nhân: Phàm nhân, chẳng lẽ ta không giống thần tiên?!
+992	j6#: Vậy ngươi có biết làm sao để thời gian quay ngược không? Ta muốn quay về một lúc nào đó trong quá khứ!
+993	Tiên nhân: Ha ha! Vậy ngươi hỏi đúng người rồi!
+994	Tiên nhân lấy ra một vật vàng rực rỡ!
+995	Tiên nhân: Bảo bối này tên "Nhật Quang Bảo Hạp", đưa ngươi về quá khứ ngươi muốn! Ngươi bằng lòng quay về quá khứ không?
+996	Cống Hoàn: Hừ, vậy phải hỏi xem ta có đồng ý không đã!
+997	j6#: Là ngươi? Ngươi giết k0#, ta phải báo thù cho nàng!
+998	Tiên nhân: Vậy ngươi có bằng lòng quay về quá khứ, dùng mạng mình đổi lấy mạng k0#, để kết thúc mối ân oán kéo dài ngàn năm này không?
+999	Tiên nữ: Thần tiên đại thúc ngày thường khá hiền hòa dễ gần, chỉ thỉnh thoảng làm ra vẻ uy nghiêm.
+1000	Tiên nữ: Trên Thiên Sơn chán thật, đến chè sen ướp lạnh ta thích nhất cũng không có!
+1001	Tiên nữ: Phàm nhân, ngươi lên đây bằng cách nào?
+1002	Tiên nữ: Thần tiên cũng có thật giả đấy, ngươi phải chú ý phân biệt!
+1003	j6#: Hà, cuối cùng cũng lên tới đỉnh Thiên Sơn, trông cũng chẳng có gì đặc biệt, không biết sao j4# ở trấn Sa Lĩnh lại say mê du lịch tới đây thế... Thôi, lúc về nhớ gửi tin cho ông ấy vậy.
+1004	Lý Mục: Nơi này phong cảnh dễ chịu, vật sản phong phú, nếu an gia lập nghiệp ở đây, đợi sau này giá đất tăng, chắc chắn thu nhập rất khá!
+1005	Tô Ninh: Hiếm khi hôm nay thời tiết đẹp thế, ta ra ngoài câu cá!
+1006	Tạ Mẫn: Già rồi, chân tay cũng không còn linh hoạt.
+1007	Vương Phi: Nhà ta mấy đời sống ở đây, cảm thấy đúng là nơi không tệ.
+1008	Hạ Kiều Kiều: Mai ta đi xem mắt, mong đối phương là người tốt.
+1009	Thần thú: Muốn đi đâu? Ta đưa ngươi đi, nhỏ tiếng thôi, ta chỉ đưa một mình ngươi thôi nhé!
+1010	j6#: Chưa tìm được Đậu Nghê Uyển, ta vẫn không đi trước.
+1011	Thôn Mộc Lỗi
+1012	Trấn Sa Lĩnh
+1013	Hỏa Thạch Cương
+1014	Lãnh Phong Ao
+1015	Đỉnh Thiên Sơn
+1016	Không đi đâu...
+1017	Thần thú: Được thôi, đi nào!
+1018	Thần thú: Ờ... vậy thôi.
+1019	Giải Binh Binh: Lần này là đồ đệ ta chưa chuẩn bị tốt, lần sau nhất định lấy mạng ngươi!
+1020	j6#: Được, để ta hỏi từng người "Đậu Nghê Uyển" ở đâu!
+1021	j6#: Haiz, mấy đứa em của em trốn đâu hết rồi? Khó tìm quá!
+1022	Trương Đại: Hì hì. Trốn tìm là vậy mà! Đại ca ca ngốc quá!
+1023	j6#: Hì hì. Ba đứa em của em ta đều tìm thấy rồi!
+1024	Trương Đại: Ừm! Tốt quá, cuối cùng em thắng được bọn nhóc đó một lần! Đại ca ca cảm ơn anh, em tặng anh năm Thanh Chi nhé!
+1025	j6#: Vậy ta không khách khí!
+1026	j6#: Chơi xong trò trốn tìm rồi hãy đi!
+1027	j6#: Chưa tìm được Đậu Nghê Uyển, tạm đừng đi nhé?
+1028	Xa xa vọng lại tiếng gọi "Hổ ca~~ Hổ ca~~".
+1029	j6#: Hả? Hình như có người gọi ta?
+1030	Lãnh Tư Kỳ: j6# ca, lại gặp nhau rồi?
+1031	j6#: Kỳ nhi, là muội? Sao muội ở đây?
+1032	Lãnh Tư Kỳ: j6# ca, thật ra thiếp chính là con bạch hồ nhỏ huynh từng cứu, thiếp vốn nghe lệnh j8# dưới trướng Hạo Thiên, nhưng sau phát hiện tên đó muốn hồi sinh ma tinh Hạo Thiên, nên thiếp đã trộm viên châu Thủy j8# tìm được, j8# phái người truy sát thiếp suốt đường, nhờ huynh cứu thiếp mới sống đến giờ, sau đó thiếp thấy huynh cũng đang thu thập Ngũ Hành Châu, lại là người tốt thật sự, thiếp đã đưa viên châu Thủy cho huynh.
+1033	j6#: Hóa ra là vậy... Vậy giờ muội tìm huynh có việc gì?
+1034	Lãnh Tư Kỳ: Thiếp vốn là hồ ly hoang trong núi rừng, vì ngưỡng mộ sự phồn hoa nhân gian mới nghe lời dối trá của j8# xuống núi, nay thiếp đã chán cảnh hỗn loạn nhân gian, châu Thủy cũng đã ở chỗ huynh là người đáng tin, thiếp không còn vướng bận, thiếp vẫn muốn về núi sâu tu luyện, thiếp đến để từ biệt huynh. Sau này... sau này, chúng ta có lẽ khó còn cơ hội gặp lại, j6# ca huynh tự bảo trọng nhé!
+1035	j6#: Kỳ nhi... muội cũng bảo trọng nhé...
+1036	j6#: Haiz... Kỳ nhi đi rồi không biết bao giờ mới gặp lại, ta vẫn nên mau lên Thiên Sơn.
+1037	Giả Thục Phân: Tôi từ nơi khác tới đây mấy năm rồi, chính là để ngắm cảnh hồ sen.
+1038	j6#: Đại thẩm, làm phiền, bà có biết Đậu Nghê Uyển không?
+1039	Giả Thục Phân: "Dỗ ngươi chơi"? Thằng nhóc này, rảnh không có việc tới trêu bà chơi à?
+1040	j6#: Đại thẩm, thật sự ta đến tìm một người tên Đậu Nghê Uyển, không phải "dỗ ngươi chơi"...
+1041	Giả Thục Phân: Tôi nghe vẫn là "dỗ ngươi chơi". Tôi tuy từ nơi khác tới, nhưng sống ở đây mấy năm rồi, chưa từng nghe có ai tên Đậu Nghê Uyển.
+1042	j6#: A! Không có người này sao? Chẳng lẽ thật sự là "dỗ ngươi chơi"... Hừ, xem ra bị con cừu đó lừa, tên này dám đùa ta, ta phải quay về tính sổ!
+1043	Vương Vũ: Hồ sen đúng là nơi tốt, có vô số cá để câu ăn.
+1044	Trương Nhất: Ngươi đã tìm thấy ta rồi, mau đi tìm những người còn lại!
+1045	Trương Nhất: Tìm được một người rồi!
+1046	Trương Nhất: Tìm được hai người rồi!
+1047	Trương Nhất: Tìm đủ cả ba rồi!
+1048	Trương Nhất: Tên thường của ta là "Chim sẻ"...
+1049	Trương Nhị: Ngươi đã tìm thấy ta rồi, mau đi tìm những người còn lại!
+1050	Trương Nhị: Tìm được một người rồi!
+1051	Trương Nhị: Tìm được hai người rồi!
+1052	Trương Nhị: Tìm đủ cả ba rồi!
+1053	Trương Nhị: Ta thích bắt cá!
+1054	Trương Tam: Ngươi đã tìm thấy ta rồi, mau đi tìm những người còn lại!
+1055	Trương Tam: Tìm được một người rồi!
+1056	Trương Tam: Tìm được hai người rồi!
+1057	Trương Tam: Tìm đủ cả ba rồi!
+1058	Trương Tam: Ta thích bắn chim sẻ!
+1059	Giải Binh Binh: Sao? Lại muốn tới bắt tọa kỵ à? Ngươi làm được không?
+1060	Giải Binh Binh: Ngươi thấy hai người bạn Hỏa thử của ta chưa? Ngươi đánh bại chúng rồi nhỉ? Lần này ta cũng sẽ sai đồ tử đồ tôn so tài với ngươi! Ngươi dám không?
+1061	Trương Đại: Đa tạ đại ca ca!
+1062	Trương Đại: Vẫn chưa tìm thấy sao?
+1063	Trương Đại: Em và các em đang chơi trốn tìm ở đây, các anh giúp em tìm họ trong 60 giây được không?
+1064	Tạm thời không rảnh...
+1065	j6#: Được, để ta tìm giúp em!
+1066	Trương Đại: Các em của em là sinh ba, giống hệt nhau, anh phải tìm đủ cả ba đấy nhé!
+1067	j6#: Không thành vấn đề!
+1068	Trương Đại: "Ba"!
+1069	Trương Đại: "Hai"!
+1070	Trương Đại: "Một"! Bắt đầu!
+1071	j6#: Tạm thời không rảnh... lần sau lại chơi với em.
+1072	j6#: Cha mẹ ta vốn là một đôi thần tiên quyến lữ đáng ngưỡng mộ trên Thiên Sơn, vì chúng sinh thiên hạ, liều chết quyết đấu với Thanh Long do Hạo Thiên khống chế, chỉ có điều tiên sủng của họ là Kỳ Lân, so với Thanh Long rõ ràng yếu thế, nhưng họ vẫn xả thân ra trận!
+1073	j6#: Lúc đó hai bên đại chiến mấy trăm hiệp, nhất thời đất rung núi chuyển, phong vân đổi sắc.
+1074	j6#: Cuối cùng, vào phút chót, nhờ sức hợp lực của cha mẹ ta, Thanh Long của Hạo Thiên đã bị thu phục!
+1075	j6#: Chính Hạo Thiên cũng bị phong ấn nguyên thần. Nhưng cha mẹ ta cũng bị thương nặng, từ đó không bao giờ xuất hiện nữa...
+1076	j9#: Con khỉ nhỏ ở góc dưới bên trái là Hồ Tôn của con, còn bên trên bên phải là Tất Phương của ta.
+1077	j6#: Oa! j9#, tiên sủng của ông to thế, bắt nạt cháu à...
+1078	j9#: Ta đang dạy con mà, đừng lo, không sao đâu. Giờ con bấm "phím mềm trái" vào menu chọn cách tấn công đi!
+1079	j9#: Vì Hồ Tôn của con cấp còn thấp, nên nó chỉ biết một đòn thường "Đột Thích", sau này nó lên cấp 11 sẽ học được pháp thuật lợi hại hơn, giờ con bấm "phím mềm trái" chọn đòn thường.
+1080	j6#: Không phải chứ! j9#, tiên sủng của ông sao mới ra tay một cái mà Hồ Tôn của cháu đã sắp chết, sắp rút khỏi chiến đấu, phải tới trận sau mới ra lại được!
+1081	j9#: Haiz, con này không cẩn thận, con không thấy chữ "Khắc" và "Khuất" sao? Điều đó nói theo thuộc tính tiên sủng, tiên sủng của ta khắc chế tiên sủng của con, đòn này xuống là con khổ rồi.
+1082	j6#: Vậy cháu làm sao đây... Cháu không muốn Hồ Tôn của cháu thoi thóp... không muốn nó rút khỏi trận này... không muốn nó trận sau cũng không ra được... Cháu muốn con khỉ nhỏ của cháu... hu hu~~
+1083	j9#: Thôi nào, muốn trận sau Hồ Tôn cũng ra được thì lúc nghỉ giữa trận cho nó ăn Linh chi để hồi sinh, hơn nữa ngay trong chiến đấu cũng có thể vào cửa hàng mua chút Linh chi, lập tức cứu sống Hồ Tôn!
+1084	j6#: Vậy sao? Vậy j9# mau nói cho cháu cách mua Linh chi đi!
+1085	j9#: Được, nói ngay đây, trước hết bấm phím "phải" dời khung chọn tới cửa hàng.
+1086	Sai phím, hãy bấm phím điều hướng "phải"!
+1087	j9#: Tiếp đó bấm "phím mềm trái" vào giao diện mua vật phẩm.
+1088	j9#: Rồi bấm phím điều hướng "xuống", dời khung chọn mua vật phẩm tới "Lục Chi".
+1089	Sai phím, hãy bấm phím điều hướng "xuống"!
+1090	j9#: Sau đó bấm phím phải đổi số lượng mua thành "2".
+1091	j6#: Sao phải mua hai cái?
+1092	j9#: Thằng bé này... mua thêm một cái cho tiện dùng mà, con mau bấm phím phải đổi số lượng mua thành "2" đi!
+1093	j9#: Bấm "phím mềm trái" để mua vật phẩm.
+1094	Sai phím, hãy bấm "phím mềm trái"!
+1095	j9#: Lại bấm "phím mềm trái" xác nhận mua.
+1096	j9#: Tốt, bấm "phím mềm phải" quay về giao diện cấp trước nhé!
+1097	j9#: Tốt, giờ bấm phím điều hướng "phải", dời khung chọn tới "Dùng vật phẩm".
+1098	j9#: Bấm "phím mềm trái" vào dùng vật phẩm.
+1099	j9#: Lại bấm "phím mềm trái" dùng "Lục Chi".
+1100	j9#: Lại bấm "phím mềm trái" xác nhận dùng "Lục Chi" cho Hồ Tôn.
+1101	j9#: Thế là Hồ Tôn hồi sinh rồi, tiếp theo con tự do phát huy nhé!
+1102	Thần thú: Để phát huy tinh thần giúp người của thần thú chúng ta, ta kể cho ngươi cách bắt sủng nhé!
+1103	j6#: Ừm, được thôi, để phát huy tinh thần không ngại học hỏi j9# dạy ta, ta tạm nghe ngươi nói.
+1104	Thần thú: Bắt sủng thì phải nhân lúc tiên sủng khá yếu mới bắt, tỉ lệ thành công mới cao, tất nhiên cũng không đánh quá nặng, vì như vậy tiên sủng sẽ bị đánh chết, nghĩa là ngươi phải thử từ từ đánh Hải Chu trước, giờ ngươi bấm hai lần phím mềm trái dùng chiêu thường đánh thử đi!
+1105	Thần thú: Được rồi, nhân lúc Hải Chu giờ hơi yếu, bấm hai lần phím điều hướng "phải", dời khung chọn tới "Dùng vật phẩm".
+1106	Thần thú: Bấm "phím mềm trái" vào dùng vật phẩm.
+1107	Thần thú: Ừm, giờ ngươi chọn dùng Phong Đại 4 ta vừa tặng để bắt nhé! Phần sau ta nghĩ ngươi cũng biết, không nói nhiều. Cố lên!
+1108	Bạo Liệt Vụ
+1109	Phép hệ Mộc tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Giam cầm" cho địch, tăng tỉ lệ bắt.
+1110	Giam cầm
+1111	Độc Đằng Thích
+1112	Phép hệ Mộc tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Giam cầm" cho địch, tăng tỉ lệ bắt.
+1113	Độc Vụ Trận
+1114	Phép hệ Mộc tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Giam cầm" cho địch, tăng tỉ lệ bắt.
+1115	Mộc Đằng Tập
+1116	Phép hệ Mộc tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Giam cầm" cho địch, tăng tỉ lệ bắt.
+1117	Đột Thích
+1118	Đòn thường không tốn MP, gây sát thương rất thấp.
+1119	Hồng Thủy Chú
+1120	Phép hệ Thủy tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.
+1121	Đóng băng
+1122	Hàn Băng Chú
+1123	Phép hệ Thủy tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.
+1124	Diệt Đỉnh Yêm
+1125	Phép hệ Thủy tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.
+1126	Băng Lăng Chùy
+1127	Phép hệ Thủy tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.
+1128	Thiên Hỏa Tiễn
+1129	Phép hệ Hỏa tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.
+1130	Thiêu đốt
+1131	Địa Ngục Hỏa
+1132	Phép hệ Hỏa tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.
+1133	Loạn Tiễn Phi
+1134	Phép hệ Hỏa tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.
+1135	Địa Hỏa Liệu
+1136	Phép hệ Hỏa tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.
+1137	Nê Thạch Chú
+1138	Phép hệ Thổ tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.
+1139	Hóa đá
+1140	Thái Sơn Băng
+1141	Phép hệ Thổ tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.
+1142	Nê Tương Bạo
+1143	Phép hệ Thổ tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.
+1144	Thiên Địa Liệt
+1145	Phép hệ Thổ tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.
+1146	Bạo Phong Chú
+1147	Phép hệ Kim tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.
+1148	Tê liệt
+1149	Cuồng Lôi Chú
+1150	Phép hệ Kim tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.
+1151	Lốc Xoáy Trảm
+1152	Phép hệ Kim tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.
+1153	Phích Lịch
+1154	Phép hệ Kim tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.
+1155	Ứng Thanh
+1156	Sâu nhỏ ẩn trong bụi cỏ, cũng ký sinh được trong cơ thể động vật, và thích hùa theo tiếng của vật chủ. Tương truyền có người bị nó ký sinh, muốn tìm phương thuốc trừ khử, bèn lần lượt đọc tên dược liệu trong "Bản Thảo Cương Mục", Ứng Thanh Trùng vốn cũng lần lượt hùa theo, nhưng đọc đến vị "Lôi Hoàn" thì im bặt, người ấy bèn uống Lôi Hoàn diệt được Ứng Thanh Trùng.
+1157	Địa Nhật Thảo
+1158	Thần thảo mọc ở phía đông bắc từ thời Nghiêu Đế thượng cổ, là món Kim Ô điểu kéo xe mặt trời cho nữ thần mặt trời Hy Hòa thích nhất. Vì quả Địa Nhật Thảo chín vào mùa hạ nên mặt trời mùa hạ mọc từ đông bắc, để Kim Ô tiện ăn quả tươi gần đó.
+1159	Phong Ly
+1160	Biệt danh "Phong Sinh Thú", vì có bộ lông xanh dày dị thường quý phái nên truyền rằng có năng lực "lửa đốt không chết, dao chém không vào", thấy người liền cúi đầu chạy, là loài thú nhỏ bản tính hay thẹn.
+1161	Hải Chu
+1162	Nhện hung dữ to bằng bánh xe, tơ phun ra cũng rất thô, ngay cả mãnh thú như hổ báo bị tơ Hải Chu quấn cũng không thoát nổi, cuối cùng chỉ thành bữa ăn của Hải Chu.
+1163	Nhung
+1164	Loài khỉ lông vàng óng, thân hình nhỏ nhắn, dáng đẹp, ý thức bầy đàn mạnh; chỉ cần một con Nhung bị thợ săn bắt, những con khác đều không rời bỏ đồng bạn, theo đuôi thợ săn mong cứu, còn thợ săn thường cảm động trước tình thân tộc của Nhung mà phóng sinh chúng.
+1165	Cửu Vĩ Hồ
+1166	Thú đồ đằng được bộ tộc Đồ Sơn thị thượng cổ sùng bái, mới sinh chỉ có một đuôi, theo tuổi tăng sẽ dần mọc thêm đuôi mới, nhưng nghe nói phải sống đến một nghìn tuổi mới mọc đủ chín đuôi có pháp lực khác nhau.
+1167	Chấp Di
+1168	Loài vật đáng yêu có bộ lông đen trắng xen kẽ độc đáo, thích ăn lá trúc và măng, còn gọi là "Thực Thiết Thú", ngày thường trông vụng về, dáng ngộ nghĩnh, nhưng gặp nguy hiểm cũng trở nên nhanh dữ lạ thường.
+1169	Hiệp Dực
+1170	Long mã màu trắng, nghe nói là một trong tám tuấn mã Chu Mục Vương mang theo khi triều kiến Tây Vương Mẫu, hông mọc đôi cánh, dáng người dũng kiện, bay lượn trên trời như đại bàng.
+1171	Phi Liêm
+1172	Thần thú mình hươu đầu sẻ, đầu mọc sừng nhọn, khắp mình vằn báo, đuôi như rắn vàng, từng giúp phe Xi Vưu tham gia trận chiến Cửu Lê của Hoa Hạ.
+1173	Thanh Long
+1174	Có thể đằng vân giá vụ cho người cưỡi, nghe nói "đầu như lạc đà, sừng như hươu, mắt như thỏ, tai như trâu, cổ như rắn, bụng như thận (sò lớn), vảy như cá chép, vuốt như chim ưng, chân như hổ", "lưng có tám mươi mốt vảy, đủ số dương chín chín", "tiếng như đánh chiêng đồng. Bên miệng có râu, dưới cằm có minh châu, dưới họng có nghịch lân", lại ẩn hiện tùy ý, nhỏ to dài ngắn tùy ý, xuân phân lên trời, thu phân lặn vực, hô phong hoán vũ, không gì không làm được, là tiên thú cực kỳ cát tường.
+1175	Băng Tằm
+1176	Loài sâu nhỏ thích ăn lá Minh Linh Giá, tính chí âm, lại kịch độc, ai lại gần nó đều bị đóng băng, nhưng rất sợ lửa, chạm chút lửa là hóa thành vũng nước trong.
+1177	Băng thử
+1178	Tiểu thú sinh sống dưới băng giá, ăn băng mà lớn, tuổi càng cao thân càng to, nhưng vừa rời môi trường lạnh là bị nóng chết.
+1179	Đại Giải
+1180	Có thể cho người cưỡi bơi dưới nước, thân hình khổng lồ, cưỡi rất thoải mái.
+1181	Đan Ngư
+1182	Cá lớn màu đỏ thần kỳ trong truyền thuyết, khi bơi trong nước có ánh đỏ vây quanh.
+1183	Hải Hồ Điệp
+1184	Sinh ra ở ảo ảnh biển, hình dạng biến hóa muôn vàn, còn gọi là "Bách Ảo Điệp".
+1185	Vũ Công
+1186	Loài vật giống dê núi, nghe nói là tọa kỵ của Lôi Thần, hô phong hoán vũ được.
+1187	Phu Chư
+1188	Hươu trắng có bốn sừng, truyền thuyết nói nó gọi được lũ lụt.
+1189	Long Ngư
+1190	Cá chép rất to, lại còn có thể như rồng thật "bay khắp chín cõi, cưỡi mây lên cao".
+1191	Thanh Loan
+1192	Chim lớn màu xanh, tiếng kêu rất êm tai, chỉ là bản tính hiếu chiến, lại có mỏ và vuốt sắc nên sức chiến đấu rất mạnh.
+1193	Huyền Vũ
+1194	Tiên thú màu đen, hình dạng như rùa lớn, là thần linh trấn giữ một phương.
+1195	Hỏa Thử
+1196	Tiên thú cưỡi được, không sợ nhiệt độ cao, đi trong dung nham nóng bỏng cũng như đi đất bằng, lại giỏi nhảy, có thể phóng lên bậc cao hơn.
+1197	Đa Tức
+1198	Chó sói mõm đỏ mắt đỏ đuôi trắng, nghe nói nó xuất hiện ở đâu thì nơi đó sẽ có hỏa hoạn.
+1199	Bác Mã
+1200	Nhìn như con ngựa lông tạp, vẻ ngoài tầm thường, thực ra là thần thú hung dữ ăn hổ báo.
+1201	Thiên Cẩu
+1202	Loài chó toàn thân đỏ rực, nghe nói ánh sáng trên người nó chiếu lên trời hóa thành sao băng, "dài mấy chục trượng, nhanh như gió, tiếng như sấm, ánh như điện", lại có thuyết Thiên Cẩu vừa xuất hiện thì thiên hạ chiến loạn không dứt.
+1203	Đế Giang
+1204	Nghe nói là một loài thần điểu, hình dạng như cái bao vải phồng, màu đỏ như lửa, mọc sáu chân bốn cánh, không có tai mắt mũi miệng, nhưng lại hiểu ca múa nhạc khúc của nhân gian.
+1205	Chu Yếm
+1206	Đười ươi đầu trắng chân đỏ, bản tính hung tàn, không ai dám lại gần.
+1207	Tất Phương
+1208	Hình dạng giống hạc đỉnh đỏ, nhưng chỉ có một chân và một cánh, thân màu xanh lam, có đốm đỏ, mỏ trắng, nghe nói Tất Phương xuất hiện báo hiệu hỏa hoạn lớn.
+1209	Xích Viêm Thú
+1210	Kỳ thú có ngọn lửa bao quanh thân, không ăn bất cứ thức ăn nào, chỉ sống bằng việc nuốt lửa.
+1211	Trùng Minh
+1212	Truyền rằng thời Nghiêu Đế cung kiệm hiền minh, nước Chi ở phương xa để tỏ ý thần phục, đã tiến cống một loài chim mỗi mắt có hai con ngươi, trừ được tà, đó chính là "Trùng Minh Điểu". Mọi người đều hoan nghênh sự đến của tiên thú cát tường này, sau còn khắc gỗ, đúc đồng hay cắt giấy, đặt hình Trùng Minh Điểu lên cửa sổ cửa ra vào mỗi nhà, mong xua ma tránh họa.
+1213	Chu Tước
+1214	Truyền rằng đó chính là phượng hoàng hệ Hỏa, người xưa nói "hình dáng phượng, trước như hồng sau như lân, trán như cò, má như uyên ương, vằn rồng lưng rùa, cằm én mỏ gà, đủ năm màu", là tiên thú dáng thanh nhã, đức hạnh tốt đẹp, mang hạnh phúc cho mọi người.
+1215	Linh Miêu
+1216	Tiểu thú lanh lợi, trên người có mùi thơm nồng.
+1217	Niên thú
+1218	Nghe nói Niên thú đầu to thân nhỏ, dài mười mấy thước, mắt như chuông đồng, đi về như gió, khi gầm phát ra tiếng "Niên~~ Niên~~" nên gọi là Niên thú. Bản tính hung tàn, thích đêm Giao thừa tới nơi đông người tấn công con người. Nên mỗi khi Niên thú sắp đến đêm Giao thừa, mọi người dán giấy đỏ, treo đèn lồng đỏ, đốt pháo..., chính là để đuổi Niên thú. Khi Niên thú bị đuổi đi, mọi người luôn vui vẻ nói với nhau: "Lại qua được một Niên thú rồi." Dần dần có cách nói ăn Tết, cũng từ đó xuất hiện phong tục ăn Tết.
+1219	Hồ Tôn
+1220	Tiểu thú thân thủ linh hoạt, thường sống ở nơi khá cao.
+1221	Kim Thiềm
+1222	Cóc ba chân, nghe nói mang tài vận đến cho chủ nhân.
+1223	Tam Túc Ô
+1224	Chính là Kim Ô kéo xe cho nữ thần mặt trời Hy Hòa, đứng bằng ba chân, lông có ánh vàng.
+1225	Thiên Lộc
+1226	Giống sư tử mọc một sừng, thân hình cao lớn, hai bên bụng khắc cánh, thần thái oai nghiêm trang trọng.
+1227	Giác Khuê
+1228	Còn gọi là Nhiệm Pháp Thú, giống dê, có một sừng, lông xanh, tính trung trực, thích bênh kẻ yếu, thấy người đánh nhau liền dùng sừng húc bên sai. Đời sau cũng có người dùng Giác Khuê để xử án.
+1229	Bạch Trạch
+1230	Thần thú toàn thân trắng như tuyết, nghe nói biết nói tiếng người, lại ăn nói giỏi, thông hiểu muôn việc.
+1231	Ngọc Tượng
+1232	Voi trắng hiếm thấy, là biểu tượng cát tường.
+1233	Bạch Hổ
+1234	Chúa tể trăm thú, có người khen "anh anh tố chất, túc túc thanh âm, uy nhiếp cầm thú, tiếu động sơn lâm", bản tính oai dũng giỏi chiến.
+1235	Hống
+1236	Tiểu thú hình như thỏ tai nhọn, nhưng rất hiếu chiến, mãnh thú như sư tử cũng sợ nó ba phần.
+1237	Đương Khang
+1238	Còn gọi là "Nha Đồn", là thụy thú báo hiệu mùa màng bội thu, hình dạng như lợn mà có nanh, tiếng kêu như gọi tên chính nó.
+1239	Khâm Nguyên
+1240	Một loài ong, to cỡ chim uyên ương, chứa nọc độc, chích thú thú chết, chích cây cây khô.
+1241	Quỷ Xa
+1242	Biệt danh "Cửu Đầu Điểu", tương truyền là quái thú đi đêm, chỉ lượn qua lượn lại trên bầu trời đêm đen, hút hồn người.
+1243	Sơn Chu
+1244	Mặt người thân nhện, to như bánh xe, thường màu nâu đỏ, tơ nhả ra dùng cầm máu được.
+1245	Suất Nhiên
+1246	Một loài rắn, truyền rằng đầu đuôi đều có đầu, và đều thô hơn rắn thường, trên người ánh ngũ sắc. Khi có người tấn công, nếu đánh đầu, đuôi sẽ phản công nhanh; nếu đánh đuôi, đầu sẽ phản công nhanh; nếu theo lý "đánh rắn đánh bảy tấc" mà tấn công, đầu và đuôi sẽ cùng phản công.
+1247	Khế Du
+1248	Truyền rằng đầu rồng đuôi ngựa vuốt hổ, dài bốn trăm thước, giỏi chạy, ăn thịt người, nhưng lại khá "ăn có đạo", gặp người tốt thì ẩn đi, gặp kẻ xấu mới ăn.
+1249	Tị Tà
+1250	Hình dáng như sư tử mọc hai cánh, truyền rằng có thể đằng vân giá vụ, hiệu lệnh sấm sét, thích ăn các loại mãnh thú, tà linh, lại rất bảo vệ chủ, có uy lực tị tà ngăn sát, trấn trạch hộ viện.
+1251	Đế Thính
+1252	Tiên thú mọc một sừng, tai chó, thân rồng, đuôi sư tử, chân kỳ lân, truyền rằng hiểu Phật lý, thông nhân tính, tránh tà ác nên được người ta coi là biểu tượng cát tường.
+1253	Kỳ Lân
+1254	Kỳ Lân hình dạng hội tụ đầu rồng, sừng hươu, mắt sư tử, lưng hổ, eo gấu, vảy rắn, móng ngựa, đuôi trâu, hơi thở như nuốt mây, tiếng như sấm kinh, vì thân hình to lớn nhưng tính ôn hòa vững vàng nên được coi là thụy thú, là biểu tượng cát tường.
+1255	Nho
+1256	Nho sản xuất từ Tây Vực, ăn ngọt mát ngon miệng, thơm lưu răng môi, hồi 20% HP.
+1257	Bánh bao
+1258	Bánh bao nhân thịt của tiệm nổi tiếng kinh thành, ăn no đỡ đói, hồi 40% HP.
+1259	Đùi gà
+1260	Chọn gà tam hoàng đặc sản, qua nhiều công đoạn ướp, hấp, rán, giòn ngoài mềm trong, thơm nức, hồi 60% HP.
+1261	Kim Sang
+1262	Thuốc hay tuyệt thế theo cổ phương trị thương do té ngã đánh đập, hồi 80% HP.
+1263	Rượu gạo
+1264	Rượu gạo tự ủ thơm nhẹ, uống vào hoạt huyết ích khí, hồi 20% MP.
+1265	Quế tửu
+1266	Rượu ngon thơm nồng thêm hoa quế, uống vào hồi 40% MP.
+1267	Rượu mạnh
+1268	Rượu mạnh nồng gặp lửa là cháy, uống vào hồi 60% MP.
+1269	Trúc Diệp
+1270	Rượu quý khó có, thơ khen rằng "chậu vàng đựng rượu hương trúc diệp, mười chén năm chén chưa tỏ ý", uống vào hồi 80% MP.
+1271	Lục Chi
+1272	Linh chi thường gặp, cứu được một tiên sủng bên ta đang thoi thóp, và hồi HP lên 20%.
+1273	Thanh Chi
+1274	Linh chi khá quý, cứu được một tiên sủng bên ta đang thoi thóp, và hồi HP lên 40%.
+1275	Tử Chi
+1276	Linh chi quý nhất, cứu được một tiên sủng bên ta đang thoi thóp, và hồi HP lên 80%.
+1277	Linh Quang
+1278	Bùa giải trạng thái Tê liệt của một tiên sủng bên ta.
+1279	Minh Giác
+1280	Bùa giải trạng thái Giam cầm của một tiên sủng bên ta.
+1281	Viêm Thiêu
+1282	Bùa giải trạng thái Đóng băng của một tiên sủng bên ta.
+1283	Lãnh Khước
+1284	Bùa giải trạng thái Thiêu đốt của một tiên sủng bên ta.
+1285	Tiêu Dung
+1286	Bùa giải trạng thái Hóa đá của một tiên sủng bên ta.
+1287	Quan Âm Phù
+1288	Bùa giải mọi trạng thái bất thường của một tiên sủng bên ta.
+1289	Phong Đại 1
+1290	Phong Đại màu đỏ (Xích), tỉ lệ bắt tiên sủng khá thấp.
+1291	Phong Đại 2
+1292	Phong Đại màu lục (Bích), tỉ lệ bắt tiên sủng vừa phải.
+1293	Phong Đại 3
+1294	Phong Đại có viết bùa chữ "Khôn", tỉ lệ bắt tiên sủng khá cao.
+1295	Phong Đại 4
+1296	Phong Đại có viết bùa chữ "Càn", tỉ lệ bắt tiên sủng cao nhất.
+1297	Gỡ pháp bảo
+1298	Gỡ pháp bảo trên người
+1299	Ngũ Vị Hoàn
+1300	Viên thuốc nhiều vị đông y, an thần kéo dài mạng, tiên sủng trang bị vật này thì HP tối đa tăng chút ít.
+1301	Đại Hoàn Đan
+1302	Viên thuốc bí chế, có hiệu quả kỳ diệu "sống người chết, mọc thịt xương trắng", tiên sủng trang bị vật này thì HP tối đa tăng khá nhiều.
+1303	Ích Khí Hoàn
+1304	Viên thuốc hay ích khí tỉnh thần, tiên sủng trang bị vật này thì MP tối đa tăng chút ít.
+1305	Bát Trân
+1306	Chế từ tám loại dược liệu quý, tiên sủng trang bị vật này thì MP tối đa tăng khá nhiều.
+1307	Cam Lâm
+1308	Vật trong bình ngọc mỡ dê của Quan Âm trong truyền thuyết, cũng giúp người sáng mắt thông suốt, vô sư tự thông, tiên sủng trang bị vật này thì dù không tham chiến vẫn nhận được chút ít EXP.
+1309	Tiên Lộ
+1310	Truyền rằng đài tiên nhân hứng sương trên hoa biểu Trung Hoa được xây để thu thập vật này, mùi thoảng bay, nhưng làm người tỉnh não khai thông, tiên sủng trang bị vật này thì dù không tham chiến vẫn nhận được khá nhiều EXP.
+1311	Liệt Diễm
+1312	Quạt báu cháy lửa hừng hực, ngoài chủ nhân không ai dám lại gần, sợ bị bỏng, tiên sủng trang bị vật này thì ATK tăng chút ít.
+1313	U Minh Phiến
+1314	Quạt quanh năm có ma trơi U Minh âm u vây quanh, tuy không có luồng khí nóng bức người, nhưng làm bị thương người trong vô hình, tiên sủng trang bị vật này thì ATK tăng khá nhiều.
+1315	Phích Lịch
+1316	Thần binh lợi khí khi tấn công lưỡi đao như chớp, khí thế như sấm sét, tiên sủng trang bị vật này thì tỉ lệ chí mạng tăng chút ít.
+1317	Băng Sương
+1318	Truyền rằng một bậc thầy đúc kiếm có được khối sắt lạnh từ thiên thạch, dốc hết tâm huyết, mất bảy lần bảy bốn mươi chín ngày mới rèn ra lưỡi dao chém sắt như bùn, ánh lạnh bức người này, tiên sủng trang bị vật này thì tỉ lệ chí mạng tăng khá nhiều.
+1319	Côn Lân
+1320	Vảy trên mình cá lớn "Côn" ở Minh Hải trong truyền thuyết, cứng dai vô cùng, tiên sủng trang bị vật này thì DEF tăng chút ít.
+1321	Long Giáp
+1322	Truyền rằng cá chép phải nhảy qua Long Môn mới thành rồng thật, mà vật này chính là giáp vảy rụng ra khi cá chép gắng sức nhảy qua Long Môn, vì thấm máu kiên trì của cá chép nên cũng có pháp lực phi phàm, tiên sủng trang bị vật này thì DEF tăng khá nhiều.
+1323	Sừng Dê Núi
+1324	Sừng của dê núi nhanh nhẹn, mang linh tính của dê núi, tiên sủng trang bị vật này thì né tránh tăng chút ít.
+1325	Linh Dương
+1326	Sừng của linh dương còn nhanh nhẹn hơn, mang linh khí của linh dương, tiên sủng trang bị vật này thì né tránh tăng khá nhiều.
+1327	Hoạt Lạc Tán
+1328	Thuốc bí chế theo cổ phương, hoạt huyết thông mạch, tiên sủng trang bị vật này thì tốc độ đánh tăng chút ít.
+1329	Tiêu Dao Tán
+1330	Truyền là tiên dược Tần Thủy Hoàng năm xưa sai người đến Bồng Lai cầu về, có công hiệu khai uất hành trệ, khiến người thần thanh khí sảng, thân nhẹ như én, vui như thần tiên, tiên sủng trang bị vật này thì tốc độ đánh tăng khá nhiều.
+1331	Kim Lũ Hài
+1332	Giày nhẹ làm bằng chỉ vàng, tiên sủng trang bị vật này thì tỉ lệ chạy thoát tăng khá nhiều.
+1333	Bộ Vân Ngoa
+1334	Giày Hoài Nam Vương Lưu An để lại sau khi tu luyện thành tiên, truyền rằng giúp người một bước lên mây, tung hoành cửu thiên, tiên sủng trang bị vật này thì tỉ lệ chạy thoát tăng khá nhiều.
+1335	Thử thách của gia gia
+1336	Gia gia bảo Tiểu Hổ lên núi sau mang về một bảo bối giấu trong rương!
+1337	Về báo cáo
+1338	Tìm được bảo bối rồi, phải về thôn Mộc Lỗi báo cáo với gia gia!
+1339	Tiểu Hổ xuất sơn
+1340	Lên đường đến trấn Sa Lĩnh!
+1341	Tìm sủng trấn Sa Lĩnh
+1342	Trò chuyện nhiều với người trong thôn, tìm manh mối về Kỳ Lân!
+1343	Manh mối nhà ma
+1344	Đến tòa nhà lớn có ma xem có Kỳ Lân không!
+1345	Đến Hỏa Thạch Cương
+1346	Theo gợi ý của "con cừu", đến Hỏa Thạch Cương!
+1347	Khát nước khôn chịu
+1348	Ở đây rất nóng, tìm cái giếng uống nước trước đã!!
+1349	Điều tra giếng
+1350	Xuống từ cửa giếng điều tra xem vì sao ở đây không có nước!
+1351	Tìm Kim Tương Ngọc
+1352	Vào hang đá núi sau giúp thần tiên tỷ tỷ tìm Kim Tương Ngọc!
+1353	Báo Kim Tương Ngọc
+1354	Về giếng báo cáo với Kim Tương Ngọc!
+1355	Báo tin mừng
+1356	Về nhà đại thúc từng cho cậu uống nước, báo tin mừng cho ông!
+1357	Đến Lãnh Phong Ao
+1358	Theo lời đại thúc, đến Lãnh Phong Ao!
+1359	Điều tra Lãnh Phong Ao
+1360	Trước khi về thôn Mộc Lỗi, nên đến nhà thôn trưởng ở đông bắc thôn trò chuyện đã!
+1361	Tìm tro thảo mộc
+1362	Tiểu Bạch bị thương rồi, tìm chút tro thảo mộc cầm máu cho nó!
+1363	Mau về thôn
+1364	Phải mau về thôn tìm gia gia, không gia gia sẽ sốt ruột!
+1365	Lên Thiên Sơn
+1366	Tiên sủng thần kỳ nhất trong truyền thuyết ở trên Thiên Sơn, đến đó tìm thử!
+1367	Thử thách thần thú
+1368	Đến Cửu Khúc Liên Trì tìm Đậu Nghê Uyển!
+1369	Thần thú cũng điên
+1370	Thần thú dám lừa người! Lên Thiên Sơn tìm nó tính sổ!!
+1371	Lên đỉnh núi
+1372	Cuối cùng cũng lên được đỉnh núi! Xem thần tiên ở đó trông thế nào!
+1373	Tìm tiên nhân thật
+1374	Phân biệt tiên nhân thật giả!
+1375	Đứa trẻ chờ mẹ (1)
+1376	Tiểu Tu đang chờ mẹ về, nhưng mẹ cậu bé là Mai Anh đang ở đâu?
+1377	Đứa trẻ chờ mẹ (2)
+1378	Tìm thấy Mai Anh ở trấn Sa Lĩnh! Nhưng bà không muốn về, ta còn phải về thôn Mộc Lỗi nói với Mộ Dung đại ca!
+1379	Đứa trẻ chờ mẹ (3)
+1380	Tiểu Tu nhờ ta mang một gói đồ cho mẹ cậu bé ở xa tận trấn Sa Lĩnh, nói mẹ cậu thấy gói này sẽ cởi được nút thắt trong lòng!
+1381	Đứa trẻ chờ mẹ (4)
+1382	Mai Anh bảo ta tìm thôn trưởng trấn Sa Lĩnh làm người bảo lãnh, bà mới đồng ý về.
+1383	Đứa trẻ chờ mẹ (5)
+1384	Thôn trưởng đồng ý bảo lãnh rồi, đi báo tin mừng này cho Mai Anh!
+1385	Nguồn gốc họ Tự (1)
+1386	Tự Bình muốn biết nguồn gốc họ Tự!
+1387	Nguồn gốc họ Tự (2)
+1388	Người biết chuyện bảo ta nói cho Tự Bình nguồn gốc họ Tự!
+1389	Chó con đi lạc (1)
+1390	Chó con của Lý bà bà đi lạc trên núi sau, giúp bà tìm lại chó con!
+1391	Chó con đi lạc (2)
+1392	Đưa chó con về nhà Lý bà bà!
+1393	Bà mối nghiệp dư (1)
+1394	Nhận lời giúp Vương Mộc Đôn đưa thư cho Tần Vịnh Thư ở góc dưới bên trái.
+1395	Bà mối nghiệp dư (2)
+1396	Bị Tần đại thúc đuổi ra rồi, đi tìm Vương Mộc Đôn nói tình hình!
+1397	Bà mối nghiệp dư (3)
+1398	Đi dạo trong thôn, tìm manh mối!
+1399	Bà mối nghiệp dư (4)
+1400	Biết bếp nhà Tần đại gia hỏng, định cải trang thành người sửa bếp, phải tìm tro lò trước, lại phải mượn bộ dụng cụ!
+1401	Bà mối nghiệp dư (5)
+1402	Đã gặp Tần Vịnh Thư, về báo với Vương Mộc Đôn,
+1403	Bà mối nghiệp dư (6)
+1404	Vương Mộc Đôn nói chỉ khi tìm lại Tần đại thẩm, Tần đại thúc mới đồng ý hôn sự của Tần Vịnh Thư và anh ấy.
+1405	Bà mối nghiệp dư (7)
+1406	Tìm được Tần đại thẩm, đi báo với Tần đại thúc
+1407	Bà mối nghiệp dư (8)
+1408	Về báo tình hình gần đây cho Vương Mộc Đôn, nói với anh Tần đại thúc đã đồng ý hôn sự, mình đi tìm Tần đại thẩm.
+1409	Vấn đạo (1)
+1410	Thay một người tu tiên đi hỏi thần tiên trên Thiên Sơn về chuyện tu tiên.
+1411	Vấn đạo (2)
+1412	Về báo tình hình cho người tu tiên.
+1413	Vợ chồng cãi nhau (1)
+1414	Lý đại thúc nói lại cãi nhau với Lý đại nương, giúp khuyên Lý đại nương đi!
+1415	Vợ chồng cãi nhau (2)
+1416	Hóa ra Lý đại nương cãi nhau vì tranh luận thôn Mộc Lỗi có mấy ngôi nhà, đi nói với Lý đại thúc số nhà thật đi!
+1417	Vợ chồng cãi nhau (3)
+1418	Lý đại thúc nhận lỗi rồi, về nói với Lý đại nương, cho hai người làm lành!
+1419	Đứa trẻ ghét đọc sách (1)
+1420	Con trai của Lỗ đại bá không thích đọc sách, bỏ nhà đi, đi tìm đứa trẻ này!
+1421	Đứa trẻ ghét đọc sách (2)
+1422	Hóa ra đứa trẻ có chí hướng khác, muốn bái sư thợ mộc ở trấn Sa Lĩnh học nghề, đi hỏi giúp nó đi!
+1423	Đứa trẻ ghét đọc sách (3)
+1424	Về nói với đứa trẻ, thợ mộc đã nhận nó làm đệ tử.
+1425	Phượng quan bị mất (1)
+1426	Phượng quan của Tần bà bà bị một tiên sủng lấy đi, tìm giúp bà quanh đây đi!
+1427	Phượng quan bị mất (2)
+1428	Cuối cùng tìm thấy ngọc bội rồi, mang về cho Tần bà bà!
+1429	Vương đại thúc khác thường (1)
+1430	Vương Tiểu Minh nói cha bạn ấy là Vương đại thúc dạo này nói năng lú lẫn, đi xem Vương đại thúc đi!
+1431	Vương đại thúc khác thường (2)
+1432	Vương đại thúc dường như bị quái thú nào nhập, đi tìm thứ gì đó trừ tà cho Vương đại thúc!
+1433	Vương đại thúc bình thường lại rồi, đi nói cho Vương Tiểu Minh!
+1434	1:
+1435	3:
+1436	2:
+1437	Thanh Long sơ cấp
+1438	Thanh Long cực phẩm
+1439	^^Phần sau còn hay hơn, mong bạn trải nghiệm!^
+1440	x1^Nhận được
+1441	Không đổi được
+1442	Không đổi tiên sủng
+1443	Không chạy được
+1444	Không chọn được kỹ năng
+1445	Lưu thành công
+1446	Giới thiệu^Bắc Kinh Trung Nhuệ Chưởng Tấn là chủ sở hữu bản quyền phần mềm Tiên Sủng Kỳ Duyên. Bắc Kinh Trung Nhuệ Chưởng Tấn ủy quyền Triệu Vinh Liên Hợp kinh doanh thương mại trò chơi tại Trung Quốc đại lục. Triệu Vinh Liên Hợp đồng thời phụ trách chăm sóc khách hàng và hỗ trợ kỹ thuật liên quan đến vận hành game^Nhà vận hành:^Triệu Vinh Liên Hợp (Bắc Kinh) Khoa học Kỹ thuật Phát triển Hữu hạn Công ty^Gọi tắt:^Triệu Vinh Liên Hợp^Email CSKH:^service@zrong.cn^Điện thoại CSKH:^010-82212999^
+1447	Thông tin
+1448	Hết Đóng băng
+1449	Cốt truyện tính phí
+1450	Lên cấp! Lv hiện tại:
+1451	Gỡ
+1452	Cài đặt âm thanh
+1453	Hồi sinh xong! Hồi 20% HP
+1454	Hồi sinh xong! Hồi 40% HP
+1455	Hồi sinh xong! Hồi 60% HP
+1456	Kho đầy! Hãy phóng sinh tiên sủng
+1457	Bản lưu 1
+1458	Bản lưu 3
+1459	Bản lưu 2
+1460	Gửi thất bại!
+1461	Gửi thất bại! Kho đầy! Hãy phóng sinh tiên sủng
+1462	Gửi thành công
+1463	Đã chết!
+1464	Đã chết, hãy hồi sinh trước!
+1465	Đã chết, hãy chọn tiên sủng mới!
+1466	Đã bán, nhận được
+1467	Trợ giúp
+1468	Giải mọi trạng thái xấu
+1469	Chúc mừng lên cấp!^
+1470	Thành công!
+1471	Vị trí chiến không được trống hết
+1472	Thắng trận!
+1473	Bắt thất bại!
+1474	Bắt thành công!
+1475	Bắt thành công! Túi đầy, tạm gửi chỗ thương nhân
+1476	Phóng sinh thất bại!
+1477	Phóng sinh thành công
+1478	Game mới
+1479	Hồi sinh tại chỗ?
+1480	Gửi tiên sủng này?
+1481	Bật âm thanh?
+1482	Đặt tiên sủng này vào túi?
+1483	Phóng sinh tiên sủng này?
+1484	Thoát game?
+1485	Tạm dừng
+1486	Game khác
+1487	Thêm game hay^tại kênh game^wap.xjoys.com^
+1488	Quái này có chủ, không bắt được!
+1489	Không có
+1490	Chẳng có pháp bảo để gỡ
+1491	Chẳng có tiên sủng đang gửi
+1492	Không có pháp bảo
+1493	Không có vật phẩm
+1494	Không có vật phẩm để bán
+1495	Pháp bảo thành công!
+1496	Thiếu MP
+1497	Hồi 20% MP
+1498	Hồi 40% MP
+1499	Hồi 60% MP
+1500	Hồi 80% MP
+1501	Game thiết kế các trận chiến muôn hình vạn trạng. Trong nhiều chiêu thức có mạnh yếu, lại có quan hệ tương sinh tương khắc, cần qua cách di truyền khiến tinh linh của bạn học được chiêu mạnh để phát huy hiệu quả tốt nhất.^Phím hướng và phím 2, 4, 6, 8 để di chuyển. Tọa kỵ: phím 0. Menu trong game/menu chiến đấu: phím mềm trái. Xác nhận: phím mềm trái, 5, phím giữa^
+1502	Hết Thiêu đốt
+1503	Hiện chưa có nhiệm vụ
+1504	Hóa đá,
+1505	Hết Hóa đá
+1506	Xác nhận
+1507	Chắc chắn thoát?^
+1508	Giam cầm,
+1509	Hết Giam cầm
+1510	Bỏ trống vị trí
+1511	cấp
+1512	cấp^
+1513	EXP^
+1514	Tiếp tục
+1515	Túi không có tiên sủng cưỡi được
+1516	Túi đầy, tạm gửi thương nhân
+1517	Túi đầy! Hãy phóng sinh hoặc gửi
+1518	Cần ít nhất một tiên sủng ra trận
+1519	Nhận được
+1520	Hồi 20% HP
+1521	Hồi 40% HP
+1522	Hồi 60% HP
+1523	Hồi 80% HP
+1524	Hồi HP xong!
+1525	Trang bị
+1526	Đã có bản lưu, ghi đè?
+1527	Cảnh này chưa mở
+1528	Phép này diệt quái ngay
+1529	Hãy giải Hóa đá trước hoặc chọn phá
+1530	Hãy chọn tiên sủng chiến!
+1531	Mua 500 vàng xong
+1532	Mua EXP x2 xong
+1533	Mua tiền x2 xong
+1534	Mua thành công!
+1535	Mua tăng 3 cấp xong
+1536	Mua Thanh Long xong
+1537	Bỏ qua
+1538	Quay lại
+1539	Thoát
+1540	Thoát game
+1541	Chạy thất bại
+1542	Chạy thành công
+1543	Chạy thành công!
+1544	vàng
+1545	vàng. Mua không?
+1546	Không đủ tiền!
+1547	Không đủ tiền, phép này cần ít nhất 10000 tiền.
+1548	Cả đội bị diệt!
+1549	Tê liệt,
+1550	Hết Tê liệt
+1551	Tiên sủng mạnh nhất không ai bằng Thanh Long, còn đằng vân giá vụ đến mọi nơi
+1552	Tiên sủng chia bốn hạng "Giáp", "Ất", "Bính", "Đinh", "Đinh" kém nhất, "Giáp" tốt nhất
+1553	Dùng Linh chi cho tiên sủng đang thoi thóp trong chiến đấu để hồi sinh và chiến tiếp
+1554	Xem mọi tiên sủng đã gặp trong "Tiên Sủng Đại Toàn"
+1555	Đại Giải chở người xuống nước
+1556	Trạng thái xấu kéo dài ít nhất hai lượt, nhiều nhất tám lượt
+1557	Trong chiến đấu HP tiên sủng về 0 là thoi thóp, hết đánh được, nhưng sau trận sẽ tự hồi sinh
+1558	Bấm phím 0 để đổi giữa các tọa kỵ đang có
+1559	Pháp bảo mạnh, giúp lên cấp và chiến đấu dễ hơn
+1560	Game có nhiều yếu tố ẩn, cần tìm kỹ
+1561	Hỏa Thử chở người nhảy lên đài cao hoặc nhảy vào dung nham
+1562	Chỗ Thần thú gửi được tối đa năm mươi tiên sủng, nhiều hơn chỉ còn cách phóng sinh
+1563	Kim khắc Mộc, Mộc khắc Thổ, Thổ khắc Thủy, Thủy khắc Hỏa, Hỏa khắc Kim
+1564	Cộng Uyển
+1565	Tiểu Linh Tử
+1566	Tiểu Hổ
+1567	Lý bà bà
+1568	Gia gia
+1569	Vương đại gia
+1570	Phong Nhã Linh
+1571	Dung nham nóng quá! Thử cưỡi Hỏa Thử hoặc rồng?
+1572	Nước sâu quá! Thử cưỡi cua hoặc rồng?
+1573	Cao thế! Chỉ Hỏa Thử mới nhảy lên được nhỉ!
