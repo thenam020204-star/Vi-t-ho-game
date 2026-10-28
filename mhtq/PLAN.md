@@ -87,6 +87,12 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
   - Chạy emu thì dùng thư mục riêng `work/emu_cwd_img` và jar thử riêng `work/build/img_test.jar`.
   - Trong PLAN.md, A2-img chỉ ghi vào dòng của mình ở "Bàn giao công nhân", "Nhật ký", "Vướng mắc".
 
+## Quyết định: logo tên game (người dùng chốt)
+- Font: `mhtq/fonts_user/Fz-Harukaze-v2.ttf` (người dùng cung cấp, đủ glyph trừ "–", không dùng tới). Chỉ dùng cho logo; chữ UI vẫn dùng f13c.
+- Chữ trên logo, 2 dòng như gốc: dòng lớn "Mộng Hồi Tam Quốc" (thay 梦回三国), dòng nhỏ "Tàn Kiếm Vấn Tình Thiên" (thay 残剑问情天).
+- Mức giống: khoảng 70% so với logo gốc (vị trí, cỡ, màu thân, viền/đổ bóng tương tự gốc). Logo được giữ hiệu ứng như gốc, là ngoại lệ với luật "nét đơn" của ảnh UI.
+- Render TTF bằng PIL ở kích thước thật rồi lượng tử về palette/kích thước như ảnh gốc. Vá cả bản K790 lẫn ảnh bìa E62 (E62 làm ở T09). Làm ảnh trước/sau để người dùng duyệt.
+
 ## Bàn giao công nhân (trạng thái dở dang, cập nhật liên tục)
 - A1: T01, T02 xong. `logs/text_path.md` hoàn chỉnh; prototype parser ở `work/t02_proto/`.
 - A1b: T03 và T04 XONG (A1b dừng ở đây). T03: scripts/mhtqlib.py, textmodel.py, text_extract.py, text_pack.py; `work/text_can_dich.tsv` (1425 dòng, cột `id file offset/khoá gốc dịch ghi_chú giới_hạn`); `logs/roundtrip.txt` PASS. Lệnh: `python3 -I scripts/text_extract.py [--merge TSV_cu]`; `python3 -I scripts/text_pack.py --tsv work/text_can_dich.tsv --out DIR` (kiểm mã màu, `#` lạ, glyph f13c, đồng bộ khoá, cảnh báo độ rộng); `python3 -I scripts/text_pack.py --selftest --log logs/roundtrip.txt`.
