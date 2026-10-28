@@ -94,6 +94,11 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
 - Mức giống: khoảng 70% so với logo gốc (vị trí, cỡ, màu thân, viền/đổ bóng tương tự gốc). Logo được giữ hiệu ứng như gốc, là ngoại lệ với luật "nét đơn" của ảnh UI.
 - Render TTF bằng PIL ở kích thước thật rồi lượng tử về palette/kích thước như ảnh gốc. Vá cả bản K790 lẫn ảnh bìa E62 (E62 làm ở T09). Làm ảnh trước/sau để người dùng duyệt.
 
+## Quyết định: logo khởi động + logo game (người dùng chốt)
+- Logo tên game (`c_2`) của A2-img: người dùng **duyệt dùng luôn**.
+- Logo khởi động: thay `logo1.png` bằng ảnh người dùng gửi, `mhtq/fonts_user/logo_namp.png` (240x320, "Việt hóa bởi NAMP"). Theo bytecode, `l.b()` luôn vẽ `/logo1.png` 20 khung trên nền trắng 0xFFFFFF, căn qua `u.a(g)`. Các logo2–7 chỉ hiện khi CID khớp bảng `l.a` (CID "00" không khớp), nên giữ nguyên.
+- Yêu cầu file: PNG 8-bit (palette nếu giữ được chất lượng, không interlace, không chunk lạ) để giảm jar và heap lúc giải mã. Kích thước 240x320 cho K790. E62 (màn ngang) làm bản riêng ở T09.
+
 ## Bàn giao công nhân (trạng thái dở dang, cập nhật liên tục)
 - A1: T01, T02 xong. `logs/text_path.md` hoàn chỉnh; prototype parser ở `work/t02_proto/`.
 - A1b: T03 và T04 XONG (A1b dừng ở đây). T03: scripts/mhtqlib.py, textmodel.py, text_extract.py, text_pack.py; `work/text_can_dich.tsv` (1425 dòng, cột `id file offset/khoá gốc dịch ghi_chú giới_hạn`); `logs/roundtrip.txt` PASS. Lệnh: `python3 -I scripts/text_extract.py [--merge TSV_cu]`; `python3 -I scripts/text_pack.py --tsv work/text_can_dich.tsv --out DIR` (kiểm mã màu, `#` lạ, glyph f13c, đồng bộ khoá, cảnh báo độ rộng); `python3 -I scripts/text_pack.py --selftest --log logs/roundtrip.txt`.
