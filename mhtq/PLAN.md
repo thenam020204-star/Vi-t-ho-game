@@ -48,7 +48,7 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
   - Agent: A1
   - Làm: thêm BitmapFont + `/font/f13c.bin`, sửa bytecode `f`/`u` (và nơi khác theo T02) để vẽ/đo bằng BitmapFont; script `scripts/patch_font.py` có thể chạy lại được. Build → preverify → jar_check → run_emu, thử nghiệm bằng cách thay tạm một chuỗi menu đầu thành tiếng Việt có dấu.
   - Hoàn thành khi: `jar_check` PASS, ảnh chụp `logs/shots_m1/` cho thấy chữ Việt có dấu đúng; zip Mốc 1 ở `out/`.
-- [ ] T05. Dịch toàn bộ text (phụ thuộc T03). Đúng MỘT công nhân Sonnet, quy trình `dp` ($SK/references/dich-pro.md)
+- [x] T05. Dịch toàn bộ text (phụ thuộc T03). Đúng MỘT công nhân Sonnet, quy trình `dp` ($SK/references/dich-pro.md)
   - Agent: công nhân dịch D1 (duy nhất). Thư mục: `mhtq/work/`; dữ liệu ở `work/dp_work/` (đã `prep` từ `work/dp_in.tsv`, sinh bởi `scripts/dp_input.py`; cột giới hạn đã đổi từ px sang số ký tự theo độ rộng trung bình 4.6px/ký tự của f13c, chỉ áp cho chuỗi một dòng; chuỗi tự xuống dòng thì không giới hạn).
   - Lệnh: `DP="python3 $SK/scripts/dp.py"`, chạy trong `mhtq/work/`.
   - Phân tích độ khó (quản đốc): **Khó vừa**. 1250 dòng duy nhất, 24k ký tự Hán; 42% thoại, 38% có xưng hô; 33 người nói; mã điều khiển 8% (`#RRGGBB…##`, `|`). Điểm khó: nam chính là người hiện đại xuyên không (thoại pha từ hiện đại, độc thoại trong ngoặc), thoại tình cảm/đùa cợt, nhãn UI ngắn (254 dòng có giới hạn, nhỏ nhất ≤6 ký tự), chữ SMS/trả phí. Tên khoá chân dung phải đúng y hệt thuật ngữ.
@@ -69,6 +69,14 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
   - **Quản đốc quyết:** chấp nhận. Các lỗi đều nằm ở f12/f15c/selftest của bộ tool, không đụng f13c. Dự án dùng nguyên file `fonts/f13c.bin` trong zip, không sinh lại font. BAO_CAO sẽ ghi lại ba lỗi này. T01 tính là xong.
 - (A1b, đã xử lý) `$SK/scripts/run_emu.py` truyền `jar 240 320 1` cho freej2me_plus nên game bị đặt 320x1: dùng `mhtq/scripts/run_emu.py` (đã sửa). Đề nghị quản đốc cập nhật skill nếu muốn.
 - FernFlower: tải được windup-fernflower 1.0.0.20171018 từ Maven Central (`work/tools/fernflower.jar`).
+- (D1, T05) `dp check` còn đúng 1 lỗi: dòng 1036 (血战八方 = `Huyết Chiến Bát Phương`, 22 ký tự) vượt giới hạn ước lượng ≤21; thuật ngữ khoá nên giữ nguyên bản dịch, chờ quản đốc nới giới hạn (dòng này thực tế ~100px) hoặc đổi thuật ngữ. Ngoài ra 48 dòng mô tả item (k=931–978) gốc bắt đầu bằng U+3000: `dp` tự giữ lại (gây cảnh báo ký tự rộng) nên D1 chuẩn hoá thẳng trong `out.tsv` thành 1 dấu cách đầu dòng; nếu `dp merge`/T06 cần lại dấu đầu dòng thì bổ sung khi đóng gói.
+- (D1, T05) Dòng ghép chuỗi trong `v.class` (k=1225–1239): 1225 `|Lên cấp:`, 1228 `: Lv`, 1234/1236 `!`, 1235 `|`, 1233 `Đạt giới hạn Lv` để ghép với số; do `dp` cắt khoảng trắng cuối nên T06 cần xem lại cách nối (thêm dấu cách) khi patch `v`.
+
+## Quyết định của quản đốc sau T05
+- Nghiệm thu T05 **đạt**: 1250/1250 dòng; `dp check` chỉ còn 1036 (vượt giới hạn ký tự ước lượng). Quản đốc đã đo px thật mọi chuỗi một dòng: chỉ `K.n07` "Huyết Chiến Bát Phương" rộng 107px, vượt hộp 101px (danh sách kỹ năng, canh giữa). Giữ thuật ngữ. T06 xem ảnh chụp danh sách kỹ năng: nếu chữ bị cắt hoặc đè viền thì chỉ cho `K.n07` dùng "Huyết Chiến B.Phương"; nếu không thì giữ nguyên.
+- Đã duyệt toàn bộ thuật ngữ `mới` (bỏ cờ). Bản ghép: `work/dp_work/final/dp_in.tsv` (cột `dịch`, khoá theo `id`). T06 điền vào cột `dịch` của `work/text_can_dich.tsv` theo `id`.
+- Dòng dp bỏ qua: `……` giữ nguyên (f13c có `…`); `？？？` → `???`; `wp` giữ nguyên. Khi đóng gói, chuẩn hoá dấu câu toàn khổ còn sót (？！，：（）　) sang bán khổ.
+- Chuỗi ghép trong `v.class`, `m.class`, `w.class`… (k=1225–1239 và các toast ghép số/tên): T06 phải đọc bytecode chỗ `StringBuffer.append` để đặt dấu cách đúng giữa các mảnh (ví dụ "Nhận" + tên đồ → "Nhận " + tên). Chuỗi gốc không có dấu cách nên phải thêm vào bản dịch của mảnh tương ứng (ghi lại trong log), không sửa logic ghép.
 
 ## Bàn giao công nhân (trạng thái dở dang, cập nhật liên tục)
 - A1: T01, T02 xong. `logs/text_path.md` hoàn chỉnh; prototype parser ở `work/t02_proto/`.
@@ -77,6 +85,7 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
   Tiếp theo (không phải việc của A1b): T05 dịch (đầu vào `work/text_can_dich.tsv`; thuật ngữ khoá: Diệp Vấn Thiên/Tiểu Duy/Anh Ninh; dòng KHOÁ phải cùng một chuỗi); T06 viết lại `k.b`/`j.a` (ngắt dòng theo dấu cách bằng ViFont, 3 dòng/trang, chặn `#` cuối chuỗi) rồi gộp text_pack -> patch_font (`--overlay` thư mục text_pack); T07 ảnh `.xng`.
 
 ## Nhật ký
+- D1: T05 xong: 1250/1250 dòng dịch tay; `dp check` chỉ còn lỗi 1036 (xem Vướng mắc); đã `dp sample 30` và sửa; thêm ~30 mục `mới` vào thuat-ngu.tsv chờ quản đốc duyệt.
 - A1b: T04 xong: hook f13c bằng bytecode tĩnh; jar_check PASS (Thêm BitmapFont/ViFont/font/f13c.bin; Đổi f,u + file thử); ảnh chụp logs/shots_m1/ (hộp nhạc, thoại có tên `Kiếm Tiên`, trang Trợ giúp đủ dấu); zip out/MHTQ_K790_moc1.zip. Ghi chú heap trong BAO_CAO (63KB/màu, CACHE=4 => ~252KB, đỉnh ~126KB thêm). Phát hiện thêm: ngắt ký tự làm thoại bị cắt giữa từ (cần T06); skill run_emu.py sai thứ tự tham số FJ (đã sửa bản trong scripts/).
 - A1b: T03 xong: 1425 slot (script 998 gồm 33 tên người nói, item 98, mission 63, skill 51, mate 1, class 213); roundtrip 19/19 file giống byte; kiểm đồng bộ khoá 叶问天/小唯/婴咛 (script/y/v/h/mate.dat; phát hiện thêm h.class cũng chứa 叶问天 làm tên người nói -> là khoá).
 - Quản đốc: nghiệm thu T02 đạt (đã chạy lại rt.py: 4 file roundtrip True; soát bytecode khoá `y.a` @18–314). Chốt quyết định tên khoá, khung 3 dòng, đo/vẽ. A1 dùng 278k token → T03/T04 giao công nhân mới (A1b).
