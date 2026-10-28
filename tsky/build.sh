@@ -1,11 +1,11 @@
 #!/bin/bash
 # Build jar Viet hoa (240x320): giai nen goc -> repack text -> patch class -> + VH + font -> zip -> preverify -> jar_check
-#   TSV=duong_dan.tsv ./build.sh [ten_jar_ra]   (mac dinh dich/text_can_dich.tsv, out/TienSungKyDuyen_240x320_vi.jar)
+#   TSV=duong_dan.tsv ./build.sh [ten_jar_ra]   (mac dinh dich/dp_work/final/text_can_dich.tsv, out/TienSungKyDuyen_240x320_vi.jar)
 set -e -o pipefail
 cd "$(dirname "$0")"
 source work/tools/env.sh
 S=/root/.claude/skills/synced/c7cebff6-afdc-419c-9062-179641ffc813_dd046f8a-671d-4e98-8dc1-6aad796e07ca/j2me-viet-hoa/scripts
-TSV=${TSV:-dich/text_can_dich.tsv}
+TSV=${TSV:-dich/dp_work/final/text_can_dich.tsv}
 GOC=goc/TienSungKyDuyen_240x320.jar
 OUT=${1:-out/TienSungKyDuyen_240x320_vi.jar}
 L=work/lib
