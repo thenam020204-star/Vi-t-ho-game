@@ -35,6 +35,31 @@ class Img:
             for x in range(x0, x0 + w):
                 self.px[x, y] = c
 
+    def inpaint(self, mask):
+        """lấp các pixel trong mask bằng trung bình các pixel lân cận không thuộc mask (lan dần)"""
+        mask = set(mask)
+        W, H = self.im.size
+        while mask:
+            fill = {}
+            for (x, y) in mask:
+                nb = [self.px[x+dx, y+dy] for dx in (-1, 0, 1) for dy in (-1, 0, 1)
+                      if (dx or dy) and 0 <= x+dx < W and 0 <= y+dy < H and (x+dx, y+dy) not in mask]
+                if nb:
+                    fill[(x, y)] = tuple(sum(c[i] for c in nb) // len(nb) for i in range(4))
+            if not fill:
+                break
+            for k, c in fill.items():
+                self.px[k] = c
+            mask -= set(fill)
+
+    def mask_where(self, box, pred, grow=0):
+        x0, y0, w, h = box
+        m = {(x, y) for x in range(x0, x0 + w) for y in range(y0, y0 + h) if pred(self.px[x, y], x, y)}
+        for _ in range(grow):
+            m |= {(x+dx, y+dy) for (x, y) in m for dx in (-1, 0, 1) for dy in (-1, 0, 1)
+                  if 0 <= x+dx < self.im.width and 0 <= y+dy < self.im.height}
+        return m
+
     # ---- vẽ
     def text(self, box, txt, color, mode='metric', align='center', valign='center', dx=0, dy=0):
         CHECK.append(txt)
@@ -141,13 +166,23 @@ def main():
     # --- nhãn lớn / hiệu ứng
     im = Img('baoji'); im.clear((0,0,82,36)); im.text((0,0,82,36), 'Bạo kích!', (255,149,0)); done(im)
     im = Img('shanbi'); im.clear((0,0,95,36)); im.text((0,0,95,36), 'Né!', (206,117,255)); done(im)
-    im = Img('tx_ke'); im.clear((30,17,46,34)); im.text((30,17,46,34), 'Khắc', (33,199,19)); done(im)
-    im = Img('tx_qu'); im.text((30,17,46,34), 'Kém', (223,0,0)); done(im)
+    im = Img('tx_ke')
+    im.inpaint(im.mask_where((18, 15, 34, 34), lambda p, x, y: p[3] > 0 and p[1] > p[0] + 12 and p[1] > p[2] + 12, 1))
+    im.text((14, 20, 42, 24), 'Khắc', (33,199,19)); done(im)
+    im = Img('tx_qu')
+    im.inpaint(im.mask_where((18, 15, 34, 34), lambda p, x, y: p[3] > 0 and p[0] > 60 and p[1] < 80 and p[0] > p[1] + 40, 1))
+    im.text((14, 20, 42, 24), 'Kém', (223,0,0)); done(im)
     im = Img('ok'); im.clear((0,0,26,20)); im.text((0,0,26,20), 'Xong', (204,0,0)); done(im)
     # --- rand: giáp ất bính đinh trong vòng tròn
     im = Img('rand')
     for i, t in enumerate(['G', 'Ấ', 'B', 'Đ']):
-        b = (26*i+5, 5, 16, 16); im.clear(b, (237,20,0,255)); im.text(b, t, (0,0,0))
+        b = (26*i+5, 5, 16, 16)
+        for y in range(26):
+            for x in range(26*i, 26*i+26):
+                r = ((x - 26*i - 12.0) ** 2 + (y - 12.0) ** 2) ** 0.5
+                if im.px[x, y][3] == 0 and r > 10.3: continue
+                im.px[x, y] = (0,0,0,255) if (r > 10.3 or 6.0 < r <= 7.0) else (237,20,0,255)
+        im.text(b, t, (0,0,0))
     done(im)
     # --- biển địa danh dọc (ad: 6 ô rộng 21), chữ xoay
     im = Img('ad')
@@ -155,6 +190,29 @@ def main():
     for i, t in enumerate(names):
         b = (21*i, 0, 21, 70); im.clear(b); im.text_rot((21*i+1, 0, 19, 70), t, (198,57,49))
     done(im)
+    # --- key.png: nhãn trên nút phím mềm (nền nút chuyển sắc theo hàng)
+    im = Img('key')
+    im.clear_rows((120, 330, 57, 19), 117); im.text((120, 330, 57, 19), 'Phím trái', (72,72,83))
+    im.clear_rows((462, 330, 57, 19), 457); im.text((462, 330, 57, 19), 'Phím phải', (72,72,83))
+    done(im)
+    # --- CG2: chữ vàng trên nền đen (giữ dòng "...")
+    im = Img('CG2')
+    GOLD = (194,160,69)
+    for (y0, y1, t) in [(24, 50, 'Đây là đâu!?'), (87, 108, 'Ta chết như vậy sao?'),
+                        (120, 142, 'Ông nội, Tiểu Linh Tử còn đợi ta...')]:
+        im.clear((0, y0, 240, y1 - y0), (0,0,0,255)); im.text((0, y0, 240, y1 - y0), t, GOLD)
+    done(im)
+    # --- npc21: bia mộ, chữ khắc dọc
+    im = Img('npc21')
+    im.inpaint(im.mask_where((16, 6, 13, 36), lambda p, x, y: p[3] > 0 and sum(p[:3]) < 330))
+    im.text((16, 8, 13, 14), 'Mộ', (70, 70, 50)); done(im)
+    # --- obj_jin0: biển hiệu
+    im = Img('obj_jin0')
+    GL = {(145,79,32,255), (142,53,11,255)}
+    def inside(x, y):
+        return 50 + (y - 40) * 5 // 55 + 3 <= x <= 75 + (y - 46) * 3 // 50 - 2
+    im.inpaint(im.mask_where((50, 50, 30, 55), lambda p, x, y: p in GL and inside(x, y), 1))
+    im.text_rot((54, 50, 20, 52), 'Kim Loan', (142,53,11)); done(im)
 
 if __name__ == '__main__':
     main()
