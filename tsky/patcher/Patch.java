@@ -50,6 +50,7 @@ public class Patch {
 
     public static void main(String[] a) throws Exception {
         Path in = Paths.get(a[0]), out = Paths.get(a[1]);
+        if (a.length > 3) loadTranslated(a[3]);
         log = new PrintWriter(new FileWriter(a[2]));
         List<Path> files = new ArrayList<>();
         try (java.util.stream.Stream<Path> st = Files.walk(in)) {
@@ -85,6 +86,16 @@ public class Patch {
             System.exit(1);
         }
         System.out.println("PATCH OK (" + changedClasses + " class)");
+    }
+
+    /** Cac chuoi dich cua hang `class:` trong TSV (cot 5): chi nhung chuoi nay moi duoc chen dau cach khi noi. */
+    static final Set<String> TRANSLATED = new HashSet<>();
+
+    static void loadTranslated(String tsv) throws IOException {
+        for (String ln : Files.readAllLines(Paths.get(tsv), java.nio.charset.StandardCharsets.UTF_8)) {
+            String[] c = ln.split("\t", -1);
+            if (c.length > 4 && c[1].startsWith("class:") && c[4].length() > 0) TRANSLATED.add(c[4]);
+        }
     }
 
     static void expect(String what, int got, int want) {
@@ -134,6 +145,9 @@ public class Patch {
         } else if (name.equals("Main/e")) {
             patchShop(cn);
             changed = true;
+        }
+        if (name.equals("Main/j") || name.equals("Main/e")) {
+            if (spaceConcat(cn) > 0) changed = true;
         }
         if (name.equals("Main/j") || name.equals("Main/e") || name.equals("rf/b")) {
             int c = cacheConcat(cn);
@@ -373,11 +387,84 @@ public class Patch {
                     m.instructions.remove(a2);
                     m.instructions.remove(a3);
                     m.instructions.remove(a4);
-                    n++;
+                    // stringWidth(Font,String) -> colWidth (tran 69 px), khoang cach 20 -> 6
+                    ((MethodInsnNode) a5).name = "colWidth";
+                    AbstractInsnNode g = next(a5);
+                    if (g != null && g.getOpcode() == Opcodes.IADD) g = next(g);
+                    if (g != null && g.getOpcode() == Opcodes.BIPUSH && ((IntInsnNode) g).operand == 20) {
+                        ((IntInsnNode) g).operand = 6;
+                        n++;
+                    }
                 }
             }
         }
         expect("Main/e.a(String[][]): cot theo ten dai nhat", n, 1);
+    }
+
+
+    /**
+     * Noi chuoi `bien + "Han dich" + bien`: ban goc tieng Trung khong can dau cach, tieng Viet thi can.
+     * Duyet moi chuoi new StringBuffer()...append(..)...toString() (chi chuoi khong co nhay/lenh khac): moi hang LDC la chu dich
+     * (>= 2 chu cai) ke voi mot phan tu KHONG phai LDC (bien/so) thi chen dau cach o phia ke; LDC "x" dung sau bien -> " x".
+     * Sua truc tiep hang LDC tai vi tri noi (khong dong vao hang dung chung o noi khac).
+     */
+    static int spaceConcat(ClassNode cn) {
+        int total = 0;
+        String sb = "java/lang/StringBuffer";
+        java.util.regex.Pattern word = java.util.regex.Pattern.compile("[A-Za-zÀ-ỹ]{2,}");
+        for (MethodNode m : cn.methods) {
+            for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+                if (!(x.getOpcode() == Opcodes.NEW && ((TypeInsnNode) x).desc.equals(sb))) continue;
+                AbstractInsnNode d = next(x), ini = d == null ? null : next(d);
+                if (d == null || d.getOpcode() != Opcodes.DUP || ini == null || !isCall(ini, Opcodes.INVOKESPECIAL, sb, "<init>", "()V")) continue;
+                List<LdcInsnNode> ldc = new ArrayList<>();      // phan tu LDC (hoac null neu la bien)
+                AbstractInsnNode c = next(ini);
+                int cnt = 0;
+                boolean ok = true;
+                AbstractInsnNode first = null;
+                int groupLen = 0;
+                LdcInsnNode single = null;
+                while (c != null && ok) {
+                    if (isCall(c, Opcodes.INVOKEVIRTUAL, sb, "toString", "()" + STR)) break;
+                    if (c instanceof MethodInsnNode && c.getOpcode() == Opcodes.INVOKEVIRTUAL && ((MethodInsnNode) c).owner.equals(sb)
+                            && ((MethodInsnNode) c).name.equals("append")) {
+                        ldc.add(groupLen == 1 ? single : null);
+                        groupLen = 0;
+                        single = null;
+                        cnt++;
+                    } else if (c instanceof JumpInsnNode || c.getOpcode() == Opcodes.NEW || c instanceof TableSwitchInsnNode || c instanceof LookupSwitchInsnNode) {
+                        ok = false;
+                    } else {
+                        groupLen++;
+                        single = (c instanceof LdcInsnNode && ((LdcInsnNode) c).cst instanceof String) ? (LdcInsnNode) c : null;
+                    }
+                    c = next(c);
+                }
+                if (!ok || c == null || cnt < 2 || groupLen != 0) continue;
+                for (int i = 0; i < ldc.size(); i++) {
+                    LdcInsnNode e = ldc.get(i);
+                    if (e == null) continue;
+                    String v = (String) e.cst;
+                    boolean prevVar = i > 0 && ldc.get(i - 1) == null;
+                    boolean nextVar = i + 1 < ldc.size() && ldc.get(i + 1) == null;
+                    String nv = v;
+                    if (v.equals("x") && prevVar) {
+                        nv = " x";
+                    } else if (TRANSLATED.contains(v) && v.length() > 0) {
+                        char f = v.charAt(0), l = v.charAt(v.length() - 1);
+                        if (prevVar && Character.isLetterOrDigit(f)) nv = " " + nv;
+                        if (nextVar && l != ' ' && l != '^' && l != '@') nv = nv + " ";
+                    }
+                    if (!nv.equals(v)) {
+                        e.cst = nv;
+                        total++;
+                        log.println("  space concat " + cn.name + "." + m.name + ": \"" + v + "\" -> \"" + nv + "\"");
+                    }
+                }
+            }
+        }
+        log.println("spaceConcat " + cn.name + ": " + total);
+        return total;
     }
 
     /**
@@ -403,23 +490,23 @@ public class Patch {
                         boolean ok = true;
                         AbstractInsnNode end = null;
                         while (ok) {
-                            // doi so: 1 lenh (LDC String / ALOAD / GETSTATIC) hoac ALOAD0+GETFIELD
-                            List<AbstractInsnNode> g = new ArrayList<>();
+                            // doi so: day lenh nap thuan (khong nhay/goi/ghi) ket thuc bang append(String)
                             AbstractInsnNode a = c;
-                            if (a == null) { ok = false; break; }
-                            int op = a.getOpcode();
-                            if (op == Opcodes.LDC && ((LdcInsnNode) a).cst instanceof String) { g.add(a); c = next(a); }
-                            else if (op == Opcodes.ALOAD && ((VarInsnNode) a).var != 0) { g.add(a); c = next(a); }
-                            else if (op == Opcodes.GETSTATIC && ((FieldInsnNode) a).desc.equals(STR)) { g.add(a); c = next(a); }
-                            else if (op == Opcodes.ALOAD && ((VarInsnNode) a).var == 0 && next(a) != null && next(a).getOpcode() == Opcodes.GETFIELD
-                                    && ((FieldInsnNode) next(a)).desc.equals(STR)) { g.add(a); g.add(next(a)); c = next(next(a)); }
-                            else { ok = false; break; }
-                            if (c == null || !isCall(c, Opcodes.INVOKEVIRTUAL, sb, "append", "(" + STR + ")L" + sb + ";")) { ok = false; break; }
-                            InsnList il = new InsnList();
-                            for (AbstractInsnNode q : g) all.add(q);
+                            int cntIn = 0;
+                            while (a != null && !isCall(a, Opcodes.INVOKEVIRTUAL, sb, "append", "(" + STR + ")L" + sb + ";")) {
+                                int op = a.getOpcode();
+                                boolean pure = op == Opcodes.LDC || op == Opcodes.ALOAD || op == Opcodes.ILOAD || op == Opcodes.GETSTATIC
+                                        || op == Opcodes.GETFIELD || op == Opcodes.AALOAD || (op >= Opcodes.ICONST_M1 && op <= Opcodes.ICONST_5)
+                                        || op == Opcodes.BIPUSH || op == Opcodes.SIPUSH;
+                                if (!pure || cntIn > 8) { ok = false; break; }
+                                all.add(a);
+                                cntIn++;
+                                a = next(a);
+                            }
+                            if (!ok || a == null || cntIn == 0) { ok = false; break; }
                             args.add(null);
-                            all.add(c);
-                            c = next(c);
+                            all.add(a);
+                            c = next(a);
                             if (c != null && isCall(c, Opcodes.INVOKEVIRTUAL, sb, "toString", "()" + STR)) { end = c; break; }
                         }
                         if (ok && end != null && args.size() >= 2 && args.size() <= 4) {
@@ -432,7 +519,7 @@ public class Patch {
                                 m.instructions.remove(q);
                                 rep.add(q);
                             }
-                            for (int i = args.size(); i < 4; i++) rep.add(new InsnNode(Opcodes.ACONST_NULL));
+                            for (int i = args.size(); i < 4; i++) rep.add(new FieldInsnNode(Opcodes.GETSTATIC, VH, "E", STR));
                             rep.add(new LdcInsnNode(catSlots++));
                             rep.add(vhCall("cat", "(" + STR + STR + STR + STR + "I)" + STR));
                             m.instructions.insertBefore(x, rep);
@@ -444,6 +531,7 @@ public class Patch {
                             nx = x.getNext();
                             m.instructions.remove(x);
                             total++;
+                            log.println("  concat cache " + cn.name + "." + m.name + m.desc + " (" + args.size() + " phan tu) slot " + (catSlots - 1));
                         }
                     }
                 }

@@ -3,6 +3,9 @@ OK   Main/e drawString: 10 (mong doi 10)
 OK   Main/e stringWidth: 8 (mong doi 8)
 OK   Main/e getHeight: 1 (mong doi 1)
 OK   Main/e.a(String[][]): cot theo ten dai nhat: 1 (mong doi 1)
+spaceConcat Main/e: 0
+  concat cache Main/e.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;)V (2 phan tu) slot 0
+  concat cache Main/e.a(Ljavax/microedition/lcdui/Graphics;IILjava/lang/String;)V (2 phan tu) slot 1
 cacheConcat Main/e: 2
 OK   Main/f [truoc] drawString: 11 (mong doi 11)
 OK   Main/f [truoc] stringWidth: 2 (mong doi 2)
@@ -29,7 +32,98 @@ OK   Main/j.z drawString -> VH.drawRight: 1 (mong doi 1)
 OK   Main/j.i drawString -> VH.drawMid: 1 (mong doi 1)
 OK   Main/j.f: mui ten menu theo nhan dang chon: 2 (mong doi 2)
 BODY Main/j.a(G,String,IIIII) -> VH.scroll (cuon theo trang)
-cacheConcat Main/j: 16
+  space concat Main/j.c: "x" -> " x"
+  space concat Main/j.c: "Mua thành công!" -> " Mua thành công!"
+  space concat Main/j.d: "x" -> " x"
+  space concat Main/j.d: "Mua thành công!" -> " Mua thành công!"
+  space concat Main/j.a: "Phóng sinh thất bại!" -> " Phóng sinh thất bại!"
+  space concat Main/j.a: "Phóng sinh thành công" -> " Phóng sinh thành công"
+  space concat Main/j.a: "cấp" -> " cấp"
+  space concat Main/j.a: "cấp" -> " cấp"
+  space concat Main/j.a: "cấp" -> " cấp"
+  space concat Main/j.a: "cấp" -> " cấp"
+  space concat Main/j.a: "cấp" -> " cấp"
+  space concat Main/j.b: "Nhận được" -> " Nhận được "
+  space concat Main/j.b: "EXP^" -> " EXP^"
+  space concat Main/j.b: "Nhận được" -> " Nhận được "
+  space concat Main/j.b: "EXP^" -> " EXP^"
+  space concat Main/j.b: "Nhận được" -> "Nhận được "
+  space concat Main/j.b: "x1^Nhận được" -> " x1^Nhận được "
+  space concat Main/j.b: "vàng" -> " vàng"
+  space concat Main/j.b: "Lên cấp! Lv hiện tại:" -> " Lên cấp! Lv hiện tại: "
+  space concat Main/j.b: "cấp^" -> " cấp^"
+  space concat Main/j.a: "Không đổi tiên sủng" -> " Không đổi tiên sủng"
+  space concat Main/j.a: "Không chạy được" -> " Không chạy được"
+  space concat Main/j.d: "Đã chết!" -> " Đã chết!"
+  space concat Main/j.b: "vàng" -> " vàng"
+  space concat Main/j.b: "Đã chết, hãy hồi sinh trước!" -> " Đã chết, hãy hồi sinh trước!"
+  space concat Main/j.c: "Gửi thất bại!" -> " Gửi thất bại!"
+  space concat Main/j.c: "Gửi thành công" -> " Gửi thành công"
+  space concat Main/j.a: "Hãy giải Hóa đá trước hoặc chọn phá" -> " Hãy giải Hóa đá trước hoặc chọn phá"
+  space concat Main/j.a: "Không chọn được kỹ năng" -> " Không chọn được kỹ năng"
+  space concat Main/j.b: "x" -> " x"
+  space concat Main/j.b: "vàng. Mua không?" -> " vàng. Mua không?"
+  space concat Main/j.e: "Đã chết!" -> " Đã chết!"
+  space concat Main/j.c: "Đã chết, hãy chọn tiên sủng mới!" -> " Đã chết, hãy chọn tiên sủng mới!"
+  space concat Main/j.f: "Chạy thành công!" -> " Chạy thành công!"
+  space concat Main/j.g: "x" -> " x"
+  space concat Main/j.g: "Đã bán, nhận được" -> " Đã bán, nhận được "
+  space concat Main/j.g: "vàng" -> " vàng"
+  space concat Main/j.f: "Túi đầy, tạm gửi thương nhân" -> " Túi đầy, tạm gửi thương nhân"
+  space concat Main/j.a: "Gỡ" -> "Gỡ "
+  space concat Main/j.a: "Thành công!" -> " Thành công!"
+  space concat Main/j.a: "Trang bị" -> "Trang bị "
+  space concat Main/j.a: "Pháp bảo thành công!" -> " Pháp bảo thành công!"
+  space concat Main/j.a: "Bắt thành công!" -> " Bắt thành công!"
+  space concat Main/j.a: "Bắt thành công! Túi đầy, tạm gửi chỗ thương nhân" -> " Bắt thành công! Túi đầy, tạm gửi chỗ thương nhân"
+  space concat Main/j.a: "Bắt thất bại!" -> " Bắt thất bại!"
+spaceConcat Main/j: 45
+  concat cache Main/j.<init>()V (3 phan tu) slot 2
+  concat cache Main/j.b(I)V (3 phan tu) slot 3
+  concat cache Main/j.a(Ljava/lang/String;Ljava/lang/String;[ILjava/lang/String;I)V (3 phan tu) slot 4
+  concat cache Main/j.a(Ljava/lang/String;)V (3 phan tu) slot 5
+  concat cache Main/j.a(Ljava/lang/String;I)Lrf/e; (3 phan tu) slot 6
+  concat cache Main/j.a(Ljava/lang/String;I)Lrf/e; (2 phan tu) slot 7
+  concat cache Main/j.a(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[ILjava/lang/String;Ljava/lang/String;)V (2 phan tu) slot 8
+  concat cache Main/j.h()V (2 phan tu) slot 9
+  concat cache Main/j.b(Ljava/lang/String;Ljava/lang/String;)V (3 phan tu) slot 10
+  concat cache Main/j.a(Ljavax/microedition/lcdui/Graphics;Lrf/e;)V (2 phan tu) slot 11
+  concat cache Main/j.a(Ljavax/microedition/lcdui/Graphics;Lrf/e;)V (2 phan tu) slot 12
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;I)V (2 phan tu) slot 13
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;I)V (2 phan tu) slot 14
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;I)V (2 phan tu) slot 15
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;I)V (2 phan tu) slot 16
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;I)V (3 phan tu) slot 17
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;I)V (3 phan tu) slot 18
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;I)V (2 phan tu) slot 19
+  concat cache Main/j.a(Lrf/e;Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 20
+  concat cache Main/j.a(Lrf/e;Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 21
+  concat cache Main/j.a(Lrf/e;Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 22
+  concat cache Main/j.a(Ljavax/microedition/lcdui/Graphics;I[Lrf/e;)V (2 phan tu) slot 23
+  concat cache Main/j.k(Ljavax/microedition/lcdui/Graphics;)V (3 phan tu) slot 24
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;)V (3 phan tu) slot 25
+  concat cache Main/j.b(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;)V (2 phan tu) slot 26
+  concat cache Main/j.b(Lrf/e;Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 27
+  concat cache Main/j.b(Lrf/e;Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 28
+  concat cache Main/j.p(Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 29
+  concat cache Main/j.p(Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 30
+  concat cache Main/j.f(Ljavax/microedition/lcdui/Graphics;Lrf/e;Lrf/e;)V (2 phan tu) slot 31
+  concat cache Main/j.f(Ljava/lang/String;)V (2 phan tu) slot 32
+  concat cache Main/j.r()V (3 phan tu) slot 33
+  concat cache Main/j.r()V (3 phan tu) slot 34
+  concat cache Main/j.r()V (2 phan tu) slot 35
+  concat cache Main/j.s()V (2 phan tu) slot 36
+  concat cache Main/j.s()V (2 phan tu) slot 37
+  concat cache Main/j.s(Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 38
+  concat cache Main/j.s(Ljavax/microedition/lcdui/Graphics;)V (2 phan tu) slot 39
+  concat cache Main/j.s(Ljavax/microedition/lcdui/Graphics;)V (3 phan tu) slot 40
+  concat cache Main/j.f(Ljavax/microedition/lcdui/Graphics;I)V (2 phan tu) slot 41
+  concat cache Main/j.a(Lrf/e;Lrf/e;II)V (3 phan tu) slot 42
+  concat cache Main/j.a(Lrf/e;Lrf/e;II)V (3 phan tu) slot 43
+  concat cache Main/j.a(Lrf/e;Lrf/e;II)V (2 phan tu) slot 44
+  concat cache Main/j.a(Lrf/e;Lrf/e;II)V (2 phan tu) slot 45
+  concat cache Main/j.a(Lrf/e;Lrf/e;II)V (2 phan tu) slot 46
+cacheConcat Main/j: 45
 OK   Main/k stringWidth: 1 (mong doi 1)
 OK   Main/k getHeight: 1 (mong doi 1)
 OK   rf/b [truoc] drawString: 10 (mong doi 10)
@@ -42,7 +136,10 @@ BODY rf/b.b(Ljava/lang/String;I)V -> VH.wrap(d,f)
 BODY rf/b.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIII)V -> VH.outline
 OK   rf/b stringWidth: 1 (mong doi 1)
 OK   rf/b getHeight: 1 (mong doi 1)
-cacheConcat rf/b: 2
+  concat cache rf/b.a(Ljava/lang/String;)Ljavax/microedition/lcdui/Image; (2 phan tu) slot 47
+  concat cache rf/b.b(Ljava/lang/String;)V (4 phan tu) slot 48
+  concat cache rf/b.b(Ljava/lang/String;)V (2 phan tu) slot 49
+cacheConcat rf/b: 3
 OK   rf/c drawString: 1 (mong doi 1)
 OK   rf/e drawString: 3 (mong doi 3)
 OK   TONG drawString: 29 (mong doi 29)

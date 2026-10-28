@@ -12,7 +12,8 @@ env -u JAVA_TOOL_OPTIONS java -jar $CFR goc/TienSungKyDuyen_240x320.jar --output
 ```
 
 ## Trạng thái
-- Giai đoạn 1: T0–T2 xong. T3 xong (extract/repack/selftest, TSV 2158 hàng). T4 xong (VH+Patch+build, PASS). T5 xong (logo NAMP, bỏ hỏi nhạc). Tiếp: T6a (quản đốc) rồi T6b dịch.
+- T0–T5 xong (phân tích, extract/repack, VH+Patch+build, logo NAMP). T6 dịch xong (bản chốt `dich/dp_work/final/text_can_dich.tsv`, build mặc định dùng nó). T8/T8b ảnh xong (A2). T7 bố cục xong: `logs/shots_T7/` (25 ảnh), docs/render.md mục 10, jar_check PASS. Việc dịch còn nhờ công nhân dịch rút tên quá ô (PLAN.md, Vướng mắc T7). Tiếp: T9 (320x240), T10, T11.
+- Dựng jar: `./build.sh` (→ `out/TienSungKyDuyen_240x320_vi.jar`). Chụp màn: `scripts/t7_emu.py --cwd work/fjsave --follow work/cmd.txt ...` (xem docs/render.md mục 10); save thử ở `work/fjsave` (không commit).
 
 ## Quyết định đã chốt với người dùng
 Hán Việt nhẹ; 仙宠 tiên sủng, 宠物 sủng vật, 骑宠 tọa kỵ; font f12; logo NAMP, bỏ hỏi nhạc; bản 320x240; tool main thêm 12px; phát hành nhánh làm việc + main/releases.

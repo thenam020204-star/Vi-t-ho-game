@@ -23,6 +23,7 @@ def main():
     ap.add_argument('--jar', required=True)
     ap.add_argument('--out', default='shots')
     ap.add_argument('--steps', default='wait 10; shot boot')
+    ap.add_argument('--follow', default=None, help='file lenh: doc them dong moi (moi dong = chuoi buoc ngan bang ;), dong "quit" de ket thuc')
     ap.add_argument('--cwd', default=None, help='thu muc lam viec co dinh cua FreeJ2ME (giu RMS/save giua cac lan chay)')
     ap.add_argument('--size', default='240x320', help='độ phân giải màn game (xem MIDlet/ảnh nền)')
     a = ap.parse_args()
@@ -66,18 +67,40 @@ def main():
         os.remove(raw)
         shots.append(f)
 
+    def do_step(step):
+        p = step.split()
+        if p[0] == 'wait':
+            time.sleep(float(p[1]))
+        elif p[0] == 'shot':
+            shot(p[1])
+        elif p[0] == 'key':
+            code = d.keysym_to_keycode(XK.string_to_keysym(p[1]))
+            for _ in range(int(p[2]) if len(p) > 2 else 1):
+                xtest.fake_input(d, X.KeyPress, code); d.sync(); time.sleep(0.12)
+                xtest.fake_input(d, X.KeyRelease, code); d.sync(); time.sleep(0.35)
+
+    def run_steps(steps):
+        for step in [x.strip() for x in steps.split(';') if x.strip()]:
+            do_step(step)
+
     try:
-        for step in [s.strip() for s in a.steps.split(';') if s.strip()]:
-            p = step.split()
-            if p[0] == 'wait':
-                time.sleep(float(p[1]))
-            elif p[0] == 'shot':
-                shot(p[1])
-            elif p[0] == 'key':
-                code = d.keysym_to_keycode(XK.string_to_keysym(p[1]))
-                for _ in range(int(p[2]) if len(p) > 2 else 1):
-                    xtest.fake_input(d, X.KeyPress, code); d.sync(); time.sleep(0.12)
-                    xtest.fake_input(d, X.KeyRelease, code); d.sync(); time.sleep(0.35)
+        run_steps(a.steps)
+        if a.follow:
+            done = 0
+            idle = 0
+            while idle < 3600:
+                lines = open(a.follow).read().splitlines() if os.path.exists(a.follow) else []
+                if len(lines) > done:
+                    idle = 0
+                    for ln in lines[done:]:
+                        done += 1
+                        if ln.strip() == 'quit':
+                            idle = 99999
+                            break
+                        run_steps(ln)
+                        open(a.follow + '.done', 'w').write(str(done))
+                else:
+                    time.sleep(0.5); idle += 1
     finally:
         alive = emu.poll() is None
         try:

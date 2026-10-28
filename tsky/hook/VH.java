@@ -503,19 +503,30 @@ public final class VH {
         return best;
     }
 
+    /** Rong cot ten cua hang (tran SHOP_NAME_MAX de cot so luong/gia con trong khung 148 px: 60 + w + 6 + 34 + 24 <= 193). */
+    static final int SHOP_NAME_MAX = 69;
+
+    public static int colWidth(Font f, String s) {
+        int w = sw(map(s));
+        return w > SHOP_NAME_MAX ? SHOP_NAME_MAX : w;
+    }
+
     /**
      * Noi chuoi cache (thay StringBuffer moi khung): ket qua gan voi tung vi tri (slot); tra lai khi cac phan tu
      * giong het (so sanh tham chieu).
      */
+    /** Phan tu dem cho cat() (rong). */
+    public static final String E = "";
+
     static final String[] cA = new String[96], cB = new String[96], cC = new String[96], cD = new String[96], cRes = new String[96];
 
     public static String cat(String a, String b, String c, String d, int slot) {
         if (slot < 96 && cRes[slot] != null && cA[slot] == a && cB[slot] == b && cC[slot] == c && cD[slot] == d) return cRes[slot];
         StringBuffer sb = new StringBuffer();
-        if (a != null) sb.append(a);
-        if (b != null) sb.append(b);
-        if (c != null) sb.append(c);
-        if (d != null) sb.append(d);
+        sb.append(a);
+        sb.append(b);
+        sb.append(c);
+        sb.append(d);
         String r = sb.toString();
         if (slot < 96) {
             cA[slot] = a;
@@ -528,7 +539,7 @@ public final class VH {
     }
 
     /** Buoc dong o mo ta cuon. */
-    static final int SCROLL_STEP = LH + 2;
+    static final int SCROLL_STEP = LH + 3;
 
     /**
      * Thay phan ve cua Main/j.a(G,String,w,h,x,y,color) (o mo ta/CG ke chuyen): lines[0..count) la ket qua wrap.

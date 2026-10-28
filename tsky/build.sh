@@ -16,7 +16,7 @@ rm -rf build/x build/rp build/xr build/patched build/stage && mkdir -p build/x b
 # 1) text -> pak/t/class da Viet hoa (chua dich: giong tung byte)   2) overlay len ban giai nen   3) patch call-site tren ban do
 python3 -I scripts/repack.py build/x "$TSV" build/rp
 cp -r build/x build/xr && cp -r build/rp/. build/xr/
-env -u JAVA_TOOL_OPTIONS java -cp $L/asm-9.7.1.jar:$L/asm-tree-9.7.1.jar:build/patcher Patch build/xr build/patched logs/patch.log
+env -u JAVA_TOOL_OPTIONS java -cp $L/asm-9.7.1.jar:$L/asm-tree-9.7.1.jar:build/patcher Patch build/xr build/patched logs/patch.log "$TSV"
 cp -r build/xr/. build/stage/ && rm -rf build/stage/META-INF
 cp -r build/patched/. build/stage/
 cp build/hook/VH.class build/stage/
