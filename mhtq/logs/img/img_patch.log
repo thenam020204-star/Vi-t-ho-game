@@ -1,0 +1,78 @@
+i_01	Cấp:	0,0,29,13	Cấp:	metric	17	#743b2f
+i_01	Hiệu:	0,13,29,13	Hiệu:	metric	20	#743b2f
+i_01	Môn:	0,26,29,13	Môn:	metric	17	#743b2f
+i_02	ATK	0,0,25,13	ATK	metric	17	#ffe522
+i_02	DEF	0,13,25,13	DEF	metric	17	#ffe522
+i_02	Bạo	0,26,25,13	Bạo	metric	15	#ffe522
+i_02	Né	0,39,25,13	Né	metric	10	#ffe522
+i_03	Chỉ số	0,0,27,15	Chỉ số	metric	27	#ffe522 TRAN(1,0)
+i_03	Rèn	0,15,27,15	Rèn	metric	15	#ffe522
+i_03	Kỹ năng	0,30,27,15	Kỹ	metric	11	#ffe522 RUTGON
+i_03	Trang bị	0,45,27,15	Giáp	metric	18	#ffe522 RUTGON
+i_03	Nhiệm vụ	0,60,27,15	N.vụ	metric	18	#ffe522 RUTGON
+i_03	Bản đồ	0,75,27,15	B.đồ	metric	18	#ffe522 RUTGON
+i_05	Tà	0,0,19,20	Tà	metric	10	#ffffda
+i_05	Chính	19,0,19,20	Hiệp	metric	18	#ffffda RUTGON
+i_05	đạo	0,20,19,20	đạo	metric	15	#ffffda
+i_05	đạo	19,20,19,20	đạo	metric	15	#ffffda
+i_06	Ngụy	0,0,25,18	Ngụy	metric	21	#f8f7d3
+i_06	Thục	0,18,25,18	Thục	metric	20	#f8f7d3
+i_06	Ngô	0,36,25,18	Ngô	metric	15	#f8f7d3
+i_07	Ác	0,0,13,25	Ác	metric	10	#dbd7d6
+i_07	Ái	0,25,13,25	Ái	metric	8	#ffe821
+i_07	Hòa	0,50,13,25	Tốt	tight	14	#ff839f TRAN(1,0) RUTGON
+i_18	HP	0,0,27,14	HP	metric	11	#ffffda
+i_18	MP	0,14,27,14	MP	metric	11	#ffffda
+i_18	EXP	0,28,27,14	EXP	metric	17	#ffffda
+i_18	Tình cảm	0,42,27,14	Tình	metric	18	#ffffda RUTGON
+i_18	Tin cậy	0,56,27,14	Tin	metric	13	#ffffda RUTGON
+i_19	Tâm Hồn Kiếm	1,0,53,13	Tâm Hồn	metric	35	#ffffda RUTGON
+i_19	Ỷ Thiên Kiếm	1,13,53,13	Ỷ Thiên	metric	32	#ffffda RUTGON
+i_19	Chủ động	1,26,53,13	Chủ động	metric	39	#ffffda
+i_19	Bị động	1,39,53,13	Bị động	metric	32	#ffffda
+i_19	Nhiệm vụ	1,52,53,13	Nhiệm vụ	metric	38	#ffffda
+i_19	Nhiệm vụ	1,65,53,13	Nhiệm vụ	metric	38	#ffffda
+i_19	Thành tựu	1,78,53,13	Thành tựu	metric	43	#ffffda
+i_19	Danh vọng	1,91,53,13	Danh vọng	metric	44	#ffffda
+i_19	Tâm Hồn Kiếm	56,0,53,13	Tâm Hồn	metric	35	#67573b RUTGON
+i_19	Ỷ Thiên Kiếm	56,13,53,13	Ỷ Thiên	metric	32	#67573b RUTGON
+i_19	Chủ động	56,26,53,13	Chủ động	metric	39	#67573b
+i_19	Bị động	56,39,53,13	Bị động	metric	32	#67573b
+i_19	Nhiệm vụ	56,52,53,13	Nhiệm vụ	metric	38	#67573b
+i_19	Nhiệm vụ	56,65,53,13	Nhiệm vụ	metric	38	#67573b
+i_19	Thành tựu	56,78,53,13	Thành tựu	metric	43	#67573b
+i_19	Danh vọng	56,91,53,13	Danh vọng	metric	44	#67573b
+i_30	Diệp Vấn Thiên	0,0,45,18	Vấn Thiên	metric	42	#fefefe RUTGON
+i_31	Tiểu Duy	0,0,38,21	Tiểu Duy	metric	38	#f8fefe TRAN(1,0)
+i_31	Anh Ninh	0,21,38,21	Anh Ninh	metric	37	#f8fefe
+i_38	Thắng lợi	0,0,49,13	Thắng lợi	metric	40	#ffe522
+i_39	Thất bại	0,0,49,13	Thất bại	metric	35	#aaa477
+i_55	Hoàn thành	0,0,49,13	Hoàn thành	metric	47	#ffe522
+i_40	Tép Riu	0,0,47,11	Tép Riu	metric	32	#ffffff
+i_40	Tà Khí	0,11,47,11	Tà Khí	metric	28	#ffffff
+i_40	Chính Khí	0,22,47,11	Chính Khí	metric	42	#ffffff
+i_40	Đồng Bì	0,33,47,11	Thiết Cốt	metric	40	#ffffff RUTGON
+i_40	Thái Bảo	0,44,47,11	Thái Bảo	metric	37	#ffffff
+i_40	Ma Đầu	0,55,47,11	Ma Đầu	metric	30	#ffffff
+i_40	Thánh Tướng	0,66,47,11	Thánh	metric	25	#ffffff RUTGON
+i_40	Hổ Uy	0,77,47,11	Hổ Oai	metric	27	#ffffff RUTGON
+i_40	Thiên Long	0,88,47,11	Thiên Long	metric	46	#ffffff
+i_40	Thiên Hành	0,99,47,11	Thiên Hành	metric	47	#ffffff TRAN(1,0)
+i_41	Cửa hàng	2,2,23,11	Tiệm	metric	19	#ffe522 RUTGON
+i_42	Mua	0,0,23,11	Mua	metric	15	#ffffff
+i_42	Bán	0,11,23,11	Bán	metric	15	#ffffff
+i_42	Rời	0,22,23,11	Rời	metric	14	#ffffff
+i_96	Né tránh	0,0,35,19	Tránh	metric	25	#f10e42 RUTGON
+i_cost	Gói đặc dược	6,0,47,11	Gói thuốc	metric	40	#8d7d5b RUTGON
+i_cost	Hồn phục thù	6,11,47,11	Phục thù	metric	37	#8d7d5b RUTGON
+i_cost	Gói đặc dược	6,22,47,11	Gói thuốc	metric	40	#ffffda RUTGON
+i_cost	Hồn phục thù	6,33,47,11	Phục thù	metric	37	#ffffda RUTGON
+c_f	Trò chơi mới	0,0,61,17	Trò chơi mới	metric	55	#000000
+c_f	Tiếp tục	0,17,61,17	Tiếp tục	metric	35	#000000
+c_f	Hướng dẫn	0,34,61,17	Hướng dẫn	metric	45	#000000
+c_f	Giới thiệu	0,51,61,17	Giới thiệu	metric	42	#000000
+c_f	Âm thanh	0,68,61,17	Âm thanh	metric	38	#000000
+c_f	Thoát game	0,85,61,17	Thoát game	metric	48	#000000
+c_f	Khu đối tác	0,102,61,17	Khu đối tác	metric	49	#000000
+c_f	Game Sohu	0,119,61,17	Game Sohu	metric	45	#000000
+c_f	Game khác	0,136,61,17	Game khác	metric	44	#fe1a38
