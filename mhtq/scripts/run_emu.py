@@ -58,12 +58,13 @@ def main():
         im = Image.open(raw).convert('RGB')
         # cắt bỏ nền đen Xvfb + thanh menu của FreeJ2ME: lấy bbox vùng khác đen
         bbox = im.point(lambda v: 255 if v > 8 else 0).convert('L').getbbox()
+        gw, gh = [int(v) for v in a.size.split('x')]
         if bbox:
-            im = im.crop(bbox)
-            # thanh menu "File Settings Debug" cao ~21px, nền xám sáng
-            top = im.crop((0, 0, im.width, 1)).convert('L').getextrema()
-            if top[0] > 180:
-                im = im.crop((0, 21, im.width, im.height))
+            # thanh menu "File Settings Debug" cao ~21px, nền xám sáng; vùng game có thể toàn đen
+            # (cảnh chuyển) nên cắt theo kích thước --size thay vì bbox của phần không đen.
+            top = im.crop((bbox[0], bbox[1], bbox[0] + 1, bbox[1] + 1)).convert('L').getextrema()
+            y0 = bbox[1] + (21 if top[0] > 180 else 0)
+            im = im.crop((bbox[0], y0, bbox[0] + gw, y0 + gh))
         f = os.path.join(a.out, name + '.png')
         im.save(f)
         os.remove(raw)
