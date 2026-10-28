@@ -96,8 +96,9 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
   - Hoàn thành khi: chụp FreeJ2ME: màn đầu là logo NAMP, sau ~2s vào game, không có màn hỏi nhạc, không có logo nhà phát hành; log có `Player.start` (hoặc lỗi MIDI headless như skill mô tả).
 
 ### Giai đoạn 3 — Dịch (đúng MỘT công nhân Sonnet 5.5)
-- [ ] T6a (quản đốc) `dp prep --charset` (charset f12), chốt `dich/thuat-ngu.tsv`, `dich/vai.md`.
-- [ ] T6b (công nhân dịch) dịch toàn bộ bằng `dp next/add/fix/check/sample`; `dp check` = OK; quản đốc `dp merge`.
+- [x] T6a (quản đốc) `dp prep --charset` (charset f12), chốt `dich/thuat-ngu.tsv`, `dich/vai.md`.
+- [ ] T6b (công nhân dịch) — thư mục `dich/`, lệnh `dp` = `python3 $S/dp.py` (S = thư mục scripts skill). Độ khó: **Khó vừa** — 1573 dòng duy nhất / 41.5k ký tự Hán, 64% thoại, 47% có xưng hô, 163 dòng có giới hạn (nhỏ nhất ≤10). Lưu ý: token jN#/k0# (×1000+), `~~` giữ, `@` (cmd49) giữ; chuỗi trạng thái ×5 phải đúng thuật ngữ; 3 chuỗi danh sách rỗng chứa "没有" phải bắt đầu bằng "Không có"; dòng `CHI-DAU-CAU` (chỉ dấu câu) dịch sang ASCII ("……"→"...", "！"→"!"). Sau `dp check` OK chạy thêm `python3 scripts/repack.py --check` (xem docs) và sửa mọi lỗi nó báo.
+  - (gốc) dịch toàn bộ bằng `dp next/add/fix/check/sample`; `dp check` = OK; quản đốc `dp merge`.
 
 ### Giai đoạn 4 — Hoàn thiện (A1)
 - [ ] T7 Bố cục: khung thoại ≥3 dòng, ngắt px ở dấu cách, phân trang, canh giữa theo độ rộng thật, các màn menu/túi đồ/cửa hàng/chiến đấu/tiên sủng đại toàn/mẹo. Hoàn thành khi: ảnh chụp từng màn không tràn, không cắt đôi từ, không sót Hán.
@@ -112,6 +113,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - Chỉ một công nhân chạy thật tại một thời điểm.
 
 ## Nhật ký
+- T6a (quản đốc): dp prep (charset f12), dich/dp_work/thuat-ngu.tsv 59 mục, vai.md; duyệt ảnh T4/T5 đạt (thoại 4 dòng vừa khung; CG kể chuyện tràn đáy → T7).
 - T0 (quản đốc): tạo .gitignore, PLAN.md, PROGRESS.md; goc/logo_namp_240x320.png.
 - T1 (A1): docs/script.md + scripts/dump_pak.py; 486 blob/1668 trường Hán, blob lớn nhất 14701 B (~20.7 KB sau dịch), 7 token tên Hán nằm trong Main/l, 3 nhóm chuỗi bị so sánh (trạng thái ×5, "没有", "空" lưu RMS).
 - T2 (A1): docs/render.md + scripts/count_callsites.py; 50 drawString/24 stringWidth/2 charWidth/2 substringWidth/4 getHeight, không có drawChar(s)/drawSubstring; thoại 2 dòng/trang ở Main/g.a, cần thay cả method.

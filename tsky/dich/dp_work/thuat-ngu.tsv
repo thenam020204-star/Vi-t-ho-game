@@ -1,0 +1,59 @@
+仙宠	tiên sủng	tt	thú tiên bắt/nuôi; đầu câu viết hoa Tiên sủng
+骑宠	tọa kỵ	tt	thú cưỡi (người dùng chốt)
+宠物	sủng vật	~	hoặc tiên sủng tuỳ ngữ cảnh (người dùng chốt)
+神兽	Thần thú	ten	NPC thần thú giữ/gửi tiên sủng
+仙人	Tiên nhân	~	
+仙女	Tiên nữ	~	
+神仙	thần tiên	~	
+法宝	pháp bảo	tt	
+法术	pháp thuật	~	
+法力值	MP	ui	
+生命值	HP	ui	
+五行珠	Ngũ Hành Châu	tt	
+五行元气	Ngũ Hành nguyên khí	tt	
+金镶玉	Kim Tương Ngọc	tt	
+甘霖	Cam Lâm	tt	pháp bảo
+风袋	Phong Đại	tt	túi gió
+木耒村	thôn Mộc Lỗi	dia	
+沙岭镇	trấn Sa Lĩnh	dia	
+冷风坳	Lãnh Phong Ao	dia	
+火石冈	Hỏa Thạch Cương	dia	
+天山	Thiên Sơn	dia	
+天门	Thiên Môn	dia	
+金銮殿	Kim Loan điện	dia	
+昊天	Hạo Thiên	ten	
+夫诸	Phu Chư	ten	tiên sủng hung dữ ở núi tuyết
+年兽	Niên thú	ten	
+贡丸	Cống Hoàn	ten	kẻ xấu ("贡丸大人" = Cống Hoàn đại nhân)
+张郭劳	Trương Quách Lao	ten	
+王小明	Vương Tiểu Minh	ten	
+刘思文	Lưu Tư Văn	ten	
+冷思琪	Lãnh Tư Kỳ	ten	
+王君平	Vương Quân Bình	ten	
+吴双	Ngô Song	ten	
+班班	Ban Ban	ten	
+鲁班	Lỗ Ban	ten	
+小狗	chó con	~	
+小哥	tiểu ca	~	NPC gọi nhân vật chính
+左软键	phím mềm trái	ui	
+右软键	phím mềm phải	ui	
+导航键	phím điều hướng	ui	
+麻痹	Tê liệt	tt	BẮT BUỘC đúng chữ (code so sánh)
+禁锢	Giam cầm	tt	BẮT BUỘC đúng chữ (code so sánh)
+冰冻	Đóng băng	tt	BẮT BUỘC đúng chữ (code so sánh)
+燃烧	Thiêu đốt	tt	BẮT BUỘC đúng chữ (code so sánh)
+石化	Hóa đá	tt	BẮT BUỘC đúng chữ (code so sánh)
+灵芝	Linh chi	tt	
+放生	phóng sinh	~	
+寄存	gửi	~	gửi tiên sủng cho Thần thú
+复活	hồi sinh	~	
+装备	trang bị	~	
+属性	thuộc tính	~	
+物品	vật phẩm	~	
+经验	EXP	ui	
+等级	Lv	~	
+攻击力	ATK	~	chỉ số; trong câu "tấn công"
+防御力	DEF	~	
+速度	SPD	~	
+金系	hệ Kim	~	ngũ hành: Kim Mộc Thủy Hỏa Thổ
+甲	Giáp	~	phẩm cấp tiên sủng Giáp/Ất/Bính/Đinh
