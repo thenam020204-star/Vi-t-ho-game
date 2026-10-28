@@ -106,7 +106,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - [x] T8 Ảnh có chữ: soát 327 PNG (`scripts/contact_sheet.py` ra lưới ảnh), danh sách `docs/anh_co_chu.tsv`, vẽ lại vào `res_vi/`. Hoàn thành khi: mọi ảnh có chữ Hán đã có bản Việt, `pixeltext check --size 12` OK.
 - [x] T9 (ảnh 320 xong: `res_vi_320/Image/menu.png`, `namp.png`) Bản 320x240 theo QĐ 10. Hoàn thành khi: chụp FreeJ2ME 320x240 qua logo, menu, hội thoại, túi đồ, chiến đấu không tràn/méo; kiểm phím hướng dẫn bằng phím số.
 - [x] T10 `rebuild.sh` (goc → out cả 2 bản + jad `MIDlet-Jar-Size` khớp), `run_emu.py` đi qua các màn chính 2 bản, `BAO_CAO.md`, `README_DU_AN.md`, `PROGRESS.md`, gói `TienSungKyDuyen_du_an.zip` theo mục Bàn giao của skill. **Quản đốc nghiệm thu.**
-- [ ] T11 Tool main theo QĐ 12 + phát hành jar/jad vào `main:releases/TienSungKyDuyen/` (quản đốc commit/push lên main).
+- [x] T11 Tool main theo QĐ 12 + phát hành jar/jad vào `main:releases/TienSungKyDuyen/` (quản đốc commit/push lên main).
 
 ## Phân công
 - A1 (Sonnet 5.5): T1 → T2 → (duyệt) → T3 → T4 → T5 → T7 → T8 → T9 → T10 → T11-tool.
@@ -115,6 +115,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - Chỉ một công nhân chạy thật tại một thời điểm.
 
 ## Nhật ký
+- T11 (quản đốc): tool 12px lên main (1f0362b, check_all pass 8 bước); phát hành main:releases/TienSungKyDuyen/ 2 jar + 2 jad + dự án zip (d1417c8); jar_check PASS cả hai (quản đốc chạy lại).
 - T6d (công nhân Sonnet): rút 11 tên chiêu về 2 từ Hán Việt (46-56 px, ≤80): Độc Đằng, Hồng Thủy, Diệt Đỉnh, Băng Chùy, Hỏa Tiễn, Loạn Tiễn, Thái Sơn, Địa Liệt, Bạo Phong, Cuồng Lôi, Lốc Xoáy; p1615 "Khuất" -> "Kém"; check OK, repack --check sạch.
 - T6c (công nhân Sonnet): tên đầy đủ Xích/Bích/Khôn/Càn Phong Đại, Liệt Diễm Phiến, Trúc Diệp Thanh (thoại+vật phẩm), giới hạn item5 cột 0 = 16 (extract.py, text_can_dich.tsv, map.json), bỏ `mới` ở thuật ngữ, thêm "Việt hoá: NAMP" cuối dòng 1446; dp check OK, repack --check sạch.
 - T6b (công nhân Sonnet): dịch tay 1573/1573 dòng, dp check OK, dp merge -> dich/dp_work/final/text_can_dich.tsv, repack --check OK (2158 hàng, 0 cảnh báo); thêm ~60 mục thuật ngữ `mới` (tên NPC/vật phẩm/tiên sủng); tên Phong Đại rút thành Phong Đại 1/2/3/4 vì giới hạn ≤12; chỗ mơ hồ ở dich/dp_work/ghi-chu.txt.
