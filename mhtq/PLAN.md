@@ -19,6 +19,11 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
 
 - **Thay công nhân khi ngữ cảnh vượt 400k token** (người dùng yêu cầu). Công nhân phải ghi trạng thái dở dang (đang ở bước nào, file nào, lệnh tiếp theo) vào mục "Bàn giao công nhân" bên dưới sau mỗi bước con, để công nhân mới đọc PLAN.md là làm tiếp được. Quản đốc theo dõi lượng token của công nhân và giao task tiếp cho công nhân mới khi vượt ngưỡng.
 
+- **(Sau T02) Tên khoá chân dung** `叶问天`/`小唯`/`婴咛`: được dịch, nhưng phải dịch **đồng bộ cùng một chuỗi** ở cả ba nơi: script.dat (op 2, tham số 0), hằng trong `y.a(String)` và hằng trong `v.a()` (mate.dat đổi theo). Bộ đóng gói của T03 phải tự kiểm sự đồng bộ này (sai thì báo lỗi). Thuật ngữ: Diệp Vấn Thiên, Tiểu Duy, Anh Ninh.
+- **(Sau T02) Không dịch:** string.dat, chuỗi build/SVN, mảng giữ chỗ, `m.a`/`m.b` chỉ dùng `.length`, 2+2 mảng trong mission.dat bị loader bỏ qua (giữ nguyên byte, chỉ dịch phần hiển thị).
+- **(Sau T02) Khung thoại:** chuyển từ 2 dòng thành **3 dòng mỗi trang** với f13c. Bước dòng 15–16px nằm gọn trong thanh 52px, giữ nguyên ảnh thanh thoại. Ngắt dòng theo dấu cách, đo bằng BitmapFont. Các hàm ngắt `k.b` (hiểu `#RRGGBB`/`##`, `|`, `\n`) và `j.a` giữ nguyên descriptor, chỉ thay thân hàm. Đồng thời chặn lỗi `#` ở cuối chuỗi. Chiều rộng ngắt giữ như cũ (196/190/210/140/120/132…), trừ khi ảnh chụp cho thấy cần đổi.
+- **(Sau T02) Đo/vẽ:** `f.a(C)I`, `f.a()` (chiều cao dòng) và mọi `drawString`/`drawChar` trong `f`/`u` trả theo BitmapFont f13c, để hiệu ứng gõ chữ và clip khớp với chữ vẽ ra.
+
 ## Ràng buộc và edge case
 - Kiểm kê: class version 45.3, đã preverify, CLDC-1.0/MIDP-1.0 trong manifest nhưng có gọi API MIDP2 + MMAPI.
 - Text: `script.dat` (UTF-16BE, ~10.6k ký tự CJK), `layer.dat` (UTF-16BE), `item.dat`/`mission.dat`/`skill.dat` (UTF-8), `string.dat`, có thể có trong `scene.dat`/`monster.dat`/`mate.dat`/`bf.dat`/`bm.dat`. Chuỗi CJK có trong các class `b f g h i j l m n p q s v w y z`.
@@ -31,7 +36,7 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
   - Agent: A1
   - Làm: `bash $SK/scripts/setup_tools.sh Tool_Viet_Hoa_NAM_P.zip mhtq/work`; `source mhtq/work/tools/env.sh`; giải nén `goc/MHTQ_K790.jar` vào `work/k790_raw/`; CFR decompile ra `src/k790_cfr/`; FernFlower (tải về nếu được, nếu không thì ghi vào Vướng mắc rồi đi tiếp) ra `src/k790_ff/`; `javap -c -p -constants` từng class ra `src/k790_javap/`. Lưu output của `inventory.py` vào `logs/inventory_k790.txt`.
   - Hoàn thành khi: `work/tools/check_all.sh` chạy OK (log ở `logs/check_all.txt`) và có đủ ba thư mục src.
-- [ ] T02. Báo cáo đường đi của chữ (phụ thuộc T01). **Quản đốc nghiệm thu**
+- [x] T02. Báo cáo đường đi của chữ (phụ thuộc T01). **Quản đốc nghiệm thu**
   - Agent: A1
   - Làm: đọc các class loader (`f i j k n t w x`) và các class vẽ chữ (`f`, `u`), viết `logs/text_path.md` gồm: (a) định dạng nhị phân của từng `.dat` có chữ (header, bảng offset, tiền tố độ dài, mã hoá, ID), có offset/ví dụ hex; (b) danh sách method vẽ/đo chữ (class.method + descriptor + dòng bytecode gọi `drawString`/`stringWidth`/…); (c) hàm ngắt dòng/phân trang/khung thoại: cách tính độ rộng (có ngưỡng mã ký tự hay `len*k`?), số dòng, kích thước khung; (d) các chuỗi CJK trong class: chuỗi nào hiển thị, chuỗi nào dùng làm khoá hoặc so sánh (kèm bằng chứng); (e) ảnh `.xng`: header, nén, palette (chỉ cần đủ để biết có giải mã được không).
   - Hoàn thành khi: `logs/text_path.md` trả lời đủ (a)–(e), mọi khẳng định có dẫn chiếu bytecode.
@@ -61,8 +66,10 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
 - FernFlower: tải được windup-fernflower 1.0.0.20171018 từ Maven Central (`work/tools/fernflower.jar`).
 
 ## Bàn giao công nhân (trạng thái dở dang, cập nhật liên tục)
-- A1: T01 làm xong phần decompile (src/k790_cfr, k790_ff, k790_javap đủ 27 class; logs/inventory_k790.txt; work/k790_raw đã giải nén). T01 đã tick. Tiếp theo: T02 viết logs/text_path.md; đọc javap src/k790_javap/{f,i,j,n,w,x,t,u}.txt, `source mhtq/work/tools/env.sh` từ gốc repo.
+- A1: T01, T02 xong. `logs/text_path.md` hoàn chỉnh; prototype parser ở `work/t02_proto/`. Tiếp theo: T03 (viết scripts/text_extract.py, text_pack.py theo định dạng trong text_path.md mục a).
 
 ## Nhật ký
+- Quản đốc: nghiệm thu T02 đạt (đã chạy lại rt.py: 4 file roundtrip True; soát bytecode khoá `y.a` @18–314). Chốt quyết định tên khoá, khung 3 dòng, đo/vẽ. A1 dùng 278k token → T03/T04 giao công nhân mới (A1b).
 - Quản đốc: kiểm kê xong, chốt phong cách + font, tạo PLAN.md, chép jar gốc vào `goc/`.
 - A1: T01 xong (tool setup, CFR/FernFlower/javap đủ 27 class, inventory); check_all lỗi do bộ tool đã được quản đốc chấp nhận.
+- A1: T02 xong: logs/text_path.md (a)-(e); parse+serialize khớp từng byte script/item/mission/skill.dat; .xng giải 118/118; phát hiện khoá chân dung 叶问天/小唯/婴咛 trong y.a(String); ngắt dòng theo ký tự; font hệ thống SMALL (bf/bm.dat không có).
