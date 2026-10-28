@@ -40,17 +40,21 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
   - Agent: A1
   - Làm: đọc các class loader (`f i j k n t w x`) và các class vẽ chữ (`f`, `u`), viết `logs/text_path.md` gồm: (a) định dạng nhị phân của từng `.dat` có chữ (header, bảng offset, tiền tố độ dài, mã hoá, ID), có offset/ví dụ hex; (b) danh sách method vẽ/đo chữ (class.method + descriptor + dòng bytecode gọi `drawString`/`stringWidth`/…); (c) hàm ngắt dòng/phân trang/khung thoại: cách tính độ rộng (có ngưỡng mã ký tự hay `len*k`?), số dòng, kích thước khung; (d) các chuỗi CJK trong class: chuỗi nào hiển thị, chuỗi nào dùng làm khoá hoặc so sánh (kèm bằng chứng); (e) ảnh `.xng`: header, nén, palette (chỉ cần đủ để biết có giải mã được không).
   - Hoàn thành khi: `logs/text_path.md` trả lời đủ (a)–(e), mọi khẳng định có dẫn chiếu bytecode.
-- [ ] T03. Bộ trích xuất/đóng gói text (phụ thuộc T02). **Quản đốc nghiệm thu**
+- [x] T03. Bộ trích xuất/đóng gói text (phụ thuộc T02). **Quản đốc nghiệm thu**
   - Agent: A1
   - Làm: `scripts/text_extract.py` + `scripts/text_pack.py` (Python, chạy bằng `python3 -I`), xuất `work/text_can_dich.tsv` với các cột `id file offset/khoá gốc dịch ghi_chú giới_hạn`. Giữ nguyên và đánh dấu mã điều khiển. Chuỗi trong class vá qua constant pool (dùng `$SK/scripts/classfile.py` nếu hợp).
   - Hoàn thành khi: đóng gói lại khi cột dịch trống/bằng gốc ra từng `.dat` và `.class` giống hệt từng byte (`cmp`); log ở `logs/roundtrip.txt`.
-- [ ] T04. Hook BitmapFont f13c (phụ thuộc T02). **Quản đốc nghiệm thu**
+- [x] T04. Hook BitmapFont f13c (phụ thuộc T02). **Quản đốc nghiệm thu**
   - Agent: A1
   - Làm: thêm BitmapFont + `/font/f13c.bin`, sửa bytecode `f`/`u` (và nơi khác theo T02) để vẽ/đo bằng BitmapFont; script `scripts/patch_font.py` có thể chạy lại được. Build → preverify → jar_check → run_emu, thử nghiệm bằng cách thay tạm một chuỗi menu đầu thành tiếng Việt có dấu.
   - Hoàn thành khi: `jar_check` PASS, ảnh chụp `logs/shots_m1/` cho thấy chữ Việt có dấu đúng; zip Mốc 1 ở `out/`.
-- [ ] T05. Dịch toàn bộ text (phụ thuộc T03). Đúng MỘT công nhân Sonnet, quy trình `dp` (dich-pro.md)
-  - Quản đốc chuẩn bị `thuat-ngu.tsv`, `vai.md`, `PLAN_DICH.md` trước khi giao.
-  - Hoàn thành khi: `dp check` OK, quản đốc soát `dp sample` đạt.
+- [ ] T05. Dịch toàn bộ text (phụ thuộc T03). Đúng MỘT công nhân Sonnet, quy trình `dp` ($SK/references/dich-pro.md)
+  - Agent: công nhân dịch D1 (duy nhất). Thư mục: `mhtq/work/`; dữ liệu ở `work/dp_work/` (đã `prep` từ `work/dp_in.tsv`, sinh bởi `scripts/dp_input.py`; cột giới hạn đã đổi từ px sang số ký tự theo độ rộng trung bình 4.6px/ký tự của f13c, chỉ áp cho chuỗi một dòng; chuỗi tự xuống dòng thì không giới hạn).
+  - Lệnh: `DP="python3 $SK/scripts/dp.py"`, chạy trong `mhtq/work/`.
+  - Phân tích độ khó (quản đốc): **Khó vừa**. 1250 dòng duy nhất, 24k ký tự Hán; 42% thoại, 38% có xưng hô; 33 người nói; mã điều khiển 8% (`#RRGGBB…##`, `|`). Điểm khó: nam chính là người hiện đại xuyên không (thoại pha từ hiện đại, độc thoại trong ngoặc), thoại tình cảm/đùa cợt, nhãn UI ngắn (254 dòng có giới hạn, nhỏ nhất ≤6 ký tự), chữ SMS/trả phí. Tên khoá chân dung phải đúng y hệt thuật ngữ.
+  - Đã chốt: `dp_work/thuat-ngu.tsv` (70 mục) và `dp_work/vai.md`. Bảng glyph: `dp_work/charset.txt` (f13c).
+  - Ghi chú: 9 dòng bị dp bỏ qua (`……`, `？？？`, `wp`). T06 lo chuẩn hoá dấu toàn khổ khi đóng gói.
+  - Hoàn thành khi: `dp check` OK, công nhân đã `dp sample 30`. Quản đốc nghiệm thu (`status/check/sample 15` + duyệt mục `mới`) rồi `dp merge`.
 - [ ] T06. Patch text + xuống dòng/phân trang/khung thoại (phụ thuộc T04, T05). **Quản đốc nghiệm thu**
   - Hoàn thành khi: jar_check PASS; ảnh chụp hội thoại, menu, túi đồ, kỹ năng, nhiệm vụ không tràn hay đè chữ; zip Mốc 2.
 - [ ] T07. Ảnh có chữ (`.xng`/PNG) (phụ thuộc T02)
@@ -63,12 +67,18 @@ Tạo bản tiếng Việt của bản K790 (240x320) rồi bản E62, chạy đ
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
 - T01 check_all.sh không OK hoàn toàn (log `logs/check_all.txt`), lỗi do chính bộ tool: (1) bước 1 đòi đúng 7 file font nhưng zip có thêm `f12.bin`; (2) bước 2 `pixeltext selftest` fail ở kiểm tra 15c (serif I i j l...), không liên quan f13c; (3) bước 1b fontgen không import được `pixeltext` khi chạy trong tmp (cần PYTHONPATH tuyệt đối; env.sh đã sửa thành đường dẫn tuyệt đối). Bước 3-6 OK. Chưa xác minh f13c sinh lại khớp f18. Đề nghị quản đốc quyết: chấp nhận hay đổi bộ tool.
   - **Quản đốc quyết:** chấp nhận. Các lỗi đều nằm ở f12/f15c/selftest của bộ tool, không đụng f13c. Dự án dùng nguyên file `fonts/f13c.bin` trong zip, không sinh lại font. BAO_CAO sẽ ghi lại ba lỗi này. T01 tính là xong.
+- (A1b, đã xử lý) `$SK/scripts/run_emu.py` truyền `jar 240 320 1` cho freej2me_plus nên game bị đặt 320x1: dùng `mhtq/scripts/run_emu.py` (đã sửa). Đề nghị quản đốc cập nhật skill nếu muốn.
 - FernFlower: tải được windup-fernflower 1.0.0.20171018 từ Maven Central (`work/tools/fernflower.jar`).
 
 ## Bàn giao công nhân (trạng thái dở dang, cập nhật liên tục)
-- A1: T01, T02 xong. `logs/text_path.md` hoàn chỉnh; prototype parser ở `work/t02_proto/`. Tiếp theo: T03 (viết scripts/text_extract.py, text_pack.py theo định dạng trong text_path.md mục a).
+- A1: T01, T02 xong. `logs/text_path.md` hoàn chỉnh; prototype parser ở `work/t02_proto/`.
+- A1b: T03 và T04 XONG (A1b dừng ở đây). T03: scripts/mhtqlib.py, textmodel.py, text_extract.py, text_pack.py; `work/text_can_dich.tsv` (1425 dòng, cột `id file offset/khoá gốc dịch ghi_chú giới_hạn`); `logs/roundtrip.txt` PASS. Lệnh: `python3 -I scripts/text_extract.py [--merge TSV_cu]`; `python3 -I scripts/text_pack.py --tsv work/text_can_dich.tsv --out DIR` (kiểm mã màu, `#` lạ, glyph f13c, đồng bộ khoá, cảnh báo độ rộng); `python3 -I scripts/text_pack.py --selftest --log logs/roundtrip.txt`.
+  T04: `scripts/patch_font.py` (thay thân f.a(String)I/a(C)I/a()I/b()I; u.a(CIII)V và u.a(String,III)V đổi 2 lệnh gọi drawChar/drawString thành invokestatic ViFont.dc/ds; `src/patch/ViFont.java`; preverify chỉ f, u, ViFont; thêm BitmapFont.class + font/f13c.bin); `scripts/build_m1.sh` dựng lại Mốc 1 + ảnh `logs/shots_m1/` + `out/MHTQ_K790_moc1.zip`. `scripts/run_emu.py` là bản SỬA của skill (FJ nhận `jar 0 W H scale`; bản skill đặt màn 320x1; chạy trong work/emu_cwd, xoá sạch mỗi lần).
+  Tiếp theo (không phải việc của A1b): T05 dịch (đầu vào `work/text_can_dich.tsv`; thuật ngữ khoá: Diệp Vấn Thiên/Tiểu Duy/Anh Ninh; dòng KHOÁ phải cùng một chuỗi); T06 viết lại `k.b`/`j.a` (ngắt dòng theo dấu cách bằng ViFont, 3 dòng/trang, chặn `#` cuối chuỗi) rồi gộp text_pack -> patch_font (`--overlay` thư mục text_pack); T07 ảnh `.xng`.
 
 ## Nhật ký
+- A1b: T04 xong: hook f13c bằng bytecode tĩnh; jar_check PASS (Thêm BitmapFont/ViFont/font/f13c.bin; Đổi f,u + file thử); ảnh chụp logs/shots_m1/ (hộp nhạc, thoại có tên `Kiếm Tiên`, trang Trợ giúp đủ dấu); zip out/MHTQ_K790_moc1.zip. Ghi chú heap trong BAO_CAO (63KB/màu, CACHE=4 => ~252KB, đỉnh ~126KB thêm). Phát hiện thêm: ngắt ký tự làm thoại bị cắt giữa từ (cần T06); skill run_emu.py sai thứ tự tham số FJ (đã sửa bản trong scripts/).
+- A1b: T03 xong: 1425 slot (script 998 gồm 33 tên người nói, item 98, mission 63, skill 51, mate 1, class 213); roundtrip 19/19 file giống byte; kiểm đồng bộ khoá 叶问天/小唯/婴咛 (script/y/v/h/mate.dat; phát hiện thêm h.class cũng chứa 叶问天 làm tên người nói -> là khoá).
 - Quản đốc: nghiệm thu T02 đạt (đã chạy lại rt.py: 4 file roundtrip True; soát bytecode khoá `y.a` @18–314). Chốt quyết định tên khoá, khung 3 dòng, đo/vẽ. A1 dùng 278k token → T03/T04 giao công nhân mới (A1b).
 - Quản đốc: kiểm kê xong, chốt phong cách + font, tạo PLAN.md, chép jar gốc vào `goc/`.
 - A1: T01 xong (tool setup, CFR/FernFlower/javap đủ 27 class, inventory); check_all lỗi do bộ tool đã được quản đốc chấp nhận.

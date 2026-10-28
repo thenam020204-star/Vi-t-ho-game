@@ -1,0 +1,12 @@
+# Roundtrip text_extract/text_pack (nguồn: work/k790_raw)
+slot: 1425; file có chữ: script.dat, item.dat, mission.dat, skill.dat, mate.dat, b.class, h.class, i.class, j.class, l.class, m.class, n.class, p.class, q.class, s.class, v.class, w.class, y.class, z.class
+[1] cột dịch trống: lỗi=0 cảnh báo=0 số dòng thay=0
+[1]: 19/19 file giống từng byte (cmp)
+[2] cột dịch = gốc: lỗi=0 cảnh báo=0 số dòng thay=0
+[2]: 19/19 file giống từng byte (cmp)
+[3] dịch tổng hợp (tiền tố "Việt "): lỗi=0 số dòng thay=1425
+[3] đọc lại từ file đã đóng gói: 1425/1425 chuỗi khớp
+[3] class mới parse lại + cấu trúc nguyên vẹn: 19/19
+[4] dịch lệch khoá (chỉ 1/4 nơi của 叶问天): BÁO LỖI đúng
+[5] dịch đồng bộ 3 khoá (script/y/v/h/mate): lỗi=0, thay 10 dòng
+KẾT QUẢ: PASS
