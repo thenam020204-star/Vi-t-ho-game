@@ -62,10 +62,11 @@ class Img:
         return m
 
     # ---- vẽ
-    def text(self, box, txt, color, mode='metric', align='center', valign='center', dx=0, dy=0):
+    def text(self, box, txt, color, mode='metric', align='center', valign='center', dx=0, dy=0, outline=-1):
+        if outline == -1: outline = OUTLINE
         CHECK.append(txt)
         r = R.draw(self.im, box, txt, size=SIZE, mode=mode, gap=1, align=align, valign=valign,
-                   dx=dx, dy=dy, fill=color + (255,) if len(color) == 3 else color, outline=OUTLINE, outline_diag=True, clip=True)
+                   dx=dx, dy=dy, fill=color + (255,) if len(color) == 3 else color, outline=outline, outline_diag=True, clip=True)
         if r['overflow_x'] or r['overflow_y']:
             print('  TRÀN', self.name, txt, box, r)
         return r
@@ -121,13 +122,13 @@ class Img:
         outp.save(out, transparency=trn if any(a != 255 for a in trn) else None, optimize=False)
         return out
 
-def rows(name, texts, rowh, w, colors, mode='metric', **kw):
+def rows(name, texts, rowh, w, colors, mode='metric', outline=-1, **kw):
     im = Img(name)
     for i, t in enumerate(texts):
         box = (0, i * rowh, w, rowh)
         im.clear(box)
         col = colors[i] if isinstance(colors, list) else colors
-        im.text(box, t, col, mode=mode)
+        im.text(box, t, col, mode=mode, outline=outline)
     return im
 
 DONE = []
@@ -138,16 +139,16 @@ def done(im):
 def main():
     # --- ảnh lưới chữ (nền trong suốt)
     done(rows('ui_shuxing1',
-        ['ATK', 'SPD', 'Bạo', 'DEF', 'Né', 'Pháp', 'Vị', 'Lv', 'Lực', 'Trí', 'Thể', 'Mẫn', 'Vận'], 13, 26,
+        ['ATK', 'SPD', 'Bạo', 'DEF', 'Né', 'Bảo', 'Vị', 'Lv', 'Lực', 'Trí', 'Thể', 'Mẫn', 'Vận'], 13, 26,
         [(244,0,5),(255,114,0),(255,222,0),(48,185,0),(0,117,255),(89,239,238),(255,128,233),(255,240,51),
          (255,189,34),(255,189,34),(255,189,34),(255,189,34),(255,189,34)]))
     done(rows('ui_system',
-        ['Nhiệm vụ', 'Túi tiên sủng', 'Cài chiến đấu', 'Vật phẩm', 'Trang bị', 'Sủng toàn thư', 'Hệ thống'], 17, 78, (0,0,0)))
+        ['Nhiệm vụ', 'Túi tiên sủng', 'Cài chiến đấu', 'Vật phẩm', 'Trang bị', 'Đồ giám', 'Hệ thống'], 17, 78, (0,0,0), outline='#eeb572'))
     done(rows('ui_system2',
-        ['Lưu tiến độ', 'Tải tiến độ', 'Cài đặt nhạc', 'Hướng dẫn', 'Thoát game'], 17, 78, (0,0,0)))
+        ['Lưu tiến độ', 'Tải tiến độ', 'Cài đặt nhạc', 'Hướng dẫn', 'Thoát game'], 17, 78, (0,0,0), outline='#eeb572'))
     SHOP = (60, 80, 40)
     done(rows('shop_sms',
-        ['Gấp đôi EXP', 'Gấp đôi tiền', 'Lên liền 3 cấp', 'Mua tiền', 'Mua T.Long', 'Cửa hàng'], 17, 78, SHOP))
+        ['Gấp đôi EXP', 'Gấp đôi tiền', 'Lên 3 cấp', 'Mua tiền', 'Mua T.Long', 'Cửa hàng'], 17, 78, SHOP, outline='#ddd2a8'))
     done(rows('ui_lifeword', ['HP', 'MP', 'EXP'], 15, 32, (255,255,255)))
     done(rows('ui_money', ['Tiền'], 18, 36, (255,198,0)))
     im = Img('ui_pro')
@@ -161,8 +162,8 @@ def main():
         b = (xs[i], 0, xs[i+1]-xs[i], 28); im.clear(b); im.text(b, t, c)
     done(im)
     im = Img('number1')
-    for i, t in enumerate(list('0123456789') + ['Chủ', 'Phụ']):
-        b = (18*i, 0, 18, 17); im.clear(b); im.text(b, t, (0,0,0), mode='fixed' if len(t) > 1 else 'metric')
+    for i, t in enumerate(list('0123456789') + ['Ch', 'Ph']):
+        b = (18*i, 0, 18, 17); im.clear(b); im.text(b, t, (0,0,0), mode='fixed' if len(t) > 1 else 'metric', outline=None)
     done(im)
     # --- nhãn lớn / hiệu ứng
     im = Img('baoji'); im.clear((0,0,82,36)); im.text((0,0,82,36), 'Bạo kích!', (255,149,0)); done(im)
@@ -173,7 +174,7 @@ def main():
     im = Img('tx_qu')
     im.inpaint(im.mask_where((18, 15, 34, 34), lambda p, x, y: p[3] > 0 and p[0] > 60 and p[1] < 80 and p[0] > p[1] + 40, 1))
     im.text((14, 20, 42, 24), 'Kém', (223,0,0)); done(im)
-    im = Img('ok'); im.clear((0,0,26,20)); im.text((0,0,26,20), 'Xong', (204,0,0)); done(im)
+    im = Img('ok'); im.clear((0,0,26,20)); im.text((0,0,26,20), 'Xong', (204,0,0), mode='tight'); done(im)
     # --- rand: giáp ất bính đinh trong vòng tròn
     im = Img('rand')
     for i, t in enumerate(['G', 'Ấ', 'B', 'Đ']):
@@ -183,11 +184,11 @@ def main():
                 r = ((x - 26*i - 12.0) ** 2 + (y - 12.0) ** 2) ** 0.5
                 if im.px[x, y][3] == 0 and r > 10.3: continue
                 im.px[x, y] = (0,0,0,255) if (r > 10.3 or 6.0 < r <= 7.0) else (237,20,0,255)
-        im.text(b, t, (0,0,0))
+        im.text(b, t, (0,0,0), outline=None)
     done(im)
     # --- biển địa danh dọc (ad: 6 ô rộng 21), chữ xoay
     im = Img('ad')
-    names = ['Mộc Lỗi thôn', 'Sa Lĩnh trấn', 'Hỏa Thạch', 'Lãnh Phong', 'Thiên Sơn', 'Liên Trì']
+    names = ['Mộc Lỗi', 'Sa Lĩnh', 'Hỏa Thạch', 'Lãnh Phong', 'Thiên Sơn', 'Liên Trì']
     for i, t in enumerate(names):
         b = (21*i, 0, 21, 70); im.clear(b); im.text_rot((21*i+1, 0, 19, 70), t, (198,57,49))
     done(im)
@@ -206,7 +207,7 @@ def main():
     # --- npc21: bia mộ, chữ khắc dọc
     im = Img('npc21')
     im.inpaint(im.mask_where((16, 6, 13, 36), lambda p, x, y: p[3] > 0 and sum(p[:3]) < 330))
-    im.text((16, 8, 13, 14), 'Mộ', (70, 70, 50)); done(im)
+    im.text((15, 8, 15, 14), 'Mộ', (70, 70, 50)); done(im)
     # --- obj_jin0: biển hiệu
     im = Img('obj_jin0')
     GL = {(145,79,32,255), (142,53,11,255)}
