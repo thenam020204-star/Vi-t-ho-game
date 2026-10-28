@@ -1832,85 +1832,85 @@ t0167	t/item4.t	48.0	谛听		item4 hang 48 cot 0 ten tien sung (noi vao thong ba
 t0168	t/item4.t	48.2	一种长有独角、犬耳、龙身、狮尾、麒麟足的仙兽，传说其晓佛理、通人性、避邪恶，因此被人们视为吉祥的象征。		item4 hang 48 cot 2 mo ta tien sung (cuon, dai nhat)	
 t0169	t/item4.t	49.0	麒麟		item4 hang 49 cot 0 ten tien sung (noi vao thong bao)	14
 t0170	t/item4.t	49.2	麒麟的样子集龙头、鹿角、狮眼、虎背、熊腰、蛇鳞、马蹄、牛尾于一身，吐息如吞云、出声若惊雷，因为体型巨大却又性情温和、稳健，所以被人们视为瑞兽，是吉祥的象征。		item4 hang 49 cot 2 mo ta tien sung (cuon, dai nhat)	
-t0171	t/item5.t	0.0	葡萄		item5 hang 0 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0171	t/item5.t	0.0	葡萄		item5 hang 0 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0172	t/item5.t	0.1	产自西域的葡萄，食之甘冽可口、唇齿留香，且能恢复二成生命。		item5 hang 0 cot 1 mo ta vat pham	
-t0173	t/item5.t	1.0	包子		item5 hang 1 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0173	t/item5.t	1.0	包子		item5 hang 1 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0174	t/item5.t	1.1	京城名店所制的肉馅包子，可充饥抵饿，亦可恢复四成生命。		item5 hang 1 cot 1 mo ta vat pham	
-t0175	t/item5.t	2.0	鸡腿		item5 hang 2 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0175	t/item5.t	2.0	鸡腿		item5 hang 2 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0176	t/item5.t	2.1	选用特产三黄鸡经过腌、蒸、炸多道工序制成，外焦内嫩、香气扑鼻，兼有恢复六成生命之功能。		item5 hang 2 cot 1 mo ta vat pham	
-t0177	t/item5.t	3.0	金疮药		item5 hang 3 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0177	t/item5.t	3.0	金疮药		item5 hang 3 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0178	t/item5.t	3.1	按照古方制作的治疗跌打损伤的绝世好药，可恢复八成生命。		item5 hang 3 cot 1 mo ta vat pham	
-t0179	t/item5.t	4.0	米酒		item5 hang 4 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0179	t/item5.t	4.0	米酒		item5 hang 4 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0180	t/item5.t	4.1	自酿的清香米酒，饮之可活血益气，法力亦可恢复二成。		item5 hang 4 cot 1 mo ta vat pham	
-t0181	t/item5.t	5.0	桂酒		item5 hang 5 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0181	t/item5.t	5.0	桂酒		item5 hang 5 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0182	t/item5.t	5.1	加入桂花的醇香美酒，饮之可恢复法力四成。		item5 hang 5 cot 1 mo ta vat pham	
-t0183	t/item5.t	6.0	烧刀子		item5 hang 6 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0183	t/item5.t	6.0	烧刀子		item5 hang 6 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0184	t/item5.t	6.1	味道浓烈、遇火即燃的烧酒，饮之可恢复法力六成。		item5 hang 6 cot 1 mo ta vat pham	
-t0185	t/item5.t	7.0	竹叶青		item5 hang 7 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0185	t/item5.t	7.0	竹叶青		item5 hang 7 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0186	t/item5.t	7.1	不可多得的名酒，有诗赞云“金盆盛酒竹叶香，十杯五杯不解意”，饮之可恢复八成法力。		item5 hang 7 cot 1 mo ta vat pham	
-t0187	t/item5.t	8.0	绿芝		item5 hang 8 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0187	t/item5.t	8.0	绿芝		item5 hang 8 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0188	t/item5.t	8.1	常见的灵芝，可挽救我方单个濒死的仙宠，并使其生命恢复至二成。		item5 hang 8 cot 1 mo ta vat pham	
-t0189	t/item5.t	9.0	青芝		item5 hang 9 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0189	t/item5.t	9.0	青芝		item5 hang 9 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0190	t/item5.t	9.1	较珍贵的灵芝，可挽救我方单个濒死的仙宠，并使其生命恢复至四成。		item5 hang 9 cot 1 mo ta vat pham	
-t0191	t/item5.t	10.0	紫芝		item5 hang 10 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0191	t/item5.t	10.0	紫芝		item5 hang 10 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0192	t/item5.t	10.1	最为珍贵的灵芝，可挽救我方单个濒死的仙宠，并使其生命恢复至八成。		item5 hang 10 cot 1 mo ta vat pham	
-t0193	t/item5.t	11.0	灵光符		item5 hang 11 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0193	t/item5.t	11.0	灵光符		item5 hang 11 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0194	t/item5.t	11.1	可解除我方单个仙宠的麻痹状态。		item5 hang 11 cot 1 mo ta vat pham	
-t0195	t/item5.t	12.0	明觉符		item5 hang 12 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0195	t/item5.t	12.0	明觉符		item5 hang 12 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0196	t/item5.t	12.1	可解除我方单个仙宠的禁锢状态。		item5 hang 12 cot 1 mo ta vat pham	
-t0197	t/item5.t	13.0	炎烧符		item5 hang 13 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0197	t/item5.t	13.0	炎烧符		item5 hang 13 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0198	t/item5.t	13.1	可解除我方单个仙宠的冰冻状态。		item5 hang 13 cot 1 mo ta vat pham	
-t0199	t/item5.t	14.0	冷却符		item5 hang 14 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0199	t/item5.t	14.0	冷却符		item5 hang 14 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0200	t/item5.t	14.1	可解除我方单个仙宠的燃烧状态。		item5 hang 14 cot 1 mo ta vat pham	
-t0201	t/item5.t	15.0	消融符		item5 hang 15 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0201	t/item5.t	15.0	消融符		item5 hang 15 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0202	t/item5.t	15.1	可解除我方单个仙宠的石化状态。		item5 hang 15 cot 1 mo ta vat pham	
-t0203	t/item5.t	16.0	观音符		item5 hang 16 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0203	t/item5.t	16.0	观音符		item5 hang 16 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0204	t/item5.t	16.1	可解除我方单个仙宠的所有异常状态。		item5 hang 16 cot 1 mo ta vat pham	
-t0205	t/item5.t	17.0	赤风袋		item5 hang 17 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0205	t/item5.t	17.0	赤风袋		item5 hang 17 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0206	t/item5.t	17.1	红色的风袋，捕捉仙宠的成功率较低。		item5 hang 17 cot 1 mo ta vat pham	
-t0207	t/item5.t	18.0	碧风袋		item5 hang 18 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0207	t/item5.t	18.0	碧风袋		item5 hang 18 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0208	t/item5.t	18.1	绿色的风袋，捕捉仙宠的成功率一般。		item5 hang 18 cot 1 mo ta vat pham	
-t0209	t/item5.t	19.0	坤风袋		item5 hang 19 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0209	t/item5.t	19.0	坤风袋		item5 hang 19 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0210	t/item5.t	19.1	上面书写有“坤”字号符咒的风袋，捕捉仙宠的成功率较高。		item5 hang 19 cot 1 mo ta vat pham	
-t0211	t/item5.t	20.0	乾风袋		item5 hang 20 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0211	t/item5.t	20.0	乾风袋		item5 hang 20 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0212	t/item5.t	20.1	上面书写有“乾”字号符咒的风袋，捕捉仙宠的成功率最高。		item5 hang 20 cot 1 mo ta vat pham	
-t0213	t/item5.t	21.0	卸载法宝		item5 hang 21 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0213	t/item5.t	21.0	卸载法宝		item5 hang 21 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0214	t/item5.t	21.1	卸载身上的法宝		item5 hang 21 cot 1 mo ta vat pham	
-t0215	t/item5.t	22.0	五味丸		item5 hang 22 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0215	t/item5.t	22.0	五味丸		item5 hang 22 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0216	t/item5.t	22.1	多味中药制成的药丸，安神续命，仙宠装备此物后，其最大生命可获得较小幅度的提升。		item5 hang 22 cot 1 mo ta vat pham	
-t0217	t/item5.t	23.0	大还丹		item5 hang 23 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0217	t/item5.t	23.0	大还丹		item5 hang 23 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0218	t/item5.t	23.1	秘制药丸，有“活死人，肉白骨”的奇效，仙宠装备此物后，其最大生命可获得较大幅度的提升。		item5 hang 23 cot 1 mo ta vat pham	
-t0219	t/item5.t	24.0	益气丸		item5 hang 24 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0219	t/item5.t	24.0	益气丸		item5 hang 24 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0220	t/item5.t	24.1	益气提神的好药丸，仙宠装备此物后，其最大法力可获得较小幅度的提升。		item5 hang 24 cot 1 mo ta vat pham	
-t0221	t/item5.t	25.0	八珍丸		item5 hang 25 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0221	t/item5.t	25.0	八珍丸		item5 hang 25 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0222	t/item5.t	25.1	八种珍贵药材精制而成，仙宠装备此物后，其最大法力可获得较大幅度的提升。		item5 hang 25 cot 1 mo ta vat pham	
-t0223	t/item5.t	26.0	甘霖		item5 hang 26 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0223	t/item5.t	26.0	甘霖		item5 hang 26 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0224	t/item5.t	26.1	传说中观音的羊脂玉净瓶中所承之物，亦能使人明目开窍、无师自通，仙宠装备此物后，即使不参与战斗也可获得较少的经验。		item5 hang 26 cot 1 mo ta vat pham	
-t0225	t/item5.t	27.0	仙露		item5 hang 27 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0225	t/item5.t	27.0	仙露		item5 hang 27 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0226	t/item5.t	27.1	传说中华表上仙人承露台就是为收集此物而造，气味飘渺，却能使人醒脑提神、茅塞顿开，仙宠装备此物后，即使不参与战斗也可获得较多的经验。		item5 hang 27 cot 1 mo ta vat pham	
-t0227	t/item5.t	28.0	烈焰扇		item5 hang 28 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0227	t/item5.t	28.0	烈焰扇		item5 hang 28 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0228	t/item5.t	28.1	一把燃着熊熊烈火的宝扇，除了其所有者外无人敢近，唯恐被其灼伤，仙宠装备此物后，其攻击可获得较小幅度的提升。		item5 hang 28 cot 1 mo ta vat pham	
-t0229	t/item5.t	29.0	幽冥扇		item5 hang 29 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0229	t/item5.t	29.0	幽冥扇		item5 hang 29 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0230	t/item5.t	29.1	扇子终年被肃杀的幽冥鬼火围绕，虽无迫人的灼热气浪，却能伤人于无形之中，仙宠装备此物后，其攻击可获得较大幅度的提升。		item5 hang 29 cot 1 mo ta vat pham	
-t0231	t/item5.t	30.0	霹雳刀		item5 hang 30 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0231	t/item5.t	30.0	霹雳刀		item5 hang 30 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0232	t/item5.t	30.1	攻击时刀刃如闪电、气势若霹雳的神兵利器，仙宠装备此物后，其暴击可获得较小幅度的提升。		item5 hang 30 cot 1 mo ta vat pham	
-t0233	t/item5.t	31.0	崩霜刃		item5 hang 31 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0233	t/item5.t	31.0	崩霜刃		item5 hang 31 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0234	t/item5.t	31.1	传说一位铸造名师得到一块天陨寒铁，便殚心竭虑，花了七七四十九天方才打造出这一把削铁如泥、寒光逼人的利刃，仙宠装备此物后，其暴击可获得较大幅度的提升。		item5 hang 31 cot 1 mo ta vat pham	
-t0235	t/item5.t	32.0	鲲鳞		item5 hang 32 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0235	t/item5.t	32.0	鲲鳞		item5 hang 32 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0236	t/item5.t	32.1	传说中冥海大鱼“鲲”身上的鳞片，坚韧无比，仙宠装备此物后，其防御可获得较小幅度的提升。		item5 hang 32 cot 1 mo ta vat pham	
-t0237	t/item5.t	33.0	龙甲		item5 hang 33 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0237	t/item5.t	33.0	龙甲		item5 hang 33 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0238	t/item5.t	33.1	传说鲤鱼需要跳过龙门才能成为真正的龙，而此物就是鲤鱼在跳龙门时因奋力跳跃挪腾而脱落的鳞甲，因为被鲤鱼的执着的血液浸染过，所以也拥有了非凡的法力，仙宠装备此物后，其防御可获得较大幅度的提升。		item5 hang 33 cot 1 mo ta vat pham	
-t0239	t/item5.t	34.0	山羊角		item5 hang 34 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0239	t/item5.t	34.0	山羊角		item5 hang 34 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0240	t/item5.t	34.1	敏捷的山羊的角，拥有山羊的灵性，仙宠装备此物后，其闪避可获得较小幅度的提升。		item5 hang 34 cot 1 mo ta vat pham	
-t0241	t/item5.t	35.0	羚羊角		item5 hang 35 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0241	t/item5.t	35.0	羚羊角		item5 hang 35 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0242	t/item5.t	35.1	更加敏捷的羚羊的角，拥有羚羊的灵气，仙宠装备此物后，其闪避可获得较大幅度的提升。		item5 hang 35 cot 1 mo ta vat pham	
-t0243	t/item5.t	36.0	活络散		item5 hang 36 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0243	t/item5.t	36.0	活络散		item5 hang 36 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0244	t/item5.t	36.1	古方秘制而成的药剂，能活血通脉，仙宠装备此物后，其攻速可获得较小幅度的提升。		item5 hang 36 cot 1 mo ta vat pham	
-t0245	t/item5.t	37.0	逍遥散		item5 hang 37 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0245	t/item5.t	37.0	逍遥散		item5 hang 37 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0246	t/item5.t	37.1	传说是秦始皇当年派人去蓬莱求回的仙药，有开郁行滞等功效，可令人神清气爽、身轻如燕、快乐似神仙，仙宠装备此物后，其攻速可获得较大幅度的提升。		item5 hang 37 cot 1 mo ta vat pham	
-t0247	t/item5.t	38.0	金缕鞋		item5 hang 38 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0247	t/item5.t	38.0	金缕鞋		item5 hang 38 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0248	t/item5.t	38.1	用金丝线制成轻便鞋履，仙宠装备此物后，其逃跑成功率可获得较大幅度的提升。		item5 hang 38 cot 1 mo ta vat pham	
-t0249	t/item5.t	39.0	步云靴		item5 hang 39 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0249	t/item5.t	39.0	步云靴		item5 hang 39 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0250	t/item5.t	39.1	淮南王刘安修炼成仙后留下的靴子，传说能使人平步青云、纵横九天，仙宠装备此物后，其逃跑成功率可获得较大幅度的提升。		item5 hang 39 cot 1 mo ta vat pham	
 t0251	t/item6.t	0.0	爷爷的试炼		item6 hang 0 cot 0 ten nhiem vu chinh	
 t0252	t/item6.t	0.1	爷爷让小虎去后山将某件藏在宝箱里的宝贝带回来！		item6 hang 0 cot 1 mo ta nhiem vu chinh	

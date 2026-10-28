@@ -271,7 +271,7 @@ p0269	pak/k4.p	say4.s/6.1	j6#子把小狗从包裹里取了出来。	Nhóc j6# l
 p0270	pak/k4.p	say4.s/8.2	j5#：太谢谢你啦，我的j6#总算回来家了，呵呵。	j5#: Cảm ơn cháu nhiều, j6# của bà cuối cùng cũng về nhà rồi, hì hì.	cmd16 thoai; mat=-1; TOKEN j5#,j6# (giu nguyen)	
 p0271	pak/k4.p	say4.s/9.2	j6#：j5#，可不可以不要让我和小狗狗叫一个名字啊……	j6#: j5#, bà đừng để cháu với cún cưng trùng tên được không...	cmd16 thoai; mat=j2#2; TOKEN j5#,j6# (giu nguyen)	
 p0272	pak/k4.p	say4.s/10.2	j5#：“j6#”这个名字流行嘛，大家都喜欢用，呵呵。好啦，我把这两个风袋给你吧！	j5#: "j6#" là tên thịnh hành mà, ai cũng thích đặt, hì hì. Thôi nào, bà tặng cháu hai cái Phong Đại này!	cmd16 thoai; mat=-1; TOKEN j5#,j6# (giu nguyen)	
-p0273	pak/k4.p	say4.s/12.1	获得两个碧风袋！	Nhận được hai Phong Đại 2!	cmd39 thong bao giua man	
+p0273	pak/k4.p	say4.s/12.1	获得两个碧风袋！	Nhận được hai Bích Phong Đại!	cmd39 thong bao giua man	
 p0274	pak/k4.p	say4.s/13.2	j6#：好吧，谢谢j5#啦……	j6#: Thôi được, cảm ơn j5#...	cmd16 thoai; mat=j2#0; TOKEN j5#,j6# (giu nguyen)	
 p0275	pak/k4.p	say4.s/19.2	j5#：小狗可能在后山。	j5#: Chó con có thể ở núi sau.	cmd16 thoai; mat=-1; TOKEN j5# (giu nguyen)	
 p0276	pak/k4.p	say4.s/22.2	j5#：j6#子，你帮奶奶一个忙好嘛？	j5#: Nhóc j6#, cháu giúp bà một việc được không?	cmd16 thoai; mat=-1; TOKEN j5#,j6# (giu nguyen)	
@@ -336,7 +336,7 @@ p0334	pak/k8.p	t1/29.2	j6#：暂时没事哈。	j6#: Tạm thời không có gì
 p0335	pak/k9.p	0/34.2	j6#：呼，还好我带的仙宠比较厉害。唉？那个大姐也不见了？看来我再也拿不到宝贝了……真是贪小便宜吃大亏啊，差点把我的小命都搭上了。	j6#: Phù, may mà tiên sủng mang theo khá mạnh. Hả? Chị gái kia cũng biến mất rồi? Xem ra mình không lấy được bảo bối nữa... đúng là tham bỏ bé thiệt thân, suýt mất cả mạng.	cmd16 thoai; mat=j2#3; TOKEN j6# (giu nguyen)	
 p0336	pak/k9.p	0/41.2	j6#：这是到哪里啊？我一踩到漩涡就到这里来了，原来漩涡里别有洞天啊。	j6#: Đây là đâu vậy? Vừa giẫm vào xoáy nước là tới đây, hóa ra trong xoáy nước còn có động thiên khác.	cmd16 thoai; mat=j2#3; TOKEN j6# (giu nguyen)	
 p0337	pak/k9.p	bx0.s/1.1	宝箱是空的……	Rương trống không...	cmd39 thong bao giua man	
-p0338	pak/k9.p	bx0.s/6.1	获得赤风袋×2！	Nhận được Phong Đại 1 x2!	cmd39 thong bao giua man	
+p0338	pak/k9.p	bx0.s/6.1	获得赤风袋×2！	Nhận được Xích Phong Đại x2!	cmd39 thong bao giua man	
 p0339	pak/k9.p	bx1.s/1.1	宝箱是空的……	Rương trống không...	cmd39 thong bao giua man	
 p0340	pak/k9.p	bx1.s/6.1	获得甘霖×1！	Nhận được Cam Lâm x1!	cmd39 thong bao giua man	
 p0341	pak/k9.p	bx2.s/1.1	宝箱是空的……	Rương trống không...	cmd39 thong bao giua man	
@@ -472,12 +472,12 @@ p0470	pak/l5.p	jq11-0.s/13.2	神兽：……这有什么奇怪的呢，我那兄
 p0471	pak/l5.p	jq11-0.s/15.2	j6#：可是你怎么知道我到这了呢？	j6#: Nhưng sao ngươi biết ta đến đây?	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
 p0472	pak/l5.p	jq11-0.s/17.2	神兽：少见多怪……我们神兽是很有灵通的，我也是看你比较面善才和你打招呼的，一般人我还不一定理呢。	Thần thú: Ít thấy nhiều lạ... Thần thú chúng ta rất có linh thông, ta thấy ngươi thuận mắt mới chào hỏi, người thường ta chưa chắc đã thèm để ý.	cmd16 thoai; mat=-1	
 p0473	pak/l5.p	jq11-0.s/19.2	j6#：那我还得多谢你看得起我啦？	j6#: Vậy ta phải cảm ơn ngươi đã coi trọng ta à?	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
-p0474	pak/l5.p	jq11-0.s/21.2	神兽：不客气，我可是走南闯北去过很多地方了，我可以教你怎么抓宠哦，而且好人做到底，我还会先送你一个抓宠必备的极品乾风袋哦！怎么样，想学不？	Thần thú: Không có chi, ta đi nam về bắc qua nhiều nơi, ta có thể dạy ngươi cách bắt sủng, lại làm người tốt đến cùng, ta còn tặng ngươi một Phong Đại 4 cực phẩm không thể thiếu khi bắt sủng! Thế nào, có muốn học không?	cmd16 thoai; mat=-1	
+p0474	pak/l5.p	jq11-0.s/21.2	神兽：不客气，我可是走南闯北去过很多地方了，我可以教你怎么抓宠哦，而且好人做到底，我还会先送你一个抓宠必备的极品乾风袋哦！怎么样，想学不？	Thần thú: Không có chi, ta đi nam về bắc qua nhiều nơi, ta có thể dạy ngươi cách bắt sủng, lại làm người tốt đến cùng, ta còn tặng ngươi một Càn Phong Đại cực phẩm không thể thiếu khi bắt sủng! Thế nào, có muốn học không?	cmd16 thoai; mat=-1	
 p0475	pak/l5.p	jq11-0.s/22.1	我想学抓宠！	Muốn học bắt sủng!	cmd26 lua chon (chi so, khong so chuoi)	24
 p0476	pak/l5.p	jq11-0.s/22.2	不想学……	Không muốn học...	cmd26 lua chon (chi so, khong so chuoi)	24
 p0477	pak/l5.p	jq11-0.s/24.2	j6#：我想学抓宠！快教我吧！	j6#: Ta muốn học bắt sủng! Mau dạy ta đi!	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
-p0478	pak/l5.p	jq11-0.s/25.2	神兽：好，那就和我战斗吧！开战前我送你一个乾风袋。	Thần thú: Được, vậy đấu với ta đi! Trước khi đấu ta tặng ngươi một Phong Đại 4.	cmd16 thoai; mat=-1	
-p0479	pak/l5.p	jq11-0.s/27.1	获得乾风袋×1！	Nhận được Phong Đại 4 x1!	cmd39 thong bao giua man	
+p0478	pak/l5.p	jq11-0.s/25.2	神兽：好，那就和我战斗吧！开战前我送你一个乾风袋。	Thần thú: Được, vậy đấu với ta đi! Trước khi đấu ta tặng ngươi một Càn Phong Đại.	cmd16 thoai; mat=-1	
+p0479	pak/l5.p	jq11-0.s/27.1	获得乾风袋×1！	Nhận được Càn Phong Đại x1!	cmd39 thong bao giua man	
 p0480	pak/l5.p	jq11-0.s/28.2	j6#：唉？我就想问问怎么抓宠，不用打架吧？	j6#: Hả? Ta chỉ muốn hỏi cách bắt sủng, đâu cần đánh nhau?	cmd16 thoai; mat=j2#3; TOKEN j6# (giu nguyen)	
 p0481	pak/l5.p	jq11-0.s/29.2	神兽：实践出真知啊，来嘛，英雄！	Thần thú: Thực hành mới ra chân tri, đến đây, anh hùng!	cmd16 thoai; mat=-1	
 p0482	pak/l5.p	jq11-0.s/33.2	j6#：不想学……	j6#: Không muốn học...	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
@@ -488,22 +488,22 @@ p0486	pak/l5.p	jq11-1.s/13.2	神兽：……这有什么奇怪的呢，我那兄
 p0487	pak/l5.p	jq11-1.s/15.2	j6#：可是你怎么知道我到这了呢？	j6#: Nhưng sao ngươi biết ta đến đây?	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
 p0488	pak/l5.p	jq11-1.s/17.2	神兽：少见多怪……我们神兽是很有灵通的，我也是看你比较面善才和你打招呼的，一般人我还不一定理呢。	Thần thú: Ít thấy nhiều lạ... Thần thú chúng ta rất có linh thông, ta thấy ngươi thuận mắt mới chào hỏi, người thường ta chưa chắc đã thèm để ý.	cmd16 thoai; mat=-1	
 p0489	pak/l5.p	jq11-1.s/19.2	j6#：那我还得多谢你看得起我啦？	j6#: Vậy ta phải cảm ơn ngươi đã coi trọng ta à?	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
-p0490	pak/l5.p	jq11-1.s/21.2	神兽：不客气，我可是走南闯北去过很多地方了，我可以教你怎么抓宠哦，而且好人做到底，我还会先送你一个抓宠必备的极品乾风袋哦！怎么样，想学不？	Thần thú: Không có chi, ta đi nam về bắc qua nhiều nơi, ta có thể dạy ngươi cách bắt sủng, lại làm người tốt đến cùng, ta còn tặng ngươi một Phong Đại 4 cực phẩm không thể thiếu khi bắt sủng! Thế nào, có muốn học không?	cmd16 thoai; mat=-1	
+p0490	pak/l5.p	jq11-1.s/21.2	神兽：不客气，我可是走南闯北去过很多地方了，我可以教你怎么抓宠哦，而且好人做到底，我还会先送你一个抓宠必备的极品乾风袋哦！怎么样，想学不？	Thần thú: Không có chi, ta đi nam về bắc qua nhiều nơi, ta có thể dạy ngươi cách bắt sủng, lại làm người tốt đến cùng, ta còn tặng ngươi một Càn Phong Đại cực phẩm không thể thiếu khi bắt sủng! Thế nào, có muốn học không?	cmd16 thoai; mat=-1	
 p0491	pak/l5.p	jq11-1.s/22.1	我想学抓宠！	Muốn học bắt sủng!	cmd26 lua chon (chi so, khong so chuoi)	24
 p0492	pak/l5.p	jq11-1.s/22.2	不想学……	Không muốn học...	cmd26 lua chon (chi so, khong so chuoi)	24
 p0493	pak/l5.p	jq11-1.s/24.2	j6#：我想学抓宠！快教我吧！	j6#: Ta muốn học bắt sủng! Mau dạy ta đi!	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
-p0494	pak/l5.p	jq11-1.s/25.2	神兽：好，那就和我战斗吧！开战前我送你一个乾风袋。	Thần thú: Được, vậy đấu với ta đi! Trước khi đấu ta tặng ngươi một Phong Đại 4.	cmd16 thoai; mat=-1	
-p0495	pak/l5.p	jq11-1.s/27.1	获得乾风袋×1！	Nhận được Phong Đại 4 x1!	cmd39 thong bao giua man	
+p0494	pak/l5.p	jq11-1.s/25.2	神兽：好，那就和我战斗吧！开战前我送你一个乾风袋。	Thần thú: Được, vậy đấu với ta đi! Trước khi đấu ta tặng ngươi một Càn Phong Đại.	cmd16 thoai; mat=-1	
+p0495	pak/l5.p	jq11-1.s/27.1	获得乾风袋×1！	Nhận được Càn Phong Đại x1!	cmd39 thong bao giua man	
 p0496	pak/l5.p	jq11-1.s/28.2	j6#：唉？我就想问问怎么抓宠，不用打架吧？	j6#: Hả? Ta chỉ muốn hỏi cách bắt sủng, đâu cần đánh nhau?	cmd16 thoai; mat=j2#3; TOKEN j6# (giu nguyen)	
 p0497	pak/l5.p	jq11-1.s/29.2	神兽：实践出真知啊，来嘛，英雄！	Thần thú: Thực hành mới ra chân tri, đến đây, anh hùng!	cmd16 thoai; mat=-1	
 p0498	pak/l5.p	jq11-1.s/33.2	j6#：不想学……	j6#: Không muốn học...	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
 p0499	pak/l5.p	s6/1.2	神兽：仙宠分为“甲”、“乙”、“丙”、“丁”四个档次，其中“丁”级最次，“甲”级最优，也是最珍惜的仙宠哦！	Thần thú: Tiên sủng chia bốn hạng "Giáp", "Ất", "Bính", "Đinh", trong đó "Đinh" kém nhất, "Giáp" tốt nhất, cũng là tiên sủng quý hiếm nhất đấy!	cmd16 thoai; mat=-1	
-p0500	pak/l5.p	s6/4.2	神兽：想学怎么抓宠吗？那就和我战斗吧！我还会送你一个抓宠必备的极品乾风袋呢。	Thần thú: Muốn học cách bắt sủng không? Vậy đấu với ta đi! Ta còn tặng ngươi một Phong Đại 4 cực phẩm không thể thiếu khi bắt sủng.	cmd16 thoai; mat=-1	
+p0500	pak/l5.p	s6/4.2	神兽：想学怎么抓宠吗？那就和我战斗吧！我还会送你一个抓宠必备的极品乾风袋呢。	Thần thú: Muốn học cách bắt sủng không? Vậy đấu với ta đi! Ta còn tặng ngươi một Càn Phong Đại cực phẩm không thể thiếu khi bắt sủng.	cmd16 thoai; mat=-1	
 p0501	pak/l5.p	s6/5.1	我想学抓宠！	Muốn học bắt sủng!	cmd26 lua chon (chi so, khong so chuoi)	24
 p0502	pak/l5.p	s6/5.2	不了……	Thôi...	cmd26 lua chon (chi so, khong so chuoi)	24
 p0503	pak/l5.p	s6/7.2	j6#：我想学抓宠！快教我吧！	j6#: Ta muốn học bắt sủng! Mau dạy ta đi!	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
-p0504	pak/l5.p	s6/8.2	神兽：好，那就和我战斗吧！开战前我送你一个乾风袋。	Thần thú: Được, vậy đấu với ta đi! Trước khi đấu ta tặng ngươi một Phong Đại 4.	cmd16 thoai; mat=-1	
-p0505	pak/l5.p	s6/10.1	获得乾风袋×1！	Nhận được Phong Đại 4 x1!	cmd39 thong bao giua man	
+p0504	pak/l5.p	s6/8.2	神兽：好，那就和我战斗吧！开战前我送你一个乾风袋。	Thần thú: Được, vậy đấu với ta đi! Trước khi đấu ta tặng ngươi một Càn Phong Đại.	cmd16 thoai; mat=-1	
+p0505	pak/l5.p	s6/10.1	获得乾风袋×1！	Nhận được Càn Phong Đại x1!	cmd39 thong bao giua man	
 p0506	pak/l5.p	s6/11.2	j6#：唉？我就想问问怎么抓宠，不用打架吧？	j6#: Hả? Ta chỉ muốn hỏi cách bắt sủng, đâu cần đánh nhau?	cmd16 thoai; mat=j2#3; TOKEN j6# (giu nguyen)	
 p0507	pak/l5.p	s6/12.2	神兽：实践出真知啊，来嘛，英雄！	Thần thú: Thực hành mới ra chân tri, đến đây, anh hùng!	cmd16 thoai; mat=-1	
 p0508	pak/l5.p	s6/16.2	j6#：不了……我自学还好点。	j6#: Thôi... ta tự học thì hơn.	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
@@ -590,7 +590,7 @@ p0588	pak/m1.p	bx0.s/6.1	获得金钱100！	Nhận được tiền vàng 100!	cm
 p0589	pak/m1.p	s0/1.2	王道灵：有生之年，我也去天山看看。	Vương Đạo Linh: Trong đời này, ta cũng muốn đến Thiên Sơn xem thử.	cmd16 thoai; mat=-1	
 p0590	pak/m1.p	s0/5.2	j6#：我去过天山了，那里也就那么回事，天门那守了只神兽，你跟它说说，它就会让你进去了。	j6#: Cháu đi Thiên Sơn rồi, ở đó cũng thường thôi, ở Thiên Môn có một thần thú canh giữ, ông nói với nó, nó sẽ cho ông vào.	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
 p0591	pak/m1.p	s0/6.2	王道灵：是吗？那我有机会一定要去那里看看了！小哥，你帮我实现了我多年的夙愿啊，这是我攒下的几个风袋，聊表谢意，不成敬意了。	Vương Đạo Linh: Vậy sao? Vậy ta có dịp nhất định phải đến đó xem! Tiểu ca, cậu giúp ta thực hiện tâm nguyện bấy lâu, đây là mấy cái Phong Đại ta dành dụm, xin tỏ chút lòng cảm tạ, không thành kính ý.	cmd16 thoai; mat=-1	
-p0592	pak/m1.p	s0/8.1	获得乾风袋×3！	Nhận được Phong Đại 4 x3!	cmd39 thong bao giua man	
+p0592	pak/m1.p	s0/8.1	获得乾风袋×3！	Nhận được Càn Phong Đại x3!	cmd39 thong bao giua man	
 p0593	pak/m1.p	s0/9.2	j6#：好说好说。	j6#: Dễ thôi, dễ thôi.	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
 p0594	pak/m1.p	s0/12.1	支线任务完成！	Nhiệm vụ phụ hoàn thành!	cmd39 thong bao giua man	
 p0595	pak/m1.p	s0/16.2	王道灵：我这一把年纪了，还想去天山，还真是有点老夫聊发少年狂啊……	Vương Đạo Linh: Ta già thế này rồi mà còn muốn đi Thiên Sơn, đúng là lão phu "tuổi già chợt phát cuồng thiếu niên"...	cmd16 thoai; mat=-1	
@@ -1027,7 +1027,7 @@ p1025	pak/o2.p	bx3.s/1.1	宝箱是空的……	Rương trống không...	cmd39 t
 p1026	pak/o2.p	bx3.s/6.1	获得金钱100！	Nhận được tiền vàng 100!	cmd39 thong bao giua man	
 p1027	pak/o3.p	0/22.2	j6#：这家伙居然躲在这里面！	j6#: Thằng này lại trốn ở trong đây!	cmd16 thoai; mat=j2#0; TOKEN j6# (giu nguyen)	
 p1028	pak/o3.p	bx0.s/1.1	宝箱是空的……	Rương trống không...	cmd39 thong bao giua man	
-p1029	pak/o3.p	bx0.s/6.1	获得赤风袋×10！	Nhận được Phong Đại 1 x10!	cmd39 thong bao giua man	
+p1029	pak/o3.p	bx0.s/6.1	获得赤风袋×10！	Nhận được Xích Phong Đại x10!	cmd39 thong bao giua man	
 p1030	pak/o3.p	bx1.s/1.1	宝箱是空的……	Rương trống không...	cmd39 thong bao giua man	
 p1031	pak/o3.p	bx1.s/6.1	获得甘霖×1！	Nhận được Cam Lâm x1!	cmd39 thong bao giua man	
 p1032	pak/o3.p	bx2.s/1.1	宝箱是空的……	Rương trống không...	cmd39 thong bao giua man	
@@ -1661,7 +1661,7 @@ p1659	pak/u3.p	0/8.2	按键错误，请按导航键“右”！	Sai phím, hãy 
 p1660	pak/u3.p	0/9.2	神兽：按“左软键”进入使用物品。	Thần thú: Bấm "phím mềm trái" vào dùng vật phẩm.	cmd16 thoai; mat=-1	
 p1661	pak/u3.p	0/10.2	神兽：按“左软键”进入使用物品。	Thần thú: Bấm "phím mềm trái" vào dùng vật phẩm.	cmd16 thoai; mat=-1	
 p1662	pak/u3.p	0/11.2	按键错误，请“按左软键”！	Sai phím, hãy bấm "phím mềm trái"!	cmd51 chan phim: cau hien khi bam sai phim	
-p1663	pak/u3.p	0/12.2	神兽：嗯，下面你就选择使用我刚送给你的乾风袋去抓吧！再后面，我想你也知道，就不多说啦。加油吧！	Thần thú: Ừm, giờ ngươi chọn dùng Phong Đại 4 ta vừa tặng để bắt nhé! Phần sau ta nghĩ ngươi cũng biết, không nói nhiều. Cố lên!	cmd16 thoai; mat=-1	
+p1663	pak/u3.p	0/12.2	神兽：嗯，下面你就选择使用我刚送给你的乾风袋去抓吧！再后面，我想你也知道，就不多说啦。加油吧！	Thần thú: Ừm, giờ ngươi chọn dùng Càn Phong Đại ta vừa tặng để bắt nhé! Phần sau ta nghĩ ngươi cũng biết, không nói nhiều. Cố lên!	cmd16 thoai; mat=-1	
 t0001	t/item3.t	0.1	爆烈雾	Bạo Liệt Vụ	item3 hang 0 cot 1 ten chieu	14
 t0002	t/item3.t	0.2	消耗七十点法力值的木系法术攻击，能对敌方造成很高的伤害，并且有一般的概率对敌人附加“禁锢”的效果，增加敌人被捕获的概率。	Phép hệ Mộc tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Giam cầm" cho địch, tăng tỉ lệ bắt.	item3 hang 0 cot 2 mo ta ky nang	
 t0003	t/item3.t	0.4	禁锢	Giam cầm	item3 hang 0 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
@@ -1832,85 +1832,85 @@ t0167	t/item4.t	48.0	谛听	Đế Thính	item4 hang 48 cot 0 ten tien sung (noi 
 t0168	t/item4.t	48.2	一种长有独角、犬耳、龙身、狮尾、麒麟足的仙兽，传说其晓佛理、通人性、避邪恶，因此被人们视为吉祥的象征。	Tiên thú mọc một sừng, tai chó, thân rồng, đuôi sư tử, chân kỳ lân, truyền rằng hiểu Phật lý, thông nhân tính, tránh tà ác nên được người ta coi là biểu tượng cát tường.	item4 hang 48 cot 2 mo ta tien sung (cuon, dai nhat)	
 t0169	t/item4.t	49.0	麒麟	Kỳ Lân	item4 hang 49 cot 0 ten tien sung (noi vao thong bao)	14
 t0170	t/item4.t	49.2	麒麟的样子集龙头、鹿角、狮眼、虎背、熊腰、蛇鳞、马蹄、牛尾于一身，吐息如吞云、出声若惊雷，因为体型巨大却又性情温和、稳健，所以被人们视为瑞兽，是吉祥的象征。	Kỳ Lân hình dạng hội tụ đầu rồng, sừng hươu, mắt sư tử, lưng hổ, eo gấu, vảy rắn, móng ngựa, đuôi trâu, hơi thở như nuốt mây, tiếng như sấm kinh, vì thân hình to lớn nhưng tính ôn hòa vững vàng nên được coi là thụy thú, là biểu tượng cát tường.	item4 hang 49 cot 2 mo ta tien sung (cuon, dai nhat)	
-t0171	t/item5.t	0.0	葡萄	Nho	item5 hang 0 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0171	t/item5.t	0.0	葡萄	Nho	item5 hang 0 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0172	t/item5.t	0.1	产自西域的葡萄，食之甘冽可口、唇齿留香，且能恢复二成生命。	Nho sản xuất từ Tây Vực, ăn ngọt mát ngon miệng, thơm lưu răng môi, hồi 20% HP.	item5 hang 0 cot 1 mo ta vat pham	
-t0173	t/item5.t	1.0	包子	Bánh bao	item5 hang 1 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0173	t/item5.t	1.0	包子	Bánh bao	item5 hang 1 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0174	t/item5.t	1.1	京城名店所制的肉馅包子，可充饥抵饿，亦可恢复四成生命。	Bánh bao nhân thịt của tiệm nổi tiếng kinh thành, ăn no đỡ đói, hồi 40% HP.	item5 hang 1 cot 1 mo ta vat pham	
-t0175	t/item5.t	2.0	鸡腿	Đùi gà	item5 hang 2 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0175	t/item5.t	2.0	鸡腿	Đùi gà	item5 hang 2 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0176	t/item5.t	2.1	选用特产三黄鸡经过腌、蒸、炸多道工序制成，外焦内嫩、香气扑鼻，兼有恢复六成生命之功能。	Chọn gà tam hoàng đặc sản, qua nhiều công đoạn ướp, hấp, rán, giòn ngoài mềm trong, thơm nức, hồi 60% HP.	item5 hang 2 cot 1 mo ta vat pham	
-t0177	t/item5.t	3.0	金疮药	Kim Sang	item5 hang 3 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0177	t/item5.t	3.0	金疮药	Kim Sang	item5 hang 3 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0178	t/item5.t	3.1	按照古方制作的治疗跌打损伤的绝世好药，可恢复八成生命。	Thuốc hay tuyệt thế theo cổ phương trị thương do té ngã đánh đập, hồi 80% HP.	item5 hang 3 cot 1 mo ta vat pham	
-t0179	t/item5.t	4.0	米酒	Rượu gạo	item5 hang 4 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0179	t/item5.t	4.0	米酒	Rượu gạo	item5 hang 4 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0180	t/item5.t	4.1	自酿的清香米酒，饮之可活血益气，法力亦可恢复二成。	Rượu gạo tự ủ thơm nhẹ, uống vào hoạt huyết ích khí, hồi 20% MP.	item5 hang 4 cot 1 mo ta vat pham	
-t0181	t/item5.t	5.0	桂酒	Quế tửu	item5 hang 5 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0181	t/item5.t	5.0	桂酒	Quế tửu	item5 hang 5 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0182	t/item5.t	5.1	加入桂花的醇香美酒，饮之可恢复法力四成。	Rượu ngon thơm nồng thêm hoa quế, uống vào hồi 40% MP.	item5 hang 5 cot 1 mo ta vat pham	
-t0183	t/item5.t	6.0	烧刀子	Rượu mạnh	item5 hang 6 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0183	t/item5.t	6.0	烧刀子	Rượu mạnh	item5 hang 6 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0184	t/item5.t	6.1	味道浓烈、遇火即燃的烧酒，饮之可恢复法力六成。	Rượu mạnh nồng gặp lửa là cháy, uống vào hồi 60% MP.	item5 hang 6 cot 1 mo ta vat pham	
-t0185	t/item5.t	7.0	竹叶青	Trúc Diệp	item5 hang 7 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0185	t/item5.t	7.0	竹叶青	Trúc Diệp Thanh	item5 hang 7 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0186	t/item5.t	7.1	不可多得的名酒，有诗赞云“金盆盛酒竹叶香，十杯五杯不解意”，饮之可恢复八成法力。	Rượu quý khó có, thơ khen rằng "chậu vàng đựng rượu hương trúc diệp, mười chén năm chén chưa tỏ ý", uống vào hồi 80% MP.	item5 hang 7 cot 1 mo ta vat pham	
-t0187	t/item5.t	8.0	绿芝	Lục Chi	item5 hang 8 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0187	t/item5.t	8.0	绿芝	Lục Chi	item5 hang 8 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0188	t/item5.t	8.1	常见的灵芝，可挽救我方单个濒死的仙宠，并使其生命恢复至二成。	Linh chi thường gặp, cứu được một tiên sủng bên ta đang thoi thóp, và hồi HP lên 20%.	item5 hang 8 cot 1 mo ta vat pham	
-t0189	t/item5.t	9.0	青芝	Thanh Chi	item5 hang 9 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0189	t/item5.t	9.0	青芝	Thanh Chi	item5 hang 9 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0190	t/item5.t	9.1	较珍贵的灵芝，可挽救我方单个濒死的仙宠，并使其生命恢复至四成。	Linh chi khá quý, cứu được một tiên sủng bên ta đang thoi thóp, và hồi HP lên 40%.	item5 hang 9 cot 1 mo ta vat pham	
-t0191	t/item5.t	10.0	紫芝	Tử Chi	item5 hang 10 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0191	t/item5.t	10.0	紫芝	Tử Chi	item5 hang 10 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0192	t/item5.t	10.1	最为珍贵的灵芝，可挽救我方单个濒死的仙宠，并使其生命恢复至八成。	Linh chi quý nhất, cứu được một tiên sủng bên ta đang thoi thóp, và hồi HP lên 80%.	item5 hang 10 cot 1 mo ta vat pham	
-t0193	t/item5.t	11.0	灵光符	Linh Quang	item5 hang 11 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0193	t/item5.t	11.0	灵光符	Linh Quang	item5 hang 11 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0194	t/item5.t	11.1	可解除我方单个仙宠的麻痹状态。	Bùa giải trạng thái Tê liệt của một tiên sủng bên ta.	item5 hang 11 cot 1 mo ta vat pham	
-t0195	t/item5.t	12.0	明觉符	Minh Giác	item5 hang 12 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0195	t/item5.t	12.0	明觉符	Minh Giác	item5 hang 12 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0196	t/item5.t	12.1	可解除我方单个仙宠的禁锢状态。	Bùa giải trạng thái Giam cầm của một tiên sủng bên ta.	item5 hang 12 cot 1 mo ta vat pham	
-t0197	t/item5.t	13.0	炎烧符	Viêm Thiêu	item5 hang 13 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0197	t/item5.t	13.0	炎烧符	Viêm Thiêu	item5 hang 13 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0198	t/item5.t	13.1	可解除我方单个仙宠的冰冻状态。	Bùa giải trạng thái Đóng băng của một tiên sủng bên ta.	item5 hang 13 cot 1 mo ta vat pham	
-t0199	t/item5.t	14.0	冷却符	Lãnh Khước	item5 hang 14 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0199	t/item5.t	14.0	冷却符	Lãnh Khước	item5 hang 14 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0200	t/item5.t	14.1	可解除我方单个仙宠的燃烧状态。	Bùa giải trạng thái Thiêu đốt của một tiên sủng bên ta.	item5 hang 14 cot 1 mo ta vat pham	
-t0201	t/item5.t	15.0	消融符	Tiêu Dung	item5 hang 15 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0201	t/item5.t	15.0	消融符	Tiêu Dung	item5 hang 15 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0202	t/item5.t	15.1	可解除我方单个仙宠的石化状态。	Bùa giải trạng thái Hóa đá của một tiên sủng bên ta.	item5 hang 15 cot 1 mo ta vat pham	
-t0203	t/item5.t	16.0	观音符	Quan Âm Phù	item5 hang 16 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0203	t/item5.t	16.0	观音符	Quan Âm Phù	item5 hang 16 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0204	t/item5.t	16.1	可解除我方单个仙宠的所有异常状态。	Bùa giải mọi trạng thái bất thường của một tiên sủng bên ta.	item5 hang 16 cot 1 mo ta vat pham	
-t0205	t/item5.t	17.0	赤风袋	Phong Đại 1	item5 hang 17 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0205	t/item5.t	17.0	赤风袋	Xích Phong Đại	item5 hang 17 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0206	t/item5.t	17.1	红色的风袋，捕捉仙宠的成功率较低。	Phong Đại màu đỏ (Xích), tỉ lệ bắt tiên sủng khá thấp.	item5 hang 17 cot 1 mo ta vat pham	
-t0207	t/item5.t	18.0	碧风袋	Phong Đại 2	item5 hang 18 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0207	t/item5.t	18.0	碧风袋	Bích Phong Đại	item5 hang 18 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0208	t/item5.t	18.1	绿色的风袋，捕捉仙宠的成功率一般。	Phong Đại màu lục (Bích), tỉ lệ bắt tiên sủng vừa phải.	item5 hang 18 cot 1 mo ta vat pham	
-t0209	t/item5.t	19.0	坤风袋	Phong Đại 3	item5 hang 19 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0209	t/item5.t	19.0	坤风袋	Khôn Phong Đại	item5 hang 19 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0210	t/item5.t	19.1	上面书写有“坤”字号符咒的风袋，捕捉仙宠的成功率较高。	Phong Đại có viết bùa chữ "Khôn", tỉ lệ bắt tiên sủng khá cao.	item5 hang 19 cot 1 mo ta vat pham	
-t0211	t/item5.t	20.0	乾风袋	Phong Đại 4	item5 hang 20 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0211	t/item5.t	20.0	乾风袋	Càn Phong Đại	item5 hang 20 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0212	t/item5.t	20.1	上面书写有“乾”字号符咒的风袋，捕捉仙宠的成功率最高。	Phong Đại có viết bùa chữ "Càn", tỉ lệ bắt tiên sủng cao nhất.	item5 hang 20 cot 1 mo ta vat pham	
-t0213	t/item5.t	21.0	卸载法宝	Gỡ pháp bảo	item5 hang 21 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0213	t/item5.t	21.0	卸载法宝	Gỡ pháp bảo	item5 hang 21 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0214	t/item5.t	21.1	卸载身上的法宝	Gỡ pháp bảo trên người	item5 hang 21 cot 1 mo ta vat pham	
-t0215	t/item5.t	22.0	五味丸	Ngũ Vị Hoàn	item5 hang 22 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0215	t/item5.t	22.0	五味丸	Ngũ Vị Hoàn	item5 hang 22 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0216	t/item5.t	22.1	多味中药制成的药丸，安神续命，仙宠装备此物后，其最大生命可获得较小幅度的提升。	Viên thuốc nhiều vị đông y, an thần kéo dài mạng, tiên sủng trang bị vật này thì HP tối đa tăng chút ít.	item5 hang 22 cot 1 mo ta vat pham	
-t0217	t/item5.t	23.0	大还丹	Đại Hoàn Đan	item5 hang 23 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0217	t/item5.t	23.0	大还丹	Đại Hoàn Đan	item5 hang 23 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0218	t/item5.t	23.1	秘制药丸，有“活死人，肉白骨”的奇效，仙宠装备此物后，其最大生命可获得较大幅度的提升。	Viên thuốc bí chế, có hiệu quả kỳ diệu "sống người chết, mọc thịt xương trắng", tiên sủng trang bị vật này thì HP tối đa tăng khá nhiều.	item5 hang 23 cot 1 mo ta vat pham	
-t0219	t/item5.t	24.0	益气丸	Ích Khí Hoàn	item5 hang 24 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0219	t/item5.t	24.0	益气丸	Ích Khí Hoàn	item5 hang 24 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0220	t/item5.t	24.1	益气提神的好药丸，仙宠装备此物后，其最大法力可获得较小幅度的提升。	Viên thuốc hay ích khí tỉnh thần, tiên sủng trang bị vật này thì MP tối đa tăng chút ít.	item5 hang 24 cot 1 mo ta vat pham	
-t0221	t/item5.t	25.0	八珍丸	Bát Trân	item5 hang 25 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0221	t/item5.t	25.0	八珍丸	Bát Trân	item5 hang 25 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0222	t/item5.t	25.1	八种珍贵药材精制而成，仙宠装备此物后，其最大法力可获得较大幅度的提升。	Chế từ tám loại dược liệu quý, tiên sủng trang bị vật này thì MP tối đa tăng khá nhiều.	item5 hang 25 cot 1 mo ta vat pham	
-t0223	t/item5.t	26.0	甘霖	Cam Lâm	item5 hang 26 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0223	t/item5.t	26.0	甘霖	Cam Lâm	item5 hang 26 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0224	t/item5.t	26.1	传说中观音的羊脂玉净瓶中所承之物，亦能使人明目开窍、无师自通，仙宠装备此物后，即使不参与战斗也可获得较少的经验。	Vật trong bình ngọc mỡ dê của Quan Âm trong truyền thuyết, cũng giúp người sáng mắt thông suốt, vô sư tự thông, tiên sủng trang bị vật này thì dù không tham chiến vẫn nhận được chút ít EXP.	item5 hang 26 cot 1 mo ta vat pham	
-t0225	t/item5.t	27.0	仙露	Tiên Lộ	item5 hang 27 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0225	t/item5.t	27.0	仙露	Tiên Lộ	item5 hang 27 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0226	t/item5.t	27.1	传说中华表上仙人承露台就是为收集此物而造，气味飘渺，却能使人醒脑提神、茅塞顿开，仙宠装备此物后，即使不参与战斗也可获得较多的经验。	Truyền rằng đài tiên nhân hứng sương trên hoa biểu Trung Hoa được xây để thu thập vật này, mùi thoảng bay, nhưng làm người tỉnh não khai thông, tiên sủng trang bị vật này thì dù không tham chiến vẫn nhận được khá nhiều EXP.	item5 hang 27 cot 1 mo ta vat pham	
-t0227	t/item5.t	28.0	烈焰扇	Liệt Diễm	item5 hang 28 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0227	t/item5.t	28.0	烈焰扇	Liệt Diễm Phiến	item5 hang 28 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0228	t/item5.t	28.1	一把燃着熊熊烈火的宝扇，除了其所有者外无人敢近，唯恐被其灼伤，仙宠装备此物后，其攻击可获得较小幅度的提升。	Quạt báu cháy lửa hừng hực, ngoài chủ nhân không ai dám lại gần, sợ bị bỏng, tiên sủng trang bị vật này thì ATK tăng chút ít.	item5 hang 28 cot 1 mo ta vat pham	
-t0229	t/item5.t	29.0	幽冥扇	U Minh Phiến	item5 hang 29 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0229	t/item5.t	29.0	幽冥扇	U Minh Phiến	item5 hang 29 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0230	t/item5.t	29.1	扇子终年被肃杀的幽冥鬼火围绕，虽无迫人的灼热气浪，却能伤人于无形之中，仙宠装备此物后，其攻击可获得较大幅度的提升。	Quạt quanh năm có ma trơi U Minh âm u vây quanh, tuy không có luồng khí nóng bức người, nhưng làm bị thương người trong vô hình, tiên sủng trang bị vật này thì ATK tăng khá nhiều.	item5 hang 29 cot 1 mo ta vat pham	
-t0231	t/item5.t	30.0	霹雳刀	Phích Lịch	item5 hang 30 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0231	t/item5.t	30.0	霹雳刀	Phích Lịch	item5 hang 30 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0232	t/item5.t	30.1	攻击时刀刃如闪电、气势若霹雳的神兵利器，仙宠装备此物后，其暴击可获得较小幅度的提升。	Thần binh lợi khí khi tấn công lưỡi đao như chớp, khí thế như sấm sét, tiên sủng trang bị vật này thì tỉ lệ chí mạng tăng chút ít.	item5 hang 30 cot 1 mo ta vat pham	
-t0233	t/item5.t	31.0	崩霜刃	Băng Sương	item5 hang 31 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0233	t/item5.t	31.0	崩霜刃	Băng Sương	item5 hang 31 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0234	t/item5.t	31.1	传说一位铸造名师得到一块天陨寒铁，便殚心竭虑，花了七七四十九天方才打造出这一把削铁如泥、寒光逼人的利刃，仙宠装备此物后，其暴击可获得较大幅度的提升。	Truyền rằng một bậc thầy đúc kiếm có được khối sắt lạnh từ thiên thạch, dốc hết tâm huyết, mất bảy lần bảy bốn mươi chín ngày mới rèn ra lưỡi dao chém sắt như bùn, ánh lạnh bức người này, tiên sủng trang bị vật này thì tỉ lệ chí mạng tăng khá nhiều.	item5 hang 31 cot 1 mo ta vat pham	
-t0235	t/item5.t	32.0	鲲鳞	Côn Lân	item5 hang 32 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0235	t/item5.t	32.0	鲲鳞	Côn Lân	item5 hang 32 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0236	t/item5.t	32.1	传说中冥海大鱼“鲲”身上的鳞片，坚韧无比，仙宠装备此物后，其防御可获得较小幅度的提升。	Vảy trên mình cá lớn "Côn" ở Minh Hải trong truyền thuyết, cứng dai vô cùng, tiên sủng trang bị vật này thì DEF tăng chút ít.	item5 hang 32 cot 1 mo ta vat pham	
-t0237	t/item5.t	33.0	龙甲	Long Giáp	item5 hang 33 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0237	t/item5.t	33.0	龙甲	Long Giáp	item5 hang 33 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0238	t/item5.t	33.1	传说鲤鱼需要跳过龙门才能成为真正的龙，而此物就是鲤鱼在跳龙门时因奋力跳跃挪腾而脱落的鳞甲，因为被鲤鱼的执着的血液浸染过，所以也拥有了非凡的法力，仙宠装备此物后，其防御可获得较大幅度的提升。	Truyền rằng cá chép phải nhảy qua Long Môn mới thành rồng thật, mà vật này chính là giáp vảy rụng ra khi cá chép gắng sức nhảy qua Long Môn, vì thấm máu kiên trì của cá chép nên cũng có pháp lực phi phàm, tiên sủng trang bị vật này thì DEF tăng khá nhiều.	item5 hang 33 cot 1 mo ta vat pham	
-t0239	t/item5.t	34.0	山羊角	Sừng Dê Núi	item5 hang 34 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0239	t/item5.t	34.0	山羊角	Sừng Dê Núi	item5 hang 34 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0240	t/item5.t	34.1	敏捷的山羊的角，拥有山羊的灵性，仙宠装备此物后，其闪避可获得较小幅度的提升。	Sừng của dê núi nhanh nhẹn, mang linh tính của dê núi, tiên sủng trang bị vật này thì né tránh tăng chút ít.	item5 hang 34 cot 1 mo ta vat pham	
-t0241	t/item5.t	35.0	羚羊角	Linh Dương	item5 hang 35 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0241	t/item5.t	35.0	羚羊角	Linh Dương	item5 hang 35 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0242	t/item5.t	35.1	更加敏捷的羚羊的角，拥有羚羊的灵气，仙宠装备此物后，其闪避可获得较大幅度的提升。	Sừng của linh dương còn nhanh nhẹn hơn, mang linh khí của linh dương, tiên sủng trang bị vật này thì né tránh tăng khá nhiều.	item5 hang 35 cot 1 mo ta vat pham	
-t0243	t/item5.t	36.0	活络散	Hoạt Lạc Tán	item5 hang 36 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0243	t/item5.t	36.0	活络散	Hoạt Lạc Tán	item5 hang 36 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0244	t/item5.t	36.1	古方秘制而成的药剂，能活血通脉，仙宠装备此物后，其攻速可获得较小幅度的提升。	Thuốc bí chế theo cổ phương, hoạt huyết thông mạch, tiên sủng trang bị vật này thì tốc độ đánh tăng chút ít.	item5 hang 36 cot 1 mo ta vat pham	
-t0245	t/item5.t	37.0	逍遥散	Tiêu Dao Tán	item5 hang 37 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0245	t/item5.t	37.0	逍遥散	Tiêu Dao Tán	item5 hang 37 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0246	t/item5.t	37.1	传说是秦始皇当年派人去蓬莱求回的仙药，有开郁行滞等功效，可令人神清气爽、身轻如燕、快乐似神仙，仙宠装备此物后，其攻速可获得较大幅度的提升。	Truyền là tiên dược Tần Thủy Hoàng năm xưa sai người đến Bồng Lai cầu về, có công hiệu khai uất hành trệ, khiến người thần thanh khí sảng, thân nhẹ như én, vui như thần tiên, tiên sủng trang bị vật này thì tốc độ đánh tăng khá nhiều.	item5 hang 37 cot 1 mo ta vat pham	
-t0247	t/item5.t	38.0	金缕鞋	Kim Lũ Hài	item5 hang 38 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0247	t/item5.t	38.0	金缕鞋	Kim Lũ Hài	item5 hang 38 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0248	t/item5.t	38.1	用金丝线制成轻便鞋履，仙宠装备此物后，其逃跑成功率可获得较大幅度的提升。	Giày nhẹ làm bằng chỉ vàng, tiên sủng trang bị vật này thì tỉ lệ chạy thoát tăng khá nhiều.	item5 hang 38 cot 1 mo ta vat pham	
-t0249	t/item5.t	39.0	步云靴	Bộ Vân Ngoa	item5 hang 39 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	12
+t0249	t/item5.t	39.0	步云靴	Bộ Vân Ngoa	item5 hang 39 cot 0 ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)	16
 t0250	t/item5.t	39.1	淮南王刘安修炼成仙后留下的靴子，传说能使人平步青云、纵横九天，仙宠装备此物后，其逃跑成功率可获得较大幅度的提升。	Giày Hoài Nam Vương Lưu An để lại sau khi tu luyện thành tiên, truyền rằng giúp người một bước lên mây, tung hoành cửu thiên, tiên sủng trang bị vật này thì tỉ lệ chạy thoát tăng khá nhiều.	item5 hang 39 cot 1 mo ta vat pham	
 t0251	t/item6.t	0.0	爷爷的试炼	Thử thách của gia gia	item6 hang 0 cot 0 ten nhiem vu chinh	
 t0252	t/item6.t	0.1	爷爷让小虎去后山将某件藏在宝箱里的宝贝带回来！	Gia gia bảo Tiểu Hổ lên núi sau mang về một bảo bối giấu trong rương!	item6 hang 0 cot 1 mo ta nhiem vu chinh	
@@ -2024,7 +2024,7 @@ c0009	class:Main/j	u2191	不能换仙宠	Không đổi tiên sủng	hien thi
 c0010	class:Main/j	u2192	不能逃跑	Không chạy được	hien thi	
 c0011	class:Main/j	u2193	不能选择技能	Không chọn được kỹ năng	hien thi	
 c0012	class:Main/j	u2194	保存成功	Lưu thành công	hien thi	
-c0013	class:Main/j	u2195	关于^北京中锐掌讯为仙宠奇缘的软件著作人。北京中锐掌讯授权兆荣联合在中国大陆从事游戏的商业运营。兆荣联合同时负责处理游戏运营的相关客服和技术支持^运营商：^兆荣联合（北京）科技发展有限公司^简称：^兆荣联合^客服邮箱:^service@zrong.cn^客服电话:^010-82212999^	Giới thiệu^Bắc Kinh Trung Nhuệ Chưởng Tấn là chủ sở hữu bản quyền phần mềm Tiên Sủng Kỳ Duyên. Bắc Kinh Trung Nhuệ Chưởng Tấn ủy quyền Triệu Vinh Liên Hợp kinh doanh thương mại trò chơi tại Trung Quốc đại lục. Triệu Vinh Liên Hợp đồng thời phụ trách chăm sóc khách hàng và hỗ trợ kỹ thuật liên quan đến vận hành game^Nhà vận hành:^Triệu Vinh Liên Hợp (Bắc Kinh) Khoa học Kỹ thuật Phát triển Hữu hạn Công ty^Gọi tắt:^Triệu Vinh Liên Hợp^Email CSKH:^service@zrong.cn^Điện thoại CSKH:^010-82212999^	hien thi; co ^ = xuong dong, giu so luong ^	
+c0013	class:Main/j	u2195	关于^北京中锐掌讯为仙宠奇缘的软件著作人。北京中锐掌讯授权兆荣联合在中国大陆从事游戏的商业运营。兆荣联合同时负责处理游戏运营的相关客服和技术支持^运营商：^兆荣联合（北京）科技发展有限公司^简称：^兆荣联合^客服邮箱:^service@zrong.cn^客服电话:^010-82212999^	Giới thiệu^Bắc Kinh Trung Nhuệ Chưởng Tấn là chủ sở hữu bản quyền phần mềm Tiên Sủng Kỳ Duyên. Bắc Kinh Trung Nhuệ Chưởng Tấn ủy quyền Triệu Vinh Liên Hợp kinh doanh thương mại trò chơi tại Trung Quốc đại lục. Triệu Vinh Liên Hợp đồng thời phụ trách chăm sóc khách hàng và hỗ trợ kỹ thuật liên quan đến vận hành game^Nhà vận hành:^Triệu Vinh Liên Hợp (Bắc Kinh) Khoa học Kỹ thuật Phát triển Hữu hạn Công ty^Gọi tắt: Triệu Vinh Liên Hợp^Email CSKH:^service@zrong.cn^Điện thoại CSKH:^010-82212999^Việt hoá: NAMP^	hien thi; co ^ = xuong dong, giu so luong ^	
 c0014	class:Main/j	u2196	关于信息	Thông tin	hien thi	
 c0015	class:Main/j	u2197	冰冻	Đóng băng	hien thi; KHOA: dong nhat voi item3.t cot 4 (indexOf) - dich CUNG gia tri	
 c0016	class:Main/j	u2198	冰冻解除	Hết Đóng băng	hien thi	

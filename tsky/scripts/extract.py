@@ -16,7 +16,7 @@ ITEM_COLS = {  # (file, col) -> (mo ta, gioi han)
     ('item3', 1): ('ten chieu', 14), ('item3', 2): ('mo ta ky nang', ''),
     ('item3', 4): ('ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1', 10),
     ('item4', 0): ('ten tien sung (noi vao thong bao)', 14), ('item4', 2): ('mo ta tien sung (cuon, dai nhat)', ''),
-    ('item5', 0): ('ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)', 12), ('item5', 1): ('mo ta vat pham', ''),
+    ('item5', 0): ('ten vat pham (noi vao thong bao, hien "ten   xN" ~100px)', 16), ('item5', 1): ('mo ta vat pham', ''),
     ('item6', 0): ('ten nhiem vu chinh', ''), ('item6', 1): ('mo ta nhiem vu chinh', ''),
     ('item7', 0): ('ten nhiem vu phu', ''), ('item7', 1): ('mo ta nhiem vu phu', ''),
 }

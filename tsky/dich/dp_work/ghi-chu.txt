@@ -4,4 +4,5 @@
 1039-1042: tro choi chu 'Dau Nghe Uyen' ~ 'dua ngươi choi' (逗你玩); dich thanh 'Do ngươi choi' de giu y.
 Ten vat pham co gioi han <=12 nen rut gon: Xich/Bich/Khon/Can Phong (Dai), Truc Diep (Thanh), Liet Diem (Phien); trong thoai van dung ten day du. 1354: nguon 'bao cao voi Kim Tuong Ngoc' co the la loi (dung ra Thuy Tinh Phuong), dich sat.
 1428: nguon noi 'tim thay ngoc boi' trong khi do la phuong quan (loi goc), dich sat. 1511 '级' dung rieng: dich 'cap'. 1446 thong tin cong ty: phien am Han Viet (Bac Kinh Trung Nhue Chuong Tan, Trieu Vinh Lien Hop); can xem co thay bang NAMP khong.
-Ten Phong Dai (<=12 ky tu) doi thanh Phong Đại 1/2/3/4 (赤/碧/坤/乾) o ca thoai va vat pham; desc ghi mau/chu bua.
+Ten Phong Dai (<=12 ky tu) doi thanh Ten vat pham giu day du (gioi han item5 cot 0 nang 12->16).
+1446: them dong 'Viet hoa: NAMP' (dj dung ^ xuong dong hop le theo docs/script.md); giu nguyen so dau ^ bang cach gop 2 cap 'nhan:^gia tri' thanh "nhan: gia tri" (bu 1 ^ bang dong NAMP).

@@ -2,136 +2,136 @@
 骑宠	tọa kỵ	tt	thú cưỡi (người dùng chốt)
 宠物	sủng vật	~	hoặc tiên sủng tuỳ ngữ cảnh (người dùng chốt)
 神兽	Thần thú	ten	NPC thần thú giữ/gửi tiên sủng
-仙人	Tiên nhân	~	
-仙女	Tiên nữ	~	
-神仙	thần tiên	~	
-法宝	pháp bảo	tt	
-法术	pháp thuật	~	
-法力值	MP	ui	
-生命值	HP	ui	
-五行珠	Ngũ Hành Châu	tt	
-五行元气	Ngũ Hành nguyên khí	tt	
-金镶玉	Kim Tương Ngọc	tt	
+仙人	Tiên nhân	~
+仙女	Tiên nữ	~
+神仙	thần tiên	~
+法宝	pháp bảo	tt
+法术	pháp thuật	~
+法力值	MP	ui
+生命值	HP	ui
+五行珠	Ngũ Hành Châu	tt
+五行元气	Ngũ Hành nguyên khí	tt
+金镶玉	Kim Tương Ngọc	tt
 甘霖	Cam Lâm	tt	pháp bảo
 风袋	Phong Đại	tt	túi gió
-木耒村	thôn Mộc Lỗi	dia	
-沙岭镇	trấn Sa Lĩnh	dia	
-冷风坳	Lãnh Phong Ao	dia	
-火石冈	Hỏa Thạch Cương	dia	
-天山	Thiên Sơn	dia	
-天门	Thiên Môn	dia	
-金銮殿	Kim Loan điện	dia	
-昊天	Hạo Thiên	ten	
+木耒村	thôn Mộc Lỗi	dia
+沙岭镇	trấn Sa Lĩnh	dia
+冷风坳	Lãnh Phong Ao	dia
+火石冈	Hỏa Thạch Cương	dia
+天山	Thiên Sơn	dia
+天门	Thiên Môn	dia
+金銮殿	Kim Loan điện	dia
+昊天	Hạo Thiên	ten
 夫诸	Phu Chư	ten	tiên sủng hung dữ ở núi tuyết
-年兽	Niên thú	ten	
+年兽	Niên thú	ten
 贡丸	Cống Hoàn	ten	kẻ xấu ("贡丸大人" = Cống Hoàn đại nhân)
-张郭劳	Trương Quách Lao	ten	
-王小明	Vương Tiểu Minh	ten	
-刘思文	Lưu Tư Văn	ten	
-冷思琪	Lãnh Tư Kỳ	ten	
-王君平	Vương Quân Bình	ten	
-吴双	Ngô Song	ten	
-班班	Ban Ban	ten	
-鲁班	Lỗ Ban	ten	
-小狗	chó con	~	
+张郭劳	Trương Quách Lao	ten
+王小明	Vương Tiểu Minh	ten
+刘思文	Lưu Tư Văn	ten
+冷思琪	Lãnh Tư Kỳ	ten
+王君平	Vương Quân Bình	ten
+吴双	Ngô Song	ten
+班班	Ban Ban	ten
+鲁班	Lỗ Ban	ten
+小狗	chó con	~
 小哥	tiểu ca	~	NPC gọi nhân vật chính
-左软键	phím mềm trái	ui	
-右软键	phím mềm phải	ui	
-导航键	phím điều hướng	ui	
+左软键	phím mềm trái	ui
+右软键	phím mềm phải	ui
+导航键	phím điều hướng	ui
 麻痹	Tê liệt	tt	BẮT BUỘC đúng chữ (code so sánh)
 禁锢	Giam cầm	tt	BẮT BUỘC đúng chữ (code so sánh)
 冰冻	Đóng băng	tt	BẮT BUỘC đúng chữ (code so sánh)
 燃烧	Thiêu đốt	tt	BẮT BUỘC đúng chữ (code so sánh)
 石化	Hóa đá	tt	BẮT BUỘC đúng chữ (code so sánh)
-灵芝	Linh chi	tt	
-放生	phóng sinh	~	
+灵芝	Linh chi	tt
+放生	phóng sinh	~
 寄存	gửi	~	gửi tiên sủng cho Thần thú
-复活	hồi sinh	~	
-装备	trang bị	~	
-属性	thuộc tính	~	
-物品	vật phẩm	~	
-经验	EXP	ui	
-等级	Lv	~	
+复活	hồi sinh	~
+装备	trang bị	~
+属性	thuộc tính	~
+物品	vật phẩm	~
+经验	EXP	ui
+等级	Lv	~
 攻击力	ATK	~	chỉ số; trong câu "tấn công"
-防御力	DEF	~	
-速度	SPD	~	
+防御力	DEF	~
+速度	SPD	~
 金系	hệ Kim	~	ngũ hành: Kim Mộc Thủy Hỏa Thổ
 甲	Giáp	~	phẩm cấp tiên sủng Giáp/Ất/Bính/Đinh
-猢狲	Hồ Tôn	tt	mới
-海蝴蝶	Hải Hồ Điệp	tt	mới
-毕方	Tất Phương	tt	mới
-风墨乾	Phong Mặc Càn	ten	mới
-女娲石	Nữ Oa Thạch	tt	mới
-女娲	Nữ Oa	ten	mới
-御妖之术	ngự yêu thuật	~	mới
-佀萍	Tự Bình	ten	mới
-慕容子轩	Mộ Dung Tử Hiên	ten	mới
-慕容修	Mộ Dung Tu	ten	mới
-鲜于卿	Tiên Vu Khanh	ten	mới
-李馨	Lý Hinh	ten	mới
-陶华瑶	Đào Hoa Dao	ten	mới
-佀达书	Tự Đạt Thư	ten	mới
-烈焰扇	Liệt Diễm Phiến	~	mới
-碧风袋	Phong Đại 2	~	mới
-赤风袋	Phong Đại 1	~	mới
-青龙	Thanh Long	tt	mới
-雷明	Lôi Minh	ten	mới
-火红红	Hỏa Hồng Hồng	ten	mới
-赵布兆	Triệu Bố Triệu	ten	mới
-常云	Thường Vân	ten	mới
-王道灵	Vương Đạo Linh	ten	mới
-荆如霜	Kinh Như Sương	ten	mới
-鲁庆	Lỗ Khánh	ten	mới
-乾风袋	Phong Đại 4	~	mới
-绿芝	Lục Chi	tt	mới
-龙甲	Long Giáp	tt	mới
-竹叶青	Trúc Diệp Thanh	~	mới
-青芝	Thanh Chi	tt	mới
-土灵珠	Thổ Linh Châu	tt	mới
-火灵珠	Hỏa Linh Châu	tt	mới
-木林森	Mộc Lâm Sâm	ten	mới
-林木森	Mộc Lâm Sâm	ten	mới
-水井方	Thủy Tỉnh Phương	ten	mới
-张慧	Trương Tuệ	ten	mới
-谢竞	Tạ Cạnh	ten	mới
-张庆	Trương Khánh	ten	mới
-陈丽	Trần Lệ	ten	mới
-火彤彤	Hỏa Đồng Đồng	ten	mới
-魏慎麽	Ngụy Thận Ma	ten	mới
-王伯通	Vương Bá Thông	ten	mới
-木灵石	Mộc Linh Thạch	tt	mới
-飞廉	Phi Liêm	tt	mới
-冰鼠	Băng thử	tt	mới
-步云靴	Bộ Vân Ngoa	tt	mới
-凤冠	phượng quan	~	mới
-白虎	Bạch Hổ	tt	mới
-绛珠仙子	Giáng Châu tiên tử	ten	mới
-秦棉红	Tần Miên Hồng	ten	mới
-杨阳	Dương Dương	ten	mới
-杨雨	Dương Vũ	ten	mới
-王爱玉	Vương Ái Ngọc	ten	mới
-王莫	Vương Mạc	ten	mới
-窦倪婉	Đậu Nghê Uyển	ten	mới
-默默	Mặc Mặc	ten	mới
-妙妙	Diệu Diệu	ten	mới
-天帝	Thiên Đế	ten	mới
-村长	Thôn trưởng	ten	mới
-蟹兵兵	Giải Binh Binh	ten	mới
-李牧	Lý Mục	ten	mới
-苏宁	Tô Ninh	ten	mới
-谢敏	Tạ Mẫn	ten	mới
-王飞	Vương Phi	ten	mới
-贺娇娇	Hạ Kiều Kiều	ten	mới
-贾淑芬	Giả Thục Phân	ten	mới
-王羽	Vương Vũ	ten	mới
-张一	Trương Nhất	ten	mới
-张二	Trương Nhị	ten	mới
-张三	Trương Tam	ten	mới
-日光宝盒	Nhật Quang Bảo Hạp	tt	mới
-海蜘蛛	Hải Chu	tt	mới
-麒麟	Kỳ Lân	tt	mới
-坤风袋	Phong Đại 3	~	mới
-小修	Tiểu Tu	ten	mới
-梅英	Mai Anh	ten	mới
-王木墩	Vương Mộc Đôn	ten	mới
-秦咏书	Tần Vịnh Thư	ten	mới
+猢狲	Hồ Tôn	tt
+海蝴蝶	Hải Hồ Điệp	tt
+毕方	Tất Phương	tt
+风墨乾	Phong Mặc Càn	ten
+女娲石	Nữ Oa Thạch	tt
+女娲	Nữ Oa	ten
+御妖之术	ngự yêu thuật	~
+佀萍	Tự Bình	ten
+慕容子轩	Mộ Dung Tử Hiên	ten
+慕容修	Mộ Dung Tu	ten
+鲜于卿	Tiên Vu Khanh	ten
+李馨	Lý Hinh	ten
+陶华瑶	Đào Hoa Dao	ten
+佀达书	Tự Đạt Thư	ten
+烈焰扇	Liệt Diễm Phiến	tt
+碧风袋	Bích Phong Đại	tt
+赤风袋	Xích Phong Đại	tt
+青龙	Thanh Long	tt
+雷明	Lôi Minh	ten
+火红红	Hỏa Hồng Hồng	ten
+赵布兆	Triệu Bố Triệu	ten
+常云	Thường Vân	ten
+王道灵	Vương Đạo Linh	ten
+荆如霜	Kinh Như Sương	ten
+鲁庆	Lỗ Khánh	ten
+乾风袋	Càn Phong Đại	tt
+绿芝	Lục Chi	tt
+龙甲	Long Giáp	tt
+竹叶青	Trúc Diệp Thanh	tt
+青芝	Thanh Chi	tt
+土灵珠	Thổ Linh Châu	tt
+火灵珠	Hỏa Linh Châu	tt
+木林森	Mộc Lâm Sâm	ten
+林木森	Mộc Lâm Sâm	ten
+水井方	Thủy Tỉnh Phương	ten
+张慧	Trương Tuệ	ten
+谢竞	Tạ Cạnh	ten
+张庆	Trương Khánh	ten
+陈丽	Trần Lệ	ten
+火彤彤	Hỏa Đồng Đồng	ten
+魏慎麽	Ngụy Thận Ma	ten
+王伯通	Vương Bá Thông	ten
+木灵石	Mộc Linh Thạch	tt
+飞廉	Phi Liêm	tt
+冰鼠	Băng thử	tt
+步云靴	Bộ Vân Ngoa	tt
+凤冠	phượng quan	~
+白虎	Bạch Hổ	tt
+绛珠仙子	Giáng Châu tiên tử	ten
+秦棉红	Tần Miên Hồng	ten
+杨阳	Dương Dương	ten
+杨雨	Dương Vũ	ten
+王爱玉	Vương Ái Ngọc	ten
+王莫	Vương Mạc	ten
+窦倪婉	Đậu Nghê Uyển	ten
+默默	Mặc Mặc	ten
+妙妙	Diệu Diệu	ten
+天帝	Thiên Đế	ten
+村长	Thôn trưởng	ten
+蟹兵兵	Giải Binh Binh	ten
+李牧	Lý Mục	ten
+苏宁	Tô Ninh	ten
+谢敏	Tạ Mẫn	ten
+王飞	Vương Phi	ten
+贺娇娇	Hạ Kiều Kiều	ten
+贾淑芬	Giả Thục Phân	ten
+王羽	Vương Vũ	ten
+张一	Trương Nhất	ten
+张二	Trương Nhị	ten
+张三	Trương Tam	ten
+日光宝盒	Nhật Quang Bảo Hạp	tt
+海蜘蛛	Hải Chu	tt
+麒麟	Kỳ Lân	tt
+坤风袋	Khôn Phong Đại	tt
+小修	Tiểu Tu	ten
+梅英	Mai Anh	ten
+王木墩	Vương Mộc Đôn	ten
+秦咏书	Tần Vịnh Thư	ten
