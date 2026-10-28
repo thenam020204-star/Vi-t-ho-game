@@ -1,0 +1,10 @@
+Thêm: ['BitmapFont.class', 'ViFont.class', 'ViTalk.class', 'ViWrap.class', 'font/f13c.bin']
+Xoá: []
+Đổi: ['META-INF/MANIFEST.MF', 'b.class', 'c_2.xng', 'c_f.xng', 'f.class', 'h.class', 'i.class', 'i_01.xng', 'i_02.xng', 'i_03.xng', 'i_05.xng', 'i_06.xng', 'i_07.xng', 'i_18.xng', 'i_19.xng', 'i_30.xng', 'i_31.xng', 'i_38.xng', 'i_39.xng', 'i_40.xng', 'i_41.xng', 'i_42.xng', 'i_55.xng', 'i_96.xng', 'i_cost.xng', 'item.dat', 'j.class', 'k.class', 'l.class', 'logo1.png', 'm.class', 'mate.dat', 'mission.dat', 'n.class', 'p.class', 'q.class', 's.class', 'script.dat', 'skill.dat', 'u.class', 'v.class', 'w.class', 'y.class', 'z.class']
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.endsWith(Ljava/lang/String;)Z (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.indexOf(I)I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.indexOf(II)I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.valueOf(Ljava/lang/Object;)Ljava/lang/String; (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V (xác nhận máy đích có)
+RESULT: PASS
