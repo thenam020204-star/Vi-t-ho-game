@@ -102,6 +102,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 
 ### Giai đoạn 4 — Hoàn thiện (A1)
 - [x] T7 Bố cục: khung thoại ≥3 dòng, ngắt px ở dấu cách, phân trang, canh giữa theo độ rộng thật, các màn menu/túi đồ/cửa hàng/chiến đấu/tiên sủng đại toàn/mẹo. Hoàn thành khi: ảnh chụp từng màn không tràn, không cắt đôi từ, không sót Hán.
+- [x] T7b Cửa hàng: giá căn phải sát mép trong khung, khối ◀số▶ ngay trước giá, tên dùng phần còn lại (chứa 88 px), không rút tên.
 - [x] T8 Ảnh có chữ: soát 327 PNG (`scripts/contact_sheet.py` ra lưới ảnh), danh sách `docs/anh_co_chu.tsv`, vẽ lại vào `res_vi/`. Hoàn thành khi: mọi ảnh có chữ Hán đã có bản Việt, `pixeltext check --size 12` OK.
 - [ ] T9 (ảnh 320 xong: `res_vi_320/Image/menu.png`, `namp.png`) Bản 320x240 theo QĐ 10. Hoàn thành khi: chụp FreeJ2ME 320x240 qua logo, menu, hội thoại, túi đồ, chiến đấu không tràn/méo; kiểm phím hướng dẫn bằng phím số.
 - [ ] T10 `rebuild.sh` (goc → out cả 2 bản + jad `MIDlet-Jar-Size` khớp), `run_emu.py` đi qua các màn chính 2 bản, `BAO_CAO.md`, `README_DU_AN.md`, `PROGRESS.md`, gói `TienSungKyDuyen_du_an.zip` theo mục Bàn giao của skill. **Quản đốc nghiệm thu.**
@@ -132,6 +133,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - T7 (A1): bố cục xong, 25 ảnh `logs/shots_T7/`, jar_check PASS. VH: `scroll` (ô mô tả/CG cuộn theo trang, không cắt nửa dòng), `drawRight/drawMid` (phím mềm theo độ rộng thật), `menuSkip` (ẩn "Game khác"), `widest/colWidth` (cột cửa hàng), `cat` (cache chuỗi nối, 50 chỗ); Patch: mũi tên menu theo nhãn, `spaceConcat` (chèn dấu cách quanh chuỗi dịch nối với biến: "5 cấp", "x1=1000 vàng", 45 chỗ); thoại lề phải w-10; build.sh mặc định dùng bản dịch final; docs/render.md mục 10; `scripts/t7_emu.py` (--cwd, --follow), `scripts/t7_test_jar.py`, `scripts/t7_measure.py`.
 - T8c (A2): `ui_fight_mid.png` ô 3 (商) = nút mở cửa hàng trong trận, vẽ "Mua" viền đen; tsv + truoc_sau.png cập nhật.
 - T11-tool (A2): `tool_main/Tool_Viet_Hoa_NAM_P.zip` + `THAY_DOI.md`: BitmapFont thêm `SIZE_12` (class 47), pixeltext `--size 12`, check_all/selftest pass (zip gốc đã fail sẵn do f13c/f15c chỉnh tay, xem THAY_DOI.md). Chưa đẩy lên main.
+- T7b (A1): `Patch.patchShop` đổi bố cục hàng cửa hàng: tên từ n2+4, `VH.shopCol` (x khối số = R-26-rộng giá, R=n2+n4-5), khoảng cách trong khối 5→1; bỏ widest/colWidth; chụp lại `logs/shots_T7/21,22` và `26_cua_hang_trong_tran` (Liệt Diễm Phiến 88 px + giá 1000 vừa, không đè).
 
 ## Quyết định quản đốc sau T1/T2 (bổ sung QĐ, công nhân làm theo)
 - QĐ 2b: **Được thay cả thân method** (giữ nguyên tên/descriptor/access) cho `Main/g.a(char[],...)`, `rf/b.a(String,int)`, `rf/b.b(String,int)`, `rf/b.a(Graphics,...)` viền chữ, `Main/f.a(Graphics,String,...)` viền chữ: thân mới chỉ gọi `invokestatic VH.*` rồi return. Bỏ `println` mỗi ký tự trong `rf/b.b`. Ngắt dòng/trang tính 1 lần khi chuỗi đổi, cache trong VH.
