@@ -1078,7 +1078,7 @@
 1078	j9#: Ta đang dạy con mà, đừng lo, không sao đâu. Giờ con bấm "phím mềm trái" vào menu chọn cách tấn công đi!
 1079	j9#: Vì Hồ Tôn của con cấp còn thấp, nên nó chỉ biết một đòn thường "Đột Thích", sau này nó lên cấp 11 sẽ học được pháp thuật lợi hại hơn, giờ con bấm "phím mềm trái" chọn đòn thường.
 1080	j6#: Không phải chứ! j9#, tiên sủng của ông sao mới ra tay một cái mà Hồ Tôn của cháu đã sắp chết, sắp rút khỏi chiến đấu, phải tới trận sau mới ra lại được!
-1081	j9#: Haiz, con này không cẩn thận, con không thấy chữ "Khắc" và "Khuất" sao? Điều đó nói theo thuộc tính tiên sủng, tiên sủng của ta khắc chế tiên sủng của con, đòn này xuống là con khổ rồi.
+1081	j9#: Haiz, con này không cẩn thận, con không thấy chữ "Khắc" và "Kém" sao? Điều đó nói theo thuộc tính tiên sủng, tiên sủng của ta khắc chế tiên sủng của con, đòn này xuống là con khổ rồi.
 1082	j6#: Vậy cháu làm sao đây... Cháu không muốn Hồ Tôn của cháu thoi thóp... không muốn nó rút khỏi trận này... không muốn nó trận sau cũng không ra được... Cháu muốn con khỉ nhỏ của cháu... hu hu~~
 1083	j9#: Thôi nào, muốn trận sau Hồ Tôn cũng ra được thì lúc nghỉ giữa trận cho nó ăn Linh chi để hồi sinh, hơn nữa ngay trong chiến đấu cũng có thể vào cửa hàng mua chút Linh chi, lập tức cứu sống Hồ Tôn!
 1084	j6#: Vậy sao? Vậy j9# mau nói cho cháu cách mua Linh chi đi!
@@ -1108,7 +1108,7 @@
 1108	Bạo Liệt Vụ
 1109	Phép hệ Mộc tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Giam cầm" cho địch, tăng tỉ lệ bắt.
 1110	Giam cầm
-1111	Độc Đằng Thích
+1111	Độc Đằng
 1112	Phép hệ Mộc tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Giam cầm" cho địch, tăng tỉ lệ bắt.
 1113	Độc Vụ Trận
 1114	Phép hệ Mộc tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Giam cầm" cho địch, tăng tỉ lệ bắt.
@@ -1116,39 +1116,39 @@
 1116	Phép hệ Mộc tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Giam cầm" cho địch, tăng tỉ lệ bắt.
 1117	Đột Thích
 1118	Đòn thường không tốn MP, gây sát thương rất thấp.
-1119	Hồng Thủy Chú
+1119	Hồng Thủy
 1120	Phép hệ Thủy tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.
 1121	Đóng băng
 1122	Hàn Băng Chú
 1123	Phép hệ Thủy tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.
-1124	Diệt Đỉnh Yêm
+1124	Diệt Đỉnh
 1125	Phép hệ Thủy tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.
-1126	Băng Lăng Chùy
+1126	Băng Chùy
 1127	Phép hệ Thủy tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.
-1128	Thiên Hỏa Tiễn
+1128	Hỏa Tiễn
 1129	Phép hệ Hỏa tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.
 1130	Thiêu đốt
 1131	Địa Ngục Hỏa
 1132	Phép hệ Hỏa tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.
-1133	Loạn Tiễn Phi
+1133	Loạn Tiễn
 1134	Phép hệ Hỏa tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.
 1135	Địa Hỏa Liệu
 1136	Phép hệ Hỏa tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.
 1137	Nê Thạch Chú
 1138	Phép hệ Thổ tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.
 1139	Hóa đá
-1140	Thái Sơn Băng
+1140	Thái Sơn
 1141	Phép hệ Thổ tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.
 1142	Nê Tương Bạo
 1143	Phép hệ Thổ tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.
-1144	Thiên Địa Liệt
+1144	Địa Liệt
 1145	Phép hệ Thổ tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.
-1146	Bạo Phong Chú
+1146	Bạo Phong
 1147	Phép hệ Kim tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.
 1148	Tê liệt
-1149	Cuồng Lôi Chú
+1149	Cuồng Lôi
 1150	Phép hệ Kim tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.
-1151	Lốc Xoáy Trảm
+1151	Lốc Xoáy
 1152	Phép hệ Kim tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.
 1153	Phích Lịch
 1154	Phép hệ Kim tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.

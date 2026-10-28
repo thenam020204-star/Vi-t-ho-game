@@ -114,6 +114,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - Chỉ một công nhân chạy thật tại một thời điểm.
 
 ## Nhật ký
+- T6d (công nhân Sonnet): rút 11 tên chiêu về 2 từ Hán Việt (46-56 px, ≤80): Độc Đằng, Hồng Thủy, Diệt Đỉnh, Băng Chùy, Hỏa Tiễn, Loạn Tiễn, Thái Sơn, Địa Liệt, Bạo Phong, Cuồng Lôi, Lốc Xoáy; p1615 "Khuất" -> "Kém"; check OK, repack --check sạch.
 - T6c (công nhân Sonnet): tên đầy đủ Xích/Bích/Khôn/Càn Phong Đại, Liệt Diễm Phiến, Trúc Diệp Thanh (thoại+vật phẩm), giới hạn item5 cột 0 = 16 (extract.py, text_can_dich.tsv, map.json), bỏ `mới` ở thuật ngữ, thêm "Việt hoá: NAMP" cuối dòng 1446; dp check OK, repack --check sạch.
 - T6b (công nhân Sonnet): dịch tay 1573/1573 dòng, dp check OK, dp merge -> dich/dp_work/final/text_can_dich.tsv, repack --check OK (2158 hàng, 0 cảnh báo); thêm ~60 mục thuật ngữ `mới` (tên NPC/vật phẩm/tiên sủng); tên Phong Đại rút thành Phong Đại 1/2/3/4 vì giới hạn ≤12; chỗ mơ hồ ở dich/dp_work/ghi-chu.txt.
 - T6a (quản đốc): dp prep (charset f12), dich/dp_work/thuat-ngu.tsv 59 mục, vai.md; duyệt ảnh T4/T5 đạt (thoại 4 dòng vừa khung; CG kể chuyện tràn đáy → T7).

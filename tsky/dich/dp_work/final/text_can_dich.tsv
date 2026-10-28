@@ -1613,7 +1613,7 @@ p1611	pak/u2.p	0/3.2	按键错误，请按左软键！	Sai phím, hãy bấm ph�
 p1612	pak/u2.p	0/4.2	j9#：因为现在你的猢狲级别比较低，所以它只会一个普通攻击“突刺”，当它以后升到11级的时候，就能学会更厉害的法术啦，下面你先按一下“左软键”选择普通攻击。	j9#: Vì Hồ Tôn của con cấp còn thấp, nên nó chỉ biết một đòn thường "Đột Thích", sau này nó lên cấp 11 sẽ học được pháp thuật lợi hại hơn, giờ con bấm "phím mềm trái" chọn đòn thường.	cmd54 thoai huong dan; TOKEN j9# (giu nguyen)	
 p1613	pak/u2.p	0/5.2	按键错误，请按左软键！	Sai phím, hãy bấm phím mềm trái!	cmd51 chan phim: cau hien khi bam sai phim	
 p1614	pak/u2.p	0/7.2	j6#：不是吧！j9#，你的仙宠怎么就出手这么一下，我的猢狲就濒死了，就要退出战斗了，得直到我的下一场战斗才能再出来了！	j6#: Không phải chứ! j9#, tiên sủng của ông sao mới ra tay một cái mà Hồ Tôn của cháu đã sắp chết, sắp rút khỏi chiến đấu, phải tới trận sau mới ra lại được!	cmd54 thoai huong dan; TOKEN j6#,j9# (giu nguyen)	
-p1615	pak/u2.p	0/8.2	j9#：唉，你这孩子真不仔细，你没看到这“克”和“屈”吗？这说明，按照仙宠的属性，我的仙宠能够克制你的仙宠，当然这一下下去有你好受的了。	j9#: Haiz, con này không cẩn thận, con không thấy chữ "Khắc" và "Khuất" sao? Điều đó nói theo thuộc tính tiên sủng, tiên sủng của ta khắc chế tiên sủng của con, đòn này xuống là con khổ rồi.	cmd54 thoai huong dan; TOKEN j9# (giu nguyen)	
+p1615	pak/u2.p	0/8.2	j9#：唉，你这孩子真不仔细，你没看到这“克”和“屈”吗？这说明，按照仙宠的属性，我的仙宠能够克制你的仙宠，当然这一下下去有你好受的了。	j9#: Haiz, con này không cẩn thận, con không thấy chữ "Khắc" và "Kém" sao? Điều đó nói theo thuộc tính tiên sủng, tiên sủng của ta khắc chế tiên sủng của con, đòn này xuống là con khổ rồi.	cmd54 thoai huong dan; TOKEN j9# (giu nguyen)	
 p1616	pak/u2.p	0/9.2	j6#：那我怎么办啊……我不要我的猢狲濒死啊……我不想它退出本场战斗啊……我不想让它下一场战斗也不能出场啊……我要我的小猴子……呜呜~~	j6#: Vậy cháu làm sao đây... Cháu không muốn Hồ Tôn của cháu thoi thóp... không muốn nó rút khỏi trận này... không muốn nó trận sau cũng không ra được... Cháu muốn con khỉ nhỏ của cháu... hu hu~~	cmd54 thoai huong dan; TOKEN j6# (giu nguyen)	
 p1617	pak/u2.p	0/10.2	j9#：好啦，好啦，要想下一次战斗猢狲也能出场的话，就趁战斗间隙去给它吃灵芝让它复活嘛，而且现在就在战斗中也可以去商城买点灵芝什么的，马上就能把猢狲救活了嘛！	j9#: Thôi nào, muốn trận sau Hồ Tôn cũng ra được thì lúc nghỉ giữa trận cho nó ăn Linh chi để hồi sinh, hơn nữa ngay trong chiến đấu cũng có thể vào cửa hàng mua chút Linh chi, lập tức cứu sống Hồ Tôn!	cmd54 thoai huong dan; TOKEN j9# (giu nguyen)	
 p1618	pak/u2.p	0/11.2	j6#：是吗？那j9#你快告诉我怎么买灵芝吧！	j6#: Vậy sao? Vậy j9# mau nói cho cháu cách mua Linh chi đi!	cmd54 thoai huong dan; TOKEN j6#,j9# (giu nguyen)	
@@ -1665,7 +1665,7 @@ p1663	pak/u3.p	0/12.2	神兽：嗯，下面你就选择使用我刚送给你的�
 t0001	t/item3.t	0.1	爆烈雾	Bạo Liệt Vụ	item3 hang 0 cot 1 ten chieu	14
 t0002	t/item3.t	0.2	消耗七十点法力值的木系法术攻击，能对敌方造成很高的伤害，并且有一般的概率对敌人附加“禁锢”的效果，增加敌人被捕获的概率。	Phép hệ Mộc tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Giam cầm" cho địch, tăng tỉ lệ bắt.	item3 hang 0 cot 2 mo ta ky nang	
 t0003	t/item3.t	0.4	禁锢	Giam cầm	item3 hang 0 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
-t0004	t/item3.t	1.1	毒藤刺	Độc Đằng Thích	item3 hang 1 cot 1 ten chieu	14
+t0004	t/item3.t	1.1	毒藤刺	Độc Đằng	item3 hang 1 cot 1 ten chieu	14
 t0005	t/item3.t	1.2	消耗五十点法力值的木系法术攻击，能对敌方造成较高的伤害，并且有较低的概率对敌人附加“禁锢”的效果，增加敌人被捕获的概率。	Phép hệ Mộc tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Giam cầm" cho địch, tăng tỉ lệ bắt.	item3 hang 1 cot 2 mo ta ky nang	
 t0006	t/item3.t	1.4	禁锢	Giam cầm	item3 hang 1 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0007	t/item3.t	2.1	毒雾阵	Độc Vụ Trận	item3 hang 2 cot 1 ten chieu	14
@@ -1676,27 +1676,27 @@ t0011	t/item3.t	3.2	消耗五点法力值的木系法术攻击，能对敌方造
 t0012	t/item3.t	3.4	禁锢	Giam cầm	item3 hang 3 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0013	t/item3.t	4.1	突刺	Đột Thích	item3 hang 4 cot 1 ten chieu	14
 t0014	t/item3.t	4.2	不消耗法力值的普通攻击，能对敌方造成很低的伤害。	Đòn thường không tốn MP, gây sát thương rất thấp.	item3 hang 4 cot 2 mo ta ky nang	
-t0015	t/item3.t	5.1	洪水咒	Hồng Thủy Chú	item3 hang 5 cot 1 ten chieu	14
+t0015	t/item3.t	5.1	洪水咒	Hồng Thủy	item3 hang 5 cot 1 ten chieu	14
 t0016	t/item3.t	5.2	消耗七十点法力值的水系法术攻击，能对敌方造成很高的伤害，并且有一般的概率对敌人附加“冰冻”的效果，降低敌人的攻速。	Phép hệ Thủy tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.	item3 hang 5 cot 2 mo ta ky nang	
 t0017	t/item3.t	5.4	冰冻	Đóng băng	item3 hang 5 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0018	t/item3.t	6.1	寒冰咒	Hàn Băng Chú	item3 hang 6 cot 1 ten chieu	14
 t0019	t/item3.t	6.2	消耗五十点法力值的水系法术攻击，能对敌方造成较高的伤害，并且有较低的概率对敌人附加“冰冻”的效果，降低敌人的攻速。	Phép hệ Thủy tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.	item3 hang 6 cot 2 mo ta ky nang	
 t0020	t/item3.t	6.4	冰冻	Đóng băng	item3 hang 6 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
-t0021	t/item3.t	7.1	灭顶淹	Diệt Đỉnh Yêm	item3 hang 7 cot 1 ten chieu	14
+t0021	t/item3.t	7.1	灭顶淹	Diệt Đỉnh	item3 hang 7 cot 1 ten chieu	14
 t0022	t/item3.t	7.2	消耗三十点法力值的水系法术攻击，能对敌方造成普通的伤害，并且有较低的概率对敌人附加“冰冻”的效果，降低敌人的攻速。	Phép hệ Thủy tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.	item3 hang 7 cot 2 mo ta ky nang	
 t0023	t/item3.t	7.4	冰冻	Đóng băng	item3 hang 7 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
-t0024	t/item3.t	8.1	冰凌锥	Băng Lăng Chùy	item3 hang 8 cot 1 ten chieu	14
+t0024	t/item3.t	8.1	冰凌锥	Băng Chùy	item3 hang 8 cot 1 ten chieu	14
 t0025	t/item3.t	8.2	消耗五点法力值的水系法术攻击，能对敌方造成较低的伤害，并且有很低的概率对敌人附加“冰冻”的效果，降低敌人的攻速。	Phép hệ Thủy tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Đóng băng" cho địch, giảm tốc độ đánh của địch.	item3 hang 8 cot 2 mo ta ky nang	
 t0026	t/item3.t	8.4	冰冻	Đóng băng	item3 hang 8 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0027	t/item3.t	9.1	突刺	Đột Thích	item3 hang 9 cot 1 ten chieu	14
 t0028	t/item3.t	9.2	不消耗法力值的普通攻击，能对敌方造成很低的伤害。	Đòn thường không tốn MP, gây sát thương rất thấp.	item3 hang 9 cot 2 mo ta ky nang	
-t0029	t/item3.t	10.1	焚天箭	Thiên Hỏa Tiễn	item3 hang 10 cot 1 ten chieu	14
+t0029	t/item3.t	10.1	焚天箭	Hỏa Tiễn	item3 hang 10 cot 1 ten chieu	14
 t0030	t/item3.t	10.2	消耗七十点法力值的火系法术攻击，能对敌方造成很高的伤害，并且有一般的概率对敌人附加“燃烧”的效果，使敌人每回合自动减少生命值。	Phép hệ Hỏa tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.	item3 hang 10 cot 2 mo ta ky nang	
 t0031	t/item3.t	10.4	燃烧	Thiêu đốt	item3 hang 10 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0032	t/item3.t	11.1	地狱火	Địa Ngục Hỏa	item3 hang 11 cot 1 ten chieu	14
 t0033	t/item3.t	11.2	消耗五十点法力值的火系法术攻击，能对敌方造成较高的伤害，并且有较低的概率对敌人附加“燃烧”的效果，使敌人每回合自动减少生命值。	Phép hệ Hỏa tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.	item3 hang 11 cot 2 mo ta ky nang	
 t0034	t/item3.t	11.4	燃烧	Thiêu đốt	item3 hang 11 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
-t0035	t/item3.t	12.1	乱箭飞	Loạn Tiễn Phi	item3 hang 12 cot 1 ten chieu	14
+t0035	t/item3.t	12.1	乱箭飞	Loạn Tiễn	item3 hang 12 cot 1 ten chieu	14
 t0036	t/item3.t	12.2	消耗三十点法力值的火系法术攻击，能对敌方造成普通的伤害，并且有较低的概率对敌人附加“燃烧”的效果，使敌人每回合自动减少生命值。	Phép hệ Hỏa tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Thiêu đốt" cho địch, địch tự mất HP mỗi lượt.	item3 hang 12 cot 2 mo ta ky nang	
 t0037	t/item3.t	12.4	燃烧	Thiêu đốt	item3 hang 12 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0038	t/item3.t	13.1	地火燎	Địa Hỏa Liệu	item3 hang 13 cot 1 ten chieu	14
@@ -1707,24 +1707,24 @@ t0042	t/item3.t	14.2	不消耗法力值的普通攻击，能对敌方造成很�
 t0043	t/item3.t	15.1	泥石咒	Nê Thạch Chú	item3 hang 15 cot 1 ten chieu	14
 t0044	t/item3.t	15.2	消耗七十点法力值的土系法术攻击，能对敌方造成很高的伤害，并且有一般的概率对敌人附加“石化”的效果，使敌人无法动作，但会少量增加敌人的防御。	Phép hệ Thổ tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.	item3 hang 15 cot 2 mo ta ky nang	
 t0045	t/item3.t	15.4	石化	Hóa đá	item3 hang 15 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
-t0046	t/item3.t	16.1	泰山崩	Thái Sơn Băng	item3 hang 16 cot 1 ten chieu	14
+t0046	t/item3.t	16.1	泰山崩	Thái Sơn	item3 hang 16 cot 1 ten chieu	14
 t0047	t/item3.t	16.2	消耗五十点法力值的土系法术攻击，能对敌方造成较高的伤害，并且有较低的概率对敌人附加“石化”的效果，使敌人无法动作，但会少量增加敌人的防御。	Phép hệ Thổ tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.	item3 hang 16 cot 2 mo ta ky nang	
 t0048	t/item3.t	16.4	石化	Hóa đá	item3 hang 16 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0049	t/item3.t	17.1	泥浆爆	Nê Tương Bạo	item3 hang 17 cot 1 ten chieu	14
 t0050	t/item3.t	17.2	消耗三十点法力值的土系法术攻击，能对敌方造成普通的伤害，并且有较低的概率对敌人附加“石化”的效果，使敌人无法动作，但会少量增加敌人的防御。	Phép hệ Thổ tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.	item3 hang 17 cot 2 mo ta ky nang	
 t0051	t/item3.t	17.4	石化	Hóa đá	item3 hang 17 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
-t0052	t/item3.t	18.1	天地裂	Thiên Địa Liệt	item3 hang 18 cot 1 ten chieu	14
+t0052	t/item3.t	18.1	天地裂	Địa Liệt	item3 hang 18 cot 1 ten chieu	14
 t0053	t/item3.t	18.2	消耗五点法力值的土系法术攻击，能对敌方造成较低的伤害，并且有很低的概率对敌人附加“石化”的效果，使敌人无法动作，但会少量增加敌人的防御。	Phép hệ Thổ tốn 5 MP, gây sát thương khá thấp, tỉ lệ rất thấp gây "Hóa đá" cho địch, địch không thể hành động nhưng tăng chút DEF.	item3 hang 18 cot 2 mo ta ky nang	
 t0054	t/item3.t	18.4	石化	Hóa đá	item3 hang 18 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0055	t/item3.t	19.1	突刺	Đột Thích	item3 hang 19 cot 1 ten chieu	14
 t0056	t/item3.t	19.2	不消耗法力值的普通攻击，能对敌方造成很低的伤害。	Đòn thường không tốn MP, gây sát thương rất thấp.	item3 hang 19 cot 2 mo ta ky nang	
-t0057	t/item3.t	20.1	暴风咒	Bạo Phong Chú	item3 hang 20 cot 1 ten chieu	14
+t0057	t/item3.t	20.1	暴风咒	Bạo Phong	item3 hang 20 cot 1 ten chieu	14
 t0058	t/item3.t	20.2	消耗七十点法力值的金系法术攻击，能对敌方造成很高的伤害，并且有一般的概率对敌人附加“麻痹”的效果，降低敌人的闪避率。	Phép hệ Kim tốn 70 MP, gây sát thương rất cao, tỉ lệ vừa phải gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.	item3 hang 20 cot 2 mo ta ky nang	
 t0059	t/item3.t	20.4	麻痹	Tê liệt	item3 hang 20 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
-t0060	t/item3.t	21.1	狂雷咒	Cuồng Lôi Chú	item3 hang 21 cot 1 ten chieu	14
+t0060	t/item3.t	21.1	狂雷咒	Cuồng Lôi	item3 hang 21 cot 1 ten chieu	14
 t0061	t/item3.t	21.2	消耗五十点法力值的金系法术攻击，能对敌方造成较高的伤害，并且有较低的概率对敌人附加“麻痹”的效果，降低敌人的闪避率。	Phép hệ Kim tốn 50 MP, gây sát thương khá cao, tỉ lệ thấp gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.	item3 hang 21 cot 2 mo ta ky nang	
 t0062	t/item3.t	21.4	麻痹	Tê liệt	item3 hang 21 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
-t0063	t/item3.t	22.1	旋风斩	Lốc Xoáy Trảm	item3 hang 22 cot 1 ten chieu	14
+t0063	t/item3.t	22.1	旋风斩	Lốc Xoáy	item3 hang 22 cot 1 ten chieu	14
 t0064	t/item3.t	22.2	消耗三十点法力值的金系法术攻击，能对敌方造成普通的伤害，并且有较低的概率对敌人附加“麻痹”的效果，降低敌人的闪避率。	Phép hệ Kim tốn 30 MP, gây sát thương vừa, tỉ lệ thấp gây "Tê liệt" cho địch, giảm tỉ lệ né của địch.	item3 hang 22 cot 2 mo ta ky nang	
 t0065	t/item3.t	22.4	麻痹	Tê liệt	item3 hang 22 cot 4 ten trang thai - KHOA DONG NHAT voi 5 hang class Main/j (麻痹 禁锢 冰冻 燃烧 石化), script.md 5.1	10
 t0066	t/item3.t	23.1	霹雳闪	Phích Lịch	item3 hang 23 cot 1 ten chieu	14
