@@ -498,7 +498,8 @@ public final class VH {
 
     /** Cua hang: x khoi <so> = R - 26 - rong(gia): 8 + 1 + chu so + 1 + 8 + 2 + gia (gia can phai tai R). */
     public static int shopCol(String[][] a, int row, int right) {
-        return right - 26 - sw(a[row][2]);
+        String[] r = a[row];
+        return right - 26 - (r.length > 2 && r[2] != null ? sw(r[2]) : 0);
     }
 
     /** Phan tu dem cho cat() (rong). */

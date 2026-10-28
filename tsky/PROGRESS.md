@@ -12,7 +12,7 @@ env -u JAVA_TOOL_OPTIONS java -jar $CFR goc/TienSungKyDuyen_240x320.jar --output
 ```
 
 ## Trạng thái
-- T0–T5 xong (phân tích, extract/repack, VH+Patch+build, logo NAMP). T6 dịch xong (bản chốt `dich/dp_work/final/text_can_dich.tsv`, build mặc định dùng nó). T8/T8b ảnh xong (A2). T7 bố cục xong: `logs/shots_T7/` (25 ảnh), docs/render.md mục 10, jar_check PASS. Việc dịch còn nhờ công nhân dịch rút tên quá ô (PLAN.md, Vướng mắc T7). Tiếp: T9 (320x240), T10, T11.
+- T0–T5 xong (phân tích, extract/repack, VH+Patch+build, logo NAMP). T6 dịch xong (bản chốt `dich/dp_work/final/text_can_dich.tsv`, build mặc định dùng nó). T8/T8b ảnh xong (A2). T7 bố cục xong: `logs/shots_T7/` (25 ảnh), docs/render.md mục 10, jar_check PASS. Việc dịch còn nhờ công nhân dịch rút tên quá ô (PLAN.md, Vướng mắc T7). T7b (cửa hàng) và T9 (320x240, 2 jar PASS, ảnh `logs/shots_T9/`) xong. Tiếp: T10, T11.
 - Dựng jar: `./build.sh` (→ `out/TienSungKyDuyen_240x320_vi.jar`). Chụp màn: `scripts/t7_emu.py --cwd work/fjsave --follow work/cmd.txt ...` (xem docs/render.md mục 10); save thử ở `work/fjsave` (không commit).
 
 ## Quyết định đã chốt với người dùng
