@@ -138,3 +138,10 @@ Không còn so sánh chuỗi hiển thị nào khác: mọi `equals/indexOf/Hash
 4. Trường chữ trong cmd 49 có `@` thay `^`; giữ `@` làm ký hiệu xuống dòng (`j.java:1895`). cmd 51 chặn phím: câu hướng dẫn nên khớp phím thực tế ở bản 320x240 (QĐ 10).
 5. Ký tự `×` (18), `—` (2) trong script: ngoài charset f12 → đổi `x` và `-`.
 6. `rf.b.a/b` giữ tối đa 100 dòng (`rf/b.java:32-33`): chuỗi dài nhất (`dm`, `dj`, CG 360 ký tự Hán ≈ 1000 ký tự Việt) khoảng 30-60 dòng ở rộng 220 px → còn dư, nhưng không được dài gấp đôi nữa.
+
+## 11. TSV `dich/text_can_dich.tsv` (T3)
+- Sinh bởi `scripts/extract.py`, ghép bởi `scripts/repack.py`, kiểm `scripts/selftest_repack.sh`. 2158 hàng: pak 1663, item3-7 350, class 145.
+- Không đưa vào TSV: `"主角"` (5 trường, bị code bỏ qua); chuỗi class chết/debug (GameMidlet, Main/a, Main/f, rf/b, rf/e, "她", "额") và "空" (QĐ 7b, VH ánh xạ).
+- Khoá class = nội dung gốc (repack thay mọi Utf8 == gốc) nên ASM đổi chỉ số constant pool không sao. Đặt `repack` SAU bước patch hoặc trước đều được.
+- `repack --check` bắt: ký tự ngoài f12, còn Hán, `^ | #` cấm ở pak/item, `^` class phải đủ số lượng, token mới, trạng thái ×5 không đồng nhất giữa `item3` cột 4 và hằng `Main/j`, "没有" không là tiền tố của 3 chuỗi danh sách rỗng.
+- Hàng ghi chú `CHI-DAU-CAU` (4 hàng chỉ có `……`/`！`): `dp prep` có thể loại khỏi dịch, nhưng f12 không có `…`/`！` Hán nên PHẢI dịch tay (hoặc quản đốc đổi bằng bảng ánh xạ) trước khi ghép.

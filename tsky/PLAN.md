@@ -86,7 +86,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
   - Hoàn thành khi: `docs/render.md` có bảng call-site (class.method:offset bytecode, số lần) + danh sách màn cần sửa bố cục, mỗi mục đề xuất cách hook (thay call-site hay thay cả method).
 
 ### Giai đoạn 2 — Hạ tầng (A1, sau khi quản đốc duyệt T1/T2)
-- [ ] T3 `scripts/extract.py` + `scripts/repack.py` → `dich/text_can_dich.tsv` (cột `id, file, offset/khoá, gốc, dịch, ghi chú ngữ cảnh, giới hạn`). Bao gồm pak, item*.t, chuỗi class (cột file = `class:Main/j` …).
+- [x] T3 `scripts/extract.py` + `scripts/repack.py` → `dich/text_can_dich.tsv` (cột `id, file, offset/khoá, gốc, dịch, ghi chú ngữ cảnh, giới hạn`). Bao gồm pak, item*.t, chuỗi class (cột file = `class:Main/j` …).
   - Hoàn thành khi: `repack` từ TSV chưa dịch ra mọi file resource giống từng byte (`cmp`), có test tự động `scripts/selftest_repack.sh`; TSV đánh dấu token mã điều khiển.
 - [ ] T4 `hook/VH.java`, `patcher/Patch.java`, `build_hook.sh`, `build.sh`. **Quản đốc nghiệm thu.**
   - VH port từ nhánh tham khảo, chỉnh theo docs/render.md. Patch theo QĐ 2–4.
@@ -115,6 +115,8 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - T0 (quản đốc): tạo .gitignore, PLAN.md, PROGRESS.md; goc/logo_namp_240x320.png.
 - T1 (A1): docs/script.md + scripts/dump_pak.py; 486 blob/1668 trường Hán, blob lớn nhất 14701 B (~20.7 KB sau dịch), 7 token tên Hán nằm trong Main/l, 3 nhóm chuỗi bị so sánh (trạng thái ×5, "没有", "空" lưu RMS).
 - T2 (A1): docs/render.md + scripts/count_callsites.py; 50 drawString/24 stringWidth/2 charWidth/2 substringWidth/4 getHeight, không có drawChar(s)/drawSubstring; thoại 2 dòng/trang ở Main/g.a, cần thay cả method.
+
+- T3 (A1): scripts/{hanlib,extract,repack}.py + selftest_repack.sh (88 file giống từng byte, test dịch thử OK); dich/text_can_dich.tsv 2158 hàng (pak 1663, item 350, class 145); khoá class = nội dung gốc (bền khi ASM đổi chỉ số CP); repack --check kiểm charset f12, ^ | #, token, trạng thái/"没有" đồng nhất.
 
 ## Quyết định quản đốc sau T1/T2 (bổ sung QĐ, công nhân làm theo)
 - QĐ 2b: **Được thay cả thân method** (giữ nguyên tên/descriptor/access) cho `Main/g.a(char[],...)`, `rf/b.a(String,int)`, `rf/b.b(String,int)`, `rf/b.a(Graphics,...)` viền chữ, `Main/f.a(Graphics,String,...)` viền chữ: thân mới chỉ gọi `invokestatic VH.*` rồi return. Bỏ `println` mỗi ký tự trong `rf/b.b`. Ngắt dòng/trang tính 1 lần khi chuỗi đổi, cache trong VH.
