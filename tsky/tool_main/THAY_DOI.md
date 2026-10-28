@@ -1,28 +1,19 @@
 # T11-tool: Tool_Viet_Hoa_NAM_P.zip thêm cỡ 12px
 
-Gốc: `Tool_Viet_Hoa_NAM_P.zip` ở gốc repo (cấu trúc `NAM_P/`). Bản mới: `tool_main/Tool_Viet_Hoa_NAM_P.zip` (cùng cấu trúc, không có build_tmp/__pycache__).
+Gốc: `Tool_Viet_Hoa_NAM_P.zip` ở gốc repo (cấu trúc `NAM_P/`). Bản mới: `tool_main/Tool_Viet_Hoa_NAM_P.zip` (cùng cấu trúc, không có build_tmp/__pycache__). Mọi file `fonts/*.bin` giữ NGUYÊN từng byte so với zip gốc.
 
-## Đã đổi
-- `NAM_P/java/BitmapFont.java`: thêm `SIZE_12 = 12`; `SIZES = {18,15,13,12}`, `HAS_STYLES = {false,true,true,false}`; `slot()` làm tròn: >=17 -> 18, 14..16 -> 15, 13 -> 13, <=12 -> 12. SANS/SELECTIVE ở 12 rơi về `f12.bin` (chỉ một kiểu). Loader đã đọc số glyph theo `readUTF().length()` của file, không hardcode 227 (f12.bin có 228 ký tự). Cập nhật comment đầu file.
-- `NAM_P/java/BitmapFont.class`: build lại bằng `sh java/build_class.sh` -> class version 47, 10805 byte (ecj 1.3 + ProGuard microedition).
-- `java/test/FontDemo.java`: thêm f12 (canvas cao 640).
-- `pixeltext_kit/pixeltext/font.py` (SIZES thêm 12), `cli.py` (chú thích), `selftest.py` (như gốc, chỉ loại f12 khỏi vòng lặp 0/O cũ; phần kiểm f12 nằm ở `selftest_f12.py` mới).
-- `check_all.sh`: GIỮ NGUYÊN các phép thử cũ như zip gốc; chỉ THÊM bước 7 (kiểm `f12.bin`: cao 12, 228 ký tự, chỉ thiếu `'` `…` `‚` so với f18, round-trip) và 7b (`pixeltext_kit/selftest_f12.py`), và đổi nhãn bước 5 (FontDemo đã gồm f12).
-- `README.md`: dòng f12 trong bảng, cách dùng `BitmapFont.SIZE_12`, quy tắc làm tròn, `--size 12`.
+## Thêm cỡ 12px
+- `java/BitmapFont.java`: `SIZE_12 = 12`; `SIZES = {18,15,13,12}`, `HAS_STYLES = {false,true,true,false}`; làm tròn >=17 -> 18, 14..16 -> 15, 13 -> 13, <=12 -> 12. SANS/SELECTIVE ở 12 dùng `f12.bin`. Loader đọc số glyph theo độ dài charset trong file (f12 = 228 ký tự), không hardcode 227. Comment đầu file cập nhật.
+- `java/BitmapFont.class`: build lại bằng `sh java/build_class.sh` -> class version 47.
+- `java/test/FontDemo.java`: thêm f12.
+- `pixeltext_kit/pixeltext/font.py`: `SIZES` thêm 12 (`--size 12`); `cli.py` chú thích; `selftest_f12.py` mới.
+- `README.md`: dòng f12 trong bảng, `BitmapFont.SIZE_12`, quy tắc làm tròn, `--size 12`.
 
-## Kết quả `sh check_all.sh` (không nới phép thử nào)
-| Bước | Kết quả | Ghi chú |
-|---|---|---|
-| 1 font .bin hợp lệ (7 file) | FAIL | FAIL từ zip gốc: thư mục `fonts/` có thêm `f12.bin` nên danh sách 7 file không khớp; ngoài ra `f13c.bin` có 229 ký tự (thừa `=` `~`) khác charset 227 của f18 |
-| 1b f15/f13 sinh lại từ f18 | FAIL | FAIL từ zip gốc: `f15c/f13c` bị chỉnh tay (glyph `e`, dấu `,` ...) lệch với `fontgen/sans18.py` |
-| 2 pixeltext selftest | FAIL | FAIL từ zip gốc: "chân chọn lọc chỉ I i j l J 1 4 giữ chân" thất bại vì f15c/f13c chỉnh tay (khác thêm `e á ạ ... ,`) |
-| 3 examples | OK | |
-| 4 BitmapFont.class version 47 | OK | |
-| 5 FontDemo (gồm f12) | OK | f12 dựng đúng, loader đọc 228 ký tự |
-| 7 f12.bin | OK | mới |
-| 7b selftest_f12 | OK | mới (`--size 12`, phủ chữ Việt, round-trip, I/l/1 phân biệt) |
-| 6 freej2me | OK | |
+## Theo quyết định người dùng (đồng bộ bộ kiểm với font đang dùng)
+1. `check_all.sh` bước 1: danh sách chuẩn 8 file (có `f12.bin`). Kiểm chặt như cũ cho f18/f15/f13/f15s/f13s/f15c (charset đúng bằng f18, 227 ký tự). Ngoại lệ có chú thích trong script: `f13c` = charset f18 + đúng `=~` ở cuối (người dùng giữ), `f12` = 228 ký tự riêng (chỉ được thiếu `'` `…` `‚` so với f18).
+2. `fontgen/hand_tuned.py` (mới) + `build_fonts.py`: nạp glyph chỉnh tay của f15c/f13c (e , ; ‚ á ạ ặ ậ é è ẻ ẽ ẹ ê ế ề ể ễ ệ ị ọ ộ ợ ụ ự ...) và `=~` cho f13c qua `OVERRIDES`/`EXTRA_CHARS`. `build_fonts.py` nay sinh lại ĐÚNG từng byte cả 6 file f15/f13 (+s,+c) (bước 1b so cmp không nới).
+3. `selftest.py`: các phép thử cũ giữ nguyên; riêng "chân chọn lọc" đổi từ "chỉ I i j l J 1 4 khác bản không chân" thành đúng tập glyph khác của font hiện có (`HAND_DIFF` theo cỡ, so bằng) và vẫn bắt buộc I i j l J 1 4 (+dấu) giữ chân; chỉ so ký tự chung (f13c có thêm `=~`). Vòng kiểm 0/O bỏ f12 (f12 có `0`/`O` trùng glyph, chỉ dùng chữ số), f12 kiểm riêng ở `selftest_f12.py` (bước 7b).
+4. `0`/`O` trùng glyph ở f12 và f12 có `= _ ~` nhưng thiếu `'` (PLAN ghi ngược) — ghi nhận, không sửa.
 
-Bước 1, 1b, 2 đã FAIL trên zip gốc trước khi sửa gì (kiểm lại bằng cách giải nén zip gốc và chạy `check_all.sh`); KHÔNG do thay đổi 12px. Phần 12px (BitmapFont SIZE_12, pixeltext `--size 12`, FontDemo, bước 7/7b) đều pass.
-
-Ghi chú khác: `f12.bin` có `= _ \` ~` nhưng thiếu `'` (PLAN ghi ngược); `0` và `O` trùng glyph ở f12 (chỉ dùng chữ số). Muốn check_all xanh hoàn toàn cần người dùng quyết: đồng bộ `sans18.py` với f15c/f13c chỉnh tay, đưa f12 vào danh sách 8 file, đưa f13c về 227 ký tự (hoặc nới charset) trong phép thử.
+## Kết quả `sh check_all.sh`: tất cả pass
+1 font .bin (8 file) OK; 1b sinh lại f15/f13/+s/+c byte-exact OK; 2 selftest OK; 3 examples OK; 4 BitmapFont.class version 47 OK; 5 FontDemo (gồm f12) OK; 7b selftest_f12 OK; 6 freej2me OK.
