@@ -41,7 +41,7 @@ Image/ui_pro.png	87,0,29,28	火	ngũ hành Hỏa	Hỏa	mỗi ô một màu theo 
 Image/ui_pro.png	116,0,29,28	土	ngũ hành Thổ	Thổ	mỗi ô một màu theo thân chữ gốc; viền đen 1px theo yêu cầu người dùng
 Image/ui_fight_mid.png	0,0,29,28	换	đổi (tiên sủng)	Đổi	viền đen 1px theo yêu cầu người dùng; thử lại với viền: đọc được "Đổi"
 Image/ui_fight_mid.png	29,0,29,28	逃	chạy trốn	Chạy	viền đen 1px theo yêu cầu người dùng
-Image/ui_fight_mid.png	58,0,28,28	商	(đọc là 商) nghi là 宠 = tiên sủng	Sủng	VƯỚNG: nghĩa chưa chắc, xem PLAN Vướng mắc; viền đen 1px theo yêu cầu người dùng
+Image/ui_fight_mid.png	58,0,28,28	商	cửa hàng (nút mở cửa hàng trong trận, quản đốc xác nhận)	Mua	viền đen 1px theo yêu cầu người dùng
 Image/ui_fight_mid.png	86,0,29,28	物	vật phẩm	Vật	viền đen 1px theo yêu cầu người dùng
 Image/ui_fight_mid.png	115,0,29,28	攻	tấn công	Đánh	viền đen 1px theo yêu cầu người dùng
 Image/ui_fight_mid.png	144,0,29,28	破	phá (chiêu)	Phá	viền đen 1px theo yêu cầu người dùng
