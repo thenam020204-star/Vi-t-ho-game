@@ -69,7 +69,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 
 ### Giai đoạn 1 — Phân tích (A1)
 - [x] T0 Thiết lập `.gitignore`, `PLAN.md`, `PROGRESS.md`. (quản đốc)
-- [ ] T1 **Phân tích script pak** → `docs/script.md`. **Quản đốc nghiệm thu.**
+- [x] T1 **Phân tích script pak** → `docs/script.md`. **Quản đốc nghiệm thu.**
   - Tìm hàm tách `^`/`|` trong `Main/j`, bộ thông dịch lệnh; lập bảng mã lệnh → ý nghĩa → trường nào là chữ hiển thị (thoại, tường thuật, lựa chọn, tên hiển thị) / trường mã (tên file, biến, cờ, số).
   - Ý nghĩa token `jN#`, `gN#`, `iN#`… và cách thay khi vẽ; code có tìm `：` hay ký tự Hán nào trong chuỗi script không (`indexOf`, `charAt`).
   - `t/item*.t`: ý nghĩa từng cột F/z/E/I/J; ô nào bị `Integer.parseInt`/so sánh.
@@ -78,7 +78,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
   - Xác minh `dat/26xueyewai.dat`, `dat/30xuecunzi.dat`, `sr/*.sr` có chữ thật không.
   - Phân loại 118 chuỗi Hán của `Main/j` + chuỗi các class khác: hiển thị / so sánh / debug.
   - Hoàn thành khi: `docs/script.md` có đủ các mục trên, dẫn `file:dòng`; có số liệu thống kê (số blob, số trường text, blob lớn nhất, ước lượng blob lớn nhất sau dịch ×1.6).
-- [ ] T2 **Phân tích vẽ chữ** → `docs/render.md`. **Quản đốc nghiệm thu.**
+- [x] T2 **Phân tích vẽ chữ** → `docs/render.md`. **Quản đốc nghiệm thu.**
   - Mọi call-site `drawString/drawChar/drawChars/drawSubstring`, `stringWidth/charWidth/charsWidth/substringWidth/getHeight/getBaselinePosition`, `setFont/getFont/Font.getFont` theo class (số lượng, dùng `javap -c` để đếm chính xác theo bytecode, không theo CFR).
   - Chỗ bố cục theo số ký tự / độ rộng cố định (`k.w`, `f.c`, `length()*`, cắt `substring` theo chỉ số để xuống dòng, vòng lặp `toCharArray`): màn nào, số dòng tối đa, độ rộng ô px cho 240 và 320, phân trang.
   - Khung hội thoại: hình học, số dòng, cách vẽ tên người nói, hiệu ứng chạy chữ, chuyển trang.
@@ -113,6 +113,19 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 
 ## Nhật ký
 - T0 (quản đốc): tạo .gitignore, PLAN.md, PROGRESS.md; goc/logo_namp_240x320.png.
+- T1 (A1): docs/script.md + scripts/dump_pak.py; 486 blob/1668 trường Hán, blob lớn nhất 14701 B (~20.7 KB sau dịch), 7 token tên Hán nằm trong Main/l, 3 nhóm chuỗi bị so sánh (trạng thái ×5, "没有", "空" lưu RMS).
+- T2 (A1): docs/render.md + scripts/count_callsites.py; 50 drawString/24 stringWidth/2 charWidth/2 substringWidth/4 getHeight, không có drawChar(s)/drawSubstring; thoại 2 dòng/trang ở Main/g.a, cần thay cả method.
+
+## Quyết định quản đốc sau T1/T2 (bổ sung QĐ, công nhân làm theo)
+- QĐ 2b: **Được thay cả thân method** (giữ nguyên tên/descriptor/access) cho `Main/g.a(char[],...)`, `rf/b.a(String,int)`, `rf/b.b(String,int)`, `rf/b.a(Graphics,...)` viền chữ, `Main/f.a(Graphics,String,...)` viền chữ: thân mới chỉ gọi `invokestatic VH.*` rồi return. Bỏ `println` mỗi ký tự trong `rf/b.b`. Ngắt dòng/trang tính 1 lần khi chuỗi đổi, cache trong VH.
+- QĐ 7b: "空" GIỮ NGUYÊN trong class/RMS; VH ánh xạ khi vẽ/đo: chuỗi đúng bằng "空" → "Trống". Trạng thái 麻痹/禁锢/冰冻/燃烧/石化 dịch CÙNG giá trị ở hằng class và `item3.t` (Tê liệt / Giam cầm / Đóng băng / Thiêu đốt / Hóa đá). `indexOf("没有")`: 3 chuỗi danh sách rỗng dịch bắt đầu bằng "Không có", hằng indexOf đổi thành "Không có"; kiểm không chuỗi hiển thị nào khác lọt nhánh này.
+- Tên token trong `Main/l`: 王大爷 Vương đại gia, 李奶奶 Lý bà bà, 小虎 Tiểu Hổ, 风雅灵 Phong Nhã Linh, 共宛 Cộng Uyển, 爷爷 Gia gia, 小灵子 Tiểu Linh Tử.
+- `Main/j` drawString(dk,0,0) (CFR `j.java:5858,5879`): chụp màn CG trên **jar gốc** ở T4; nếu đúng là chữ debug đè góc trên-trái thì NOP (pop đủ đối số), nếu không thì giữ và ghi lại.
+- Mục menu "更多游戏" (platformRequest web quảng cáo): ẩn khỏi menu (hoặc nếu ẩn rủi ro lệch chỉ số menu thì biến thành no-op và đổi nhãn). Ghi cách làm vào docs/render.md.
+- Phím mềm căn theo `k.w*2`, cửa hàng đặt cột theo tên hàng đầu, mũi tên menu theo "继续游戏": sửa ở T7 bằng đo độ rộng thật.
 
 ## Vướng mắc
-(trống)
+- (đã xử lý, xem mục trên) (T1/T2, A1) QĐ 2 + QĐ 4 chưa đủ cho 5 chỗ: chỉ thay call-site không sửa được ngắt dòng/trang ở `Main/g.a`, `rf/b.a(String,int)`, `rf/b.b(String,int)` và viền chữ 8 hướng (`rf/b.a(G,...)`, `Main/f.a`) -> đề xuất thay cả thân method bằng `invokestatic VH.*` (vẫn giữ descriptor, QĐ 3 không vi phạm). Cần quản đốc duyệt.
+- (T1) Hằng "空" bị `equals` và lưu RMS `xianchong1`: đề xuất giữ nguyên trong class, ánh xạ khi vẽ trong VH (trái QĐ 7 "dịch cùng giá trị"?). Quản đốc chốt.
+- (T1) `j9#` (爷爷) chỉ có một bản dịch trong `Main/l`; muốn đổi "ông nội"/"gia gia" theo ngữ cảnh phải dịch thẳng trong pak. Token `j8#` (共宛) cần hỏi người dùng.
+- (T2) `Main/j.java:5858,5879` `drawString(dk,0,0)` là mã debug sót vẽ cả đoạn CG ở góc trên-trái; đề xuất NOP. Mục menu "更多游戏" mở web quảng cáo (`platformRequest`), ngoài phạm vi nhưng nên hỏi người dùng có ẩn không.
