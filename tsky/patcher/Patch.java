@@ -368,39 +368,62 @@ public class Patch {
         log.println("BODY Main/j.a(G,String,IIIII) -> VH.scroll (cuon theo trang)");
     }
 
-    /** Cua hang Main/e.a(G,String[][],...): cot so luong/gia dat sau ten DAI NHAT (khong phai ten hang dau). */
+    /**
+     * Cua hang Main/e.a(G,String[][],...) kieu 1 (T7b): gia can PHAI sat mep trong khung, khoi <so> ngay truoc gia, ten dung phan con lai.
+     * - ten bat dau o n2+4 (goc n2+18);
+     * - x khoi so = VH.shopCol(a,row,n2+n4-5) = R - 26 - rong(gia) (goc: sau ten hang dau + 20);
+     * - khoang cach trong khoi 5 -> 1 (hai cho).
+     */
     static void patchShop(ClassNode cn) {
         MethodNode m = method(cn, "a", "(L" + G + ";[[" + STR + "IIIIIIZI)I");
         int n = 0;
         for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
-            if (x.getOpcode() == Opcodes.ALOAD && ((VarInsnNode) x).var == 2) {
-                AbstractInsnNode a1 = x.getNext(), a2 = a1 == null ? null : a1.getNext(), a3 = a2 == null ? null : a2.getNext(),
-                        a4 = a3 == null ? null : a3.getNext(), a5 = a4 == null ? null : a4.getNext();
-                if (a1 != null && a1.getOpcode() == Opcodes.ICONST_0 && a2 != null && a2.getOpcode() == Opcodes.AALOAD
-                        && a3 != null && a3.getOpcode() == Opcodes.ICONST_0 && a4 != null && a4.getOpcode() == Opcodes.AALOAD
-                        && a5 != null && a5.getOpcode() == Opcodes.INVOKESTATIC && ((MethodInsnNode) a5).name.equals("stringWidth")) {
+            // ten: n2 + 18 -> n2 + 4
+            if (x.getOpcode() == Opcodes.BIPUSH && ((IntInsnNode) x).operand == 18) {
+                AbstractInsnNode pv = prev(x), nx = next(x);
+                if (pv != null && pv.getOpcode() == Opcodes.ILOAD && ((VarInsnNode) pv).var == 4 && nx != null && nx.getOpcode() == Opcodes.IADD) {
+                    ((IntInsnNode) x).operand = 4;
+                    n += 100;
+                }
+            }
+            // x cot so luong: iload15; getstatic a; aload2; iconst0; aaload; iconst0; aaload; stringWidth; iadd; bipush 20; iadd; istore 19
+            if (x.getOpcode() == Opcodes.ILOAD && ((VarInsnNode) x).var == 15) {
+                List<AbstractInsnNode> q = new ArrayList<>();
+                AbstractInsnNode c = x;
+                for (int k = 0; k < 12 && c != null; k++) { q.add(c); c = next(c); }
+                if (q.size() == 12 && q.get(1).getOpcode() == Opcodes.GETSTATIC && q.get(2).getOpcode() == Opcodes.ALOAD && ((VarInsnNode) q.get(2)).var == 2
+                        && q.get(3).getOpcode() == Opcodes.ICONST_0 && q.get(4).getOpcode() == Opcodes.AALOAD && q.get(5).getOpcode() == Opcodes.ICONST_0
+                        && q.get(6).getOpcode() == Opcodes.AALOAD && q.get(7).getOpcode() == Opcodes.INVOKESTATIC && q.get(8).getOpcode() == Opcodes.IADD
+                        && q.get(9).getOpcode() == Opcodes.BIPUSH && q.get(10).getOpcode() == Opcodes.IADD
+                        && q.get(11).getOpcode() == Opcodes.ISTORE && ((VarInsnNode) q.get(11)).var == 19) {
                     InsnList r = new InsnList();
-                    r.add(new InsnNode(Opcodes.ICONST_0));
-                    r.add(vhCall("widest", "([[" + STR + "I)" + STR));
-                    m.instructions.insert(a4, r);
-                    m.instructions.remove(a1);
-                    m.instructions.remove(a2);
-                    m.instructions.remove(a3);
-                    m.instructions.remove(a4);
-                    // stringWidth(Font,String) -> colWidth (tran 69 px), khoang cach 20 -> 6
-                    ((MethodInsnNode) a5).name = "colWidth";
-                    AbstractInsnNode g = next(a5);
-                    if (g != null && g.getOpcode() == Opcodes.IADD) g = next(g);
-                    if (g != null && g.getOpcode() == Opcodes.BIPUSH && ((IntInsnNode) g).operand == 20) {
-                        ((IntInsnNode) g).operand = 6;
-                        n++;
+                    r.add(new VarInsnNode(Opcodes.ALOAD, 2));
+                    r.add(new VarInsnNode(Opcodes.ILOAD, 17));
+                    r.add(new VarInsnNode(Opcodes.ILOAD, 4));
+                    r.add(new VarInsnNode(Opcodes.ILOAD, 6));
+                    r.add(new InsnNode(Opcodes.IADD));
+                    r.add(new InsnNode(Opcodes.ICONST_5));
+                    r.add(new InsnNode(Opcodes.ISUB));
+                    r.add(vhCall("shopCol", "([[" + STR + "II)I"));
+                    m.instructions.insertBefore(q.get(11), r);
+                    for (int k = 0; k < 11; k++) m.instructions.remove(q.get(k));
+                    // khoang cach 5 -> 1 (2 cho ngay sau)
+                    int g = 0;
+                    AbstractInsnNode y = q.get(11);
+                    while (y != null && g < 2) {
+                        AbstractInsnNode ny = y.getNext();
+                        if (y.getOpcode() == Opcodes.ICONST_5 && next(y) != null && next(y).getOpcode() == Opcodes.IADD) {
+                            m.instructions.set(y, new InsnNode(Opcodes.ICONST_1));
+                            g++;
+                        }
+                        y = ny;
                     }
+                    n += g == 2 ? 1 : 1000;
                 }
             }
         }
-        expect("Main/e.a(String[][]): cot theo ten dai nhat", n, 1);
+        expect("Main/e.a(String[][]): bo cuc cua hang (ten, cot, khoang cach)", n, 101);
     }
-
 
     /**
      * Noi chuoi `bien + "Han dich" + bien`: ban goc tieng Trung khong can dau cach, tieng Viet thi can.

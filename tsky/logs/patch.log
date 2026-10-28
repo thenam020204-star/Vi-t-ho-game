@@ -2,7 +2,7 @@ OK   Main/a drawString: 1 (mong doi 1)
 OK   Main/e drawString: 10 (mong doi 10)
 OK   Main/e stringWidth: 8 (mong doi 8)
 OK   Main/e getHeight: 1 (mong doi 1)
-OK   Main/e.a(String[][]): cot theo ten dai nhat: 1 (mong doi 1)
+OK   Main/e.a(String[][]): bo cuc cua hang (ten, cot, khoang cach): 101 (mong doi 101)
 spaceConcat Main/e: 0
   concat cache Main/e.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;)V (2 phan tu) slot 0
   concat cache Main/e.a(Ljavax/microedition/lcdui/Graphics;IILjava/lang/String;)V (2 phan tu) slot 1

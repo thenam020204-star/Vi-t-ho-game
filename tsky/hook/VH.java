@@ -479,42 +479,11 @@ public final class VH {
         return cR;
     }
 
-    static String[][] wideArr;
-    static int wideCol = -1;
-    static String wideStr = "";
-
-    /** Chuoi rong nhat cua cot col (cache theo tham chieu mang; mang dung lai trong cung khung hinh). */
-    public static String widest(String[][] a, int col) {
-        if (a == wideArr && col == wideCol) return wideStr;
-        String best = "";
-        int bw = -1;
-        for (int i = 0; i < a.length; i++) {
-            String t = a[i][col];
-            if (t == null) continue;
-            int w = sw(t);
-            if (w > bw) {
-                bw = w;
-                best = t;
-            }
-        }
-        wideArr = a;
-        wideCol = col;
-        wideStr = best;
-        return best;
+    /** Cua hang: x khoi <so> = R - 26 - rong(gia): 8 + 1 + chu so + 1 + 8 + 2 + gia (gia can phai tai R). */
+    public static int shopCol(String[][] a, int row, int right) {
+        return right - 26 - sw(a[row][2]);
     }
 
-    /** Rong cot ten cua hang (tran SHOP_NAME_MAX de cot so luong/gia con trong khung 148 px: 60 + w + 6 + 34 + 24 <= 193). */
-    static final int SHOP_NAME_MAX = 69;
-
-    public static int colWidth(Font f, String s) {
-        int w = sw(map(s));
-        return w > SHOP_NAME_MAX ? SHOP_NAME_MAX : w;
-    }
-
-    /**
-     * Noi chuoi cache (thay StringBuffer moi khung): ket qua gan voi tung vi tri (slot); tra lai khi cac phan tu
-     * giong het (so sanh tham chieu).
-     */
     /** Phan tu dem cho cat() (rong). */
     public static final String E = "";
 
