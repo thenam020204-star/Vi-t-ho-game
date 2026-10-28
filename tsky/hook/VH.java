@@ -386,7 +386,7 @@ public final class VH {
     static void layout(char[] a, int w) {
         int n = a.length;
         if (dLs.length < n + 2) dLs = new int[n + 2];
-        int maxW = w - 5;
+        int maxW = w - 10;
         if (maxW < SW) maxW = SW;
         int cnt = 0, ls = 0;
         while (ls < n) {
@@ -451,6 +451,119 @@ public final class VH {
             }
         }
         return dLs[end] - 1;
+    }
+
+    // ================================================================ T7: nhan, menu, cuon, cot
+
+    /** Phim mem phai: game dat x = t - 2*k.w - 1 (k.w = SW). Ve sat le phai: ket thuc o x + 2*SW. */
+    public static void drawRight(Graphics g, String s, int x, int y, int anchor) {
+        if (s == null) return;
+        s = map(s);
+        drawRange(g, s, 0, s.length(), x + 2 * SW - sw(s), y, anchor);
+    }
+
+    /** "Tam dung": game dat x = t/2 - k.w (tam chu = x + SW). */
+    public static void drawMid(Graphics g, String s, int x, int y, int anchor) {
+        if (s == null) return;
+        s = map(s);
+        drawRange(g, s, 0, s.length(), x + SW - (sw(s) >> 1), y, anchor);
+    }
+
+    static int menuLast;
+
+    /** Menu chinh: bo muc 2 (Game khac). Nhan trai/phai doi cR +-1 nen nhay qua: tu <2 thi len 3, tu >2 thi lui 1. */
+    public static int menuSkip(int cR, int busy) {
+        if (busy != 0) return cR;
+        if (cR == 2) cR = menuLast < 2 ? 3 : 1;
+        menuLast = cR;
+        return cR;
+    }
+
+    static String[][] wideArr;
+    static int wideCol = -1;
+    static String wideStr = "";
+
+    /** Chuoi rong nhat cua cot col (cache theo tham chieu mang; mang dung lai trong cung khung hinh). */
+    public static String widest(String[][] a, int col) {
+        if (a == wideArr && col == wideCol) return wideStr;
+        String best = "";
+        int bw = -1;
+        for (int i = 0; i < a.length; i++) {
+            String t = a[i][col];
+            if (t == null) continue;
+            int w = sw(t);
+            if (w > bw) {
+                bw = w;
+                best = t;
+            }
+        }
+        wideArr = a;
+        wideCol = col;
+        wideStr = best;
+        return best;
+    }
+
+    /**
+     * Noi chuoi cache (thay StringBuffer moi khung): ket qua gan voi tung vi tri (slot); tra lai khi cac phan tu
+     * giong het (so sanh tham chieu).
+     */
+    static final String[] cA = new String[96], cB = new String[96], cC = new String[96], cD = new String[96], cRes = new String[96];
+
+    public static String cat(String a, String b, String c, String d, int slot) {
+        if (slot < 96 && cRes[slot] != null && cA[slot] == a && cB[slot] == b && cC[slot] == c && cD[slot] == d) return cRes[slot];
+        StringBuffer sb = new StringBuffer();
+        if (a != null) sb.append(a);
+        if (b != null) sb.append(b);
+        if (c != null) sb.append(c);
+        if (d != null) sb.append(d);
+        String r = sb.toString();
+        if (slot < 96) {
+            cA[slot] = a;
+            cB[slot] = b;
+            cC[slot] = c;
+            cD[slot] = d;
+            cRes[slot] = r;
+        }
+        return r;
+    }
+
+    /** Buoc dong o mo ta cuon. */
+    static final int SCROLL_STEP = LH + 2;
+
+    /**
+     * Thay phan ve cua Main/j.a(G,String,w,h,x,y,color) (o mo ta/CG ke chuyen): lines[0..count) la ket qua wrap.
+     * Vua khung thi ve tinh; dai hon thi lat TRANG (moi trang v = h/step dong day du, khong cat nua dong), tick dem khung hinh
+     * (15 khung/giay), moi trang giu 20 + 12*v khung roi sang trang ke, het thi quay lai trang dau. Tra tick moi.
+     */
+    public static int scroll(Graphics g, String[] lines, int count, int x, int y, int w, int h, int color, int tick) {
+        int lo = 0;
+        while (lo < count && lines[lo].length() == 0) lo++;
+        int n = count - lo;
+        if (n <= 0) return 0;
+        int v = h / SCROLL_STEP;
+        if (v < 1) v = 1;
+        int first = 0;
+        if (n > v) {
+            int pages = (n + v - 1) / v;
+            int per = 20 + 12 * v;
+            int page = tick / per;
+            if (page >= pages) {
+                tick = 0;
+                page = 0;
+            }
+            first = page * v;
+            tick++;
+        } else {
+            tick = 0;
+        }
+        g.setColor(color);
+        int end = first + v;
+        if (end > n) end = n;
+        for (int i = first; i < end; i++) {
+            String s = lines[lo + i];
+            drawRange(g, s, 0, s.length(), x, y + (i - first) * SCROLL_STEP, 0);
+        }
+        return tick;
     }
 
     // ================================================================ khoi dong

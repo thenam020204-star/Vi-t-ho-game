@@ -347,7 +347,7 @@ public class Patch {
         L.add(new VarInsnNode(Opcodes.ILOAD, 7));
         L.add(new VarInsnNode(Opcodes.ALOAD, 0));
         L.add(new FieldInsnNode(Opcodes.GETFIELD, "Main/j", "X", "I"));
-        L.add(vhCall("scroll", "(L" + G + ";[" + STR + "IIIIIII" + "I)I"));
+        L.add(vhCall("scroll", "(L" + G + ";[" + STR + "IIIIIII)I"));
         L.add(new FieldInsnNode(Opcodes.PUTFIELD, "Main/j", "X", "I"));
         L.add(new InsnNode(Opcodes.RETURN));
         a.instructions = L;
