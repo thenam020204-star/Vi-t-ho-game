@@ -138,6 +138,12 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - Mục menu "更多游戏" (platformRequest web quảng cáo): ẩn khỏi menu (hoặc nếu ẩn rủi ro lệch chỉ số menu thì biến thành no-op và đổi nhãn). Ghi cách làm vào docs/render.md.
 - Phím mềm căn theo `k.w*2`, cửa hàng đặt cột theo tên hàng đầu, mũi tên menu theo "继续游戏": sửa ở T7 bằng đo độ rộng thật.
 
+## Quyết định quản đốc sau T7
+- Cửa hàng: KHÔNG rút tên vật phẩm. A1 đổi bố cục hàng: giá căn phải sát mép trong khung, khối ◀số▶ đặt ngay trước giá, cột tên dùng phần còn lại (phải chứa được tên dài nhất 88 px). (T7b, A1)
+- 11 tên chiêu vượt ô 80 px (t0004…t0063 trong Vướng mắc T7): công nhân dịch rút gọn ≤ 80 px (đo bằng f12), giữ Hán Việt. `p1615` "Khuất" → thống nhất "Kém" như ảnh tx_qu. (T6d, công nhân dịch)
+- `ui_fight_mid.png` ô 3 = mở cửa hàng trong trận → nhãn "Mua". (T8c, A2)
+- Chữ `l` của f12 giống `L`: lỗi thiết kế font của bộ tool, không tự sửa glyph (quy tắc skill); báo người dùng.
+
 ## Vướng mắc
 - (đã xử lý, xem mục trên) (T1/T2, A1) QĐ 2 + QĐ 4 chưa đủ cho 5 chỗ: chỉ thay call-site không sửa được ngắt dòng/trang ở `Main/g.a`, `rf/b.a(String,int)`, `rf/b.b(String,int)` và viền chữ 8 hướng (`rf/b.a(G,...)`, `Main/f.a`) -> đề xuất thay cả thân method bằng `invokestatic VH.*` (vẫn giữ descriptor, QĐ 3 không vi phạm). Cần quản đốc duyệt.
 - (T1) Hằng "空" bị `equals` và lưu RMS `xianchong1`: đề xuất giữ nguyên trong class, ánh xạ khi vẽ trong VH (trái QĐ 7 "dịch cùng giá trị"?). Quản đốc chốt.
