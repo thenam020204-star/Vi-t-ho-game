@@ -1,3 +1,4 @@
+ghi đè K.n07: 'Huyết Chiến Bát Phương' -> 'Huyết Chiến B.Phương'
 dấu cách ghép C.b.5 (b.<init>: label + mô tả nhiệm vụ): 'Hoàn thành nhiệm vụ:' -> 'Hoàn thành nhiệm vụ: '
 chuẩn hoá toàn khổ C.h.74: '？？？' -> '???'
 dấu cách ghép C.m.43 (m.a@205: tên đồ + "đã hủy"): 'Đã hủy' -> ' Đã hủy'

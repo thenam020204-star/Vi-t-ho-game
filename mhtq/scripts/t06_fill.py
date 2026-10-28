@@ -51,6 +51,9 @@ PAD = {
     'C.m.63': ('', ' ', 'm.a: "Tiêu vàng " + số'),
 }
 
+# Ghi đè sau khi đo ảnh chụp (quản đốc cho phép): 107px > hộp 101px, chữ đè viền danh sách kỹ năng
+OVERRIDE = {'K.n07': 'Huyết Chiến B.Phương'}
+
 
 def norm(t):
     return u''.join(FW.get(c, c) for c in t)
@@ -93,6 +96,9 @@ def main(argv=None):
                 t = t.rstrip(' ') + tl
             if t != t0:
                 log.append('dấu cách ghép %s (%s): %r -> %r' % (r[0], why, t0, t))
+        if r[0] in OVERRIDE:
+            log.append('ghi đè %s: %r -> %r' % (r[0], t, OVERRIDE[r[0]]))
+            t = OVERRIDE[r[0]]
         r[4] = L.esc(t)
         n += 1
     with open(a.out, 'w', encoding='utf-8', newline='\n') as f:
