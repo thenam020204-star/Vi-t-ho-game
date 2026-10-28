@@ -1,4 +1,5 @@
 OK   Main/a drawString: 1 (mong doi 1)
+OK   Main/a: keyEq thay so sanh cq/cr: 4 (mong doi 4)
 OK   Main/e drawString: 10 (mong doi 10)
 OK   Main/e stringWidth: 8 (mong doi 8)
 OK   Main/e getHeight: 1 (mong doi 1)
@@ -27,6 +28,7 @@ OK   Main/g [truoc] getHeight: 0 (mong doi 0)
 BODY Main/g.a([CLjavax/microedition/lcdui/Graphics;IIIII)I -> VH.dialog
 OK   Main/j drawString: 13 (mong doi 13)
 OK   Main/j stringWidth: 12 (mong doi 12)
+OK   Main/j.d: bo remap phim case 6: 1 (mong doi 1)
 OK   Main/j.y drawString -> VH.drawRight: 1 (mong doi 1)
 OK   Main/j.z drawString -> VH.drawRight: 1 (mong doi 1)
 OK   Main/j.i drawString -> VH.drawMid: 1 (mong doi 1)

@@ -145,6 +145,9 @@ public class Patch {
         } else if (name.equals("Main/e")) {
             patchShop(cn);
             changed = true;
+        } else if (name.equals("Main/a")) {
+            patchKeyEq(cn);
+            changed = true;
         }
         if (name.equals("Main/j") || name.equals("Main/e")) {
             if (spaceConcat(cn) > 0) changed = true;
@@ -286,7 +289,45 @@ public class Patch {
         expect(cn.name + "." + mname + " drawString -> VH." + to, n, want);
     }
 
+    /** T9: bo remap phim cho p==6 (E62) trong Main/j.d(String,String): case 6 -> default (khong doi 48->109, -4->104, -2->98). */
+    static void patchKeyRemap(ClassNode cn) {
+        MethodNode d = method(cn, "d", "(" + STR + STR + ")V");
+        int n = 0;
+        for (AbstractInsnNode x = d.instructions.getFirst(); x != null; x = x.getNext()) {
+            if (x instanceof TableSwitchInsnNode) {
+                TableSwitchInsnNode t = (TableSwitchInsnNode) x;
+                if (t.min == 4 && t.max == 6) {
+                    t.labels.set(2, t.dflt);
+                    n++;
+                }
+            }
+        }
+        expect("Main/j.d: bo remap phim case 6", n, 1);
+    }
+
+    /** T9: so khop phim bang nhom tuong duong: cq (phim bam) so voi Integer.parseInt(cr) -> VH.keyEq (4 cho trong Main/a). */
+    static void patchKeyEq(ClassNode cn) {
+        int n = 0;
+        for (MethodNode m : cn.methods) {
+            for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+                if (isCall(x, Opcodes.INVOKESTATIC, "java/lang/Integer", "parseInt", "(" + STR + ")I")) {
+                    AbstractInsnNode nx = x.getNext();
+                    AbstractInsnNode pv = prev(x);
+                    if (nx instanceof JumpInsnNode && (nx.getOpcode() == Opcodes.IF_ICMPEQ || nx.getOpcode() == Opcodes.IF_ICMPNE)
+                            && pv != null && pv.getOpcode() == Opcodes.GETSTATIC && ((FieldInsnNode) pv).name.equals("cr")) {
+                        m.instructions.insert(x, vhCall("keyEq", "(II)Z"));
+                        JumpInsnNode j = (JumpInsnNode) nx;
+                        m.instructions.set(nx, new JumpInsnNode(nx.getOpcode() == Opcodes.IF_ICMPEQ ? Opcodes.IFNE : Opcodes.IFEQ, j.label));
+                        n++;
+                    }
+                }
+            }
+        }
+        expect("Main/a: keyEq thay so sanh cq/cr", n, 4);
+    }
+
     static void patchMainJ(ClassNode cn) {
+        patchKeyRemap(cn);
         // phim mem phai ("Thoat"/"Quay lai", x = t - k.w*2 - 1) va "Tam dung" (x = t/2 - k.w): can theo do rong that
         retarget(cn, "y", "drawRight", 1);
         retarget(cn, "z", "drawRight", 1);

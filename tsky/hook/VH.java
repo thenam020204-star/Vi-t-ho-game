@@ -469,6 +469,23 @@ public final class VH {
         drawRange(g, s, 0, s.length(), x + SW - (sw(s) >> 1), y, anchor);
     }
 
+    /** Phim tuong duong (so / mui ten / QWERTY): {-1,50,116} {-2,56,98} {-3,52,102} {-4,54,104} {-5,53,103} {48,109}. */
+    static final int[][] KEYS = {{-1, 50, 116}, {-2, 56, 98}, {-3, 52, 102}, {-4, 54, 104}, {-5, 53, 103}, {48, 109, 109}};
+
+    public static boolean keyEq(int a, int b) {
+        if (a == b) return true;
+        for (int i = 0; i < KEYS.length; i++) {
+            int[] g = KEYS[i];
+            boolean ha = false, hb = false;
+            for (int k = 0; k < 3; k++) {
+                if (g[k] == a) ha = true;
+                if (g[k] == b) hb = true;
+            }
+            if (ha && hb) return true;
+        }
+        return false;
+    }
+
     static int menuLast;
 
     /** Menu chinh: bo muc 2 (Game khac). Nhan trai/phai doi cR +-1 nen nhay qua: tu <2 thi len 3, tu >2 thi lui 1. */
