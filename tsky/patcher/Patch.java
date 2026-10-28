@@ -128,6 +128,17 @@ public class Patch {
             int w = want == null ? 0 : want[i];
             if (n != w || n > 0) expect(name + " " + CALLS[i][1], n, w);
         }
+        if (name.equals("Main/j")) {
+            patchMainJ(cn);
+            changed = true;
+        } else if (name.equals("Main/e")) {
+            patchShop(cn);
+            changed = true;
+        }
+        if (name.equals("Main/j") || name.equals("Main/e") || name.equals("rf/b")) {
+            int c = cacheConcat(cn);
+            if (c > 0) changed = true;
+        }
         return changed;
     }
 
@@ -239,6 +250,210 @@ public class Patch {
         if (op == Opcodes.LDC && ((LdcInsnNode) x).cst instanceof Integer) return (Integer) ((LdcInsnNode) x).cst;
         return Integer.MIN_VALUE;
     }
+
+    // ===================================================================== T7: bo cuc
+    static MethodInsnNode vhCall(String name, String desc) {
+        return new MethodInsnNode(Opcodes.INVOKESTATIC, VH, name, desc, false);
+    }
+
+    /** Doi cac call VH.drawString trong method (name, (Graphics)V) thanh VH.<to>; phai dung `want` lan. */
+    static void retarget(ClassNode cn, String mname, String to, int want) {
+        MethodNode m = method(cn, mname, "(L" + G + ";)V");
+        int n = 0;
+        for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+            if (x instanceof MethodInsnNode && x.getOpcode() == Opcodes.INVOKESTATIC) {
+                MethodInsnNode mi = (MethodInsnNode) x;
+                if (mi.owner.equals(VH) && mi.name.equals("drawString")) {
+                    mi.name = to;
+                    n++;
+                }
+            }
+        }
+        expect(cn.name + "." + mname + " drawString -> VH." + to, n, want);
+    }
+
+    static void patchMainJ(ClassNode cn) {
+        // phim mem phai ("Thoat"/"Quay lai", x = t - k.w*2 - 1) va "Tam dung" (x = t/2 - k.w): can theo do rong that
+        retarget(cn, "y", "drawRight", 1);
+        retarget(cn, "z", "drawRight", 1);
+        retarget(cn, "i", "drawMid", 1);
+
+        // menu chinh f(Graphics): (1) bo muc 2 ("Game khac", platformRequest quang cao), (2) mui ten theo nhan dang chon
+        MethodNode f = method(cn, "f", "(L" + G + ";)V");
+        InsnList pre = new InsnList();
+        pre.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        pre.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        pre.add(new FieldInsnNode(Opcodes.GETFIELD, "Main/j", "cR", "I"));
+        String[] busy = {"bS", "bX", "bC", "bk", "bs", "bL"};
+        for (int i = 0; i < busy.length; i++) {
+            pre.add(new FieldInsnNode(Opcodes.GETSTATIC, "Main/j", busy[i], "Z"));
+            if (i > 0) pre.add(new InsnNode(Opcodes.IOR));
+        }
+        pre.add(vhCall("menuSkip", "(II)I"));
+        pre.add(new FieldInsnNode(Opcodes.PUTFIELD, "Main/j", "cR", "I"));
+        f.instructions.insert(pre);
+        int arrows = 0;
+        for (AbstractInsnNode x = f.instructions.getFirst(); x != null; x = x.getNext()) {
+            if (x.getOpcode() == Opcodes.ALOAD && ((VarInsnNode) x).var == 2) {
+                AbstractInsnNode a1 = x.getNext();
+                AbstractInsnNode a2 = a1 == null ? null : a1.getNext();
+                AbstractInsnNode a3 = a2 == null ? null : a2.getNext();
+                if (a1 != null && a1.getOpcode() == Opcodes.ICONST_1 && a2 != null && a2.getOpcode() == Opcodes.AALOAD
+                        && a3 != null && a3.getOpcode() == Opcodes.INVOKESTATIC && ((MethodInsnNode) a3).name.equals("stringWidth")) {
+                    InsnList r = new InsnList();
+                    r.add(new VarInsnNode(Opcodes.ALOAD, 0));
+                    r.add(new FieldInsnNode(Opcodes.GETFIELD, "Main/j", "cR", "I"));
+                    f.instructions.insert(a1, r);
+                    f.instructions.remove(a1);
+                    arrows++;
+                }
+            }
+        }
+        expect("Main/j.f: mui ten menu theo nhan dang chon", arrows, 2);
+
+        // o mo ta cuon doc a(G,String,IIIII)V: cuon theo trang (hang + thay trang), khong cat nua dong
+        MethodNode a = method(cn, "a", "(L" + G + ";" + STR + "IIIII)V");
+        clearBody(a);
+        InsnList L = new InsnList();
+        LabelNode skip = new LabelNode();
+        // g=1 s=2 w=3 h=4 x=5 y=6 color=7
+        L.add(new VarInsnNode(Opcodes.ALOAD, 1));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 5));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 6));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 3));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 4));
+        L.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL, G, "setClip", "(IIII)V", false));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "Main/j", "bE", "Z"));
+        L.add(new JumpInsnNode(Opcodes.IFEQ, skip));
+        L.add(new VarInsnNode(Opcodes.ALOAD, 2));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 3));
+        L.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "rf/b", "a", "(" + STR + "I)V", false));
+        L.add(new InsnNode(Opcodes.ICONST_0));
+        L.add(new FieldInsnNode(Opcodes.PUTSTATIC, "Main/j", "bE", "Z"));
+        L.add(new InsnNode(Opcodes.ICONST_0));
+        L.add(new FieldInsnNode(Opcodes.PUTSTATIC, "Main/j", "cW", "I"));
+        L.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        L.add(new InsnNode(Opcodes.ICONST_0));
+        L.add(new FieldInsnNode(Opcodes.PUTFIELD, "Main/j", "X", "I"));
+        L.add(skip);
+        L.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        L.add(new VarInsnNode(Opcodes.ALOAD, 1));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "rf/b", "c", "[" + STR));
+        L.add(new FieldInsnNode(Opcodes.GETSTATIC, "rf/b", "e", "I"));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 5));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 6));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 3));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 4));
+        L.add(new VarInsnNode(Opcodes.ILOAD, 7));
+        L.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        L.add(new FieldInsnNode(Opcodes.GETFIELD, "Main/j", "X", "I"));
+        L.add(vhCall("scroll", "(L" + G + ";[" + STR + "IIIIIII" + "I)I"));
+        L.add(new FieldInsnNode(Opcodes.PUTFIELD, "Main/j", "X", "I"));
+        L.add(new InsnNode(Opcodes.RETURN));
+        a.instructions = L;
+        log.println("BODY Main/j.a(G,String,IIIII) -> VH.scroll (cuon theo trang)");
+    }
+
+    /** Cua hang Main/e.a(G,String[][],...): cot so luong/gia dat sau ten DAI NHAT (khong phai ten hang dau). */
+    static void patchShop(ClassNode cn) {
+        MethodNode m = method(cn, "a", "(L" + G + ";[[" + STR + "IIIIIIZI)I");
+        int n = 0;
+        for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+            if (x.getOpcode() == Opcodes.ALOAD && ((VarInsnNode) x).var == 2) {
+                AbstractInsnNode a1 = x.getNext(), a2 = a1 == null ? null : a1.getNext(), a3 = a2 == null ? null : a2.getNext(),
+                        a4 = a3 == null ? null : a3.getNext(), a5 = a4 == null ? null : a4.getNext();
+                if (a1 != null && a1.getOpcode() == Opcodes.ICONST_0 && a2 != null && a2.getOpcode() == Opcodes.AALOAD
+                        && a3 != null && a3.getOpcode() == Opcodes.ICONST_0 && a4 != null && a4.getOpcode() == Opcodes.AALOAD
+                        && a5 != null && a5.getOpcode() == Opcodes.INVOKESTATIC && ((MethodInsnNode) a5).name.equals("stringWidth")) {
+                    InsnList r = new InsnList();
+                    r.add(new InsnNode(Opcodes.ICONST_0));
+                    r.add(vhCall("widest", "([[" + STR + "I)" + STR));
+                    m.instructions.insert(a4, r);
+                    m.instructions.remove(a1);
+                    m.instructions.remove(a2);
+                    m.instructions.remove(a3);
+                    m.instructions.remove(a4);
+                    n++;
+                }
+            }
+        }
+        expect("Main/e.a(String[][]): cot theo ten dai nhat", n, 1);
+    }
+
+    /**
+     * Noi chuoi toan String ("a" + b + "^") moi khung hinh: thay chuoi new StringBuffer().append(S)...toString() bang
+     * VH.catN(a,b,..,slot): neu cac phan tu giu nguyen (so sanh tham chieu) thi tra lai ket qua da noi (khong cap phat).
+     * Chi xu ly chuoi chi co append(String) voi doi so la 1 lenh don (LDC/ALOAD/GETSTATIC/this.field).
+     */
+    static int catSlots = 0;
+
+    static int cacheConcat(ClassNode cn) {
+        int total = 0;
+        String sb = "java/lang/StringBuffer";
+        for (MethodNode m : cn.methods) {
+            AbstractInsnNode x = m.instructions.getFirst();
+            while (x != null) {
+                AbstractInsnNode nx = x.getNext();
+                if (x.getOpcode() == Opcodes.NEW && ((TypeInsnNode) x).desc.equals(sb)) {
+                    AbstractInsnNode d = next(x), ini = d == null ? null : next(d);
+                    if (d != null && d.getOpcode() == Opcodes.DUP && ini != null && isCall(ini, Opcodes.INVOKESPECIAL, sb, "<init>", "()V")) {
+                        List<InsnList> args = new ArrayList<>();
+                        List<AbstractInsnNode> all = new ArrayList<>();
+                        AbstractInsnNode c = next(ini);
+                        boolean ok = true;
+                        AbstractInsnNode end = null;
+                        while (ok) {
+                            // doi so: 1 lenh (LDC String / ALOAD / GETSTATIC) hoac ALOAD0+GETFIELD
+                            List<AbstractInsnNode> g = new ArrayList<>();
+                            AbstractInsnNode a = c;
+                            if (a == null) { ok = false; break; }
+                            int op = a.getOpcode();
+                            if (op == Opcodes.LDC && ((LdcInsnNode) a).cst instanceof String) { g.add(a); c = next(a); }
+                            else if (op == Opcodes.ALOAD && ((VarInsnNode) a).var != 0) { g.add(a); c = next(a); }
+                            else if (op == Opcodes.GETSTATIC && ((FieldInsnNode) a).desc.equals(STR)) { g.add(a); c = next(a); }
+                            else if (op == Opcodes.ALOAD && ((VarInsnNode) a).var == 0 && next(a) != null && next(a).getOpcode() == Opcodes.GETFIELD
+                                    && ((FieldInsnNode) next(a)).desc.equals(STR)) { g.add(a); g.add(next(a)); c = next(next(a)); }
+                            else { ok = false; break; }
+                            if (c == null || !isCall(c, Opcodes.INVOKEVIRTUAL, sb, "append", "(" + STR + ")L" + sb + ";")) { ok = false; break; }
+                            InsnList il = new InsnList();
+                            for (AbstractInsnNode q : g) all.add(q);
+                            args.add(null);
+                            all.add(c);
+                            c = next(c);
+                            if (c != null && isCall(c, Opcodes.INVOKEVIRTUAL, sb, "toString", "()" + STR)) { end = c; break; }
+                        }
+                        if (ok && end != null && args.size() >= 2 && args.size() <= 4) {
+                            // gom lenh doi so (bo cac append)
+                            List<AbstractInsnNode> keep = new ArrayList<>();
+                            for (AbstractInsnNode q : all) if (!(q instanceof MethodInsnNode)) keep.add(q);
+                            InsnList rep = new InsnList();
+                            // doi so duoc giu nguyen thu tu; dem cho du 4 doi so
+                            for (AbstractInsnNode q : keep) {
+                                m.instructions.remove(q);
+                                rep.add(q);
+                            }
+                            for (int i = args.size(); i < 4; i++) rep.add(new InsnNode(Opcodes.ACONST_NULL));
+                            rep.add(new LdcInsnNode(catSlots++));
+                            rep.add(vhCall("cat", "(" + STR + STR + STR + STR + "I)" + STR));
+                            m.instructions.insertBefore(x, rep);
+                            // xoa new/dup/init + cac append + toString
+                            for (AbstractInsnNode q : all) if (q instanceof MethodInsnNode) m.instructions.remove(q);
+                            m.instructions.remove(end);
+                            m.instructions.remove(ini);
+                            m.instructions.remove(d);
+                            nx = x.getNext();
+                            m.instructions.remove(x);
+                            total++;
+                        }
+                    }
+                }
+                x = nx;
+            }
+        }
+        log.println("cacheConcat " + cn.name + ": " + total);
+        return total;
+    }
+
     // ===================================================================== Main/f: khoi dong (QD 9)
     /**
      * - c(): chi nap /Image/namp.png (VH.logo()) vao this.h, bo bg/logo0-5/logo51/52/menu thu nho.

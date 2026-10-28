@@ -11,6 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, 'work/x/Image')
 DST = os.path.join(ROOT, 'res_vi/Image')
 SIZE = 12
+OUTLINE = '#000000'   # viền đen 1px 8 hướng theo yêu cầu người dùng (đặt None để tắt)
 CHECK = []   # mọi nhãn để chạy pixeltext check
 
 class Img:
@@ -64,7 +65,7 @@ class Img:
     def text(self, box, txt, color, mode='metric', align='center', valign='center', dx=0, dy=0):
         CHECK.append(txt)
         r = R.draw(self.im, box, txt, size=SIZE, mode=mode, gap=1, align=align, valign=valign,
-                   dx=dx, dy=dy, fill=color + (255,) if len(color) == 3 else color, outline=None, clip=True)
+                   dx=dx, dy=dy, fill=color + (255,) if len(color) == 3 else color, outline=OUTLINE, outline_diag=True, clip=True)
         if r['overflow_x'] or r['overflow_y']:
             print('  TRÀN', self.name, txt, box, r)
         return r
@@ -72,7 +73,7 @@ class Img:
     def text_rot(self, box, txt, color, mode='metric'):
         """chữ xoay 90 độ theo chiều kim đồng hồ (biển dọc), canh giữa trong box"""
         CHECK.append(txt)
-        t = R.render(txt, SIZE, mode, 1, trim=True, fill=color + (255,))
+        t = R.render(txt, SIZE, mode, 1, trim=True, fill=color + (255,), outline=OUTLINE, outline_diag=True)
         t = t.rotate(-90, expand=True)
         x0, y0, w, h = box
         if t.width > w or t.height > h:
@@ -155,7 +156,7 @@ def main():
     done(im)
     im = Img('ui_fight_mid')
     xs = [0, 29, 58, 86, 115, 144, 173]
-    for i, (t, c) in enumerate([('Thay',(31,131,255)),('Chạy',(54,143,0)),('Sủng',(31,131,255)),
+    for i, (t, c) in enumerate([('Đổi',(31,131,255)),('Chạy',(54,143,0)),('Sủng',(31,131,255)),
                                 ('Vật',(31,131,255)),('Đánh',(31,131,255)),('Phá',(255,121,1))]):
         b = (xs[i], 0, xs[i+1]-xs[i], 28); im.clear(b); im.text(b, t, c)
     done(im)
