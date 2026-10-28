@@ -92,7 +92,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
   - VH port từ nhánh tham khảo, chỉnh theo docs/render.md. Patch theo QĐ 2–4.
   - Build: giải nén goc → patch class → chép `font/f12.bin`, `VH.class` → zip → `$S/preverify.sh` → `$S/jar_check.py goc patched` → `run_emu.py`.
   - Hoàn thành khi: `jar_check` `RESULT: PASS`; ảnh chụp FreeJ2ME menu chính + một hội thoại hiện chữ (còn Hán vẫn được, chưa dịch) bằng font f12, không exception.
-- [ ] T5 Khởi động theo QĐ 9 (`res_vi/Image/namp.png` từ `goc/logo_namp_240x320.png`).
+- [x] T5 Khởi động theo QĐ 9 (`res_vi/Image/namp.png` từ `goc/logo_namp_240x320.png`).
   - Hoàn thành khi: chụp FreeJ2ME: màn đầu là logo NAMP, sau ~2s vào game, không có màn hỏi nhạc, không có logo nhà phát hành; log có `Player.start` (hoặc lỗi MIDI headless như skill mô tả).
 
 ### Giai đoạn 3 — Dịch (đúng MỘT công nhân Sonnet 5.5)
@@ -119,6 +119,8 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - T3 (A1): scripts/{hanlib,extract,repack}.py + selftest_repack.sh (88 file giống từng byte, test dịch thử OK); dich/text_can_dich.tsv 2158 hàng (pak 1663, item 350, class 145); khoá class = nội dung gốc (bền khi ASM đổi chỉ số CP); repack --check kiểm charset f12, ^ | #, token, trạng thái/"没有" đồng nhất.
 
 - T4 (A1): hook/VH.java (f12, dialog 4 dòng/trang cache theo mảng, wrap px cache, outline, ánh xạ "空"→Trống, cắt theo clip), patcher/Patch.java (29 drawString + 24 stringWidth + 4 getHeight thay call-site; thân 5 method theo QĐ 2b; dừng nếu số khớp lệch), build_hook.sh, build.sh (TSV=... tuỳ chọn); jar_check PASS; ảnh logs/shots_T4/ (không exception). CG debug drawString(dk,0,0): trên jar gốc KHÔNG thấy (bị setClip của j.a(7 tham số) cắt) nên GIỮ nguyên, VH bỏ qua phần ngoài clip nên không tốn.
+
+- T5 (A1): Patch.patchBoot trên Main/f (c() chỉ nạp namp.png qua VH.logo, paint pha u vẽ giữa màn, run(): trước u=false chèn g=true;bY=true;w=false;v=false;e()); res_vi/Image/namp.png; build.sh bỏ bg/logo0-5/logo51/52 (chỉ f.c() tham chiếu). Ảnh logs/shots_T5/: logo NAMP ~2s -> menu, không hỏi nhạc/logo nhà phát hành; emu_T5.log có MIDIPlayer.start (lỗi MIDI headless của container, không phải lỗi game).
 
 ## Quyết định quản đốc sau T1/T2 (bổ sung QĐ, công nhân làm theo)
 - QĐ 2b: **Được thay cả thân method** (giữ nguyên tên/descriptor/access) cho `Main/g.a(char[],...)`, `rf/b.a(String,int)`, `rf/b.b(String,int)`, `rf/b.a(Graphics,...)` viền chữ, `Main/f.a(Graphics,String,...)` viền chữ: thân mới chỉ gọi `invokestatic VH.*` rồi return. Bỏ `println` mỗi ký tự trong `rf/b.b`. Ngắt dòng/trang tính 1 lần khi chuỗi đổi, cache trong VH.

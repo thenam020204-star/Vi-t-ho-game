@@ -12,7 +12,7 @@ env -u JAVA_TOOL_OPTIONS java -jar $CFR goc/TienSungKyDuyen_240x320.jar --output
 ```
 
 ## Trạng thái
-- Giai đoạn 1: T0–T2 xong. T3 xong (extract/repack/selftest, TSV 2158 hàng). T4 xong (VH+Patch+build, PASS). T5: xem PLAN.
+- Giai đoạn 1: T0–T2 xong. T3 xong (extract/repack/selftest, TSV 2158 hàng). T4 xong (VH+Patch+build, PASS). T5 xong (logo NAMP, bỏ hỏi nhạc). Tiếp: T6a (quản đốc) rồi T6b dịch.
 
 ## Quyết định đã chốt với người dùng
 Hán Việt nhẹ; 仙宠 tiên sủng, 宠物 sủng vật, 骑宠 tọa kỵ; font f12; logo NAMP, bỏ hỏi nhạc; bản 320x240; tool main thêm 12px; phát hành nhánh làm việc + main/releases.

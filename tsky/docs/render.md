@@ -170,3 +170,8 @@ Không tìm thấy: cắt `substring` theo chỉ số để xuống dòng (ngoà
 - Màn CG (`j.java:5858,5879` `drawString(dk,0,0)`): trên jar gốc (`logs/shots_T4/goc_cg.png`) KHÔNG hiện chữ ở góc trái trên vì clip còn đặt từ `j.a(7 tham số)`; giữ nguyên, `VH.drawRange` bỏ qua phần ngoài clip nên không tốn chi phí vẽ.
 - VH: ký tự ngoài f12 — chữ Hán/dấu câu Hán (>= U+2E80) = ô trống rộng 12 (giữ bố cục), còn lại = rộng dấu cách. Thoại 4 dòng/trang (hằng `PAGE_LINES`), ngắt ở dấu cách theo px, lề phải 5 px như code gốc.
 - Chưa làm (T7): nhãn phím mềm căn `k.w*2`, mũi tên menu chính, cột cửa hàng, "更多游戏", hộp xác nhận 2 dòng.
+
+## 9. Kết quả T5 (khởi động, QĐ 9)
+- `Main/f.c()` chỉ còn nạp `/Image/namp.png` (`VH.logo()`); `paint` pha `u` vẽ `h` ở `(t/2, s/2)` anchor 3 (đã bỏ lệch -40); `run()` chèn `g=true; Main.j.bY=true; w=false; v=false; this.e()` ngay trước `u=false` (tránh `paint` rơi vào nhánh `w` khi `o[]`=null), rồi chạy khối `finally` gốc. Logo hiện ~2 s theo `Thread.sleep(2000)` gốc.
+- Jar bỏ `Image/bg.png`, `logo0..5.png`, `logo51/52.png`; giữ `menu.png` (bìa menu chính trong `Main/j`) và `xjoy.mid`.
+- `res_vi/Image/namp.png` = `goc/logo_namp_240x320.png` (bản 320x240 làm ở T9).

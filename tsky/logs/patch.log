@@ -8,6 +8,9 @@ OK   Main/f [truoc] charWidth: 0 (mong doi 0)
 OK   Main/f [truoc] substringWidth: 0 (mong doi 0)
 OK   Main/f [truoc] getHeight: 1 (mong doi 1)
 BODY Main/f.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIIII)V -> VH.outline
+BODY Main/f.c() -> chi nap namp.png
+OK   Main/f.paint: bipush 40 (2 dau la pha u) -> 0: 42 (mong doi 42)
+OK   Main/f.run: chen bat nhac + bo hoi nhac/logo truoc u=false: 1 (mong doi 1)
 OK   Main/f drawString: 1 (mong doi 1)
 OK   Main/f stringWidth: 2 (mong doi 2)
 OK   Main/f getHeight: 1 (mong doi 1)

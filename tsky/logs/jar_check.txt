@@ -1,5 +1,5 @@
-Thêm: ['VH.class', 'font/f12.bin']
-Xoá: []
+Thêm: ['Image/namp.png', 'VH.class', 'font/f12.bin']
+Xoá: ['Image/bg.png', 'Image/logo0.png', 'Image/logo1.png', 'Image/logo2.png', 'Image/logo3.png', 'Image/logo4.png', 'Image/logo5.png', 'Image/logo51.png', 'Image/logo52.png']
 Đổi: ['Main/GameMidlet.class', 'Main/a.class', 'Main/b.class', 'Main/c.class', 'Main/e.class', 'Main/f.class', 'Main/g.class', 'Main/h.class', 'Main/j.class', 'Main/k.class', 'Main/l.class', 'rf/a.class', 'rf/b.class', 'rf/c.class', 'rf/d.class', 'rf/e.class', 'rf/f.class', 'rf/g.class', 'rf/h.class']
 WARN VH.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
 WARN VH.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)

@@ -116,6 +116,10 @@ public class Patch {
             redirectBody(cn, "a", "(L" + G + ";" + STR + "IIIII)V", "outline");
             changed = true;
         }
+        if (name.equals("Main/f")) {
+            patchBoot(cn);
+            changed = true;
+        }
         // QD 2: thay call-site
         for (int i = 0; i < CALLS.length; i++) {
             int n = redirectCalls(cn, CALLS[i][0], CALLS[i][1], CALLS[i][2], CALLS[i][3]);
@@ -234,5 +238,60 @@ public class Patch {
         if (op == Opcodes.BIPUSH || op == Opcodes.SIPUSH) return ((IntInsnNode) x).operand;
         if (op == Opcodes.LDC && ((LdcInsnNode) x).cst instanceof Integer) return (Integer) ((LdcInsnNode) x).cst;
         return Integer.MIN_VALUE;
+    }
+    // ===================================================================== Main/f: khoi dong (QD 9)
+    /**
+     * - c(): chi nap /Image/namp.png (VH.logo()) vao this.h, bo bg/logo0-5/logo51/52/menu thu nho.
+     * - paint pha u: ve h giua man hinh (y = s/2, khong lech -40).
+     * - run(): sau 2s logo, TRUOC khi u=false: g=true; Main.j.bY=true; w=false; v=false; this.e() (bat nhac) -> bo qua hoi nhac + hoat hinh logo,
+     *   di thang vao khoi finally goc (chuyen canvas, a.d().a(2), start thread).
+     */
+    static void patchBoot(ClassNode cn) {
+        MethodNode c = method(cn, "c", "()V");
+        clearBody(c);
+        InsnList L = new InsnList();
+        L.add(new VarInsnNode(Opcodes.ALOAD, 0));
+        L.add(new MethodInsnNode(Opcodes.INVOKESTATIC, VH, "logo", "()Ljavax/microedition/lcdui/Image;", false));
+        L.add(new FieldInsnNode(Opcodes.PUTFIELD, "Main/f", "h", "Ljavax/microedition/lcdui/Image;"));
+        L.add(new InsnNode(Opcodes.RETURN));
+        c.instructions = L;
+        log.println("BODY Main/f.c() -> chi nap namp.png");
+
+        MethodNode p = method(cn, "paint", "(L" + G + ";)V");
+        int n40 = 0, shifted = 0;
+        for (AbstractInsnNode x = p.instructions.getFirst(); x != null; x = x.getNext()) {
+            if (x.getOpcode() == Opcodes.BIPUSH && ((IntInsnNode) x).operand == 40) {
+                n40++;
+                if (n40 <= 2) {
+                    p.instructions.set(x, x = new InsnNode(Opcodes.ICONST_0));
+                    shifted++;
+                }
+            }
+        }
+        expect("Main/f.paint: bipush 40 (2 dau la pha u) -> 0", n40 * 10 + shifted, 42);
+
+        MethodNode r = method(cn, "run", "()V");
+        int ins = 0;
+        for (AbstractInsnNode x = r.instructions.getFirst(); x != null; x = x.getNext()) {
+            if (isField(x, Opcodes.PUTSTATIC, "Main/f", "u")) {
+                AbstractInsnNode pv = prev(x);
+                if (pv != null && pv.getOpcode() == Opcodes.ICONST_0) {
+                    InsnList a = new InsnList();
+                    a.add(new InsnNode(Opcodes.ICONST_1));
+                    a.add(new FieldInsnNode(Opcodes.PUTSTATIC, "Main/f", "g", "Z"));
+                    a.add(new InsnNode(Opcodes.ICONST_1));
+                    a.add(new FieldInsnNode(Opcodes.PUTSTATIC, "Main/j", "bY", "Z"));
+                    a.add(new InsnNode(Opcodes.ICONST_0));
+                    a.add(new FieldInsnNode(Opcodes.PUTSTATIC, "Main/f", "w", "Z"));
+                    a.add(new InsnNode(Opcodes.ICONST_0));
+                    a.add(new FieldInsnNode(Opcodes.PUTSTATIC, "Main/f", "v", "Z"));
+                    a.add(new VarInsnNode(Opcodes.ALOAD, 0));
+                    a.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL, "Main/f", "e", "()V", false));
+                    r.instructions.insertBefore(pv, a);
+                    ins++;
+                }
+            }
+        }
+        expect("Main/f.run: chen bat nhac + bo hoi nhac/logo truoc u=false", ins, 1);
     }
 }

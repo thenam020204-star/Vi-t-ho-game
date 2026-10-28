@@ -21,6 +21,8 @@ cp -r build/xr/. build/stage/ && rm -rf build/stage/META-INF
 cp -r build/patched/. build/stage/
 cp build/hook/VH.class build/stage/
 mkdir -p build/stage/font && cp work/tools/fonts/f12.bin build/stage/font/
+# logo nha phat hanh + hoat hinh khoi dong goc: chi Main/f.c() tham chieu (da bo, QD 9)
+for f in bg logo0 logo1 logo2 logo3 logo4 logo5 logo51 logo52; do rm -f build/stage/Image/$f.png; done
 [ -d res_vi ] && cp -r res_vi/. build/stage/
 mkdir -p build/stage/META-INF && cp manifest/MANIFEST.MF build/stage/META-INF/MANIFEST.MF 2>/dev/null || unzip -p "$GOC" META-INF/MANIFEST.MF > build/stage/META-INF/MANIFEST.MF
 rm -f build/raw.jar

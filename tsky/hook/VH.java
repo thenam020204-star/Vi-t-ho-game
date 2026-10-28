@@ -452,4 +452,15 @@ public final class VH {
         }
         return dLs[end] - 1;
     }
+
+    // ================================================================ khoi dong
+
+    /** Logo NAMP khoi dong (Main/f.c() sau patch). */
+    public static Image logo() {
+        try {
+            return Image.createImage("/Image/namp.png");
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }
