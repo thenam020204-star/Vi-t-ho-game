@@ -1,0 +1,101 @@
+file	ô chữ x,y,w,h	chữ gốc	nghĩa	bản Việt	ghi chú
+Image/ui_shuxing1.png	0,0,26,13	攻击	tấn công	ATK	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,13,26,13	攻速	tốc độ đánh	SPD	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,26,26,13	暴击	bạo kích	Bạo	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,39,26,13	防御	phòng thủ	DEF	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,52,26,13	闪避	né tránh	Né	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,65,26,13	法宝	pháp bảo	Pháp	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,78,26,13	战位	vị trí chiến đấu	Vị	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,91,26,13	等级	cấp	Lv	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,104,26,13	力量	sức mạnh	Lực	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,117,26,13	智力	trí lực	Trí	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,130,26,13	体质	thể chất	Thể	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,143,26,13	敏捷	nhanh nhẹn	Mẫn	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_shuxing1.png	0,156,26,13	运气	vận khí	Vận	ô 26px: rút gọn (Bạo=Bạo kích, Pháp=Pháp bảo, Vị=Vị trí, Mẫn=Mẫn tiệp)
+Image/ui_system.png	0,0,78,17	任务指引	chỉ dẫn nhiệm vụ	Nhiệm vụ	menu hệ thống; chữ đen
+Image/ui_system.png	0,17,78,17	仙宠背包	túi tiên sủng	Túi tiên sủng	menu hệ thống; chữ đen
+Image/ui_system.png	0,34,78,17	战斗设置	cài đặt chiến đấu	Cài chiến đấu	menu hệ thống; chữ đen
+Image/ui_system.png	0,51,78,17	道具物品	đạo cụ vật phẩm	Vật phẩm	menu hệ thống; chữ đen
+Image/ui_system.png	0,68,78,17	装备法宝	trang bị pháp bảo	Trang bị	menu hệ thống; chữ đen
+Image/ui_system.png	0,85,78,17	仙宠大全	tiên sủng đại toàn	Sủng toàn thư	menu hệ thống; chữ đen
+Image/ui_system.png	0,102,78,17	系统设置	cài đặt hệ thống	Hệ thống	menu hệ thống; chữ đen
+Image/ui_system2.png	0,0,78,17	保存进度	lưu tiến độ	Lưu tiến độ	menu hệ thống 2; chữ đen
+Image/ui_system2.png	0,17,78,17	读取进度	tải tiến độ	Tải tiến độ	menu hệ thống 2; chữ đen
+Image/ui_system2.png	0,34,78,17	音乐设置	cài đặt nhạc	Cài đặt nhạc	menu hệ thống 2; chữ đen
+Image/ui_system2.png	0,51,78,17	游戏帮助	trợ giúp game	Hướng dẫn	menu hệ thống 2; chữ đen
+Image/ui_system2.png	0,68,78,17	退出游戏	thoát game	Thoát game	menu hệ thống 2; chữ đen
+Image/shop_sms.png	0,0,78,17	双倍经验	gấp đôi kinh nghiệm	Gấp đôi EXP	cửa hàng SMS; 
+Image/shop_sms.png	0,17,78,17	双倍金钱	gấp đôi tiền	Gấp đôi tiền	cửa hàng SMS; 
+Image/shop_sms.png	0,34,78,17	连升三级	lên liền ba cấp	Lên liền 3 cấp	cửa hàng SMS; 
+Image/shop_sms.png	0,51,78,17	购买金钱	mua tiền	Mua tiền	cửa hàng SMS; 
+Image/shop_sms.png	0,68,78,17	购买青龙	mua Thanh Long	Mua T.Long	cửa hàng SMS; 78px: Thanh Long rút gọn T.Long
+Image/shop_sms.png	0,85,78,17	商店	cửa hàng	Cửa hàng	cửa hàng SMS; 
+Image/ui_lifeword.png	0,0,32,15	生命	sinh mệnh	HP	theo thuat-ngu: HP/MP/EXP; chữ trắng
+Image/ui_lifeword.png	0,15,32,15	法力	pháp lực	MP	theo thuat-ngu: HP/MP/EXP; chữ trắng
+Image/ui_lifeword.png	0,30,32,15	经验	kinh nghiệm	EXP	theo thuat-ngu: HP/MP/EXP; chữ trắng
+Image/ui_money.png	0,0,36,18	金钱	tiền	Tiền	chữ vàng
+Image/ui_pro.png	0,0,29,28	金	ngũ hành Kim	Kim	mỗi ô một màu theo thân chữ gốc
+Image/ui_pro.png	29,0,29,28	木	ngũ hành Mộc	Mộc	mỗi ô một màu theo thân chữ gốc
+Image/ui_pro.png	58,0,29,28	水	ngũ hành Thủy	Thủy	mỗi ô một màu theo thân chữ gốc
+Image/ui_pro.png	87,0,29,28	火	ngũ hành Hỏa	Hỏa	mỗi ô một màu theo thân chữ gốc
+Image/ui_pro.png	116,0,29,28	土	ngũ hành Thổ	Thổ	mỗi ô một màu theo thân chữ gốc
+Image/ui_fight_mid.png	0,0,29,28	换	đổi (tiên sủng)	Đổi	
+Image/ui_fight_mid.png	29,0,29,28	逃	chạy trốn	Chạy	
+Image/ui_fight_mid.png	58,0,28,28	商	(đọc là 商) nghi là 宠 = tiên sủng	Sủng	VƯỚNG: nghĩa chưa chắc, xem PLAN Vướng mắc
+Image/ui_fight_mid.png	86,0,29,28	物	vật phẩm	Vật	
+Image/ui_fight_mid.png	115,0,29,28	攻	tấn công	Đánh	
+Image/ui_fight_mid.png	144,0,29,28	破	phá (chiêu)	Phá	
+Image/number1.png	0,0,18,17	零	số 0 (đánh số tab/mục)	0	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	18,0,18,17	一	số 1 (đánh số tab/mục)	1	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	36,0,18,17	二	số 2 (đánh số tab/mục)	2	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	54,0,18,17	三	số 3 (đánh số tab/mục)	3	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	72,0,18,17	四	số 4 (đánh số tab/mục)	4	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	90,0,18,17	五	số 5 (đánh số tab/mục)	5	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	108,0,18,17	六	số 6 (đánh số tab/mục)	6	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	126,0,18,17	七	số 7 (đánh số tab/mục)	7	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	144,0,18,17	八	số 8 (đánh số tab/mục)	8	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	162,0,18,17	九	số 9 (đánh số tab/mục)	9	chữ số Ả Rập thay chữ số Hán; f12 '0' trùng 'O' (chấp nhận, chỉ dùng chữ số)
+Image/number1.png	180,0,18,17	主	chính (tab nhiệm vụ chính)	Chủ	mode fixed rộng 18; 12px không chứa 'Chính'
+Image/number1.png	198,0,18,17	支	nhánh (nhiệm vụ phụ)	Phụ	mode fixed rộng 18
+Image/baoji.png	0,0,82,36	暴击!	bạo kích (chí mạng)	Bạo kích!	chữ cam (255,149,0), mất viền/chuyển sắc theo quy tắc
+Image/shanbi.png	0,0,95,36	闪避	né tránh	Né!	chữ tím; vệt tốc độ gốc bị xoá cùng chữ
+Image/tx_ke.png	14,20,42,24	克	khắc (tiên sủng khắc hệ)	Khắc	xoá chữ xanh bằng lan màu láng giềng, giữ quầng sáng
+Image/tx_qu.png	14,20,42,24	屈	khuất/bị khắc	Kém	giữ vệt đen nền; nghĩa suy từ cặp 克/屈
+Image/ok.png	0,0,26,20	完成	hoàn thành (dấu triện đỏ nghiêng)	Xong	viền triện nghiêng gốc bị xoá; chữ đỏ ngang
+Image/rand.png	0,0,26,26	甲	phẩm cấp Giáp	G	vòng tròn 26px chỉ chứa 1 chữ cái đầu; dựng lại vòng đỏ đối xứng (mất chuyển sắc nhẹ)
+Image/rand.png	26,0,26,26	乙	phẩm cấp Ất	Ấ	vòng tròn 26px chỉ chứa 1 chữ cái đầu; dựng lại vòng đỏ đối xứng (mất chuyển sắc nhẹ)
+Image/rand.png	52,0,26,26	丙	phẩm cấp Bính	B	vòng tròn 26px chỉ chứa 1 chữ cái đầu; dựng lại vòng đỏ đối xứng (mất chuyển sắc nhẹ)
+Image/rand.png	78,0,26,26	丁	phẩm cấp Đinh	Đ	vòng tròn 26px chỉ chứa 1 chữ cái đầu; dựng lại vòng đỏ đối xứng (mất chuyển sắc nhẹ)
+Image/ad.png	0,0,21,70	木耒村	thôn Mộc Lỗi	Mộc Lỗi thôn	biển địa danh dọc, mỗi ô 21px (code chia 6): chữ xoay 90 độ cùng chiều kim đồng hồ, rút gọn nếu quá 70px
+Image/ad.png	21,0,21,70	沙岭镇	trấn Sa Lĩnh	Sa Lĩnh trấn	biển địa danh dọc, mỗi ô 21px (code chia 6): chữ xoay 90 độ cùng chiều kim đồng hồ, rút gọn nếu quá 70px
+Image/ad.png	42,0,21,70	火石冈	Hỏa Thạch Cương	Hỏa Thạch	biển địa danh dọc, mỗi ô 21px (code chia 6): chữ xoay 90 độ cùng chiều kim đồng hồ, rút gọn nếu quá 70px
+Image/ad.png	63,0,21,70	冷风坳	Lãnh Phong Ao	Lãnh Phong	biển địa danh dọc, mỗi ô 21px (code chia 6): chữ xoay 90 độ cùng chiều kim đồng hồ, rút gọn nếu quá 70px
+Image/ad.png	84,0,21,70	天山	Thiên Sơn	Thiên Sơn	biển địa danh dọc, mỗi ô 21px (code chia 6): chữ xoay 90 độ cùng chiều kim đồng hồ, rút gọn nếu quá 70px
+Image/ad.png	105,0,21,70	九曲莲池	Cửu Khúc Liên Trì	Liên Trì	biển địa danh dọc, mỗi ô 21px (code chia 6): chữ xoay 90 độ cùng chiều kim đồng hồ, rút gọn nếu quá 70px
+Image/CG2.png	0,24,240,26	這是哪裏！？	Đây là đâu!?	Đây là đâu!?	chữ vàng (194,160,69) trên nền đen
+Image/CG2.png	0,87,240,21	我就這么死了么?	Ta chết như vậy sao?	Ta chết như vậy sao?	
+Image/CG2.png	0,120,240,22	爺爺和小靈子還在等着我…	Ông nội và Tiểu Linh Tử vẫn đang đợi ta…	Ông nội, Tiểu Linh Tử còn đợi ta...	rút gọn cho vừa 240px; dòng '. . .' giữ nguyên
+Image/key.png	120,330,57,19	左软键	phím mềm trái	Phím trái	màu chữ (72,72,83); nền nút lấp theo hàng
+Image/key.png	462,330,57,19	右软键	phím mềm phải	Phím phải	
+Image/npc21.png	16,6,13,36	风雅灵之墓	mộ Phong Nhã Linh (bia dọc)	Mộ	bia rộng 13px: chỉ vừa 'Mộ'; tên người đã có trong hội thoại
+Image/obj_jin0.png	54,50,20,52	金銮殿(?)	Kim Loan (biển hiệu cung điện)	Kim Loan	chữ khắc nâu, xoay 90 độ trên biển; đọc gốc không chắc 100% (ghi 金銮)
+Image/zt0.png		金	ngũ hành Kim (hoa văn bút lông trang trí dưới chân)	(giữ)	KHÔNG vẽ lại: hoạ tiết nghệ thuật 45x39 chìm trong quầng hiệu ứng, không phải nhãn; xem Vướng mắc
+Image/zt1.png		木	Mộc	(giữ)	như zt0
+Image/zt2.png		水	Thủy	(giữ)	như zt0
+Image/zt3.png		火	Hỏa	(giữ)	như zt0
+Image/zt4.png		土	Thổ	(giữ)	như zt0
+Image/ui_zhou_w.png		(họa tiết giữa thanh trục)	trang trí	(giữ)	không phải chữ rõ nghĩa
+Image/menu.png		(đã Việt)	bìa 'Tiên Sủng Kỳ Duyên'	(giữ)	bỏ qua theo yêu cầu; bản ngang tại res_vi_320
+Image/bg.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+Image/logo0.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+Image/logo1.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+Image/logo2.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+Image/logo3.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+Image/logo4.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+Image/logo5.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+Image/logo51.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+Image/logo52.png		(logo nhà phát hành)		(bỏ)	đã loại khỏi jar ở T5; bỏ qua
+
+# Ghi chú cuối
+# - pixeltext-kit (work/tools, không nằm trong git): thêm 12 vào font.SIZES (SIZES = (18,15,13,12,...)) -> --size 12 nhận f12.bin; xem docs/pixeltext_f12.md.
+# - 327 PNG đã soát qua logs/shots_T8/luoi_01..09.png; 20 ảnh vẽ lại ở res_vi/Image; ảnh 320x240 ở res_vi_320/Image (menu.png, namp.png).

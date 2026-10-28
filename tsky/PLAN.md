@@ -102,8 +102,8 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 
 ### Giai đoạn 4 — Hoàn thiện (A1)
 - [ ] T7 Bố cục: khung thoại ≥3 dòng, ngắt px ở dấu cách, phân trang, canh giữa theo độ rộng thật, các màn menu/túi đồ/cửa hàng/chiến đấu/tiên sủng đại toàn/mẹo. Hoàn thành khi: ảnh chụp từng màn không tràn, không cắt đôi từ, không sót Hán.
-- [ ] T8 Ảnh có chữ: soát 327 PNG (`scripts/contact_sheet.py` ra lưới ảnh), danh sách `docs/anh_co_chu.tsv`, vẽ lại vào `res_vi/`. Hoàn thành khi: mọi ảnh có chữ Hán đã có bản Việt, `pixeltext check --size 12` OK.
-- [ ] T9 Bản 320x240 theo QĐ 10. Hoàn thành khi: chụp FreeJ2ME 320x240 qua logo, menu, hội thoại, túi đồ, chiến đấu không tràn/méo; kiểm phím hướng dẫn bằng phím số.
+- [x] T8 Ảnh có chữ: soát 327 PNG (`scripts/contact_sheet.py` ra lưới ảnh), danh sách `docs/anh_co_chu.tsv`, vẽ lại vào `res_vi/`. Hoàn thành khi: mọi ảnh có chữ Hán đã có bản Việt, `pixeltext check --size 12` OK.
+- [ ] T9 (ảnh 320 xong: `res_vi_320/Image/menu.png`, `namp.png`) Bản 320x240 theo QĐ 10. Hoàn thành khi: chụp FreeJ2ME 320x240 qua logo, menu, hội thoại, túi đồ, chiến đấu không tràn/méo; kiểm phím hướng dẫn bằng phím số.
 - [ ] T10 `rebuild.sh` (goc → out cả 2 bản + jad `MIDlet-Jar-Size` khớp), `run_emu.py` đi qua các màn chính 2 bản, `BAO_CAO.md`, `README_DU_AN.md`, `PROGRESS.md`, gói `TienSungKyDuyen_du_an.zip` theo mục Bàn giao của skill. **Quản đốc nghiệm thu.**
 - [ ] T11 Tool main theo QĐ 12 + phát hành jar/jad vào `main:releases/TienSungKyDuyen/` (quản đốc commit/push lên main).
 
@@ -126,6 +126,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - T4 (A1): hook/VH.java (f12, dialog 4 dòng/trang cache theo mảng, wrap px cache, outline, ánh xạ "空"→Trống, cắt theo clip), patcher/Patch.java (29 drawString + 24 stringWidth + 4 getHeight thay call-site; thân 5 method theo QĐ 2b; dừng nếu số khớp lệch), build_hook.sh, build.sh (TSV=... tuỳ chọn); jar_check PASS; ảnh logs/shots_T4/ (không exception). CG debug drawString(dk,0,0): trên jar gốc KHÔNG thấy (bị setClip của j.a(7 tham số) cắt) nên GIỮ nguyên, VH bỏ qua phần ngoài clip nên không tốn.
 
 - T5 (A1): Patch.patchBoot trên Main/f (c() chỉ nạp namp.png qua VH.logo, paint pha u vẽ giữa màn, run(): trước u=false chèn g=true;bY=true;w=false;v=false;e()); res_vi/Image/namp.png; build.sh bỏ bg/logo0-5/logo51/52 (chỉ f.c() tham chiếu). Ảnh logs/shots_T5/: logo NAMP ~2s -> menu, không hỏi nhạc/logo nhà phát hành; emu_T5.log có MIDIPlayer.start (lỗi MIDI headless của container, không phải lỗi game).
+- T8 + T9-ảnh (A2): soát 327 PNG (logs/shots_T8/luoi_01..09), `docs/anh_co_chu.tsv`; 20 ảnh vẽ lại f12 vào `res_vi/Image` (scripts/make_img.py), `pixeltext` sửa để nhận `--size 12` (docs/pixeltext_f12.md), 80 nhãn check sạch; `res_vi_320/Image/menu.png` + `namp.png` 320x240 (scripts/make_img_320.py); trước/sau `logs/shots_T8/truoc_sau.png`, `ngang_320.png`.
 
 ## Quyết định quản đốc sau T1/T2 (bổ sung QĐ, công nhân làm theo)
 - QĐ 2b: **Được thay cả thân method** (giữ nguyên tên/descriptor/access) cho `Main/g.a(char[],...)`, `rf/b.a(String,int)`, `rf/b.b(String,int)`, `rf/b.a(Graphics,...)` viền chữ, `Main/f.a(Graphics,String,...)` viền chữ: thân mới chỉ gọi `invokestatic VH.*` rồi return. Bỏ `println` mỗi ký tự trong `rf/b.b`. Ngắt dòng/trang tính 1 lần khi chuỗi đổi, cache trong VH.
@@ -140,3 +141,4 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 - (T1) Hằng "空" bị `equals` và lưu RMS `xianchong1`: đề xuất giữ nguyên trong class, ánh xạ khi vẽ trong VH (trái QĐ 7 "dịch cùng giá trị"?). Quản đốc chốt.
 - (T1) `j9#` (爷爷) chỉ có một bản dịch trong `Main/l`; muốn đổi "ông nội"/"gia gia" theo ngữ cảnh phải dịch thẳng trong pak. Token `j8#` (共宛) cần hỏi người dùng.
 - (T2) `Main/j.java:5858,5879` `drawString(dk,0,0)` là mã debug sót vẽ cả đoạn CG ở góc trên-trái; đề xuất NOP. Mục menu "更多游戏" mở web quảng cáo (`platformRequest`), ngoài phạm vi nhưng nên hỏi người dùng có ẩn không.
+- (T8, A2) `ui_fight_mid.png` ô 3 đọc là 商 (nghi 宠); đã vẽ "Sủng" — cần xác nhận nghĩa nút này khi chụp trận đấu. `zt0..zt4.png` (hoa văn bút lông 金木水火土 dưới chân, 45x39 chìm trong hiệu ứng) và `ui_zhou_w.png` chưa vẽ lại: không phải nhãn; hỏi người dùng có muốn thay bằng Kim/Mộc/Thủy/Hỏa/Thổ không. Biển địa danh `ad.png` rộng 21px/ô nên chữ xoay 90 độ và rút gọn ("Hỏa Thạch", "Lãnh Phong", "Liên Trì"); bia mộ `npc21.png` chỉ vừa "Mộ". Vẽ không viền nên chữ trên nền sáng/tối lẫn có thể kém rõ so với bản gốc có viền.
