@@ -37,7 +37,7 @@ def main():
     # Truyền sẵn ISO_8859_1 để FreeJ2ME không tự khởi động lại; jar truyền bằng đường dẫn thường.
     emu = subprocess.Popen(['java', '-Dfile.encoding=ISO_8859_1', '-jar', os.path.abspath(a.fj),
                             os.path.abspath(a.jar), '0'] + a.size.split('x') + ['1'],
-                           env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+                           env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True, cwd=__import__('tempfile').mkdtemp(prefix='fj_'))
 
     from Xlib import display as xd, X, XK
     from Xlib.ext import xtest

@@ -3,3 +3,7 @@ src/
 build/
 *.pyc
 __pycache__/
+out/
+rms/
+config/
+freej2me_system/
