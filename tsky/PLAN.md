@@ -110,6 +110,7 @@ Trạng thái: `[ ]` chưa, `[~]` đang làm (ghi tên), `[x]` xong.
 ## Phân công
 - A1 (Sonnet 5.5): T1 → T2 → (duyệt) → T3 → T4 → T5 → T7 → T8 → T9 → T10 → T11-tool.
 - Công nhân dịch (Sonnet 5.5, một người): T6b.
+- **Công nhân vẽ ảnh A2 (Sonnet 5.5, theo yêu cầu người dùng chạy song song với công nhân dịch)**: T8 + T9-ảnh (`res_vi_320/Image/menu.png` bìa ngang 320x240 và `res_vi_320/Image/namp.png` logo ngang). Chỉ đụng `res_vi/`, `res_vi_320/`, `scripts/` ảnh mới (`contact_sheet.py`, `make_img*.py`), `docs/anh_co_chu.tsv`, `logs/shots_T8/`; KHÔNG sửa `dich/`, `hook/`, `patcher/`, `build.sh`. Commit chỉ các đường dẫn của mình.
 - Chỉ một công nhân chạy thật tại một thời điểm.
 
 ## Nhật ký
