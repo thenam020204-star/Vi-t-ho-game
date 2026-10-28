@@ -155,7 +155,7 @@ def main():
     done(im)
     im = Img('ui_fight_mid')
     xs = [0, 29, 58, 86, 115, 144, 173]
-    for i, (t, c) in enumerate([('Đổi',(31,131,255)),('Chạy',(54,143,0)),('Sủng',(31,131,255)),
+    for i, (t, c) in enumerate([('Thay',(31,131,255)),('Chạy',(54,143,0)),('Sủng',(31,131,255)),
                                 ('Vật',(31,131,255)),('Đánh',(31,131,255)),('Phá',(255,121,1))]):
         b = (xs[i], 0, xs[i+1]-xs[i], 28); im.clear(b); im.text(b, t, c)
     done(im)
