@@ -1,0 +1,36 @@
+wait 9000
+rawdown -1
+wait 100
+probe au cC
+rawup -1
+wait 400
+rawdown -2
+wait 100
+probe au cC
+rawup -2
+wait 400
+rawdown -3
+wait 100
+probe au cC
+rawup -3
+wait 400
+rawdown -4
+wait 100
+probe au cC
+rawup -4
+wait 400
+rawdown -5
+wait 100
+probe au cC
+rawup -5
+wait 400
+rawdown -6
+wait 100
+probe au cC
+rawup -6
+wait 400
+rawdown -7
+wait 100
+probe au cC
+rawup -7
+wait 400

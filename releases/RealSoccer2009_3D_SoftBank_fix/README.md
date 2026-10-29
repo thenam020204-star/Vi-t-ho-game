@@ -64,3 +64,22 @@ Vá tại chỗ 6 toán hạng `bipush` (`patchkeys.py`, cùng độ dài lệnh
 - ✅ Đối chiếu mọi lời gọi `com.mexa.opgl.*` và `com.jblend.media.smaf.phrase.*` với mã nguồn J2ME Loader: đều tồn tại (SMAF trong J2ME Loader là stub → âm thanh SMAF có thể im).
 - ⚠️ Chưa chạy thử trong emulator (không có emulator hỗ trợ OPGL trong môi trường build). Chưa thử máy thật.
 - ⚠️ Game dùng API 3D riêng của SoftBank (`com.mexa.opgl`): chỉ chạy trên máy SoftBank hỗ trợ OPGL hoặc J2ME Loader; KEmulator/MicroEmulator/Nokia không có API này.
+
+## Test FreeJ2ME headless (`test/`)
+
+`FJ=<freej2me_plus.jar> test/run.sh <jar> <script> <outdir>`. Dùng `freej2me_plus.jar` trong `Tool_Viet_Hoa_NAM_P.zip`,
+màn hình 480×800, bảng mã Shift_JIS. FreeJ2ME không có `com.mexa.opgl` → `test/stub/` là stub no-op, chỉ chèn vào **bản sao test**
+của JAR (không có trong JAR phát hành); phần 3D không hiển thị khi test.
+
+Bitmask `au.cC` khi đang giữ phím (`keys_raw.txt`, gọi thẳng `Canvas.keyPressed`), mã Nokia:
+
+| Phím gửi | Bản chỉ sửa manifest | Bản sửa phím |
+|---|---|---|
+| −1 lên | 64 (lên) | 64 (lên) |
+| −2 xuống | 16 (trái ✗) | 4 (xuống) |
+| −3 trái | 0 ✗ | 16 (trái) |
+| −4 phải | 0 ✗ | 1 (phải) |
+| −5 OK | 1 (phải ✗) | bit được game tiêu thụ ngay; màn hình chuyển đúng (xem ảnh) |
+
+`menu_ok.txt` / `menu_ok_platform.txt`: OK → tắt hỏi âm thanh → màn tiêu đề → OK → menu chính. Bản chỉ sửa manifest đứng yên ở
+màn hỏi âm thanh (`freej2me_keys_before_after.png`, hàng trên: trước, hàng dưới: sau).

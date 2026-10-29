@@ -1,0 +1,17 @@
+wait 9000
+shot t0
+rawdown -5
+wait 150
+rawup -5
+wait 2500
+shot t1
+rawdown -2
+wait 150
+rawup -2
+wait 800
+shot t2
+rawdown -5
+wait 150
+rawup -5
+wait 2500
+shot t3
