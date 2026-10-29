@@ -1,0 +1,105 @@
+# anh	sx	sy	w	h	kieu	dx	goc	dich
+# kieu: 0 = chu o tam o; 1 = tu ghep tu nhieu o (ve ca tu, tam = x+dx); 2 = an (o con lai cua tu ghep)
+/ui/2.png	266	16	28	15	0	0	经验	EXP
+/ui/2.png	236	16	28	15	0	0	能量	EN
+/ui/2.png	207	16	28	15	0	0	生命	HP
+/ui/2.png	175	16	29	13	0	0	返回	Trở về
+/ui/2.png	143	16	29	13	0	0	确定	Chọn
+/ui/2.png	116	16	26	13	0	0	出售	Bán
+/ui/2.png	86	16	26	14	0	0	购买	Mua
+/ui/2.png	57	16	26	13	0	0	饰品	Trang sức
+/ui/2.png	29	16	26	13	0	0	防具	Giáp
+/ui/2.png	1	16	26	13	0	0	武器	Vũ khí
+/ui/2.png	244	0	30	15	0	0	材料	Vật liệu
+/ui/2.png	211	0	30	15	0	0	状态	Trạng thái
+/ui/2.png	161	0	46	15	0	0	市政厅	Tòa thị chính
+/ui/2.png	96	0	30	15	0	0	购买	Mua
+/ui/2.png	129	0	30	15	0	0	出售	Bán
+/ui/2.png	64	0	30	15	0	0	饰品	Trang sức
+/ui/2.png	32	0	30	15	0	0	防具	Giáp
+/ui/2.png	1	0	30	15	0	0	武器	Vũ khí
+/ui/2.png	251	32	55	13	0	0	城市信息	Thông tin TP
+/ui/2.png	221	32	26	13	0	0	材料	Vật liệu
+/ui/2.png	192	32	26	13	0	0	补给	Tiếp tế
+/ui/2.png	149	32	40	13	0	0	档案库	Lưu trữ
+/ui/2.png	84	30	62	15	0	0	城市信息	Thông tin TP
+/ui/2.png	34	30	46	15	0	0	档案库	Lưu trữ
+/ui/2.png	1	30	30	15	0	0	补给	Tiếp tế
+/ui/3.png	0	0	62	15	0	0	中心矿井	Khu mỏ
+/ui/6.png	88	0	75	13	0	0	短信商店	Shop SMS
+/ui/6.png	88	71	75	13	0	0	星际商店	Cửa hàng
+/ui/6.png	88	101	75	13	0	0	系统设置	Cài đặt
+/ui/6.png	88	115	75	13	0	0	游戏帮助	Trợ giúp
+/ui/6.png	88	130	75	13	0	0	回主菜单	Về menu chính
+/ui/6.png	88	14	75	13	0	0	个人资料	Nhân vật
+/ui/6.png	88	28	75	13	0	0	背包查看	Túi đồ
+/ui/6.png	91	178	75	13	0	0	技能升级	Kỹ năng
+/ui/6.png	88	56	75	13	0	0	任务查看	Nhiệm vụ
+/ui/6.png	88	42	75	13	0	0	锻造图鉴	Sách rèn
+/ui/6.png	90	161	75	13	0	0	坐骑查看	Thú cưỡi
+/ui/6.png	1	1	86	15	0	0	短信商店	Shop SMS
+/ui/6.png	1	81	86	15	0	0	星际商店	Cửa hàng
+/ui/6.png	1	113	86	15	0	0	系统设置	Cài đặt
+/ui/6.png	1	129	86	15	0	0	游戏帮助	Trợ giúp
+/ui/6.png	1	145	86	15	0	0	回主菜单	Về menu chính
+/ui/6.png	1	17	86	15	0	0	个人资料	Nhân vật
+/ui/6.png	1	33	86	15	0	0	背包查看	Túi đồ
+/ui/6.png	0	178	86	15	0	0	技能升级	Kỹ năng
+/ui/6.png	1	65	86	15	0	0	任务查看	Nhiệm vụ
+/ui/6.png	1	49	86	15	0	0	锻造图鉴	Sách rèn
+/ui/6.png	0	162	86	15	0	0	坐骑查看	Thú cưỡi
+/ui/6.png	101	145	53	15	0	0	音效：	Âm thanh:
+/ui/6.png	1	97	86	15	0	0	返回游戏	Về trò chơi
+/ui/6.png	88	86	75	13	0	0	返回游戏	Về trò chơi
+/ui/2.png	265	47	40	13	0	0	空间包	Túi
+/ui/2.png	249	47	12	13	0	0	剑	Kiếm
+/ui/2.png	218	47	26	13	0	0	拳套	Găng
+/ui/2.png	183	47	29	13	0	0	升级	Nâng cấp
+/ui/2.png	134	46	46	15	0	0	空间包	Túi
+/ui/2.png	117	47	14	15	0	0	剑	Kiếm
+/ui/2.png	83	47	30	15	0	0	拳套	Găng
+/ui/6.png	0	162	38	15	0	0	坐骑	Thú cưỡi
+/ui/2.png	0	64	30	15	0	0	帮助	Trợ giúp
+/ui/2.png	32	64	30	15	0	0	关于	Giới thiệu
+/ui/2.png	64	64	46	15	0	0	军工厂	Xưởng QS
+/ui/2.png	112	64	30	15	0	0	锻造	Rèn
+/ui/2.png	144	64	30	15	0	0	材料	Vật liệu
+/ui/2.png	176	64	30	15	0	0	主线	Chính
+/ui/2.png	208	64	30	15	0	0	支线	Phụ
+/ui/2.png	243	64	29	15	0	0	攻击	Công
+/ui/2.png	274	64	28	15	0	0	防御	Thủ
+/ui/2.png	154	80	26	13	0	0	主线	Chính
+/ui/2.png	182	80	26	13	0	0	支线	Phụ
+/ui/2.png	211	80	42	15	0	0	暴击率	TL bạo
+/ui/2.png	255	80	42	15	0	0	暴击值	ST bạo
+/ui/2.png	0	98	12	13	1	12	查	Xem
+/ui/2.png	28	98	12	13	1	12	放	Bỏ
+/ui/2.png	55	98	12	13	1	12	接	Nhận
+/ui/2.png	83	98	12	13	1	12	提	Nộp
+/ui/2.png	111	98	12	13	1	12	选	Tùy chọn
+/ui/2.png	14	99	12	12	2	0	看	
+/ui/2.png	42	98	12	13	2	0	弃	
+/ui/2.png	125	98	13	13	2	0	项	
+/ui/2.png	97	98	12	13	2	0	交	
+/ui/2.png	69	98	12	13	2	0	受	
+/ui/6.png	1	33	38	15	0	0	背包	Túi đồ
+/ui/6.png	49	113	38	15	0	0	设置	Cài đặt
+/ui/2.png	0	81	64	15	0	0	贸易中心	TT thương mại
+/ui/2.png	65	81	65	15	0	0	星际神殿	Đền Tinh Tế
+/ui/2.png	140	96	64	15	0	0	锻造图鉴	Sách rèn
+/ui/2.png	206	96	65	15	0	0	星际商店	Cửa hàng
+/ui/2.png	275	96	31	15	0	0	矿井	Mỏ
+/ui/6.png	1	1	14	15	1	36	短	Shop SMS
+/ui/6.png	25	1	14	15	2	0	信	
+/ui/6.png	49	1	14	15	2	0	商	
+/ui/6.png	73	1	14	15	2	0	店	
+/ui/6.png	0	194	86	15	0	0	QQ社区	Cộng đồng QQ
+/ui/6.png	91	196	75	13	0	0	QQ社区	Cộng đồng QQ
+/ui/6.png	0	214	86	15	0	0	继续游戏	Chơi tiếp
+/ui/6.png	91	215	75	13	0	0	继续游戏	Chơi tiếp
+/ui/batternum.png	0	28	69	28	3	0	连击	COMBO
+/ui/batternum.png	72	28	69	28	3	0	连击(trang)	COMBO
+/ui/batternum.png	154	29	86	37	3	0	连击(trang lon)	COMBO
+/ui/popnum.png	227	5	42	15	0	0	未命中	Trượt
+/ui/debuff.png	58	93	20	15	0	0	狂暴	Cuồng
+/ui/debuff.png	30	92	28	13	0	0	狂暴	Cuồng

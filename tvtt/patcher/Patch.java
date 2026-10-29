@@ -22,7 +22,7 @@ public class Patch {
 
     /** Cau hinh tung ban: class ve chu, ten field Graphics/gradient/bang mau, tam man hinh, so drawString. */
     static class Cfg {
-        String cls, fG, fGrad, fCtab, boot, midlet;
+        String cls, fG, fGrad, fCtab, boot, midlet, loader, menu;
         int cx, drawStrings;
         String mDrawG, mDrawC, mLines, mLinesTW, mLinesFade, mWidth, mWidthRaw, mTw, mWrap;
     }
@@ -33,7 +33,7 @@ public class Patch {
             c.cls = "src/b"; c.fG = "a"; c.fGrad = "g"; c.fCtab = "a";
             c.cx = v.equals("240") ? 120 : 160;
             c.drawStrings = 11;
-            c.boot = "src/q"; c.midlet = "src/GameMidlet";
+            c.boot = "src/q"; c.midlet = "src/GameMidlet"; c.loader = "src/m"; c.menu = "src/o";
             c.mDrawG = c.mDrawC = c.mLines = c.mLinesTW = c.mWidth = c.mWrap = "a";
             c.mLinesFade = c.mTw = "b";
             c.mWidthRaw = "c";
@@ -49,6 +49,8 @@ public class Patch {
         log.println("ban " + a[0] + " class " + c.cls);
         write(in, out, c.cls, 1, c);
         write(in, out, c.boot, 2, c);
+        write(in, out, c.loader, 3, c);
+        write(in, out, c.menu, 4, c);
         log.close();
         if (failed) {
             System.err.println("PATCH FAILED - xem log");
@@ -60,7 +62,7 @@ public class Patch {
     static void write(Path in, Path out, String cls, int kind, Cfg c) throws IOException {
         ClassNode cn = new ClassNode();
         new ClassReader(Files.readAllBytes(in.resolve(cls + ".class"))).accept(cn, 0);
-        if (kind == 1) patchText(cn, c); else patchBoot(cn, c);
+        if (kind == 1) patchText(cn, c); else if (kind == 2) patchBoot(cn, c); else if (kind == 3) patchLoader(cn, c); else patchMenu(cn, c);
         stripStackMap(cn);
         ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
         cn.accept(cw);
@@ -108,6 +110,80 @@ public class Patch {
         log.println("BODY " + cn.name + ".run/paint/a() -> logo NAMP, am thanh bat (4)");
     }
 
+    /** m.a(String)Image (nap anh): truoc moi areturn goi VH.reg(anh, duong_dan) de VH nhan ra atlas co o chu. */
+    static void patchLoader(ClassNode cn, Cfg c) {
+        String IMG = "Ljavax/microedition/lcdui/Image;";
+        MethodNode m = method(cn, "a", "(" + STR + ")" + IMG);
+        expect("loader " + cn.name + ".a(String)Image", m == null ? 0 : 1, 1);
+        if (m == null) return;
+        if ((m.access & Opcodes.ACC_STATIC) == 0) throw new IllegalStateException("loader khong static");
+        int k = 0;
+        for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+            if (x.getOpcode() == Opcodes.ARETURN) {
+                InsnList L = new InsnList();
+                L.add(new InsnNode(Opcodes.DUP));
+                L.add(new VarInsnNode(Opcodes.ALOAD, 0));
+                L.add(new MethodInsnNode(Opcodes.INVOKESTATIC, VH, "reg", "(" + IMG + STR + ")V", false));
+                m.instructions.insertBefore(x, L);
+                k++;
+            }
+        }
+        expect("loader areturn -> VH.reg", k, 2);
+    }
+
+    /** Menu chinh: bo muc 8 ("Them game" = mo web quang cao) khoi 2 mang byte liet ke muc menu trong o.<init>. */
+    static void patchMenu(ClassNode cn, Cfg c) {
+        MethodNode m = method(cn, "<init>", "(Lsrc/b;)V");
+        expect("menu " + cn.name + ".<init>", m == null ? 0 : 1, 1);
+        if (m == null) return;
+        int k = dropByte(m, new int[]{1, 8, 2, 3, 4, 5}, 8) + dropByte(m, new int[]{1, 0, 8, 2, 3, 4, 5}, 8);
+        expect("menu bo muc 8", k, 2);
+    }
+
+    static int pushVal(AbstractInsnNode x) {
+        int op = x.getOpcode();
+        if (op >= Opcodes.ICONST_M1 && op <= Opcodes.ICONST_5) return op - Opcodes.ICONST_0;
+        if (op == Opcodes.BIPUSH || op == Opcodes.SIPUSH) return ((IntInsnNode) x).operand;
+        return Integer.MIN_VALUE;
+    }
+
+    static AbstractInsnNode push(int v) {
+        if (v >= -1 && v <= 5) return new InsnNode(Opcodes.ICONST_0 + v);
+        return new IntInsnNode(Opcodes.BIPUSH, v);
+    }
+
+    /** Tim literal new byte[]{vals}; dung lai khong co phan tu `drop`. Tra 1 neu thay. */
+    static int dropByte(MethodNode m, int[] vals, int drop) {
+        for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+            if (pushVal(x) != vals.length) continue;
+            AbstractInsnNode na = x.getNext();
+            if (na == null || na.getOpcode() != Opcodes.NEWARRAY || ((IntInsnNode) na).operand != Opcodes.T_BYTE) continue;
+            AbstractInsnNode y = na.getNext();
+            boolean ok = true;
+            List<AbstractInsnNode> seq = new ArrayList<>();
+            seq.add(x); seq.add(na);
+            for (int i = 0; i < vals.length && ok; i++) {
+                AbstractInsnNode d = y, ix = d == null ? null : d.getNext(), v = ix == null ? null : ix.getNext(), st = v == null ? null : v.getNext();
+                if (d == null || d.getOpcode() != Opcodes.DUP || pushVal(ix) != i || pushVal(v) != vals[i] || st == null || st.getOpcode() != Opcodes.BASTORE) { ok = false; break; }
+                seq.add(d); seq.add(ix); seq.add(v); seq.add(st);
+                y = st.getNext();
+            }
+            if (!ok) continue;
+            InsnList L = new InsnList();
+            L.add(push(vals.length - 1));
+            L.add(new IntInsnNode(Opcodes.NEWARRAY, Opcodes.T_BYTE));
+            int j = 0;
+            for (int v : vals) {
+                if (v == drop) continue;
+                L.add(new InsnNode(Opcodes.DUP)); L.add(push(j++)); L.add(push(v)); L.add(new InsnNode(Opcodes.BASTORE));
+            }
+            m.instructions.insertBefore(x, L);
+            for (AbstractInsnNode r : seq) m.instructions.remove(r);
+            return 1;
+        }
+        return 0;
+    }
+
     static void setBody(MethodNode m, InsnList L) {
         m.instructions = L;
         m.tryCatchBlocks = new ArrayList<>();
@@ -139,6 +215,9 @@ public class Patch {
         body(cn, c.mWidthRaw, "(" + STR + ")I", "widthRaw", "(" + STR + ")I", "A1");
         body(cn, c.mTw, "(" + STR + ")I", "twUnits", "(" + STR + ")I", "A0");
         body(cn, c.mWrap, "(" + STR + "II)[" + STR, "wrap", "(" + STR + "I)[" + STR, "A1", "I2");
+        String IMG = "Ljavax/microedition/lcdui/Image;";
+        body(cn, "a", "(" + IMG + "IIII[SI)V", "mod", "(" + GD + IMG + "IIII[SI)V",
+                gF, "A1", "I2", "I3", "I4", "I5", "A6", "I7");
         int n = redirectCalls(cn, G, "drawString", "(" + STR + "III)V", "drawString", "(" + GD + STR + "III)V");
         expect(c.cls + " Graphics.drawString -> VH.drawString", n, c.drawStrings);
     }

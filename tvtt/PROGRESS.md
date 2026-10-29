@@ -12,4 +12,9 @@ Quyết định (người dùng chốt): văn phong **hiện đại**; font **f1
 ## Trạng thái
 - [x] extract (5685 hàng, 2038 chuỗi khác nhau) / repack selftest byte-exact cả 3 bản
 - [x] VH + Patch + build.sh 240: jar_check PASS, FreeJ2ME chạy (logs/shots_t2)
-- [ ] Dịch (dp) — [ ] ảnh có chữ (menu/…) — [ ] bản 320, 360 — [ ] đóng gói
+- [x] Dịch tay 2034/2034 (dp), QA OK (scripts/qa.py, scripts/merge.sh); tên hành tinh rút gọn cho khung bản đồ
+- [x] Hook ô chữ atlas: VH.mod (thay thân b.a(Image,…,short[],int)) + VH.reg (m.a(String) nạp ảnh) + font/vhm.dat từ docs/module_chu.tsv
+- [x] Ảnh vẽ lại (scripts/make_img.py -> res_vi_240): menu/1 (tiêu đề), menu/2 (mục menu), map/122-126, head/play, logo/exit (nền NAMP)
+- [x] Ẩn "Thêm game" (o.<init> bỏ mục 8), xoá ảnh logo cũ (scripts/post_stage.sh)
+- Phím FreeJ2ME: bật Num_Lock rồi KP_0..KP_9; q/w = phím mềm; Return chỉ ở menu chính
+- [ ] Soát màn trong game (cửa hàng, túi, nhiệm vụ…) — [ ] ui/35.png (phím vẽ dọc) — [ ] bản 320, 360 — [ ] đóng gói

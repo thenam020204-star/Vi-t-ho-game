@@ -20,6 +20,8 @@ env -u JAVA_TOOL_OPTIONS java -cp $L/asm-9.7.1.jar:$L/asm-tree-9.7.1.jar:build/p
 cp -r $B/patched/. $B/stage/
 cp build/hook/src/VH.class $B/stage/src/
 mkdir -p $B/stage/font && cp "$FONT_DIR/f12.bin" $B/stage/font/
+MT=docs/module_chu.tsv; [ -f docs/module_chu_$V.tsv ] && MT=docs/module_chu_$V.tsv
+python3 -I scripts/build_vhm.py $B/x $B/stage/font/vhm.dat $MT
 [ -d res_vi ] && cp -r res_vi/. $B/stage/
 [ -d res_vi_$V ] && cp -r res_vi_$V/. $B/stage/
 [ -x scripts/post_stage.sh ] && scripts/post_stage.sh $V $B/stage

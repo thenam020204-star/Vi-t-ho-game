@@ -43,6 +43,7 @@ public final class VH {
 
     static {
         load("/font/f12.bin");
+        loadMods();
     }
 
     private VH() {
@@ -394,6 +395,128 @@ public final class VH {
         int p = line.lastIndexOf('$');
         if (p >= 0 && p + 1 < line.length()) color[0] = line.charAt(p + 1);
         out.addElement(line);
+    }
+
+
+    // ------------------------------------------------------------------ o chu trong atlas anh (thay anh bang chu f12)
+
+    /** Anh atlas da dang ky (theo duong dan) va bang o chu nap tu /font/vhm.dat. */
+    static String[] apath;
+    static javax.microedition.lcdui.Image[] aimg;
+    static int[] eA, eX, eY, eW, eH, eK, eD, eC;
+    static String[] eT;
+    static int[] obuf;
+
+    static void loadMods() {
+        InputStream in = null;
+        try {
+            in = "".getClass().getResourceAsStream("/font/vhm.dat");
+            if (in == null) return;
+            DataInputStream d = new DataInputStream(in);
+            int n = d.readShort();
+            eA = new int[n]; eX = new int[n]; eY = new int[n]; eW = new int[n]; eH = new int[n];
+            eK = new int[n]; eD = new int[n]; eC = new int[n]; eT = new String[n];
+            String[] ps = new String[n];
+            int np = 0;
+            for (int i = 0; i < n; i++) {
+                String p = d.readUTF();
+                int a = -1;
+                for (int k = 0; k < np; k++) if (ps[k].equals(p)) a = k;
+                if (a < 0) { ps[np] = p; a = np++; }
+                eA[i] = a;
+                eX[i] = d.readShort(); eY[i] = d.readShort(); eW[i] = d.readShort(); eH[i] = d.readShort();
+                eK[i] = d.readByte(); eD[i] = d.readShort(); eC[i] = d.readInt();
+                eT[i] = d.readUTF();
+            }
+            apath = new String[np];
+            System.arraycopy(ps, 0, apath, 0, np);
+            aimg = new javax.microedition.lcdui.Image[np];
+            obuf = new int[(maxW * 2 + 2) * (FH * 2 + 2)];
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (in != null) {
+                try { in.close(); } catch (Exception e) { }
+            }
+        }
+    }
+
+    /** Goi tu m.a(String) ngay truoc khi tra anh vua nap: ghi nho anh atlas co o chu. */
+    public static void reg(javax.microedition.lcdui.Image im, String path) {
+        if (apath == null || im == null || path == null) return;
+        for (int k = 0; k < apath.length; k++) if (apath[k].equals(path)) aimg[k] = im;
+    }
+
+    /**
+     * Thay than b.a(Image,x,y,anchor,trans,short[] mod,int idx) (ve 1 module bang drawRegion).
+     * Module la o chu da dich -> ve chu f12 vien den o tam o; con lai giu drawRegion nhu goc.
+     */
+    public static void mod(Graphics g, javax.microedition.lcdui.Image im, int x, int y, int anchor, int trans, short[] m, int idx) {
+        int o = idx * 5;
+        int sx = m[o + 1], sy = m[o + 2], w = m[o + 3], h = m[o + 4];
+        if (aimg != null && trans == 0) {
+            int a = -1;
+            for (int k = 0; k < aimg.length; k++) if (aimg[k] == im) { a = k; break; }
+            if (a >= 0) {
+                for (int i = 0; i < eA.length; i++) {
+                    if (eA[i] == a && eX[i] == sx && eY[i] == sy && eW[i] == w && eH[i] == h) {
+                        if ((anchor & Graphics.RIGHT) != 0) x -= w;
+                        else if ((anchor & Graphics.HCENTER) != 0) x -= w >> 1;
+                        if ((anchor & Graphics.BOTTOM) != 0) y -= h;
+                        else if ((anchor & Graphics.VCENTER) != 0) y -= h >> 1;
+                        if (eK[i] == 2) return;
+                        String t = eT[i];
+                        int sc = eK[i] == 3 ? 2 : 1;
+                        int cx = eK[i] == 1 ? x + eD[i] : x + (w >> 1);
+                        int tx = cx - ((widthRaw(t) * sc) >> 1);
+                        int ty = y + ((h - FH * sc) >> 1);
+                        int argb = 0xFF000000 | eC[i];
+                        int n = t.length();
+                        for (int j = 0; j < n; j++) tx += glyphO(g, t.charAt(j), tx, ty, argb, sc);
+                        return;
+                    }
+                }
+            }
+        }
+        try {
+            g.drawRegion(im, sx, sy, w, h, trans, x, y, anchor);
+        } catch (Exception e) {
+            System.out.print(e.toString());
+        }
+    }
+
+    /** Ve 1 ky tu mau argb (phong sc lan) co vien den 1px 8 huong (1 lan drawRGB, bo dem dung lai). Tra do rong. */
+    static int glyphO(Graphics g, char c, int x, int y, int argb, int sc) {
+        c = map(c);
+        int i = idx(c);
+        if (i < 0) return (c >= '\u2e80' ? 12 : spaceW) * sc;
+        int w = widths[i];
+        if (c == ' ' || w <= 0) return w * sc;
+        int off = offsets[i];
+        int gw = w * sc, gh = FH * sc;
+        int bw = gw + 2, bh = gh + 2;
+        int[] b = obuf;
+        for (int k = 0; k < bw * bh; k++) b[k] = 0;
+        int rows = fh < FH ? fh : FH;
+        for (int r = 0; r < gh; r++) {
+            for (int q = 0; q < gw; q++) {
+                int rr = r / sc;
+                if (rr >= rows || !px(off + q / sc, rr)) continue;
+                for (int dy = 0; dy <= 2; dy++) {
+                    for (int dx = 0; dx <= 2; dx++) {
+                        int p = (r + dy) * bw + q + dx;
+                        if (b[p] == 0) b[p] = 0xFF000000;
+                    }
+                }
+            }
+        }
+        for (int r = 0; r < gh; r++) {
+            int rr = r / sc;
+            if (rr >= rows) continue;
+            for (int q = 0; q < gw; q++) if (px(off + q / sc, rr)) b[(r + 1) * bw + q + 1] = argb;
+        }
+        g.drawRGB(b, 0, bw, x - 1, y - 1, bw, bh, true);
+        return gw;
     }
 
     // ------------------------------------------------------------------ khoi dong NAMP
