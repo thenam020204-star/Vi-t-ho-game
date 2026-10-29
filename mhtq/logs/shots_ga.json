@@ -1,0 +1,12 @@
+{
+ "shots": [
+  "logs/shots_ga/status.png",
+  "logs/shots_ga/skill.png",
+  "logs/shots_ga/skill_down.png",
+  "logs/shots_ga/map.png",
+  "logs/shots_ga/quest.png"
+ ],
+ "emu_alive_at_end": true,
+ "exceptions": [],
+ "log": "logs/shots_ga/emu.log"
+}

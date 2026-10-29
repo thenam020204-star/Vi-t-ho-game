@@ -1,0 +1,8 @@
+[INFO] org.recompile.mobile.MobilePlatform: Accompanying JAD found! Parsing additional MIDlet properties.
+[INFO] Loading MIDlet: æ¢¦åä¸å½æ®åé®æå¤© | Main Class: com.yesky.game.XMIDlet
+[ERROR] javax.microedition.media.Manager: Couldn't open Tone Player: Can not open line
+[INFO] javax.microedition.midlet.MIDlet: Create MIDlet
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: CID
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: CID
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: CID

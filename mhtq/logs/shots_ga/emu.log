@@ -1,0 +1,7 @@
+[INFO] Loading MIDlet: Mong Hoi Tam Quoc | Main Class: com.yesky.game.XMIDlet
+[ERROR] javax.microedition.media.Manager: Couldn't open Tone Player: Can not open line
+[INFO] javax.microedition.midlet.MIDlet: Create MIDlet
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: CID
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: CID
+[INFO] javax.microedition.midlet.MIDlet: getAppProperty: CID

@@ -1,0 +1,10 @@
+Thêm: ['BitmapFont.class', 'ViFont.class', 'ViTalk.class', 'ViWrap.class', 'font/f13c.bin']
+Xoá: []
+Đổi: ['META-INF/MANIFEST.MF', 'b.class', 'f.class', 'h.class', 'i.class', 'item.dat', 'j.class', 'k.class', 'l.class', 'm.class', 'mate.dat', 'mission.dat', 'n.class', 'p.class', 'q.class', 's.class', 'script.dat', 'skill.dat', 'u.class', 'v.class', 'w.class', 'y.class', 'z.class']
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.endsWith(Ljava/lang/String;)Z (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.indexOf(I)I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.indexOf(II)I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.valueOf(Ljava/lang/Object;)Ljava/lang/String; (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V (xác nhận máy đích có)
+RESULT: PASS

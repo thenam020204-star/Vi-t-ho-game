@@ -1,0 +1,69 @@
+INFO:  Decompiling class a
+INFO:  ... done
+INFO:  Decompiling class b
+INFO:  ... done
+INFO:  Decompiling class c
+INFO:  ... done
+INFO:  Decompiling class com/yesky/game/XMIDlet
+INFO:  ... done
+INFO:  Decompiling class d
+INFO:  ... done
+INFO:  Decompiling class e
+INFO:  ... done
+INFO:  Decompiling class f
+INFO:  ... done
+INFO:  Decompiling class g
+INFO:  ... done
+INFO:  Decompiling class h
+INFO:  ... done
+INFO:  Decompiling class i
+INFO:  ... done
+INFO:  Decompiling class j
+WARN:           Heavily obfuscated exception ranges found!
+ERROR:          Statement cannot be decomposed although reducible!
+WARN:           Method a (IZI)V couldn't be decompiled.
+java.lang.RuntimeException: parsing failure!
+	at org.jetbrains.java.decompiler.modules.decompiler.DomHelper.parseGraph(DomHelper.java:217)
+	at org.jetbrains.java.decompiler.main.rels.MethodProcessorRunnable.codeToJava(MethodProcessorRunnable.java:122)
+	at org.jetbrains.java.decompiler.main.rels.ClassWrapper.init(ClassWrapper.java:81)
+	at org.jetbrains.java.decompiler.main.ClassesProcessor.initWrappers(ClassesProcessor.java:303)
+	at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:250)
+	at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:87)
+	at org.jetbrains.java.decompiler.struct.ContextUnit.save(ContextUnit.java:147)
+	at org.jetbrains.java.decompiler.struct.StructContext.saveContext(StructContext.java:72)
+	at org.jetbrains.java.decompiler.main.Fernflower.decompileContext(Fernflower.java:54)
+	at org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler.decompileContext(ConsoleDecompiler.java:135)
+	at org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler.main(ConsoleDecompiler.java:96)
+INFO:  ... done
+INFO:  Decompiling class k
+INFO:  ... done
+INFO:  Decompiling class l
+INFO:  ... done
+INFO:  Decompiling class m
+INFO:  ... done
+INFO:  Decompiling class n
+INFO:  ... done
+INFO:  Decompiling class o
+INFO:  ... done
+INFO:  Decompiling class p
+INFO:  ... done
+INFO:  Decompiling class q
+INFO:  ... done
+INFO:  Decompiling class r
+INFO:  ... done
+INFO:  Decompiling class s
+INFO:  ... done
+INFO:  Decompiling class t
+INFO:  ... done
+INFO:  Decompiling class u
+INFO:  ... done
+INFO:  Decompiling class v
+INFO:  ... done
+INFO:  Decompiling class w
+INFO:  ... done
+INFO:  Decompiling class x
+INFO:  ... done
+INFO:  Decompiling class y
+INFO:  ... done
+INFO:  Decompiling class z
+INFO:  ... done
