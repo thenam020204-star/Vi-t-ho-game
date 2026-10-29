@@ -23,6 +23,8 @@ public class Patch {
     /** Cau hinh tung ban: class ve chu, ten field Graphics/gradient/bang mau, tam man hinh, so drawString. */
     static class Cfg {
         String cls, fG, fGrad, fCtab, boot, midlet, loader, menu;
+        /** chinh hang so bo cuc: {lop, method, desc, cu, moi, so lan} */
+        String[][] consts = new String[0][];
         int cx, drawStrings;
         String mDrawG, mDrawC, mLines, mLinesTW, mLinesFade, mWidth, mWidthRaw, mTw, mWrap;
     }
@@ -34,6 +36,11 @@ public class Patch {
             c.cx = v.equals("240") ? 120 : 160;
             c.drawStrings = 11;
             c.boot = "src/q"; c.midlet = "src/GameMidlet"; c.loader = "src/m"; c.menu = "src/o";
+            // HUD quai: ten quai (dich dai hon) len hang tren (y 299 -> 285) de khong de chu "Lv"
+            c.consts = v.equals("240") ? new String[][]{{"src/v", "a", "(Lsrc/e;Z)V", "299", "285", "1"}}
+                    : new String[][]{{"src/v", "a", "(Lsrc/e;Z)V", "219", "205", "1"},
+                                     // man ngang: loi dan (v.b(String,int)) ngat dong 220 -> 300 px, it phai lat trang
+                                     {"src/v", "b", "(Ljava/lang/String;I)V", "220", "300", "2"}};
             c.mDrawG = c.mDrawC = c.mLines = c.mLinesTW = c.mWidth = c.mWrap = "a";
             c.mLinesFade = c.mTw = "b";
             c.mWidthRaw = "c";
@@ -51,6 +58,26 @@ public class Patch {
         write(in, out, c.boot, 2, c);
         write(in, out, c.loader, 3, c);
         write(in, out, c.menu, 4, c);
+        for (String[] k : c.consts) {
+            Path f = out.resolve(k[0] + ".class");
+            if (!Files.exists(f)) f = in.resolve(k[0] + ".class");
+            ClassNode cn = new ClassNode();
+            new ClassReader(Files.readAllBytes(f)).accept(cn, 0);
+            MethodNode m = method(cn, k[1], k[2]);
+            int n = 0;
+            if (m != null) {
+                for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+                    if (pushVal(x) == Integer.parseInt(k[3]) && x instanceof IntInsnNode) { ((IntInsnNode) x).operand = Integer.parseInt(k[4]); n++; }
+                }
+            }
+            expect("hang so " + k[0] + "." + k[1] + k[2] + " " + k[3] + "->" + k[4], n, Integer.parseInt(k[5]));
+            stripStackMap(cn);
+            ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+            cn.accept(cw);
+            Path o = out.resolve(k[0] + ".class");
+            Files.createDirectories(o.getParent());
+            Files.write(o, cw.toByteArray());
+        }
         log.close();
         if (failed) {
             System.err.println("PATCH FAILED - xem log");

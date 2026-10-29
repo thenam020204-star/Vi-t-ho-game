@@ -18,7 +18,7 @@ cs = set(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'di
 
 def color(path, sx, sy, w, h):
     im = Image.open(os.path.join(X, path.lstrip('/'))).convert('RGBA').crop((sx, sy, sx + w, sy + h))
-    px = [p for p in im.getdata() if p[3] > 128]
+    b = im.tobytes(); px = [tuple(b[i:i + 4]) for i in range(0, len(b), 4) if b[i + 3] > 128]
     if not px:
         return 0xFFFFFF
     px.sort(key=lambda p: p[0] * 3 + p[1] * 6 + p[2])

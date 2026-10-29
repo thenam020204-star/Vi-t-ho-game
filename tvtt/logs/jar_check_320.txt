@@ -1,0 +1,16 @@
+Thêm: ['font/f12.bin', 'font/vhm.dat', 'logo/namp.png', 'src/VH.class']
+Xoá: ['logo/bg.png', 'logo/cwa.png', 'logo/gameLogo.png', 'logo/gameLogo1.png', 'logo/logo0.png', 'logo/logo1.png', 'logo/logo2.png', 'logo/logo3.png', 'logo/logo4.png', 'logo/logo5.png', 'logo/logo51.png', 'logo/logo52.png', 'logo/soundAsk.png']
+Đổi: ['META-INF/MANIFEST.MF', 'data/e105.data', 'data/e110.data', 'data/e114.data', 'data/e115.data', 'data/e116.data', 'data/e119.data', 'data/e12.data', 'data/e120.data', 'data/e132.data', 'data/e139.data', 'data/e14.data', 'data/e140.data', 'data/e141.data', 'data/e143.data', 'data/e144.data', 'data/e149.data', 'data/e15.data', 'data/e150.data', 'data/e151.data', 'data/e152.data', 'data/e153.data', 'data/e155.data', 'data/e162.data', 'data/e163.data', 'data/e164.data', 'data/e165.data', 'data/e166.data', 'data/e167.data', 'data/e168.data', 'data/e19.data', 'data/e28.data', 'data/e3.data', 'data/e38.data', 'data/e49.data', 'data/e57.data', 'data/e64.data', 'data/e73.data', 'data/e78.data', 'data/e84.data', 'data/e93.data', 'data/e94.data', 'data/iteminfo.data', 'data/mapinfo.data', 'data/missioninfo0.data', 'data/missioninfo1.data', 'data/skillinfo.data', 'data/universeinfo.data', 'head/play.png', 'logo/exit.png', 'map/122.png', 'map/123.png', 'map/124.png', 'map/125.png', 'map/126.png', 'menu/1.png', 'menu/2.png', 'menu/6.png', 'menu/7.png', 'menu/8.png', 'src/GameMidlet.class', 'src/a.class', 'src/b.class', 'src/c.class', 'src/d.class', 'src/e.class', 'src/f.class', 'src/g.class', 'src/h.class', 'src/i.class', 'src/j.class', 'src/k.class', 'src/m.class', 'src/o.class', 'src/q.class', 'src/r.class', 'src/s.class', 'src/t.class', 'src/u.class', 'src/v.class', 'src/w.class']
+WARN src/VH.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/lang/StringBuffer.<init>(I)V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/util/Vector.<init>()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/util/Vector.addElement(Ljava/lang/Object;)V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/util/Vector.copyInto([Ljava/lang/Object;)V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/util/Vector.size()I (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.getHeight()I (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.getWidth()I (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.repaint()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.serviceRepaints()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+RESULT: PASS
