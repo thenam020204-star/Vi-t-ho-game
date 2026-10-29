@@ -38,6 +38,11 @@ public class Harness {
                         if (arr == null || !(arr instanceof Object[])) continue; Object[] oa = (Object[]) arr;
                         for (int q = 3; q < s.length; q++) { int ix = Integer.parseInt(s[q]); LOG.println("str " + s[1] + "." + s[2] + "[" + ix + "] = " + (ix < oa.length ? dump(oa[ix]) : "OOB len=" + oa.length)); } }
                     break; }
+                case "arr": { Method flc = ClassLoader.class.getDeclaredMethod("findLoadedClass", String.class); flc.setAccessible(true);
+                    Class<?> c = (Class<?>) flc.invoke(p.loader, s[1]);
+                    for (Field x : c.getDeclaredFields()) if (x.getName().equals(s[2]) && x.getType().isArray()) { x.setAccessible(true); Object v = x.get(null);
+                        LOG.println("arr " + s[1] + "." + s[2] + " " + x.getType().getSimpleName() + " = " + deep(v)); }
+                    break; }
                 case "threads": for (java.util.Map.Entry<Thread, StackTraceElement[]> e : Thread.getAllStackTraces().entrySet()) {
                         LOG.println("THREAD " + e.getKey().getName() + " " + e.getKey().getState());
                         StackTraceElement[] st = e.getValue(); for (int i = 0; i < Math.min(st.length, 14); i++) LOG.println("    at " + st[i]); } break;
@@ -61,6 +66,14 @@ public class Harness {
             } catch (Throwable e) {}
         }
         return b.append('}').toString();
+    }
+    static String deep(Object v) {
+        if (v == null) return "null";
+        if (v instanceof int[]) return java.util.Arrays.toString((int[]) v);
+        if (v instanceof short[]) return java.util.Arrays.toString((short[]) v);
+        if (v instanceof byte[]) return java.util.Arrays.toString((byte[]) v);
+        if (v instanceof Object[]) { StringBuilder b = new StringBuilder("["); for (Object o : (Object[]) v) b.append(deep(o)).append(", "); return b.append("]").toString(); }
+        return String.valueOf(v);
     }
     static void shot(String f) throws Exception {
         PlatformImage pi = p.getLcdFrontbuffer();

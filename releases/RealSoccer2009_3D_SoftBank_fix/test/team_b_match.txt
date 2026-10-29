@@ -1,0 +1,95 @@
+wait 9000
+press 53 150
+wait 2500
+press 53 150
+wait 3000
+probe au a
+press 56 150
+wait 400
+press 53 150
+wait 2500
+shot t0
+press 54 120
+wait 350
+press 54 120
+wait 350
+press 54 120
+wait 350
+press 56 120
+wait 350
+probe ai x
+probe ai w
+shot t1
+press 53 150
+wait 800
+probe ai bn
+shot t2
+press 54 120
+wait 300
+press 54 120
+wait 300
+press 54 120
+wait 300
+press 54 120
+wait 300
+press 54 120
+wait 300
+press 54 120
+wait 300
+press 54 120
+wait 300
+press 54 120
+wait 300
+press 54 120
+wait 300
+probe ai x
+shot t3
+press 53 150
+wait 1500
+press 53 150
+wait 1500
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+press 53 150
+wait 1800
+probe ai A
+probe au ac
+shot u1
+wait 5000
+shot u2
+probe au bE
+probe au a

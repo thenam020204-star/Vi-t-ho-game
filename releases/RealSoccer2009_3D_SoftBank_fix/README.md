@@ -88,6 +88,25 @@ Cách vá (giữ độ dài lệnh, chỉ nhảy tới offset đã có frame Sta
 `into_match.txt` → `freej2me_into_match.png`: menu bằng 8/2/5, soft phải quay lại, vào tới trận (`ac = 8`, đồng hồ chạy),
 giữ 6 → `aC = 4`, 0 → 1024, `bE = 0` (không kẹt). Hình 3D vỡ là do stub OPGL của harness.
 
+## Mở giới hạn bản demo (`patchdemo.py`, `addkits.py`)
+
+| Giới hạn | Vị trí | Cách mở |
+|---|---|---|
+| 5 lượt chơi (`au.a`, lưu RMS) | `au.run` offset 1293, 1604: `a = a − 1` | `iconst_1 → iconst_0` (không trừ) |
+| Hết lượt → màn 14 “mua bản đầy đủ” | `ai.t` offset 956: `getstatic au.a; ifgt` | `iconst_1; nop; nop` (save cũ đã về 0 vẫn chơi được) |
+| Con trỏ chọn đội chỉ qua lại ô 1↔2, đội 2 bị ép | `ai.a()Z` | 2 × `iconst_0 → iconst_1` (luôn cho di chuyển) |
+| Ổ khoá vẽ trên mọi ô trừ Ba Lan/Anh | `ai.f(I)` offset 5024–5041 | điều kiện “bỏ qua” luôn đúng (`iload → iconst`, cùng độ dài) |
+| JAR demo chỉ có áo `tex/2.t`, `tex/3.t` (+199) → NPE khi nạp đội khác, game kẹt | `au.a(IZZ)` nạp `/tex/<id+1>.t` | **thêm 196 file** `tex/N.t` (chép áo Ba Lan/Anh xen kẽ) cho 198 đội |
+
+Đo (FreeJ2ME, `team_b_match.txt`): chọn Tây Ban Nha + Bắc Ireland (trang ヨーロッパB) → vào trận `ac = 8`, `bE = 0`,
+`au.a` giữ 5; tập exception giống hệt bản trước. JAR tăng 1,59 → 3,19 MB.
+
+⚠️ Không có trong JAR demo (không thể “mở khoá”, phải dựng lại):
+- áo thật của 196 đội (đang dùng áo Ba Lan/Anh), cờ của các trang ngoài ヨーロッパA (ô trống);
+- handler chọn của **ゲームモード** (màn 137: カップ/リーグ/PK戦/練習) và chỉnh **設定** (màn 102) — demo xoá code, chỉ còn
+  lên/xuống/quay lại; màn đích 129/131/138/110 vẫn còn;
+- chữ kết quả trận `au.a[640 + loại_trận]` cho loại ≠ exhibition: bảng chữ demo chỉ có 641 chữ (0…640).
+
 ## Lỗi 3: đơ ở menu chính
 
 `au.run()` bọc cả tick trong `try { … bE = 0; } catch (Exception e) {}`. Nếu tick ném exception, `bE` kẹt ở 1 → khối
