@@ -1,0 +1,30 @@
+wait 9000
+press -5 150
+wait 2500
+press -5 150
+wait 3000
+shot q0
+probe ai J
+press -2 150
+wait 600
+shot q1
+press -2 150
+wait 600
+shot q2
+probe ai J
+press -1 150
+wait 600
+probe ai J
+shot q3
+press -5 150
+wait 3000
+probe ai A
+shot q4
+press -2 150
+wait 600
+shot q5
+press -7 150
+wait 2000
+probe ai A
+shot q6
+probe au bE

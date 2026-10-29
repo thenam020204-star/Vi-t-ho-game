@@ -32,6 +32,15 @@ public class Harness {
                 case "probe": probe(s[1], s[2], t0); break;
                 case "rawdown": ((javax.microedition.lcdui.Canvas) Mobile.getDisplay().getCurrent()).keyPressed(Integer.parseInt(s[1])); break;
                 case "rawup": ((javax.microedition.lcdui.Canvas) Mobile.getDisplay().getCurrent()).keyReleased(Integer.parseInt(s[1])); break;
+                case "strs": { Method flc = ClassLoader.class.getDeclaredMethod("findLoadedClass", String.class); flc.setAccessible(true);
+                    Class<?> c = (Class<?>) flc.invoke(p.loader, s[1]);
+                    for (Field x : c.getDeclaredFields()) if (x.getName().equals(s[2]) && x.getType().isArray()) { x.setAccessible(true); Object arr = x.get(null);
+                        if (arr == null || !(arr instanceof Object[])) continue; Object[] oa = (Object[]) arr;
+                        for (int q = 3; q < s.length; q++) { int ix = Integer.parseInt(s[q]); LOG.println("str " + s[1] + "." + s[2] + "[" + ix + "] = " + (ix < oa.length ? dump(oa[ix]) : "OOB len=" + oa.length)); } }
+                    break; }
+                case "threads": for (java.util.Map.Entry<Thread, StackTraceElement[]> e : Thread.getAllStackTraces().entrySet()) {
+                        LOG.println("THREAD " + e.getKey().getName() + " " + e.getKey().getState());
+                        StackTraceElement[] st = e.getValue(); for (int i = 0; i < Math.min(st.length, 14); i++) LOG.println("    at " + st[i]); } break;
                 case "down": MobilePlatform.keyPressed(Integer.parseInt(s[1])); break;
                 case "up": MobilePlatform.keyReleased(Integer.parseInt(s[1])); break;
             }
@@ -39,6 +48,19 @@ public class Harness {
         }
         LOG.println("DONE");
         allowExit = true; System.exit(0);
+    }
+    static String dump(Object o) {
+        if (o == null || o instanceof String || o.getClass().isArray()) return String.valueOf(o);
+        StringBuilder b = new StringBuilder(o.getClass().getName() + "{");
+        for (Field f : o.getClass().getDeclaredFields()) {
+            if (java.lang.reflect.Modifier.isStatic(f.getModifiers())) continue;
+            try { f.setAccessible(true); Object v = f.get(o);
+                if (v instanceof char[]) v = "'" + new String((char[]) v) + "'";
+                else if (v instanceof byte[]) { try { v = "b'" + new String((byte[]) v, "Shift_JIS") + "'"; } catch (Exception e) {} }
+                b.append(f.getName()).append('=').append(v).append(' ');
+            } catch (Throwable e) {}
+        }
+        return b.append('}').toString();
     }
     static void shot(String f) throws Exception {
         PlatformImage pi = p.getLcdFrontbuffer();
