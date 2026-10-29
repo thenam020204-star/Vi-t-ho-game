@@ -43,8 +43,11 @@ public class Patch {
             c.drawStrings = 11;
             c.boot = "src/q"; c.midlet = "src/GameMidlet"; c.loader = "src/m"; c.menu = "src/o";
             // HUD quai: ten quai (dich dai hon) len hang tren (y 299 -> 285) de khong de chu "Lv"
-            c.consts = v.equals("240") ? new String[][]{{"src/v", "a", "(Lsrc/e;Z)V", "299", "285", "1"}}
+            // thoai: ten nguoi noi can giua quanh x=35 (dai -> tran trai man hinh) -> can trai x=4 (anchor 33 -> 36)
+            c.consts = v.equals("240") ? new String[][]{{"src/v", "a", "(Lsrc/e;Z)V", "299", "285", "1"},
+                                                         {"src/v", "Q", "()V", "35,258,33", "4,258,36", "1"}}
                     : new String[][]{{"src/v", "a", "(Lsrc/e;Z)V", "219", "205", "1"},
+                                     {"src/v", "Q", "()V", "35,178,33", "4,178,36", "1"},
                                      // man ngang: loi dan (v.b(String,int)) ngat dong 220 -> 300 px, it phai lat trang
                                      {"src/v", "b", "(Ljava/lang/String;I)V", "220", "300", "2"}};
             c.mDrawG = c.mDrawC = c.mLines = c.mLinesTW = c.mWidth = c.mWrap = "a";
@@ -100,11 +103,36 @@ public class Patch {
             MethodNode m = method(cn, k[1], k[2]);
             int n = 0;
             if (m != null) {
+                String[] olds = k[3].split(","), news = k[4].split(",");
                 for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
-                    if (pushVal(x) == Integer.parseInt(k[3]) && x instanceof IntInsnNode) { ((IntInsnNode) x).operand = Integer.parseInt(k[4]); n++; }
+                    AbstractInsnNode y = x; boolean ok = true;
+                    List<IntInsnNode> hit = new ArrayList<>();
+                    for (String o : olds) {
+                        if (y == null || !(y instanceof IntInsnNode) || pushVal(y) != Integer.parseInt(o)) { ok = false; break; }
+                        hit.add((IntInsnNode) y); y = y.getNext();
+                    }
+                    if (!ok) continue;
+                    for (int j = 0; j < hit.size(); j++) hit.get(j).operand = Integer.parseInt(news[j]);
+                    n++;
                 }
             }
             expect("hang so " + k[0] + "." + k[1] + k[2] + " " + k[3] + "->" + k[4], n, Integer.parseInt(k[5]));
+            if (m != null && k[1].equals("Q") && k[0].equals("src/v")) {
+                // ten nguoi noi: b.a(String,x,y,anchor,mau) -> b.a(String,x,y,anchor,mau,mau_vien) (ham vien 4 huong co san), vien trang
+                int q = 0;
+                for (AbstractInsnNode x = m.instructions.getFirst(); x != null; x = x.getNext()) {
+                    if (x instanceof IntInsnNode && pushVal(x) == 4) {
+                        AbstractInsnNode y1 = x.getNext(), an = y1 == null ? null : y1.getNext(), col = an == null ? null : an.getNext(), inv = col == null ? null : col.getNext();
+                        if (an != null && pushVal(an) == 36 && col != null && col.getOpcode() == Opcodes.ICONST_0 && inv instanceof MethodInsnNode
+                                && ((MethodInsnNode) inv).owner.equals("src/b") && ((MethodInsnNode) inv).desc.equals("(" + STR + "IIII)V")) {
+                            m.instructions.insert(col, new LdcInsnNode(0xFFFFFF));
+                            ((MethodInsnNode) inv).desc = "(" + STR + "IIIII)V";
+                            q++;
+                        }
+                    }
+                }
+                expect("ten nguoi noi -> chu vien", q, 1);
+            }
             stripStackMap(cn);
             ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
             cn.accept(cw);

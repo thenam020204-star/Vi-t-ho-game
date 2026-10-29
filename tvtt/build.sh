@@ -8,7 +8,8 @@ V=${1:?ban: 240|320|360}
 case $V in 240) J=240x320;; 320) J=320;; 360) J=360x640;; esac
 TSV=${TSV:-dich/dp_work/final/text_can_dich.tsv}; [ -f "$TSV" ] || TSV=dich/text_can_dich.tsv
 GOC=goc/tvtt_$J.jar
-OUT=${OUT:-out/TinhVanTruyenThuyet_${J}_vi.jar}
+ON=$J; [ $V = 320 ] && ON=320x240
+OUT=${OUT:-out/TinhVanTruyenThuyet_${ON}_vi.jar}
 L="$LIBS"; B=build/$V
 mkdir -p logs out
 [ -f build/hook/src/VH.class ] && [ build/hook/src/VH.class -nt hook/VH.java ] && [ build/patcher/Patch.class -nt patcher/Patch.java ] || ./build_hook.sh
