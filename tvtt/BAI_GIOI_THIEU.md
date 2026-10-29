@@ -13,7 +13,7 @@ Ai là bạn, ai là thù? Hãy tự mình khám phá!
 • Hệ thống vũ khí, nhẫn, rèn trang bị, cửa hàng, nhiệm vụ phong phú
 • Cốt truyện dài, nhiều nhân vật, nhiều bước ngoặt bất ngờ
 
-🇻🇳 PHẦN VIỆT HOÁ
+✍️ PHẦN VIỆT HOÁ
 • Dịch tay toàn bộ cốt truyện, hội thoại, nhiệm vụ, vật phẩm, kỹ năng và giao diện (hơn 2000 câu), văn phong hiện đại, dễ đọc
 • Font chữ tiếng Việt có dấu đầy đủ, hiển thị đẹp, giữ màu chữ và hiệu ứng chạy chữ của bản gốc
 • Việt hoá cả chữ trong hình: menu, nút bấm, tab, tên trang bị, bảng tên thành phố, logo tiêu đề
