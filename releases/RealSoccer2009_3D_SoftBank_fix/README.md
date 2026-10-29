@@ -33,6 +33,31 @@ Cài chỉ bằng JAR → `getAppProperty` trả `null` → NPE. Trên máy th�
 
 Script tái tạo: `python3 fixmf.py <jar_gốc> <jar_mới>`.
 
+## Lỗi 2: không nhận phím (J2ME Loader)
+
+`au` (GameCanvas) đọc mã phím từ 7 field static gán trong `au.<clinit>` (offset 7553–7584), chỉ gán ở đó;
+`keyPressed/keyReleased/c(int)` là nơi duy nhất đọc chúng, sau đó mọi logic dùng bitmask `cC`.
+Logic ghép phím chéo cho thấy vòng hướng `cF(bit1) – cI(bit4) – cG(bit16) – cH(bit64)` → cặp đối diện
+`cF↔cG`, `cI↔cH`, khớp bố cục phím Sharp/SoftBank:
+
+| Field | Ý nghĩa | Gốc (SoftBank) | Mới (Nokia/J2ME Loader) |
+|---|---|---|---|
+| cH | lên | −1 | −1 (giữ) |
+| cI | xuống | −6 | −2 |
+| cG | trái | −2 | −3 |
+| cF | phải | −5 | −4 |
+| cJ | OK/chọn | −20 | −5 |
+| cK | soft trái | −21 | −6 |
+| cL | soft phải | −22 | −7 |
+
+Phím số 0–9, `*`, `#` (48–57, 42, 35) không đổi.
+
+Vá tại chỗ 6 toán hạng `bipush` (`patchkeys.py`, cùng độ dài lệnh, không đổi opcode/kiểu → StackMap giữ nguyên).
+`javap` trước/sau chỉ khác đúng 6 dòng đó. Đóng gói: `replace.py <jar> <jar_mới> au.class <au.class_đã_vá>`.
+
+⚠️ Bản này dành cho J2ME Loader / máy dùng mã phím Nokia. Trên máy SoftBank thật hãy dùng JAR gốc + bản sửa manifest
+(mã −2/−5/−6 trùng giữa hai bố cục nên một JAR không hỗ trợ cả hai được nếu không phát hiện nền tảng).
+
 ## Kiểm tra đã làm / còn lại
 
 - ✅ JarFile đọc manifest mới: `MIDlet-FullVersion-URL` có giá trị.
