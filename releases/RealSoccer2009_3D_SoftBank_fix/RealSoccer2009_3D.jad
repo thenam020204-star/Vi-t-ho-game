@@ -1,0 +1,13 @@
+MIDlet-Name: ﾘｱﾙｻｯｶｰ2009 3D(体験版)
+MIDlet-Version: 1.0.4
+MIDlet-Icon: /icon.png
+MIDlet-Vendor: Gameloft SA
+MIDlet-1: ﾘｱﾙｻｯｶｰ2009 3D(体験版), /icon.png, GloftRS93
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Data-Size: 7500
+MIDxlet-OPGL: Y
+MIDlet-Permissions: com.mexa.opgl.OpglGraphics
+MIDlet-FullVersion-URL: http://www.gameloft.com
+MIDlet-Jar-URL: RealSoccer2009_3D.jar
+MIDlet-Jar-Size: 1588156
