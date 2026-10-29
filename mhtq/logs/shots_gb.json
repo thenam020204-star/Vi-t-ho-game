@@ -1,0 +1,12 @@
+{
+ "shots": [
+  "logs/shots_gb/status.png",
+  "logs/shots_gb/item_a.png",
+  "logs/shots_gb/item_b.png",
+  "logs/shots_gb/item_c.png",
+  "logs/shots_gb/item_d.png"
+ ],
+ "emu_alive_at_end": true,
+ "exceptions": [],
+ "log": "logs/shots_gb/emu.log"
+}
