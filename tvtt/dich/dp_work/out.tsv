@@ -1,0 +1,2034 @@
+1	Tinh thể Warp
+2	Con người đã cá nhân hóa công nghệ warp, dùng rất tiện, nhưng dân mê du lịch thường phản đối nó. Lập tức trở về bản đồ vũ trụ.
+3	Thuốc quân dụng
+4	Thuốc bắt buộc của quân đội, không ngon lắm. Hồi 10000 HP.
+5	Thuốc rễ cây
+6	Phi Hành Giả chiết xuất từ một loài cây, hồi phục rất tốt. Hồi 20000 HP.
+7	Thuốc thánh chiến
+8	Tổng hợp từ vật chất quý hiếm, hồi rất nhiều. Hồi 30000 HP.
+9	Thuốc nạp năng lượng
+10	Làm từ chất tiết của một loài kiến ngoài hành tinh, tốt nhất đừng kể cho người mua. Hồi 1400 năng lượng.
+11	Thuốc linh năng
+12	Kỹ thuật chiết xuất thực vật tuyệt vời của Phi Hành Giả. Hồi 2200 năng lượng.
+13	Thuốc thánh linh
+14	Bổ sung rất nhiều năng lượng, nguyên liệu không rõ. Hồi 4400 năng lượng.
+15	Siêu hỗn dược
+16	Chiết xuất từ nhiều loài động thực vật, công thức chưa từng tiết lộ. Hồi 50 % HP + hồi 40 % năng lượng.
+17	Viên nang vạn năng
+18	Nghe nói thành phần thuốc giải trạng thái bất thường này lấy từ một loài bò sát có độc. Giải mọi trạng thái bất thường.
+19	Đồ tiếp tế
+20	Không ai chịu tiết lộ thành phần của nó, dù trả giá cao, nhưng ai cũng biết nó vừa nuôi no một con thú vừa nạp đầy một chiếc mô tô. Nạp đầy năng lượng cho thú cưỡi.
+21	Mở rộng túi
+22	Ai từng đặt chân lên nhiều hành tinh đều cần nó. Sức chứa túi +8.
+23	Hoóc-môn chiến đấu
+24	Sản phẩm không tác dụng phụ, yên tâm sử dụng. Công cơ bản vĩnh viễn +100.
+25	Hoóc-môn tăng trưởng
+26	Sản phẩm không tác dụng phụ, yên tâm sử dụng. HP vĩnh viễn +600.
+27	Hoóc-môn linh lực
+28	Sản phẩm không tác dụng phụ, yên tâm sử dụng. Năng lượng vĩnh viễn +150.
+29	Hợp kim titan
+30	Đồ thép độ cứng bình thường.
+31	Tinh thể keo
+32	Vật liệu tinh thể dạng keo, chất lượng thường.
+33	Xích Moore
+34	Dây xích cơ khí.
+35	Tinh thể Tử tích
+36	Quặng tinh thể chất lượng thường.
+37	Xương sống sói
+38	Xương của sói.
+39	Đá vụn Ural
+40	Khối đá Ural chất lượng kém.
+41	Khối đồng vị
+42	Vài loại vật liệu mềm tình cờ hòa vào nhau trong tự nhiên.
+43	Đa hợp kim titan
+44	Đồ thép rất cứng.
+45	Đồng xoáy tố
+46	Tinh thể tố có độ tinh khiết khá cao.
+47	Khối polyme
+48	Một vài loại vật liệu mềm tình cờ hòa vào nhau trong tự nhiên.
+49	Xương tê giác vụn
+50	Xương vỡ của tê giác khổng lồ, rất cứng.
+51	Nơ-ron
+52	Vật liệu bí ẩn này không quá khó gặp.
+53	Tua-bin hạt nhân
+54	Một thiết bị khởi động.
+55	Đá phiến Ural
+56	Đá đặc sản của hành tinh Ural, còn cứng hơn cả thép.
+57	Tinh thể keo đen
+58	Quặng tinh thể keo màu đen.
+59	Tinh thể Tử tích băng
+60	Quặng pha lê cực kỳ quý giá.
+61	Hạt giống Rom
+62	Hạt giống của một loài cây kỳ lạ do người Rom lai tạo.
+63	Sừng tê giác
+64	Sừng của tê giác khổng lồ, cứng vô cùng.
+65	Vòng Moore
+66	Linh kiện cơ khí.
+67	Hào quang Rom
+68	Vật liệu hiếm không biết người Rom tìm từ đâu, nghe nói dưới ánh sáng sẽ hiện lên bóng dáng tổ tiên.
+69	Vinh quang Song Tinh
+70	Chất liệu kim loại mà tộc trưởng Phi Hành Giả đeo.
+71	Tua-bin vật chất tối
+72	Thiết bị khởi động bằng năng lượng tối.
+73	Khớp nơ-ron
+74	Vật liệu rất bí ẩn, có kẻ còn dùng nó chế thuốc cấm bán chui.
+75	Tinh thể đồng xoáy
+76	Lấy từ khoáng vật tinh thể cực kỳ tinh khiết.
+77	Ý chí Sói Chiến
+78	Biểu tượng danh dự của tộc Sói Chiến, thường chỉ dũng sĩ mới được đeo.
+79	Huy hiệu Phong Ngữ
+80	Mảnh thiên thạch trong vũ trụ, Phi Hành Giả thích đúc kim loại này thành huy hiệu.
+81	Ánh sáng Song Tinh
+82	Mảnh thiên thạch trong vũ trụ, chỉ Phi Hành Giả mới biến được nó thành năng lượng.
+83	Thiên thạch xanh lam
+84	Thiên thạch xanh nhạt rơi xuống hành tinh Stanovoy từ thời cổ đại, được Phi Hành Giả thu thập làm thánh vật tượng trưng trí tuệ.
+85	Thiên thạch vàng
+86	Thiên thạch vàng nhạt rơi xuống hành tinh Jutland từ thời cổ đại, nay được người Rom lang thang thu thập, đồn rằng bên trong phát ra giai điệu tuyệt đẹp.
+87	Thiên thạch đỏ
+88	Thiên thạch đỏ thẫm rơi xuống hành tinh Ural từ thời cổ đại, được tộc Sói Chiến thu thập làm thánh vật tượng trưng sức mạnh.
+89	Kiếm chiến binh
+90	Vũ khí tiêu chuẩn của quân Liên minh Doanh nghiệp, uy lực hoàn toàn tùy người dùng.
+91	Kiếm hiệp sĩ
+92	Vũ khí hiệp sĩ rèn tại New Zion, mang tinh thần của các dũng sĩ Zion.
+93	Kiếm laser
+94	Mang công nghệ bí ẩn của Phi Hành Giả, nhưng nhìn tay nghề thì có vẻ họ không muốn giúp chúng ta.
+95	Kiếm chém sắt
+96	Nhìn cái tên là biết kỹ thuật gia công của Hailar đáng sợ và tai tiếng cỡ nào.
+97	Kiếm vật tổ
+98	Do ảnh hưởng vùng miền, thân kiếm có hoa văn đỏ kiểu tộc Sói Chiến, sắc bén vô cùng.
+99	Kiếm thập tự
+100	Kết hợp tay nghề tinh xảo hơn trên nền kiếm hiệp sĩ.
+101	Lam Linh
+102	Hoàn toàn do Phi Hành Giả chế tạo, lưỡi kiếm cực sắc mà lại siêu nhẹ.
+103	Kiếm răng lạ
+104	Cổ kiếm tỏa ra tử khí. Hailar bắt chước tay nghề siêu đẳng của Phi Hành Giả, không ngờ thanh kiếm đáng sợ như thể nuốt được linh hồn.
+105	Kiếm thánh giá
+106	Đúng là quý tộc trong các loại kiếm, thân kiếm đẹp đến mức chẳng ai nghĩ nó là công cụ giết người.
+107	Kiếm khát máu
+108	Vẫn do Phi Hành Giả làm ra, thân kiếm đỏ rực như đang khao khát thêm máu.
+109	Lưỡi độc
+110	Binh khí tộc Sói Chiến coi là biểu tượng quyền lực, chứa linh hồn hoang dã nguyên thủy nhất.
+111	Hồng Ảnh
+112	Tương truyền Kiếm khát máu hút đủ máu sẽ tiến hóa thành nó. Lạ thay thân kiếm như lá đỏ đang nở, lại cho người ta cảm giác bình yên.
+113	Liệt Hồn
+114	Thanh kiếm huyền thoại như muốn truyền một thông điệp bí ẩn. Nghe nói lặng lẽ nhìn nó lâu sẽ bất giác lạc mất chính mình.
+115	Nhật Thực
+116	Người Teuton kết hợp tay nghề đỉnh cao của mình và của Phi Hành Giả, đó là sự tôn sùng tuyệt đối với tôn giáo và ý chí dân tộc của họ.
+117	Ngân Hà
+118	Thanh kiếm tối thượng kết tinh trí tuệ các chủng tộc, như thể lúc nào cũng có thể phóng ra muôn tia sáng.
+119	Găng chiến đấu
+120	Vũ khí tiêu chuẩn của quân Liên minh Doanh nghiệp, chống được giáp cứng.
+121	Găng mỏ ưng
+122	Vẻ ngoài đẹp đẽ hút không ít người thường mua để tỏ ra khác biệt.
+123	Găng đấu sĩ
+124	Tên là đấu sĩ nhưng không hề thô kệch, dân New Zion rất kén chọn về thẩm mỹ.
+125	Găng ảo thuật
+126	Đồn rằng đeo găng này sẽ dễ dàng học được đủ loại ảo thuật, nhưng ma lực của nó thể hiện rõ hơn trên chiến trường.
+127	Găng lửa đỏ
+128	Trang bị đem lại nhiệt huyết như ngọn lửa.
+129	Găng chim ưng
+130	Phi Hành Giả tôn sùng chim ưng tung cánh một cách khó hiểu, nên ý tưởng này được đưa vào cả vũ khí.
+131	Găng dã thú
+132	Khi dùng găng như có tiếng gọi hoang dã, sức mạnh thú tính lan khắp cơ thể.
+133	Trái tim sư tử
+134	Khi trúng địch sẽ nghe văng vẳng tiếng sư tử gầm, kẻ địch mà nghe thấy thì thảm rồi.
+135	Găng xung điện
+136	Sau khi lắp thiết bị năng lượng, sức phá hoại tăng mạnh, người thường cũng có thể tay không đập vỡ đá.
+137	Găng thiên quyền
+138	Cái tên đến từ tốc độ ra đòn, trọng lượng nhẹ làm tăng lực xung kích.
+139	Thần Mặt Trời
+140	Trang bị được thần linh che chở, có lẽ là ân huệ trời ban cho Phi Hành Giả.
+141	Thập tự vàng
+142	Uy lực khổng lồ, không ai từ chối nổi sức mạnh này.
+143	Găng tinh thể
+144	Gửi gắm khoa học mạnh mẽ của Phi Hành Giả, găng được gắn tinh thể nên mạnh vô cùng.
+145	Găng linh năng
+146	New Zion luôn tổng hợp công nghệ các vùng, nhờ vậy thứ vũ khí đỉnh cao này ra đời.
+147	Găng thánh chiến
+148	Vũ khí tối thượng, kết tinh của trí tuệ và lòng dũng cảm, chỉ người thật sự đủ tư cách tham gia thánh chiến mới được đeo.
+149	Súng quang tốc
+150	Vũ khí không thể thiếu trong quân đội, dùng nó thì dù chưa luyện tập cũng hạ được người khác.
+151	Súng phóng lựu điện
+152	Trong trận đánh đông người, một phát đạn khiến vô số kẻ lãnh đủ. Nòng rất to, súng cũng hơi lớn.
+153	Súng lựu Dạ Ưng
+154	Đừng để cái tên đánh lừa, vũ khí này chẳng liên quan gì tới "thanh lịch", chỉ là khi bắn nghe như tiếng chim ưng đêm.
+155	Súng lựu Cực Quang
+156	Trong súng có một thùng năng lượng lớn, chất lỏng bên trong bắn ra cùng đạn, sức phá hoại kinh người.
+157	Giáp hộ thân
+158	Quân trang tiêu chuẩn, giảm sát thương khi bị tấn công.
+159	Giáp đấu sĩ
+160	Chống được đòn khá nặng, nghe nói nhiều đấu trường ngầm đang lén buôn bán loại giáp này.
+161	Giáp thoi
+162	Đồ phòng thủ rất chính quy, chất lượng cực tốt.
+163	Khiên giáp vinh dự
+164	Chiến binh vĩ đại phải có trang phục vĩ đại, việc này gần như đã thành một cách chứng minh.
+165	Giáp pha lê
+166	Giáp cực cứng, chế tạo bằng kỹ thuật độc đáo, hầu hết lưỡi sắc đều bó tay.
+167	Linh hồn đất mẹ
+168	Đồn rằng nó hút khí tức của đất để tăng phòng thủ, trừ khi bạn chẻ đôi được mặt đất.
+169	Giáp vảy rồng
+170	Không chỉ cực cứng mà khi bị đánh trúng còn hơi trơn, chuyển lực sang chỗ khác, có thể nói là cương nhu kết hợp.                                                             
+171	Thánh vực hộ thể
+172	Giáp được tinh linh thánh vực vuốt ve, mang lời chúc phúc của tinh linh.
+173	Giáp Ares
+174	Được ban linh hồn của chiến thần Ares, ngay cả sức mạnh tia sét cũng không phá nổi.
+175	Giáp thánh quang
+176	Có ánh sáng chư thần bao quanh, giúp chiến binh dũng mãnh nhất xông vào quân địch lấy đầu thủ lĩnh mà không hề hấn gì.
+177	Nhẫn lính
+178	Nhẫn chiến đấu bình thường nhất.
+179	Nhẫn cường công
+180	Tăng sức mạnh của tay.
+181	Nhẫn chiến thần
+182	Sức mạnh tăng vọt, nhiều người khó chống đỡ.
+183	Nhẫn thần kỹ
+184	Giúp người dùng tiến bộ rõ rệt về kỹ xảo.
+185	Loạn Vũ
+186	Đạo cụ bắt buộc của người thích phô trương, tăng mạnh sát thương chí mạng.
+187	Nhẫn ảo thuật gia
+188	Nhẫn sơ cấp nhiều ảo thuật gia hay đeo.
+189	Nhẫn cao năng
+190	Người có địa vị mới đeo, nhiều đại gia trong thành phố thường bỏ tiền lớn mua, ma lực của nó thu hút phái nữ.
+191	Nhẫn chí mạng
+192	Tăng tỉ lệ trúng của đòn nặng.
+193	Nhẫn búa tạ
+194	Đeo vào thấy tay như cây búa tạ, tràn đầy sức mạnh.
+195	Cơn giận bạo chúa
+196	Tương truyền là chiếc nhẫn bạo chúa thời cổ ưa thích, đeo vào có thể tùy ý trừng phạt kẻ dưới.
+197	Nhẫn núi lở
+198	Như được ban sức mạnh của sơn thần, rất mạnh.
+199	Nhẫn Titan
+200	Có người còn gọi nó là nhẫn khổng lồ, sức mạnh của nó khó tin nổi.
+201	Nhẫn tàn sát
+202	Nhẫn của hoàng đế ma cà rồng thời cổ, có lẽ bạn cũng sẽ khiến nó nhuốm đầy máu.
+203	Nhẫn né tránh
+204	Trong chiến đấu, tốc độ có thể giúp bạn né được đòn của một dũng sĩ tộc Sói Chiến.
+205	Nhẫn né cao
+206	Tăng thêm tỉ lệ né tránh.
+207	Nhẫn choáng
+208	Trong nhẫn chứa ma lực có thể làm kẻ địch choáng tạm thời.
+209	Nhẫn Hercules
+210	Trang bị được Hercules che chở, tỉ lệ cao khiến kẻ địch bị tê liệt.
+211	Nhẫn hộ thể
+212	Loại nhẫn này được linh hồn bảo vệ, người ta khen chê về nó lẫn lộn.
+213	Nhẫn miễn nhiễm
+214	Nhiều linh hồn bay quanh bảo vệ bạn, chỉ là người ta ngày càng bàn tán liệu nó có nuốt chửng người dùng không.
+215	Nhẫn giảm tốc
+216	Nhẫn sẽ thả ác linh quấn lấy kẻ địch.
+217	Nhẫn làm chậm
+218	Có tăng tốc thì có giảm tốc, nghe nói các sở an ninh thành phố định phát cho nhân viên.
+219	Nhẫn băng giá
+220	Bên trong tụ băng giá, ai bị trúng rất khó thoát.
+221	Nhẫn hồi phục
+222	Nhẫn sẽ từ từ chữa lành vết thương, đeo vào bạn thấy đỡ hơn chưa!?
+223	Nhẫn hồi sinh
+224	Tăng mạnh khả năng chữa trị, bị cấm mua bán ở nhiều nơi, đồ cứu người rốt cuộc thường trở nên tàn khốc.
+225	Nhẫn phản đòn
+226	Tạo quanh người một lớp gai nhỏ vô hình.
+227	Nhẫn bụi gai
+228	Đeo vào như cả người bị bụi gai quấn quanh, chẳng ai dám lại gần.
+229	Nhẫn giáp gai
+230	Ai đánh bạn cũng như tự đánh mình, với kẻ địch thì cảm giác đó đáng sợ biết bao.
+231	Nhẫn bão tố
+232	Chỉ thiên tài chiến đấu thực sự mới đeo được, nó sẽ giúp kẻ địch của bạn được giải thoát, tin tôi đi.
+233	Nhẫn ma cà rồng
+234	Tương truyền làm từ răng nanh ma cà rồng thời cổ, có khả năng hút máu.
+235	Nhẫn bá tước
+236	Trang bị hút máu huyền thoại, gần như hiếm ai từng nghe đến, chỉ nền văn minh vĩ đại của Phi Hành Giả mới sao chép được thứ khó tin như vậy.
+237	Nhẫn tăng tốc
+238	Tăng tốc độ di chuyển, theo một nghĩa nào đó hệ thống an ninh thành phố rất không muốn nó xuất hiện trên thị trường.
+239	Nhẫn thần tốc
+240	Tăng mạnh tốc độ di chuyển, từng có người sức khỏe kém đeo vào rồi bị chảy máu.
+241	Nhẫn tầm bảo
+242	Đạo cụ mà các nhà khảo cổ hằng mơ ước, nếu bạn là thương nhân thành đạt cũng nên có nó.
+243	Nhẫn phòng thủ
+244	Tăng phòng thủ, bên trong chứa năng lượng giáp cực mạnh.
+245	Nhẫn khiên chắn
+246	Tăng mạnh phòng thủ, nó còn che chở bạn hơn cả người yêu.
+247	Đồng tử thời không
+248	Khiến mọi đơn vị đứng yên 10 giây
+249	Chém lưỡi kiếm
+250	Dùng sóng lưỡi kiếm gây sát thương cho kẻ địch trên một đường thẳng.
+251	Chém cuồng phong
+252	Loạn vũ mạnh hơn, làm chậm kẻ địch 5 giây.
+253	Vạn tượng nhận
+254	Loạn vũ đạt tối đa, khiến kẻ địch trúng độc 10 giây.
+255	Đạn hủy diệt
+256	Gọi tên lửa quanh mình tiêu diệt kẻ địch.
+257	Thiên tai
+258	Gọi tên lửa truy đuổi tiêu diệt kẻ địch.
+259	Phán xét tận thế
+260	Gọi tên lửa trên diện rộng tiêu diệt kẻ địch.
+261	Xung năng lượng
+262	Nện mạnh xuống đất gây sát thương phạm vi nhỏ.
+263	Phân hạch
+264	Nện mạnh xuống đất, kẻ địch phía trước bị sát thương.
+265	Sóng núi lửa
+266	Nện mạnh xuống đất gây sát thương phạm vi cực rộng, kèm hiệu ứng choáng.
+267	Cơn giận đất mẹ
+268	Nện mạnh xuống đất gây nổ liên hoàn, đồng thời xóa trạng thái của kẻ địch.
+269	Lá chắn
+270	Dùng một lớp lá chắn bảo vệ bản thân. Giữ phím tắt kỹ năng để duy trì.
+271	Lá chắn nạp
+272	Lá chắn từ từ hồi HP, giải trúng độc. Giữ phím tắt kỹ năng để duy trì.
+273	Phòng thủ mạnh
+274	Lá chắn từ từ hồi HP và phản sát thương của kẻ địch, giải mọi hiệu ứng xấu. Giữ phím tắt kỹ năng để duy trì.
+275	Hào quang hiệp sĩ
+276	Tăng sát thương tấn công cơ bản.
+277	Hào quang hộ vệ
+278	Tăng phòng thủ.
+279	Hào quang thần võ
+280	Tăng chỉ số đòn chí mạng.
+281	Hào quang kiếm thần
+282	Tăng mạnh công khi cầm kiếm.
+283	Hào quang nhất thiểm
+284	Tăng tỉ lệ bạo kích.
+285	Hào quang cuồng bạo
+286	Tăng sát thương bạo kích.
+287	Hào quang thần thánh
+288	Tăng giới hạn tối đa của HP và năng lượng.
+289	Thời gian ngưng đọng
+290	Lập tức dừng thời gian.
+291	Tân binh
+292	Sự trưởng thành của các cậu khiến mọi người đều vui mừng. Là tấm gương của "thế hệ Phục hưng", các cậu đại diện cho tương lai của Liên minh Doanh nghiệp. Chiến tranh tuy đã kết thúc nhưng kẻ thù vẫn còn, và việc các cậu thiếu kinh nghiệm thực chiến là nỗi lo duy nhất của chúng tôi. Vì vậy tôi mong các cậu đừng xem nhẹ bất kỳ nhiệm vụ nào.
+293	Nắm giữ kinh tế
+294	Thuê hai thợ khai thác ở Khu mỏ New Zion, việc này sẽ bảo đảm nền tảng kinh tế cho cậu.
+295	Lần đầu ra tay
+296	Theo tình báo, trên hành tinh này có nhiều kẻ thù khó nhằn khiến chúng ta phải chú ý. Đám chỉ huy chiến trường này từng là những chiến binh rất dũng mãnh, sao giờ họ lại gia nhập tổ chức phi pháp? Chúng ta phải tìm hiểu cho rõ.
+297	Chiến dịch bí mật
+298	Hành tinh Jutland là quê hương nơi ta từng chinh chiến, nhưng ở đó vẫn còn dấu vết quân kháng chiến. Chúng vẫn không chấp nhận hòa bình và còn đe dọa an ninh hành tinh Mia. Đi xử lý mấy tên phóng hỏa! Tất nhiên, còn phải cắt đường tiếp tế, hạ vài tên lính quân y, nếu không mọi nỗ lực trước đây sẽ thành công cốc.
+299	Năng lượng hiếm
+300	Khối polyme đã là một chất tinh luyện cực hiếm, nó vẫn là nguồn năng lượng không thể thiếu trong nhiều lĩnh vực. Nhưng đồng nghiệp ở công ty thăm dò vừa báo tin vui: ở Vịnh Bắc phát hiện kẻ địch mang theo loại năng lượng này. Chúng ta dốc sức hỗ trợ xây dựng New Zion, một vấn đề lớn của Kế hoạch Phục hưng sẽ được giải quyết.
+301	Thâm nhập
+302	Chúng ta bỗng mất liên lạc với Pháo đài Bavaria, tôi cần các cậu đi làm rõ chuyện gì đã xảy ra.
+303	Ngã tư
+304	Khẩn cấp! Nhân viên Kế hoạch Phục hưng bị bắt cóc tới một hành tinh ngoài biên giới, kẻ gây ra là Hiệp sĩ Teuton! Chúng không đưa yêu sách, từ chối đàm phán! May là có người đã gửi được tín hiệu cầu cứu, họ bị giam trên một tiểu hành tinh ngoài biên giới. Hành động, phải thật nhanh!
+305	Thăm dò
+306	Chúng ta phát hiện Hailar là địa bàn của quân phản loạn, qua đó xem tình hình, nhưng tuyệt đối đừng để lộ thân phận.
+307	Triệt phá sào huyệt
+308	Người Rom dựa vào địa hình kín đáo của hành tinh Stanovoy để làm nhiều việc phi pháp, ở khe nứt Đại Kavkaz có một sào huyệt! Nhưng phải cẩn thận, địa thế hành tinh Stanovoy là thứ chưa từng thấy. Dù thế nào cũng không thể để chúng nhởn nhơ ngoài vòng pháp luật nữa.
+309	Giao dịch đen
+310	Có tin đáng tin cậy cho biết sắp có một giao dịch lớn ở hành tinh Stanovoy, quan trọng nhất là thủ lĩnh người Rom vùng biên - Carmen Bão Tố sẽ đích thân giao dịch. Nắm lấy cơ hội, giáng đòn nặng vào đám buôn lậu ngang ngược này!
+311	Đồng minh mới
+312	Hội đồng quyết định cử một sứ đoàn tới Ngũ Quốc đàm phán với Phi Hành Giả. Hội đồng bổ nhiệm cậu làm đại sứ trưởng, xử lý mọi việc của liên minh tại hành tinh Stanovoy, mong chuyến đi Ngũ Quốc lần này cậu sẽ mang cành ô liu hòa bình trở về.
+313	Dẹp quấy rối
+314	Đám Phi Hành Giả dưới trướng Isa thường quấy rối chúng tôi, lần này cũng vậy. Chúng luôn muốn thôn tính Ngũ Quốc, nhờ cậu giúp đuổi bớt một số Phi Hành Giả.
+315	Phản loạn
+316	Một Phi Hành Giả tên Isa định phá quan hệ giữa chúng tôi và Liên minh Doanh nghiệp, giờ cần cậu tới hỗ trợ, ít nhất đừng để liên minh của chúng ta bị bóp chết từ trong trứng nước.
+317	Tranh giành tài nguyên
+318	Chúng tôi đang rất cần một loại đá của Ural, tộc Sói Chiến luôn nắm quyền kiểm soát các vật liệu này, hãy giúp chúng tôi giành lại một phần từ tay đám man rợ đó.
+319	Thú cưỡi phiền phức
+320	Cậu phải biết thú cưỡi của tộc Sói Chiến đều là những con sói hung bạo, tiêu diệt chúng sẽ giúp ta kéo dài thêm thời gian.
+321	Tù trưởng man rợ
+322	Tình huống tệ nhất đã đến: thủ lĩnh tộc Sói Chiến, chiến thần Mông Cổ mạnh nhất Khan Guldan đã tới hành tinh Stanovoy, trận chiến với hắn từng khiến chúng ta gần như tuyệt vọng. Nhưng thấp thoáng sau lưng chúng có bóng dáng người Teuton. Tôi có linh cảm xấu, người Teuton đã tìm được đồng minh mới.
+323	Bất ngờ
+324	Người Teuton quả thật có một tiền đồn ở chỗ chúng ta, gọi là Pháo đài Acre, tôi nghĩ ở đó sẽ cực kỳ nguy hiểm, nhưng tôi vẫn phải đi!
+325	Thoát chết
+326	Chết tiệt! Rốt cuộc là chuyện gì!? Dù sao cũng phải mau thoát khỏi New Zion, tuy không biết đi đâu, không ngờ giờ lại phải đi con đường này theo cách như vậy.
+327	Kẻ đào ngũ
+328	Không biết Hailar đã xảy ra chuyện gì, nhưng giờ cũng chỉ còn Hailar chứa chấp được "kẻ phản bội" của Liên minh Doanh nghiệp như tôi.
+329	Lục địa mới
+330	Công ty thương mại viễn dương đã đưa một phần sản phẩm mới tới Astana trên hành tinh Ural, Hội đồng rất coi trọng tuyến thương mại hoàn toàn mới này. Hải trình vĩ đại sẽ được mở ra bởi chính cậu!
+331	Biến thù thành bạn
+332	Cảm ơn cậu đã đến! Bạn cũ thì nói ngắn gọn. Phi Hành Giả trên hành tinh Kent bị người Teuton mê hoặc nên đã phản bội, chúng định chia rẽ chủng tộc để làm lành với người Teuton. Tệ hơn nữa, chúng bắt người Rom trên hành tinh Kent làm con tin, buộc Carmen Bão Tố chiến đấu cho chúng! Sức chúng tôi có hạn, cần cậu giúp. Hơn nữa, nếu kéo được Carmen về phía mình thì sẽ rất có lợi.
+333	Chấm dứt chia rẽ
+334	Phản công, đã đến lúc chấm dứt chia rẽ một lần nữa! Nhưng hành tinh Kent sẽ khắc nghiệt hơn Stanovoy nhiều. Isa từng là Phong Ngữ Giả dũng mãnh nhất của chúng tôi. Tôi ước gì anh ta chọn đứng về phía chúng tôi, nhưng giờ chúng tôi buộc phải quyết chiến với anh ta.
+335	Trở về quê hương
+336	Được mang ánh bình minh hòa bình đặt chân lên Hailar một lần nữa, tôi xúc động vô cùng. Dân tộc chúng tôi cuối cùng cũng giữ lại được chút thể diện còn sót lại để đối mặt với tổ tiên Phi Hành Giả cổ xưa.
+337	Hộ vệ liên minh
+338	Những việc cậu làm gần đây khiến dân chúng tôi vô cùng kính phục! Sắp tới một tuyến bay riêng giữa hành tinh Mia và hành tinh Kent sẽ hình thành. Nhưng phải nói là vẫn còn nhiều Phi Hành Giả ngăn cản, trinh sát của chúng tôi lại phát hiện dấu vết của chúng, phải nhân lúc này mau đánh bại chúng!
+339	Đàm phán
+340	Phải nói là ý tưởng của cậu, theo chúng tôi hiểu... quá táo bạo! Tới hành tinh Ural, ngồi đối mặt với đám man... với người Sói Chiến.
+341	Đối đầu sức mạnh
+342	Chỉ khi thắng Guldan chúng ta mới có cơ hội liên minh, phải nói việc này như một ván cược, thua thì cậu mất mạng.
+343	Bảo vệ thương lộ
+344	Các Khan rất hứng thú với hàng của các người, loài người đúng là một lũ khốn khôn lỏi. Nhưng dạo này trên thương lộ ở Đồng bằng Ural cướp xuất hiện liên tục, các Khan rất tức giận. Muốn hợp tác ư! Thì giúp chúng tôi xử chúng!
+345	Kế hoạch đoạt lại
+346	Đi tìm lại những món đồ bị cướp cho chúng tôi, chúng cướp của tôi thế nào thì cậu cướp lại thế ấy! Không cần nương tay!!!
+347	Đột phá
+348	Chúng tôi đã tìm ra điểm tập kết của người Teuton! Pháo đài Tiểu Á, pháo đài lớn nhất của người Teuton trong thiên hà. Đại Khan nói: tấn công thẳng, phá tan từ phía sau! Trước hết đột phá vòng ngoài pháo đài, người Sói Chiến sẽ dốc toàn lực giúp cậu mở cổng.
+349	Tấn công
+350	Chúng tôi thấy bóng dáng Isa bên trong, có thể chắc chắn đây là điểm dịch chuyển chủ lực! Phi Hành Giả đã nóng lòng muốn thử, mau ngăn chúng lại!
+351	Thời khắc chiến tranh
+352	Đã đến lúc kết thúc mọi chuyện, Kẻ Canh Gác đã chiếm Tiền đồn Mia, chỉ khi đánh bại hắn ta mới tiến về hành tinh Mia được. Chiến đấu đi! Dũng sĩ!
+353	Quyết chiến
+354	Đại quyết chiến! Người Sói Chiến giúp cậu chống lại quân phòng thủ vòng ngoài, Phi Hành Giả sẽ yểm trợ cậu xông vào New Zion, chúng tôi đã dốc hết sức vì cậu rồi! Phần còn lại trông cả vào cậu, bạn của tôi, chúc may mắn, chiến binh tộc Sói Chiến rất vinh dự được sát cánh cùng cậu!
+355	Vòng luân hồi số mệnh
+356	Thám báo Phi Hành Giả báo rằng đã phát hiện Công tước Schwab ở Cao nguyên Golan vùng cực, họ đang gấp rút chuẩn bị điều gì đó. Hội Sử học cho rằng việc này liên quan tới vài tin đồn kinh hoàng về Chiến tranh Trăm năm. Nhưng là gì thì có vẻ cũng không còn quan trọng, chúng ta đã không còn đường lui.
+357	Rèn binh khí
+358	Với một chiến binh, thứ thân thiết nhất là binh khí. Đi đi! Bước bước đầu tiên tới việc rèn ra binh khí hoàn hảo nhất thế gian!
+359	Cải tạo thành phố
+360	Xây dựng và tu sửa thành phố luôn là một trong những việc quan trọng nhất, không chỉ có lợi cho chúng tôi mà còn cho các cậu và tất cả mọi người.
+361	Thu thập vật liệu
+362	Đồng nghiệp bên Kế hoạch Phục hưng cần ta giúp, nhu cầu năng lượng mới ở biên giới vượt dự tính, họ gửi một danh sách, chú ý thu thập hàng tịch thu từ lính đánh thuê phi pháp. Trong trang bị của đám kiếm sĩ và bộ binh lửa rất dễ tìm thấy Hợp kim titan và Tinh thể keo.
+363	Liên kết ngầm
+364	Tình bạn giữa người Rom và một số Phi Hành Giả khiến chúng tôi rất bất ngờ, hãy ngăn những vụ móc nối bí mật giữa chúng.
+365	Độc quyền năng lượng
+366	Đồng xoáy tố của hành tinh Kent đã bị đám người Teuton tham lam dùng để vũ trang hết, trước khi giành lại Kent, cách duy nhất để có là thu từ người Teuton chiếm đóng Pháo đài Bavaria.
+367	Diệt du kích
+368	Tôi nghĩ lần này chúng làm thật rồi, Isa chắc chắn sẽ tổng tấn công chúng ta, hãy diệt đội du kích của chúng.
+369	Dọn chướng ngại
+370	Chúng tôi lại phát hiện bóng dáng bẩn thỉu của chúng ở Hẻm núi Thermodon. Đẩy lùi đám chiến binh tộc Sói Chiến. Đối phó lũ khốn này phải hết sức cẩn thận!
+371	Sau bức màn
+372	Hiệp sĩ Teuton từng ở đây đã lập một tiểu đội, ẩn nấp tại Pháo đài Acre. Chúng tôi tin rằng trong vụ phản bội ở Kent lần này, chúng đều là kẻ trung gian tích cực. Giờ đám hiệp sĩ Teuton đáng ghét đó đang đốc chiến ở Núi Yenisei, xử lũ sâu bọ đáng ghét này đi!
+373	Rắc rối mới
+374	Phi thuyền của chúng tôi cần ít tài nguyên động lực, đây là rắc rối lớn với chúng tôi, đi thu thập một ít về nhé.
+375	Kẻ đào vàng
+376	Tôi nghi liên minh giữa đám chiến binh loài người và Phi Hành Giả có uẩn khúc, rốt cuộc mục đích của chúng là gì? Nghe đồn có một tổ chức tôn giáo khổng lồ thao túng phía sau. Mang về vài tù binh, tôi muốn biết điều gì khiến chúng liều mạng vì Phi Hành Giả như vậy.
+377	Bảo vật bí ẩn
+378	Theo tình báo, ở Hẻm núi Thermodon có vài chiến binh Thánh Điện đang mưu đồ bất chính, chúng có vẻ rất mạnh. Trước khi giúp chúng tôi tiêu diệt chúng, tôi nghĩ cậu nên nhận rõ khoảng cách thực lực.
+379	Di sản cổ xưa
+380	Trời ạ, máy dò cho biết ở vực sâu Thermodon có phản ứng năng lượng cực mạnh. Đó là nơi tổ tiên chúng tôi sống sớm nhất, ngay cả chúng tôi cũng không giải thích được khối năng lượng đó là gì, tài liệu không hề ghi chép, nhưng tôi cảm nhận được tiếng gọi của nó.
+381	U linh bóng tối
+382	Lũ u linh chết tiệt, súng bắn tỉa chết tiệt, dạo này đám khốn này hoạt động ngày càng nhiều, các Khan cho rằng chắc chắn có kẻ tài trợ cho chúng! Nghiền nát lũ u linh, còn phải tìm ra kẻ chủ mưu, nợ máu phải trả bằng máu!
+383	Bảo vệ lãnh thổ
+384	Liên minh Doanh nghiệp ngu xuẩn khiến Đại Khan nổi giận, bản thân đã nguy trong sớm tối mà còn dám gửi tuyên chiến! Nhưng cậu yên tâm, Đại Khan nói chúng tôi tuyệt không bán đứng chiến hữu, ngài đã bảo chiến binh Sói Chiến sẵn sàng, nếu chúng dám đặt chân lên Vùng trũng Attila thì sẽ biết tay.
+385	Đại càn quét
+386	Ở Vùng trũng Attila vẫn còn rải rác nhiều tàn quân Liên minh Doanh nghiệp, tôi cần cậu xử một phần để giết một răn trăm!
+387	Hiểm họa virus
+388	Pháo đài Tiểu Á vẫn còn sót lại zombie người bị nhiễm bệnh, mau tiêu diệt chúng, nếu không mầm bệnh e sẽ lan ra khắp thiên hà.
+389	Vịnh Bắc
+390	Theo tài liệu đã biết, Vịnh Bắc là điển hình cho đa dạng sinh học của hành tinh này. Chính vì thế, nơi đây từng là bãi thí nghiệm quan trọng về biến đổi gen và tiến hóa loài.
+391	Belt
+392	Belt là thành phố doanh trại tạm thời tại Vịnh Bắc trong cuộc chiến trước, vì nằm trên hành tinh do địch kiểm soát nên cuối cùng bị phá hủy. Tài liệu cụ thể luôn là tối mật của Liên minh Doanh nghiệp, còn giờ người Teuton lại trỗi dậy ở đây.
+393	Đồi Skagerrak
+394	Trải qua mấy chục năm thăng trầm, sự sống tươi tốt nơi đây đã vùi lấp phế tích ngày xưa.
+395	Pháo đài Acre
+396	Pháo đài Acre là một góc của "Tam giác Teuton", pháo đài chiến đấu cải tạo từ sao chổi này bay quanh bên ngoài sao đôi Stanovoy, theo dõi mọi động tĩnh của Phi Hành Giả. Tài nguyên chuyển từ hành tinh Kent đều tới Pháo đài Acre trước, rồi mới chuyển cho người Teuton khắp nơi.
+397	Tiền đồn Mia
+398	Quỹ đạo liên sao duy nhất để vào hành tinh Mia. Nơi đây kiểm tra nghiêm ngặt mọi phi thuyền liên sao.
+399	New Zion
+400	Sau chiến tranh, loài người dựng nên biểu tượng văn minh mới ở vùng Thung lũng Gris trên hành tinh Mia - New Zion. Tại thành phố này, Liên minh Doanh nghiệp luôn nỗ lực tái lập luật pháp và khôi phục ngọn lửa văn minh.
+401	Thành Zion
+402	Để bảo đảm vị thế tuyệt đối của tự do thương mại, khi thành lập liên minh đã quy hoạch cơ quan chính trị ở ngoại thành. Cũng vì thế ngoại thành trở thành pháo đài canh phòng nghiêm ngặt, bảo đảm tự do, hòa bình và phồn vinh cho nội thành.
+403	Thung lũng Gris
+404	Thung lũng Gris là ốc đảo rực rỡ nhất giữa sa mạc mênh mông của hành tinh Mia, những ngọn núi sắc như dao cao 2000 mét che đi nắng gắt, dòng sông không chỉ mang tới đất màu mỡ mà còn bồi nên một đồng bằng châu thổ rộng lớn. Gió biển thổi vào lại mang đến lượng mưa dồi dào cho Thung lũng Gris.
+405	Cao nguyên Golan
+406	Cao nguyên Golan nằm ở cực bắc hành tinh Mia, dưới những vách đá cao chót vót lưu giữ lượng lớn nước đóng băng và tài nguyên hóa thạch. Theo đà khai thác của Kế hoạch Phục hưng, Cao nguyên Golan đã thành trung tâm năng lượng của nền văn minh mới. Mỗi ngày lượng lớn tài nguyên được đưa theo hải trình gọi là Tuyến Moses tới New Zion.
+407	Đường Zion
+408	Con đường rộng và sầm uất nhất dẫn tới Thành Zion, các tòa nhà ven đường đã hình thành khu thương mại phồn hoa.
+409	Pháo đài Bavaria
+410	Pháo đài Bavaria là hành tinh cải tạo lớn nhất trong "Tam giác Teuton", có tin tình báo đáng tin cậy cho thấy người Teuton dùng nơi này làm thí nghiệm biến đổi gen bị cấm.
+411	Đồng bằng Ural
+412	Đồng bằng Ural mang tên hành tinh, đủ thấy đồng bằng mênh mông này chiếm phần lớn hành tinh. Cả tài liệu lẫn di tích lộ thiên đều cho thấy tộc Sói Chiến kiên cường từng xây dựng một nền văn minh huy hoàng ở đây, có lẽ khí hậu đã buộc tộc Sói Chiến lại phải lên đường di cư.
+413	Vùng trũng Attila
+414	Vùng trũng Attila giữ nguồn nước duy nhất ở đây, một hồ nước mặn mà tộc Sói Chiến gọi là biển. Nhưng mấy trăm năm gần đây môi trường ngày càng xấu đi, hồ co lại nghiêm trọng, không gian sống của tộc Sói Chiến bị chèn ép dữ dội. Họ đành lại mang theo vũ khí và bản tính hoang dã, lên đường chinh phạt các vì sao.
+415	Astana
+416	Astana nằm trong Vùng trũng Attila là thủ đô của toàn bộ tộc Sói Chiến. Là thánh địa tinh thần của tộc, mọi nghi lễ chủng tộc đều tổ chức tại đây: bổ nhiệm Khan của các bộ lạc, phán quyết chiến lược chủng tộc, còn lễ phong chiến thần Mông Cổ hằng năm ở đại đấu trường càng là biểu tượng tinh thần của bộ tộc.
+417	Trong pháo đài Tiểu Á
+418	Là pháo đài kỳ hạm, cấu trúc bên trong phức tạp đến kinh ngạc. Nhờ hệ thống vận hành tinh vi này, Hiệp sĩ Teuton có thể tổ chức đội viễn chinh ở bất kỳ quy mô nào bất cứ lúc nào.
+419	Pháo đài Tiểu Á
+420	Người Teuton đã cải tạo môi trường trọng lực của Tiểu Á, khiến bề mặt vỡ vụn thành một lớp phòng ngự tự nhiên. Ai muốn xâm nhập vào trong pháo đài đều sẽ bó tay.
+421	Thành Kent
+422	Hiệp sĩ Teuton lấy danh nghĩa che chở Phi Hành Giả, xây dựng tòa thành không gian khổng lồ này ngoài hành tinh Kent, thực chất để tăng cường phòng bị Stanovoy và nô dịch Kent. Khoáng sản của Kent đều phải trung chuyển qua thành này rồi mới tới các doanh trại của Hiệp sĩ Teuton khắp vũ trụ.
+423	Hailar
+424	Hailar là thành phố công nghiệp Hiệp sĩ Teuton xây trên hành tinh Kent, chuyên gia công khoáng sản từ khắp hành tinh. Chính vì có Hailar, nơi đây từ thánh khiết trắng trong đã trở nên bẩn thỉu không chịu nổi.
+425	Tuyết nguyên Bell
+426	Tuyết nguyên Bell bao la bát ngát, là vùng sản xuất khoáng sản chính của hành tinh Kent. Giờ đây trên tuyết nguyên trắng xóa đầy doanh trại và hầm mỏ của người Teuton.
+427	Đường trạm Hailar
+428	Con đường duy nhất vào Hailar.
+429	Hẻm núi Thermodon
+430	Vực sâu hiểm trở bất thường, đầy rẫy biến số.
+431	Khe nứt Đại Kavkaz
+432	Hẻm núi hiểm trở nhất, chênh lệch độ cao lớn nhất hành tinh. Từ khi cuộc chiến liên sao lần trước kết thúc, nhờ địa thế đặc biệt, nơi đây thành chợ đen sôi động nhất bên ngoài biên giới Liên minh Doanh nghiệp.
+433	Ngũ Quốc
+434	Phi Hành Giả phân tán trên hành tinh Stanovoy sau khi tụ họp lại ở Hẻm núi Thermodon đã đoàn kết các dân tộc của lục địa này, lập nên Ngũ Quốc, nghĩa là năm quốc gia lớn trên hành tinh từ nay hợp làm một.
+435	Núi Yenisei
+436	Nơi cao nhất hành tinh Stanovoy, dưới lớp tuyết trắng xóa ẩn giấu một loại quặng gọi là Tử tích. Người Teuton để có được loại quặng giàu năng lượng này đã dùng đủ thủ đoạn mờ ám, giành được quyền khai thác ở đây.
+437	Jutland
+438	Hành tinh ở biên giới thiên hà, nghe nói nhiều nhà thám hiểm thích ghé qua đây.
+439	Một góc của "Tam giác Teuton", những tảng đá trôi vỡ vụn quanh hành tinh rõ ràng đã thành "hào bảo vệ" của nó.
+440	Vệ tinh của hành tinh Mia, tiểu hành tinh này luôn đóng vai trò yết hầu của Mia.
+441	Mia
+442	Liên minh Doanh nghiệp luôn nắm quyền sở hữu hành tinh này, phải nói các loại tài nguyên ở đây cũng đủ cung cấp năng lượng.
+443	Một góc của "Tam giác Teuton", hành tinh này gần như đã bị người Teuton cải tạo thành một căn cứ thí nghiệm khổng lồ.
+444	Một góc của "Tam giác Teuton", Pháo đài Acre như chiếc ống nhòm theo dõi mọi động tĩnh của Stanovoy và Kent.
+445	Ural
+446	Nghe đồn trước kia dân đào vàng hay ghé nơi này, nhưng giờ người ta thường gọi nó là "vùng đất man rợ".
+447	Kent
+448	Hành tinh giàu khoáng sản nhất thiên hà, nhưng người Teuton đã nô dịch vùng đất thánh từng trắng trong của Phi Hành Giả này.
+449	Stanovoy
+450	Hành tinh này từ xưa đã nuôi dưỡng nền văn minh Phi Hành Giả, nhưng giờ đã thành nơi tụ họp của mọi chủng tộc.
+451	Nolan：Isa, tôi nghĩ đây sẽ là lần cuối chúng ta gặp nhau.
+452	Isa：Ta đoán ngay ngươi sẽ xuất hiện, đó cũng chính là điều ta muốn nói với ngươi.
+453	Nolan：Kết thúc chuyện này đi!
+454	Isa：Ta... ta không cam tâm, tại sao... ta lại... thua!
+455	Nolan：Isa, ngươi từng là chiến binh đáng tự hào nhất của Phi Hành Giả, dù tôi luôn ghét ngươi, nhưng... hãy yên nghỉ.
+456	Công tước Schwab：A, em trai của ta, ta biết chúng ta sẽ gặp lại.
+457	Nolan：Nói nhảm, tôi không biết ông cấu kết với ai để gài tôi, nhưng âm mưu của ông đừng hòng thành công!
+458	Công tước Schwab：Giờ liên minh chính nghĩa của em đang truy bắt em khắp nơi, quay về đi, làm lại con trai của Frederick.
+459	Nolan：Dù chúng ta thật là anh em thì ông cũng là kẻ điên, tôi tuyệt đối không cùng ông gây ra tai họa!
+460	Công tước Schwab：Nebu mới là hung thủ, ta chỉ muốn nợ máu trả bằng máu!
+461	Nolan：Không thể nào! Chính ông giết các con tin, chính ông khiến tôi ra nông nỗi này!
+462	Hippolyte：Nolan, lẽ nào tất cả là thật...
+463	Nolan：Không phải vậy, Hippolyte!
+464	Công tước Schwab：Ta thật thất vọng, em trai. Phi thuyền ta chuẩn bị cho em ở ngoài thành, ta sẽ chờ em đổi ý. Nhớ kỹ, chúng ta là anh em!
+465	Hippolyte：Tôi vốn không tin tất cả chuyện này, nhưng...
+466	Nolan：Hippolyte, lẽ nào cậu cũng không tin tôi...
+467	Hippolyte：Nolan, xin lỗi, tôi không làm gì được, hãy cùng tôi quay về!
+468	Nolan：Hippolyte, chờ tôi, sớm muộn gì tôi cũng sẽ quay lại minh oan cho mình.
+469	Hippolyte：Nolan, xin đừng như vậy, liên minh sẽ làm rõ sự thật, tin tôi đi, chúng ta vốn là bạn thân mà.
+470	Nolan：Hippolyte!......
+471	Meda：Nolan, họ đuổi tới rồi, đi mau!
+472	Nolan：Meda, cậu... việc gì phải thế? Đã chẳng còn ai tin tôi nữa!
+473	Meda：Đừng ngốc thế, Nolan, chúng ta sẽ cùng vượt qua khó khăn. Lòng dũng cảm khi cậu chống người Teuton trước đây đâu rồi?
+474	Nolan：Nhưng chúng ta đã hết đường chạy rồi...
+475	Nolan：Khoan, có người gửi tin cho tôi... là Phi Hành Giả Moses. Hành tinh Stanovoy có phản loạn, mong chúng ta tới cứu, xem ra họ chưa biết chuyện xảy ra ở đây. Đi thôi, cứ tới Ngũ Quốc trước đã!
+476	Nhận nhiệm vụ mới!
+477	Ngoại thành Zion, tòa án quân sự liên minh xét xử Nolan. Công tố viên đứng đối diện Nolan chính là người anh em ngày xưa của cậu - Nebu Jr.
+478	Công tước Schwab：Hahaha, còn nhớ ta không? Chủ tịch Nebu.
+479	Nebu I："Ngươi là..."
+480	Nebu Jr：Hắn là thủ lĩnh Hiệp sĩ Teuton, Schwab. Cận vệ!
+481	Công tước Schwab：Ngươi đã lừa Nolan, hôm nay ta sẽ đưa nó về!
+482	Công tước Schwab：Được rồi, kẻ địch trước mắt em đã biến mất, ra gặp ta đi.
+483	Nebu Jr：Cận vệ! Bắt Nolan lại!
+484	Nolan：Đến nước này chỉ còn cách rời khỏi đây trước đã.
+485	Nebu Jr：Nolan, trinh sát của chúng tôi tận mắt thấy cậu bí mật nói chuyện với Schwab, thủ lĩnh Hiệp sĩ Teuton.
+486	Nolan：Đây là cái bẫy! Chắc chắn có kẻ giăng bẫy!
+487	Nebu Jr：Cha, con thật không dám tin anh em của con, Nolan, lại thành ra thế này.
+488	Nebu Jr：Cha, đến giờ Nolan vẫn còn định vu khống con, không ngờ cậu ta sa đọa đến mức này.
+489	Nebu I：Nolan... rốt cuộc con...
+490	Nolan：Liên minh Doanh nghiệp chắc chắn có nội gián! Sớm muộn tôi cũng sẽ tìm ra hắn! Tôi sẽ quay lại! Quay lại để chứng minh mình trong sạch!
+491	Moses：Xem ra chúng ta đã đến muộn.
+492	Nolan：Mục tiêu của chúng hẳn là cha nuôi tôi, tôi đi cứu ông ấy. Guldan, yểm trợ quân của tôi. Moses, tra xem Công tước Schwab giờ đang ở đâu!
+493	Guldan：Dám cản đường ở đây, đồ rác rưởi!
+494	Moses：Được, tra rõ tôi sẽ báo cậu!
+495	Hippolyte：Nebu, sao hôm nay anh lại đưa em tới đây?
+496	Nebu Jr：Ở đây chỉ có hai ta, anh muốn ở riêng với em một lúc.
+497	Hippolyte：Nebu, anh có gì muốn nói với em à?
+498	Nebu Jr：Em đã bao giờ để quên chìa khóa trong căn phòng bị khóa chưa?
+499	Hippolyte：Nebu, anh nói gì vậy? Em không hiểu.
+500	Nebu Jr：Cánh cửa đó anh chưa bao giờ mở được, nhưng giờ thì, em yêu, anh đã có chìa khóa rồi, anh sẽ lấy lại tất cả những gì anh đã mất!
+501	Cùng lúc đó...
+502	Hippolyte：Anh yêu... em...
+503	Năm năm trước khi chiến tranh kết thúc, trên một hành tinh, Nebu đi ngăn chặn một cuộc thảm sát tàn bạo.
+504	Nebu：Lạ thật, rốt cuộc vì mục đích gì mà muốn hủy diệt chủng tộc ở đây?
+505	?：Hừ hừ hừ, không ngờ cha lại để lại di sản quý giá thế này!
+506	New Zion hỗn loạn, nội thành bất ngờ xuất hiện hàng loạt hiệp sĩ Teuton khiến liên minh trở tay không kịp. Chẳng mấy chốc tuyến phòng thủ ngoại thành vững như thành đồng cũng đổ vỡ.
+507	Nebu I：Chuyện... chuyện này là do ai làm?!
+508	Nebu Jr：Là con, thưa cha.
+509	Nebu I：Là con? Nhưng... nhưng mà...
+510	Nebu Jr：Nhìn cha bây giờ xem, người cha con từng tôn thờ giờ lại yếu đuối đến thế. Vì cha, con không những không bảo vệ được mà còn phải tàn sát chính dân mình, đôi tay con từng nhuốm đầy máu người phe mình!
+511	Nebu I：Con ơi, con không hiểu hòa bình có được khó khăn thế nào đâu, con làm vậy chỉ khiến liên minh tan nát trong tay con!
+512	Nebu Jr：Cha sai rồi! Một đế chế liên sao hùng mạnh sắp ra đời trong tay con! Chỉ cần cha giao quyền lực cho con.
+513	Nebu I：Con ơi, con bắt đầu từ khi nào...
+514	Nebu Jr：Con không định bàn bạc với cha.
+515	Nebu Jr：Xin lỗi cha...
+516	Nolan：Dừng tay! Nebu!
+517	Nebu Jr：Nolan, tôi biết cậu sẽ quay lại. Tôi rất thất vọng, cậu không đứng về phía tôi như ngày xưa.
+518	Nolan：Quả nhiên đúng như tôi đoán! Cậu đã làm gì Hippolyte?
+519	Nebu Jr：Cô ấy là một nữ chiến binh Amazon anh dũng, và đã dùng chính mạng sống để dẫn chiến thắng tới đây!
+520	Nolan：Nebu...
+521	Nebu Jr：Dục vọng con người không có điểm dừng. Khi có được chiếc chìa khóa luôn mong muốn, cậu sẽ muốn biết bên kia cánh cửa là gì: quyền nắm giữ thế giới? Hay là mẹ cậu bên bàn ăn đang chờ khoảnh khắc cậu đẩy cửa bước vào?
+522	Nebu Jr：Tôi đã không còn đường lui, giờ tôi buộc phải đẩy cánh cửa này ra, bất kể bên kia có gì đang chờ.
+523	Nebu Jr：Hè hè hè... Nolan... cậu nghĩ vì sao tôi lại thành ra thế này...
+524	Nolan：Đừng nói nữa... Nebu... gắng lên được không? Sau này chúng ta vẫn là anh em!
+525	Nebu Jr：Sau sự kiện Bavaria... tôi dần thấy sức mình không đủ...... nên tôi định giao dịch với người Teuton... tôi nghĩ chỉ có vậy mới mang lại hòa bình thật sự... Xin lỗi... anh em... chính tôi đã hãm hại cậu!
+526	Nolan：Nebu, dù thế nào chúng ta vẫn là anh em tốt... chúng ta sẽ lại cùng chiến đấu, cùng cười đùa như xưa...
+527	Nebu Jr：Tôi thấy chưa bao giờ nhẹ nhõm như lúc này, đã làm phiền cậu rồi... người anh...
+528	Nolan：Nebu! Nebu! Nebu!!! A!!!!!!!!!!!
+529	Nolan：Tất cả chuyện này rốt cuộc là sao...
+530	Nebu I：Xin lỗi, Nolan, ta đã giấu con sự thật... Cha con khi còn sống luôn theo đuổi một nghiên cứu nguy hiểm. Ta nghĩ giờ là lúc con nên biết tất cả, con có quyền được biết.
+531	Nolan：Lẽ... lẽ nào...
+532	Nebu I：Đừng do dự nữa, con, đây là số mệnh. Ta luôn sợ ngày này đến. Không! Giờ nên nói là cuối cùng ta cũng yên lòng. Đây chính là câu trả lời con luôn tìm kiếm...
+533	Nebu I：Từ khi cha con mất, mọi người bình tĩnh lại và nhìn nhận lại cuộc chiến này. Năm đó cha con cũng đã dùng một máy quay nhỏ ghi lại từng chi tiết của cuộc chiến. Giờ con có thể hiểu rồi, ta không muốn sau này con sống trong đau khổ. Xin lỗi, Nolan...
+534	Nolan：Đây là tất cả những gì con kiên trì, khao khát sao? Con đi theo hướng mình theo đuổi đến cuối cùng lại là kết cục thế này. Con thậm chí không biết mình nên trách ai hay bị ai trách, nên cầu xin ngài tha thứ hay tha thứ cho ngài!
+535	Moses：Nolan, thám báo của chúng tôi nói Công tước Schwab đang ở Cao nguyên Golan!
+536	Nebu I：Đó là trung tâm năng lượng của hành tinh! Con à, nếu chúng phá hủy nơi đó, hành tinh Mia sẽ tê liệt hoàn toàn. Đi đâu về đâu con hãy tự quyết định.
+537	Nolan：Hãy để mọi thứ kết thúc đi...
+538	Nebu I：Con à, từ giờ con sẽ tự chọn cuộc đời mình, mong con tha thứ cho ta! Giờ chúng ta đều trắng tay cả rồi.
+539	Nolan：Ngươi là Phong Ngữ Giả phản loạn Isa?
+540	Isa：Là loài người? Quả như lời đồn, tên Moses hèn nhát đã quy phục loài người, vinh quang của Phi Hành Giả bị hắn vứt sạch rồi.
+541	Nolan：Cái gì?! Các ngươi có quan hệ gì với người Teuton!
+542	Isa：Hahaha, đợi khi thắng được ta rồi mới đủ tư cách chất vấn ta như vậy.
+543	Nolan：Bớt nói nhảm! Đánh thôi!
+544	Nolan：Sao? Chúng ta phải hỏi một câu đáp một câu à?
+545	Isa：Cũng khá đấy, nhưng muốn thắng ta còn sớm lắm.
+546	Nolan：Đứng lại... Chết tiệt!
+547	Nebu：Cái gì thế kia?
+548	Nebu：Địa thế ở đây kỳ lạ thật! E rằng chỉ Phi Hành Giả mới sống nổi ở đây.
+549	Nebu：Mong cái thứ này đưa được mình sang bên kia, qua thử xem.
+550	Đứng trên trận dịch chuyển, bấm $2 phím 5$1 để dịch chuyển tức thời sang bên kia
+551	Isa：À, xem ai tới này, Nolan. Nếu cái Liên minh Doanh nghiệp yếu đuối còn ai đáng để so tài thì chắc chắn là ngươi.
+552	Nolan：Rất vinh hạnh, Phong Ngữ Giả Isa.
+553	Meda：Thiết bị đáng sợ này hình như tôi đã thấy ở đâu rồi?
+554	Moses：Hiệp sĩ Teuton có nhiều thiết bị bị Liên minh Doanh nghiệp cấm. Đây là cổng liên sao mini.
+555	Nolan：Nhưng mỗi lần dịch chuyển không gian đều phải tiêu hao lượng lớn năng lượng. Chúng ta chỉ có thể dịch chuyển trong vũ trụ trống trải...
+556	Moses：Thực ra trong vũ trụ có một số sinh vật, một vài cá thể ưu tú trong số đó, nếu được xúc tác thích hợp, có thể dùng cơ thể để chuyển hóa năng lượng. Không may, trong cuộc chiến năm xưa có kẻ phát hiện cơ thể người Amazon có thể làm vật dẫn mở cổng liên sao, nên trong kiếp nạn đó cả dân tộc Amazon đã bị đẩy tới bờ vực.
+557	Meda：Tôi nhớ ra rồi! Tôi đúng là đã thấy, anh tôi mang một thứ như vậy tới tòa nhà Kế hoạch Phục hưng trong nội thành!
+558	Nolan：Moses, ông nói người Amazon làm sao?
+559	Moses：Người Amazon, trong mười năm cuối của Chiến tranh Trăm năm, vì thiên phú vượt trội đủ để mở cổng liên sao nên gần như bị tận diệt...
+560	Nolan：Hippolyte... Nguy rồi! Nghe này, Moses, Zion gặp nguy, ông phải giúp tôi quay về... hơn nữa nhất định phải kịp trước khi Nebu Jr kết hôn!
+561	Meda：Khoan, khoan, có chuyện gì vậy?
+562	Nolan：Tuy tôi không dám tin! Nhưng có lẽ anh cậu chính là kẻ hãm hại tôi, hơn nữa anh ta đã đặt cỗ máy này trong nội thành, mà cả Thành Zion chỉ có một người phụ nữ mang dòng máu Amazon...
+563	Meda：Hippolyte?!
+564	Nolan：Đúng vậy!
+565	Moses：Khoan, Nolan, tuy tôi sẵn lòng giúp cậu nhưng phải nhắc cậu, với thực lực hiện giờ của chúng ta rất khó đối đầu người Teuton.
+566	Nolan：Chúng ta thì không, nhưng có thể liên minh với Sói Chiến!
+567	Moses：Cái gì? Việc này... tôi không nghĩ đó là ý hay...
+568	Nolan：Moses, ông nghĩ xem, người Teuton từng xâm chiếm lãnh địa tộc Sói Chiến và nô dịch dân của họ. Kẻ thù của kẻ thù là bạn, đúng không?
+569	Moses：Tôi vẫn cho rằng...
+570	Carmen：Tôi đã nghe cuộc nói chuyện của các người.
+571	Nolan：Carmen?
+572	Carmen：Nolan, tôi rất khâm phục sự chính trực và mạnh mẽ của cậu. Cậu truy nã chúng tôi vì cậu công minh, cậu cứu chúng tôi vì cậu có tâm hồn chính nghĩa. Tinh thần người Rom chúng tôi không hèn hạ, chúng tôi sẽ dốc sức giúp những người đáng tôn trọng.
+573	Carmen：Tôi cũng có chút giao tình với tộc Sói Chiến, có lẽ lần này tôi giúp được cậu.
+574	Moses：Tôi nghĩ ta nên về Hailar trước, suy nghĩ kỹ bước tiếp theo. Hơn nữa mọi Phi Hành Giả cũng đang mong ngày trở về Hailar!
+575	Nolan：......Được rồi, Moses, ông nói đúng, vừa rồi tôi hơi bốc đồng. Ta về Hailar nghỉ ngơi tạm đã, nhưng! Nhưng tôi nhất định sẽ đi kết thúc chuyện này!
+576	Nolan：Cái... cái gì đây...?
+577	Isa：Đáng! Đáng ghét! Loài người yếu đuối! Ta thề lần sau gặp lại chắc chắn là ngày tận số của ngươi!
+578	Nolan：Chúng ta sẽ kết thúc chuyện này, Isa.
+579	Nolan：Nhưng mà...
+580	Nolan：Nhưng! Chúng ta phải hành động ngay!!!
+581	Moses：Nolan! Bình tĩnh lại! Cậu nghĩ kỹ đi, nếu giờ chúng ta đi thì là đi nộp mạng!
+582	Nebu：Lại là sói, cả đời này tôi thật không muốn thấy loài vật này nữa!
+583	Nebu：Ôi! Trời ạ! Mày bị thương rồi! Đồng bọn cũng bỏ mặc mày à? Không sao, may mà tao có mang theo ít $2Đồ tiếp tế$1, nó sẽ giúp được mày.
+584	Bấm $2 phím #$1 để cưỡi thú cưỡi.
+585	Nebu：Nhưng trông nó có vẻ không ổn lắm.
+586	Nebu：Nhìn mày xem, giờ thấy khá hơn nhiều chưa?
+587	Nebu：Sao? Mày muốn tao cưỡi lên à? Ngoan quá nhỉ, từ nay chúng ta là bạn chiến đấu kề vai rồi!
+588	Nebu cho Sói Chiến ăn $2Đồ tiếp tế$1.
+589	Bấm $2 phím 7, 9$1 để dùng kỹ năng thú cưỡi.
+590	Lính tộc Sói Chiến：Anh em nhìn kìa! Sói Chiến của chúng ta lại theo loài người! Đồ phế phẩm vô dụng! Cho kẻ phản bội này một bài học!
+591	Nebu：Mày đang cố chống lại số phận à? Tao cũng vậy, chiến tranh chắc cũng khiến mày mất tất cả, nhưng từ nay chẳng ai trong chúng ta cô đơn nữa! Tiến lên!
+592	Meda：Nolan, cậu còn nhớ chuyện giáp lần trước nói không?
+593	Nolan：Nhớ chứ, có chuyện gì à?
+594	Meda：Lần trước nói $2kiếm$1 hợp đánh $2giáp xanh$1, lần này phải nói cho cậu biết $2găng đấm$1 hợp đánh $2giáp đỏ$1 nhé!
+595	Nolan：Ra vậy!
+596	Meda：Tất nhiên cũng có kẻ địch $2giáp vàng$1, nhưng với loại này đòn nào cũng hiệu quả cả.
+597	Nolan：Tôi nhớ rồi Meda, cảm ơn cậu.
+598	Meda：Hì hì, không có gì, Nolan không được bị thương đâu đấy!
+599	Nebu：Mặt đất rung chuyển thế này là sao?! Frederick... chờ tôi!
+600	Nebu：Cái... cái gì đây?
+601	Bảy năm trước khi chiến tranh kết thúc.
+602	Frederick：Nebu, tôi đã đợi quá lâu rồi.
+603	Nebu：Frederick, tốt quá! Cậu vẫn còn sống, đừng lại gần đây, nguy hiểm!
+604	Frederick：Đừng hoảng, Nebu, đây là kiệt tác của tôi, nó đúng là nghệ thuật, phải không?
+605	Nebu：Đây... đây là cậu...
+606	Frederick：Tôi đã nói từ lâu, chúng ta thật nhỏ bé, nhưng vũ trụ có quá nhiều khả năng kỳ diệu đến kinh ngạc. Nếu cấy được ý chí của chúng ta vào vạn vật, tôi sẽ kiểm soát mọi thứ, tôi sẽ chấm dứt chiến tranh! Tôi chính là Thượng đế!
+607	Nebu：..........
+608	Nebu：Frederick... được rồi, tôi thừa nhận, cậu đúng! Sức mạnh của cậu đã khiến tôi khâm phục, cậu có muốn cùng tôi chia sẻ vinh quang không?
+609	Frederick：Tôi biết mà, cậu mãi là anh em của tôi, Nebu, chúng ta cùng hưởng vinh quang, giờ cơ hội đến rồi...
+610	Frederick：Tôi đã tin cậu như thế...
+611	Nebu：Xin lỗi, Frederick, tha thứ cho tôi, lần này tôi đã không chiến đấu như một quý ông.
+612	Frederick：Tôi mơ cũng muốn lại được kề vai chiến đấu với cậu, tôi chẳng hề đề phòng cậu, còn cậu, anh em của tôi...
+613	Nebu：Có những lúc hy sinh số ít là cần thiết, phải không? Đó là lời cậu nói, rất tiếc.
+614	Binh sĩ：Chấn động vừa rồi bắt nguồn từ đây!
+615	Binh sĩ：Ở đây hình như không có gì bất thường.
+616	Binh sĩ：Chúng tôi cũng theo chấn động mà tới.
+617	Nebu：Frederick, lẽ nào cậu đã...
+618	Binh sĩ：Quái... quái vật!
+619	Binh sĩ：Chuyện gì vậy?
+620	Nebu：Frederick! Tỉnh táo lại đi! Cậu có biết mình đang làm gì không?!
+621	Frederick：Nebu! Người cần tỉnh táo là cậu! Cậu vẫn ngây thơ nghĩ loài người sẽ tự tìm đến hòa bình sao?! Chỉ người như tôi mới thay đổi được lịch sử!
+622	Nebu：Từ bỏ con quái vật này đi, tôi vừa thấy nó giết cả đồng bào của chúng ta! Đây là cách ngăn chiến tranh mà cậu nói à?!
+623	Frederick：Quái vật?! Cậu lại gọi nó là quái vật! Tôi rất thất vọng, anh em, tôi từng khao khát được kề vai chiến đấu với cậu biết bao, nếu cậu còn can thiệp, tôi sẽ xử cậu ngay tại đây! Nebu!
+624	Con quái vật trước mặt Nebu rốt cuộc từ đâu tới? Liệu anh có tìm được Frederick và cùng thoát khỏi hành tinh này?
+625	Kỷ nguyên mới sẽ đón hòa bình chứ? Những chủng tộc bí ẩn giữa các vì sao có muốn cùng loài người chia sẻ vũ trụ này?
+626	Quá khứ và tương lai do chính tay bạn tạo nên.
+627	Meda：Này, Nolan, cậu ổn chứ? Cần tôi giúp không?
+628	Giới thiệu nhân vật： Meda, 18 tuổi, học việc truyền giáo và ca xướng của Thánh Y Hội liên minh. Em gái Nebu Jr, lớn lên cùng Nolan và Nebu Jr từ nhỏ.
+629	Nolan：Sao cậu lại tới đây? Ở đây nguy hiểm lắm, du kích ở ngay gần.
+630	Meda：Thánh Y Hội tổ chức cho chúng tôi tới cứu thương binh.
+631	Nolan：Vậy cậu phải tự bảo vệ mình đấy, không thì anh cậu lại trách tôi.
+632	Meda：Hồi nhỏ chẳng phải cậu toàn bắt nạt tôi sao. Sao? Không đi cùng Hippolyte à? Cô ấy không thèm để ý cậu hả?
+633	Nolan：Đừng đùa nữa, Meda, có chuyện gì không?
+634	Meda：Trong những trận trước cậu có để ý giáp của kẻ địch không?
+635	Nolan：Cảm ơn nhé, Meda, chuyện này quan trọng lắm. Lát nữa cậu cũng mau về New Zion đi, ở đây nguy hiểm.
+636	Meda：Tuân lệnh, sếp! Hì hì.
+637	Nolan：Vũ khí và nguồn tin của các ngươi từ đâu ra? Ngươi có quyền chọn, nhưng ta nghĩ ngươi biết hậu quả!
+638	Chỉ huy chiến trường：Mày coi bọn tao là lũ hèn à? Đồ người Mia chết tiệt!
+639	Nolan：Tên lính cầm cờ này chắc là $2Chỉ huy chiến trường$1 nhiệm vụ nhắc tới.
+640	Nebu：Nebu đã hạ cánh, cho đám khách không mời của cậu nếm thử món nướng cay nồng của hành tinh Mia nào!
+641	Frederick：Chào mừng tới bữa tiệc cuồng hoan Skagerrak, may mà máy vô tuyến của cậu vẫn chạy.
+642	Lính tộc Sói Chiến：Nói chuyện với đồng bọn xong chưa? Có khi đó là di ngôn cuối cùng của mày.
+643	Nebu：Trời ạ, tôi thật muốn Frederick cũng nghe tụi bay gào thét, có khi đó cũng là câu cuối của mày.
+644	Frederick：À, quên nói với cậu, bạn già, muốn dạy dỗ đám man rợ đó thì bấm $2phím 5$1 để tấn công, nếu vũ khí của cậu chưa gỉ.
+645	Nebu：Cảm ơn lời khuyên, Frederick, vũ khí của tôi chưa từng được nghỉ đâu.
+646	Frederick：Bạn già, đối phó lũ quái da dày thịt béo này phải dùng găng đấm tăng cường, bấm $2phím 1$1 để đổi. Giáp của quái vật có khác nhau đấy, tôi thật muốn nghe nắm đấm của cậu kêu "bùm bùm".
+647	Nebu：Có phải chúng ta nói hơi nhiều rồi không? Frederick, tôi đoán đám bạn Sói Chiến chắc muốn đá tôi một phát từ phía sau lắm.
+648	Bấm $2phím 5$1 để tấn công, $2phím 1$1 để đổi vũ khí.
+649	Meda：Chờ tôi với.
+650	Meda：Này, trong những trận trước cậu có để ý giáp của kẻ địch không?
+651	Nolan：Giáp? Ý cậu là $2biểu tượng khiên$1 cạnh chân dung kẻ địch?
+652	Meda：Đúng vậy, Nolan quả nhiên đã để ý. Giáp kẻ địch khác nhau sẽ ảnh hưởng sát thương của cậu. Như quân phản loạn vùng này đều là $2giáp xanh$1, đánh $2giáp xanh$1 bằng $2kiếm$1 sát thương sẽ cao, dùng $2găng đấm$1 thì thấp đi.
+653	Nolan：Cảm ơn nhé, Meda, chuyện này quan trọng lắm!
+654	Meda：Ừ, cậu tự thử đi, tôi cũng phải đi làm nhiệm vụ, lát gặp.
+655	Meda：Tiện thể, $2phím 3$1 là bắn đấy, nhưng dùng để hỗ trợ tấn công thôi.
+656	Nebu：Lũ tự phụ khát máu các ngươi, điều gì khiến các ngươi thèm khát vùng đất này?
+657	Trinh sát Phi Hành Giả：Loài người có tư cách gì chất vấn chúng ta? Nơi này từ thời viễn cổ đã là đất của Phi Hành Giả, chúng ta chỉ lấy lại đồ của mình thôi.
+658	Nebu：Nên các ngươi tàn sát dân ở đây?
+659	Võ sĩ Phi Hành Giả：Hahaha! Loài người vốn là loài vật không có tín ngưỡng, ta còn thấy linh hồn chúng cũng dơ bẩn!
+660	Nebu：Vậy hãy để các ngươi cảm nhận nỗi oán than của những linh hồn đó!
+661	Nebu：Vẫn còn sống à? Cũng tốt, ta hỏi ngươi, ở đây rốt cuộc có gì? Đáng để các ngươi giết nhiều dân vô tội vậy sao?
+662	Trinh sát Phi Hành Giả：Xin... xin đừng giết tôi... chúng tôi đang tìm...
+663	Trinh sát Phi Hành Giả：Hahahaha, loài người đúng là đồ ngu!
+664	Nebu：Chết tiệt!
+665	Nebu：?
+666	Trinh sát Phi Hành Giả：?
+667	Nebu：Đây... đây là... đâu? Ý thức của mình ngừng lại sao? Cảm giác ngay cả cơn gió vừa lướt qua mặt cũng ngừng, không... không đúng, cái ngừng lại không phải ý thức mà là cơ thể mình......
+668	Trinh sát Phi Hành Giả：Thời gian... và vạn vật trên đời...... đều ngừng... lại, không... không muốn... chết
+669	Nebu：Vừa rồi đã xảy ra chuyện gì? Đây rốt cuộc...... là sức mạnh gì...
+670	Đoạn hình ảnh này rốt cuộc có ý nghĩa gì? Cha chắc chắn cũng vì nó mà sinh lòng hứng thú...
+671	Frederick：Tôi quay lại rồi, anh em, nếu cậu còn sống.
+672	Nebu：Nhờ cậu chiếu cố, tôi còn cách cái chết vài bước. Lại có chuyện gì? Không đợi tôi ôm cậu rồi hẵng nói được à?
+673	Frederick：Chuyện này quan trọng, tôi sợ cậu quên bấm $2phím 7 và 9$1 sẽ tung tuyệt chiêu, nó giúp cậu và kẻ địch chơi vui hơn chút, phải không?
+674	Nebu：Tất nhiên tôi không quên, hiếm khi cậu nhớ rõ vậy đấy Frederick!
+675	Frederick：Đừng nhắc nữa ông bạn, tôi biết rõ uy lực của chúng hơn ai hết, mau qua đây.
+676	Bấm $2phím 7, 9$1 để tung tuyệt chiêu.
+677	Meda：Hồi nhỏ chẳng phải cậu toàn bắt nạt tôi sao. Sao? Không đi cùng Hippolyte à? Anh ấy không thèm để ý cậu hả?
+678	Nolan：Đừng đùa nữa, Meda, e là còn nhiệm vụ khác đang chờ tôi.
+679	Meda：Tất nhiên tôi biết, nếu xong nhiệm vụ, dùng $2Tinh thể Warp$1 là có thể rời cảnh chiến đấu ngay lập tức.
+680	Nolan：Xong nhiệm vụ tôi sẽ về, ở đây nguy hiểm, lát nữa cậu cũng mau về New Zion đi.
+681	Frederick：Tin xấu, đồng minh vùng biên của địch tới rồi.
+682	Nebu：Chết tiệt, đám này trông đúng là cứng đầu.
+683	Lính phun lửa：Mấy con tin đáng thương đó, hè hè hè......
+684	Chỉ huy：Đi mau đi, ở lại đây cũng chẳng còn ý nghĩa gì nữa.
+685	Nolan：E là các ngươi chẳng đi đâu được nữa!
+686	Chỉ huy：Ngươi là ai?! Mau bắt hắn!
+687	Nolan：Ta là ai? Ta còn nhiều câu muốn hỏi các ngươi lắm, các chỉ huy.
+688	Chỉ huy：Bọn tao không phải lũ hèn! Đồ người Mia chết tiệt! Nhưng tên chiến binh liên minh đáng thương kia, mày chẳng đắc ý được bao lâu đâu, hè hè hè.
+689	Nolan：Chết tiệt, tên này lại thà tự sát.
+690	Chỉ huy：Ở đây xảy ra chuyện gì?! Là ngươi à! Bọn ta sẽ băm vằm ngươi!
+691	Nolan：May mà ông trời lại cho mình thêm một cơ hội.
+692	Nolan：Ta muốn biết vũ khí và nguồn tin của các ngươi từ đâu ra? Nếu không thì kết cục ngươi vừa thấy rồi đấy.
+693	Chỉ huy：......................
+694	Nolan：Mau trả lời ta, tin ta đi, việc này rất quan trọng với ngươi.
+695	Chỉ huy：Là! Là Hiệp sĩ Teuton! Chúng muốn chống lại Liên minh Doanh nghiệp của các người......
+696	Nolan：Sao vậy?! Nói tiếp đi!
+697	Chỉ huy chiến trường：Tao chưa muốn chết!!!!!! A!!!!!!
+698	Nolan：Ai đó?! Ra đây!
+699	Nolan：Chết tiệt! Rốt cuộc là ai?
+700	?：Hừ! Giờ thì có trò vui rồi...
+701	Nebu：Tuyệt, để tôi dùng đôi nắm đấm này xử lũ xâm lược tàn ác!
+702	Nolan：Khai ra vũ khí và nguồn tin của các ngươi?!
+703	Chỉ huy chiến trường：Hừ, tên lính Liên minh Doanh nghiệp ngu xuẩn có tư cách gì chất vấn ta?
+704	Nolan：Khoan đã! Chết tiệt!
+705	Chỉ huy chiến trường：..............................
+706	Nolan：Ngươi có gì muốn nói với ta không?
+707	Chỉ huy chiến trường：Xin đừng giết tôi! Anh muốn gì tôi cũng đưa!!! Tha cho tôi một mạng!!!!!!
+708	Nolan：...Vũ khí và tin tình báo của các ngươi lấy từ ai?
+709	Chỉ huy chiến trường：Là! Là Hiệp sĩ Teuton! Chúng muốn chống lại Liên minh Doanh nghiệp của các người......
+710	Tù trưởng tộc Sói Chiến：Xé xác lũ người ngu dốt đó! Các chiến binh! Tổ tiên đang dõi theo chúng ta!
+711	Tù trưởng tộc Sói Chiến：Máu của tộc Sói Chiến sẽ phủ khắp mặt đất...
+712	Frederick：Nebu, thả chúng đi, cậu yên tâm, muốn gặp chúng thì chúng sẽ còn quay lại tìm chúng ta.
+713	Nebu：Tôi chẳng muốn gặp lại chúng đâu, Frederick!
+714	Frederick：Tôi cũng vậy, mau về Belt đi, ở đây chào đón cậu.
+715	Nolan：Ngươi nên hiểu ta đã hạ bao nhiêu lính của các ngươi để tới được đây!
+716	Chỉ huy chiến trường：Muốn moi câu trả lời từ miệng ta à? Đi tới đây mà còn thắc mắc, chứng tỏ đồng bào ta không muốn khuất phục thằng nhóc vênh váo như ngươi thế nào!
+717	Nolan：Miệng đám này kín thật!
+718	Nolan：Chỉ cần hạ tên lính gác to xác này là chúng ta đột phá tới hành tinh Mia.
+719	Nolan：Được rồi, bước tiếp theo cuối cùng cũng có thể tiến về New Zion!
+720	Nebu I：Nhiệm vụ lần này hoàn thành rất đẹp, ta rất hài lòng. Con có thể vào $2Đền Tinh Tế$1 để $2lưu tiến độ$1, như vậy công sức của con sẽ không uổng phí.
+721	Nolan：Xin chỉ thị!
+722	Nebu I：Con nên biết kinh tế nghĩa là gì!
+723	Nolan：Vâng! Con hiểu rất rõ!
+724	Hippolyte：Tôi không đùa với cậu đâu, ngài Nebu I muốn cậu đi điều tra lai lịch quân phản loạn, ngay tại vịnh hẹp Skagerrak, mấy tên chỉ huy đó có lẽ biết gì đó.
+725	Nolan：Tôi biết rồi, Hippolyte, chúng ta không thể nói chuyện khác à?
+726	Hippolyte：Tôi thích nói về công việc cao cả của chúng ta hơn.
+727	Nolan：Tất nhiên, ý tôi là lúc rảnh chúng ta không thể cùng đi dạo sao?
+728	Hippolyte：Thôi nào, Nolan, tôi còn nhiệm vụ, đi trước đây.
+729	Nolan：Được rồi, được rồi, vậy hẹn gặp lại!
+730	Nebu Jr：Cẩn thận nhé, anh em.
+731	Nebu I：Thế nào? Nolan? Đã moi được tin gì từ mấy tên chỉ huy đó chưa?
+732	Nolan：Không ngờ lúc tra hỏi, kẻ địch lại bị ám sát......
+733	Nebu I：Tin tình báo đã biết thì sao?
+734	Nolan：Chỉ biết đứng sau là một tổ chức tên Hiệp sĩ Teuton.
+735	Nebu I：Hiệp sĩ... Teuton...? Ừm, ta nghĩ việc này đã vượt khỏi phạm vi con quản lý, quá nguy hiểm.
+736	Nolan：Nhưng mà!
+737	Nebu I：Phục tùng mệnh lệnh, đừng quên giờ con là quân nhân!
+738	Meda：Nolan, sao vậy?
+739	Nolan：Meda? Vừa nãy ngài Nebu nghe đến tên Hiệp sĩ Teuton liền cấm tôi điều tra chuyện quân Cộng hòa.
+740	Meda：Chắc cha sợ cậu gặp nguy hiểm. Hiệp sĩ Teuton... để tôi tra tài liệu xem.
+741	Nolan：Giỏi thật... có lẽ cha nuôi thật sự lo cho tôi, vậy tôi xuất phát trước.
+742	Meda：Nhất định phải cẩn thận nhé!
+743	Nolan：Tôi sẽ cẩn thận.
+744	Nebu I：Sau sự kiện Bavaria lần trước, ta đã cử người dò đường tìm ra một thành phố căn cứ của Teuton. Các con tới đó thử tiếp xúc thăm dò, nhưng nhớ kỹ! Tuyệt đối không được để lộ thân phận!
+745	Nebu Jr：Cha... con muốn nghỉ ngơi thêm hai ngày, xin cha thứ lỗi.
+746	Nebu I：Các con, chúng ta được biết ở Pháo đài Bavaria có một số người vô tội của Liên minh Doanh nghiệp bị bắt làm con tin, giờ cần các con đi giải cứu!
+747	Nolan：Con trở thành chiến binh liên minh là để cứu nhiều người hơn khỏi hoạn nạn, cha con đã chết vì chiến tranh. Con không muốn bất kỳ ai phải chịu cảnh giống con nữa!
+748	Nebu I：Ừm... ta rất hiểu con, Nolan. Ta cũng chưa từng nghi ngờ con sẽ trở thành một chiến binh vĩ đại.
+749	Nebu Jr：Cha, con và Hippolyte cũng đã sẵn sàng, con tuyệt không cho phép bọn cướp làm nhục dân ta.
+750	Nebu I：Tốt lắm, con của ta. Hippolyte cũng từ lâu không còn là cô bé yếu đuối trong ấn tượng của ta nữa.
+751	Hippolyte：Được làm chiến binh Liên minh Doanh nghiệp là vinh dự của tôi!
+752	Nebu I：Dòng máu Amazon trong người con và biểu hiện của hai đứa khiến ta rất kỳ vọng, xuất phát đi!
+753	Nolan：Tuân lệnh.
+754	Nebu Jr：Vâng! Thưa cha!
+755	Hippolyte：Rõ!
+756	Nebu I：Nolan đã giúp chúng ta có được tin tình báo này. Một nhóm người Rom lang thang đang chiếm cứ Đại Kavkaz trên hành tinh Stanovoy để buôn lậu vũ khí, cần các con đi ngăn chúng lại.
+757	Nolan：Vâng, nghe nói thủ lĩnh của đám lang thang - Carmen Bão Tố - cũng đích thân tham gia giao dịch lần này. Tuy cô ta là nữ chiến binh nhưng thực lực rất mạnh.
+758	Hippolyte：Nghe nói thủ lĩnh của chúng là một nữ chiến binh?!
+759	Nolan：Hippolyte, cậu tới rồi à?
+760	Hippolyte：Tôi bắt đầu thấy hứng thú với nữ chiến binh được đồn là rất mạnh kia rồi.
+761	Nolan：Hippolyte, bao giờ cậu mới bỏ được cái tính hiếu thắng này?
+762	Hippolyte：Trong người tôi chảy dòng máu của vô số chiến binh vinh quang, cậu không hiểu được đâu.
+763	Quân liên minh：Gọi ngài Hippolyte, xin ngài tới nhà máy bỏ hoang ở khu D, chúng tôi chờ ở đây.
+764	Hippolyte：Xì, lại đúng lúc này. Lần sau có cơ hội thế này nhất định phải báo tôi.
+765	Nolan：Vậy tôi xuất phát đây...
+766	Nebu I：Lũ trẻ này, thật là... hahaha!
+767	Nolan：Cha nuôi, Phi Hành Giả trên hành tinh Stanovoy cần chúng ta.
+768	Nebu I：Tốt lắm, là Liên minh Doanh nghiệp, chúng ta nên tiếp nhận họ.
+769	Nolan：Vậy con đi Stanovoy báo cho họ ngay!
+770	Nebu I：Đi đi, Nolan. Đừng quên gửi lời hỏi thăm của ta.
+771	Nolan：Meda, nếu không được trở lại chiến trường tôi sẽ cứ bất an mãi. Tôi lo cho anh cậu, lo cho...
+772	Meda：Lo cho Hippolyte, tôi biết, đó mới là điều cậu thật sự quan tâm.
+773	Nolan：Đừng trêu tôi nữa, thật đấy, còn chuyện xảy ra gần đây, tôi lo sẽ có một sự thật tôi không muốn thấy...
+774	Meda：Đừng lo nữa, Nolan! Kẻ đó chỉ cố ý dọa cậu thôi! Có khi chẳng có gì đâu, cậu lúc nào cũng đa sầu đa cảm, phát ghét, hèn gì Hippolyte... haha.
+775	Nolan：Ừm... ơ, thư của Hippolyte, gửi đến lúc này, có lẽ họ gặp rắc rối... a, sao lại...
+776	Meda：Có chuyện gì vậy? Cho tôi xem... a, anh tôi cầu hôn Hippolyte rồi...
+777	Nolan：Cô ấy nói rất phấn khích cũng rất bối rối, không biết sao Nebu đột nhiên quyết định vậy... nhưng đây thật là... chuyện đáng mừng, phải không?
+778	Meda：Nolan...
+779	Một ngày nọ...
+780	Moses：Nolan, Ngũ Quốc đang gặp rắc rối lớn, mong cậu kịp thời tới cứu!
+781	Nolan：Được, tôi xuất phát ngay!
+782	Nolan：Vâng... vâng
+783	Nebu I：Ở đó thế nào?
+784	Nolan：Bầu không khí làm con thấy rất khó chịu, nhưng việc phong tỏa không quá chặt.
+785	Nhận thưởng nhiệm vụ: một Giáp đấu sĩ!
+786	Nhận thưởng nhiệm vụ: một Giáp thoi!
+787	Nebu I：Người dò đường cũng báo với ta như vậy. Họ còn thu được ở đó một bộ giáp máy chiến đấu rất mạnh, con cầm lấy đi, chắc chắn sẽ có ích.
+788	Mười hai năm sau
+789	Nebu I：Các con, đây là lần đầu các con làm nhiệm vụ, nếu làm hỏng thì đừng mong mặc lại bộ đồ này!
+790	Giới thiệu nhân vật： Nebu I, người sáng lập Liên minh Doanh nghiệp, luôn là anh hùng vĩ đại trong lòng mọi người.
+791	Nebu Jr：Cha, cha sẽ không thất vọng đâu. Nâng ly cho chuyến viễn chinh đầu tiên! Tin tưởng là động lực cốt lõi để chúng ta tiến xa!
+792	Giới thiệu nhân vật： Nebu Jr, 22 tuổi, quan chấp hành thực tập của Kế hoạch Phục hưng Babylon, con trai Chủ tịch Liên minh Doanh nghiệp Nebu I.
+793	Nebu Jr：Rất vui được cùng nhau lên đường, cha sẽ sớm tự hào về chúng con thôi.
+794	Nolan：Đúng vậy, Nebu Jr, chúng ta sẽ cùng tiến lên!
+795	Giới thiệu nhân vật： Nolan, con nuôi của Nebu I, 20 tuổi, đại kiếm sư thực tập của Cận vệ liên minh. Cha cậu chết trong Chiến tranh Trăm năm, Nebu I nhận cậu làm con nuôi và nuôi lớn.
+796	Nolan：Bất cứ lúc nào, ở đâu, phải không? Hippolyte.
+797	Hippolyte：Nolan, chúng ta không rảnh tán gẫu đâu, du kích địch có thể gây rắc rối bất cứ lúc nào.
+798	Giới thiệu nhân vật： Hippolyte, 20 tuổi, con lai giữa người Amazon và loài người, bạn học trường quân sự với Nebu Jr và Nolan, nữ kiếm sĩ triển vọng nhất của Cận vệ.
+799	Nebu I：Du kích của quân Cộng hòa Liên sao rất xảo quyệt, ba đứa mỗi người dẫn một đội. Thông tin nhiệm vụ đã gửi cho các con, bấm phím $2 * $1 để xem nhiệm vụ.
+800	Nebu I：Trước khi xuất phát hãy ôn lại cách phân bổ kỹ năng. Khi góc trên trái màn hình hiện $2dấu cộng xanh lá$1 nghĩa là còn $2điểm kỹ năng$1 chưa dùng, rồi làm theo hướng dẫn của ta.
+801	Nebu I：Tốt lắm, các con, thấy các con phân bổ kỹ năng thành thạo ta rất vui. Được rồi, xuất phát đi!
+802	Meda：Đó hình như là một tổ chức chống chính phủ, nghe nói đội quân này có đức tin rất sùng đạo, tinh thần hiệp sĩ khiến chúng trên chiến trường rất kỷ luật và dũng mãnh. Cha chắc đang lo cho cậu đấy, Nolan.
+803	Không lâu sau sự kiện lần trước, cuộc chiến liên sao kéo dài trăm năm tuyên bố kết thúc. Mọi người buông vũ khí, đàm phán hòa bình, một tương lai hoàn toàn mới ra đời - Liên minh Doanh nghiệp. Nebu, sau vô số trận chiến được bầu làm thủ lĩnh, là người sáng lập Liên minh Doanh nghiệp, dẫn dắt mọi người dựng lại quê hương trên mảnh đất đã hóa tro tàn, xây nên New Zion. Để giữ gìn nền hòa bình khó khăn lắm mới có, liên minh đã áp đặt lệnh hạn chế buôn bán vũ khí nghiêm khắc nhất từ trước tới nay.
+804	Nebu I：Tốt lắm, trong New Zion có một khu mỏ, vào đó thuê hai thợ mỏ, việc này sẽ giúp ích cho con nhiều.
+805	Nebu Jr：Nolan về rồi kìa.
+806	Nebu I：Nolan, ở đó thế nào?
+807	Nebu Jr：Cha, hãy để con mang cành ô liu tới cho Phi Hành Giả.
+808	Nebu I：Cứ để Nolan đi, dù sao nó cũng đã từng làm việc với Phi Hành Giả.
+809	Nebu Jr：Cha... nhưng mà
+810	Nolan：Nebu Jr, việc chạy vặt này cứ để tôi lo.
+811	Nebu Jr：Ừ, vậy cũng được... đi đường cẩn thận...
+812	Nebu I：Tốt lắm, vùng Vịnh Bắc trên hành tinh Jutland vẫn còn tàn quân kháng chiến. Hãy giúp Liên minh Doanh nghiệp tiêu diệt một số lính lửa, cắt đường tiếp tế của chúng, hạ vài y tá, tiện thử uy lực vũ khí mới của con.
+813	Nolan：Vâng! Con chuẩn bị xuất phát ngay.
+814	Nebu I：Cẩn thận đám côn đồ đó, nơi ấy từng để lại cho ta ký ức đau đớn, bây giờ cũng vậy.
+815	Hippolyte：Nolan, cậu cũng ở đây à?
+816	Nolan：À, trùng hợp thật, cậu cũng có nhiệm vụ à?
+817	Hippolyte：Quân phản loạn dạo này phiền thật, $2Tòa thị chính$1 chắc lại có $2nhiệm vụ phụ$1 mới, cậu có thể qua xem.
+818	Nolan：Gì cơ? $2Nhiệm vụ phụ$1? Lẽ nào chúng mở dần theo nhiệm vụ mới hoàn thành?
+819	Nebu Jr：Tôi có làm phiền hai người nói chuyện không?
+820	Hippolyte：Nebu Jr? Anh tới rồi à? Làm gì có, em với Nolan chỉ tình cờ gặp nhau tán gẫu thôi.
+821	Nebu Jr：Ha ha, Hippolyte, lát nữa ta nói chuyện sau, anh tới tìm Nolan.
+822	Hippolyte：Vậy được, hai người nói chuyện trước, lát nữa phải tới tìm em đấy.
+823	Nolan：Bye Hippolyte. Nebu Jr, cậu thoắt ẩn thoắt hiện ra tìm tôi chắc chẳng có chuyện gì hay ho?!
+824	Nebu Jr：Nói gì vậy, Liên minh Doanh nghiệp cần ít Khối polyme để chế tạo vài loại máy mới, cần cậu tới Vịnh Bắc thu thập từ người đám y tá.
+825	Nolan：Cậu mà xuất hiện thì chắc chắn chẳng có chuyện tốt!!! Máy móc mới gì chứ, nhưng ai bảo chúng ta là anh em, nghe cậu là được!
+826	Nebu Jr：Ha ha, Nolan, cậu lúc nào cũng thích càu nhàu, gặp lại sau.
+827	Nebu Jr：Thu thập vật liệu sao rồi Nolan?
+828	Nolan：Tôi đích thân ra tay, cậu phải đoán được kết quả chứ, anh em.
+829	Nebu Jr：Tôi chưa bao giờ nghi ngờ cậu. Báo cậu một tin vui, lần cải tạo New Zion này được giao cho tôi, chúng ta cần cùng nhau nâng cấp thành phố New Zion.
+830	Nolan：Pháo đài Bavaria à? Mong là ở đó đừng xảy ra chuyện gì.
+831	Nebu Jr：Ừ, xuất phát ngay!
+832	Nolan：Hippolyte cũng đi à? Được! Chúng ta xuất phát ngay!
+833	Nolan：Nebu Jr! Chẳng phải cậu luôn muốn tìm ra kẻ cầm đầu sao! Cậu bị sao vậy!
+834	Hippolyte：Nolan! Xảy ra chuyện như vậy mấy ai còn giữ được bình tĩnh! Đừng ép Nebu Jr nữa!
+835	Nebu Jr：Xin lỗi, Nolan, giờ tôi thấy hơi lực bất tòng tâm, các cậu đi đi.
+836	Hippolyte：Tôi ở lại New Zion, lúc này Nebu Jr cần tôi giúp.
+837	Nolan：Được rồi... Hippolyte, chăm sóc Nebu Jr cho tốt.
+838	Nebu I：Thôi, tạm không nói chuyện này. Gần đây ở vùng Đại Kavkaz hành tinh Stanovoy có một đám người Rom tụ tập.
+839	Nolan：Người Rom? Là người Rom được gọi là dân lang thang liên sao đó à?
+840	Nebu I：Đúng vậy, nhiều vụ buôn lậu vũ khí đều do chúng nhúng tay. Giờ cần làm suy yếu một phần chiến lực của chúng, ta cần thám báo của ta dò la động tĩnh của chúng.
+841	Nolan：Để con đi gặp chúng!
+842	Nolan：Con sẽ đi.
+843	Nebu I：Nhưng lại có nhiệm vụ mới rồi.
+844	Hippolyte：Nolan.
+845	Nolan：Hippolyte? Cậu tìm tôi có việc à? Hẹn tôi đi chơi sao?
+846	Hippolyte：Đừng đùa nữa! Nolan, tôi nghĩ cậu nên thay thanh kiếm cũ kỹ đó đi.
+847	Hippolyte：Đúng vậy, tới $2Xưởng quân sự$1 có thể rèn $2kiếm, găng đấm và trang sức$1. Lần này cậu cần rèn một thanh $2Kiếm hiệp sĩ$1 theo yêu cầu của Xưởng quân sự.
+848	Nebu I：Tốt lắm Nolan, vừa hay Nebu Jr cũng ở đây, ta cần các con gom xu pha lê để nâng cấp thành phố New Zion.
+849	Nolan：Rõ!
+850	Nebu I：Tốt lắm, thành phố sau khi nâng cấp sẽ có nhiều thứ mới, các con có thể đi xem. Nhưng dạo này tin xấu cứ liên tục, hành tinh láng giềng của chúng ta, Pháo đài Bavaria, bỗng mất tín hiệu liên lạc, không biết đã xảy ra chuyện gì!
+851	Nolan：Ý cậu là tới $2Xưởng quân sự$1 rèn một thanh mới?
+852	Nolan：Ừ, việc này rất có lợi cho tôi, cảm ơn cậu, Hippolyte.
+853	Meda：Hippolyte...
+854	Nebu I：Đã gặp Hippolyte rồi chứ, rèn được vũ khí mới chưa?
+855	Nolan：Thật à?! Tôi phải làm thế nào?
+856	Nebu Jr：Đầu tiên khi có đủ xu pha lê chúng ta tới $2Đền Tinh Tế$1, rồi chọn $2Nâng cấp thành phố$1 là được.
+857	Nebu Jr：Hahaha, thành phố mới ra đời trong tay chúng ta! Thật đáng mừng!
+858	Nolan：Đúng vậy! Mọi người trong thành sẽ đều vui!
+859	Hippolyte：Không phải tôi muốn làm mất hứng, nhưng hành tinh láng giềng của chúng ta, Pháo đài Bavaria, bỗng mất tín hiệu liên lạc, chúng ta cần cùng đi điều tra.
+860	Hippolyte：Đúng là như vậy.
+861	Moses：Rất vui được gặp lại cậu, người bạn loài người của tôi.
+862	Nolan：Tôi cũng vậy, tôi nghĩ tôi nên chào mừng ông gia nhập Liên minh Doanh nghiệp.
+863	Moses：Tuyệt quá, vậy chúng tôi có thể thoát khỏi sự áp bức kép của Sói Chiến và Teuton.
+864	Võ sĩ Phi Hành Giả：Moses vĩ đại, chúng ta gặp rắc rối lớn rồi, có thám báo nói trên hành tinh Kent tụ tập rất nhiều võ sĩ Phi Hành Giả.
+865	Nolan：Võ sĩ Phi Hành Giả khác?
+866	Moses：Đúng vậy, thực ra các bộ lạc Phi Hành Giả luôn trong tình trạng chia rẽ. Nếu không có gì bất ngờ thì lại là Phong Ngữ Giả Isa, nghe đồn tên này qua lại rất thân với một tổ chức tên là người Teuton, lần này e là liên quan đến việc chúng tôi hợp tác với Liên minh Doanh nghiệp.
+867	Nolan：Teuton?! Để tôi lo, tôi với người Teuton còn món nợ chưa tính xong!
+868	Moses：Đương nhiên! Hơn nữa chúng tôi thu được một con rồng lửa từ đám người Rom vội vã bỏ chạy, mong nó xứng với lòng biết ơn của tôi dành cho cậu, tôi thành tâm cầu phúc cho cậu, chiến binh vĩ đại.
+869	Nolan：Thế nào rồi? Moses.
+870	Moses：Tộc Sói Chiến cuối cùng cũng tổng tấn công, và Khan của chúng, Guldan, cũng đích thân ra trận. Tên đó luôn khiến chúng tôi đau đầu.
+871	Nolan：Trong đầu tôi đã hiện ra hình dáng hắn rồi, một gã to xác mặt xanh nanh nhọn? Hay một con tinh tinh ngốc?
+872	Trên hành tinh Kent, Phi Hành Giả Tinh Vân có quan hệ mật thiết với Hiệp sĩ Teuton đã phản bội. Chúng chế tạo vũ khí cho người Teuton, mưu đồ lật đổ chính quyền hiện tại để làm lành với người Teuton.
+873	Moses：Nolan, cậu về rồi.
+874	Nolan：Moses, lẽ nào lại là tin xấu? Sao dạo này toàn tin xấu vậy.
+875	Moses：Là Isa! Hắn đã phản bội. Hơn nữa chúng còn bắt cóc người Rom, ép họ chiến đấu thay. Carmen Bão Tố, cậu đã gặp cô ta rồi.
+876	Nolan：Yên tâm đi, Moses, tâm trạng tệ sẽ không ảnh hưởng đến quan hệ của chúng ta.
+877	Moses：Con cáo cuối cùng cũng lộ đuôi rồi.
+878	Nolan：Là Isa? Con cáo xảo quyệt này lúc nào cũng thích gây rắc rối lớn.
+879	Moses：Đúng vậy, chúng đang ở Đường trạm Hailar trên hành tinh Kent. Cẩn thận, Isa là một chiến binh thiên tài khó đoán.
+880	Nolan：Đừng lo cho tôi, tôi xuất phát ngay!
+881	Moses：......
+882	Moses：Cậu mới là chiến binh thiên tài nhất tôi từng gặp...
+883	Nhận thưởng nhiệm vụ: một Vinh quang Song Tinh!
+884	Moses：Chuyện cậu bị bắt tôi đã nghe hết rồi, rốt cuộc là sao?
+885	Nolan：Để sau tôi giải thích với ông nhé Moses, giờ tâm trạng tôi tệ lắm. Tóm lại tình hình không khả quan, chúng ta đang rất cần tin vui.
+886	Moses：Đã vậy thì... Nolan... thám báo của chúng tôi dò được thành Astana của tộc Sói Chiến hiện không có quân đóng giữ, có lẽ ở đó sẽ có cơ hội mới, không biết có tính là tin vui không.
+887	Nolan：Tất nhiên là tin vui rồi! Moses, giờ tôi đã là tội phạm bị truy nã số một của liên minh, khám phá một thành phố mới thì còn gì tuyệt hơn.
+888	Moses：Được, nhưng cậu vẫn phải cẩn thận đám man rợ đó, dù sao nơi đó vẫn là ẩn số.
+889	Nolan：Có ẩn số còn hơn chẳng có gì, Moses, tôi xuất phát tới đó xem ngay!
+890	Nolan：Mong là tôi đã giúp được ông, Moses.
+891	Moses：Isa cuối cùng cũng không nhịn được mà hành động, Ngũ Quốc tuyệt đối không khuất phục hắn!
+892	Nolan：Yên tâm, Liên minh Doanh nghiệp sẽ không đồng ý đâu, Isa để tôi xử lý!
+893	Moses：Tộc Sói Chiến luôn chiếm giữ vùng mỏ đá, thực tế giờ chúng tôi đang rất cần ít đá Ural, mong cậu giúp lấy về một ít.
+894	Nolan：Tộc Sói Chiến đáng ghét.
+895	Moses：Việc chúng tôi lấy đá Ural đã bị tộc Sói Chiến biết, có vẻ chúng giận dữ lắm, nhưng chúng tôi cũng không khuất phục. Lũ sói đó như động cơ của tộc Sói Chiến, diệt chúng trước sẽ khiến chúng tự rối loạn.
+896	Moses：Đám đó tuy tai tiếng nhưng có sức mạnh không ai trong vũ trụ sánh được, tuyệt đối đừng liều lĩnh với chúng.
+897	Nolan：Tốt lắm, tôi đang muốn xem thử sức mạnh đó.
+898	Moses：Nolan, cậu còn tâm trí đùa à? Lần này e là cực kỳ nguy hiểm.
+899	Nolan：Haha, thôi nào, Moses, gặp đối thủ thế này tôi phấn khích lắm!
+900	Moses：Tôi sẽ cầu nguyện cho cậu.
+901	Đúng lúc Nolan tưởng cơ hội đã đến để đối mặt sự thật thì một việc bất ngờ khác lại xảy ra: Hội đồng thông qua dự luật, xếp Hiệp sĩ Teuton vào tổ chức thù địch đặc biệt, giao Kế hoạch Phục hưng Babylon toàn quyền thực hiện mọi hành động trấn áp liên quan. Nghĩa là Nolan sẽ không được tham gia các hành động tiếp theo liên quan tới Hiệp sĩ Teuton. Còn Nebu Jr, người luôn ủng hộ cậu, lúc này lại im lặng chấp nhận sự sắp xếp đó. Tương lai khó khăn lắm mới sáng tỏ giờ lại mờ mịt. Cô đơn và hoang mang bủa vây cậu, chỉ có sự an ủi của Meda bên cạnh cho cậu chút tình thân ngày cũ.
+902	Nolan：Thành phố này trông cũng được đấy, nhưng không khí căng thẳng thật.
+903	Moses：Nơi đây từng là quê hương của chúng tôi, giờ chúng tôi đã trở về! Hailar vĩ đại! Nolan! Tôi phải làm sao để cậu thấy được tâm trạng xúc động lúc này của tôi!
+904	Nolan：Chúc mừng ông, Moses, mong là tôi thật sự đã giúp được các ông nhiều.
+905	Moses：Tôi phải làm sao để cậu thấy được tâm trạng xúc động lúc này của tôi.
+906	Nolan：Tuyệt! Chúng ta xuất phát ngay! Tới chỗ tộc Sói Chiến - Astana!
+907	Carmen：Tôi sẽ giúp cậu, yên tâm đi, Nolan.
+908	Nolan：Yên tâm đi, Meda, chúng ta chỉ đi đàm phán thôi, xuất phát!
+909	Nolan：Nhưng giờ vẫn còn tàn quân Phi Hành Giả phản loạn, tôi đi tiêu diệt chúng trước, nếu không sẽ còn nhiều rắc rối hơn.
+910	Nhận thưởng nhiệm vụ
+911	Nebu I：Nolan, có tình hình mới, về New Zion đi.
+912	Quân phản loạn：Mày là người của Liên minh Doanh nghiệp à?
+913	Quân phản loạn：Này! Gọi mày đấy! Mày là người của Liên minh Doanh nghiệp à?!
+914	Nolan：Anh gọi tôi......? Liên minh Doanh nghiệp là gì? Tôi chỉ muốn đổ ít xăng ở đây thôi.
+915	Quân phản loạn：Thôi được, coi như mày may, hôm nay tao vui, nhìn cái bộ dạng ngơ ngơ của mày cũng chẳng làm được gì, đi đổ xăng đi, anh bạn.
+916	Nolan：Cái gã này. Phù, làm mình toát cả mồ hôi lạnh.
+917	Nolan：Moses, chúng ta thì không, nhưng có thể liên minh với Sói Chiến!
+918	Carmen：Nolan, tôi rất khâm phục sự chính trực và mạnh mẽ của cậu. Cậu truy nã chúng tôi vì cậu công minh, cậu cứu chúng tôi vì cậu có tâm hồn chính nghĩa. Tinh thần người Rom không hèn hạ, chúng tôi sẽ dốc sức giúp những người đáng tôn trọng.
+919	Nolan：Được rồi, chúng ta bàn đối sách tiếp theo.
+920	Moses：Tôi nghĩ e là vẫn phải tích lũy chờ thời cơ, dù sao thế lực của chúng ta giờ còn quá nhỏ.
+921	Guldan：Vậy ra, Carmen, là cô dẫn... ta thật không muốn thừa nhận... bạn bè của cô tới lãnh địa của chúng ta.
+922	Carmen：Guldan thân mến, chính Nolan đã cứu tộc nhân của tôi, giờ cậu ấy lâm vào khốn cảnh, tôi cần giúp cậu ấy.
+923	Guldan：À, nhìn ngươi xem, loài người, cảnh khốn đốn hiện giờ của ngươi là do đồng minh của ngươi, lũ Phi Hành Giả nhát gan yếu đuối lây cho à? Hahaha...
+924	Nolan：Giữ cái miệng man rợ bẩn thỉu như dân tộc ngươi lại, Guldan! Lúc trước ngươi thừa nước đục thả câu, cuối cùng gieo gió gặt bão, lại bị người Teuton khống chế, còn mặt mũi đâu mà ăn nói ngông cuồng ở đây!
+925	Guldan：Gào! Loài người không biết sống chết!
+926	Nolan：Đủ rồi, tôi không tới để châm ngòi, tôi tới để tìm liên minh! Giờ kẻ thù duy nhất của chúng ta là Hiệp sĩ Teuton, các ông đấu đá nội bộ chỉ khiến mình bị nô dịch.
+927	Guldan：Nolan, muốn ta tin ngươi thì chứng minh thực lực đi! Đấu với ngươi thêm một lần, ta chờ ở Vùng trũng Attila. Nếu ngươi thắng được các anh hùng dọc đường và cuối cùng thắng ta, ta sẽ liên minh với ngươi, tôn ngươi là anh hùng của tộc Sói Chiến!
+928	Tù trưởng tộc Sói Chiến：Nhóc, chào mừng tới Astana. Nhưng ta phải nói trước, dân bộ lạc ở đây chẳng thích nói đùa với loài người đâu.
+929	Guldan：Thám tử ta cài báo về người Teuton sắp tập kết ở Pháo đài Tiểu Á, ta nên đánh rối đội hình chúng trước.
+930	Nolan：Ừ, tôi cũng đang có ý đó.
+931	Guldan：Tốt lắm, chúng ta đã mở được cánh cổng vào trong Pháo đài Tiểu Á. Nghe nói Phong Ngữ Giả Isa và quân Phi Hành Giả của hắn dịch chuyển ở đó, đi kết thúc chuyện với hắn đi.
+932	Nolan：Tôi đã chuẩn bị cho việc này từ lâu.
+933	Nolan：Được rồi, giờ đi đột phá Tiền đồn Mia, chỉ cần qua được cửa ải này là chúng ta tới được hành tinh Mia, tới New Zion!
+934	Guldan：Xem ta cho lũ tạp chủng này biết tay!
+935	Nolan：Yên tâm, tôi chưa học được kiểu nói đùa của tộc Sói Chiến đâu...
+936	Moses：Nolan, không biết cậu ở Astana thế nào, nhưng Ngũ Quốc thì chẳng ổn chút nào.
+937	Nolan：Moses, tôi quay về ngay, ở đây khó chịu lắm.
+938	Guldan：Hàng của tộc Sói Chiến phải qua Đồng bằng Ural, nhưng ở đó có nhiều tên cướp đáng ghét thường quấy rối chúng ta, giúp ta tiêu diệt chúng! Cho lũ khốn đó chết không toàn thây!!! Chết!!! Khụ khụ khụ!!!
+939	Nolan：Ông nóng tính thật đấy.
+940	Guldan：Chết tiệt! Ta mải dạy dỗ chúng mà quên lấy lại đồ của mình! Ta ra lệnh cho ngươi! Đoạt lại hết đồ của ta từ tay chúng!!! Tức chết ta mất!!!
+941	Nolan：Ông đúng là biết hành người, to xác.
+942	Guldan：Đi mau! Loài người!
+943	Nolan：Được rồi được rồi, ông cũng nên sửa cái tính nóng nảy đó đi.
+944	Guldan：Thằng nhóc thối.
+945	Frederick：Chào mừng tới hành tinh Jutland, bạn già! Tôi biết cậu nhất định sẽ tới kịp. Nào! Xem kiệt tác của quân viễn chinh Jutland chúng tôi này, thành Belt, nơi đây sẽ ươm mầm tương lai mới!
+946	Nebu：Tôi không quan tâm cậu bày trò gì ở đây, Frederick! Nhưng cậu đã quá phô trương ở nơi nguy hiểm này! Giờ chủ lực địch đang tập kết ngay trên đầu chúng ta. Việc cậu có thể làm là mau tạm biệt thành Belt của cậu rồi ngoan ngoãn về cùng tôi!
+947	Frederick：Nebu, chỉ cần kiệt tác của tôi ra đời, chiến tranh sẽ sớm kết thúc! Nhưng trước đó tôi phải nâng cấp thành phố thêm một lần. Thành phố sau nâng cấp không chỉ có thêm nhiều trang bị mới mà khu mỏ cũng chạy hết công suất hơn. Nào! Khoảnh khắc vĩ đại này, tôi giao cho cậu điều khiển.
+948	Nebu：Tôi liều bị Hội đồng luận tội, đem tính mạng cả quân đội tới thiên hà do địch kiểm soát này cứu cậu, cậu thật sự nghĩ một thành phố có thể thay đổi cục diện chiến tranh à?!
+949	Frederick：Phải, tiền đồ chính trị của cậu mới là quan trọng nhất, đại nhân vật như ngài hy sinh đến thế, tôi vô cùng cảm kích!
+950	Nebu：Tôi không có thời gian xoa dịu sự cố chấp của cậu! Một ngày! Tôi chỉ đợi được cậu một ngày!
+951	Frederick：Cảm ơn trời đất, Nebu! Cậu nhất định không hối hận vì ở lại đâu.
+952	Hội đồng：Xin hãy nghe máy! Đội rút lui gặp đại quân chủ lực địch, Hội đồng yêu cầu Nebu lập tức chi viện hạm đội rút lui.
+953	Nebu：...Nebu đã rõ. Frederick, xin lỗi, Hội đồng yêu cầu tôi lập tức đi chi viện các đơn vị khác...
+954	Frederick：Cái gì, xin nối máy với Hội đồng...
+955	Hội đồng：Đề nghị đơn vị Belt tiếp tục cố thủ. Nebu, nhắc lại! Lập tức quay về chi viện hạm đội rút lui, xin lỗi, Frederick...
+956	Nebu：Nebu đã rõ, toàn tốc quay về! Frederick, tôi hứa ba ngày sau nhất định sẽ đón cậu về.
+957	Frederick：Nebu, đây là âm mưu! Họ muốn hãm hại tôi! Lẽ nào cậu nỡ bỏ tôi vào nguy hiểm?!
+958	Frederick：Nebu? Nebu? Đừng bỏ tôi lại một mình!
+959	Frederick：Nebu......
+960	Ba ngày sau
+961	Nebu：Gọi quân viễn chinh Jutland, Nebu đã tới gần Belt, có nghe rõ không?
+962	Nebu：Có nghe rõ không?
+963	Nebu：Lẽ nào... hạ cánh thẳng xuống Belt, nhất định phải tìm ra Frederick!
+964	Nebu：Âm thanh phát ra từ Vịnh Bắc! Ở đó còn nhiều quân địch! Tiến về Vịnh Bắc!
+965	Frederick：Nào, làm theo lời tôi, trước tiên chọn $2Đền Tinh Tế$1.
+966	Frederick：Vào giao diện Đền Tinh Tế rồi chọn mục $2Nâng cấp thành phố$1, thế nào? Thú vị chứ? Hành tinh này sắp mang trong mình sự sống mới!
+967	Frederick：Ngài Chủ tịch, Belt sắp thất thủ, có tài liệu quan trọng cần bảo vệ, xin cứu viện!
+968	Cuộc chiến liên sao kéo dài trăm năm không có kẻ thắng. Các chủng tộc đã quên chiến tranh bắt đầu thế nào, rốt cuộc chiến đấu vì điều gì! Chỉ có câu chuyện về những anh hùng, theo khúc chiến ca, còn được truyền tụng trên mảnh đất đã hóa tro tàn!
+969	Bảy năm trước khi chiến tranh kết thúc, hành tinh Jutland.
+970	Nebu：Gọi quân viễn chinh Jutland, đây là Nebu, tới tăng viện, xin trả lời.
+971	Frederick：Đã nhận, nhưng "tiệc chào mừng" e phải lùi lại chút, Vịnh Bắc phía bắc thành Belt đang bị tấn công, cần chi viện.
+972	Nebu：Đã nhận.
+973	Nolan bám theo Schwab suốt đường, tới một tiểu hành tinh ngoài biên giới tên là Pháo đài Acre - hành tinh bị người Teuton cải tạo thành pháo đài chiến đấu.
+974	Meda：Người lúc nãy đi về phía Pháo đài Acre rồi!
+975	Nolan：Cậu ấy chắc chắn sẽ cần tôi giúp... Quân liên minh, đây là Tuần Du Giả, xin hạ cánh, tôi sẽ hỗ trợ.
+976	Quân liên minh：Không chấp thuận! Đề nghị Tuần Du Giả lập tức rời đi! Nhắc lại, đề nghị Tuần Du Giả lập tức rời đi!
+977	Nolan：Cái gì, tôi muốn gặp trực tiếp Nebu Jr.
+978	Quân liên minh：Đây là lệnh trực tiếp của quan chấp hành, kẻ nào trái lệnh sẽ bị trục xuất bằng vũ lực!
+979	Nolan：Ừ, tôi nhất định phải đuổi theo hắn làm rõ sự thật! Meda, cậu về trước được không?
+980	Meda：Nhưng... tôi lo cho cậu...
+981	Nolan：Không sao, tôi hứa sẽ bình an trở về, được không? Tôi hứa với cậu.
+982	Meda：Vậy được, cậu nhất định phải cẩn thận, đừng hành động liều lĩnh.
+983	Nolan：Ừ, yên tâm, tôi xuất phát đây, cậu mau về New Zion đi.
+984	Meda：......Nolan
+985	Hành tinh Stanovoy là mục tiêu giám sát quan trọng của trinh sát liên minh. Nơi đó thường tụ tập một chủng tộc gọi là người Rom lang thang, chủng tộc nhiều tai ương này không có lãnh thổ cố định, làm đủ trò phạm pháp trong và ngoài biên giới liên minh. Thủ lĩnh của họ - Carmen Bão Tố - còn là tội phạm bị liên minh treo thưởng lớn. Trinh sát nắm được tin quan trọng về vụ giao dịch lần này, thậm chí Carmen Bão Tố cũng đích thân tham gia. Địa điểm là một hành tinh quan trọng ngoài biên giới - Stanovoy, và chủng tộc sống ở đây còn che chở cho các giao dịch này.
+986	Nolan：Thời khắc quyết chiến cuối cùng đã đến...
+987	Meda：Sao vậy? Nolan? Trong lòng hơi thấp thỏm à?
+988	Nolan：Meda, ước gì mấy đứa chúng ta còn có thể trở lại những ngày như trước.
+989	Meda：Ngày trước... cảm giác đã xa chúng ta lắm rồi...
+990	Nolan：Tôi sẽ tự tay thay đổi tất cả! Tạm biệt! Meda.
+991	Meda：Tôi sẽ mãi ở bên cậu... Nolan... dù cậu ở đâu.
+992	Giới thiệu nhân vật： Nebu, 27 tuổi, nhân vật lừng lẫy trong quân gìn giữ hòa bình, hình tượng đầy sức hút cá nhân nên thường được phái nữ theo đuổi.
+993	Giới thiệu nhân vật： Frederick, 28 tuổi, chuyên gia khoa học quân sự, chiến hữu lâu năm của Nebu. Tin tuyệt đối rằng khoa học có thể cứu loài người, tuy được ca ngợi là thiên tài nhưng tính cách cũng khiến các tướng lĩnh đau đầu.
+994	?：Lũ khỉ trộm quả hết con này tới con khác, cách con trước đã một năm... hai năm... ba năm... bốn năm... năm năm... sáu năm... bảy năm...
+995	Nolan：Này, khoan! Ông là ai? Lẩm bẩm gì ở đó vậy?!
+996	?：Ta không có tên, gọi ta là Ẩn sĩ Cổ xưa.
+997	Nolan：Ẩn sĩ... Cổ xưa...?
+998	Ẩn sĩ Cổ xưa：Chiến... thôi!
+999	Ẩn sĩ Cổ xưa：Dù chiến binh mạnh nhất cũng không thắng nổi sự bào mòn của năm tháng, ta thua rồi.
+1000	Nolan：Tôi không thắng ông, ông thua thời gian.
+1001	Chỉ huy：Chết tiệt! Lại chậm một bước.
+1002	Nolan：Này, ông là ai?!
+1003	Chỉ huy：Thật là, hiếm hoi mượn cớ đi công tác định chơi cho đã.
+1004	Nolan：Tên này rốt cuộc là bạn hay thù...
+1005	Nolan：Carmen Bão Tố, lại gặp nhau rồi. Thật thất vọng là cô vẫn muốn làm gì thì làm.
+1006	Carmen：Vung thanh kiếm trong tay cậu đi, cho tôi xem chính nghĩa rốt cuộc nghĩa là gì?!
+1007	Carmen：Đây là lần thứ hai tôi thua cậu, Carmen phục cậu, tôi sẵn sàng nhận hình phạt của liên minh các cậu.
+1008	Nolan：Thực ra tôi hiểu hoàn cảnh của cô, hơn nữa tôi cũng không còn đại diện Liên minh Doanh nghiệp nữa.
+1009	Carmen：Cậu...
+1010	Nolan：Hãy tin tôi, tôi sẽ cứu người của cô.
+1011	Carmen：Dù thế nào, chúng tôi mãi biết ơn những gì cậu đã làm.
+1012	Carmen：Còn nữa, mau về Ngũ Quốc đi, e là rắc rối của các cậu còn lâu mới hết.
+1013	Nolan：Được, cảm ơn cô, Carmen.
+1014	Nolan：Thưa cô, tôi nghĩ cô sắp bị bắt rồi.
+1015	Carmen：Chiến binh Liên minh Doanh nghiệp vĩ đại, cậu không có quyền trừng phạt tôi.
+1016	Nolan：E là điều đó không thành cái cớ cho cô phạm lệnh cấm.
+1017	Carmen：Vậy để tôi xem thử thực lực của Liên minh Doanh nghiệp.
+1018	Nolan：Đầu hàng đi! Carmen!
+1019	Carmen：Hừ, nhóc con, cậu còn ngây thơ về chính trị vậy sao, luật pháp không trừng trị mọi tội phạm đâu.
+1020	Nolan：Vậy cô nghĩ ai đã bảo tôi tới bắt cô?
+1021	Carmen：Chiến binh trẻ, tôi tiên đoán tương lai cậu sẽ sa vào vòng xoáy, hẹn gặp lại.
+1022	Nolan：Đứng lại!
+1023	Nolan：Chết tiệt!
+1024	?：Cảm ơn cậu đã cho chúng tôi chút bình yên, chiến binh loài người.
+1025	Nolan：Ai?!
+1026	?：Đừng hoảng, chúng tôi là chủ nhân duy nhất của mảnh đất này, trước kia là vậy, tương lai cũng nhất định vậy.
+1027	Nolan：Tôi chưa nghe nói có chủ nhân nào phải trốn chui trốn lủi khắp nơi.
+1028	?：Tôi là Moses, tộc trưởng bộ lạc Phi Hành Giả. Ẩn mình trong bóng tối không phải ý tôi, chỉ là quê hương chúng tôi đã sớm bị giày xéo.
+1029	Nolan：Ông nói Carmen Bão Tố à?
+1030	Moses：Carmen chỉ là khách qua đường ở đây. Một tổ chức tên là Hiệp sĩ Teuton thèm khát năng lượng nơi này, còn ép chúng tôi chế tạo vũ khí cho chúng.
+1031	Nolan：Chết tiệt! Lại là Hiệp sĩ Teuton! Rồi chúng trực tiếp khống chế nơi này?
+1032	Moses：Nghe tôi nói hết đã, chàng trai. Tộc Sói Chiến đời đời quấy nhiễu chúng tôi, còn người Teuton lợi dụng điều đó, lấy cớ bảo vệ chúng tôi để khống chế nơi này.
+1033	Nolan：Tôi nghĩ Liên minh Doanh nghiệp sẽ bảo đảm an toàn cho các ông, chỉ cần các ông không chế tạo thứ vũ khí nguy hiểm đó nữa.
+1034	Moses：Tôi thật sự có thể tin loài người sao?
+1035	Nolan：Tôi thề.
+1036	Moses：Mong cậu sẽ giữ lời.
+1037	Nolan：Tôi báo tin vui cho ông bằng cách nào?
+1038	Moses：Tới thành phố của chúng tôi - Ngũ Quốc, dù thế nào chúng tôi cũng chào đón cậu.
+1039	Nolan：Vậy hẹn gặp lại.
+1040	Guldan：Loài người làm anh hùng gì ở đây, cút về cái xe nôi cũ nát của các ngươi đi!
+1041	Nolan：Nói thật, ấn tượng đầu tiên của tôi về các ngươi chẳng tốt chút nào.
+1042	Guldan：E là ngay sau đây ấn tượng của ngươi về ta còn tệ hơn!
+1043	Nolan：Vậy thì tới đây!
+1044	Guldan：Loài người đáng ghét! Sớm muộn ta cũng tự tay vặn gãy cổ ngươi...
+1045	?：Quả nhiên không phụ kỳ vọng của ta, không hổ là con trai Frederick.
+1046	Nolan：Ông là ai?!
+1047	?：Ta chính là kẻ thù số một của Liên minh Doanh nghiệp - thủ lĩnh Hiệp sĩ Teuton, Công tước Schwab. Còn em, có thể gọi ta là anh trai.
+1048	Nolan：Cái gì...
+1049	Công tước Schwab：Ta biết em rất muốn biết sự thật, đi theo ta, ta sẽ cho em biết vài chuyện thú vị.
+1050	Giới thiệu nhân vật： Công tước Schwab, thủ lĩnh Hiệp sĩ Teuton, tự xưng là anh trai Nolan, luôn là tội phạm bị truy nã hàng đầu của Liên minh Doanh nghiệp.
+1051	Nolan：Trời ơi! Gã này đúng là vạm vỡ.
+1052	Guldan：Ngươi đang lẩm bẩm di ngôn à? Mau xông lên đi!!!
+1053	Nolan：Guldan, ngươi phải trả giá cho hành vi man rợ của mình!
+1054	Nolan：Tên này! Còn định chạy!
+1055	Công tước Schwab：Cuối cùng chúng ta vẫn gặp nhau ở đây.
+1056	Nolan：Tôi tới đây để chấm dứt sự tàn bạo của ông, ngăn bi kịch lan rộng.
+1057	Công tước Schwab：Em muốn phản bội gia tộc sao? Chắc em đã xem đoạn phim cha ghi lại rồi.
+1058	Nolan：Tôi không phản bội, tôi cũng chưa từng chọn như vậy, và đoạn phim đó chẳng liên quan gì tới ông.
+1059	Công tước Schwab：Nhục nhã biết bao! Nhục nhã biết bao! Cha ơi, con của cha phản bội cha thế này đây! Cha, hôm nay con sẽ chứng minh ai mới là người kế thừa vinh quang của cha!
+1060	Nolan：Giờ tôi đã chẳng còn gì cả... ông nghĩ mình được gì từ chuyện này?
+1061	Công tước Schwab：Cha! Không... không thể nào......
+1062	Meda：Nolan! Tốt quá, trời phù hộ tôi còn được gặp lại cậu!
+1063	Nolan：Meda, chúng ta đã chẳng còn gì nữa. Từng có lúc, từng có lúc chúng ta, Nebu Jr, Hippolyte đã vui vẻ cười đùa bên nhau biết bao...
+1064	Nolan：Nebu, cậu đã thấy gì ở bên kia cánh cửa? Tôi ước gì được cảm nhận giống như cậu.
+1065	Tạm biệt... Nolan... Meda...... Cha...
+1066	Hippolyte......
+1067	Đã hoàn thành toàn bộ màn chơi, muốn đạt hoàn hảo có thể tiếp tục chơi.
+1068	Cuối cùng, cảm ơn bạn đã ủng hộ trò chơi!
+1069	Guldan：Lại gặp nhau rồi, thằng nhóc miệng còn hơi sữa.
+1070	Nolan：Tôi nhớ ông từng nói muốn vặn gãy cổ tôi, vậy để tôi xem thử.
+1071	Guldan：Gà trống non ngây thơ, ta sẽ làm vậy.
+1072	Sau khi đánh bại Khan Guldan ở Vùng trũng Attila, liên minh mới cuối cùng cũng chính thức hình thành. Cùng lúc đó Meda cũng biết được thời gian cụ thể anh cô kết hôn với Hippolyte. Thám báo Phi Hành Giả Tinh Vân cũng biết ở một vùng biên viễn đang có rất nhiều người Teuton bí mật tập kết.
+1073	Guldan：Loài người! Coi như ta đánh giá thấp ngươi, tới Astana tìm ta! Có lẽ ta nên cân nhắc ai mới thật sự là kẻ thù.
+1074	Nolan：Chờ tôi ở đó, Guldan.
+1075	Haidu："Không cần nghĩ cũng biết, chắc chắn bị lão già không biết nghỉ đó phát hiện rồi!"
+1076	Nolan："Ọe, trời ơi, ít ra theo tôi thấy các người vẫn có điểm chung..."
+1077	Nolan："Phù, sau này chuyện nhà kiểu này cứ để ông ta tự giải quyết thì hơn."
+1078	Nebu Jr：Lạ thật, những kẻ địch này tôi chưa từng nghe nói, rốt cuộc chúng là gì?
+1079	Nolan：......, không rõ, cứ đi tìm hiểu trước đã.
+1080	Hiệp sĩ Teuton：Hahahaha, e là người Liên minh Doanh nghiệp còn chưa biết chúng ta đã chiếm nơi này!
+1081	Nebu Jr：Chết tiệt! Lại là đám này, Hiệp sĩ Teuton rốt cuộc có lai lịch gì?!
+1082	Hiệp sĩ Teuton：Muốn trách thì trách Liên minh Doanh nghiệp các ngươi không đủ sức bảo vệ họ, hahaha!
+1083	Nebu Jr：Nolan! Lên thôi, ít nhất cứ đánh bại chúng đã!
+1084	Nolan：Chỉ chờ câu này của cậu thôi!
+1085	Hippolyte：Giờ làm sao đây? Nebu Jr?
+1086	Nebu Jr：Không ngờ Pháo đài Bavaria quả thật đã bị chiếm, chúng ta về liên minh nghỉ ngơi trước đã, tiện thể đích thân báo việc này cho cha.
+1087	Nolan：Được, Nebu Jr, nghe cậu.
+1088	Nebu Jr：Người ở đây bị các ngươi đưa đi đâu hết rồi?
+1089	Nolan：Mau nói vị trí con tin, nếu không muốn lớp vỏ sắt của ngươi thêm vài vết móp.
+1090	Kẻ Canh Gác：Loài người tạo ra ta nhưng lại bị một nhóm người khác tiêu diệt, đây là trí tuệ vĩ đại của các ngươi sao?
+1091	Nolan：Ít nhất không phải tôi tạo ra ngươi, mau nói vị trí con tin!
+1092	Kẻ Canh Gác：Mỉa mai thật, hahaha. Trong đám zombie các ngươi vừa diệt, có khi có cả bạn bè cũ của các ngươi. Cũng như các ngươi giết ta, các ngươi cũng đã giết họ.
+1093	Nolan：Lẽ nào... lẽ nào các con tin đều......
+1094	Nebu Jr：Không thể nào...
+1095	Kẻ Canh Gác：Hối hận đi, loài người, đây là trí tuệ của các ngươi. Nói cho cùng số phận họ với lũ vỏ sắt bọn ta có khác gì đâu, bọn ta là công cụ do loài người tạo ra, còn họ cũng chỉ là công cụ mà thôi.
+1096	Nebu Jr：Nhìn xem chúng ta đã làm gì! Nolan. Tôi không thể tin, tay tôi đầy máu của dân mình.
+1097	Nolan：Tôi biết, nhưng sự đã rồi, chúng ta chỉ có thể đối mặt hiện thực.
+1098	Nebu Jr：Đây là nhiệm vụ quan trọng đầu tiên của chúng ta, lẽ ra tôi phải bảo vệ họ, nhưng...
+1099	Hippolyte：Ít nhất chúng ta phải mạnh mẽ lên! Cùng nhau tìm ra kẻ cầm đầu, bắt hắn đền tội...
+1100	?：Hahahahahaha! Người các ngươi tìm chính là ta.
+1101	Nebu Jr：Đáng ghét! Không thể tha thứ!
+1102	?：Bình tĩnh, chàng trai trẻ. Địa vị của ngươi là thứ nhiều người cả đời không với tới được.
+1103	?：Còn em, hãy nhớ ta, sẽ có ngày ta kể cho em nghe câu chuyện về cha em.
+1104	Nolan：Ông rốt cuộc đang nói nhảm gì vậy?
+1105	?：Kiên nhẫn chút, sớm muộn gì em cũng sẽ gặp lại ta!
+1106	Nolan：Tên này có lẽ biết vị trí con tin.
+1107	Nebu Jr：E là không đánh bại nó thì nó không nói đâu. Quân tiếp viện của địch để tôi và Hippolyte kìm chân, ở đây giao cho cậu, Nolan!
+1108	Nolan：Mau nói Schwab ở đâu?! Ta muốn gặp hắn!
+1109	Kẻ Canh Gác：Chỉ khi đánh bại ta mới mở được công tắc vào trong pháo đài, nhưng còn phải xem ngươi có bản lĩnh đó không.
+1110	Nolan：Đơn giản thôi.
+1111	?：Cạch!
+1112	Nolan：Hình như có tiếng cổng mở.
+1113	Tổng đốc Teuton：Chiến binh Liên minh Doanh nghiệp, nếu được ta thật muốn làm thịt ngươi!
+1114	Nolan：Nhưng rất tiếc, ngươi không làm được.
+1115	Tổng đốc Teuton：Teuton vạn tuế!
+1116	Nolan：Điều gì đã cho chúng thứ sức mạnh tinh thần đáng sợ này...
+1117	Nolan：Schwab!
+1118	Công tước Schwab：Hừ hừ, Nolan, ta biết em sẽ theo tới.
+1119	Nolan：Rốt cuộc ông đã che giấu sự thật gì?!
+1120	Công tước Schwab：Trước hết ta phải nói, em và ta là anh em ruột chính hiệu, trong người chúng ta đều chảy dòng máu gia tộc Frederick!
+1121	Nolan：Ông và tôi là anh em? Không thể nào! Ông đang mê hoặc tôi, ông nghĩ tôi sẽ tin trò lừa này à?!
+1122	Công tước Schwab：Liên minh Doanh nghiệp mới là trò lừa, Nolan! Đi cùng ta, chấn hưng vinh quang gia tộc Frederick, đoạt lại thế giới thuộc về chúng ta!
+1123	Nolan：Đủ rồi! Cha tôi chết vì chiến tranh! Nên ông đừng hòng thành công, tôi sẽ lấy thân phận Cận vệ Liên minh Doanh nghiệp đưa ông về chịu xét xử!
+1124	Công tước Schwab：Sinh ra là anh em thì cả đời là anh em, sớm muộn em sẽ chấp nhận số mệnh này, em không có lựa chọn!
+1125	Nolan：Chết tiệt, ông nghĩ tôi tin mấy lời ma quỷ này à! Tôi sẽ bắt ông về thẩm vấn ngay bây giờ!
+1126	Công tước Schwab：Rất tiếc, ta nghĩ chúng ta chỉ nói được tới đây. Lát nữa còn một màn kịch hay chờ em, thứ lỗi ta không tiếp được.
+1127	Nolan：Khoan đã!
+1128	Nebu Jr：Nolan, không ngờ cậu lại cấu kết với Hiệp sĩ Teuton!
+1129	Sau khi trở về, Nolan sẽ bị liên minh thẩm vấn. Còn cha nuôi cậu chẳng có chút vui mừng nào, vì ông không sao tin nổi Nolan, đứa con ông quan tâm nhất, lại bị giải về như một tội phạm. Ông nhớ tới cha của Nolan, người bạn thân nhất ngày xưa của ông...
+1130	Nolan：Nebu Jr! Sao các cậu lại tới đây?! Đây... đây là bẫy của Schwab!
+1131	Nebu Jr：Nolan, tha lỗi cho tôi, cậu đã là phạm nhân rồi.
+1132	 tệ
+1133	$1Bạn túng tiền không mua được món đồ mình muốn? Gửi tin nhắn để nhận ngay 10000 tiền. Phí tin nhắn chỉ 2 tệ, cần gửi 1 tin, 2 tệ/tin (chưa gồm cước), có gửi không?
+1134	$1Bạn cam lòng chịu kết cục này sao? Gửi tin nhắn để hồi sinh ngay tại chỗ đầy HP và năng lượng, bất tử trong 100 giây, mau đi báo thù! Phí tin nhắn chỉ 2 tệ, cần gửi 1 tin, 2 tệ/tin (chưa gồm cước), có gửi không?
+1135	$1Bị người ngoài hành tinh chà đạp vì chênh lệch cấp? Lên nhanh 5 cấp (tối đa cấp 50) để báo thù, tặng thêm 5 điểm kỹ năng. Phí tin nhắn chỉ 2 tệ, cần gửi 1 tin, 2 tệ/tin (chưa gồm cước), có gửi không?
+1136	$1Tiêu 12 tệ là được nhận miễn phí： 40000 tiền và 15 điểm kỹ năng, cảm ơn bạn đã ủng hộ trò chơi.
+1137	$1Tiêu 16 tệ là được nhận miễn phí： 60000 tiền và 20 điểm kỹ năng, cảm ơn bạn đã ủng hộ trò chơi.
+1138	$1Tiêu 8 tệ là được nhận miễn phí： 20000 tiền và 10 điểm kỹ năng, cảm ơn bạn đã ủng hộ trò chơi.
+1139	$1Khu mỏ giúp bạn khai thác tiền, nhưng bạn đã chán chạy đi chạy lại? Thuê quản gia khu mỏ để tự động nhặt tiền và vật liệu. Phí tin nhắn chỉ 2 tệ, cần gửi 1 tin, 2 tệ/tin (chưa gồm cước), có gửi không?
+1140	$1Frederick rốt cuộc sống hay chết? Nền hòa bình mới ẩn chứa tai họa gì? Số phận các vì sao sẽ do bạn nắm giữ! Phí tin nhắn chỉ 2 tệ, cần gửi 1 tin, 2 tệ/tin (chưa gồm cước), có gửi không?
+1141	Gói quà lớn
+1142	Nhận gói quà 12 tệ
+1143	Nhận gói quà 16 tệ
+1144	Nhận gói quà 8 tệ
+1145	Hồi sinh tại chỗ
+1146	Đã tiêu 
+1147	Đã mua quản gia khu mỏ.
+1148	Đã nhận gói quà này.
+1149	Quản gia mỏ
+1150	Xác thực bản quyền
+1151	Đã đạt cấp tối đa, không cần mua.
+1152	Gói quà đẹp
+1153	Mua cấp
+1154	Mua tiền
+1155	Gói quà mua sắm
+1156	 Hệ thống và thành phố：| Phím 2, 4, 6, 8： di chuyển| Phím 5: xác nhận| Phím mềm trái: menu hệ thống, tùy chọn| Phím mềm phải: menu game, quay lại| | Chiến đấu:| Phím 2, 4, 6, 8: di chuyển| Nhấn đúp 4, 6: lướt| Phím 5: tấn công| Phím 1: đổi vũ khí| Phím 3: dùng súng| Phím 7, 9: dùng kỹ năng| Phím *: danh sách nhiệm vụ| Phím #: lên/xuống thú cưỡi| Phím 0: xem bản đồ|
+1157	$1Mỗi $2thành phố$1 rèn được trang bị khác nhau.
+1158	$1Trong $2Cửa hàng$1 ở $2phím mềm trái$1: mua đắt bán rẻ.
+1159	$1Trong $2Trợ giúp$1 có thể xem $2vật liệu rơi$1.
+1160	$1Kẻ địch không có giáp thì không hiện giáp.
+1161	$1Dùng khéo $2thú cưỡi$1 giúp bạn đi lại thông suốt.
+1162	$2Nâng cấp thành phố$1 để Xưởng quân sự rèn thêm trang bị.
+1163	$2Giáp đỏ$1 nên đánh bằng găng đấm.
+1164	$2Giáp xanh$1 nên đánh bằng kiếm.
+1165	$2Giáp vàng$1 đánh bằng kiếm hay găng đấm đều được.
+1166	Hiện bản đồ
+1167	Công ty TNHH Công nghệ Không dây Hoa Ngu Bắc Kinh là chủ sở hữu bản quyền phần mềm trò chơi "Tinh Vân Truyền Thuyết (Hoa Ngu)". Công ty TNHH Công nghệ Không dây Hoa Ngu Bắc Kinh ủy quyền cho Sina Wireless vận hành thương mại trò chơi này tại Trung Quốc đại lục. Sina Wireless đồng thời phụ trách chăm sóc khách hàng và hỗ trợ kỹ thuật cho trò chơi.|Điện thoại CSKH： 4006900000|Email CSKH：|bjkf@staff.sina.com.cn|Nhà phát triển： Hoa Ngu Wireless
+1168	Nâng cấp thành phố để tăng giới hạn thuê thợ mỏ.
+1169	Không
+1170	Trong thành phố và khi chiến đấu bấm $2phím *$1 để xem nhiệm vụ.
+1171	Đại Kavkaz
+1172	Đại Kavkaz, Tuyết nguyên Bell
+1173	Ngoài pháo đài Tiểu Á, Tiền đồn Mia, Cao nguyên Golan
+1174	Có tại kênh game
+1175	Đồ rơi
+1176	Phân bố địch
+1177	Bách khoa địch
+1178	Đồi Skagerrak, Vịnh Bắc, Pháo đài Bavaria
+1179	New Zion, Đồng bằng Ural
+1180	Có
+1181	Bật âm thanh?
+1182	Thoát kết nối mạng?
+1183	Thêm nhiều game hay
+1184	Đường trạm Hailar, Thành Kent, Hẻm núi Thermodon, Trong pháo đài Tiểu Á
+1185	Đường trạm Hailar, Thành Kent, Hẻm núi Thermodon, Trong pháo đài Tiểu Á, Tiền đồn Mia, New Zion, Cao nguyên Golan
+1186	Cách chơi
+1187	Tạm dừng
+1188	Hẻm núi Thermodon, Ngoài pháo đài Tiểu Á, Cao nguyên Golan
+1189	Đồng ý
+1190	Thoát game?
+1191	Thành Kent, Tiền đồn Mia
+1192	Quay lại
+1193	Thoát
+1194	Vùng trũng Attila, Đồng bằng Ural
+1195	Vùng trũng Attila, Ngoài pháo đài Tiểu Á, Tiền đồn Mia, New Zion, Cao nguyên Golan
+1196	Pháo đài Acre, Núi Yenisei, Đường trạm Hailar, Đồng bằng Ural, Tiền đồn Mia
+1197	Pháo đài Acre, Ngoài pháo đài Tiểu Á
+1198	Pháo đài Acre, New Zion
+1199	Pháo đài Acre, New Zion, Núi Yenisei, Tiền đồn Mia
+1200	Pháo đài Acre, Vùng trũng Attila, Tiền đồn Mia, New Zion, Cao nguyên Golan
+1201	 giây
+1202	Dùng Viên nang vạn năng
+1203	Zombie
+1204	Kiếm sĩ
+1205	Vật tổ tăng tốc
+1206	Thủy quái Bắc Hải
+1207	Vật tổ trị liệu
+1208	Khan Guldan
+1209	Kiếm sĩ phản lực
+1210	U linh phản lực
+1211	Lính súng phản lực
+1212	Lính lửa phản lực
+1213	Lính rắn lửa phản lực
+1214	Lính bắn tỉa phản lực
+1215	Quỷ kiếm sĩ phản lực
+1216	Quỷ thương binh phản lực
+1217	Ám thuật sĩ Thánh Điện
+1218	Ám võ sĩ Thánh Điện
+1219	Thuật sĩ Thánh Điện
+1220	Võ sĩ Thánh Điện
+1221	Mìn
+1222	Độ bền thú cưỡi bằng 0
+1223	Điểm lưu
+1224	Kẻ Canh Gác
+1225	Nebu Jr
+1226	Nebu
+1227	Xúc tu thủy quái
+1228	U linh
+1229	Sói Chiến
+1230	Chỉ huy chiến trường
+1231	Kỹ năng đang hồi
+1232	Y tá
+1233	Chỉ huy
+1234	Kẻ gặt
+1235	Vật tổ tấn công
+1236	Bất tử 
+1237	Chưa trang bị thú cưỡi
+1238	Chưa trang bị kỹ năng
+1239	Vệ binh máy
+1240	Giáp máy
+1241	Thánh hiệp sĩ Teuton
+1242	Hiệp sĩ Teuton
+1243	Lính súng
+1244	Rồng lửa
+1245	Lính lửa
+1246	Lính rắn lửa
+1247	Zombie cuồng bạo
+1248	Vật tổ cuồng bạo
+1249	Lính bắn tỉa
+1250	Sói
+1251	Chiến binh Rom
+1252	Cuồng chiến binh Rom
+1253	Pháp sư Rom
+1254	Túi đã đầy, có thể mở rộng túi ở cửa hàng
+1255	Không đủ năng lượng
+1256	Kẻ gặt hoang dã
+1257	Chức năng chưa mở!
+1258	Khu vực này không xem được!
+1259	Khu vực chưa mở, không thể đi qua
+1260	Nolan
+1261	Carmen Bão Tố
+1262	Isa Phong Ngữ
+1263	Y tá cao cấp
+1264	Pháp sư cấp cao
+1265	Quỷ kiếm sĩ
+1266	Quỷ thương binh
+1267	Phản sát thương
+1268	Bị đánh
+1269	Tấn công
+1270	Chết
+1271	HP+
+1272	Di chuyển
+1273	Đứng
+1274	Phòng thủ
+1275	Phím 0: bật/tắt bản đồ nhỏ
+1276	Phím 0: trợ giúp
+1277	Một anh hùng vĩ đại sao có thể thiếu trang bị đủ tốt? Nếu bạn là chiến binh bẩm sinh, hãy chọn ở đây bộ trang bị hợp với bạn.
+1278	Chính
+1279	Nơi giao nhận nhiệm vụ, có vô số sân khấu để bạn thể hiện tài năng.
+1280	Dùng Tinh thể Warp
+1281	Xưởng quân sự
+1282	Lối ra
+1283	Công trình trái tim của thành phố, tại đây bạn có thể nâng cấp thành phố, cũng có thể lưu lại hành trình phiêu lưu vĩ đại của bạn.
+1284	Boss
+1285	Lưu
+1286	Nebu I：Dùng $2Tinh thể Warp$1 sẽ lập tức trở về không gian, như vậy tránh được nhiều phiền phức.
+1287	Nebu I：Đúng, đây là vật phẩm chế tạo bằng công nghệ warp tiên tiến nhất, vào $2Túi đồ$1 tìm $2Tinh thể Warp$1 rồi dùng là được.
+1288	Nebu I：Nolan, nhiệm vụ đầu tiên suôn sẻ chứ?
+1289	Nebu：Mau tới Đồi Skagerrak chi viện đi.
+1290	đã mở.
+1291	Tòa thị chính
+1292	Kiếm và găng đấm đều gây sát thương bình thường lên giáp vàng
+1293	Kiếm gây sát thương cao hơn lên giáp xanh
+1294	Găng đấm gây sát thương cao hơn lên giáp đỏ
+1295	Bấm phím # để cưỡi thú
+1296	Bấm phím 0 để tiếp tục
+1297	Bấm phím 1 để đổi vũ khí
+1298	Bấm phím 5 để xác nhận
+1299	Bấm phím 5 để chọn kỹ năng kiếm
+1300	Bấm phím mềm phải
+1301	Bấm phím mềm trái!
+1302	Phụ
+1303	Hàng bán chạy nhất khắp các vì sao đều có đủ ở đây, tất nhiên bạn phải trả đủ tiền mới được.
+1304	Đền Tinh Tế
+1305	Khu mỏ
+1306	Trang bị kỹ năng
+1307	Hành tinh chưa mở, không thể đi qua
+1308	Hãy chọn Đền Tinh Tế
+1309	Hãy trang bị kỹ năng
+1310	Hãy chọn Chém lưỡi kiếm
+1311	Hãy chọn kỹ năng kiếm
+1312	Hãy chọn Mở
+1313	Hãy chọn giao diện nâng kỹ năng
+1314	Hãy chọn Tinh thể Warp
+1315	Hãy chọn túi vật phẩm
+1316	Hãy chọn giao diện xem túi
+1317	Hãy chọn Trang bị
+1318	Nolan：$2Tinh thể Warp$1?
+1319	Nolan：Vâng, con trở về ngay!
+1320	Nolan：Đã hoàn thành rồi! Con đang định về New Zion, nhưng trên đường về e là khó tránh đụng độ kẻ địch.
+1321	Trung tâm thương mại
+1322	Bước qua cánh cửa này, thế giới bên ngoài không còn an toàn!
+1323	Vào giao diện nâng kỹ năng
+1324	Vào Đền Tinh Tế
+1325	Vào giao diện xem túi
+1326	Vào túi đạo cụ
+1327	Chọn Chém lưỡi kiếm rồi bấm phím 5
+1328	Chọn Nâng cấp thành phố
+1329	Chọn Nâng cấp thành phố
+1330	Chọn mở kỹ năng
+1331	Chọn kỹ năng và trang bị
+1332	Chọn Tinh thể Warp rồi bấm phím 5
+1333	Chọn Túi không gian
+1334	Nơi khai thác xu pha lê và vật liệu, cần thuê thợ khai thác làm việc cho bạn. Tất nhiên thuê càng nhiều thợ thì thu nhập càng lớn. Chúc bạn may mắn, chiến binh vĩ đại của tôi.
+1335	$0(Hoa Ngu)
+1336	Trò chơi mới
+1337	Thêm game
+1338	Giới thiệu
+1339	Trợ giúp
+1340	Cài đặt
+1341	Chơi tiếp
+1342	Thoát game
+1343	Chơi lại từ đầu sẽ xóa dữ liệu lưu, có chơi lại không?
+1344	 1 cái
+1345	 cái
+1346	 hồi HP và năng lượng?
+1347	 xu pha lê,
+1348	 xác nhận mua?
+1349	 xác nhận bán?
+1350	 xác nhận mua?
+1351	 cấp
+1352	 thành phố cấp
+1353	 đặt lại điểm kỹ năng?
+1354	 tiền, có rèn không?
+1355	 sách rèn
+1356	 %/giây
+1357	$11 cái
+1358	$1Thú cưỡi：
+1359	$1Vũ khí cần：
+1360	$1Chặt đứt $2xúc tu$1 để thủy quái yếu đi
+1361	$1Công: $
+1362	$1ST bạo kích: $
+1363	$1Tỉ lệ bạo kích: $
+1364	$1HP: $
+1365	$1Đánh bằng $2găng đấm$1 để ngắt kỹ năng
+1366	$1Đánh bằng $2găng đấm$1 hiệu quả hơn
+1367	$1Đào mỏ xong, nhận được 
+1368	$1giây
+1369	$1Đủ điều kiện để mở
+1370	$1Năng lượng: $
+1371	$1Hãy giữ phím $27 $1
+1372	$1Hãy giữ phím $29 $1
+1373	$1Tiền x 
+1374	$1Thủ: $
+1375	$1Cần trang bị $6Đồng tử thời không
+1376	$2Thủy quái$1 đang suy yếu, mau tấn công
+1377	$2Đã mở
+1378	$2Túi đã đầy
+1379	$6Kỹ năng cần：
+1380	,Nội lực+
+1381	Phím 7
+1382	Phím 9
+1383	x1,
+1384	ST cấp sau：
+1385	ST cấp sau： công cơ bản x 
+1386	Cấp sau：
+1387	Cấp sau： tăng ST cơ bản 
+1388	Cấp sau： tăng ST tuyệt chiêu 
+1389	Cấp sau： tăng ST kiếm 
+1390	Cấp sau： tăng ST bạo kích 
+1391	Cấp sau： tăng tỉ lệ bạo kích 
+1392	Cấp sau： tăng thủ 
+1393	Cấp sau： hồi HP 
+1394	Vứt
+1395	Đã vứt
+1396	Nhiệm vụ chính
+1397	Mua thành công
+1398	Mua bán vật liệu
+1399	Ngũ Quốc nay là thành phố công nghiệp lớn nhất thiên hà, bạn sẽ điều khiển gã khổng lồ này thế nào?
+1400	Loài người, chọn vũ khí ngươi thích đi!
+1401	Địa điểm
+1402	Phần thưởng
+1403	Mô tả
+1404	Đã đủ số nhiệm vụ, không thể nhận thêm
+1405	Chưa đủ điều kiện, không thể nộp
+1406	Mục tiêu
+1407	Ô 1
+1408	Ô 2
+1409	Ô một
+1410	Ô hai
+1411	Bạn có thể xây dựng thành phố ở đây, cũng có thể lưu lại hành trình phiêu lưu vĩ đại của bạn.
+1412	Dùng
+1413	Dùng thành công. HP+
+1414	Dùng thành công, trạng thái đã bình thường
+1415	Dùng thành công, độ bền thú cưỡi đã đầy.
+1416	Dùng thành công, HP+
+1417	Dùng thành công, sức chứa túi tăng lên
+1418	Dùng thành công, năng lượng+
+1419	Bán thành công
+1420	Bán trang bị
+1421	Bán đạo cụ
+1422	Đã tới địa điểm nhiệm vụ
+1423	Bộ sưu tập kiếm
+1424	Thời gian còn：
+1425	Thời gian còn： 00:00
+1426	Nâng cấp
+1427	Nâng cấp thành phố
+1428	Nâng cấp thành phố New Zion lên：
+1429	Điều kiện nâng cấp
+1430	Bán thành công
+1431	Tháo
+1432	Tháo thành công
+1433	Tháo thành công.
+1434	Phản sát thương
+1435	Có thể nhận $2vật liệu$1： $
+1436	Có thể nhận $2vật liệu$1： không
+1437	Có thể nhận $7tiền$1：
+1438	Chào! Cần gì không? Tôi đáp ứng bạn mọi thứ.
+1439	Mô tả thú cưỡi
+1440	Chỉ số thú cưỡi
+1441	Xem thú cưỡi
+1442	Độ bền thú cưỡi đã đầy, không thể dùng
+1443	Thú cưỡi：
+1444	Thông tin thành phố
+1445	Nâng cấp thành phố
+1446	Thành phố đã lên 
+1447	Cấp thành phố hiện tại：
+1448	Cấp thành phố tối đa： cấp 3
+1449	Cấp thành phố đã tối đa
+1450	Tăng ST cơ bản
+1451	Tăng ST tuyệt chiêu
+1452	Tăng ST bạo kích
+1453	Tăng tỉ lệ bạo kích
+1454	Tăng tỉ lệ rơi đồ
+1455	Tăng HP tối đa 
+1456	Tăng tỉ lệ choáng
+1457	Tăng năng lượng tối đa 
+1458	Tăng tốc độ di chuyển
+1459	Tăng tỉ lệ né
+1460	Tăng phòng thủ
+1461	Đang lưu...
+1462	Lưu tiến độ
+1463	Xong
+1464	Nebu
+1465	Nebu I
+1466	Đã vứt!
+1467	Đã lưu.
+1468	Đã xong
+1469	Đã hồi phục.
+1470	Đã tự động thu!
+1471	Đã trang bị
+1472	Đang trang bị, không thể bán
+1473	Hippolyte
+1474	Dẫn chúng tôi tới phồn vinh, nơi đây sẽ là khởi đầu chinh phục vũ trụ!
+1475	Mở
+1476	ST cơ bản tăng hiện tại：
+1477	ST tuyệt chiêu tăng hiện tại：
+1478	ST kiếm tăng hiện tại：
+1479	ST bạo kích tăng hiện tại：
+1480	Tỉ lệ bạo kích tăng hiện tại：
+1481	HP tối đa tăng hiện tại 
+1482	Năng lượng tối đa tăng hiện tại 
+1483	Thủ tăng hiện tại：
+1484	HP hồi hiện tại：
+1485	Hiện không thể dùng Tinh thể Warp.
+1486	Hiện không có điểm kỹ năng
+1487	Trạng thái hiện tại không vào được cửa hàng!
+1488	Mỏ hiện không có thu nhập để nhận
+1489	ST cấp hiện tại：
+1490	Mau tới nhận đi!
+1491	Muốn để lại thêm vết thương trên người kẻ địch? Bạn tới đúng chỗ rồi!
+1492	Ta xưa nay không chào đón loài người! Nhưng thấy ngươi có ý cải thiện cái môi trường ồn ào ở đây...
+1493	Thuốc của chúng tôi đều là hàng tự nhiên.
+1494	hoặc
+1495	Mở rộng túi
+1496	Bất tử khi tung kỹ năng.
+1497	Mô tả kỹ năng
+1498	Chỉ số kỹ năng
+1499	Điểm KN:
+1500	Đã đặt lại điểm kỹ năng.
+1501	Bộ sưu tập găng
+1502	Hồi HP liên tục
+1503	Bấm phím 0 để quay lại
+1504	Bấm phím 5 để dừng
+1505	Bấm phím 5 để tiếp tục
+1506	Mô tả phụ kiện
+1507	Chỉ số phụ kiện
+1508	Nhiệm vụ phụ
+1509	Đánh hút năng lượng
+1510	Đánh hút máu
+1511	Công vĩnh viễn+
+1512	Bỏ thưởng
+1513	Xếp túi
+1514	Cấp thành phố New Zion  
+1515	Công tước Schwab
+1516	Không
+1517	Dừng thời gian 10 giây
+1518	Vứt bỏ?
+1519	Lưu tiến độ game?
+1520	Nhận nhiệm vụ?
+1521	Nộp nhiệm vụ?
+1522	Bỏ nhiệm vụ?
+1523	Tốn 
+1524	Tốn 1500 tiền để mở rộng túi?
+1525	Tốn tiền 
+1526	Về menu chính?
+1527	Có rèn không?
+1528	Tạm thời không thể khai thác
+1529	chưa mở.
+1530	Giáp máy： Giáp trụ thu được của một tổ chức trong chiến tranh, hàm lượng công nghệ rất cao, có kỹ năng Rải mìn và Xuyên quang tốc.
+1531	Thiếu vật liệu, mua vật liệu và rèn vũ khí tổng cộng tốn 
+1532	Xem
+1533	Xem thông tin chi tiết vật phẩm, trang bị vũ khí, dùng đạo cụ.
+1534	Trang bị này không thể có lại, chắc chắn bán?
+1535	Mô tả vũ khí
+1536	Chỉ số vũ khí
+1537	So với kiếm tiền của ngươi, ta khao khát tự do hơn!
+1538	Không có điểm kỹ năng
+1539	Không có vật liệu.
+1540	Không có vũ khí
+1541	Không có trang bị
+1542	Không có trang bị.
+1543	Không có đạo cụ.
+1544	Đã phá đảo
+1545	Rồng lửa： Liên minh Doanh nghiệp cấm mua bán loài này, vì năng lượng của nó vượt xa tưởng tượng, có kỹ năng Húc và Lửa địa ngục.
+1546	Trạng thái bình thường, không thể dùng đạo cụ.
+1547	Sói： Hậu duệ của thú cưỡi Nebu I năm xưa, chỉ nhận thiên tài có thực lực mạnh làm chủ nhân, có kỹ năng Húc và Gọi bầy sói.
+1548	HP và năng lượng đã đầy, không cần hồi.
+1549	HP và năng lượng đã đầy, không thể dùng đạo cụ.
+1550	HP đã đầy, không thể dùng đạo cụ.
+1551	HP vĩnh viễn+
+1552	Thợ mỏ
+1553	Thu nhập mỏ
+1554	Thợ mỏ  
+1555	Số thợ mỏ đã tối đa, không thể thuê thêm
+1556	Chắc chắn dùng?
+1557	Cấp 
+1558	Thiếu vũ khí cần để rèn.
+1559	Meda
+1560	Độ bền：
+1561	Trong túi không có Đồ tiếp tế.
+1562	Túi đã mở rộng tối đa.
+1563	Túi đã đầy, có thể mở rộng túi ở cửa hàng
+1564	Túi đã đầy, không thể nộp nhiệm vụ
+1565	Túi đã đầy, hãy dọn túi trước!
+1566	Túi đã đầy, hãy dọn túi rồi tới mỏ nhận!
+1567	Năng lượng+
+1568	Năng lượng đã đầy, không thể dùng đạo cụ.
+1569	Năng lượng vĩnh viễn+
+1570	Tiêu hao năng lượng：
+1571	Tốn tiền 
+1572	Nhận thưởng nhiệm vụ：
+1573	Nhận vật liệu
+1574	Frederick
+1575	Tiếp tế
+1576	Trang bị
+1577	Trang bị thành công
+1578	Trang bị thành công.
+1579	Mô tả trang bị
+1580	Chỉ số trang bị
+1581	Trang bị chưa mở
+1582	Túi trang bị
+1583	Phải biết là mấy thứ này phần lớn chúng tôi bán cho loài người rồi, so với đạo cụ tôi tin vào ma lực của pháp sư hơn.
+1584	Nhân vật đã chết, không thể dùng đạo cụ.
+1585	Nhiệm vụ này chưa mở!
+1586	Hãy nhớ đừng bán trái phép những vũ khí này cho bất kỳ ai.
+1587	Nolan
+1588	Mua thành công
+1589	Mua đạo cụ
+1590	Còn mua được 
+1591	Ở đây cái gì cũng có... như thể chúng tôi chưa từng có gì cả.
+1592	Ở đây giá tuy cao nhưng có khi lại cứu mạng bạn đấy.
+1593	Ẩn sĩ Cổ xưa
+1594	Chọn số lượng vứt：
+1595	Chọn số lượng mua：
+1596	Chọn số lượng bán：
+1597	Chọn số lượng thuê：
+1598	Túi đạo cụ
+1599	Đặt lại điểm kỹ năng
+1600	Không đủ tiền
+1601	Tiền：
+1602	Số tiền là 
+1603	Sách rèn
+1604	Thành phố rèn
+1605	Rèn thành công! Đã trang bị vũ khí
+1606	Rèn thành công, trang bị vũ khí không?
+1607	Vật liệu rèn
+1608	Rèn trang bị này cần 
+1609	Rèn trang bị này cần sách rèn
+1610	Rèn trang bị
+1611	Công cộng thêm：
+1612	Bạo kích cộng thêm：
+1613	Tỉ lệ bạo kích thêm：
+1614	Thủ cộng thêm：
+1615	Giảm tốc độ di chuyển của địch
+1616	Giảm tiêu hao năng lượng
+1617	Giảm thời gian hiệu ứng xấu
+1618	Cập nhật thông tin chi tiết các đạo cụ.
+1619	Thuê thợ mỏ
+1620	Thuê thợ mỏ thành công
+1621	Giá thuê： 200
+1622	Kỹ năng cấp trước chưa đạt cấp yêu cầu
+1623	Nhận thành công
+1624	Nhận thu nhập
+1625	Bộ sưu tập trang sức
+1626	, và nhận $
+1627	, nhận được tiền 
+1628	$1Frederick rốt cuộc sống hay chết? Nền hòa bình mới ẩn chứa tai họa gì? Số phận các vì sao sẽ do bạn nắm giữ! Phí tin nhắn chỉ 2 tệ, cần gửi 1 tin, 2 tệ/tin (chưa gồm cước), có gửi không?
+1629	Túi đã đầy, có thể mở rộng ở cửa hàng
+1630	Đứng trên trận dịch chuyển, chạm $2biểu tượng tấn công$1 để dịch chuyển tức thời sang bên kia
+1631	Chạm $2biểu tượng #$1 để cưỡi thú cưỡi.
+1632	$2Chạm biểu tượng 7, 9$1 để dùng kỹ năng thú cưỡi.
+1633	Frederick：À, quên nói với cậu, bạn già, muốn dạy dỗ đám man rợ đó thì chạm $2biểu tượng tấn công$1 để tấn công, nếu vũ khí của cậu chưa gỉ.
+1634	Frederick：Bạn già, đối phó lũ quái da dày thịt béo này phải dùng găng đấm tăng cường, chạm $2biểu tượng 1$1 để đổi. Giáp của quái vật có khác nhau đấy, tôi thật muốn nghe nắm đấm của cậu kêu "bùm bùm".
+1635	Chạm $2biểu tượng tấn công$1 để tấn công, $2biểu tượng 1$1 để đổi vũ khí.
+1636	Meda：Tiện thể, $2biểu tượng 3$1 là bắn đấy, nhưng dùng để hỗ trợ tấn công thôi.
+1637	Frederick：Chuyện này quan trọng, tôi sợ cậu quên chạm $2biểu tượng 7 và 9$1 sẽ tung tuyệt chiêu, nó giúp cậu và kẻ địch chơi vui hơn chút, phải không?
+1638	Chạm $2biểu tượng 7, 9$1 để tung tuyệt chiêu.
+1639	Nebu I：Du kích của quân Cộng hòa Liên sao rất xảo quyệt, ba đứa mỗi người dẫn một đội. Thông tin nhiệm vụ đã gửi cho các con, chạm $2biểu tượng *$1 để xem nhiệm vụ.
+1640	Mở mã bí mật
+1641	Xóa logo
+1642	Khởi tạo Camera
+1643	Khởi tạo Logic
+1644	Khởi tạo Menu
+1645	Xóa Menu
+1646	Khởi tạo mapm
+1647	Xóa mapm
+1648	Khởi tạo rolem
+1649	Khởi tạo ui
+1650	Xóa ui
+1651	Nạp bản đồ chiến đấu
+1652	Khởi tạo dữ liệu gameUi
+1653	Khởi tạo Box
+1654	Tạo nhân vật chính
+1655	Khởi tạo rèn
+1656	Tạo tài nguyên địch hiện tại
+1657	Tạo hiệu ứng sáng
+1658	Xóa nhân vật chính
+1659	Đặt ống kính
+1660	Sắp xếp
+1661	Khởi tạo NPC chiến đấu
+1662	Khởi tạo vị trí nhân vật chiến đấu
+1663	Nhạc chiến đấu
+1664	Khởi tạo font chấm điểm
+1665	Khởi tạo bản đồ lớn
+1666	Khởi tạo thành phố
+1667	Xóa bản đồ lớn
+1668	Xóa thành phố
+1669	Xóa tài nguyên chiến đấu
+1670	Nạp ảnh vật phẩm
+1671	Đổi ảnh vũ khí
+1672	Xóa tài nguyên lớp
+1673	Xóa tài nguyên nhân vật chính
+1674	Game mới
+1675	Nạp tài nguyên cửa
+1676	Khởi tạo Text
+1677	Khởi tạo lại dữ liệu nhân vật
+1678	Khởi tạo số bật lên
+1679	Tạo lại nhân vật chính
+1680	Đọc dữ liệu lưu
+1681	Đặt lại ảnh vũ khí và thú cưỡi
+1682	Lưu game
+1683	Khởi tạo chiến đấu khi chơi tiếp
+1684	Nạp biểu cảm
+1685	Lưu tạm dữ liệu nhân vật chính
+1686	Đọc dữ liệu tạm nhân vật
+1687	Khởi tạo dữ liệu nhân vật chính
+1688	Thêm lại vật phẩm
+1689	Khởi tạo HP nhân vật
+1690	Đổi thú cưỡi
+1691	Nhạc menu chính
+1692	Nhạc vũ trụ
+1693	Nhạc thành phố
+1694	$1Trong $2Cửa hàng$1: mua đắt bán rẻ.
+1695	Trong thành phố và khi chiến đấu chạm $2biểu tượng *$1 để xem nhiệm vụ.
+1696	Vuốt trái phải để chỉnh âm lượng
+1697	 Hệ thống và thành phố：| Chạm góc dưới trái màn hình: menu hệ thống, tùy chọn| Chạm góc dưới phải màn hình: menu game, quay lại| | Chiến đấu：| Chạm biểu tượng lên xuống trái phải bên trái màn hình: di chuyển| Chạm đúp biểu tượng trái phải bên trái: lướt| Chạm biểu tượng vũ khí bên phải: tấn công| Chạm biểu tượng 1: đổi vũ khí| Chạm biểu tượng 3: dùng súng| Chạm biểu tượng 7, 9: dùng kỹ năng| Chạm biểu tượng *: danh sách nhiệm vụ| Chạm biểu tượng #: lên/xuống thú cưỡi| Chạm biểu tượng 0: xem bản đồ| Chạm biểu tượng thứ nhất góc trên phải: menu hệ thống| Chạm biểu tượng thứ hai góc trên phải: menu game| |Lưu ý đặc biệt：|Trò chơi này chỉ hỗ trợ màn hình ngang và cảm ứng.
+1698	Xác nhận
+1699	Người chơi
+1700	Đồng minh
+1701	Cửa
+1702	Hiệu ứng
+1703	Vật triệu hồi
+1704	Lính
+1705	Đồ rơi
+1706	Vị trí người triệu hồi
+1707	Vị trí mục tiêu
+1708	Ngẫu nhiên trong màn hình
+1709	Theo mục tiêu
+1710	Vị trí mục tiêu chéo 45 độ
+1711	Ngẫu nhiên quanh người triệu hồi
+1712	Ngẫu nhiên quanh mục tiêu
+1713	Quét trong màn hình
+1714	Truy đuổi
+1715	Ra khỏi màn hình ngang
+1716	Chạm đất
+1717	Trúng
+1718	Ra khỏi màn hình ngang hai lần
+1719	Ra khỏi vùng theo chiều dọc
+1720	Diễn xong động tác
+1721	Người triệu hồi biến mất
+1722	Người triệu hồi
+1723	Mục tiêu
+1724	Mọi đồng đội
+1725	Mọi kẻ địch
+1726	Vùng ngẫu nhiên
+1727	Nhân vật chính
+1728	Khan Guldan sơ cấp
+1729	Khan Guldan cao cấp
+1730	Carmen Bão Tố sơ cấp
+1731	Carmen Bão Tố cao cấp
+1732	Isa Phong Ngữ sơ cấp
+1733	Isa Phong Ngữ cao cấp
+1734	Người máy sơ cấp
+1735	Người máy cao cấp
+1736	Thủy quái Bắc Hải sơ cấp
+1737	Thủy quái Bắc Hải cao cấp
+1738	Kiếm binh không phản lực sơ cấp
+1739	Kiếm binh không phản lực cao cấp
+1740	Thương binh không phản lực sơ cấp
+1741	Thương binh không phản lực cao cấp
+1742	Hỏa binh không phản lực sơ cấp
+1743	Hỏa binh không phản lực cao cấp
+1744	Lính bắn tỉa không phản lực sơ cấp
+1745	Lính bắn tỉa không phản lực cao cấp
+1746	Kiếm binh phản lực sơ cấp
+1747	Kiếm binh phản lực cao cấp
+1748	Thương binh phản lực sơ cấp
+1749	Thương binh phản lực cao cấp
+1750	Hỏa binh phản lực sơ cấp
+1751	Hỏa binh phản lực cao cấp
+1752	Lính bắn tỉa phản lực sơ cấp
+1753	Lính bắn tỉa phản lực cao cấp
+1754	Y tá sơ cấp
+1755	Chỉ huy chiến trường sơ cấp
+1756	Chỉ huy chiến trường cao cấp
+1757	Hiệp sĩ Teuton sơ cấp
+1758	Hiệp sĩ Teuton cao cấp
+1759	Chiến binh Rom sơ cấp
+1760	Chiến binh Rom cao cấp
+1761	Pháp sư Rom sơ cấp
+1762	Pháp sư Rom cao cấp
+1763	Võ sĩ Phi Hành Giả sơ cấp
+1764	Võ sĩ Phi Hành Giả cao cấp
+1765	Trinh sát Phi Hành Giả sơ cấp
+1766	Trinh sát Phi Hành Giả cao cấp
+1767	Chiến binh tộc Sói Chiến sơ cấp
+1768	Chiến binh tộc Sói Chiến cao cấp
+1769	Sói sơ cấp
+1770	Sói cao cấp
+1771	Zombie sơ cấp
+1772	Zombie cao cấp
+1773	Nhân vật chính cưỡi sói
+1774	Rồng lửa
+1775	Nebu già
+1776	Mìn
+1777	Tăng công
+1778	Tăng tốc
+1779	Trị liệu
+1780	Mọi hiệu ứng biến mất
+1781	Trúng độc
+1782	Giảm tốc
+1783	Choáng
+1784	Hiệu ứng vật tổ trị liệu
+1785	Hiệu ứng vật tổ cuồng bạo
+1786	Hiệu ứng vật tổ tấn công
+1787	Hiệu ứng vật tổ tăng tốc
+1788	Bất tử
+1789	Giảm tiêu hao phép
+1790	Hồi máu liên tục
+1791	Hoóc-môn sinh mệnh
+1792	Súng quang tốc Dạ Ưng
+1793	Nhẫn cao tốc
+1794	Nhẫn vạn vật tĩnh lặng
+1795	Ban đầu
+1796	Tấn công 1
+1797	Tấn công 2
+1798	Tấn công 3
+1799	Tấn công 4
+1800	Tấn công 5
+1801	Tấn công 6
+1802	Dừng
+1803	Tiến gần theo ngang trước
+1804	Tiến gần theo dọc trước
+1805	Rời xa theo ngang trước
+1806	Rời xa theo dọc trước
+1807	Vòng ra sau
+1808	Tuần tra
+1809	Phản công
+1810	Giao diện hệ thống
+1811	Giao diện menu
+1812	Cài đặt hệ thống
+1813	Giao diện trợ giúp
+1814	Giao diện thuộc tính nhân vật
+1815	Giao diện vật phẩm
+1816	Giao diện trang bị vũ khí
+1817	Giao diện xem nhiệm vụ
+1818	Giao diện cửa hàng
+1819	Giao diện kỹ năng nhân vật
+1820	Giao diện thú cưỡi
+1821	Giao diện Đền Tinh Tế
+1822	Giao diện Tòa thị chính
+1823	Giao diện Trung tâm thương mại
+1824	Giao diện Xưởng quân sự
+1825	Giao diện khu mỏ
+1826	Hoạt cảnh chuyển cảnh
+1827	Hiện giao diện nhiệm vụ
+1828	Giao diện lưu
+1829	Bộ sưu tập rèn
+1830	Giao diện túi
+1831	Giao diện xếp đạo cụ
+1832	Giao diện xếp trang bị
+1833	Nội thành Zion
+1834	Ngoại thành Zion
+1835	Ngoài pháo đài Tiểu Á
+1836	Bản đồ lớn
+1837	Tuyệt chiêu kiếm 1 đoạn 1
+1838	Tuyệt chiêu kiếm 1 đoạn 2
+1839	Tuyệt chiêu kiếm 1 đoạn 3
+1840	Tuyệt chiêu kiếm 2 đoạn 1
+1841	Tuyệt chiêu kiếm 2 đoạn 2
+1842	Tuyệt chiêu kiếm 2 đoạn 3
+1843	Tuyệt chiêu găng 1 đoạn 1
+1844	Tuyệt chiêu găng 1 đoạn 2
+1845	Tuyệt chiêu găng 1 đoạn 3
+1846	Tuyệt chiêu găng 1 đoạn 4
+1847	Tuyệt chiêu găng 2 đoạn 1
+1848	Tuyệt chiêu găng 2 đoạn 2
+1849	Tuyệt chiêu găng 2 đoạn 3
+1850	Kỹ năng ngưng đọng thời gian
+1851	Mỏ
+1852	Cửa hàng tin nhắn
+1853	Giao diện tính phí tin nhắn
+1854	Xanh lá
+1855	Vàng
+1856	Cam
+1857	Xanh lam
+1858	Quản gia mỏ
+1859	Gói quà 8 tệ
+1860	Gói quà 12 tệ
+1861	Gói quà 16 tệ
+1862	Xác nhận gửi?
+1863	Bạn đã gửi thành công
+1864	tin, cần gửi thêm
+1865	tin, xác nhận gửi?
+1866	Đang gửi...
+1867	Mua thành công! Chơi lại từ đầu chức năng này không cần trả phí nữa. Hãy lưu game kịp thời!
+1868	Mua thành công! Tiền đã được tự động lưu.
+1869	Mua thành công! Cấp đã được tự động lưu.
+1870	Mua thành công! Hãy kịp thời tới điểm lưu để lưu game!
+1871	Gửi thất bại.
+1872	Không đủ ô đạo cụ.
+1873	Nhận thành công. Tiền và điểm kỹ năng đã tự động lưu.
+1874	Chưa đạt mức chi tiêu, không thể nhận.
+1875	Lớp phủ gợi ý bán trong suốt
+1876	Biểu tượng 7
+1877	Biểu tượng 9
+1878	Chạm màn hình để tiếp tục
+1879	Về menu chính?
+1880	cấp
+1881	Không có vũ khí.
+1882	Không có giáp.
+1883	Không có trang sức.
+1884	Chạm màn hình để dừng
+1885	Hồi HP và năng lượng?
+1886	Chạm tùy chọn
+1887	Trạng thái mỏ
+1888	Giá thuê mỗi người：200
+1889	Mô tả mỏ
+1890	Thuê càng nhiều thợ, mỗi đơn vị thời gian khai thác càng nhiều tiền và vật liệu.
+1891	Độ bền thú cưỡi đã đầy, không thể dùng đạo cụ
+1892	$1Hãy giữ $2biểu tượng 7$1
+1893	$1Hãy giữ $2biểu tượng 9$1
+1894	Nói chuyện với NPC thành phố
+1895	Tới bản đồ
+1896	Đặt vị trí nhân vật chính
+1897	Nhân vật chính di chuyển
+1898	Xóa kẻ địch
+1899	Làm mới boss
+1900	Làm mới lính
+1901	Ngừng sinh lính
+1902	Đối thoại
+1903	Lính quay hướng
+1904	Diệt sạch kẻ địch
+1905	Lính di chuyển
+1906	Khóa cửa
+1907	Đối thoại tự động
+1908	Đặt số lượng sinh lính
+1909	Đổi bản đồ
+1910	Chờ
+1911	Qua cửa
+1912	Đặt bảng lính
+1913	Đặt động tác boss
+1914	Đặt trạng thái sống của boss
+1915	Đặt trạng thái sống của lính
+1916	Bắt đầu rung màn hình
+1917	Dừng rung màn hình
+1918	Hoàn thành nhiệm vụ chính
+1919	Tiếp tục sự kiện
+1920	Thực hiện tiếp tục sự kiện
+1921	Đặt tiêu điểm camera
+1922	Ống kính tự động
+1923	Nhận nhiệm vụ chính
+1924	Điều kiện nhiệm vụ chính
+1925	Nhân vật chính tấn công
+1926	Boss tấn công
+1927	Boss di chuyển
+1928	Gợi ý
+1929	Boss quay hướng
+1930	Mở khu vực
+1931	Kích hoạt khi vào cửa
+1932	Lời dẫn
+1933	Mở vũ khí
+1934	Đặt động tác lính
+1935	Đặt loại boss
+1936	Nhân vật chính quay hướng
+1937	Điều kiện khoảng nhiệm vụ chính
+1938	Mở nhiệm vụ phụ
+1939	Đặt động tác nhân vật chính
+1940	Phá đảo
+1941	Nhân vật chính đi ngang
+1942	Làm mới nhân vật chính
+1943	Lính tấn công
+1944	Boss chết
+1945	Bắt đầu hồi tưởng
+1946	Kết thúc hồi tưởng
+1947	Tắt màn hình
+1948	Đổi vũ khí
+1949	Thủy quái Bắc Hải di chuyển
+1950	Giới thiệu
+1951	Trạng thái nhiệm vụ chính
+1952	Đặt vị trí NPC
+1953	Hiện nhiệm vụ chính
+1954	Bắt đầu ngưng đọng thời gian
+1955	Kết thúc ngưng đọng thời gian
+1956	Đặt bản đồ nhỏ
+1957	Đặt trạng thái về thành
+1958	Đặt danh sách nhân vật chính
+1959	Đặt trạng thái sống của đồng minh
+1960	Đặt có vẽ nhân vật chính không
+1961	Đồng minh tấn công
+1962	Nói chuyện với NPC chiến đấu
+1963	Sự kiện lặp
+1964	Vào lưu
+1965	Bắt đầu hướng dẫn
+1966	Đồng minh quay hướng
+1967	Đặt trạng thái NPC
+1968	NPC di chuyển
+1969	Đặt trạng thái nhiệm vụ chính
+1970	Chỉ huy bị tấn công
+1971	Lính hiện biểu cảm
+1972	NPC quay hướng
+1973	Đóng khu vực
+1974	Nhân vật chính hiện biểu cảm
+1975	Đặt trạng thái hình ảnh
+1976	Đặt tốc độ di chuyển
+1977	Tê giác di chuyển
+1978	Đặt động tác NPC
+1979	Đặt trạng thái địch chết hết
+1980	Phát hiệu ứng sáng
+1981	Xóa hiệu ứng sáng
+1982	Nhân vật chính xung phong
+1983	Đồng minh hiện biểu cảm
+1984	NPC hiện biểu cảm
+1985	Điều kiện nhiệm vụ phụ
+1986	Kiểm tra trạng thái nhân vật
+1987	Nhân vật chính và NPC cùng hiện biểu cảm
+1988	Đặt động tác đồng minh
+1989	Đặt boss chết
+1990	Xuống thú cưỡi
+1991	Tự động lưu
+1992	Đối thoại 1
+1993	Hoàn thành hướng dẫn về thành
+1994	Kiểm tra có cuộn về thành không
+1995	Nạp thú cưỡi
+1996	Khôi phục trạng thái thú cưỡi
+1997	Bắt đầu sinh lính cố định
+1998	Kết thúc sinh lính cố định
+1999	Sinh lính ngẫu nhiên
+2000	Đặt trạng thái di chuyển
+2001	Chạm công trình thành phố
+2002	Chọn trong giao diện Đền Tinh Tế
+2003	Giao diện nâng cấp
+2004	Giao diện nâng cấp Command
+2005	Chạm để vào hành tinh
+2006	Chạm để vào hành tinh cấp hai
+2007	Vào giao diện kỹ năng
+2008	Chọn kỹ năng kiếm
+2009	Chọn kỹ năng
+2010	Mở kỹ năng
+2011	Trang bị phím 7
+2012	Giới thiệu giáp kiếm
+2013	Giới thiệu giáp găng
+2014	Giới thiệu giáp thường
+2015	Vào sự kiện
+2016	Cưỡi thú cưỡi
+2017	Hướng dẫn đổi vũ khí
+2018	Chọn túi
+2019	Chọn túi vật phẩm
+2020	Chọn cuộn về thành
+2021	Dùng cuộn về thành
+2022	Chọn vật phẩm
+2023	Chọn xác nhận
+2024	Vào sự kiện 1
+2025	Chạm vào đây để xem trợ giúp
+2026	Chạm vào đây để quay lại
+2027	Chọn Tinh thể Warp
+2028	Chạm biểu tượng 1 để đổi vũ khí
+2029	Chạm biểu tượng # để cưỡi thú
+2030	Chạm biểu tượng tùy chọn!
+2031	Chạm biểu tượng góc dưới phải màn hình
+2032	Chạm biểu tượng thứ hai góc trên phải
+2033	Chọn Chém lưỡi kiếm
+2034	Chọn biểu tượng góc dưới trái để dùng

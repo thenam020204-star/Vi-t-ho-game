@@ -31,8 +31,8 @@ def validate(rows):
             err.append('%s: ma mau $n lech' % r['id'])
         if g.count('|') != d.count('|'):
             err.append('%s: so | lech' % r['id'])
-        if d.count('$') != len(re.findall(r'\$\d', d)):
-            err.append('%s: $ le khong kem so' % r['id'])
+        if d.count('$') != g.count('$'):
+            err.append('%s: so dau $ lech' % r['id'])
         if '：' in g and g.index('：') <= 8:
             if '：' not in d:
                 err.append('%s: thoai mat dau ：' % r['id'])
