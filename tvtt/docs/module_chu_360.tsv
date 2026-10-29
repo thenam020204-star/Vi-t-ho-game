@@ -1,0 +1,131 @@
+# bo sung rieng ban 360 (ui.data 360 co atlas ui/42 ten vat pham, ui/43 tu lon); ten vat pham = ban dich da chot
+/ui/6.png	92	178	74	13	0	0	技能升级	Kỹ năng
+/ui/2.png	4	122	28	29	1	30	帮(助)	Trợ giúp
+/ui/2.png	80	123	59	28	0	0	关于	Giới thiệu
+/ui/2.png	161	127	49	23	0	0	确定	Chọn
+/ui/2.png	232	127	51	23	0	0	返回	Trở về
+/ui/2.png	35	122	28	29	2	0	助	
+/ui/43.png	77	154	57	26	0	0	确定	Chọn
+/ui/43.png	75	188	57	26	0	0	返回	Trở về
+/ui/43.png	6	2	63	29	0	0	购买	Mua
+/ui/43.png	4	40	62	33	0	0	武器	Vũ khí
+/ui/43.png	3	75	62	33	0	0	防具	Giáp
+/ui/43.png	3	113	62	31	0	0	饰品	Trang sức
+/ui/43.png	3	147	62	33	0	0	坐骑	Thú cưỡi
+/ui/43.png	3	184	30	30	0	0	剑	Kiếm
+/ui/43.png	3	217	60	32	0	0	拳套	Găng
+/ui/43.png	3	254	59	30	0	0	主线	Chính
+/ui/43.png	1	287	62	31	0	0	支线	Phụ
+/ui/43.png	3	321	62	27	0	0	出售	Bán
+/ui/43.png	68	315	66	33	0	0	状态	Trạng thái
+/ui/43.png	69	282	65	33	0	0	背包	Túi đồ
+/ui/43.png	69	252	69	31	0	0	帮助	Trợ giúp
+/ui/43.png	74	219	59	32	0	0	锻造	Rèn
+/ui/43.png	73	111	38	36	0	0	饰品	Trang sức
+/ui/43.png	74	73	36	35	0	0	拳套	Găng
+/ui/43.png	74	36	64	36	0	0	矿井	Mỏ
+/ui/43.png	72	1	63	32	0	0	设置	Cài đặt
+/ui/43.png	140	2	64	30	0	0	音效	Âm thanh
+/ui/43.png	146	33	58	26	0	0	购买	Mua
+/ui/43.png	146	60	56	24	0	0	出售	Bán
+/ui/43.png	145	86	54	27	0	0	武器	Vũ khí
+/ui/43.png	145	116	54	29	0	0	防具	Giáp
+/ui/43.png	143	147	56	28	0	0	饰品	Trang sức
+/ui/43.png	142	181	59	31	0	0	坐骑	Thú cưỡi
+/ui/43.png	143	215	35	28	0	0	剑	Kiếm
+/ui/43.png	145	247	55	29	0	0	拳套	Găng
+/ui/43.png	144	281	57	32	0	0	主线	Chính
+/ui/43.png	144	320	54	28	0	0	支线	Phụ
+/ui/43.png	207	203	100	32	0	0	短信商店	Shop SMS
+/ui/43.png	204	170	105	32	0	0	城市信息	Thông tin TP
+/ui/43.png	204	133	105	33	0	0	星际神殿	Đền Tinh Tế
+/ui/43.png	203	98	104	35	0	0	锻造图鉴	Sách rèn
+/ui/43.png	206	65	96	33	0	0	空间包	Túi
+/ui/43.png	206	31	93	32	0	0	市政厅	Tòa thị chính
+/ui/43.png	206	1	94	30	0	0	军工厂	Xưởng QS
+/ui/42.png	1	3	44	17	0	0	战士剑	Kiếm chiến binh
+/ui/42.png	1	24	44	17	0	0	骑士剑	Kiếm hiệp sĩ
+/ui/42.png	376	225	45	17	0	0	激光剑	Kiếm laser
+/ui/42.png	1	45	44	17	0	0	斩铁剑	Kiếm chém sắt
+/ui/42.png	1	65	44	17	0	0	图腾剑	Kiếm vật tổ
+/ui/42.png	1	84	44	17	0	0	十字剑	Kiếm thập tự
+/ui/42.png	1	102	45	17	0	0	蓝灵	Lam Linh
+/ui/42.png	2	125	44	17	0	0	异齿剑	Kiếm răng lạ
+/ui/42.png	2	145	58	17	0	0	圣十字剑	Kiếm thánh giá
+/ui/42.png	2	168	44	17	0	0	嗜血剑	Kiếm khát máu
+/ui/42.png	2	189	44	17	0	0	毒刃	Lưỡi độc
+/ui/42.png	2	209	44	17	0	0	红影	Hồng Ảnh
+/ui/42.png	1	231	44	17	0	0	裂魂	Liệt Hồn
+/ui/42.png	1	255	44	17	0	0	日蚀	Nhật Thực
+/ui/42.png	0	276	44	17	0	0	银河	Ngân Hà
+/ui/42.png	66	2	58	17	0	0	战斗拳套	Găng chiến đấu
+/ui/42.png	66	23	58	17	0	0	鹰嘴拳套	Găng mỏ ưng
+/ui/42.png	66	48	58	17	0	0	斗士拳套	Găng đấu sĩ
+/ui/42.png	66	66	58	17	0	0	魔术拳套	Găng ảo thuật
+/ui/42.png	66	84	58	17	0	0	赤焰拳套	Găng lửa đỏ
+/ui/42.png	66	103	58	17	0	0	猎鹰拳套	Găng chim ưng
+/ui/42.png	66	122	58	17	0	0	野兽拳套	Găng dã thú
+/ui/42.png	66	143	58	17	0	0	狮子之心	Trái tim sư tử
+/ui/42.png	66	161	58	17	0	0	脉冲拳套	Găng xung điện
+/ui/42.png	66	181	58	17	0	0	千束拳套	Găng thiên quyền
+/ui/42.png	65	201	44	17	0	0	太阳神	Thần Mặt Trời
+/ui/42.png	65	221	44	17	0	0	金十字	Thập tự vàng
+/ui/42.png	65	239	58	17	0	0	晶体拳套	Găng tinh thể
+/ui/42.png	65	257	58	17	0	0	灵能拳套	Găng linh năng
+/ui/42.png	67	281	58	17	0	0	圣战拳套	Găng thánh chiến
+/ui/42.png	135	2	72	17	0	0	战地光速枪	Súng quang tốc
+/ui/42.png	135	25	72	17	0	0	电能榴弹枪	Súng phóng lựu điện
+/ui/42.png	137	47	72	17	0	0	夜鹰光速枪	Súng quang tốc Dạ Ưng
+/ui/42.png	136	69	72	17	0	0	极光榴弹枪	Súng lựu Cực Quang
+/ui/42.png	135	93	58	17	0	0	护身铠甲	Giáp hộ thân
+/ui/42.png	135	112	58	17	0	0	斗士铠甲	Giáp đấu sĩ
+/ui/42.png	135	134	44	17	0	0	梭子甲	Giáp thoi
+/ui/42.png	135	157	58	17	0	0	荣誉盾甲	Khiên giáp vinh dự
+/ui/42.png	134	179	44	17	0	0	水晶铠	Giáp pha lê
+/ui/42.png	135	199	58	17	0	0	大地之灵	Linh hồn đất mẹ
+/ui/42.png	135	218	44	17	0	0	龙鳞铠	Giáp vảy rồng
+/ui/42.png	135	238	58	17	0	0	圣域守护	Thánh vực hộ thể
+/ui/42.png	135	258	72	17	0	0	阿瑞斯之铠	Giáp Ares
+/ui/42.png	137	277	44	17	0	0	圣光铠	Giáp thánh quang
+/ui/42.png	222	1	58	17	0	0	士兵指轮	Nhẫn lính
+/ui/42.png	222	22	58	17	0	0	强攻指轮	Nhẫn cường công
+/ui/42.png	222	42	58	17	0	0	战神指轮	Nhẫn chiến thần
+/ui/42.png	222	61	58	17	0	0	神技指轮	Nhẫn thần kỹ
+/ui/42.png	222	84	44	17	0	0	乱舞	Loạn Vũ
+/ui/42.png	222	106	72	17	0	0	魔术师戒指	Nhẫn ảo thuật gia
+/ui/42.png	221	127	58	17	0	0	高能戒指	Nhẫn cao năng
+/ui/42.png	221	146	58	17	0	0	暴击戒指	Nhẫn chí mạng
+/ui/42.png	221	167	58	17	0	0	重锤戒指	Nhẫn búa tạ
+/ui/42.png	220	185	58	17	0	0	暴君之怒	Cơn giận bạo chúa
+/ui/42.png	220	205	58	17	0	0	山崩指环	Nhẫn núi lở
+/ui/42.png	219	223	58	17	0	0	泰坦指环	Nhẫn Titan
+/ui/42.png	219	247	58	17	0	0	残害指环	Nhẫn tàn sát
+/ui/42.png	218	266	58	17	0	0	闪避戒指	Nhẫn né tránh
+/ui/42.png	300	246	58	17	0	0	高闪戒指	Nhẫn né cao
+/ui/42.png	300	267	58	17	0	0	眩晕戒指	Nhẫn choáng
+/ui/42.png	218	284	72	17	0	0	大力神戒指	Nhẫn Hercules
+/ui/42.png	300	1	58	17	0	0	护体指环	Nhẫn hộ thể
+/ui/42.png	301	23	58	17	0	0	免疫指环	Nhẫn miễn nhiễm
+/ui/42.png	301	44	58	17	0	0	减速戒指	Nhẫn giảm tốc
+/ui/42.png	302	63	58	17	0	0	缓身戒指	Nhẫn làm chậm
+/ui/42.png	302	84	58	17	0	0	冰霜戒指	Nhẫn băng giá
+/ui/42.png	301	103	58	17	0	0	恢复戒指	Nhẫn hồi phục
+/ui/42.png	302	124	58	17	0	0	复苏指环	Nhẫn hồi sinh
+/ui/42.png	301	144	58	17	0	0	反弹戒指	Nhẫn phản đòn
+/ui/42.png	300	164	58	17	0	0	荆棘戒指	Nhẫn bụi gai
+/ui/42.png	299	184	58	17	0	0	刺甲戒指	Nhẫn giáp gai
+/ui/42.png	299	203	58	17	0	0	风暴指环	Nhẫn bão tố
+/ui/42.png	299	226	72	17	0	0	吸血鬼戒指	Nhẫn ma cà rồng
+/ui/42.png	368	0	58	17	0	0	伯爵戒指	Nhẫn bá tước
+/ui/42.png	368	20	58	17	0	0	加速戒指	Nhẫn tăng tốc
+/ui/42.png	368	40	58	17	0	0	神速戒指	Nhẫn thần tốc
+/ui/42.png	368	58	58	17	0	0	寻宝戒指	Nhẫn tầm bảo
+/ui/42.png	368	79	58	17	0	0	防御戒指	Nhẫn phòng thủ
+/ui/42.png	368	101	58	17	0	0	护盾戒指	Nhẫn khiên chắn
+/ui/42.png	369	126	58	17	0	0	时空之瞳	Đồng tử thời không
+/ui/43.png	211	242	62	30	0	0	选项	Tùy chọn
+/ui/43.png	211	316	60	29	0	0	关于	Giới thiệu
+/ui/43.png	309	4	60	28	0	0	查看	Xem
+/ui/43.png	311	35	59	28	0	0	放弃	Bỏ
+/ui/43.png	311	68	59	27	0	0	提交	Nộp
+/ui/43.png	312	102	58	27	0	0	接受	Nhận

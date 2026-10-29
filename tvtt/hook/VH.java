@@ -24,8 +24,10 @@ import javax.microedition.lcdui.Graphics;
  * Chu Han con sot = o trong rong 12px; dau cau Han -> ASCII. Khong float, khong reflection.
  */
 public final class VH {
-    /** Chieu cao o chu (= hzk12 goc). */
-    static final int FH = 12;
+    /** Chieu cao o chu (= chieu cao font da nap; ban 240/320: 12 = hzk12 goc). */
+    static int FH = 12;
+    /** Cach dong cua cac ham ve nhieu dong (ban 240/320: 16, ban 360: 20). */
+    static int LS = 16;
     /** So ky tu cho moi don vi bo dem chay chu (bo dem cua game la byte). */
     static final int TW = 3;
 
@@ -42,7 +44,23 @@ public final class VH {
     static int[] buf;
 
     static {
-        load("/font/f12.bin");
+        String font = "/font/f12.bin";
+        InputStream in = null;
+        try {
+            in = "".getClass().getResourceAsStream("/font/vh.cfg");
+            if (in != null) {
+                DataInputStream d = new DataInputStream(in);
+                font = d.readUTF();
+                LS = d.readByte();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (in != null) {
+                try { in.close(); } catch (Exception e) { }
+            }
+        }
+        load(font);
         loadMods();
     }
 
@@ -88,6 +106,7 @@ public final class VH {
             int sp = idx(' ');
             if (sp >= 0) spaceW = widths[sp];
             if (maxW < 12) maxW = 12;
+            FH = fh;
             buf = new int[maxW * FH];
         } catch (Exception e) {
             e.printStackTrace();
@@ -178,10 +197,11 @@ public final class VH {
 
     /** Gradient 16 muc tu mau n3 (dinh) toi n2 (day) - y het b.a(int,int) goc. */
     static void setGrad(int[] grad, int n2, int n3) {
+        int dv = grad.length - 1;
         for (int i = 0; i < grad.length; i++) {
-            int r = i * ((n2 & 0xFF0000) - (n3 & 0xFF0000)) / 15 + n3 & 0xFF0000;
-            int gg = i * ((n2 & 0xFF00) - (n3 & 0xFF00)) / 15 + n3 & 0xFF00;
-            int bb = i * ((n2 & 0xFF) - (n3 & 0xFF)) / 15 + n3 & 0xFF;
+            int r = i * ((n2 & 0xFF0000) - (n3 & 0xFF0000)) / dv + n3 & 0xFF0000;
+            int gg = i * ((n2 & 0xFF00) - (n3 & 0xFF00)) / dv + n3 & 0xFF00;
+            int bb = i * ((n2 & 0xFF) - (n3 & 0xFF)) / dv + n3 & 0xFF;
             grad[i] = r | gg | bb;
         }
     }
@@ -275,7 +295,32 @@ public final class VH {
         for (int i = 0; i < count; i++) {
             int k = i + start;
             if (k < 0 || k >= ss.length) continue;
-            drawG(g, grad, ctab, ss[k], x, y + (i << 4), anchor);
+            drawG(g, grad, ctab, ss[k], x, y + i * LS, anchor);
+        }
+    }
+
+    /** Nhu linesTW, co anchor (17 = can giua) - ban 360 drawZkStringArry1. */
+    public static void linesTWA(Graphics g, int[] grad, int[][] ctab, String[] ss, int x0, int y, int anchor, int start, int count, int lim) {
+        int budget = lim * TW;
+        int shown = 0;
+        for (int i = 0; i < count; i++) {
+            int k = i + start;
+            if (k < 0 || k >= ss.length) continue;
+            String s = ss[k];
+            int x = anchor == 17 ? x0 - (width(s) >> 1) : x0;
+            int n = s.length();
+            for (int j = 0; j < n && shown < budget; j++) {
+                char c = s.charAt(j);
+                if (c == '$') {
+                    if (j + 1 < n) {
+                        int d = digit(s.charAt(++j));
+                        if (d >= 0) setGrad(grad, ctab[0][d], ctab[1][d]);
+                    }
+                    continue;
+                }
+                x += glyph(g, c, x, y + i * LS, grad, 0xFF000000, 0);
+                shown++;
+            }
         }
     }
 
@@ -298,8 +343,37 @@ public final class VH {
                     }
                     continue;
                 }
-                x += glyph(g, c, x, y + (i << 4), grad, 0xFF000000, 0);
+                x += glyph(g, c, x, y + i * LS, grad, 0xFF000000, 0);
                 shown++;
+            }
+        }
+    }
+
+    /** Font.getHeight / stringHeight() cua game. */
+    public static int height() {
+        return FH;
+    }
+
+    /** Nhu linesFade nhung theo anchor (17 = can giua quanh x, khac = trai) - ban 360 drawZkStringArry2. */
+    public static void linesFadeA(Graphics g, int[] grad, int[][] ctab, String[] ss, int x, int y, int anchor, int start, int count, int fade) {
+        for (int i = 0; i < count; i++) {
+            int k = i + start;
+            if (k < 0 || k >= ss.length) continue;
+            String s = ss[k];
+            int xx = anchor == 17 ? x - (width(s) >> 1) : x;
+            int alpha = 0xFF000000;
+            if (i == count - 1 && fade > -1) alpha = fade * 0x11000000;
+            int n = s.length();
+            for (int j = 0; j < n; j++) {
+                char c = s.charAt(j);
+                if (c == '$') {
+                    if (j + 1 < n) {
+                        int d = digit(s.charAt(++j));
+                        if (d >= 0) setGrad(grad, ctab[0][d], ctab[1][d]);
+                    }
+                    continue;
+                }
+                xx += glyph(g, c, xx, y + i * LS, grad, alpha, 0);
             }
         }
     }
@@ -323,7 +397,7 @@ public final class VH {
                     }
                     continue;
                 }
-                x += glyph(g, c, x, y + (i << 4), grad, alpha, 0);
+                x += glyph(g, c, x, y + i * LS, grad, alpha, 0);
             }
         }
     }

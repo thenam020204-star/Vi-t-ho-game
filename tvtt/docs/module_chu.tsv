@@ -100,6 +100,3 @@
 /ui/batternum.png	0	28	69	28	3	0	连击	COMBO
 /ui/batternum.png	72	28	69	28	3	0	连击(trang)	COMBO
 /ui/batternum.png	154	29	86	37	3	0	连击(trang lon)	COMBO
-/ui/popnum.png	227	5	42	15	0	0	未命中	Trượt
-/ui/debuff.png	58	93	20	15	0	0	狂暴	Cuồng
-/ui/debuff.png	30	92	28	13	0	0	狂暴	Cuồng

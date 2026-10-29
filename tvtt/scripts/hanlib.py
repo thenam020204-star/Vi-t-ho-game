@@ -109,12 +109,19 @@ def parse_cp(d):
     return ent, o
 
 
+def _string_refs(ent):
+    """chi so Utf8 duoc CONSTANT_String (tag 8) tham chieu."""
+    return {struct.unpack('>H', e[1])[0] for e in ent if e and e[0] == 8}
+
+
 def class_han_utf8(d):
-    """-> [(cp_index, text)] cac Utf8 chua Han."""
+    """-> [(cp_index, text)] cac Utf8 chua Han DUOC DUNG LAM HANG CHUOI (CONSTANT_String).
+    Utf8 chi dung lam ten field/method/descriptor (vd ban 360: GameData.星际神殿) khong tinh."""
     ent, _ = parse_cp(d)
+    refs = _string_refs(ent)
     out = []
     for i, e in enumerate(ent):
-        if e and e[0] == 1:
+        if e and e[0] == 1 and i in refs:
             s = mutf8_decode(e[1][2:])
             if HAN.search(s):
                 out.append((i, s))
@@ -122,23 +129,40 @@ def class_han_utf8(d):
 
 
 def rewrite_class(d, repl):
-    """repl: {text_goc: text_dich}. Thay moi Utf8 co noi dung == text_goc. Khong doi thi tra nguyen byte."""
+    """repl: {text_goc: text_dich}. Chi doi HANG CHUOI: moi CONSTANT_String tro toi Utf8 co noi dung == text_goc
+    duoc tro sang mot Utf8 MOI them cuoi constant pool (Utf8 goc giu nguyen, vi co the la ten field/method).
+    Khong doi gi thi tra nguyen byte."""
     ent, end = parse_cp(d)
     if not repl:
         return d
-    out = bytearray(d[:10]); changed = 0
+    n = len(ent)
+    new_utf = []          # [(text_dich)] them sau cung
+    remap = {}            # cp_index Utf8 goc -> cp_index Utf8 moi
+    for i, e in enumerate(ent):
+        if e and e[0] == 8:
+            u = struct.unpack('>H', e[1])[0]
+            s = mutf8_decode(ent[u][1][2:])
+            if s in repl and repl[s] != s and u not in remap:
+                remap[u] = n + len(new_utf); new_utf.append(repl[s])
+    if not remap:
+        return d
+    if n + len(new_utf) > 65535:
+        raise ValueError('constant pool qua lon')
+    out = bytearray(d[:8]) + struct.pack('>H', n + len(new_utf))
     for i, e in enumerate(ent):
         if e is None:
             continue
         t, raw = e
-        if t == 1:
-            s = mutf8_decode(raw[2:])
-            if s in repl and repl[s] != s:
-                nb = mutf8_encode(repl[s])
-                if len(nb) > 65535:
-                    raise ValueError('Utf8 > 65535')
-                raw = struct.pack('>H', len(nb)) + nb; changed += 1
+        if t == 8:
+            u = struct.unpack('>H', raw)[0]
+            if u in remap:
+                raw = struct.pack('>H', remap[u])
         out.append(t); out += raw
+    for txt in new_utf:
+        nb = mutf8_encode(txt)
+        if len(nb) > 65535:
+            raise ValueError('Utf8 > 65535')
+        out.append(1); out += struct.pack('>H', len(nb)) + nb
     out += d[end:]
     return bytes(out)
 

@@ -7,6 +7,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 from pixeltext.paint import draw, patch, render
 
 X, OUT = sys.argv[1], sys.argv[2]
+V = sys.argv[3] if len(sys.argv) > 3 else ('360' if os.path.exists(os.path.join(sys.argv[1], 'map', '130.png')) else '240')
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 
 
@@ -36,23 +37,36 @@ def clear(im, box):
 # 1) menu/2.png: 9 dong chu Han (module 0-8 cua menu.data), dong tieng Anh giu nguyen
 MENU = ['Chơi tiếp', 'Trò chơi mới', 'Cài đặt', 'Trợ giúp', 'Giới thiệu', 'Thoát game', 'Cộng đồng QQ', 'Bảng điểm', 'Thêm game']
 FILL = ['#ffffff,#9fb0d8'] * 6 + ['#ffd040,#ff7a10'] * 2 + ['#ffe060,#ff2010']
-im = load('menu/2.png'); mods = modules('data/menu.data')
-for i in range(9):
+im = load('menu/2.png') if V != '360' else None; mods = modules('data/menu.data')
+for i in (range(9) if V != '360' else []):
     m = mods[i]; box = (m[1], m[2], m[3], m[4])
     clear(im, box)
     draw(im, box, MENU[i], size=18, fill=FILL[i].split(','), outline='#000000', outline_diag=True)
-save(im, 'menu/2.png')
+if im is not None: save(im, 'menu/2.png')
+
+# 1b) ban 360: menu/1.png (module 6-14 dong chu Han 194x38, 26 = "点击屏幕继续"), chu f18 phong 2
+if V == '360':
+    MENU360 = ['Trò chơi mới', 'Chơi tiếp', 'Cài đặt', 'Trợ giúp', 'Giới thiệu', 'Thoát game', 'Cộng đồng QQ', 'Bảng điểm', 'Thêm game']
+    im = load('menu/1.png')
+    for i in range(9):
+        m = mods[6 + i]; box = (m[1], m[2], m[3], m[4])
+        clear(im, box)
+        draw(im, box, MENU360[i], size=18, scale=2, fill=FILL[[1, 0, 2, 3, 4, 5, 6, 7, 8][i]].split(','), outline='#000000', outline_diag=True)
+    m = mods[26]; box = (m[1], m[2], m[3], m[4]); clear(im, box)
+    draw(im, box, 'Chạm màn hình để tiếp tục', size=18, fill=['#ffffff', '#9fd8ff'], outline='#000000', outline_diag=True)
+    save(im, 'menu/1.png')
 
 # 2) menu/1.png: logo tieu de
-im = load('menu/1.png'); W, H = im.size
+im = load('menu/1.png') if V != '360' else None
+W, H = im.size if im else (1, 1)
 new = Image.new('RGBA', (W, H), (0, 0, 0, 0))
 y2 = 52 if H >= 100 else 38
 draw(new, (0, 4 if H >= 100 else 0, W, 37), 'TINH VÂN', size=18, scale=2, fill=['#ffffff', '#7fd0ff'], outline='#06243c', outline_diag=True)
 draw(new, (0, y2, W, 37), 'TRUYỀN THUYẾT', size=18, scale=2, fill=['#d8f4ff', '#3f90e0'], outline='#06243c', outline_diag=True)
-save(new, 'menu/1.png')
+if V != '360': save(new, 'menu/1.png')
 
 # 3) bang ten thanh pho map/122-126
-for n, t in zip(range(122, 127), ['New Zion', 'Ngũ Quốc', 'Hailar', 'Astana', 'Belt']):
+for n, t in zip(range(122, 127) if V != '360' else range(126, 131), ['New Zion', 'Ngũ Quốc', 'Hailar', 'Astana', 'Belt']):
     im = load('map/%d.png' % n)
     patch(im, (2, 2, im.width - 4, im.height - 4), t, size='15c', outline='#000000', outline_diag=True)
     save(im, 'map/%d.png' % n)
@@ -105,9 +119,33 @@ if os.path.exists(os.path.join(X, 'menu', '8.png')):          # ban 320
         draw(im, (0, 2, W, 38), 'TINH VÂN', size=18, scale=2, fill=['#ffffff', '#7fd0ff'], outline='#06243c', outline_diag=True)
         draw(im, (0, 42, W, 38), 'TRUYỀN THUYẾT', size=18, scale=2 if W >= 182 else 1, fill=['#d8f4ff', '#3f90e0'], outline='#06243c', outline_diag=True)
         save(im, 'menu/%d.png' % n)
+elif V == '360':                                               # ban 360: menu/0 module 0-4 (manh tieu de phong to)
+    # module 0,1,2 (khung 1-6 cua menu.data) deu ve DE LEN nen (module 5) -> lam trong suot, chi giu chu tieu de
+    im = load('menu/0.png'); mods = modules('data/menu.data')
+    for k, sc in ((0, 3), (1, 3), (2, 2)):
+        m = mods[k]; box = (m[1], m[2], m[3], m[4])
+        clear(im, box)
+        lh = 18 * sc; top = m[2] + (m[4] - 2 * lh - 6) // 2
+        draw(im, (m[1], top, m[3], lh + 2), 'TINH VÂN', size=18, scale=sc, fill=['#ffffff', '#7fd0ff'], outline='#06243c', outline_diag=True)
+        draw(im, (m[1], top + lh + 6, m[3], lh + 2), 'TRUYỀN THUYẾT', size=18, scale=sc if 89 * sc <= m[3] else sc - 1, fill=['#d8f4ff', '#3f90e0'], outline='#06243c', outline_diag=True)
+    save(im, 'menu/0.png')
 else:                                                          # ban 240: menu/0 ben phai (module 27, 28)
     im = load('menu/0.png'); mods = modules('data/menu.data')
     for k in (27, 28):
         m = mods[k]
         if m[0] == 0: retitle(im, (m[1], m[2], m[3], m[4]))
     save(im, 'menu/0.png')
+
+# 8) ui/popnum.png: "未命中" (vung 227,5,42x15 cua popnum.data) ve bang drawRegion truc tiep (khong qua VH.mod) -> sua anh
+im = load('ui/popnum.png')
+clear(im, (227, 5, 42, 15))
+draw(im, (227, 5, 42, 15), 'Trượt', size=12, fill=['#ffffff', '#ffd040'], outline='#000000', outline_diag=True)
+save(im, 'ui/popnum.png')
+
+# 9) ui/debuff.png: "狂暴" (trang thai cuong bao, 2 khung hinh 58,93,20x15 va 30,92,28x13) -> "Nộ" (cuong no) do (sua anh, khong phu thuoc duong ve)
+im = load('ui/debuff.png')
+for box in ((30, 92, 28, 13), (58, 93, 20, 15)):
+    clear(im, box)
+draw(im, (30, 92, 28, 13), 'Nộ', size=12, fill=['#ffd0a0', '#ff2000'])
+draw(im, (58, 93, 20, 15), 'Nộ', size=12, fill=['#ffd0a0', '#ff2000'])
+save(im, 'ui/debuff.png')

@@ -23,6 +23,12 @@ public class Patch {
     /** Cau hinh tung ban: class ve chu, ten field Graphics/gradient/bang mau, tam man hinh, so drawString. */
     static class Cfg {
         String cls, fG, fGrad, fCtab, boot, midlet, loader, menu;
+        boolean v360;
+        String mModule = "a", mHeight = null;
+        String bPlayer = "a", bMidlet = "a", bVol = "a", bInit = "a", loaderName = "a", menuInit = "(Lsrc/b;)V";
+        int menuDrop = 8;
+        int[][] menuArrays = {{1, 8, 2, 3, 4, 5}, {1, 0, 8, 2, 3, 4, 5}};
+        String[][] extraDrawString = new String[0][];   // {lop, so call-site}
         /** chinh hang so bo cuc: {lop, method, desc, cu, moi, so lan} */
         String[][] consts = new String[0][];
         int cx, drawStrings;
@@ -46,6 +52,22 @@ public class Patch {
             c.mWidthRaw = "c";
             return c;
         }
+        if (v.equals("360")) {
+            c.v360 = true;
+            c.cls = "src/GameCanvas"; c.fG = "g"; c.fGrad = "colordata"; c.fCtab = "colorlist";
+            c.drawStrings = 14;
+            c.extraDrawString = new String[][]{{"src/MapManager", "1"}};
+            c.mDrawG = c.mDrawC = "drawZkString";
+            c.mLines = "drawZkStringArry"; c.mLinesTW = "drawZkStringArry1"; c.mLinesFade = "drawZkStringArry2";
+            c.mWidth = "getStringWidth"; c.mWidthRaw = "stringLength"; c.mTw = "getStringLength"; c.mWrap = "formatzkword";
+            c.mModule = "drawImage"; c.mHeight = "stringHeight";
+            c.boot = "src/SplashCanvas"; c.midlet = "src/GameMidlet";
+            c.bPlayer = "play"; c.bMidlet = "theMidlet"; c.bVol = "soundEffect"; c.bInit = "init";
+            c.loader = "src/Util"; c.loaderName = "createImage";
+            c.menu = "src/GameMenu"; c.menuInit = "(Lsrc/GameCanvas;)V"; c.menuDrop = 14;
+            c.menuArrays = new int[][]{{6, 14, 8, 9, 10, 11}, {6, 7, 14, 8, 9, 10, 11}};
+            return c;
+        }
         throw new IllegalArgumentException("ban chua ho tro: " + v);
     }
 
@@ -58,6 +80,18 @@ public class Patch {
         write(in, out, c.boot, 2, c);
         write(in, out, c.loader, 3, c);
         write(in, out, c.menu, 4, c);
+        for (String[] k : c.extraDrawString) {
+            ClassNode cn = new ClassNode();
+            new ClassReader(Files.readAllBytes(in.resolve(k[0] + ".class"))).accept(cn, 0);
+            int n = redirectCalls(cn, G, "drawString", "(" + STR + "III)V", "drawString", "(" + GD + STR + "III)V");
+            expect(k[0] + " Graphics.drawString -> VH.drawString", n, Integer.parseInt(k[1]));
+            stripStackMap(cn);
+            ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+            cn.accept(cw);
+            Path o = out.resolve(k[0] + ".class");
+            Files.createDirectories(o.getParent());
+            Files.write(o, cw.toByteArray());
+        }
         for (String[] k : c.consts) {
             Path f = out.resolve(k[0] + ".class");
             if (!Files.exists(f)) f = in.resolve(k[0] + ".class");
@@ -105,22 +139,22 @@ public class Patch {
      */
     static void patchBoot(ClassNode cn, Cfg c) {
         String PL = "Ljavax/microedition/media/Player;", CV = "Ljavax/microedition/lcdui/Canvas;";
-        expect("field Player", findField(cn, "a", PL) == null ? 0 : 1, 1);
-        expect("field midlet", findField(cn, "a", "L" + c.midlet + ";") == null ? 0 : 1, 1);
-        FieldNode vol = findField(cn, "a", "I");
+        expect("field Player", findField(cn, c.bPlayer, PL) == null ? 0 : 1, 1);
+        expect("field midlet", findField(cn, c.bMidlet, "L" + c.midlet + ";") == null ? 0 : 1, 1);
+        FieldNode vol = findField(cn, c.bVol, "I");
         expect("static int am luong", vol != null && (vol.access & Opcodes.ACC_STATIC) != 0 ? 1 : 0, 1);
-        MethodNode run = method(cn, "run", "()V"), paint = method(cn, "paint", "(" + GD + ")V"), img = method(cn, "a", "()V");
+        MethodNode run = method(cn, "run", "()V"), paint = method(cn, "paint", "(" + GD + ")V"), img = method(cn, c.bInit, "()V");
         expect("q.run/paint/a()", (run != null ? 1 : 0) + (paint != null ? 1 : 0) + (img != null ? 1 : 0), 3);
         if (run == null || paint == null || img == null) return;
         InsnList L = new InsnList();
         L.add(new VarInsnNode(Opcodes.ALOAD, 0));
         L.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        L.add(new FieldInsnNode(Opcodes.GETFIELD, cn.name, "a", PL));
+        L.add(new FieldInsnNode(Opcodes.GETFIELD, cn.name, c.bPlayer, PL));
         L.add(new MethodInsnNode(Opcodes.INVOKESTATIC, VH, "boot", "(" + CV + PL + ")V", false));
         L.add(new InsnNode(Opcodes.ICONST_4));
-        L.add(new FieldInsnNode(Opcodes.PUTSTATIC, cn.name, "a", "I"));
+        L.add(new FieldInsnNode(Opcodes.PUTSTATIC, cn.name, c.bVol, "I"));
         L.add(new VarInsnNode(Opcodes.ALOAD, 0));
-        L.add(new FieldInsnNode(Opcodes.GETFIELD, cn.name, "a", "L" + c.midlet + ";"));
+        L.add(new FieldInsnNode(Opcodes.GETFIELD, cn.name, c.bMidlet, "L" + c.midlet + ";"));
         L.add(new InsnNode(Opcodes.ICONST_1));
         L.add(new MethodInsnNode(Opcodes.INVOKEVIRTUAL, c.midlet, "startGame", "(B)V", false));
         L.add(new InsnNode(Opcodes.RETURN));
@@ -140,8 +174,8 @@ public class Patch {
     /** m.a(String)Image (nap anh): truoc moi areturn goi VH.reg(anh, duong_dan) de VH nhan ra atlas co o chu. */
     static void patchLoader(ClassNode cn, Cfg c) {
         String IMG = "Ljavax/microedition/lcdui/Image;";
-        MethodNode m = method(cn, "a", "(" + STR + ")" + IMG);
-        expect("loader " + cn.name + ".a(String)Image", m == null ? 0 : 1, 1);
+        MethodNode m = method(cn, c.loaderName, "(" + STR + ")" + IMG);
+        expect("loader " + cn.name + "." + c.loaderName + "(String)Image", m == null ? 0 : 1, 1);
         if (m == null) return;
         if ((m.access & Opcodes.ACC_STATIC) == 0) throw new IllegalStateException("loader khong static");
         int k = 0;
@@ -160,11 +194,12 @@ public class Patch {
 
     /** Menu chinh: bo muc 8 ("Them game" = mo web quang cao) khoi 2 mang byte liet ke muc menu trong o.<init>. */
     static void patchMenu(ClassNode cn, Cfg c) {
-        MethodNode m = method(cn, "<init>", "(Lsrc/b;)V");
+        MethodNode m = method(cn, "<init>", c.menuInit);
         expect("menu " + cn.name + ".<init>", m == null ? 0 : 1, 1);
         if (m == null) return;
-        int k = dropByte(m, new int[]{1, 8, 2, 3, 4, 5}, 8) + dropByte(m, new int[]{1, 0, 8, 2, 3, 4, 5}, 8);
-        expect("menu bo muc 8", k, 2);
+        int k = 0;
+        for (int[] arr : c.menuArrays) k += dropByte(m, arr, c.menuDrop);
+        expect("menu bo muc " + c.menuDrop, k, c.menuArrays.length);
     }
 
     static int pushVal(AbstractInsnNode x) {
@@ -234,16 +269,24 @@ public class Patch {
                 gF, "A1", "I2", "I3", "I4", "I6");
         body(cn, c.mLines, "([" + STR + "IIIIII)V", "lines", "(" + GD + "[I[[I[" + STR + "IIIII)V",
                 gF, gr, ct, "A1", "I2", "I3", "I4", "I5", "I6");
-        body(cn, c.mLinesTW, "([" + STR + "IIIIIIB)V", "linesTW", "(" + GD + "[I[[I[" + STR + "IIIII)V",
-                gF, gr, ct, "A1", "I2", "I3", "I5", "I6", "I8");
-        body(cn, c.mLinesFade, "([" + STR + "IIIIII)V", "linesFade", "(" + GD + "[I[[I[" + STR + "IIIII)V",
-                gF, gr, ct, "A1", "K" + c.cx, "I3", "I5", "I6", "I7");
+        if (c.v360) {
+            body(cn, c.mLinesTW, "([" + STR + "IIIIIIB)V", "linesTWA", "(" + GD + "[I[[I[" + STR + "IIIIII)V",
+                    gF, gr, ct, "A1", "I2", "I3", "I4", "I5", "I6", "I8");
+            body(cn, c.mLinesFade, "([" + STR + "IIIIII)V", "linesFadeA", "(" + GD + "[I[[I[" + STR + "IIIIII)V",
+                    gF, gr, ct, "A1", "I2", "I3", "I4", "I5", "I6", "I7");
+            body(cn, c.mHeight, "()I", "height", "()I");
+        } else {
+            body(cn, c.mLinesTW, "([" + STR + "IIIIIIB)V", "linesTW", "(" + GD + "[I[[I[" + STR + "IIIII)V",
+                    gF, gr, ct, "A1", "I2", "I3", "I5", "I6", "I8");
+            body(cn, c.mLinesFade, "([" + STR + "IIIIII)V", "linesFade", "(" + GD + "[I[[I[" + STR + "IIIII)V",
+                    gF, gr, ct, "A1", "K" + c.cx, "I3", "I5", "I6", "I7");
+        }
         body(cn, c.mWidth, "(" + STR + ")I", "width", "(" + STR + ")I", "A1");
         body(cn, c.mWidthRaw, "(" + STR + ")I", "widthRaw", "(" + STR + ")I", "A1");
-        body(cn, c.mTw, "(" + STR + ")I", "twUnits", "(" + STR + ")I", "A0");
+        body(cn, c.mTw, "(" + STR + ")I", "twUnits", "(" + STR + ")I", c.v360 ? "A1" : "A0");
         body(cn, c.mWrap, "(" + STR + "II)[" + STR, "wrap", "(" + STR + "I)[" + STR, "A1", "I2");
         String IMG = "Ljavax/microedition/lcdui/Image;";
-        body(cn, "a", "(" + IMG + "IIII[SI)V", "mod", "(" + GD + IMG + "IIII[SI)V",
+        body(cn, c.mModule, "(" + IMG + "IIII[SI)V", "mod", "(" + GD + IMG + "IIII[SI)V",
                 gF, "A1", "I2", "I3", "I4", "I5", "A6", "I7");
         int n = redirectCalls(cn, G, "drawString", "(" + STR + "III)V", "drawString", "(" + GD + STR + "III)V");
         expect(c.cls + " Graphics.drawString -> VH.drawString", n, c.drawStrings);

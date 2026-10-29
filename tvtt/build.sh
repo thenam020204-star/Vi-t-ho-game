@@ -19,7 +19,9 @@ cp -r $B/x/. $B/stage/ && cp -r $B/rp/. $B/stage/
 env -u JAVA_TOOL_OPTIONS java -cp $L/asm-9.7.1.jar:$L/asm-tree-9.7.1.jar:build/patcher Patch $V $B/stage $B/patched logs/patch_$V.log
 cp -r $B/patched/. $B/stage/
 cp build/hook/src/VH.class $B/stage/src/
-mkdir -p $B/stage/font && cp "$FONT_DIR/f12.bin" $B/stage/font/
+FONT=f12; LSP=16; [ $V = 360 ] && FONT=f15c && LSP=20      # ban 360: font goc 16px, cach dong 20 -> f15c
+mkdir -p $B/stage/font && cp "$FONT_DIR/$FONT.bin" $B/stage/font/
+python3 -c "import struct,sys; n=b'/font/$FONT.bin'; open('$B/stage/font/vh.cfg','wb').write(struct.pack('>H',len(n))+n+bytes([$LSP]))"
 MT=docs/module_chu.tsv; [ -f docs/module_chu_$V.tsv ] && MT="$MT docs/module_chu_$V.tsv"
 python3 -I scripts/build_vhm.py $B/x $B/stage/font/vhm.dat $MT
 [ -d res_vi ] && cp -r res_vi/. $B/stage/

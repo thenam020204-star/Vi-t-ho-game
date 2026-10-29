@@ -1,0 +1,41 @@
+[INFO] org.recompile.mobile.MobilePlatform: Accompanying JAD found! Parsing additional MIDlet properties.
+[INFO] Loading MIDlet: Tinh Van Truyen Thuyet | Main Class: src.GameMidlet
+[ERROR] javax.microedition.media.Manager: Couldn't open Tone Player: Can not open line
+[INFO] javax.microedition.midlet.MIDlet: Create MIDlet
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:640, 360
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'logo/namp.png' in jar: file:/home/user/Vi-t-ho-game/tvtt/out/TinhVanTruyenThuyet_360x640_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'logo/namp.png' in jar: file:/home/user/Vi-t-ho-game/tvtt/out/TinhVanTruyenThuyet_360x640_vi.jar
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:640, 360
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at src.Sound.playMusic(Unknown Source)
+	at src.GameCanvas.loadLogic(Unknown Source)
+	at src.GameCanvas.gameProcess(Unknown Source)
+	at src.GameCanvas.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at src.Sound.playMusic(Unknown Source)
+	at src.GameCanvas.loadLogic(Unknown Source)
+	at src.GameCanvas.gameProcess(Unknown Source)
+	at src.GameCanvas.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at src.Sound.playMusic(Unknown Source)
+	at src.GameCanvas.loadLogic(Unknown Source)
+	at src.GameCanvas.gameProcess(Unknown Source)
+	at src.GameCanvas.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
