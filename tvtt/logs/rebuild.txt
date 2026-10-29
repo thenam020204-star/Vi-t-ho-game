@@ -1,0 +1,29 @@
+build_hook OK
+repack: 54 file doi, 0 chuoi Han chua dich
+PATCH OK
+vhm: 100 o chu
+ProGuard, version 7.4.2
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.repaint()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.serviceRepaints()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+RESULT: PASS
+repack: 54 file doi, 0 chuoi Han chua dich
+PATCH OK
+vhm: 104 o chu
+ProGuard, version 7.4.2
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.repaint()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.serviceRepaints()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+RESULT: PASS
+repack: 56 file doi, 0 chuoi Han chua dich
+PATCH OK
+vhm: 230 o chu
+ProGuard, version 7.4.2
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.repaint()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.serviceRepaints()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+RESULT: PASS
+719ad8d350788e075d6534150e55fa77012705507a95785409dd494a4f049ae8  out/TinhVanTruyenThuyet_240x320_vi.jar
+5623681ef47d23b6bda75a343e1aa6ada842dc901719114010be1aa4133d521c  out/TinhVanTruyenThuyet_320x240_vi.jar
+81e005d20f1c4c1e99f07e5b08828521404986bd48d3f2bd280db9246e924af9  out/TinhVanTruyenThuyet_360x640_vi.jar
+rebuild OK

@@ -77,7 +77,7 @@ patch(im, (8, 0, im.width - 8, im.height), 'Phát', size=12)
 save(im, 'head/play.png')
 
 # 5) logo/exit.png: nen man thoat co logo nha phat hanh -> logo NAMP lam toi
-LG = Image.open(os.path.join(ROOT, '..', 'logo0.png')).convert('RGBA')
+LG = Image.open(os.path.join(ROOT, 'goc', 'logo_namp.png')).convert('RGBA')
 
 
 def fit_logo(W, H, bright):
