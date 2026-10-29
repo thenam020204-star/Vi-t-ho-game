@@ -1,0 +1,127 @@
+wait 9000
+press 53 150
+wait 2500
+press -6 150
+wait 3000
+probe ai A
+probe ai J
+press 56 150
+wait 500
+probe ai J
+press 56 150
+wait 500
+probe ai J
+press 50 150
+wait 500
+probe ai J
+shot r0
+press 53 150
+wait 2500
+probe ai A
+shot r1
+press -7 150
+wait 2000
+probe ai A
+shot r2
+press -2 150
+wait 500
+probe ai J
+press -6 150
+wait 2500
+probe ai A
+shot r3
+rawdown 49
+wait 30
+probe au cC
+rawup 49
+wait 300
+rawdown 50
+wait 30
+probe au cC
+rawup 50
+wait 300
+rawdown 51
+wait 30
+probe au cC
+rawup 51
+wait 300
+rawdown 52
+wait 30
+probe au cC
+rawup 52
+wait 300
+rawdown 54
+wait 30
+probe au cC
+rawup 54
+wait 300
+rawdown 55
+wait 30
+probe au cC
+rawup 55
+wait 300
+rawdown 56
+wait 30
+probe au cC
+rawup 56
+wait 300
+rawdown 57
+wait 30
+probe au cC
+rawup 57
+wait 300
+rawdown 53
+wait 30
+probe au cC
+rawup 53
+wait 300
+rawdown 48
+wait 30
+probe au cC
+rawup 48
+wait 300
+rawdown 42
+wait 30
+probe au cC
+rawup 42
+wait 300
+rawdown 35
+wait 30
+probe au cC
+rawup 35
+wait 300
+rawdown -5
+wait 30
+probe au cC
+rawup -5
+wait 300
+rawdown -6
+wait 30
+probe au cC
+rawup -6
+wait 300
+rawdown -7
+wait 30
+probe au cC
+rawup -7
+wait 300
+rawdown -1
+wait 30
+probe au cC
+rawup -1
+wait 300
+rawdown -2
+wait 30
+probe au cC
+rawup -2
+wait 300
+rawdown -3
+wait 30
+probe au cC
+rawup -3
+wait 300
+rawdown -4
+wait 30
+probe au cC
+rawup -4
+wait 300

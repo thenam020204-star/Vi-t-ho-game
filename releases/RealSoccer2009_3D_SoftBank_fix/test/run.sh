@@ -9,6 +9,6 @@ javac -cp "$FJ" -d "$W/h" "$H/Harness.java"
 javac --release 8 -d "$W/stub" "$H"/stub/com/mexa/opgl/*.java
 cp "$1" "$W/test.jar"; (cd "$W/stub" && zip -q "$W/test.jar" com/mexa/opgl/*.class)
 OUT=$(cd "$3" && pwd)
-(cd "$W/h" && timeout 60 java $JOPTS -Djava.security.manager=allow -Dhlog="$OUT/harness.log" -Djava.awt.headless=true \
+(cd "$W/h" && timeout ${HTIMEOUT:-60} java $JOPTS -Djava.security.manager=allow -Dhlog="$OUT/harness.log" -Djava.awt.headless=true \
   --add-opens java.base/java.lang=ALL-UNNAMED -cp "$FJ:." Harness "$W/test.jar" ${SCREEN_W:-800} ${SCREEN_H:-480} "$2" "$OUT") || true
 cat "$OUT/harness.log"

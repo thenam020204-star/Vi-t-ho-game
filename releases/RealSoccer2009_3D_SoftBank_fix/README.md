@@ -60,6 +60,34 @@ Phím số 0–9, `*`, `#` không đổi. `cH` gốc gán bằng `iconst_m1` (1 
 
 ⚠️ Bản này dành cho J2ME Loader / máy dùng mã phím Nokia, màn hình **800×480**. Máy SoftBank thật: dùng JAR gốc + JAD gốc.
 
+## Lỗi 4: phím số / soft key lộn xộn (`patchkeys2.py`)
+
+Bảng `au.c(int)` của bản SoftBank (máy cầm ngang) gán 0/1/2/3/4/7/* và soft trái = 524288 — bit này **không nơi nào
+kiểm tra** (chỉ là “phím bất kỳ”) — còn 6→1024, 8→512, 9→2048, #→4096, soft phải→8192; OK giữa trong trận cũng 524288.
+Ý nghĩa bit trong trận (`bh.java` ~3700): 256 chuyền (`ax==5`), 512 chuyền dài (`ax==2`), 1024 sút (`ax==3`, `h(9216·lực)`),
+2048 động tác giả/kỹ thuật (`ax==6`); 4096 quay lại, 8192 / 8448 chọn.
+Chữ hướng dẫn trong game: 384「方向ｷｰ|または|1/2/3/4/6/7/8/9ｷｰで|移動」, 386「5ｷｰで|ﾊﾟｽ」, 388「0ｷｰで|ｼｭｰﾄ」, 389「#ｷｰで|ﾛﾝｸﾞﾊﾟｽ」.
+
+| Phím | Bit | Tác dụng |
+|---|---|---|
+| 1 2 3 / 4 6 / 7 8 9, D-pad | 128 1 2 / 64 4 / 32 16 8 | 8 hướng |
+| 5, OK giữa | 256 | chuyền / chọn |
+| 0 | 1024 | sút |
+| * | 2048 | động tác giả |
+| # | 512 | chuyền dài |
+| soft trái | 8192 | 選択 |
+| soft phải | 4096 | 戻る |
+
+Cách vá (giữ độ dài lệnh, chỉ nhảy tới offset đã có frame StackMap — script tự kiểm tra):
+- viết lại 12 entry `tableswitch` (35..57) và hằng trong các slot `return` (`ldc 524288` → `bipush`, `sipush` → `sipush`);
+- phím 5 trỏ tới nhánh có sẵn offset 153 (→ 256, giống OK);
+- OK giữa: toán hạng `bipush 8` (so `ac == 8`, đang trong trận) → 127, nên luôn ra 256;
+- nhánh `cK`: `ldc; ireturn` → `goto 327` (slot `sipush 4096`); `<clinit>`: `cK = −7`, `cL = −6`.
+
+Đo trên FreeJ2ME (`keys_layout.txt`, bitmask `au.cC` khi giữ phím) — khớp bảng trên 19/19 phím.
+`into_match.txt` → `freej2me_into_match.png`: menu bằng 8/2/5, soft phải quay lại, vào tới trận (`ac = 8`, đồng hồ chạy),
+giữ 6 → `aC = 4`, 0 → 1024, `bE = 0` (không kẹt). Hình 3D vỡ là do stub OPGL của harness.
+
 ## Lỗi 3: đơ ở menu chính
 
 `au.run()` bọc cả tick trong `try { … bE = 0; } catch (Exception e) {}`. Nếu tick ném exception, `bE` kẹt ở 1 → khối
@@ -77,7 +105,7 @@ Exception thật (bắt bằng `-Xlog:exceptions`): `ArrayIndexOutOfBoundsExcept
 ## Kiểm tra đã làm / còn lại
 
 - ✅ Diff entry với JAR gốc: chỉ `META-INF/MANIFEST.MF`, `au.class`, `ai.class` khác; không thêm/xoá entry.
-- ✅ `javap` trước/sau: `au` khác 7 dòng trong `<clinit>`; `ai` chỉ khác khối khởi tạo `u`/`v`.
+- ✅ `javap` trước/sau: `au` khác ở 7 lệnh trong `<clinit>` và trong `c(I)I` (tableswitch + slot return + 2 lệnh); `ai` chỉ khác khối `u`/`v`.
 - ✅ ASM Verify (`--require-stackmap`, lib = FreeJ2ME + JDK java.base + stub OPGL): kết quả **giống hệt** JAR gốc
   (75 class, không tham chiếu thiếu, đủ StackMap; 8 lỗi nội bộ công cụ ở 8 method không bị sửa, có cả trên bản gốc).
 - ✅ FreeJ2ME 800×480: hỏi âm thanh → tiêu đề → menu 6 mục → lên/xuống đổi mục (`ai.J` 0→2→1) → OK vào chọn đội;
