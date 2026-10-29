@@ -1,0 +1,16 @@
+Thêm: ['font/f12.bin', 'logo/namp.png', 'src/VH.class']
+Xoá: []
+Đổi: ['src/GameMidlet.class', 'src/a.class', 'src/b.class', 'src/c.class', 'src/d.class', 'src/e.class', 'src/f.class', 'src/g.class', 'src/h.class', 'src/i.class', 'src/j.class', 'src/k.class', 'src/m.class', 'src/o.class', 'src/q.class', 'src/r.class', 'src/s.class', 'src/t.class', 'src/u.class', 'src/v.class', 'src/w.class']
+WARN src/VH.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/lang/StringBuffer.<init>(I)V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/util/Vector.<init>()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/util/Vector.addElement(Ljava/lang/Object;)V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/util/Vector.copyInto([Ljava/lang/Object;)V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: java/util/Vector.size()I (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.getHeight()I (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.getWidth()I (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.repaint()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Canvas.serviceRepaints()V (xác nhận máy đích có)
+WARN src/VH.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+RESULT: PASS
