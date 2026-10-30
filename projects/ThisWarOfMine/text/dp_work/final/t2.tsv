@@ -1,0 +1,897 @@
+id	src	dst	ctx
+Items/Groups/Tools	Tools	Dụng cụ	Items/Groups/Tools
+Items/Groups/Consumables	Consumables	Vật tiêu hao	Items/Groups/Consumables
+Items/Groups/Guns	Weapons	Vũ khí	Items/Groups/Guns
+Items/Groups/ShelterItems	Household Items	Đồ gia dụng	Items/Groups/ShelterItems
+Items/Groups/Materials	Materials	Nguyên liệu	Items/Groups/Materials
+Items/Groups/Equipment	Equipment	Trang bị	Items/Groups/Equipment
+Items/Groups/Other	Other	Khác	Items/Groups/Other
+Items/Groups/BasicItems	Basic Items	Vật phẩm cơ bản	Items/Groups/BasicItems
+Items/Groups/Improvement	Improvement	Nâng cấp	Items/Groups/Improvement
+Items/Groups/Crafters	Workshops	Xưởng	Items/Groups/Crafters
+Items/Groups/Weapon	Weapons	Vũ khí	Items/Groups/Weapon
+Items/ShelterItems/Cooker_Name	Crude Stove	Bếp thô sơ	Items/ShelterItems/Cooker_Name
+Items/ShelterItems/Cooker_Description	It's as simple as they get: just burn some fuel made up of wood, books or components and use some water to cook a meal more nutritious than raw food.	Đơn giản nhất có thể: đốt nhiên liệu làm từ gỗ, sách hoặc linh kiện, rồi dùng nước nấu bữa ăn bổ dưỡng hơn đồ sống.	Items/ShelterItems/Cooker_Description
+Items/ShelterItems/Cooker2_Name	Improved Stove	Bếp cải tiến	Items/ShelterItems/Cooker2_Name
+Items/ShelterItems/Cooker2_Description	A more efficient stove. Allows us to prepare cooked food more efficiently, saving fuel.	Bếp hiệu quả hơn. Nấu đồ chín nhanh hơn, tiết kiệm nhiên liệu.	Items/ShelterItems/Cooker2_Description
+Items/ShelterItems/Garden_Name	Herbal Garden	Vườn thảo mộc	Items/ShelterItems/Garden_Name
+Items/ShelterItems/Garden_Description	Using fertilizer we can grow some herbs here and use them to make medication or cheap cigarettes. We can improve it to grow vegetables.	Bón phân thì trồng được thảo mộc, dùng làm thuốc men hoặc thuốc lá rẻ tiền. Nâng cấp thì trồng được rau củ.	Items/ShelterItems/Garden_Description
+Items/ShelterItems/HerbalWorkshop_Name	Herbal Workshop	Xưởng thảo mộc	Items/ShelterItems/HerbalWorkshop_Name
+Items/ShelterItems/HerbalWorkshop_Description	A table with some simple equipment where we can prepare herbal meds, bandages and low quality roll-up cigarettes. We can upgrade it to make real meds and good quality cigarettes.	Bàn làm việc với vài dụng cụ đơn giản, để chế thuốc thảo dược, băng gạc và thuốc lá cuốn kém chất lượng. Nâng cấp thì làm được thuốc men thật và thuốc lá tốt hơn.	Items/ShelterItems/HerbalWorkshop_Description
+Items/ShelterItems/Heater_Name	Simple Heater	Lò sưởi đơn giản	Items/ShelterItems/Heater_Name
+Items/ShelterItems/Heater_Description	Allows us to heat the shelter, so that we don't get ill. We can prepare fuel for it using wood, books or various components.	Giữ ấm nơi trú ẩn để khỏi ốm. Có thể làm nhiên liệu từ gỗ, sách hoặc nhiều linh kiện.	Items/ShelterItems/Heater_Description
+Items/ShelterItems/Heater2_Name	Improved Heater	Lò sưởi cải tiến	Items/ShelterItems/Heater2_Name
+Items/ShelterItems/Heater2_Description	It heats up the shelter much more efficiently using less fuel.	Sưởi ấm nơi trú ẩn hiệu quả hơn, tốn ít nhiên liệu hơn.	Items/ShelterItems/Heater2_Description
+Items/ShelterItems/Bed_Name	Bed	Giường	Items/ShelterItems/Bed_Name
+Items/ShelterItems/Bed_Description	Offers a decent sleep without back pain, no matter if it's night or day.	Ngủ đủ, không đau lưng, ngày hay đêm đều được.	Items/ShelterItems/Bed_Description
+Items/ShelterItems/Radio_Name	Radio	Radio	Items/ShelterItems/Radio_Name
+Items/ShelterItems/Radio_Description	It would be great to listen to current news and weather forecasts. We could be better prepared to deal with hardships if we knew about them well in advance. When there's nothing on the news, we can listen to music and brighten up our mood.	Nghe tin tức và dự báo thời tiết thì tốt biết mấy. Biết trước khó khăn thì dễ đối phó hơn. Hết tin thì nghe nhạc cho đỡ buồn.	Items/ShelterItems/Radio_Description
+Items/ShelterItems/HoochGear_Name	Moonshine Still	Nồi nấu rượu lậu	Items/ShelterItems/HoochGear_Name
+Items/ShelterItems/HoochGear_Description	With a bit of patience, some water and sugar we can make a foul-tasting but strong booze. We could then barter it for things we need. Just don't expect too much.	Kiên nhẫn chút, có nước và đường là nấu được thứ rượu dở tệ nhưng nồng. Có thể đem đổi lấy đồ cần thiết. Đừng mong gì nhiều.	Items/ShelterItems/HoochGear_Description
+Items/ShelterItems/HoochGear2_Name	Alcohol Distiller	Máy chưng cồn	Items/ShelterItems/HoochGear2_Name
+Items/ShelterItems/HoochGear2_Description	Distills moonshine into pure, high-quality alcohol, component for meds and bandages, or a much better bartering item.	Chưng rượu lậu thành cồn nguyên chất, dùng làm thuốc men và băng gạc, hoặc hàng đổi chác tốt hơn nhiều.	Items/ShelterItems/HoochGear2_Description
+Items/ShelterItems/BasicWorkshop_Name	Simple Workshop	Xưởng đơn giản	Items/ShelterItems/BasicWorkshop_Name
+Items/ShelterItems/BasicWorkshop_Description	An improvised workbench for making simple equipment, furniture and other useful stuff, such as beds or chairs. We can upgrade it to make even more useful things.	Bàn làm việc tạm bợ, dùng làm trang bị đơn giản, đồ đạc và vài thứ hữu ích khác như giường, ghế. Nâng cấp thì làm được nhiều thứ hơn.	Items/ShelterItems/BasicWorkshop_Description
+Items/ShelterItems/BasicWorkshop2_Name	Improved Workshop	Xưởng cải tiến	Items/ShelterItems/BasicWorkshop2_Name
+Items/ShelterItems/BasicWorkshop2_Description	Enables the manufacture of more sophisticated items and appliances, providing us with more options to get food or meds, and trade goods. We can upgrade it further to make electrical improvements.	Chế tạo được đồ tinh vi và thiết bị hơn, có thêm cách kiếm đồ ăn, thuốc men và hàng đổi chác. Nâng cấp tiếp thì làm được cải tiến điện.	Items/ShelterItems/BasicWorkshop2_Description
+Items/ShelterItems/WaterCollector_Name	Rainwater Collector	Bình hứng nước mưa	Items/ShelterItems/WaterCollector_Name
+Items/ShelterItems/WaterCollector_Description	A simple contraption to collect and filter rainwater needed for cooking and making alcohol. It might be wise to build a couple of them.	Thiết bị đơn giản để hứng và lọc nước mưa, dùng để nấu ăn và nấu rượu. Nên làm vài cái.	Items/ShelterItems/WaterCollector_Description
+Items/ShelterItems/SnowCollector_Name	Pile of Snow	Đống tuyết	Items/ShelterItems/SnowCollector_Name
+Items/ShelterItems/Armchair_Name	Armchair	Ghế bành	Items/ShelterItems/Armchair_Name
+Items/ShelterItems/Armchair_Description	An armchair is a comfortable piece of furniture. If you sit in it with a good book, you can almost forget about the war.	Ghế bành êm ái. Ngồi đó với cuốn sách hay là gần như quên chiến tranh.	Items/ShelterItems/Armchair_Description
+Items/ShelterItems/Chair_Name	Chair	Ghế	Items/ShelterItems/Chair_Name
+Items/ShelterItems/Chair_Description	It's better to sit on a chair than on the floor. We should build it to make this place more like home. It will make us feel better in these tough times.	Ngồi ghế vẫn hơn ngồi đất. Làm ra nó để chỗ này giống nhà hơn. Lúc khó khăn thế này, thấy dễ chịu hơn.	Items/ShelterItems/Chair_Description
+Items/ShelterItems/Trap_Name	Trap for small animals	Bẫy thú nhỏ	Items/ShelterItems/Trap_Name
+Items/ShelterItems/Trap_Description	The only small animals left seem to be rats... Still, meat is a rare commodity in wartime. We simply have to put in some bait and wait.	Thú nhỏ còn lại chắc chỉ có chuột... Nhưng thời chiến thịt hiếm lắm. Cứ đặt mồi rồi chờ.	Items/ShelterItems/Trap_Description
+Items/ShelterItems/BasicWorkshop3_Name	Advanced Workshop	Xưởng tiên tiến	Items/ShelterItems/BasicWorkshop3_Name
+Items/ShelterItems/BasicWorkshop3_Description	This advanced workshop allows us to make useful electrical appliances, such as heat lamps for gardens and mixers for herbal workshops or for metal workshops.	Xưởng tiên tiến làm được thiết bị điện hữu ích, như đèn sưởi cho vườn và máy trộn cho xưởng thảo mộc hay xưởng kim khí.	Items/ShelterItems/BasicWorkshop3_Description
+Items/ShelterItems/Guitar_Name	Guitar	Đàn guitar	Items/ShelterItems/Guitar_Name
+Items/ShelterItems/Guitar_Description	Having something to occupy time is important. A guitar can brighten up our mood, especially if the person playing it knows what they are doing.	Có việc gì đó để giết thời gian thì quan trọng. Đàn guitar làm tinh thần khá lên, nhất là khi người chơi biết chơi.	Items/ShelterItems/Guitar_Description
+Items/ShelterItems/Garden2_Description	We can grow vegetables here using water and fertilizer, but it takes time.	Trồng rau ở đây cần nước và phân bón, nhưng phải chờ lâu.	Items/ShelterItems/Garden2_Description
+Items/ShelterItems/Garden2_Name	Vegetable Garden	Vườn rau	Items/ShelterItems/Garden2_Name
+Items/ShelterItems/HighVoltageDoor_Name	Reinforced Door	Cửa gia cố	Items/ShelterItems/HighVoltageDoor_Name
+Items/ShelterItems/HighVoltageDoor_Description	Once we board up holes and windows in the shelter, we can think of reinforcing the door and installing a simple alarm system.	Khi đã bịt lỗ và cửa sổ lại, có thể tính đến gia cố cửa và lắp chuông báo động đơn giản.	Items/ShelterItems/HighVoltageDoor_Description
+Items/ShelterItems/BlockedHole_Name	Board up	Bịt lại	Items/ShelterItems/BlockedHole_Name
+Items/ShelterItems/BlockedHole_Description	We can board up holes and windows in the building for more protection against looters.	Bịt lỗ hổng và cửa sổ trong tòa nhà để chống bọn hôi của.	Items/ShelterItems/BlockedHole_Description
+Items/ShelterItems/MetalWorkshop_Name	Metal Workshop	Xưởng kim khí	Items/ShelterItems/MetalWorkshop_Name
+Items/ShelterItems/MetalWorkshop_Description	Allows us to make tools, such as shovels for clearing rubble, crowbars for breaking doors and knives for self-defense. Later we could use it to build more advanced tools or even repair firearms.	Làm được dụng cụ như xẻng dọn gạch vụn, xà beng phá cửa và dao tự vệ. Về sau có thể làm dụng cụ tinh xảo hơn, thậm chí sửa súng.	Items/ShelterItems/MetalWorkshop_Description
+Items/ShelterItems/MetalWorkshop2_Name	Improved Metal Workshop	Xưởng kim khí cải tiến	Items/ShelterItems/MetalWorkshop2_Name
+Items/ShelterItems/MetalWorkshop2_Description	Apart from making more tools such as an axe or saw blade, we can also fix simple broken firearms and helmets here. We can upgrade it even further to make ammo and fix bulletproof vests.	Ngoài rìu, lưỡi cưa, còn sửa được súng hỏng đơn giản và mũ sắt. Nâng cấp tiếp thì làm được đạn và sửa áo giáp quân dụng.	Items/ShelterItems/MetalWorkshop2_Description
+Items/ShelterItems/MetalWorkshop3_Name	Advanced Metal Workshop	Xưởng kim khí tiên tiến	Items/ShelterItems/MetalWorkshop3_Name
+Items/ShelterItems/MetalWorkshop3_Description	Apart from making tools we can fix all broken firearms here, as well as vests and helmets, and refill empty shell casings to reuse them.	Ngoài dụng cụ, ở đây sửa được mọi súng hỏng, cả áo giáp quân dụng lẫn mũ sắt, và nạp lại vỏ đạn rỗng để dùng lại.	Items/ShelterItems/MetalWorkshop3_Description
+Items/ShelterItems/HerbalWorkshop2_Name	Improved Herbal workshop	Xưởng thảo mộc cải tiến	Items/ShelterItems/HerbalWorkshop2_Name
+Items/ShelterItems/HerbalWorkshop2_Description	It enables the manufacture of real meds and quality roll-up cigarettes.	Chế được thuốc men thật và thuốc lá cuốn chất lượng cao.	Items/ShelterItems/HerbalWorkshop2_Description
+Items/ShelterItems/Swing_Name	Swing	Xích đu	Items/ShelterItems/Swing_Name
+Items/ShelterItems/Swing_Description	It's just a simple swing, but for a kid it's a never-ending source of fun.	Chỉ là cái xích đu đơn giản, nhưng với trẻ con thì vui không bao giờ hết.	Items/ShelterItems/Swing_Description
+Items/ShelterItems/DrawingTable_Name	Kids' desk	Bàn học của trẻ	Items/ShelterItems/DrawingTable_Name
+Items/ShelterItems/DrawingTable_Description	It's important for kids to have their own place in the shelter. They can draw here, read books and play with toys. It helps them forget about the war.	Trẻ con cần có chỗ riêng trong nơi trú ẩn. Chúng vẽ, đọc sách và chơi đồ chơi ở đây. Giúp chúng quên chiến tranh.	Items/ShelterItems/DrawingTable_Description
+Items/ShelterItems/ToyBox_Name	Toy Box	Hộp đồ chơi	Items/ShelterItems/ToyBox_Name
+Items/ShelterItems/ToyBox_Description	It contains everything! A teddy bear, dolls, pocket planes and cars. Even toy soldiers...	Đủ thứ cả! Gấu bông, búp bê, máy bay và xe hơi nhỏ. Cả lính đồ chơi nữa...	Items/ShelterItems/ToyBox_Description
+Items/ShelterItems/Snowman_Name	Snowman	Người tuyết	Items/ShelterItems/Snowman_Name
+Items/ShelterItems/Snowman_Description	Winter is harsh for adults, but for kids it's a time to play.	Mùa đông khắc nghiệt với người lớn, nhưng với trẻ con thì là lúc để nô đùa.	Items/ShelterItems/Snowman_Description
+Items/ShelterItems/Ball_Name	Ball	Quả bóng	Items/ShelterItems/Ball_Name
+Items/ShelterItems/Ball_Description	Which child doesn't like to play with a ball?	Đứa trẻ nào mà không thích chơi bóng?	Items/ShelterItems/Ball_Description
+Items/ShelterItems/JumpRope_Name	Jump Rope	Dây nhảy	Items/ShelterItems/JumpRope_Name
+Items/ShelterItems/JumpRope_Description	It's amazing how a simple piece of rope can keep children entertained for so many hours.	Một sợi dây đơn giản mà giữ trẻ con chơi được cả giờ, thật lạ.	Items/ShelterItems/JumpRope_Description
+Items/ShelterItems/ShelterBridge_Name	Makeshift bridge	Cầu tạm	Items/ShelterItems/ShelterBridge_Name
+Items/ShelterItems/ShelterBridge_Description	A makeshift bridge leading to the other wing of the house.	Cầu tạm nối sang cánh kia của ngôi nhà.	Items/ShelterItems/ShelterBridge_Description
+Items/Materials/Wood_Name	Wood	Gỗ	Items/Materials/Wood_Name
+Items/Materials/Wood_Description	An essential component for all kinds of stuff, plus we can chop it to fuel stoves and heaters.	Thiết yếu để làm đủ loại đồ, lại chẻ ra làm nhiên liệu cho bếp và lò sưởi.	Items/Materials/Wood_Description
+Items/Materials/Materials_Name	Components	Linh kiện	Items/Materials/Materials_Name
+Items/Materials/Materials_Description	Various components needed to make just about anything. Nails, duct tape, plastic containers, scrap, things like that.	Đủ loại linh kiện để làm gần như mọi thứ. Đinh, băng dính, hộp nhựa, phế liệu, đại loại vậy.	Items/Materials/Materials_Description
+Items/Materials/GunPowder_Name	Gunpowder	Thuốc súng	Items/Materials/GunPowder_Name
+Items/Materials/GunPowder_Description	Gunpowder is used to manufacture ammunition and explosives.	Thuốc súng dùng để chế đạn và chất nổ.	Items/Materials/GunPowder_Description
+Items/Materials/WeaponParts_Name	Weapon Parts	Linh kiện súng	Items/Materials/WeaponParts_Name
+Items/Materials/WeaponParts_Description	Various weapon parts. Blades, barrels, springs, locks and so on.	Đủ loại linh kiện súng. Lưỡi, nòng, lò xo, khóa và các thứ tương tự.	Items/Materials/WeaponParts_Description
+Items/Materials/Sugar_Name	Sugar	Đường	Items/Materials/Sugar_Name
+Items/Materials/Sugar_Description	There'd be no moonshine without sugar. Essential for the fermentation process.	Không có đường thì không có rượu lậu. Cần cho quá trình lên men.	Items/Materials/Sugar_Description
+Items/Materials/Parts_Name	Parts	Phụ tùng	Items/Materials/Parts_Name
+Items/Materials/Parts_Description	Various mechanical parts. Used for building and fixing complex devices.	Đủ loại phụ tùng cơ khí. Dùng để chế và sửa thiết bị phức tạp.	Items/Materials/Parts_Description
+Items/Materials/Herbs_Name	Herbs	Thảo mộc	Items/Materials/Herbs_Name
+Items/Materials/Tobacco_Name	Tobacco	Thuốc lá sợi	Items/Materials/Tobacco_Name
+Items/Materials/Tobacco_Description	We can make expensive cigarettes from this tobacco.	Từ thuốc lá sợi này làm được thuốc lá đắt tiền.	Items/Materials/Tobacco_Description
+Items/Materials/Plants_Description	Various herbs that can be used to make herbal medications and roll-up cigarettes.	Đủ loại thảo mộc, dùng để chế thuốc thảo dược và thuốc lá cuốn.	Items/Materials/Plants_Description
+Items/Materials/Plants_Name	Herbs	Thảo mộc	Items/Materials/Plants_Name
+Items/Materials/MedIngredients_Name	Med ingredients	Nguyên liệu thuốc	Items/Materials/MedIngredients_Name
+Items/Materials/MedIngredients_Description	Old pills and animal meds. With a little bit of knowledge they can be used to make normal meds.	Thuốc viên cũ và thuốc thú y. Có chút hiểu biết thì chế được thuốc men thường.	Items/Materials/MedIngredients_Description
+Items/Materials/ShotgunShells_Description	Empty shotgun shells. We could use them to make shotgun ammo.	Vỏ đạn súng săn rỗng. Có thể nạp lại thành đạn súng săn.	Items/Materials/ShotgunShells_Description
+Items/Materials/ShotgunShells_Name	Shotgun Shells	Vỏ đạn súng săn	Items/Materials/ShotgunShells_Name
+Items/Materials/PistolShells_Name	Shell Casings	Vỏ đạn	Items/Materials/PistolShells_Name
+Items/Materials/PistolShells_Description	Empty shell casings. We could make firearm ammo out of them.	Vỏ đạn rỗng. Có thể làm đạn súng cầm tay từ chúng.	Items/Materials/PistolShells_Description
+Items/Materials/RfileShells_Name	Rifle Shells	Vỏ đạn súng trường	Items/Materials/RfileShells_Name
+Items/Materials/RifleShells_Description	Empty rifle shells. We could make rifle ammo out of them.	Vỏ đạn súng trường rỗng. Có thể làm đạn súng trường từ chúng.	Items/Materials/RifleShells_Description
+Items/Materials/StaleFood_Name	Fertilizer	Phân bón	Items/Materials/StaleFood_Name
+Items/Materials/StaleFood_Description	Organic waste that we can use as fertilizer in our garden to grow herbs or vegetables, or as bait in a trap for small animals.	Rác hữu cơ, bón vườn để trồng thảo mộc hay rau củ, hoặc làm mồi cho bẫy thú nhỏ.	Items/Materials/StaleFood_Description
+Items/Materials/ElectricParts_Name	Electric Parts	Linh kiện điện	Items/Materials/ElectricParts_Name
+Items/Materials/ElectricParts_Description	Some electric parts. They will come in handy if we want to introduce advanced improvements to our shelter.	Vài linh kiện điện. Sẽ có ích khi muốn cải tiến nơi trú ẩn thêm.	Items/Materials/ElectricParts_Description
+Items/UniqueMaterials/Speaker_Name	Speaker	Loa	Items/UniqueMaterials/Speaker_Name
+Items/UniqueMaterials/Speaker_Description	An essential part of any radio receiver.	Bộ phận thiết yếu của máy thu radio.	Items/UniqueMaterials/Speaker_Description
+Items/UniqueMaterials/Pistol_broken_Name	Broken Pistol	Súng lục hỏng	Items/UniqueMaterials/Pistol_broken_Name
+Items/UniqueMaterials/Pistol_broken_Description	An old weapon with a few missing parts.	Vũ khí cũ, thiếu vài bộ phận.	Items/UniqueMaterials/Pistol_broken_Description
+Items/UniqueMaterials/Machinegun_broken_Name	Broken Assault Rifle	Súng trường tấn công hỏng	Items/UniqueMaterials/Machinegun_broken_Name
+Items/UniqueMaterials/Machinegun_broken_Description	It used to be a deadly weapon, but it doesn't work anymore.	Từng là vũ khí chết người, giờ không còn bắn được.	Items/UniqueMaterials/Machinegun_broken_Description
+Items/UniqueMaterials/Shotgun_broken_Name	Broken Shotgun	Súng săn hỏng	Items/UniqueMaterials/Shotgun_broken_Name
+Items/UniqueMaterials/Shotgun_broken_Description	A half-dismantled shotgun.	Súng săn tháo gần nửa.	Items/UniqueMaterials/Shotgun_broken_Description
+Items/UniqueMaterials/Helmet_broken_Name	Damaged helmet	Mũ sắt hỏng	Items/UniqueMaterials/Helmet_broken_Name
+Items/UniqueMaterials/Helmet_broken_Description	It's damaged so badly it can't be used, but after some repairs it could save someone's head.	Hỏng nặng, không đội được. Sửa lại thì may ra cứu được cái đầu nào đó.	Items/UniqueMaterials/Helmet_broken_Description
+Items/UniqueMaterials/Vest_broken_Name	Damaged Vest	Áo giáp hỏng	Items/UniqueMaterials/Vest_broken_Name
+Items/UniqueMaterials/Vest_broken_Description	Damaged military vest. Some repairs are needed before it can be used again.	Áo giáp quân dụng hỏng. Phải sửa mới mặc lại được.	Items/UniqueMaterials/Vest_broken_Description
+Items/UniqueMaterials/Guitar_broken_Name	Broken Guitar	Đàn guitar hỏng	Items/UniqueMaterials/Guitar_broken_Name
+Items/UniqueMaterials/Guitar_broken_Description	It's broken, but not beyond repair. It would be cool to pass the time with nice music.	Hỏng, nhưng chưa đến mức không sửa được. Có nhạc hay để giết thời gian thì tốt.	Items/UniqueMaterials/Guitar_broken_Description
+Items/UniqueMaterials/BrokenToy_Name	Broken Toy	Đồ chơi hỏng	Items/UniqueMaterials/BrokenToy_Name
+Items/UniqueMaterials/BrokenToy_Description	This toy has seen better days. It's broken now, but it certainly brought a lot of joy to its previous owner.	Món đồ chơi này từng đẹp hơn. Giờ hỏng rồi, nhưng trước đây chắc đã mang nhiều niềm vui cho chủ cũ.	Items/UniqueMaterials/BrokenToy_Description
+Items/UniqueMaterials/ConductPass_Name	Conduct Pass	Giấy thông hành	Items/UniqueMaterials/ConductPass_Name
+Items/UniqueMaterials/ConductPass_Description	A safe conduct pass issued by the local army headquarters to Robert Zhigajev. It’s useless to us, but could be quite valuable for someone with access to a skilled forger.	Giấy thông hành do bộ chỉ huy quân đội địa phương cấp cho Robert Zhigajev. Với chúng tôi thì vô dụng, nhưng với người quen thợ làm giấy giả giỏi thì có thể đáng giá.	Items/UniqueMaterials/ConductPass_Description
+Items/UniqueMaterials/KarelNote_Name	Karel’s note	Thư của Karel	Items/UniqueMaterials/KarelNote_Name
+Items/UniqueMaterials/KarelNote_Description	It’s a note from Karel confirming that you paid for the passage. It contains directions that will lead you to a safe house once you disembark.	Thư của Karel xác nhận đã trả tiền qua đường. Có chỉ đường tới nhà an toàn khi lên bờ.	Items/UniqueMaterials/KarelNote_Description
+Items/UniqueMaterials/ShelterBridgePart_Name	Makeshift bridge main part	Phần chính của cầu tạm	Items/UniqueMaterials/ShelterBridgePart_Name
+Items/UniqueMaterials/ShelterBridgePart_Description	This part is required to build the makeshift bridge.	Cần bộ phận này để dựng cầu tạm.	Items/UniqueMaterials/ShelterBridgePart_Description
+Items/UniqueMaterials/Crayons_Name	Crayons	Bút sáp màu	Items/UniqueMaterials/Crayons_Name
+Items/UniqueMaterials/Crayons_Description	A colorful set of crayons. It’s almost complete. Amelia could draw whatever she wanted with them.	Bộ bút sáp màu sặc sỡ, gần đủ rồi. Amelia có thể vẽ bất cứ thứ gì con bé muốn.	Items/UniqueMaterials/Crayons_Description
+Items/Consumables/RawFood_Name	Raw Food	Thực phẩm sống	Items/Consumables/RawFood_Name
+Items/Consumables/RawFood_Description	It's edible but would be more nutritious when cooked.	Ăn được, nhưng nấu chín thì bổ dưỡng hơn.	Items/Consumables/RawFood_Description
+Items/Consumables/CookedFood_Name	Cooked Food	Đồ ăn chín	Items/Consumables/CookedFood_Name
+Items/Consumables/CookedFood_Description	A simple cooked meal, more nutritious and tastier than raw food. It gets even better and more filling with vegetables.	Bữa ăn chín đơn giản, bổ dưỡng và ngon hơn đồ sống. Có rau củ thì còn ngon và no hơn.	Items/Consumables/CookedFood_Description
+Items/Consumables/PistolAmmo_Name	Ammunition	Đạn	Items/Consumables/PistolAmmo_Name
+Items/Consumables/PistolAmmo_Description	Ammunition for firearms.	Đạn cho súng cầm tay.	Items/Consumables/PistolAmmo_Description
+Items/Consumables/Alcohol_Name	Pure Alcohol	Cồn nguyên chất	Items/Consumables/Alcohol_Name
+Items/Consumables/Alcohol_Description	A small flask of pure alcohol. You can drink it, you can trade it or you can use it to produce meds or bandages.	Bình nhỏ cồn nguyên chất. Uống được, đổi được, hoặc dùng để làm thuốc men hay băng gạc.	Items/Consumables/Alcohol_Description
+Items/Consumables/Meds_Name	Medications	Thuốc men	Items/Consumables/Meds_Name
+Items/Consumables/Meds_Description	Their taste is terrible, but they can save your life in sickness.	Vị đắng ghê, nhưng lúc ốm có thể cứu mạng.	Items/Consumables/Meds_Description
+Items/Consumables/Bandages_Name	Bandages	Băng gạc	Items/Consumables/Bandages_Name
+Items/Consumables/Bandages_Description	Used to dress wounds.	Dùng để băng vết thương.	Items/Consumables/Bandages_Description
+Items/Consumables/CannedFood_Name	Canned Food	Đồ hộp	Items/Consumables/CannedFood_Name
+Items/Consumables/CannedFood_Description	A canned meal, more nutritious than raw food. With time, you'll get used to its taste.	Bữa đồ hộp, bổ dưỡng hơn đồ sống. Ăn lâu rồi cũng quen vị.	Items/Consumables/CannedFood_Description
+Items/Consumables/Hooch_Name	Moonshine	Rượu lậu	Items/Consumables/Hooch_Name
+Items/Consumables/Hooch_Description	Things get easier when you drink it. Or so it seems. It's a good trading item.	Uống vào thấy dễ chịu hơn. Hoặc là tưởng vậy. Đổi chác thì được.	Items/Consumables/Hooch_Description
+Items/Consumables/JaredFood_Name	Jarred Food	Đồ đóng lọ	Items/Consumables/JaredFood_Name
+Items/Consumables/JaredFood_Description	It doesn't spoil so we can store it longer, and it's good for trade.	Không hỏng nên để được lâu, lại tốt để đổi chác.	Items/Consumables/JaredFood_Description
+Items/Consumables/ShotgunAmmo_Name	Shotgun Ammo	Đạn súng săn	Items/Consumables/ShotgunAmmo_Name
+Items/Consumables/ShotgunAmmo_Description	Ammunition for shotguns.	Đạn cho súng săn.	Items/Consumables/ShotgunAmmo_Description
+Items/Consumables/RifleAmmo_Name	Rifle Ammo	Đạn súng trường	Items/Consumables/RifleAmmo_Name
+Items/Consumables/RifleAmmo_Description	Ammunition for rifles.	Đạn cho súng trường.	Items/Consumables/RifleAmmo_Description
+Items/Consumables/HerbalMeds_Name	Herbal Meds	Thuốc thảo dược	Items/Consumables/HerbalMeds_Name
+Items/Consumables/HerbalMeds_Description	Simple medications based on herbs. Sometimes they help, sometimes they don't. Still, they're better than nothing.	Thuốc thảo dược đơn giản. Lúc hiệu nghiệm, lúc không. Nhưng vẫn hơn không có gì.	Items/Consumables/HerbalMeds_Description
+Items/Consumables/DismantlingTools_Name	Dismantling Tools	Dụng cụ tháo lắp	Items/Consumables/DismantlingTools_Name
+Items/Consumables/DismantlingTools_Description	Tools for dismantling electrical and mechanical devices. Screwdrivers, files, cutters and the like. They're homemade, so not very durable.	Dụng cụ để tháo thiết bị điện và cơ khí. Tua vít, giũa, kìm cắt và đại loại vậy. Tự làm nên không bền lắm.	Items/Consumables/DismantlingTools_Description
+Items/Consumables/Vegetables_Name	Vegetables	Rau củ	Items/Consumables/Vegetables_Name
+Items/Consumables/Vegetables_description	We can eat them as is, but they make a much better meal when cooked with some raw food.	Ăn sống cũng được, nhưng nấu chung với đồ sống thì bữa ăn ngon hơn nhiều.	Items/Consumables/Vegetables_description
+Items/Consumables/SawBlade_Name	Saw Blade	Lưỡi cưa	Items/Consumables/SawBlade_Name
+Items/Consumables/SawBlade_Description	We can use it to cut through metal bars and chains to get to otherwise inaccessible places.	Dùng để cắt song sắt và xích, vào được những chỗ không thể vào.	Items/Consumables/SawBlade_Description
+Items/Consumables/HomeGrownTobacco_Name	Homegrown Tobacco	Thuốc lá tự trồng	Items/Consumables/HomeGrownTobacco_Name
+Items/Consumables/HomeGrownTobacco_Description	Homegrown tobacco for making roll-up cigarettes. Not nearly as good as the real thing, but we can grow it ourselves.	Thuốc lá tự trồng để cuốn thuốc. Kém xa hàng thật, nhưng tự trồng được.	Items/Consumables/HomeGrownTobacco_Description
+Items/Consumables/Joint_Name	Roll-up Cigarette	Thuốc lá cuốn	Items/Consumables/Joint_Name
+Items/Consumables/Joint_Description	Roll-up cigarette made from herbs. It reeks acrid, bitter smoke.	Thuốc lá cuốn làm từ thảo mộc. Khói hắc, đắng.	Items/Consumables/Joint_Description
+Items/Consumables/Cigarette_Name	Cigarette	Thuốc lá	Items/Consumables/Cigarette_Name
+Items/Consumables/Cigarette_Description	Real tobacco cigarette. Often used as currency in times of war.	Thuốc lá thật. Thời chiến hay dùng làm tiền.	Items/Consumables/Cigarette_Description
+Items/Consumables/QualityJoint_Name	Quality Roll-up	Thuốc lá cuốn chất lượng	Items/Consumables/QualityJoint_Name
+Items/Consumables/QualityJoint_Description	Roll-up made from equal parts of tobacco and herbs. Quite good under the circumstances.	Thuốc lá cuốn pha nửa thuốc lá sợi, nửa thảo mộc. Trong hoàn cảnh này thì khá ổn.	Items/Consumables/QualityJoint_Description
+Items/Consumables/Coffee_Name	Coffee	Cà phê	Items/Consumables/Coffee_Name
+Items/Consumables/Coffee_Description	Some of us drink coffee to find strength in order to survive another day. Its limited availability in wartime makes it a valuable commodity.	Có người uống cà phê để có sức sống thêm một ngày. Thời chiến khan hiếm nên rất quý.	Items/Consumables/Coffee_Description
+Items/Fuels/Water_Name	Clean Water	Nước sạch	Items/Fuels/Water_Name
+Items/Fuels/Water_Description	Some relatively clean water. You'll need it to prepare a good meal or make alcohol.	Nước tương đối sạch. Cần để nấu bữa ngon hoặc nấu rượu.	Items/Fuels/Water_Description
+Items/Fuels/Filter_Name	Filter	Bộ lọc	Items/Fuels/Filter_Name
+Items/Fuels/Filter_Description	Homemade single-use filter to purify rainwater or distill alcohol.	Bộ lọc tự chế, dùng một lần, để lọc nước mưa hoặc chưng cồn.	Items/Fuels/Filter_Description
+Items/Fuels/Snow_Name	Snow	Tuyết	Items/Fuels/Snow_Name
+Items/Fuels/Snow_Description	We can melt it into water.	Nấu chảy thành nước.	Items/Fuels/Snow_Description
+Items/Fuels/HeaterFuel_Name	Fuel	Nhiên liệu	Items/Fuels/HeaterFuel_Name
+Items/Fuels/HeaterFuel_Description	Everything that we can burn in the heater to warm up our place, or in the stove to cook food. We can make it from wood, books or components.	Thứ đốt được trong lò sưởi để giữ ấm, hoặc trong bếp để nấu ăn. Làm từ gỗ, sách hoặc linh kiện.	Items/Fuels/HeaterFuel_Description
+Items/Fuels/Book_Name	Book	Sách	Items/Fuels/Book_Name
+Items/Fuels/Book_Description	A good book is uplifting. The more we have, the better. If times are hard, we can make them into fuel for our heater or stove.	Sách hay thì làm người khá hơn. Càng nhiều càng tốt. Lúc khó khăn thì xé ra làm nhiên liệu cho lò hay bếp.	Items/Fuels/Book_Description
+Items/Tools/Crowbar_Name	Crowbar	Xà beng	Items/Tools/Crowbar_Name
+Items/Tools/Crowbar_Description	Homemade tool you can use to pry open a few doors before it breaks. It does the job slowly and loudly.	Dụng cụ tự chế, cạy được vài cánh cửa trước khi gãy. Làm chậm và ồn.	Items/Tools/Crowbar_Description
+Items/Tools/LockPick_Name	Lock Pick	Đồ cạy khóa	Items/Tools/LockPick_Name
+Items/Tools/LockPick_Description	It's single use but it opens locks quickly and quietly.	Dùng một lần, nhưng mở khóa nhanh và êm.	Items/Tools/LockPick_Description
+Items/Tools/Shovel_Name	Shovel	Xẻng	Items/Tools/Shovel_Name
+Items/Tools/Shovel_Description	A small shovel for picking through rubble.	Xẻng nhỏ để lục gạch vụn.	Items/Tools/Shovel_Description
+Items/Tools/Vest_Name	Military Vest	Áo giáp quân dụng	Items/Tools/Vest_Name
+Items/Tools/Vest_Description	Vastly increases the chances of surviving a bullet or blade hit.	Tăng mạnh cơ hội sống sót khi trúng đạn hoặc dao.	Items/Tools/Vest_Description
+Items/Tools/Helmet_Name	Helmet	Mũ sắt	Items/Tools/Helmet_Name
+Items/Tools/Helmet_Description	It gives some protection against bullets and knives.	Chống được phần nào đạn và dao.	Items/Tools/Helmet_Description
+Items/Tools/Hatchet_Name	Hatchet	Rìu	Items/Tools/Hatchet_Name
+Items/Tools/Hatchet_Description	We can use it to chop furniture... Or people.	Chặt đồ đạc được... Hoặc chặt người.	Items/Tools/Hatchet_Description
+Items/Guns/Pistol_Name	Pistol	Súng lục	Items/Guns/Pistol_Name
+Items/Guns/Pistol_Description	Point at a person you want to hurt.	Chĩa vào người muốn làm đau.	Items/Guns/Pistol_Description
+Items/Guns/Machinegun_Name	Assault Rifle	Súng trường tấn công	Items/Guns/Machinegun_Name
+Items/Guns/Machinegun_Description	Military assault rifle, with a good rate of fire.	Súng trường tấn công quân dụng, tốc độ bắn tốt.	Items/Guns/Machinegun_Description
+Items/Guns/SniperRifle_Name	Scoped Rifle	Súng trường ngắm	Items/Guns/SniperRifle_Name
+Items/Guns/SniperRifle_Description	Military assault rifle fitted with a scope.	Súng trường tấn công quân dụng lắp ống ngắm.	Items/Guns/SniperRifle_Description
+Items/Guns/Shotgun_Name	Shotgun	Súng săn	Items/Guns/Shotgun_Name
+Items/Guns/Shotgun_Description	A powerful weapon for short distances.	Vũ khí mạnh ở cự ly gần.	Items/Guns/Shotgun_Description
+Items/Melee/Knife_Name	Knife	Dao	Items/Melee/Knife_Name
+Items/Melee/Knife_Description	It used to be a kitchen utensil, but now it's a dangerous melee weapon.	Từng là đồ dùng nhà bếp, giờ là vũ khí cận chiến nguy hiểm.	Items/Melee/Knife_Description
+Items/Melee/Fists	Fists	Nắm đấm	Items/Melee/Fists
+Items/TradingItems/TradingItem_Name	Jewelry	Trang sức	Items/TradingItems/TradingItem_Name
+Items/TradingItems/TradingItem_Description	A piece of jewelry, valuable bartering item.	Món trang sức, hàng đổi chác có giá.	Items/TradingItems/TradingItem_Description
+Items/TradingItems/PlushDog_Name	Plush Dog	Chó bông	Items/TradingItems/PlushDog_Name
+Items/TradingItems/PlushDog_Description	A fluffy dog toy for kids. Looks almost like new. Amelia has always loved dogs. She’ll be delighted to have it.	Đồ chơi chó bông cho trẻ con. Gần như còn mới. Amelia lúc nào cũng thích chó. Con bé sẽ mừng lắm.	Items/TradingItems/PlushDog_Description
+Items/TradingItems/BrokenPlushDog_Name	Filthy Plush Dog	Chó bông bẩn	Items/TradingItems/BrokenPlushDog_Name
+Items/TradingItems/BrokenPlushDog_Description	It's dirty, but it definitely is the Plush Doggie I gave to Amelia.	Bẩn, nhưng đúng là con chó bông tôi đã tặng Amelia.	Items/TradingItems/BrokenPlushDog_Description
+Items/TradingItems/AmeliaHoodie_Name	Amelia's Hoodie	Áo nỉ của Amelia	Items/TradingItems/AmeliaHoodie_Name
+Items/TradingItems/AmeliaHoodie_Description	Well-worn and dirty, but it undoubtedly is Amelia's hoodie.	Cũ và bẩn, nhưng chắc chắn là áo nỉ của Amelia.	Items/TradingItems/AmeliaHoodie_Description
+Items/ElectricTier/HeatLamp_Name	Heat Lamp	Đèn sưởi	Items/ElectricTier/HeatLamp_Name
+Items/ElectricTier/HeatLamp_Description	We can use this lamp to grow plants indoors.	Dùng đèn này để trồng cây trong nhà.	Items/ElectricTier/HeatLamp_Description
+Items/ElectricTier/Mixer_Name	Mixer	Máy trộn	Items/ElectricTier/Mixer_Name
+Items/ElectricTier/Mixer_Description	We can use it to mix gunpowder or medicine ingredients.	Dùng để trộn thuốc súng hoặc nguyên liệu thuốc.	Items/ElectricTier/Mixer_Description
+Items/ElectricTier/TermoRegulator_Name	Thermo regulator	Bộ điều nhiệt	Items/ElectricTier/TermoRegulator_Name
+Items/ElectricTier/TermoRegulator_Description	We can use it to maintain optimum temperature of the heater and save wood. We'll also need it to make a distiller if we want to purify alcohol.	Dùng để giữ nhiệt lò sưởi ở mức tốt nhất, tiết kiệm gỗ. Muốn chưng cồn sạch thì cũng cần nó để làm máy chưng.	Items/ElectricTier/TermoRegulator_Description
+Items/ElectricTier/TermoRegulator_alt_Description	We'll need it to make a distiller if we want to purify alcohol.	Muốn chưng cồn sạch thì cần nó để làm máy chưng.	Items/ElectricTier/TermoRegulator_alt_Description
+Items/StimulantsDescription/Abstinent	Abstinent	Kiêng khem	Items/StimulantsDescription/Abstinent
+Items/StimulantsDescription/Smoker	Smoker	Nghiện thuốc	Items/StimulantsDescription/Smoker
+Items/StimulantsDescription/CoffeeDrinker	Coffee Drinker	Nghiện cà phê	Items/StimulantsDescription/CoffeeDrinker
+Items/StimulantsDescription/ConsumeCigarettes	Cigarettes consumed per day:	Thuốc lá hút mỗi ngày:	Items/StimulantsDescription/ConsumeCigarettes
+Items/StimulantsDescription/ConsumeCoffee	Cups of coffee consumed per day:	Số ly cà phê mỗi ngày:	Items/StimulantsDescription/ConsumeCoffee
+Items/StimulantsDescription/LackOfCoffee	We lack coffee!	Thiếu cà phê!	Items/StimulantsDescription/LackOfCoffee
+Items/StimulantsDescription/LackOfCigarettes	We lack cigarettes!	Thiếu thuốc lá!	Items/StimulantsDescription/LackOfCigarettes
+Items/StimulantsDescription/LackOfCoffeeAndCigarettes	We lack coffee and cigarettes!	Thiếu cà phê và thuốc lá!	Items/StimulantsDescription/LackOfCoffeeAndCigarettes
+Items/Keys/KeyPharmacyBackDoor_Name	Brother's Pharmacy keys	Chìa khóa hiệu thuốc của anh trai	Items/Keys/KeyPharmacyBackDoor_Name
+Items/Keys/KeyPharmacyBackDoor_Description	My brother has always kept his keys on him, it's strange that they were lying on the ground. I can use them to open locked doors in the pharmacy.	Anh trai tôi lúc nào cũng giữ chìa khóa trên người, lạ thật khi chúng nằm dưới đất. Có thể dùng để mở các cửa khóa trong hiệu thuốc.	Items/Keys/KeyPharmacyBackDoor_Description
+CharacterParameters/Depressed/StateName	Depressed	Suy sụp	CharacterParameters/Depressed/StateName
+CharacterParameters/Hungry/Levels/1_f	STILL HUNGRY	VẪN ĐÓI	CharacterParameters/Hungry/Levels/1_f
+CharacterParameters/Hungry/Levels/1	HUNGRY	ĐÓI	CharacterParameters/Hungry/Levels/1
+CharacterParameters/Hungry/Levels/2_f	STILL VERY HUNGRY	VẪN RẤT ĐÓI	CharacterParameters/Hungry/Levels/2_f
+CharacterParameters/Hungry/Levels/2	VERY HUNGRY	RẤT ĐÓI	CharacterParameters/Hungry/Levels/2
+CharacterParameters/Hungry/Levels/3_f	STILL STARVING	VẪN ĐÓI LẢ	CharacterParameters/Hungry/Levels/3_f
+CharacterParameters/Hungry/Levels/3	STARVING	ĐÓI LẢ	CharacterParameters/Hungry/Levels/3
+CharacterParameters/Hungry/Levels/4_f	STILL EXTREMELY STARVED	VẪN KIỆT SỨC VÌ ĐÓI	CharacterParameters/Hungry/Levels/4_f
+CharacterParameters/Hungry/Levels/4	EXTREMELY STARVED	KIỆT SỨC VÌ ĐÓI	CharacterParameters/Hungry/Levels/4
+CharacterParameters/Hungry/Levels/-1	WELL FED	NO NÊ	CharacterParameters/Hungry/Levels/-1
+CharacterParameters/Tired/Levels/1	TIRED	MỆT	CharacterParameters/Tired/Levels/1
+CharacterParameters/Tired/Levels/2	VERY TIRED	RẤT MỆT	CharacterParameters/Tired/Levels/2
+CharacterParameters/Tired/Levels/3	EXHAUSTED	KIỆT SỨC	CharacterParameters/Tired/Levels/3
+CharacterParameters/Tired/Levels/4	EXTREMELY EXHAUSTED	CẠN KIỆT	CharacterParameters/Tired/Levels/4
+CharacterParameters/Tired/Notes/Recovery	(RECOVERING)	(ĐANG HỒI PHỤC)	CharacterParameters/Tired/Notes/Recovery
+CharacterParameters/Wounded/Levels/1	SLIGHTLY WOUNDED	HƠI BỊ THƯƠNG	CharacterParameters/Wounded/Levels/1
+CharacterParameters/Wounded/Levels/2	WOUNDED	BỊ THƯƠNG	CharacterParameters/Wounded/Levels/2
+CharacterParameters/Wounded/Levels/3	SEVERELY WOUNDED	BỊ THƯƠNG NẶNG	CharacterParameters/Wounded/Levels/3
+CharacterParameters/Wounded/Levels/4	LETHALLY WOUNDED	THƯƠNG CHÍ MẠNG	CharacterParameters/Wounded/Levels/4
+CharacterParameters/Wounded/Notes/Bandages_delayed_influence	(BANDAGED)	(ĐÃ BĂNG BÓ)	CharacterParameters/Wounded/Notes/Bandages_delayed_influence
+CharacterParameters/Wounded/StateName	Wounded	Bị thương	CharacterParameters/Wounded/StateName
+CharacterParameters/Sick/Levels/1	SLIGHTLY SICK	HƠI ỐM	CharacterParameters/Sick/Levels/1
+CharacterParameters/Sick/Levels/2	SICK	ỐM	CharacterParameters/Sick/Levels/2
+CharacterParameters/Sick/Levels/3	SEVERELY ILL	ỐM NẶNG	CharacterParameters/Sick/Levels/3
+CharacterParameters/Sick/Levels/4	TERMINALLY ILL	BỆNH NAN Y	CharacterParameters/Sick/Levels/4
+CharacterParameters/Sick/Notes/Meds_delayed_influence	(ON MEDS)	(ĐANG UỐNG THUỐC)	CharacterParameters/Sick/Notes/Meds_delayed_influence
+CharacterParameters/Sick/StateName	Sick	Ốm	CharacterParameters/Sick/StateName
+CharacterParameters/BadSleep/Levels/1	SLEPT POORLY	NGỦ KHÔNG YÊN	CharacterParameters/BadSleep/Levels/1
+CharacterParameters/Morale/Levels/0	Content	Hài lòng	CharacterParameters/Morale/Levels/0
+CharacterParameters/Morale/Levels/2	Sad	Buồn	CharacterParameters/Morale/Levels/2
+CharacterParameters/Morale/Levels/3	Depressed	Suy sụp	CharacterParameters/Morale/Levels/3
+CharacterParameters/Morale/Levels/4	Broken	Gục ngã	CharacterParameters/Morale/Levels/4
+CharacterParameters/Morale/NeedSmoke	(I need cigarettes)	(Cần thuốc lá)	CharacterParameters/Morale/NeedSmoke
+CharacterParameters/Morale/NeedCoffee	(I need coffee)	(Cần cà phê)	CharacterParameters/Morale/NeedCoffee
+CharacterParameters/Morale/NeedBoth	(I need coffee and cigarette)	(Cần cà phê và thuốc lá)	CharacterParameters/Morale/NeedBoth
+CharacterParameters/Morale/BeingComforted	(Comforted)	(Được an ủi)	CharacterParameters/Morale/BeingComforted
+CharacterParameters/Morale/Playing	(Playing)	(Đang chơi)	CharacterParameters/Morale/Playing
+CharacterParameters/Morale/Talking	(Talking)	(Đang trò chuyện)	CharacterParameters/Morale/Talking
+CharacterParameters/Morale/LookingAfter	(Looking after)	(Đang chăm sóc)	CharacterParameters/Morale/LookingAfter
+CharacterParameters/Morale/LookedAfter	(Looked after)	(Được chăm sóc)	CharacterParameters/Morale/LookedAfter
+CharacterParameters/Drunk/Levels/1	DRUNK	SAY XỈN	CharacterParameters/Drunk/Levels/1
+CharacterParameters/Drunk/StateName	DRUNK	SAY XỈN	CharacterParameters/Drunk/StateName
+CharacterParameters/Hangover/Levels/1	Hangover	Dư rượu	CharacterParameters/Hangover/Levels/1
+CharacterParameters/Sleepy/Levels/1	Drowsy	Buồn ngủ	CharacterParameters/Sleepy/Levels/1
+CharacterParameters/WarStories/Nina	Unresponsive	Đờ đẫn	CharacterParameters/WarStories/Nina
+CharacterParameters/WarStories/Determined	Determined	Quyết tâm	CharacterParameters/WarStories/Determined
+GameFlow/Ending/Win	The War is Over.	Chiến tranh đã kết thúc.	GameFlow/Ending/Win
+GameFlow/Ending/Lose	You Didn't Make It.	Bạn không sống sót.	GameFlow/Ending/Lose
+GameFlow/Ending/WinDays	You've survived.	Bạn đã sống sót.	GameFlow/Ending/WinDays
+GameFlow/Ending/LoseDays	You've survived only for ^DayOfWar^ days.	Bạn chỉ sống sót được ^DayOfWar^ ngày.	GameFlow/Ending/LoseDays
+GameFlow/Ending/Win_alternative	The boat reaches a safe shore.	Con thuyền cập bến an toàn.	GameFlow/Ending/Win_alternative
+GameFlow/Ending/WinDays_alternative	You have escaped.	Bạn đã thoát.	GameFlow/Ending/WinDays_alternative
+GameFlow/Ending/WS1_suicide	You've learned the truth about Amelia's fate.	Bạn đã biết sự thật về số phận của Amelia.	GameFlow/Ending/WS1_suicide
+GameFlow/Ending/WS1_suicide_days	Victims of war often suffer from mental disorders.	Nạn nhân chiến tranh thường mắc rối loạn tâm thần.	GameFlow/Ending/WS1_suicide_days
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/00	I'm looking for my missing daughter. A little blonde girl.	Tôi đang tìm con gái mất tích. Một đứa tóc vàng nhỏ.	GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/00
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/01	Oh yeah, I've seen her...	Ồ, tao có thấy nó...	GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/01
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/02	Oh my God! Really? Please, tell me everything you know!	Trời ơi! Thật à? Làm ơn, kể hết những gì anh biết!	GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/02
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/03	You help me first, then I help you. I'm very hungry...	Mày giúp tao trước, rồi tao giúp mày. Tao đói lắm...	GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/03
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/04	If you bring me some food, I'll tell you what I know.	Mang đồ ăn cho tao, tao sẽ kể những gì tao biết.	GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/04
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/05	How about you tell me now and I don't kick the shit out of you?	Hay mày nói ngay đi, không thì tao đánh cho mày nhừ xương.	GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/05
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/06	Oh, I won't tell you anything if you hurt me. And if you kill me, you'll never find your daughter.	Mày đánh tao thì tao chẳng kể gì đâu. Giết tao thì mày cũng chẳng bao giờ tìm được con gái mày.	GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/06
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/07	Want to save her? Bring me the food. I'll wait here.	Muốn cứu nó không? Mang đồ ăn tới. Tao đợi ở đây.	GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/07
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/00	Here's your food, you greedy bastard. Now spill it.	Đồ ăn của mày đây, đồ tham lam chết tiệt. Giờ khai đi.	GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/00
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/01	No need to be rude. There isn't much to tell. I've seen a blonde girl, maybe ten years old.	Đừng hỗn thế. Cũng chẳng có gì nhiều để kể. Tao thấy một đứa tóc vàng, chừng mười tuổi.	GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/01
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/02	Some guy, about your size, was carrying her towards the hospital.	Một thằng nào đó, cỡ mày, đang bế nó tới bệnh viện.	GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/02
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/03	The hospital... You'd better be right. For your own sake.	Bệnh viện... Tốt nhất mày nói thật, vì chính mày.	GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/03
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/04	You can waste your breath threatening me or go look for your daughter.	Mày phí hơi dọa tao thì tốt hơn đi tìm con gái mày.	GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/04
+GameFlow/Quests/WarStories/Story1/NeedFood/OnPostponeDialog/00	Alright, I'll bring you food. Wait here.	Được, tôi mang đồ ăn tới. Anh đợi ở đây.	GameFlow/Quests/WarStories/Story1/NeedFood/OnPostponeDialog/00
+GameFlow/Quests/WarStories/Story1/NeedFood/OnPostponeDialog/01	I'm not going anywhere.	Tao có đi đâu đâu.	GameFlow/Quests/WarStories/Story1/NeedFood/OnPostponeDialog/01
+GameFlow/Quests/WarStories/Story1/NeedFood/OnReturn/00	Oh, it's you again...	Ồ, lại là mày à...	GameFlow/Quests/WarStories/Story1/NeedFood/OnReturn/00
+GameFlow/Quests/WarStories/Story1/NeedFood/OnReturn/01	Did you bring me the food?	Mày mang đồ ăn cho tao chưa?	GameFlow/Quests/WarStories/Story1/NeedFood/OnReturn/01
+GameFlow/Quests/WarStories/Story1/NeedFood/Title	Bring me food.	Mang đồ ăn tới đây.	GameFlow/Quests/WarStories/Story1/NeedFood/Title
+GameFlow/Quests/WarStories/Story1/NeedFood/Description	I want food in exchange for information. I prefer canned food, but raw food will do in a pinch. See how generous I am?	Tao muốn đổi đồ ăn lấy thông tin. Đồ hộp thì tốt hơn, đồ sống cũng đỡ. Thấy tao hào phóng chưa?	GameFlow/Quests/WarStories/Story1/NeedFood/Description
+GameFlow/BackFromScavenge	^Scavenger^ IS BACK	^Scavenger^ ĐÃ VỀ	GameFlow/BackFromScavenge
+GameFlow/NightIsComing	THE NIGHT	ĐÊM	GameFlow/NightIsComing
+GameFlow/NewDay	DAY ^DayOfWar^	NGÀY ^DayOfWar^	GameFlow/NewDay
+GameFlow/ScavengerDied	^RecentlyDiedDweller^ DIED	^RecentlyDiedDweller^ ĐÃ CHẾT	GameFlow/ScavengerDied
+GameFlow/AllDwellersDied	ALL THE SURVIVORS ARE DEAD.	TẤT CẢ NGƯỜI SỐNG SÓT ĐÃ CHẾT.	GameFlow/AllDwellersDied
+GameFlow/Victory	THE WAR IS OVER.	CHIẾN TRANH ĐÃ KẾT THÚC.	GameFlow/Victory
+GameFlow/GameObjective	SURVIVE THE LAST MONTH OF WAR.	SỐNG SÓT QUA THÁNG CUỐI CÙNG CỦA CHIẾN TRANH.	GameFlow/GameObjective
+GameFlow/ScavengeTimeout	THE DAWN HAS CAUGHT ^Scavenger^. IT WILL BE HARDER TO RETURN.	BÌNH MINH ĐÃ BẮT ^Scavenger^. QUAY VỀ SẼ KHÓ HƠN.	GameFlow/ScavengeTimeout
+GameFlow/GameObjectiveE3	SURVIVE THE WAR.	SỐNG SÓT QUA CHIẾN TRANH.	GameFlow/GameObjectiveE3
+GameFlow/Intro_01	THESE DAYS WAR CAN BREAK OUT ANYTIME	NGÀY NAY CHIẾN TRANH CÓ THỂ NỔ RA BẤT CỨ LÚC NÀO	GameFlow/Intro_01
+GameFlow/Intro_02	ANYWHERE	Ở BẤT CỨ ĐÂU	GameFlow/Intro_02
+GameFlow/Intro_03	IF YOUR CITY COMES UNDER SIEGE	NẾU THÀNH PHỐ BỊ VÂY HÃM	GameFlow/Intro_03
+GameFlow/Intro_04	YOU'RE NOT PREPARED FOR IT	BẠN KHÔNG CHUẨN BỊ GÌ CẢ	GameFlow/Intro_04
+GameFlow/Intro_05	SURVIVE	SỐNG SÓT	GameFlow/Intro_05
+UI/Crafting/Make	Make|XPadA|	Chế tạo|XPadA|	UI/Crafting/Make
+UI/Crafting/Exit	Exit|XPadB|	Thoát|XPadB|	UI/Crafting/Exit
+UI/Crafting/OneItemCreated	One ^ItemName^ will be made	Sẽ chế ra một ^ItemName^	UI/Crafting/OneItemCreated
+UI/Crafting/Decrease	-|XPadLeftBumper|	-|XPadLeftBumper|	UI/Crafting/Decrease
+UI/Crafting/Increase	+|XPadRightBumper|	+|XPadRightBumper|	UI/Crafting/Increase
+UI/Crafting/SelectItemToCraft	What should I make?	Chế cái gì đây?	UI/Crafting/SelectItemToCraft
+UI/Crafting/Rearrange	Rearrange	Sắp xếp lại	UI/Crafting/Rearrange
+UI/Crafting/RequiredComponents	Components we need	Linh kiện cần dùng	UI/Crafting/RequiredComponents
+UI/Crafting/Amount	How many	Số lượng	UI/Crafting/Amount
+UI/Crafting/CraftingTime	How long	Thời gian	UI/Crafting/CraftingTime
+UI/Crafting/RequiredSkill	Required Skill	Kỹ năng cần	UI/Crafting/RequiredSkill
+UI/Crafting/TrapTimeUnknown	I don't know	Không rõ	UI/Crafting/TrapTimeUnknown
+UI/Crafting/RandomTime	Random	Ngẫu nhiên	UI/Crafting/RandomTime
+UI/Crafting/Teach	Teach|XPadY|	Dạy|XPadY|	UI/Crafting/Teach
+UI/Crafting/Hour	h	g	UI/Crafting/Hour
+UI/Buttons/Done	Done	Xong	UI/Buttons/Done
+UI/Buttons/Ok	OK|XPadA|	OK|XPadA|	UI/Buttons/Ok
+UI/Buttons/Cancel	Cancel|XPadB|	Hủy|XPadB|	UI/Buttons/Cancel
+UI/Buttons/Continue	Continue|XPadA|	Tiếp tục|XPadA|	UI/Buttons/Continue
+UI/Buttons/Yes	Yes|XPadA|	Có|XPadA|	UI/Buttons/Yes
+UI/Buttons/Apply	Apply|XPadA|	Áp dụng|XPadA|	UI/Buttons/Apply
+UI/Buttons/No	No|XPadB|	Không|XPadB|	UI/Buttons/No
+UI/Buttons/Epilogue	Epilogue	Hồi kết	UI/Buttons/Epilogue
+UI/Buttons/Later	Later|XPadA|	Để sau|XPadA|	UI/Buttons/Later
+UI/Menu/Resume	Resume	Tiếp tục	UI/Menu/Resume
+UI/Menu/Quit	Quit Game	Thoát game	UI/Menu/Quit
+UI/Menu/Surrender	Leave	Bỏ cuộc	UI/Menu/Surrender
+UI/Menu/Survive	Survive	Sống sót	UI/Menu/Survive
+UI/Menu/Continue	Continue	Tiếp tục	UI/Menu/Continue
+UI/Menu/StartNew	Another try	Thử lại	UI/Menu/StartNew
+UI/Menu/Settings	Settings	Cài đặt	UI/Menu/Settings
+UI/Menu/Gamepad	Control Scheme	Sơ đồ điều khiển	UI/Menu/Gamepad
+UI/Menu/WarChildGraffiti	Graffiti	Tranh tường	UI/Menu/WarChildGraffiti
+UI/Menu/SurrenderConfirmation	Are you sure you want to leave? All unsaved progress will be lost.	Chắc chắn muốn bỏ cuộc? Mọi tiến trình chưa lưu sẽ mất.	UI/Menu/SurrenderConfirmation
+UI/Menu/ModeSelection_01	Press to start This War Of Mine Classic Modes	Nhấn để bắt đầu chế độ Cổ điển của This War Of Mine	UI/Menu/ModeSelection_01
+UI/Menu/ModeSelection_02	Press to start This War Of Mine Stories Mode	Nhấn để bắt đầu chế độ Stories của This War Of Mine	UI/Menu/ModeSelection_02
+UI/Menu/MoreEpisodes	More Episodes	Thêm tập	UI/Menu/MoreEpisodes
+UI/Menu/SeasonPass	Season Pass	Thẻ mùa	UI/Menu/SeasonPass
+UI/Menu/NewStory	New Story	Câu chuyện mới	UI/Menu/NewStory
+UI/Menu/ChooseEpisode	Choose Episode	Chọn tập	UI/Menu/ChooseEpisode
+UI/Menu/StoriesMode	Stories Mode	Chế độ Stories	UI/Menu/StoriesMode
+UI/Menu/ClassicModes	Classic Modes	Chế độ cổ điển	UI/Menu/ClassicModes
+UI/Menu/DisableMods	Disable all mods for best experience	Tắt mọi mod để chơi tốt nhất	UI/Menu/DisableMods
+UI/Menu/GetEpisode	Get Episode	Lấy tập	UI/Menu/GetEpisode
+UI/Menu/BuyEpisode	Buy Episode	Mua tập	UI/Menu/BuyEpisode
+UI/Menu/BuySeasonPass	Buy Season Pass	Mua thẻ mùa	UI/Menu/BuySeasonPass
+UI/HUD/EndDay	|XPadB|End Day	|XPadB|Kết thúc ngày	UI/HUD/EndDay
+UI/HUD/RunToExit	|XPadB|Run To Exit	|XPadB|Chạy ra cửa	UI/HUD/RunToExit
+UI/Log/Title	Day Log	Nhật ký ngày	UI/Log/Title
+UI/Scavenge/VisitedXDaysAgo	VISITED ^NoOfDays^ DAYS AGO	ĐÃ GHÉ ^NoOfDays^ NGÀY TRƯỚC	UI/Scavenge/VisitedXDaysAgo
+UI/Scavenge/GoForScavenge	PREPARE|XPadX|	CHUẨN BỊ|XPadX|	UI/Scavenge/GoForScavenge
+UI/Scavenge/GoForScavengeInv	SCAVENGE|XPadX|	LỤC LỌI|XPadX|	UI/Scavenge/GoForScavengeInv
+UI/Scavenge/JustSleep	STAY|XPadB|	Ở LẠI|XPadB|	UI/Scavenge/JustSleep
+UI/Scavenge/ButtonScavenge	SCAVENGE	LỤC LỌI	UI/Scavenge/ButtonScavenge
+UI/Scavenge/ButtonGuard	GUARD	CANH GÁC	UI/Scavenge/ButtonGuard
+UI/Scavenge/ButtonSleep	SLEEP	NGỦ	UI/Scavenge/ButtonSleep
+UI/Scavenge/ButtonSleepInBed	SLEEP IN BED	NGỦ TRÊN GIƯỜNG	UI/Scavenge/ButtonSleepInBed
+UI/Scavenge/Back	BACK|XPadB|	QUAY LẠI|XPadB|	UI/Scavenge/Back
+UI/Scavenge/CannotScavenge	PLEASE SELECT A SCAVENGER	HÃY CHỌN NGƯỜI ĐI LỤC LỌI	UI/Scavenge/CannotScavenge
+UI/Scavenge/CannotStay	PLEASE UNSELECT A SCAVENGER	HÃY BỎ CHỌN NGƯỜI ĐI LỤC LỌI	UI/Scavenge/CannotStay
+UI/Scavenge/PlanNight	Plan the night	Lên kế hoạch đêm nay	UI/Scavenge/PlanNight
+UI/Scavenge/Home	Our Shelter	Nơi trú của chúng tôi	UI/Scavenge/Home
+UI/Scavenge/notInWinter	Can't get there due to snow	Không tới được vì tuyết	UI/Scavenge/notInWinter
+UI/Scavenge/notDuringFights	Can't get there due to fighting	Không tới được vì giao tranh	UI/Scavenge/notDuringFights
+UI/Scavenge/Visited	Visited	Đã ghé	UI/Scavenge/Visited
+UI/Scavenge/New	New	Mới	UI/Scavenge/New
+UI/Scavenge/ArmyFront	ArmyFront	Mặt trận quân đội	UI/Scavenge/ArmyFront
+UI/Scavenge/Scavenger	Scavenger	Người đi lục lọi	UI/Scavenge/Scavenger
+UI/Scavenge/WorkshopUpload	Publish on Workshop	Đăng lên Workshop	UI/Scavenge/WorkshopUpload
+UI/Scavenge/ButtonSleepWithParent	SLEEP WITH ADULT	NGỦ CÙNG NGƯỜI LỚN	UI/Scavenge/ButtonSleepWithParent
+UI/Scavenge/ButtonSleepWithChild	SLEEP WITH CHILD	NGỦ CÙNG TRẺ	UI/Scavenge/ButtonSleepWithChild
+UI/Scavenge/CannotScavengeLocation	CHOOSE LOCATION	CHỌN ĐỊA ĐIỂM	UI/Scavenge/CannotScavengeLocation
+UI/Scavenge/WS_Story1_ScavengeBlockade	I can’t leave Amelia on her own. What if someone comes into our shelter? I need to protect her.	Không thể để Amelia ở một mình. Nhỡ có ai vào nơi trú thì sao? Tôi phải bảo vệ con bé.	UI/Scavenge/WS_Story1_ScavengeBlockade
+UI/Scavenge/WS_Story1_TakeToyOnScavenge	I'd better take Amelia's plush dog. I'm sure she misses it.	Tốt nhất là mang theo chó bông của Amelia. Chắc con bé nhớ nó lắm.	UI/Scavenge/WS_Story1_TakeToyOnScavenge
+UI/Scavenge/WS_Story1_TakeWeaponOnScavenge	I'm certain to meet armed men. I'd better take some weapon with me.	Chắc chắn sẽ gặp người có vũ khí. Phải mang theo vũ khí thôi.	UI/Scavenge/WS_Story1_TakeWeaponOnScavenge
+UI/Scavenge/WS_Story1_ButtonScavengeAmelia	LOOK FOR AMELIA	TÌM AMELIA	UI/Scavenge/WS_Story1_ButtonScavengeAmelia
+UI/Scavenge/WS_Story1_GoForScavengeInvAmelia	LOOK FOR AMELIA|XPadX|	TÌM AMELIA|XPadX|	UI/Scavenge/WS_Story1_GoForScavengeInvAmelia
+UI/InventoryScreen/EquipmentSlots/Gun	Equipped Firearm	Súng đang trang bị	UI/InventoryScreen/EquipmentSlots/Gun
+UI/InventoryScreen/EquipmentSlots/Meelee	Equipped Melee Weapon	Vũ khí cận chiến đang trang bị	UI/InventoryScreen/EquipmentSlots/Meelee
+UI/InventoryScreen/EquipmentSlots/Head	Current Headgear	Mũ đang đội	UI/InventoryScreen/EquipmentSlots/Head
+UI/InventoryScreen/EquipmentSlots/Torso	Current Body Armor	Áo giáp đang mặc	UI/InventoryScreen/EquipmentSlots/Torso
+UI/InventoryScreen/EquipmentSlots/Backpack	Current Backpack	Ba lô đang mang	UI/InventoryScreen/EquipmentSlots/Backpack
+UI/InventoryScreen/EquipButton	EQUIP|XPadY|	TRANG BỊ|XPadY|	UI/InventoryScreen/EquipButton
+UI/InventoryScreen/DropButton	DROP|XPadA|	BỎ|XPadA|	UI/InventoryScreen/DropButton
+UI/InventoryScreen/ExitButton	EXIT|XPadB|	THOÁT|XPadB|	UI/InventoryScreen/ExitButton
+UI/InventoryScreen/UseButton	Use|XPadX|	Dùng|XPadX|	UI/InventoryScreen/UseButton
+UI/InventoryScreen/TakeButton	TAKE|XPadA|	LẤY|XPadA|	UI/InventoryScreen/TakeButton
+UI/InventoryScreen/GraballButton	GRAB ALL|XPadX|	LẤY HẾT|XPadX|	UI/InventoryScreen/GraballButton
+UI/InventoryScreen/Slots	Space	Chỗ trống	UI/InventoryScreen/Slots
+UI/InventoryScreen/Backpack	Backpack	Ba lô	UI/InventoryScreen/Backpack
+UI/InventoryScreen/Searched	Searched	Đã lục	UI/InventoryScreen/Searched
+UI/InventoryScreen/go	Go	Đi	UI/InventoryScreen/go
+UI/InventoryScreen/autoEquipped	We'll use the equipment during attack.	Sẽ dùng trang bị khi bị tấn công.	UI/InventoryScreen/autoEquipped
+UI/InventoryScreen/ShelterInfoTitle	Some Thoughts	Suy nghĩ	UI/InventoryScreen/ShelterInfoTitle
+UI/Trading/NotInterested	NOT INTERESTED|XPadB|	KHÔNG HỨNG THÚ|XPadB|	UI/Trading/NotInterested
+UI/Trading/Deal	DEAL|XPadX|	THỎA THUẬN|XPadX|	UI/Trading/Deal
+UI/Trading/NotEnoughSpace	I can't carry that much!	Không mang nổi nhiều thế!	UI/Trading/NotEnoughSpace
+UI/Trading/Header	Let's trade	Đổi chác nào	UI/Trading/Header
+UI/Trading/OurItems	Our things	Đồ của chúng tôi	UI/Trading/OurItems
+UI/Trading/HisItems	What do you want?	Anh muốn gì?	UI/Trading/HisItems
+UI/StoryItem/Continue	CONTINUE|XPadA|	TIẾP TỤC|XPadA|	UI/StoryItem/Continue
+UI/Settings/LanguageNames/English	English	Tiếng Việt	UI/Settings/LanguageNames/English
+UI/Settings/LanguageNames/German	Deutsch	Tiếng Đức	UI/Settings/LanguageNames/German
+UI/Settings/LanguageNames/Polish	Polski	Tiếng Ba Lan	UI/Settings/LanguageNames/Polish
+UI/Settings/LanguageNames/French	French	Tiếng Pháp	UI/Settings/LanguageNames/French
+UI/Settings/LanguageNames/Italian	Italiano	Tiếng Ý	UI/Settings/LanguageNames/Italian
+UI/Settings/LanguageNames/Spanish	Spanish	Tiếng Tây Ban Nha	UI/Settings/LanguageNames/Spanish
+UI/Settings/LanguageNames/Japanese	Japanese	Tiếng Nhật	UI/Settings/LanguageNames/Japanese
+UI/Settings/LanguageNames/Chinese	Chinese	Tiếng Trung	UI/Settings/LanguageNames/Chinese
+UI/Settings/LanguageNames/Russian	Russian	Tiếng Nga	UI/Settings/LanguageNames/Russian
+UI/Settings/LanguageNames/Portuguese	Portuguese	Tiếng Bồ Đào Nha	UI/Settings/LanguageNames/Portuguese
+UI/Settings/LanguageNames/Default	Default	Mặc định	UI/Settings/LanguageNames/Default
+UI/Settings/LanguageNames/Brazilian	Brazilian	Tiếng Bồ Đào Nha (Brazil)	UI/Settings/LanguageNames/Brazilian
+UI/Settings/LanguageNames/Korean	Korean	Tiếng Hàn	UI/Settings/LanguageNames/Korean
+UI/Settings/LanguageNames/Turkish	Turkish	Tiếng Thổ Nhĩ Kỳ	UI/Settings/LanguageNames/Turkish
+UI/Settings/QualityLevels/UltraLow	Ultra Low	Cực thấp	UI/Settings/QualityLevels/UltraLow
+UI/Settings/QualityLevels/Low	Low	Thấp	UI/Settings/QualityLevels/Low
+UI/Settings/QualityLevels/Medium	Medium	Vừa	UI/Settings/QualityLevels/Medium
+UI/Settings/QualityLevels/High	High	Cao	UI/Settings/QualityLevels/High
+UI/Settings/QualityLevels/VeryHigh	Very High	Rất cao	UI/Settings/QualityLevels/VeryHigh
+UI/Settings/Debug/DMStandard	DEBUG MODE: STANDARD	CHẾ ĐỘ GỠ LỖI: CHUẨN	UI/Settings/Debug/DMStandard
+UI/Settings/Debug/DMSummer	DEBUG MODE: SUMMER ALL	CHẾ ĐỘ GỠ LỖI: MÙA HÈ	UI/Settings/Debug/DMSummer
+UI/Settings/Debug/DMWinter	DEBUG MODE: WINTER ALL	CHẾ ĐỘ GỠ LỖI: MÙA ĐÔNG	UI/Settings/Debug/DMWinter
+UI/Settings/On	On	Bật	UI/Settings/On
+UI/Settings/Off	Off	Tắt	UI/Settings/Off
+UI/Settings/AudioSettings	Audio Settings	Cài đặt âm thanh	UI/Settings/AudioSettings
+UI/Settings/VideoSettings	Video Settings	Cài đặt hình ảnh	UI/Settings/VideoSettings
+UI/Settings/MiscSettings	Misc Settings	Cài đặt khác	UI/Settings/MiscSettings
+UI/Settings/MusicVolume	Music Volume	Âm lượng nhạc	UI/Settings/MusicVolume
+UI/Settings/SFXVolume	SFX Volume	Âm lượng hiệu ứng	UI/Settings/SFXVolume
+UI/Settings/VoiceVolume	Voice Volume	Âm lượng giọng nói	UI/Settings/VoiceVolume
+UI/Settings/Resolution	Resolution	Độ phân giải	UI/Settings/Resolution
+UI/Settings/FullScreen	Full Screen	Toàn màn hình	UI/Settings/FullScreen
+UI/Settings/GFXQuality	GFX Quality	Chất lượng đồ họa	UI/Settings/GFXQuality
+UI/Settings/Language	Language	Ngôn ngữ	UI/Settings/Language
+UI/Settings/Subtitles	Subtitles	Phụ đề	UI/Settings/Subtitles
+UI/Settings/OptionsHeader	Settings	Cài đặt	UI/Settings/OptionsHeader
+UI/Settings/PencilEffect	PENCIL EFFECT	HIỆU ỨNG BÚT CHÌ	UI/Settings/PencilEffect
+UI/Settings/Soft	SOFT	MỀM	UI/Settings/Soft
+UI/Settings/Hard	SKETCHY	PHÁC HỌA	UI/Settings/Hard
+UI/Settings/TemperatureScale	Temp. Scale	Đơn vị nhiệt độ	UI/Settings/TemperatureScale
+UI/Settings/Celsius	Celsius	Độ C	UI/Settings/Celsius
+UI/Settings/Fahrenheit	Fahrenheit	Độ F	UI/Settings/Fahrenheit
+UI/Settings/ControlMode	Control Mode	Chế độ điều khiển	UI/Settings/ControlMode
+UI/Settings/ControlMouse	Mouse	Chuột	UI/Settings/ControlMouse
+UI/Settings/ControlGamepad	Controller	Tay cầm	UI/Settings/ControlGamepad
+UI/Settings/PhoneUI	PhoneUI	Giao diện điện thoại	UI/Settings/PhoneUI
+UI/Settings/UIChangeInformation	RESTART TO APPLY CHANGES	KHỞI ĐỘNG LẠI ĐỂ ÁP DỤNG	UI/Settings/UIChangeInformation
+UI/Settings/ChangeAccount	Change Profile |XPadY|	Đổi hồ sơ |XPadY|	UI/Settings/ChangeAccount
+UI/Visit/WaitButton	Give me a sec|XPadX|	Chờ tôi chút|XPadX|	UI/Visit/WaitButton
+UI/Visit/CantHelpButton	Can't help you...|XPadA|	Không giúp được...|XPadA|	UI/Visit/CantHelpButton
+UI/Visit/PostponeButton	Maybe later|XPadY|	Để sau|XPadY|	UI/Visit/PostponeButton
+UI/Visit/OfferTitle	I can give you:	Tôi có thể đưa:	UI/Visit/OfferTitle
+UI/Visit/DemandTitle	We need:	Chúng tôi cần:	UI/Visit/DemandTitle
+UI/Game/itemPlace	Drag to place on empty destination	Kéo tới chỗ trống để đặt	UI/Game/itemPlace
+UI/Game/cancel	Back|XPadB|	Quay lại|XPadB|	UI/Game/cancel
+UI/Game/place	Place|XPadA|	Đặt|XPadA|	UI/Game/place
+UI/Game/done	Done	Xong	UI/Game/done
+UI/Game/DayTitle	Central Europe	Trung Âu	UI/Game/DayTitle
+UI/Game_Start/Headphones	"War is delightful only to those who have had no experience of it"	"Chiến tranh chỉ hấp dẫn với những ai chưa từng trải qua nó"	UI/Game_Start/Headphones
+UI/Game_Start/Pope_1	"War is a defeat for humanity"	"Chiến tranh là thất bại của nhân loại"	UI/Game_Start/Pope_1
+UI/Game_Start/Pope_2	Pope John Paul II	Giáo hoàng John Paul II	UI/Game_Start/Pope_2
+UI/Game_Start/Ernest_1	"In modern war... you will die like a dog for no good reason"	"Trong chiến tranh hiện đại... anh sẽ chết như chó, chẳng vì lý do gì ra hồn"	UI/Game_Start/Ernest_1
+UI/Game_Start/Ernest_2	Ernest Hemingway	Ernest Hemingway	UI/Game_Start/Ernest_2
+UI/Game_Start/Ernest_3	“Notes on the Next War: A Serious Topical Letter,” Esquire, Sept. 1935	“Notes on the Next War: A Serious Topical Letter,” Esquire, Sept. 1935	UI/Game_Start/Ernest_3
+UI/Game_Start/SaveInfoXB1	This game automatically saves your game progress. Please do not turn off your Xbox One console when you see this icon or your current progress will be lost.	Trò chơi này tự động lưu tiến trình. Vui lòng không tắt máy Xbox One khi thấy biểu tượng này, nếu không tiến trình hiện tại sẽ mất.	UI/Game_Start/SaveInfoXB1
+UI/Game_Start/SaveInfoPS4	This game automatically saves your game progress. Please do not turn off your PlayStation®4 system when you see this icon or your current progress will be lost.	Trò chơi này tự động lưu tiến trình. Vui lòng không tắt hệ máy PlayStation®4 khi thấy biểu tượng này, nếu không tiến trình hiện tại sẽ mất.	UI/Game_Start/SaveInfoPS4
+UI/MessageBox/StartNewGameConfirm	You will lose your current progress, are you sure?	Bạn sẽ mất tiến trình hiện tại. Chắc chứ?	UI/MessageBox/StartNewGameConfirm
+UI/MessageBox/ConsoleAccountConfirm	You have not signed in. You need to sign in to save your progress and be awarded Achievements. Do you want to sign in now?	Bạn chưa đăng nhập. Cần đăng nhập để lưu tiến trình và nhận thành tựu. Đăng nhập ngay bây giờ?	UI/MessageBox/ConsoleAccountConfirm
+UI/MessageBox/Sign-InChange	Sign-in change has occurred. The game will return to the title screen.	Tài khoản đăng nhập đã thay đổi. Trò chơi sẽ quay về màn hình tiêu đề.	UI/MessageBox/Sign-InChange
+UI/MessageBox/ControllerDisconnected	{mr|Controller has been disconnected, please reconnect the controller.}{fr|The wireless controller has been disconnected, please reconnect the wireless controller.}	{mr|Tay cầm đã ngắt kết nối, vui lòng kết nối lại tay cầm.}{fr|Tay cầm không dây đã ngắt kết nối, vui lòng kết nối lại tay cầm không dây.}	UI/MessageBox/ControllerDisconnected
+UI/MessageBox/LossProgressWarning	Are you sure you want to exit? Any unsaved game progress will be lost.	Chắc chắn muốn thoát? Mọi tiến trình chưa lưu sẽ mất.	UI/MessageBox/LossProgressWarning
+UI/MessageBox/NoInternetConnection	No Internet Connection	Không có kết nối Internet	UI/MessageBox/NoInternetConnection
+UI/MessageBox/NewContentAnniversaryEdition	It's been two years since This War of Mine global release and we're still expanding the experience. This |#color=FF3800|new free DLC|#defaultcolor|, created especially for the Anniversary Edition, adds |#color=FF3800|new characters|#defaultcolor|, |#color=FF3800|new locations|#defaultcolor| to explore, and most importantly - a |#color=FF3800|whole new ending|#defaultcolor|, leading to a different outcome to the game. The dilemma though remains the same – how far will you go, to protect the ones you care about? 	Đã hai năm kể từ khi This War of Mine ra mắt toàn cầu, và chúng tôi vẫn tiếp tục mở rộng trải nghiệm. |#color=FF3800|DLC miễn phí mới|#defaultcolor|, làm riêng cho Anniversary Edition, thêm |#color=FF3800|nhân vật mới|#defaultcolor|, |#color=FF3800|địa điểm mới|#defaultcolor| để khám phá, và quan trọng nhất là |#color=FF3800|một kết thúc hoàn toàn mới|#defaultcolor|, dẫn tới một kết cục khác của trò chơi. Tuy nhiên, lựa chọn khó khăn vẫn như cũ – bạn sẽ đi xa đến đâu để bảo vệ những người mình quan tâm? 	UI/MessageBox/NewContentAnniversaryEdition
+UI/MessageBox/NewContentAnniversaryEdition_title	Anniversary Edition	Anniversary Edition	UI/MessageBox/NewContentAnniversaryEdition_title
+UI/ScenarioSelect/header	Choose Your Story	Chọn câu chuyện	UI/ScenarioSelect/header
+UI/ScenarioSelect/soon	To be unlocked	Sẽ mở khóa	UI/ScenarioSelect/soon
+UI/ScenarioSelect/locked	Locked	Đã khóa	UI/ScenarioSelect/locked
+UI/ScenarioSelect/survived	Survived	Đã sống sót	UI/ScenarioSelect/survived
+UI/ScenarioSelect/notsurvived	Survived only ^DayOfWar^ days	Chỉ sống sót ^DayOfWar^ ngày	UI/ScenarioSelect/notsurvived
+UI/ScenarioSelect/days	^DayOfWar^ days	^DayOfWar^ ngày	UI/ScenarioSelect/days
+UI/ScenarioSelect/new	New	Mới	UI/ScenarioSelect/new
+UI/ScenarioSelect/random	Random|XPadX|	Ngẫu nhiên|XPadX|	UI/ScenarioSelect/random
+UI/ScenarioSelect/custom	Write my own story	Tự viết câu chuyện	UI/ScenarioSelect/custom
+UI/ScenarioSelect/custom2	My own story	Câu chuyện của tôi	UI/ScenarioSelect/custom2
+UI/ScenarioSelect/custom3	Define my own story	Tự thiết lập câu chuyện	UI/ScenarioSelect/custom3
+UI/ScenarioSelect/header_ws	Choose New Story	Chọn câu chuyện mới	UI/ScenarioSelect/header_ws
+UI/ScenarioSelect/title1_ws	Father's Promise	Lời hứa của người cha	UI/ScenarioSelect/title1_ws
+UI/ScenarioSelect/season_ws	Season Pass|XPadX|	Thẻ mùa|XPadX|	UI/ScenarioSelect/season_ws
+UI/AgeVerification/EnterAgeMessage	You need to verify that you are over 18, please enter your birth date to continue	Cần xác minh bạn đủ 18 tuổi. Vui lòng nhập ngày sinh để tiếp tục.	UI/AgeVerification/EnterAgeMessage
+UI/AgeVerification/FirstTryWrongAgeMessage	Warning! Your account shall become locked unless you verify that you are over 18	Cảnh báo! Tài khoản sẽ bị khóa nếu bạn không xác minh đủ 18 tuổi.	UI/AgeVerification/FirstTryWrongAgeMessage
+UI/AgeVerification/SecondTryWrongAgeMessage	Your account has been locked due to age requirements	Tài khoản đã bị khóa do yêu cầu độ tuổi.	UI/AgeVerification/SecondTryWrongAgeMessage
+UI/AgeVerification/WaitForUnlockMessage	Your account shall be unlocked in:	Tài khoản sẽ được mở khóa sau:	UI/AgeVerification/WaitForUnlockMessage
+UI/AgeVerification/Apply	Apply|XPadY|	Áp dụng|XPadY|	UI/AgeVerification/Apply
+UI/ScenarioEditor/Messages/SelectDweller	You must choose at least one character	Phải chọn ít nhất một nhân vật	UI/ScenarioEditor/Messages/SelectDweller
+UI/ScenarioEditor/Messages/TooManyDwellers	You can choose only ^count^ characters	Chỉ được chọn ^count^ nhân vật	UI/ScenarioEditor/Messages/TooManyDwellers
+UI/ScenarioEditor/Messages/NotEnoughLocations	You must select at least ^count^ locations	Phải chọn ít nhất ^count^ địa điểm	UI/ScenarioEditor/Messages/NotEnoughLocations
+UI/ScenarioEditor/Messages/EmptyName	You must enter a name	Phải nhập tên	UI/ScenarioEditor/Messages/EmptyName
+UI/ScenarioEditor/Messages/EmptyCharacterName	You must enter a name	Phải nhập tên	UI/ScenarioEditor/Messages/EmptyCharacterName
+UI/ScenarioEditor/Messages/SureYouWantToDelete	Are you sure you want to delete?	Chắc chắn muốn xóa?	UI/ScenarioEditor/Messages/SureYouWantToDelete
+UI/ScenarioEditor/Messages/SureYouWantToDelete2	Are you sure you want to delete scenario?	Chắc chắn muốn xóa kịch bản?	UI/ScenarioEditor/Messages/SureYouWantToDelete2
+UI/ScenarioEditor/Messages/SureYouWantToDelete3	Are you sure you want to delete story?	Chắc chắn muốn xóa câu chuyện?	UI/ScenarioEditor/Messages/SureYouWantToDelete3
+UI/ScenarioEditor/Messages/SureYouWantToDelete4	Are you sure you want to delete character?	Chắc chắn muốn xóa nhân vật?	UI/ScenarioEditor/Messages/SureYouWantToDelete4
+UI/ScenarioEditor/Messages/SureYouWantToDelete5	Are you sure you want to delete civilian?	Chắc chắn muốn xóa thường dân?	UI/ScenarioEditor/Messages/SureYouWantToDelete5
+UI/ScenarioEditor/Messages/SureYouWantToDelete6	Are you sure you want to delete city map?	Chắc chắn muốn xóa bản đồ thành phố?	UI/ScenarioEditor/Messages/SureYouWantToDelete6
+UI/ScenarioEditor/Messages/SureYouWantToOverwrite	Are you sure you want to overwrite?	Chắc chắn muốn ghi đè?	UI/ScenarioEditor/Messages/SureYouWantToOverwrite
+UI/ScenarioEditor/Messages/SureYouWantToOverwrite2	Are you sure you want to overwrite story?	Chắc chắn muốn ghi đè câu chuyện?	UI/ScenarioEditor/Messages/SureYouWantToOverwrite2
+UI/ScenarioEditor/Messages/SureYouWantToOverwrite3	Are you sure you want to overwrite city map?	Chắc chắn muốn ghi đè bản đồ thành phố?	UI/ScenarioEditor/Messages/SureYouWantToOverwrite3
+UI/ScenarioEditor/Messages/SureYouWantToOverwrite4	Are you sure you want to overwrite civilian?	Chắc chắn muốn ghi đè thường dân?	UI/ScenarioEditor/Messages/SureYouWantToOverwrite4
+UI/ScenarioEditor/Messages/SureYouWantToEdit	Are you sure you want to edit?	Chắc chắn muốn sửa?	UI/ScenarioEditor/Messages/SureYouWantToEdit
+UI/ScenarioEditor/Messages/SureYouWantToEdit2	Are you sure you want to edit civilian?	Chắc chắn muốn sửa thường dân?	UI/ScenarioEditor/Messages/SureYouWantToEdit2
+UI/ScenarioEditor/Messages/NoMoreThanOneChild	You can't select more than one child	Không thể chọn nhiều hơn một trẻ em	UI/ScenarioEditor/Messages/NoMoreThanOneChild
+UI/ScenarioEditor/Messages/AtLeastOneAdult	You have to select at least one adult	Phải chọn ít nhất một người lớn	UI/ScenarioEditor/Messages/AtLeastOneAdult
+UI/ScenarioEditor/Messages/NotEnoughSpace	Can't save content. You've reached max custom content space	Không lưu được. Đã hết chỗ cho nội dung tùy chỉnh.	UI/ScenarioEditor/Messages/NotEnoughSpace
+UI/ScenarioEditor/Messages/SureYouWantToLeave	Are you sure you want to leave your story?	Chắc chắn muốn rời câu chuyện?	UI/ScenarioEditor/Messages/SureYouWantToLeave
+UI/ScenarioEditor/WarDuration	Days until ceasefire	Số ngày đến khi ngừng bắn	UI/ScenarioEditor/WarDuration
+UI/ScenarioEditor/Difficulty	Difficulty	Độ khó	UI/ScenarioEditor/Difficulty
+UI/ScenarioEditor/Difficulty2	Intensity of the conflict	Mức độ khốc liệt	UI/ScenarioEditor/Difficulty2
+UI/ScenarioEditor/Low	Low	Thấp	UI/ScenarioEditor/Low
+UI/ScenarioEditor/WinterLow	Mild	Nhẹ	UI/ScenarioEditor/WinterLow
+UI/ScenarioEditor/WinterMedium	Moderate	Vừa	UI/ScenarioEditor/WinterMedium
+UI/ScenarioEditor/WinterHard	Severe	Khắc nghiệt	UI/ScenarioEditor/WinterHard
+UI/ScenarioEditor/Low2	Minor	Nhỏ	UI/ScenarioEditor/Low2
+UI/ScenarioEditor/Medium	Moderate	Vừa	UI/ScenarioEditor/Medium
+UI/ScenarioEditor/Medium2	Major	Lớn	UI/ScenarioEditor/Medium2
+UI/ScenarioEditor/Hard	High	Cao	UI/ScenarioEditor/Hard
+UI/ScenarioEditor/Hard2	Center of the storm	Tâm bão	UI/ScenarioEditor/Hard2
+UI/ScenarioEditor/Short	Short	Ngắn	UI/ScenarioEditor/Short
+UI/ScenarioEditor/Long	Long	Dài	UI/ScenarioEditor/Long
+UI/ScenarioEditor/WinterStart	Winter comes	Mùa đông đến	UI/ScenarioEditor/WinterStart
+UI/ScenarioEditor/WinterStart2	First day of winter	Ngày đầu mùa đông	UI/ScenarioEditor/WinterStart2
+UI/ScenarioEditor/WinterPower	Winter harshness	Độ khắc nghiệt của mùa đông	UI/ScenarioEditor/WinterPower
+UI/ScenarioEditor/WinterDuration	Winter Length	Độ dài mùa đông	UI/ScenarioEditor/WinterDuration
+UI/ScenarioEditor/Never	Never	Không bao giờ	UI/ScenarioEditor/Never
+UI/ScenarioEditor/Early	Early	Sớm	UI/ScenarioEditor/Early
+UI/ScenarioEditor/Middle	Halfway through	Giữa chừng	UI/ScenarioEditor/Middle
+UI/ScenarioEditor/Late	Late	Muộn	UI/ScenarioEditor/Late
+UI/ScenarioEditor/Title	My Story	Câu chuyện của tôi	UI/ScenarioEditor/Title
+UI/ScenarioEditor/Title_old	Scenario Editor	Trình soạn kịch bản	UI/ScenarioEditor/Title_old
+UI/ScenarioEditor/SelectCharacters	Choose people to start with	Chọn người để bắt đầu	UI/ScenarioEditor/SelectCharacters
+UI/ScenarioEditor/SelectCharacters2	Choose starting people	Chọn người khởi đầu	UI/ScenarioEditor/SelectCharacters2
+UI/ScenarioEditor/SelectCharacters3	Choose people to your home	Chọn người về nhà bạn	UI/ScenarioEditor/SelectCharacters3
+UI/ScenarioEditor/SelectCharacters4	Starting people in your house	Người khởi đầu trong nhà	UI/ScenarioEditor/SelectCharacters4
+UI/ScenarioEditor/SelectCharacters_old	Select Character	Chọn nhân vật	UI/ScenarioEditor/SelectCharacters_old
+UI/ScenarioEditor/WinterConfig	Winter	Mùa đông	UI/ScenarioEditor/WinterConfig
+UI/ScenarioEditor/WinterConfig_old	Winter Settings	Cài đặt mùa đông	UI/ScenarioEditor/WinterConfig_old
+UI/ScenarioEditor/LocationsSettings	City Map	Bản đồ thành phố	UI/ScenarioEditor/LocationsSettings
+UI/ScenarioEditor/LocationsSettings_old	Locations Settings	Cài đặt địa điểm	UI/ScenarioEditor/LocationsSettings_old
+UI/ScenarioEditor/Select	View	Xem	UI/ScenarioEditor/Select
+UI/ScenarioEditor/Select_old	Select|XPadA|	Chọn|XPadA|	UI/ScenarioEditor/Select_old
+UI/ScenarioEditor/LowDescription	The city is cut off, but the situation could be worse. The shortages of supplies are a problem, but not a drastic one yet. Crime is not rampant yet, as people still prefer to scavenge for supplies rather than rob others. People are hopeful, and neighbours often stick together and try to help one another.	Thành phố bị cắt đứt, nhưng tình hình có thể còn tệ hơn. Thiếu vật tư là vấn đề, nhưng chưa phải quá nghiêm trọng. Tội phạm chưa tràn lan, vì người ta vẫn thích lục lọi tìm vật tư hơn là cướp của người khác. Mọi người còn hy vọng, hàng xóm thường bám víu vào nhau và giúp đỡ lẫn nhau.	UI/ScenarioEditor/LowDescription
+UI/ScenarioEditor/MediumDescription	The situation in the city is severe. There are shortages of everything, and black market prices fluctuate. Bands of looters attack homes at night, as desperate people turn to crime to survive. People have some hope, but neighbours aren’t quick to help one another.	Tình hình trong thành phố khốc liệt. Thiếu thốn mọi thứ, giá chợ đen dao động liên tục. Các băng hôi của tấn công nhà cửa vào ban đêm, khi những người tuyệt vọng quay sang tội phạm để sống sót. Người ta vẫn còn chút hy vọng, nhưng hàng xóm không mấy vội vã giúp nhau.	UI/ScenarioEditor/MediumDescription
+UI/ScenarioEditor/HardDescription	The ongoing siege means the situation in the city is dire. Even the most basic supplies are difficult to get. Black market prices skyrocket. Desperate people scour the streets and ruins clean of everything of any use. Bandits roam the city and nobody is safe in their home. People have little hope, and are unwilling to help one another.	Cuộc vây hãm kéo dài khiến tình hình thành phố thảm khốc. Ngay cả vật tư cơ bản nhất cũng khó kiếm. Giá chợ đen tăng vọt. Những người tuyệt vọng lục sạch đường phố và đống đổ nát, không còn gì có ích. Bọn cướp lang thang khắp thành phố, không ai an toàn trong nhà mình. Người ta gần như hết hy vọng, và chẳng ai muốn giúp ai.	UI/ScenarioEditor/HardDescription
+UI/ScenarioEditor/ShelterItemsGood	Well equipped shelter.	Nơi trú được trang bị tốt.	UI/ScenarioEditor/ShelterItemsGood
+UI/ScenarioEditor/ShelterItemsNormal	Decently equipped shelter.	Nơi trú được trang bị khá.	UI/ScenarioEditor/ShelterItemsNormal
+UI/ScenarioEditor/ShelterItemsPoor	Poorly equipped shelter.	Nơi trú được trang bị kém.	UI/ScenarioEditor/ShelterItemsPoor
+UI/ScenarioEditor/ShelterA_Name	Tenement	Chung cư	UI/ScenarioEditor/ShelterA_Name
+UI/ScenarioEditor/ShelterB_Name	Suburban house	Nhà ngoại ô	UI/ScenarioEditor/ShelterB_Name
+UI/ScenarioEditor/NewCharacter	Define new civilian	Tạo thường dân mới	UI/ScenarioEditor/NewCharacter
+UI/ScenarioEditor/NewCharacter_old	Create Character	Tạo nhân vật	UI/ScenarioEditor/NewCharacter_old
+UI/ScenarioEditor/CharacterCount	People chosen:	Người đã chọn:	UI/ScenarioEditor/CharacterCount
+UI/ScenarioEditor/CharacterCount2	Civilians chosen:	Thường dân đã chọn:	UI/ScenarioEditor/CharacterCount2
+UI/ScenarioEditor/LocationsCount	Locations chosen:	Địa điểm đã chọn:	UI/ScenarioEditor/LocationsCount
+UI/ScenarioEditor/SelectLocations	My City Map	Bản đồ thành phố của tôi	UI/ScenarioEditor/SelectLocations
+UI/ScenarioEditor/SelectLocations_old	Select Locations	Chọn địa điểm	UI/ScenarioEditor/SelectLocations_old
+UI/ScenarioEditor/SelectShelter	Choose Your Shelter	Chọn nơi trú của bạn	UI/ScenarioEditor/SelectShelter
+UI/ScenarioEditor/SaveScenario	Save My Story|XPadY|	Lưu câu chuyện|XPadY|	UI/ScenarioEditor/SaveScenario
+UI/ScenarioEditor/SaveScenario_old	Save Scenario	Lưu kịch bản	UI/ScenarioEditor/SaveScenario_old
+UI/ScenarioEditor/LoadScenario	Load My Story|XPadX|	Tải câu chuyện|XPadX|	UI/ScenarioEditor/LoadScenario
+UI/ScenarioEditor/LoadScenario_old	Load Scenario	Tải kịch bản	UI/ScenarioEditor/LoadScenario_old
+UI/ScenarioEditor/SelectScenario	Choose Saved Story	Chọn câu chuyện đã lưu	UI/ScenarioEditor/SelectScenario
+UI/ScenarioEditor/SelectScenario_old	Select Saved Scenario	Chọn kịch bản đã lưu	UI/ScenarioEditor/SelectScenario_old
+UI/ScenarioEditor/ScnarioList	Story List	Danh sách câu chuyện	UI/ScenarioEditor/ScnarioList
+UI/ScenarioEditor/ScnarioList_old	Scenario List	Danh sách kịch bản	UI/ScenarioEditor/ScnarioList_old
+UI/ScenarioEditor/Delete	Delete|XPadY|	Xóa|XPadY|	UI/ScenarioEditor/Delete
+UI/ScenarioEditor/Load	Load|XPadA|	Tải|XPadA|	UI/ScenarioEditor/Load
+UI/ScenarioEditor/Save	Save|XPadA|	Lưu|XPadA|	UI/ScenarioEditor/Save
+UI/ScenarioEditor/LoadLocations	Load City Map|XPadX|	Tải bản đồ|XPadX|	UI/ScenarioEditor/LoadLocations
+UI/ScenarioEditor/LoadLocations_old	Load Locations	Tải địa điểm	UI/ScenarioEditor/LoadLocations_old
+UI/ScenarioEditor/SaveLocations	Save City Map|XPadY|	Lưu bản đồ|XPadY|	UI/ScenarioEditor/SaveLocations
+UI/ScenarioEditor/SaveLocations_old	Save Locations	Lưu địa điểm	UI/ScenarioEditor/SaveLocations_old
+UI/ScenarioEditor/StartNewStory	Start My Story	Bắt đầu câu chuyện	UI/ScenarioEditor/StartNewStory
+UI/ScenarioEditor/UploadToWorkshop	Upload to Workshop |XPadY|	Tải lên Workshop |XPadY|	UI/ScenarioEditor/UploadToWorkshop
+UI/ScenarioEditor/WorkshopLicenseAgreementTitle	Legal agreement required	Cần đồng ý điều khoản pháp lý	UI/ScenarioEditor/WorkshopLicenseAgreementTitle
+UI/ScenarioEditor/WorkshopLicenseAgreementMessage	To make this item visible in Workshop, you need to agree to terms of service (http://steamcommunity.com/sharedfiles/workshoplegalagreement). Please visit your item's page.	Để vật phẩm này hiển thị trên Workshop, bạn cần đồng ý điều khoản dịch vụ (http://steamcommunity.com/sharedfiles/workshoplegalagreement). Vui lòng truy cập trang của vật phẩm.	UI/ScenarioEditor/WorkshopLicenseAgreementMessage
+UI/ScenarioEditor/ToggleLocations	Toggle Location |XPadA|	Bật/tắt địa điểm |XPadA|	UI/ScenarioEditor/ToggleLocations
+UI/ScenarioEditor/Edit	Edit|XPadX|	Sửa|XPadX|	UI/ScenarioEditor/Edit
+UI/ScenarioEditor/TextboxTitle_Name	Enter civilian name.	Nhập tên thường dân.	UI/ScenarioEditor/TextboxTitle_Name
+UI/ScenarioEditor/TextboxTitle_Mappack	Enter City Map name.	Nhập tên bản đồ thành phố.	UI/ScenarioEditor/TextboxTitle_Mappack
+UI/ScenarioEditor/TextboxTitle_Scenario	Enter Story name.	Nhập tên câu chuyện.	UI/ScenarioEditor/TextboxTitle_Scenario
+UI/ScenarioEditor/Min	MIN	PHÚT	UI/ScenarioEditor/Min
+UI/CharacterEditor/Patterns/PoliceOfficer	Police Officer	Cảnh sát	UI/CharacterEditor/Patterns/PoliceOfficer
+UI/CharacterEditor/Patterns/PoliceOfficer_charskill1	Familiar with guns	Quen súng	UI/CharacterEditor/Patterns/PoliceOfficer_charskill1
+UI/CharacterEditor/Patterns/PoliceOfficer_charskillBackup	Firearms proficiency	Thành thạo súng cầm tay	UI/CharacterEditor/Patterns/PoliceOfficer_charskillBackup
+UI/CharacterEditor/Patterns/PoliceOfficer_charskill2	Proficient with firearms	Thành thạo súng	UI/CharacterEditor/Patterns/PoliceOfficer_charskill2
+UI/CharacterEditor/Patterns/PoliceOfficer_charskill3	Good aim	Nhắm giỏi	UI/CharacterEditor/Patterns/PoliceOfficer_charskill3
+UI/CharacterEditor/Patterns/Computer_specialist	Computer specialist	Chuyên gia máy tính	UI/CharacterEditor/Patterns/Computer_specialist
+UI/CharacterEditor/Patterns/Computer_specialist_charskill1	Knack for tinkering	Khéo tay sửa chữa	UI/CharacterEditor/Patterns/Computer_specialist_charskill1
+UI/CharacterEditor/Patterns/Computer_specialist_charskill2	Uses fewer electric parts to make electric appliances	Dùng ít linh kiện điện hơn để chế thiết bị điện	UI/CharacterEditor/Patterns/Computer_specialist_charskill2
+UI/CharacterEditor/Patterns/Computer_specialist_charskill3	Saves electric parts	Tiết kiệm linh kiện điện	UI/CharacterEditor/Patterns/Computer_specialist_charskill3
+UI/CharacterEditor/Patterns/Nurse	Nurse	Y tá	UI/CharacterEditor/Patterns/Nurse
+UI/CharacterEditor/Patterns/Nurse_charskill1	Medical training	Được đào tạo y tế	UI/CharacterEditor/Patterns/Nurse_charskill1
+UI/CharacterEditor/Patterns/Nurse_charskill2	More efficient wound treatment	Băng bó vết thương hiệu quả hơn	UI/CharacterEditor/Patterns/Nurse_charskill2
+UI/CharacterEditor/Patterns/Nurse_charskill3	More efficient illness treatment	Chữa bệnh hiệu quả hơn	UI/CharacterEditor/Patterns/Nurse_charskill3
+UI/CharacterEditor/Patterns/Nurse_charskill4	More resistant to disease	Kháng bệnh tốt hơn	UI/CharacterEditor/Patterns/Nurse_charskill4
+UI/CharacterEditor/Patterns/Forester	Forester	Kiểm lâm	UI/CharacterEditor/Patterns/Forester
+UI/CharacterEditor/Patterns/Forester_charskill1	Uses wood more efficiently when trying to warm the shelter	Dùng gỗ hiệu quả hơn khi sưởi nơi trú	UI/CharacterEditor/Patterns/Forester_charskill1
+UI/CharacterEditor/Patterns/Forester_charskill2	Can dig through rubble faster with or without a shovel	Lục gạch vụn nhanh hơn, có hoặc không có xẻng	UI/CharacterEditor/Patterns/Forester_charskill2
+UI/CharacterEditor/Patterns/Forester_charskill3	Makes heater fuel more efficiently	Chế nhiên liệu lò sưởi hiệu quả hơn	UI/CharacterEditor/Patterns/Forester_charskill3
+UI/CharacterEditor/Patterns/Forester_charskill4	Digs through rubble faster	Lục gạch vụn nhanh hơn	UI/CharacterEditor/Patterns/Forester_charskill4
+UI/CharacterEditor/Patterns/Forester_charskill5	Uses less wood for heating	Sưởi ấm tốn ít gỗ hơn	UI/CharacterEditor/Patterns/Forester_charskill5
+UI/CharacterEditor/Patterns/ChemistBackup	Chemist	Nhà hóa học	UI/CharacterEditor/Patterns/ChemistBackup
+UI/CharacterEditor/Patterns/Chemist	Pharmacist	Dược sĩ	UI/CharacterEditor/Patterns/Chemist
+UI/CharacterEditor/Patterns/Chemist_charskill1	Uses fewer ingredients when making alcohol and medications	Dùng ít nguyên liệu hơn khi nấu rượu và chế thuốc	UI/CharacterEditor/Patterns/Chemist_charskill1
+UI/CharacterEditor/Patterns/Chemist_charskill2	Knows much about meds	Hiểu nhiều về thuốc men	UI/CharacterEditor/Patterns/Chemist_charskill2
+UI/CharacterEditor/Patterns/Chemist_charskill2_Backup	Good at making meds	Giỏi chế thuốc men	UI/CharacterEditor/Patterns/Chemist_charskill2_Backup
+UI/CharacterEditor/Patterns/Insurance_agent	Insurance agent	Nhân viên bảo hiểm	UI/CharacterEditor/Patterns/Insurance_agent
+UI/CharacterEditor/Patterns/Insurance_agent_charskill1	Persuasive	Có sức thuyết phục	UI/CharacterEditor/Patterns/Insurance_agent_charskill1
+UI/CharacterEditor/Patterns/Insurance_agent_charskill1_Backup	Bartering skills	Kỹ năng đổi chác	UI/CharacterEditor/Patterns/Insurance_agent_charskill1_Backup
+UI/CharacterEditor/Patterns/Photographer	Photographer	Nhiếp ảnh gia	UI/CharacterEditor/Patterns/Photographer
+UI/CharacterEditor/Patterns/Photographer_charskill1	No special skill	Không có kỹ năng đặc biệt	UI/CharacterEditor/Patterns/Photographer_charskill1
+UI/CharacterEditor/Patterns/Photographer_charskill2	Keen eye for detail	Tinh mắt	UI/CharacterEditor/Patterns/Photographer_charskill2
+UI/CharacterEditor/Patterns/Psychologist	Psychologist	Nhà tâm lý	UI/CharacterEditor/Patterns/Psychologist
+UI/CharacterEditor/Patterns/Psychologist_charskill1	More resistant to trauma, better at cheering up others	Chịu chấn thương tinh thần tốt hơn, giỏi làm người khác vui lên	UI/CharacterEditor/Patterns/Psychologist_charskill1
+UI/CharacterEditor/Patterns/Psychologist_charskill2	Strong willed	Ý chí kiên định	UI/CharacterEditor/Patterns/Psychologist_charskill2
+UI/CharacterEditor/Patterns/Forester_no_skill	Loves nature	Yêu thiên nhiên	UI/CharacterEditor/Patterns/Forester_no_skill
+UI/CharacterEditor/Patterns/Lumberjack_hatchet_skill	Skilled woodchopper	Thợ chặt gỗ lành nghề	UI/CharacterEditor/Patterns/Lumberjack_hatchet_skill
+UI/CharacterEditor/Patterns/Lumberjack_hatchet_skillBackup	Good with a hatchet	Giỏi dùng rìu	UI/CharacterEditor/Patterns/Lumberjack_hatchet_skillBackup
+UI/CharacterEditor/Patterns/Lumberjack	Woodsman	Tiều phu	UI/CharacterEditor/Patterns/Lumberjack
+UI/CharacterEditor/Patterns/LumberjackBackup	Lumberjack	Thợ rừng	UI/CharacterEditor/Patterns/LumberjackBackup
+UI/CharacterEditor/Patterns/Computer_specialist_charskill4	Knack for electronics	Khéo tay điện tử	UI/CharacterEditor/Patterns/Computer_specialist_charskill4
+UI/CharacterEditor/Gender	Gender	Giới tính	UI/CharacterEditor/Gender
+UI/CharacterEditor/GenderMale	Male	Nam	UI/CharacterEditor/GenderMale
+UI/CharacterEditor/GenderMale2	Man	Đàn ông	UI/CharacterEditor/GenderMale2
+UI/CharacterEditor/GenderFemale	Female	Nữ	UI/CharacterEditor/GenderFemale
+UI/CharacterEditor/GenderFemale2	Woman	Phụ nữ	UI/CharacterEditor/GenderFemale2
+UI/CharacterEditor/Pattern	Occupation	Nghề nghiệp	UI/CharacterEditor/Pattern
+UI/CharacterEditor/Portrait	Portrait	Chân dung	UI/CharacterEditor/Portrait
+UI/CharacterEditor/Model	Physique	Vóc dáng	UI/CharacterEditor/Model
+UI/CharacterEditor/Model2	Apperance	Ngoại hình	UI/CharacterEditor/Model2
+UI/CharacterEditor/Model_old	Model	Mẫu	UI/CharacterEditor/Model_old
+UI/CharacterEditor/Bio	Bio	Tiểu sử	UI/CharacterEditor/Bio
+UI/CharacterEditor/Bio_old	Story	Câu chuyện	UI/CharacterEditor/Bio_old
+UI/CharacterEditor/Name	Name	Tên	UI/CharacterEditor/Name
+UI/CharacterEditor/Title	New Civilian	Thường dân mới	UI/CharacterEditor/Title
+UI/CharacterEditor/Title_old	Character Creation	Tạo nhân vật	UI/CharacterEditor/Title_old
+UI/CharacterEditor/UploadPhoto	Upload Your Photo	Tải ảnh của bạn lên	UI/CharacterEditor/UploadPhoto
+UI/CharacterEditor/UploadPhoto_STEAM	To upload your photo, place the file in PORTRAITS in main game folder.	Để tải ảnh lên, đặt tệp vào thư mục PORTRAITS trong thư mục gốc của trò chơi.	UI/CharacterEditor/UploadPhoto_STEAM
+UI/CharacterEditor/UploadPhoto_DRMFree	To upload your photo, place the file in PORTRAITS in Documents/This War Of Mine.	Để tải ảnh lên, đặt tệp vào PORTRAITS trong Documents/This War Of Mine.	UI/CharacterEditor/UploadPhoto_DRMFree
+UI/CharacterEditor/UploadPhoto_MacAppStore	To upload your photo, place the file in PORTRAITS in Library/.../This War Of Mine.	Để tải ảnh lên, đặt tệp vào PORTRAITS trong Library/.../This War Of Mine.	UI/CharacterEditor/UploadPhoto_MacAppStore
+UI/CharacterEditor/Save	Save Character	Lưu nhân vật	UI/CharacterEditor/Save
+UI/Workshop/VisibilitySettingTitle	Visibility	Hiển thị	UI/Workshop/VisibilitySettingTitle
+UI/Workshop/VisibilityPublic	Public	Công khai	UI/Workshop/VisibilityPublic
+UI/Workshop/VisibilityFriendsOnly	Friends Only	Chỉ bạn bè	UI/Workshop/VisibilityFriendsOnly
+UI/Workshop/VisibilityPrivate	Private	Riêng tư	UI/Workshop/VisibilityPrivate
+UI/Workshop/UploadToWorkshop	Upload to Workshop	Tải lên Workshop	UI/Workshop/UploadToWorkshop
+UI/Workshop/LicenseAgreementTitle	Legal agreement required	Cần đồng ý điều khoản pháp lý	UI/Workshop/LicenseAgreementTitle
+UI/Workshop/LicenseAgreementMessage	To make this item visible in Workshop, you need to agree to terms of service.	Để vật phẩm hiển thị trên Workshop, bạn cần đồng ý điều khoản dịch vụ.	UI/Workshop/LicenseAgreementMessage
+UI/Workshop/LoadTitle	Workshop Story	Câu chuyện Workshop	UI/Workshop/LoadTitle
+UI/Workshop/Browse	Browse Workshop |XPadX|	Duyệt Workshop |XPadX|	UI/Workshop/Browse
+UI/Workshop/Author	By:	Tác giả:	UI/Workshop/Author
+UI/Workshop/StartScenario	Start Story |XPadY|	Bắt đầu câu chuyện |XPadY|	UI/Workshop/StartScenario
+UI/Workshop/ItemName	Item Name	Tên vật phẩm	UI/Workshop/ItemName
+UI/Workshop/ItemDescription	Item Description	Mô tả vật phẩm	UI/Workshop/ItemDescription
+UI/Workshop/PublishNew	Publish New Item |XPadY|	Đăng vật phẩm mới |XPadY|	UI/Workshop/PublishNew
+UI/Workshop/UpdateExisting	Update Existing |XPadX|	Cập nhật đã có |XPadX|	UI/Workshop/UpdateExisting
+UI/Workshop/NoWorkshopItems	Browse Workshop to discover new items	Duyệt Workshop để tìm vật phẩm mới	UI/Workshop/NoWorkshopItems
+UI/Workshop/WorkshopMenu	Workshop Story	Câu chuyện Workshop	UI/Workshop/WorkshopMenu
+UI/Workshop/WorkshopCharacter	Workshop Civillian	Thường dân Workshop	UI/Workshop/WorkshopCharacter
+UI/Workshop/PublishItemTitle	Publish Workshop Item	Đăng vật phẩm Workshop	UI/Workshop/PublishItemTitle
+UI/Workshop/PublishMessage	Sending item content...	Đang gửi nội dung...	UI/Workshop/PublishMessage
+UI/Workshop/PublishCompleted	Item Published Successfully	Đã đăng thành công	UI/Workshop/PublishCompleted
+UI/Workshop/PublishError	Publishing item failed!	Đăng thất bại!	UI/Workshop/PublishError
+UI/Workshop/LicenseAgreement	License Agreement |XPadX|	Thỏa thuận giấy phép |XPadX|	UI/Workshop/LicenseAgreement
+UI/Workshop/EmptyName	You must provide an item name	Phải nhập tên vật phẩm	UI/Workshop/EmptyName
+UI/Workshop/EmptyDescription	You must provide an item description	Phải nhập mô tả vật phẩm	UI/Workshop/EmptyDescription
+UI/Workshop/SubscribedItems	Subscribed items	Vật phẩm đã đăng ký	UI/Workshop/SubscribedItems
+UI/Modding/ModdingCentre	Modding Centre	Trung tâm mod	UI/Modding/ModdingCentre
+UI/Modding/NoModdingItems	No modding items	Không có mục mod	UI/Modding/NoModdingItems
+UI/Modding/PriorityUp	PRIORITY UP |XPadUp|	ƯU TIÊN LÊN |XPadUp|	UI/Modding/PriorityUp
+UI/Modding/Enable	ENABLE |XPadA|	BẬT |XPadA|	UI/Modding/Enable
+UI/Modding/Disable	DISABLE |XPadA|	TẮT |XPadA|	UI/Modding/Disable
+UI/Modding/PriorityDown	PRIORITY DOWN |XPadDown|	ƯU TIÊN XUỐNG |XPadDown|	UI/Modding/PriorityDown
+UI/Modding/Restart	You must restart game to apply changes	Phải khởi động lại game để áp dụng	UI/Modding/Restart
+UI/Modding/Status	Status:	Trạng thái:	UI/Modding/Status
+UI/Modding/ConflictWith	Conflict with:	Xung đột với:	UI/Modding/ConflictWith
+UI/Modding/NotLoaded	Not loaded	Chưa tải	UI/Modding/NotLoaded
+UI/Modding/Loaded	Loaded	Đã tải	UI/Modding/Loaded
+UI/Modding/NoConflicts	Hooray, no conflicts!	Tốt, không có xung đột!	UI/Modding/NoConflicts
+UI/Modding/NoModdingItemsNW	No modding items	Không có mục mod	UI/Modding/NoModdingItemsNW
+UI/Babel/Title	Babel	Babel	UI/Babel/Title
+UI/Babel/Info	BABEL project is a community based initiative, that will allow to bring This War of Mine experience to people all around the world. Thanks to the effort of all participants, soon the game will be available in all major languages, allowing everyone to play in his native language. You can be a part of the project – register and start working on the translation right away!	Dự án BABEL là sáng kiến cộng đồng, đưa trải nghiệm This War of Mine đến mọi người trên thế giới. Nhờ công sức của tất cả người tham gia, trò chơi sẽ sớm có mặt bằng các ngôn ngữ chính, để ai cũng chơi được bằng tiếng mẹ đẻ. Bạn có thể tham gia dự án – đăng ký và bắt tay vào dịch ngay!	UI/Babel/Info
+UI/Babel/Status	STATUS:	TRẠNG THÁI:	UI/Babel/Status
+UI/Babel/GameVersion	Game Version:	Phiên bản game:	UI/Babel/GameVersion
+UI/Babel/NoLanguages	No languages avalible	Không có ngôn ngữ nào	UI/Babel/NoLanguages
+UI/Babel/Download	Download |XPadY|	Tải về |XPadY|	UI/Babel/Download
+UI/Babel/Update	Update	Cập nhật	UI/Babel/Update
+UI/Babel/NewVersionAvailable	New version is available	Có phiên bản mới	UI/Babel/NewVersionAvailable
+UI/Babel/Current	Current	Hiện tại	UI/Babel/Current
+UI/Babel/Connect	Refresh |XPadX|	Làm mới |XPadX|	UI/Babel/Connect
+UI/Babel/NotDownloaded	Not downloaded	Chưa tải về	UI/Babel/NotDownloaded
+UI/Babel/DownloadFailed	Downloading item failed!	Tải thất bại!	UI/Babel/DownloadFailed
+UI/Babel/DownloadCompleted	Item Downloaded Successfully	Đã tải về thành công	UI/Babel/DownloadCompleted
+UI/Babel/Downloading	Downloading item...	Đang tải...	UI/Babel/Downloading
+UI/Babel/RefreshCompleted	List refreshed successfully	Đã làm mới danh sách	UI/Babel/RefreshCompleted
+UI/InAppPurchase/Buy	Buy|XPadA|	Mua|XPadA|	UI/InAppPurchase/Buy
+UI/InAppPurchase/DLC	DLC	DLC	UI/InAppPurchase/DLC
+UI/InAppPurchase/Restore	Restore|XPadX|	Khôi phục|XPadX|	UI/InAppPurchase/Restore
+UI/InAppPurchase/Loading	Loading	Đang tải	UI/InAppPurchase/Loading
+UI/InAppPurchase/TLODescription	The Little Ones explores the hardships of wartime survival as seen from an entirely new perspective, that of a child.	The Little Ones khám phá gian khổ sinh tồn thời chiến từ một góc nhìn hoàn toàn mới: góc nhìn của một đứa trẻ.	UI/InAppPurchase/TLODescription
+UI/InAppPurchase/TLOName	The Little Ones	The Little Ones	UI/InAppPurchase/TLOName
+UI/InAppPurchase/UnlockGameTitle	Purchase the full version	Mua bản đầy đủ	UI/InAppPurchase/UnlockGameTitle
+UI/InAppPurchase/UnlockGameName	Thank you for support official version.	Cảm ơn bạn đã ủng hộ bản chính thức.	UI/InAppPurchase/UnlockGameName
+UI/InAppPurchase/UnlockGameDescription	If you want to experience more contents, only 30 RMB for the full version, more scenes and roles for you to experience!	Muốn trải nghiệm thêm nội dung, bản đầy đủ chỉ 30 RMB, nhiều cảnh và vai hơn để bạn khám phá!	UI/InAppPurchase/UnlockGameDescription
+UI/WarStories/SaveWindow	Click YES to start a new game. Click NO to continue from the last day before you died.	Nhấn CÓ để bắt đầu ván mới. Nhấn KHÔNG để tiếp tục từ ngày trước khi bạn chết.	UI/WarStories/SaveWindow
+UI/WarStories/ContinueBox	Do you want to continue from the day before?	Tiếp tục từ ngày hôm trước?	UI/WarStories/ContinueBox
+UI/GameTitle	This War of Mine	This War of Mine	UI/GameTitle
+UI/DAY_TIME	DAY TIME	BAN NGÀY	UI/DAY_TIME
+UI/NIGHT_TIME	NIGHT TIME	BAN ĐÊM	UI/NIGHT_TIME
+UI/Loading	LOADING...	LOADING...	UI/Loading
+UI/Pause	Paused	Tạm dừng	UI/Pause
+UI/Day	Day	Ngày	UI/Day
+UI/DayNumber	Day ^Day^	Ngày ^Day^	UI/DayNumber
+UI/Night	Night	Đêm	UI/Night
+UI/Inventory	Our things	Đồ của chúng tôi	UI/Inventory
+UI/Inventory_Btn	|XPadY|Our things	|XPadY|Đồ của chúng tôi	UI/Inventory_Btn
+UI/Backpack	Backpack	Ba lô	UI/Backpack
+UI/Backpack_Btn	|XPadY|Backpack	|XPadY|Ba lô	UI/Backpack_Btn
+UI/EndDayConfirm	Are you sure you want to end the day?	Chắc chắn kết thúc ngày?	UI/EndDayConfirm
+UI/DragForMore	Drag for more	Kéo để thêm	UI/DragForMore
+UI/guest	Someone's at the door.	Có người gõ cửa.	UI/guest
+UI/ScavengeIcons	I can't scavenge during combat	Không thể lục lọi khi đang giao tranh	UI/ScavengeIcons
+UI/ButtonScavenge	Scavenge	Lục lọi	UI/ButtonScavenge
+UI/HideWeapon	Hide Weapon	Giấu vũ khí	UI/HideWeapon
+UI/ItemBroken	This item has broken.	Vật phẩm này đã hỏng.	UI/ItemBroken
+UI/PrivateProperty	Private Property	Tài sản tư nhân	UI/PrivateProperty
+UI/MyStory	MY STORY	CÂU CHUYỆN CỦA TÔI	UI/MyStory
+UI/ConsoleWelcome	Press |XPadA| to continue	Nhấn |XPadA| để tiếp tục	UI/ConsoleWelcome
+UI/LoadingProfile	CHECKING SAVED DATA...	ĐANG KIỂM TRA DỮ LIỆU ĐÃ LƯU...	UI/LoadingProfile
+UI/PressPreviewEnd	This is the end of the preview demo of This War of Mine on tablets. Look out for the full experience to be released soon in July.	Đây là hết bản demo xem trước This War of Mine trên máy tính bảng. Hãy chờ trải nghiệm đầy đủ, sắp ra mắt vào tháng 7.	UI/PressPreviewEnd
+UI/SynchronizingCloud	Synchronizing with cloud	Đang đồng bộ với đám mây	UI/SynchronizingCloud
+UI/SynchronizingFailed	Synchronizing failed	Đồng bộ thất bại	UI/SynchronizingFailed
+UI/ChangeRadioStation	Use right stick to tune radio.	Dùng cần analog phải để dò đài radio.	UI/ChangeRadioStation
+UI/NotSignedIn	Not signed in	Chưa đăng nhập	UI/NotSignedIn
+UI/ButtonScavengeWithControl	|XPadUp|Scavenge	|XPadUp|Lục lọi	UI/ButtonScavengeWithControl
+UI/Help	Help	Trợ giúp	UI/Help
+UI/LStickForMore	Use |LeftStick| to see more	Dùng |LeftStick| để xem thêm	UI/LStickForMore
+UI/RStickForMore	Use |RightStick| to see more	Dùng |RightStick| để xem thêm	UI/RStickForMore
+UI/BumpersForMore	Use |XPadLeftBack| / |XPadRightBack| to see more	Dùng |XPadLeftBack| / |XPadRightBack| để xem thêm	UI/BumpersForMore
+UI/ForceNewContent	Anniversary Edition Mode	Chế độ Anniversary Edition	UI/ForceNewContent
+UI/ForceNewContentPopUp	With this option enabled, you can be sure you'll be playing the content of |#color=FF3800|Anniversary Edition|#defaultcolor|, including new locations, new characters and new ending. Otherwise it will be included at random.	Khi bật tùy chọn này, bạn chắc chắn chơi được nội dung của |#color=FF3800|Anniversary Edition|#defaultcolor|, gồm địa điểm mới, nhân vật mới và kết thúc mới. Nếu không, nội dung này sẽ được chọn ngẫu nhiên.	UI/ForceNewContentPopUp
+UI/AM	am	sáng	UI/AM
+UI/PM	pm	chiều	UI/PM
+UI/NewRadioMessage	Strange sounds coming from radio.	Có tiếng lạ phát ra từ radio.	UI/NewRadioMessage
+UI/NewBioText	New entry in Adam's bio.	Có mục mới trong tiểu sử của Adam.	UI/NewBioText
+CharacterSkills/Warrior	Trained In Combat	Được huấn luyện chiến đấu	CharacterSkills/Warrior
+CharacterSkills/Scavenger	Skilled Scavenger	Lục lọi lành nghề	CharacterSkills/Scavenger
+CharacterSkills/Thief	Sneaks Quietly	Lẻn đi êm	CharacterSkills/Thief
+CharacterSkills/Trader	Bargaining Skills	Kỹ năng mặc cả	CharacterSkills/Trader
+CharacterSkills/Misiek	Strong But Slow	Khỏe nhưng chậm	CharacterSkills/Misiek
+CharacterSkills/Cook	Good Cook	Nấu ăn giỏi	CharacterSkills/Cook
+CharacterSkills/Crafter	Handyman	Thợ khéo tay	CharacterSkills/Crafter
+CharacterSkills/Lawyer	Talented Lawyer	Luật sư tài năng	CharacterSkills/Lawyer
+CharacterSkills/Mathematician	Good Mathematician	Giỏi toán	CharacterSkills/Mathematician
+CharacterSkills/Star	Fast Runner	Chạy nhanh	CharacterSkills/Star
+CharacterSkills/Student	Bolsters Spirits	Nâng tinh thần người khác	CharacterSkills/Student
+CharacterSkills/Teacher	Loves Children	Yêu trẻ con	CharacterSkills/Teacher
+CharacterSkills/Irina	Green Thumb	Khéo trồng trọt	CharacterSkills/Irina
+CharacterSkills/Christo	Determined Father	Người cha kiên định	CharacterSkills/Christo
+CharacterSkills/Henrik	Tobacconist	Chủ tiệm thuốc lá	CharacterSkills/Henrik
+CharacterSkills/Lydia	Irina's niece	Cháu gái của Irina	CharacterSkills/Lydia
+CharacterSkills/Misha	Neighborhood kid	Đứa trẻ hàng xóm	CharacterSkills/Misha
+CharacterSkills/Ivano	Henrik's grandson	Cháu trai của Henrik	CharacterSkills/Ivano
+CharacterSkills/Kalina	War orphan	Trẻ mồ côi chiến tranh	CharacterSkills/Kalina
+CharacterSkills/Iskra	Christo's daughter	Con gái của Christo	CharacterSkills/Iskra
+CharacterSkills/Sergei	Lost boy	Cậu bé lạc	CharacterSkills/Sergei
+CharacterSkills/Amelia	Adam's daughter	Con gái của Adam	CharacterSkills/Amelia
+LocationDescriptions/ScenarioEditor/Setups_titles/Couple	Couple	Cặp đôi	LocationDescriptions/ScenarioEditor/Setups_titles/Couple
+LocationDescriptions/ScenarioEditor/Setups_titles/Soldiers	Soldiers	Lính	LocationDescriptions/ScenarioEditor/Setups_titles/Soldiers
+LocationDescriptions/ScenarioEditor/Setups_titles/Trader	Trader	Thương nhân	LocationDescriptions/ScenarioEditor/Setups_titles/Trader
+LocationDescriptions/ScenarioEditor/Setups_titles/Girls	Girls	Các cô gái	LocationDescriptions/ScenarioEditor/Setups_titles/Girls
+LocationDescriptions/ScenarioEditor/Setups_titles/Bandits	Bandits	Bọn cướp	LocationDescriptions/ScenarioEditor/Setups_titles/Bandits
+LocationDescriptions/ScenarioEditor/Setups_titles/Snipers	Snipers	Lính bắn tỉa	LocationDescriptions/ScenarioEditor/Setups_titles/Snipers
+LocationDescriptions/ScenarioEditor/Setups_titles/Rebels	Rebels	Quân nổi dậy	LocationDescriptions/ScenarioEditor/Setups_titles/Rebels
+LocationDescriptions/ScenarioEditor/Setups_titles/Homeless	Homeless	Vô gia cư	LocationDescriptions/ScenarioEditor/Setups_titles/Homeless
+LocationDescriptions/ScenarioEditor/Setups_titles/Scavenger	Scavenger	Người đi lục lọi	LocationDescriptions/ScenarioEditor/Setups_titles/Scavenger
+LocationDescriptions/ScenarioEditor/Setups_titles/Scavengers	Scavengers	Người đi lục lọi	LocationDescriptions/ScenarioEditor/Setups_titles/Scavengers
+LocationDescriptions/ScenarioEditor/Setups_titles/Father_and_son	Father and Son	Cha và con trai	LocationDescriptions/ScenarioEditor/Setups_titles/Father_and_son
+LocationDescriptions/ScenarioEditor/Setups_titles/Familly	Familly	Gia đình	LocationDescriptions/ScenarioEditor/Setups_titles/Familly
+LocationDescriptions/ScenarioEditor/Setups_titles/Civilians	Civilians	Thường dân	LocationDescriptions/ScenarioEditor/Setups_titles/Civilians
+LocationDescriptions/ScenarioEditor/Setups_titles/Faithful	Faithful	Người sùng đạo	LocationDescriptions/ScenarioEditor/Setups_titles/Faithful
+LocationDescriptions/ScenarioEditor/Setups_titles/Priest	Priest	Linh mục	LocationDescriptions/ScenarioEditor/Setups_titles/Priest
+LocationDescriptions/ScenarioEditor/Setups_titles/Sniper	Sniper	Lính bắn tỉa	LocationDescriptions/ScenarioEditor/Setups_titles/Sniper
+LocationDescriptions/ScenarioEditor/Setups_titles/Traders	Traders	Thương nhân	LocationDescriptions/ScenarioEditor/Setups_titles/Traders
+LocationDescriptions/ScenarioEditor/Setups_titles/Market	Market	Chợ	LocationDescriptions/ScenarioEditor/Setups_titles/Market
+LocationDescriptions/LotsOf	Lots of ^ItemName^	Nhiều ^ItemName^	LocationDescriptions/LotsOf
+LocationDescriptions/Some	Some ^ItemName^	Một ít ^ItemName^	LocationDescriptions/Some
+LocationDescriptions/HugeAmounts	Huge amounts of ^ItemName^	Rất nhiều ^ItemName^	LocationDescriptions/HugeAmounts
+LocationDescriptions/Food	Food	Đồ ăn	LocationDescriptions/Food
+LocationDescriptions/Scrap	Materials	Nguyên liệu	LocationDescriptions/Scrap
+LocationDescriptions/Weapon	Weapons	Vũ khí	LocationDescriptions/Weapon
+LocationDescriptions/Tools	Tools	Dụng cụ	LocationDescriptions/Tools
+LocationDescriptions/Meds	Meds	Thuốc men	LocationDescriptions/Meds
+LocationDescriptions/Cautious	Caution advised	Nên cẩn thận	LocationDescriptions/Cautious
+LocationDescriptions/Danger	Danger	Nguy hiểm	LocationDescriptions/Danger
+LocationDescriptions/Trader	Possible trade	Có thể đổi chác	LocationDescriptions/Trader
+LocationDescriptions/Parts	Parts	Phụ tùng	LocationDescriptions/Parts
+LocationDescriptions/Ingredients	Ingredients	Nguyên liệu	LocationDescriptions/Ingredients
+Events/WinterStart	Bitter cold will make it much more difficult for us to survive.	Cái rét cắt da sẽ khiến chúng ta khó sống sót hơn nhiều.	Events/WinterStart
+Events/WinterStartTitle	It is getting very cold	Trời đang rất lạnh	Events/WinterStartTitle
+Events/WinterEnd	Thank goodness, the worst colds are over.	May quá, cái rét khủng khiếp nhất đã qua.	Events/WinterEnd
+Events/WinterEndTitle	Cold days have passed	Những ngày rét đã qua	Events/WinterEndTitle
+Events/BanditAttacksStart	Bands of looters have become audacious. We had better watch out.	Các băng hôi của đã trở nên táo tợn. Phải cẩn thận.	Events/BanditAttacksStart
+Events/BanditAttacksStartTitle	Outbreak of crime	Tội phạm bùng phát	Events/BanditAttacksStartTitle
+Events/BanditAttacksEnd	Civic self-defense patrols have put an end to the reign of armed bands of looters.	Đội tuần tra tự vệ dân sự đã chấm dứt thời các băng hôi của có vũ trang.	Events/BanditAttacksEnd
+Events/BanditAttacksEndTitle	Curb on crime	Kiềm chế tội phạm	Events/BanditAttacksEndTitle
+TEST/YOU_HAVE	You have ^Count^	Bạn có ^Count^	TEST/YOU_HAVE
+TakingCareOf/GiveFood/Kids/00	I'm worried about you ^CharacterName^, you must eat.	Lo quá, ^CharacterName^ ơi, phải ăn đi nhé.	TakingCareOf/GiveFood/Kids/00
+TakingCareOf/GiveFood/Kids/01	I brought you something to eat, ^CharacterName^.	Mang chút đồ ăn cho ^CharacterName^ này.	TakingCareOf/GiveFood/Kids/01
+TakingCareOf/GiveFood/Kids/02	You look hungry ^CharacterName^, here I brought you some food.	^CharacterName^ trông đói quá, mang đồ ăn tới đây nè.	TakingCareOf/GiveFood/Kids/02
+TakingCareOf/GiveFood/00	Here ^CharacterName^, you have to eat...	Này ^CharacterName^, ăn đi...	TakingCareOf/GiveFood/00
+TakingCareOf/GiveFood/01	You really should eat something.	Ăn chút gì đi chứ.	TakingCareOf/GiveFood/01
+TakingCareOf/GiveFood/02	Come on, don't give up! You gotta eat!	Thôi nào, đừng bỏ cuộc! Phải ăn chứ!	TakingCareOf/GiveFood/02
+TakingCareOf/GiveMeds/00	Here, these will help you.	Đây, cái này sẽ giúp được.	TakingCareOf/GiveMeds/00
+TakingCareOf/GiveMeds/01	You're sick, you need medicine. Take this.	Ốm rồi, phải uống thuốc. Cầm lấy.	TakingCareOf/GiveMeds/01
+TakingCareOf/GiveMeds/02	You will get better ^CharacterName^, just take some of these.	^CharacterName^ sẽ khỏe lại thôi, uống mấy viên này đi.	TakingCareOf/GiveMeds/02
+TakingCareOf/Bandages/00	^CharacterName^ you're bleeding, let me dress that wound.	^CharacterName^ chảy máu rồi, để tôi băng vết thương.	TakingCareOf/Bandages/00
+TakingCareOf/Bandages/01	You need bandages, let me help you.	Cần băng gạc hả, để tôi giúp.	TakingCareOf/Bandages/01
+TakingCareOf/Bandages/02	Come on ^CharacterName^, I'll dress your wound.	Thôi nào ^CharacterName^, tôi băng vết thương cho.	TakingCareOf/Bandages/02
+TakingCareOf/DrinkTogether/00	Come on, let's have a drink and talk. Everything will be fine.	Thôi nào, uống chút rồi nói chuyện. Mọi chuyện rồi sẽ ổn.	TakingCareOf/DrinkTogether/00
+TakingCareOf/DrinkTogether/01	Drink with me, friend. I'll cheer you up!	Uống với tôi đi, bạn. Tôi sẽ làm bạn vui lên!	TakingCareOf/DrinkTogether/01
+TakingCareOf/DrinkTogether/02	Come on, don't be so blue. Let's have a drink together!	Thôi nào, đừng buồn thế. Mình cùng uống một chén!	TakingCareOf/DrinkTogether/02
+TakingCareOf/Comforts/00	Get a grip. We'll make it, you'll see. This war can't last forever!	Tỉnh lại đi. Mình sẽ qua được, rồi xem. Chiến tranh không kéo dài mãi đâu!	TakingCareOf/Comforts/00
+TakingCareOf/Comforts/01	Don't give up hope, ^CharacterName^! This war will be over soon, trust me.	Đừng mất hy vọng, ^CharacterName^! Chiến tranh sẽ sớm kết thúc thôi, tin tôi.	TakingCareOf/Comforts/01
+TakingCareOf/Comforts/02	I know it's grim now, but It won't always be like that. Think about the future!	Bây giờ thì khốn khổ thế này, nhưng không phải mãi thế đâu. Nghĩ về tương lai đi!	TakingCareOf/Comforts/02
+Gamepad/Settings	In-game Menu	Menu trong game	Gamepad/Settings
+Gamepad/LB	Switch Character	Đổi nhân vật	Gamepad/LB
+Gamepad/RB	Switch Character	Đổi nhân vật	Gamepad/RB
+Gamepad/LT	Target cycle	Chuyển mục tiêu	Gamepad/LT
+Gamepad/RT	\nAttack	\nAttack	Gamepad/RT
+Gamepad/LStick	Character movement	Di chuyển nhân vật	Gamepad/LStick
+Gamepad/LStickPress	(Press) Zoom out	(Nhấn) Thu nhỏ	Gamepad/LStickPress
+Gamepad/RStick	Camera	Camera	Gamepad/RStick
+Gamepad/RStickPress	(Press) Zoom in	(Nhấn) Phóng to	Gamepad/RStickPress
+Gamepad/updown	Toggle Scavenge/\nCombat Mode\n	Chuyển Lục lọi/\nChế độ chiến đấu\n	Gamepad/updown
+Gamepad/leftright	Toggle Action	Chuyển hành động	Gamepad/leftright
+Gamepad/A	Action / Accept	Hành động / Xác nhận	Gamepad/A
+Gamepad/B	Back / Cancel	Quay lại / Hủy	Gamepad/B
+Gamepad/Y	Inventory	Kho đồ	Gamepad/Y
+Gamepad/YHold	(Press and hold) Radial menu	(Giữ) Menu tròn	Gamepad/YHold
+Gamepad/X	Various	Nhiều loại	Gamepad/X
+Gamepad/CombatSplashScreen	War is not a playground. Sometimes the situation will force you to get into a fight. You can meet people who will be hostile towards you. Remember that you are not defenseless.	Chiến tranh không phải sân chơi. Đôi khi hoàn cảnh buộc bạn phải đánh nhau. Có thể gặp người thù địch với bạn. Nhớ rằng bạn không hề vô phương tự vệ.	Gamepad/CombatSplashScreen
+DLC/Title/01	USA	Mỹ	DLC/Title/01
+DLC/Title/02	Italy	Ý	DLC/Title/02
+DLC/Title/03	France	Pháp	DLC/Title/03
+DLC/Title/04	Poland	Ba Lan	DLC/Title/04
+DLC/Title/05	Poland	Ba Lan	DLC/Title/05
+DLC/Title/06	Canada	Canada	DLC/Title/06
+DLC/Title/07	Poland	Ba Lan	DLC/Title/07
+DLC/Title/08	USA	Mỹ	DLC/Title/08
+DLC/Title/09	France	Pháp	DLC/Title/09
+DLC/Title/10	Poland	Ba Lan	DLC/Title/10
+DLC/Description/01	Canadian-American artist Gabriel “Specter” Reese as a kid sketched and painted the streets of Montreal. Nowadays his work has been featured in countless gallery shows and he’s been commissioned to do several large public works in Brooklyn and Manhattan.	Nghệ sĩ người Canada–Mỹ Gabriel “Specter” Reese, hồi nhỏ đã vẽ và sơn các con phố ở Montreal. Ngày nay tác phẩm của anh được trưng bày trong vô số phòng tranh, và anh được đặt làm nhiều tác phẩm công cộng lớn ở Brooklyn và Manhattan.	DLC/Description/01
+DLC/Description/02	Since the early nineties, SeaCreative whose real name is Fabrizio Sarti has been painting walls and train cars in and around Milan, Italy. Today SeaCreative paints and shows his own characters, not just in the more conventional setting of an exhibition, but still throughout the urban setting of Milan.	Từ đầu những năm chín mươi, SeaCreative (tên thật là Fabrizio Sarti) đã vẽ tường và toa tàu trong và quanh Milan, Ý. Hiện nay SeaCreative vẽ và trưng bày các nhân vật của riêng mình, không chỉ trong không gian triển lãm thông thường, mà còn ngay giữa đô thị Milan.	DLC/Description/02
+DLC/Description/03	Emir personally experienced war as a boy. He began to repulse the hatred for war by crushing charcoal on large formats. His compositions are reflections on human condition and our society during the war.	Emir từng trải qua chiến tranh khi còn là một cậu bé. Anh bắt đầu chống lại lòng căm ghét chiến tranh bằng cách nghiền than củi lên những khổ tranh lớn. Bố cục của anh là suy ngẫm về thân phận con người và xã hội trong chiến tranh.	DLC/Description/03
+DLC/Description/04	M-City is a project of Mariusz Waras, born 1978 in Gdynia, Poland. His projects including several hundred murals, may be seen in the streets of Warsaw, Gdańsk, Berlin, Paris, Jakarta, Sao Paulo, New York, Bolzano, London and Prague, as well as in art galleries.	M-City là dự án của Mariusz Waras, sinh năm 1978 tại Gdynia, Ba Lan. Các dự án của anh gồm hàng trăm bức tranh tường, có thể thấy trên đường phố Warsaw, Gdańsk, Berlin, Paris, Jakarta, Sao Paulo, New York, Bolzano, London và Prague, cũng như trong các phòng tranh.	DLC/Description/04
+DLC/Description/05	Man behind M-City project Mariusz Waras is is also a curator of the 238x504 billboard gallery in Gdynia as well as an archivist and collector of Polish street art.	Người đứng sau dự án M-City, Mariusz Waras, còn là giám tuyển của phòng trưng bày biển quảng cáo 238x504 ở Gdynia, cũng như nhà lưu trữ và sưu tập viên nghệ thuật đường phố Ba Lan.	DLC/Description/05
+DLC/Description/06	Fauxreel is a self tought Canadian artist. He creates stunning photo based street art to provoke reflection upon many issues like identity, social relationships and the spaces that we inhabit.	Fauxreel là nghệ sĩ Canada tự học. Anh tạo ra các tác phẩm nghệ thuật đường phố dựa trên ảnh chụp ấn tượng, nhằm gợi suy ngẫm về nhiều vấn đề như bản sắc, quan hệ xã hội và những không gian ta đang sống.	DLC/Description/06
+DLC/Description/07	Mariusz Waras is also a freelance graphic artist, frequently awarded in various contests. In 2008 Tristan Manco, an international art expert included him in the official list of the worlds's most important artists of the stencil-graffiti scene.	Mariusz Waras cũng là họa sĩ đồ họa tự do, thường được trao giải trong nhiều cuộc thi. Năm 2008, chuyên gia nghệ thuật quốc tế Tristan Manco đã đưa anh vào danh sách chính thức các nghệ sĩ quan trọng nhất thế giới trong trào lưu graffiti stencil.	DLC/Description/07
+DLC/Description/08	In the street, Specter is known for precise installations that revitalize forgotten places. The work is as much about the piece as it is about where it is placed. He specifically chooses the environments for his work and it often evolves to reflect the chosen location.	Trên đường phố, Specter được biết đến với các tác phẩm sắp đặt chính xác, làm sống lại những nơi bị lãng quên. Tác phẩm gắn bó với nơi đặt nó không kém gì với chính nó. Anh chọn không gian cho tác phẩm rất kỹ, và tác phẩm thường biến đổi để phản ánh địa điểm được chọn.	DLC/Description/08
+DLC/Description/09	Large formats that Emir utilizes in his work allowed for better impact making very contrasted images quite impressive in an expressionist way.	Những khổ tranh lớn mà Emir sử dụng tạo tác động mạnh, làm nên những hình ảnh tương phản rất rõ, ấn tượng theo lối biểu hiện.	DLC/Description/09
+DLC/Description/10	Mateusz Walus is a young and very talented artist from Poland. He is insanely passionate about art and games. Mateusz created some of the graphics used in This War of Mine.	Mateusz Walus là nghệ sĩ trẻ, rất tài năng đến từ Ba Lan. Anh đam mê nghệ thuật và trò chơi đến mức gần như cuồng. Mateusz đã làm một số đồ họa dùng trong This War of Mine.	DLC/Description/10
+DLC/View	View	Xem	DLC/View
+DLC/ViewA	View|XPadA|	Xem|XPadA|	DLC/ViewA
+DLC/ThankYou	Thank you for supporting the charity War Child.	Cảm ơn bạn đã ủng hộ tổ chức từ thiện War Child.	DLC/ThankYou
+DLC/Found	Found on	Tìm thấy tại	DLC/Found
+DLC/Locked	Locked	Đã khóa	DLC/Locked
+DEBUGTEXT	--TEXT--NOT--FOUND--	--TEXT--NOT--FOUND--	DEBUGTEXT
+Credits	"<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 bit studios S.A. 2014\n<BR>\n<BR>\n<BR>\n<HAND>\nSTARTED AS AN INSPIRING IDEA OF GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HEADER>\nDESIGN DIRECTOR & PROJECT LEAD\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nART DIRECTOR & PROJECT LEAD\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n\n\n\n<HEADER>\nLEAD DESIGNER\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nSENIOR DESIGNERS\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nLEVEL DESIGN\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nAI DESIGNER\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nLead Writer\n<NAME>\nMaciej Skóra\n<BR>\n\n<HEADER>\nSTORY & WRITING\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nADDITIONAL STORY & SCRIPT\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLead Artist\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nSenior 3D Artists\n<NAME>\nBartek Rydel\nJakub Piotrowski\n<BR>\n\n<HEADER>\nCharacter Artists\n<NAME>\nOlaf Pożoga\nDominik Zieliński\n<BR>\n\n<HEADER>\nAnimations\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPrzemysław Marszał\nTomasz Piętek\n<BR>\n\n<HEADER>\nPhotography\n<NAME>\nTomasz Pietęk\nPrzemysław Marszał\n<BR>\n\n<HEADER>\nConcept Art & Backgrounds\n<NAME>\nJakub Kowalczyk\n<BR>\n\n<HEADER>\nAdditional Concept Art\n<NAME>\nMateusz Waluś\nJan Buczny\n<BR>\n\n<HEADER>\nAdditional 3D Artists\n<NAME>\nMateusz Waluś\nMarcin Wawrzonowski\nKonrad Wiśniewski\nJan Buczny\n<BR>\n\n<HEADER>\nAdditional Animations\n<NAME>\nArtur Bielenica\nPiotr Chomiak\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD GAME PROGRAMMER\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nSENIOR GAME PROGRAMMER\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nGAME PROGRAMMER\n<NAME>\nPIOTR KOWALSKI\n<BR>\n\n<HEADER>\nENGINE PROGRAMMING\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nTOOLS & ADDITIONAL PROGRAMMING\n<NAME>\nRAFAŁ PODKOWIŃSKI\nROBERT PRZYGODA\nPIOTR KOWALSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nMUSIC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nSOUND ENGINEER\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nADDITIONAL SOUNDS\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nADDITIONAL MUSIC\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nPRODUCTION\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA LEAD\n<NAME>\nPAWEŁ ""The 47"" CZAPLARSKI\n<BR>\n\n\n<HEADER>\nSENIOR QA SPECIALISTS\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nQA TESTERS\n<NAME>\nPAWEŁ BONIFACIUK\nKONSTANTY MICHNIEWICZ\nBARTEK NAJDYHOR\n<BR>\n\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMODELS\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nzlib – general purpose compression library\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nThe Vorbis General Audio Compression Codec\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – general scripting language\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nAji Hand Font by Ajith Rajan\n<BR>\n\nOkuda font by Mike Okuda\n<BR>\n\nTertre Extra Bold font by Jan Schmoeger\n<BR>\n\nDesignosaur Font by Archy Studio\n<BR>\n\nCovered By Your Grace Font by KG Fonts\n<BR>\n\nGunny Rewritten Font by Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>"\n\n\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMODELS\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nzlib – general purpose compression library\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nThe Vorbis General Audio Compression Codec\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – general scripting language\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nAji Hand Font by Ajith Rajan\n<BR>\n\nOkuda font by Mike Okuda\n<BR>\n\nTertre Extra Bold font by Jan Schmoeger\n<BR>\n\nDesignosaur Font by Archy Studio\n<BR>\n\nCovered By Your Grace Font by KG Fonts\n<BR>\n\nGunny Rewritten Font by Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>	"<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 bit studios S.A. 2014\n<BR>\n<BR>\n<BR>\n<HAND>\nBẮT ĐẦU TỪ MỘT Ý TƯỞNG TRUYỀN CẢM HỨNG CỦA GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HEADER>\nGIÁM ĐỐC THIẾT KẾ & TRƯỞNG DỰ ÁN\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nGIÁM ĐỐC NGHỆ THUẬT & TRƯỞNG DỰ ÁN\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n\n\n\n<HEADER>\nTRƯỞNG NHÓM THIẾT KẾ\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nTHIẾT KẾ CAO CẤP\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nTHIẾT KẾ MÀN CHƠI\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nTHIẾT KẾ AI\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nTrưởng nhóm viết\n<NAME>\nMaciej Skóra\n<BR>\n\n<HEADER>\nCÂU CHUYỆN & VIẾT LỜI\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nCÂU CHUYỆN & KỊCH BẢN BỔ SUNG\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nTrưởng nhóm mỹ thuật\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nHọa sĩ 3D cao cấp\n<NAME>\nBartek Rydel\nJakub Piotrowski\n<BR>\n\n<HEADER>\nHọa sĩ nhân vật\n<NAME>\nOlaf Pożoga\nDominik Zieliński\n<BR>\n\n<HEADER>\nHoạt họa\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPrzemysław Marszał\nTomasz Piętek\n<BR>\n\n<HEADER>\nNhiếp ảnh\n<NAME>\nTomasz Pietęk\nPrzemysław Marszał\n<BR>\n\n<HEADER>\nConcept Art & Phông nền\n<NAME>\nJakub Kowalczyk\n<BR>\n\n<HEADER>\nConcept Art bổ sung\n<NAME>\nMateusz Waluś\nJan Buczny\n<BR>\n\n<HEADER>\nHọa sĩ 3D bổ sung\n<NAME>\nMateusz Waluś\nMarcin Wawrzonowski\nKonrad Wiśniewski\nJan Buczny\n<BR>\n\n<HEADER>\nHoạt họa bổ sung\n<NAME>\nArtur Bielenica\nPiotr Chomiak\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nTRƯỞNG NHÓM LẬP TRÌNH GAME\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nLẬP TRÌNH GAME CAO CẤP\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nLẬP TRÌNH GAME\n<NAME>\nPIOTR KOWALSKI\n<BR>\n\n<HEADER>\nLẬP TRÌNH ENGINE\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nCÔNG CỤ & LẬP TRÌNH BỔ SUNG\n<NAME>\nRAFAŁ PODKOWIŃSKI\nROBERT PRZYGODA\nPIOTR KOWALSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nNHẠC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nKỸ SƯ ÂM THANH\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nÂM THANH BỔ SUNG\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nNHẠC BỔ SUNG\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSẢN XUẤT\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM QA\n<NAME>\nPAWEŁ ""The 47"" CZAPLARSKI\n<BR>\n\n\n<HEADER>\nCHUYÊN GIA QA CAO CẤP\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nKIỂM THỬ QA\n<NAME>\nPAWEŁ BONIFACIUK\nKONSTANTY MICHNIEWICZ\nBARTEK NAJDYHOR\n<BR>\n\n\n<HEADER>\nBẢN DỊCH\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nPHÁT TRIỂN KINH DOANH\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nQUAN HỆ CÔNG CHÚNG & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nQUẢN LÝ VĂN PHÒNG\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nHỖ TRỢ BỔ SUNG\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nCẢM ƠN ĐẶC BIỆT ĐẾN\n<NAME>\n<BR>\nEMIR CERIMOVIC VÌ MỌI SỰ GIÚP ĐỠ & TƯ LIỆU\n<BR>\nJOHN KEYSER VÌ MỌI SỰ ỦNG HỘ\n<BR>\nBẠN BÈ VÀ GIA ĐÌNH CHÚNG TÔI\n<BR>\nCỔ ĐÔNG 11 BIT STUDIOS\nVÌ SỰ TIN TƯỞNG VÀ TÍN NHIỆM\n<BR><BR><BR><BR>\n\n\n<HEADER>\nKIỂM THỬ FOCUS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMÔ HÌNH\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSẢN PHẨM BÊN THỨ BA\n<NAME>\nzlib – thư viện nén đa dụng\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nBộ mã nén âm thanh đa dụng Vorbis\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – ngôn ngữ kịch bản đa dụng\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nPhông Aji Hand của Ajith Rajan\n<BR>\n\nPhông Okuda của Mike Okuda\n<BR>\n\nPhông Tertre Extra Bold của Jan Schmoeger\n<BR>\n\nPhông Designosaur của Archy Studio\n<BR>\n\nPhông Covered By Your Grace của KG Fonts\n<BR>\n\nPhông Gunny Rewritten của Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>"\n\n\n\n<HEADER>\nBẢN DỊCH\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nPHÁT TRIỂN KINH DOANH\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nQUAN HỆ CÔNG CHÚNG & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nQUẢN LÝ VĂN PHÒNG\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nHỖ TRỢ BỔ SUNG\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nCẢM ƠN ĐẶC BIỆT ĐẾN\n<NAME>\n<BR>\nEMIR CERIMOVIC VÌ MỌI SỰ GIÚP ĐỠ & TƯ LIỆU\n<BR>\nJOHN KEYSER VÌ MỌI SỰ ỦNG HỘ\n<BR>\nBẠN BÈ VÀ GIA ĐÌNH CHÚNG TÔI\n<BR>\nCỔ ĐÔNG 11 BIT STUDIOS\nVÌ SỰ TIN TƯỞNG VÀ TÍN NHIỆM\n<BR><BR><BR><BR>\n\n\n<HEADER>\nKIỂM THỬ FOCUS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMÔ HÌNH\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSẢN PHẨM BÊN THỨ BA\n<NAME>\nzlib – thư viện nén đa dụng\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nBộ mã nén âm thanh đa dụng Vorbis\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – ngôn ngữ kịch bản đa dụng\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nPhông Aji Hand của Ajith Rajan\n<BR>\n\nPhông Okuda của Mike Okuda\n<BR>\n\nPhông Tertre Extra Bold của Jan Schmoeger\n<BR>\n\nPhông Designosaur của Archy Studio\n<BR>\n\nPhông Covered By Your Grace của KG Fonts\n<BR>\n\nPhông Gunny Rewritten của Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>	Credits
+Credits_Title	Credits	Ghi công	Credits_Title
+DEBUGTEXT_FINAL	…	…	DEBUGTEXT_FINAL
+CreditsStories	<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 BIT STUDIOS S.A. 2015\n<BR>\n<BR>\n<BR>\n<HAND>\nSTARTED AS AN INSPIRING IDEA OF GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nDESIGN DIRECTOR & PROJECT LEAD\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nART DIRECTOR & PROJECT LEAD\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n<HAND>\nTHIS WAR OF MINE STORIES: FATHER'S PROMISE\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nGAME DESIGN\n<NAME>\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nSTORY\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nWRITING\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nPROGRAMMING\n<NAME>\nJANUSZ KUNOWSKI\nDAMIAN WICIŃSKI\n<BR>\n\n<HEADER>\nART\n<NAME>\nJAKUB PIOTROWSKI\nTOMASZ KISILEWICZ\n<BR>\n\n<HEADER>\nPRODUCTION\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA\n<NAME>\nBARTŁOMIEJ GWARDIAK\n<BR>\n\n<HEADER>\nPHOTOGRAPHY\n<NAME>\nPIOTR JAGUŚ\n<BR>\n\n<HEADER>\nBASED ON CHARACTERS BY ŁUKASZ ORBITOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HAND>\nTHIS WAR OF MINE CREDITS\n<BR>\n<BR>\n\n<HEADER>\nLEAD DESIGNER\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nCONSOLE VERSION LEAD DESIGNER\n<NAME>\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nSENIOR DESIGNER\n<NAME>\nKACPER KWIATKOWSKI\n<BR>\n\n<HEADER>\nLEVEL DESIGN\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nAI DESIGNER\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nJUNIOR DESIGNERS\n<NAME>\nPAWEŁ SZYSZKA\nUGO TRELIS\n<BR>\n\n<HEADER>\nLEAD WRITER\n<NAME>\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nSTORY & WRITING\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nADDITIONAL STORY & SCRIPT\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD ARTIST\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nSENIOR 3D ARTISTS\n<NAME>\nBARTEK RYDEL\nJAKUB PIOTROWSKI\n<BR>\n\n<HEADER>\nCHARACTER ARTISTS\n<NAME>\nOLAF POŻOGA\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nANIMATIONS\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPRZEMYSŁAW MARSZAŁ\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nPHOTOGRAPHY\n<NAME>\nTOMASZ PIETĘK\nPRZEMYSŁAW MARSZAŁ\n<BR>\n\n<HEADER>\nCONCEPT ART & BACKGROUNDS\n<NAME>\nJAKUB KOWALCZYK\n<BR>\n\n<HEADER>\nADDITIONAL CONCEPT ART\n<NAME>\nMATEUSZ WALUŚ\nJAN BUCZNY\n<BR>\n\n<HEADER>\nADDITIONAL 3D ARTISTS\n<NAME>\nMATEUSZ WALUŚ\nMARCIN WAWRZONOWSKI\nKONRAD WIŚNIEWSKI\nJAN BUCZNY\n<BR>\n\n<HEADER>\nADDITIONAL ANIMATIONS\n<NAME>\nARTUR BIELENICA\nPIOTR CHOMIAK\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD GAME PROGRAMMER\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nSENIOR GAME PROGRAMMER\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nGAME PROGRAMMERS\n<NAME>\nPIOTR KOWALSKI\nJANUSZ KUNOWSKI\n<BR>\n\n<HEADER>\nENGINE PROGRAMMING\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\n<BR>\n\n<HEADER>\nCONSOLE PORTING\n<NAME>\nRAFAŁ PODKOWINSKI\nTRISTAN RYBAK\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nTOOLS\n<NAME>\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\n<BR>\n\n<HEADER>\nADDITIONAL PROGRAMMING\n<NAME>\nSZYMON JABŁOŃSKI\nDAMIAN WICIŃSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nMUSIC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nSOUND ENGINEER\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nADDITIONAL SOUNDS\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nADDITIONAL MUSIC\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n<HEADER>\nPRODUCTION\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA LEAD\n<NAME>\nPAWEŁ ""THE 47"" CZAPLARSKI\n<BR>\n\n<HEADER>\nSENIOR QA SPECIALISTS\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nADDITIONAL QA\n<NAME>\nPAWEŁ BONIFACIUK\nBARTEK NAJDYHOR\n<BR>\n<BR>\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA ANNA WARGOCKA\nBEATA KOSZNIK\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n<HEADER>\nMOTION CAPTURE\n<NAME>\nWWW.MOCAP.PL\n<BR><BR>\n\n<HEADER>\nCAST, CASTING DIRECTOR\n<NAME>\nADRIAN PERDJON\n<BR>\n\n<HEADER>\nMOTION CAPTURE SUPERVISOR\n<NAME>\nMICHAŁ HRYDZIUSZKO\n<BR>\n\n<HEADER>\nMOTION CAPTURE TRACKER\n<NAME>\nMATEUSZ POKS\n<BR>\n\n<HEADER>\nMOTION CAPTURE ACTORS\n<NAME>\nADRIAN PERDJON\nALAN MARKOWSKI\nBARBARA MŁOŹNIAK\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nMODELS\n<NAME>\nBEDNARZ MATEUSZ \nBRZOSTEK PIOTR\nCERIMOVIC EMIR\nCHMILELECKA KAROLINA \nCHODKOWSKI PIOTR \nCZAPLARSKI PAWEŁ \nDIAMOUTETE KAMELE \nDROZDOWSKI MICHAŁ \nFELDMAN PAWEŁ \nGAŹDZIŃSKA KINGA\nGRADZIŃSKA JUSTYNA \nGWAREK RADOSŁAW\nHAYATO KITABATAKE\nHUANCA-VILLAN KENAYA \nJEFIMOW MARCIN \nKACZOR MACIEJ \nKASPARIAN NELTA \nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA \nKOWALSKI JAKUB\nKOWALSKI JAN \nKOWALSKI PIOTR \nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID \nKWIATKOWSKA KINGA\nKWIATKOWSKI KACPER \nLENARTOWICZ JADWIGA \nLIVINGSTONE ALISIGWE\nLU XIN \nMACIASZEK REMIGIUSZ \nMARSZAŁ BARTOSZ \nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKA NATALIA \nMIECHOWSKI PAWEŁ \nNGUYEN DIEU CHI \nNGUYEN DIEU LINH\nNGUYEN DUY \nNGUYEN THI THUY HUAN \nPAŁKA ALBERT \nPIĘTEK TOMASZ\nPIOTROWSKA ANNA\nPIOTROWSKI JAKUB \nPIOTROWSKI PAWEŁ \nPODKOWIŃSKA SANDRA\nPODKOWIŃSKI RAFAŁ \nPOŻOGA IDA\nPOŻOGA OLAF\nRENDASZKA PAWEŁ \nROZBICKA MARIA \nRUOCHEN WU\nSETLAK WOJCIECH \nSKÓRA MACIEJ \nSTELMACH EWA\nSTEVENSON GRAMMONT \nSTYPEREK BARTOSZ \nSUŁECKI MACIEJ \nSZCZEPANOWSKA KAROLINA \nSZCZEŚNIK MACIEJ \nSZEWCZYK SARA \nSZYNKARNIKOW OLEKSANDER\nSZYSZKA PAWEŁ \nŚMIETAŃSKI ADAM \nTCHORZ KAROLINA \nTOMALAK ALEKS \nTOMALAK MAREK \nWARGOCKA MONIKA ANNA\nWASIAK HENRYK \nWASIAK MACIEJ \nWICIŃSKI DAMIAN \nWIEJAK-GRĄŻKA MARTA\nWIERZBICKA JULIA \nWIERZBICKA MAGDALENA \nWIERZBICKI MICHAŁ \nWŁOSEK RAFAŁ \nWRÓBLEWSKI MATEUSZ \nZAJĄCZKOWSKI BORYS \nZAJĄCZKOWSKI KAROL \nZALEWSKA BARBARA\nZIELIŃSKI DOMINIK \nZINSOU LORIS\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\nDEEP SILVER\n<BR><BR><BR><BR>\n\n<HEADER>\nPRODUCTION\n<BR><BR>\n\n<HEADER>\nINTERNATIONAL DIRECTOR PRODUCTION\n<NAME>\nCHRISTIAN MORIZ\n<BR><BR>\n\n<HEADER>\nPRODUCT MANAGEMENT\n<BR><BR>\n\n<HEADER>\n PRODUCT MANAGER\n<NAME>\nLISA MOOSBAUER\n<BR><BR>\n\n<HEADER>\nRELEASE MANAGEMENT/MASTERING\n<BR><BR>\n\n<HEADER>\nSENIOR PRODUCT RELEASE MANAGER\n<NAME>\nDANIEL GAITZSCH\n<BR>\n\n<HEADER>\nPRODUCT RELEASE MANAGER\n<NAME>\nCARL BARRETT\n<BR><BR>\n\n<HEADER>\nLOCALIZATION & INTERNATIONALIZATION\n<BR><BR>\n\n<HEADER>\nINTERNATIONAL RELEASE & LOCALIZATION QA MANAGER\n<NAME>\nLUKAS KOTRLY\n<BR>\n\n<HEADER>\nLOCALIZATION QA PROJECT MANAGER\n<NAME>\nALEXANDRE LELANDAIS\n<BR><BR>\n\n<HEADER>\nQUALITY ASSURANCE\n<BR><BR>\n\n<HEADER>\nHEAD OF QA & RELEASE MANAGER\n<NAME>\nCARLO SARTI\n<BR>\n\n<HEADER>\nQA PROJECT MANAGER & HEAD OF COMPLIANCE QA\n<NAME>\nRAFAL BOGUSZEWSKI\n<BR>\n\n<HEADER>\nQA PROJECT MANAGER\n<NAME>\nKALPESH PATEL\n<BR>\n\n<HEADER>\nADDITIONAL QA SUPPORT\n<NAME>\nKEITH RUSSELL\nCHRISTOPHER BARR\nELITSA IVANOVA\n<BR><BR>\n\n<HEADER>\nQLOC S.A.\n<BR><BR>\n\n<HEADER>\nGENERAL MANAGER\n<NAME>\nADAM PIESIAK\n<BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT DIRECTOR\n<NAME>\nPAWEL GRZYWACZEWSKI\n<BR>\n\n<HEADER>\nDIRECTOR OF ACCOUNT MANAGEMENT\n<NAME>\nPAWEL ZIAJKA\n<BR>\n\n<HEADER>\nACCOUNT MANAGERS\n<NAME>\nMARTA OLEJNICZAK\nJAKUB TRUDZIK\n<BR>\n\n<HEADER>\nHEAD OF QUALITY ASSURANCE\n<NAME>\nSERGIUSZ SLOSARCZYK\n<BR>\n\n<HEADER>\nQA PROJECT MANAGERS\n<NAME>\nMARCIN GORNIAK\nMACIEJ MAZUREK\n<BR>\n\n<HEADER>\nQA LAB MANAGERS\n<NAME>\nBARTOSZ ANTECKI\nPAWEL STRZELCZYK\n<BR>\n\n<HEADER>\nQA TEAM LEADERS\n<NAME>\nPAWEL KRAWCZUK\n<BR>\n\n<HEADER>\nCOMPLIANCE ENGINEERS\n<NAME>\nEWA ANGIELSKA\nRAFAL DABROWSKI\nADAM KOPCZYNSKI\nMICHAL NIBURSKI\nPAWEL SZCZESNY\n<BR>\n\n<HEADER>\nQA TESTERS\n<NAME>\nRICHARD BORZYMOWSKI\nPAWEL DRAGAN\nKINGA GAJEWSKA\nMICHAL GLEBICKI\nADAM HYZ\nDAWID KOZLOWSKI\nRAFAL LIPSKI\nBARTLOMIEJ RYDER\nKRZYSZTOF SETNIEWSKI\nROMAN SKURSKI\nMAYA TAKEUCHI\nRAFAL TYC\n<BR>\n\n<HEADER>\nIT MANAGER\n<NAME>\nTOMASZ DZIEDZIC\n<BR>\n\n<HEADER>\nR&D SPECIALIST\n<NAME>\nBARTEK ZUKOWSKI\n<BR><BR>\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nZLIB – GENERAL PURPOSE COMPRESSION LIBRARY\nCOPYRIGHT © 1995-2004\nJEAN-LOUP GAILLY AND MARK ADLER\n<BR>\n\nTHE VORBIS GENERAL AUDIO COMPRESSION CODEC\nCOPYRIGHT © 1994-2002 XIPH.ORG FOUNDATION\n<BR>\n\nLUA – GENERAL SCRIPTING LANGUAGE\nCOPYRIGHT © 1994–2010 LUA.ORG, PUC-RIO\n<BR>\n\nCURL\nLICENSE COPYRIGHT © 1996-2013 DANIEL STENBERG\n<BR>\n\nAJI HAND FONT BY AJITH RAJAN\n<BR>\n\nOKUDA FONT BY MIKE OKUDA\n<BR>\n\nTERTRE EXTRA BOLD FONT BY JAN SCHMOEGER\n<BR>\n\nDESIGNOSAUR FONT BY ARCHY STUDIO\n<BR>\n\nCOVERED BY YOUR GRACE FONT BY KG FONTS\n<BR>\n\nGUNNY REWRITTEN FONT BY VIT CONDAK\n<BR>\n\n\nERNEST HEMINGWAY\nNOTES ON THE NEXT WAR: A SERIOUS TOPICAL LETTER\nESQUIRE SEPT. 1935\n<BR>\n<BR>\n<BR>\n \n11 BIT STUDIOS\n2015\n<BR>\n<BR>\n<BR>"	<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 BIT STUDIOS S.A. 2015\n<BR>\n<BR>\n<BR>\n<HAND>\nBẮT ĐẦU TỪ MỘT Ý TƯỞNG TRUYỀN CẢM HỨNG CỦA GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nGIÁM ĐỐC THIẾT KẾ & TRƯỞNG DỰ ÁN\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nGIÁM ĐỐC NGHỆ THUẬT & TRƯỞNG DỰ ÁN\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n<HAND>\nTHIS WAR OF MINE STORIES: LỜI HỨA CỦA NGƯỜI CHA\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nTHIẾT KẾ TRÒ CHƠI\n<NAME>\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nCÂU CHUYỆN\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nVIẾT LỜI\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nLẬP TRÌNH\n<NAME>\nJANUSZ KUNOWSKI\nDAMIAN WICIŃSKI\n<BR>\n\n<HEADER>\nMỸ THUẬT\n<NAME>\nJAKUB PIOTROWSKI\nTOMASZ KISILEWICZ\n<BR>\n\n<HEADER>\nSẢN XUẤT\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA\n<NAME>\nBARTŁOMIEJ GWARDIAK\n<BR>\n\n<HEADER>\nNHIẾP ẢNH\n<NAME>\nPIOTR JAGUŚ\n<BR>\n\n<HEADER>\nDỰA TRÊN NHÂN VẬT CỦA ŁUKASZ ORBITOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HAND>\nGHI CÔNG THIS WAR OF MINE\n<BR>\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM THIẾT KẾ\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM THIẾT KẾ BẢN CONSOLE\n<NAME>\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nTHIẾT KẾ CAO CẤP\n<NAME>\nKACPER KWIATKOWSKI\n<BR>\n\n<HEADER>\nTHIẾT KẾ MÀN CHƠI\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nTHIẾT KẾ AI\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nTHIẾT KẾ JUNIOR\n<NAME>\nPAWEŁ SZYSZKA\nUGO TRELIS\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM VIẾT\n<NAME>\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nCÂU CHUYỆN & VIẾT LỜI\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nCÂU CHUYỆN & KỊCH BẢN BỔ SUNG\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nTRƯỞNG NHÓM MỸ THUẬT\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nHỌA SĨ 3D CAO CẤP\n<NAME>\nBARTEK RYDEL\nJAKUB PIOTROWSKI\n<BR>\n\n<HEADER>\nHỌA SĨ NHÂN VẬT\n<NAME>\nOLAF POŻOGA\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nHOẠT HỌA\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPRZEMYSŁAW MARSZAŁ\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nNHIẾP ẢNH\n<NAME>\nTOMASZ PIETĘK\nPRZEMYSŁAW MARSZAŁ\n<BR>\n\n<HEADER>\nCONCEPT ART & PHÔNG NỀN\n<NAME>\nJAKUB KOWALCZYK\n<BR>\n\n<HEADER>\nCONCEPT ART BỔ SUNG\n<NAME>\nMATEUSZ WALUŚ\nJAN BUCZNY\n<BR>\n\n<HEADER>\nHỌA SĨ 3D BỔ SUNG\n<NAME>\nMATEUSZ WALUŚ\nMARCIN WAWRZONOWSKI\nKONRAD WIŚNIEWSKI\nJAN BUCZNY\n<BR>\n\n<HEADER>\nHOẠT HỌA BỔ SUNG\n<NAME>\nARTUR BIELENICA\nPIOTR CHOMIAK\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nTRƯỞNG NHÓM LẬP TRÌNH GAME\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nLẬP TRÌNH GAME CAO CẤP\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nLẬP TRÌNH GAME\n<NAME>\nPIOTR KOWALSKI\nJANUSZ KUNOWSKI\n<BR>\n\n<HEADER>\nLẬP TRÌNH ENGINE\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\n<BR>\n\n<HEADER>\nCHUYỂN PORT BẢN CONSOLE\n<NAME>\nRAFAŁ PODKOWINSKI\nTRISTAN RYBAK\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nCÔNG CỤ\n<NAME>\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\n<BR>\n\n<HEADER>\nLẬP TRÌNH BỔ SUNG\n<NAME>\nSZYMON JABŁOŃSKI\nDAMIAN WICIŃSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nNHẠC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nKỸ SƯ ÂM THANH\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nÂM THANH BỔ SUNG\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nNHẠC BỔ SUNG\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n<HEADER>\nSẢN XUẤT\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM QA\n<NAME>\nPAWEŁ ""THE 47"" CZAPLARSKI\n<BR>\n\n<HEADER>\nCHUYÊN GIA QA CAO CẤP\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nQA BỔ SUNG\n<NAME>\nPAWEŁ BONIFACIUK\nBARTEK NAJDYHOR\n<BR>\n<BR>\n\n<HEADER>\nBẢN DỊCH\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nPHÁT TRIỂN KINH DOANH\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nQUAN HỆ CÔNG CHÚNG & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nQUẢN LÝ VĂN PHÒNG\n<NAME>\nMARTA SKWARSKA\nMONIKA ANNA WARGOCKA\nBEATA KOSZNIK\n<BR>\n\n<HEADER>\nHỖ TRỢ BỔ SUNG\n<NAME>\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nCẢM ƠN ĐẶC BIỆT ĐẾN\n<NAME>\n<BR>\nEMIR CERIMOVIC VÌ MỌI SỰ GIÚP ĐỠ & TƯ LIỆU\n<BR>\nJOHN KEYSER VÌ MỌI SỰ ỦNG HỘ\n<BR>\nBẠN BÈ VÀ GIA ĐÌNH CHÚNG TÔI\n<BR>\nCỔ ĐÔNG 11 BIT STUDIOS\nVÌ SỰ TIN TƯỞNG VÀ TÍN NHIỆM\n<BR><BR><BR><BR>\n\n\n<HEADER>\nKIỂM THỬ FOCUS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n<HEADER>\nBẮT CHUYỂN ĐỘNG\n<NAME>\nWWW.MOCAP.PL\n<BR><BR>\n\n<HEADER>\nDÀN DIỄN VIÊN, GIÁM ĐỐC CASTING\n<NAME>\nADRIAN PERDJON\n<BR>\n\n<HEADER>\nGIÁM SÁT BẮT CHUYỂN ĐỘNG\n<NAME>\nMICHAŁ HRYDZIUSZKO\n<BR>\n\n<HEADER>\nNGƯỜI THEO DÕI BẮT CHUYỂN ĐỘNG\n<NAME>\nMATEUSZ POKS\n<BR>\n\n<HEADER>\nDIỄN VIÊN BẮT CHUYỂN ĐỘNG\n<NAME>\nADRIAN PERDJON\nALAN MARKOWSKI\nBARBARA MŁOŹNIAK\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nMÔ HÌNH\n<NAME>\nBEDNARZ MATEUSZ \nBRZOSTEK PIOTR\nCERIMOVIC EMIR\nCHMILELECKA KAROLINA \nCHODKOWSKI PIOTR \nCZAPLARSKI PAWEŁ \nDIAMOUTETE KAMELE \nDROZDOWSKI MICHAŁ \nFELDMAN PAWEŁ \nGAŹDZIŃSKA KINGA\nGRADZIŃSKA JUSTYNA \nGWAREK RADOSŁAW\nHAYATO KITABATAKE\nHUANCA-VILLAN KENAYA \nJEFIMOW MARCIN \nKACZOR MACIEJ \nKASPARIAN NELTA \nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA \nKOWALSKI JAKUB\nKOWALSKI JAN \nKOWALSKI PIOTR \nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID \nKWIATKOWSKA KINGA\nKWIATKOWSKI KACPER \nLENARTOWICZ JADWIGA \nLIVINGSTONE ALISIGWE\nLU XIN \nMACIASZEK REMIGIUSZ \nMARSZAŁ BARTOSZ \nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKA NATALIA \nMIECHOWSKI PAWEŁ \nNGUYEN DIEU CHI \nNGUYEN DIEU LINH\nNGUYEN DUY \nNGUYEN THI THUY HUAN \nPAŁKA ALBERT \nPIĘTEK TOMASZ\nPIOTROWSKA ANNA\nPIOTROWSKI JAKUB \nPIOTROWSKI PAWEŁ \nPODKOWIŃSKA SANDRA\nPODKOWIŃSKI RAFAŁ \nPOŻOGA IDA\nPOŻOGA OLAF\nRENDASZKA PAWEŁ \nROZBICKA MARIA \nRUOCHEN WU\nSETLAK WOJCIECH \nSKÓRA MACIEJ \nSTELMACH EWA\nSTEVENSON GRAMMONT \nSTYPEREK BARTOSZ \nSUŁECKI MACIEJ \nSZCZEPANOWSKA KAROLINA \nSZCZEŚNIK MACIEJ \nSZEWCZYK SARA \nSZYNKARNIKOW OLEKSANDER\nSZYSZKA PAWEŁ \nŚMIETAŃSKI ADAM \nTCHORZ KAROLINA \nTOMALAK ALEKS \nTOMALAK MAREK \nWARGOCKA MONIKA ANNA\nWASIAK HENRYK \nWASIAK MACIEJ \nWICIŃSKI DAMIAN \nWIEJAK-GRĄŻKA MARTA\nWIERZBICKA JULIA \nWIERZBICKA MAGDALENA \nWIERZBICKI MICHAŁ \nWŁOSEK RAFAŁ \nWRÓBLEWSKI MATEUSZ \nZAJĄCZKOWSKI BORYS \nZAJĄCZKOWSKI KAROL \nZALEWSKA BARBARA\nZIELIŃSKI DOMINIK \nZINSOU LORIS\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\nDEEP SILVER\n<BR><BR><BR><BR>\n\n<HEADER>\nSẢN XUẤT\n<BR><BR>\n\n<HEADER>\nGIÁM ĐỐC SẢN XUẤT QUỐC TẾ\n<NAME>\nCHRISTIAN MORIZ\n<BR><BR>\n\n<HEADER>\nQUẢN LÝ SẢN PHẨM\n<BR><BR>\n\n<HEADER>\n QUẢN LÝ SẢN PHẨM\n<NAME>\nLISA MOOSBAUER\n<BR><BR>\n\n<HEADER>\nQUẢN LÝ PHÁT HÀNH/MASTERING\n<BR><BR>\n\n<HEADER>\nQUẢN LÝ PHÁT HÀNH CAO CẤP\n<NAME>\nDANIEL GAITZSCH\n<BR>\n\n<HEADER>\nQUẢN LÝ PHÁT HÀNH\n<NAME>\nCARL BARRETT\n<BR><BR>\n\n<HEADER>\nBẢN ĐỊA HÓA & QUỐC TẾ HÓA\n<BR><BR>\n\n<HEADER>\nQUẢN LÝ QA PHÁT HÀNH & BẢN ĐỊA HÓA QUỐC TẾ\n<NAME>\nLUKAS KOTRLY\n<BR>\n\n<HEADER>\nQUẢN LÝ DỰ ÁN QA BẢN ĐỊA HÓA\n<NAME>\nALEXANDRE LELANDAIS\n<BR><BR>\n\n<HEADER>\nĐẢM BẢO CHẤT LƯỢNG\n<BR><BR>\n\n<HEADER>\nTRƯỞNG QA & QUẢN LÝ PHÁT HÀNH\n<NAME>\nCARLO SARTI\n<BR>\n\n<HEADER>\nQUẢN LÝ DỰ ÁN QA & TRƯỞNG BỘ PHẬN QA TUÂN THỦ\n<NAME>\nRAFAL BOGUSZEWSKI\n<BR>\n\n<HEADER>\nQUẢN LÝ DỰ ÁN QA\n<NAME>\nKALPESH PATEL\n<BR>\n\n<HEADER>\nHỖ TRỢ QA BỔ SUNG\n<NAME>\nKEITH RUSSELL\nCHRISTOPHER BARR\nELITSA IVANOVA\n<BR><BR>\n\n<HEADER>\nQLOC S.A.\n<BR><BR>\n\n<HEADER>\nTỔNG GIÁM ĐỐC\n<NAME>\nADAM PIESIAK\n<BR>\n\n<HEADER>\nGIÁM ĐỐC PHÁT TRIỂN KINH DOANH\n<NAME>\nPAWEL GRZYWACZEWSKI\n<BR>\n\n<HEADER>\nGIÁM ĐỐC QUẢN LÝ KHÁCH HÀNG\n<NAME>\nPAWEL ZIAJKA\n<BR>\n\n<HEADER>\nQUẢN LÝ KHÁCH HÀNG\n<NAME>\nMARTA OLEJNICZAK\nJAKUB TRUDZIK\n<BR>\n\n<HEADER>\nTRƯỞNG BỘ PHẬN ĐẢM BẢO CHẤT LƯỢNG\n<NAME>\nSERGIUSZ SLOSARCZYK\n<BR>\n\n<HEADER>\nQUẢN LÝ DỰ ÁN QA\n<NAME>\nMARCIN GORNIAK\nMACIEJ MAZUREK\n<BR>\n\n<HEADER>\nQUẢN LÝ PHÒNG LAB QA\n<NAME>\nBARTOSZ ANTECKI\nPAWEL STRZELCZYK\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM QA\n<NAME>\nPAWEL KRAWCZUK\n<BR>\n\n<HEADER>\nKỸ SƯ TUÂN THỦ\n<NAME>\nEWA ANGIELSKA\nRAFAL DABROWSKI\nADAM KOPCZYNSKI\nMICHAL NIBURSKI\nPAWEL SZCZESNY\n<BR>\n\n<HEADER>\nKIỂM THỬ QA\n<NAME>\nRICHARD BORZYMOWSKI\nPAWEL DRAGAN\nKINGA GAJEWSKA\nMICHAL GLEBICKI\nADAM HYZ\nDAWID KOZLOWSKI\nRAFAL LIPSKI\nBARTLOMIEJ RYDER\nKRZYSZTOF SETNIEWSKI\nROMAN SKURSKI\nMAYA TAKEUCHI\nRAFAL TYC\n<BR>\n\n<HEADER>\nQUẢN LÝ IT\n<NAME>\nTOMASZ DZIEDZIC\n<BR>\n\n<HEADER>\nCHUYÊN GIA R&D\n<NAME>\nBARTEK ZUKOWSKI\n<BR><BR>\n\n<HEADER>\nSẢN PHẨM BÊN THỨ BA\n<NAME>\nZLIB – THƯ VIỆN NÉN ĐA DỤNG\nCOPYRIGHT © 1995-2004\nJEAN-LOUP GAILLY AND MARK ADLER\n<BR>\n\nBỘ MÃ NÉN ÂM THANH ĐA DỤNG VORBIS\nCOPYRIGHT © 1994-2002 XIPH.ORG FOUNDATION\n<BR>\n\nLUA – NGÔN NGỮ KỊCH BẢN ĐA DỤNG\nCOPYRIGHT © 1994–2010 LUA.ORG, PUC-RIO\n<BR>\n\nCURL\nGIẤY PHÉP & BẢN QUYỀN © 1996-2013 DANIEL STENBERG\n<BR>\n\nPHÔNG AJI HAND CỦA AJITH RAJAN\n<BR>\n\nPHÔNG OKUDA CỦA MIKE OKUDA\n<BR>\n\nPHÔNG TERTRE EXTRA BOLD CỦA JAN SCHMOEGER\n<BR>\n\nPHÔNG DESIGNOSAUR CỦA ARCHY STUDIO\n<BR>\n\nPHÔNG COVERED BY YOUR GRACE CỦA KG FONTS\n<BR>\n\nPHÔNG GUNNY REWRITTEN CỦA VIT CONDAK\n<BR>\n\n\nERNEST HEMINGWAY\nNOTES ON THE NEXT WAR: A SERIOUS TOPICAL LETTER\nESQUIRE SEPT. 1935\n<BR>\n<BR>\n<BR>\n \n11 BIT STUDIOS\n2015\n<BR>\n<BR>\n<BR>"	CreditsStories

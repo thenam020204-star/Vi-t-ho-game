@@ -29,11 +29,11 @@ Dịch text Anh → Việt (giọng thời chiến), ghi vào slot tiếng Anh c
   - Agent: A1 — Sonnet 5.5
   - Đầu vào/đầu ra: t1.tsv → dp_work/t1/out.tsv (`dp -t t1 ...`)
   - Hoàn thành khi: `dp -t t1 check` = OK, đã `sample 30` — **Quản đốc nghiệm thu**
-- [ ] T2. Dịch text UI/HUD
+- [x] T2. Dịch text UI/HUD
   - Agent: A2 (chờ A1 ≥ 90%) — Haiku 5.5
   - Đầu vào/đầu ra: t2.tsv → dp_work/t2/out.tsv (`dp -t t2 ...`)
   - Hoàn thành khi: `dp -t t2 check` = OK, đã `sample 15`
-- [ ] T3. Ghép, patch font, đóng gói common.dat/.idx, bao-cao.md — quản đốc
+- [x] T3. Ghép, patch font, đóng gói common.dat/.idx, bao-cao.md — quản đốc
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
 - (trống)
@@ -43,3 +43,5 @@ Dịch text Anh → Việt (giọng thời chiến), ghi vào slot tiếng Anh c
 - A1 (Sonnet 5.5): T1 dịch xong 6612/6612, dp check OK; sample 30 đã soát xưng hô/giọng.
 - Quản đốc nghiệm thu T1: sửa 37 dòng xưng hô trẻ em (6359-6369 NeedMeds là trẻ; lời Kids/ xưng "cháu"); A1 làm lại KidComfort/Kids_* (85 dòng) với thẻ thêm: trong Dialogues/ {mr|}{fr|} = giới NGƯỜI NGHE, {ms|}{fs|} = giới NGƯỜI NÓI. `dp check` báo 96 dòng "thừa thẻ" là CHỦ Ý — đã kiểm bằng script riêng: mã khác khớp, thẻ đủ cặp m/f, chỉ ở Dialogues/.
 - ĐANG DỞ (phiên hết giới hạn): T2 790/864. Làm tiếp: `dp -t t2 next` → add → check → sample 15; rồi T3: `dp -t t1 merge`, `dp -t t2 merge` → dp_work/final/, `sh ../build.sh <thư mục common.idx/.dat gốc> <out>` (FONT_MODE=times mặc định), verify, đóng zip, bao-cao.md. Chưa kiểm trên máy: thẻ giới tính thêm mới có được game xử lý không.
+- A2 (Haiku 5.5): T2 dịch xong 864/864, dp check OK; sample 15 đã soát. Vướng mắc nhỏ ghi trong ghi-chu.txt (T2:).
+- T3 xong: merge, build Times, VERIFY OK, kiểm lại khối text từ bản đóng gói; bao-cao.md. Còn chờ người dùng test thẻ giới tính trên máy.
