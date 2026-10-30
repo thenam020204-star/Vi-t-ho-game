@@ -41,3 +41,5 @@ Dịch text Anh → Việt (giọng thời chiến), ghi vào slot tiếng Anh c
 ## Nhật ký
 - T0 xong: t1 6612 dòng, t2 864 dòng, giữ nguyên 220 dòng.
 - A1 (Sonnet 5.5): T1 dịch xong 6612/6612, dp check OK; sample 30 đã soát xưng hô/giọng.
+- Quản đốc nghiệm thu T1: sửa 37 dòng xưng hô trẻ em (6359-6369 NeedMeds là trẻ; lời Kids/ xưng "cháu"); A1 làm lại KidComfort/Kids_* (85 dòng) với thẻ thêm: trong Dialogues/ {mr|}{fr|} = giới NGƯỜI NGHE, {ms|}{fs|} = giới NGƯỜI NÓI. `dp check` báo 96 dòng "thừa thẻ" là CHỦ Ý — đã kiểm bằng script riêng: mã khác khớp, thẻ đủ cặp m/f, chỉ ở Dialogues/.
+- ĐANG DỞ (phiên hết giới hạn): T2 790/864. Làm tiếp: `dp -t t2 next` → add → check → sample 15; rồi T3: `dp -t t1 merge`, `dp -t t2 merge` → dp_work/final/, `sh ../build.sh <thư mục common.idx/.dat gốc> <out>` (FONT_MODE=times mặc định), verify, đóng zip, bao-cao.md. Chưa kiểm trên máy: thẻ giới tính thêm mới có được game xử lý không.
