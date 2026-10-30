@@ -25,7 +25,7 @@ Dịch text Anh → Việt (giọng thời chiến), ghi vào slot tiếng Anh c
 
 ## Checklist
 - [x] T0. Quản đốc: prep, phân tích độ khó, chốt bảng thuật ngữ + vai, chọn model
-- [ ] T1. Dịch text tài nguyên
+- [x] T1. Dịch text tài nguyên
   - Agent: A1 — Sonnet 5.5
   - Đầu vào/đầu ra: t1.tsv → dp_work/t1/out.tsv (`dp -t t1 ...`)
   - Hoàn thành khi: `dp -t t1 check` = OK, đã `sample 30` — **Quản đốc nghiệm thu**
@@ -40,3 +40,4 @@ Dịch text Anh → Việt (giọng thời chiến), ghi vào slot tiếng Anh c
 
 ## Nhật ký
 - T0 xong: t1 6612 dòng, t2 864 dòng, giữ nguyên 220 dòng.
+- A1 (Sonnet 5.5): T1 dịch xong 6612/6612, dp check OK; sample 30 đã soát xưng hô/giọng.
