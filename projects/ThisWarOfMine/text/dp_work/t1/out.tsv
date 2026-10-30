@@ -105,16 +105,16 @@
 105	Mấy thứ này không giúp được tôi. Tôi cần thuốc mạnh hơn.
 106	Tôi cần thuốc thật. Mấy thứ này không đủ.
 107	Tôi ốm nặng quá, mấy thứ này chẳng ăn thua.
-108	Không... bây giờ tớ không muốn chơi.
-109	Tớ không có hứng...
-110	Tớ không muốn chơi một mình...
+108	Không... bây giờ tôi không muốn chơi.
+109	Tôi không có hứng...
+110	Tôi không muốn chơi một mình...
 111	Không... Chắc có việc gì hay hơn chứ?
 112	Bụng cháu no rồi!
-113	Cháu không ăn thêm được nữa.
+113	Không ăn thêm được nữa.
 114	Cháu không được đụng vào mấy thứ này khi chưa có phép.
-115	Cháu khỏe mà, để dành thuốc lúc khác.
+115	Tôi khỏe mà, để dành thuốc lúc khác.
 116	Cháu cần người lớn giúp việc này.
-117	Cháu khỏe mà, biết đâu sau này cần đến băng gạc.
+117	Không sao đâu, để dành băng gạc cho lúc cần.
 118	Cháu nhỏ quá, không làm được.
 119	Có khi người lớn giúp cháu được?
 120	Cháu nên gọi ai đó làm việc này.
@@ -273,23 +273,23 @@
 273	Ác mộng
 274	^CharacterName^ gặp ác mộng khủng khiếp và không ngủ được.
 275	Hoảng loạn
-276	Đêm qua ^CharacterName^ lên cơn hoảng loạn. ^OtherCharacterName^ thức suốt đêm để dỗ {ms|cậu bé}{fs|cô bé} bình tĩnh lại.
+276	Đêm qua ^CharacterName^ lên cơn hoảng loạn. ^OtherCharacterName^ thức suốt đêm để dỗ {ms|thằng bé}{fs|con bé} bình tĩnh lại.
 277	Hỏa hoạn
 278	Đêm qua ^CharacterName^ châm lửa, may mà chúng tôi dập được trước khi cháy lan.
 279	Giận dữ
-280	Buổi tối ^CharacterName^ lên cơn thịnh nộ, {ms|cậu bé}{fs|cô bé} gào thét, đấm đá lung tung.
+280	Buổi tối ^CharacterName^ lên cơn thịnh nộ, {ms|thằng bé}{fs|con bé} gào thét, đấm đá lung tung.
 281	Đòi chú ý
 282	Đêm qua ^CharacterName^ đòi được chú ý và không để ^OtherCharacterName^ ngủ.
 283	Đái dầm
-284	Đêm qua ^CharacterName^ đái dầm ra giường của {ms|cậu bé}{fs|cô bé}, dù trước giờ {ms|cậu bé}{fs|cô bé} chưa từng như vậy.
+284	Đêm qua ^CharacterName^ đái dầm ra giường của {ms|thằng bé}{fs|con bé}, dù trước giờ {ms|thằng bé}{fs|con bé} chưa từng như vậy.
 285	Trò đóng vai đáng sợ
 286	Đêm qua ^CharacterName^ đóng vai một tên lính giết thường dân. Thật đáng sợ.
 287	Sững sờ
-288	^CharacterName^ sững sờ suốt buổi tối. {ms|Cậu bé}{fs|Cô bé} chỉ ngồi trên sàn, đung đưa người tới lui.
+288	^CharacterName^ sững sờ suốt buổi tối. {ms|Thằng bé}{fs|Con bé} chỉ ngồi trên sàn, đung đưa người tới lui.
 289	Bạn tưởng tượng
 290	Có vẻ ^CharacterName^ đã tưởng tượng ra một người bạn.
 291	Trốn
-292	Đến giờ đi ngủ, chúng tôi mới thấy ^CharacterName^ biến mất. Tìm hàng giờ liền thì thấy {ms|cậu bé}{fs|cô bé} đang trốn trong tủ quần áo.
+292	Đến giờ đi ngủ, chúng tôi mới thấy ^CharacterName^ biến mất. Tìm hàng giờ liền thì thấy {ms|thằng bé}{fs|con bé} đang trốn trong tủ quần áo.
 293	^CharacterName^ đã tự tử.
 294	^CharacterName^ khóc suốt đêm.
 295	Chúng tôi thấy ^CharacterName^ đã chết. {ms|Anh ấy}{fs|Cô ấy} không chịu nổi nữa và đã tự kết liễu đời {ms|anh ấy}{fs|cô ấy}.
@@ -315,7 +315,7 @@
 315	^CharacterName^ thấy bị đối xử tệ, ngày càng cay đắng và giận dữ.
 316	^CharacterName^ giận chúng tôi.
 317	^OtherCharacterName^ đã rời nơi trú ẩn cùng ^CharacterName^.
-318	^CharacterName^ kiệt sức. ^OtherCharacterName^ quyết định cứu {ms|cậu bé}{fs|cô bé}. Cả hai cùng rời nơi trú ẩn của chúng tôi.
+318	^CharacterName^ kiệt sức. ^OtherCharacterName^ quyết định cứu {ms|thằng bé}{fs|con bé}. Cả hai cùng rời nơi trú ẩn của chúng tôi.
 319	^OtherCharacterName^ đã giúp ^CharacterName^.
 320	^OtherCharacterName^ đã dùng đồ tiếp tế của chúng tôi để giúp ^CharacterName^.
 321	^CharacterName^ đã về sau đám tang.
@@ -2057,3 +2057,959 @@
 2057	Tôi yếu quá, nên nằm giường một lúc.
 2058	Không thoải mái lắm, nhưng ít ra tôi thấy ấm hơn.
 2059	Khá hơn chút rồi. Giá mẹ tôi ở đây.
+2060	Tôi từng ngủ giường tốt hơn, nhưng cái này tạm được.
+2061	Tôi yếu quá, phải ngồi xuống.
+2062	Giá có giường tử tế, và chút nước hầm nóng.
+2063	Không thể để căn bệnh này đánh gục.
+2064	Phải nằm xuống giường, tôi run cầm cập.
+2065	Tôi yếu quá, phải nằm nghỉ trên giường một lúc.
+2066	Phải vượt qua căn bệnh này, còn nhiều việc phải làm.
+2067	Lâu rồi tôi chưa ngủ.
+2068	Tôi cần nghỉ chút...
+2069	Nên ngủ bù đêm qua.
+2070	Quá nhiều đêm không ngủ.
+2071	Khó làm việc khi không được nghỉ.
+2072	Tôi cần nghỉ ngơi.
+2073	Tôi kiệt sức rồi. Nếu không được ngủ...
+2074	Tôi mệt quá... có thể ngủ gục bất cứ lúc nào.
+2075	Người tôi tê dại, buồn ngủ. Sắp không chịu nổi...
+2076	Tôi chỉ nằm một phút... Mệt quá...
+2077	Nghỉ... Chỉ một chút nghỉ thôi...
+2078	Tôi choáng váng và yếu... Cần nghỉ ngay...
+2079	Tối nay cháu ngủ giường được không ạ?
+2080	Cháu ngủ không ngon...
+2081	Ngủ dưới sàn thật tệ.
+2082	Tôi muốn ngủ một đêm ngon trên giường tử tế.
+2083	Phần lớn thời gian tôi ngủ không yên.
+2084	Lưng tôi đau vì ngủ dưới sàn.
+2085	Cháu thích khi trời ấm.
+2086	Cháu mong ở đây vẫn ấm.
+2087	Ít nhất cũng ấm.
+2088	May là ở đây không lạnh.
+2089	Mong chúng ta giữ được hơi ấm trong này.
+2090	Tay cháu lạnh!
+2091	Cháu lạnh, mình tăng lửa lên được không ạ?
+2092	Trời đang lạnh dần.
+2093	Lạnh thế này dễ đổ bệnh.
+2094	Trong nhà khá lạnh. Nên nghĩ đến chuyện sưởi.
+2095	Sao lạnh thế? Cháu cóng quá!
+2096	Cháu lạnh quá, cháu muốn ngồi cạnh lửa!
+2097	Trong này lạnh quá!
+2098	Tôi lạnh thấu xương. Phải sớm có sưởi.
+2099	Cái lạnh chết tiệt này kiểu gì cũng cảm.
+2100	Ngày này cũng không tệ.
+2101	Chúng ta sẽ qua được.
+2102	Rồi mọi chuyện sẽ ổn, cuối cùng.
+2103	Ít nhất cũng đỡ phần nào.
+2104	Tốt, tốt. Cứ giữ như vậy!
+2105	Tôi chắc hôm nay sẽ có tin tốt!
+2106	Sắp hết rồi. Chúng ta sẽ ổn!
+2107	Cuối cùng cũng có chuyện tốt!
+2108	Không phải ngày tốt...
+2109	Đừng mất hy vọng...
+2110	Ngày một tệ hơn.
+2111	Giá tôi rời thành phố... Chết tiệt!
+2112	Mọi thứ khó quá rồi...
+2113	Tôi không thể... Tôi bỏ cuộc.
+2114	Chuyện này sẽ không bao giờ kết thúc...
+2115	Tất cả những thứ này... Tôi không chịu nổi nữa.
+2116	Đủ rồi... Tôi không chịu nổi nữa!
+2117	Kệ mẹ nó...
+2118	Làm thế thì được gì?...
+2119	Dù sao cũng chẳng có ý nghĩa gì...
+2120	Chết đi còn hơn...
+2121	Giá tôi chưa từng sinh ra!
+2122	Tôi không chịu nổi nữa... Không thể...
+2123	Làm ơn, tôi muốn tỉnh khỏi cơn ác mộng này...
+2124	Thà chết còn hơn sống thêm một ngày trong địa ngục này...
+2125	Tôi nhớ ^CharacterName^, mong {mr|anh ấy}{fr|cô ấy} sớm về...
+2126	^CharacterName^ đâu rồi?
+2127	Tôi nhớ ^CharacterName^.
+2128	Không có ^CharacterName^ thì chúng ta xoay xở sao?
+2129	Tôi không tin {mr|anh ấy}{fr|cô ấy} đã đi rồi...
+2130	^CharacterName^ chết rồi sao?
+2131	Tôi cũng sắp chết sao..?
+2132	^CharacterName^... Giá còn được ở bên nhau như trước...
+2133	^CharacterName^... ôi, ^CharacterName^!
+2134	Sao {mr|anh ấy}{fr|cô ấy} phải chết?!
+2135	^CharacterName^ đâu? {mr|Anh ấy}{fr|Cô ấy} lẽ ra phải về rồi...
+2136	^CharacterName^ đã xảy ra chuyện gì?
+2137	Có ai thấy ^CharacterName^ không?
+2138	Giá ^CharacterName^ ở nhà!
+2139	Tôi không tin ^CharacterName^ bị giết...
+2140	Chúng giết ^CharacterName^ như giết con chó...
+2141	Không thể tin... hôm qua {mr|anh ấy}{fr|cô ấy} còn ở với chúng ta mà giờ...
+2142	Giết người như thế... Phí một mạng người...
+2143	{mr|Anh ấy}{fr|Cô ấy} sẽ không bao giờ quay lại!
+2144	^CharacterName^ đã xảy ra chuyện gì? Nói tôi nghe!
+2145	Không ai nói gì với tôi! ^CharacterName^ đâu?
+2146	Sao {mr|anh ấy}{fr|cô ấy} có thể biến mất và bỏ chúng ta một mình?!
+2147	Tôi không ngừng nghĩ ^CharacterName^ bị giết thế nào. Chẳng bao lâu chúng sẽ giết hết chúng ta...
+2148	Tôi không vượt qua được cái chết của {mr|anh ấy}{fr|cô ấy}... Ai sẽ là người tiếp theo?
+2149	Chúng giết ^CharacterName^…Chúng sẽ giết hết chúng ta sao?
+2150	Sao chúng phải giết ^CharacterName^?... Phí một mạng người khủng khiếp...
+2151	Tôi đã làm điều tôi làm. Phải mạnh mẽ, không thì tất cả cũng chết.
+2152	Chuyện này có thể xảy ra với bất kỳ ai. Là chiến tranh.
+2153	Lẽ ra không kết thúc thế... Tôi không vượt qua được.
+2154	Đôi mắt sợ hãi ấy...
+2155	Là chiến tranh, nhưng... có nhất thiết phải xảy ra không?
+2156	Tôi có lựa chọn nào không? Tôi không ngừng nghĩ về nó...
+2157	Không thể tin tôi đã giết như thế...
+2158	Chết chóc quá nhiều... khắp nơi...
+2159	... Thế này quá sức với tôi ...
+2160	Chết tiệt! ... Tôi không ngừng nghĩ về việc mình đã làm...
+2161	^CharacterName^ không chịu nói chuyện đêm qua đã xảy ra gì.
+2162	Hôm nay ^CharacterName^ có gì đó lạ.
+2163	Nếu ^CharacterName^ giết ai thì chắc là vì lợi ích của chúng ta.
+2164	^CharacterName^ đã chọn một lựa chọn khó... nhưng lúc nào cũng là chúng ta hoặc chúng.
+2165	Hôm nay ^CharacterName^ im lặng quá… không biết đã xảy ra chuyện gì.
+2166	Sao không ai kể cho cháu chuyện đêm qua?
+2167	Cháu lớn rồi mà, sao ai cũng coi cháu như trẻ con?!
+2168	Hôm nay ^CharacterName^ xanh xao, {mr|anh ấy}{fr|cô ấy} có ốm không?
+2169	^CharacterName^ đã giết người... chết tiệt...
+2170	^CharacterName^! Sao...?
+2171	Có người chết... vì chúng ta.
+2172	Tôi không muốn nghĩ về nó...
+2173	Tôi nghĩ ^CharacterName^ đã làm chuyện thật tồi tệ.
+2174	Hôm nay ^CharacterName^ khác lạ, có chuyện gì thế?
+2175	^CharacterName^ có gì đó không ổn, nhưng tôi không biết là gì.
+2176	Có điều gì đang day dứt ^CharacterName^, tôi nhìn ra được.
+2177	Nên để mắt đến ^CharacterName^…
+2178	Sao?! Sao chúng ta lại làm thế này?...
+2179	Tôi không ngừng nghĩ về việc ^CharacterName^ đã làm...
+2180	Hết máu rồi! ... Đừng nữa!!!
+2181	Hoặc chúng ta hoặc chúng, người nằm đó có thể là tôi.
+2182	Tôi không thể làm lại điều đã làm. Hết chiến tranh rồi mình sẽ khóc thương, nhưng trước tiên phải sống sót.
+2183	Giá tôi làm lại được... nhưng tôi còn lựa chọn nào?
+2184	Không thể tin là tôi đã làm vậy... Mọi thứ diễn ra quá nhanh...
+2185	Giá tôi đừng đến đó... nhưng tôi đã đến... và tôi đã giết...
+2186	Lần sau tôi có giết ai nữa không? Mong mọi chuyện sớm kết thúc, bằng cách này hay cách khác...
+2187	Bao giờ cái thứ chết tiệt này mới hết?... Tôi sẽ không gánh thêm một cái chết nữa...
+2188	Chết tiệt... Cái chết này là giọt nước tràn ly, tôi hết rồi...
+2189	Cháu mơ thấy ác mộng về ^CharacterName^. Mừng là {mr|chú ấy}{fr|cô ấy} đã về.
+2190	Cháu lúc nào cũng mong ^CharacterName^ mau về.
+2191	^CharacterName^ đã làm điều {mr|anh ấy}{fr|cô ấy} phải làm. Là chiến tranh.
+2192	Tôi chắc ^CharacterName^ sẽ không giết ai nếu có cách tránh.
+2193	Cháu luôn lo cho ^CharacterName^ mỗi khi {mr|chú ấy}{fr|cô ấy} ra ngoài ban đêm.
+2194	Ôi, ^CharacterName^... Sao cậu phải làm thế?...
+2195	Nếu sống sót, ^CharacterName^ sẽ không bao giờ quên chuyện này...
+2196	Giá chúng ta không phải làm thế này...
+2197	Giết chóc thế này... Có bao giờ hết không?
+2198	Cháu lo... hôm nay ^CharacterName^ có gì đó khác.
+2199	Cháu biết có chuyện không hay xảy ra, mà chẳng ai nói gì với cháu!
+2200	Chúng ta thật sự phải giết sao?! Không còn cách nào khác à?
+2201	Thêm một cái chết... Để làm gì? Để làm gì?
+2202	Lũ côn đồ chết tiệt... bớt được một tên.
+2203	Cặn bã cướp bóc... chúng sẽ giết tôi như giết chó, nhưng lần này thì không!
+2204	Tôi buộc phải tự vệ... nhưng tôi ghét việc mình bị ép phải làm.
+2205	Suýt chết... tôi cũng có thể đã chết...
+2206	Giá chúng ta không phải giết để sống sót.
+2207	Không biết hắn đã giết bao nhiêu người... Tôi không thể trở thành như hắn.
+2208	Chết tiệt! Mong cả lũ chúng xuống địa ngục! Sao chúng không để chúng ta sống?...
+2209	Lũ giết người khốn kiếp! Tôi không chịu nổi nữa...
+2210	Cháu nghe lỏm là ^CharacterName^ có một chuyến đi nguy hiểm!
+2211	^CharacterName^ nói giờ chúng ta an toàn hơn một chút!
+2212	Làm tốt lắm, ^CharacterName^. Bớt một thằng khốn.
+2213	^CharacterName^ làm tốt. Lũ giết người đó không biết thương xót.
+2214	^CharacterName^ gặp rắc rối trong đêm, cháu không muốn {mr|chú ấy}{fr|cô ấy} ra ngoài nữa!
+2215	Tối nay ^CharacterName^ nên ở nhà, ngoài kia đáng sợ.
+2216	^CharacterName^ không có lựa chọn... nhưng giá chúng ta có.
+2217	Bọn côn đồ này tự chuốc lấy... nhưng tôi vẫn thương ^CharacterName^.
+2218	Cháu nghe lỏm ^CharacterName^ gặp nguy trong đêm! Cháu muốn {mr|chú ấy}{fr|cô ấy} ở nhà!
+2219	Cháu không muốn ^CharacterName^ liều mạng vì cháu, cháu muốn {mr|chú ấy}{fr|cô ấy} được an toàn.
+2220	Cái vòng luẩn quẩn... Chúng giết người, giờ ^CharacterName^ giết một tên trong số chúng...
+2221	Khắp nơi đã quá nhiều chết chóc... giờ lại thêm chuyện này...
+2222	Không tin nổi may mắn của mình. Hắn là sát thủ được huấn luyện... mà tôi thắng!
+2223	Hắn mang chiến tranh đến thành phố này, giờ hắn chết rồi.
+2224	Thằng khốn tội nghiệp... không biết hắn có bị bắt đi lính không...
+2225	Tôi không ngừng nghĩ đến lá thư mẹ hắn sẽ nhận...
+2226	Hắn là một gã bình thường... như chúng ta...
+2227	Chắc hắn cũng không muốn ở đây, như chúng ta vậy.
+2228	Bọn lính nguy hiểm, nhưng ^CharacterName^ dũng cảm lắm!
+2229	^CharacterName^ sẽ không để tên lính nào làm hại chúng ta!
+2230	Tốt, giá chúng ta cũng trả đũa được bọn bắn tỉa.
+2231	^CharacterName^ thật phi thường. Bớt một tên giết người!
+2232	Cháu nghe nói ^CharacterName^ gặp một tên lính xấu! Cháu không muốn {mr|chú ấy}{fr|cô ấy} bị thương!
+2233	Cháu không muốn ^CharacterName^ gặp lính nữa, họ đáng sợ lắm!
+2234	Chính phủ đang xúi chúng ta quay sang chống nhau...
+2235	Đưa quân đội đi đánh chính dân mình là tội ác... nhưng gã này đâu có quyền quyết định.
+2236	Bọn lính xấu có ở khắp nơi, chẳng chỗ nào an toàn!
+2237	Nếu bọn lính đi tìm ^CharacterName^, chúng sẽ làm hại mình!
+2238	Gã tội nghiệp này đã làm gì đáng phải chịu thế này?! Hắn chỉ làm theo lệnh!
+2239	Sao ^CharacterName^ phải làm vậy?! Họ đâu có xin đến đây!
+2240	^CharacterName^ nói chỉ là vết thương ngoài da.
+2241	^CharacterName^ cho cháu xem mấy vết xước và bảo sẽ thành cái sẹo ngầu lắm!
+2242	Cháu chắc ^CharacterName^ sẽ không sao.
+2243	Tôi chắc ^CharacterName^ sẽ ổn, vết thương này không đáng lo.
+2244	Cháu thấy ^CharacterName^ chảy máu...
+2245	Mong ^CharacterName^ sớm khỏe.
+2246	Phải có ai đó chăm sóc ^CharacterName^ thật tốt.
+2247	^CharacterName^ cần băng gạc càng sớm càng tốt.
+2248	^CharacterName^ cần băng vết thương này.
+2249	Tôi lo cho ^CharacterName^.
+2250	Nhìn ^CharacterName^ kìa. Vết thương của {mr|anh ấy}{fr|cô ấy} trông không ổn.
+2251	Bị thương dễ quá, chết tiệt.
+2252	^CharacterName^ chắc đau lắm!
+2253	^CharacterName^ sắp chết ạ..?
+2254	Phải làm gì đó cho ^CharacterName^ đi! {mr|Chú ấy}{fr|Cô ấy} đau suốt!
+2255	Cháu thấy ^CharacterName^ khóc vì đau! {mr|Chú ấy}{fr|Cô ấy} cần bác sĩ!
+2256	^CharacterName^... Chúng đã làm gì {mr|anh ấy}{fr|cô ấy}...?
+2257	Giá chúng ta giúp được ^CharacterName^...
+2258	Chết tiệt, không thể mất {mr|anh ấy}{fr|cô ấy}...
+2259	^CharacterName^ mất nhiều máu quá...
+2260	^CharacterName^ nói {mr|chú ấy}{fr|cô ấy} sắp ăn thôi!
+2261	^CharacterName^ nói {mr|chú ấy}{fr|cô ấy} không đói chút nào!
+2262	Cháu nghe bụng ^CharacterName^ sôi!
+2263	^CharacterName^ gầy đi nhiều lắm!
+2264	^CharacterName^ nói {mr|chú ấy}{fr|cô ấy} không đói chút nào, nhưng cháu không tin…
+2265	^CharacterName^ nên ăn gì đó, ai cũng cần ăn.
+2266	^CharacterName^ than là {mr|chú ấy}{fr|cô ấy} đói lắm.
+2267	^CharacterName^ không vui vì {mr|chú ấy}{fr|cô ấy} đói.
+2268	^CharacterName^ yếu lắm, {mr|chú ấy}{fr|cô ấy} còn không bế nổi cháu!
+2269	^CharacterName^ gầy quá! Giờ cháu thấy rõ cả xương của {mr|chú ấy}{fr|cô ấy}!
+2270	^CharacterName^ về rồi! ^CharacterName^ về rồi!
+2271	Cháu mừng vì ^CharacterName^ về rồi! Người ta bảo cháu đừng lo, mà cháu vẫn lo!
+2272	Cháu lo lắm, lo thật nhiều!
+2273	Cháu sợ lắm, cứ tưởng không về nữa!
+2274	^CharacterName^ đi lâu quá, cháu còn khóc nữa!
+2275	Cháu tưởng không bao giờ gặp lại ^CharacterName^ nữa...
+2276	Hôm nay tôi khỏe hơn nhiều. Tôi sẽ ổn.
+2277	Băng gạc có tác dụng.
+2278	Cuối cùng tôi cũng khỏe.
+2279	Vết thương cuối cùng cũng lành.
+2280	Hôm nay ^CharacterName^ trông khá hơn.
+2281	May là có băng gạc cho {mr|anh ấy}{fr|cô ấy}.
+2282	Có vẻ ^CharacterName^ đã hồi phục.
+2283	Tôi mừng vì ^CharacterName^ thấy khỏe hơn.
+2284	Tôi sẽ ổn, chỉ ho nhẹ thôi.
+2285	Ngủ một đêm ngon, uống vài viên thuốc là tôi khỏe.
+2286	Đúng lúc xui nhất để đổ bệnh…
+2287	Trước chiến tranh, một hai ngày là tôi khỏi…
+2288	Không có thuốc thì tôi không khá hơn được.
+2289	Chết tiệt, tôi chẳng khá hơn chút nào.
+2290	Tôi ốm triền miên... Quá sức với tôi rồi, tôi sẽ không khỏi...
+2291	Tôi sợ chuyện này sẽ không kết thúc tốt đẹp với tôi...
+2292	Tôi ghét bị ốm. Tôi sợ mình đang nặng hơn…
+2293	Tôi sẽ không thấy được ngày hết chiến tranh...
+2294	^CharacterName^ ho một chút, nhưng {mr|chú ấy}{fr|cô ấy} bảo không nghiêm trọng.
+2295	^CharacterName^ nói {mr|chú ấy}{fr|cô ấy} hơi ốm, nhưng sẽ sớm khỏe.
+2296	Tôi chắc ^CharacterName^ chịu được cơn ho nhẹ.
+2297	Chỉ là cảm lạnh thôi, {mr|anh ấy}{fr|cô ấy} sẽ ổn.
+2298	Cháu nghe nói ^CharacterName^ ốm nặng. Cháu không muốn {mr|chú ấy}{fr|cô ấy} ốm.
+2299	^CharacterName^ bảo cháu tránh xa {mr|chú ấy}{fr|cô ấy}...
+2300	Cháu thấy ^CharacterName^ chẳng khá hơn chút nào!
+2301	Cháu thấy ^CharacterName^ run bần bật! Và {mr|chú ấy}{fr|cô ấy} ra nhiều mồ hôi!
+2302	^CharacterName^ trông không khỏe. Giá tôi gọi được xe cấp cứu...
+2303	Tôi sợ ^CharacterName^ chẳng khá hơn...
+2304	Tôi lo cho ^CharacterName^, nhìn {mr|anh ấy}{fr|cô ấy} kìa...
+2305	Giá ^CharacterName^ khá hơn... Tôi sợ điều tồi tệ nhất.
+2306	Cháu không muốn ^CharacterName^ chết!
+2307	Ai giúp ^CharacterName^ với! {mr|Chú ấy}{fr|Cô ấy} trông ốm nặng lắm!
+2308	^CharacterName^ sẽ chết vì bệnh đó ạ?
+2309	Mình đưa ^CharacterName^ đến bệnh viện được không ạ? {mr|Chú ấy}{fr|Cô ấy} trông không khỏe!
+2310	Chúng ta không thắng nổi căn bệnh này... Chẳng bao lâu mọi thứ sẽ kết thúc...
+2311	Vô vọng... Không có giúp đỡ, chỉ còn biết mong một cái kết nhanh...
+2312	Tôi sợ ^CharacterName^ không qua khỏi...
+2313	^CharacterName^ sẽ không vượt qua được...
+2314	Thuốc có tác dụng.
+2315	Cuối cùng tôi cũng khỏe!
+2316	May là có thuốc cho {mr|anh ấy}{fr|cô ấy}.
+2317	Có kẻ định đột nhập vào nhà mình ban đêm!
+2318	Cháu thức dậy ban đêm khi nghe tiếng người la hét và đánh nhau. Cháu sợ.
+2319	Chúng ta an toàn ở đây, ở trong nhà thì không ai làm hại được.
+2320	Chỉ cần còn cảnh giác, chúng không làm hại được chúng ta ở đây.
+2321	Đêm qua có mấy người xấu ở ngoài.
+2322	Mấy người xấu đó có quay lại không ạ?
+2323	Cháu sợ mấy người đến ban đêm.
+2324	Cháu không muốn mấy người xấu đó quay lại.
+2325	Chúng ta đẩy lui được cuộc tấn công, nhưng lỡ lần sau mạnh hơn thì sao?
+2326	Lần trước chúng ta đuổi được bọn côn đồ, nhưng không cản chúng mãi được...
+2327	Phải cảnh giác. Tôi sợ bọn cướp chỉ đang thăm dò phòng thủ của mình.
+2328	Tôi sợ lần tấn công vừa rồi chỉ là may. Lỡ băng sau mạnh hơn thì sao?
+2329	Sao họ tấn công mình? Sao không để mình yên?
+2330	Cháu sợ mấy tên trộm đến ban đêm.
+2331	Cháu không thấy an toàn ở đây, mong mấy người xấu đó đừng quay lại.
+2332	Cháu sợ mấy người đó ban đêm lắm.
+2333	Sớm muộn gì bọn cướp cũng phá được. Rồi chúng sẽ làm gì mình?
+2334	Không thể cản chúng mãi… Chỉ là vấn đề thời gian.
+2335	Lần này đuổi được chúng, nhưng về lâu dài chúng ta chẳng có cơ hội...
+2336	Chúng rút chỉ là may. Tôi sợ lần sau sẽ là dấu chấm hết...
+2337	Mấy người xấu đến ban đêm, nhưng mình đã dũng cảm.
+2338	Bọn cướp không làm hại được mình ở đây, nhà mình như pháo đài.
+2339	Thật tốt khi chúng ta canh giữ được chỗ này khỏi bọn tấn công.
+2340	Bọn cướp đánh lui được! Cứ cảnh giác thôi!
+2341	Mấy người xấu đến đêm đó là ai vậy?
+2342	Sao mấy người đó định cướp mình? Mình đâu có gì nhiều.
+2343	Mong mấy tên trộm đó đừng quay lại...
+2344	Giá không có trộm đến cướp mình ban đêm.
+2345	Suýt nữa. Chúng mang thêm người là mình tiêu!
+2346	Bọn cướp biết chúng ta ở đây. Chúng sẽ quay lại đông hơn.
+2347	Nếu chúng cứ đánh, cuối cùng sẽ làm chúng ta kiệt sức...
+2348	Tôi sợ chúng ta chưa kịp hồi phục thì lần sau đã đến...
+2349	Sao họ không để mình yên? Sao?
+2350	Ở nhà cũ của mình thì đâu có chuyện này.
+2351	Cháu nhỏ, cháu không đánh nổi mấy tên trộm to khỏe.
+2352	Nếu họ lại đến, họ sẽ làm hại mình.
+2353	Lần sau chúng sẽ phá được... Vô ích thôi...
+2354	Chúng ta thắng, nhưng đổi lại cái giá nào? Không thể kéo dài mãi...
+2355	Không thể cứ thế này. Cuối cùng chúng sẽ giết hết chúng ta...
+2356	Thêm một đợt như thế là chúng ta tiêu...
+2357	Giá mà mình giết được chúng để chúng không quay lại nữa!
+2358	Mình sẽ không để bọn cướp đánh bại. Không đâu!
+2359	Bọn cướp nguy hiểm, nhưng chúng ta đối phó được!
+2360	Đuổi được bọn cướp nếu chúng ta canh giữ.
+2361	Người xấu làm đau mình! Sao vậy?
+2362	Lỡ mấy người xấu đó quay lại thì sao? Rồi sao ạ?
+2363	Mình làm thêm gì đó để họ đừng làm đau mình được không ạ?
+2364	Cháu sợ mấy người xấu đó quay lại làm mình đau hơn nữa!
+2365	Tôi sợ chúng ta không sống nổi đợt tấn công sau...
+2366	Lần này chúng ta suýt không qua nổi. Nếu chúng quay lại thì làm sao?
+2367	Những đợt tấn công thế này sẽ sớm làm chúng ta kiệt sức, tôi sợ vậy...
+2368	Bọn cướp sẽ kết liễu chúng ta nếu không làm gì đó.
+2369	Cháu muốn mấy người xấu thôi làm đau mình, nhưng cháu làm được gì?
+2370	Kinh khủng quá, mấy người xấu muốn làm đau mình lúc nào cũng được!
+2371	Giá mình giết hết mấy người xấu!
+2372	Cháu ghét mấy tên trộm đó, cháu muốn họ chết hết!
+2373	Tất cả sẽ chết... Lần sau bọn tấn công đến là hết...
+2374	Chúng ta không có cơ hội... Không cản được bọn cướp làm điều chúng muốn…
+2375	Lũ côn đồ chết tiệt... từng đứa một, chúng sẽ giết hết chúng ta...
+2376	Lần sau chúng sẽ lấy hết đồ... và mạng sống của chúng ta...
+2377	Những thứ này sống còn với chúng ta. Tôi phải lấy.
+2378	Tôi chỉ lấy những gì chúng ta cần nhất.
+2379	Trộm cắp là sai, nhưng tôi biết làm sao?
+2380	Tôi thấy tệ về chuyện đó, nhưng tôi phải lấy những thứ ấy.
+2381	Khốn khổ đến mức nào nữa... Phải trộm để sống...
+2382	Giá không phải trộm... Nhưng không được...
+2383	^CharacterName^ mang về ít đồ cần thiết. Phải, anh ta ăn trộm… thì sao?
+2384	Đôi khi phải trộm mới sống được.
+2385	Tôi muốn ^CharacterName^ đừng trộm, nhưng chúng ta cần đồ tiếp tế.
+2386	^CharacterName^ mang về ít đồ ăn trộm. Mong những người ấy không cần đến chúng.
+2387	Có vẻ chiến tranh đã biến chúng ta thành kẻ trộm...
+2388	Không chỉ nghèo, giờ chúng ta còn bẩn thỉu...
+2389	Tôi phải trộm những thứ này, chúng sẽ giúp chúng ta...
+2390	Không có những món này chúng ta không sống nổi, tôi phải lấy.
+2391	Tội nghiệp họ, tôi thấy tệ khi lấy đồ của họ...
+2392	Có lẽ tôi không nên trộm những thứ đó...
+2393	Mong những người ấy ổn, họ cần những thứ này như chúng ta.
+2394	Trộm của những người nghèo khác... Tôi đã trở thành gì thế này?
+2395	Nếu ^CharacterName^ không lấy, lính hay bọn hôi của cũng sẽ lấy...
+2396	Tôi thương những người ấy, nhưng chúng ta cần đồ tiếp tế...
+2397	Tôi biết cần đồ tiếp tế, nhưng trộm ư?... Thế là sai.
+2398	Khổ sở đến thế là cùng? Trộm để sống...
+2399	^CharacterName^ lẽ ra nên để lại cho họ nhiều đồ hơn, họ cũng đang túng thiếu!
+2400	Có vẻ chúng ta chẳng hơn gì bọn hôi của...
+2401	Tôi xin lỗi những người ấy, nhưng tôi không có lựa chọn.
+2402	Những người tội nghiệp ấy giờ sẽ khổ lắm.
+2403	Còn lại quá ít, những người ấy có thể không sống nổi...
+2404	Tôi thấy tệ khi lấy những thứ ấy. Giờ họ sống sao?
+2405	Tôi để lại cho họ gần như không có gì… Họ sẽ không trụ lâu...
+2406	Tôi đã làm gì thế này... Thiếu những thứ tôi lấy, họ chắc chắn sẽ chết...
+2407	Chúng ta chẳng hơn gì bọn hôi của...
+2408	Tôi không nghĩ phải dùng đến cướp bóc...
+2409	Cướp bóc là cách duy nhất để có thứ mình cần sao?!
+2410	Sao ^CharacterName^ có thể để lại cho họ gần như không có gì...
+2411	Chúng ta tuyệt vọng đến mức phải vét sạch người ta sao?!
+2412	^CharacterName^ thật tàn nhẫn khi để họ không còn gì...
+2413	Cháu không ngủ được ban đêm...
+2414	Cháu sợ ngủ quá...
+2415	Tôi không ngủ cả đêm... Tôi thấy tệ lắm...
+2416	Làm sao ngủ được khi mọi nỗi sợ tồi tệ nhất cứ chạy trong đầu?
+2417	Cháu không ngủ được, cháu sợ bom rơi trúng nhà mình.
+2418	Ban đêm có người bắn nhau... lỡ họ đến giết mình thì sao?
+2419	Tôi cần ngủ. Nhưng hễ nhắm mắt, những điều tồi tệ nhất tôi đã thấy lại ám tôi.
+2420	Tôi không ngủ được, không ngừng suy nghĩ...
+2421	^CharacterName^ không ngủ được ban đêm. {mr|Chú ấy}{fr|Cô ấy} trông xanh xao.
+2422	^CharacterName^ trằn trọc suốt đêm. {mr|Chú ấy}{fr|Cô ấy} không ngủ được.
+2423	Sao ^CharacterName^ bỏ chúng ta? {mr|Chú ấy}{fr|Cô ấy} đi đâu rồi?
+2424	^CharacterName^ sẽ sớm về, đúng không ạ? Đúng không?
+2425	Không có ^CharacterName^ sẽ khó hơn.
+2426	^CharacterName^ bỏ chúng ta. Chúng ta tệ đến thế sao?
+2427	Sao ^CharacterName^ bỏ mình? Cháu không hiểu...
+2428	Cháu ghét ^CharacterName^! Sao {mr|chú ấy}{fr|cô ấy} bỏ mình lại?
+2429	Chúng ta có thể làm gì để ^CharacterName^ ở lại không?
+2430	^CharacterName^ mất hy vọng chúng ta sống sót ở đây... Nếu {mr|anh ấy}{fr|cô ấy} đúng thì sao?
+2431	^CharacterName^ không nên uống rượu...
+2432	Cháu không thích khi ^CharacterName^ uống rượu!
+2433	Cháu ghét khi ^CharacterName^ uống!
+2434	Sao {mr|chú ấy}{fr|cô ấy} cứ phải uống?
+2435	^CharacterName^ lấy hết đồ của mình rồi chạy mất! Sao {mr|chú ấy}{fr|cô ấy} làm vậy được?
+2436	Cháu tưởng ^CharacterName^ là bạn, mà {mr|chú ấy}{fr|cô ấy} chỉ là kẻ trộm bẩn thỉu!
+2437	^CharacterName^ phản bội mình và lấy đồ của mình. Cháu ghét {mr|chú ấy}{fr|cô ấy}!
+2438	Sao ^CharacterName^ lại trộm của mình? Cháu ghét {mr|chú ấy}{fr|cô ấy}!
+2439	Cháu nghe lỏm một vụ cãi nhau tối qua. ^CharacterName^ ác lắm...
+2440	Tối qua có người la rất to. Không biết có chuyện gì.
+2441	Chúng ta không thể cãi nhau thế mãi, phải giúp nhau.
+2442	Đã khó rồi, còn thêm ^CharacterName^ cãi mọi thứ.
+2443	Sao hôm qua ^CharacterName^ la hét nhiều thế?
+2444	Sao ^CharacterName^ ác thế? Chẳng hiểu gì cả!
+2445	Nếu không thống nhất được, chúng ta sẽ không sống nổi...
+2446	Trận cãi vã tối qua thật kinh khủng...
+2447	Sao ^CharacterName^ lại làm vậy? Sao?!
+2448	Sao ^CharacterName^ bỏ cháu như thế?!
+2449	Sao {mr|anh ấy}{fr|cô ấy} lại làm thế? Vẫn còn chút hy vọng mà...
+2450	Phát hiện ^CharacterName^ đã {mr|tự tử}{fr|tự tử} thật kinh khủng!
+2451	^CharacterName^ đã {mr|tự tử}{fr|tự tử}... Cháu cũng sẽ chết ạ?
+2452	Cháu ghét ^CharacterName^ vì bỏ mình thế! Cháu ghét {mr|chú ấy}{fr|cô ấy}!
+2453	Tự tử là lối thoát duy nhất khỏi địa ngục này sao?
+2454	^CharacterName^ không chịu nổi nữa... Chúng ta mạnh hơn sao?
+2455	^CharacterName^ buồn và khóc, làm cháu cũng buồn theo...
+2456	Cháu mong ^CharacterName^ đừng khóc, nhưng cháu không biết phải làm sao.
+2457	Nghe ^CharacterName^ khóc cả đêm đau lòng quá...
+2458	^CharacterName^ có gì đó thật sự không ổn, {mr|anh ấy}{fr|cô ấy} nức nở dữ dội cả đêm.
+2459	Nghe ^CharacterName^ khóc, cháu cũng muốn khóc.
+2460	^CharacterName^ khóc cả đêm. Chắc tệ lắm. Mình sắp chết ạ?
+2461	Tôi không làm {mr|anh ấy}{fr|cô ấy} nín khóc được...
+2462	Có vẻ ^CharacterName^ đang suy sụp...
+2463	Hôm nay ai cũng im lặng quá...
+2464	^CharacterName^ bị thâm mắt. Tối qua có chuyện gì ạ?
+2465	Tối qua ^CharacterName^ đánh nhau với tôi...
+2466	Tối qua ^CharacterName^ đánh tôi. Sao {mr|anh ấy}{fr|cô ấy} làm được?
+2467	Sao ^CharacterName^ làm vậy được?!
+2468	^CharacterName^ là đồ bắt nạt!
+2469	Tối qua ^CharacterName^ giận dữ và bắt đầu đánh tôi...
+2470	Làm sao chống chọi nghịch cảnh nếu chúng ta đánh nhau?
+2471	Tôi mừng vì ^CharacterName^ đã về. Tôi lo lắm.
+2472	^CharacterName^ về được rồi. Thấy {mr|anh ấy}{fr|cô ấy} lại thật tốt.
+2473	Chúng ta cần ^CharacterName^, may là {mr|anh ấy}{fr|cô ấy} đã về.
+2474	Tôi không biết sẽ làm gì nếu mất ^CharacterName^.
+2475	Lần này ^CharacterName^ vẫn về được dù nguy hiểm.
+2476	^CharacterName^ có thể đã bị giết... {mr|anh ấy}{fr|cô ấy} nghĩ gì vậy?
+2477	Tôi tưởng ^CharacterName^ không về được.
+2478	Chết tiệt, đã mấy ngày tôi chưa hút thuốc.
+2479	Một điếu thuốc sẽ làm tôi dễ chịu hơn.
+2480	Lần cuối tôi hút thuốc là khi nào nhỉ?
+2481	Lâu quá rồi tôi chưa được hút thuốc.
+2482	^CharacterName^ bỏ chạy khỏi mình, nhưng cháu nghĩ {mr|chú ấy}{fr|cô ấy} sẽ quay lại.
+2483	Mình đâu cần ^CharacterName^, đúng không?
+2484	^CharacterName^ đi đâu rồi?
+2485	^CharacterName^ bỏ đi vì mình đối xử tệ với {mr|chú ấy}{fr|cô ấy}.
+2486	^CharacterName^ bỏ mình rồi, nhưng {mr|chú ấy}{fr|cô ấy} sống một mình sao được?
+2487	Lẽ ra mình nên tốt với ^CharacterName^ hơn.
+2488	^CharacterName^ buồn, mong không phải lỗi của cháu!
+2489	Có khi cháu chơi với ^CharacterName^ thì {mr|chú ấy}{fr|cô ấy} sẽ vui lên!
+2490	^CharacterName^ buồn lắm, không biết vì sao...
+2491	Cháu không muốn ^CharacterName^ giận...
+2492	^CharacterName^ có ghét mình không?
+2493	^CharacterName^ trông giận lắm, mong không phải lỗi của cháu.
+2494	Ai ở đây cũng đói, nhưng cháu chắc mình sẽ sớm được ăn!
+2495	Ai cũng đói... có cái pizza thì tuyệt!
+2496	Ai cũng đói, mà mình chẳng có gì để ăn...
+2497	Cho mình ăn gì đó bây giờ được không ạ?
+2498	Buồn lắm khi ai cũng đói...
+2499	Phải đi mua đồ thôi! Mình cần đồ ăn!
+2500	Cháu không hiểu sao mình chẳng có gì để ăn...
+2501	Cháu không muốn ai phải đói nữa!
+2502	Bụng mình sôi rồi, phải ăn gì đó... nhưng ăn gì?
+2503	Ai cũng đói mà cháu không biết làm sao...
+2504	Các chiến binh ngày xưa tự hào về sẹo của mình, mình cũng nên tự hào.
+2505	Ai cũng bầm tím, nhưng không sao đâu, mình mạnh mà.
+2506	Ai ở đây cũng bị thương...
+2507	Giá có thứ gì làm hết đau.
+2508	Cháu không muốn ai phải đau, nhưng cháu làm được gì?
+2509	Giá cháu làm được gì đó để mọi người khỏe lại.
+2510	Sao người ta làm đau nhau? Sao không dừng lại? Sao?
+2511	Tệ rồi! Mình phải đi khám bác sĩ hết!
+2512	Mình phải vào bệnh viện hết!
+2513	Sao người xấu làm đau mình? Mình đâu có làm phiền ai!
+2514	Mình sẽ không chịu thua bệnh, mình sẽ mạnh mẽ!
+2515	Ở trường có lần ai cũng ốm cùng lúc!
+2516	Ai ở đây cũng ốm...
+2517	Ai cũng xanh xao quá...
+2518	Sao ai cũng ốm? Mình làm gì được không?
+2519	Có phải ai cũng bị cúm không?
+2520	Bệnh này nặng lắm, mình cần giúp đỡ!
+2521	Mình thật sự cần bác sĩ đến khám!
+2522	Mình cần thuốc viên hay gì đó, nhưng lấy ở đâu?
+2523	Cháu không muốn ai chết! Cháu không muốn!
+2524	Có vẻ thỏa thuận tôi làm ở gara sẽ giúp những người này.
+2525	Thỏa thuận tôi làm ở gara cũng có lợi cho những người này.
+2526	^CharacterName^ giúp mấy người gặp khó khăn. Có khi họ sẽ thành bạn của mình?
+2527	Nếu mình giúp nhau như đêm qua, bọn lính sẽ không thắng được!
+2528	Tôi mừng vì ^CharacterName^ đã giúp những người ở gara.
+2529	Thật tốt khi giúp nhau chút ít, như ^CharacterName^ với mấy người ở gara.
+2530	Tôi không ngừng nghĩ về chuyện xảy ra ở gara...
+2531	Những người ở gara sẽ xoay xở thôi... đúng không?
+2532	Giá tôi không phải trộm ở gara...
+2533	Mấy người ở gara... sau chiến tranh tôi sẽ đền bù cho họ... bằng cách nào đó...
+2534	^CharacterName^ mang về đồ tốt. Không biết {mr|chú ấy}{fr|cô ấy} lấy đâu ra?
+2535	^CharacterName^ không nói nhiều về đêm qua, nhưng {mr|chú ấy}{fr|cô ấy} mang về ít đồ hay.
+2536	^CharacterName^ lấy nhiều của mấy người ở gara...
+2537	^CharacterName^ vét sạch gara... chỉ để lại cho họ gần như không có gì...
+2538	Thật đáng tiếc chuyện ^CharacterName^ làm ở gara... nhưng chúng ta làm được gì?...
+2539	Tiếc là ^CharacterName^ đã ăn trộm của chủ gara... nhưng chúng ta cần những thứ đó!
+2540	Người đói đó chắc giờ sẽ ổn. Ít nhất vài ngày.
+2541	Tôi mừng vì đã chia đồ ăn cho người đói đó.
+2542	Chia đồ ăn cho ông ấy là điều tối thiểu tôi làm được.
+2543	^CharacterName^ nói mình phải tử tế với người khác.
+2544	^CharacterName^ nói mình không giúp được tất cả, nhưng ít nhất phải cố.
+2545	Cha xứ nói mỗi việc tốt đưa mình đến gần thiên đường hơn.
+2546	Tôi ngưỡng mộ việc ^CharacterName^ làm ở khu nhà chiếm dụng.
+2547	Tôi ngưỡng mộ lòng trắc ẩn của ^CharacterName^ với người đói đó.
+2548	^CharacterName^ làm đúng. Chúng ta cần giúp người khác.
+2549	Người vô gia cư đó... Tôi làm được gì? Ai cũng đói...
+2550	Gã đói lả đó... Giá chúng ta đủ để chia...
+2551	Người đói tôi gặp... Tôi không quên được...
+2552	Tôi không quên được người vô gia cư đó... không biết ông ấy có sống không...
+2553	Có người đói xin ^CharacterName^ đồ ăn, nhưng mình cũng đói.
+2554	Trong thành phố đâu chỉ mình đói...
+2555	Giá mình có nhiều đồ ăn hơn...
+2556	Người ^CharacterName^ gặp... Rồi ông ấy sẽ ra sao...?
+2557	Tôi sợ người đói ^CharacterName^ gặp không qua nổi mùa đông...
+2558	^CharacterName^ gặp gã vô gia cư đó... mà bỏ mặc ông ta chết sao...?
+2559	Người đói ^CharacterName^ gặp... nhưng chúng ta cũng đói...
+2560	Tôi không biết bằng cách nào, nhưng tôi đã làm được. Tôi đã giúp một người ở nhà chứa đó.
+2561	Nhà chứa vẫn còn đó, nhưng ít ra tôi cứu được một người.
+2562	^CharacterName^ cứu mấy người phụ nữ bị bắt cóc! {mr|Chú ấy}{fr|Cô ấy} là anh hùng!
+2563	^CharacterName^ dũng cảm lắm!
+2564	Nếu cháu bị bắt cóc, ^CharacterName^ sẽ cứu cháu.
+2565	Không biết ^CharacterName^ dũng cảm đến điên hay chỉ điên.
+2566	Thành phố này không thuộc về bọn băng đảng!
+2567	Chuyện xảy ra ở nhà chứa... tôi thấy nể.
+2568	Không biết tôi lấy đâu ra can đảm đó.
+2569	Người tôi giúp trông tệ lắm, nhưng giờ chắc khá hơn.
+2570	Không ai dũng cảm bằng ^CharacterName^!
+2571	Chống lại kẻ ác và cứu người gặp nạn là việc ^CharacterName^ làm!
+2572	^CharacterName^ đứng lên chống bọn tội phạm. Đáng ngưỡng mộ.
+2573	Lũ tâm thần chết tiệt. May là ^CharacterName^ đã thả được người đó.
+2574	Tôi đã chắc là chúng sẽ không bao giờ hại ai nữa.
+2575	Giết hai tên lính đó, tôi đã cứu nhiều mạng.
+2576	Bọn bắn tỉa giết nhiều người, nhưng chúng không giết được ^CharacterName^!
+2577	Giờ bọn bắn tỉa sẽ sợ không dám đến công trường đó.
+2578	Bọn bắn tỉa đó đáng bị vậy.
+2579	Đường phố an toàn hơn chút khi hai tên bắn tỉa đã đi.
+2580	Nhà cặp vợ chồng già đó cướp được khá nhiều.
+2581	Tôi mang về nhiều đồ từ nhà cặp vợ chồng già đó.
+2582	Tôi cứ nghĩ về ông già và vợ ông.
+2583	Tôi chẳng để lại bao nhiêu cho những người già ấy...
+2584	Bà cụ đó trông không khỏe. Bà có ổn không?
+2585	Giờ những người đó sẽ ra sao...?
+2586	Ông già và vợ ông... Tôi không ngừng nghĩ về chuyện xảy ra ở đó...
+2587	Cướp cặp vợ chồng già là giọt nước tràn ly... Tôi không làm được nữa.
+2588	Nếu bà ấy chết... Chồng bà sẽ không sống nổi...
+2589	Giờ chúng ta đều là bọn cướp tàn nhẫn... Chẳng ích gì giả vờ không phải...
+2590	^CharacterName^ mang về đồ tốt từ căn nhà vừa rồi.
+2591	Không biết mấy ông bà già lấy đâu ra nhiều đồ tốt thế.
+2592	Ông bà già tốt bụng đã rộng rãi với ^CharacterName^.
+2593	Thật tốt khi người ta chia sẻ cho mình.
+2594	Giờ chúng ta cướp cả người hưu trí sao...?
+2595	Những người ^CharacterName^ đã cướp...
+2596	^CharacterName^ lấy nhiều của cặp vợ chồng già này...
+2597	Giờ người già còn khổ hơn.
+2598	^CharacterName^ trông buồn, dù {mr|chú ấy}{fr|cô ấy} mang về nhiều đồ.
+2599	Cháu nghĩ ^CharacterName^ không nói hết sự thật với cháu...
+2600	^CharcterName^ sẽ không nói dối cháu, đúng không? {mr|Chú ấy}{fr|Cô ấy} không làm vậy đâu.
+2601	^CharacterName^ cướp một cặp vợ chồng già... Chúng ta thành ra thế nào rồi?
+2602	Cặp vợ chồng già đó... Họ sống sao đây...?
+2603	Chúng ta cướp sạch người ta. Chiến tranh đã lấy đi phẩm giá của chúng ta.
+2604	Giờ chúng ta đều là bọn cướp. Tôi chán ngấy rồi.
+2605	Cặp vợ chồng già tôi gặp... thật đáng kinh ngạc là họ chịu đựng được.
+2606	Cặp vợ chồng già tôi gặp... mong họ xoay xở được.
+2607	^CharacterName^ lại ghé thăm mấy ông bà già thân thiện. Họ vẫn khỏe!
+2608	Thật kinh ngạc là cặp vợ chồng già này vẫn tự cầm cự trong nhà.
+2609	Người già chết, và thời buổi này đặc biệt khắc nghiệt với họ.
+2610	Ông già và vợ ông... Có phải lỗi của tôi không?
+2611	Những ông bà già này... Thật đáng thương...
+2612	Người ta chết suốt... người già chỉ là những người đi trước.
+2613	Những người hưu trí đó đâu phải chết nếu thời bình...
+2614	^CharacterName^ nói mấy ông bà già tốt bụng đã chia đồ cho mình giờ ở trên thiên đường.
+2615	Mấy ông bà già sẽ không chia đồ cho mình nữa... họ mất rồi.
+2616	^CharacterName^ trông buồn. Cháu nghĩ {mr|chú ấy}{fr|cô ấy} quý mấy ông bà già đó.
+2617	Những người chết ^CharacterName^ đã thấy... Họ đã gặp chuyện gì?
+2618	Những ông bà già có căn nhà đẹp như thế, mà giờ họ chết...
+2619	Cặp vợ chồng già ^CharacterName^ đã thấy... Có phải chúng ta là nguyên nhân khiến họ chết?
+2620	Những ông bà già này... phí một mạng người...
+2621	Cô gái đó sợ lắm...
+2622	Bọn lính không thể muốn làm gì thì làm!
+2623	Sao tôi lại đến cái cửa hàng chết tiệt đó!
+2624	Có ai giúp cô gái đó được không?
+2625	Cô gái tội nghiệp... Chắc cô ấy sợ lắm...
+2626	Lũ cặn bã quân đội... Chết hết đi và thối rữa.
+2627	Chuyện xảy ra trong cửa hàng đó... Giá tôi đừng đến đó...
+2628	Lẽ ra phải có người giúp... Không ai quan tâm nữa...
+2629	Có chuyện ^CharacterName^ thấy làm {mr|chú ấy}{fr|cô ấy} buồn, nhưng cháu không biết là gì.
+2630	Không biết điều gì làm ^CharacterName^ buồn thế.
+2631	Cháu không biết sao ^CharacterName^ không chịu nói {mr|chú ấy}{fr|cô ấy} đã thấy gì...
+2632	Cô gái ^CharacterName^ kể... Tội nghiệp...
+2633	Quân đội ngày càng đồi bại.
+2634	Có lẽ ^CharacterName^ không nên đến đó?
+2635	Liệu ^CharacterName^ có giúp được cô ấy bằng cách nào không?
+2636	Chắc tối qua có chuyện rất tệ. ^CharacterName^ xanh xao lắm.
+2637	Cháu nghe nói ^CharacterName^ thấy một tên lính làm đau người ta.
+2638	Bọn lính xấu xa, làm đau người ta! Cháu mong họ chết hết!
+2639	Đêm nào tôi cũng nghe có người bị hại trong thành phố chết tiệt này...
+2640	Quân đội ở đây để hành hạ chúng ta...
+2641	^CharacterName^... Sao cậu lại đến cửa hàng đó...
+2642	^CharacterName^... Cậu không làm gì được sao...?
+2643	Cô gái đó giờ chắc an toàn. Nhẹ cả người.
+2644	Lũ côn đồ quân đội này không bắt nạt chúng ta được!
+2645	May là tôi đến đúng lúc để chặn tên lính đó.
+2646	Cứu một mạng người... cảm giác thật tốt.
+2647	^CharacterName^ là anh hùng!
+2648	Có ^CharacterName^ ở đây thì bọn lính không làm hại ai được!
+2649	Bọn lính thấy ^CharacterName^ thì nên chạy đi!
+2650	^CharacterName^ có dũng khí.
+2651	Không tin được ^CharacterName^ dám chống lại quân đội.
+2652	Tôi mừng vì ^CharacterName^ đã đến cửa hàng đó.
+2653	Cô gái đó nên biết ơn ^CharacterName^.
+2654	Không biết người bị thương đó ra sao...
+2655	Lẽ ra tôi phải giúp người bị thương đó...
+2656	Tội nghiệp... mà tôi bỏ ông ta ở đó...
+2657	Tôi bỏ mặc ông ta chết... Con trai ông ta sẽ ra sao...?
+2658	Không có tôi giúp, chắc ông ta không qua khỏi...
+2659	Lẽ ra tôi phải làm gì đó...
+2660	^CharacterName^ kể {mr|chú ấy}{fr|cô ấy} thấy một người bị bắn tỉa bắn.
+2661	Cháu không muốn {mr|chú ấy}{fr|cô ấy} liều đến đó lần nữa.
+2662	Ngã tư Bắn tỉa nguy hiểm lắm.
+2663	Câu chuyện ^CharacterName^ kể chỉ càng xác nhận bọn bắn tỉa nguy hiểm thế nào.
+2664	^CharacterName^ lẽ ra nên làm gì đó giúp người đó...
+2665	Nếu là tôi ở đó thay ^CharacterName^, tôi có giúp không?
+2666	Cháu không muốn ^CharacterName^ bị bắn tỉa bắn!
+2667	^CharacterName^ đừng đến chỗ nguy hiểm đó nữa!
+2668	Mình cứ ở đây thôi, đừng liều.
+2669	Bọn bắn tỉa sẽ hạ chúng ta từng người một. Chỉ là vấn đề thời gian.
+2670	Rất có thể tất cả chúng ta sẽ như người đó.
+2671	Nếu người đó chết, đứa con của ông ta chắc cũng không sống nổi.
+2672	Tôi nhẹ người vì người đó đã đến được chỗ con mình.
+2673	Tôi mừng vì giúp được người bị thương đó.
+2674	Chúng ta phải giúp nhau mỗi khi có thể.
+2675	^CharacterName^ cứu một người bị bắn tỉa bắn.
+2676	Người đó may là có ^CharacterName^ ở đó.
+2677	Cháu ghét bọn bắn tỉa! Cháu mừng vì ^CharacterName^ cứu được người đó.
+2678	Chuyện xảy ra ở Ngã tư Bắn tỉa có thể còn tệ hơn nhiều.
+2679	^CharacterName^ làm đúng.
+2680	Tôi nhẹ người khi nghe ^CharacterName^ đã giúp người đó.
+2681	Tội nghiệp... Tên bắn tỉa chắc đã kết liễu rồi.
+2682	Tội nghiệp... Không ai nên chết chảy máu một mình giữa phố.
+2683	Tôi cũng có thể thành ra như người tội nghiệp đó...
+2684	Đến chỗ đó nguy hiểm lắm!
+2685	Cháu sợ lần sau ^CharacterName^ không về nữa...
+2686	Lỡ lính bắn tỉa giết ^CharacterName^ thì sao? Rồi sao?
+2687	Thêm một nạn nhân của Ngã tư Bắn tỉa...
+2688	Đạn bắn tỉa còn lấy thêm bao nhiêu mạng nữa?
+2689	Giết chóc có bao giờ dừng?
+2690	Tôi thương các bệnh nhân, nhưng tôi không có lựa chọn.
+2691	Giờ bệnh viện sẽ khó khăn lắm.
+2692	Không có thuốc và băng gạc, những người đó có thể không sống nổi...
+2693	Tôi thấy tệ vì ăn trộm của bệnh viện, bệnh nhân sẽ ra sao?
+2694	Bác sĩ đó đã làm rất nhiều cho bệnh viện... Mà tôi phá hết...
+2695	Tôi đã làm gì thế này... Bệnh nhân ở bệnh viện có thể chết vì tôi...
+2696	^CharacterName^ mang về ít đồ tiếp tế từ bệnh viện.
+2697	Bệnh viện vẫn giúp những người như mình. Tốt quá!
+2698	Giờ chúng ta ăn trộm của người ốm và người bị thương.
+2699	Tôi không nghĩ cướp bệnh viện là cần thiết.
+2700	^CharacterName^ buồn vì {mr|chú ấy}{fr|cô ấy} thấy nhiều người bị thương.
+2701	Bệnh viện là nơi u ám.
+2702	Cướp bệnh viện... Không còn cách nào khác sao?
+2703	Sao ^CharacterName^ lấy đồ tiếp tế của bệnh viện được chứ!
+2704	Sao ^CharacterName^ buồn? Ở bệnh viện có chuyện gì ạ?
+2705	Điều gì làm ^CharacterName^ phiền lòng?
+2706	Ăn trộm của bệnh viện... còn gì tệ hơn thế?!
+2707	^CharacterName^ lấy thuốc và băng gạc... Thật hèn hạ...
+2708	Nhờ tôi giúp, bác sĩ sẽ cứu thêm nhiều mạng.
+2709	Bệnh viện không thể đầu hàng! Bệnh nhân có thể trông cậy vào chúng ta.
+2710	Mong những thứ tôi trao đổi với bác sĩ sẽ cứu được mạng ai đó.
+2711	Chúng ta không có nhiều, nhưng vẫn giúp được người khác.
+2712	Tôi đã giúp bệnh viện... nhưng giờ chúng ta làm gì?
+2713	Chúng ta đã cho đi vật tư y tế, mà chúng khó kiếm lắm...
+2714	^CharacterName^ chia một ít đồ của mình cho bác sĩ ở bệnh viện.
+2715	Giờ bác sĩ đó giúp được nhiều người hơn.
+2716	Tôi cũng sẽ làm như ^CharacterName^.
+2717	Nếu cùng chung sức, bệnh viện sẽ không sụp đổ!
+2718	Cháu không biết cho đồ đi có phải ý hay không...
+2719	Lỡ có ai ốm hay bị thương thì sao?
+2720	Quyên góp đồ tiếp tế là ý hay, trừ khi chính chúng ta cần.
+2721	Giúp là tốt, nhưng có lẽ không phải lúc.
+2722	Bệnh viện không đủ đồ sao? Họ cũng cần đồ của mình ạ?
+2723	Mình phải nhận giúp đỡ từ bệnh viện chứ, sao lại ngược lại ạ?
+2724	Ừ, bệnh nhân sẽ sống... còn chúng ta thì không.
+2725	Người trong bệnh viện có cơ hội hơn chúng ta...
+2726	^CharacterName^ ốm rất nặng... Nên đào mộ khi còn chút sức.
+2727	Chúng ta khốn khổ đến mức không giúp nổi ^CharacterName^ chống bệnh.
+2728	Tôi thấy bất lực... ^CharacterName^ ốm nặng mà tôi chỉ biết ngồi nhìn... Kịp có thuốc không?
+2729	Tôi sợ ^CharacterName^ không qua khỏi, mà tôi chẳng làm gì được.
+2730	^CharacterName^ ốm nặng. Tôi thật sự lo chúng ta sẽ lây bệnh.
+2731	Mong chúng ta không lây bệnh từ ^CharacterName^. Chuyện {mr|anh ấy}{fr|cô ấy} ốm đã đủ tệ rồi.
+2732	^CharacterName^ ốm nặng. Phải tìm thuốc cho {mr|anh ấy}{fr|cô ấy} bằng mọi giá. Không mua được thì có thể trộm.
+2733	^CharacterName^ sẽ không qua khỏi nếu không kiếm được thuốc.
+2734	^CharacterName^ ngày càng tệ và có lẽ không qua khỏi. Tiếc là chúng ta không giúp được {mr|anh ấy}{fr|cô ấy}.
+2735	Nếu không có thêm thuốc, cuối cùng chúng ta đều gục vì bệnh như ^CharacterName^.
+2736	Tôi lo cho ^CharacterName^, {mr|anh ấy}{fr|cô ấy} đang tệ dần. Phải sớm tìm thuốc.
+2737	Phải chăm sóc nhau! Phải nhanh chóng kiếm thuốc cho ^CharacterName^.
+2738	Cháu không muốn ^CharacterName^ chết. Cháu mong giúp {mr|chú ấy}{fr|cô ấy} khỏe lại, nhưng cháu làm được gì?
+2739	Sao không ai giúp ^CharacterName^? {mr|Chú ấy}{fr|Cô ấy} cần đi khám bác sĩ!
+2740	^CharacterName^ ho suốt, {mr|chú ấy}{fr|cô ấy} sẽ làm mình ốm hết!
+2741	Nếu ^CharacterName^ chết, cháu sẽ không bao giờ tha thứ cho {mr|chú ấy}{fr|cô ấy}!
+2742	^CharacterName^ ốm. Cháu nghĩ {mr|chú ấy}{fr|cô ấy} nên đi khám bác sĩ.
+2743	^CharacterName^ ho nhiều, mong {mr|chú ấy}{fr|cô ấy} sớm khỏe.
+2744	^CharacterName^ ốm rất rất nặng. Tôi sợ. Sao bác sĩ không đến?!
+2745	Tôi lo cho bé ^CharacterName^ lắm, {mr|thằng bé}{fr|con bé} ốm nặng, mà trong hoàn cảnh này... Không, tốt nhất đừng nghĩ đến.
+2746	Chết tiệt... Tôi ốm quá... Tôi cần thuốc, cần ngay... Thằng khốn nào đã lấy liều cuối?!
+2747	Tôi cần thuốc... Tôi không cần biết các người kiếm bằng cách nào, cứ kiếm đi!
+2748	Bệnh ngày càng nặng... Tôi cần thuốc gấp... Tôi cần hơn bất kỳ ai...
+2749	Phải kiếm thuốc cho tôi... mua, trộm, tôi không quan tâm miễn là có...
+2750	Tôi ốm quá... Cơn sốt này đang giết tôi... Tôi rất cần thuốc...
+2751	Tôi chết vì căn bệnh này... các người không thể để tôi chết... không thể...
+2752	Tôi ốm rất nặng... Tôi nghĩ đây là hết... Không có thuốc tôi sẽ chết...
+2753	Tôi ốm quá... kiếm cho tôi ít thuốc được không? Các người cần tôi...
+2754	Tôi thấy tệ kinh khủng... Nếu không tìm được thuốc, tôi sẽ chết...
+2755	Phải kiếm thuốc cho tôi không thì tôi chết... Đừng để chuyện đó xảy ra... làm ơn...
+2756	Tôi thấy ốm quá... Không biết mình có qua nổi không...
+2757	Có lẽ là hết rồi, các bạn... Hứa với tôi là các bạn sẽ cố gắng dù tôi không qua khỏi...
+2758	Cháu ốm lắm... Cháu sắp chết ạ? Cháu không muốn chết...
+2759	Cháu có đỡ hơn chút nào không ạ? Cháu nghĩ là chưa...
+2760	Cháu không muốn ốm nữa, sao cháu không khỏi?! Sao cháu không được đi khám bác sĩ?!
+2761	Cháu không muốn nằm giường, cháu không muốn ốm! Sao không ai giúp cháu?!
+2762	Cháu thấy không khỏe... Cháu nghĩ cháu nên đi khám bác sĩ...
+2763	Cháu ốm. Cháu không muốn ốm. Cho cháu ít thuốc viên hay gì đó được không ạ?
+2764	Sao người khác có nhiều thế còn chúng ta có ít?! Họ nên chia sẻ, không thì liệu hồn!
+2765	Lũ khốn đó không chịu chia cho chúng ta, tôi phải làm vậy.
+2766	Chúng ta cần đồ tiếp tế, tôi không thể để chúng cản đường.
+2767	Tôi sẽ sống sót bằng mọi giá.
+2768	May là tôi không bị bắt. Tôi vẫn nghe tim đập thình thịch.
+2769	Suýt nữa. May là tôi làm được.
+2770	Chúng ta không khác gì người khác. Chúng ta làm điều phải làm để sống.
+2771	Phải trộm để sống. Là chiến tranh.
+2772	Tôi biết là sai, nhưng không thế thì sống sao?
+2773	Kiếm đồ bằng cách nào có quan trọng không? Quan trọng là còn sống.
+2774	Số phận những người đó không phải chuyện của chúng ta. Quan trọng là có đồ tiếp tế.
+2775	Tôi lo cho người của mình, số phận họ không phải chuyện của tôi.
+2776	Tôi kinh hãi khi thấy mình phải làm gì để chúng ta sống sót.
+2777	Chúng ta cướp người ta thế này được bao lâu trước khi bị bắt?
+2778	Việc tôi phải làm thật kinh khủng, nhưng hoặc là họ hoặc là chúng ta.
+2779	Tôi đã làm điều phải làm. Phải lo cho người của mình.
+2780	Chúng ta làm hại người khác để có thứ cần... Có hơn gì bọn cướp không?
+2781	Cướp người ta có thật là cách duy nhất để sống không? Nếu vậy thì chúng ta mất linh hồn rồi.
+2782	Tôi thấy tệ vì đã cướp những người đó...
+2783	Không tin được tôi đã cướp những người đó... Tôi nghĩ gì thế?
+2784	Hai cha con tội nghiệp... ^CharacterName^ không nên trộm của họ.
+2785	Sao ^CharacterName^ làm vậy? Không còn cách nào khác sao?
+2786	Tôi không trách ^CharacterName^ vì trộm ở gara. Tôi cũng sẽ làm vậy.
+2787	Họ có bù lại được những thứ ^CharacterName^ lấy không?
+2788	Mấy người ở gara cũng khổ như chúng ta, tôi thấy tệ vì ^CharacterName^ đã trộm của họ.
+2789	Cháu nghĩ ^CharacterName^ đã cướp ai đó, nhưng {mr|chú ấy}{fr|cô ấy} không chịu nói.
+2790	Chẳng ai nói gì với cháu! Cháu hỏi ^CharacterName^ chỗ {mr|chú ấy}{fr|cô ấy} lấy mấy thứ này ở đâu, mà {mr|chú ấy}{fr|cô ấy} không nói.
+2791	^CharacterName^ vào gara, rồi mang về mấy thứ hay hay!
+2792	Vụ trao đổi tốt, chúng ta giúp nhau.
+2793	Tôi mừng vì trao đổi được với mấy người đó. Có thể làm lại.
+2794	Tôi mừng vì giúp được cha của người đó.
+2795	Thật tốt khi biết dù khó khăn vẫn giúp được người khác!
+2796	Tôi thấy ông bà già chết rồi. Chiến tranh mẹ kiếp.
+2797	Chiến tranh mẹ kiếp! Nó ép ta làm những chuyện ghê tởm thế này.
+2798	Người già lúc nào cũng chết, chiến tranh cũng không khác.
+2799	Hai ông bà đó vốn không qua nổi, dù chúng ta không ghé thăm.
+2800	Cả hai ông bà đều chết. Dẫu sao thà họ chứ không phải chúng ta.
+2801	Hai ông bà không tự vệ được. Phải chắc chúng ta không như vậy, nếu không muốn kết cục như họ.
+2802	Cặp vợ chồng già chết rồi. Nếu chúng ta không lấy đồ của họ, người khác cũng lấy.
+2803	Hai ông bà vẫn chết thôi, đồ tiếp tế của họ có ích cho chúng ta hơn.
+2804	Cặp vợ chồng già tội nghiệp không qua khỏi và tất cả là lỗi của chúng ta.
+2805	Không có chúng ta, hai ông bà có thể vẫn còn sống. Tôi xấu hổ, nhưng không có đồ ăn và thuốc thì sống sao?
+2806	Họ chết, chúng ta sống. Còn hơn ngược lại. Dù sao họ cũng già rồi.
+2807	Chúng ta lo cho người của mình. Gia đình hai ông bà lẽ ra phải chăm họ tốt hơn.
+2808	Tôi thấy thi thể hai ông bà. Hóa ra gia đình họ chẳng quan tâm.
+2809	Mong chúng ta không có kết cục như hai ông bà. Có ai nhớ đến chúng ta không?
+2810	Lẽ ra chúng ta có thể thương xót hai ông bà. Chúng ta đã không, và giờ họ chết.
+2811	Chúng ta gây ra cái chết của hai ông bà. Nhưng nếu phải chọn giữa mạng người lạ và mạng bạn mình...
+2812	Hành động của chúng ta dẫn đến cái chết của hai ông bà. Chúng ta biện minh thế nào?
+2813	Chúng ta là lý do hai ông bà chết. Chúng ta đáng khinh.
+2814	Chúng ta chịu trách nhiệm cho cái chết của cặp vợ chồng già. Chúng ta thật ghê tởm.
+2815	Hèn đến mức nào nữa... Hai ông bà chết là vì chúng ta.
+2816	Hai ông bà chết rồi. Lỗi ở chúng ta.
+2817	Cướp người già không tự vệ được... Chúng ta không xứng được sống.
+2818	Nếu không có chúng ta, cặp vợ chồng già vẫn còn sống.
+2819	Tôi thấy tệ vì hai ông bà. Họ chết vì chúng ta.
+2820	Nếu chúng ta không ghé thăm hai ông bà, giờ người nằm chết có thể là chúng ta.
+2821	Hai ông bà không tự vệ nổi trước chúng ta. Chúng ta tự vệ nổi trước bọn hôi của khác không?
+2822	Nên đoàn kết vượt qua bão tố hơn là làm hại và trộm của người khác.
+2823	Nếu cuộc vây hãm kéo dài, ai cũng chết vì đói và bệnh, hoặc chúng ta giết nhau vì mẩu thừa còn lại.
+2824	Dù sao họ cũng già rồi, chúng ta cần những thứ này hơn họ.
+2825	Tôi không có lựa chọn, tôi phải lấy đồ của họ. Không thì sống sao?
+2826	Họ già rồi, chắc cũng không sống lâu. Đồ của họ sẽ giúp chúng ta.
+2827	Tôi phải lấy những thứ ấy, gia đình họ nên chăm sóc họ. Chúng ta chỉ có nhau.
+2828	Tôi không muốn nói về cách tôi có những đồ tiếp tế này.
+2829	Đừng hỏi tôi lấy những thứ này bằng cách nào. Cứ mừng là chúng ta có.
+2830	Tôi biết là sai, nhưng phải lấy thứ chúng ta cần. Không thì chẳng có cơ hội.
+2831	Tôi không tự hào, nhưng tôi phải trộm của những người tội nghiệp đó. Chúng ta rất cần đồ tiếp tế.
+2832	Cặp vợ chồng già đó... tôi không nghĩ họ qua khỏi nếu thiếu số đồ tôi lấy.
+2833	Hai ông bà tội nghiệp... Tôi sẽ không làm nếu chúng ta không tuyệt vọng đến thế.
+2834	Hai ông bà có nhiều thứ, cả đồ ăn và thuốc, trong khi chúng ta có quá ít. Đừng trách tôi lấy một ít.
+2835	Hai ông bà có gia đình nuôi. Họ sẽ ổn.
+2836	Việc ^CharacterName^ làm rất tàn nhẫn. Mong hai ông bà ổn.
+2837	Hai ông bà tội nghiệp... Tôi không ngừng hình dung bố mẹ mình ở hoàn cảnh của họ...
+2838	Tôi không quan tâm ^CharacterName^ kiếm đồ ở đâu và bằng cách nào. Tôi mừng là {mr|anh ấy}{fr|cô ấy} không về tay không.
+2839	Tôi không nghĩ trộm của cặp vợ chồng già là cần thiết. Chắc có cách khác để có thứ chúng ta cần.
+2840	Mong hai ông bà có gia đình giúp đỡ. Chúng ta không nên trộm của họ nữa.
+2841	Cháu lo ^CharacterName^ nói dối cháu về chỗ {mr|chú ấy}{fr|cô ấy} lấy mấy thứ đó, nhưng sao {mr|chú ấy}{fr|cô ấy} phải nói dối?
+2842	^CharacterName^ nói có ông bà già cho {mr|chú ấy}{fr|cô ấy} ít đồ để giúp mình, nhưng cháu không tin {mr|chú ấy}{fr|cô ấy}.
+2843	^CharacterName^ đến thăm mấy người tốt, họ cho {mr|chú ấy}{fr|cô ấy} ít đồ. {mr|Chú ấy}{fr|Cô ấy} buồn vì {mr|chú ấy}{fr|cô ấy} không có gì để cảm ơn họ.
+2844	Chúng ta không có nhiều nhưng không thể làm ngơ trước đau khổ.
+2845	Tôi chia ít đồ ăn cho một người đói. Dù có quá ít, chúng ta vẫn phải giữ lấy nhân tính.
+2846	Tôi cho người đói lả đó đồ ăn. Dù sao cũng chẳng giúp ích được chúng ta.
+2847	Chúng ta có ít đồ ăn, nhưng tôi buộc phải chia cho người tội nghiệp đó.
+2848	^CharacterName^ chia đồ ăn của chúng ta cho một người đói lả. Dù sao chắc chúng ta cũng không qua nổi.
+2849	Không biết người đói đó có cơ hội hơn chúng ta không.
+2850	Tôi mừng vì ^CharacterName^ đã giúp người tội nghiệp đó.
+2851	Tội nghiệp ông ấy, tôi hiểu vì sao ^CharacterName^ không thể từ chối chia cho ông ấy ít đồ ăn.
+2852	Tôi biết đồ tiếp tế eo hẹp, nhưng ^CharacterName^ làm đúng khi chia đồ ăn cho người ở khu nhà chiếm dụng.
+2853	Ai trong thành phố cũng đói... Buồn quá...
+2854	Sao ^CharacterName^ lại cho đồ ăn của mình đi như vậy?! Ngốc quá!
+2855	^CharacterName^ tốt bụng, cho một người vô gia cư đói ít đồ ăn.
+2856	Người tội nghiệp, mong chúng ta không rơi vào cảnh như ông ấy.
+2857	Tôi không thể chia đồ ăn cho ông ấy. Chúng ta đã có quá ít, mà chắc cũng chẳng khác gì mấy.
+2858	Đồ ăn khó kiếm quá. Chúng ta không đủ để chia cho ai.
+2859	Tội nghiệp. Giá dư được ít đồ ăn thì tôi đã cho. Nhưng tôi phải nghĩ cho những người khác.
+2860	Nếu cuộc vây hãm kéo dài thêm, ai cũng sẽ bắt đầu chết đói.
+2861	Chết đói chắc khủng khiếp lắm, mong người ở khu nhà chiếm dụng xoay xở được.
+2862	Nếu ai xin cũng chia đồ ăn, chúng ta sẽ không qua nổi.
+2863	Chúng ta khốn khổ đến mức không giúp nổi người đói đó.
+2864	Người đói lả tội nghiệp. Chẳng bao lâu ngày càng nhiều người sẽ đói.
+2865	Mong người ở khu nhà chiếm dụng ổn. Hay mình mang cho ông ấy ít đồ ăn?
+2866	Người đói lả ở khu nhà chiếm dụng chỉ là một trong hàng trăm người mắc kẹt trong thành phố.
+2867	Phải đoàn kết giúp nhau, không thì có thể chung số phận với người ở khu nhà chiếm dụng.
+2868	Phải chắc chắn chúng ta không có kết cục như người tội nghiệp đó.
+2869	Cháu sợ những người đói không nhà. Họ có thể ăn thịt mình nếu mình không cẩn thận.
+2870	^CharacterName^ gặp một gã ăn mày bẩn thỉu, hắn rất thô lỗ với {mr|chú ấy}{fr|cô ấy} và định ăn trộm đồ ăn! Phải coi chừng.
+2871	^CharacterName^ gặp một người ăn mày đói, nhưng {mr|chú ấy}{fr|cô ấy} không giúp được ông ấy.
+2872	Lũ lính chết tiệt! Chúng tưởng muốn làm gì thì làm! Đồ tội phạm khốn kiếp!
+2873	Tôi thấy một tên lính hành hạ một cô gái... Nên tránh lũ lợn đó.
+2874	Chuyện xảy ra với cô gái đó thật khủng khiếp, nhưng tên lính sẽ hại tôi nặng hơn nếu tôi can thiệp.
+2875	Chuyện xảy ra với cô gái đó diễn ra mỗi ngày thời chiến. Nếu tôi cố giúp, tên lính sẽ giết tôi.
+2876	Tôi thương cô gái đó... nhưng tôi biết làm gì?
+2877	Tôi thấy một tên lính hành hạ một cô gái tội nghiệp. Tôi chỉ mừng đó không phải người tôi quen.
+2878	Tên lính đó tàn nhẫn với cô gái ấy quá... Mà tôi bất lực không ngăn được.
+2879	Con lợn đó lợi dụng một cô gái không tự vệ được mà tôi không ngăn được... Nếu can thiệp thì tất cả chúng ta gặp nguy.
+2880	Tôi không giúp được cô gái đó. Tôi không làm được gì. Tôi thấy mình bất lực quá.
+2881	Những gì tên lính làm với cô gái tội nghiệp đó... sao có người tàn nhẫn đến thế? Giá tôi đủ mạnh để cứu cô ấy...
+2882	^CharacterName^ không làm được gì để cứu cô gái đó.
+2883	Buồn quá khi ^CharacterName^ không cứu được cô gái đó.
+2884	Những gì tên lính làm với cô gái tội nghiệp đó... sao có người tàn nhẫn đến thế? Giá ^CharacterName^ đã giúp cô ấy...
+2885	Cô gái tội nghiệp... Tôi không ngừng nghĩ về chuyện xảy ra với cô ấy...
+2886	Tôi thương cô gái đó... nhưng tên lính sẽ làm ^CharacterName^ tệ hơn nhiều nếu {mr|anh ấy}{fr|cô ấy} can thiệp.
+2887	Cô gái tội nghiệp... Nên tránh lũ cặn bã quân đội tàn nhẫn đó.
+2888	^CharacterName^ không thể liều giúp cô gái đó, anh ấy sẽ đặt tất cả chúng ta vào nguy hiểm.
+2889	Bạn bè hay gia đình cô gái đó đâu? ^CharacterName^ không có nghĩa vụ cứu cô ấy.
+2890	Tên lính đó tàn nhẫn với cô gái ấy quá... Mà ^CharacterName^ bất lực không ngăn được hắn.
+2891	Quân đội tàn nhẫn quá... Phải chắc chúng ta tự vệ được trước chúng.
+2892	Cô gái tội nghiệp không tự vệ được, bị con quái vật đó hành hạ... nhưng nếu ^CharacterName^ cố ngăn hắn, tất cả chúng ta có thể gặp nguy.
+2893	Cô gái bất hạnh đó... Tôi không tưởng tượng nổi chuyện đó xảy ra với chị em, con gái hay bạn tôi.
+2894	Tôi hiểu vì sao ^CharacterName^ không giúp cô gái đó. Quá nguy hiểm.
+2895	^CharacterName^ làm gì được trước tên lính đó? Chúng là sát thủ được huấn luyện!
+2896	Tối qua ^CharacterName^ thấy chuyện kinh khủng, nhưng cháu không biết là gì.
+2897	Cháu giận ^CharacterName^! Có chuyện không ổn mà {mr|chú ấy}{fr|cô ấy} không chịu nói...
+2898	Cháu biết tối qua có chuyện rất tệ, nhưng ^CharacterName^ không chịu nói là gì.
+2899	Lũ khốn tưởng muốn làm gì thì làm! May là tôi ở đó để cứu cô gái.
+2900	Cứu cô gái đó liều lắm, tôi có thể bị giết. Tôi nghĩ gì thế?
+2901	Tay tôi vẫn run. Tên lính có thể giết tôi, nhưng tôi đã làm đúng.
+2902	Tôi đã giúp cô gái đó. Cô ấy nên biết ơn vì tôi ở đó.
+2903	Tôi đã cứu cô gái đó. Không biết có ai làm vậy cho một người trong chúng ta không?
+2904	Mong việc giúp cô gái đó không đặt chúng ta vào nguy hiểm. Chúng ta đã đủ rắc rối.
+2905	Tôi không muốn tưởng tượng chuyện gì xảy ra nếu tôi không cứu cô gái đó.
+2906	Tôi mừng vì đã cứu cô gái đó. Sao quân đội làm được những chuyện như vậy?
+2907	Tôi đã cứu cô gái đó... nhưng mỗi đêm của cuộc chiến này còn bao nhiêu người kém may mắn hơn?
+2908	Tôi rất mừng vì cứu được cô gái đó. Mong cô bé tội nghiệp ổn.
+2909	^CharacterName^ cứu được cô gái đó... nhưng mỗi đêm của cuộc chiến này còn bao nhiêu người kém may mắn hơn?
+2910	^CharacterName^ đã cứu cô gái đó... lần này.
+2911	Tôi rất mừng vì ^CharacterName^ cứu được cô gái đó. Mong cô bé tội nghiệp ổn.
+2912	Tôi không muốn nghĩ chuyện gì xảy ra nếu ^CharacterName^ không ở đó cứu cô gái.
+2913	Có một bà tội nghiệp gặp nạn và ^CharacterName^ đến giúp, nhưng nguy hiểm lắm. {mr|Chú ấy}{fr|Cô ấy} có thể chết!
+2914	Một tên lính xấu định làm đau một cô gái tội nghiệp, nhưng ^CharacterName^ cứu được cô ấy! Cháu mong tên lính đó chết rồi!
+2915	^CharacterName^ nói {mr|chú ấy}{fr|cô ấy} cứu một cô gái, nhưng {mr|chú ấy}{fr|cô ấy} không kể hết cho cháu dù cháu hỏi.
+2916	Bọn bắn tỉa là cặn bã tệ nhất! Thằng khốn suýt hạ tôi như hạ người đó!
+2917	Suýt nữa. Tôi có thể thành ra như người đó.
+2918	Suýt nữa... Người nằm đó chảy máu có thể là tôi, thay vì ông ấy.
+2919	Chuyện xảy ra với người đó chứng minh tiếng xấu của chỗ ấy. Nên tránh.
+2920	Tôi không giúp ông ấy... Tôi sợ quá.
+2921	Phải cẩn thận, không thì chúng ta như người đó.
+2922	Tôi cứ nghĩ về người đó... Người nằm đó chảy máu có thể là một trong chúng ta.
+2923	Người đó và đứa con nhỏ... Sao không ai giúp họ?
+2924	Tôi có giúp được ông ấy không? Hay ông ấy cũng chảy máu đến chết?
+2925	Ông ấy cần tôi giúp mà tôi sợ, không biết làm gì...
+2926	Tiếc là ^CharacterName^ không giúp người đó, nhưng {mr|anh ấy}{fr|cô ấy} có thể bị giết.
+2927	^CharacterName^ bỏ mặc người đó chết. {mr|Anh ấy}{fr|Cô ấy} còn làm được gì không?
+2928	Người tội nghiệp... Sao ^CharacterName^ không giúp ông ấy?
+2929	Sao ^CharacterName^ phớt lờ tiếng kêu cứu của người đó?
+2930	Buồn là ^CharacterName^ không giúp người đó. Nhưng tôi mừng vì {mr|anh ấy}{fr|cô ấy} sống sót.
+2931	^CharacterName^ có thể bị tên bắn tỉa giết nếu {mr|anh ấy}{fr|cô ấy} cố giúp người đó.
+2932	Sao chúng săn chúng ta như thú vật? Chúng ta đã làm gì chúng?
+2933	Chuyện xảy ra với người đó có thể xảy ra với bất kỳ ai. Phải cẩn thận.
+2934	Một ngày nào đó chúng ta có thể như người đó, bị bắn tỉa hạ. Và cũng chẳng ai giúp.
+2935	Giết chóc này không bao giờ dừng sao? Sao lũ giết người bắn dân thường như thế? Người tội nghiệp...
+2936	Tôi lo cho ^CharacterName^ lắm. Mừng là {mr|anh ấy}{fr|cô ấy} về còn sống.
+2937	^CharacterName^ có thể đã bị giết ở đó. Rồi chúng ta làm gì?
+2938	^CharacterName^ kể tôi nghe về tên bắn tỉa. Mừng là người ngoài kia không phải tôi.
+2939	Tôi hiểu vì sao ^CharacterName^ không giúp người đó. Quá nguy hiểm.
+2940	Bọn bắn tỉa ở khắp nơi... Cháu không muốn ^CharacterName^ ra ngoài nữa! Cháu muốn {mr|chú ấy}{fr|cô ấy} được an toàn!
+2941	Mong ai đó giết tên bắn tỉa đó! Sao hắn dám bắn ^CharacterName^?!
+2942	Một tên bắn tỉa định giết ^CharacterName^! Cháu không muốn {mr|chú ấy}{fr|cô ấy} quay lại đó nữa...
+2943	Mong tên bắn tỉa đó cháy dưới địa ngục! Sao hắn bắn dân thường mà nhìn nổi mặt mình trong gương?
+2944	Suýt lắm, quá suýt, nhưng tôi làm được, và người đó biết ơn.
+2945	Giúp ông ấy đáng lắm, ông ấy rất biết ơn.
+2946	Tôi giúp ông ấy nhưng không muốn nghĩ chuyện gì xảy ra nếu tôi cũng bị trúng đạn.
+2947	Không có tôi giúp ông ấy không qua khỏi, nhưng tôi cũng may sống sót.
+2948	Ông ấy không có ai khác giúp. Nếu không có tôi, giờ ông ấy đã chết.
+2949	Tôi giúp ông ấy, nhưng không biết ông ấy có sống qua ngày mai.
+2950	Tôi mừng vì giúp được ông ấy. Ai trong chúng ta cũng có thể ở hoàn cảnh đó.
+2951	Tôi giúp ông ấy, nhưng còn bao nhiêu đứa trẻ mất cha trước khi chiến tranh này kết thúc?
+2952	Tôi rất mừng vì giúp được người đó và con của ông ấy.
+2953	^CharacterName^ giúp người đó, nhưng chiến tranh này còn khiến bao nhiêu đứa trẻ mồ côi nữa?
+2954	Đứa con của ông ấy rồi sẽ ra sao? Giữa chiến tranh, nó còn hy vọng gì có tuổi thơ hạnh phúc?
+2955	Tôi rất mừng ^CharacterName^ đã giúp người đó và con ông ấy!
+2956	Tôi nhẹ lòng hơn khi biết ông ấy và con được an toàn.
+2957	^CharacterName^ cứu người đó, liều cả mạng của {mr|chú ấy}{fr|cô ấy}. Lỡ {mr|chú ấy}{fr|cô ấy} bị giết thì sao? Rồi sao?
+2958	Người đó may là có ^CharacterName^ đến cứu! ^CharacterName^ là nhất!
+2959	^CharacterName^ kể tối qua {mr|chú ấy}{fr|cô ấy} dũng cảm thế nào! {mr|Chú ấy}{fr|Cô ấy} cứu một người bị lính bắn tỉa bắn!
+2960	Thằng bắn tỉa chết tiệt kết liễu rồi bỏ xác người ta ngoài đường. Chúng nghĩ làm vậy tôi sợ chắc?
+2961	Thêm một xác ở Ngã tư Bắn tỉa. Không biết tên xạ thủ có khắc dấu lên súng không.
+2962	Tôi đã thấy đạn bắn tỉa làm gì với gã chúng ta gặp trước đó. Có thể là tôi.
+2963	Xác người đó nhắc tôi việc đi lục lọi quanh Ngã tư Bắn tỉa nguy hiểm thế nào.
+2964	Ngã tư Bắn tỉa nguy hiểm với người đi lục lọi, nhưng ông ấy chỉ đang về nhà...
+2965	Qua Ngã tư Bắn tỉa không dễ, nhưng làm được. Người chúng ta gặp chắc đã quá bất cẩn.
+2966	Thêm một người chết dưới tay lính bắn tỉa. Có lẽ nên tránh xa Ngã tư Bắn tỉa.
+2967	May là chúng ta không chọn trốn gần Ngã tư Bắn tỉa, chỗ đó còn nguy hiểm hơn đây. Tiếc là người chúng ta gặp không có lựa chọn ấy.
+2968	Tôi đã thấy quá nhiều người bị bắn tỉa hạ... Người đó không phải người đầu tiên để lại đứa con mồ côi.
+2969	Giá tôi làm gì đó giúp người ở Ngã tư Bắn tỉa... Gia đình ông ấy sẽ ra sao?
+2970	^CharacterName^ kể về người bị lính bắn tỉa giết... Tôi không muốn nghĩ đến.
+2971	Mong ^CharacterName^ không tự trách {mr|bản thân}{fr|bản thân} về cái chết của người ở Ngã tư Bắn tỉa...
+2972	Chúng ta có giúp được người ở Ngã tư Bắn tỉa không...? Mong con trai ông ấy ổn.
+2973	Người ở Ngã tư Bắn tỉa có ý chí sống mạnh quá... Tiếc là không đủ.
+2974	^CharacterName^ thấy một người bị lính bắn tỉa giết. Chỉ cần một xạ thủ ẩn gần chỗ mình là giết hết chúng ta.
+2975	Tên bắn tỉa đó đã lấy bao nhiêu mạng? Người tội nghiệp vào danh sách nạn nhân.
+2976	^CharacterName^ nói người ở Ngã tư Bắn tỉa chết rồi. Không chỉ chỗ đó mới bị bắn, phải cẩn thận hơn nữa.
+2977	^CharacterName^ nên tránh xa chỗ đáng nguyền rủa đó. {mr|Anh ấy}{fr|Cô ấy} không làm được gì để giúp người đó.
+2978	Đồ tiếp tế của chúng ta ít, nhưng chia cho bệnh viện tạo khác biệt lớn hơn.
+2979	Tôi trao đổi với bác sĩ ở bệnh viện. Không phải thương vụ tốt nhất, nhưng bệnh viện phục vụ cả cộng đồng.
+2980	Tôi quyên ít đồ cho bệnh viện. Tôi thấy họ đang cần.
+2981	Thấy bệnh nhân vật lộn ở bệnh viện, tôi không nhịn được mà đưa bác sĩ ít đồ. Mong cứu thêm được nhiều mạng.
+2982	Những thứ ^CharacterName^ quyên cho bệnh viện có thể cứu mạng bệnh nhân. Chỉ mong sau này chúng ta không cần đến.
+2983	Chúng ta thật sự không đủ sức cho đi, nhưng tốt là đã ngoại lệ với bệnh viện.
+2984	Chúng ta cùng chung số phận. Đó là bệnh viện của chúng ta, mạng sống bệnh nhân là mối lo của chúng ta.
+2985	^CharacterName^ quyết định trao đổi với bác sĩ. Lần này không chỉ vì lợi nhuận của chúng ta.
+2986	^CharacterName^ cho người ở bệnh viện ít đồ. Chưa biết có tạo khác biệt gì không.
+2987	Giờ bệnh nhân có cơ hội sống cao hơn. Còn chúng ta thì sao? Liệu chúng ta có sống tiếp...?
+2988	Tôi ngưỡng mộ ^CharacterName^ vì giúp những người ở bệnh viện.
+2989	Giúp người khác là vũ khí của chúng ta chống bạo lực và sự vô cảm. ^CharacterName^ làm gương tốt ở bệnh viện.
+2990	^CharacterName^ giúp mấy người ở bệnh viện, nhưng ai giúp mình bây giờ?
+2991	Sao ^CharacterName^ cho đồ của mình đi khi mình cần chúng? Cháu không hiểu!
+2992	^CharacterName^ cho bác sĩ ở bệnh viện ít đồ để ông ấy cứu thêm người ốm, người bị thương.
+2993	Tôi lấy ít đồ hữu ích từ bệnh viện... Họ xoay xở được mà không có chúng không?
+2994	Những bệnh nhân đó... Tôi biết trộm của bệnh viện là sai nhưng phải lo cho nhóm của mình.
+2995	Với vài người, bệnh viện hay nhà chứa không còn quan trọng. Chúng ta đã thành thú vật, chỉ quan tâm sống sót.
+2996	Những người đó vốn đã ốm... Giờ tôi lấy vật tư bệnh viện, họ sẽ ra sao?
+2997	Trộm của bệnh viện là sai, nhưng tôi tuyệt vọng. Tình cảnh chúng ta rất tệ.
+2998	Băng gạc và thuốc lúc nào cũng thiếu, nhưng lấy từ bệnh viện...?
+2999	^CharacterName^ hẳn đã rất tuyệt vọng mới cướp bệnh viện.
+3000	^CharacterName^ là người cướp bệnh viện, nhưng tôi vẫn thấy mình có trách nhiệm.
+3001	Tôi biết chúng ta khổ, nhưng... có nhất thiết là bệnh viện không?
+3002	^CharacterName^ trộm ít đồ ở bệnh viện. Giờ chúng ta sống thêm được chút nhờ họ.
+3003	Có lúc tôi đã lên án ^CharacterName^ vì cướp bệnh viện...
+3004	Bệnh viện còn đứng vững nhờ vị bác sĩ nổi tiếng này. Ông ấy là anh hùng... Còn chúng ta thì ngược lại.
+3005	Sao chúng ta cướp bệnh viện được? Họ đã khó khăn lắm rồi!
+3006	^CharacterName^ nói bác sĩ cho {mr|chú ấy}{fr|cô ấy} ít đồ, nhưng cháu nghĩ {mr|chú ấy}{fr|cô ấy} có thể đã ăn trộm...
+3007	Cháu nghĩ ^CharacterName^ có thể đã trộm ít đồ ở bệnh viện, nhưng cháu không quan tâm, miễn là {mr|chú ấy}{fr|cô ấy} ở đây với cháu.
+3008	^CharacterName^ được bệnh viện giúp ít đồ, nhưng buồn khi {mr|chú ấy}{fr|cô ấy} thấy bao nhiêu người nghèo, bị thương ở đó.
+3009	Và, lại một lần nữa, tôi liều mạng vì người khác...
+3010	Nhà chứa này là nơi ác độc, phụ nữ bị làm đau! Tôi phải hành động, giúp họ là đúng.
+3011	Rõ ràng vài người phụ nữ ở nhà chứa bị bọn xã hội đen ngược đãi. Giúp họ liều lắm, nhưng mong nó khích lệ người khác hành động.
+3012	Ừ, ta cứu được ai đó ở nhà chứa. Nhưng tha một hai mạng cũng chẳng khác gì.
+3013	Khi ^CharacterName^ phát hiện vài phụ nữ làm việc trong nhà chứa trái ý muốn, {mr|anh ấy}{fr|cô ấy} quyết định giúp họ. Tôi ngưỡng mộ {mr|anh ấy}{fr|cô ấy} vì điều đó.
+3014	^CharacterName^ đã hành động dũng cảm ở nhà chứa đó. Lỡ người ta quen rơi vào tay bọn côn đồ thì sao?
+3015	Sao trong thành phố nhiều kẻ cướp thế? ^CharacterName^ diệt được vài tên, nhưng còn bao nhiêu nữa? Chúng có bao giờ đi không?
