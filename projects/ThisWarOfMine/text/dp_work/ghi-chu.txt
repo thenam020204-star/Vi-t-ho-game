@@ -1,0 +1,4 @@
+DwellerComfort/Kid_0x, KidComfort/Altruistic, Survivalist_02: không rõ người nói là trẻ hay người lớn; dịch trung tính, tránh xưng hô cứng. 739 'I hate you' dịch 'Cháu ghét mọi người!' vì không rõ giới người nghe.
+Kids_Play/Kid_Dialog (riddle/tongue twister): dịch chuyển ý, câu đố chơi chữ 'Bee' giữ nguyên chữ Bee; vần líu lưỡi đổi sang câu Việt tương đương.
+1196 'ADAM DAJE JEDZENIE - QUEST COMPLETED' là chuỗi nội bộ (tiếng Ba Lan), giữ nguyên. Story1/Br*: 'brother' dịch 'anh bạn', xưng tôi–cậu.
+1656-1659,1678-1685: gốc là tiếng Ba Lan (lẫn trong slot en), dịch nghĩa sang Việt. Story1: brother của Adam = em trai.
