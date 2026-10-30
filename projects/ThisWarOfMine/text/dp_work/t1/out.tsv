@@ -645,12 +645,12 @@
 645	Nhưng chỉ nghĩ chuyện vui thôi nhé.
 646	Được thôi!
 647	Này ^CharacterName^, đừng ủ rũ thế!
-648	Tớ ở đây khi nào cậu cần. Sao vậy?
-649	Tớ... tớ biết. Tớ nhớ các bạn...
-650	Tớ còn nhớ cả đi học.
-651	Chiến tranh sẽ sớm hết thôi, cậu sẽ thấy.
-652	Cậu hứa chứ?
-653	Tớ hứa, chỉ cần chờ thôi.
+648	{ms|Chú}{fs|Cô} ở đây mỗi khi cháu cần. Sao thế cháu?
+649	Cháu... cháu biết. Cháu nhớ các bạn...
+650	Cháu còn nhớ cả đi học.
+651	Chiến tranh sẽ sớm hết thôi, cháu sẽ thấy.
+652	{mr|Chú}{fr|Cô} hứa chứ ạ?
+653	{ms|Chú}{fs|Cô} hứa, chỉ cần chờ thôi.
 654	Này ^CharacterName^...
 655	Cháu không khóc đấy chứ?
 656	Cháu... cháu...
@@ -661,8 +661,8 @@
 661	Này, sao mặt buồn thui thế?
 662	Ở đây kinh khủng quá... Cháu không muốn ở đây nữa!
 663	Chưa rời thành phố được, nhưng sắp rồi.
-664	Sao biết ạ?
-665	Hình như nghe trên radio, hoặc ngoài chợ.
+664	Sao {mr|chú}{fr|cô} biết ạ?
+665	Hình như {ms|chú}{fs|cô} nghe trên radio, hoặc ngoài chợ.
 666	Thật ạ? Còn phải ở đây bao lâu nữa?
 667	Không lâu đâu, rồi cháu sẽ thấy!
 668	Sao mặt sầm thế ^CharacterName^?
@@ -672,61 +672,61 @@
 672	Ai rồi cũng phải chết, nhóc ạ. Đừng hèn, bình tĩnh lại!
 673	Nhưng... nhưng...
 674	Thôi nào, đừng khóc nữa!
-675	Sau chiến tranh cậu định làm gì?
-676	Tớ không biết...
-677	Tớ sẽ đi Paris. Cậu biết ở đó có gì không?
+675	Sau chiến tranh cháu định làm gì?
+676	Cháu không biết...
+677	{ms|Chú}{fs|Cô} sẽ đi Paris. Cháu biết ở đó có gì không?
 678	Không phải một, mà là HAI công viên giải trí. Và...
 679	...chúng cứ cố vượt mặt nhau SUỐT.
-680	Cho tớ đi cùng được không?
-681	Để xem... cậu phải ngoan.
-682	Tớ sẽ ngoan, tớ hứa!
-683	^CharacterName^, cậu muốn nghe chuyện không?
+680	Cho cháu đi cùng được không ạ?
+681	Để xem... cháu phải ngoan.
+682	Cháu sẽ ngoan, cháu hứa ạ!
+683	^CharacterName^, cháu muốn nghe chuyện không?
 684	Ngày xưa có một con Chuột rất sợ một con Mèo.
 685	Nó sống trong một cái hang nhỏ trên tường.
-686	Giống tụi mình...
+686	Giống chúng ta...
 687	Và nó cũng chỉ dám ra ngoài ban đêm.
 688	Nhưng một hôm, nó nghe tin con Mèo không còn nữa!
-689	Rồi nó sống hạnh phúc mãi mãi à?
+689	Rồi nó sống hạnh phúc mãi mãi ạ?
 690	Không. Nó chết vì ăn quá no.
-691	Nhưng nó chết trong hạnh phúc!
+691	Nhưng nó chết trong hạnh phúc mà!
 692	Ừ đúng!
 693	Sao thế, ^CharacterName^?
 694	Cháu nhớ trường.
 695	Phải có chiến tranh mới nghe một đứa trẻ nói vậy.
 696	Không, ý cháu là cháu nhớ các bạn.
-697	Cũng nhớ bạn bè chứ. Nhưng không phải cái gì cũng tệ.
+697	{ms|Chú}{fs|Cô} cũng nhớ bạn bè. Nhưng không phải cái gì cũng tệ.
 698	Sao ạ?
-699	Bây giờ có bạn mới rồi.
-700	Và khi chuyện này kết thúc, sẽ có thêm nhiều bạn nữa.
+699	Bây giờ {ms|chú}{fs|cô} có bạn mới rồi.
+700	Và khi chuyện này kết thúc, chúng ta sẽ có thêm nhiều bạn nữa.
 701	Thật ạ? Ai vậy?
 702	Tất cả những người sống sót qua chuyện này sẽ là bạn của chúng ta.
 703	Này, ^CharacterName^, sao thế?
-704	Nhìn nè, tớ có con mèo con cho cậu!
-705	Đó là mảnh thảm.
+704	Nhìn nè, {ms|chú}{fs|cô} có con mèo con cho cháu đây!
+705	Đó là mảnh thảm mà.
 706	Nhưng nó cần được ôm!
 707	Ngốc quá.
-708	Tớ biết cậu muốn làm tớ cười. Xin lỗi.
-709	Tớ chỉ... Mọi chuyện sẽ ổn thôi, cậu sẽ thấy.
+708	Cháu biết {mr|chú}{fr|cô} muốn làm cháu cười. Cháu xin lỗi.
+709	{ms|Chú}{fs|Cô} chỉ... Mọi chuyện sẽ ổn thôi, cháu sẽ thấy.
 710	^CharacterName^, sao thế?
 711	Cháu sợ.
-712	Ừ, sợ lắm. Nhưng sẽ không bỏ cuộc.
+712	Ừ, {ms|chú}{fs|cô} cũng sợ. Nhưng {ms|chú}{fs|cô} sẽ không bỏ cuộc.
 713	Chết có đau không ạ?
 714	Cháu sẽ không chết đâu!
-715	Có đấy.
-716	Đôi khi. Nhưng sẽ không để cháu chết.
+715	Có đau mà.
+716	Đôi khi. Nhưng {ms|chú}{fs|cô} sẽ không để cháu chết.
 717	Người lớn lúc nào cũng nói dối.
-718	Hứa sẽ làm mọi cách để bảo vệ cháu.
-719	Cậu biết không, hồi nhỏ tớ từng ngã từ trên cây xuống.
-720	Tớ cũng vậy. Rồi sao?
-721	Nhưng cậu có ngã trúng ai không?
-722	Tớ ngã trúng thầy giáo của tớ.
-723	Trúng người á?
-724	Thật hả?
-725	Ừ. Thầy đến hỏi tại sao tớ không đi học.
-726	Trời!
-727	Và tớ làm gãy xương đòn của thầy.
-728	Chắc thầy giận cậu lắm.
-729	Tớ không biết. Tớ đã chuyển trường.
+718	{ms|Chú}{fs|Cô} hứa sẽ làm mọi cách để bảo vệ cháu.
+719	Cháu biết không, hồi nhỏ {ms|chú}{fs|cô} từng ngã từ trên cây xuống.
+720	Cháu cũng vậy. Rồi sao ạ?
+721	Nhưng cháu có ngã trúng ai không?
+722	{ms|Chú}{fs|Cô} ngã trúng thầy giáo của {ms|chú}{fs|cô}.
+723	Trúng người ạ?
+724	Thật ạ?
+725	Ừ. Thầy đến hỏi tại sao {ms|chú}{fs|cô} không đi học.
+726	Trời ạ!
+727	Và {ms|chú}{fs|cô} làm gãy xương đòn của thầy.
+728	Chắc thầy giận {mr|chú}{fr|cô} lắm ạ.
+729	{ms|Chú}{fs|Cô} không biết. {ms|Chú}{fs|Cô} đã chuyển trường.
 730	Thôi rên rỉ đi, ^CharacterName^.
 731	Cháu không muốn ở đây nữa!
 732	Cháu không biết mình may mắn thế nào đâu.
@@ -739,58 +739,58 @@
 739	Cháu ghét mọi người!
 740	Thế mới đúng. Hết sụt sịt rồi!
 741	^CharacterName^, đừng ủ rũ nữa.
-742	Tớ đâu có.
-743	Cậu ủ rũ như một kẻ ủ rũ.
-744	Kẻ ủ rũ là gì?
-745	Là cậu. Kẻ ủ rũ chính hiệu.
-746	Đừng gọi tớ thế!
-747	Này, đâu phải lỗi của tớ!
-748	Giá mà tớ lớn, tớ sẽ...
-749	Cậu sẽ lau sàn bằng tớ ấy!
+742	Cháu đâu có.
+743	Cháu ủ rũ như một kẻ ủ rũ.
+744	Kẻ ủ rũ là gì ạ?
+745	Là cháu đấy. Một kẻ ủ rũ chính hiệu.
+746	Đừng gọi cháu thế!
+747	Này, đâu phải lỗi của {ms|chú}{fs|cô}!
+748	Giá mà cháu lớn, cháu sẽ...
+749	Cháu sẽ lau sàn bằng {ms|chú}{fs|cô} ấy!
 750	Chắc chắn rồi!
-751	Chào {mr|chú}{fr|cô}.
-752	Giờ sẽ sống với tụi cháu ạ?
+751	Chào {mr|chú}{fr|cô} ạ.
+752	Giờ {mr|chú}{fr|cô} sẽ sống với chúng cháu ạ?
 753	Ừ, có vẻ vậy.
-754	Hoan hô! Cháu dẫn đi xem quanh nhé, nếu muốn.
+754	Hoan hô! Cháu dẫn {mr|chú}{fr|cô} đi xem quanh nhé, nếu {mr|chú}{fr|cô} muốn.
 755	Cháu tốt bụng quá, cảm ơn.
-756	Trông cậu mệt thế, ổn không?
-757	Tớ hơi yếu thôi.
-758	Nhưng tớ sẽ ổn, vui lên nào.
-759	Được rồi, tớ sẽ tìm thuốc tăng lực cho cậu!
-760	Cái mới này làm được gì thế?
-761	Tớ không nói được, bí mật mà!
+756	Trông {mr|chú}{fr|cô} mệt thế, {mr|chú}{fr|cô} ổn không ạ?
+757	{ms|Chú}{fs|Cô} hơi yếu thôi.
+758	Nhưng {ms|chú}{fs|cô} sẽ ổn, vui lên nào cháu.
+759	Dạ, cháu sẽ tìm thuốc tăng lực cho {mr|chú}{fr|cô}!
+760	Cái mới này làm được gì thế {mr|bố}{fr|mẹ}?
+761	{ms|Bố}{fs|Mẹ} không nói được, bí mật mà!
 762	Thôi mà! Nói đi, nói đi, nói đi!
 763	Nói đi!
-764	Tớ xin lỗi phải nói điều này, nhưng...
-765	Không! Không đúng! Cậu nói dối!
+764	{ms|Chú}{fs|Cô} xin lỗi phải nói điều này với cháu, nhưng...
+765	Không! Không đúng! {mr|Chú}{fr|Cô} nói dối!
 766	Cháu sợ!
 767	Đừng lo, mọi chuyện sẽ ổn thôi.
 768	Những người này sẽ chăm sóc cháu thật tốt, rồi cháu sẽ thấy!
 769	Đang làm gì thế ạ?
 770	Đang làm việc. Bận lắm...
 771	...đi chơi chỗ khác nhé?
-772	Nhưng cháu muốn chơi cùng cơ...
+772	Nhưng cháu muốn chơi cùng {mr|chú}{fr|cô} cơ...
 773	^CharacterName^ đang làm gì thế?
 774	Không phải bây giờ. Đang bận.
 775	Nhưng cháu giúp! Cháu giúp được mà.
 776	Biết cháu giúp được. Nhưng không phải bây giờ.
 777	^CharacterName^, chơi với cháu không?
-778	Xin lỗi nhóc, giờ không được. Để sau nhé.
+778	Xin lỗi nhóc, giờ {ms|chú}{fs|cô} không được. Để sau nhé.
 779	^CharacterName^! Cháu vừa thấy con chuột to nhất từ trước đến giờ! Lại đây! Cháu chỉ cho...
-780	Được rồi. Cẩn thận nhé. Lát nữa sẽ xem.
-781	Này, đang làm gì thế? Mình làm gì cùng nhau được không?
+780	Được rồi. Cẩn thận nhé. Lát nữa {ms|chú}{fs|cô} sẽ xem.
+781	Này, {mr|chú}{fr|cô} đang làm gì thế ạ? Mình làm gì cùng nhau được không?
 782	Không có gì quan trọng. Ừ, được.
 783	Hoan hô!
-784	Đi nghĩ một câu đố đi, rồi sẽ thử đoán, được không?
+784	Đi nghĩ một câu đố đi, rồi {ms|chú}{fs|cô} sẽ thử đoán, được không?
 785	Dạ!
-786	Biết đánh nhau không ạ?
+786	{mr|Chú}{fr|cô} biết đánh nhau không ạ?
 787	Biết chứ.
 788	Hay quá! Dạy cháu nhé?
-789	Sẽ dạy, nhưng để sau nhé?
+789	{ms|Chú}{fs|Cô} sẽ dạy, nhưng để sau nhé?
 790	Cháu sợ ^CharacterName^, ôm cháu được không?
 791	Tất nhiên, lại đây. Không cần sợ đâu…
 792	…mọi chuyện sẽ ổn thôi.
-793	Hứa đấy.
+793	{ms|Chú}{fs|Cô} hứa đấy.
 794	^CharacterName^, sao người ta lại giết nhau?
 795	Vì... họ quên cách nói chuyện.
 796	Nhưng chúng ta không quên đúng không ^CharacterName^?
@@ -803,10 +803,10 @@
 803	Phải, những người khác làm ra.
 804	Nhưng họ không giống chúng ta, đúng không?
 805	Nhìn này ^CharacterName^, con bắt được con gián!
-806	Hay lắm ^CharacterName^, nhưng giờ đang bận.
-807	Lát nữa con cho xem mấy con bọ nhé?
+806	Hay lắm ^CharacterName^, nhưng giờ {ms|bố}{fs|mẹ} đang bận.
+807	Lát nữa con cho {ms|bố}{fs|mẹ} xem mấy con bọ nhé?
 808	Con sẽ tìm con bọ to nhất trên đời!
-809	Bao giờ dẫn con đi xem xiếc?
+809	Bao giờ {mr|bố}{fr|mẹ} dẫn con đi xem xiếc?
 810	Con muốn xem gấu được huấn luyện.
 811	Xin lỗi, rạp xiếc đóng cửa rồi.
 812	Mình đi vào sinh nhật con nhé?
@@ -819,12 +819,12 @@
 819	Sao vậy cháu? Trông buồn thế...
 820	Cháu sợ ra ngoài chơi.
 821	Vậy mình chơi trong nhà nhé?
-822	Lát nữa quay lại nhé, sẽ có câu đố cho cháu!
+822	Lát nữa quay lại nhé, {ms|chú}{fs|cô} sẽ có câu đố cho cháu!
 823	Dạo này thế nào, {mr|nhóc}{fr|cưng}?
 824	Cũng tạm ạ. Bao giờ chiến tranh hết?
-825	Không biết chắc, nhưng mong là sớm.
-826	Vậy là không biết.
-827	Chưa, nhưng khi biết sẽ nói ngay, được không?
+825	Không biết chắc, nhưng {ms|chú}{fs|cô} mong là sớm.
+826	Vậy là {mr|chú}{fr|cô} không biết ạ.
+827	Chưa, nhưng khi biết {ms|chú}{fs|cô} sẽ nói ngay, được không?
 828	Sao thế, {mr|nhóc}{fr|cưng}?
 829	^CharacterName^ chải tóc giúp cháu được không?
 830	Được, cháu có mang lược không?
@@ -842,18 +842,18 @@
 842	Không! Bây giờ cháu không muốn chơi...
 843	Sao vậy, có chuyện gì?
 844	Chỉ là... cháu sợ... đừng ra ngoài ban đêm nhé!
-845	Có lúc phải đi, nhưng đêm nay sẽ cố ở nhà.
+845	Có lúc phải đi, nhưng đêm nay {ms|chú}{fs|cô} sẽ cố ở nhà.
 846	Này ^CharacterName^, chơi không?
 847	Không… cháu không có tâm trạng…
 848	Sao? Có chuyện gì?
 849	Chuyện gì cũng tệ!
 850	Biết là khó và cháu nhớ bạn bè, nhưng sắp gặp lại thôi.
-851	Hứa đấy, và tối nay sẽ cố mang cho cháu thứ gì đó hay hay, được không?
+851	{ms|Chú}{fs|Cô} hứa đấy, và tối nay {ms|chú}{fs|cô} sẽ cố mang cho cháu thứ gì đó hay hay, được không?
 852	Trông cháu xanh xao, mọi chuyện ổn chứ?
 853	Không ạ.
 854	Nói xem có chuyện gì.
 855	Tất cả! Cháu không được đi học gặp bạn, không được ra ngoài chơi...
-856	Hết chiến tranh là cháu đi học lại, hứa đấy.
+856	Hết chiến tranh là cháu đi học lại, {ms|chú}{fs|cô} hứa đấy.
 857	Và cháu sẽ được chơi với bạn chứ?
 858	Tất nhiên rồi, cháu yêu.
 859	Cháu muốn chơi không, nhóc?
@@ -876,9 +876,9 @@
 876	Dạ, ^CharacterName^…?
 877	Sao thế cháu? Này, cháu khóc à?
 878	Không… Chỉ là… có gì rơi vào mắt cháu thôi…
-879	Này, vui lên đi, trước giờ ngủ sẽ kể cháu nghe một câu chuyện, được không?
-880	Dạ, nhưng phải hứa nhé!
-881	Hứa!
+879	Này, vui lên đi, trước giờ ngủ {ms|chú}{fs|cô} sẽ kể cháu nghe một câu chuyện, được không?
+880	Dạ, nhưng {mr|chú}{fr|cô} phải hứa nhé!
+881	{ms|Chú}{fs|Cô} hứa!
 882	Ừ! Tớ muốn đua đến căn phòng kia!
 883	Được, bắt đầu nào!
 884	Hoan hô! Tớ thắng rồi!
@@ -971,19 +971,19 @@
 971	Ừ, mai thử lại nhé.
 972	Cậu muốn chơi trò vỗ tay không?
 973	Được chứ!
-974	Cậu ốm à ^CharacterName^?
+974	^CharacterName^, {mr|bố}{fr|mẹ} ốm à?
 975	Không nghiêm trọng đâu.
-976	Đừng khóc. Tớ sẽ ổn.
-977	Hứa với tớ đi!
-978	Tớ hứa với cậu, ^CharacterName^.
-979	Có đau nhiều không?
-980	Chỉ hơi đau thôi.
-981	Nhưng cậu sẽ ổn chứ?
-982	Chắc chắn rồi.
-983	Tớ biết chuyện này khó với cậu, ^CharacterName^...
-984	Cậu biết gì chứ! Để tớ yên!
-985	Tớ hiểu đây là mất mát khủng khiếp với cậu, nhưng thời gian sẽ chữa lành mọi vết thương.
-986	Cậu biết gì về chuyện đó? Đâu phải cậu mất!
+976	Đừng khóc. {ms|Bố}{fs|Mẹ} sẽ ổn.
+977	Hứa với con đi!
+978	{ms|Bố}{fs|Mẹ} hứa với con, ^CharacterName^.
+979	Có đau nhiều không {mr|bố}{fr|mẹ}?
+980	Chỉ hơi đau thôi con.
+981	Nhưng {mr|bố}{fr|mẹ} sẽ ổn chứ?
+982	Chắc chắn rồi con.
+983	{ms|Chú}{fs|Cô} biết chuyện này khó với cháu, ^CharacterName^...
+984	{mr|Chú}{fr|Cô} biết gì chứ! Để cháu yên!
+985	{ms|Chú}{fs|Cô} hiểu đây là mất mát khủng khiếp với cháu, nhưng thời gian sẽ chữa lành mọi vết thương.
+986	{mr|Chú}{fr|Cô} biết gì về chuyện đó? Đâu phải {mr|chú}{fr|cô} mất!
 987	Ai trong chúng ta cũng đã mất ai đó hay phải hy sinh điều gì, nhưng ít ra chúng ta còn có nhau.
 988	^CharacterName^?
 989	Tất cả là lỗi của tớ!
@@ -1000,85 +1000,85 @@
 1000	Bất công!
 1001	Ừ.
 1002	...tớ muốn ở một mình...
-1003	Để tớ yên.
-1004	Tớ lo cho cậu.
-1005	Giá mà tớ chết thay.
-1006	Cậu phải sống.
-1007	Tớ không muốn.
-1008	Cậu phải sống sót, không thì người xấu sẽ thắng.
-1009	Tớ không quan tâm...
-1010	Tớ sẽ làm mọi thứ để giúp cậu.
-1011	Cậu không giúp được tớ đâu. Không ai giúp được.
+1003	Để cháu yên.
+1004	{ms|Chú}{fs|Cô} lo cho cháu.
+1005	Giá mà cháu chết thay.
+1006	Cháu phải sống.
+1007	Cháu không muốn.
+1008	Cháu phải sống sót, không thì người xấu sẽ thắng.
+1009	Cháu không quan tâm...
+1010	{ms|Chú}{fs|Cô} sẽ làm mọi thứ để giúp cháu.
+1011	{mr|Chú}{fr|Cô} không giúp được cháu đâu. Không ai giúp được.
 1012	Ôi, ^CharacterName^...
 1013	^CharacterName^! Về rồi à!
 1014	Thấy cháu dũng cảm rồi đấy.
 1015	Tất nhiên, cháu gần như người lớn rồi!
 1016	Cháu nhớ ^CharacterName^ lắm!
-1017	Cháu cũng nhớ ^CharacterName^ lắm!
-1018	Mừng vì cháu ở đây.
-1019	Có mặt ở đây là vì cháu.
+1017	{ms|Chú}{fs|Cô} cũng nhớ cháu lắm, ^CharacterName^!
+1018	Cháu mừng vì {mr|chú}{fr|cô} ở đây.
+1019	{ms|Chú}{fs|Cô} ở đây là vì cháu.
 1020	Sao ^CharacterName^ buồn thế?
 1021	Có chuyện gì tệ xảy ra à?
 1022	Không có gì, không có gì cả.
 1023	Có chuyện gì không ^CharacterName^?
 1024	Cháu không thích khi ^CharacterName^ phải ra ngoài ban đêm...
-1025	Biết chứ cháu, nhưng phải đi. Phải có người đi.
-1026	^CharacterName^! Sao tay chảy máu thế?
+1025	Biết chứ cháu, nhưng {ms|chú}{fs|cô} phải đi. Phải có người đi.
+1026	^CharacterName^! Sao tay {mr|chú}{fr|cô} chảy máu thế?
 1027	Đừng lo, chỉ xước nhẹ thôi.
-1028	Chắc là sẽ ổn chứ?
+1028	{mr|Chú}{fr|Cô} chắc là sẽ ổn chứ ạ?
 1029	Tất nhiên... Giờ kể nghe đêm qua của cháu đi. Cháu ngủ ngon không?
 1030	Không, cháu lo lắm...
-1031	Cháu có trái tim tốt, ^CharacterName^, nhưng không cần lo. Sẽ ổn thôi.
+1031	Cháu có trái tim tốt, ^CharacterName^, nhưng không cần lo. {ms|Chú}{fs|Cô} sẽ ổn thôi.
 1032	Chuyện gì thế ^CharacterName^?!
 1033	Ồ, gặp chuyến phiêu lưu tệ, nhưng sẽ ổn...
 1034	Cháu lo lắm!
-1035	Sẽ ổn thôi, đừng lo, ^CharacterName^.
-1036	Làm sao không lo được? Đang chảy máu kìa!
-1037	Băng vết thương lại là ổn.
+1035	{ms|Chú}{fs|Cô} sẽ ổn thôi, đừng lo, ^CharacterName^.
+1036	Làm sao cháu không lo được? {mr|Chú}{fr|Cô} đang chảy máu kìa!
+1037	{ms|Chú}{fs|Cô} sẽ băng vết thương lại là ổn.
 1038	^CharacterName^! Đêm qua có người xấu đến lấy đồ của mình!
 1039	Cháu ổn chứ? Chúng có làm cháu đau không?
 1040	Không... Nhưng đừng bỏ cháu lại một mình nữa!
-1041	Đừng lo cưng, giờ sẽ bảo vệ cháu.
-1042	Phải thế đấy!
-1043	Sẽ làm.
-1044	Sao lại bỏ cháu? Mấy người xấu đến lấy đồ của mình! Mà không có ai ở đây!
+1041	Đừng lo cưng, giờ {ms|chú}{fs|cô} sẽ bảo vệ cháu.
+1042	{mr|Chú}{fr|Cô} phải làm thế đấy!
+1043	{ms|Chú}{fs|Cô} sẽ làm.
+1044	Sao {mr|chú}{fr|cô} lại bỏ cháu? Mấy người xấu đến lấy đồ của mình! Mà không có ai ở đây!
 1045	Trời ơi! Cháu ổn chứ?
 1046	Dạ, nhưng cháu sợ lắm...
-1047	Xin lỗi vì đã bỏ cháu, ^CharacterName^, phải đi tìm đồ tiếp tế. Giờ về rồi.
-1048	Và sẽ không bỏ cháu nữa chứ?
-1049	Sẽ không.
+1047	{ms|Chú}{fs|Cô} xin lỗi vì đã bỏ cháu, ^CharacterName^, {ms|chú}{fs|cô} phải đi tìm đồ tiếp tế. Giờ {ms|chú}{fs|cô} về rồi.
+1048	Và {mr|chú}{fr|cô} sẽ không bỏ cháu nữa chứ?
+1049	{ms|Chú}{fs|Cô} sẽ không.
 1050	^CharacterName^! ^CharacterName^! Đêm qua mình bị tấn công!
 1051	Gì cơ?! Cháu có bị thương không? Chuyện gì xảy ra?
 1052	Cháu hét lên và tên trộm đánh cháu rất mạnh...
 1053	Thằng khốn... Sao nó dám?!
-1054	Lẽ ra không nên để cháu ở một mình... Để giờ chăm sóc cháu.
+1054	Lẽ ra {ms|chú}{fs|cô} không nên để cháu ở một mình... Để {ms|chú}{fs|cô} chăm sóc cháu.
 1055	^CharacterName^, giúp cháu!
 1056	Sao thế ^CharacterName^?
 1057	Đêm qua có người đến lấy đồ, và họ làm cháu đau! Cháu ghét họ!
 1058	Lũ khốn kiếp! Đây, để xem nào...
 1059	Đau...
-1060	Biết rồi cháu, nhưng hãy dũng cảm. Sẽ ổn thôi, hứa đấy.
+1060	Biết rồi cháu, nhưng hãy dũng cảm. Sẽ ổn thôi, {ms|chú}{fs|cô} hứa đấy.
 1061	Cháu mừng vì ^CharacterName^ đã về!
-1062	Cũng vậy! Và có thứ này cho cháu!
+1062	{ms|Chú}{fs|Cô} cũng vậy! Và {ms|chú}{fs|cô} có thứ này cho cháu!
 1063	Thật ạ, gì thế?
 1064	Nhìn này, mình làm được món đồ chơi mới từ cái này!
-1065	^CharacterName^! Không sao chứ? Cháu lo lắm...
-1066	Ổn, cháu à, và có điều bất ngờ cho cháu!
+1065	^CharacterName^! {mr|Chú}{fr|Cô} không sao chứ? Cháu lo lắm...
+1066	Ổn, cháu à, và {ms|chú}{fs|cô} có điều bất ngờ cho cháu!
 1067	Cho cháu xem!
-1068	Hiệu đồ chơi đóng cửa hết, nhưng xem mang gì về này!
+1068	Hiệu đồ chơi đóng cửa hết, nhưng xem {ms|chú}{fs|cô} mang gì về này!
 1069	Oa, cảm ơn ^CharacterName^!
-1070	^CharacterName^! Đi đâu rồi?!
-1071	Đi kiếm ít đồ ăn và...
-1072	Bỏ cháu một mình! Mà đêm qua có người đến đây!
+1070	^CharacterName^! {mr|Chú}{fr|Cô} đi đâu rồi?!
+1071	{ms|Chú}{fs|Cô} đi kiếm ít đồ ăn và...
+1072	{mr|Chú}{fr|Cô} bỏ cháu một mình! Mà đêm qua có người đến đây!
 1073	Cháu nói gì?! Ai thế?
-1074	Cháu không biết! Cháu sợ lắm! Sao lại bỏ cháu một mình?!
-1075	Xin lỗi cháu, sẽ không bỏ cháu nữa.
+1074	Cháu không biết! Cháu sợ lắm! Sao {mr|chú}{fr|cô} lại bỏ cháu một mình?!
+1075	{ms|Chú}{fs|Cô} xin lỗi cháu, {ms|chú}{fs|cô} sẽ không bỏ cháu nữa.
 1076	Cháu ghét ^CharacterName^!
 1077	Gì? Sao lại nói thế?!
-1078	Vì để cháu một mình ban đêm!
-1079	Phải ra ngoài tìm đồ tiếp tế...
+1078	Vì {mr|chú}{fr|cô} để cháu một mình ban đêm!
+1079	{ms|Chú}{fs|Cô} phải ra ngoài tìm đồ tiếp tế...
 1080	Đêm qua có người ở đây! Họ định làm hại cháu!
-1081	Trời ơi, cháu ổn không? Lẽ ra không nên để cháu một mình, xin lỗi cháu, ^CharacterName^...
+1081	Trời ơi, cháu ổn không? Lẽ ra {ms|chú}{fs|cô} không nên để cháu một mình, {ms|chú}{fs|cô} xin lỗi cháu, ^CharacterName^...
 1082	Nhìn này ^CharacterName^, trước tiên đặt ít củi vào đây, thấy không?
 1083	Dạ, cháu thấy rồi.
 1084	Tiếp theo, đặt nồi nước vào đây.

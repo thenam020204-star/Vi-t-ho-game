@@ -13,3 +13,4 @@ Kids_Play/Kid_Dialog (riddle/tongue twister): dịch chuyển ý, câu đố ch�
 6359-6369 (NeedMeds) khách là trẻ em nhưng key không ghi Kid, giữ xưng hô trung tính (chúng tôi / các anh chị).
 6571-6572, 6579-6582 gốc tiếng Ba Lan (Adam kể), dịch nghĩa; 'Amelka' -> Amelia.
 6585-6586, 6589-6590, 6595-6596 gốc tiếng Ba Lan (Adam kể), dịch nghĩa.
+Xưng hô trẻ/người lớn (làm lại theo quản đốc), các ca mơ hồ: 756-759 (Dweller_Weak) coi A là trẻ, B người lớn; 763-765 (ParentDied) B coi là người lớn báo tin; 886-889, 898-901, 920-924, 932-973 (không dấu hiệu người lớn) giữ tớ–cậu; Kids_Grieving 988-1002 (01, 02) giữ tớ–cậu vì không rõ A; Grieving 00 và 03 coi A là người lớn, B là trẻ; 885 nguồn có {mr|..}{ms|..} lệch thẻ, giữ nguyên.

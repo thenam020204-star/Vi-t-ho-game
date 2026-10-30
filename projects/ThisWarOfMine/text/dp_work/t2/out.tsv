@@ -1,0 +1,540 @@
+1	Dụng cụ
+2	Vật tiêu hao
+3	Vũ khí
+4	Đồ gia dụng
+5	Nguyên liệu
+6	Trang bị
+7	Khác
+8	Vật phẩm cơ bản
+9	Nâng cấp
+10	Xưởng
+11	Bếp thô sơ
+12	Đơn giản nhất có thể: đốt nhiên liệu làm từ gỗ, sách hoặc linh kiện, rồi dùng nước nấu bữa ăn bổ dưỡng hơn đồ sống.
+13	Bếp cải tiến
+14	Bếp hiệu quả hơn. Nấu đồ chín nhanh hơn, tiết kiệm nhiên liệu.
+15	Vườn thảo mộc
+16	Bón phân thì trồng được thảo mộc, dùng làm thuốc men hoặc thuốc lá rẻ tiền. Nâng cấp thì trồng được rau củ.
+17	Xưởng thảo mộc
+18	Bàn làm việc với vài dụng cụ đơn giản, để chế thuốc thảo dược, băng gạc và thuốc lá cuốn kém chất lượng. Nâng cấp thì làm được thuốc men thật và thuốc lá tốt hơn.
+19	Lò sưởi đơn giản
+20	Giữ ấm nơi trú ẩn để khỏi ốm. Có thể làm nhiên liệu từ gỗ, sách hoặc nhiều linh kiện.
+21	Lò sưởi cải tiến
+22	Sưởi ấm nơi trú ẩn hiệu quả hơn, tốn ít nhiên liệu hơn.
+23	Giường
+24	Ngủ đủ, không đau lưng, ngày hay đêm đều được.
+25	Radio
+26	Nghe tin tức và dự báo thời tiết thì tốt biết mấy. Biết trước khó khăn thì dễ đối phó hơn. Hết tin thì nghe nhạc cho đỡ buồn.
+27	Nồi nấu rượu lậu
+28	Kiên nhẫn chút, có nước và đường là nấu được thứ rượu dở tệ nhưng nồng. Có thể đem đổi lấy đồ cần thiết. Đừng mong gì nhiều.
+29	Máy chưng cồn
+30	Chưng rượu lậu thành cồn nguyên chất, dùng làm thuốc men và băng gạc, hoặc hàng đổi chác tốt hơn nhiều.
+31	Xưởng đơn giản
+32	Bàn làm việc tạm bợ, dùng làm trang bị đơn giản, đồ đạc và vài thứ hữu ích khác như giường, ghế. Nâng cấp thì làm được nhiều thứ hơn.
+33	Xưởng cải tiến
+34	Chế tạo được đồ tinh vi và thiết bị hơn, có thêm cách kiếm đồ ăn, thuốc men và hàng đổi chác. Nâng cấp tiếp thì làm được cải tiến điện.
+35	Bình hứng nước mưa
+36	Thiết bị đơn giản để hứng và lọc nước mưa, dùng để nấu ăn và nấu rượu. Nên làm vài cái.
+37	Đống tuyết
+38	Ghế bành
+39	Ghế bành êm ái. Ngồi đó với cuốn sách hay là gần như quên chiến tranh.
+40	Ghế
+41	Ngồi ghế vẫn hơn ngồi đất. Làm ra nó để chỗ này giống nhà hơn. Lúc khó khăn thế này, thấy dễ chịu hơn.
+42	Bẫy thú nhỏ
+43	Thú nhỏ còn lại chắc chỉ có chuột... Nhưng thời chiến thịt hiếm lắm. Cứ đặt mồi rồi chờ.
+44	Xưởng tiên tiến
+45	Xưởng tiên tiến làm được thiết bị điện hữu ích, như đèn sưởi cho vườn và máy trộn cho xưởng thảo mộc hay xưởng kim khí.
+46	Đàn guitar
+47	Có việc gì đó để giết thời gian thì quan trọng. Đàn guitar làm tinh thần khá lên, nhất là khi người chơi biết chơi.
+48	Trồng rau ở đây cần nước và phân bón, nhưng phải chờ lâu.
+49	Vườn rau
+50	Cửa gia cố
+51	Khi đã bịt lỗ và cửa sổ lại, có thể tính đến gia cố cửa và lắp chuông báo động đơn giản.
+52	Bịt lại
+53	Bịt lỗ hổng và cửa sổ trong tòa nhà để chống bọn hôi của.
+54	Xưởng kim khí
+55	Làm được dụng cụ như xẻng dọn gạch vụn, xà beng phá cửa và dao tự vệ. Về sau có thể làm dụng cụ tinh xảo hơn, thậm chí sửa súng.
+56	Xưởng kim khí cải tiến
+57	Ngoài rìu, lưỡi cưa, còn sửa được súng hỏng đơn giản và mũ sắt. Nâng cấp tiếp thì làm được đạn và sửa áo giáp quân dụng.
+58	Xưởng kim khí tiên tiến
+59	Ngoài dụng cụ, ở đây sửa được mọi súng hỏng, cả áo giáp quân dụng lẫn mũ sắt, và nạp lại vỏ đạn rỗng để dùng lại.
+60	Xưởng thảo mộc cải tiến
+61	Chế được thuốc men thật và thuốc lá cuốn chất lượng cao.
+62	Xích đu
+63	Chỉ là cái xích đu đơn giản, nhưng với trẻ con thì vui không bao giờ hết.
+64	Bàn học của trẻ
+65	Trẻ con cần có chỗ riêng trong nơi trú ẩn. Chúng vẽ, đọc sách và chơi đồ chơi ở đây. Giúp chúng quên chiến tranh.
+66	Hộp đồ chơi
+67	Đủ thứ cả! Gấu bông, búp bê, máy bay và xe hơi nhỏ. Cả lính đồ chơi nữa...
+68	Người tuyết
+69	Mùa đông khắc nghiệt với người lớn, nhưng với trẻ con thì là lúc để nô đùa.
+70	Quả bóng
+71	Đứa trẻ nào mà không thích chơi bóng?
+72	Dây nhảy
+73	Một sợi dây đơn giản mà giữ trẻ con chơi được cả giờ, thật lạ.
+74	Cầu tạm
+75	Cầu tạm nối sang cánh kia của ngôi nhà.
+76	Gỗ
+77	Thiết yếu để làm đủ loại đồ, lại chẻ ra làm nhiên liệu cho bếp và lò sưởi.
+78	Linh kiện
+79	Đủ loại linh kiện để làm gần như mọi thứ. Đinh, băng dính, hộp nhựa, phế liệu, đại loại vậy.
+80	Thuốc súng
+81	Thuốc súng dùng để chế đạn và chất nổ.
+82	Linh kiện súng
+83	Đủ loại linh kiện súng. Lưỡi, nòng, lò xo, khóa và các thứ tương tự.
+84	Đường
+85	Không có đường thì không có rượu lậu. Cần cho quá trình lên men.
+86	Phụ tùng
+87	Đủ loại phụ tùng cơ khí. Dùng để chế và sửa thiết bị phức tạp.
+88	Thảo mộc
+89	Thuốc lá sợi
+90	Từ thuốc lá sợi này làm được thuốc lá đắt tiền.
+91	Đủ loại thảo mộc, dùng để chế thuốc thảo dược và thuốc lá cuốn.
+92	Nguyên liệu thuốc
+93	Thuốc viên cũ và thuốc thú y. Có chút hiểu biết thì chế được thuốc men thường.
+94	Vỏ đạn súng săn rỗng. Có thể nạp lại thành đạn súng săn.
+95	Vỏ đạn súng săn
+96	Vỏ đạn
+97	Vỏ đạn rỗng. Có thể làm đạn súng cầm tay từ chúng.
+98	Vỏ đạn súng trường
+99	Vỏ đạn súng trường rỗng. Có thể làm đạn súng trường từ chúng.
+100	Phân bón
+101	Rác hữu cơ, bón vườn để trồng thảo mộc hay rau củ, hoặc làm mồi cho bẫy thú nhỏ.
+102	Linh kiện điện
+103	Vài linh kiện điện. Sẽ có ích khi muốn cải tiến nơi trú ẩn thêm.
+104	Loa
+105	Bộ phận thiết yếu của máy thu radio.
+106	Súng lục hỏng
+107	Vũ khí cũ, thiếu vài bộ phận.
+108	Súng trường tấn công hỏng
+109	Từng là vũ khí chết người, giờ không còn bắn được.
+110	Súng săn hỏng
+111	Súng săn tháo gần nửa.
+112	Mũ sắt hỏng
+113	Hỏng nặng, không đội được. Sửa lại thì may ra cứu được cái đầu nào đó.
+114	Áo giáp hỏng
+115	Áo giáp quân dụng hỏng. Phải sửa mới mặc lại được.
+116	Đàn guitar hỏng
+117	Hỏng, nhưng chưa đến mức không sửa được. Có nhạc hay để giết thời gian thì tốt.
+118	Đồ chơi hỏng
+119	Món đồ chơi này từng đẹp hơn. Giờ hỏng rồi, nhưng trước đây chắc đã mang nhiều niềm vui cho chủ cũ.
+120	Giấy thông hành
+121	Giấy thông hành do bộ chỉ huy quân đội địa phương cấp cho Robert Zhigajev. Với chúng tôi thì vô dụng, nhưng với người quen thợ làm giấy giả giỏi thì có thể đáng giá.
+122	Thư của Karel
+123	Thư của Karel xác nhận đã trả tiền qua đường. Có chỉ đường tới nhà an toàn khi lên bờ.
+124	Phần chính của cầu tạm
+125	Cần bộ phận này để dựng cầu tạm.
+126	Bút sáp màu
+127	Bộ bút sáp màu sặc sỡ, gần đủ rồi. Amelia có thể vẽ bất cứ thứ gì con bé muốn.
+128	Thực phẩm sống
+129	Ăn được, nhưng nấu chín thì bổ dưỡng hơn.
+130	Đồ ăn chín
+131	Bữa ăn chín đơn giản, bổ dưỡng và ngon hơn đồ sống. Có rau củ thì còn ngon và no hơn.
+132	Đạn
+133	Đạn cho súng cầm tay.
+134	Cồn nguyên chất
+135	Bình nhỏ cồn nguyên chất. Uống được, đổi được, hoặc dùng để làm thuốc men hay băng gạc.
+136	Thuốc men
+137	Vị đắng ghê, nhưng lúc ốm có thể cứu mạng.
+138	Băng gạc
+139	Dùng để băng vết thương.
+140	Đồ hộp
+141	Bữa đồ hộp, bổ dưỡng hơn đồ sống. Ăn lâu rồi cũng quen vị.
+142	Rượu lậu
+143	Uống vào thấy dễ chịu hơn. Hoặc là tưởng vậy. Đổi chác thì được.
+144	Đồ đóng lọ
+145	Không hỏng nên để được lâu, lại tốt để đổi chác.
+146	Đạn súng săn
+147	Đạn cho súng săn.
+148	Đạn súng trường
+149	Đạn cho súng trường.
+150	Thuốc thảo dược
+151	Thuốc thảo dược đơn giản. Lúc hiệu nghiệm, lúc không. Nhưng vẫn hơn không có gì.
+152	Dụng cụ tháo lắp
+153	Dụng cụ để tháo thiết bị điện và cơ khí. Tua vít, giũa, kìm cắt và đại loại vậy. Tự làm nên không bền lắm.
+154	Rau củ
+155	Ăn sống cũng được, nhưng nấu chung với đồ sống thì bữa ăn ngon hơn nhiều.
+156	Lưỡi cưa
+157	Dùng để cắt song sắt và xích, vào được những chỗ không thể vào.
+158	Thuốc lá tự trồng
+159	Thuốc lá tự trồng để cuốn thuốc. Kém xa hàng thật, nhưng tự trồng được.
+160	Thuốc lá cuốn
+161	Thuốc lá cuốn làm từ thảo mộc. Khói hắc, đắng.
+162	Thuốc lá
+163	Thuốc lá thật. Thời chiến hay dùng làm tiền.
+164	Thuốc lá cuốn chất lượng
+165	Thuốc lá cuốn pha nửa thuốc lá sợi, nửa thảo mộc. Trong hoàn cảnh này thì khá ổn.
+166	Cà phê
+167	Có người uống cà phê để có sức sống thêm một ngày. Thời chiến khan hiếm nên rất quý.
+168	Nước sạch
+169	Nước tương đối sạch. Cần để nấu bữa ngon hoặc nấu rượu.
+170	Bộ lọc
+171	Bộ lọc tự chế, dùng một lần, để lọc nước mưa hoặc chưng cồn.
+172	Tuyết
+173	Nấu chảy thành nước.
+174	Nhiên liệu
+175	Thứ đốt được trong lò sưởi để giữ ấm, hoặc trong bếp để nấu ăn. Làm từ gỗ, sách hoặc linh kiện.
+176	Sách
+177	Sách hay thì làm người khá hơn. Càng nhiều càng tốt. Lúc khó khăn thì xé ra làm nhiên liệu cho lò hay bếp.
+178	Xà beng
+179	Dụng cụ tự chế, cạy được vài cánh cửa trước khi gãy. Làm chậm và ồn.
+180	Đồ cạy khóa
+181	Dùng một lần, nhưng mở khóa nhanh và êm.
+182	Xẻng
+183	Xẻng nhỏ để lục gạch vụn.
+184	Áo giáp quân dụng
+185	Tăng mạnh cơ hội sống sót khi trúng đạn hoặc dao.
+186	Mũ sắt
+187	Chống được phần nào đạn và dao.
+188	Rìu
+189	Chặt đồ đạc được... Hoặc chặt người.
+190	Súng lục
+191	Chĩa vào người muốn làm đau.
+192	Súng trường tấn công
+193	Súng trường tấn công quân dụng, tốc độ bắn tốt.
+194	Súng trường ngắm
+195	Súng trường tấn công quân dụng lắp ống ngắm.
+196	Súng săn
+197	Vũ khí mạnh ở cự ly gần.
+198	Dao
+199	Từng là đồ dùng nhà bếp, giờ là vũ khí cận chiến nguy hiểm.
+200	Nắm đấm
+201	Trang sức
+202	Món trang sức, hàng đổi chác có giá.
+203	Chó bông
+204	Đồ chơi chó bông cho trẻ con. Gần như còn mới. Amelia lúc nào cũng thích chó. Con bé sẽ mừng lắm.
+205	Chó bông bẩn
+206	Bẩn, nhưng đúng là con chó bông tôi đã tặng Amelia.
+207	Áo nỉ của Amelia
+208	Cũ và bẩn, nhưng chắc chắn là áo nỉ của Amelia.
+209	Đèn sưởi
+210	Dùng đèn này để trồng cây trong nhà.
+211	Máy trộn
+212	Dùng để trộn thuốc súng hoặc nguyên liệu thuốc.
+213	Bộ điều nhiệt
+214	Dùng để giữ nhiệt lò sưởi ở mức tốt nhất, tiết kiệm gỗ. Muốn chưng cồn sạch thì cũng cần nó để làm máy chưng.
+215	Muốn chưng cồn sạch thì cần nó để làm máy chưng.
+216	Kiêng khem
+217	Nghiện thuốc
+218	Nghiện cà phê
+219	Thuốc lá hút mỗi ngày:
+220	Số ly cà phê mỗi ngày:
+221	Thiếu cà phê!
+222	Thiếu thuốc lá!
+223	Thiếu cà phê và thuốc lá!
+224	Chìa khóa hiệu thuốc của anh trai
+225	Anh trai tôi lúc nào cũng giữ chìa khóa trên người, lạ thật khi chúng nằm dưới đất. Có thể dùng để mở các cửa khóa trong hiệu thuốc.
+226	Suy sụp
+227	VẪN ĐÓI
+228	ĐÓI
+229	VẪN RẤT ĐÓI
+230	RẤT ĐÓI
+231	VẪN ĐÓI LẢ
+232	ĐÓI LẢ
+233	VẪN KIỆT SỨC VÌ ĐÓI
+234	KIỆT SỨC VÌ ĐÓI
+235	NO NÊ
+236	MỆT
+237	RẤT MỆT
+238	KIỆT SỨC
+239	CẠN KIỆT
+240	(ĐANG HỒI PHỤC)
+241	HƠI BỊ THƯƠNG
+242	BỊ THƯƠNG
+243	BỊ THƯƠNG NẶNG
+244	THƯƠNG CHÍ MẠNG
+245	(ĐÃ BĂNG BÓ)
+246	Bị thương
+247	HƠI ỐM
+248	ỐM
+249	ỐM NẶNG
+250	BỆNH NAN Y
+251	(ĐANG UỐNG THUỐC)
+252	Ốm
+253	NGỦ KHÔNG YÊN
+254	Hài lòng
+255	Buồn
+256	Gục ngã
+257	(Cần thuốc lá)
+258	(Cần cà phê)
+259	(Cần cà phê và thuốc lá)
+260	(Được an ủi)
+261	(Đang chơi)
+262	(Đang trò chuyện)
+263	(Đang chăm sóc)
+264	(Được chăm sóc)
+265	SAY XỈN
+266	Dư rượu
+267	Buồn ngủ
+268	Đờ đẫn
+269	Quyết tâm
+270	Chiến tranh đã kết thúc.
+271	Bạn không sống sót.
+272	Bạn đã sống sót.
+273	Bạn chỉ sống sót được ^DayOfWar^ ngày.
+274	Con thuyền cập bến an toàn.
+275	Bạn đã thoát.
+276	Bạn đã biết sự thật về số phận của Amelia.
+277	Nạn nhân chiến tranh thường mắc rối loạn tâm thần.
+278	Tôi đang tìm con gái mất tích. Một đứa tóc vàng nhỏ.
+279	Ồ, tao có thấy nó...
+280	Trời ơi! Thật à? Làm ơn, kể hết những gì anh biết!
+281	Mày giúp tao trước, rồi tao giúp mày. Tao đói lắm...
+282	Mang đồ ăn cho tao, tao sẽ kể những gì tao biết.
+283	Hay mày nói ngay đi, không thì tao đánh cho mày nhừ xương.
+284	Mày đánh tao thì tao chẳng kể gì đâu. Giết tao thì mày cũng chẳng bao giờ tìm được con gái mày.
+285	Muốn cứu nó không? Mang đồ ăn tới. Tao đợi ở đây.
+286	Đồ ăn của mày đây, đồ tham lam chết tiệt. Giờ khai đi.
+287	Đừng hỗn thế. Cũng chẳng có gì nhiều để kể. Tao thấy một đứa tóc vàng, chừng mười tuổi.
+288	Một thằng nào đó, cỡ mày, đang bế nó tới bệnh viện.
+289	Bệnh viện... Tốt nhất mày nói thật, vì chính mày.
+290	Mày phí hơi dọa tao thì tốt hơn đi tìm con gái mày.
+291	Được, tôi mang đồ ăn tới. Anh đợi ở đây.
+292	Tao có đi đâu đâu.
+293	Ồ, lại là mày à...
+294	Mày mang đồ ăn cho tao chưa?
+295	Mang đồ ăn tới đây.
+296	Tao muốn đổi đồ ăn lấy thông tin. Đồ hộp thì tốt hơn, đồ sống cũng đỡ. Thấy tao hào phóng chưa?
+297	^Scavenger^ ĐÃ VỀ
+298	ĐÊM
+299	NGÀY ^DayOfWar^
+300	^RecentlyDiedDweller^ ĐÃ CHẾT
+301	TẤT CẢ NGƯỜI SỐNG SÓT ĐÃ CHẾT.
+302	CHIẾN TRANH ĐÃ KẾT THÚC.
+303	SỐNG SÓT QUA THÁNG CUỐI CÙNG CỦA CHIẾN TRANH.
+304	BÌNH MINH ĐÃ BẮT ^Scavenger^. QUAY VỀ SẼ KHÓ HƠN.
+305	SỐNG SÓT QUA CHIẾN TRANH.
+306	NGÀY NAY CHIẾN TRANH CÓ THỂ NỔ RA BẤT CỨ LÚC NÀO
+307	Ở BẤT CỨ ĐÂU
+308	NẾU THÀNH PHỐ BỊ VÂY HÃM
+309	BẠN KHÔNG CHUẨN BỊ GÌ CẢ
+310	SỐNG SÓT
+311	Chế tạo|XPadA|
+312	Thoát|XPadB|
+313	Sẽ chế ra một ^ItemName^
+314	-|XPadLeftBumper|
+315	+|XPadRightBumper|
+316	Chế cái gì đây?
+317	Sắp xếp lại
+318	Linh kiện cần dùng
+319	Số lượng
+320	Thời gian
+321	Kỹ năng cần
+322	Không rõ
+323	Ngẫu nhiên
+324	Dạy|XPadY|
+325	g
+326	Xong
+327	OK|XPadA|
+328	Hủy|XPadB|
+329	Tiếp tục|XPadA|
+330	Có|XPadA|
+331	Áp dụng|XPadA|
+332	Không|XPadB|
+333	Hồi kết
+334	Để sau|XPadA|
+335	Tiếp tục
+336	Thoát game
+337	Bỏ cuộc
+338	Sống sót
+339	Tiếp tục
+340	Thử lại
+341	Cài đặt
+342	Sơ đồ điều khiển
+343	Tranh tường
+344	Chắc chắn muốn bỏ cuộc? Mọi tiến trình chưa lưu sẽ mất.
+345	Nhấn để bắt đầu chế độ Cổ điển của This War Of Mine
+346	Nhấn để bắt đầu chế độ Stories của This War Of Mine
+347	Thêm tập
+348	Thẻ mùa
+349	Câu chuyện mới
+350	Chọn tập
+351	Chế độ Stories
+352	Chế độ cổ điển
+353	Tắt mọi mod để chơi tốt nhất
+354	Lấy tập
+355	Mua tập
+356	Mua thẻ mùa
+357	|XPadB|Kết thúc ngày
+358	|XPadB|Chạy ra cửa
+359	Nhật ký ngày
+360	ĐÃ GHÉ ^NoOfDays^ NGÀY TRƯỚC
+361	CHUẨN BỊ|XPadX|
+362	LỤC LỌI|XPadX|
+363	Ở LẠI|XPadB|
+364	LỤC LỌI
+365	CANH GÁC
+366	NGỦ
+367	NGỦ TRÊN GIƯỜNG
+368	QUAY LẠI|XPadB|
+369	HÃY CHỌN NGƯỜI ĐI LỤC LỌI
+370	HÃY BỎ CHỌN NGƯỜI ĐI LỤC LỌI
+371	Lên kế hoạch đêm nay
+372	Nơi trú của chúng tôi
+373	Không tới được vì tuyết
+374	Không tới được vì giao tranh
+375	Đã ghé
+376	Mới
+377	Mặt trận quân đội
+378	Người đi lục lọi
+379	Đăng lên Workshop
+380	NGỦ CÙNG NGƯỜI LỚN
+381	NGỦ CÙNG TRẺ
+382	CHỌN ĐỊA ĐIỂM
+383	Không thể để Amelia ở một mình. Nhỡ có ai vào nơi trú thì sao? Tôi phải bảo vệ con bé.
+384	Tốt nhất là mang theo chó bông của Amelia. Chắc con bé nhớ nó lắm.
+385	Chắc chắn sẽ gặp người có vũ khí. Phải mang theo vũ khí thôi.
+386	TÌM AMELIA
+387	TÌM AMELIA|XPadX|
+388	Súng đang trang bị
+389	Vũ khí cận chiến đang trang bị
+390	Mũ đang đội
+391	Áo giáp đang mặc
+392	Ba lô đang mang
+393	TRANG BỊ|XPadY|
+394	BỎ|XPadA|
+395	THOÁT|XPadB|
+396	Dùng|XPadX|
+397	LẤY|XPadA|
+398	LẤY HẾT|XPadX|
+399	Chỗ trống
+400	Ba lô
+401	Đã lục
+402	Đi
+403	Sẽ dùng trang bị khi bị tấn công.
+404	Suy nghĩ
+405	KHÔNG HỨNG THÚ|XPadB|
+406	THỎA THUẬN|XPadX|
+407	Không mang nổi nhiều thế!
+408	Đổi chác nào
+409	Đồ của chúng tôi
+410	Anh muốn gì?
+411	TIẾP TỤC|XPadA|
+412	Tiếng Anh
+413	Tiếng Đức
+414	Tiếng Ba Lan
+415	Tiếng Pháp
+416	Tiếng Ý
+417	Tiếng Tây Ban Nha
+418	Tiếng Nhật
+419	Tiếng Trung
+420	Tiếng Nga
+421	Tiếng Bồ Đào Nha
+422	Mặc định
+423	Tiếng Bồ Đào Nha (Brazil)
+424	Tiếng Hàn
+425	Tiếng Thổ Nhĩ Kỳ
+426	Cực thấp
+427	Thấp
+428	Vừa
+429	Cao
+430	Rất cao
+431	CHẾ ĐỘ GỠ LỖI: CHUẨN
+432	CHẾ ĐỘ GỠ LỖI: MÙA HÈ
+433	CHẾ ĐỘ GỠ LỖI: MÙA ĐÔNG
+434	Bật
+435	Tắt
+436	Cài đặt âm thanh
+437	Cài đặt hình ảnh
+438	Cài đặt khác
+439	Âm lượng nhạc
+440	Âm lượng hiệu ứng
+441	Âm lượng giọng nói
+442	Độ phân giải
+443	Toàn màn hình
+444	Chất lượng đồ họa
+445	Ngôn ngữ
+446	Phụ đề
+447	HIỆU ỨNG BÚT CHÌ
+448	MỀM
+449	PHÁC HỌA
+450	Đơn vị nhiệt độ
+451	Độ C
+452	Độ F
+453	Chế độ điều khiển
+454	Chuột
+455	Tay cầm
+456	Giao diện điện thoại
+457	KHỞI ĐỘNG LẠI ĐỂ ÁP DỤNG
+458	Đổi hồ sơ |XPadY|
+459	Chờ tôi chút|XPadX|
+460	Không giúp được...|XPadA|
+461	Để sau|XPadY|
+462	Tôi có thể đưa:
+463	Chúng tôi cần:
+464	Kéo tới chỗ trống để đặt
+465	Quay lại|XPadB|
+466	Đặt|XPadA|
+467	Trung Âu
+468	"Chiến tranh chỉ hấp dẫn với những ai chưa từng trải qua nó"
+469	"Chiến tranh là thất bại của nhân loại"
+470	Giáo hoàng John Paul II
+471	"Trong chiến tranh hiện đại... anh sẽ chết như chó, chẳng vì lý do gì ra hồn"
+472	Ernest Hemingway
+473	“Notes on the Next War: A Serious Topical Letter,” Esquire, Sept. 1935
+474	Trò chơi này tự động lưu tiến trình. Vui lòng không tắt máy Xbox One khi thấy biểu tượng này, nếu không tiến trình hiện tại sẽ mất.
+475	Trò chơi này tự động lưu tiến trình. Vui lòng không tắt hệ máy PlayStation®4 khi thấy biểu tượng này, nếu không tiến trình hiện tại sẽ mất.
+476	Bạn sẽ mất tiến trình hiện tại. Chắc chứ?
+477	Bạn chưa đăng nhập. Cần đăng nhập để lưu tiến trình và nhận thành tựu. Đăng nhập ngay bây giờ?
+478	Tài khoản đăng nhập đã thay đổi. Trò chơi sẽ quay về màn hình tiêu đề.
+479	{mr|Tay cầm đã ngắt kết nối, vui lòng kết nối lại tay cầm.}{fr|Tay cầm không dây đã ngắt kết nối, vui lòng kết nối lại tay cầm không dây.}
+480	Chắc chắn muốn thoát? Mọi tiến trình chưa lưu sẽ mất.
+481	Không có kết nối Internet
+482	Đã hai năm kể từ khi This War of Mine ra mắt toàn cầu, và chúng tôi vẫn tiếp tục mở rộng trải nghiệm. |#color=FF3800|DLC miễn phí mới|#defaultcolor|, làm riêng cho Anniversary Edition, thêm |#color=FF3800|nhân vật mới|#defaultcolor|, |#color=FF3800|địa điểm mới|#defaultcolor| để khám phá, và quan trọng nhất là |#color=FF3800|một kết thúc hoàn toàn mới|#defaultcolor|, dẫn tới một kết cục khác của trò chơi. Tuy nhiên, lựa chọn khó khăn vẫn như cũ – bạn sẽ đi xa đến đâu để bảo vệ những người mình quan tâm? 
+483	Anniversary Edition
+484	Chọn câu chuyện
+485	Sẽ mở khóa
+486	Đã khóa
+487	Đã sống sót
+488	Chỉ sống sót ^DayOfWar^ ngày
+489	^DayOfWar^ ngày
+490	Ngẫu nhiên|XPadX|
+491	Tự viết câu chuyện
+492	Câu chuyện của tôi
+493	Tự thiết lập câu chuyện
+494	Chọn câu chuyện mới
+495	Lời hứa của người cha
+496	Thẻ mùa|XPadX|
+497	Cần xác minh bạn đủ 18 tuổi. Vui lòng nhập ngày sinh để tiếp tục.
+498	Cảnh báo! Tài khoản sẽ bị khóa nếu bạn không xác minh đủ 18 tuổi.
+499	Tài khoản đã bị khóa do yêu cầu độ tuổi.
+500	Tài khoản sẽ được mở khóa sau:
+501	Áp dụng|XPadY|
+502	Phải chọn ít nhất một nhân vật
+503	Chỉ được chọn ^count^ nhân vật
+504	Phải chọn ít nhất ^count^ địa điểm
+505	Phải nhập tên
+506	Chắc chắn muốn xóa?
+507	Chắc chắn muốn xóa kịch bản?
+508	Chắc chắn muốn xóa câu chuyện?
+509	Chắc chắn muốn xóa nhân vật?
+510	Chắc chắn muốn xóa thường dân?
+511	Chắc chắn muốn xóa bản đồ thành phố?
+512	Chắc chắn muốn ghi đè?
+513	Chắc chắn muốn ghi đè câu chuyện?
+514	Chắc chắn muốn ghi đè bản đồ thành phố?
+515	Chắc chắn muốn ghi đè thường dân?
+516	Chắc chắn muốn sửa?
+517	Chắc chắn muốn sửa thường dân?
+518	Không thể chọn nhiều hơn một trẻ em
+519	Phải chọn ít nhất một người lớn
+520	Không lưu được. Đã hết chỗ cho nội dung tùy chỉnh.
+521	Chắc chắn muốn rời câu chuyện?
+522	Số ngày đến khi ngừng bắn
+523	Độ khó
+524	Mức độ khốc liệt
+525	Nhẹ
+526	Vừa
+527	Khắc nghiệt
+528	Nhỏ
+529	Lớn
+530	Tâm bão
+531	Ngắn
+532	Dài
+533	Mùa đông đến
+534	Ngày đầu mùa đông
+535	Độ khắc nghiệt của mùa đông
+536	Độ dài mùa đông
+537	Không bao giờ
+538	Sớm
+539	Giữa chừng
+540	Muộn
