@@ -9,7 +9,7 @@
 - Ngôn ngữ: `CFunction.getLanguage` luôn trả `"en"`; bản Việt được chép vào mọi slot `memorytext*.dat.jpg`.
 
 ## Đang làm / còn lại
-- [ ] Offline: giả lập `com/com2us/peppermint/HubBridge` (auth/guest/asyncRequest), IAP miễn phí, push/Firebase/PlayGames no-op, bỏ quyền INTERNET.
+- [ ] Offline: đã phân tích luồng (xem `docs/offline_phan_tich.md`). Gem/tính năng trả phí đi qua **socket tới server game** (`Network_Connect(6)`), nên phải chọn giữa giả lập server và vá từng tính năng. Chưa vá gì.
 - [ ] Dịch 10.602 mục bằng `dp` (giữ tên class/kỹ năng/vật phẩm/tên riêng tiếng Anh).
 - [ ] Ảnh có chữ: `UI_BUT_ENG_*`, `UI_TITLEMAIN`, `ETC_ban_*`...
 - [ ] Test trên máy thật: container không có /dev/kvm nên không chạy được Android emulator.
