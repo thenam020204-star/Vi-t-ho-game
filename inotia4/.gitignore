@@ -6,3 +6,5 @@ work/
 *.apk
 *.apks
 out/
+__pycache__/
+*.pyc
