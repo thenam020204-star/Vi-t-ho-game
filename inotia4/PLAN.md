@@ -12,6 +12,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - sửa lỗi văng khi load save;
   - vẽ lại font cỡ lớn (T7);
   - **mod menu**: thanh kéo hệ số sát thương / phòng thủ / EXP, từ x1 tới x50 (T8; người dùng yêu cầu 2026-10-31 để chơi cốt truyện);
+  - **thay nút HUD bằng bộ ảnh của người dùng** (T10; `assets_user/hud/`, gửi 2026-11-01);
   - **tầm nhìn rộng hơn + HUD lùi vào trong** (T9; người dùng yêu cầu 2026-10-31 kèm ảnh màn chơi): tăng màn logic, HUD cách mép trên/dưới/hai bên;
   - đồng bộ `rebuild.sh`;
   - bản phát hành, gói dự án và `BAO_CAO.md`.
@@ -409,6 +410,26 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - unidbg với `-Demu.w=2400 -Demu.h=1080` chụp màn tiêu đề/intro với k = 1,0 và k = 1,25; so vị trí chạm (tap vào START vẫn trúng).
     - Nếu T2 xong: chụp màn chơi.
     - Rồi build bản thử cho người dùng.
+- [ ] T10. Thay nút HUD màn chơi bằng ảnh của người dùng — **Quản đốc nghiệm thu**. Thứ tự: sau T8; làm cùng đợt với T9 nếu tiện (cùng là HUD).
+  - Đầu vào: `assets_user/hud/` (PNG RGBA, SHA256 trong `SHA256.txt`; ảnh xem nhanh `assets_user/hud_preview.png`):
+    - `btn_save` (116²), `btn_shop` (116², có sẵn chữ "Cửa hàng"), `btn_pause` (116²), `btn_frame` (116², khung tròn trống), `btn_swap` (186²);
+    - `attack` + `attack_pressed` (512², vùng có hình khoảng 425×408 và 507×507).
+    - Ảnh HUD gốc trên máy thật: `docs/emu_shots/may_that_man_choi_hud_goc.jpg`.
+  - Ánh xạ dự kiến (quản đốc; người dùng xác nhận khi xem bản thử):
+    - nút tải về/lưu (cột trái, trên) → `btn_save`;
+    - giỏ hàng (cột trái, giữa) → `btn_shop`;
+    - bánh răng (cột trái, dưới) → `btn_pause`;
+    - nút đổi ↻ (phải, giữa) → `btn_swap`;
+    - các ô kỹ năng/bình máu (khung tròn) → `btn_frame` (icon kỹ năng/bình vẫn do game vẽ đè lên);
+    - nút tấn công lớn (phải, dưới) → `attack`, lúc bấm → `attack_pressed`.
+  - Quy tắc:
+    - giữ nguyên kích thước ô sprite gốc trong atlas, để layout và vùng chạm không đổi;
+    - thu ảnh người dùng bằng Lanczos, giữ alpha, căn giữa; xử lý premultiplied alpha đúng theo định dạng atlas;
+    - dùng lại pipeline ảnh đã có (`scripts/img_vi.py`, đã dùng cho `UI_BUT_ENG_*`, `UI_006`...);
+    - ảnh nào không tìm thấy hoặc ánh xạ không chắc thì ghi "CHƯA XÁC ĐỊNH", không đoán.
+  - [ ] T10a. Tìm sprite HUD gốc: file atlas, toạ độ, kích thước, trạng thái thường/bấm; tìm hàm vẽ trong `UIPlay_*` để xác nhận. Xuất ảnh đối chiếu gốc ↔ mới vào `docs/hud_thay_nut.md`.
+  - [ ] T10b. Ghép ảnh mới vào atlas, repack, selftest byte (atlas không đổi phải ra giống từng byte); `apkdiff` chỉ khác đúng các file atlas.
+  - [ ] T10c. Kiểm: render atlas ra PNG so với ảnh gốc; nếu T2 xong thì chụp màn chơi; rồi bản thử cho người dùng.
 - [ ] ~~T4. IAP "mua miễn phí"~~ — **BỎ** theo người dùng (2026-10-31). Bàn giao dưới đây giữ lại để tham khảo.
   - Bàn giao (A2 đọc trước, ~70%):
     - Java `InAppV4`:
@@ -499,3 +520,6 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - A1 (T7) dừng ở ~316k, đã ghi bàn giao ⇒ lúc làm tiếp giao T7 cho công nhân mới.
   - A2 (T9a) dừng ở ~40%, ~145k ⇒ quản đốc đã ghi bàn giao dưới T9.
   - Thứ tự khi làm tiếp: T7 (chạy) và T9a (đọc trước, phần còn lại) → T8 → T9b/c.
+- 2026-11-01 02:34 (VN) quản đốc: người dùng gửi `assets.zip` (7 nút HUD) trong lúc tạm dừng.
+  - Lưu vào `assets_user/hud/`, thêm T10 (sau T8, cùng đợt T9).
+  - Chưa giao việc (đang tạm dừng tới 06:41).
