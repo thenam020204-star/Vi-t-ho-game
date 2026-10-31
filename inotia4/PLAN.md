@@ -169,13 +169,13 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
       - Chỉ khi không có vùng đệm mới mượn thân `SAVE_SaveData` (0x1d5b88). Điều kiện: chứng minh không có xref, không có reloc, không có tên `Java_` / `RegisterNatives` trỏ tới.
     - **P2 (phòng thủ, làm sau P1)**: `SAVE_Load` trả 0 thì không vào `EnterPlay` với hero NULL. Chỉ nghiên cứu và đề xuất đích an toàn (về menu/màn chọn save), ghi vào tài liệu. **Không áp khi chưa có quản đốc duyệt.**
   - Task con (làm theo thứ tự, mỗi bước xong ghi `Bàn giao:`):
-    - [ ] T3a. `scripts/re/save_crypto.py <libgame.so> <file> --key STR [--oob zero] [--encrypt]`: đọc T từ lib, giải mã/mã hoá, kiểm Σmã/Σthô, in bảng 7 mục.
+    - [x] T3a. `scripts/re/save_crypto.py <libgame.so> <file> --key STR [--oob zero] [--encrypt]`: đọc T từ lib, giải mã/mã hoá, kiểm Σmã/Σthô, in bảng 7 mục.
       - Hoàn thành khi:
         - `thpcheckslot1.dat --key 394572` cho Σthô đúng;
         - `save0.dat --key ""` (giả lập P1, tức key = T) báo Σthô sai và liệt kê các vị trí chênh;
         - roundtrip mã hoá → giải mã trên dữ liệu thử là bằng nhau;
         - định dạng ghi vào `docs/save_format.md`.
-    - [ ] T3b. P1 qua `scripts/patch_lib.py`, mỗi patch kiểm byte gốc.
+    - [x] T3b. P1 qua `scripts/patch_lib.py`, mỗi patch kiểm byte gốc.
       - Thêm cơ chế "base đã có patch" cho patch 0x203e68 có sẵn trong lib của TEST4: khớp old ⇒ áp, khớp new ⇒ báo "đã áp", khác cả hai ⇒ dừng.
       - `build_from_apk.sh` thêm `--lib`: thay `lib/arm64-v8a/libgame.so` đã vá, giữ căn 16 KB, giữ store/align như cũ.
       - Hoàn thành khi:
@@ -190,8 +190,37 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
       - Sau đó build bản thử `test_builds/Inotia4_TEST8_vi_offline.apk` (`--smali net --vnfont --lib --diag`) + SHA256, ghi PROGRESS.
     - [ ] T3d. P2: tài liệu đề xuất (không áp).
   - Hoàn thành T3 khi: T3a–T3c đạt, T3d có đề xuất; người dùng thử TEST8 theo quy trình: game mới → lưu → tắt hẳn app → mở lại → load.
+  - Bàn giao (A1 mới, T3a XONG): tạo `scripts/re/save_crypto.py` (đọc T từ lib qua `adr`, giải/mã hoá, `--selftest`, `--oob zero|file:`, known-plaintext) và `docs/save_format.md`. Kết quả: `thpcheckslot1.dat --key 394572` Σmã 186/Σthô 68 KHỚP; `save0.dat --key ""` Σthô lưu 16 ≠ tính 226, bảng 7 mục hợp lệ, known-plaintext (Info+21..+32 = 140, 20132, 5) sai 8/12 byte và suy ra byte nhớ `0x2d0d67=0xb4`, `0x2d0d6f=0xb4` (tag con trỏ heap trong `gImgUI`), 20 qword con trỏ nghi vấn đều nằm trên biến con trỏ (`gImgUI`, `g_pSGL*`, `s_cachedTexture`) ⇒ xác nhận nguyên nhân khoá rỗng. Roundtrip 250 ca OK. Phát hiện cho T3b: `ENCRYPT_Process2` KHÔNG có vùng đệm ≥16 B trong segment R-X (khe giữa section chỉ 8/12 B: 0x2a82c8, 0xa3e88, 0x127574), nên T3b dự định sửa ngay trong thân hàm (vùng 0x1409a4–0x1409bf, xem Bàn giao T3b khi xong). Bước tiếp: T3b (`scripts/patch_lib.py` + `build_from_apk.sh --lib`). Lệnh: `python3 -I scripts/re/save_crypto.py /opt/work/lib4/libgame.so <file> --key STR`.
+  - Bàn giao (A1 mới, T3b XONG): sửa `scripts/patch_lib.py` (mỗi patch có old/new/refs/asm: khớp old ⇒ áp, khớp new ⇒ "đã áp", khác ⇒ dừng; thêm `--disasm`, `--list`, `--diff A B`) và `scripts/build_from_apk.sh` (cờ `--lib`, kiểm lib trong APK == bản đã vá). Patch P1 tại `0x1409a4..0x1409bf` (7 lệnh, trong thân `ENCRYPT_Process2`, KHÔNG dùng cave vì không có khe ≥16 B trong segment R-X: khe giữa section chỉ 8/12 B tại 0xa3e88, 0x127574, 0x2a82c8; không cần mượn `SAVE_SaveData`): trước `cbnz x3,0x1409b8; mov w8,#0x3231; add x20,sp,#4; movk w8,#0x33,lsl#16; str w8,[sp,#4]; mov x0,x20; bl strlen`; sau `cbnz x3,0x1409ac; adr x20,0xa5e67 ("123\0" có sẵn trong .rodata, refs kiểm 31 32 33 00); mov x0,x20; bl strlen; cmp w0,#0; csinc w0,w0,wzr,ne; nop` ⇒ L=max(strlen,1), khoá NULL vẫn "123", khoá khác rỗng không đổi. Lệnh kế `cbz w22,0x140a24` @0x1409c0 giữ nguyên (refs). Patch 0x203e68 cũ: lib TEST4 đã có ⇒ "đã áp". Bằng chứng: `out/Inotia4_T3b_check.apk` (`--smali net --vnfont --lib --diag`, cờ y TEST7) PASS apksigner/zipalign -P 16/check_apk; `apkdiff` vs TEST7 chỉ khác `lib/arm64-v8a/libgame.so`; `patch_lib.py --diff` lib gốc vs lib trong APK: 24 byte, 3 đoạn, đều trong vùng khai báo; lib vá sha256 `406bfe59...298f` (file `/opt/work/t3/libgame_p1.so`). Bước tiếp: T3c (unidbg gọi thẳng `ENCRYPT_Process2`, so lib gốc `/opt/work/lib4/libgame.so` với `/opt/work/t3/libgame_p1.so`). Lệnh: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/<ten>.apk --smali net --vnfont --lib --diag`.
 - [ ] T7. Vẽ lại font f18 ở cỡ lớn thật (thay cách phóng q/16 đang làm mất dấu) — **Quản đốc nghiệm thu**. **Ưu tiên: ngay sau T3, trước T2/T4.**
-  - Agent: A2 đọc trước (T7a làm được bằng đọc tĩnh); chạy thật sau khi T3 xong.
+  - Agent: công nhân mới, chạy thật sau khi T3 xong. A2 đã đọc trước, dừng ở ~402k ngữ cảnh (vượt ngưỡng, không dùng lại).
+  - Bàn giao (A2 đọc trước T7a, chưa có ảnh xác nhận):
+    - **Không phải do buffer cắt.**
+      - Đường chính của game: `SGL_grpCreateStringImageInRect` 0x1340bc → `RenderToTextureInRect` 0x265eb8 → `SGL_RenderFontToAlphaImageInRect` 0x266ac8 → `measureInRect` + `drawInRect`.
+      - Native chép đúng H hàng mà `measureInRect` trả, buffer `int[2048*2048]` (`CWrapperActivity:139`).
+      - Đường `drawText` (rows = `(int)(size*1.3)` @0x2666d4) không có caller.
+    - **Nguyên nhân khả dĩ nhất: dấu trong f18 quá nhỏ.**
+      - Kích thước dấu: nặng 1 px (hàng 16); sừng ơ/ư 1 px (cột 6, hàng 8); sắc/huyền 2 px chéo; hỏi 3–4 px; ngã 4 px. Dấu chồng (Ấ, ổ) nằm ở hàng 0–4.
+      - Phóng q/16 với q = 16–24 thì dấu nặng và sừng vẫn chỉ 1×1 px ảo.
+      - Texture chữ lọc `GL_LINEAR` (`SGL_Texture::Create` @0x2648fc/0x26490c đặt `0x2601`), GPU lại phóng ×1,6875, nên texel đơn bị nhoè mờ, trông như mất dấu. Ảnh xem trước dùng nearest nên không thấy lỗi.
+    - Phụ:
+      - bước dòng của game `GRPX_GetFontHeight` = size+2 (rodata 0xac3c0/0xac270), còn `lineH` của VNFont lớn hơn, nên dòng sau đè dòng trước 3–7 px ở các đường vẽ từng dòng;
+      - cỡ 14/20 (f18) cũng có dấu 1 px.
+    - Chưa xác định: chưa có ảnh máy thật; giá trị `[g_pSGL+0x14]` (hệ số size ở 0x135118).
+  - Quyết định của quản đốc cho T7 (dựa trên bàn giao):
+    - **Kích thước tối thiểu:** mọi dấu ≥ 2×2 px ở cỡ thiết kế.
+      - Dấu nặng 2×2; sừng 2×2 ở hàng x-height; sắc/huyền nét dày 2 px, dài 4–5 px; hỏi ~3×4; ngã dày 2 px, rộng ~6 px.
+      - Dấu cách thân chữ ≥ 1 hàng; dấu chồng cách nhau ≥ 1 hàng.
+    - **Ô font mới** cho size 24, tỉ lệ 1:1:
+      - H ≤ 28 (gợi ý: vùng dấu hàng 0–8, chữ hoa 9–23, BASE = 23, đuôi 24–27);
+      - H ≤ `1.3*size` để vẫn hợp đường `drawText`;
+      - đặt tên `font/f24vn.bin` thay cho `f27vn.bin` ở trên.
+    - **Tích hợp:**
+      - size ≥ 24 dùng font mới, hệ số `size/24` (làm tròn xuống như `sc()`);
+      - `measureInRect` và `drawInRect` dùng chung `lineH`;
+      - **size < 24 giữ f18 q/16 như TEST7**; xét lại khi có ảnh/phản hồi của người dùng về chữ nhỏ.
+    - **Loại** vá `GL_LINEAR → GL_NEAREST` (0x2648fc/0x26490c): ảnh hưởng mọi texture SGL. Chỉ xét lại nếu font mới vẫn nhoè.
+    - **T7a đạt khi** có ảnh mô phỏng: render buffer chữ (nearest) rồi phóng bilinear ×1,6875 bằng Python, so f18×1,5 với font mới. Ghi vào `docs/font_lon.md`.
   - Đầu vào:
     - `font/f18vn.bin`, `font/charset.txt`;
     - `java/src/com/namp/vh/VNFont.java` (H=18, BASE=14, GAP=2);
@@ -206,7 +235,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Giữ dáng f18, thiết kế cho size 24 (khoảng 1,5 lần f18, ô cao ~27 px); dấu thanh và dấu mũ vẽ lại rõ, không chồng lấn; cùng charset với `f18vn.bin`.
     - Cách vẽ: vector hoá f18 rồi raster lại, hoặc phóng kiểu pixel-art rồi sửa bằng script. Không dùng nguồn font không rõ bản quyền.
     - Sinh bằng script trong `fontgen_inotia/` hoặc `scripts/`, ra `font/f27vn.bin` (cùng định dạng, ghi H/BASE mới).
-    - Ảnh so sánh `docs/font_preview_f27.png`: f18×1,5 hiện tại và font mới, câu mẫu đủ dấu, ví dụ "Ầ Ẫ Ẩ Ấ Ậ Ể Ỗ Ữ Ự Ỹ Đ ầ ẫ ẩ ấ ậ ể ỗ ữ ự ỹ đ — Thiên đường ở phía trước!".
+    - Ảnh so sánh `docs/font_preview_f24.png`: f18×1,5 hiện tại và font mới (cả bản nearest và bản bilinear ×1,6875), câu mẫu đủ dấu, ví dụ "Ầ Ẫ Ẩ Ấ Ậ Ể Ỗ Ữ Ự Ỹ Đ ầ ẫ ẩ ấ ậ ể ỗ ữ ự ỹ đ — Thiên đường ở phía trước!".
   - [ ] T7c. Tích hợp vào VNFont.
     - `size < 24` dùng f18 như trước; `size >= 24` dùng font mới với hệ số `size/24`, chỉ phóng to.
     - Glyph phải nằm gọn trong vùng native cấp (theo T7a).
@@ -217,7 +246,21 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - build thử PASS;
     - dex chỉ khác ở `com/namp/vh/*`;
     - quản đốc duyệt ảnh, rồi người dùng xác nhận trên máy.
-- [ ] T4. IAP "mua miễn phí" — **Quản đốc nghiệm thu** (sau T1)
+- [ ] T4. IAP "mua miễn phí" — **Quản đốc nghiệm thu** (sau T1). **TẠM DỪNG: giả định thiết kế sai, cần người dùng quyết phạm vi (xem Vướng mắc).**
+  - Bàn giao (A2 đọc trước, ~70%):
+    - Java `InAppV4`:
+      - method: `marketConnect(J)V`, `getProductInfo(J)V`, `purchase(String,String,J)V`, `restore(J)V`, `transactionFinish(String,J)V`;
+      - kết quả về qua `glView.queueEvent`, chỉ khi `glView != null` và `cbRef != 0`;
+      - callback `cs{MarketList,GetProductInfo,Purchase}CB(JIILjava/lang/String;Ljava/lang/Object;)V`, đối tượng kèm theo lần lượt là `int[]`, `InAppV4$ProductInfo[]`, `InAppV4$ReceiptInfo[]`;
+      - shim JNI ở 0x278580, 0x27867c, 0x2790e4.
+    - Native:
+      - `InAppV4MarketListCB` @0x212bbc: thành công khi err == 0 và count ≠ 0.
+      - `InAppV4ProductInfoCB` @0x213138 (struct 0x68 B) rồi tới `C2S_HubBeginWithFlow`.
+      - Mua: `NetworkStore_Process` @0x20d518 (state 12) → `InApp_BuyItem` @0x212c74 → `CS_IapV4Purchase(pid, "%d", Inotia_ReceiptInfoCB @0x213954)`.
+    - **Rào chính:** khi err == 0, `Inotia_SendGameServerReceipt` @0x213b08 chuyển sang state 13 → `Network_SendData(0x39)` (gửi receipt lên socket `inotia4.com2us.net:38000`).
+      - Native **không tự cộng vật phẩm**: state 14 chỉ gọi `Transaction_Finish` và hiện popup.
+      - Vì vậy chỉ giả `csPurchaseCB` thì không nhận được gì.
+    - Chưa xác định: gói trả lời của server cho 0x39 và ai cộng gem; nhánh `getActiveNetwork == 1` @0x16ae04 (popup 78).
   - Việc:
     - đọc `com/com2us/module/inappv4/InAppV4` (smali) và native `InAppV4MarketListCB` / `csPurchaseCB` / `csGetProductInfoCB` / `InApp_BuyItem` / `UIPlay_CallInAppShopProc`;
     - thiết kế luồng giả: `marketConnect` thành công, danh sách sản phẩm trả về, `purchase(productId)` → callback thành công đúng định dạng native đọc;
@@ -241,7 +284,11 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - người dùng cài thử OK.
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
-- (trống)
+- **T4 IAP** (2026-10-31): Quyết định thiết kế "native cộng vật phẩm qua callback thành công gốc" **không đúng**. Vật phẩm/gem do game server cộng sau khi nhận receipt (gói 0x39), còn native không cộng cục bộ.
+  - Muốn "mua miễn phí" phải chọn một trong hai:
+    - (a) giả lập trả lời server cho gói 0x39, cùng loại việc với "Gem trên server" vốn đang ngoài phạm vi;
+    - (b) vá native để tự cộng vật phẩm ở state 14.
+  - Cả hai đều cần RE lớn. Chờ người dùng quyết; tạm làm T7 → T2 trước.
 
 ## Nhật ký
 - 2026-10-31 quản đốc: lập PLAN giai đoạn ổn định; T0/T0b đã xong ở phiên trước (TEST6/TEST7).
@@ -258,3 +305,6 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Chốt hướng P1 (vá lõi mã hoá) + P2 (phòng thủ, chỉ đề xuất); chia T3a–T3d.
   - Giao T3 cho A1 mới (chạy); A2 mới đọc trước T4.
 - 2026-10-31 quản đốc: người dùng báo font TEST7 to nhưng mất dấu, yêu cầu vẽ lại f18 cỡ lớn ⇒ thêm T7, ưu tiên ngay sau T3. A2 chuyển từ đọc trước T4 sang đọc trước T7 (T4 lùi lại).
+- 2026-10-31 quản đốc: A2 đọc trước xong (~402k, dừng hẳn).
+  - T4: rào là server cộng gem sau gói receipt 0x39 ⇒ T4 tạm dừng, ghi Vướng mắc chờ người dùng.
+  - T7a: nguyên nhân khả dĩ là dấu 1 px bị `GL_LINEAR` + GPU ×1,6875 làm nhoè, không phải buffer cắt ⇒ chốt quy cách font mới `f24vn` (dấu ≥ 2×2) và tích hợp cho size ≥ 24.
