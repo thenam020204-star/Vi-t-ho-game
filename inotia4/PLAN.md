@@ -368,6 +368,34 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Rồi build bản thử cho người dùng.
 - [ ] T9. Tầm nhìn rộng hơn + HUD lùi vào trong — **Quản đốc nghiệm thu**. Thứ tự: làm cùng đợt hoặc ngay sau T8 (dùng chung vùng nhớ mod và nhóm patch).
   - Agent: A2 mới đọc trước T9a ngay (chỉ đọc).
+  - Bàn giao (A2 đọc trước T9a, TẠM DỪNG ~40%, ~145k ngữ cảnh; chưa có patch nào đủ bằng chứng):
+    - **Biến:**
+      - 0x2d6090/94 là W/H thật; 0x2d6098/9c là W/H logic.
+      - Hai hàm ghi: `SGL_grpInitialize` (0x133030/3c, 0x13307c/80) và `SGL_ReapplyScreenSize` (0x1333e0/e8, 0x133440/44).
+      - `resolutioninit` có 0 caller, là mã chết.
+    - **4 hằng cần đổi để tăng tầm nhìn:** 0x133048, 0x133058 (grpInitialize), 0x1333f8, 0x13340c (Reapply), dạng `mov w8,#0x44200000/0x44700000`.
+      - Nhánh 960 phải thành 1,5×H_logic, vì `GetScalePlusW/H` (0x130968/0x1309c0) còn so W_logic với 960.
+      - Cần cave mới (cave 0x18bb00 đã dành cho T8).
+    - **Chiếu hình:** `SGL_LoadProjectionView_Screen` 0x132a84 dùng `glOrthox(0,W_logic,0,H_logic)`, viewport kín màn ⇒ đổi W/H logic là toàn cảnh co giãn nhất quán.
+      - Reapply gọi `glViewport` + `LoadProjectionView`, và chỉ chạy từ `nativeReapplyScreenSize`.
+    - **`CalcResolution*` chỉ dùng cho menu/popup (căn giữa 960×640), KHÔNG dùng cho HUD màn chơi** ⇒ không có "1 điểm chung" để lùi HUD.
+      - HUD màn chơi neo thẳng vào W/H logic qua `SGL_GetScreenWidth/Height` (0x131928/0x131984, hơn 70 caller) trong `UIPlay_Create` 0x167f28 và `UIPlayPorting_Draw` 0x16985c.
+    - **`UIPlay_Create`** (đọc tới 0x168340):
+      - cột trái x=1, y=155/232/309, ô 75×75;
+      - cột phải x=W−93, y=10/110/210;
+      - thanh ID 4 căn giữa (W−458)/2, y=0;
+      - 6 nút kỹ năng x=(W−3)−off, y=(H+2)−off (mảng off ở rodata 0xac410/0xac5e0/0xac1e0/0xac280/0xac1d0).
+      - `ControlObject_SetRect` = vùng chạm ⇒ vá ở đây thì hình và chạm cùng dời, với điều kiện vá `UIPlayPorting_Draw` theo.
+    - **Chạm:**
+      - `Point_ChangeGameBufferPosToUIBufferPos` 0x13ec20 nhân theo `SGL_GetScreenWidth/Height` ⇒ tự theo W/H logic;
+      - `SimulateTouchPress` 0x1e906c: `x·480/W_logic`.
+      - Đường từ Java tới `handleCletEventImpl` chưa đọc.
+    - **Còn phải đọc:**
+      - thứ tự `onResume` so với `SGL_grpInitialize`;
+      - `MAP_DrawPartial`/`MAP_*` (hằng 640/960, camera);
+      - ảnh nền khi H > 640 (`GAMELOADER_DrawBackGround`, `STATE_DrawMainMenu`, `DrawTitle_Title`, `RenderCoreFlush` 640f);
+      - nửa sau `UIPlay_Create`, `UIPlayPorting_Draw`, minimap, phím ảo;
+      - rủi ro theo từng màn.
   - [ ] T9a. RE + thiết kế, ghi vào `docs/tam_nhin_hud.md`.
     - Mọi chỗ ghi/đọc 0x2d6098/0x2d609c và mọi hằng 640/960 (int `0x280`/`0x3c0`, float `0x44200000`/`0x44700000`) có liên quan tới kích thước màn; phân loại từng chỗ.
     - Caller của `CalcResolutionWidth/Height`, `GetResolutionWidth/Height`, `GRPX_GetScreenWidth/Height`: neo HUD vào mép hay căn giữa vùng 960×640 hay khác.
@@ -466,3 +494,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Yêu cầu tăng tầm nhìn (màn logic) và dời HUD vào trong, có khoảng hở so với mép ⇒ thêm T9.
   - Chốt thiết kế: hệ số k chỉnh bằng mod menu, mặc định 1,25; lề HUD 24/16 px.
   - A2 mới đọc trước T9a.
+- 2026-11-01 02:3x (giờ VN) quản đốc: **TẠM DỪNG theo người dùng; làm tiếp lúc 06:41.**
+  - Có ping giữ cache mỗi 55 phút.
+  - A1 (T7) dừng ở ~316k, đã ghi bàn giao ⇒ lúc làm tiếp giao T7 cho công nhân mới.
+  - A2 (T9a) dừng ở ~40%, ~145k ⇒ quản đốc đã ghi bàn giao dưới T9.
+  - Thứ tự khi làm tiếp: T7 (chạy) và T9a (đọc trước, phần còn lại) → T8 → T9b/c.
