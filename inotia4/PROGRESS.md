@@ -27,3 +27,24 @@
 ## Ghi chú kỹ thuật
 - Native libgame.so tạo 5 font: size 20/24/38/28/14, cao dòng 22/26/40/30/16 (`GRPX_CreateFont` @0x12a6ac).
 - File gốc không có trong git: đặt `base.apk` + `split_config.*.apk` vào một thư mục rồi chạy rebuild (sha256 ở `goc/SHA256.txt`).
+
+## LỖI MỞ: TEST4 văng ngay lúc tải trên máy thật (người dùng báo 2026-10-31)
+Màn hình: nền đen + vòng xoay tải Android, rồi văng. Emulator unidbg chỉ chạy native nên **chưa từng chạy phần Java trên ART thật**. Chưa có logcat, nên nguyên nhân CHƯA XÁC ĐỊNH.
+
+Đã kiểm (tĩnh):
+- Không có lớp Application riêng. LAUNCHER = `MainActivity` (extends CWrapperActivity, gọi `HiveActivity.onCreate`...).
+- `ActiveUser.start` không có caller smali (native gọi qua JNI). `Offline.*` dùng `CFunction.runOnGlThread` → `CFunction.mGLSurfaceView.queueEvent`. Nếu bị gọi trước khi GL view được gán thì NPE (cần xác minh).
+- Manifest không còn split bắt buộc. Quyền còn lại: VIBRATE, ACCESS_WIFI_STATE, ACCESS_NETWORK_STATE, WAKE_LOCK, ...
+- Hercules (`com.com2us.security.Hercules`, libHercules.so) vẫn chạy; APK đã ký lại bằng khoá khác, nên có thể bị chống sửa. Chưa kiểm.
+
+Nghi vấn theo thứ tự ưu tiên:
+1. **Gỡ INTERNET**: không có quyền này, DNS ném `SecurityException` (RuntimeException), có thể làm sập thread của Hive/Firebase/Facebook/PlayGames init provider. Vòng xoay rất giống màn setup của Hive.
+2. Hercules phát hiện chữ ký mới hoặc APK bị sửa.
+3. NPE trong `Offline` (`mGLSurfaceView` null).
+4. classes3.dex: d8 báo "java.lang.Runnable not found" vì chưa truyền `--lib android.jar`. Cần build lại với `--lib`.
+
+Việc tiếp theo (đề xuất):
+- Làm bản chẩn đoán: ContentProvider `initOrder` cao cài `UncaughtExceptionHandler` và đọc `logcat -d` của chính uid lúc khởi động. Nếu lần chạy trước có `FATAL EXCEPTION`/`Fatal signal` thì mở Activity hiện log kèm nút Chia sẻ. android.jar API 16 tải từ Maven: `com.google.android:android:4.1.1.4`.
+- Gửi 2 bản để thu hẹp nguyên nhân: (a) như TEST4 + chẩn đoán; (b) trả lại quyền INTERNET + chẩn đoán.
+- Hoặc nhờ người dùng gửi logcat (`adb logcat -b crash`).
+- d8: thêm `--lib android.jar`.
