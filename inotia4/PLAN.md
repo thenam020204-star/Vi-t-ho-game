@@ -277,7 +277,52 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - dex chỉ khác ở `com/namp/vh/*`;
     - quản đốc duyệt ảnh, rồi người dùng xác nhận trên máy.
 - [ ] T8. Mod menu: sát thương / phòng thủ / EXP, thanh kéo x1–x50 — **Quản đốc nghiệm thu**. Thứ tự: sau T7.
-  - Agent: A2 mới đọc trước T8a ngay (chỉ đọc); chạy thật sau T7.
+  - Agent: công nhân chạy mới sau T7. A2 đọc trước T8a xong (~312k, dừng).
+  - Bàn giao (A2 đọc trước T8a, chưa chạy gì):
+    - **Điểm chặn:**
+      - `CHAR_AddDamage` 0x18b3e0: x0 = kẻ tấn công (có thể NULL), x1 = mục tiêu, w2 = sát thương int32 (< 1 thì thoát);
+      - `MERCENARYSYSTEM_AddExperience` 0x1c7688 (giết quái; gọi từ `CHARSYSTEM_Die`);
+      - `MERCENARYSYSTEM_AddExpFixed` 0x1c7a2c (thưởng nhiệm vụ).
+      - Không hook `CHAR_AddExperience` 0x183964: nó còn 3 caller nạp EXP tồn của lính, hook sẽ nhân đôi.
+      - Sát thương kịch bản `EVTSYSTEM_Process` (`AddLife(-N)`) không được phủ.
+    - **Phe:** byte `[char+0x311]`: 0 = người chơi (party, main player, triệu hồi chép phe chủ), 1 = quái, 2 = NPC.
+    - **Phòng thủ gốc:** `dmg×(1000−def‰)/1000`, phép bị chặn ≤ 750‰ (0x18bde4), nên không thể "phòng thủ ×50" ⇒ **chia sát thương nhận cho Mdef**.
+    - **Patch:**
+      - A 0x18b3e0 `ffc301d1` → `c8010014` (b 0x18bb00);
+      - B 0x1c7860 `c80d8052` → `c510ff17` (b 0x18bb74);
+      - C 0x1c7a44 `f303002a` → `5910ff17` (b 0x18bba8).
+      - Cave 228 B ở 0x18bb00..0x18bbe4 (sha256[:16] của byte gốc `e35d270c3ba4b6ee`), mượn 2 hàm chết `CHAR_AddDamageEffect` và `CHAR_AddDamageByDefaultCheck`. Bằng chứng: 0 caller, 0 reloc/adrp/literal trỏ vào, không có stub PLT, `libHercules` không import.
+      - Mã asm và hex đầy đủ có trong báo cáo A2 (quản đốc đã lưu, công nhân T8 dựng lại bằng `llvm-mc` theo quy cách dưới đây).
+    - **Vùng nhớ:** Mdmg/Mdef/Mexp = int32 @0x72f780/0x72f784/0x72f788.
+      - Nằm ở đuôi trang cuối `.bss` (bss kết thúc 0x72f770, trang kết thúc 0x730000).
+      - 0 adrp vào trang 0x72f000/0x730000; reloc duy nhất gần đó có addend 0x72f770, nhỏ hơn 0x72f780.
+    - **Kênh Java → native:**
+      - `sun.misc.Unsafe`: `hiddenapi-flags` ghi `putInt(JI)V` là `unsupported`, tức không bị chặn ở targetSdk 36.
+      - `/proc/self/mem`: SELinux `allow domain self:file rw_file_perms`; ghi vào VMA có `VM_WRITE` không cần `FOLL_FORCE`.
+      - Base lấy từ `/proc/self/maps` (lib được giải nén, offset 0).
+    - **Gắn:** `MainActivity.onResume` (smali `.locals 1`), ngay sau `invoke-static {p0}, Lcom/hive/HiveActivity;->onResume(Landroid/app/Activity;)V` (khớp 1 lần). Nút nổi thêm bằng `addContentView` trên UI thread.
+  - Quyết định của quản đốc cho T8 (dựa trên bàn giao; đã tự disasm đầu `CHAR_AddDamage`: hàm gốc đọc `[x1,#0x2c9]` không kiểm null sau `cmp w2,#1`, nên cave đọc `[x1,#0x311]` cùng thứ tự là không thêm rủi ro):
+    - Dùng 3 điểm A/B/C, cave và vùng nhớ như bàn giao.
+      - T8a phải kiểm lại: (p_vaddr + p_memsz) của PT_LOAD chứa `.bss` làm tròn lên trang 4 KB và 16 KB đều > 0x72f78c.
+      - Phía Java kiểm lúc chạy: dòng `maps` phủ 0x72f780..0x72f78c phải là `rw-p`.
+    - **Hệ số:** chỉ nhận 2..50; giá trị khác (kể cả 0 mặc định) coi như 1, tức như game gốc.
+    - **Sát thương phe người chơi gây ra** (kẻ tấn công ≠ NULL và phe 0) × Mdmg, **chặn trần 999.999**, không phải 0x7FFFFFFF như A2 đề xuất.
+      - Lý do: tránh tràn `dmg×80` @0x18b48c và `[atk+0x19c]×dmg` @0x18b4e8.
+      - Hằng: `mov w13,#0x423f; movk w13,#0xf,lsl#16`.
+    - **Sát thương phe người chơi nhận** (mục tiêu phe 0) chia Mdef, tối thiểu 1.
+    - **EXP** × Mexp, chặn trần 0xFFFFFF (`w19×110` @0x1c7868 tràn khi > 19,5M).
+    - **Kênh Java → native:**
+      - **chính**: `/proc/self/mem` (lỗi chỉ là IOException);
+      - **dự phòng**: `Unsafe.putInt`, chỉ khi đã kiểm magic ELF tại base và vùng đích `rw-p`;
+      - ghi xong đọc lại để kiểm;
+      - cả hai đều hỏng thì toast "Mod không chạy được trên máy này", game vẫn chạy bình thường.
+      - Ghi lại cả 3 giá trị ở mỗi `onResume`, vì `.bss` về 0 mỗi lần mở app.
+    - **Smali:** thêm cơ chế `INSERT_AFTER` vào `patch_smali.py` (dòng neo khớp đúng 1 lần trong method, chèn 1 dòng sau), thay vì thay cả thân `onResume`.
+    - **Nút nổi:**
+      - nhỏ, kéo thả được, không che vùng 960×640 giữa màn: đặt ở lề trái/phải, vì màn logic 1422×640 dư mỗi bên 231 px;
+      - bọc `try/catch Throwable`; chống thêm 2 lần;
+      - không cấp phát trong vòng lặp game.
+    - T8d theo kế hoạch của A2: `emu_start` tại 3 điểm vá với thanh ghi và `.bss` đặt sẵn, thử Mdmg/Mdef/Mexp = 0, 1, 2, 50, 51 và biên trần; với A, đặt breakpoint ở `CHAR_AddLife` để đọc w1 = −dmg.
   - [ ] T8a. RE + thiết kế, ghi vào `docs/mod_menu.md`.
     - Tìm hàm tính sát thương người chơi gây ra / nhận và hàm cộng EXP trong `libgame.so`, dựa vào symbol + disasm:
       - chữ ký, kiểu dữ liệu (byte/short/int, có dấu không), giá trị tối đa;
@@ -371,3 +416,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-10-31 quản đốc: nghiệm thu T3a–T3d ĐẠT, commit TEST8 (P1 vá lõi mã hoá). Gửi người dùng thử.
   - A1 (T3) dừng ở ~350k.
   - Giao T7 cho công nhân chạy mới.
+- 2026-10-31 quản đốc: A2 đọc trước T8a xong (~312k, dừng).
+  - Chốt 3 điểm chặn (`CHAR_AddDamage`, `MERCENARYSYSTEM_AddExperience`, `AddExpFixed`), cave trong 2 hàm chết, vùng nhớ đuôi `.bss`.
+  - Trần sát thương 999.999, trần EXP 0xFFFFFF.
+  - Kênh Java → native: `/proc/self/mem`, dự phòng `Unsafe`.
+  - T8 chờ T7 xong.
