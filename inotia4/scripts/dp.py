@@ -179,7 +179,7 @@ def load_gl():
 def env():
     meta = jl('meta.json')
     if not meta: die('chưa prep (không thấy dp_work/meta.json)')
-    codes = re.compile(CODE0 + ('|' + meta['codes'] if meta.get('codes') else ''))
+    codes = re.compile(meta.get('code0', CODE0) + ('|' + meta['codes'] if meta.get('codes') else ''))  # code0: thay mau ma mac dinh (vd game khong co the <...>)
     cs = set(open(P('charset.txt'), encoding='utf-8').read()) if os.path.exists(P('charset.txt')) else None
     return meta, codes, cs
 

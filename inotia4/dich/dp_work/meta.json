@@ -1,1 +1,24 @@
-{"fmt": "tsv", "nl": "\n", "tail": true, "bom": false, "hdr": true, "cols": {"src": 1, "dst": 3}, "file": "/home/user/Vi-t-ho-game/inotia4/dich/text_can_dich.tsv", "lang": "en", "codes": "\\$[A-Za-z]|&[A-Za-z]|%[ds]", "enc": "utf-8", "args": {"src": null, "dst": null, "ctx": null, "lim": null, "sheet": null, "enc": "utf-8"}}
+{
+ "fmt": "tsv",
+ "nl": "\n",
+ "tail": true,
+ "bom": false,
+ "hdr": true,
+ "cols": {
+  "src": 1,
+  "dst": 3
+ },
+ "file": "/home/user/Vi-t-ho-game/inotia4/dich/text_can_dich.tsv",
+ "lang": "en",
+ "codes": "\\$[A-Za-z]|&[A-Za-z]|%[ds]",
+ "enc": "utf-8",
+ "args": {
+  "src": null,
+  "dst": null,
+  "ctx": null,
+  "lim": null,
+  "sheet": null,
+  "enc": "utf-8"
+ },
+ "code0": "\\\\[nrt]|%\\d*[sdfx]|\\{\\d+\\}|\\$\\d+|\\^\\d|#[0-9A-Za-z]|[|@~]"
+}
