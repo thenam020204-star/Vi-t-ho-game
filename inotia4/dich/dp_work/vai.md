@@ -1,0 +1,30 @@
+# Inotia 4 — vai & văn phong (chốt với người dùng)
+- Lời thoại/mô tả/UI: tiếng Việt hiện đại, tự nhiên. KHÔNG Hán Việt nặng.
+- GIỮ NGUYÊN tiếng Anh: tên class (Black Knight, Assassin, Warlock, Priest, Ranger, Warrior...), tên kỹ năng, tên vật phẩm/trang bị, tên riêng người, địa danh/bản đồ (Delos Cave, Snowfield 4...), tên quái/boss, phe phái riêng (Shadow Tribe, Shadow Followers).
+- Câu chứa các tên trên: dịch câu, giữ tên.
+- Chỉ số/UI: HP, MP, EXP, ATK, DEF, SP, Lv, Gem, Gold.
+- Mã điều khiển: $R $S $G $B (màu, $B = về màu thường) bọc đúng cụm từ tương ứng; &N xuống dòng, &P sang trang; %d %s giữ nguyên số lượng/thứ tự.
+- Tiêu đề nhiệm vụ: dịch ngắn gọn.
+## Nhân vật & xưng hô
+- Kiyan: nhân vật chính, sát thủ trẻ của Shadow Tribe; nói thẳng, lạnh. Với người lạ/NPC: tôi – anh/chị/ông/bà/cô/cậu tùy tuổi; với Channel: tôi – cô (sau thân hơn có thể giữ).
+- Channel: cô gái được bảo hộ, "đứa con của Tamit"; hiền, lễ phép: tôi – anh (với Kiyan).
+- Tamit: thần ban sự sống (Life-giver). Shadow Tribe: phe bóng tối.
+- Kẻ thù/quái nói với Kiyan: ta – ngươi. Kiyan đáp kẻ thù: ta – ngươi hoặc tôi – mày khi giận.
+- Trưởng làng/Elder, thị trưởng (Mayor), lính: ông/tôi lịch sự. NPC giao nhiệm vụ: tôi – cậu (gọi Kiyan).
+- $G(...) = suy nghĩ trong đầu: xưng "mình"/bỏ chủ ngữ.
+- Tên bản đồ/khu vực: GIỮ TIẾNG ANH toàn bộ (kể cả Inn, Weapons Store trong danh sách map) cho thống nhất.
+- Darius: cấp trên/thủ lĩnh trực tiếp của Kiyan trong Shadow Tribe. Kiyan: tôi – ngài; Darius: ta – cậu.
+- Eara: cô gái bị quân Berkel truy lùng (Channel). Eara↔Kiyan: tôi – anh / tôi – cô. Shin: người bảo vệ Eara.
+- Earl Grafton (bá tước, kẻ thù): với lính: ta – các ngươi; với Kiyan: ta – ngươi. Lính gọi Grafton: "ngài"/"chúa công".
+- Cardinal Janus: Hồng y Janus; Kiyan: tôi – ngài; Janus: ta – cậu.
+- Portia: người của tộc giúp cải trang (nữ): tôi – cậu. Sahir, Goshak: tay sai của "Lord" (thờ Moar), cợt nhả: tụi tôi/ngài.
+- Trung sĩ Lehman (Sergeant): cộc cằn: tôi – cậu. Chỉ huy Alexander (Commander, Hiệp sĩ Berkel, ngạo mạn): ta – ngươi/cậu.
+- Shin: người fey (tiên tộc), hộ vệ của Channel; thù địch với Kiyan: ta – ngươi (cả hai phía). Kiyan gọi Shin "tóc vàng" khi chọc.
+- Goblin: nói ngọng, cụt lủn ("Người xấu! Chết!"), xưng "tụi tao", gọi Kiyan "người".
+- Nirniti: nữ pháp sư ở Kamuran, lớn tuổi: tôi – cậu; Kiyan: tôi – bà.
+- Walter (Amarok, người sói hiền): tôi – cậu. Thị trưởng làng Dwarf: ta – ngươi (cộc). Eara gọi Kiyan "Kiyan", nói nhẹ nhàng.
+- Cornette: nữ lính đánh thuê được thuê bảo vệ Channel, ngông: ta – ngươi. Chasers: đội truy lùng của Arnen (giữ tên).
+- Portia thật ra là djinn (tộc có cánh) cải trang thành Nirniti; nói chuyện với Kiyan thân mật: tôi – cậu. Ben (Pendrik, môi giới): tôi – cậu.
+- Pope/His Holiness: Giáo hoàng / Đức Thánh Cha. Kane (Dark Sorcerer, nhà thí nghiệm lập dị của tộc): ta – cậu. Leiden: nhà giả kim: tôi – cậu.
+- Olaf (Steel Orc, chiến binh trọng danh dự): tôi – cô/cậu. Kẻ cầm đầu dị giáo (heresy leader): ta – các ngươi.
+- Azad: "Người lạ ở Hwagan", bí ẩn, biết quá khứ Kiyan: tôi – cậu/các người. Trưởng lão Steel Orc: ta – các con/các vị.

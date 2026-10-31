@@ -1,0 +1,4413 @@
+1	Black Knight
+2	Sức mạnh nguyên thuỷ của các hiệp sĩ cao quý vượt xa giới hạn con người. Với danh xưng trang nghiêm và lòng trung thành với Shadow Tribe, các hắc kỵ sĩ là những bậc thầy hàng đầu của Tribe.
+3	Assassin
+4	Họ đã tồn tại trên lục địa Inotia từ rất lâu. Trải qua vô số khoá huấn luyện khắc nghiệt và thực chiến, họ sở hữu sức chiến đấu độc lập mạnh nhất lục địa.
+5	Warlock
+6	Những pháp sư này bị quyền năng hắc ám đầy mê hoặc của Shadow Tribe lôi kéo, thay vì đức tin vào giáo hội. Phép thuật và tà thuật của họ có sức huỷ diệt cao nhất lục địa Inotia.
+7	Priest
+8	Một số Shadow Followers từng là giáo sĩ sùng đạo của Tamit, Đấng ban sự sống. Đức tin méo mó vào ma thuật hắc ám khiến họ còn huỷ diệt hơn cả khi được ban sức mạnh ánh sáng.
+9	Ranger
+10	Những kẻ truy lùng này sống trong rừng sâu, xa nơi con người. Thành viên Shadow Tribe liên lạc với họ để thu thập thông tin quý giá giúp sinh tồn.
+11	Warrior
+12	Đến từ vùng cao nguyên phía bắc lục địa Inotia, họ là những chiến binh man tộc. Một số làm lính đánh thuê cho Shadow Tribe, không vì danh vọng hay tiền tài mà vì khát khao tàn sát kẻ thù trên chiến trường.
+13	STR
+14	Tăng sát thương vật lý. Có thưởng thêm cho vũ khí hai tay.
+15	DEX
+16	Tăng sát thương vật lý, độ chính xác và thưởng né tránh.
+17	VIT
+18	Tăng HP và phòng thủ.
+19	INT
+20	Tăng sát thương phép. Orb (pháp cụ) được thưởng thêm.
+21	MEN
+22	Tăng sát thương phép và thưởng độ chính xác.
+23	Tiền
+24	Handbag
+25	Small Bag
+26	Backpack
+27	Infinity Bag
+28	Healing Potion (S)
+29	Healing Potion (M)
+30	Healing Potion (L)
+31	Healing Potion (XL)
+32	Mana Gem
+33	Life Potion (S)
+34	Life Potion (M)
+35	Life Potion (L)
+36	Life Potion (XL)
+37	Elixir
+38	Supreme Elixir
+39	Novice Weapon Scroll
+40	Standard Weapon Scroll
+41	Advance Weapon Scroll
+42	Supreme Weapon Scroll
+43	Chaos Weapon Scroll
+44	Novice Armor Scroll
+45	Standard Armor Scroll
+46	Advanced Armor Scroll
+47	Supreme Armor Scroll
+48	Chaos Armor Scroll
+49	Resurrection Scroll
+50	Improved Resurrection Scroll
+51	Novice Jewel
+52	Standard Jewel
+53	Advanced Jewel
+54	Supreme Jewel
+55	Chaos Jewel
+56	Mithril
+57	Chaos Scale
+58	Leather
+59	Bloody Fur
+60	Dust of Death
+61	Spell Crystal
+62	Palpitant Crystal
+63	Sharp Claw
+64	Magic Cloth
+65	Mercenary Emblem (Black Knight)
+66	Mercenary Emblem (Assassin)
+67	Mercenary Emblem (Ranger)
+68	Mercenary Emblem (Warlock)
+69	Mercenary Emblem (Priest)
+70	Mercenary Emblem (Warrior)
+71	Divine Mercenary Emblem
+72	Hero Emblem
+73	Shadow Mercenary Emblem
+74	Skillbook
+75	Novice Dice
+76	Standard Dice
+77	Advanced Dice
+78	Supreme Dice
+79	Chaos Dice
+80	Leaf of Life
+81	Fruit of Cause
+82	Root of Soul
+83	Magic Branch
+84	Transcendent Flower
+85	Lamp
+86	Resurrection Prayer
+87	Trang bị
+88	Dagger
+89	Short Sword
+90	Dirk
+91	Kukri
+92	Ninja Blade
+93	Blade
+94	Main Gauche
+95	Kris
+96	Knife
+97	Assassin Dagger
+98	Impassivity Blade
+99	Blade of Hell
+100	Sashimi
+101	Flash Cutter
+102	Hell Guider
+103	Predator's Claw
+104	Destructive Fang
+105	Drake's Sword
+106	Blood Drinker
+107	Longsword
+108	Broad Sword
+109	Scimitar
+110	Katana
+111	War Sword
+112	Rune Sword
+113	Gladius
+114	Falchion
+115	Talwar
+116	Knight Sword
+117	Durandal
+118	Duel Master
+119	Excalibur
+120	Dragon Saber
+121	East Blade
+122	Masamune
+123	Heaven Sword
+124	Blood Raven
+125	Emperor's Sword
+126	Hatchet
+127	Twin Axe
+128	Francisca
+129	Tomahawk
+130	War Axe
+131	Naga
+132	Hell Razor
+133	Skull Breaker
+134	Soul Destroyer
+135	Mad Slayer
+136	Wolfram Battle Axe
+137	Darkness Shredder
+138	Body Slicer
+139	Club
+140	War Hammer
+141	Bat
+142	Dwarven War Hammer
+143	Power Bludgeon
+144	Tyrant's Iron Mace
+145	Storm Hammer
+146	Scourge Mace
+147	Heathen's Mace
+148	Shadowfiend Iron Mace
+149	Greatsword
+150	Bulova 
+151	Double Crescent Blade
+152	Crescent Sword
+153	Great Sword
+154	Bastard Sword
+155	Viking Axe
+156	Naginata
+157	Giant Axe
+158	Flamberge
+159	Angurvadel
+160	Lunar Eclipse
+161	Silver Sword
+162	Bloody Dragon
+163	Lance of Longinus
+164	Ashcalon
+165	Dragon Slayer
+166	Soul River
+167	Mortal Slayer
+168	Destruction Scepter
+169	Obsidian Laser
+170	Crystal Orb
+171	Magic Book
+172	Idol
+173	Mana Orb
+174	Old Book
+175	Bright Crystal
+176	Oracle Book
+177	Shadow Doll
+178	Blue Orb
+179	Ancient Book
+180	Dragon Heart
+181	Searing Crystal
+182	Runic Tablet
+183	Book of Judgement
+184	Spiritual Totem
+185	Hall of Salvation
+186	Destructive Fireball
+187	Holy Tablet
+188	Destructive Totem
+189	Staff
+190	Cedar Staff
+191	Bone Staff
+192	Hickory Staff
+193	Mage Staff
+194	Quarterstaff
+195	Sage Staff
+196	Ancient Staff
+197	Monks Staff
+198	Rune Staff
+199	Majestic Staff
+200	Omnipotent Apostles
+201	Divine Staff
+202	Staff of Nightmares
+203	Yggdrasil Branch
+204	Spawn Bane
+205	Staff of Anubis
+206	Desolator
+207	Mind Crier
+208	Huntsman Bow
+209	Short Bow
+210	Long Bow
+211	Composite Bow
+212	Battle Bow
+213	Bamboo Bow
+214	Single Bow
+215	Big Bow
+216	Gakkung Bow
+217	Eagle Bow
+218	Ace Archer's Bow
+219	Gungnir: Odin's Bow
+220	Hawkeye
+221	Elven Bow
+222	Death Wind
+223	Avenger
+224	Wind Conqueror's Bow
+225	Bone Stinger
+226	Sharpshooter
+227	Light Crossbow
+228	Heavy Crossbow
+229	Sling Catapult
+230	Enhanced Crossbow
+231	Catapult
+232	Chokonu
+233	Battle Crossbow
+234	Hurler
+235	Arbalest
+236	Ballista
+237	Slayer's Crossbow
+238	Heart Extortionist
+239	Hellfire
+240	Autoshooter
+241	Inotia Fire
+242	Vengence
+243	Sniper
+244	Redrider Bowgun
+245	Heart Breaker
+246	Robe
+247	Cotton Robe
+248	Uniform
+249	Tunic
+250	Charm Suit
+251	Mage Robe
+252	Elemental Robe
+253	Pure White Robe
+254	Elven Tunic
+255	Twilight Suit
+256	Martyr of Light
+257	Forgotten Hero's Robe
+258	Arcana's Robe
+259	Abyss Garb
+260	Funeral Suit of the Corrupted
+261	Dragon Cape
+262	King Rich's Cape
+263	Sage's Tattered Robe
+264	Leather Armor
+265	Hide Armor
+266	Hard Leather
+267	Dark Leather
+268	Strider Armor
+269	Bandit Mail
+270	Ghost Armor
+271	Studded Leather
+272	Dread Armor
+273	Elven Leather
+274	Great Thief's Leather Suit
+275	Dark Chaser
+276	Death Mail
+277	Black Uniform
+278	Werewolf Leather
+279	Leather Armor S Rank 
+280	Shadow Strider
+281	Black Chaser
+282	Chain Mail
+283	Splint Mail
+284	Light Plate
+285	Half Plate
+286	Full Plate
+287	Ring Mail
+288	Brigandine
+289	Elven Mail
+290	Iron Armor
+291	Chaos Armor
+292	Balrog Mail 
+293	Dragon Scale Armor
+294	Blood Conqueror
+295	Ancient Armor
+296	Heavy Armor
+297	Bison Mail
+298	Armor of Sorrow
+299	Steel Heart
+300	Cloth Hat
+301	Hood
+302	Cone Hat
+303	Skull Face
+304	Circlet
+305	Tribe Hat
+306	Black Bandanna
+307	Sorcerer's Hat
+308	Bone Helm
+309	Crown
+310	Visor Rank S
+311	King Rich's Crown
+312	Crown of Glory
+313	Enlightened One
+314	Cat Mask
+315	Cat Ears
+316	Remex Headband
+317	Witch Hat
+318	Charm Cone Hat
+319	Adventurer Hat
+320	Cotton Cone Hat
+321	Crown of Prosperity
+322	Circlet of Flame
+323	Carp Hat
+324	Clown Hat
+325	Santa Hat
+326	Seed
+327	Fedora
+328	Brilliant Wizard Hat
+329	Baby Headband
+330	Assassin's Turban
+331	Bandanna of Darkness
+332	Fairy Hat
+333	Ninja Headband
+334	Knowledge Crown
+335	Bandanna of Wisdom
+336	Rabbit Ears
+337	Funky
+338	Lucky Hat
+339	Sage Hat
+340	Circlet of Hope
+341	Big Ribbon
+342	Fur Helm
+343	Leather Helm
+344	Skull Cap
+345	Helm
+346	Full Helm
+347	Hunter Cap
+348	Shadow Cap
+349	Soldier Helm
+350	Fighter Helmet
+351	Knight Helm
+352	Steel Veil
+353	Palladium Helm
+354	Helm of Mist
+355	Demon's Crown
+356	Blaze of Glory
+357	Berserker Helm
+358	Dainty Ears
+359	Empire's Crown
+360	Star Hat
+361	Perky Ears
+362	Flower Fairy
+363	Tiara
+364	Samurai Helmet
+365	Carp Deity Mask
+366	Blazing Vessel
+367	Meow Mask
+368	Nickel Silver Pot
+369	Hero's Helmet
+370	Dragon Knight Helm
+371	Angel Helmet
+372	Gladiator Helmet
+373	Voluminous Style
+374	Black Knight Helm
+375	Red Hat
+376	Colorful Ribbon
+377	Leather Gloves
+378	Fur Gloves
+379	Leather Bracer
+380	Leather Gauntlet
+381	Battle Fist
+382	Tough Gloves
+383	Mittens
+384	Magic Bracer
+385	Rune Gauntlet
+386	War Fist
+387	Adventurer Gloves
+388	Steel Clutches
+389	Demon Bracers
+390	Fighter Bracers
+391	Grip Holder Rank S
+392	Blood Fist
+393	Legion Gauntlet
+394	Victory Gauntlet
+395	Shoes
+396	Boots
+397	Heavy Boots
+398	Rune Boots
+399	Greaves
+400	Rune Shoes
+401	Enhanced Boots
+402	Battle Boots
+403	Magic Boots
+404	War Boots
+405	Light Sandals
+406	Soul Boots
+407	Charm Greaves
+408	Wing Boots
+409	Sneak Boots Rank S
+410	Adventurer Foot
+411	Infantry Boots
+412	Conqueror Boots
+413	Wooden Shield
+414	Small Shield
+415	Large Shield
+416	Kite Shield
+417	Tower Shield 
+418	Round Shield
+419	Buckler
+420	Defender
+421	Guardian Shield
+422	Pavise
+423	Mirror Shield
+424	Iron Wall Shield
+425	Regulus Shield
+426	Alloy Shield
+427	Emperor's Shield
+428	Titan Shield
+429	The Last Guardian
+430	Guardian of Patience
+431	Ferrule
+432	Copper Ring
+433	Crystal Ring
+434	Bright Ring
+435	Charm Ring
+436	Silver Ring
+437	Gold Ring
+438	Diamond Ring
+439	Ring of Faith
+440	Luminous Ring
+441	Jade Loop
+442	Jade Ring
+443	Faith Loop
+444	Golden Ring
+445	Succubus Ring
+446	Celebrant Ring
+447	Authority of Power
+448	Soul Ring
+449	Medal
+450	Emerald Pendant
+451	Amulet
+452	Wolf Tooth
+453	Energy Talisman
+454	Silver Necklace
+455	Eternity Necklace
+456	Gold Necklace
+457	Dragon Tooth
+458	Sign of Truth 
+459	Magical Blood Talisman
+460	 Adventurer Talisman
+461	Barbaric Bone Necklace 
+462	Amulet of Truth
+463	Salamander Heart
+464	Megalodon Fangs
+465	Dragon Teeth Necklace
+466	Truth of Life
+467	Cloak
+468	Insulating Cloak
+469	Traveler's Cloak
+470	Tribe's Cloak
+471	Premium Cloak
+472	Cute Cloak
+473	Fur Cloak
+474	Chaser's Cloak
+475	Cloak of Darkness
+476	Cloak of Vision
+477	Hero's Cloak
+478	Warrior's Cloak
+479	Cloak of War
+480	Drake Wings
+481	Master's Coat of Arms
+482	Rags of the Dead
+483	Wings of Light
+484	Wounds of War
+485	Basic Dagger
+486	Basic Longsword
+487	Basic Axe
+488	Basic Blunt
+489	Basic Greatsword
+490	Basic Two-handed Axe
+491	Basic Two-handed Blunt
+492	Basic Orb
+493	Basic Staff
+494	Basic Bow
+495	Basic Crossbow
+496	Basic Cloth Armor
+497	Basic Leather Armor
+498	Basic Plate Armor
+499	Basic Hat
+500	Basic Helm
+501	Basic Gloves
+502	Basic Shoes
+503	Basic Shield
+504	Basic Cloak
+505	Basic Talisman
+506	Basic Ring
+507	Basic Circlet
+508	Requiem Marble
+509	Succubus Robe
+510	Black Leather Boots
+511	Red Crystal Necklace
+512	Third Eye Ring
+513	Bloody Dragon Cloak
+514	Illusionist's Leather
+515	Ice Frost Ring
+516	Demon's Fingerbone
+517	Giant's Footprint
+518	Zwei Hander
+519	Black Steel Plate
+520	Warrior Boots
+521	Steel Orc Warrior Symbol
+522	Valor's Ring
+523	Magic Stone Piece
+524	Janus' Recommendation
+525	Skeleton Warrior's leg bone
+526	Stiff Skeleton Warrior's skull
+527	Quest Regenerating Item
+528	Old Armor Piece
+529	Cavebat Wingscales
+530	Shiny Spell Crystal
+531	Berkel Knight Uniform1
+532	Berkel Knight Uniform2
+533	Berkel Knight Uniform3
+534	Calcareous Maggot Flesh
+535	Cavespider's Crispy Leg
+536	Prison Key
+537	Plump Maggot Flesh
+538	West Mine Key
+539	Lumps of Zinc
+540	Lumps of Copper
+541	Purity Stone
+542	Purity Stone Necklace
+543	Magic Rock
+544	Poisonous Cactus Oil
+545	Key to Goblin's Lair
+546	Vampire Bat's Softbones
+547	Condensed Poison Cactus Oil
+548	Rodger's Ore Order Form
+549	Desert Wasps Hivepiece
+550	Gray Scorpion's Tail
+551	Solid Platinum
+552	Red-winged Bats Wing
+553	Ore From Michikoff
+554	Bat Meat
+555	Haiden the First's Hat
+556	Schreiber's Necklace
+557	Robbie's Special Antidote
+558	Ben's Goods
+559	Redhoods Boss' Bandanna
+560	Schmitt's Claymore
+561	Aggressive Mimic's Nuclear
+562	Swamp Turtle's Eggs
+563	Jose's Farming Tools
+564	Haldate's Ring
+565	Cave Mice Meat
+566	Contaminated Cactus
+567	Black Giant Maggot Eggs
+568	Closed Dungeon Key
+569	Darius' Armor
+570	Red Serpent's Tongue
+571	Black Wolf's Heart
+572	Red Herbs
+573	Orichalcum
+574	Whiffy Mud
+575	Red-claw Bear's Skull 
+576	Scream Dungeon Key
+577	Steel Orc Elder's Spell
+578	Chapel Key
+579	Bauer's Sword
+580	Kirk's Dog Tag
+581	Berkel Plate Armor
+582	Berkel Leather Armor
+583	Berkel Knight's Robe
+584	Black Staff
+585	Black Bow
+586	Black Dagger
+587	Black Sword
+588	Heavy Black Sword
+589	Crude Iron Ring
+590	Mantle
+591	Copper Necklace
+592	Old Brass Ring
+593	Brass Staff
+594	Berkel Combat Bow
+595	Sharp Dagger
+596	Berkel Sword
+597	Berkel Iron Mace
+598	Bat Winged Cap
+599	Special Iron Helmet
+600	Miner's Gloves
+601	Wanderer Boots
+602	Zircon Ring
+603	Special Dwarf Armor
+604	Dwarf's Leather
+605	Dwarf's Robe
+606	Armor of Valor
+607	Leather of Ambition
+608	Robe of Wisdom
+609	Wolf Leather Soles
+610	Golem Gauntlet
+611	Sojourner's Hood
+612	Condemnation Helmet
+613	Jujube Staff
+614	Shadow Piercing Bow
+615	Dagger of Darkness
+616	Man Eater
+617	Shattered Fierce Fangs
+618	Green Jade Ring
+619	Wolf Fang Necklace
+620	Orc Warrior's Cloak
+621	Blessed Gauntlets
+622	Lost Master's Kiteshield
+623	Special Dwarf Boots
+624	Brass Plated Armor
+625	Hunter's Leather Clothing
+626	Birch Shield
+627	Shaman's Robe
+628	Slime Oil
+629	Shrubber Branches
+630	Raging Magic Bookcores
+631	Maria's Letter
+632	Daisies
+633	Daisy Bouquet
+634	Confidential Document
+635	Phantom Soul Stone
+636	Bloody Dancing Blade
+637	Dark Mace
+638	Staff of Darkness
+639	Slayer's Sword
+640	Onyx Crossbow
+641	Black Crystal Necklace
+642	Daisy Flower Ring
+643	Flesh Fragment
+644	Soul Fragment
+645	Life Fragment
+646	Ectoplasm
+647	Eara's Necklace
+648	Raspberries
+649	Supplies
+650	Pure Water
+651	Blue Bushspider's Fangs
+652	Supplejack Roots
+653	Solar Crystal
+654	Storage Key
+655	Prescription
+656	Swamp Plant Roots
+657	Swamp Snake's Poison
+658	Damp Slime Jelly
+659	Oogle Queen's Charm Pouch
+660	Oogle Guardsman's Eye
+661	Hunter's Possessions
+662	Vendor's Goods
+663	Carnivore Flower Leaf
+664	Treasure Chest
+665	List of Supplies
+666	Forest Spider's Sting
+667	Spiritual Treebranch
+668	Seeds
+669	Eternal Crystal
+670	Drow's Key Piece
+671	Drow's Key
+672	Invisible Wingslime Crystal
+673	Snowy Snakefangs
+674	Blizzard Wasp's Honey
+675	Ice Elemental Crystal
+676	Wheat
+677	Refined Flour
+678	Special Fishcake
+679	Purified Waters
+680	Drow's Magic Dagger
+681	Elf's Magic Scroll
+682	Snowfield Map
+683	Powder
+684	Firecracker
+685	Snowflake Cactus Oil
+686	Iceshell Turtle's Shell
+687	Poisonfrost Spider's Eggs
+688	Gear
+689	Charm Core
+690	Sweet Honey
+691	Rusty Sword
+692	Drow Warrior's Sword
+693	Forest Mosquito's Needle
+694	Honeybee Hive Piece
+695	Fire Crystal
+696	Wolfskin
+697	Furcoat
+698	Royal Dagger
+699	Existence Fragment
+700	Power Cup
+701	Bear Meat
+702	Old Swordsblade
+703	Thick Wood
+704	Woman's Pendant
+705	Sealed Stone 1
+706	Sealed Dungeon Key 1
+707	Sealed Stone 2
+708	Sealed Dungeon Key 2
+709	Ripped Message
+710	Ripped Message 2
+711	Sealed Stone 3
+712	Sealed Dungeon Key 3
+713	Dominique's Journal
+714	Sealed Stone 4
+715	lvl D Weapon Combo Unit
+716	D Armor Combo Unit
+717	C Weapon Combo Unit
+718	C Armor Combo Unit
+719	B Weapon Combo Unit
+720	B Armor Combo Unit NO.1
+721	B Armor Combo Unit NO.2
+722	A Weapon Combo Unit
+723	S Weapon Combo Unit
+724	S Armor Combo Unit NO.1
+725	S Armor Combo Unit NO.2
+726	S Armor Combo Unit NO.3
+727	Craftsman Leather Boots 
+728	Dazzling Pumpkin Necklace
+729	Elf Ghoul's Sheet Plate
+730	Elf Ghoul's Leather Plate
+731	Elf Ghoul's Robe
+732	New Cultstem Ring
+733	Dragon Tears
+734	Shadowstrike Dagger
+735	Landstrike Sword
+736	Windstrike Bow
+737	Eternal Ice Gloves
+738	Goblin Hero's Necklace
+739	Guardian Foot's Shoes 
+740	Mjollnir
+741	Colossus Nails
+742	Prophet's Staff
+743	Deer Side Bow 
+744	Sage's Bandanna
+745	Sage's Helm
+746	Onyx's Boots
+747	Robe of Dawn
+748	Conqueror of Darkness
+749	Dark Armor
+750	Resurrection Cloak
+751	Ice Ring
+752	Flash Dagger
+753	Bravewarrior Sword
+754	Seven-Branched Sword
+755	Heat Crystal
+756	Ice Windy Crossbow
+757	Gauntlet of Destruction
+758	Tear Crystal
+759	Drow Dagger
+760	Drow Warrior Sword
+761	Dark Hammer
+762	Drow Wizard Staff
+763	Dark Chasing Bow
+764	Dazzling Boots
+765	Hunter's Old Cloak
+766	Ancient Dagger
+767	Ancient Longsword
+768	Ancient Sword
+769	Ancient Crossbow
+770	Ivan's Robe
+771	Ivan's Leather Armor
+772	Ivan's Armor
+773	Dominique's Necklace
+774	Weak Cactus Juice
+775	Palm fruit
+776	Fusion Machine Fix Device
+777	Rock
+778	Dry Twigs
+779	Canyon Bear's Gallbladder
+780	Meadow Turtle's Shell
+781	Grauple's Leaves
+782	Vampire Bat's Flesh
+783	Blackstriped Maggot's Juice
+784	Spider Web
+785	Shrubber's Roots
+786	Red Spell Crystal
+787	Grey Spell Crystal
+788	Green Spell Crystal
+789	Paillette
+790	Fusion Manager's Necklace
+791	Incomplete Flagellum of Life
+792	Cursed Swordsblade
+793	The Promised Sword
+794	Speed Boots
+795	Armor of Truth
+796	Shin's Healing Potion
+797	Memory Pieces
+798	Sword of Destruction
+799	Sword of Extreme
+800	Sword of Genocide
+801	Sword of Chaos
+802	Sword of Rebirth
+803	Sword of Truth
+804	Giant Black Sword
+805	Giant Destruction Sword
+806	Giant Extreme Sword
+807	Giant Genocide Sword
+808	Giant Chaos Sword
+809	Giant Sword of Rebirth
+810	Giant Sword of Truth
+811	Black Blade
+812	Blade of Destruction
+813	Blade of Extreme
+814	Blade of Genocide
+815	Blade of Chaos
+816	Blade of Rebirth
+817	Blade of Truth
+818	Staff of Destruction
+819	Staff of Extreme
+820	Staff of Genocide
+821	Staff of Chaos
+822	Staff of Rebirth
+823	Staff of Truth
+824	Black Mace 
+825	Mace of Destruction
+826	Mace of Extreme
+827	Mace of Genocide
+828	Mace of Chaos
+829	Mace of Rebirth
+830	Mace of Truth
+831	Bow of Destruction
+832	Bow of Extreme
+833	Bow of Genocide
+834	Bow of Chaos
+835	Bow of Rebirth
+836	Bow of Truth
+837	Black Shield
+838	Shield of Destruction
+839	Shield of Extreme
+840	Shield of Genocide
+841	Shield of Chaos
+842	Shield of Rebirth
+843	Shield of Truth
+844	Black Plate
+845	Destruction Plate
+846	Extreme Plate
+847	Genocide Plate
+848	Chaos Plate
+849	Reincarnating Plate
+850	Plate of Truth
+851	Black Iron Plate
+852	Light Armer of Destruction
+853	Light Armer of Extreme
+854	Light Armer of Genocide
+855	Light Armer of Chaos
+856	Light Armer of Rebirth
+857	Light Armer of Truth
+858	Uniform of Destruction
+859	Uniform of Extreme
+860	Uniform of Genocide
+861	Uniform of Chaos
+862	Uniform of Rebirth
+863	Uniform of Truth
+864	Bandanna of Destruction
+865	Bandanna of Extreme
+866	Bandanna of Genocide
+867	Bandanna of Chaos
+868	Bandanna of Rebirth
+869	Bandanna of Truth
+870	Black Helmet
+871	Helmet of Destruction
+872	Helmet of Extreme
+873	Helmet of Genocide
+874	Helmet of Chaos
+875	Helmet of Rebirth
+876	Helmet of Truth
+877	Cloak of Devotion
+878	Beginner Knight Set
+879	Soldier Knight Set
+880	Elite Knight Set
+881	Berkelan Knight Set
+882	Veteran Knight Set
+883	Champion Knight Set
+884	Hero Knight Set
+885	Beginner Warrior Set
+886	Soldier Warrior Set
+887	Elite Warrior Set
+888	Berkelan Warrior Set
+889	Veteran Warrior Set
+890	Champion Warrior Set
+891	Hero Warrior Set
+892	Beginner Assassin Set
+893	Soldier Assassin Set
+894	Elite Assassin Set
+895	Berkelan Assassin Set
+896	Veteran Assassin Set
+897	Champion Assassin Set
+898	Hero Assassin Set
+899	Beginner Bandit Set
+900	Soldier Bandit Set
+901	Elite Bandit Set
+902	Berkelan Bandit Set
+903	Veteran Bandit Set
+904	Champion Bandit Set
+905	Hero Bandit Set
+906	Beginner Sorcerer Set
+907	Soldier Sorcerer Set
+908	Elite Sorcerer Set
+909	Berkelan Sorcerer Set
+910	Veteran Sorcerer Set
+911	Champion Sorcerer Set
+912	Hero Sorcerer Set
+913	Beginner Abbot Set
+914	Soldier Abbot Set
+915	Elite Abbot Set
+916	Berkelan Abbot Set
+917	Veteran Abbot Set
+918	Champion Abbot Set
+919	Hero Abbot Set
+920	Beginner Hunter Set
+921	Soldier Hunter Set
+922	Elite Hunter Set
+923	Berkelan Hunter Set
+924	Veteran Hunter Set
+925	Champion Hunter Set
+926	Hero Hunter Set
+927	Adventurer Set
+928	Skills Reset Spell
+929	Stats Reset Spell
+930	Absolute Rune
+931	Hero's Emblem (Black Knight)
+932	Hero's Emblem (Assassin)
+933	Hero's Emblem (Warlock)
+934	Hero's Emblem (Priest)
+935	Hero's Emblem (Ranger)
+936	Hero's Emblem (Warrior)
+937	Sealed Skillbook (Black Knight)
+938	Sealed Skillbook (Assassin)
+939	Sealed Skillbook (Warlock)
+940	Sealed Skillbook (Priest)
+941	Sealed Skillbook (Ranger)
+942	Sealed Skillbook (Warrior)
+943	Chaos Set
+944	Bounteous Chaos Set
+945	Epic Chaos Set
+946	Bounteous Epic Chaos Set
+947	Jewel of Catharsis
+948	Slime Piece
+949	Sp. Weapon Enhance Scroll
+950	Sp. Armor Enhance Scroll
+951	Disguise Mask
+952	Royal Necklace
+953	Royal Bracelet
+954	Equip Combo Set
+955	Bounteous Equip Combo Set
+956	Key
+957	Ancient Document
+958	Thorn needle
+959	Gray Rat Fangs
+960	Bush Turtle Tears
+961	Snake Meat
+962	Roderick's Gold
+963	Arnen Soldiers Dog Tags
+964	Official Bounty Hunter Boots
+965	Official Bounty Hunter Hood
+966	Official Bounty Hunter Sword
+967	Intrepid Dwarf Armor
+968	Official Bounty Hunter Bow
+969	Staff of Justice
+970	Smite's Mace
+971	Bounty Hunter Guild Medal
+972	Wilderness Warrior's Cloak 
+973	Lost Hunter's Sword
+974	Elven Hunter's Crossbow 
+975	Fist of Justice
+976	Senior Hunter's Helm
+977	Wiseman's Ring
+978	Abandoned Sharpsword
+979	Jeff's Plate Armor
+980	Jeff's Leather Armor
+981	Jeff's Robe
+982	Đặt lại chỉ số
+983	Đặt lại kỹ năng
+984	Hồi sinh tất cả (Resurrection Prayer)
+985	Ghép Chaos
+986	Ghép Epic Chaos
+987	Hoàn thành nhiệm vụ Bonus Dungeon
+988	Mở ô lính đánh thuê
+989	Hồi sinh có phước lành khi cả đội bị hạ
+990	Wolf Fang
+991	Slime Crystal
+992	Heart of Crimson Agouara
+993	Abandoned Weapon
+994	Evil Bat wings
+995	Hard Skull
+996	Black Sap
+997	Sealed Necklace Chest
+998	Sealed Armor Chest
+999	Sealed Weapon Chest
+1000	Potential boost scroll
+1001	EXP amplification scroll
+1002	Merciless Dagger
+1003	Merciless Sword
+1004	Merciless Giant Sword
+1005	Merciless Iron Mace
+1006	Merciless Staff
+1007	Merciless Bow
+1008	Rìu
+1009	Chuỳ
+1010	Hai tay
+1011	Orb
+1012	Cung
+1013	Nỏ
+1014	Giáp vải
+1015	Giáp tấm
+1016	Mũ
+1017	Găng
+1018	Khiên
+1019	Bùa
+1020	Nhẫn
+1021	Vòng
+1022	Thuốc (hồi phục)
+1023	Thuốc (cường hoá)
+1024	Sách phép
+1025	Ngọc
+1026	Khác
+1027	Nguyên liệu
+1028	Công thức
+1029	Huy hiệu lính
+1030	Túi
+1031	Xúc xắc
+1032	Đồ vật
+1033	Nhiệm vụ
+1034	Cửa hàng
+1035	Rusty
+1036	Old
+1037	Ancient
+1038	Incisive
+1039	Shrewd
+1040	Polished
+1041	Durable
+1042	Artisan
+1043	Steel
+1044	Premium
+1045	Titanium
+1046	Shining
+1047	Mysterious
+1048	Tỉ lệ chí mạng
+1049	Tỉ lệ trúng
+1050	Kháng ST chí mạng
+1051	Kháng ST phép
+1052	Tỉ lệ né
+1053	Tỉ lệ đỡ bằng khiên
+1054	Tỉ lệ đỡ bằng vũ khí
+1055	Tăng MP
+1056	Hồi MP
+1057	Kháng chí mạng
+1058	Tăng ST chí mạng
+1059	Hút HP
+1060	Lửa
+1061	Gió
+1062	Băng giá
+1063	Thánh
+1064	Bóng tối
+1065	Độc
+1066	Pendulum
+1067	Sương giá
+1068	Năng lượng hồi phục
+1069	Zealot
+1070	Hồi phục tức thì
+1071	Chuyên gia phép
+1072	Giảm thu hút
+1073	Kháng choáng
+1074	Kháng nước
+1075	Kháng mù
+1076	Kháng sợ hãi
+1077	Kháng giảm tốc
+1078	Kháng câm lặng
+1079	Chaos
+1080	Epic Chaos
+1081	Tạo lỗ khảm
+1082	Dark Strike
+1083	Phantom Clash
+1084	Curse of Screams
+1085	Shield Bash
+1086	Firestorm
+1087	Sword of Hell
+1088	Demon's Shield
+1089	Guardian of Darkness
+1090	Molten Armor
+1091	Improved Defense
+1092	Soul Sword
+1093	Blood Sword
+1094	Shield of Rage
+1095	Flares of Pain
+1096	Wrath of Darkness
+1097	Continuous Slash
+1098	Spiritual Blade
+1099	Poison Touch
+1100	Assassin's Sword
+1101	Dark Attack
+1102	Freeze Extreme
+1103	Whist
+1104	Blade Deflection
+1105	Energy Bodhi
+1106	Twin Blade
+1107	Dark Sense
+1108	Fortitude
+1109	Flare
+1110	Deep Breath
+1111	Shadow Phantom
+1112	Touch of Agony
+1113	Blood Curse
+1114	Fire Offering
+1115	Pain Overture
+1116	Summon Hellfire
+1117	Spell Redemption
+1118	Hell's Pawn
+1119	Summon Bard
+1120	Monster's Scream
+1121	Mage's Claw
+1122	Blood Revenge
+1123	Bard of Destruction
+1124	Blade of Darkness
+1125	Blood Feast
+1126	Lightning of Hell
+1127	Rush of Anger
+1128	Shouts of Threat
+1129	Armor Penetration
+1130	Giant Blow
+1131	Weapon Hitback
+1132	Swirling Storm
+1133	Blood Thirst
+1134	Storm of Frenzy
+1135	Enrage
+1136	Weapon Specializing
+1137	Skin of Steel
+1138	Soul's Thirst
+1139	Revenge Incarnate
+1140	Warrior's Instinct
+1141	Insanity Thrills
+1142	Prayer of Recovery
+1143	Apostles of Light
+1144	Light Command
+1145	Celestial Armor
+1146	Blinding Flash
+1147	Holy Sacrifice
+1148	Divine Strike
+1149	Hammer of Wrath
+1150	Celestial Lightning
+1151	Healing Enhancement
+1152	Ordination Prayer
+1153	Magic Insight
+1154	Shield of Trust
+1155	Divine Arms
+1156	God of Justice
+1157	Aimed Shot
+1158	Multiple Shot
+1159	Ambush
+1160	Net Shackles
+1161	Spiritual Arrow
+1162	Rampage
+1163	Beast Companion
+1164	Spirit of Nature
+1165	Survival Instinct
+1166	Clever Fellow
+1167	Forest Knowledge
+1168	Rear Penetration
+1169	Disturbance
+1170	Spiritual Affinity
+1171	Sniping
+1172	Đánh lan
+1173	Power Hit
+1174	Sword Vengeance
+1175	Skilled Metal Armor
+1176	Chosen Hero
+1177	Colossus
+1178	Vital Point Attack
+1179	Skilled Leather Armor
+1180	Treasure Hunter
+1181	Magic Vengeance
+1182	Skilled Cloth Armor
+1183	Studying Magic
+1184	Paper Collector
+1185	Overcharge
+1186	Blunt Vengeance
+1187	Coaching
+1188	Celebrity
+1189	Strong Physique
+1190	Bow Vengeance
+1191	Deadly Attack
+1192	Herb Finder
+1193	Strong Spirit
+1194	Two-handed Weapon Vengeance
+1195	Digestion Enhancement
+1196	Pickup Trophy
+1197	Monster AI TEST
+1198	Power Strike
+1199	Beast Strike
+1200	Poisoning
+1201	Khóc
+1202	Nhìn quanh
+1203	Nhặt
+1204	Đưa
+1205	Hoan hô
+1206	Demon Road Attack
+1207	Demon Road Skill
+1208	Skill 2
+1209	Shin Whirlwind
+1210	Queen Spider_Web Fire
+1211	Goblin Boss_Attack Speed Increase
+1212	Minotaur_Scout Captain_Head Werewolf_Cornette_Stun Attack
+1213	Seal Protector_Purity Stone Protector_Poisoning
+1214	Cornette_ Sword of Darkness
+1215	Chief Abbot _ Lightning
+1216	Tindalrose_Baron Borgia_ Chief Abbot_Sleep Curse
+1217	Djinn_Space of Death
+1218	Minotaur_Tindalrose_Baron Borgia_Emergency Healing
+1219	Tindalrose_Hammer of Elimination
+1220	Alexander_Blazing Armor
+1221	Minotaur_Strong Landshake
+1222	Alexander_Blaze Bomb
+1223	Alexander_Bat Summon
+1224	Moar
+1225	Thú cưng
+1226	Tung đòn mạnh vào kẻ địch. (Triệu hồi soul sword, 'sát thương kỹ năng' lần sau sẽ tăng.)
+1227	(Sát thương + STR x1.2 + INT) x
+1228	Sát thương:
+1229	Thời gian Soul Sword:
+1230	%d.%d%%
+1231	+%d.%d%%
+1232	%d giây
+1233	Triệu hồi 'phantom sword' tấn công kẻ địch ở xa. Giảm phòng thủ của địch. (Thu hút Aggro)
+1234	(Sát thương + STR + INT x1.2) x
+1235	Giảm phòng thủ:
+1236	Thời gian:
+1237	-%d.%d%%
+1238	Gây sát thương lên kẻ địch xung quanh và giảm 'sức tấn công'. (Thu hút Aggro)
+1239	(Sát thương + STR + VIT x1.2) x
+1240	Giảm tấn công:
+1241	Lao khiên tới và làm choáng kẻ địch xung quanh. (Cần khiên)
+1242	(Sát thương vật lý + STR) x
+1243	Thời gian choáng:
+1244	Truyền lửa mạnh vào kiếm, tung đòn tấn công lửa.
+1245	Triệu hồi 'phantom sword' quanh mình để tấn công. (Thu hút Aggro)
+1246	 Tăng 'tỉ lệ đỡ bằng khiên'. Khi 'đỡ khiên', 'gạt đòn' hoặc 'né' thành công, tăng hồi mana trong 20 giây.
+1247	Tăng tỉ lệ đỡ khiên:
+1248	Tăng tỉ lệ hồi mana:
+1249	Thời gian hiệu ứng:
+1250	 Tăng 'phòng thủ' và 'đỡ khiên' của cả đội trong một lúc.
+1251	Tăng phòng thủ:
+1252	Tăng tỉ lệ đỡ bằng vũ khí:
+1253	 Dựng 'tường lửa phòng ngự' tăng 'kháng phép'; kẻ địch đánh vật lý vào sẽ bị lửa thiêu.
+1254	Tăng kháng phép:
+1255	Sát thương lửa (Def):
+1256	Tăng phòng thủ và tỉ lệ né.
+1257	Tăng tỉ lệ né:
+1258	Khi tấn công có tỉ lệ triệu hồi linh hồn kiếm. (Tăng sát thương kỹ năng lần sau.)
+1259	Tỉ lệ triệu hồi Soul Sword:
+1260	Hút HP của địch khi tung đòn 'huyết lực', đồng thời tăng 'sát thương phép'.
+1261	Hút HP:
+1262	Tăng sát thương phép:
+1263	Tăng sức tấn công mỗi khi 'đỡ khiên' hoặc 'gạt đòn' thành công. (Tối đa 5 lần)
+1264	Tăng tấn công:
+1265	Gây 'sát thương kéo dài' khi dùng 'molten armor' hoặc 'firestorm'.
+1266	Sát thương mỗi 2 giây: của Sát thương
+1267	Tỉ lệ bốc cháy:
+1268	Khi bị địch tấn công, 'tốc độ đánh' của Black Knight tăng. (Tốc độ đánh: tối đa 6 khung hình)
+1269	Tăng tốc độ đánh:
+1270	Tỉ lệ kích hoạt:
+1271	Liên tục tấn công một kẻ địch bằng 'hệ bóng tối'. 'Tỉ lệ chí mạng' cao.
+1272	(Sát thương phép + INT x1.2 + MEN) x
+1273	Số lần đánh:
+1274	Tỉ lệ chí mạng:
+1275	%d lần
+1276	Thiêu đốt cơ thể kẻ địch.
+1277	Sát thương lửa: Sát thương phép x
+1278	Nguyền rủa kẻ địch xung quanh, làm chậm 'tốc độ di chuyển' và hút máu của chúng.
+1279	(Sát thương phép + INT + MEN x1.2) x
+1280	Giảm tốc độ di chuyển:
+1281	Phủ lửa lên một vùng rộng để tấn công.
+1282	Tự làm mình bị thương để tăng mana. Tính như bị địch gây sát thương.
+1283	Sát thương: HP x
+1284	Tăng mana:
+1285	%d
+1286	Tăng cả lượng mana tiêu hao lẫn sát thương của kỹ năng.
+1287	Tăng mana tiêu hao:
+1288	Tăng sát thương:
+1289	Triệu hồi 'pawn of hell'.
+1290	Tấn công của Pawn:
+1291	Thời gian triệu hồi:
+1292	Triệu hồi 'bard'. Tăng kháng sát thương vật lý và phép của Warlock.
+1293	Kháng vật lý:
+1294	Kháng phép:
+1295	Pawn of hell gào thét làm choáng và gây sát thương mọi thứ xung quanh. (Thu hút Aggro)
+1296	Đòn đánh của pawn of hell hồi MP cho Warlock.
+1297	Hồi MP:
+1298	Tăng sát thương khi bạn, thú cưng và/hoặc đồng đội bị địch tấn công.
+1299	Tổng số lần:
+1300	Tăng sức tấn công khi 'bard' được triệu hồi.
+1301	Tăng sát thương phép của Warlock.
+1302	Tăng sát thương của blood curse và truyền 'hiệu ứng hút máu' cho cả đội.
+1303	Khi chí mạng, có tỉ lệ giáng sét vào mục tiêu.
+1304	(Sát thương phép + INT x1.2) x
+1305	Tỉ lệ giáng sét:
+1306	Hồi HP cho một đồng đội.
+1307	Lượng hồi: (Sát thương + MEN) x
+1308	Tăng 'tỉ lệ đỡ khiên', thêm 'sát thương thánh' vào vũ khí và tăng 'tỉ lệ kích hoạt'.
+1309	Tỉ lệ sát thương thánh:
+1310	Tỉ lệ đỡ khiên:
+1311	Giúp đồng đội hồi HP từ từ.
+1312	Hấp thụ toàn bộ sát thương nhận vào trong chốc lát.
+1313	Hồi HP cho đồng đội xung quanh và làm quái vật dịu đi.
+1314	(Sát thương + INT x1.2 + MEN) x
+1315	Ngủ:
+1316	Gánh một phần sát thương của đồng đội.
+1317	Chia sẻ sát thương:
+1318	Lao tới tấn công kẻ địch. 'Tỉ lệ chí mạng' cao. (Cần khiên)
+1319	(Sát thương + STR x1.2) x
+1320	Triệu hồi 'hammer of wrath'. Gây sát thương và làm choáng vùng xung quanh.
+1321	(Sát thương + MEN + STR x1.2) x
+1322	Thời gian choáng:
+1323	Giáng sét quanh Priest.
+1324	(Sát thương + MEN + INT x1.2) x
+1325	Tăng lượng hồi của phép trị thương.
+1326	Tăng sức hồi phục:
+1327	Tốc độ hồi MP từ phép hồi phục mà đồng đội nhận được tăng trong chốc lát.
+1328	Hồi mana:
+1329	+%d
+1330	Kháng phép của địch giảm trong 6 giây khi trúng kỹ năng. (Tối đa 3 lần)
+1331	Giảm kháng phép
+1332	Sát thương của đồng đội tăng mỗi khi đỡ khiên hoặc gạt đòn thành công. (Tối đa 3 lần)
+1333	Tăng tỉ lệ đỡ khiên; tăng độ chính xác và tỉ lệ chí mạng khi dùng chùy.
+1334	Tỉ lệ đỡ khiên:
+1335	Tỉ lệ trúng của chuỳ:
+1336	Giáng 'celestial lightning' khi 'divine strike' hoặc 'hammer of wrath' chí mạng. (Cần Celestial Lightning)
+1337	Đánh kẻ địch 3 lần với tỉ lệ chí mạng cao.
+1338	(Sát thương vật lý + DEX x1.2 + STR) x
+1339	Hồi một lượng mana nhất định khi tấn công kẻ địch.
+1340	Thêm 'hệ độc' vào vũ khí trong một thời gian và tăng 'tỉ lệ kích hoạt'.
+1341	Đánh vào chỗ hiểm của địch. Độ chính xác thấp, nhưng khi đang 'whist' thì rất cao. (Kích hoạt hệ độc 100%).
+1342	Giảm độ chính xác:
+1343	%d%%
+1344	Áp sát kẻ địch thật nhanh và tấn công mọi kẻ địch gần đó.
+1345	(Sát thương vật lý + DEX + STR x1.2) x
+1346	Truyền 'hàn khí' vào kiếm để đánh kẻ địch xung quanh. Địch trúng đòn bị chậm 3 giây.
+1347	Giảm tốc độ di chuyển và tốc độ đánh:
+1348	Ẩn thân để tăng sức tấn công. Tăng độ chính xác của assassin's sword.
+1349	(Sát thương vật lý) x
+1350	Tăng độ chính xác:
+1351	Tăng tỉ lệ gạt đòn; gạt đòn thành công gây thêm 30% sát thương lên địch.
+1352	Tỉ lệ gạt đòn:
+1353	Tức thì cường hoá thể lực. Tăng 'tỉ lệ kích hoạt tay trái' và 'sức tấn công' trong một thời gian.
+1354	Tỉ lệ kích hoạt tay trái:
+1355	 Tăng 'tỉ lệ kích hoạt vũ khí tay trái' và tăng 'sát thương chí mạng' khi dùng dao găm và/hoặc kiếm.
+1356	Tỉ lệ kích hoạt vũ khí tay trái:
+1357	Sát thương chí mạng:
+1358	Giải phong ấn Whist, tăng tỉ lệ né trong một lúc.
+1359	Khi né hoặc gạt đòn thành công, thời gian hồi kỹ năng được làm mới.
+1360	Khi tấn công, có tỉ lệ trở lại trạng thái 'whist'.
+1361	Tỉ lệ Whist:
+1362	Tỉ lệ Whist khi đánh tay trái:
+1363	Kéo dài thời gian 'energy bodhi' và tăng 'tỉ lệ né' trong thời gian đó.
+1364	Thời gian tăng thêm:
+1365	Tỉ lệ né tăng thêm:
+1366	+%d giây
+1367	Tăng tỉ lệ chí mạng khi tấn công trong trạng thái 'whist'.
+1368	Bắn nhiều mũi tên vào một kẻ địch.
+1369	(Sát thương + DEX x1.2) x
+1370	Số mũi tên:
+1371	Tăng 'tỉ lệ bắn chuẩn' bằng chí mạng lên kẻ địch đã trúng aimed shot.
+1372	(Sát thương + DEX x1.2 + MEN) x
+1373	Giảm kháng chí mạng:
+1374	Tăng sát thương trong một thời gian. 'Di chuyển' làm giảm sát thương, 'ambush' sẽ kết thúc hiệu ứng.
+1375	Ném lưới vào vùng của kẻ địch, khiến địch không thể di chuyển trong một lúc.
+1376	Thời gian đóng băng:
+1377	Bắn mũi tên hút mana của kẻ địch.
+1378	(Sát thương + DEX + MEN x1.2) x
+1379	Hút mana
+1380	Bắn tên khắp xung quanh để tấn công kẻ địch.
+1381	Gọi 'beast companion'. Khi 'beast companion' tấn công, xoá hết 'aggro' của kẻ địch xung quanh.
+1382	HP của thú:
+1383	Tỉ lệ thu hút Aggro trong 6 giây 
+1384	Triệu hồi 'spirit of nature' hồi HP cho đội và tăng tỉ lệ hồi HP, MP.
+1385	Lượng hồi: (Sát thương + MEN x1.2) x
+1386	Tăng tỉ lệ hồi HP, MP 
+1387	Tăng tỉ lệ gạt đòn; gạt đòn thành công sẽ làm choáng kẻ địch đánh tầm gần.
+1388	Tăng tỉ lệ gạt đòn:
+1389	Thời gian choáng:
+1390	Đòn đánh của thú có tỉ lệ làm mới thời gian hồi kỹ năng của Ranger. 
+1391	Thêm 'hệ gió' vào vũ khí và tăng 'tỉ lệ kích hoạt hệ gió'.
+1392	Tỉ lệ kích hoạt hệ gió:
+1393	Tăng sát thương lên kẻ địch không tấn công.
+1394	Khi tấn công, chuyển 'aggro' sang thú cưng hoặc nhân vật có phòng thủ cao.
+1395	Xác suất xảy ra:
+1396	Kéo dài thời gian triệu hồi 'beast companion' và 'spirit of nature'.
+1397	Tăng thời gian triệu hồi:
+1398	Tăng 'tỉ lệ chí mạng' và 'tầm bắn' khi đang ambush.
+1399	Tăng tầm bắn:
+1400	%d pixel
+1401	Lao vào kẻ địch và làm choáng trong chốc lát. 
+1402	(Sát thương vật lý + STR x1.2) x
+1403	Gầm thét vào kẻ địch xung quanh, giảm tốc độ di chuyển và tốc độ đánh.
+1404	(Sát thương vật lý + STR + VIT x1.2) x
+1405	Sau khi kỹ năng kích hoạt, có tỉ lệ phòng thủ của địch biến mất trong chốc lát.
+1406	Tỉ lệ xuyên giáp:
+1407	Thời gian kỹ năng
+1408	Thời gian giảm phòng thủ
+1409	Nện mạnh xuống kẻ địch xung quanh, gây choáng và sát thương khắp vùng.
+1410	(Sát thương vật lý + STR x1.2 + DEX) x
+1411	Vung kiếm xung quanh khiến địch rơi vũ khí. Sức tấn công của địch giảm một nửa trong một lúc.
+1412	(Sát thương vật lý + STR + DEX x1.2) x
+1413	Vung vũ khí thật nhanh xung quanh để tấn công.
+1414	Có tỉ lệ hồi HP khi tấn công kẻ địch.
+1415	Lượng hồi: của Sát thương
+1416	Nổi cơn thịnh nộ, tăng 'sinh lực' và 'tốc độ đánh'.
+1417	Tăng sinh lực:
+1418	Tăng 'tỉ lệ vũ khí phụ'; mỗi khi tấn công, sức tấn công của đồng đội tăng dần mỗi 2 giây. (Tối đa 5 lần)
+1419	Tỉ lệ kích hoạt vũ khí phụ
+1420	Tăng sát thương khi dùng 'tỉ lệ đánh tay trái' và 'vũ khí hai tay'.
+1421	Tỉ lệ đánh tay trái:
+1422	Tăng kháng vật lý và kháng phép.
+1423	Kháng sát thương vật lý:
+1424	Kháng sát thương phép:
+1425	Tăng 'hiệu ứng blood thirst' và có thêm tỉ lệ hút MP.
+1426	Tỉ lệ kích hoạt hút HP:
+1427	Lượng hút mana:
+1428	Khi tấn công, có tỉ lệ tăng dần sức tấn công. (Tối đa 5 lần)
+1429	Khi tấn công, có tỉ lệ làm mới thời gian hồi của mọi kỹ năng.
+1430	Tỉ lệ làm mới hồi chiêu:
+1431	Tỉ lệ làm mới (hai tay):
+1432	Khi tấn công, có tỉ lệ đánh trúng cả kẻ địch gần đó.
+1433	Tăng 10% kháng vật lý và kháng phép khi HP dưới 30%. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1434	Tăng 2% sát thương vật lý và phép khi dùng trường kiếm. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1435	Tăng 10% phòng thủ khi mặc giáp kim loại. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1436	3% cơ hội nhận vật phẩm unique khi rút kiếm huyền thoại. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1437	Tăng 3% giá bán vật phẩm. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1438	3% cơ hội gây choáng 1 giây khi chí mạng. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1439	Tăng 3% sát thương vật lý khi mặc giáp da. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1440	Tăng cơ hội nhận vật phẩm tốt hơn khi mở rương thường. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1441	Tăng 2% sát thương phép. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1442	Tăng 3% sát thương phép khi mặc giáp vải. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1443	Tăng 3% kháng sát thương phép. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1444	Tăng 3% tỉ lệ rơi vật phẩm loại cuộn phép. &N (Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1445	Giảm 2% giá khi mua vật phẩm. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1446	1% cơ hội gây choáng 1 giây khi dùng chuỳ. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1447	Tăng 2% điểm kinh nghiệm nhận được. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1448	Tăng cơ hội ra lính hiếm khi tuyển lính đánh thuê. &N (Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1449	Tăng 10% 'hiệu quả thuốc'. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1450	Tăng 3% 'sát thương vật lý' khi dùng cung. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1451	Tăng 5% sát thương chí mạng. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1452	Tăng 2% tỉ lệ rơi mọi vật phẩm nguyên liệu. &N (Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1453	Giảm 5% khả năng bị trạng thái bất thường.&N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1454	Tăng 3% sát thương vật lý khi dùng vũ khí hai tay. &N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê) 
+1455	Thời gian hồi thuốc giảm 3 giây.&N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê).
+1456	Tăng 1% tỉ lệ rơi trang bị.&N(Kỹ năng lính đánh thuê: áp dụng cho mọi lính đánh thuê)
+1457	Bush
+1458	Jar
+1459	Box
+1460	Scorpion
+1461	Snake
+1462	Cactus
+1463	Maggot
+1464	Mimic
+1465	Rat
+1466	Spider
+1467	Wolf
+1468	Slime
+1469	Wing Slime
+1470	Sproot
+1471	Skeleton
+1472	Flying Book
+1473	Bear
+1474	Oogle
+1475	Turtle
+1476	Artillery Turtle
+1477	Goblin
+1478	Zombie Prisoner
+1479	Minotaur
+1480	Golem
+1481	Werewolf
+1482	Mosquito
+1483	Bees
+1484	Beehive
+1485	Ghost
+1486	Fireball
+1487	Cursed Creature
+1488	Demon Road
+1489	Berkel Soldier
+1490	Berkel Archer
+1491	Berkel Knight
+1492	Berkel Priest
+1493	Human Monk
+1494	Dark Soldier
+1495	Dark Archer
+1496	Dark Knight
+1497	Shadow Priest
+1498	Dark Monk
+1499	Desert Soldier
+1500	Desert Assassin
+1501	Orc Warrior
+1502	Dark Creature's Eggs
+1503	Succubus
+1504	Mutated Prisoner
+1505	Mysterious Monster
+1506	Shin
+1507	Hard-boned Skeleton Soldier
+1508	Human Priest's Test
+1509	Earl Grafton
+1510	Berkel Dispatch Soldier
+1511	Cave Bat
+1512	Fragile Skeleton Soldier
+1513	Sleek Slime
+1514	Shaggy Grayfang
+1515	Forest Snake
+1516	Wild Wolf
+1517	Arnen Sentinel
+1518	Tamed Battle Turtle
+1519	Arnen Guard Leader
+1520	Goblin Cave
+1521	Goblin Guard
+1522	Head Goblin
+1523	Calcareous Maggots
+1524	Cave Spider
+1525	Vampire Bat
+1526	Plump Maggots
+1527	Blue-pocket Cavespider
+1528	Goblin Warder
+1529	Head Werewolf
+1530	Purity Stone Protector
+1531	Cornette
+1532	Gigantic Werewolf
+1533	Rigid Wing Slime
+1534	Poisonous Cactus
+1535	Sword Master
+1536	Cave Mouse
+1537	Queen Spider
+1538	Giant Tarantula
+1539	Desert Tortoise
+1540	Sand Scorpion
+1541	Head Goblin Yirzuch
+1542	Weak Cactus
+1543	Night Hunters Scout
+1544	Summoned Pawn of Hell
+1545	Summoned Cursed Creature
+1546	Contaminated Berkel Priest
+1547	Lunatic Guard
+1548	Mutated Abbot
+1549	Bizarre Flying Book
+1550	Poisonous Spider
+1551	Hybrid Wolf
+1552	Mutinous Benukes
+1553	Zealot Manson
+1554	Arnen Guard
+1555	Arnen Adjutant General
+1556	Desert Wasphive
+1557	Gray Scorpion
+1558	Red-winged Bat
+1559	Blue Wolf
+1560	Voracious Maggots
+1561	Loud Mimic
+1562	Sly Mimic
+1563	Lunatic Djinn
+1564	Acid Slime
+1565	Starving Boss Wolf
+1566	Tarantula Spider
+1567	Alligator Turtle
+1568	Black Vampire Bat
+1569	Savage Rat
+1570	Goblin Swordsman Magnatue
+1571	Steelbox Mimic 
+1572	Death-stalker Scorpion
+1573	Porcupine Cactus
+1574	Killer Werewolf Jack
+1575	Starving Maggots
+1576	Legendary Silverwolf
+1577	Demon Scriptures
+1578	Hwagan Brown Bear
+1579	Slayer Jurupaz
+1580	Branded Spirit
+1581	Viper Black Mamba
+1582	Thief Gunnishe
+1583	Aggressive Mimic
+1584	Delos Swamp Snake
+1585	Redhood Bandits Boss
+1586	Captain of Arnen Chasers
+1587	Ben's Men
+1588	Acts Leader Schmitt
+1589	Trained Battle Turtle
+1590	Black Rattlesnake
+1591	Red Flower Cactus
+1592	Swamp Turtle
+1593	Red Claw Bear
+1594	Bone Orc Guard
+1595	Prison of Screams Headguard
+1596	Zahad Kuruhatt
+1597	Black Giant Maggots
+1598	Black Skeleton
+1599	Boss Skeleton
+1600	Heresy Leader
+1601	Baron Borgia
+1602	Red Snake
+1603	Black Wolf
+1604	Inquisitor's Legionnaire
+1605	Dungeon Mimics
+1606	Enraged Magic Book
+1607	Vicious Ghost
+1608	Nibbler Mimics
+1609	Rednosed Swamp Turtle
+1610	Revealed Spy Duhammel
+1611	Fort of Screams Guard
+1612	Fort of Screams Guard Leader
+1613	Cursed Ghost
+1614	Resurrected Orc Ancestors
+1615	Angered Spirit
+1616	Mysterious Spring's Slime
+1617	Swamp Mosquitoes
+1618	Strayed Artillery Turtles
+1619	Steel-teethed Cave Mice
+1620	Traveler's Wrath
+1621	Contaminated Berkel Soldier
+1622	Contaminated Arnen Soldier
+1623	Blood Hungry Mosquito
+1624	Redhood Bandits
+1625	Captured Archers of Arnen
+1626	Pendrik Guard
+1627	Dispatched Monk of Arnen
+1628	Black Giant Maggot Cocoons
+1629	Shrubber
+1630	Enraged Shrubber
+1631	Berkelan Church Priest
+1632	Shadow's Senior Priest Traitor
+1633	Berkelen Guards
+1634	Berkelen Castle Guards
+1635	Berkel Wizard Guards
+1636	Geyorgk the Cruel Enemy
+1637	Evil Creatures
+1638	Tainted Dark Ghost
+1639	Contaminated Monsters
+1640	Sin Carrier
+1641	Principle Guardian
+1642	Blackhood Thieves
+1643	Blackhoods Boss
+1644	Mine Bats
+1645	Abandoned Creature
+1646	Watcher's Eye
+1647	Contaminated Elementals
+1648	Experimented Djinn
+1649	Desert Rattlesnakes
+1650	Sewer Rats
+1651	Shiny Maggots
+1652	Elite Goblins
+1653	Smelly Goblins
+1654	Goblin Pet Spiders
+1655	Goblin Pet Bats
+1656	Vampire Maggots
+1657	Wet Cave Slime
+1658	Cave's Bizarre Plant
+1659	Arnen Guard Captain
+1660	Shadow Bats
+1661	Wine Drunken Bats
+1662	Knife-needled Mosquitoes
+1663	Reagents 
+1664	Summoned Elementals
+1665	Prisoner
+1666	Prisoner Archer
+1667	Blackhoods Chief
+1668	Swamp Plants
+1669	Swamp Snakes
+1670	Damp Slime
+1671	Oogle Queen
+1672	Oogle Guardsman
+1673	Chasers Scout Captain
+1674	Arnen's Poisonous Scorpion
+1675	Summoned Minotaur
+1676	Blue Bushspider
+1677	Sandstorm Crew Captain
+1678	Sandstorm Crew Member
+1679	Trained Werewolves
+1680	Steel Artillery Turtles
+1681	Elite White Goblin Warrior
+1682	White Head Goblin
+1683	Chasers Adjutant 
+1684	Tindalrose
+1685	Chasers Elite Crew Member
+1686	Convict
+1687	Big-needled Mosquitoes
+1688	Calcareous Slime
+1689	Carnivore Flower
+1690	Snow Cactus
+1691	Iceshell Turtles
+1692	Poisonfrost Spiders
+1693	Chaser's Reconnaissance
+1694	Forest Spider
+1695	Bewitched Oogle
+1696	Enraged Cave Rat
+1697	Blackhoods Archer
+1698	Enchanted Ancient Book
+1699	Large Wing Bat
+1700	Vicious Bear
+1701	Honeybee Hive
+1702	Forest Mosquitoes
+1703	Drow's Soul
+1704	Elite Drow's Soul
+1705	Invisible Wing Slime
+1706	Snowy Snake
+1707	Blizzard Wasphive
+1708	Ice Elementals
+1709	Jagged-teeth Rats
+1710	White-striped Bat
+1711	Dew-eating Maggots
+1712	Gray-eyed Mosquito
+1713	Etherin the Wing Slime
+1714	Spring Protector Minotaur
+1715	Chief Drow
+1716	Tethered Oogle
+1717	Tethered Oogle Queen
+1718	Elves Wrath
+1719	Elven Archer Wrath
+1720	Guardian Golem
+1721	Chasers Soldier
+1722	Chasers Chief
+1723	Chasers Archer
+1724	Snowfield Slime
+1725	Snowfield Snake
+1726	Greedy Chaser
+1727	Elven Kings Soul
+1728	Elven Kings Guard
+1729	Senior Elf
+1730	Sanctuary Guardian
+1731	Royal Family's Knight
+1732	Alexander
+1733	Dragon Alexander
+1734	Bigfoot Bear
+1735	Darius
+1736	Portia
+1737	Doppelganger
+1738	Dark Forces of Evil
+1739	Piolren Rat
+1740	Blue Wingslime
+1741	Bush Scorpion
+1742	Bush Maggots
+1743	Snowfield Wolf
+1744	Ghostfire
+1745	Elf Seal Protector
+1746	Ivan's Minion
+1747	Ivan
+1748	Seal Protector
+1749	Snowfield Scorpion
+1750	Snowfield Bear
+1751	Prairie Wolf
+1752	Blind Bat
+1753	Spirits of the Dead
+1754	Flesh of the Dead
+1755	Hallucinated Wasphive
+1756	Shadow Spirit
+1757	Venomous Maggots
+1758	Meadow Turtle
+1759	Canyon Brown Bear
+1760	Lethal Viper
+1761	White Goblin Warrior
+1762	Intrepid White Goblin Warrior
+1763	Black Meadow Bear
+1764	Aloof Werewolf
+1765	Sandstorm Crew Soldier
+1766	Sandstorm Crew Archer
+1767	Sandstorm Crew Troop
+1768	Ice-tailed Scorpion
+1769	Frost Clawed Werewolf
+1770	Purified Springs Watcher
+1771	Ice Mimic
+1772	Sealed Succubus
+1773	Gray Mouse
+1774	Bush Turtle
+1775	White Poison Sting Mosquito
+1776	Virulent Slime
+1777	Red Oogle
+1778	Grauple
+1779	Whitebeard Rat
+1780	Seductive Succubus
+1781	Blackstriped Maggots
+1782	Elven Soul
+1783	Thorn Needled Spider
+1784	Enchanted Journal
+1785	Moldy Eggs
+1786	Twin Minotaur
+1787	Elven Figure
+1788	Moving Oogle Doll
+1789	Forbidden Ancient Cursebook
+1790	Standard Guardian
+1791	Elven Archer Figure
+1792	Moving Tarantula Statue
+1793	Moving Stuffed Adult Oogle
+1794	Elven Warrior Remains
+1795	Blade Bat
+1796	Toxic Slime
+1797	Steel Guardian
+1798	Mithril Guardian
+1799	Divine Elven Figure
+1800	Divine Elven Archer Figure
+1801	Chasers Elite Soldier
+1802	Chasers Elite Archer
+1803	Yuhar's Pet
+1804	Spirit of the Ancient Elves
+1805	Red-eyed Wolf
+1806	Taipan Viper
+1807	Rose of Death
+1808	Shadow Soldier
+1809	Shadow Elite Knight
+1810	Incomplete Flagellum
+1811	Cursed One
+1812	Black Soul
+1813	Dark Warrior
+1814	Dark Offerings
+1815	Black Bat
+1816	Enraged Wing Slime
+1817	Red Flower Shrubber
+1818	Poisonous Forest Spider
+1819	Ice Viper
+1820	Hell Ghostfire
+1821	Sharptooth Ice Mimic
+1822	Cannibal Grauple
+1823	Chief Elf's Soul
+1824	Enraged Journal
+1825	Wicked Creature
+1826	Dark Death-taker
+1827	Drifting Ghost
+1828	Enraged Wolf
+1829	Lunatic Berkel Soldier
+1830	Lunatic Berkel Archer
+1831	Berserk Spider
+1832	Berserk Bat
+1833	Contaminated Goblin
+1834	Mutated Zombie
+1835	Lunatic Earl
+1836	Contaminated Head Goblin
+1837	Memory-eroding Mimic
+1838	Wolrang
+1839	Raging Werewolf
+1840	Mutated Desert Tortoise
+1841	Burning Cactus
+1842	Dark Priest
+1843	Meandering Mimic
+1844	Spirit of Snow
+1845	Snow Mouse
+1846	Snowfield Protector
+1847	Jeff the Wanted Criminal
+1848	Arnen Mutated Scorpion
+1849	Meadow Savage Turtle
+1850	Lunatic White Goblin Warrior
+1851	Vicious Werewolf
+1852	Frost Werewolf
+1853	Iceshell Turtle
+1854	Purification Cave Watcher
+1855	Enraged Arnen Soldier
+1856	Bone Orc Warrior Ghoul
+1857	Bone Orc Sorcerer Spirit 
+1858	Drenched Skeleton
+1859	Boss Werewolf's Lost Soul
+1860	Lunatic Chasers Captain
+1861	Zahad Kuruhatt's Spirit
+1862	Summoned Bat
+1863	Darkhoods Warrior
+1864	Darkhoods Archer
+1865	Sewer Rat
+1866	Enchanted Succubus
+1867	Mad Ghostfire
+1868	Dark Scriptures
+1869	Drow Warrior Ghoul
+1870	Drow Sorcerer Spirit
+1871	Raging Oogle
+1872	Darkhoods Boss
+1873	Demon Lord
+1874	Enraged Chief Drow's Spirit
+1875	Poisonous Sting Maggots
+1876	Sharptooth Mimic
+1877	Wild Bear
+1878	Fangsnake
+1879	Ruffian
+1880	Elf Warrior Ghoul
+1881	Tainted Oogle
+1882	Raging Minotaur
+1883	Lunatic Golem
+1884	Enraged Dragon
+1885	Shadow of Darkness
+1886	Barrel of Toxic Waste
+1887	Mad Dog in a Haystack
+1888	Infected Mouse in a Box
+1889	Ancient Mimic
+1890	1000-year-old Fountain Snake
+1891	Ancient Mutated Poison Spider
+1892	Dark Praising Forbidden Book
+1893	Rebel Remains
+1894	Uncontrollable Guardian
+1895	Wicked Drow Archer Figure
+1896	Deceased Remains
+1897	Enraged Memory Egg
+1898	Test Slime
+1899	Heavy Slime
+1900	Deadly Poisonous Viper
+1901	Starved Wolf
+1902	Crimson Agouara
+1903	Brutal Deserter
+1904	Evil Bat
+1905	Remains of a Forgotten Soldier
+1906	Greedy Mimic
+1907	Foul Maggot
+1908	Lost Ghost
+1909	Book of Evil Darkness
+1910	Evil Spirit of Abyss
+1911	Nghỉ ngơi
+1912	Tiệm vũ khí
+1913	Tiệm giáp
+1914	Tạp hoá
+1915	Sạp chợ đen
+1916	Tiệm đồ hiếm
+1917	Tiệm đèn
+1918	NO TEXT
+1919	Đăng ký
+1920	Ghép vật phẩm
+1921	Hồi sinh đồng đội
+1922	Tuyển lính đánh thuê
+1923	Tuyển
+1924	Giải tán
+1925	Xem thông tin
+1926	Đang cố rút thanh kiếm khỏi mặt đất!
+1927	Triệu hồi Boss
+1928	Đổi quặng
+1929	Dịch chuyển
+1930	Cửa hàng mạng
+1931	Người bán vũ khí
+1932	Người bán giáp
+1933	Người bán tạp hoá
+1934	Người bán đồ hiếm
+1935	Người hỗ trợ lính
+1936	Chủ quán trọ
+1937	Gã bán hàng rong
+1938	Người bán đèn
+1939	Người giữ đấu trường
+1940	Đàn ông
+1941	Phụ nữ
+1942	Cậu bé
+1943	Cô bé
+1944	Ông lão
+1945	Bà lão
+1946	Hộp thư
+1947	Rương báu
+1948	Rương báu cao cấp
+1949	Giếng
+1950	Thanh kiếm huyền thoại
+1951	Azad
+1952	Janus
+1953	Eara
+1954	Lehman
+1955	Pháp sư Grumman
+1956	Lính Arnen
+1957	Người hầu
+1958	Phù thuỷ hắc ám Kane
+1959	Tảng đá vỡ
+1960	Eara bất tỉnh
+1961	Channel
+1962	Pháp sư Grumman gục ngã
+1963	Lính Berkel gục ngã
+1964	Học viên Shadow
+1965	Ngôi sao
+1966	Đống củi
+1967	Công tắc
+1968	Nhà giam
+1969	Cổng
+1970	Pha lê
+1971	Công tắc 2
+1972	Thử thách của Azad
+1973	Thử thách của Eara
+1974	Thử thách của Darius
+1975	Thử thách của Thánh tế
+1976	Hộp cũ
+1977	Cổng dịch chuyển
+1978	Trống
+1979	Bó rơm
+1980	Đuốc
+1981	Bia mộ
+1982	Ngôi mộ
+1983	Chướng ngại
+1984	Thủ kho Shadow
+1985	Khu canh gác
+1986	Đèn đường
+1987	Lửa trại
+1988	Tảng đá
+1989	Tu sĩ thánh
+1990	Cung thủ thánh
+1991	Sahir
+1992	Goshak
+1993	Chó sói Grayfang
+1994	Kiyan
+1995	Suối trong
+1996	Suối mát
+1997	Suối huyền bí
+1998	Đài phun của Djinn
+1999	Đài phun hỗn mang
+2000	Cổng hang Goblin
+2001	Kinkan mù
+2002	Đầu bếp Robbie
+2003	Cửa ngách nô lệ
+2004	Cổng nhà giam
+2005	Tù nhân 1
+2006	Tù nhân 2
+2007	Tù nhân Izelynn
+2008	Tù nhân 4
+2009	Tù nhân 5
+2010	Thương nhân bị bắt cóc 1
+2011	Thương nhân bị bắt cóc 2
+2012	Thương nhân bị bắt cóc 3
+2013	Người bán tạp hoá rong
+2014	Đội giải cứu Channel
+2015	Thánh tế
+2016	Nirniti
+2017	Amarok Walter
+2018	Walter
+2019	Thị trưởng làng Dwarf
+2020	Lính gác làng Dwarf
+2021	Thợ mỏ Dwarf Donovan
+2022	Chuyên gia mỏ Dolpe
+2023	Tảng đá chắn đường
+2024	Rương báu của Boss
+2025	Xác Head Goblin
+2026	Xác Goblin Guard
+2027	Xác Cave Goblin
+2028	Hàng rào
+2029	Xác Yirzuch
+2030	Rodger
+2031	Dylan
+2032	Thương nhân Michikoff
+2033	Old Lady Sasha
+2034	Shredder
+2035	Jackie
+2036	Amarok Eric
+2037	Amarok Harris
+2038	Kevin
+2039	Haiden III
+2040	Thợ mỏ Dwarf Schreiber
+2041	Baldwin 
+2042	Ben
+2043	Tout
+2044	Công tắc
+2045	Con gái Izelynn
+2046	Con trai Izelynn
+2047	Olaf
+2048	Đội trưởng gác Marduk
+2049	Thánh tế bị nhiễm độc
+2050	Cửa thép nhà nguyện
+2051	Xác Thánh tế bị ô nhiễm
+2052	Lính gác Turnak
+2053	Steel Orc Bauer
+2054	Đội trưởng đội tuần tra Reims
+2055	Nhà sinh vật học Benzino
+2056	Đội viên tuần tra Sina
+2057	Nông dân Jose 
+2058	Đầu bếp Melanie
+2059	Quản gia của Ben
+2060	Steel Orc Shultz
+2061	Steel Orc Guste
+2062	Lính gác Hedfeld
+2063	Thủ thư độc hại Brinner
+2064	Người lạ ở Hwagan
+2065	Nước suối trong
+2066	Tù và
+2067	Cửa của bọn cướp
+2068	Cổng đá
+2069	Tảng đá trong suốt
+2070	Đội trưởng quân Heket
+2071	Cửa thép
+2072	Công tắc hoa văn
+2073	Hố
+2074	Bệ thờ thép
+2075	Trưởng lão Steel Orc
+2076	Giáo hoàng Erasmus
+2077	Nhà giả kim Leiden
+2078	Trưởng nhóm học viên
+2079	Đội trưởng Chasers
+2080	Nhà nghiên cứu vũ khí Jeff
+2081	Maria
+2082	Samuel
+2083	Jackson
+2084	Mickey
+2085	Vale
+2086	Bó rơm ở nhà kho
+2087	Bounty Hunter Lars
+2088	Bounty Hunter Hugh
+2089	Bounty Hunter Mowanza
+2090	Bounty Hunter Othniel
+2091	Bounty Hunter Clint
+2092	Bounty Hunter Boaz
+2093	Tony
+2094	Robbins
+2095	Milriah
+2096	Bát Thịt
+2097	Bát Linh hồn
+2098	Bát Sự sống
+2099	Little Fey
+2100	Lối ra
+2101	Yirien
+2102	Lính gác Dark Knight
+2103	Hiệp sĩ lâu đài Berkel
+2104	Bounty Hunter Duey
+2105	Phụ nữ trong làng
+2106	Thị trưởng làng Rinoen
+2107	Đàn ông trong làng
+2108	Đứa trẻ
+2109	Dược sư Mabel
+2110	Yuhar
+2111	Trưởng tiếp tế Deponin
+2112	Xác thợ săn
+2113	Nhà nghiên cứu Oogle
+2114	Tù binh
+2115	Sailen
+2116	Cây linh thiêng
+2117	Đá phù phép
+2118	Kết giới hầm phong ấn
+2119	Phó tướng Drow
+2120	Thủ lĩnh Drow
+2121	Quân y Chasers
+2122	Pháp sư Arnen
+2123	Lính Arnen bất tỉnh
+2124	Fusion Machine
+2125	Người bán rong Hawkins
+2126	Hồn ma Josh
+2127	Xác Josh
+2128	Fey Leader
+2129	Xác Fey
+2130	Thành viên Chasers 1
+2131	Thành viên Chasers 2
+2132	Thành viên Chasers 3
+2133	Chiến binh Drow
+2134	Xác gấu
+2135	Thợ săn
+2136	Monica
+2137	Charles
+2138	Claude
+2139	Felix
+2140	Dominique
+2141	Nhà thám hiểm Simon
+2142	Lawrence
+2143	Thầy thuốc
+2144	Hiền nhân Cá chép
+2145	Goblin Miller
+2146	Minotaur vui vẻ
+2147	Trưởng lão Snow Fey
+2148	Thanh niên Snow Fey
+2149	Đội trưởng gác Snow Fey
+2150	Lính gác Snow Fey
+2151	Beatrice 
+2152	Spania
+2153	Largal
+2154	Melibael
+2155	Juradkiel
+2156	Etherin
+2157	Lăng mộ nhà vua
+2158	Rummy
+2159	Giường
+2160	Bệ thờ phong ấn
+2161	Thầy thuốc Franz
+2162	Kệ sách
+2163	Cây cầu
+2164	Guardian đổ nát
+2165	Bệ thờ giao ước
+2166	Cựu binh
+2167	Người giám hộ
+2168	Kiyan đang nằm
+2169	Ngọn lửa
+2170	Hang máu
+2171	Bounty Hunter Rubin
+2172	Rosarine
+2173	Amelia
+2174	Baildhaud
+2175	John Snow
+2176	Ishwhicapel
+2177	Jacques
+2178	Mortred
+2179	Hanzo
+2180	Morgana
+2181	Vilhelm
+2182	Legolrhaz
+2183	Jahrubahn
+2184	Dire
+2185	Rheena
+2186	Seukhadi
+2187	Morello
+2188	Nash
+2189	Evelyn
+2190	Danoris
+2191	Deborah
+2192	Duval
+2193	Granichos
+2194	Sugar Ray
+2195	Fenoa
+2196	Gumniang
+2197	Kenjin
+2198	Ceres
+2199	Rineah
+2200	Kuntu
+2201	Clea
+2202	Rica
+2203	Pamina
+2204	Mares
+2205	Loutch
+2206	Proto
+2207	Exion
+2208	Lacroix
+2209	Romeo
+2210	Gabriel
+2211	Orbey
+2212	Enesse
+2213	Seraphina
+2214	Derek
+2215	Kirst
+2216	Gurarde
+2217	Kane
+2218	Bounty Hunter Craig
+2219	Bounty Hunter Arnold
+2220	Bounty Hunter Reeves
+2221	Bounty Hunter Barlog
+2222	Bounty Hunter Hunde
+2223	Bounty Hunter Pinto
+2224	Elinia
+2225	Bậc thầy cường hoá huyền thoại
+2226	Tảng đá chắn hang
+2227	Cửa đóng
+2228	Lối vào tầng 2 bệ thờ
+2229	Lối vào tầng 3 bệ thờ
+2230	Lối vào tầng 4 bệ thờ
+2231	Lối vào tầng cuối bệ thờ
+2232	Cánh cửa ký ức
+2233	Công tắc không rõ
+2234	Thầy chữa hồn
+2235	Murphy
+2236	Phú hộ Roderick
+2237	Nhà leo núi Vermont
+2238	Kernaks
+2239	Người yêu nước Ludwig
+2240	Người giữ thánh địa Elf
+2241	Tượng gấu Bắc cực
+2242	Tượng gấu đen
+2243	Tượng gấu nâu
+2244	Tượng gấu đỏ
+2245	Helen
+2246	Người bán vật phẩm phép
+2247	Busybody Luna
+2248	Vũ khí của bọn tôi là tốt nhất thế giới!
+2249	Giáo với khiên mà đấu nhau thì chẳng phải giáo thắng sao?
+2250	Thứ gì cậu cần cũng có ở đây. Xem thử đi nào!
+2251	Đang tìm thứ gì đặc biệt à? Vậy thì đến đúng chỗ rồi đấy. Hàng ở đây món nào cũng đặc biệt.
+2252	Chiếc giường ấm áp với ga trải sạch sẽ. Chợp mắt một lát ở nơi dễ chịu nào.
+2253	Mua thì mua, không thì thôi. Tôi không bán để cậu được lợi đâu. 
+2254	Sẵn sàng chiến đấu chưa? 
+2255	Thị trấn này nhỏ thật, nhưng thứ gì cậu cần cũng có. Đừng tưởng đi chỗ khác sẽ tốt hơn.
+2256	Ờ... cậu...?
+2257	Tôi chẳng có bạn nào cùng tuổi, buồn quá.
+2258	Ối... cả người đau nhức. Già rồi mà. Này cậu kia, lại đây đấm lưng cho tôi được không?
+2259	Cảm ơn đã cứu tôi. Tôi cũng phải đi ngay đây...&NKhông kịp hỏi, nhưng cậu đang tìm thứ gì đó phải không?
+2260	Ơn trời! Cha-... à không, tiểu thư đang đợi cậu đấy.
+2261	Chẳng biết ai như thế. Ồ, anh chàng tóc vàng điển trai... chắc cậu không nói tôi đấy chứ?
+2262	Hả? Tôi không biết. Làng này chẳng có ai tôi không biết cả! Sao cậu lại tới đây? Nếu chán thì đi chơi với tôi đi!
+2263	Hửm? Không, lâu rồi chẳng thấy người lạ nào ở đây. Cậu nhầm rồi, chàng trai.
+2264	Căng thẳng giữa Berkel và Arnen tăng lên từng ngày. Thế này thì sắp có chiến tranh rồi, phải không?
+2265	Anh Baskin của tôi đâu rồi...
+2266	Hửm, cổ vật à? Nghe chán quá... cậu bé, lại đây chơi cờ với ông đi?
+2267	Xin lỗi, nhưng tôi không thích nói về chuyện đó.
+2268	Tôi là thầy thuốc đi cùng nhóm người tìm cổ vật. Chưa bao giờ nghĩ chúng tôi lại bị kẹt ở ngôi làng này...
+2269	Đã bảo là ông không biết mà. Quên chuyện đó đi, chơi cờ nào.
+2270	Cậu đúng là cứng đầu nhỉ? Đã bảo tôi chẳng còn gì để nói nữa.
+2271	À, cái người nổi điên sau khi cố phá phong ấn ấy hả? Xin lỗi, tôi không biết. $Srummy$B ở $Rbãi đất trống$B có vẻ biết rõ hắn, sao cậu không hỏi thử?
+2272	Maria... sao một người lại có thể vừa dễ thương vừa đáng yêu đến thế chứ?
+2273	Chào cậu bé. Định đi đâu thế?
+2274	Hừm, trường hợp này chắc sẽ hiệu quả hơn nếu giảm lực và tăng độ cứng...
+2275	Nhớ đấy, nếu để những ký ức bạo lực xâm chiếm, cậu sẽ bị trói buộc ở nơi này mãi mãi. Hãy cẩn thận.
+2276	Cố gắng làm gì cho mệt... phí sức thôi...&NNếu là tôi thì tôi bỏ cuộc rồi.
+2277	Lâu lắm rồi mới thấy người trẻ như cậu quanh đây. Sớm muộn gì cậu cũng sẽ uể oải như mấy gã đằng kia thôi...&NThị trấn này là nơi như thế đấy.
+2278	Hãy để những linh hồn mệt mỏi được nghỉ ngơi…&NCậu có muốn chữa lành linh hồn bị tổn thương không?
+2279	Shadow Tribe's Camp
+2280	NETWORK Map
+2281	BEGIN Map
+2282	CASTLE_BASE Map2
+2283	GUILD_BASE Map2
+2284	MERCENARY_OFFICE Map 2
+2285	CHOICE Map2
+2286	ARENA Map2
+2287	BARRACK Map2
+2288	HOSPITAL Map2
+2289	WAREHOUSE Map2
+2290	SIEGE_MAIN Map2
+2291	NETWORK_MINE Map2
+2292	ROOM_RED Map2
+2293	ROOM_BLUE Map2
+2294	ROOM_YELLOW Map2
+2295	FISHSAGE Map2
+2296	FISHSAGE_GATE Map2
+2297	Shadow Hall
+2298	Kiyan's Room
+2299	Shadow Tribe Leader's Office
+2300	Sanctus Imriel 
+2301	Shadow Training Dungeon1
+2302	Old Sanctuary
+2303	Inside Arnen Castle01
+2304	Inside Arnen Castle02
+2305	Northwest side of Arnen Castle
+2306	Channel's Room
+2307	Forest of Shadows 1
+2308	Forest of Shadows 2
+2309	Cave of Silence 1
+2310	Cave of Silence 2
+2311	Shadow Warehouse
+2312	Inn
+2313	Berkel Capital
+2314	Hanun Forest 1
+2315	Hanun  
+2316	Weapons Store
+2317	Hakan Desert 1
+2318	Hakan Desert 2
+2319	Hakan Desert 3
+2320	Hakan Desert 4
+2321	Goblin's Lair 1
+2322	Goblin's Lair 2
+2323	Goblin's Lair 3
+2324	Goblin's Kitchen
+2325	Goblin's Storage
+2326	Spider's Lair 1
+2327	Spider's Lair 2
+2328	Goblin Prison 1
+2329	Goblin Prison 2
+2330	Goblins Store
+2331	Oasis
+2332	Leap-gate District
+2333	Hakan Desert 5
+2334	Nirniti's House
+2335	Kamuran Village
+2336	Dwarf Village Mayor's House
+2337	Dwarf Village East
+2338	Werewolf Lair
+2339	Dwarf Village
+2340	Mines West Section B1
+2341	Mines West Section2 B1
+2342	Mines Lowest Floor
+2343	Mine Undergrounds B1
+2344	Kamuran Hills
+2345	East Kamuran
+2346	Mine Undergrounds B2
+2347	Mine Undergrounds B3
+2348	Dwarf Village Inn
+2349	Kamuran Wilderness Cave
+2350	Kamuran Wilderness
+2351	South Kamuran
+2352	Mine Undergrounds B4
+2353	Kamuran Village Inn
+2354	Border Gateway
+2355	Ben's Mansion
+2356	Redhoods Hideout
+2357	Redhoods Boss Room
+2358	Guardpost Floor 3
+2359	Pendrik Village Safehouse
+2360	Underground Prison Guardpost
+2361	South Pendrik
+2362	Pendrik Village
+2363	Pendrik Village Inn
+2364	Pendrik Northern Plains
+2365	Delos Swamps 1
+2366	Smugglers Secret Entrance 2
+2367	Delos Swamps 2
+2368	Land of Exile 1
+2369	Land of Exile 4
+2370	Land of Exile 3
+2371	Land of Exile 8
+2372	Land of Exile 9
+2373	Delos Highlands
+2374	Heket Greenlands
+2375	Guardpost Secret Entrance
+2376	Pendrik's Deserted House
+2377	Redhoods Hideout Basement
+2378	Delos Cave
+2379	Guardpost Floor 1
+2380	Guardpost Floor 2
+2381	Land of Exile 2
+2382	Smugglers Secret Entrance 1
+2383	Land of Exile 7
+2384	Berkelen Knights Headquarters
+2385	Divine Berkelen Knights
+2386	Closed Dungeon 2
+2387	Shadow Training Dungeon 2
+2388	Leiden's House
+2389	Closed Dungeon 1
+2390	Secret Sanctum 1
+2391	Secret Sanctum 2
+2392	Steel Orc Village
+2393	Steel Orc Village Guardpost
+2394	Shadow Swamp
+2395	Hwagan Canyon 2
+2396	Stranger's House
+2397	Hwagan Canyon Cave 3
+2398	Hwagan Canyon Cave 4
+2399	Bone Orc District 1
+2400	Hwagan Canyon 4
+2401	Fort of Screams Floor 2
+2402	Bone Orc District 2
+2403	Fort of Screams Floor 3
+2404	Fort of Screams Top Floor
+2405	Fort of Screams Floor 1
+2406	Steel Orc Elder's House
+2407	Noxious Sanctum Entrance
+2408	Noxious Sanctum Basement 1
+2409	Noxious Sanctum Basement 2
+2410	Noxious Sanctum Chapel
+2411	Noxious Sanctum Main Hall
+2412	Reminiscence Map
+2413	Cliff Road
+2414	Hwagan Canyon Cave 1
+2415	Hwagan Canyon Cave 2
+2416	Hwagan Canyon 3
+2417	Noxious Sanctum Hall
+2418	Steel Swamp 1
+2419	Steel Swamp 2
+2420	Hwagan Canyon 1
+2421	Steel Village Weapons Store
+2422	Steel Orc Village Mercenary Wait Area
+2423	Steel Village Inn
+2424	Berkel Church Monastery 4
+2425	Hanun Forest 4
+2426	Berkel Church Monastery 1
+2427	Berkel Church Monastery 2
+2428	Berkel Church Hall
+2429	Berkel Capital Square
+2430	Empire Capital Alley 1
+2431	Empire Capital Alley 2
+2432	Empire Capital Alley 3
+2433	Empire Capital Alley 4
+2434	Empire Capital Alley 5
+2435	Hanun Forest 3
+2436	Monster AI Test Map
+2437	Eternal World 1
+2438	Eternal World 2
+2439	Eternal World 3
+2440	Eldorn Forest 3
+2441	Eldorn Forest 4
+2442	Southern Deponin
+2443	Deponin Village
+2444	Blackhoods Prison
+2445	Blackhoods Boss Room
+2446	Blackhoods Hideout
+2447	Blackhoods Stronghold 1
+2448	Blackhoods Stronghold 2
+2449	Blackhoods Storage
+2450	Rinoen Village
+2451	Oogle Habitat 1
+2452	Oogle Habitat 2
+2453	Oogle Habitat 3
+2454	Oogle Queen's Room
+2455	Deponin Dealers Union
+2456	Rinoen Forest
+2457	Rinoen Safehouse
+2458	Deponin's Herbhouse
+2459	West Rinoen
+2460	Eldorn Forest Clearings
+2461	Rinoen Inn
+2462	Rinoen Mayor's House
+2463	Ronarck Cliffs
+2464	Ronarck Canyon 1
+2465	Ronarck Canyon 2
+2466	Maze of Death 1
+2467	Maze of Death 2
+2468	Maze of Death 3
+2469	Maze of Death 4
+2470	Beacon Hill floor 1
+2471	Beacon Hill floor 2
+2472	Beacon Hill floor 3
+2473	Beacon Hill rooftop
+2474	Eldorn Gateway
+2475	Eldorn Forest 1
+2476	Eldorn Forest 2
+2477	Takal Woods
+2478	Piolren Meadows 6
+2479	Piolren Meadows 7
+2480	Piolren Meadows 8
+2481	Piolren Rocky Mountain
+2482	Piolren Underground Cave 1
+2483	Piolren Underground Cave 2
+2484	Piolren Underground Cave 3
+2485	Piolren Underground Cave 4
+2486	Piolren Meadows 1
+2487	Piolren Meadows 2
+2488	Piolren Meadows 3
+2489	Piolren Meadows 4
+2490	Piolren Meadows 5
+2491	North Rinoen
+2492	Eternal Forest Entrance
+2493	Snow Fey Village
+2494	Clear Frost Plains
+2495	Snow Fey Weapons Store
+2496	White Valley 1
+2497	White Valley 2
+2498	Northern Winds Forest
+2499	Sage's House
+2500	Snowfield Forest
+2501	Ice Fortress
+2502	Snow Elf Village Inn
+2503	Eternal Winter Swamps
+2504	Fey Village Mercenary Wait Area
+2505	Purification Cave 1
+2506	Purification Cave 2
+2507	Purification Cave 3
+2508	Miller's House
+2509	Cure Room
+2510	Healer's House
+2511	Berkel Church Monastery 3
+2512	Snow Fey Village Entrance
+2513	Drow Fortress 1
+2514	Drow Fortress 2
+2515	Drow Fortress 3
+2516	Snowfield 1
+2517	Snowfield 2
+2518	Snowfield 4
+2519	Snowfield 5
+2520	Snowfield Crossroad
+2521	Snowfield East Crossroad
+2522	Snowfield North Crossroad
+2523	Snowfield West Crossroad
+2524	Snowfield Caves
+2525	Snowfield Cliffs
+2526	Eternal Forest 1
+2527	Eternal Forest 1-2
+2528	Eternal Forest 2
+2529	Eternal Forest 3
+2530	Drow's Soul District 1
+2531	Drow's Soul District 2
+2532	Eternal Forest 6
+2533	Eternal Forest 7
+2534	Eternal Forest Bounds 1
+2535	Eternal Forest 4
+2536	Eternal Forest Bounds 3
+2537	Eternal Forest Exit
+2538	Eldorn Forest 5
+2539	Eternal Forest Cave
+2540	Eternal Forest Bounds 2
+2541	Snowfield Hills
+2542	Eternal Snowy Forest 1
+2543	Lonely Plains
+2544	Forest of Enlightenment
+2545	Room of Death
+2546	Royal Burial Chamber
+2547	Royal Burial Chamber 2
+2548	Royal Burial Chamber 3
+2549	Hunter's Cabin
+2550	New Way of Life
+2551	Styx Road
+2552	Styx Road 2
+2553	Styx Road 3
+2554	Noxious Sanctum floor B1
+2555	Noxious Sanctum floor B2
+2556	Noxious Sanctum floor B3
+2557	Noxious Sanctum floor B4
+2558	Abyss Engine Room
+2559	Abyss Warehouse
+2560	Hall of Abyss
+2561	Room of Patience
+2562	Room of Life
+2563	South Room of Afterlife
+2564	East Room of Afterlife
+2565	West Room of Afterlife
+2566	Hall of Afterlife
+2567	Engine Room of Reality
+2568	Hall of Reality
+2569	Hall of Resurrection
+2570	Room of Resurrection
+2571	Room of Regression
+2572	Room of Trials
+2573	Road of Crusade
+2574	Road of Truth
+2575	Snowfield 3
+2576	Western Deponin
+2577	Eternal Snowy Valley
+2578	Eternal Snowy Forest 2
+2579	Eternal Snowy Forest 3
+2580	Eternal Snowy Forest 4
+2581	Eternal Snowy Forest 5
+2582	Mist Village Clearings
+2583	Abandoned Camp
+2584	Sealed Dungeon 1-1
+2585	Sealed Dungeon 1-2
+2586	Sealed Dungeon 1-3
+2587	Hunter's House
+2588	Mist Village Store
+2589	Forest Graveyard
+2590	Mist Village
+2591	Mist Forest 1
+2592	Mist Forest 2
+2593	Mist Forest 3
+2594	Mist Village Inn
+2595	Mist Village Healing Center
+2596	Mayor's House
+2597	Mayor's House Basement 1
+2598	Mist Village Deserted House 1
+2599	Mist Village Deserted House 3
+2600	Sealed Dungeon 2-1
+2601	Sealed Dungeon 2-2
+2602	Sealed Dungeon 2-3
+2603	Sealed Dungeon 3-1
+2604	Sealed Dungeon 3-2
+2605	Sealed Dungeon 3-3
+2606	Sealed Room: South
+2607	Sealed Room: East
+2608	Sealed Room: North
+2609	Sealed Room: West
+2610	Elven Sanctuary Entrance
+2611	Mist Forest 4
+2612	Final Sealed Boss Room
+2613	Final Seal's Center
+2614	Mayor's House Basement 2
+2615	Mayor's House Basement 3
+2616	Beach
+2617	Lake Sellen
+2618	Dark Space
+2619	Space of Despair
+2620	Road of Renewal
+2621	Phantom Forest 1
+2622	Phantom Forest 2
+2623	Sellen Meadows 1
+2624	Sellen Meadows 2
+2625	Eternal Forest 5
+2626	Eternal Forest 8
+2627	Kiyan's Memory Layer 1
+2628	Dark Woods 1
+2629	Dark Woods 2
+2630	Dark Woods 3
+2631	Piolren Meadows 9
+2632	Kiyan's Memory Layer 2
+2633	Abandoned Mines 1
+2634	Empire Capital Inn
+2635	Abandoned Mines 2
+2636	Abandoned Mines 3
+2637	Blazing Desert 1
+2638	Blazing Desert 2
+2639	Blazing Desert 3
+2640	Lonely Plateaus 1
+2641	Lonely Plateaus 2
+2642	Lonely Plateaus 3
+2643	Kiyan's Memory Layer 3
+2644	Wrecked Castle 1
+2645	Wrecked Castle 2
+2646	Wrecked Castle 3
+2647	Land of Death 1
+2648	Land of Death 2
+2649	Land of Death 3
+2650	Spiritual Forest 1
+2651	Spiritual Forest 2
+2652	Spiritual Forest 3
+2653	Kiyan's Memory Layer 4
+2654	Endless Snowfield 1
+2655	Endless Snowfield 2
+2656	Endless Snowfield 3
+2657	Cave of Trials 1
+2658	Cave of Trials 2
+2659	Cave of Trials 3
+2660	Forgotten Ruins 1
+2661	Forgotten Ruins 2
+2662	Forgotten Ruins 3
+2663	Kiyan's Final Memory Layer 1
+2664	Kiyan's Final Memory Layer 3
+2665	Kiyan's Final Memory Layer 4
+2666	Kiyan's Final Memory Layer 5
+2667	Land of Exile 5
+2668	Land of Exile 6
+2669	Eternal Forest 1-1
+2670	Kiyan's Final Memory Layer 2
+2671	Mist Village Deserted House 2
+2672	Em tin…
+2673	Lời nói, ánh mắt, tất cả của anh..
+2674	đều là thật…
+2675	Giờ đến lượt em cứu anh.
+2676	Anh là người có thể phá vỡ sợi xích định mệnh đã dẫn dắt chúng ta tới đây….
+2677	….Em tin như vậy.
+2678	Hửm...?
+2679	Lại là giấc mơ.
+2680	$G(Chắc tại mình lo lắng vì $Rnhiệm vụ hôm nay$G…)$B
+2681	$G(Dù sao, gọi kiểu này chắc là việc gấp...)$B
+2682	$SKiyan$B.
+2683	$SDarius$B gọi cậu đấy.
+2684	Đã gọi rồi sao?
+2685	Ngài ấy đang đợi cậu ở $SForest of Shadows$B. Đi về phía $Rđông$B ấy.
+2686	Vâng. Tôi đi ngay.
+2687	Ngài gọi tôi ạ?
+2688	Cậu đến muộn đấy, Kiyan.
+2689	Nhìn kìa. Thấy bọn chúng không?
+2690	Trinh sát báo đã thấy cô ta đâu đó quanh đây.&PKhông được để mất dấu, hiểu chưa? Tìm cho ra!
+2691	Rõ, thưa ngài!
+2692	Kẻ đang quát tháo kia là $SGrafton$B, $Rbá tước của các Hiệp sĩ Berkel$B.&PChắc cậu từng nghe tên hắn. Hắn nổi tiếng lắm.
+2693	Và hắn đã gây cho chúng ta không ít rắc rối,&Nphải không ạ?
+2694	Phải. Sẽ yên tâm hơn nhiều nếu biết gã đó không thể quấy rối tộc ta được nữa.&PTa tin cậu hiểu ý ta.
+2695	Tôi xin tuân lệnh, thưa ngài.
+2696	Xử hắn đi.
+2697	Rõ, thưa ngài.
+2698	Mệnh lệnh đó cậu có thể xem trong $RMenu$B, ở thẻ $RNhiệm vụ$B.
+2699	Khi nào cần xem tiến độ, cứ mở ra xem lại.
+2700	Ta mong cậu xong việc thật nhanh; ta sẽ đợi ở $Rdoanh trại$B.
+2701	Nơi này đầy $Rlính$B. &NPhải tránh tai mắt của $RĐế quốc$B. &PTôi có ý này: đi theo tôi.
+2702	Tôi sẽ dụ chúng vào bẫy. &NCô ở lại đây đợi tôi.
+2703	Anh sẽ chỉ có một mình.&PAnh chắc là đáng để liều như vậy chứ?
+2704	Tôi sẽ ổn thôi.
+2705	Xong việc tôi sẽ quay lại.
+2706	Nó kia rồi!
+2707	Bắt lấy nó! Nó sẽ cho biết con bé ở đâu!
+2708	Có trời chứng giám, ngươi đừng hòng sống sót rời khỏi đây.
+2709	Quái vật!
+2710	Mày tiêu rồi!
+2711	…Hù.
+2712	Nó đang giết anh em ta! Hạ nó đi!
+2713	Hahahahahahaha bắt được thì bắt đi!
+2714	Nó chạy đằng kia! Tóm lấy nó!
+2715	Lạnh quá.
+2716	Đó có phải lựa chọn đúng không? Có lẽ là không. 
+2717	Nhưng thà bị cho là ngây thơ…
+2718	Còn hơn để họ biết ý định thật của mình.
+2719	…Sẽ ổn cả thôi.
+2720	$G(Có ai đó ở đây. Mình cảm nhận được.)$B
+2721	Thảm hại thật.&NTưởng trốn trong hang là thoát được bọn ta sao?
+2722	Không được làm cô ta bị thương!&NCô ta phải sống, bằng mọi giá, nghe chưa?
+2723	Ta thấy ngược lại thì đúng hơn. Chết đi.
+2724	$RCô ta$B ở đây.&NLục soát bụi cây, lôi cô ta ra!
+2725	Thưa ngài!&NỞ đây có dấu chân!
+2726	Dấu chân to quá nhỉ.
+2727	$G(Được rồi, không phải của mình. Nhưng chúng đang tới quá gần!)$B
+2728	Vậy là ngươi tưởng trốn được bọn ta.&NTưởng mình khôn lắm.
+2729	Nhưng chỗ trốn đó tệ thật đấy.
+2730	Không lạnh à, cô bé?&NĂn mặc phong phanh thế kia…
+2731	Lẽ ra ngươi không nên rời khỏi sự bảo vệ của pháo đài.&PAi biết được ngoài kia sẽ xảy ra chuyện gì…
+2732	$G($B$SShin$B$G sắp quay lại rồi. Mình phải câu giờ tới lúc đó.)$B
+2733	Đưa cô ta đi. Nhưng đừng làm cô ta bị thương.&NCô ta quý giá lắm.
+2734	Buông tôi ra, các người biết là không được chạm vào tôi.&PTôi sẽ tự đi theo.
+2735	Khó mà tin ngươi vụ đó.&NDù sao ngươi cũng vừa bỏ trốn mà. 
+2736	Ai đó…?
+2737	Thưa… thưa ngài…
+2738	Cái quái gì đã xảy ra &Nkhi ta vừa quay lưng đi vậy?!
+2739	Hắn như một cái bóng, thưa ngài, &Nkhông ai cản nổi…
+2740	Cái gì? &NNgươi nói gì vậy?!
+2741	Chỉ một $Rthằng nhóc$B thôi, thưa ngài, chỉ một.&NChưa tới hai mươi tuổi… Đúng là ác quỷ…
+2742	AAAA! Hắn tới rồi! Chính là hắn!
+2743	Trời ơi!
+2744	Chào ngài, $SBá tước Grafton$B.
+2745	Sao ngươi dám gọi thẳng tên ngài như thế! 
+2746	...Có vẻ tìm đúng người rồi.
+2747	Ngươi là ai?&NKẻ nào dám tấn công cả Hiệp sĩ đoàn?
+2748	Ngài chẳng cần biết đâu. &NĐằng nào ngài cũng chết.
+2749	Cái gì?
+2750	Hãy vui vì được hi sinh cho $Rtộc của chúng ta$B.
+2751	Anh là ai?
+2752	Trời ơi, anh giết hết những người đó rồi!
+2753	Sao cũng được, tôi không có thời gian cho việc này.
+2754	...rất vui được gặp cô.
+2755	Ấy, khoan, đừng! &NBỏ vũ khí xuống đi mà!
+2756	Sao ở đây chẳng ai nói chuyện cho ra hồn vậy?
+2757	Ờm… tôi phải nói gì đây? &NAnh đang định giết tôi mà!
+2758	Cô là cô gái mà gã kia đang tìm à?
+2759	Ừm, nói vậy thì đơn giản quá.
+2760	Nhưng đúng, là tôi. Và tôi muốn được sống.
+2761	Bao nhiêu người đã hi sinh vì tôi... Tôi không thể để sự hi sinh của họ thành vô ích...!&PXin anh... Hãy tha cho tôi... Tôi còn sứ mệnh phải hoàn thành…
+2762	Tôi chẳng thấy chuyện đó liên quan gì đến tôi.
+2763	Làm ơn, làm ơn tha cho tôi đi.&NAnh cần gì tôi cũng có thể đưa.
+2764	Thôi, hôm nay tôi "ăn" đủ người rồi, mà cô thì gầy quá, không hợp khẩu vị.
+2765	Dù sao thì ai cũng chết cả rồi, chạy hết sức đi. 
+2766	Đây là cơ hội duy nhất của cô.
+2767	....Anh ta thật sự tha cho mình sao?
+2768	Chuyện quái gì đã xảy ra ở đây vậy?!
+2769	Eara, cô không sao! May quá! &NKhoan đã… cô ổn thật chứ?
+2770	Tất nhiên rồi.
+2771	Không ngờ lại thấy cô giữa đống xác thế này… Nhưng phải đi nhanh thôi. &PVẫn còn lính quanh đây. Chạy nào.
+2772	Bá tước?
+2773	Đã bị xử lý.
+2774	Nhiệm vụ rất khó, nhưng cậu đã chứng tỏ mình xứng đáng với $Rtộc của chúng ta$B. &NCậu là $Rsát thủ$B giỏi nhất của chúng ta.&PTộc ta có thể sống yên ổn, &Nít nhất là lúc này.
+2775	Được phục vụ là vinh dự của tôi, thưa ngài.
+2776	Tốt. $RĐức ngài$B sẽ ban thưởng xứng đáng cho cậu.
+2777	Với chuyện này, cậu đã trưởng thành hơn. &N$RCấp độ$B của cậu đã tăng.
+2778	Khi lên cấp, $Rchỉ số$B và $Rđiểm kỹ năng$B sẽ tăng. &PHãy dùng chúng cho tốt.
+2779	Giờ cậu đã có địa vị cao trong số chúng ta…
+2780	Ta nghĩ có thể cho cậu biết mọi chuyện ở đây thực sự vận hành ra sao.
+2781	…Vì thế, chúng ta cần hoà bình trong đế quốc.
+2782	$G(Việc đó có lẽ sẽ mất thời gian.)$B
+2783	$G(Cuối cùng, có vẻ đã xong.)$B
+2784	Thưa Hồng y.
+2785	Xin lỗi đã để cậu phải đợi. &NThánh lễ kéo dài hơn dự tính.
+2786	Không sao ạ. &NNgài gọi tôi có việc gì?
+2787	Đây không phải lúc và chỗ để nói chuyện đó. &PHãy đến $Rvăn phòng$B của ta, ở đó có thể nói thoải mái.
+2788	Vâng, thưa Hồng y.
+2789	Dạo này cậu vẫn khoẻ chứ, Kiyan?
+2790	Vâng, thưa $RHồng y Janus$B.
+2791	Ta rất vui vì cậu đã trở thành $RVirtuoso$B. Tộc ta và dân chúng cần những bàn tay nhanh nhẹn như cậu.&PCậu sẵn sàng phụng sự đại nghĩa chưa?
+2792	Rồi, thưa Hồng y.&PNhiệm vụ của tôi là gì?
+2793	Cậu đã nghe về vụ $RChannel$B bị bắt cóc gần đây chưa?
+2794	Channel là gì vậy?
+2795	Một phụ nữ người Berkel quý giá đến mức chúng nghĩ chúng ta đã bắt cô ta.
+2796	Berkel gần như chắc thắng cuộc chiến, &Nngay cả $Rcác Đấng Tối Cao$B cũng không bảo vệ nổi chúng ta. &PNgười của Shadow Tribe phải ngăn chiến tranh nổ ra.&PChúng ta sẽ $Rgiải cứu$B Channel.
+2797	Ngay lúc này, một $RĐội giải cứu$B đang được cử tới chỗ Channel; các hiệp sĩ Berkel sẽ sớm lên đường. &PHãy cải trang thành một người trong số họ, cô ta sẽ đi theo cậu vì tưởng cậu là người bảo vệ. &PĐó là nhiệm vụ của cậu.
+2798	Có thể cậu sẽ thấy lạ vì Channel là đứa con thực sự của $RTamit$B, vị thần mà họ gọi là $RĐấng Ban Sự Sống$B. &PNhưng việc này ta buộc phải làm. &N$SPortia$B sẽ cho cậu biết chi tiết. &PMong đôi tay và tinh thần cậu mang theo danh dự của tộc ta, Kiyan.
+2799	Tôi sẽ không làm ngài thất vọng, thưa Hồng y.
+2800	$SSahir$B, $SGoshak$B. &NĐến lúc rồi.
+2801	Thưa chủ nhân, có chuyện gì vậy?
+2802	Đã đến lúc thực hiện&N$Rkế hoạch$B của chúng ta.
+2803	Nguyện $RChaos-Strider$B ở cùng chúng ta.
+2804	Phải. Quyền năng hắc ám vĩ đại của $RMoar$B sẽ dẫn lối cho các ngươi. &PDụ chúng tới nơi đó. &NLàm mọi cách để dẫn chúng tới đó.
+2805	Vâng, thưa chủ nhân! &NNgài sẽ không phải hối hận. &PTôi sẽ làm theo lệnh đến cùng.
+2806	Nhưng nhớ đấy. &NChúng tuyệt đối không được biết $Rlý do$B của chúng ta. Không bao giờ.
+2807	Haha! Chủ nhân! &NNgài lo xa quá rồi. Cứ xem tôi làm này.
+2808	Đi thôi, Goshak. &NĐến giờ chơi rồi.
+2809	Ok, tôi mang xẻng theo. &NCậu mang xô nhé.
+2810	Hừm… mọi thứ đều suôn sẻ. 
+2811	Tất cả hỗn loạn này rồi sẽ dần dẫn tới &Nsự hồi sinh của $RMoar$B…
+2812	Đồ $Rcải trang$B của cậu sắp xong rồi. &NNó sẽ cho cậu vẻ ngoài hoàn hảo của một $RBerkel Knight$B. &PNhưng vẫn cần nguyên liệu để hoàn tất phép. &PCậu vào sâu trong $RShadow  Training Dungeon2$B lấy mấy $Rnguyên liệu$B này cùng ít $Rectoplasm$B giúp tôi nhé? &PKhoảng $R5$B cái
+2813	Tôi hiểu rồi. 
+2814	Đợi chút. Tôi sẽ làm phép.
+2815	Sẵn sàng chưa? &PKhoan, cậu nên kiểm tra trang bị mới vừa mặc, cho chắc. &PTrong $RMenu trang bị$B cậu sẽ thấy $Rđồ đạc$B của mình. &NCầm lấy cái này...
+2816	Trông thì giống hiệp sĩ đấy, nhưng trà trộn vào quân Berkel vẫn rất nguy hiểm. &PCậu sẽ không đơn độc, sẽ có người $Rgiúp$B.
+2817	Cách tốt nhất để có người hỗ trợ là thuê lính đánh thuê. Những người có thể xông pha mà cậu ít gặp nguy hiểm nhất. &PTôi sẽ chỉ cậu cách thuê họ.
+2818	À phải, tôi đã hứa sẽ kể cậu nghe về $Rlính đánh thuê$B.
+2819	Được rồi, tôi tin cậu đã sẵn sàng. &NCầm lấy.
+2820	Lá thư giới thiệu này phải được trao cho $SLehman$B, đội trưởng Đội giải cứu Channel.&PHọ đang ở $RHanun Forest$B.
+2821	Rõ, thưa ngài.
+2822	Nếu kế hoạch thành công, cậu sẽ lập công lớn cho tộc ta. &PVậy thì, chúc may mắn.
+2823	Cẩn thận nhé, Ki!
+2824	Tôi sẽ cố hết sức. 
+2825	Cậu ấy sẽ ổn chứ?
+2826	Đừng lo. Cậu ấy học từ người giỏi nhất, và hiện giờ chính cậu ấy là người giỏi nhất. 
+2827	Mọi việc cậu ấy làm đều vì tộc ta. Chúng ta ở đây cũng vì thế mà.
+2828	Sao chưa nghe tin gì từ bọn họ?
+2829	Trễ hẹn lâu lắm rồi! &PKhông ai sắp xếp nổi thì làm sao đón được Channel?! &NLũ ngốc vô dụng…
+2830	$G(Họ thật sự sốt ruột muốn bắt được cô ấy...)$B
+2831	$RTrung sĩ Lehman$B?
+2832	Phải, tôi đây. Cậu là…?
+2833	Kiyan, tập sự. &NTôi mang thư giới thiệu của Hồng y Janus.
+2834	Ngài ấy tự viết à?
+2835	Vâng, chính ngài ấy. Mời ông xem.
+2836	Được. Cậu được nhận. &PNhưng không có Đội giải cứu và $Rpháp sư$B kiểm tra $Sleap-gate$B thì chiến dịch chưa thể bắt đầu. &PCậu phải đợi thôi.
+2837	À mà nói thật, cậu có thể giúp tôi ngay đấy. &PĐi tìm pháp sư $SGrumman$B. Ông ta hơi lạc đường, chắc đang lang thang đâu đó trong rừng.
+2838	Nhân danh Nữ thần, chuyện gì đang xảy ra ở đây thế này?!
+2839	$G(...Ồn ào gì vậy?)$B
+2840	Khó lắm sao? &NTôi xin hai trung đội lính cơ mà?! &PSao chưa tới mười người?
+2841	À, thật ra thì…
+2842	Trung sĩ Lehman, đừng làm ầm lên.
+2843	Chỉ huy $SAlexander$B? &NThật bất ngờ.
+2844	Thế ra ngươi định giải cứu Channel quý giá của chúng ta với một nắm người à? &PKhông thấy cần thêm người sao?
+2845	Tôi đã xin hai trung đội lính, &Nthưa Chỉ huy. Không biết giờ họ ở đâu.
+2846	Chà, có vẻ chỗ nào cũng thiếu người. Đội thánh hiệp sĩ cũng vậy. &PHọ chỉ cử vài người cũng chẳng có gì lạ.
+2847	Còn ngươi, Trung sĩ, đừng có than phiền. &PNhất là khi vợ ngươi không biết tối thứ Sáu ngươi đâu có chơi poker.
+2848	Chỉ huy Alexander, chắc ngài không có ý đó…
+2849	Ta chỉ huy các $RHiệp sĩ Berkel$B. &PNgươi có vấn đề gì với điều đó không, Trung sĩ?
+2850	...Không, thưa ngài.
+2851	Ta đoán vậy... Để xem nào… &PChỉ với từng này lính, giải cứu Channel e là khó đấy.
+2852	Nhưng sẽ là một thử thách thú vị. 
+2853	Thôi, ta đi đây.
+2854	Để xem các ngươi làm tốt thế nào... hay không.
+2855	Tôi ghét gã này.
+2856	À, Kiyan. Lại đây.
+2857	Chuyện gì vậy? Người này là ai?
+2858	$RChỉ huy Alexander$B dẫn dắt $RHiệp sĩ Berkel$B. &NHắn trực tiếp nhận lệnh từ Đức Thánh Cha, như năm thủ lĩnh quân đoàn khác. &PTiếc là không thể qua mặt hắn. &NDù khó chịu đến mấy cũng phải nịnh hắn thôi.
+2859	Dù sao, cuộc giải cứu Channel phải bắt đầu sớm. Càng sớm càng tốt. &PNên lấy lại tinh thần đi, sẵn sàng thì đến gặp tôi.
+2860	Grumman, chuẩn bị xong chưa?
+2861	Để tôi nhẩm lại trình tự dẫn tới leap-gate đã.
+2862	Tôi tin ông. Vậy thì đi thôi.
+2863	Cậu tới rồi. Giờ tôi giải thích rõ hơn về nhiệm vụ. &PTrinh sát báo Channel đang bị nhốt sâu trong lâu đài Arnen. &PCậu sẽ cứu cô ấy từ đó, đưa cô ấy tới $Rleap-gate$B này để trở về Đế quốc. &PNếu có chuyện gì, đi về phía $Rnam$B tới $Rleap-gate khẩn cấp$B, ở $Rphía bắc làng Kamuran$B. 
+2864	Tiến lên, anh em! &NPhải cứu được Channel!
+2865	Im ắng thế này khiến tôi bồn chồn. &NNơi rộng lớn vậy mà trống trơn…
+2866	Cảm giác như một cái bẫy, thưa ngài.
+2867	Có thể là bẫy, nhưng ta đâu có lựa chọn, đúng không? &PDù là bẫy, chúng ta cũng phải tìm được Channel.
+2868	Thưa ngài!
+2869	Nghe thấy không? Có tiếng gì ở dưới kia…
+2870	Ai làm báo động kêu vậy?!
+2871	Có kẻ đột nhập! Bắt lấy chúng!
+2872	Lũ chó suy đồi của Đế quốc Berkel…&NDám mò tới tận cửa nhà ta!
+2873	Chúng sẽ không sống sót rời khỏi đây. &NPhải đổ máu để rửa nhục.
+2874	Bị bao vây rồi, chết tiệt!
+2875	Vì Channel, vì Berkel, chiến đấu! &NPhải hoàn thành nhiệm vụ, bất kể nguy hiểm!
+2876	Vì Channel!
+2877	Trung thành với Berkel!
+2878	Kiyan, chúng quá đông, cậu không đánh một mình nổi đâu. &PLên tuyến đầu, nhân lúc anh em còn sức thì giảm bớt số lượng chúng để ta có cơ hội hơn!
+2879	Chúng cứ kéo đến mãi, bọn ta mệt rồi…
+2880	Kiyan, báo cáo!
+2881	Tôi đây, thưa ngài!
+2882	Chúng quá đông. Tôi sẽ cầm chân chúng ở đây, cậu đi tìm Channel. &PĐừng tiếc sức. Làm mọi cách để đưa cô ấy về!
+2883	Rõ, thưa Trung sĩ!
+2884	Cô là Channel?
+2885	Còn anh là… cái gã đáng ghét đó.
+2886	Cô vừa gọi tôi là đáng ghét à?
+2887	Chẳng phải anh bảo tôi gầy quá sao? &NĂn miếng trả miếng thôi.
+2888	Vậy ra $RChannel$B là người như cô. &NTuyệt thật.
+2889	Tôi chẳng thấy chuyện đó liên quan gì đến anh.
+2890	Mà sao anh lại ăn mặc như hiệp sĩ thế? &PĐịnh giấu hình xăm à? Hối hận về quá khứ, hay chỉ là cải trang?
+2891	Tôi thuộc $RHiệp sĩ Berkel$B.
+2892	Tôi được cử tới $Rgiải cứu$B cô.
+2893	Phải gặp nguy hiểm thì mới cần được $Rgiải cứu$B chứ.
+2894	Cô đang gặp nguy đấy, không có thời gian đấu khẩu đâu. Giờ thì mau ra khỏi đây đã.
+2895	Anh bảo anh là hiệp sĩ. &NAnh tưởng tôi ngốc à? Tôi không tin đâu. &PTôi có thể giả vờ tin lời nói dối dở tệ đó rồi giết anh lúc anh mất cảnh giác.
+2896	Như thế thì tôi lại đem mạng mình ra mạo hiểm chỉ vì tò mò. &NTôi đâu có ngốc.
+2897	Ngoài kia người ta đang liều mạng vì cô, rồi trận chiến cũng sẽ lan tới đây thôi. &PTôi chẳng thuộc phe nào, nên tôi đưa cô ra khỏi đây. Thật ra, tôi là lựa chọn tốt nhất của cô đấy.
+2898	Nói lại đi.
+2899	Cô chắc là cần thời gian suy nghĩ chứ? Vì tôi khá chắc chúng đang bám sát sau lưng tôi. &PCô phải chọn: sống hay chết?
+2900	Anh nói anh không thuộc $RBerkel$B, cũng chẳng phải người của $RShadow Tribe$B. &PRốt cuộc anh là ai?
+2901	Xin lỗi, chuyện đó quan trọng à?
+2902	E là có đấy. &PTôi đã trốn khỏi Đế quốc, và tôi sẽ không quay về.
+2903	Tốt. Tôi đâu có đưa cô về đó.
+2904	Tôi cũng không nghĩ anh định cứu tôi. &PTôi định trở thành $Rngười lưu vong$B và sống nốt quãng đời còn lại ngoài tầm với của họ.
+2905	$G(Tin được thật không?) &P(...Nhưng nghĩ lại thì... lúc đó cô ta đúng là đang bị quân Đế quốc truy đuổi...)$B
+2906	Đế quốc và Giáo hội đã lấy tên tôi để biện minh cho việc giết hại vô số người vô tội. &PTôi không thể dung thứ chuyện đó. 
+2907	Và vì lý do đó, có lẽ sự giúp đỡ của anh sẽ đáng quý.
+2908	Nhưng động cơ của anh chưa đủ rõ ràng, tôi sẽ không đi theo anh. &NAnh chưa thuyết phục được tôi.
+2909	$G(Thật vô lý. Làm sao giờ?)$B
+2910	Channel ở lối này! Bắt cô ta!
+2911	$G(Nhanh vậy sao? Có nên ép cô ta đi theo không? Nhưng mình được lệnh không được làm cô ta bị thương…)$B&NNếu cô không chịu hợp tác thì chỉ còn cách này.
+2912	Hả?
+2913	Ặc!
+2914	Tôi không muốn phải làm thế này, nhưng cô không cho tôi lựa chọn nào khác.
+2915	Mạng của mình đáng giá hơn mạng cô ta. &NPhải đi trước khi chúng xông vào.
+2916	Trung sĩ Lehman!
+2917	Kiyan, cậu đưa được Channel ra rồi. &NLàm tốt lắm.
+2918	Nhưng sao cô ấy lại bất tỉnh? &NĐã xảy ra chuyện gì?
+2919	…Không có gì, thưa ngài. Cô ấy ăn uống không đủ. &NChỉ vậy thôi.
+2920	….Ra vậy. Giờ cậu đã có cô ấy rồi, mau đi đi.
+2921	Lũ khốn này bắt cóc Channel! Bắt lấy chúng!
+2922	Có vẻ chúng cứ kéo đến không ngớt! &NChúng từ đâu ra vậy chứ?!
+2923	Kiyan! Phải đưa cô ấy ra khỏi đây! &NĐưa Channel tới leap-gate! Đi mau!
+2924	Trung sĩ, ngài nên đi đi! Tôi sẽ yểm hộ ngài!
+2925	Chúng ta bị áp đảo quân số rồi. &NLo cho Channel đi, tôi sẽ đảm bảo hai người thoát ra an toàn. &PĐi ngay! Đây là mệnh lệnh!
+2926	...Rõ, thưa ngài.
+2927	Cảm ơn ngài.
+2928	….Có vẻ cổng bị khoá rồi.
+2929	Không hiểu nổi. Có gì đó không ổn…
+2930	Giờ thì, đồ khốn. &NNgươi dám đụng vào cô ấy.
+2931	$G(Gã này là cái quái gì vậy…?)$B
+2932	Lý do của ngươi là gì? 
+2933	$G(Hắn là kẻ đã giết hết đám lính sao?)$B
+2934	Nhân danh Nữ thần, ngươi không phải người. &NNgươi là $Rfey$B!
+2935	Ta là $SShin$B, $Rhộ vệ$B của Channel. 
+2936	Và đây là lần cuối ta yêu cầu ngươi thả cô ấy ra.
+2937	Ta không có ý định đó. Ngươi thấy đấy, giờ ta là hộ vệ mới của cô ta. Ngươi để mất, ta nhặt được. &PTránh ra.
+2938	Ngươi biết ta sẽ giết ngươi nếu không giao cô ấy cho ta. Tất nhiên là phải lành lặn.
+2939	$G(Để xem ai chết!)$B
+2940	$G(Hoá ra cách luyện của fey khác thật.) &P(Ngươi có vài đòn hay đấy. Nhưng chưa đủ để hạ ta đâu.)$B
+2941	Ta thấy ngươi đang chật vật đấy.
+2942	Ngươi sẽ không thắng được ta!
+2943	Được rồi, ngươi cũng có chút bản lĩnh.&NNhưng chưa đủ.
+2944	Ta sẽ nghiền mắt ngươi thành bụi.
+2945	Vậy à? Thử xem!
+2946	Lùi lại! Không lùi ngay thì tính mạng cô ấy gặp nguy đấy!
+2947	Ngươi bảo vệ cô ấy kiểu đó à?
+2948	Nghe này, ta nói rõ cho đôi tai fey bé tí của ngươi nghe. &PTa không ưa ngươi. Ngươi bước thêm một bước, ta sẽ $Rgiết$B người phụ nữ này. Channel hay không cũng vậy. Rõ chưa?
+2949	Ồ, rõ lắm. Ngươi là đồ hèn dám uy hiếp một phụ nữ không có khả năng tự vệ.
+2950	…Cứ như cô ta là tiểu thư yếu đuối vậy. &NNgươi đọc truyện sến nhiều quá rồi.
+2951	Vậy ngươi quyết thế nào? &NNgươi đi, hay cô ta chết?
+2952	Biết gì không, con người? Ta ghét ngươi.
+2953	Chết tiệt!
+2954	Quyết định đúng đấy.
+2955	Ta sẽ bám sát ngay sau ngươi. Ta sẽ đuổi theo cho tới khi ngươi chết và cô ấy trở về với ta.
+2956	Chính ngươi mới đang đẩy cô ta vào nguy hiểm. &P$G(Mình nên tới $B$Rleap-gate$B$G khẩn cấp ở $B$Rphía bắc làng Kamuran$B$G.)$B
+2957	Ôi, đồ hèn.
+2958	Ngươi sẽ phải trả giá!
+2959	Ngươi không phải con người.
+2960	Ngươi cũng vậy thôi, fey.
+2961	Xin lỗi nhé, nhưng ta không cho ngươi qua đâu. Phải đánh với ta đã.
+2962	Ngươi thật sự nghĩ mình mạnh hơn ta sao?
+2963	Ha! 
+2964	Trời đất, ngươi đúng là phiền phức. &NTránh đường!
+2965	Ta chẳng quan tâm ngươi nghĩ gì đâu, tóc vàng.
+2966	Ngươi không phải…
+2967	Chà! Lâu lắm rồi không dùng chiêu này! Đã thật! 
+2968	Ngươi có sức mạnh lớn hơn mức mà loại như ngươi được phép có.
+2969	Ừ, nói câu đó với bố mẹ ta ấy. &NHọ tự hào về ta lắm.
+2970	Lời hay ý đẹp thế đủ rồi, tóc vàng, ta đi đây. Rất vui được gặp ngươi.
+2971	Hửm? Ngươi là ai?
+2972	Ngươi lạc mất đội rồi à? &NSao lại ở đây?
+2973	Nói mau. Ngươi đang trái lệnh Vương quốc sao?
+2974	$G(Chẳng cần nói gì thêm. Chết đi.)$B
+2975	Hự!
+2976	Bắt thằng khốn đó!
+2977	Hắn giết Hans rồi!
+2978	Giết hắn!
+2979	Hừm… xem ra không gây ồn ào thì chẳng vào được.
+2980	Ta là tín đồ của Shadow Tribe.
+2981	Kẻ ngoại đạo! Sao ngươi dám làm ô uế nơi này!
+2982	Chuyện gì đang xảy ra ở đây?
+2983	Thưa ngài! Có một người ở đằng kia, chúng tôi chưa xác minh được…
+2984	Không, nhìn trang phục kìa. &NHắn là người của Shadow Tribe. &PHắn còn có cả hình xăm nghi lễ!
+2985	Shadow Tribe, thật sao?
+2986	Lũ vô thần đáng nguyền rủa!
+2987	Đã biết ta là ai thì giữ các ngươi sống cũng vô ích.
+2988	Diệt trừ quỷ dữ!
+2989	Nhân danh Chúa!
+2990	Đồ bị nguyền rủa!
+2991	Sao ngươi có thể giết nhiều người nhanh đến vậy?
+2992	Vì như thế thì khỏi phải trả lời câu hỏi. &N$RBá tước Grafton$B ở đâu?
+2993	Giết ta đi, đồ ngoại đạo. Ta không nói với đôi tai ô uế.
+2994	Được thôi. Vậy thanh kiếm ô uế của ta sẽ xuyên qua tấm thân thanh khiết của ngươi. &NCầu xin tha mạng đi.
+2995	…Khoan. Ta sẽ nói. Họ ở $RCave of Silence$B, phía nam.
+2996	$RCave of Silence$B? &NChưa nghe bao giờ. Biết chuyện gì sẽ xảy ra nếu ngươi nói dối chứ?
+2997	Ta sẽ không cầu xin, nhưng… Tha cho ta, đồ ngoại đạo.
+2998	Hừm… Không. Lẽ ra ngươi nên cầu xin.
+2999	Quái vật! &NAaa!
+3000	Hự!
+3001	Đáng lẽ hắn nên cầu xin thật.
+3002	Cảm ơn. Tôi không cần anh nữa, anh có thể quay về.
+3003	Chiếc hộp cũ bật mở kèm tiếng vỡ.
+3004	Đây là hàng rào chắc chắn. Kích hoạt cơ quan thì nó sẽ dịch chuyển.
+3005	$RKhu vực cấm$B này không hợp để luyện tập: quái vật lẻ bị thả ở đây. &PChỉ được luyện tập ở khu vực quy định.
+3006	Đang là Tuần Thánh ở tu viện Berkel. Khu rừng sẽ đóng cửa để các tu sĩ cử hành nghi lễ trọn vẹn. &PNhững ai theo lời $RĐấng Ban Sự Sống$B sẽ hiểu.
+3007	Được rồi, chắc cắt đuôi được bọn chúng rồi…. &NNày! Dậy đi!
+3008	không….
+3009	Tỉnh chưa?
+3010	Chúng ta đang ở đâu?
+3011	$RHakan$B. Càng xa thành phố càng an toàn.
+3012	Sa mạc Hakan sao?
+3013	Tôi dám chắc là mình vẫn còn trong phòng…
+3014	Sao anh đưa được tôi tới đây? &NAnh cõng tôi à? &NXa thế này sao?!
+3015	Tôi phải quyết định nhanh.
+3016	Sao cô lại cố chạy trốn tôi?
+3017	Được thôi. Cứ im lặng tuỳ cô.&NTôi không có thời gian cho trò trẻ con này.
+3018	Khoan, khoan đã!
+3019	Đổi ý rồi à?
+3020	Nghe này, tôi đã nói rồi, tôi không thể quay về Đế quốc. &NTôi có lý do chính đáng.
+3021	Mà tin anh cũng không dễ.
+3022	Cô không tin tôi? &NXin lỗi, nhưng chuyện này mình nói rồi mà?
+3023	Tôi đã cứu cô mấy lần. &NCõng cô tới tận giữa sa mạc.&PLo cho cô được nghỉ ngơi, được ăn.
+3024	Thì đúng, nhưng…
+3025	Quan điểm của tôi về Đế quốc đã rất rõ. Tôi sợ người ta định lợi dụng tôi để gây chiến. &PVà tôi không chắc anh không thuộc phe nào trong số đó.
+3026	Được rồi. Tôi thấy không thuyết phục được cô.
+3027	Vậy làm đơn giản thôi. &NNếu cô còn trốn, tôi sẽ phải trói cô lại.
+3028	Tôi không muốn làm vậy. Nên hãy hợp tác.
+3029	Anh đang đi vào con đường huỷ diệt đấy. &NĐừng dùng vũ lực với tôi.
+3030	Được,
+3031	Tôi hiểu rồi. Tôi sẽ đi với anh.
+3032	Tốt. Vậy đi thôi.
+3033	Nghỉ qua đêm đã. &NĐi tiếp trong bóng tối nguy hiểm lắm.
+3034	Tôi dựng trại đây. Xong ngay thôi.
+3035	Anh lính, ngủ chưa?
+3036	…Ngủ say rồi.
+3037	Anh ta có cái gì đó… &PTrông có vẻ đáng tin, nhưng biết bao người cũng thế. Rồi cuối cùng lại lợi dụng mình. &PMình không thể tin anh ta được.
+3038	Khoan đã. Ánh sáng gì kia?
+3039	Chúng đã bám theo dấu rồi sao?
+3040	Còn anh ta thì ngủ ngon lành. &NChà, đúng là dịp tốt để chuồn khỏi đây.
+3041	Tôi không phải con rối để Đế quốc lợi dụng. &NXin lỗi vì bỏ đi, nhưng anh không ngăn được tôi tới Arnen đâu.
+3042	Tạm biệt nhé.
+3043	Ngủ năm tiếng… &NPhải đi sớm thôi.
+3044	Cô Channel? Đi thôi.
+3045	Channel? Cô đi đâu rồi??
+3046	Không thể tin được. Cô ta bỏ trốn rồi.
+3047	Bỏ trốn giữa sa mạc, quần áo thì chẳng phù hợp. &NĐến nước cũng không mang.
+3048	Ánh đèn! &NChắc cô ta đi về hướng đó.
+3049	Goblin?
+3050	Ơ? Người kìa!
+3051	Harr! Nhìn! Thêm một người nữa.
+3052	$RHai người$B trong một ngày! &NMay quá!
+3053	Các ngươi đã thấy một người khác à? &NChannel!
+3054	Không, không phải channel. Là người. Đồ ngốc.
+3055	Người ngốc, ngốc!
+3056	Người to và khoẻ.
+3057	Người mà các ngươi thấy trước ta là ai?
+3058	Tao không nói gì với người dơ bẩn như mày!
+3059	Định thử sự kiên nhẫn của ta à? &NVì hôm nay ta mệt lắm rồi đấy.
+3060	Harr! Người đáng sợ! Được được, tao nói. &NĐằng kia, người áo trắng, đằng kia… lối đó!
+3061	Vậy là cô ấy từng ở đây. &NCác ngươi đã làm gì cô ấy?
+3062	Đầu đàn mang tới hang phía bắc. &NĐầu đàn nói chợ nô lệ nhiều tiền lắm.
+3063	…chết tiệt.
+3064	Harr! Cái gì vậy!
+3065	$SOld-ears$B! Mừng trở về!
+3066	Người đàn ông, người xấu xấu! &NAnh em tụi tao bị người đàn ông giết hết!
+3067	Harr! Người xấu! &NNgười xấu chết đi!
+3068	Chết tiệt. Lũ Goblin đần độn. &NTránh đường!
+3069	Chết đi!!
+3070	Được rồi, đây là hang phía bắc. &NGiờ tên Đầu đàn ở đâu?
+3071	Áaa người! Báo Đầu đàn!
+3072	Chắc giờ hắn sẽ tự tìm đến ta thôi.
+3073	Harr, haaarrrrrr…
+3074	HAAARRRRRR
+3075	Harr, nó đó! &NNgười xấu! Chết đi!
+3076	Người không được vào hang goblin! &NNgười vào, Đầu đàn nổi giận! Chặn người đàn ông!
+3077	Harr, kẻ xâm nhập! Chặn người lại!
+3078	$G(Chết tiệt, suýt nữa thì bắt kịp..) &P(Khó rồi đây. Chắc phải có lối vào khác…)$B
+3079	Harr! Chạy thôi!
+3080	...chết tiệt!
+3081	Harr! Người, giờ không qua được!
+3082	Mình tới muộn rồi sao...
+3083	Chắc chẳng còn cách nào khác ngoài tìm đường khác.
+3084	Sao người kia lại ở đây?
+3085	Này anh kia! Lại đây chút được không?
+3086	À, cảm ơn. Chừng này nguyên liệu là đủ rồi.
+3087	Được rồi, giờ chỉ tôi cách vào trong đi.
+3088	À phải phải. Đi về phía $Rbắc$B. Anh sẽ thấy $RSpider Cave$B. &PTrong hang đó có con đường dẫn tới căn cứ của goblin.
+3089	Nhưng cẩn thận đấy. &NNghe nói goblin còn chẳng dám vào hang đó vì có một $Rnhện chúa$B. &PNghe bảo nó tấn công bằng chất độc chết người. 
+3090	Vậy làm sao tôi qua được con nhện chúa đó?
+3091	Đây. Cầm lấy thuốc này.
+3092	Gì đây? Thuốc độc à?
+3093	Không hẳn. Thuốc này là giải độc cực mạnh, bảo vệ anh khỏi nọc độc của nhện chúa. &PNhưng nhớ đấy. Nó chỉ có tác dụng trong thời gian ngắn. Thấy nhện chúa là phải dùng ngay.
+3094	...Hiểu rồi.
+3095	Có gì đó không ổn…
+3096	Kriiiiiiiiiiiiiiiss…
+3097	Phải dùng thuốc giải ngay thôi.
+3098	Lại đây, đồ nhện chúa ngu ngốc!
+3099	Hả? Có người? Ở đây sao?
+3100	Nàyyyy! Lại đây! Cứu tôi với!
+3101	Ê, cảm ơn anh. Giúp bọn tôi ra khỏi đây với. &PBọn tôi sẽ biết ơn lắm.
+3102	......&N$G(Có vẻ Channel không ở đây.)$B
+3103	Có thấy cô gái trẻ mặc đồ trắng không?
+3104	Trắng, trắng, trắng… Ờ, thì…
+3105	......&N$G(Hắn không biết; chẳng cần hắn.)$B
+3106	Gì cơ? Anh định bỏ tôi lại đây à?
+3107	Khoan, khoan! &NAnh bảo cô gái đó mặc đồ trắng à?
+3108	Anh thấy cô ấy rồi à? Cô ấy đâu?
+3109	Ừ, phải, tất nhiên! Tất nhiên rồi. &NGiúp bọn tôi ra rồi tôi sẽ nói.
+3110	Làm ơn đi. Tôi cũng muốn giúp anh mà. 
+3111	….Được thôi. &NCó biết chìa khoá ở đâu không?
+3112	Có một $Rtên cai ngục goblin$B quanh đây, hắn giữ chìa khoá. &PDễ nhận ra lắm vì quần áo hắn khác bọn kia.
+3113	Hiểu rồi. Tôi đi lấy chìa. Chờ đấy.
+3114	Yeah! Tự do rồi! Cuối cùng cũng tự do! &NBiết lấy gì báo đáp anh đây?
+3115	Không cần. Chỉ cần nói cô gái đó ở đâu.
+3116	Ờm….đ…được. &NTôi thấy bạn gái của anh bị bọn goblin bắt làm con tin. &PNghe chúng nói sẽ đưa cô ấy vào $Rnhà ngục đặc biệt$B, nơi chỉ giam con tin giá cao. 
+3117	Nhà ngục đặc biệt đó ở đâu?
+3118	Tôi không chắc, nhưng nghe nói nó ở sâu dưới lòng đất tối tăm của hang này, chỗ Head Goblin sống. &PNhưng… cẩn thận đấy. Tên Đầu đàn này không giống bọn kia đâu.
+3119	…Ngõ cụt. Tuyệt thật.
+3120	$G(Trông như cơ quan. Chỉ cần tìm ra công tắc…)$B
+3121	Harr! Lũ người dơ bẩn!!
+3122	Harrr! Người không được vào phòng boss!
+3123	Người, CHẾT!!
+3124	Huaaaaargh! Mày là thằng người rắn đã giết anh em tao!
+3125	……...Còn ngươi là Head Goblin.
+3126	Thả cô gái ra, ta sẽ cho ngươi chết nhẹ nhàng.
+3127	Huaaaaargh! Mày dám, đồ người!!!
+3128	Người sẽ chết! Chuẩn bị CHẾT đi!!!
+3129	Chết tiệt!!
+3130	Thằng ranh con….!!
+3131	Phù… suýt nữa thì toi.
+3132	Giờ cô ấy ở đâu?
+3133	Cô đây rồi.
+3134	Anh… giết hết chúng rồi.
+3135	Lùi lại để tôi đưa cô ra.
+3136	Được rồi, ra đi.
+3137	Anh lính…. sao anh tới được….?
+3138	Chuyện đó nói sau.
+3139	Nhanh lên, phải ra khỏi đây trước khi bọn khác tới.
+3140	Vâng, đúng rồi. Nhưng anh có vẻ bị thương.
+3141	Ừ, thì. &NGiết goblin thì cô cũng sẽ thế thôi.
+3142	Dù sao, đi thôi.
+3143	Huaaaaaargh….
+3144	Chết tiệt, cái thứ đó! Nó vẫn còn sống à?
+3145	Huaaaargh….Người….CHẾT….!
+3146	Không!
+3147	F@&%!!
+3148	Huaaaar….ggh…grgl….
+3149	Cuối cùng thì….
+3150	Cái gì…. có $Rđộc$B… trên….
+3151	Này!! Anh không sao chứ?!
+3152	….hửm…? Đây là đâu?
+3153	Còn cô gái đâu rồi?
+3154	Cô ta lại bỏ trốn….. nữa à?
+3155	A, anh tỉnh rồi!
+3156	Vết thương của anh nặng quá nên tôi dùng $Rnội lực$B của mình, nhưng vẫn chưa hồi phục…
+3157	Dù sao anh tỉnh lại là tốt rồi.
+3158	$G(Sao thái độ cô ta lại thay đổi như vậy?)$B
+3159	$G(Thôi kệ, vậy là cô ta không bỏ trốn nữa.)$B
+3160	Cô đã cứu tôi. Tôi nợ mạng sống của ai đây?
+3161	Tôi là $SEara$B.
+3162	...Gì cơ?
+3163	À. Tôi là tập sự của Berkel. &NTên tôi là $SKiyan$B.
+3164	Kiyan. Kiyan. Tên hay đấy.
+3165	Cảm ơn anh. Không có anh thì tôi đã bị bán làm nô lệ, hoặc bị giết rồi. &PAnh đã cứu mạng tôi, tôi rất biết ơn.
+3166	Ừ, thì…
+3167	Kiyan… tôi nợ anh lần này.
+3168	Nhưng, tôi nói lại lần nữa…..&NTôi không thể bị giao cho bất kỳ ai.
+3169	Tôi là Channel, và vì thế mà tôi bị lợi dụng. Tôi không thể để ai lợi dụng mình nữa. &PĐã có quá nhiều người chết vì chuyện đó.
+3170	Sao?
+3171	Muộn rồi.
+3172	Cô đã bị bắt cóc. &PAi cũng đang tìm cô, và các phe đối địch đang chuẩn bị gây chiến.
+3173	Chiến tranh? Chiến tranh là sao?
+3174	Mà tôi đâu có bị bắt cóc. &NChuyện gì đang xảy ra vậy?!
+3175	Cô chỉ là cái cớ để chiến tranh nổ ra thôi.
+3176	Cô biết đấy, nếu cô không bị bắt cóc thì chuyện này đã không xảy ra.
+3177	Tôi bị bắt cóc sao?
+3178	Mà tránh chuyện đó… chính là lý do tôi bỏ đi ngay từ đầu. &NSao mọi chuyện lại rối tung lên thế này?
+3179	Vậy nếu cuộc chiến này là lỗi của tôi, tôi phải ngăn nó lại. &PNhưng làm sao ngăn hai quốc gia huỷ diệt lẫn nhau đây?
+3180	Có một cách.
+3181	...Thật sao?
+3182	Cứ quay về Đế quốc là được.
+3183	Họ thì khác gì nhau chứ? &NHọ vẫn sẽ lợi dụng tôi, lợi dụng sức mạnh của tôi. 
+3184	Xin lỗi, nhưng giờ cô thật sự không còn lựa chọn nào khác.
+3185	Chỗ này không gần Arnen lắm, đường đi thì đầy thú dữ, chưa kể lũ goblin mà cô đã "hân hạnh" gặp. &PTôi sẽ đưa cô đi. Cô sẽ an toàn.
+3186	<Sigh>....
+3187	Tôi đã mong mình cứ thế trốn đi được. &NRõ ràng là không ổn rồi.
+3188	Phải. Cô chẳng làm gì khác được đâu.
+3189	Tôi hiểu rồi.
+3190	Vậy thì, đưa cô về Đế quốc thôi. Tôi sẽ đi cùng cô từng bước. 
+3191	Chuyện đó…
+3192	Anh nói đúng.
+3193	Anh đã giúp tôi rất nhiều. &NChúng ta thật sự ngăn được chiến tranh sao? &PTôi không chắc, nhưng chắc là đáng để thử.
+3194	Anh không đi à?
+3195	Trước khi đi, tôi muốn làm rõ một chuyện.
+3196	Lúc chúng ta ở trong $Rhang$B, &Nkhi có lính của Đế quốc…
+3197	Sao anh không nói mình là hiệp sĩ Berkel?
+3198	$G(Chết thật. Mình chưa nghĩ tới chuyện đó.)$B
+3199	À, cô biết đấy, trong quân Đế quốc có nhiều $Rphe phái$B.
+3200	Tôi thuộc một $Rphe$B chủ trương hoà bình, tránh xung đột. 
+3201	&N$G(Không thể để cô ấy biết mình là ai.)$B
+3202	Và để quay về, chúng ta cần tới $Rleap-gate$B ở $RKamuran$B. &PMong gió đẩy nhanh bước chân ta.
+3203	Cậu ta chưa về à? 
+3204	Thằng $Rlính mới$B ấy hả? Chưa, nhưng cậu ta sẽ ổn thôi. Trông cậu ta đánh đấm cũng khá.
+3205	Không có tin gì tức là tin tốt.
+3206	Cái gì thế?
+3207	Đây là khu vực cấm. &NTránh ra.
+3208	Vậy ngươi nghĩ giáp của mình đủ dày à?
+3209	…Cái gì?
+3210	Ặc..!
+3211	Chà, ngươi nên đổi chỗ mua giáp đi thôi.
+3212	Ai đó! Các ngươi từ Vương quốc tới à?!
+3213	Có quan trọng không? Đằng nào ngươi cũng chết.
+3214	Cái gì?! Thằng chó….!
+3215	Sahir?
+3216	..Còn Goshak nữa. Đúng lúc lắm. &NXem tôi vừa tìm được gì này.
+3217	Ừ. Có cần xử luôn tên đó không?
+3218	Được thôi. Đâu phải lần đầu thấy máu.
+3219	Lũ khốn kiếp!
+3220	Lũ sát nhân…
+3221	Các ngươi sẽ phải trả giá…
+3222	Được rồi, hắn sắp gục rồi! &NGiết hắn thế nào đây?
+3223	Dễ quá. Hắn yếu xìu.
+3224	Phải có ai mạnh hơn.
+3225	Chắc đành chịu thôi. 
+3226	Sao cũng được. Làm thôi.
+3227	$G($Rleap-gate$G chắc ở đâu đó đằng kia.)$B
+3228	Đây là...?
+3229	Đây là một cuộc thảm sát.
+3230	Ai đã làm chuyện này?&NNhiều máu quá… thật tàn nhẫn.
+3231	Tìm người sống sót.
+3232	Kiyan… Kiyan, cậu về được rồi.
+3233	Đừng nói nhiều, Trung sĩ. &NNgài cần giữ sức.
+3234	Eara, cô là Channel, cô cứu được ngài ấy mà!
+3235	Vô ích thôi. Tôi sắp chết rồi.
+3236	Ai đã làm thế này với ngài?
+3237	Tôi không biết. $RHai gã$B.
+3238	Chỉ có hai người thôi sao? &NNgài còn nhớ gì nữa không?
+3239	Có thể là hiệp sĩ. Nhưng chuyện đó không quan trọng…&PLeap-gate đã bị phá huỷ….
+3240	Đi….đi gặp pháp sư của Kamuran, $RNirniti$B.
+3241	Bà ấy là người tạo ra leap-gate… &NBà ấy có thể giúp các cậu trở về.
+3242	Berkel và....&P...và Channel....&Nphải được an toàn…
+3243	Chỉ huy…!
+3244	Ngài ấy đi rồi. &NHãy tiễn ngài ấy ra đi thanh thản.
+3245	Chết tiệt...
+3246	Chúng ta phải tới $RKamuran$B ngay, không được chần chừ.
+3247	Có thể còn sát thủ ẩn nấp trong bóng tối.
+3248	Nghe chẳng yên tâm chút nào.
+3249	Phải. Lối này.
+3250	Xin lỗi, anh lính, vì anh đã phải chiến đấu vì tôi.
+3251	Xin lỗi vì anh đã chết vì tôi.
+3252	$G(Nhiệm vụ hoàn tất)$B
+3253	$G(Haha. Tốt. Giờ ngươi có thể trở lại hình dạng thật rồi.)$B
+3254	$G(Hahaha)$B
+3255	Bà là pháp sư Nirniti phải không?
+3256	Phải. Tôi đang nói chuyện với ai đây?
+3257	Nghe nói bà là người tạo ra $Rleap-gate$B.
+3258	Cậu từ Arnen tới à?
+3259	Không. Tôi là hộ vệ của Channel. Chúng tôi từ Berkel tới. &PLeap-gate đã bị phá huỷ. Vì vậy chúng tôi tới tìm bà.
+3260	Nói rõ hơn được không, chàng trai?
+3261	Chuyện là thế này…
+3262	Đúng là các cậu đã gặp cảnh ngộ khủng khiếp.
+3263	Vâng. &PVì thế chúng tôi muốn biết gần đây còn $Rleap-gate$B nào khác không.
+3264	Ra vậy. Nhưng tiếc là chỉ có cái đó thôi. &PPhải sửa lại, nếu các cậu không muốn bị xé đôi người khi dịch chuyển. 
+3265	Có sửa được không?
+3266	Có thể xoay xở được. Nhưng cần một vật phẩm để hoàn tất phép. Đó là một $Rhòn đá phép$B. &PNgười lùn đã canh giữ nó suốt mấy chục năm. Hòn đá đó nằm ngay giữa làng Dwarf.
+3267	Trán tôi có mụn cóc hay sao? Cô cứ nhìn chằm chằm vào tôi.
+3268	À, không, tôi chỉ đang mải nghĩ thôi. &PVậy nếu chúng ta tới làng Dwarf lấy hòn đá đó…
+3269	Eara, cô cho tôi nói chuyện riêng với Nirniti một lát được không?
+3270	Vâng, tất nhiên.
+3271	? Có chuyện gì à?
+3272	Ừ,
+3273	…Cô là $SPortia$B.
+3274	Haha, bị cậu bắt bài rồi. &NCó vẻ tôi chẳng giấu được cậu.
+3275	Sao cô lại ở đây?
+3276	Janus cử tôi tới. Tin đội giải cứu bị xoá sổ đã tới tai ngài ấy. &PTôi được cử tới điều tra, và giúp một tay nếu cần. Phải nói là mớ hỗn độn này vui ra trò đấy.
+3277	Mọi chuyện có hơi vượt tầm kiểm soát. &NNhưng tôi không ngờ lại gặp cô ở Arnen.
+3278	Cậu vẫn là người chỉ huy, Kiyan. &NChannel nằm trong tay cậu. &NTôi chỉ ở đây để giúp thôi.
+3279	Đi đi. Lính đang ở không xa sau lưng các cậu đâu. &PMong các vì sao dẫn lối cho cậu.
+3280	…Được.
+3281	Chuyện gì vậy?
+3282	Không có gì. Đi thôi.
+3283	Lữ khách, điều gì đưa ngươi tới đây? &NNgươi không phải người vùng này.
+3284	Tôi nghe về hòn đá phép. &NTôi có một đề nghị để đổi lấy nó. &PVà phải, tôi đã nghe về lũ người sói.
+3285	Vậy ngươi biết về lũ sói hung ác! &NBọn ta không đủ sức đối đầu với chúng. &PChúng chiếm mất mỏ của bọn ta rồi. &NCái mỏ! Đá quý! &PNgười lùn ra khỏi mỏ thì còn làm được gì hả, con người?!
+3286	Lũ sói ở đâu?
+3287	Chúng ở $Rtầng hầm thứ hai của mỏ$B. &NNgươi định làm gì?
+3288	Nếu tôi dẹp được lũ người sói này, ông sẽ đưa tôi hòn đá. &PThoả thuận chứ?
+3289	Thoả thuận. &NHãy trả lại mỏ cho bọn ta, ngươi sẽ có hòn đá.
+3290	Vậy được.
+3291	Sao một con người lại vào được đây?!
+3292	Ta nghĩ đó là chuyện ngươi ít cần lo nhất. &PXin lỗi, đừng để bụng nhé.
+3293	Ngươi định giết ta à? Khoan đã!
+3294	Khoan đã! &PVậy các cậu định tấn công lũ sói à?
+3295	Tôi đang trên đường tới gặp Thị trưởng thì tình cờ nghe các cậu nói chuyện. &PTôi hỏi một câu được không?
+3296	Cậu vừa hỏi rồi đấy.
+3297	Đừng lạnh lùng thế chứ. &PTôi vừa xuống mỏ cách đây không lâu. Tôi đã thấy chúng. Lũ $Rsói$B ấy.
+3298	Ông chắc chứ?
+3299	Chắc chắn. Chúng còn cố trấn an tôi nữa. &PĐúng là chúng có làm phiền việc đào mỏ của bọn tôi, nhưng có vẻ chúng không xấu như lời đồn.
+3300	Tôi không ngăn được nếu cậu định hạ chúng, nhưng ít nhất cậu tha cho $SWalter$B, người đã cứu mạng tôi được không? &PAnh ấy là người tốt, cậu thử nói chuyện với anh ấy sẽ hiểu.
+3301	Được. Nếu ông nói vậy, và nếu anh ta vô hại với chúng tôi, chúng tôi sẽ tha cho anh ta.
+3302	Cậu lạnh lùng thật đấy. &NDù sao, tôi xin cậu đấy. Làm ơn. Anh ấy đã cứu mạng tôi.
+3303	Grừ…
+3304	Nhân danh mặt trăng, sao các người lại muốn giết ta? &NVô lý quá!
+3305	Chết tiệt! Mặt mũi con người thì đẹp hơn, nhưng lòng dạ còn đen hơn sói.
+3306	Ngươi sẽ chết nhanh thôi.
+3307	Lại gì nữa đây?
+3308	Anh thật sự nghĩ con sói này độc ác sao? &PCó gì đó không ổn. Tôi cảm nhận được.
+3309	Đây không phải trận chiến của chúng ta. Tôi làm những gì cần để lấy hòn đá. Thế thôi. Chuyện của họ chẳng liên quan đến tôi.
+3310	Tôi lại nghĩ đó là chuyện của chúng ta. &NCó thể làm bạn thì đừng gây thù. &PKiyan. Chúng ta cũng nên nghe chuyện của họ.
+3311	Kiyan... Ta nên nghe họ nói trước đã.
+3312	Nhưng chúng ta không có thời gian ngồi nghe kể chuyện, Channel!
+3313	Thôi… được rồi. &PBắt hắn nói đi.
+3314	Cảm ơn anh nhiều, Kiyan.
+3315	Anh Sói, rất vui được gặp anh. Ở đây đã xảy ra chuyện gì vậy? Tôi đoán đúng chứ? &PCó điều gì khuất tất phải không?
+3316	Đúng vậy, thưa tiểu thư.
+3317	Cô ấy có địa vị cao. Lời cô ấy có trọng lượng ở Berkel. Kể cho cô ấy nghe đi.
+3318	Mỗi khi anh em tôi nhìn $Străng tròn$B, lý trí biến mất và con thú trỗi dậy. &PChúng tôi không phải người sói, mà là $Ramarok$B, nhưng khi hoá thú thì không thể tự kiểm soát. &PNhưng ở trong mỏ, đâu đó dưới này có hào quang của $Rhòn đá thanh tẩy$B ngăn ánh trăng, giúp chúng tôi giữ được tỉnh táo. &PTôi rất tiếc cho những người lùn ở mỏ, nhưng chúng tôi không có lựa chọn. Chúng tôi không muốn thêm người vô tội nào bị giết nữa.
+3319	Chuyện đó… thật bất ngờ.
+3320	Hào quang của hòn đá quý đó giúp chúng tôi tỉnh táo, nhưng có vẻ nó nằm sâu tận dưới đáy mỏ. &PChỉ người lùn mới xuống được tới đó, nhưng họ có vẻ quá sợ để lại gần chúng tôi. &PNên chúng tôi kẹt giữa khủng hoảng, mà người lùn thì càng ngày càng ghét chúng tôi, nói chuyện với họ khó lắm.
+3321	Nghe phức tạp thật. 
+3322	Chúng ta cần giúp người lùn và bầy sói giải quyết chuyện này. &PHọ cần người ngoài giúp họ nói chuyện với nhau. &PVả lại, trước giờ ta có biết amarok khác người sói đâu?
+3323	Ta không có thời gian cho chuyện này. &PTa cần hòn đá, và cần thật nhanh.
+3324	Bầy sói không xấu, người lùn cũng vậy. &PChúng ta nên giúp đỡ họ.
+3325	Ưu tiên của chúng ta là sửa leap-gate.
+3326	Tôi đoán là sắp có chữ "nhưng".
+3327	Kiyan. Tôi có thể quay về Berkel với đôi tay vấy máu mà không có lấy một việc tốt nào sao? 
+3328	Cô cần phải sống. &NKhông phải đi cứu thế giới.
+3329	Đúng vậy. Đó là một trong những lý do tôi rời Berkel. &PNhưng lần này tôi có cơ hội tốt. &PAnh sẽ đảm bảo không có chuyện gì xảy ra với tôi, đúng không?
+3330	Vâng, thưa tiểu thư.
+3331	Tôi sẽ ghi nhớ thiện ý của cô.
+3332	Vậy, anh Sói.
+3333	Tên tôi là $SWalter$B. &NNhư đã nói, tôi là một $Ramarok$B.
+3334	$G(Đó là cái tên mà người lùn nhắc tới…)$B
+3335	Vậy, Walter. Chúng tôi có thể giúp người lùn hiểu ra. &PCác anh chỉ cần hòn đá thanh tẩy thôi phải không?
+3336	Đúng vậy. Ở dưới này, chúng tôi vẫn dùng $Rmảnh vỡ$B của hòn đá thanh tẩy. &PNhưng chúng chỉ có một nửa hào quang của hòn đá gốc. Chúng tôi cảm nhận được hào quang mạnh từ bên dưới, vì thế mới tới đây. &PCác cậu phải xuống $Rtầng thấp nhất$B của mỏ. $RHòn đá thanh tẩy$B chắc ở đó. 
+3337	Chỉ cần hòn đá này là mọi chuyện được giải quyết sao?
+3338	Chắc chắn. &NCẩn thận nhé. &PCó khi chúng tôi còn trở lại được $Rhình người$B nữa.
+3339	Được. Chúng tôi sẽ đem chuyện này tới $RThị trưởng làng Dwarf$B.
+3340	Thật sao?
+3341	Tất nhiên.
+3342	Eara, quay về làng thôi.
+3343	Vâng, Kiyan. 
+3344	Walter, xin hãy đợi. Chúng tôi sẽ lấy đá và mang về.
+3345	Tuyệt quá. Tôi sẽ không bao giờ quên ơn này.
+3346	Các cậu không.. giết.. Walter?
+3347	Đừng lo. Walter vẫn an toàn.
+3348	Thật sao? 
+3349	Phải. Chúng tôi cũng sẽ giúp lấy hòn đá thanh tẩy, nên kiên nhẫn chút.
+3350	Thật hả?! Cậu nói thật chứ? &PTôi cứ tưởng các cậu là sát thủ do người lùn cử tới, hoá ra tôi nghĩ sai. &PXin lỗi vì đã định tấn công các cậu. Tôi sẽ bảo anh em khác giúp các cậu nữa.
+3351	..và đó là lý do bầy Amarok xâm nhập vào mỏ. &PHọ chưa từng làm gì sai cả. &PNên nếu ông có thể giúp tôi xuống $Rhầm mỏ$B tìm hòn đá….
+3352	Ngươi tin lời con sói đó à?
+3353	...Gì cơ ạ?
+3354	Ánh mắt nó là bằng chứng của sự tàn bạo… &NLũ sói khiến bọn ta không sống nổi. &PNgay lúc này, thợ đào của bọn ta còn chẳng dám vào mỏ vì sợ chúng.
+3355	Đó là hiểu lầm thôi. &PNhư tôi đã nói, họ là $Ramarok$B, không phải $Rngười sói$B...&PAmarok không tới đây để làm hại ai.
+3356	Eara, ra khỏi đây trước đã. Họ không muốn nghe đâu.
+3357	Đáng lẽ phải đoán được Thị trưởng sẽ từ chối đề nghị.
+3358	Ông ấy rất nhạy cảm với chuyện lũ sói. Phản ứng đó cũng dễ hiểu.
+3359	Chúng tôi đã cố truyền lời của anh.
+3360	Đành chịu thôi. Ông ấy đã nghe tiếng nói của tôi qua lời các cậu. &PChuyện này rồi sẽ có ích.
+3361	Có cách nào xuống mỏ không?
+3362	Anh trai tôi $SDolpe$B có thể dẫn các cậu vào mỏ. Trước hết cầm lấy $Rchìa khoá$B này.
+3363	Có $Rhàng rào$B chặn lối vào $Rtầng hầm thứ nhất$B của mỏ. &PCắm $Rchìa khoá$B vào hàng rào, $Rlối vào phía tây$B sẽ mở.
+3364	Tôi sẽ xuống mỏ tìm nó.
+3365	Nhờ cả vào cậu. Hãy để chuyện này kết thúc vui vẻ.
+3366	Được rồi. Nhìn này. &NĐây là $Rcông nghệ điện$B mà cả đời làm việc của bọn tôi phụ thuộc vào. &PĐầu tiên, bỏ kẽm và đồng vào nước muối, rồi…
+3367	Xong. &NGiờ đi lối đó, sẽ có xe goòng đưa cậu $Rxuống ba tầng$B. 
+3368	Cảm ơn ông.
+3369	Đó chắc là $Rhòn đá thanh tẩy$B.
+3370	Hòn đá này mang sức mạnh thiêng liêng. &NNgươi phải chứng tỏ mình xứng đáng sở hữu nó.
+3371	Đây là...
+3372	Có $Rvệ binh$B canh giữ hòn đá. Cũng hợp lý. &PPhải xử lý chúng thôi.
+3373	…Chắc là nó đây.
+3374	$G(Quay lại chỗ bầy $Ramarok$B$G thôi.)$B
+3375	Đây là $Rkhoáng thạch thanh tẩy$B. Giờ các anh không phải trốn trong mỏ nữa.
+3376	Các cậu lấy được đá rồi à?
+3377	Trời đất! &NTừ giờ tôi được sống tỉnh táo rồi!
+3378	Phải, chúng tôi không còn phải lo mất trí mỗi khi nhìn trăng nữa. &PCứ như không phải thật vậy. &NCác cậu đã cứu chúng tôi: chúng tôi sẽ không quên. &PBiết lấy gì báo đáp đây?
+3379	Chúng tôi chẳng cần gì cả. Thấy các anh cười là quá đủ rồi. 
+3380	Giờ chúng tôi sẽ lên mặt đất. Đây, cầm lấy cái này.
+3381	Sợi dây chuyền này được kết từ các mảnh của hòn đá thanh tẩy. &PMón quà nhỏ này mong trả được phần nào món nợ của chúng tôi. &NCảm ơn các cậu.
+3382	Thật mừng vì mọi chuyện đã ổn thoả.
+3383	Cảm ơn anh nhiều lắm, Kiyan...
+3384	Có gì đâu. &N Cứ coi như... &PĐó là lời cảm ơn vì cô đã hợp tác. 
+3385	...Cả đời tôi giảng đạo ở nhà thờ, nhưng chưa bao giờ giúp người khác như thế này.
+3386	Hoá ra giúp người thật sự là cảm giác thế này. Hihi.
+3387	Xong chuyện rồi, quay lại gặp $RThị trưởng làng Dwarf$B thôi.
+3388	Hừm, ra là chuyện như vậy. &NTa chưa từng chịu nghe các ngươi. &PTa biết xin lỗi thế nào cho sự thù địch của mình đây?
+3389	Không, ông không cần đâu. &NChúng tôi chỉ quay lại báo rằng nhờ hòn đá, lũ sói sẽ biến mất hết. &PChỉ còn lại hình người của họ. &NMỏ sẽ an toàn với các ông.
+3390	Cảm ơn tiểu thư. &NTa sẽ bảo thợ mỏ mang hòn đá phép các ngươi cần tới. Đợi ở đây.
+3391	Đây. Đây là hòn đá phép, một món quà nhỏ cảm ơn công sức của các ngươi.
+3392	Một lần nữa, cảm ơn rất nhiều vì đã giúp đỡ. 
+3393	Không có gì. Giờ chúng tôi phải lên đường rồi.
+3394	Vậy tạm biệt, đi đường cẩn thận.
+3395	Xin lỗi các bạn, tôi đến trễ. &NMà tôi đang vội. Hãy tới leap-gate ngay, đừng chần chừ.
+3396	Chúng đã đuổi kịp rồi.
+3397	$G(Suỵt! Chúng nghe thấy đấy. Nhanh, trốn vào đây!)$B
+3398	Đó là quân phục Berkel à?
+3399	Cái máy khổng lồ đó là cái quái gì vậy?
+3400	Trông lạ lắm, không phải thứ có ở làng này. &PChắc chúng dính líu tới vụ mấy cái xác.
+3401	Từ lúc ta bám theo hai đứa đó đã xảy ra bao nhiêu chuyện. Có gì đó không ổn.
+3402	$SCornette$B. Có ý gì không?
+3403	Chưa nghĩ ra. &PNhưng theo ta, một nhóm nhỏ rất thiện chiến đã tấn công số còn lại.
+3404	$G(Hai người? Mình dám chắc chỉ có một gã bắt Eara đi thôi.)$B
+3405	Này, hai người kia! &NCó gì mà tán gẫu thế?
+3406	Tán gẫu đủ rồi. Đi tìm manh mối trong đồ đạc của đám lính đi. 
+3407	Ta ghét gã này. Chúng ta đang cố giải cứu Channel. &PHắn tưởng hắn là ai? Sếp của chúng ta chắc?
+3408	Thật ra thì hắn đúng là cấp trên của chúng ta. Không nói gì được đâu.
+3409	Anh em! Giao chỗ này cho họ, chúng ta sẽ tới $RKamuran$B tìm tung tích Channel!
+3410	Vậy thì đi thôi!
+3411	Có vẻ chúng đang kéo xuống tận Kamuran.
+3412	Trước khi tới $RKamuran Wilderness$B, trên đường có một $Rhang$B. Ta vào đó trước đã.
+3413	Được. 
+3414	Đi lối này nguy hiểm quá.
+3415	Phải ẩn nấp và tìm đường khác.
+3416	Chúng ta có thể trốn ở đây, tránh kẻ tò mò và đám truy đuổi.
+3417	Sớm muộn gì chúng cũng tìm ra chỗ này. &PChỉ cần lính lùng sục, hỏi han dân làng là chúng sẽ biết chúng ta đã tới Kamuran.
+3418	Đúng vậy. Hừm… nhưng không sửa được leap-gate thì không thể về Berkel…
+3419	…Quanh đây có chỗ nào thu hút sự chú ý của Chasers được không?
+3420	Tôi sẽ dụ hết lính đi, kể cả bọn canh leap-gate. &PTrong lúc đó, hai người tới cổng sửa nó.
+3421	Ra vậy…
+3422	Đi về phía $Rđông$B sẽ thấy một $Rkho quân sự$B ở Kamuran Wilderness. &PĐốt nó đi, chúng sẽ buộc phải dồn hết sự chú ý vào đó.
+3423	Nhưng cẩn thận. Thù địch giữa Berkel và Arnen khiến lính tráng càng thêm cảnh giác. &PKho đó cũng sẽ được canh gác bởi nhiều lính hơn mức cần thiết.
+3424	Trong lúc đó, ta phải nhanh lên. &PCó tin đồn chúng đang mở rộng phạm vi lùng sục.
+3425	Được. Ta có thể thử cách này. &NTôi cần đủ nguyên liệu để đốt một đống lửa lớn. &P$RDầu xương rồng$B cực kỳ dễ cháy, dùng nó đi. Mang cho tôi 10 cái, vậy là đủ.
+3426	Hiểu rồi.
+3427	$G(Lính vẫn đang canh leap-gate... Giờ di chuyển nguy hiểm quá.)$B
+3428	$G(Lính chắc đang ở dưới làng. Kế hoạch chưa thành thì không nên vào làng.)$B
+3429	Tuyệt! Giờ trộn dầu với phép thuật…
+3430	Tuyệt vời. Đốt cái kho thôi.
+3431	Tôi muốn nói là quá liều lĩnh nhưng chẳng còn cách nào khác. &PTôi sẽ ở lại đây bảo vệ Eara. Anh lính Kiyan, trông cậy cả vào cậu.
+3432	Đánh một mình có thể khó khăn, nhưng vì tôi phải ở lại bảo vệ Eara, cậu cầm cái này theo để dẫn đường.
+3433	Eara, Nirniti là người đáng tin cậy. 
+3434	Vâng. Cẩn thận phía sau và về sớm nhé.
+3435	Kẻ đột nhập! Báo cho Đội trưởng!
+3436	Ngươi, canh khu này. &NSố còn lại, theo ta!
+3437	Chúng thật sự nghĩ chỉ một nhúm người là cản được ta sao? Lũ ngốc.
+3438	Con quỷ này là ai?! &NHắn quét sạch cả một trung đội!
+3439	Hắn đang nhắm tới kho! &NKhông được để hắn qua. &PLập hàng chặn đường!
+3440	Rõ! Tất cả, chuẩn bị bắn!
+3441	Ồ, dễ thương thật. Xếp hàng cơ đấy.
+3442	$G(Lửa lớn thế này sẽ thu hút sự chú ý của Arnen). &P(Đến lúc quay về hang chỗ Nirniti và Eara rồi.)$B
+3443	Mùi gì vậy? Cháy à?
+3444	Không thể nào. Ngươi có thấy cái ta thấy không?
+3445	Shin, Cornette!
+3446	Cháy! &NCó kẻ đốt kho rồi!
+3447	Bọn ta thấy rồi. Mong là các ngươi đã bắt được thủ phạm.
+3448	Chỉ một gã thôi, chúng tôi biết. &NHắn là ác quỷ! &PHắn chạy mất rồi, người của ta đang truy đuổi.
+3449	Được. Để xem con quỷ đó có thoát được ta không.
+3450	Ấy, ấy! Khoan đã!
+3451	Ai giải thích giùm ta xem sao một gã vô danh lại có thể giữa ban ngày tới đốt kho rồi cứ thế mà trốn thoát?
+3452	Không có thời gian mà nổi giận đâu. &PPhải làm gì đó trước khi mất thêm nữa.
+3453	Lũ fey đó… &NRõ là một nền văn hoá khác.
+3454	Này! Hai người kia!
+3455	...Sao?
+3456	Ở lại với ta.&NTa không nghĩ chuyện này đáng lo đến thế.
+3457	Tình hình bên ngoài sao rồi?
+3458	Thành công! &NToàn bộ lính Arnen đang kéo về phía kho.
+3459	Thấy xác chết quanh kho là chúng sẽ biết có chuyện. &PKhông còn thời gian, mau sửa cái này thôi.
+3460	Phải. Trước tiên tôi cần xem nó hỏng tới đâu. Đi nào.
+3461	Toàn bộ lính Arnen đã ra ngoài.&NNhanh, tới $Rleap-gate$B.
+3462	May là không hỏng nặng như tôi nghĩ. Tôi sửa nhanh được.
+3463	Mọi người nhớ cho, ta đã đúng. Lửa đâu tự nhiên mà có. &PTa mong các ngươi nhớ là ta đã nói trước rồi.
+3464	Cornette nói đúng!
+3465	Toàn bộ chuyện này đã được dàn dựng từ đầu.
+3466	Còn ngươi là ai?
+3467	Bọn ta được thuê để bảo vệ Channel. Ta là $SCornette$B. &PXin lỗi, nhưng ta không để các ngươi đi dễ dàng vậy đâu. &NTa được trả nhiều $Rtiền$B cho việc này.
+3468	Vậy thì chẳng còn cách nào khác. &PLàm thôi. Tôi sẽ sửa leap-gate. Kiyan, cầm chân chúng giúp tôi.
+3469	Được. Tôi sẽ đấu với cô ta. 
+3470	Ha, mơ đi, nhóc con! &NSức mạnh của ta sẽ làm ngươi choáng váng! &PNgươi tưởng ngươi là ai? &NCó gan thì lại đây!
+3471	Được rồi, có lẽ ta nói hơi sớm.
+3472	Ta không giết trẻ con hay phụ nữ.
+3473	Ngươi có $R"lợi thế" đáng ngờ$B là vừa trẻ con vừa là phụ nữ. &NNên ngươi được sống.
+3474	Cái gì…?
+3475	Khoan, ngươi đốt đồ của bọn ta, đánh ta, rồi còn dám sỉ nhục ta? Đùa ta đấy à? 
+3476	Leap-gate sao rồi, Nirniti?
+3477	Một phút nữa.
+3478	Ta là trẻ con á? Sao ta lại bị đối xử thế này? Hả? Hả? &PNgươi tưởng không phải trả giá à? &PTa sẽ tấn công lúc ngươi ngủ, rình lúc ngươi tắm, và ta sẽ trả thù!
+3479	Xong rồi. Chỉ cần nhớ trình tự là được.
+3480	Chuyện gì đang xảy ra ở đây?!
+3481	Xong rồi chứ?
+3482	Ừ, lại đây, lối này!
+3483	Cornette!
+3484	…và Eara!
+3485	Shin!
+3486	Eara, nhanh lên!
+3487	Ngươi là tên người đó!
+3488	Eara, lại đây!
+3489	…Shin, xin lỗi. Nhưng tôi đã quyết định quay về Đế quốc.
+3490	Eara, sao cô lại nói điều vô lý vậy?! &PChính cô quyết định rời khỏi cái nơi vô dụng đó mà!
+3491	Xin lỗi, Shin. Nhưng có những điều tôi đã bỏ lỡ, tôi cần quay về sửa chữa.
+3492	Cô Channel?
+3493	Các ngươi đang làm gì vậy?! &NĐưa cô ấy về bình an vô sự!
+3494	Chết tiệt, không đủ thời gian để đặt toạ độ! &PMay là có vài toạ độ đã nhập sẵn, nên ta có thể tới $Rvị trí có sẵn$B này. &PĐó là $RSecret Sanctum$B của $Rcộng đồng Berkel$B ở Arnen. &PVì nó gần $Rbiên giới$B nên từ đó ta có thể tìm đường về Berkel.
+3495	Cô Channel!
+3496	Shin, rồi một ngày anh sẽ hiểu tôi. &PTin tôi đi, thế này là tốt nhất.
+3497	Phù. Tốt, họ qua được rồi. Giờ… đến lượt mình biến mất.
+3498	Tại sao, Eara… Tại sao?! 
+3499	Ồ, ta không thấy ngài. Ngài ở đây từ đầu à?
+3500	Ừ. Nhưng trước đó, cô bỏ $Rlớp cải trang$B ra đi. Cứ như đang nói chuyện với người khác vậy.
+3501	Hô hô, được thôi. &NTôi cũng thấy khó chịu trong bộ này.
+3502	Lâu lắm rồi mới thấy đôi $Rcánh$B đó. &PKhông, lâu lắm rồi mới thấy $Rđôi cánh cuối cùng của tộc djinn$B.
+3503	Ngoài anh với tôi thì còn ai biết thân phận của tôi chứ? &PTôi chẳng có gì phải giấu anh, mà ngày nào cũng giấu mình là djinn đã đủ mệt rồi. &PThỉnh thoảng cũng phải thở một chút chứ.
+3504	Mà bảo tôi là người cuối cùng của cả bầy, nghe như tôi là loài vật tuyệt chủng vậy. &PNhững người khác chỉ đang mong được $Rgiải phóng$B, và rồi họ sẽ được… sớm hay muộn thôi.
+3505	Phải. Nhưng chỉ khi $Rkế hoạch$B này thành công thì cô mới tự do sải cánh khắp thế giới. &PCô, và tất cả $Rnhững djinn khác$B.
+3506	Haha, phải. &NChuyện đó tôi tin anh.
+3507	Mà này, cô vừa hoàn thành một nhiệm vụ khá phức tạp đấy.
+3508	Này, tôi đâu có lựa chọn nào khác. &NAi ngờ mọi chuyện lại rối rắm thế?&PDù sao thì giờ $Rai cũng$B vui cả, đúng không? &NTất cả, kể cả $Ranh$B.
+3509	…Ừ, cô nói cũng có lý.
+3510	Cô ấy thế nào? $SChannel$B ấy.
+3511	Lớn hơn rồi. Đã $R10 năm$B… cô ấy vẫn mang cảm giác như xưa. &PNhưng đôi mắt cô ấy…
+3512	Đôi mắt? Anh đùa à.
+3513	Haha, trông tôi giống đang đùa không?
+3514	Sao cũng được. Về thôi.
+3515	Hôm nay kiểm tra kiểu gì vậy?
+3516	Sao họ đến trễ thế?
+3517	Kiên nhẫn đi. Lệnh trực tiếp từ cấp trên đấy.
+3518	Đi lối đó thôi, Eara.
+3519	Có một $Rcửa ải$B. Lính gác trông canh rất chặt. &PĐi qua đó chẳng khác gì tự sát.
+3520	Chúng ta nên làm gì đây?
+3521	Chào. Hai cô cậu định tới $RĐế quốc$B à?
+3522	Đừng lo, đừng lo. &PTôi chỉ là người có thể đưa các cậu sang bên kia $Rbiên giới$B, mà có vẻ $Rcửa ải$B không phải thứ các cậu đang tìm.
+3523	Ông muốn gì?
+3524	Ra là dân mặc cả. &PThế, có hứng thú hay không?
+3525	Nói à? Tưởng hỏi thế là có câu trả lời ngay sao?
+3526	$G(Lính gác biên giới đã siết chặt ca trực.) &P(Phải tìm $Rđường khác$G để vượt qua.)
+3527	Được. Đây.
+3528	Thế mới phải chứ. &NNói chính xác thì cái tôi biết là $Rngười biết cách vượt qua$B. &PXuống $RPendrik Village$B tìm một gã tên $RBen$B. &NHắn sẽ có thứ các cậu cần.
+3529	Ông chắc chứ?
+3530	Nói dối thì cứ đâm tôi. &PNhưng Ben khó tính lắm đấy. &NCó khi phải vất vả chút mới moi được tin.
+3531	$G(Vậy thì tới $RPendrik Village$B thôi.)$B
+3532	...Giờ tôi không đủ tiền trả ông.
+3533	Chà, tôi đâu phải nhà từ thiện. &NKhông trả tiền thì đừng mong chơi.
+3534	Được rồi. Có tiền trả chưa?
+3535	Anh là Ben phải không?
+3536	Chính tôi. Tôi giúp gì được cậu?
+3537	Chúng tôi đang tìm đường tới Đế quốc. &PNghe nói anh có thể giúp?
+3538	Ừ. Đi qua cửa ải đằng kia như mọi người ấy.
+3539	Tôi nghe nói còn đường khác để qua.
+3540	À, cậu nói vậy à. Được thôi. &PTrông cậu có vẻ đáng tin đấy nhỉ? &PNếu cậu làm xong hai việc tôi nhờ, tôi sẽ chỉ cách khác để qua mặt lính gác.
+3541	…Được.
+3542	Đi về phía $Rđông bắc$B làng, cậu sẽ thấy một $Rhang$B ở $RDelos Swamps$B. &PTrong hang có lũ $Rmimic ranh mãnh$B đã cuỗm hết hàng của tôi. &PLũ khốn kiếp. Trước hết dẹp lũ sâu bọ đó rồi mang về $R10$B $Rmón hàng$B của tôi.
+3543	Nghe cũng không khó lắm.
+3544	Tốt. Việc còn lại là về lũ rắn. &PChúng nhung nhúc ở $SDelos Swamps$B, phía $Rtây bắc$B từ đây. &PNếu cậu giảm bớt số lượng chúng bằng cách giết $R12$B con, tôi sẽ đưa cậu thứ đã hứa.
+3545	Có chuyện gì ở đây vậy?
+3546	Chúng tôi đang tìm hai kẻ phản loạn cực kỳ nguy hiểm. &PMột $Rgã tóc xám$B mắt hoang dại và một $Rcô gái tóc đen$B mặc $Râu trắng$B.
+3547	Người ra vào đông lắm, khó mà biết được. Nhưng nghe có vẻ khác thường đấy. &PMà họ là ai mà cả một trung đội phải truy lùng vậy?
+3548	$RChannel$B đã bị một tên lính Berkel bắt cóc.
+3549	Cô gái này là $RChannel$B sao?
+3550	Phải. Phải tìm ra cô ấy, cô ấy đang gặp nguy hiểm lớn.
+3551	Khoan, khoan đã.
+3552	Có lẽ tôi đã gặp mấy người trông hơi giống như các ngài tả.
+3553	Họ ở đâu? Nói mau!
+3554	Tôi cũng không chắc lắm, nhưng họ đi lối này, chắc chưa xa đâu.
+3555	Nghe vậy ta mừng rồi.
+3556	Tôi có thể dẫn các ngài theo hướng họ đi.
+3557	Nhưng không miễn phí đâu nhé.
+3558	Tìm được Channel rồi ta sẽ thưởng cho ngươi đàng hoàng.
+3559	Tuyệt. Vậy bắt đầu thôi.
+3560	Đã diệt xong lũ rắn Delos Swamps. Chỉ đường đi.
+3561	Ờờờ… tôi quên mất một chuyện. &NCòn một việc nữa cần cậu lo giúp.
+3562	Vậy à? Đột ngột thế?
+3563	Tôi biết là lạ. &PNhưng tôi đang đưa tin cực kỳ quan trọng, đâu thể bỏ phí chỉ với hai việc vặt.
+3564	Anh còn cần gì nữa?
+3565	Lũ $Rcướp$B ở làng này cần được xử lý. &PBọn tôi làm nạn nhân của chúng nhiều năm rồi, mà cậu có vẻ đủ sức chấm dứt chuyện này. &PNên tôi nhờ cậu tìm tới $RRedhoods Boss$B, hạ hắn và mang về chiếc khăn rằn đỏ của hắn làm bằng chứng. &PBăng đó ở $RDelos Highlands$B, phía đông Delos Meadows.
+3566	Ý anh là $Rám sát$B?
+3567	Đúng vậy.
+3568	Yêu cầu lớn thế chỉ để đổi lấy mấy lời chỉ đường vớ vẩn.
+3569	Ấy ấy, tôi vừa giải thích rồi còn gì? &PThông tin này giá trị với cậu đến mức đó đấy. &PTôi thề, cậu xong việc cuối này là tôi đưa thứ cậu cần.
+3570	…Được thôi.
+3571	Chuyện $Rám sát$B này…
+3572	Tôi biết cô nghĩ chẳng có lý do chính đáng nào cho việc tàn ác. Tôi vẫn sẽ làm kẻ có tội.
+3573	Tuyệt! Và nhớ rằng cậu làm việc… ác này… là để bảo vệ những linh hồn vô tội.
+3574	Phải, chúng ta đang quay về Đế quốc. &PVà phải, việc đó rất quan trọng. &NNhưng nếu đường về trải đầy xác chết thì quay về cũng vô nghĩa.
+3575	Không còn cách nào khác đâu, Eara. Ta phải làm theo. &PNếu cô thấy ngại thì tôi đi một mình.
+3576	Mong linh hồn anh không bị vấy bẩn.
+3577	Rồiii. &NVà cũng đừng để bị kiếm đâm thủng người nhé. &PĐằng đó hơi nguy hiểm, không phải chỗ cho tiểu thư. &NĐi một mình là hay đấy.
+3578	Tôi không muốn mang theo người sợ giết chóc. Nhưng….
+3579	Tiểu thư á? &NThôi đi… cô ấy còn gan dạ hơn khối đàn ông tôi biết.
+3580	Đừng lo, cô bé. &NCậu ta sẽ ổn thôi.
+3581	Ben cử ngươi tới à? Một sát thủ? &PLần này lão còn tìm được kẻ có bản lĩnh nữa cơ đấy…
+3582	Ta thật sự không thích tán gẫu với nạn nhân.
+3583	Ta chẳng thù oán gì ngươi, xin lỗi. &NNgươi cản đường thôi. &PHãy chuộc tội đi rồi ngươi sẽ ra đi thanh thản.
+3584	Tội gì chứ? Ben mới là kẻ ác!
+3585	Lão bỏ đói dân làng. Lão sở hữu kho thóc rồi để lương thực quý giá của bọn tôi mục rữa ở đó. &PBọn tôi đang chết dần. &NNhìn xem ai cũng gầy trơ xương!
+3586	Ngươi nói nhiều quá đấy.
+3587	Vì tôi muốn sống. &NChết đói còn chưa giết được tôi. &PTôi cũng không muốn chết dưới lưỡi kiếm. Nếu tôi chết bây giờ, người của tôi cũng sẽ theo tôi xuống mồ. &PBọn tôi đã quá yếu rồi…
+3588	Làm ơn... Tôi tin ai cũng có quyền đấu tranh cho sự sống, tự do và mưu cầu hạnh phúc. &PVà cả cái ăn nữa.
+3589	Ngươi may mắn đấy.
+3590	Sự sống, tự do và mưu cầu hạnh phúc… &PNếu ngươi nói đúng thì ta phải cứu bạn đồng hành của ta. &NĐưa khăn rằn đây.
+3591	Khoan!
+3592	Cảm ơn. Tôi và người của tôi nợ cậu.
+3593	Eara!
+3594	Shin?
+3595	A, cô không sao. Thật nhẹ cả người.
+3596	…Anh bám theo tôi à?
+3597	$RTên kiêu ngạo đáng ghét$B đâu rồi?
+3598	Hắn bị đẩy vào chỗ nguy hiểm. Có lẽ hắn sẽ không sống sót trở về.
+3599	Anh phản bội chúng tôi sao?
+3600	Không... Kiyan...!
+3601	Tôi phải ra khỏi đây.
+3602	Hắn là kẻ xấu và đã đe doạ sự an toàn của cô. Ta sẽ chăm sóc cô.
+3603	Không, Shin, tôi không tin anh ấy đã chết.
+3604	Khoan đã! &NBọn ta mới là người xử lý hắn! &PNgươi được dặn là phải giữ Channel cho bọn ta cơ mà!
+3605	Ồ? Tôi quên mất. &PNhưng dù sao cô ta ở ngay góc kia, cứ tự nhiên. &PCó điều phải có $Rphần thưởng$B rồi tôi mới chỉ đường.
+3606	... Đồ khốn!
+3607	$R10 đồng vàng$B. Đủ chưa?
+3608	Giờ chỉ cho bọn ta cô ấy đã đi đâu.
+3609	Cái-
+3610	Đây. $RKhăn rằn$B.
+3611	Vậy là cậu đánh úp thành công rồi?
+3612	Phải. Giờ chỉ đường đi.
+3613	À, chuyện là… &PĐược rồi, được rồi. Phù. &PBọn $Rbuôn lậu$B thường đi theo lối $RSecret Cave$B.
+3614	Nó ở đâu?
+3615	Nó nằm sau một $Rtảng đá$B ở $Rphía nam Pendrik Village$B. &PKích hoạt $Rcông tắc$B trên tảng đá là có lối vào hang. &PNhưng đường tới tảng đá từng là nơi ở cũ của $Rdjinn$B, còn gọi là $RDjinn's Dungeon$B, nên mặt đất sẽ $Rsụp xuống$B nếu cậu đi sai đường. &PVì djinn đã bị $Rphong ấn$B từ lâu... chắc cũng không tệ lắm đâu. &PNhưng nhớ: một khi đã rơi xuống hầm thì khó mà tìm được đường lên.
+3616	Hiểu rồi. 
+3617	Được. Còn $Rcô ấy$B?
+3618	A! Tôi quên nói với cậu! &NLính Arnen đã bắt cô ấy đi rồi!
+3619	…Anh nói thật đấy à?
+3620	Tôi đã cố ngăn chúng! &NNhìn này, tôi còn bị trầy ở đây, thấy không? &PĐau lắm. Tôi đâu phải lính! &NTôi chỉ là người bình thường thôi. &NTôi đã cố hết sức rồi! &PGiờ cậu đi cứu cô ấy đi.
+3621	Chuyện xảy ra lúc nào? Chúng đi đâu?
+3622	Mới vài phút trước thôi. &PKhông biết vì sao, nhưng có vẻ chúng đang ở lại $Rtrạm gác$B của làng.
+3623	Anh có biết cách nào $Rlẻn vào$B không?
+3624	Tôi sẽ trả $Rgiá$B.
+3625	Ờờ.... được thôi. Có một cách. Cậu đi về $Rphía đông$B thị trấn. &PCó một $Rngôi nhà bỏ hoang$B, nó thông với một $Rlối vào bí mật$B ở $Rtầng hầm trạm gác$B. Chúc may mắn!
+3626	Nếu cô ấy có mệnh hệ gì… tôi sẽ bắt anh chịu trách nhiệm.
+3627	Ý cậu là sao?
+3628	Anh nên viết di chúc đi.
+3629	Chết tiệt. Chết tiệt, chết tiệt, chết tiệt.
+3630	Thôi, nếu cậu đổi ý thì tôi vẫn ở đây.
+3631	Vậy... muốn biết à? 
+3632	Ngươi? Ta tưởng ngươi chết rồi!
+3633	Ta không dễ chết đâu.
+3634	Bắt lấy tên khốn đó, lũ hèn nhát!
+3635	Ngươi bảo ngươi không dễ chết cơ mà.
+3636	Channel đâu?
+3637	Giết ta đi. Ta không nói đâu.
+3638	Được. Tạm biệt.
+3639	Áaa! Không ngờ ngươi làm thật! Khoan, khoan!
+3640	Cô ta ở $Rnhà an toàn$B, phía $Rtây$B làng.
+3641	Có kẻ đột nhập! Tất cả tới đây!
+3642	Đồ chó!
+3643	Ôi trời. Tên khó ở còn sống.
+3644	Bắt hắn!
+3645	Ha.. Umhahahahhaa! &PThử đi! Thử đi, đồ ngốc! &PGiờ câm miệng trước khi ta đổi ý giết ngươi ngay tại chỗ.
+3646	Được rồi, lính đâu. Ném hắn vào ngục.
+3647	Thật tuyệt vời.
+3648	Bị tống vào đây theo cách ngu ngốc thế này…. &PKhông biết cô ấy có ổn không…
+3649	Ai.. Ai đó?!
+3650	Đây đúng là quần áo của lũ cướp có tên $RRedhoods$B!
+3651	Bắt hắn!
+3652	Sao ngươi dám đánh đồng đội của ta!
+3653	Ặc…
+3654	…Còn ngươi là ai?
+3655	Ngươi nghĩ ngươi đang…?
+3656	$RĐặc vụ$B của chúng tôi đang ở giữa làng; Hắn là nguồn gốc của câu chuyện cậu kể đấy.
+3657	Vẫn chưa đủ. &NTôi muốn thêm thứ khác từ cậu.
+3658	Nói thẳng thừng thế…
+3659	Chuyện đó...
+3660	Vậy là $Rcô gái$B bị lính Arnen bắt đi. Và anh muốn tôi $Rdụ chúng đi chỗ khác$B?
+3661	Chính xác. Không khó lắm đâu. &NNhưng sẽ giúp ích nhiều lắm.&PCậu làm xong việc này thì coi như hoà.
+3662	$G($RNhà an toàn$G, ở $Rphía tây$G thị trấn…)$B
+3663	Kiyan!
+3664	Anh còn sống! Ơn trời…
+3665	Tôi biết đường tới Đế quốc rồi. &PỞ $RSouth Pendrik$B có một $Rlối vào bí mật$B sẽ đưa chúng ta đi đúng hướng.
+3666	Vâng, Kiyan.
+3667	Không thể nào, vậy ra cậu đã đưa Channel về.
+3668	Sao anh biết cô ấy là $RChannel$B?
+3669	Vậy là ngươi bán đứng ta, đồ chó vô dụng. &NNgươi đã khai Channel ra.
+3670	Chính cậu mới là kẻ $Rbắt cóc$B cô ấy ngay từ đầu, anh bạn ạ. &PTôi chẳng làm gì sai cả.
+3671	Ngươi nói nhiều quá. Tránh đường.
+3672	E hèm. Chúng ta đang nói về $Rkhoản bồi thường$B. Nhớ chứ? &PKhông có nó tôi không tránh đường được.
+3673	Ngươi chỉ nghĩ được tới tiền.
+3674	Câm miệng! Để xem lát nữa ngươi còn ăn nói thế được không. &PBắt chúng, chúng ở đây!
+3675	Ôi trời ơi! Sao… lính của tôi!
+3676	Đừng làm thế, không tốt cho sức khoẻ đâu!
+3677	Ngươi biến đi thì sức khoẻ ta sẽ tốt hơn.
+3678	C-cái gì cơ?
+3679	À, câm miệng và chết đi.
+3680	Làm ơn… tha cho tôi…!
+3681	Kh-khoan đã...!
+3682	...Có chuyện gì?
+3683	Khoan! Tôi không thích đổ máu vô ích. &PPhải, tôi biết hắn đã bán đứng chúng ta, nhưng hắn cũng cho chúng ta thông tin quý giá.
+3684	Đi thôi, Kiyan. Được không?
+3685	Khoan đã, Kiyan!
+3686	...Tôi không giết hắn. &PNhưng nếu cô để tôi diệt con ký sinh trùng này thì tôi thấy dễ chịu hơn nhiều.
+3687	Tôi chẳng vui vẻ gì với chuyện này. 
+3688	Thế là tốt nhất rồi, Kiyan. &NGiờ đi thôi.
+3689	Chắc là chỗ này…
+3690	Là $RRedhood Bandits$B!
+3691	Sao các ngươi dám vác mặt tới đây giữa ban ngày?
+3692	$G(Chúng đã hành động rồi. Đúng lúc lắm.)$B
+3693	Shin! $RKhẩn cấp$B!
+3694	Chuyện gì vậy?
+3695	Bọn trộm vừa xông vào làng! 
+3696	Ta phải bảo vệ Channel trước hết.
+3697	Ngài nghĩ cô ấy sẽ an toàn nếu thị trấn bị phá huỷ sao?! &NNgài phải giúp!
+3698	Eara, đợi ở đây. &NTa sẽ quay lại đón cô.
+3699	$G(Hoàn hảo. Đến $Rlúc$G rồi.)$B
+3700	Chừng này chắc đủ câu giờ cho họ rồi.
+3701	Nghe đây! Rút lui!
+3702	Rõ, đại ca!
+3703	Phù… cuối cùng cũng xong.
+3704	$G(Đủ $Rthời gian$G? Để làm gì?)$B &NShin, còn Channel thì sao?
+3705	Channel đang đợi ở nhà an toàn. Cô ấy không sao.
+3706	Nhưng ta vẫn có linh cảm xấu. &NĐi tìm cô ấy thôi.
+3707	Linh cảm xấu là sao?
+3708	Đi thôi, đồ fey ngu ngốc đần độn, nhấc đôi tai nhọn của ngươi lên!
+3709	Ta đã bảo có gì đó không ổn mà.
+3710	Và ta chắc thằng tóc trắng khốn kiếp đó chịu trách nhiệm. &PĐi đá đít hắn thôi.
+3711	Chúng ta không biết họ đi đâu.
+3712	Ngươi đùa kiểu tiên đấy à? &NPhải đưa cô ấy về, bằng cách này hay cách khác. &PNgươi có ý nào hay hơn không?&NKhông à? Vậy thì đi.
+3713	Có manh mối đây. Nhưng có thể họ đã vượt biên rồi.
+3714	Ta không chắc họ đủ thời gian vượt qua. Lần này cơ hội nghiêng về phía ta.
+3715	$G(Đã có người đuổi theo rồi…!)$B
+3716	Eara, lối này.
+3717	$G(Đây là ngõ cụt. Nếu chúng tới…)$B
+3718	$G(Vậy thì ta phục kích chúng.)$B
+3719	$GEara, cô phải áp sát tường nếu không chúng sẽ thấy.$B
+3720	Rung chuyển gì vậy?
+3721	KYAAA!
+3722	Là giọng cô ấy!
+3723	…Eara!
+3724	Eara...!
+3725	Ưưư…
+3726	Chúng ta đang ở đâu? Đã xảy ra chuyện gì?
+3727	$RMặt đất$B sụp xuống. &NTôi đã được cảnh báo phải cẩn thận nếu đi chệch đường. 
+3728	Nghe tệ thật. Ra được không?
+3729	Không biết. Tìm $Rlối ra$B trước đã.
+3730	Ý hay đấy.
+3731	Lối ra!
+3732	$G(Chẳng sứt mẻ chút nào.)$B
+3733	Chúng ta còn cách nào khác?
+3734	Đây là lối ra duy nhất. Nếu không ra được thì…
+3735	Không. Phải có cách. &PCô nghỉ ngơi đi trong lúc tôi nghĩ cách.
+3736	Anh nói đúng, tôi kiệt sức rồi.
+3737	$G($R3 ngày$G… vẫn chưa tìm ra lối nào trong hầm này.) &P($RĐây$G là lối ra duy nhất.)$B
+3738	Hang này lạnh quá. Cô ổn chứ?
+3739	Vâng. Chắc tôi ngủ không đủ thôi.
+3740	Gì đây?
+3741	Đây. Dùng $Râo choàng$B này đi.
+3742	Anh không lạnh sao?
+3743	Tôi ổn. Chỉ đừng làm rách nó là được.
+3744	Eara?
+3745	Cả hai cùng đắp áo này đi. &NTôi thấy anh cũng đang lạnh cóng mà.
+3746	Ừ, thì... vậy mong là đừng làm rách nó.
+3747	Ừm... Kiyan?
+3748	Lúc anh để tôi lại ở nhà Ben…&Nanh không lo tôi bỏ đi sao? &PTôi đã bỏ anh mà đi một lần khi anh đang ngủ, sao anh nghĩ tôi sẽ không đi lần nữa?
+3749	Tôi không nói chính xác được… nhưng tôi cảm thấy cô chẳng có nơi nào để đi…&PNói đúng hơn là chẳng có nơi nào tốt hơn để đi…
+3750	…Ra vậy…
+3751	Phải thừa nhận rằng…
+3752	Người ta luôn bảo cô làm thế này, làm thế kia…&PNhưng đi cùng tôi, cô có thể tự chọn đường về Berkel mà không cần ai giúp hay ra lệnh.
+3753	Đúng là tôi luôn bị sai bảo, vì tôi là Channel. &PNhư thế là tốt nhất.
+3754	Đúng là đi với anh, tôi thấy mình nắm được số phận nhiều hơn.
+3755	Nhưng tôi phải xin lỗi lần nữa, Kiyan. &PAnh bị kẹt ở đây là vì tôi.
+3756	Không hẳn.
+3757	Đây hoàn toàn không phải lỗi của cô. &NNhìn nhận khách quan thì là lỗi của tôi. &PChúng ta sẽ về được Đế quốc. Chỉ là không đi đường thẳng nhất thôi.
+3758	Nghe vậy.... cũng thấy yên lòng.
+3759	Vậy thì hãy hi vọng.
+3760	Phải. Bằng mọi giá tôi sẽ tìm ra $Rlối thoát$B.
+3761	Gì thế này? &NLại $Rđộng đất$B à?
+3762	Đằng kia!
+3763	Lối ra sao?
+3764	Mặt đất nứt ra rồi. &PCơ hội đây. Đi thôi!
+3765	Cô đi trước đi.
+3766	Tôi không thích chuyện này chút nào.
+3767	Có $Ránh sáng$B ở đằng kia…
+3768	Ra khỏi đây thôi.
+3769	ÁAAAA!!
+3770	Eara!  
+3771	Eara! Đồ khốn bẩn thỉu, lộ mặt ra đây!
+3772	Keeeheeeeheeeheee….
+3773	Một $Rdjinn$B? Sao có thể?
+3774	Phải, phải, Djinn tuyệt chủng rồi, sinh vật trong truyền thuyết, vân vân và mây mây. &PCác ngươi đã phong ấn bọn ta và giết $RGreat Gorgon$B. Chết đi.
+3775	Hyaaaaah!!
+3776	Chỉ có thế thôi à?
+3777	$G(Sức mạnh của sinh vật này ở một đẳng cấp khác hẳn.)$B
+3778	Eara, chạy khỏi đây đi!
+3779	Kyaaaaaaaaaaaahh!
+3780	Hự...!
+3781	Kiyan, nguy hiểm lắm!
+3782	May mà cô nhận ra đấy! &NĐi đi, tôi sẽ đuổi kịp! &PChuyện này dễ với tôi thôi, nhưng cô không đi ngay thì chỉ thành gánh nặng!
+3783	Không. Tôi không bỏ anh lại một mình!
+3784	Con người… các ngươi thật thảm hại.. &NVì đồng tộc của ta!
+3785	Grừ…!
+3786	Hạ một tên. &PGiờ tới lượt cô, người đẹp.
+3787	Kiyan!!
+3788	Chết thanh thản đi.
+3789	Kyaargh!
+3790	…Ngươi!
+3791	Thằng nhóc ngu ngốc... Ngươi chọc nhầm Djinn rồi.&PNgươi sẽ phải trả giá bằng mạng sống.
+3792	Kyaargh… đồ con người dơ bẩn!!
+3793	Kyaaaarrrrrggggh!!
+3794	Suýt nữa thì toi.&NMay mà tôi tới kịp. 
+3795	Tới kịp? Anh đã bám theo à?
+3796	Ừ, sao cũng được. Trước hết đừng để cậu chết đã. &PCậu chảy máu ròng ròng kìa.
+3797	Tôi biết chút $Rphép chữa trị$B.
+3798	Khoan đã.
+3799	Tôi không chắc phép của cô có tác dụng với gã này.
+3800	Đó… là một loại phép khác…
+3801	Anh là ai? &NSao lại tìm được chỗ này?
+3802	Cậu nên cảm ơn tôi đấy. &NTôi vừa cứu mạng cậu. 
+3803	Sao anh giúp tôi? &NAnh có biết tôi đâu?
+3804	Không, chỉ là tình cờ thôi. &PNhân tiện, tôi thích kiểu tóc của cậu.
+3805	Chúng ta sẽ sớm gặp lại. Mong là trước $RNgày Định Mệnh$B.
+3806	Gã này biết điều gì đó mà ta không biết. &PSao hắn tìm được chúng ta chứ?
+3807	Tôi không biết, và điều đó làm tôi sợ.
+3808	Ra khỏi đây trước đã. &NTrước khi con quái hay gã kia quay lại.
+3809	Ba ngày! 
+3810	Ba ngày bị nhốt ở cái chỗ chết tiệt này!
+3811	Lại động đất nữa!
+3812	Cái... không phải tại ta đâu!
+3813	...Chúng ta ra được rồi.
+3814	Vừa xảy ra chuyện gì vậy? Các nơi có $Rthông nhau$B sao? 
+3815	Ta không biết chuyện gì đã xảy ra. &NTa chỉ biết là có thể ra ngoài và phải tìm Channel.
+3816	Cuối cùng cũng ra được! &PChứng sợ chỗ kín của ta đỡ hơn nhiều rồi.
+3817	Này, chúng ta còn chẳng biết phải đi lối nào.
+3818	Đây là $RSouth Pendrik$B à? &PChúng ta quay lại rồi sao?
+3819	Chết tiệt. Không thể tin là ta lại quay về đây! &PEara đâu? Còn tên khốn kia nữa?
+3820	Chắc mình đã lỡ mất họ khi ở dưới lòng đất.
+3821	Tại ngươi đấy! &NSao lại để lỡ họ được?! &PHọ lộ liễu như con voi hồng trong hành lang rộng hai mét vậy!
+3822	Chỉ cần... im lặng mà đi.
+3823	Ben, đồ ô nhục, cử ngươi tới $Rám sát$B à? &PNày, thằng nhãi, tưởng làm được sao?
+3824	Đáng lẽ chuyện ta tới không được loan báo.
+3825	Bọn ta có mạng lưới do thám khá tốt. &PTrinh sát thấy ngươi từ cách xa cả dặm. &PNhưng ngươi chưa vào được đâu. &NKhông vào thì ngươi còn sống.
+3826	$G(Mình thật sự ghét bị người khác bảo phải làm gì…) &P(Nhưng có lẽ nên quay lại theo cách kín đáo hơn.)$B
+3827	Cửa bị khoá. Quay về làng rồi đi qua đường hầm thôi.
+3828	Chúng ta đang ở $RHeket Greenlands$B.
+3829	$RĐế quốc$B. Cuối cùng cũng tới.
+3830	Sao vậy, Eara?
+3831	Tôi nợ anh chuyện này. Không có anh thì tôi đã không tới được đây.
+3832	Và một mình thì cô cũng không về được Berkel đâu. Tôi sẽ hộ tống cô.
+3833	$RLính$B của $RĐế quốc$B?
+3834	Khoan đã… &NCô là $RChannel$B. Phải không?
+3835	Vâng. Chính tôi.
+3836	Thật tuyệt quá!
+3837	Chúng tôi nghe tin toàn bộ Đội giải cứu đã bị giết. &NAi cũng lo điều tồi tệ nhất xảy ra với cô ấy. &PBiết cô ấy còn sống thật nhẹ nhõm. &NCảm ơn anh, anh lính.
+3838	Tôi chỉ làm nhiệm vụ thôi.
+3839	Đường về Berkel còn xa. &NHãy nghỉ ngơi ở $Rdoanh trại$B đã. &PChúng tôi sẽ hộ tống cô về nhà.
+3840	Dọn chỗ trong doanh trại cho Channel.
+3841	Theo tôi, tôi dẫn mọi người tới doanh trại.
+3842	Không có gì nhiều nhưng mong là cô thấy thoải mái.
+3843	$G(Là gã $Rlúc trước$G…)$B
+3844	Channel! Thiếu nụ cười của cô, khoảng thời gian qua thật dài và trống trải.
+3845	$SAlexander$B!
+3846	Từ khi cô bị $Rbắt cóc$B, chúng ta ngày đêm lo lắng. &PVậy mà cô đây rồi, trông khoẻ mạnh lắm.
+3847	$SĐức Thánh Cha$B muốn gặp cô ở Berkel càng sớm càng tốt. &NChúng ta phải đi thôi.
+3848	X.... Xin lỗi, thưa ngài? 
+3849	Tôi được lệnh trực tiếp $Rhộ tống$B Channel về Kinh đô.
+3850	Ta thấy cậu mệt và cần nghỉ ngơi, nhưng chúng ta phải lên đường.
+3851	Nhưng... Channel cũng đang kiệt sức...
+3852	Ta biết, nhưng $RGiáo hoàng$B muốn gặp cô ấy. &PNgươi dám cãi lời Đức Thánh Cha sao?
+3853	Không, tất nhiên là không!
+3854	Vậy thì, Channel, đi thôi.
+3855	Kiyan... tôi sẽ gặp lại anh chứ?
+3856	Chắc là không đâu. &PTôi chỉ là một người lính. Chúng ta sẽ không gặp lại nữa. 
+3857	Tôi biết, tất nhiên rồi. Nếu có khi nào anh cần tôi…
+3858	Eara, nhanh lên, làm ơn. Chúng ta phải về trước khi trời sáng.
+3859	Ồ. Kiyan, một lần nữa cảm ơn anh vì tất cả.
+3860	Như tôi đã nói, tôi chỉ làm nhiệm vụ thôi.
+3861	Được gặp cô là vinh dự của tôi... Eara.
+3862	Có lẽ chúng ta sẽ lại nói chuyện ở Berkel… 
+3863	Vậy là nhiệm vụ giải cứu cô ấy đã hoàn tất.
+3864	Nhưng sao mình thấy trống rỗng quá.
+3865	Rẽ trái một chút, rẽ phải một chút.&PChúng sẽ kẹt đâu đó gần đây thôi! &NĐi nào!
+3866	$G(Cửa lại kẹt rồi.)
+3867	Kẻ xâm nhập, ngươi đừng hòng tiến thêm bước nào. &P$RBọn ta đã đóng cửa.$B. &NKhông thể mở được đâu. Hahaha.
+3868	$G(Chắc phải có cách.) &P(Xem thử chúng có giữ $Rchìa khoá$G không.)$B
+3869	$G(Tuyệt, giờ sao đây... phải kích hoạt cái đó mới mở được à?)$B
+3870	$G(Cái gì... lại về chỗ cũ à?!)$B
+3871	Ngươi có thề trung thành với Giáo hội Berkel không?
+3872	Tôi xin thề.
+3873	Ngươi có thề trung thành với Đế quốc không?
+3874	Ghi nhận công lao bảo vệ Channel, $RKiyan$B, ngươi được nhận vào $RHiệp sĩ đoàn Thánh Berkel$B.
+3875	Tôi sẽ phụng sự trong danh dự.
+3876	Kiyan… À không. Giờ ta nên gọi cậu là $RHiệp sĩ Kiyan$B mới phải.
+3877	Chúc mừng cậu. Chúng ta rất tự hào về thành tích của cậu.
+3878	Tôi chỉ làm những gì được lệnh thôi.
+3879	Ta rất vui khi biết có thể tin cậu sẽ tuân lệnh. Cậu đã thể hiện lòng trung thành và sự chủ động. &PVì vậy, ta khen ngợi cậu.
+3880	Giờ ta phải cử hành thánh lễ. &PCậu tới $Rvăn phòng$B ta đợi nhé. Chúng ta sẽ nói thêm.
+3881	Tôi hiểu. 
+3882	Ta đã phong tước hiệp sĩ cho Kiyan, nhưng đó là một quyết định cay đắng. &PVì mọi $Rkế hoạch$B đều không diễn ra như dự tính…
+3883	…xin Đức Thánh Cha tha thứ.
+3884	Alexander, có khi như vậy lại tốt hơn.. $Rcô ta$B có thể được dùng vào việc $Rcó lợi$B hơn như hiện giờ. &PTa sẽ có $Rbài phát biểu$B chính thức về sự trở về của Channel, chuẩn bị đi.
+3885	Dân chúng sẽ vui khi thấy ngài.
+3886	Vậy thần sẽ chuẩn bị mọi thứ, thưa Đức ngài.
+3887	Nước đi khôn ngoan đấy, Kiyan. &PTa không định để cậu thành hiệp sĩ, nhưng có cậu cài vào trong sẽ dễ dàng hơn nhiều.
+3888	Cảm ơn Hồng y. &PTất nhiên, tôi hoàn toàn trung thành với Shadow Tribe.
+3889	Cậu còn gì muốn nói không?
+3890	Ta chắc chuyến đi dài đã làm cậu kiệt sức. &PVề phòng nghỉ ngơi đi.
+3891	Lạ thật. Nhiệm vụ này thành công rõ ràng. &PĐáng lẽ mình phải vui mới đúng.
+3892	Lại chẳng có tin gì của Eara. &PMong cô ấy vẫn ổn.
+3893	Kiyan, cậu có ở đây không?
+3894	Tôi không làm phiền chứ?
+3895	Không. Cô cứ nói.
+3896	Có chuyện xảy ra. &PCó lẽ tôi cần cậu giúp.
+3897	Chuyện về $SLeiden$B, nhà giả kim. &PÔng ta được nhờ chế tạo một bộ $Rgiáp$B cho chúng ta, có vẻ đã làm xong. &PTôi phải tham chiến trong $Rkhoá huấn luyện của Shadow Tribe$B, cậu lấy bộ giáp từ ông ta giúp tôi được không?
+3898	Cứ để tôi. 
+3899	Cảm ơn cậu. Ông ta đã tới $RShadow Warehouse$B. 
+3900	Cảm ơn cậu. Cậu giúp tôi nhiều lắm. &PMà gã đó đòi những nguyên liệu kỳ lạ thật… không biết để làm gì?
+3901	E hèm. Nhờ cậu mà bộ giáp sắp xong rồi. &PTôi nhờ cậu mang cái này về cho $SDarius$B được không?
+3902	Cảm ơn cậu nhiều lắm. &NMong là sẽ gặp lại sau.
+3903	$G(Về $Rphòng$G nghỉ chút thôi.)$B
+3904	Vài ngày sau...
+3905	Bộ giáp đã hoàn thành.
+3906	Cảm ơn cậu vì việc này, Kiyan.
+3907	Không có gì đâu.
+3908	Vậy ta để cậu nghỉ ngơi.
+3909	Thưa ngài! Darius!
+3910	Chuyện gì? 
+3911	Chuyện lớn rồi. $RHọc viên của Shadow Tribe$B bị cô lập trong $RTraining Dungeon$B!
+3912	Ngươi nói gì vậy? &NQuái trong hầm yếu lắm. &PHọc viên không đánh nổi chúng sao?
+3913	$SPhù thuỷ hắc ám Kane$B đã làm thí nghiệm cường hoá lũ quái này để nâng cao kỹ năng cho học viên. &PCó vẻ sự cố xảy ra khi học viên vào hầm sau khi lũ quái nổi điên.
+3914	Tuyệt, nghe tuyệt thật. &NPhần lớn Shadow Tribe đang ra trận, nên..
+3915	Tôi sẽ xem có thể làm gì, thưa ngài.
+3916	Kiyan, chỉ còn cậu thôi.
+3917	Trước tiên, tới gặp $SKane$B. Hắn sẽ có câu trả lời.
+3918	Cậu nghe chuyện chưa?
+3919	Tin ta đi. Ta nghe đủ rồi. &PTừng giây! Lúc nào cũng vậy! &NNgười trong tộc cứ nhắc đi nhắc lại…
+3920	Vậy có cách nào ngăn chúng không?
+3921	Ta cần cậu tới đó xem chúng điên loạn tới mức nào. &PVào $RTraining Dungeon$B, hỏi các $Rhọc viên$B. Ta cần cậu báo cáo tình hình.
+3922	Vâng, tôi sẽ làm. &NXin ông khẩn trương với thuốc.
+3923	Ta sẽ cố hết sức. 
+3924	Sơ tán người bị thương. Nhanh lên.
+3925	Cảm ơn anh! Tôi sẽ nhớ ơn hôm nay.
+3926	$G(Giờ phải quay lại chỗ $RKane$G.)$B
+3927	Một con quái điều khiển cả bầy? &NThú vị.. thí nghiệm thật sự thành công! &PTrí thông minh tăng vọt, cả cử động cơ thể nữa… Ta đúng là thiên tài!
+3928	E hèm…! Giờ, có lời của cậu và đám học viên, ta chỉ cần chế thuốc thử làm chúng dịu lại. &PĐợi đó. Ta sẽ bắt đầu ngay lập tức, và…
+3929	Ông đang ra lệnh cho Kiyan đấy à? 
+3930	Mớ hỗn độn này hoàn toàn là lỗi của ông, đúng không? Liệu mà sửa đi.
+3931	P...Portia!
+3932	Kiyan. Tôi nói chuyện với cậu chút được không?
+3933	Được.
+3934	Có chuyện gì vậy?
+3935	Gần đây cậu đã gặp $SLeiden$B. Phải không?
+3936	Nhà giả kim ấy à? Phải.
+3937	Gần đây ông ta nói có một $Rgã khả nghi$B xuất hiện trong tộc. &PÔng ta và tôi hẹn sẽ gặp lại sau khi tìm được $Rbằng chứng cụ thể$B, nhưng từ đó tôi mất liên lạc với ông ta. &PHơn nữa, hôm qua $Rhệ thống phát hiện đột nhập$B ở chỗ ông ta đã bị kích hoạt. &PPhép của thiết bị đó có hoạt động không? Nói thật, tôi thấy không yên tâm.
+3938	Vậy nên cậu đi cùng tôi tới $Rnhà Leiden$B. &PĐể tránh $Rlính kiểm tra$B, $Rthân phận hiệp sĩ$B của cậu sẽ rất cần thiết.
+3939	Tôi sẽ xem có làm được gì. 
+3940	Cảm ơn cậu. Nhà Leiden ở rìa $RHanun Forest$B. &NSẵn sàng chưa?
+3941	Không có ai ở nhà…
+3942	Lạ thật. Tôi thấy rợn người… ông ta biến mất rồi. 
+3943	Biết ngay mà. Hai người các ngươi cùng một phe. 
+3944	Ngươi mới được phong hiệp sĩ đúng không? &PVậy ra ngươi là $Rkẻ ngoại đạo$B!
+3945	Cô ta nói gì vậy?
+3946	Ồ, đừng giả vờ không biết. &NBọn ta biết tên giả kim theo phe bên kia. &PCó người thấy lão nói chuyện với lũ hắc ám!
+3947	May mà bọn ta mai phục... &NBị bắt như chuột chết, hả? &NBắt chúng!
+3948	Chắc là hết rồi.
+3949	Làm tốt lắm, Kiyan.
+3950	Nhưng vì sao Leiden lại bị lộ? &PChỉ cần ông ta hé một lời về tộc ta là chúng ta tiêu đời.
+3951	Dùng $Rthuật gọi hồn$B kéo linh hồn gã này về, chúng ta có thể tìm ra tung tích Leiden.
+3952	Kiyan, tôi cần những $Rnguyên liệu$B sau để gọi hồn: $Rlưỡi rắn đỏ$B, $Rtim sói đen$B và $Rthảo dược đỏ$B. &PTất cả đều có ở $RHanun Forest$B.
+3953	Sao… các người muốn gì….
+3954	Xin lỗi vì cản đường ngươi sang thế giới bên kia, nhưng chúng ta cần câu trả lời.
+3955	Chúng đã đưa $Rnhà giả kim$B đi đâu? &NChúng định làm gì ông ta? &PKhai hết những gì ngươi biết.
+3956	Hắn bị... đưa từ $RHanun Forest$B tới một $Rtu viện$B. &PShadow Tribe đang bị truy lùng.
+3957	Gì cơ...?
+3958	Đây là $Rdị giáo$B. &PShadow Tribe… $Rđồ bị nguyền rủa$B.
+3959	Tôi không hiểu, rốt cuộc bị lộ từ đâu chứ?
+3960	Nếu Leiden khai, hoặc tệ hơn, giao nộp $Rdanh sách tín đồ của tộc$B, tất cả chúng ta sẽ cùng sụp đổ…!
+3961	Đây là tình trạng khẩn cấp. &NPhải đưa Leiden ra khỏi $Rtu viện$B ngay.
+3962	Nếu Leiden đã hở miệng, cậu sẽ phải $Rthủ tiêu$B những kẻ liên quan, cùng mọi tài liệu buộc tội.
+3963	Nhanh lên. Có thể Leiden đang khai… hoặc tệ hơn, đã khai và bị giết rồi...
+3964	Tuần Thánh ở Berkel chưa kết thúc, nên lúc này người ngoài không được vào tu viện.&PNhững ai tuân theo luật lệ của giáo hội sẽ giữ đúng nguyên tắc.
+3965	Như đã nói, Tuần Thánh ở Berkel chưa kết thúc, nên tu viện cấm người ngoài.
+3966	Lũ ngoại đạo! Tấn công!
+3967	ÁAAA!!
+3968	La hét chẳng giúp được gì đâu, anh lính. &PNếu đó là món vũ khí nhọn nhất của ngươi thì thật đáng buồn.
+3969	Kiyan? Cả Portia nữa?
+3970	Sao ông lại bị bọn thánh chiến bắt? Chúng đã biết được những gì?
+3971	À, ừ, chuyện là…
+3972	Kẻ tội đồ đã thú nhận lỗi lầm. &PGiờ hắn sẽ được tha thứ nhân danh giáo hội... bằng cái chết.
+3973	Thế nhưng, vẫn còn những kẻ xưng tội nhận ra mình là tội đồ, và Đấng trên cao đã ban xuống một dấu hiệu.
+3974	Ngươi hẳn là kẻ cầm đầu dị giáo.
+3975	Bọn ta đã thề diệt trừ tín đồ của Moar, lũ ký sinh quái gở của đức tin. &PNếu tên ngươi không có trong danh sách này, hãy biết rằng ngươi có phúc vì bị coi là kẻ không đáng kể.
+3976	$G(Vậy hắn là kẻ giữ danh sách mà Leiden nói.)$B
+3977	Tín đồ giáo hội Berkel thật đáng thương. Chết đi.
+3978	Lũ ngoại đạo! Tưởng diệt được ta sao? &PÝ nghĩ thật lố bịch, nhưng phải nói là, với thân phận dị giáo, các ngươi khá gan dạ… &PĐể xem sau trận này các ngươi còn nói được không? &NHỡi các tín đồ! Xông lên!
+3979	Kẻ phản bội sẽ bị trừng phạt dưới quyền năng của giáo hội!
+3980	Lũ Shadow Tribe các ngươi! Chết đi!
+3981	…$RQuái vật$B sao?
+3982	Sao ngươi biết nơi này? Đây là $RSecret Sanctum$B ở Berkel!
+3983	…Tôi không chắc lắm.
+3984	$G(Thoạt nhìn thì giống $Rma thuật hắc ám$G.)$B
+3985	$G(Nhưng không, cảm giác có gì đó khác…)$B
+3986	Tôi không thích chuyện này. Tốt nhất đừng ở lại đây.
+3987	Đi thôi.
+3988	Được rồi. Ở đây ta phải chọn một đường.
+3989	Có vẻ phía này bị chặn. &NKhông còn cách nào ngoài thử phía kia.
+3990	Gì cơ?! Một $ROrc$B?!
+3991	$RVết thương$B này nặng quá. &NPhải chữa ngay; để tôi làm.
+3992	Anh sẽ ổn thôi...
+3993	Hừ… cảm ơn cô. &NNhững con người khác thì đã khắc nghiệt hơn với bọn Orc chúng tôi.
+3994	Tôi là $SOlaf$B. Chiến binh của $RSteel Orc Tribe$B
+3995	Cứ gọi tôi là Eara.
+3996	Eara? Cô là Channel.
+3997	Được gặp cô là vinh dự của tôi.
+3998	Vinh dự là của tôi mới đúng. &NSao anh lại bị thương nặng thế này?
+3999	Tôi đang ở $Rtrạm gác$B gần làng thì bị $RBone Orc$B tấn công. &PTôi trốn được tới đây, nhưng vết thương thì cũng sắp giết tôi rồi. &PCô đã cứu mạng tôi. Cảm ơn cô. Steel Orc trọng danh dự, cô sẽ được đền đáp.
+4000	Tôi không cần đền đáp. Thấy anh còn sống là tôi vui rồi.
+4001	Nhưng điều gì đưa hai người tới đây? &NCon người không hay lang thang vùng này.
+4002	Chúng tôi đang trên đường tới $RĐế quốc Berkel$B. Anh chỉ đường giúp được không?
+4003	Chỉ $RTrưởng lão$B của tộc tôi biết đường, chiến binh ạ. &PTôi phải về làng báo cho mọi người biết về $RBone Orc$B. &PKhi đó, để cảm ơn đã cứu tôi, có lẽ hai người sẽ được chỉ đường.
+4004	Vậy thì lên đường thôi. &PRa khỏi Sanctum này sẽ tới $RSteel Swamp 2$B. Phía bắc đó là làng tôi.
+4005	$SMarduk$B!
+4006	Olaf! Gặp anh ở đây thật tốt. &NChúng ta gặp rắc rối rồi.
+4007	Rắc rối? Kể tôi nghe.
+4008	$RBone Orc$B đã bắt cóc $RTrưởng lão$B của chúng ta!
+4009	Sao chúng tiếp cận được ngài ấy chứ?!
+4010	Anh chưa biết hết đâu. Ở đây không nói được, theo tôi tới $Rtrạm gác$B.
+4011	Dẫn đường đi.
+4012	Olaf, khoan đã.
+4013	Chuyện gì?
+4014	Con người không được vào làng. &NLuật này tồn tại quá lâu rồi, không thể bỏ qua. &PXin lỗi, nhưng cánh cổng này sẽ không mở cho các người, những kẻ lạ mặt.
+4015	Những người lạ này đã cứu mạng tôi. &NTôi đề nghị nhận họ làm thành viên danh dự của tộc ta.
+4016	Họ cứu anh? &NCon người cứu một Orc sao?
+4017	Đúng vậy, anh bạn. Họ xứng đáng được ở cùng chúng ta. &PHơn nữa, có thể chúng ta sẽ cần đến họ.
+4018	Tôi thấy người đàn ông này mạnh. &NNhưng còn người phụ nữ?
+4019	Tâm trí cô ấy vững vàng, lại sắc sảo.
+4020	Vâng... tuy trông tôi yếu ớt, nhưng sức mạnh của tôi sẽ giúp ích nhiều cho các Orc.
+4021	Như đã nói, sức mạnh của cô ấy rất hữu ích.
+4022	Và... tôi phải nói thật. &PChúng tôi đang làm nhiệm vụ ngoại giao tối mật, từ Brtjvbz. &PThân phận ngoại giao không cho phép chúng tôi tiết lộ bất cứ điều gì thấy ở đây. &NChúng tôi đã thề.
+4023	…Họ đã thề. &PHọ đã cứu mạng tôi, Marduk. &NTôi tin lời họ. &PTôi sẽ chịu trách nhiệm cho họ, với tư cách thành viên danh dự. &NTôi sẽ bảo lãnh cho họ. 
+4024	…Được thôi. Anh đặt cược tên tuổi và danh dự của mình vào cách cư xử của họ đấy.
+4025	Đi thôi, Kiyan.
+4026	Brtjvbz? Có nơi đó thật à?
+4027	Giờ kể thêm đi. &NTrưởng lão bị bắt cóc giữa ban ngày? &PSao lại xảy ra chuyện đó? &NCó manh mối gì không?
+4028	Tôi nghĩ là do sức mạnh mà $RBone Orc$B đã phát triển mấy năm gần đây.
+4029	Trưởng lão đã yểm một $Rphép$B bảo vệ ngôi làng.
+4030	Khi Bone Orc tấn công $Rtrạm gác$B, Trưởng lão bị bắt cóc từ $RSteel Altar$B lúc đang dâng lễ vật.
+4031	Vậy… cuộc tấn công chỉ là nghi binh.
+4032	Tôi xin lỗi. &NTôi không ngờ Trưởng lão có thể bị bắt cóc giữa ban ngày.
+4033	Dù là thành viên danh dự, các vị cũng không cần phải chọn phe trong mối thù này. 
+4034	Tuy nhiên, tình thế là vậy, tôi buộc phải $Rnhờ$B các vị một việc.
+4035	Đường tới Berkel cực kỳ khó tìm, chỉ Trưởng lão của chúng tôi biết. 
+4036	Các vị giúp chúng tôi cứu ngài ấy được không? 
+4037	Chúng tôi rất vinh dự được giúp.
+4038	Cảm ơn rất nhiều.
+4039	Trước hết hãy tìm $Rmanh mối$B ở $RSteel Altar$B. &PBệ thờ nằm ở $Rphía đông$B $RSteel Swamp 2$B.
+4040	Đây là bệ thờ Trưởng lão dùng để làm lễ.
+4041	Trên đó viết gì vậy?
+4042	Đây là…
+4043	Đây là một trong nhiều $Rký hiệu$B tượng trưng cho Bone Orc và quân đội của chúng. 
+4044	Cái này hẳn là của $RNight Hunters$B. 
+4045	Tôi nghe nói chúng hay quanh quẩn ở phía $Rtây nam$B $RShadow Swamp$B. &PTới đó $Rphục kích$B lấy thông tin thôi. 
+4046	Đi thôi. 
+4047	Nấp sau cái cây này đợi phục kích. &PChúng là lũ xảo quyệt, thích chỗ ẩm ướt tối tăm.
+4048	Có vẻ chúng tới trễ.
+4049	Suỵt! Tôi nghe thấy gì đó.
+4050	Cuối cùng các ngươi cũng tới! 
+4051	Ngươi là Steel Orc. &NSao dám đặt chân lên đất của bọn ta?
+4052	Không thể tha thứ.
+4053	Bắt hắn. Hắn phải trả giá.
+4054	Có giỏi thì thử đi!
+4055	Các ngươi đưa Trưởng lão của bọn ta đi đâu?
+4056	Haha, được thôi, ta nói cho mà nghe. &NNhưng ta e là các ngươi không kịp cứu lão đâu.
+4057	"Trưởng lão" hay gì đó của các ngươi đang chết dần chết mòn ở $RFort of Screams$B!
+4058	$RFort of Screams$B?! &NTôi chẳng thích cái tên đó chút nào.
+4059	Haha, lão sẽ không bao giờ thoát khỏi cái địa ngục đó. 
+4060	Ngươi và cả lũ Steel Orc sẽ sớm bỏ mạng thôi!
+4061	Đó là nơi cuối cùng tôi mong tìm thấy ngài ấy...
+4062	Đường tới nơi ở của Bone Orc được canh gác cẩn mật. Giờ chưa vào được.
+4063	Quay về làng, suy nghĩ thật thấu đáo rồi lập kế hoạch tìm Trưởng lão.
+4064	$RFort of Screams$B? Không ổn rồi.
+4065	Không thể đi cửa chính. Không có đường vào.
+4066	Không, thật ra tôi nghe nói có thể còn lối khác; $RHwagan Canyon$B. 
+4067	Nhưng nhiều quái vật mạnh rình rập khu đó ngày đêm. &PChưa kể $RGiant Golem$B. Chúng ta không địch nổi.
+4068	Olaf, anh có nghe về $RNgười lạ ở Hwagan$B chưa? 
+4069	$RNgười lạ$B?
+4070	Ừ. Khoảng một tháng trước có một $Rcon người$B cố vượt qua. &NHắn mang về nhiều lời đồn.
+4071	Nếu là thật thì gã đó sẽ biết $Rcách đánh golem$B.
+4072	Hay là đi tìm hắn trước?
+4073	Có vẻ chúng ta không có nhiều lựa chọn. Làm vậy đi.
+4074	Đi về $Rphía nam$B tới Hwagan Canyon tìm $Rngười lạ$B này.
+4075	Krrrrarrrrrrrrr
+4076	Thịt trông ôi rồi, nhưng ngươi là của ta.
+4077	Có phải người đó không?
+4078	Phải, chính hắn. 
+4079	$G(Hắn hạ con quái đó chỉ bằng một đòn. Hắn là ai vậy..)$B
+4080	Giờ đi hỏi người đó cách vượt qua cánh cổng đi.
+4081	…Anh còn nhớ tôi không?
+4082	Không. Đáng lẽ phải nhớ à?
+4083	Có lẽ không, chắc tôi nhầm. &NCác người muốn gì ở tôi?
+4084	Để tôi tóm tắt.
+4085	…Chuyện là vậy đó. 
+4086	Chỉ có vũ khí mang tên $RPower of the Dragon$B mới hạ được con quái đó.
+4087	Sức mạnh của rồng?
+4088	Đó là một thanh kiếm, được tạc từ $Rxương rồng$B.
+4089	Thanh kiếm đó ở đâu? Anh có nó không?
+4090	Thanh kiếm này không thể rơi vào tay người khác. &PNhưng tôi có thể tung $Rđòn kết liễu$B thay các người.
+4091	Anh làm được thật sao?
+4092	Tôi không bao giờ hứa suông.
+4093	Vậy thoả thuận nhé. Đi thôi..
+4094	Khoan. Trước khi đi, có một vấn đề.
+4095	Vũ khí đã bị gãy trong lúc tôi đi lấy nó.
+4096	Muốn giết golem, kiếm phải ở tình trạng hoàn hảo. &PThanh kiếm này làm từ $Rxương rồng$B, và chỉ có $Rorihalcum$B, một loại vật liệu đặc biệt, mới sửa được. &PNhưng tôi không biết tìm nó ở đâu.
+4097	Hừm.. có thể lấy orihalcum ở $Rphía đông$B hẻm núi, tại $RMysterious Spring$B. &PKhu đó cấm con người, nhưng vì cần anh giúp nên chúng tôi sẽ lấy $Rorihalcum$B cho anh.
+4098	Tuyệt. Thanh kiếm khá lớn, nên cần mang về khoảng $R5$B phần vật liệu. &PTôi sẽ đợi ở $Rnhà$B.
+4099	Kiếm sửa xong rồi. &PNhưng tôi chỉ tung đòn kết liễu thôi; tôi không muốn dính líu nhiều.
+4100	Được. Vậy đi thôi.
+4101	Krrrarrr…
+4102	Sinh vật này hôi quá.
+4103	Mọi người cầm vũ khí lên! &NChúng ta bị tấn công!
+4104	Krrrarrrr!!!
+4105	Tránh ra.
+4106	Để tôi lo.
+4107	Biến đi, đồ quái vật ghê tởm!
+4108	Krrr..rrar…..
+4109	Căng thẳng thật.
+4110	$G(Anh ta mạnh quá… may mà anh ta đứng về phía chúng ta.)$B
+4111	Tôi nghĩ mình đã làm hết sức rồi. 
+4112	Cảm ơn anh đã giúp. &NChúng tôi không chắc có đủ để đền đáp lòng tốt của anh.
+4113	Ồ, tôi chỉ đang chán thôi. &NĐừng bận tâm.
+4114	Vả lại, tôi vui một cách kỳ lạ khi gặp được tất cả các người, những người tôi mong gặp từ lâu. &PTôi không nghĩ chuyện đó lại xảy ra lần nữa.
+4115	Lời anh nói một đằng nhưng tôi e ý anh lại khác.
+4116	Có khi nào anh biết tôi không?
+4117	Tên tôi là $SAzad$B.
+4118	Tôi đến từ quá khứ của cậu. &NCậu sẽ sớm biết thôi.
+4119	$G(Gã này điên rồi.)$B
+4120	Được rồi, ngượng ngùng thật đấy. &NNhưng chúng ta cần ra khỏi hẻm núi đã. &PCẩn thận nhé. &NLãnh thổ Bone Orc ở ngay đằng kia.
+4121	Chúng ta đang tiến sâu vào lãnh thổ Bone Orc. $RPhép thuật$B sẽ giúp ta che giấu thân phận. &PPhép này là sở trường của $RSteel Orc$B.
+4122	Tôi không thoải mái với phép thuật man rợ.
+4123	Nó sẽ cho chúng ta sức mạnh, mà ta đang cần đấy, chiến binh.&PMang cho tôi $Rbùn hôi$B và $Rsọ gấu vuốt đỏ$B, mỗi thứ $R7$B cái. &PNguyên liệu không xa đâu. 
+4124	Nước suối kia sẽ tinh khiết hơn nước ao. &PLấy đủ nguyên liệu rồi gặp tôi ở $Rcon suối$B trên kia.
+4125	Sọ, nước và bùn trộn với nhau… &NNgười ta tưởng chỉ là trộn bừa. &PNhưng với linh hồn tổ tiên tôi, nó sẽ thành $Rthuốc thử$B đầy uy lực.
+4126	Xong rồi. Và đây là $Rmặt nạ$B để mỗi người che giấu thân phận. Đeo vào đi.
+4127	Chuẩn bị giải cứu $STrưởng lão$B thôi. &PĐi về phía $Rtây$B sẽ thấy $Rtrạm gác$B của Bone Orc. &NLên đường!
+4128	$G(Đi lên thêm chút nữa là $Rtrạm gác của Bone Orc$G.) &P(Phép của $ROlaf$G chưa hoàn tất thì lại gần chúng nguy hiểm quá.)$B
+4129	Ta chưa thấy mấy gã này bao giờ.
+4130	Phải, bọn tôi mới được điều tới hỗ trợ. 
+4131	Phù… Bọn ngươi hôi quá. &NĐi tắm trước khi làm việc đi.
+4132	Rõ. Hẹn ca sau.
+4133	$GMặt nạ có tác dụng thật. &NTuyệt vời.
+4134	$GVậy thì đi thôi.$B
+4135	Chuyện gì đây? &NTa chưa nghe nói hôm nay có lính mới tới.
+4136	Sao ngươi dám?! Lính mới?! Bọn ta á?! &NBọn ta là Tổng thanh tra nhận lệnh trực tiếp từ $SZahad Kuruhatt$B! &PCư xử cho đàng hoàng trước khi bọn ta quyết định kiểm tra trạm của ngươi!
+4137	Ôi, tôi xin lỗi! Mời ngài vào.
+4138	$RTrưởng lão Steel Orc$B có thông tin mà bọn ta được lệnh phải moi ra. Lão ở đâu?
+4139	Ở $Rtầng 3 Fort of Screams$B.
+4140	Được. Nghỉ.
+4141	$GVậy là biết ngài ấy ở đâu rồi.
+4142	$G$RFort of Screams$B chính xác ở đâu?
+4143	$GChính là nơi đó.
+4144	$GĐược rồi. Tôi sẵn sàng.
+4145	$GKhông đơn giản thế đâu.
+4146	$GCó vấn đề gì?
+4147	$GNếu xông thẳng vào, quân tiếp viện sẽ ập tới, chúng ta sẽ bị kẹt trong pháo đài. &PCần kế hoạch rút lui, và cách duy nhất là cắt đường gọi quân tiếp viện. &PNghe nói $R4 chiếc tù và$B chúng dùng để gọi cứu viện ở tầng 2 pháo đài. &PPhải $Rphá huỷ$B chúng trước khi cùng Trưởng lão thoát ra.
+4148	$GHiểu rồi.$B
+4149	Không cần đeo mặt nạ nữa. &NTừ đây trở đi là cuộc chạy đua với thời gian. &PMặt nạ chỉ thêm vướng víu, bỏ ra đi.
+4150	$G(Phá hết đám tù và. Chưa phá xong mà đi lên thì quá liều lĩnh.)$B
+4151	Trưởng lão, ngài không sao chứ?
+4152	Olaf, là con đấy à?!
+4153	Đừng lo, thưa ngài. Con sẽ đưa ngài ra.
+4154	Bone Orc đã yểm $Rphép$B lên song sắt. Nhà ngục này không mở bằng cách thường được. &P$RTrưởng ngục$B đã khoá ta bằng $Rchìa khoá đặc biệt$B. Chỉ chìa khoá đó mới giải thoát được ta.
+4155	Tên trưởng ngục đó ở đâu?
+4156	Không xa đây đâu. Từ lúc ta bị giam, hắn chưa rời tầng này.
+4157	Con hiểu rồi. Xin ngài đợi con tìm tên đó.  
+4158	Giờ ưu tiên là cứu Trưởng lão. Mau tìm chìa khoá của trưởng ngục.
+4159	Các vị đã tìm được chìa khoá. &NGiờ đi cứu Trưởng lão thôi.
+4160	Olaf, nhờ con mà ta được tự do.
+4161	Nhưng ta chưa từng gặp hai người gầy gò này.
+4162	Họ mới là lý do thật sự giúp ngài được tự do.
+4163	Ân nhân $Rcứu mạng$B của ta sao?
+4164	Về làng rồi hãy kể cho nhau nghe.&PGiờ thì quay về làng thôi.
+4165	Ồ, khoan đã. &NChưa xong đâu.
+4166	Dưới sự chỉ dẫn của pháp sư xương $SZahad Kuruhatt$B, chúng vẫn có thể xoá sổ làng ta. &PTa phải bảo vệ dân làng, và sẽ không về trước khi ngăn được linh hồn tà ác này đọc thần chú.
+4167	Có thể tìm kẻ này ở đâu?
+4168	Ở $Rbệ thờ$B phía bắc đây. &NTa chắc nếu nhanh chân thì có thể ngăn hắn.
+4169	Ta thấy các ngươi tới đây bình an vô sự. &PLại còn kéo theo cả con người?! Sợ không dám tới một mình à? &PCũng được, lũ người của các ngươi sẽ là vật tế hoàn hảo để phép này thành công.
+4170	Ngươi có thể khao khát huỷ diệt, nhưng chúng ta sẽ không để điều đó xảy ra.
+4171	Ồ, vui đấy. &PCó chút kháng cự càng thêm kịch tính.
+4172	Bao anh em của ta đã chết dưới tay ngươi. &NNgươi sẽ phải trả giá bằng máu.
+4173	Thôi nói nhiều và giết ta đi, nếu dám.
+4174	Đồ...!
+4175	Ngươi là ai...? Ngươi không phải $SZahad Kuruhatt$B!
+4176	Ha. Bất ngờ chưa.
+4177	Chuyện gì đang xảy ra? &N$SZahad Kuruhatt$B đâu?!
+4178	Haha, điều gì khiến các ngươi nghĩ ta sẽ nói? &PLũ orc ngu ngốc như các ngươi sẽ không bao giờ biết bọn ta định làm gì. &PCác ngươi thấy đấy… khi anh trai ta trở về thống nhất Bone Orc, con người và lũ não sắt các ngươi sẽ... chết…
+4179	…Ngươi là ai? Zahad Kuruhatt ở đâu!
+4180	Muwahaha haa haa haa...haa...
+4181	Hắn chết rồi. Chết tiệt.
+4182	Thêm một nạn nhân trên đường đi…&NSteel Orc sẽ chết? &NTôi không hiểu.
+4183	Phải thừa nhận tôi hơi rối, nhưng chắc chắn đây là điều chúng ta cần biết. &PHãy về $RElder's House$B trong làng; có thể sẽ có manh mối để bắt đầu. &PNhưng nếu về cùng Trưởng lão vừa được giải cứu thì không thể chần chừ, phải về thẳng làng orc, nên hãy suy nghĩ kỹ trước khi đi. 
+4184	Hắn có một người anh em sinh đôi. Ai mà ngờ được chứ?
+4185	Chuyện này làm tôi bất an.
+4186	Nhưng nghe con có vẻ khá bình tĩnh. &NThế là tốt. &PVậy, những người trẻ đang giúp chúng ta là ai?
+4187	Họ đang tới Berkel. &PHọ đã cứu một người của chúng ta, nên trở thành thành viên danh dự của tộc.
+4188	Hỡi những người trẻ, cảm ơn các vị đã bảo vệ những gì lẽ ra ta phải bảo vệ.
+4189	Chúng con đã nói với họ rằng $Rngài$B có thể chỉ đường tới Berkel.
+4190	Phải. Ta nghĩ ta nợ các vị điều đó. &PĐường tới Berkel bắt đầu từ $RSecret Sanctum$B, phía $Rtây$B đây.
+4191	Ồ, Secret Sanctum… Quanh đó chẳng phải có sinh vật kỳ lạ sao?
+4192	Đúng vậy. Ta thấy cô hiểu biết hơn vẻ ngoài đấy, cô gái. &PCó một lối vào bị chặn, đó là đường duy nhất trở về thế giới loài người. &PNơi đó toả ra hào quang tà ác, nên cô và ta sẽ chịu trách nhiệm về phong ấn.
+4193	Chúng tôi dùng con đường đó được không? Chúng tôi cần về Đế quốc càng nhanh càng tốt.
+4194	Hừm… vậy ta sẽ đưa các vị $Rcuộn phép$B chứa thần chú giải phong ấn.
+4195	Vì các vị không còn cách nào khác ngoài đi lối này, hãy cẩn thận với hào quang tà ác. &PChúc các vị mọi điều tốt đẹp nhất.
+4196	Các vị không chỉ cứu tôi mà còn cứu cả Trưởng lão.... biết lấy gì báo đáp đây? &PNếu khi nào cần, tôi hứa sẽ giúp các vị. &PTạm biệt nhé, chàng trai.
+4197	$G(Mình phải quay lại $SSecret Sanctum$G)$B
+4198	$RSách phép$B nhận từ Trưởng lão sẽ giúp được.
+4199	Xong rồi. Phong ấn đã biến mất.
+4200	$RHào quang hắc ám$B ngày càng dày đặc… &PTôi chưa từng cảm thấy thứ gì như vậy. &NChuyện gì đang xảy ra?
+4201	Á!
+4202	Kiyan, anh không sao chứ?
+4203	$G(Đột nhiên, đầu mình…)$B
+4204	Anh bị sao vậy?
+4205	....Phù. Không có gì.
+4206	Đi thôi. &NKhông được lãng phí thời gian.
+4207	Anh chắc là đi được chứ?
+4208	Chỉ là cơn đau thoáng qua thôi. &NĐừng lo. Đi thôi.
+4209	Tuỳ anh vậy.
+4210	Có người ở đằng kia!
+4211	Thưa ông, ông là thầy tế của Sanctum phải không?
+4212	Sanctum này bị sao vậy? &NTôi nghe nói đây là Secret Sanctum của Berkel, nhưng..
+4213	Krrrrrrrr…
+4214	Krrrrrrrrrraaaaaaaaarrrgggghhhh!!
+4215	CHẾT ĐI!! CÁC NGƯƠI SẼ CHẾT HẾTTT!!!!
+4216	Chắc ông ta bị nhiễm rồi. Cẩn thận!
+4217	Krrrrargh…!
+4218	Rốt cuộc chuyện gì đang xảy ra vậy…
+4219	Đây là lời nguyền. Giờ chỉ có $Rsức mạnh ánh sáng$B mới cứu được ta. &PĐi đi trước khi các ngươi bị $Rnguyền rủa$B...
+4220	Lời nguyền? Trông đâu giống.
+4221	Ở $REast Library$B… có...
+4222	$RLời nguyền$B là sao?
+4223	$G(Ui… đau đầu… lại nữa…!)$B
+4224	$G(Mình bị sao… thế này….)$B
+4225	Kiyan? Anh không sao chứ?
+4226	À.. ừ. Tôi ổn.
+4227	Anh đang phun máu kìa, biết không?
+4228	Không phải lần đầu đâu. Tôi khoẻ hơn vẻ ngoài mà. &PTới $REast Library$B đi, ở đó có thể tìm được $Rmanh mối$B.
+4229	...Nếu anh nói vậy....
+4230	Mong là anh khoẻ thật. Tôi không cõng anh nổi đâu.
+4231	D-20. Sanctum vẫn bị một luồng hào quang không rõ từ tầng hầm làm ô uế.
+4232	$STrưởng tu viện$B đã cố phong ấn năng lượng này, nhưng lại bị nó nuốt chửng, biến thành quái vật.
+4233	Không! Áaa!!!!!!
+4234	Krrrrraaaaarrrrrr!!!!
+4235	Chạy khỏi ông ta rồi nhốt ông ta trong nhà nguyện, suýt nữa là không kịp..
+4236	Tuy nhiên, đường duy nhất tới Đế quốc lại đi qua nhà nguyện.
+4237	Các $Rlính gác$B đều giữ $Rchìa khoá nhà nguyện$B, nhưng khi mất trí, họ đánh nhau loạn xạ, giờ chẳng biết ai đang giữ chìa.
+4238	Ngươi mới là đồ chết!!! Krrrarrr!!
+4239	Dù có thể thoát khỏi tầm tay họ khi họ đang đánh nhau dưới hầm...
+4240	Tôi cũng không chịu nổi hào quang tà ác đang dần nuốt chửng ý chí mình nữa…
+4241	Ai đọc được cuốn nhật ký này… xin hãy…&Nngăn lời nguyền này lan rộng…
+4242	Thật khủng khiếp..
+4243	Chắc không có chìa khoá thì chẳng còn lối thoát nào. Chúng ta sẽ phải đánh $RMutated Chief Abbot$B. &PTrước hết phải tìm chìa khoá từ một trong những $Rlính gác$B bị nhiễm dưới tầng hầm. 
+4244	Một tiếng ngân lạ vang lên trong nhà nguyện, và cánh cửa mở ra...
+4245	$G(Mùi gì kinh tởm vậy? Buồn nôn quá!)$B
+4246	C-cái gì... Cảm giác như từ thế giới khác… &PCô có cảm thấy không? &N$RHào quang hắc ám$B thật đáng sợ... &PCó lẽ đó là thứ mà vị thầy tế nhắc tới?
+4247	Tôi ghét bóng tối. Áaa!
+4248	Cô không sao chứ, Eara?
+4249	Tôi bị giật mình thôi. Bóng tối không phải điều tôi thật sự lo. &PCảm giác hắc ám đột ngột, luồng hào quang đó, mới là điều làm tôi lo.
+4250	Đứng sát tôi.
+4251	A...!
+4252	…Ui! Cái gì vậy?!
+4253	Krrrrarrrrrr…
+4254	Hắn là $RTrưởng tu viện$B của Sanctum này sao…?
+4255	Những con người đầu tiên ta thấy sau khi $Rthức tỉnh$B khỏi giấc ngủ dài. &NCác ngươi là cái quái gì?
+4256	Hô hô. Khỏi trả lời cũng được. &PMột $Rkẻ mang ánh sáng$B đứng cùng một $Rđứa con của chaos-strider$B? Thú vị đấy.
+4257	Ngươi nói gì vậy? &P$G(Hắn biết mình thuộc $RShadow Tribe$G sao?)$B
+4258	Áaa…!
+4259	Đừng lại gần tôi!
+4260	$G(Đau… quá…)$B
+4261	Kwaaaaaaa!
+4262	KIYAN!
+4263	Haha... Hắn chưa thức tỉnh hoàn toàn.
+4264	Ngươi đã làm gì ta?!
+4265	Chẳng làm gì cả. &NChỉ là cơ thể ngươi phản ứng với $Rbóng tối$B bên trong thôi.
+4266	Ngươi… đang… nói gì.... &NÁAAAAA!!!
+4267	……! &N……?!
+4268	……! &N………!
+4269	$G(Chuyện gì đang xảy ra…?!)$B
+4270	Ta thấy được bóng tối trong ngươi. &PTốt, ta sẽ giết ngươi ở đây và dùng sức mạnh đó cho mình!
+4271	Khôngggg!
+4272	Eara! Đừng!!
+4273	$RÁAAAAAAAAAAAA!!!!!!$B
+4274	Hắn đã $Rthức tỉnh$B, phải không?
+4275	Umhaha… hắn không chịu nổi sức mạnh đó. &PVĩnh biệt nhé!
+4276	Kiyan...!
+4277	Cơ thể ta không nghe lời ta nữa!
+4278	Hô hô~ ngươi còn sức phản kháng sao? Càng lúc càng hay.
+4279	Eara! Cẩn thận!! 
+4280	Cứ đánh tuỳ thích. Nhưng đây sẽ là lần cuối, đồ ngốc. &PChào mừng tới $Rnấm mồ$B của chính ngươi!
+4281	Khặc… ta biết, nhưng không chịu thừa nhận. &NChắc là hết đời ta rồi….
+4282	$G(Biết? Biết gì chứ?)$B
+4283	Các ngươi có thể đánh bại ta, nhưng sự thức tỉnh của $RVị Vua Cuối Cùng$B đã không còn xa…. &PKhi Ngài tới, các ngươi sẽ thấy ngày tận thế…&P...và cuộc cách mạng sang một thế giới mới….
+4284	Thế giới mới là sao?
+4285	Haha… Buồn cười là các ngươi không biết….
+4286	.....Hắn chết rồi.
+4287	…Vâng… Kiyan, anh ổn chứ? &NLúc nãy anh trông như bị chấn động vậy.
+4288	Đừng lo. Tôi đã bảo là tôi khoẻ mà.
+4289	Phải băng bó vết thương cho anh thôi.
+4290	$G(Mà ai cũng nói anh ấy là $Rđứa con của bóng tối$G… &NLiệu có thật không? &PLiệu mình có phải giết người này vì mình là $RChannel$G)?$B
+4291	Thứ tà ác này có thể lây lan. Phải cẩn thận. &PVà phải ra khỏi đây.
+4292	...Anh nói đúng.
+4293	Mong ông tìm được bình yên ở thế giới bên kia.
+4294	Đường này sẽ dẫn chúng ta sang bên kia vách đá.
+4295	Hoàn hảo! Thật hoàn hảo. Họ đã đi qua $RForesighted Place$B mà không gặp chuyện gì. &PCó vẻ chúng ta không cần can thiệp nữa. &PHọ tự xoay xở tốt rồi.
+4296	Ta sẽ quay về giáo hội.
+4297	Này, Goshak. Đi thôi.
+4298	Kẻ đột nhập! &NKẻ đột nhập đang xuống hầm!
+4299	Chúng ta sẽ chặn chúng trước khi chúng gặp Boss!
+4300	Muốn qua thì... phải bước qua xác ta!
+4301	Đóng cửa lại!!
+4302	$G(Đánh nhau phiền phức quá. Chết tiệt, mình không có thời gian để phí...)$B
+4303	$G(Mấy cái $Rcông tắc$B kia có thể mở cửa. Không chắc lắm, nhưng phải thử thôi.)$B
+4304	$G(Giờ có thể vào $RPhòng Boss$G rồi.)$B
+4305	Mọi thứ sẵn sàng chưa? Một khi sang Arnen, mọi nhiệm vụ phụ sẽ biến mất. &NCậu chắc chắn chứ?
+4306	Được, nhưng nhanh lên. Không thể chậm trễ thêm nữa.
+4307	Vậy thì đi thôi.
+4308	Một khi đi qua leap-gate này thì không quay lại được. &PCậu còn nhiệm vụ nào ở đây không?
+4309	...Vẫn còn vài việc cần giải quyết.
+4310	Được. Vậy làm xong hết rồi quay lại. &PNhưng nhanh lên, chúng ta không có thời gian để phí.
+4311	Sẵn sàng đi chưa?
+4312	$G(Cuối cùng cũng rời được cái nơi khốn khổ này)$B
+4313	$G(Nhưng vẫn còn vài việc chưa xong. Phải quay vào trong.)$B
+4314	$G(Được. Chắc là xong hết rồi.)$B
+4315	$G(Có công tắc đây. Kích hoạt nó để vào lối đi bí mật.)
+4316	$G(...Vẫn còn việc chưa xong. Giải quyết xong rồi mới kích hoạt cái này.)
+4317	$G(Được rồi, giờ chắc vào được rồi...)
+4318	Bừa bộn quá.
+4319	Thôi, ta đã làm những gì cần làm.
+4320	Phải. Giờ xong rồi. &PLeiden, ngay khi vết thương của ông được chữa, chúng ta cần tìm hiểu chính xác chuyện gì đang xảy ra.
+4321	Tôi đoán nhà ông có $Rhộp cứu thương$B chứ, Leiden? Đi thôi.
+4322	Ông sẽ ổn thôi.
+4323	Cảm ơn sau, giờ thì nói đi. &PBị lộ từ đâu? &NÔng có hành động gì đáng ngờ không?
+4324	Không bao giờ! Tôi không hiểu ai hay bằng cách nào mà chúng ta bị lộ, nhưng lính đột ngột tấn công, thế thôi.
+4325	Có người trong tộc đã $Rphản bội$B chúng ta. Đó là lời giải thích duy nhất.
+4326	Nghe vậy chẳng khiến tôi yên tâm chút nào.
+4327	Thật ra… tôi có nghi một người.
+4328	Phải, người ở bữa tiệc. &NTôi thấy hắn mờ ám. Đó là ai vậy?
+4329	$SBaron Borgia$B.
+4330	Borgia?
+4331	Hắn là người được nhờ cung cấp $Rnguyên liệu phép$B.
+4332	Chúng không phải thứ chúng ta thường dùng, nên chúng ta giao chúng cho Nam tước. &PMột thời gian sau, tôi tra trong Thư khố để tìm manh mối.
+4333	Trong Thư khố ghi rằng những thứ này đã bị cấm từ lâu, nghe nói là có độc. &PChúng đến từ một sinh vật phép bị cấm.
+4334	$RSinh vật phép bị cấm$B này là gì? Một loài quái vật à?
+4335	Nếu biết thì tôi đã nói rồi. &PKỳ lạ là hầu như không bao giờ thấy những sinh vật như vậy được tạo ra bên ngoài Shadow Tribe, nên tôi phải báo cho các vị.
+4336	Tôi thấy chuyện này có gì đó rất mờ ám.
+4337	Kiyan, tôi xin lỗi, nhưng cậu sẽ phải điều tra gã Borgia này. &PTìm hiểu và cố làm rõ chuyện này.
+4338	Tôi làm ngay. 
+4339	Đi về phía tây nam, cậu sẽ thấy hắn ở phía bên kia $RCapital Square$B. &PNếu hắn là kẻ phản bội… hắn phải bị $Rthủ tiêu$B.
+4340	Phải, cậu giỏi việc đó mà. &NTôi sẽ về Hội cùng Leiden. &PXong việc thì báo cho tôi.
+4341	$RNó$B sẵn sàng chưa?
+4342	Trước hết phải tránh tai mắt người khác. Theo tôi.
+4343	$G(Để kín đáo, chúng di chuyển rất khẽ. Mình cũng phải bám theo.)$B
+4344	Chỗ này chắc đủ an toàn. &PĐây, $Rmón đồ$B ngài yêu cầu đây.
+4345	Ngươi làm tốt lắm. Ngài Alexander sẽ hài lòng.
+4346	$G($SAlexander$G? Là tên chỉ huy ngạo mạn nhận lệnh trực tiếp từ $RGiáo hoàng$G.)$B
+4347	Nhờ ngươi mà bọn ta có được $Rmón đồ$B, giờ có thể diệt sạch người của Shadow. 
+4348	Vì ta không muốn sống như con rối của Hội nữa. &PTa mới là người phải cảm ơn ngài, bạn của ta.
+4349	Chẳng bao lâu nữa, Chỉ huy Alexander sẽ ra lệnh càn quét người của Shadow. &PTa sẽ báo cho ngươi trước khi mọi hành động được tiến hành.
+4350	Giờ thì rời khỏi đây thôi.
+4351	Xin lỗi, nhưng chuyện đó không xảy ra đâu.
+4352	...Ta bị bám đuôi sao?
+4353	Chậm chạp thật đấy, với một "Trưởng lão" như ngươi.
+4354	Ngươi định giết ta vì Shadow Tribe sao?
+4355	Phải. Có lời trăn trối nào thì nói ngay đi.
+4356	Xin lỗi nhé, nhóc con. Ta không dễ bị thủ tiêu vậy đâu. Chuẩn bị trăn trối đi.
+4357	Ôi…
+4358	Ta không thể chết…
+4359	$G(Giờ phải về báo cáo với $SPortia$G.)$B
+4360	Để một thằng nhóc đánh bại... Lũ ngu vô dụng.
+4361	Thôi, dù sao ngươi cũng có $Rhàng$B rồi, chuyện này xong.
+4362	Giờ tới lượt ta; đến lượt ta làm theo $Rkế hoạch$B.
+4363	Chuyện với Borgia sao rồi?
+4364	Đã xử lý xong.
+4365	Vậy hắn chính là kẻ để lộ tin. 
+4366	Tôi biết cậu sẽ làm tốt mà. &NLàm tốt lắm.
+4367	...Không có gì.
+4368	Lần này cậu giúp ích thật sự. &NTôi đã chuẩn bị phần thưởng cho cậu.
+4369	Ơ… Cảm ơn.
+4370	Không, thật đấy. Dạo này cậu không giống mọi khi, tôi không khỏi tự hỏi…
+4371	Hay trái tim cậu đã mềm yếu đi? &PNhưng cậu vừa chứng minh không chút nghi ngờ rằng cậu vẫn là người mà chúng ta kính trọng.. và có thể trông cậy.
+4372	Tôi… rất vui.
+4373	Tôi cũng vậy. Giờ về $Rphòng$B nghỉ ngơi đi. &NCậu xứng đáng được nghỉ.
+4374	...Rõ. 
+4375	Có gì đó không ổn. &NMình cảm thấy như đang sống một cuộc đời sao chép. 
+4376	Không hiểu sao, mọi thứ chẳng còn sống động như trước.
+4377	Thôi, đây là cuộc đời mình.
+4378	Ngày mai, ở $RCapital Square$B, cô sẽ có một $Rbài phát biểu$B. Chúng ta đang $Rchiến tranh$B với Arnen.
+4379	$RChiến tranh$B? Vì tôi sao? &PTôi vừa mới về, sao lại thế được?
+4380	Việc cô trở về không quan trọng. &NĐiều quan trọng là cô đã bị bắt cóc. &PĐây, bài phát biểu về trải nghiệm đáng sợ của cô đã được chuẩn bị sẵn. &PCứ đọc theo như mọi khi.
+4381	Ngài biết mà, tôi đâu thật sự bị bắt cóc.
+4382	Ta biết. Lý do là gì không quan trọng; Chúng ta chỉ cần một $Rcái cớ hợp lý$B. &PBài phát biểu đã được lên lịch cho ngày mai.
+4383	Đây không phải kế hoạch của tôi...
+4384	$G(Mọi hiệp sĩ được gọi nhậm chức? &NChuyện gì vậy?)$B
+4385	Hôm nay, $SĐức Thánh Cha$B và $SChannel$B sẽ xuất hiện trước dân chúng cho một $Rbài phát biểu công khai$B quan trọng.
+4386	$G(Eara?)$B
+4387	Chúng ta, các Thánh hiệp sĩ, phụ trách bảo vệ Đức Thánh Cha và Channel. &PCác hiệp sĩ, an toàn của hai nhân vật quan trọng nhất Đế quốc là ưu tiên hàng đầu. &PĐịa điểm là Toà thị chính phía tây nam Kinh đô. &PTất cả phải tập trung ở đó trong một giờ nữa. Rõ chưa?
+4388	$G($RCận vệ của Channel$G.. ít ra mình có thể thấy cô ấy có ổn không.) &P(Vậy thì tới $RCapital Square$G…)$B
+4389	$G(Mọi chuyện đang diễn ra tốt đẹp.)$B
+4390	Lời của Tamit vang lên từ miệng cô ấy. &PCác người biết cô ấy là $RChannel của Ánh sáng$B. &PCô ấy sẽ soi sáng cuộc đời chúng ta bằng hi vọng. Hãy kính cẩn lắng nghe.
+4391	Xin chào mọi người.
+4392	Như mọi người đã biết, tôi bị lính Arnen bắt cóc. &PCon đường của tôi được bàn tay Tamit soi sáng, Người đã giúp tôi trở về nhà ở Berkel gần đây.
+4393	Những kẻ bắt cóc tôi rất $Rtàn nhẫn$B và $Rđộc ác$B.
+4394	$G(Cô ấy đang nói gì vậy?)$B
+4395	Chúng chối bỏ chân lý của ánh sáng và lời của Tamit. &PChúng muốn xâm lược chúng ta và truyền bá lời của bóng tối.
+4396	Hành động của chúng là trọng tội không thể dung thứ, đồng thời là sự phản nghịch Đấng Ban Sự Sống.
+4397	Tamit đã nói qua tôi rằng kẻ tội đồ phải bị trừng phạt.
+4398	Đó là lý do hôm nay tôi đứng đây…. &NĐể nói về Arnen và….
+4399	$GCô đang làm gì vậy? &NTuyên bố $RThánh chiến$G! Ngay!$B
+4400	Tôi…
+4401	Tôi không thể làm thế này.
+4402	Mọi người, hãy nghe cho rõ. Các bạn vừa nghe tôi $Rnói dối$B đấy.
+4403	Cô gái đó gan thật.
+4404	Tôi chưa từng bị bắt cóc. &NVụ bắt cóc này được dựng lên làm cái cớ cho một cuộc Thánh chiến. &PTôi không muốn thấy bất kỳ ai trong các bạn bị dùng để thoả cơn khát máu của Giáo hội Berkel.
+4405	Tôi chẳng hiểu gì cả...
+4406	Khoan, vậy là chúng ta bị chính những người lãnh đạo của mình lừa dối sao?
+4407	Rút lại những lời đó ngay.
+4408	Tên fey đó…?
+4409	Vậy hắn là $Rcận vệ$B à?
+4410	Và giờ hắn tới tận Kinh đô? &NMình phải tới chỗ hắn.
+4411	Được rồi, quay lại $RCapital Square$B.
+4412	Trong tình huống đó, có lẽ cô ấy im lặng sẽ tốt hơn.
+4413	Có lẽ các Thánh hiệp sĩ biết giờ sẽ xảy ra chuyện gì.
