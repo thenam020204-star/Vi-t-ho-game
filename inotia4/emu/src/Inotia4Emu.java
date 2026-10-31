@@ -32,6 +32,8 @@ public class Inotia4Emu extends AbstractJni {
     int origW, origH;
     static final int FONT_W = 1024, FONT_H = 512;
     static final int DISP_W = 960, DISP_H = 640;
+    static final long EPOCH_MS = 1793404800000L; // 2026-10-31 00:00 UTC
+    long virtMs = 0, virtTick = 0;
     IntArray fontBuf;
 
     Inotia4Emu(File so, File apk, File out) {
@@ -46,7 +48,8 @@ public class Inotia4Emu extends AbstractJni {
         emulator = AndroidEmulatorBuilder.for64Bit()
                 .setRootDir(root)
                 .setProcessName(PKG)
-                .addBackendFactory(new Unicorn2Factory(true))
+                .addBackendFactory("dynarmic".equals(System.getProperty("emu.backend"))
+                        ? new com.github.unidbg.arm.backend.DynarmicFactory(true) : new Unicorn2Factory(true))
                 .build();
         Memory memory = emulator.getMemory();
         memory.setLibraryResolver(new AndroidResolver(23));
@@ -74,6 +77,32 @@ public class Inotia4Emu extends AbstractJni {
                     return true;
                 });
             }
+        }
+        // Dong ho ao: gettimeofday/time cua libc tra ve epoch co dinh + virtMs (16ms moi frame) -> chay tat dinh
+        if (!Boolean.getBoolean("emu.realtime")) {
+            com.github.unidbg.Module libc = emulator.getMemory().findModule("libc.so");
+            com.github.unidbg.debugger.Debugger dbg1 = emulator.attach();
+            dbg1.addBreakPoint(libc.findSymbolByName("gettimeofday", false).getAddress(), (emu, addr) -> {
+                com.github.unidbg.arm.backend.Backend be = emu.getBackend();
+                long tv = be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_X0).longValue();
+                long us = EPOCH_MS * 1000 + virtMs * 1000 + (virtTick++ % 1000);
+                if (tv != 0) {
+                    com.github.unidbg.pointer.UnidbgPointer p = com.github.unidbg.pointer.UnidbgPointer.pointer(emu, tv);
+                    p.setLong(0, us / 1000000); p.setLong(8, us % 1000000);
+                }
+                be.reg_write(unicorn.Arm64Const.UC_ARM64_REG_X0, 0);
+                be.reg_write(unicorn.Arm64Const.UC_ARM64_REG_PC, be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_LR).longValue());
+                return true;
+            });
+            dbg1.addBreakPoint(libc.findSymbolByName("time", false).getAddress(), (emu, addr) -> {
+                com.github.unidbg.arm.backend.Backend be = emu.getBackend();
+                long t = (EPOCH_MS + virtMs) / 1000;
+                long p0 = be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_X0).longValue();
+                if (p0 != 0) com.github.unidbg.pointer.UnidbgPointer.pointer(emu, p0).setLong(0, t);
+                be.reg_write(unicorn.Arm64Const.UC_ARM64_REG_X0, t);
+                be.reg_write(unicorn.Arm64Const.UC_ARM64_REG_PC, be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_LR).longValue());
+                return true;
+            });
         }
         String tf = System.getProperty("emu.tracefn", "");
         if (!tf.isEmpty()) {
@@ -127,6 +156,70 @@ public class Inotia4Emu extends AbstractJni {
             if (m.startsWith("getSystemVersionCode(")) return 28;
             if (m.startsWith("getNativeAvailableMemory(")) return 512L << 20;
         }
+        if (sig.startsWith("com/com2us/wrapper/font/C")) {
+            String m = sig.substring(sig.indexOf("->") + 2);
+            int[] buf = fontBuf.getValue();
+            switch (m) {
+                case "getStringWidth([BII)I":
+                    return com.namp.vh.VNFont.getStringWidth(bytes(va, 0), va.getIntArg(1), va.getIntArg(2));
+                case "drawText([BII)I": {
+                    int size = va.getIntArg(1);
+                    int w = com.namp.vh.VNFont.drawText(buf, bytes(va, 0), size, va.getIntArg(2));
+                    syncFont(w * (int) (size * 1.3d));
+                    logText(va, 0, "drawText size=" + size);
+                    return w;
+                }
+                case "drawText([BII[I)I": {
+                    int size = va.getIntArg(1);
+                    int w = com.namp.vh.VNFont.drawTextPart(buf, FONT_W, bytes(va, 0), size, va.getIntArg(2), (int[]) va.getObjectArg(3).getValue());
+                    syncFont(w * (int) (size * 1.3d));
+                    return w;
+                }
+                case "getStringWidthHeightInRect([BIIII[I)I":
+                    return com.namp.vh.VNFont.measureInRect(bytes(va, 0), va.getIntArg(1), va.getIntArg(2), va.getIntArg(3), va.getIntArg(4), (int[]) va.getObjectArg(5).getValue());
+                case "drawTextInRect([BIIIII)I": {
+                    byte[] b = bytes(va, 0);
+                    int size = va.getIntArg(1), style = va.getIntArg(2), align = va.getIntArg(3), maxW = va.getIntArg(4), mode = va.getIntArg(5);
+                    int[] o = new int[2];
+                    com.namp.vh.VNFont.measureInRect(b, size, style, maxW, mode, o);
+                    int r = com.namp.vh.VNFont.drawInRect(buf, b, size, style, align, maxW, mode);
+                    syncFont(maxW * o[1]);
+                    logText(va, 0, "drawTextInRect size=" + size + " w=" + maxW);
+                    return r;
+                }
+            }
+        }
+        String C = "com/com2us/wrapper/common/CCommonAPI->";
+        try {
+            if (sig.equals(C + "generateHash([BLjava/lang/String;)[B"))
+                return new com.github.unidbg.linux.android.dvm.array.ByteArray(vm, java.security.MessageDigest.getInstance(
+                        (String) va.getObjectArg(1).getValue()).digest(bytes(va, 0)));
+            if (sig.equals(C + "generateHashtoHexString([BLjava/lang/String;)Ljava/lang/String;")) {
+                byte[] h = java.security.MessageDigest.getInstance((String) va.getObjectArg(1).getValue()).digest(bytes(va, 0));
+                StringBuilder sb = new StringBuilder(); for (byte x : h) sb.append(String.format("%02x", x)); return str(sb.toString());
+            }
+        } catch (java.security.NoSuchAlgorithmException ex) { throw new RuntimeException(ex); }
+        if (sig.equals(C + "generateCRC32([B)J")) { java.util.zip.CRC32 c = new java.util.zip.CRC32(); c.update(bytes(va, 0)); return c.getValue(); }
+        if (sig.equals(C + "encodeBase64([B)[B")) return new com.github.unidbg.linux.android.dvm.array.ByteArray(vm, Base64.getEncoder().encode(bytes(va, 0)));
+        if (sig.equals(C + "decodeBase64([B)[B")) return new com.github.unidbg.linux.android.dvm.array.ByteArray(vm, Base64.getMimeDecoder().decode(bytes(va, 0)));
+        if (sig.equals(C + "getActiveNetwork()I")) return NET_TYPE;
+        if (sig.equals("com/com2us/wrapper/utility/CUtility->getAppProperty([B)[B")) {
+            byte[] v = appProps.get(new String(bytes(va, 0), java.nio.charset.StandardCharsets.UTF_8));
+            return v == null ? null : new com.github.unidbg.linux.android.dvm.array.ByteArray(vm, v);
+        }
+        if (sig.equals("com/com2us/wrapper/utility/CUtility->setAppProperty([B[B)V")) {
+            String k = new String(bytes(va, 0), java.nio.charset.StandardCharsets.UTF_8);
+            appProps.put(k, bytes(va, 1)); System.out.println("[prop] set " + k + " = " + new String(bytes(va, 1), java.nio.charset.StandardCharsets.UTF_8));
+            return VOID;
+        }
+        if (sig.equals("com/com2us/wrapper/utility/CUtility->removeAppProperty([B)V")) { appProps.remove(new String(bytes(va, 0), java.nio.charset.StandardCharsets.UTF_8)); return VOID; }
+        if (sig.startsWith("com/com2us/wrapper/media/CSoundManager->")) {
+            String m = sig.substring(sig.indexOf("->") + 2);
+            if (m.startsWith("soundCreate")) return ++soundId;
+            if (m.endsWith(")Z")) return true;
+            if (m.endsWith(")I")) return 0;
+            return VOID;
+        }
         switch (sig) {
             case "com/com2us/wrapper/function/CResource->getFileDescriptorFromAsset(Ljava/lang/String;[I)Ljava/io/FileDescriptor;": {
                 String name = (String) va.getObjectArg(0).getValue();
@@ -149,7 +242,40 @@ public class Inotia4Emu extends AbstractJni {
             }
             case "com/com2us/wrapper/WrapperUserDefined->getMaxMemory()J": return 512L << 20;
             case "com/com2us/wrapper/WrapperUserDefined->getTotalMemory()J": return 128L << 20;
+            // ---- ActiveUser offline: luu con tro notifier, start() -> bao thanh cong o frame sau
+            case "com/com2us/module/activeuser/ActiveUser->setJNIActiveUserNotifier(J)V": auNotifier = va.getLongArg(0); return VOID;
+            case "com/com2us/module/activeuser/ActiveUser->setJNIUserAgreeNotifier(J)V": auAgree = va.getLongArg(0); return VOID;
+            case "com/com2us/module/activeuser/ActiveUser->start(Lcom/com2us/module/manager/ModuleManager$SERVER_STATE;)V":
+                later(() -> obj("com/com2us/module/activeuser/ActiveUser").callJniMethod(emulator, "jniActiveUserNotifier(JI)V", auNotifier, 0), "ActiveUser -> jniActiveUserNotifier(0)");
+                return VOID;
+            case "com/com2us/module/activeuser/ActiveUser->jniGetAgeRange(J)V": {
+                final long j = va.getLongArg(0);
+                later(() -> obj("com/com2us/module/activeuser/ActiveUser").callJniMethod(emulator,
+                        "jniGetAgeRangeNotifier(JIIIILjava/lang/String;Ljava/lang/String;)V", j, 1, 4, -1, -1, str(""), str("")), "AgeRange(1,4)");
+                return VOID;
+            }
+            // ---- HubBridge offline (Peppermint): moi request tra JSON cuc bo
+            case "com/com2us/peppermint/HubBridge->initializeEx(Ljava/lang/String;I)I": return 0;
+            case "com/com2us/peppermint/HubBridge->asyncRequest(Ljava/lang/String;Ljava/lang/String;JJ)I": {
+                String name = (String) va.getObjectArg(0).getValue();
+                Object pr = va.getObjectArg(1) == null ? null : va.getObjectArg(1).getValue();
+                hubReply(name, "asyncRequest " + name + " params=" + pr, va.getLongArg(2), va.getLongArg(3));
+                return 0;
+            }
+            case "com/com2us/wrapper/WrapperUserDefined->GetStringFromXmlEx(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/Object;": {
+                String file = (String) va.getObjectArg(0).getValue(), key = (String) va.getObjectArg(1).getValue();
+                int idx = va.getIntArg(2);
+                List<String> arr = plist(file).get(key);
+                String v = arr != null && idx < arr.size() ? arr.get(idx) : null;
+                trace("xml " + file + "/" + key + "[" + idx + "] = " + v);
+                if (v == null) { System.out.println("[xml] thieu " + file + "/" + key + "[" + idx + "]"); return null; }
+                return new com.github.unidbg.linux.android.dvm.array.ByteArray(vm, v.getBytes(java.nio.charset.StandardCharsets.UTF_8));
+            }
             case "com/com2us/wrapper/function/CResource->closeFileDescriptor(Ljava/lang/String;)V":
+            case "com/com2us/module/activeuser/ActiveUser->setServerId(Ljava/lang/String;)V":
+            case "com/com2us/wrapper/WrapperUserDefined->ActivityIndicatorOpen()V":
+            case "com/com2us/wrapper/WrapperUserDefined->ActivityIndicatorClose()V":
+            case "com/com2us/wrapper/game/CGameManager->requestRender()V":
             case "com/com2us/module/activeuser/ActiveUser->setLogged(Z)V":
             case "com/com2us/module/activeuser/ActiveUser->setModuleOrientation(I)V":
                 return VOID;
@@ -192,7 +318,76 @@ public class Inotia4Emu extends AbstractJni {
     @Override public DvmObject<?> callObjectMethod(BaseVM vm, DvmObject<?> o, String sig, VarArg va) { return obj(java(o, sig, va)); }
     @Override public DvmObject<?> newObjectV(BaseVM vm, DvmClass c, String sig, VaList va) { note("NEW " + sig); return c.newObject(null); }
     @Override public DvmObject<?> newObject(BaseVM vm, DvmClass c, String sig, VarArg va) { note("NEW " + sig); return c.newObject(null); }
-    @Override public DvmObject<?> getStaticObjectField(BaseVM vm, DvmClass c, String sig) { note("GSF " + sig); return null; }
+    @Override public DvmObject<?> getStaticObjectField(BaseVM vm, DvmClass c, String sig) {
+        if (sig.startsWith("com/com2us/module/manager/ModuleManager$SERVER_STATE->")) return c.newObject(sig.substring(sig.indexOf("->") + 2, sig.indexOf(':')));
+        note("GSF " + sig); return null;
+    }
+    long auNotifier, auAgree;
+    final Map<String, byte[]> appProps = new TreeMap<>();
+    int soundId;
+    /** CCommonAPI.getActiveNetwork: 1 = khong ho tro/khong mang, 2 = WWAN, 3 = WiFi. Ban offline: 1. */
+    static final int NET_TYPE = Integer.getInteger("emu.net", 1);
+
+    static byte[] bytes(VarArg va, int i) { DvmObject<?> o = va.getObjectArg(i); return o == null ? new byte[0] : (byte[]) o.getValue(); }
+
+    /** Chep n pixel dau cua mPixelbuffer vao con tro ma native giu tu GetIntArrayElements (global @0x32e8c8). */
+    void syncFont(int n) {
+        long base = dm.getModule().base;
+        long ptr = com.github.unidbg.pointer.UnidbgPointer.pointer(emulator, base + 0x32e8c8).getLong(0);
+        if (ptr == 0 || n <= 0) return;
+        n = Math.min(n, FONT_W * FONT_H);
+        int[] buf = fontBuf.getValue();
+        java.nio.ByteBuffer bb = java.nio.ByteBuffer.allocate(n * 4).order(java.nio.ByteOrder.LITTLE_ENDIAN);
+        for (int k = 0; k < n; k++) bb.putInt(buf[k]);
+        com.github.unidbg.pointer.UnidbgPointer.pointer(emulator, ptr).write(0, bb.array(), 0, n * 4);
+    }
+
+    final Set<String> textsSeen = new LinkedHashSet<>();
+    void logText(VarArg va, int i, String what) {
+        String t = new String(bytes(va, i), java.nio.charset.StandardCharsets.UTF_8);
+        if (textsSeen.add(t)) System.out.println("[text] " + what + " : " + t.replace("\n", "\\n"));
+    }
+    final Map<String, Map<String, List<String>>> plists = new HashMap<>();
+
+    /** res/xml/<file>.xml dang plist: key -> mang string (chi so = ngon ngu, 0 = EN). */
+    Map<String, List<String>> plist(String file) {
+        return plists.computeIfAbsent(file, f -> {
+            Map<String, List<String>> m = new LinkedHashMap<>();
+            File x = new File(System.getProperty("emu.resxml", "../work/dec/res/xml"), f + ".xml");
+            try {
+                String t = new String(java.nio.file.Files.readAllBytes(x.toPath()), java.nio.charset.StandardCharsets.UTF_8);
+                java.util.regex.Matcher mm = java.util.regex.Pattern.compile("<key>(.*?)</key>\\s*<array>(.*?)</array>", java.util.regex.Pattern.DOTALL).matcher(t);
+                while (mm.find()) {
+                    List<String> arr = new ArrayList<>();
+                    java.util.regex.Matcher sm = java.util.regex.Pattern.compile("<string>(.*?)</string>|<string/>", java.util.regex.Pattern.DOTALL).matcher(mm.group(2));
+                    while (sm.find()) arr.add(unxml(sm.group(1) == null ? "" : sm.group(1)));
+                    m.put(mm.group(1), arr);
+                }
+            } catch (java.io.IOException ex) { System.out.println("[xml] khong doc duoc " + x); }
+            return m;
+        });
+    }
+    static String unxml(String s) {
+        return s.replace("&lt;", "<").replace("&gt;", ">").replace("&quot;", "\"").replace("&apos;", "'").replace("\\'", "'").replace("\\\"", "\"").replace("&amp;", "&");
+    }
+
+    /** JSON offline cho tung request Hub (giong lop Java se dua vao APK). */
+    static String offlineHubJson(String name) {
+        switch (name) {
+            case "device/registered": return "{\"type\":\"device/registered\",\"error_code\":0,\"error_msg\":\"\",\"is_registered\":false}";
+            default: return "{\"type\":\"" + name + "\",\"error_code\":0,\"error_msg\":\"\"}";
+        }
+    }
+
+    void hubReply(String name, String what, final long j, final long j2) {
+        final String json = offlineHubJson(name);
+        System.out.println("[hub] " + what + " -> " + json);
+        later(() -> vm.resolveClass("com/com2us/peppermint/HubBridge").callStaticJniMethod(emulator,
+                "hubCallbackWithJSON(Ljava/lang/String;JJ)V", str(json), j, j2), "hubCallback " + name);
+    }
+    final List<Object[]> laterQ = new ArrayList<>();
+    /** Goi lai native o cuoi frame (giong viewEx.queueEvent / runOnGlThread). */
+    void later(Runnable r, String what) { laterQ.add(new Object[]{r, what}); }
     @Override public int getStaticIntField(BaseVM vm, DvmClass c, String sig) { note("GSI " + sig); return 0; }
     @Override public DvmObject<?> getObjectField(BaseVM vm, DvmObject<?> o, String sig) { note("GF " + sig); return null; }
     @Override public int getIntField(BaseVM vm, DvmObject<?> o, String sig) {
@@ -253,8 +448,9 @@ public class Inotia4Emu extends AbstractJni {
         step("CCommonAPI.nativeInitialize", () -> vm.resolveClass("com/com2us/wrapper/common/CCommonAPI").callStaticJniMethod(emulator, "nativeInitialize()V"));
         wrapperInit("com/com2us/wrapper/function/CFunctionTaskRunner");
         wrapperInit("com/com2us/wrapper/kernel/CEventHandler");
+        evManage = direct(16); evQueue = direct(2048);
         step("CEventHandler.nativeEventHandlerInitialize", () -> obj("com/com2us/wrapper/kernel/CEventHandler").callJniMethod(emulator,
-                "nativeEventHandlerInitialize(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;II)V", direct(16), direct(2048), 8, 256));
+                "nativeEventHandlerInitialize(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;II)V", evManage, evQueue, 8, 256));
         wrapperInit("com/com2us/wrapper/game/CGameManager");
         wrapperInit("com/com2us/wrapper/kernel/CWrapperTimer");
         wrapperInit("com/com2us/wrapper/sensor/CSensor");
@@ -276,15 +472,76 @@ public class Inotia4Emu extends AbstractJni {
         for (int f = 0; f < frames; f++) {
             final int ff = f;
             try { vm.resolveClass(K).callStaticJniMethod(emulator, "nativeProcess()V"); }
-            catch (Throwable t) { System.out.println("!! nativeProcess #" + f + ": " + t); break; }
+            catch (Throwable t) {
+                System.out.println("!! nativeProcess #" + f + ": " + t);
+                try { emulator.getUnwinder().unwind(); } catch (Throwable t2) { System.out.println("unwind loi: " + t2); }
+                break;
+            }
             onFrameEnd(f);
-            long due = t0 + (f + 1) * 16L - System.currentTimeMillis();
-            if (due > 0) try { Thread.sleep(due); } catch (InterruptedException ignored) { }
+            virtMs += 16;
+            if (Boolean.getBoolean("emu.realtime")) {
+                long due = t0 + (f + 1) * 16L - System.currentTimeMillis();
+                if (due > 0) try { Thread.sleep(due); } catch (InterruptedException ignored) { }
+            }
             if (f % 50 == 0) System.out.println("== frame " + f + " t=" + (System.currentTimeMillis() - t0) + "ms gl=" + gl.calls.size());
         }
     }
 
+    DirectBuffer evManage, evQueue;
+
+    /** CEventHandler.onEvent: hang doi vong 256 muc x 8 byte (big-endian), chi so ghi/doc la long LE. */
+    boolean addEvent(int type, int a, int b, int c, int d) {
+        com.github.unidbg.pointer.UnidbgPointer m = evManage.getValue(), q = evQueue.getValue();
+        long head = m.getLong(0), tail = m.getLong(8);
+        long j = head + 1;
+        if (j % 256 == tail) return false;
+        long off = (head % 256) * 8;
+        byte[] e = {(byte) (type >> 8), (byte) type, (byte) (a >> 8), (byte) a, (byte) (b >> 8), (byte) b, (byte) c, (byte) d};
+        q.write(off, e, 0, 8);
+        m.setLong(0, j % 256);
+        return true;
+    }
+
+    /** Kich ban: "frame:lenh:thamso;..."  lenh = tap x,y (toa do 480x320) | shot ten | key ma */
+    final Map<Integer, List<String[]>> script = new HashMap<>();
+    void loadScript(String sc) {
+        if (sc == null) return;
+        for (String part : sc.split(";")) {
+            String[] t = part.trim().split(":", 3);
+            if (t.length < 2) continue;
+            script.computeIfAbsent(Integer.parseInt(t[0]), k -> new ArrayList<>()).add(new String[]{t[1], t.length > 2 ? t[2] : ""});
+        }
+    }
+    final Map<Integer, int[]> pendingUp = new HashMap<>();
+
+    void runScript(int f) {
+        int[] up = pendingUp.remove(f);
+        if (up != null) addEvent(3, up[0], up[1], 1, 1);
+        List<String[]> cmds = script.get(f);
+        if (cmds == null) return;
+        for (String[] c : cmds) {
+            switch (c[0]) {
+                case "tap": {
+                    String[] xy = c[1].split(",");
+                    int x = Integer.parseInt(xy[0]), y = Integer.parseInt(xy[1]);
+                    addEvent(1, x, y, 1, 1);
+                    pendingUp.put(f + 4, new int[]{x, y});
+                    System.out.println("== frame " + f + " tap " + x + "," + y);
+                    break;
+                }
+                case "shot": gl.screenshot(new File(out, c[1] + ".png")); System.out.println("== frame " + f + " shot " + c[1]); break;
+                case "key": addEvent(4096, Integer.parseInt(c[1]), -1, -1, -1); addEvent(4097, Integer.parseInt(c[1]), -1, -1, -1); break;
+            }
+        }
+    }
+
     void onFrameEnd(int f) {
+        runScript(f);
+        while (!laterQ.isEmpty()) {
+            Object[] t = laterQ.remove(0);
+            System.out.println("== frame " + f + " callback " + t[1]);
+            try { ((Runnable) t[0]).run(); } catch (Throwable ex) { System.out.println("!! callback " + t[1] + ": " + ex); }
+        }
         if (shotEvery > 0 && f % shotEvery == 0 && gl.drawCalls > 0) gl.screenshot(new File(out, String.format("f%05d.png", f)));
     }
     int shotEvery = Integer.getInteger("emu.shot", 0);
@@ -295,6 +552,7 @@ public class Inotia4Emu extends AbstractJni {
         Inotia4Emu e = new Inotia4Emu(new File(a[0]), new File(a[1]), out);
         System.out.println("== JNI_OnLoad");
         e.dm.callJNI_OnLoad(e.emulator);
+        e.loadScript(System.getProperty("emu.script"));
         e.boot(a.length > 3 ? Integer.parseInt(a[3]) : 3);
         System.out.println("== JNI chua xu ly:");
         for (Map.Entry<String, Integer> en : e.unknown.entrySet()) System.out.println("  " + en.getValue() + "x " + en.getKey());
