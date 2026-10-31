@@ -117,8 +117,72 @@ public final class CrashLog {
         }
         head.append('\n');
         sb.insert(0, head);
+        sb.append("\n===== FILE DU LIEU APP =====\n");
+        listFiles(dataDir(c), "", 0, sb);
         sb.append("\n===== LOGCAT CUA APP (moi nhat o cuoi) =====\n").append(logcat());
         return sb.toString();
+    }
+
+    static File dataDir(Context c) {
+        File f = c.getFilesDir().getParentFile();
+        return f != null ? f : c.getFilesDir();
+    }
+
+    /** Thu muc khong can (cache, webview, code): bo qua khi liet ke/xuat. */
+    static boolean skipDir(String name) {
+        return name.equals("cache") || name.equals("code_cache") || name.startsWith("app_webview")
+            || name.equals("lib") || name.equals("app_textures") || name.equals("no_backup");
+    }
+
+    private static int listed;
+
+    private static void listFiles(File d, String rel, int depth, StringBuilder sb) {
+        if (depth == 0) listed = 0;
+        File[] fs = d.listFiles();
+        if (fs == null) return;
+        for (File f : fs) {
+            if (listed++ > 400) { if (listed == 402) sb.append("...(con nua)\n"); return; }
+            String r = rel + f.getName();
+            if (f.isDirectory()) {
+                sb.append(r).append("/\n");
+                if (depth < 4 && !skipDir(f.getName())) listFiles(f, r + "/", depth + 1, sb);
+            } else {
+                sb.append(r).append("  ").append(f.length()).append("  ").append(fmt(f.lastModified())).append('\n');
+            }
+        }
+    }
+
+    /** Nen cac file du lieu nho (save, cau hinh) vao zip de gui phan tich. Bo file > 3 MB va thu muc cache. */
+    public static int zipData(Context c, java.io.OutputStream out) throws Exception {
+        java.util.zip.ZipOutputStream z = new java.util.zip.ZipOutputStream(out);
+        int n = zipDir(dataDir(c), "", 0, z);
+        z.close();
+        return n;
+    }
+
+    private static int zipDir(File d, String rel, int depth, java.util.zip.ZipOutputStream z) throws Exception {
+        File[] fs = d.listFiles();
+        if (fs == null) return 0;
+        int n = 0;
+        byte[] buf = new byte[8192];
+        for (File f : fs) {
+            String r = rel + f.getName();
+            if (f.isDirectory()) {
+                if (depth < 4 && !skipDir(f.getName())) n += zipDir(f, r + "/", depth + 1, z);
+                continue;
+            }
+            if (f.length() > 3L * 1024 * 1024 || !f.canRead()) continue;
+            java.util.zip.ZipEntry e = new java.util.zip.ZipEntry(r);
+            e.setTime(f.lastModified());
+            z.putNextEntry(e);
+            FileInputStream in = new FileInputStream(f);
+            int k;
+            while ((k = in.read(buf)) > 0) z.write(buf, 0, k);
+            in.close();
+            z.closeEntry();
+            n++;
+        }
+        return n;
     }
 
     private static String join(String[] a) {
@@ -157,8 +221,15 @@ public final class CrashLog {
                 if (in != null) {
                     byte[] b = readAll(in, 512 * 1024);
                     // native: tombstone protobuf (Android 12+) -> lay cac chuoi in duoc (ten .so, ham, abort message)
-                    sb.append("   --- trace ---\n").append(r == ApplicationExitInfo.REASON_ANR
-                        ? new String(b, 0, Math.min(b.length, 48 * 1024), "UTF-8") : printable(b, 24 * 1024)).append('\n');
+                    if (r == ApplicationExitInfo.REASON_ANR) {
+                        sb.append("   --- trace ---\n").append(new String(b, 0, Math.min(b.length, 48 * 1024), "UTF-8")).append('\n');
+                    } else {
+                        StringBuilder fr = new StringBuilder();
+                        frameCount = 0;
+                        walk(b, 0, b.length, 0, fr);
+                        sb.append("   --- frames (rel_pc  ham+offset  file) ---\n").append(fr);
+                        sb.append("   --- chuoi trong tombstone ---\n").append(printable(b, 8 * 1024)).append('\n');
+                    }
                 }
             }
         }
@@ -185,6 +256,66 @@ public final class CrashLog {
             case 16: return "PACKAGE_UPDATED";
             default: return "UNKNOWN(" + r + ")";
         }
+    }
+
+    // ---- giai ma toi thieu tombstone protobuf (Android 12+): tim message BacktraceFrame
+    // {1: rel_pc, 4: function_name, 5: function_offset, 6: file_name} o moi do sau.
+    private static int frameCount;
+    private static int vpos;
+
+    private static long varint(byte[] b, int end) {
+        long v = 0;
+        for (int s = 0; s < 64 && vpos < end; s += 7) {
+            int x = b[vpos++] & 0xff;
+            v |= (long) (x & 0x7f) << s;
+            if (x < 0x80) return v;
+        }
+        vpos = -1;
+        return 0;
+    }
+
+    private static void walk(byte[] b, int off, int end, int depth, StringBuilder out) {
+        if (frameCount >= 80) return;
+        long relpc = -1, fo = 0;
+        String fn = null, file = null;
+        int[] subs = new int[64];
+        int ns = 0;
+        vpos = off;
+        while (vpos < end) {
+            long key = varint(b, end);
+            if (vpos < 0 || key == 0) return;
+            int f = (int) (key >>> 3), wt = (int) (key & 7);
+            if (wt == 0) {
+                long v = varint(b, end);
+                if (vpos < 0) return;
+                if (f == 1) relpc = v;
+                if (f == 5) fo = v;
+            } else if (wt == 2) {
+                long len = varint(b, end);
+                if (vpos < 0 || len < 0 || vpos + len > end) return;
+                int st = vpos;
+                if (f == 4) fn = new String(b, st, (int) len);
+                if (f == 6) file = new String(b, st, (int) len);
+                if (ns < subs.length - 1 && len > 2) { subs[ns++] = st; subs[ns++] = st + (int) len; }
+                vpos = st + (int) len;
+            } else if (wt == 1) {
+                vpos += 8;
+            } else if (wt == 5) {
+                vpos += 4;
+            } else {
+                return;
+            }
+        }
+        if (vpos != end) return;
+        if (fn != null && file != null && relpc >= 0) {
+            int slash = file.lastIndexOf('/');
+            out.append("   #").append(frameCount++).append(" 0x").append(Long.toHexString(relpc)).append("  ")
+                .append(fn.length() == 0 ? "?" : fn).append("+0x").append(Long.toHexString(fo)).append("  ")
+                .append(slash >= 0 ? file.substring(slash + 1) : file).append('\n');
+            return;
+        }
+        if (depth >= 8) return;
+        for (int i = 0; i < ns; i += 2) walk(b, subs[i], subs[i + 1], depth + 1, out);
     }
 
     private static String printable(byte[] b, int max) {

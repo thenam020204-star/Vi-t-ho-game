@@ -11,15 +11,15 @@ package com.namp.vh;
  *  - drawTextInRect: hang ngang = rectW, cao = tong chieu cao cac dong;
  *  - getStringWidthHeightInRect: out[0] = rong, out[1] = cao, cung thuat toan ngat dong.
  *
- * Phong to f18 theo boi so nguyen k (khong loc): k = max(1, (size+2)/18).
- * Kich co game dung: 14,20,24,28 -> k=1; 38 -> k=2.
+ * Phong to f18 theo he so q/16 (nearest-neighbour), q = max(16, size): xem scale().
+ * Kich co game dung: 14 -> x1, 20 -> x1.25, 24 -> x1.5, 28 -> x1.75, 38 -> x2.375.
  * Khong cap phat object trong luc ve: UTF-8 giai ma vao bo dem char[] dung lai.
  */
 public final class VNFont {
 
     private static final int H = 18;        // chieu cao o chu f18
     private static final int BASE = 14;     // hang day chu (hang cuoi cua 'x')
-    private static final int GAP = 4;       // khoang cach dong (px o k=1)
+    private static final int GAP = 2;       // khoang cach dong (px nguon, nhan theo he so)
 
     private static boolean ready;
     private static char[] chars;            // da sap xep tang dan
@@ -129,30 +129,45 @@ public final class VNFont {
         return qIdx;
     }
 
+    /**
+     * He so phong q/16 (nearest-neighbour), q = max(16, size): size 14 -> x1, 20 -> x1.25, 24 -> x1.5,
+     * 28 -> x1.75, 38 -> x2.375. Ban dau dung boi so nguyen k = (size+2)/18 nhung tren may that
+     * (2400x1080) chu chi ~60% co chu goc, con x2 thi vuot bo dem drawText (cao size*1.3) -> cat chu.
+     * GPU cung da phong khong nguyen (vd x1.6875) nen boi so nguyen o buoc nay khong con giu net.
+     */
     private static int scale(int size) {
-        int k = (size + 2) / H;
-        return k < 1 ? 1 : k;
+        return size < 16 ? 16 : size;
     }
 
-    private static int adv(char c, int k, boolean bold) {
+    /** Do rong nguon (px f18) cua 1 ky tu. */
+    private static int srcAdv(char c, boolean bold) {
         if (c == '\n' || c == '\r') return 0;
-        return (widths[glyph(c)] + (bold ? 1 : 0)) * k;
+        return widths[glyph(c)] + (bold ? 1 : 0);
     }
 
-    private static int width(int from, int to, int k, boolean bold) {
+    private static int srcWidth(int from, int to, boolean bold) {
         int w = 0;
-        for (int i = from; i < to; i++) w += adv(cbuf[i], k, bold);
+        for (int i = from; i < to; i++) w += srcAdv(cbuf[i], bold);
         return w;
     }
 
-    private static int lineH(int k) {
-        return (H + GAP) * k;
+    /** Doi px nguon -> px dich theo q/16 (lam tron xuong, dung cho ca do va ve nen luon khop). */
+    private static int sc(int v, int q) {
+        return (v * q) >> 4;
+    }
+
+    private static int width(int from, int to, int q, boolean bold) {
+        return sc(srcWidth(from, to, bold), q);
+    }
+
+    private static int lineH(int q) {
+        return sc(H + GAP, q);
     }
 
     /** Ve [from,to) cua cbuf: goc trai-tren o chu tai (x,y), hang ngang stride, toi da rows hang. */
     private static void blit(int[] buf, int stride, int rows, int from, int to, int x, int y,
-                             int k, boolean bold, boolean underline) {
-        int x0 = x;
+                             int q, boolean bold, boolean underline) {
+        int sx = 0;                                   // vi tri cong don theo px nguon
         for (int i = from; i < to; i++) {
             char c = cbuf[i];
             if (c == '\n' || c == '\r') continue;
@@ -160,30 +175,32 @@ public final class VNFont {
             int gw = widths[g];
             int go = offsets[g];
             for (int r = 0; r < H; r++) {
+                int y0 = y + sc(r, q), y1 = y + sc(r + 1, q);
                 int base = r * atlasW + go;
                 for (int col = 0; col < gw; col++) {
                     int kk = base + col;
                     if ((bits[kk >> 3] & (1 << (kk & 7))) == 0) continue;
-                    fill(buf, stride, rows, x + col * k, y + r * k, k);
-                    if (bold) fill(buf, stride, rows, x + (col + 1) * k, y + r * k, k);
+                    int cx = sx + col;
+                    fill(buf, stride, rows, x + sc(cx, q), y0, x + sc(cx + (bold ? 2 : 1), q), y1);
                 }
             }
-            x += (gw + (bold ? 1 : 0)) * k;
+            sx += gw + (bold ? 1 : 0);
         }
-        if (underline && x > x0) {
-            int uy = y + (BASE + 2) * k;
-            for (int t = 0; t < k; t++) hline(buf, stride, rows, x0, x, uy + t);
+        if (underline && sx > 0) {
+            int uy = y + sc(BASE + 2, q), uy1 = y + sc(BASE + 3, q);
+            for (int yy = uy; yy < uy1; yy++) hline(buf, stride, rows, x, x + sc(sx, q), yy);
         }
     }
 
-    private static void fill(int[] buf, int stride, int rows, int px, int py, int k) {
-        for (int dy = 0; dy < k; dy++) {
-            int yy = py + dy;
-            if (yy < 0 || yy >= rows) continue;
+    /** To dac hinh chu nhat [x0,x1) x [y0,y1), cat theo khung buf. */
+    private static void fill(int[] buf, int stride, int rows, int x0, int y0, int x1, int y1) {
+        if (y0 < 0) y0 = 0;
+        if (y1 > rows) y1 = rows;
+        if (x0 < 0) x0 = 0;
+        if (x1 > stride) x1 = stride;
+        for (int yy = y0; yy < y1; yy++) {
             int row = yy * stride;
-            for (int dx = 0; dx < k; dx++) {
-                int xx = px + dx;
-                if (xx < 0 || xx >= stride) continue;
+            for (int xx = x0; xx < x1; xx++) {
                 int p = row + xx;
                 if (p < buf.length) buf[p] = 0xFFFFFFFF;
             }
@@ -204,8 +221,9 @@ public final class VNFont {
         for (int i = 0; i < n; i++) buf[i] = 0;
     }
 
-    private static int topFor(int size, int k) {
-        int t = size - (BASE + 1) * k;
+    /** Hang tren cua o chu sao cho duong chan chu (hang BASE) nam o y = size nhu Paint goc. */
+    private static int topFor(int size, int q) {
+        int t = size - sc(BASE + 1, q);
         return t < 0 ? 0 : t;
     }
 
@@ -237,13 +255,14 @@ public final class VNFont {
         if (start < 0) return 0;
         int k = scale(size);
         boolean bold = (style & 1) != 0;
-        int end = start, w = 1;
+        int end = start, sw = 0;
         while (end < clen) {
-            int a = adv(cbuf[end], k, bold);
-            if (w + a >= maxW && end > start) break;
-            w += a;
+            int a = srcAdv(cbuf[end], bold);
+            if (sc(sw + a, k) + 1 >= maxW && end > start) break;
+            sw += a;
             end++;
         }
+        int w = sc(sw, k) + 1;
         int rows = (int) (size * 1.3d);
         clear(buf, w * rows);
         blit(buf, w, rows, start, end, 0, topFor(size, k), k, bold, (style & 4) != 0);
@@ -261,8 +280,8 @@ public final class VNFont {
         while (i < clen) {
             char c = cbuf[i];
             if (c == '\n') { lineEnd = i; lineNext = i + 1; return; }
-            int a = adv(c, k, bold);
-            if (w + a + 1 > maxW && i > start) {
+            int a = srcAdv(c, bold);
+            if (sc(w + a, k) + 1 > maxW && i > start) {
                 if (c == ' ') { lineEnd = i; lineNext = i + 1; return; }
                 if (lastSpace > start) { lineEnd = lastSpace; lineNext = lastSpace + 1; return; }
                 lineEnd = i; lineNext = i; return;
@@ -311,7 +330,7 @@ public final class VNFont {
         clear(buf, maxW * rows);
         s = 0;
         int y = 0;
-        int top = (lh - H * k) / 2;
+        int top = (lh - sc(H, k)) / 2;
         while (s < clen && y < rows) {
             nextLine(s, maxW, k, bold);
             int w = width(s, lineEnd, k, bold);

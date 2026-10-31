@@ -31,7 +31,7 @@ public class Inotia4Emu extends AbstractJni {
     final File res, out;
     int origW, origH;
     static final int FONT_W = 1024, FONT_H = 512;
-    static final int DISP_W = 960, DISP_H = 640;
+    static final int DISP_W = Integer.getInteger("emu.w", 960), DISP_H = Integer.getInteger("emu.h", 640);
     static final long EPOCH_MS = 1793404800000L; // 2026-10-31 00:00 UTC
     long virtMs = 0, virtTick = 0;
     IntArray fontBuf;
@@ -111,8 +111,10 @@ public class Inotia4Emu extends AbstractJni {
                 com.github.unidbg.Symbol sym = dm.getModule().findSymbolByName(name, false);
                 if (sym == null) { System.out.println("[trace] khong co symbol " + name); continue; }
                 dbg.addBreakPoint(sym.getAddress(), (emu, addr) -> {
-                    System.out.println("[fn] " + name + " x0=0x" + Long.toHexString(emu.getContext().getLongArg(0))
-                            + " x1=0x" + Long.toHexString(emu.getContext().getLongArg(1)));
+                    StringBuilder sb = new StringBuilder("[fn] " + name);
+                    for (int r = 0; r < 6; r++) sb.append(" x").append(r).append("=0x").append(Long.toHexString(emu.getContext().getLongArg(r)));
+                    sb.append(" lr=0x").append(Long.toHexString(emu.getContext().getLR() - dm.getModule().base));
+                    System.out.println(sb);
                     return true;
                 });
             }

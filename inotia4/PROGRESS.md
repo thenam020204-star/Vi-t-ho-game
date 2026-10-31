@@ -28,6 +28,20 @@
 - Native libgame.so tạo 5 font: size 20/24/38/28/14, cao dòng 22/26/40/30/16 (`GRPX_CreateFont` @0x12a6ac).
 - File gốc không có trong git: đặt `base.apk` + `split_config.*.apk` vào một thư mục rồi chạy rebuild (sha256 ở `goc/SHA256.txt`).
 
+## Phiên 2 (tiếp): TEST6 chạy được; lỗi văng khi load save; font to hơn (TEST7)
+- **TEST6 chạy được trên máy thật** (vào game, xem được đoạn mở đầu).
+- **Lỗi mới khi load save** (`logs/may_that_TEST6_load_save_2026-10-31.txt`): `CRASH_NATIVE` SIGSEGV, fault addr 0x328, tại `CHAR_GetSkillPoint` (`ldrb w0,[x0,#0x328]`) ← `GAMESTATE_EnterPlay` (0x13840c) ← `GAMESTATE_SetState` ← `GAMESTATE_ProcessMapChange`.
+  Con trỏ nhân vật chính (global qua GOT `0x2bebd8`) bằng null. Chỉ `SAVE_LoadCharacterAll` mới gán nó, và chỉ khi `SAVE_LoadFile` → `SAVE_LoadData` thành công. Nếu thất bại thì `SAVE_Load` bỏ qua phần nạp nhân vật mà không báo lỗi, sau đó `EnterPlay` văng.
+  - Khoá và thư mục save: `HubSave_GetKey` lấy app property `Hub2uniqueUserId` / `Hub2uniqueDeviceId`, chỉ được set ở `hubCallbackAuth` / `GuestAuth` / `GuestBind` (bản offline không chạy tới các hàm này). Lưu (`SAVE_SaveData`) và đọc dùng cùng logic, nên khoá không lệch giữa lúc lưu và lúc đọc.
+  - `SAVE_LoadFile` kiểm version ≤ 5 và chỉ số ô save, và cần Inventory/Quest/Event đọc được. **Nguyên nhân cụ thể CHƯA XÁC ĐỊNH**: cần file save thật.
+  - Màn chọn save gọi `HttpConnectPage(6,0)`. Khi HTTP lỗi thì hiện `PopupNetError` (bảng `0x2b9878`). Đây là hành vi bình thường khi offline.
+  - unidbg văng ở màn chọn save trong `run_quantize` của jemalloc thuộc libc giả lập (size 0). Lỗi riêng của unidbg, chưa sửa.
+- Bản chẩn đoán đã nâng cấp: giải mã frame tombstone (rel_pc + hàm + offset), liệt kê file dữ liệu app, nút **Xuất save** (zip file ≤ 3 MB, bỏ cache → `Download/inotia4_save_*.zip`).
+- **Font**: VNFont đổi từ bội số nguyên `k=(size+2)/18` sang hệ số `q/16` với `q=max(16,size)`, phóng nearest-neighbour; `GAP` 4→2.
+  Số đo: native luôn xin cỡ 24 (khung 565), không phụ thuộc màn hình. Chữ trên máy chỉ bằng khoảng 60% chữ gốc. Phóng ×2 sẽ vượt bộ đệm `drawText` (cao `size*1.3`), làm cắt chữ. GPU cũng đã phóng không nguyên (×1,6875 ở 2400×1080). Ảnh so sánh: `docs/emu_shots/font_cu_moi_co24.png`.
+- `scripts/build_from_apk.sh` (thay `diag_build.sh`, file cũ giờ là wrapper) với các cờ `--smali`, `--vnfont`, `--diag`, `--internet`.
+- `test_builds/Inotia4_TEST7_vi_offline.apk` = TEST4 + `net` + font mới + chẩn đoán. So với TEST6 chỉ khác `classes3.dex` và `classes4.dex`.
+
 ## ĐÃ TÌM RA NGUYÊN NHÂN VĂNG (báo cáo TEST5a, Xiaomi 23113RKC6C, Android 16)
 Log đầy đủ: `logs/may_that_TEST5a_2026-10-31.txt`. Lỗi `CRASH(Java)` ở luồng `Thread-19`:
 `java.lang.SecurityException: Permission denied (missing INTERNET permission?)` tại `com.com2us.wrapper.network.CWrapperHttp$1.run` (`getResponseCode`).

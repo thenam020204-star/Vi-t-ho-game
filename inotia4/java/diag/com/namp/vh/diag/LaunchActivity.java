@@ -80,6 +80,7 @@ public final class LaunchActivity extends Activity {
         btn(row, "Lưu vào Download", new View.OnClickListener() { public void onClick(View v) { save(); } });
         btn(row, "Chia sẻ", new View.OnClickListener() { public void onClick(View v) { share(); } });
         btn(row, "Sao chép", new View.OnClickListener() { public void onClick(View v) { copy(); } });
+        btn(row, "Xuất save", new View.OnClickListener() { public void onClick(View v) { exportSave(); } });
         btn(row, "Vào game", new View.OnClickListener() { public void onClick(View v) { go(); } });
         root.addView(row);
         ScrollView sv = new ScrollView(this);
@@ -117,6 +118,30 @@ public final class LaunchActivity extends Activity {
             }
         } catch (Throwable t) {
             toast("Lưu lỗi: " + t);
+        }
+    }
+
+    /** Nen file du lieu game (save, cau hinh; bo cache va file > 3 MB) vao Download/inotia4_save_*.zip. */
+    private void exportSave() {
+        String name = "inotia4_save_" + System.currentTimeMillis() + ".zip";
+        try {
+            int n;
+            if (Build.VERSION.SDK_INT >= 29) {
+                ContentValues cv = new ContentValues();
+                cv.put(MediaStore.MediaColumns.DISPLAY_NAME, name);
+                cv.put(MediaStore.MediaColumns.MIME_TYPE, "application/zip");
+                cv.put(MediaStore.MediaColumns.RELATIVE_PATH, "Download/");
+                Uri u = getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, cv);
+                OutputStream o = getContentResolver().openOutputStream(u);
+                n = CrashLog.zipData(this, o);
+                toast("Đã lưu Download/" + name + " (" + n + " file)");
+            } else {
+                File f = new File(getExternalFilesDir(null), name);
+                n = CrashLog.zipData(this, new FileOutputStream(f));
+                toast("Đã lưu " + f + " (" + n + " file)");
+            }
+        } catch (Throwable t) {
+            toast("Xuất save lỗi: " + t);
         }
     }
 
