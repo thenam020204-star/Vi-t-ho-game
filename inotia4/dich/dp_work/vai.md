@@ -28,3 +28,11 @@
 - Pope/His Holiness: Giáo hoàng / Đức Thánh Cha. Kane (Dark Sorcerer, nhà thí nghiệm lập dị của tộc): ta – cậu. Leiden: nhà giả kim: tôi – cậu.
 - Olaf (Steel Orc, chiến binh trọng danh dự): tôi – cô/cậu. Kẻ cầm đầu dị giáo (heresy leader): ta – các ngươi.
 - Azad: "Người lạ ở Hwagan", bí ẩn, biết quá khứ Kiyan: tôi – cậu/các người. Trưởng lão Steel Orc: ta – các con/các vị.
+- Yirien: bé gái fey, nói ngọng nghịu trẻ con; gọi Kiyan "anh"/"anh trai", xưng "em"/"Yirien". Kiyan với Yirien: anh – nhóc.
+- Tindalrose ("chó điên"), chỉ huy trung đội săn Channel: ta – các ngươi.
+- Mẹ của Yirien (Snow Fey): tôi – cậu. Yirien gọi mẹ "mẹ ơi".
+- Hiền nhân Cá chép (Carp Sage, đội cá trên đầu, đãng trí, mê bánh cá): ta – cậu/chàng trai.
+- Yuhar: phó tướng của Alexander: tôi – ngài. Ivan: hồn pháp sư được giải phong ấn, giúp Kiyan: tôi – cậu.
+- Hiệp sĩ lang thang vô danh (cứu Kiyan mất trí nhớ): tôi – cậu, giọng thân thiện.
+- Sau khi lộ thân phận (k~5718): Azad là anh trai Kiyan (cùng là vật chứa của Moar): Azad – Kiyan: anh – em; Kiyan giận: ngươi. Portia phản Janus, theo Azad. Janus lộ mặt ác: ta – ngươi khi đối đầu.
+- Sailen (tiên rừng, vui vẻ): tôi – các cậu. Cây du già (old elm, nói cổ): ta – các ngươi/hỡi những người trẻ.
