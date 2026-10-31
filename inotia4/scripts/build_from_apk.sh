@@ -3,7 +3,7 @@
 #   bash scripts/build_from_apk.sh <base.apk> <out.apk> [--smali nhom1,nhom2] [--vnfont] [--lib] [--diag] [--internet]
 #   --smali  : decode smali day du, ap scripts/patch_smali.py --group <nhom> (vd. net);
 #              khong co --smali: apktool -s, giu nguyen tung byte moi dex cua base;
-#   --vnfont : bien dich lai com.namp.vh (VNFont/FontData/Offline) tu java/src -> thay classes3.dex;
+#   --vnfont : bien dich lai com.namp.vh (VNFont/FontData/FontData24/Offline) tu java/src -> thay classes3.dex;
 #   --lib    : va lib/arm64-v8a/libgame.so bang scripts/patch_lib.py (patch nao lib nen da co thi bao "da ap"),
 #              giu nguyen kich thuoc/STORED/can 16 KB (fix_zip.py lo phan can);
 #   --diag   : them classes4.dex = com.namp.vh.diag (LaunchActivity, DiagProvider, CrashLog) + sua manifest;
@@ -45,6 +45,7 @@ if [ $VNFONT = 1 ]; then
   echo "== 2. VNFont -> classes3.dex (javac --release 8, d8 --lib android.jar)"
   mkdir -p "$W/vnf/stub" "$W/vnf/cls" "$W/vnf/dex"
   python3 -I scripts/gen_fontdata.py font/f18vn.bin java/src/com/namp/vh/FontData.java
+  python3 -I scripts/gen_fontdata.py font/f24vn.bin java/src/com/namp/vh/FontData24.java --parts
   env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -d "$W/vnf/stub" $(find java/stubs -name '*.java')
   env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -cp "$W/vnf/stub" -d "$W/vnf/cls" java/src/com/namp/vh/*.java
   $D8 --lib "$W/vnf/stub" --output "$W/vnf/dex" "$W"/vnf/cls/com/namp/vh/*.class

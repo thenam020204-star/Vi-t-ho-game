@@ -58,6 +58,7 @@ echo "anh: $(ls "$W"/img_vi | wc -l) file"
 echo "== 5. VNFont -> classes3.dex"
 rm -rf "$W/vnf" && mkdir -p "$W/vnf/cls" "$W/vnf/stub" "$W/vnf/dex"
 $PY scripts/gen_fontdata.py font/f18vn.bin java/src/com/namp/vh/FontData.java
+$PY scripts/gen_fontdata.py font/f24vn.bin java/src/com/namp/vh/FontData24.java --parts
 env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -d "$W/vnf/stub" $(find java/stubs -name '*.java')
 env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -cp "$W/vnf/stub" -d "$W/vnf/cls" java/src/com/namp/vh/*.java
 # chi dong goi com/namp/vh (stub KHONG vao dex)
