@@ -55,10 +55,11 @@ Thêm tuỳ chọn `-Demu.dumpfont=DIR` vào `emu/src/Inotia4Emu.java` (làm đ�
 python3 -I fontgen_inotia/gpu_sim.py out.png "nhãn=/opt/work/t7/dump_f18/dump_000_s24.png"
 ```
 
-Màn chọn ô save có `size=24`, `w=659`. Lưu ý: unidbg vẫn văng `UC_ERR_READ_UNMAPPED` ngay sau lệnh này (lỗi môi trường jemalloc đã ghi ở T2, không phải của game), nên **ảnh màn hình** (`fNNNNN.png`) không có chữ; đệm chữ thì đã lưu xong trước khi văng (callback Java chạy trước), nên dump vẫn dùng được.
+Màn chọn ô save có `size=24` (`w=659` với TEST7). Lưu ý: unidbg vẫn văng `UC_ERR_READ_UNMAPPED` ngay sau lệnh này (lỗi môi trường jemalloc đã ghi ở T2, không phải của game), nên **ảnh màn hình** (`fNNNNN.png`) không có chữ; đệm chữ thì đã lưu xong trước khi văng (callback Java chạy trước), nên dump vẫn dùng được.
 
 - `docs/emu_shots/font_dump_f18_s24.png`: đệm chữ thật với `VNFont` TEST7 (f18, q=24).
-- `docs/emu_shots/font_dump_f18_gpu.png`: cùng đệm, phóng ×1,6875 nearest (trên) và bilinear (dưới).
+- `docs/emu_shots/font_dump_f24_s24.png`: cùng màn, cùng lệnh, sau T7c (`VNFont` dùng `f24vn` cho size 24; hộp rộng 698 thay vì 659 vì chữ rộng hơn khoảng 5%).
+- `docs/emu_shots/font_dump_so_sanh_gpu.png`: hai đệm trên phóng ×1,6875, mỗi cái hai khối nearest (trên) và bilinear (dưới); hai khối đầu là f18 TEST7, hai khối sau là f24vn.
 
 Giới hạn: unidbg không chạy GPU của máy thật, ảnh phóng là mô phỏng bằng Pillow (BILINEAR = nội suy theo tâm điểm ảnh, cùng nguyên lý `GL_LINEAR`).
 
@@ -78,3 +79,11 @@ Sinh bằng `python3 fontgen_inotia/gen_f24.py font/f18vn.bin font/f24vn.bin`; k
 - Thân chữ: "bút 2×2" từ f18 (mỗi điểm sáng thành khối 2×2, toạ độ nhân khoảng 1,4), nét dày đều 2 px; 13 chữ vẽ tay lại (A K M N R V X Y k v w x y).
 - Dấu vẽ lại trên lưới 24 và ghép: nặng 2×2; sắc/huyền 3×4; hỏi 4×4; ngã 9×3 (7×3 trên chữ có sừng, để cách sừng ≥ 2 px); mũ/á 7×3 có khối 2×2 đặc; sừng 2×2 ở hàng x-height. Dấu cách thân chữ ≥ 1 hàng; hai dấu chồng cách nhau ≥ 1 hàng.
 - Kiểm tự động (`check_f24.py`): mọi thành phần dấu bbox ≥ 2×2, không có nét 1 px theo cả hai phương, cách thân (Chebyshev) ≥ 2, dấu chồng cách ≥ 1 hàng, sừng và thanh ngang `đ/Đ` dày ≥ 2.
+
+## 6. Tích hợp vào `VNFont` (T7c)
+
+- `java/src/com/namp/vh/VNFont.java`: hai mặt chữ (lớp trong `Face`: h, base, gap, bề dày gạch chân, mẫu số `den`, bảng glyph). `size < 24` → F18 với `q = max(16, size)`, mẫu 16, **giống hệt TEST7** (so từng pixel trên 10 size từ 10 đến 23, 4 kiểu chữ, cả `drawText`, `drawTextPart`, `drawInRect`, `measureInRect`: CRC trùng). `size >= 24` → F24 với `q = size`, mẫu 24, hệ số size/24 ≥ 1 (24 → ×1, 28 → ×1,167, 38 → ×1,583), chỉ phóng to, làm tròn xuống như `sc()` cũ.
+- 5 method công khai giữ nguyên chữ ký (`getStringWidth`, `drawText`, `drawTextPart`, `measureInRect`, `drawInRect`). Chọn mặt chữ bằng một trường tĩnh `cur` đặt đầu mỗi lần gọi (các hàm đều `synchronized`). Không cấp phát trong vòng vẽ: hai bảng glyph nạp một lần ở `init()`.
+- Chiều cao dòng `(H+GAP)*q/den`: F18 `20*q/16` = F24 `30*q/24` = 1,25·q, tức bằng TEST7 ở mọi size ≥ 24; `drawText` (cao `(int)(size*1.3)`) không cắt hàng ở 24/28/38 (kiểm bằng `java/test/VNFontTest.java`: số điểm sáng của `drawText` bằng `drawInRect` một dòng với câu có mọi dấu chồng). Gạch chân F24 dày 2 hàng nguồn.
+- Chữ rộng hơn khoảng 5% so với f18×1,5 ở size 24 (bề rộng ô 11 thay cho 10,5 trung bình): vẫn do native ngắt dòng qua `measureInRect`, nên không thay đổi cách dùng hộp.
+- Dữ liệu: `font/f24vn.bin` → `java/src/com/namp/vh/FontData24.java` (`static final String[] PARTS`, mỗi phần ≤ 16000 byte; hiện 9761 byte nên 1 phần; thử `--parts 3000` ra 4 phần, đệm chữ giống hệt 1 phần). Sinh bằng `python3 -I scripts/gen_fontdata.py font/f24vn.bin java/src/com/namp/vh/FontData24.java --parts`, có trong `scripts/build_from_apk.sh` (`--vnfont`), `scripts/rebuild.sh` và `emu/run.sh` (danh sách javac).
