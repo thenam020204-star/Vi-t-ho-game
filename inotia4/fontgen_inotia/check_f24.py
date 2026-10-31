@@ -134,6 +134,7 @@ def main(a):
         base, horn, mods = d
         n_mark_glyph += 1
         G = P[c]
+        plain = set(p for p in P[base] if p[1] >= X_TOP) if base.islower() else set(P[base])
         if horn:
             hb = {'o': 'ơ', 'u': 'ư', 'O': 'Ơ', 'U': 'Ư'}[base]
             ref = P[hb]
@@ -160,8 +161,7 @@ def main(a):
         if horn and not mods:
             continue
         cl = comps(mk)
-        bt = min(p[1] for p in ref)
-        bb = max(p[1] for p in ref if p[1] <= BASE) if ref else BASE
+        bt = min(p[1] for p in plain)
         n_comp = []
         for cp in cl:
             n_marks += 1
@@ -178,8 +178,8 @@ def main(a):
             near = min(cheb(p, q) for p in cp for q in G - mk) if (G - mk) else 99
             if near < 2:
                 bad(c, 'dau cham/lien ke than chu (khoang cach %d)' % near)
-            if y1 < min(p[1] for p in ref):         # dau tren
-                cols = [q for q in ref if x0 <= q[0] <= x1]
+            if y1 < bt:                              # dau tren
+                cols = [q for q in plain if x0 <= q[0] <= x1]
                 top = min(q[1] for q in cols) if cols else bt
                 if y1 > top - 2:
                     bad(c, 'dau tren cach than <1 hang (day dau %d, dinh than %d)' % (y1, top))
@@ -195,16 +195,15 @@ def main(a):
                 bad(c, 'hai dau chong cach nhau <1 hang (%s,%s)' % ((a0, a1), (b0, b1)))
     # d / D
     for c, b in (('đ', 'd'), ('Đ', 'D')):
-        bar = P[c] - P[b]
-        cl = comps(bar)
-        if not cl:
+        bar = P[c] - P[b]                  # hai manh trai/phai cua than noi nhau qua than: xet chung
+        if not bar:
             bad(c, 'thieu thanh ngang')
-        for cp in cl:
-            x0, y0, x1, y1 = bbox(cp)
-            if y1 - y0 + 1 < 2 or x1 - x0 + 1 < 2:
-                bad(c, 'thanh ngang mong <2 px')
-            if thick_ok(cp):
-                bad(c, 'thanh ngang co net 1 px')
+            continue
+        x0, y0, x1, y1 = bbox(bar)
+        if y1 - y0 + 1 < 2 or x1 - x0 + 1 < 2:
+            bad(c, 'thanh ngang mong <2 px')
+        if thick_ok(bar):
+            bad(c, 'thanh ngang co net 1 px')
     print('f24vn: %d glyph, H=%d; glyph co dau/sung: %d; thanh phan dau: %d (co khoi 2x2 dac: %d)'
           % (len(cs), h, n_mark_glyph, n_marks, n_solid))
     print('VI PHAM: %d' % len(viol))

@@ -144,9 +144,9 @@ MARKS = {
     'acute': ([".##", ".##", "##.", "##."], 1),
     'grave': (["##.", "##.", ".##", ".##"], 1),
     'hook': (["###.", "..##", "..##", ".##."], 1),
-    'tilde': (["..###..##", ".##.####.", "##...##.."], 4),
-    'circ': (["..###..", ".##.##.", "##...##"], 3),
-    'breve': (["##...##", ".##.##.", "..###.."], 3),
+    'tilde': (["..###..##", ".##.#####", "##...##.."], 4),
+    'circ': (["..###..", ".#####.", "##...##"], 3),
+    'breve': (["##...##", ".#####.", "..###.."], 3),
     'dot': (["##", "##"], 0),     # cot tam = cot trai cua cap
 }
 
@@ -249,9 +249,9 @@ def build(gl18, charset):
             mtop = stamp(pts, mod, cx, bottom)
             bottom = mtop - 1 - GAP_ROWS
         if tone and tone != 'dot':
-            stamp(pts, tone, cx, bottom)
+            stamp(pts, tone, cx - 1 if (horn and tone == 'tilde') else cx, bottom)   # tranh sung ben phai
         if tone == 'dot':
-            stamp(pts, 'dot', cx if base not in 'y' else cx, BASE + 3)
+            stamp(pts, 'dot', cx + 2 if base == 'y' else cx, BASE + 3)             # y: dau nang ben phai duoi duoi
         adv = max(ADV, bbox(pts)[2] + 3)
         out[c] = (adv, pts)
     return out
