@@ -1,0 +1,8 @@
+tools/*.jar
+tools/jadx/
+tools/NAM_P/
+tools/Tool_Viet_Hoa_NAM_P.zip
+work/
+*.apk
+*.apks
+keystore/

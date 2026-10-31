@@ -1,0 +1,7 @@
+patched com/com2us/wrapper/font/CFont .method public getStringWidth([BII)I
+patched com/com2us/wrapper/font/CFont .method public drawText([BII)I
+patched com/com2us/wrapper/font/CFont .method public drawText([BII[I)I
+patched com/com2us/wrapper/font/CSGLFont .method public drawTextInRect([BIIIII)I
+patched com/com2us/wrapper/font/CSGLFont .method public getStringWidthHeightInRect([BIIII[I)I
+patched com/com2us/wrapper/function/CFunction .method public static getLanguage(Ljava/lang/String;)Ljava/lang/String;
+tong: 6 method
