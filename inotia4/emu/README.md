@@ -19,3 +19,9 @@ echo "$PWD/unidbg-android/target/unidbg-android-0.9.10-SNAPSHOT.jar:$(cat cp.txt
 LIB=<libgame.so> APK=out/Inotia4_vi_offline.apk EMU_OPTS="-Demu.shot=50" bash emu/run.sh 400
 # ảnh: work/emuout/fNNNNN.png, last.png ; -Demu.trace=true in mọi JNI ; -Demu.tracefn=a,b in khi vào hàm
 ```
+
+## Kiểm hàm mã hoá save không cần chạy game (T3c)
+```bash
+bash emu/crypto_check.sh <libgame.so gốc> <libgame.so đã vá> [thư mục kết quả] [logs/save_TEST7]
+```
+`emu/src/CryptoCheck.java` nạp lib, gọi thẳng `ENCRYPT_Process2` với khoá rỗng = buffer `HubSave_key`, ghi rác sau buffer (mô phỏng bộ nhớ khác nhau giữa hai tiến trình) rồi mã hoá/giải mã; `scripts/re/crypto_xcheck.py` so kết quả với `scripts/re/save_crypto.py`. Dòng cuối phải là `TONG KET: TAT CA DAT`. Log mẫu: `logs/t3c_crypto_check.log`.

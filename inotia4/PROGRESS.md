@@ -92,3 +92,12 @@ Việc tiếp theo (đề xuất):
 - Gửi 2 bản để thu hẹp nguyên nhân: (a) như TEST4 + chẩn đoán; (b) trả lại quyền INTERNET + chẩn đoán.
 - Hoặc nhờ người dùng gửi logcat (`adb logcat -b crash`).
 - d8: thêm `--lib android.jar`.
+
+## Phiên 3: sửa văng khi load save (T3a–T3c) — TEST8
+- **Nguyên nhân (đã chứng minh, `docs/save_format.md`)**: khoá save rỗng ở bản offline ⇒ `ENCRYPT_Process2` (0x140970) chia modulo cho 0 ⇒ đọc `key[r+i]` vượt buffer `HubSave_key` (64 B) sang con trỏ heap (`gImgUI`, `g_pSGL*`, `s_cachedTexture`) đổi theo mỗi lần chạy ⇒ save ghi ở lần chạy A không giải mã được ở lần chạy B ⇒ `SAVE_LoadData` false ⇒ `PLAYER_pMainPlayer` NULL ⇒ SIGSEGV. Bằng chứng: known-plaintext trong `save0.dat` (hằng 140/20132/5 ở Info) cho thấy byte nhớ `0xb4` (tag con trỏ heap) tại `0x2d0d67`, `0x2d0d6f`; unidbg tái hiện đúng cơ chế (`logs/t3c_crypto_check.log`).
+- **Công cụ**: `scripts/re/save_crypto.py` (giải/mã hoá + kiểm tổng, `--selftest`), `scripts/re/crypto_xcheck.py`, `emu/src/CryptoCheck.java` + `emu/crypto_check.sh` (gọi thẳng hàm trong unidbg, so lib gốc/lib vá/script).
+- **Vá lib (P1)**: `scripts/patch_lib.py` patch 0x1409a4..0x1409bf: `L = max(strlen(key),1)`. Không cave (không có khe ≥16 B trong segment R-X), viết lại 7 lệnh trong thân hàm; khoá NULL vẫn "123"; khoá khác rỗng không đổi. `scripts/build_from_apk.sh` có cờ `--lib`. Patch cũ 0x203e68 được nhận là "đã áp" trên lib TEST4.
+- **Kết quả unidbg (khoá rỗng, 3189 B, mã hoá khi bộ nhớ sau `HubSave_key` = rác G1; giải mã khi G1 / khi G2)**: lib gốc G1 ⇒ true, G2 ⇒ **false**; lib vá G1 ⇒ true, G2 ⇒ **true**. Khoá khác rỗng/NULL/n=0/n=28: bản mã lib gốc == lib vá == `save_crypto.py`. Lib gốc == mô hình đọc vượt buffer từng byte.
+- **`test_builds/Inotia4_TEST8_vi_offline.apk`** = TEST7 + lib đã vá (`--smali net --vnfont --lib --diag`; vẫn KHÔNG có INTERNET). SHA256 ở `test_builds/SHA256_TEST8.txt`. So TEST7 chỉ khác `lib/arm64-v8a/libgame.so`; cùng khoá ký ⇒ cài đè được.
+- **Nhờ người dùng thử**: cài đè TEST8 ⇒ game mới (nên dùng ô save mới hoặc ghi đè ô 0; **save cũ của TEST7 không cứu được**, nạp lại ô đó vẫn văng vì chưa áp P2) ⇒ lưu ⇒ tắt hẳn app (vuốt khỏi đa nhiệm) ⇒ mở lại ⇒ load. Nếu văng, mở bản chẩn đoán, bấm Xuất save và gửi.
+- **CHƯA XÁC ĐỊNH**: khoá của `appinfo.dat` (`UTIL_pPhoneNumber`, giải mã với khoá rỗng cho Σthô sai ⇒ khoá khác rỗng hoặc bộ nhớ sau nó khác 0); `envinfo.dat` có mã hoá không; chữ `A` cuối thư mục `thpcheckslot`.
