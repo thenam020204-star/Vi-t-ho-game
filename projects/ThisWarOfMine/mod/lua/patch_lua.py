@@ -1,7 +1,8 @@
 """Vá script Lua trong common.dat cho tính năng "công việc xong tức thì" của menu mod.
 Khối a0d11dd5 = NonInstantAction (lớp gốc mọi hành động có thanh tiến độ: lục đồ, dọn, chặt, dỡ chướng ngại, mở khoá...).
-Chỉ thêm một nhánh được bật bằng biến toàn cục TWOMMOD_INSTANT (libtwommod.so đặt qua LuaWrapper::Execute).
-Khi biến chưa được đặt (không có menu) hành vi giống hệt bản gốc.
+Chỉ thêm một nhánh, bật khi gConfigHelper:PS4IsPlusSubscriptionActive() trả true. Hàm này (chỉ dành cho PS4)
+trên Android luôn trả false; libtwommod.so hook GOT của nó để trả trạng thái công tắc trong menu.
+Native không gọi vào Lua; không có libtwommod.so thì hành vi giống hệt bản gốc.
   python3 patch_lua.py <thư mục khối gốc (datpack unpack)> <thư mục khối thay>"""
 import sys, os
 
@@ -13,7 +14,8 @@ OLD = b"""function NonInstantAction:OnUpdateTime(dt)
 \tend;
 \tself.Timer = self.Timer + dt;"""
 
-NEW = b"""-- twommod: hanh dong "cong viec" cua nguoi trong nhom xong ngay khi bat menu (TWOMMOD_INSTANT)
+NEW = b"""-- twommod: hanh dong "cong viec" cua nguoi trong nhom xong ngay khi bat menu
+-- (PS4IsPlusSubscriptionActive luon false tren Android; libtwommod.so tra ve trang thai cong tac)
 local TWOMMOD_WORK = {"ScavengeAction", "ClearAction", "RemoveBlockadeAction", "ChopAction", "LockAction", "UnlockAction"};
 local function TWOMMOD_IsWork(a)
 \tlocal u = a.OnUpdate;
@@ -28,7 +30,8 @@ function NonInstantAction:OnUpdateTime(dt)
 \tif self.MultiplierName and self.User then
 \t\tdt = dt * self.User:GetParameterValueAsMultiplier(self.MultiplierName);
 \tend;
-\tif TWOMMOD_INSTANT and self.User and self.Duration and self.Duration > 0 and self.User:HasTag("Dweller") and TWOMMOD_IsWork(self) then
+\tif self.User and self.Duration and self.Duration > 0 and gConfigHelper and gConfigHelper:PS4IsPlusSubscriptionActive()
+\t\tand self.User:HasTag("Dweller") and TWOMMOD_IsWork(self) then
 \t\tlocal need = self.Duration - self.Timer;
 \t\tif need > dt then dt = need; end;
 \tend;

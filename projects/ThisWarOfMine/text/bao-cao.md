@@ -3,6 +3,7 @@
 ## Kết quả
 - Dịch tay 7770 dòng (T1 6874 dòng / 6612 chuỗi duy nhất — Sonnet; T2 896 dòng / 864 chuỗi — Haiku), giữ nguyên 220 dòng (`Names/*` + rỗng). Tổng 7990 bản ghi.
 - Text tiếng Việt ghi vào slot **English** (slot 1) của khối `2f6496cc`; nhãn ngôn ngữ English đổi thành "Tiếng Việt".
+- Cỡ nhỏ phóng thêm 40% (`SMALL_BOOST=1.4`, mặc định): 16 font hẹp trước đây rơi xuống f13/f15 (chữ hoa 7/8px) nay cao 10/11.2px — f13 → f18 nguyên pixel, f15 → f18 vẽ lại ×1.12. `SMALL_BOOST=1.0` = như cũ.
 - Font (mặc định từ nay `FONT_MODE=pixel`): 137 font Latin thay bằng font pixel NAM.P `fonts/namp/f18.bin` (18px có chân). Tỉ lệ s = min(chữ hoa gốc/10, độ rộng a–z gốc/f18): s<0.8 → f13, <0.95 → f15, <1.3 → f18 nguyên pixel; ≥1.3 → vẽ lại bằng nét (nối tâm ô pixel, nét chéo liền, chân chữ vuông, độ đậm s·min(1.2, 1+0.07(s−1)), khử răng cưa). Vẽ tay thêm: Ł ł Ą ą Ę ę Ń ń Ś ś Ź ź Ż ż – “ ” ’ © ® = _ ` ~ (f13/f15 ánh xạ hàng theo vùng). Ký tự không có trong bộ pixel giữ glyph gốc.
 - Font cũ (`FONT_MODE=times`): 137 font Latin thay bằng Times New Roman (giữ cỡ: min(khớp chữ hoa, khớp độ rộng a–z), giữ baseline, chiều cao dòng, bpp; font 2bpp dựng lại viền). Font CJK/Hàn giữ nguyên.
 - Build: `sh build.sh <gốc> <ra>` → `VERIFY OK: khối giữ nguyên 191, khối thay 138`.

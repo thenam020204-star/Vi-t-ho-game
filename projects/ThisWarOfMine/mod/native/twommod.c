@@ -15,7 +15,8 @@
  *   gKosovoGlobalState: +0xe4 "ScavengeTime" (độ dài đêm lục lọi, float) — đặt ở InitScavengeScene, đọc ở FlowStateScavenge
  *   KosovoCraftingBaseComponent: +0x44 trạng thái (3 = người đang làm), +0x50 đã làm, +0x54 tổng thời gian;
  *                       OnTickCrafting(float) = vtable+0x130 (4 vtable: CraftingBase/Crafting/Construction/Upgrade)
- *   gLuaWrapper:        +0x00 lua_State*; LuaWrapper::Execute(const char*, unsigned) chạy một chuỗi Lua
+ *   LUAConfigHelper::PS4IsPlusSubscriptionActive(): trên Android = "return false", chỉ được gọi từ wrapper tolua
+ *                       (gConfigHelper trong Lua) -> dùng làm công tắc cho script NonInstantAction đã vá
  */
 #include <jni.h>
 #include <dlfcn.h>
@@ -50,8 +51,6 @@ static int (*f_ContAdd)(void *cont, void *name, int n);
 static int (*f_CanTake)(void *cont, void *name, int ignore);
 static char *p_mainparams;         /* gKosovoMainParams */
 static char *p_globalstate;        /* gKosovoGlobalState */
-static void *p_lua;                /* gLuaWrapper */
-static int (*f_LuaExec)(void *lw, const char *code, unsigned nres);
 
 /* hàm gốc */
 static void (*o_ReduceHP)(void *, void *);
@@ -65,6 +64,7 @@ static void (*o_GiveTo)(void *, void *, unsigned, int);
 static void (*o_GiveToSib)(void *, int, int);
 static void (*o_TickCraft)(void *, float);
 static uintptr_t (*o_InitScav)(void *, void *, float, void *, void *);
+static int (*o_PS4Plus)(void *);
 
 /* vùng mã của KosovoUIPanelInventory::* (bảng thùng đồ / kho — không gồm bảng giao dịch) */
 #define MAXR 128
@@ -312,17 +312,10 @@ static void h_TickCraft(void *c, float dt) {
     o_TickCraft(c, dt);
 }
 
-/* hành động Lua (lục đồ, dọn, chặt, dỡ chướng ngại, mở khoá): đặt biến toàn cục TWOMMOD_INSTANT,
-   NonInstantAction:OnUpdateTime trong common.dat đã vá sẽ đọc biến này (mod/lua/patch_lua.py) */
-static void *g_luaL; static int g_luaval = -1; static unsigned g_luatick;
-static void tick_lua(void) {
-    if (!p_lua || !f_LuaExec) return;
-    void *L = *(void **)p_lua; if (!L) return;
-    int v = g_opt[OPT_INSTANT] != 0;
-    if (L == g_luaL && v == g_luaval && (++g_luatick % 600)) return;   /* đặt lại định kỳ phòng khi script nạp lại */
-    f_LuaExec(p_lua, v ? "TWOMMOD_INSTANT=true" : "TWOMMOD_INSTANT=nil", 0);
-    g_luaL = L; g_luaval = v;
-}
+/* hành động Lua (lục đồ, dọn, chặt, dỡ chướng ngại, mở khoá): NonInstantAction:OnUpdateTime trong common.dat
+   đã vá (mod/lua/patch_lua.py) hỏi gConfigHelper:PS4IsPlusSubscriptionActive(). Lua tự gọi xuống, native không
+   bao giờ gọi vào Lua (tránh đụng Lua state khi game tạm dừng / nạp lại). */
+static int h_PS4Plus(void *self) { (void)self; return g_opt[OPT_INSTANT] != 0; }
 
 /* ---------------- 6. tốc độ ngày / đêm ---------------- */
 static float speed(void) { int i = g_opt[OPT_DAYSPEED]; return (i >= 0 && i < NSPEED) ? SPEEDS[i] : 1.f; }
@@ -369,7 +362,6 @@ static void h_SceneOnTick(void *sc) {
     if (p_itemcfg && !g_ok[OPT_STACK99]) { int c = check_stack_layout(); if (c == 1) g_ok[OPT_STACK99] = 1; }
     tick_stack();
     tick_bags();
-    if (g_ok[OPT_INSTANT]) tick_lua();
     if (g_ok[OPT_DAYSPEED]) { tick_day(); tick_night(); }
 }
 
@@ -402,8 +394,6 @@ static int install(void) {
     SYM(f_CanTake, "_ZN24KosovoInventoryContainer7CanTakeERK10NameStringb");
     SYM(p_mainparams, "gKosovoMainParams");
     SYM(p_globalstate, "gKosovoGlobalState");
-    SYM(p_lua, "gLuaWrapper");
-    SYM(f_LuaExec, "_ZN10LuaWrapper7ExecuteEPKcj");
     SYM(o_TickCraft, "_ZN27KosovoCraftingBaseComponent14OnTickCraftingEf");
     collect_panel_ranges();
     int tick = got_hook("_ZN11KosovoScene6OnTickEv", h_SceneOnTick, (void **)&o_SceneOnTick);
@@ -428,11 +418,12 @@ static int install(void) {
                                    "_ZTV27KosovoConstructionComponent", "_ZTV22KosovoUpgradeComponent"};
         for (int i = 0; i < 4; i++) vt += vt_hook(VT[i], 0x130, (void *)o_TickCraft, (void *)h_TickCraft);
     }
-    g_ok[OPT_INSTANT] = tick && ((p_lua && f_LuaExec) || vt);
+    int lua = got_hook("_ZNK15LUAConfigHelper27PS4IsPlusSubscriptionActiveEv", (void *)h_PS4Plus, (void **)&o_PS4Plus);
+    g_ok[OPT_INSTANT] = lua || vt;
     g_ok[OPT_DAYSPEED] = tick && p_mainparams && p_globalstate && p_delegate && f_IsScavenge
         && got_hook("_ZN17KosovoGlobalState17InitScavengeSceneERK10NameStringfRK10SimpleGUIDS5_", h_InitScav, (void **)&o_InitScav);
     LOG("cài xong: god=%d bag=%d loot=%d instant=%d (vtable %d/4, lua %d) dayspeed=%d panelRanges=%d",
-        g_ok[0], g_ok[1], g_ok[3], g_ok[4], vt, p_lua && f_LuaExec, g_ok[5], g_nr);
+        g_ok[0], g_ok[1], g_ok[3], g_ok[4], vt, lua, g_ok[5], g_nr);
     return 1;
 }
 

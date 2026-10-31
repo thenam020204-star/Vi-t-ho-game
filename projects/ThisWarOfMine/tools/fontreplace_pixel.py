@@ -129,12 +129,22 @@ def redraw(g, s, ss=4):
     return np.array(im.crop((0, 0, W2 * ss, H2 * ss)).resize((W2, H2), Image.BOX))
 
 
+# cỡ nhỏ (f13/f15) phóng thêm theo chiều cao chữ hoa: SMALL_BOOST=1.4 -> +40% (1.0 = như cũ)
+SMALL_BOOST = float(os.environ.get('SMALL_BOOST', '1.4'))
+CAP_PX = {'f13': 7, 'f15': 8, 'f18': 10}                 # chiều cao chữ hoa đo từ các file .bin
+
+
 def choose(F):
     _, G = pixfont('f18')
     wid = sum(G[c].shape[1] for c in fr.LOW)
     s = min(F.cap / 10.0, sum(F.adv(c) for c in fr.LOW if F.has(c)) / wid)
-    if s < 0.8: return 'f13', 1.0, s
-    if s < 0.95: return 'f15', 1.0, s
+    if s < 0.95:
+        name = 'f13' if s < 0.8 else 'f15'
+        t = CAP_PX[name] * SMALL_BOOST / CAP_PX['f18']   # tỉ lệ so với f18
+        if SMALL_BOOST == 1.0: return name, 1.0, s
+        if t < 0.9: return ('f15' if t * 10 >= 8 else 'f13'), 1.0, s
+        if t < 1.05: return 'f18', 1.0, s                 # gần đúng 10px: dùng f18 nguyên pixel (nét sắc)
+        return 'f18', t, s
     if s < 1.3: return 'f18', 1.0, s
     return 'f18', s, s
 
