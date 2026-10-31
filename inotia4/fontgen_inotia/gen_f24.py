@@ -49,6 +49,95 @@ def block_map(rows18, drop_rows=()):
     return pts
 
 
+# ---------------------------------------------------------------- chu ve tay (thay cho but 2x2 o cac chu bi dac)
+def _rows(top, rows):
+    """rows: danh sach tap cot (hoac chuoi '#'/'.') bat dau tu hang `top` -> tap diem."""
+    pts = set()
+    for j, r in enumerate(rows):
+        if isinstance(r, str):
+            r = [i for i, ch in enumerate(r) if ch == '#']
+        for x in r:
+            pts.add((x, top + j))
+    return pts
+
+
+def _run(x, n=2):
+    return range(x, x + n)
+
+
+def _arms(top, left_edges, right_edges, n=2):
+    """Hai canh cheo: moi hang co mot doan n diem bat dau tai cot trai cua canh."""
+    rows = []
+    for a, b in zip(left_edges, right_edges):
+        rows.append(set(_run(a, n)) | set(_run(b, n)))
+    return _rows(top, rows)
+
+
+def _stem(top, rows, cols):
+    return set((x, top + j) for j in range(rows) for x in cols)
+
+
+def hand_glyphs():
+    g = {}
+    cap = CAP_TOP
+    xt = X_TOP
+    # A: dinh 3 cot, hai chan thang, thanh ngang 2 hang
+    g['A'] = _rows(cap, ["...###...", "...###...", "..##.##..", "..##.##..", ".##...##.", ".##...##.", ".##...##.",
+                         "##.....##", "##.....##", "#########", "#########", "##.....##", "##.....##", "##.....##",
+                         "##.....##"])
+    # V: hai canh thang 5 hang roi chup lai, mui nhon 3 cot
+    L = [0] * 5 + [0, 1, 1, 1, 2, 2, 2, 3, 3, 3]
+    g['V'] = _arms(cap, L, [7 - v for v in L])
+    # X: hai duong cheo cat nhau o giua
+    XL = [int(y * 7 / 14.0 + 0.5) for y in range(15)]
+    g['X'] = _arms(cap, XL, [7 - v for v in XL])
+    # Y: hai canh roi than 3 cot, chan co serif
+    YL = [0, 0, 0, 1, 1, 2, 2, 3, 3]
+    pts = _arms(cap, YL[:7], [7 - v for v in YL[:7]])
+    pts |= _stem(cap + 7, 8, (3, 4, 5))
+    pts |= _stem(cap + 13, 2, range(1, 8))
+    g['Y'] = pts
+    # K: than cot 1-2, hai canh 2 px, serif trai tren duoi
+    pts = _stem(cap, 15, (1, 2))
+    pts |= _stem(cap, 1, (0, 3)) | _stem(cap + 14, 1, (0, 3))
+    up = [7, 6, 6, 5, 5, 4, 4, 3]
+    lo = [3, 4, 4, 5, 5, 6, 6, 7]
+    for j, x in enumerate(up):
+        pts |= set((c, cap + j) for c in _run(x))
+    for j, x in enumerate(lo):
+        pts |= set((c, cap + 7 + j) for c in _run(x))
+    g['K'] = pts
+    # N: hai than 2 px, duong cheo 2 px
+    NL = [1 + int(y * 5 / 14.0 + 0.5) for y in range(15)]
+    pts = _stem(cap, 15, (0, 1)) | _stem(cap, 15, (7, 8))
+    for j, x in enumerate(NL):
+        pts |= set((c, cap + j) for c in _run(x))
+    g['N'] = pts
+    # M: hai than ngoai + nut giua hinh V
+    g['M'] = _rows(cap, ["##.....##", "###...###", "###.#.###", "##.###.##", "##.###.##", "##..#..##", "##.....##",
+                         "##.....##", "##.....##", "##.....##", "##.....##", "##.....##", "##.....##", "##.....##",
+                         "##.....##"])
+    # R: bung chu D mo + chan cheo
+    g['R'] = _rows(cap, ["######...", ".##..##..", ".##...##.", ".##...##.", ".##...##.", ".##..##..", ".######..",
+                         ".######..", ".##.##...", ".##..##..", ".##..##..", ".##...##.", ".##...##.", ".##...##.",
+                         "####.####"])
+    # chu thuong
+    XV = [0, 0, 1, 1, 2, 2, 2, 3, 3]
+    g['v'] = _arms(xt, XV, [7 - v for v in XV])
+    XX = [int(y * 7 / 8.0 + 0.5) for y in range(9)]
+    g['x'] = _arms(xt, XX, [7 - v for v in XX])
+    pts = _arms(xt, XV[:7], [7 - v for v in XV[:7]]) | _stem(xt + 7, 2, (3, 4, 5))
+    pts |= _rows(xt + 9, ["..###....", "..##.....", ".##......", "###......"])
+    g['y'] = pts
+    g['w'] = _rows(xt, ["##.....##", "##.....##", "##.###.##", "##.###.##", "##.###.##", "##.###.##", "##.###.##",
+                        ".##.#.##.", ".##.#.##."])
+    g['k'] = _rows(xt - 6, ["###......", ".##......", ".##......", ".##......", ".##......", ".##......",
+                            ".##....##", ".##...##.", ".##..##..", ".##.##...", ".#####...", ".##.##...",
+                            ".##..##..", ".##...##.", "####...##"])
+
+    return g
+
+
 # ---------------------------------------------------------------- dau (ve tay tren luoi 24)
 # Moi dau: (cac hang, cot tam). Cot tam = cot (tinh tu 0 cua hinh) nam tren tam than chu.
 MARKS = {
@@ -107,7 +196,12 @@ def bbox(pts):
     return min(xs), min(ys), max(xs), max(ys)
 
 
+HAND = {}
+
+
 def build(gl18, charset):
+    HAND.clear()
+    HAND.update(hand_glyphs())
     """-> {ky tu: (adv, set diem)}"""
     out = {}
     plain = {}
@@ -120,7 +214,7 @@ def build(gl18, charset):
         if c == ' ':
             out[c] = (ADV_SPACE, set())
             continue
-        pts = block_map(gl18[c])
+        pts = HAND.get(c) if c in HAND else block_map(gl18[c])
         w18 = len(gl18[c][0])
         adv = ADV if w18 == 7 else int(w18 * 1.5 + 2.5)
         adv = max(adv, bbox(pts)[2] + 3 if pts else adv)
