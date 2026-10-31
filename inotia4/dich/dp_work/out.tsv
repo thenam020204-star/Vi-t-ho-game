@@ -7852,3 +7852,541 @@
 7852	..Hự…
 7853	Thu hoạch vật chất hắc ám.
 7854	Với một kẻ vô danh như ngươi…
+7855	Giới hạn cấp
+7856	Cấp
+7857	Loại
+7858	Class
+7859	Sát thương
+7860	Phòng thủ
+7861	Nhân vật
+7862	Trang bị
+7863	Hành trang
+7864	Đội
+7865	Kỹ năng
+7866	Hệ thống
+7867	Lưu
+7868	Trợ giúp
+7869	Tuỳ chọn
+7870	Vật phẩm Cash
+7871	Rời đi
+7872	Vật phẩm
+7873	Tiền trong túi
+7874	Người chơi
+7875	LV
+7876	EXP
+7877	HP
+7878	MP
+7879	DMG
+7880	M. DMG
+7881	DEF
+7882	M. DEF
+7883	CRT
+7884	M. RES
+7885	EVD
+7886	M. CRT
+7887	Điểm chỉ số:
+7888	Boss
+7889	Chơi mới
+7890	Chơi tiếp
+7891	Ô lưu
+7892	KỸ NĂNG
+7893	ĐIỂM
+7894	%d/%d
+7895	OK
+7896	TẤN CÔNG
+7897	TẮT
+7898	BẬT
+7899	(chưa chọn)
+7900	Hợp nhất
+7901	Cả đội gục ngã 
+7902	Game Over
+7903	Dùng Resurrection Prayer
+7904	Mua Resurrection Prayer
+7905	(không bị phạt)
+7906	(hồi sinh ngay)
+7907	TRỐNG
+7908	Điểm kỹ năng:
+7909	Dùng kỹ năng
+7910	Không dùng
+7911	Dùng
+7912	Tự động phản công
+7913	Cài đặt kỹ năng chi tiết
+7914	Thường
+7915	Cao
+7916	Số lượng:
+7917	Gán phím tắt
+7918	Chọn Mercenary Emblem
+7919	Nhận
+7920	Hoàn thành
+7921	/ null không có!!
+7922	Phần thưởng
+7923	Điểm kinh nghiệm
+7924	Tiêu hao MP
+7925	Hiệu ứng kỹ năng
+7926	Cậu có muốn học không?
+7927	Hồi chiêu
+7928	giây
+7929	Hồi cả HP lẫn MP.
+7930	Tốc độ đánh
+7931	Rất nhanh
+7932	Nhanh
+7933	Khá nhanh
+7934	Khá chậm
+7935	Chậm
+7936	Rất chậm
+7937	Không đủ dung lượng cài đặt (hoặc chạy). Cần %dKB bộ nhớ trống.
+7938	Lỗi (%d) khi cài đặt tệp.
+7939	%s tăng +%d
+7940	%s giảm -%d
+7941	Cần có chìa khoá.
+7942	Giá
+7943	Cảm ơn~ Cảm ơn~
+7944	Không có thành viên nào cần hồi sinh.
+7945	Hồi sinh thất bại.
+7946	Dùng %s
+7947	Chưa có vật phẩm nào được gán.
+7948	(%d)
+7949	(Giá %d won)
+7950	$ACậu có muốn mua %d %s $Bkhông?&N(%d won)
+7951	Đang cài đặt
+7952	Đang xử lý
+7953	Đang tải
+7954	Phải triệu hồi Golem trước.
+7955	Cần có khiên để dùng kỹ năng này.
+7956	Không đủ MP.
+7957	Không đủ HP.
+7958	Không thể chuyển bản đồ khi đang hồi sinh.
+7959	Tăng độ bền
+7960	Ô khảm
+7961	Sát thương vật lý
+7962	Sát thương phép
+7963	Tỉ lệ đánh tay trái
+7964	Tỉ lệ tăng sát thương phép
+7965	Cấp tối đa:
+7966	Điều kiện: Thêm %d điểm kỹ năng
+7967	Điểm kỹ năng cần:
+7968	Cấp đạt được:
+7969	Đặt lại điểm kỹ năng
+7970	Kết hợp thuốc
+7971	Cường hoá đá quý
+7972	Tạo ô khảm đá quý
+7973	Vật phẩm độc nhất
+7974	Kết hợp 3 đá quý sơ cấp để tạo 1 đá quý thường.
+7975	Kết hợp 3 đá quý thường để tạo 1 đá quý cao cấp.
+7976	Kết hợp 3 đá quý cao cấp để tạo 1 đá quý tối thượng.
+7977	Kết hợp 3 đá quý tối thượng để tạo 1 đá quý chaos.
+7978	Chưa có công thức hợp nhất nào. Hãy làm nhiệm vụ máy hợp nhất để nhận công thức.
+7979	Nói chuyện với %s
+7980	Đưa %s cho %s
+7981	Mua
+7982	Tải bản Inotia 4 Plus
+7983	Thông tin quái vật
+7984	Thông tin đội, chọn thành viên
+7985	Nút hành động: tấn công, nói chuyện với NPC
+7986	Phím tắt: gán/dùng kỹ năng và thuốc
+7987	D-pad: di chuyển nhân vật
+7988	Lưu, Cash Shop, Menu game
+7989	Bản đồ nhỏ
+7990	Đóng menu game
+7991	Menu game: trạng thái, túi, kỹ năng, đội, nhiệm vụ, hệ thống
+7992	Chọn thành viên đội
+7993	Thông tin
+7994	Đổi phím tắt
+7995	Đã nhận vũ khí huyền thoại.
+7996	Kẻ nào dám nhắm vào kiếm của ta!!
+7997	Không đủ kỹ năng để nhận vũ khí.
+7998	Đã nhận một vũ khí.
+7999	Ực ực-
+8000	Không đủ chỗ trong hành trang để tiếp tục.
+8001	Không còn ô trống.
+8002	Túi không trống.
+8003	Cậu có muốn mua không?
+8004	Cậu có muốn bán không?
+8005	Không đủ số lượng.
+8006	Không đủ chỗ trong hành trang.
+8007	Lỗi
+8008	Cậu chắc chắn muốn xoá dữ liệu đã lưu và chơi lại? Vật phẩm cash đã nhận sẽ bị đặt lại khi chơi lại từ đầu.
+8009	Không có dữ liệu đã lưu.
+8010	Đã lưu
+8011	Lưu thất bại
+8012	Đã thêm công thức [%s] vào máy hợp nhất.
+8013	Cậu có muốn tiếp tục hợp nhất không?
+8014	Cậu có muốn nghỉ ngơi không?
+8015	Cậu có muốn về menu chính không?
+8016	Đã nhận %s.
+8017	Không có ai để hồi sinh.
+8018	Kho lính đánh thuê không đủ chỗ.
+8019	Có lính đánh thuê mới. Hãy xem ở mục Lính đánh thuê trong menu quản lý game.
+8020	Đã cho nghỉ thì không thể quay lại. Tiếp tục?
+8021	Không thể lưu ở bản đồ hiện tại.
+8022	Cảnh báo! Không thể lưu ở bản đồ hiện tại!
+8023	Không thể thay thế.
+8024	Không thể tiếp tục.
+8025	Cậu có muốn hồi sinh không?
+8026	Đã bán vật phẩm.
+8027	Đã mua vật phẩm.
+8028	Vật phẩm này không bán.
+8029	Không thể nhận thêm nhiệm vụ.
+8030	Cậu có muốn bỏ nhiệm vụ này không?
+8031	Class đã chọn không hợp với nhân vật.
+8032	Không thể thực hiện ở bản đồ hiện tại.
+8033	Không có xúc xắc.
+8034	Hãy đổ xúc xắc trước.
+8035	Cậu có muốn áp dụng chỉ số hiện tại không?
+8036	Lần đổ cuối chưa được áp dụng vào chỉ số hiện tại. Cậu chắc chắn muốn thoát?
+8037	Đã áp dụng
+8038	Không thể loại đồng đội đã chết khỏi đội.
+8039	Hiện không thể loại đồng đội khỏi đội.
+8040	Cậu có muốn đặt lại chỉ số của %s(%s) không?
+8041	Cậu có muốn đặt lại kỹ năng của %s(%s) không?
+8042	Chỉ khả dụng khi kỹ năng đạt cấp cao nhất.
+8043	Không thể học kỹ năng này thêm nữa.
+8044	%s(%s) đã học cấp %s%d.
+8045	Cậu có muốn nâng cấp kỹ năng của %s(%s) không?
+8046	Cậu có muốn dùng supreme elixir cho %s(%s) không?
+8047	Mua thất bại.
+8048	Đã mua xong.
+8049	Không đủ điểm chỉ số.
+8050	Chỉ dùng được cho nhân vật chính.
+8051	Cậu có muốn áp dụng không?
+8052	Chỉ dùng được cho vật phẩm chaos.
+8053	 Cường hoá +2 thành công!!
+8054	Cấp không phù hợp.
+8055	Không đủ độ bền.
+8056	Khác với cuộn cường hoá lần trước.
+8057	Cần cường hoá ít nhất 1 lần.
+8058	Chỉ dùng được Chaos Enhancement Scroll khi độ bền bằng 0.
+8059	Cậu thật sự muốn dùng nó?
+8060	Đã thêm $A%s$B vào đội.
+8061	Đội đã hết chỗ thêm thành viên.
+8062	Vật phẩm sẽ phát sinh phí sử dụng hoặc phí cuộc gọi khi mua. Ngoài ra, xin lưu ý vật phẩm đã mua không thể hoàn trả.
+8063	Hạn mức thanh toán mua vật phẩm là 30.000 won mỗi tháng.
+8064	Hạn mức thanh toán khi mua vật phẩm cho mỗi game là 30.000 won mỗi ngày, 100.000 won mỗi tháng, và tổng cộng 150.000 won mỗi tháng.
+8065	Cậu có muốn mua vật phẩm $A%s$B không?  Sẽ tính phí sử dụng $A%d$B won.
+8066	Cậu có muốn mua vật phẩm $A%s$B không? Sẽ tính thêm $A%d$B cash phí sử dụng (chưa gồm phí cuộc gọi). Một số vật phẩm đã mua có thể mất thêm thời gian, xin vui lòng chờ.
+8067	Cậu có muốn dùng Resurrection Prayer không?
+8068	Không thao tác trong một khoảng thời gian sẽ kết thúc phiên chơi.
+8069	Không đủ tiền.
+8070	Hành trang không còn ô trống.
+8071	Chưa kết nối mạng. Vui lòng thử lại sau. 
+8072	Cậu có thể dùng dịch vụ 'Sao lưu dữ liệu' để lưu dữ liệu an toàn trên máy chủ sau khi đăng ký / đăng nhập Com2uS Hub. Cậu có muốn đăng nhập ngay không?
+8073	Đang kiểm tra dữ liệu chơi và vật phẩm trước đây. Vui lòng chờ.&N(Miễn phí sử dụng/phí cuộc gọi)
+8074	Đang lưu dữ liệu chơi và vật phẩm từ máy chủ.&N(Miễn phí sử dụng/phí cuộc gọi)
+8075	Vật phẩm cash sẽ phát sinh phí cuộc gọi, mọi liên lạc và dữ liệu game sẽ được lưu trên máy chủ Com2uS. Kết nối?
+8076	Không thao tác trong một khoảng thời gian sẽ kết thúc phiên chơi. Lưu dữ liệu hiện tại?
+8077	Lỗi kết nối. Đang thoát game. Cậu có muốn lưu dữ liệu hiện tại không?
+8078	Đã tìm thấy dữ liệu chơi và vật phẩm đã lưu trên máy chủ. Cậu có muốn nhập dữ liệu không? &N(Miễn phí sử dụng/phí cuộc gọi)
+8079	Không xác minh được dữ liệu lưu trên máy chủ do mạng không ổn định. Tiếp tục chơi mà không khôi phục dữ liệu đã lưu?
+8080	Chức năng này tính phí cuộc gọi. Cậu có muốn tiếp tục không?
+8081	Lỗi kết nối. Vui lòng thử lại sau.
+8082	Bản đồ hiện tại không hỗ trợ.
+8083	Không đủ nguyên liệu để tiếp tục hợp nhất.
+8084	Đặt số lần hợp nhất.
+8085	Cần chọn trang bị trong hành trang để hợp nhất.
+8086	Chỉ dành cho đá quý.
+8087	Cấp đá quý không phù hợp để hợp nhất.
+8088	Đá quý này đã được thêm vào.
+8089	Chỉ hợp nhất được trang bị.
+8090	Chỉ hợp nhất được vật phẩm không có ô khảm.
+8091	Chỉ hợp nhất được vũ khí và giáp.
+8092	Vật phẩm Chaos Epic không thể Chaos.
+8093	Epic Chaos chỉ áp dụng được cho vật phẩm Chaos.
+8094	Đã đạt số lần hợp nhất tối đa. Không thể hợp nhất thêm.
+8095	Hợp nhất thành công.
+8096	Không có tệp để tải.
+8097	Lỗi kết nối. Đang kết thúc phiên chơi.
+8098	Đã lưu thành công dữ liệu chơi và vật phẩm. Vui lòng khởi động lại game để hoàn tất cài đặt.$NChạm OK để thoát game.
+8099	Kết nối tới máy chủ không ổn định.&NVui lòng thử lại sau.
+8100	Lỗi kết nối. Đang thoát chương trình.
+8101	Xác thực thành công.
+8102	Lỗi xác thực. Đang thoát chương trình.
+8103	Lỗi tệp lưu. Không thể xử lý bình thường.
+8104	Đã lưu thành công dữ liệu chơi và vật phẩm. Vui lòng khởi động lại game để hoàn tất cài đặt. Chạm OK để thoát game.
+8105	Không có dữ liệu lưu trên máy chủ.
+8106	Đã xoá dữ liệu trước đó.
+8107	Không đủ bộ nhớ để tiếp tục.
+8108	Xin lỗi vì sự bất tiện này.
+8109	TẮT: không phản công sau khi quái tấn công.
+8110	Trì hoãn: phản công sau một số lần bị quái tấn công.
+8111	Dùng: đánh trả ngay khi bị quái tấn công.
+8112	Không thể huỷ vật phẩm này.
+8113	Cậu có muốn học kỹ năng này không?
+8114	Chưa đủ điều kiện để học kỹ năng này.
+8115	Cậu có muốn huỷ vật phẩm này không?
+8116	Vật phẩm không phù hợp.
+8117	Không đủ ô khảm.
+8118	Nếu đăng ký/đăng nhập Com2uS Hub, lịch sử mua sẽ được ghi lại kể cả khi cậu đổi thiết bị.&N(Đăng ký/đăng nhập ở menu chính)
+8119	★Đây là bản miễn phí. Hãy thử $SInotia4 PLUS$B! ★&N&N- Chơi thoải mái không quảng cáo!&N- $RTặng thêm 100 Gem!$B&N- Có thể chuyển dữ liệu bằng $Rsao lưu dữ liệu$B! Dữ liệu bản cũ dùng được ở bản PLUS.
+8120	Cậu có muốn đặt lại chỉ số không?(%d GEM)&NGem đang có: %d GEM
+8121	Cậu có muốn đặt lại kỹ năng không?(%d GEM)&NGem đang có: %d GEM
+8122	Cả đội đã gục ngã.&nCậu có thể về menu chính, hoặc dùng gem để hồi sinh cả đội.&N&NHồi sinh cả đội?(%d GEM)&NGem đang có: %d GEM 
+8123	Dùng gem để hợp nhất?(%d GEM)&NGem đang có: %d GEM 
+8124	Hoàn thành nhiệm vụ ngay?(%d GEM)&NGem đang có: %d GEM 
+8125	Thêm ô lính đánh thuê?(%d GEM)&NGem đang có: %d GEM 
+8126	Không đủ gem.&NHãy mua gem ở cửa hàng InApp!
+8127	Không đủ gem. Chuyển tới trang mua?
+8128	Đã đặt lại chỉ số.
+8129	Đã đặt lại kỹ năng.
+8130	Đã thêm một ô lính đánh thuê. 
+8131	Game Over&N(Phạt 5% EXP)
+8132	Hồi sinh ngay&N(Không bị phạt, hồi đầy HP và MP)
+8133	Dùng hồi sinh ngay?(%d GEM)&NGem đang có: %d GEM 
+8134	Chọn phím tắt để gán.
+8135	Cần đăng ký hoặc đăng nhập Com2uS Hub để dùng sao lưu/khôi phục dữ liệu.
+8136	Sao lưu dữ liệu hoàn tất.&NDữ liệu lưu trong ứng dụng sẽ bị xoá sau khi sao lưu xong.
+8137	Khôi phục dữ liệu hoàn tất.
+8138	Không có dữ liệu để sao lưu.
+8139	Không có dữ liệu để khôi phục.
+8140	Cậu có muốn tới trang đánh giá không?
+8141	Không thể sao lưu dữ liệu. Đã có dữ liệu sao lưu trước đó.
+8142	Sao lưu dữ liệu thất bại. Vui lòng thử lại sau. 
+8143	Đã tìm thấy dữ liệu chơi đã lưu trên máy chủ. Cậu có muốn thay thế dữ liệu không?
+8144	Dịch vụ này yêu cầu đăng ký hoặc đăng nhập Com2uS Hub .
+8145	Kết nối mạng thất bại. Vui lòng thử lại sau.
+8146	★Mọi quảng cáo trong màn hình tuỳ chọn sẽ bị xoá vĩnh viễn khi mua $SNO MORE ADS$B.★&N&N$R- Giá : $$ %.2f$B&N- Cậu sẽ không mất thêm tiền khi mua lại dịch vụ này, kể cả khi xoá game rồi tải lại.  
+8147	Đã mua $SNO MORE ADS$B.&NĐã gỡ quảng cáo thành công.
+8148	★Mọi quảng cáo trong màn hình tuỳ chọn sẽ bị xoá vĩnh viễn khi mua $SNO MORE ADS$B.★&N&N$R- Khấu trừ  : L%d $B&N- Cậu sẽ không mất thêm tiền khi mua lại dịch vụ này, kể cả khi xoá game rồi tải lại.  
+8149	Mua thành công.
+8150	Do có hoạt động bất thường trên thiết bị, không thể lưu và khôi phục dữ liệu.&NVui lòng tắt game và khởi động lại.&NNếu lỗi lặp lại nhiều lần, vui lòng liên hệ Trung tâm khách hàng Com2uS.&N- E-mail: info@com2us.com
+8151	Cậu có muốn mua vật phẩm $S%s$B không?
+8152	< Hướng dẫn dữ liệu lưu >&NDữ liệu lưu của Inotia 4 được lưu trên thiết bị. Khi xoá game, dữ liệu lưu trên thiết bị cũng bị xoá theo.&NCậu có thể lưu dữ liệu an toàn bằng 'sao lưu dữ liệu' trong phần tuỳ chọn. 
+8153	Khi mua vật phẩm này sẽ phát sinh phí thông tin $R%d won$B và một ít phí cuộc gọi. Khi kết nối máy chủ, số điện thoại sẽ được lưu trên máy chủ Com2uS để ghi nhận thanh toán. (Không dùng cho mục đích nào khác ngoài ghi nhận thanh toán.)&N-Không tắt game khi đang mua.&N-Vật phẩm dạng cash có thể huỷ mua phần $Schưa sử dụng$B trong vòng $R7 ngày$B sau khi mua; vật phẩm đơn lẻ bị hạn chế huỷ mua.
+8154	Kết hợp 3 $S%s$B để tạo ra $R%s$B
+8155	Hồi sinh ban phước&N(Không bị phạt, hồi đầy HP và MP, đồng thời tăng chỉ số nhân vật trong một thời gian)
+8156	Cậu có muốn dùng Hồi sinh ban phước không?(%d gem)&N(Tăng tấn công, tấn công phép, phòng thủ, kháng phép và HP)&NGem đang có: %d gem
+8157	Đã có lịch sử mua. Vật phẩm này chỉ mua được một lần.
+8158	Cậu có thể chọn 1 trong 6 class.&NMô tả từng class ở cuối màn hình.
+8159	Chọn một ô trống để bắt đầu game mới.&NDữ liệu lưu trên thiết bị sẽ bị xoá khi xoá game.&NNếu dùng 'Sao lưu dữ liệu' trong cài đặt, cậu có thể lưu dữ liệu an toàn trên máy chủ.
+8160	Cậu có muốn xem $Rtrợ giúp và cách điều khiển$B để chơi thuận tiện hơn không?
+8161	Không đủ gem. Đang chuyển tới trang mua Gem. 
+8162	Chạm $Rnút hướng$B ở góc dưới bên trái để điều khiển nhân vật. 
+8163	Chạm nút lưu đang nhấp nháy bên trái để $Rlưu dữ liệu game$B.
+8164	Chạm nút cash shop đang nhấp nháy để xem $Sthưởng hằng ngày$B.
+8165	Giờ cậu đã sẵn sàng lên đường. Hãy khám phá thế giới mới qua cánh cổng bên phải.
+8166	Khi ở gần quái vật, chạm $Rnút hành động$B đang nhấp nháy bên phải để bắt đầu $Stự động tấn công$B.
+8167	Chạm phím tắt đang nhấp nháy ở góc dưới bên phải để dùng $Rkỹ năng đặc biệt$B.
+8168	Chạm phím tắt đang nhấp nháy ở góc dưới bên phải để dùng thuốc hồi HP. 
+8169	Chúc mừng lên cấp. Chạm nút menu game đang nhấp nháy bên trái để tăng $Sđiểm chỉ số$B và $Rđiểm kỹ năng$B.
+8170	Chúc mừng. Cậu nhận được Life Potion. Chạm nút menu game đang nhấp nháy bên trái để xem vật phẩm.
+8171	Khi ở gần rào chắn có dấu chấm hỏi, chạm nút hành động đang nhấp nháy bên phải để tiếp tục sự kiện. 
+8172	Tới chỗ người bán tạp hoá trong lều ở góc dưới bên phải để mua bán vật phẩm. 
+8173	Chạm nút cộng đang nhấp nháy để cộng điểm vào từng chỉ số.
+8174	Chạm $Sthẻ kỹ năng$B đang nhấp nháy để học các kỹ năng.
+8175	Chạm $Sthẻ túi$B đang nhấp nháy để xem vật phẩm đã nhận.
+8176	Chạm vật phẩm đang nhấp nháy để xem thông tin và cách dùng. 
+8177	Vào cash shop trong game thường xuyên để nhận phần thưởng sau. 
+8178	Có thể di chuyển bằng phím 2, 4, 6, 8 hoặc phím Lên, Xuống, Trái, Phải (chạm).
+8179	Đi theo mũi tên trên màn hình để hoàn thành nhiệm vụ.
+8180	Mua tại cửa hàng để giám định vật phẩm chưa giám định, hoặc mua cuộn giám định vật phẩm ở cửa hàng.
+8181	Nhấn 0 để tấn công mục tiêu mà đồng đội có thể hỗ trợ.
+8182	Dùng nút menu để đổi điểm đến.
+8183	Dùng phím hộp để mở rương báu.
+8184	Có thể tìm thấy nút # trên bản đồ.
+8185	Cần nhập công thức vào sổ tay hợp nhất trước khi hợp nhất vật phẩm bằng máy hợp nhất.
+8186	Uống nước suối để hồi HP hoặc MP.
+8187	Vật phẩm nhiệm vụ nằm trong túi nhiệm vụ.
+8188	3. Dùng phím 1, 3, 7, 9 hoặc biểu tượng phím tắt (chạm) để dùng kỹ năng đã gán. Tuy nhiên, mỗi kỹ năng có thời gian hồi chiêu (thời gian chờ) sau khi dùng, nên hãy dùng cẩn thận.
+8189	Mỗi lần lên cấp, cậu nhận 3 điểm chỉ số và 1 điểm kỹ năng. Có thể cộng điểm trong mục 'chỉ số' và 'kỹ năng' của Menu.
+8190	&N &NMẸO. Dùng phím 5 hoặc biểu tượng tấn công (chạm) để tấn công quái vật xung quanh.
+8191	Nhiệm vụ đã $Rhoàn thành$B.
+8192	$RChạm$B vào $Rbiểu tượng tấn công$B để tự động tấn công.
+8193	Đi qua vật phẩm để nhặt nó.
+8194	Xem vật phẩm ở thẻ $RMenu$B-$Rtúi$B. Nếu cần, hãy gán vào $Rphím tắt$B.
+8195	$RNhặt$B mana gem khi đánh quái để hồi MP nhanh.
+8196	Vào thẻ Menu-$Rtúi$B và dùng $Rwarrior's emblem$B để thêm chiến binh.
+8197	Quay về trại và báo cáo với $SDarius$B để nhận $REXP$B và $Rphần thưởng$B.
+8198	Chúc mừng cậu đã trở về thế giới thực.
+8199	Cậu đã hoàn thành toàn bộ câu chuyện của Inotia 4.
+8200	Chúng ta sẽ gặp lại trong câu chuyện tiếp theo.
+8201	Nhấn $Snút tấn công$B ở góc dưới bên phải để tự động tấn công mục tiêu trong tầm mà không cần chạm liên tục. 
+8202	Nhấn nút đã gán làm $Rphím tắt$B để dùng kỹ năng hoặc vật phẩm. 
+8203	Một số kỹ năng và vật phẩm chỉ dùng được sau $Rthời gian hồi chiêu$B. 
+8204	Có thể gán hoặc gỡ phím tắt ở $SThẻ kỹ năng$B và $RThẻ túi$B trong $RMenu$B. 
+8205	Đã hồi HP.
+8206	MP đang hồi dần.
+8207	Nước suối hồi HP dần dần.
+8208	Không thể dùng thuốc vì đau bụng.
+8209	Đã hồi một lượng lớn HP.
+8210	Tinh thần minh mẫn giúp tăng tốc độ hồi MP.
+8211	Uống nước suối khiến cậu bị ốm. (Không dùng được thuốc)
+8212	Quái vật xuất hiện ở suối nước.
+8213	Đã hồi đủ HP.
+8214	Uống nước suối giúp cậu thêm sức. (Tăng tấn công)
+8215	Uống nước suối bị nhiễm độc làm giảm hiệu quả thuốc.
+8216	Đã hồi một chút HP.
+8217	Nước suối khiến cậu nổi cuồng. (Tăng tấn công, giảm phòng thủ)
+8218	Nước suối làm tinh thần cậu đảo lộn. (Không dùng được kỹ năng)
+8219	Nước suối dường như đã tăng kỹ năng chiến đấu của cậu.
+8220	Điều khiển
+8221	Menu game
+8222	Black Knight: Sức mạnh nguyên thuỷ của các hiệp sĩ quý tộc vượt quá những gì con người có thể nắm giữ. Với tín điều nghiêm khắc và lòng trung thành với Shadow Tribe, các hiệp sĩ đen là lực lượng chủ chốt để trở thành virtuoso của tộc.&N&NAssassin: Họ đã là một phần của lục địa Inotia từ rất lâu. Trải qua vô số khoá huấn luyện khắc nghiệt và kỹ năng thực chiến, họ sở hữu sức chiến đấu độc lập mạnh nhất lục địa.&N&NWarlock: Những pháp sư này bị sức mạnh hắc ám đầy mê hoặc của Shadow Tribe lôi cuốn hơn là đức tin vào nhà thờ. Phép thuật và tà thuật họ thực hành có sức huỷ diệt lớn nhất lục địa Inotia.&N&NPriest: Một số tín đồ bóng tối từng là tu sĩ sùng đạo của Đấng ban sự sống, Tamit. Đức tin méo mó vào ma thuật hắc ám khiến họ còn huỷ diệt hơn cả khi được ban sức mạnh ánh sáng.&NRanger:Sống trong rừng, xa lánh hầu hết hoạt động của con người, là những kẻ truy lùng này. Thành viên Shadow Tribe liên lạc với họ để thu thập thông tin quý giá giúp sinh tồn.&N&NWarrior: Đến từ vùng cao nguyên phía bắc lục địa Inotia, họ là những nhà vô địch của tộc người man rợ. Một số là lính đánh thuê của Shadow Tribe, không vì danh dự hay của cải, mà vì khát khao mãnh liệt được tàn sát kẻ thù trên chiến trường.
+8223	Mỗi lần lên cấp, cậu nhận 1 điểm kỹ năng.&NDùng điểm kỹ năng nhận được trong Menu kỹ năng để nâng cấp kỹ năng.&NCó kỹ năng Chủ động, kỹ năng Bị động và kỹ năng Lính đánh thuê.&NChủ động: chỉ dùng được khi người chơi ra lệnh và gán vào phím tắt.&NBị động: có tác dụng ngay khi học xong.&NLính đánh thuê: kỹ năng&NCấp tối đa có thể học bằng điểm kỹ năng là 4 (một số kỹ năng là 3), muốn nâng tiếp thì cần sách kỹ năng.&N- Sách kỹ năng: học kỹ năng mà không tốn điểm kỹ năng. (Chỉ dùng được cho kỹ năng đã đạt cấp tối đa, và nâng kỹ năng dưới cấp 8)&N Sách kỹ năng cũng dùng được cho lính đánh thuê, nhưng chỉ khi lính đánh thuê đó đã học kỹ năng ở cấp tối đa.  
+8224	Chỉ số
+8225	Có tổng cộng 5 chỉ số: Sức mạnh, Khéo léo, Sinh lực, Trí tuệ và Tinh thần. &N&NSức mạnh: tăng tấn công (chủ yếu: sát thương vật lý với vũ khí hai tay)&NKhéo léo: tăng tấn công (chủ yếu: sát thương vật lý)&NSinh lực: tăng HP và phòng thủ &NTrí tuệ: tăng tấn công (chủ yếu: sát thương phép với pháp cụ)&NTinh thần: tăng độ chính xác (chủ yếu: sát thương phép) &N&NMỗi lần lên cấp nhận 3 điểm chỉ số, có thể dùng để tăng từng chỉ số của nhân vật.
+8226	Điều khiển đội
+8227	Trong trận, cậu có thể chạm vào khung thành viên đội để chọn nhân vật. Chạm lần nữa để đi theo một nhân vật hoặc cùng tấn công một kẻ địch. 
+8228	Quản lý đội
+8229	Xem thông tin lính đánh thuê ở Menu game - mục Đội. Tuyển hoặc loại thành viên tuỳ ý.
+8230	Tuyển lính đánh thuê
+8231	Có thể tuyển lính đánh thuê bằng [Mercenary Emblem] xuất hiện khi hoàn thành nhiệm vụ hoặc chiến thắng quái vật.&NClass của lính tuyển được chọn ngẫu nhiên.&NNếu dùng seal of blessed warrior hoặc seal of warrior, cậu có thể nhận được lính đánh thuê mạnh.&NMỗi lính đánh thuê đều có thể mặc và tháo trang bị. Khi cho lính đánh thuê nghỉ, trang bị trên người họ cũng mất theo. 
+8232	- Trang bị: chia thành vũ khí, trang bị và phụ kiện. Dùng cho nhân vật chính.&N- Vật phẩm tiêu hao&NThuốc: hồi HP và MP cho nhân vật hoặc tăng điểm kỹ năng.&NCuộn cường hoá: tăng sát thương và phòng thủ cho vũ khí, trang bị có hạng và cấp phù hợp. Kéo cuộn vào vật phẩm muốn cường hoá để dùng.&N- Đá quý: thêm chức năng phụ cho vật phẩm có hạng và cấp phù hợp. Kéo đá quý vào vật phẩm muốn khảm. Số chức năng thêm được bằng số ô khảm. &N- Túi: người chơi có thể thêm 4 túi vào hành trang tiêu chuẩn để dùng. &N- Nguyên liệu: dùng để tạo vật phẩm qua máy hợp nhất. 
+8233	Khi tấn công quái vật, có tỉ lệ xuất hiện Mana Gem. Nhặt Mana Gem sẽ hồi MP, nên hãy nhặt khi cần để tiếp tục chiến đấu.
+8234	Nguyên tố
+8235	Có 6 loại nguyên tố:&NGió: làm choáng kẻ địch một lúc và gây thêm sát thương.&NLửa: gây chút sát thương lên quái vật quanh người chơi.&NBăng: đóng băng kẻ địch, làm chậm tốc độ đánh và di chuyển, đồng thời gây thêm sát thương trong một lúc.&NThần thánh: sát thương vật lý và phép của kẻ địch về '0' trong một lúc và gây thêm sát thương.&NBóng tối: xuyên qua phòng ngự của kẻ địch, liên tục gây sát thương mạnh.&NĐộc: liên tục gây sát thương mạnh lên kẻ địch. Độc càng tích tụ sát thương càng tăng.
+8236	Cậu có thể tạo vật phẩm mới từ nguyên liệu hoặc vật phẩm khác tìm được khi chơi.&NHợp nhất vật phẩm thực hiện ở 'Máy hợp nhất' trong làng hoặc thị trấn.&N- Kết hợp thuốc: dùng nguyên liệu để tạo thuốc.&N- Cường hoá đá quý: trộn đá quý cấp thấp để tạo đá quý cấp cao.&N- Tạo ô khảm: tạo ô khảm trên vật phẩm chưa có ô. Cần 'Sharp Claw' và 'Novice Jewel'.&N- Hợp nhất Chaos: tăng hoặc giảm sát thương và phòng thủ của vũ khí, trang bị. Áp dụng cho vật phẩm không phải Epic Chaos. Cần 'Magic Branch', 'Spell Crystal', ‘Mithril’ và ‘Chaos Scale’.&N- Hợp nhất Epic Chaos: tăng hoặc giảm sát thương và phòng thủ của vũ khí, trang bị. Chỉ áp dụng cho vật phẩm đã hợp nhất chaos, cần 'Transcendent Flower', 'Palpitant Crystal', 'Mithril' và 'Chaos Scale'.&N- Vật phẩm độc nhất: nếu đăng ký công thức, cậu có thể kết hợp nguyên liệu để tạo vật phẩm độc nhất.
+8237	Hồi sinh
+8238	Khi nhân vật không thể chiến đấu vì bị thương, hãy dùng Soul Healer, Resurrection Scroll hoặc Resurrection Prayer để hồi sinh. &NNếu còn một đồng đội trụ lại trong trận thì không bị phạt. Nhưng nếu tất cả nhân vật đều chết, game kết thúc và cậu phải chơi lại từ dữ liệu đã lưu trước đó.
+8239	Khôi phục và sao lưu
+8240	1. Chức năng khôi phục và sao lưu cho phép lưu tệp trên nhiều thiết bị. &N2. Tệp lưu sẽ bị xoá khi sao lưu dữ liệu. &N3. Tệp lưu sẽ bị thay thế khi khôi phục dữ liệu.&N4. Cần đăng nhập Hub để dùng dịch vụ sao lưu và khôi phục. 
+8241	Điều khoản sử dụng(1)
+8242	1. Mọi quyền, bao gồm quyền sở hữu trí tuệ, liên quan tới Inotia 4: Assassin of Berkel đều thuộc về Com2us. &N2. Com2us không chịu trách nhiệm về nội dung hoặc tương tác do người dùng tạo trực tuyến.&N3. Com2us không chịu trách nhiệm về bất kỳ lỗi hay ảnh hưởng không mong muốn nào do phần mềm gây ra khi cài đặt từ kho ứng dụng không chính thức hoặc trên thiết bị đã bị can thiệp.
+8243	Điều khoản sử dụng(2)
+8244	4. Tuỳ tình trạng mạng, cậu có thể gặp tắc nghẽn hoặc độ trễ cao. &N5. Nếu lưu dữ liệu sau khi đăng nhập Com2us Hub, cậu có thể lấy lại dữ liệu cũ kể cả khi đổi thiết bị. (Bắt buộc đăng nhập Com2uS Hub.) &N6. Không thể hoàn tiền vật phẩm cash đã mua và đã tiêu hao, cũng không thể khôi phục vật phẩm đã mất sau khi xoá dữ liệu tài khoản. Ngoài ra, mọi giao dịch trong game chỉ dùng được tới khi game hết hạn hoặc ngừng dịch vụ. &N7. Do bảo trì định kỳ, kiểm tra sửa chữa, thay máy chủ hoặc các sự kiện khác, dịch vụ có thể tạm ngừng hoặc cậu có thể bị hạn chế truy cập Com2us Hub và các dịch vụ game trực tuyến khác.&N&Ne-mail: info@com2us.com&N&NTrang chủ: global.com2us.com
+8245	Điều khoản sử dụng(1)
+8246	1. Mọi quyền và tài sản trí tuệ của game thuộc về Com2uS.&N2. Com2uS không chịu trách nhiệm về nội dung do người dùng tạo ra trong game.&N3. Game có thể không hoạt động đúng trên thiết bị bất thường, hoặc khi không tải và chạy game theo cách thông thường.&N4. Tuỳ tình trạng mạng, có thể xảy ra trễ hoặc lỗi liên quan tới mạng.&N5. Có thể sao lưu và khôi phục dữ liệu lưu qua Com2uS Hub, và dùng tệp lưu trên nhiều thiết bị.&N6. Vật phẩm tiêu hao và cash đã mua không thể khôi phục khi xoá game.&NNgoài ra, vật phẩm và cash trong game chỉ có hiệu lực tới khi game ngừng dịch vụ.&N7. Chức năng mạng trong game là chức năng phụ, có thể tạm ngừng hoặc bị hạn chế do bảo trì định kỳ, kiểm tra sửa chữa, thay thế hoặc hỏng máy chủ.&N8. Khi khôi phục cài đặt gốc thiết bị đang dùng, dữ liệu chơi bằng đăng nhập khách (Guest Login) có thể bị xoá và không thể khôi phục. (Khuyến nghị đăng nhập Com2uS Hub trước khi chơi.)
+8247	Điều khoản sử dụng(2)
+8248	9. Nếu gặp sự cố khi chơi, xin liên hệ ngay Trung tâm khách hàng Com2uS (ĐT 1588-7155 hoặc support@com2us.com).&NNếu tự ý tải đi tải lại cùng một game, có thể không được bồi thường.&N10. Vật phẩm game là một phần của chương trình game, một tác phẩm có bản quyền, nên Com2uS là chủ sở hữu bản quyền, còn người dùng có quyền sử dụng.&NHành vi trái phép có thể bị xử lý theo luật bản quyền, luật xúc tiến ngành công nghiệp game và các luật hình sự liên quan.&N11. Nếu tháo chip USIM hoặc lắp chip USIM của người khác rồi chạy game, sẽ xảy ra lỗi xác thực và dữ liệu lưu có thể bị đặt lại, xin lưu ý.&N12. Nếu game bị tắt bất thường, như tự ý tháo pin hoặc hết pin, dữ liệu có thể gặp lỗi và không thể khôi phục.&N&Ne-mail: support@com2us.com&N&NTrang chủ: www.com2us.com
+8249	Có câu hỏi?
+8250	E-mail : info@com2us.com&N&NTrang chủ : www.com2us.com
+8251	Điều khoản & Chính sách
+8252	Phát triển nhân vật, Hồi sinh, Túi
+8253	Sách phép cường hoá
+8254	Vũ khí
+8255	Giáp
+8256	Vật phẩm Bonus Dungeon
+8257	Túi (4 ô)
+8258	Túi (8 ô)
+8259	Túi (12 ô)
+8260	Túi (16 ô)
+8261	Hồi 2400~3200 HP.
+8262	Hồi 4200~5600 HP.
+8263	Hồi 7200~9600 HP.
+8264	Hồi 12600~16800 HP.
+8265	Hồi 480 HP và 18 MP trong 16 giây.
+8266	Hồi 840 HP và 21 MP trong 16 giây.
+8267	Hồi 1440 HP và 24 MP trong 16 giây.
+8268	Hồi 2520 HP và 27 MP trong 16 giây.
+8269	Hồi cả HP lẫn MP.
+8270	Nhận 1 điểm kỹ năng. (Điểm kỹ năng thêm vào sẽ mất khi đặt lại điểm kỹ năng.)
+8271	Cường hoá tấn công của vũ khí cấp 1-33. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8272	Cường hoá tấn công của vũ khí cấp 1-66. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8273	Cường hoá tấn công của vũ khí cấp 1-99. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8274	Cường hoá tấn công của vũ khí mọi cấp. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8275	Tăng tấn công của vũ khí đã cường hoá. (Không tốn độ bền. Thất bại sẽ giảm 1 cấp cường hoá)
+8276	Cường hoá phòng thủ của khiên cấp 1-33. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8277	Cường hoá phòng thủ của khiên cấp 1-66. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8278	Cường hoá phòng thủ của khiên cấp 1-99. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8279	Cường hoá phòng thủ của khiên mọi cấp. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8280	Tăng phòng thủ của giáp đã cường hoá. (Không tốn độ bền. Thất bại sẽ giảm 1 cấp cường hoá)
+8281	Hồi sinh thành viên đội đã chết.
+8282	Hồi sinh thành viên đội đã chết, đồng thời hồi HP và MP.
+8283	Thêm thuộc tính Novice cho vật phẩm.&NKéo đá quý vào vật phẩm muốn khảm. Số chức năng thêm được bằng số ô khảm.
+8284	Thêm thuộc tính Standard cho vật phẩm.&NKéo đá quý vào vật phẩm muốn khảm. Số chức năng thêm được bằng số ô khảm.
+8285	Thêm thuộc tính Advanced cho vật phẩm.&NKéo đá quý vào vật phẩm muốn khảm. Số chức năng thêm được bằng số ô khảm.
+8286	Thêm thuộc tính Supreme cho vật phẩm.&NKéo đá quý vào vật phẩm muốn khảm. Số chức năng thêm được bằng số ô khảm.
+8287	Nguyên liệu hợp nhất
+8288	Dùng để tuyển một lính đánh thuê.
+8289	Dùng để tuyển một lính đánh thuê giỏi.
+8290	Dùng để tuyển một lính đánh thuê rất giỏi.
+8291	Đặt lại chỉ số của người chơi.
+8292	Triệu hồi thương nhân đèn thần. Chuyên bán nguyên liệu hợp nhất.
+8293	Vật phẩm nhiệm vụ
+8294	Thêm vào máy hợp nhất công thức của một trong các loại: vũ khí hai tay, kiếm, pháp cụ, dao găm và/hoặc nỏ.
+8295	Thêm vào máy hợp nhất công thức của một trong các loại: mũ, mũ sắt, giày và/hoặc giáp tấm.
+8296	Thêm vào máy hợp nhất công thức của một trong các loại: pháp cụ, kiếm, dao găm, nỏ và/hoặc vũ khí cùn.
+8297	Thêm vào máy hợp nhất công thức của một trong các loại: dây chuyền, giáp da, khiên và/hoặc giày.
+8298	Thêm vào máy hợp nhất công thức của một trong các loại: kiếm một tay, dao găm, rìu, nỏ và/hoặc trượng.
+8299	Thêm vào máy hợp nhất công thức của một trong các loại: mũ sắt, nhẫn, áo và/hoặc găng tay.
+8300	Thêm vào máy hợp nhất công thức của một trong các loại: giáp da, giày, mũ và/hoặc giáp tấm.
+8301	Thêm vào máy hợp nhất công thức của một trong các loại: kiếm, trượng, nỏ, cung và/hoặc vũ khí hai tay.
+8302	Thêm vào máy hợp nhất công thức của một trong các loại: rìu, trượng, dao găm, cung, kiếm, đại kiếm và/hoặc cung.
+8303	Thêm vào công thức của một trong hai máy hợp nhất công thức của một trong các loại: găng tay, nhẫn và/hoặc áo.
+8304	Thêm vào máy hợp nhất công thức của một trong các loại: giáp da, giày và/hoặc khiên.
+8305	Thêm vào máy hợp nhất công thức của một trong các loại: giáp tấm, mũ sắt và/hoặc áo choàng.
+8306	Đặt lại kỹ năng của nhân vật.
+8307	Đặt lại chỉ số của nhân vật.
+8308	Giải nhiệm vụ Bonus Dungeon. (Nếu có nhiều nhiệm vụ, sẽ giải nhiệm vụ ở tầng thấp hơn.)
+8309	Magic Branch(6), Spell Crystal(6), Mithril(18), Chaos Scale(3)
+8310	Magic Branch(24), Spell Crystal(24), Mithril(72), Chaos Scale(12), Jewel of Catharsis(2)
+8311	Transcendent Flower(2), Palpitant Crystal(6), Mithril(16), Chaos Scale(2)
+8312	Transcendent Flower(8), Palpitant Crystal(8), Mithril(64), Chaos Scale(8), Jewel of Catharsis(2)
+8313	Đặt lại hợp nhất Chaos và Epic chaos.
+8314	Hồi sinh thành viên đội mà không bị phạt khi cả đội đều chết.
+8315	Mithril(4), Leather(25), Magic Cloth(25), Bloody Fur(25), Jewel(Standard 2, Advanced 2, Supreme 2)
+8316	Mithril (8), Leather (50), Magic Cloth(50), Bloody Fur (50), Jewel(Standard 2, Advanced 2, Supreme 6)
+8317	Tăng cấp kỹ năng. (Chỉ dùng được cho kỹ năng đã đạt cấp tối đa, và nâng kỹ năng dưới cấp 8)
+8318	Bộ vật phẩm cấp 1 (Black Sword, Black Shield, Black Steel Plate, Black Helmet)
+8319	Bộ vật phẩm cấp 24 (Sword of Destruction, Shield of Destruction, Steel Plate of Destruction, Helmet of Destruction)
+8320	Bộ vật phẩm cấp 47 (Sword of Extreme, Shield of Extreme, Steel Plate of Extreme, Helmet of Extreme)
+8321	Bộ vật phẩm cấp 70 (Sword of Genocide, Shield of Genocide, Steel Plate of Genocide, Helmet of Genocide)
+8322	Bộ vật phẩm cấp 93 (Sword of Chaos, Shield of Chaos, Steel Plate of Chaos, Helmet of Chaos)
+8323	Bộ vật phẩm cấp 100 (Sword of Rebirth, Shield of Rebirth, Steel Plate of Rebirth, Helmet of Rebirth)
+8324	Bộ vật phẩm cấp 105 (Sword of Truth, Shield of Truth, Steel Plate of Truth, Helmet of Truth)
+8325	Bộ vật phẩm cấp 1 (Black Giant Sword, Black Steel Plate, Black Helmet)
+8326	Bộ vật phẩm cấp 24 (Giant Sword of Destruction, Steel Plate of Destruction, Helmet of Destruction)
+8327	Bộ vật phẩm cấp 47 (Giant Sword of Extreme, Steel Plate of Extreme, Helmet of Extreme)
+8328	Bộ vật phẩm cấp 70 (Giant Sword of Genocide, Steel Plate of Genocide, Helmet of Genocide)
+8329	Bộ vật phẩm cấp 93 (Giant Sword of Chaos, Steel Plate of Chaos, Helmet of Chaos)
+8330	Bộ vật phẩm cấp 100 (Giant Sword of Rebirth, Steel Plate of Rebirth, Helmet of Rebirth)
+8331	Bộ vật phẩm cấp 105 (Giant Sword of Truth, Steel Plate of Truth, Helmet of Truth)
+8332	Bộ vật phẩm cấp 1 (2 Black Blades, Black Iron Plate, Black Bandanna)
+8333	Bộ vật phẩm cấp 24 (2 Blades of Destruction, Iron Plate of Destruction, Bandanna of Destruction)
+8334	Bộ vật phẩm cấp 47 (2 Blades of Extreme, Iron Plate of Extreme, Bandanna of Extreme)
+8335	Bộ vật phẩm cấp 70 (2 Blades of Genocide, Iron Plate of Genocide, Bandanna of Genocide)
+8336	Bộ vật phẩm cấp 93 (2 Blades of Chaos, Iron Plate of Chaos, Bandanna of Chaos)
+8337	Bộ vật phẩm cấp 100 (2 Blades of Rebirth, Iron Plate of Rebirth, Bandanna of Rebirth)
+8338	Bộ vật phẩm cấp 105 (2 Blades of Truth, Iron Plate of Truth, Bandanna of Truth)
+8339	Bộ vật phẩm cấp 1 (Black Sword, Black Blade, Black Iron Plate, Black Bandanna)
+8340	Bộ vật phẩm cấp 24 (Sword of Destruction, Blade of Destruction, Iron Plate of Destruction, Bandanna of Destruction)
+8341	Bộ vật phẩm cấp 47 (Sword of Extreme, Blade of Extreme, Iron Plate of Extreme, Bandanna of Extreme)
+8342	Bộ vật phẩm cấp 70 (Sword of Genocide, Blade of Genocide, Iron Plate of Genocide, Bandanna of Genocide)
+8343	Bộ vật phẩm cấp 93 (Sword of Chaos, Blade of Chaos, Iron Plate of Chaos, Bandanna of Chaos)
+8344	Bộ vật phẩm cấp 100 (Sword of Rebirth, Blade of Rebirth, Iron Plate of Rebirth, Bandanna of Rebirth)
+8345	Bộ vật phẩm cấp 105 (Sword of Truth, Blade of Truth, Iron Plate of Truth, Bandanna of Truth)
+8346	Bộ vật phẩm cấp 1 (Black Staff, Black Uniform, Black Bandanna)
+8347	Bộ vật phẩm cấp 24 (Staff of Destruction, Uniform of Destruction, Bandanna of Destruction)
+8348	Bộ vật phẩm cấp 47 (Staff of Extreme, Uniform of Extreme, Bandanna of Extreme)
+8349	Bộ vật phẩm cấp 70 (Staff of Genocide, Uniform of Genocide, Bandanna of Genocide)
+8350	Bộ vật phẩm cấp 93 (Staff of Chaos, Uniform of Chaos, Bandanna of Chaos)
+8351	Bộ vật phẩm cấp 100 (Staff of Rebirth, Uniform of Rebirth, Bandanna of Rebirth)
+8352	Bộ vật phẩm cấp 105 (Staff of Truth, Uniform of Truth, Bandanna of Truth)
+8353	Bộ vật phẩm cấp 1 (Black Mace, Black Shield, Black Steel Plate, Black Helmet)
+8354	Bộ vật phẩm cấp 24 (Mace of Destruction, Shield of Destruction, Steel Plate of Destruction, Helmet of Destruction)
+8355	Bộ vật phẩm cấp 47 (Mace of Extreme, Shield of Extreme, Steel Plate of Extreme, Helmet of Extreme)
+8356	Bộ vật phẩm cấp 70 (Mace of Genocide, Shield of Genocide, Steel Plate of Genocide, Helmet of Genocide)
+8357	Bộ vật phẩm cấp 93 (Mace of Chaos, Shield of Chaos, Steel Plate of Chaos, Helmet of Chaos)
+8358	Bộ vật phẩm cấp 100 (Mace of Rebirth, Shield of Rebirth, Steel Plate of Chaos, Bandanna of Rebirth)
+8359	Bộ vật phẩm cấp 105 (Mace of Truth, Shield of Truth, Steel Plate of Truth, Bandanna of Truth)
+8360	Bộ vật phẩm cấp 1 (Black Bow, Black Iron Plate, Black Bandanna)
+8361	Bộ vật phẩm cấp 24 (Bow of Destruction, Iron Plate of Destruction, Bandanna of Destruction)
+8362	Bộ vật phẩm cấp 47 (Bow of Extreme, Iron Plate of Extreme, Bandanna of Extreme)
+8363	Bộ vật phẩm cấp 70 (Bow of Genocide, Iron Plate of Genocide, Bandanna of Genocide)
+8364	Bộ vật phẩm cấp 93 (Bow of Chaos, Iron Plate of Chaos, Bandanna of Chaos)
+8365	Bộ vật phẩm cấp 100 (Bow of Rebirth, Iron Plate of Rebirth, Bandanna of Rebirth)
+8366	Bộ vật phẩm cấp 105 (Bow of Truth, Iron Plate of Truth, Bandanna of Truth)
+8367	Bộ vật phẩm mọi class đều dùng được, gồm áo choàng dùng từ cấp 1 tới các cấp cao hơn (3 Infinity Bag và Cloak of Devotion)
+8368	Cường hoá tấn công của vũ khí. Có thể dùng cùng Supreme Weapon Scroll, và tỉ lệ cường hoá tăng 30% khi cường hoá 2 lần. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8369	Cường hoá phòng thủ của giáp. Có thể dùng cùng Supreme Armor Scroll, và tỉ lệ cường hoá tăng 30% khi cường hoá 2 lần. (tốn độ bền)&NKéo cuộn vào vật phẩm muốn cường hoá để dùng.
+8370	Nhận ngẫu nhiên một kỹ năng từ Black Knight Skillbook.
+8371	Nhận ngẫu nhiên một kỹ năng từ Assassin Skillbook.
+8372	Nhận ngẫu nhiên một kỹ năng từ Warlock Skillbook.
+8373	Nhận ngẫu nhiên một kỹ năng từ Priest Skillbook.
+8374	Nhận ngẫu nhiên một kỹ năng từ Ranger Skillbook.
+8375	Nhận ngẫu nhiên một kỹ năng từ Warrior Skillbook.
+8376	Khi dùng, có tỉ lệ thấp nhận được vũ khí tốt nhất. 
+8377	Khi dùng, có tỉ lệ thấp nhận được dây chuyền tốt nhất. 
+8378	Khi dùng, có tỉ lệ thấp nhận được găng tay tốt nhất. 
+8379	Khi dùng, tấn công, tấn công phép, phòng thủ, kháng phép và HP sẽ tăng trong 3 phút. Hiệu ứng này sẽ mất khi thoát game. 
+8380	Khi dùng, nhận gấp đôi EXP trong 10 phút. Hiệu ứng này sẽ mất khi thoát game. 
+8381	Ví GEM
+8382	Túi GEM
+8383	Gói GEM
+8384	Đống GEM
+8385	Hộp GEM
+8386	Rương GEM
+8387	Tủ GEM
+8388	Gói GOLD
+8389	Đống GOLD
+8390	Hộp GOLD
+8391	Túi Gold
+8392	Substantial Traveler Set
