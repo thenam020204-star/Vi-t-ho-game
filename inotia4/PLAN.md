@@ -304,6 +304,11 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - T7c: `java/src/com/namp/vh/VNFont.java` (2 mặt chữ; `size<24` giống hệt TEST7, kiểm CRC 10 size × 4 kiểu; `size>=24` f24 chỉ phóng to; 5 method công khai giữ nguyên), `java/src/com/namp/vh/FontData24.java` (`PARTS`, ≤16000 B/phần), `scripts/gen_fontdata.py` (`--parts`), bước sinh trong `scripts/build_from_apk.sh`, `scripts/rebuild.sh`, `emu/run.sh`; `java/test/VNFontTest.java` thêm kiểm không cắt hàng ở 24/28/38.
     - Build `out/Inotia4_T7_check.apk` (`--smali net --vnfont --lib --diag`, sha256 `f355d923…b5d7`, không commit): apksigner v1/v2/v3 OK, `zipalign -c -P 16 4` OK, `check_apk.py` PASS, cùng chứng chỉ ký TEST8 (`cc559651…20d4`), `apkdiff` với TEST8 chỉ khác `classes3.dex`; trong dex chỉ có lớp `com/namp/vh/*` (FontData, Offline, Offline$1-3 giống hệt TEST8; VNFont đổi; thêm FontData24, VNFont$Face).
     - Việc còn lại cho quản đốc: duyệt `docs/font_preview_f24.png` + `docs/emu_shots/font_dump_so_sanh_gpu.png`; nếu duyệt thì đóng gói bản thử cho người dùng xác nhận trên máy (chữ cỡ 24/28/38 dùng f24, chữ nhỏ vẫn f18). Lệnh build: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/<ten>.apk --smali net --vnfont --lib --diag`.
+  - Quản đốc nghiệm thu T7a–T7c (2026-11-01): ĐẠT.
+    - Đã xem `docs/font_preview_f24.png` (phóng to từng đoạn) và `docs/emu_shots/font_dump_so_sanh_gpu.png`: f24 đủ dấu ở cả nearest lẫn bilinear ×1,6875; ỡ/ữ không còn dính sừng.
+    - Đã soát diff `VNFont`: `size<24` giữ đường f18 cũ; f24 chỉ phóng ≥1; `lineH` = 1,25·q ở cả 2 mặt chữ (giữ như TEST7); `topFor` = 0 ở 24/28/38 nên glyph nằm gọn bộ đệm `drawText` (size·1,3); chỉ cấp phát trong `init`; hàm công khai vẫn `synchronized`.
+    - Tự chạy lại: `apkdiff` TEST8 → T7_check chỉ khác `classes3.dex`; apksigner v1/v2/v3 OK; `zipalign -c -P 16 4` OK.
+    - Đóng gói `test_builds/Inotia4_TEST9_vi_offline.apk` (= `out/Inotia4_T7_check.apk`, SHA256 trong `SHA256_TEST9.txt`) gửi người dùng. Còn chờ người dùng xác nhận trên máy ⇒ chưa tick T7.
   - Hoàn thành T7 khi:
     - ảnh preview và ảnh unidbg đủ dấu;
     - build thử PASS;
@@ -535,3 +540,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 A1 (T7, lượt 2): T7b xong, `font/f24vn.bin` check_f24 = 0 vi phạm; ảnh `docs/font_preview_f24.png`.
 - 2026-11-01 quản đốc: người dùng xác nhận TEST8 load save OK trên máy thật ⇒ tick T3. Người dùng cũng xác nhận bánh răng → `btn_pause` (T10).
 - 2026-11-01 A1 (T7, lượt 2): T7a xong (`docs/font_lon.md`, `-Demu.dumpfont`, ảnh unidbg); T7c xong (VNFont 2 mặt chữ, FontData24); build `out/Inotia4_T7_check.apk` PASS, `apkdiff` với TEST8 chỉ khác `classes3.dex` (`com/namp/vh/*`). Chờ quản đốc nghiệm thu.
+- 2026-11-01 quản đốc: nghiệm thu T7a–T7c ĐẠT; gửi TEST9 (TEST8 + font f24vn cho chữ cỡ ≥24). Chờ người dùng xác nhận font trên máy. Giao T8 cho công nhân chạy mới; A2 vẫn đọc T9a.

@@ -102,3 +102,11 @@ Việc tiếp theo (đề xuất):
 - **Nhờ người dùng thử**: cài đè TEST8 ⇒ game mới (nên dùng ô save mới hoặc ghi đè ô 0; **save cũ của TEST7 không cứu được**, nạp lại ô đó vẫn văng vì chưa áp P2) ⇒ lưu ⇒ tắt hẳn app (vuốt khỏi đa nhiệm) ⇒ mở lại ⇒ load. Nếu văng, mở bản chẩn đoán, bấm Xuất save và gửi.
 - **CHƯA XÁC ĐỊNH**: khoá của `appinfo.dat` (`UTIL_pPhoneNumber`, giải mã với khoá rỗng cho Σthô sai ⇒ khoá khác rỗng hoặc bộ nhớ sau nó khác 0); `envinfo.dat` có mã hoá không; chữ `A` cuối thư mục `thpcheckslot`.
 - **P2 (chỉ đề xuất, chưa áp)**: `docs/p2_load_fail_guard.md` — khi `SAVE_Load` thất bại thì `GAMESTATE_SetState(4)` (về menu chính) thay vì vào `EnterPlay` với hero NULL; cần cave trong thân `SAVE_SaveData` (hàm chết đã chứng minh). Chờ quản đốc duyệt và T2 để kiểm chứng.
+- **Người dùng xác nhận (2026-11-01)**: TEST8 lưu → tắt hẳn app → mở lại → load OK trên máy thật.
+
+## Phiên 4: font cỡ lớn f24vn (T7) — TEST9
+- **Nguyên nhân mất dấu (T7a, `docs/font_lon.md`)**: dấu của f18 chỉ 1 px; phóng ×1,5 rồi GPU lọc `GL_LINEAR` ×1,6875 (`SGL_Texture::Create` 0x2648f8–0x26490c) làm nhoè. Native không cắt hàng (đệm đủ H hàng). Kết luận dựa trên disasm + mô phỏng; chưa có ảnh máy thật.
+- **Font mới `font/f24vn.bin`** (233 glyph, ô 28 hàng, BASE 23; mọi dấu ≥2×2 px; `check_f24.py` 0 vi phạm), sinh bằng `fontgen_inotia/gen_f24.py`.
+- **VNFont**: `size<24` giữ f18 như TEST7; `size>=24` dùng f24 hệ số size/24 (chỉ phóng to). Dữ liệu `FontData24.PARTS`.
+- **`test_builds/Inotia4_TEST9_vi_offline.apk`** = TEST8 + font f24 (`--smali net --vnfont --lib --diag`). SHA256 ở `test_builds/SHA256_TEST9.txt`. So TEST8 chỉ khác `classes3.dex` (lớp `com/namp/vh/*`); cùng khoá ký ⇒ cài đè được, save giữ nguyên.
+- **Nhờ người dùng thử**: cài đè TEST9, xem chữ hội thoại/menu có đủ dấu không (đặc biệt ặ ộ ợ ự ỡ ữ Ấ Ổ), chữ có tràn khung không.
