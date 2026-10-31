@@ -1,0 +1,864 @@
+1	Dụng cụ
+2	Vật tiêu hao
+3	Vũ khí
+4	Đồ gia dụng
+5	Nguyên liệu
+6	Trang bị
+7	Khác
+8	Vật phẩm cơ bản
+9	Nâng cấp
+10	Xưởng
+11	Bếp thô sơ
+12	Đơn giản nhất có thể: đốt nhiên liệu làm từ gỗ, sách hoặc linh kiện, rồi dùng nước nấu bữa ăn bổ dưỡng hơn đồ sống.
+13	Bếp cải tiến
+14	Bếp hiệu quả hơn. Nấu đồ chín nhanh hơn, tiết kiệm nhiên liệu.
+15	Vườn thảo mộc
+16	Bón phân thì trồng được thảo mộc, dùng làm thuốc men hoặc thuốc lá rẻ tiền. Nâng cấp thì trồng được rau củ.
+17	Xưởng thảo mộc
+18	Bàn làm việc với vài dụng cụ đơn giản, để chế thuốc thảo dược, băng gạc và thuốc lá cuốn kém chất lượng. Nâng cấp thì làm được thuốc men thật và thuốc lá tốt hơn.
+19	Lò sưởi đơn giản
+20	Giữ ấm nơi trú ẩn để khỏi ốm. Có thể làm nhiên liệu từ gỗ, sách hoặc nhiều linh kiện.
+21	Lò sưởi cải tiến
+22	Sưởi ấm nơi trú ẩn hiệu quả hơn, tốn ít nhiên liệu hơn.
+23	Giường
+24	Ngủ đủ, không đau lưng, ngày hay đêm đều được.
+25	Radio
+26	Nghe tin tức và dự báo thời tiết thì tốt biết mấy. Biết trước khó khăn thì dễ đối phó hơn. Hết tin thì nghe nhạc cho đỡ buồn.
+27	Nồi nấu rượu lậu
+28	Kiên nhẫn chút, có nước và đường là nấu được thứ rượu dở tệ nhưng nồng. Có thể đem đổi lấy đồ cần thiết. Đừng mong gì nhiều.
+29	Máy chưng cồn
+30	Chưng rượu lậu thành cồn nguyên chất, dùng làm thuốc men và băng gạc, hoặc hàng đổi chác tốt hơn nhiều.
+31	Xưởng đơn giản
+32	Bàn làm việc tạm bợ, dùng làm trang bị đơn giản, đồ đạc và vài thứ hữu ích khác như giường, ghế. Nâng cấp thì làm được nhiều thứ hơn.
+33	Xưởng cải tiến
+34	Chế tạo được đồ tinh vi và thiết bị hơn, có thêm cách kiếm đồ ăn, thuốc men và hàng đổi chác. Nâng cấp tiếp thì làm được cải tiến điện.
+35	Bình hứng nước mưa
+36	Thiết bị đơn giản để hứng và lọc nước mưa, dùng để nấu ăn và nấu rượu. Nên làm vài cái.
+37	Đống tuyết
+38	Ghế bành
+39	Ghế bành êm ái. Ngồi đó với cuốn sách hay là gần như quên chiến tranh.
+40	Ghế
+41	Ngồi ghế vẫn hơn ngồi đất. Làm ra nó để chỗ này giống nhà hơn. Lúc khó khăn thế này, thấy dễ chịu hơn.
+42	Bẫy thú nhỏ
+43	Thú nhỏ còn lại chắc chỉ có chuột... Nhưng thời chiến thịt hiếm lắm. Cứ đặt mồi rồi chờ.
+44	Xưởng tiên tiến
+45	Xưởng tiên tiến làm được thiết bị điện hữu ích, như đèn sưởi cho vườn và máy trộn cho xưởng thảo mộc hay xưởng kim khí.
+46	Đàn guitar
+47	Có việc gì đó để giết thời gian thì quan trọng. Đàn guitar làm tinh thần khá lên, nhất là khi người chơi biết chơi.
+48	Trồng rau ở đây cần nước và phân bón, nhưng phải chờ lâu.
+49	Vườn rau
+50	Cửa gia cố
+51	Khi đã bịt lỗ và cửa sổ lại, có thể tính đến gia cố cửa và lắp chuông báo động đơn giản.
+52	Bịt lại
+53	Bịt lỗ hổng và cửa sổ trong tòa nhà để chống bọn hôi của.
+54	Xưởng kim khí
+55	Làm được dụng cụ như xẻng dọn gạch vụn, xà beng phá cửa và dao tự vệ. Về sau có thể làm dụng cụ tinh xảo hơn, thậm chí sửa súng.
+56	Xưởng kim khí cải tiến
+57	Ngoài rìu, lưỡi cưa, còn sửa được súng hỏng đơn giản và mũ sắt. Nâng cấp tiếp thì làm được đạn và sửa áo giáp quân dụng.
+58	Xưởng kim khí tiên tiến
+59	Ngoài dụng cụ, ở đây sửa được mọi súng hỏng, cả áo giáp quân dụng lẫn mũ sắt, và nạp lại vỏ đạn rỗng để dùng lại.
+60	Xưởng thảo mộc cải tiến
+61	Chế được thuốc men thật và thuốc lá cuốn chất lượng cao.
+62	Xích đu
+63	Chỉ là cái xích đu đơn giản, nhưng với trẻ con thì vui không bao giờ hết.
+64	Bàn học của trẻ
+65	Trẻ con cần có chỗ riêng trong nơi trú ẩn. Chúng vẽ, đọc sách và chơi đồ chơi ở đây. Giúp chúng quên chiến tranh.
+66	Hộp đồ chơi
+67	Đủ thứ cả! Gấu bông, búp bê, máy bay và xe hơi nhỏ. Cả lính đồ chơi nữa...
+68	Người tuyết
+69	Mùa đông khắc nghiệt với người lớn, nhưng với trẻ con thì là lúc để nô đùa.
+70	Quả bóng
+71	Đứa trẻ nào mà không thích chơi bóng?
+72	Dây nhảy
+73	Một sợi dây đơn giản mà giữ trẻ con chơi được cả giờ, thật lạ.
+74	Cầu tạm
+75	Cầu tạm nối sang cánh kia của ngôi nhà.
+76	Gỗ
+77	Thiết yếu để làm đủ loại đồ, lại chẻ ra làm nhiên liệu cho bếp và lò sưởi.
+78	Linh kiện
+79	Đủ loại linh kiện để làm gần như mọi thứ. Đinh, băng dính, hộp nhựa, phế liệu, đại loại vậy.
+80	Thuốc súng
+81	Thuốc súng dùng để chế đạn và chất nổ.
+82	Linh kiện súng
+83	Đủ loại linh kiện súng. Lưỡi, nòng, lò xo, khóa và các thứ tương tự.
+84	Đường
+85	Không có đường thì không có rượu lậu. Cần cho quá trình lên men.
+86	Phụ tùng
+87	Đủ loại phụ tùng cơ khí. Dùng để chế và sửa thiết bị phức tạp.
+88	Thảo mộc
+89	Thuốc lá sợi
+90	Từ thuốc lá sợi này làm được thuốc lá đắt tiền.
+91	Đủ loại thảo mộc, dùng để chế thuốc thảo dược và thuốc lá cuốn.
+92	Nguyên liệu thuốc
+93	Thuốc viên cũ và thuốc thú y. Có chút hiểu biết thì chế được thuốc men thường.
+94	Vỏ đạn súng săn rỗng. Có thể nạp lại thành đạn súng săn.
+95	Vỏ đạn súng săn
+96	Vỏ đạn
+97	Vỏ đạn rỗng. Có thể làm đạn súng cầm tay từ chúng.
+98	Vỏ đạn súng trường
+99	Vỏ đạn súng trường rỗng. Có thể làm đạn súng trường từ chúng.
+100	Phân bón
+101	Rác hữu cơ, bón vườn để trồng thảo mộc hay rau củ, hoặc làm mồi cho bẫy thú nhỏ.
+102	Linh kiện điện
+103	Vài linh kiện điện. Sẽ có ích khi muốn cải tiến nơi trú ẩn thêm.
+104	Loa
+105	Bộ phận thiết yếu của máy thu radio.
+106	Súng lục hỏng
+107	Vũ khí cũ, thiếu vài bộ phận.
+108	Súng trường tấn công hỏng
+109	Từng là vũ khí chết người, giờ không còn bắn được.
+110	Súng săn hỏng
+111	Súng săn tháo gần nửa.
+112	Mũ sắt hỏng
+113	Hỏng nặng, không đội được. Sửa lại thì may ra cứu được cái đầu nào đó.
+114	Áo giáp hỏng
+115	Áo giáp quân dụng hỏng. Phải sửa mới mặc lại được.
+116	Đàn guitar hỏng
+117	Hỏng, nhưng chưa đến mức không sửa được. Có nhạc hay để giết thời gian thì tốt.
+118	Đồ chơi hỏng
+119	Món đồ chơi này từng đẹp hơn. Giờ hỏng rồi, nhưng trước đây chắc đã mang nhiều niềm vui cho chủ cũ.
+120	Giấy thông hành
+121	Giấy thông hành do bộ chỉ huy quân đội địa phương cấp cho Robert Zhigajev. Với chúng tôi thì vô dụng, nhưng với người quen thợ làm giấy giả giỏi thì có thể đáng giá.
+122	Thư của Karel
+123	Thư của Karel xác nhận đã trả tiền qua đường. Có chỉ đường tới nhà an toàn khi lên bờ.
+124	Phần chính của cầu tạm
+125	Cần bộ phận này để dựng cầu tạm.
+126	Bút sáp màu
+127	Bộ bút sáp màu sặc sỡ, gần đủ rồi. Amelia có thể vẽ bất cứ thứ gì con bé muốn.
+128	Thực phẩm sống
+129	Ăn được, nhưng nấu chín thì bổ dưỡng hơn.
+130	Đồ ăn chín
+131	Bữa ăn chín đơn giản, bổ dưỡng và ngon hơn đồ sống. Có rau củ thì còn ngon và no hơn.
+132	Đạn
+133	Đạn cho súng cầm tay.
+134	Cồn nguyên chất
+135	Bình nhỏ cồn nguyên chất. Uống được, đổi được, hoặc dùng để làm thuốc men hay băng gạc.
+136	Thuốc men
+137	Vị đắng ghê, nhưng lúc ốm có thể cứu mạng.
+138	Băng gạc
+139	Dùng để băng vết thương.
+140	Đồ hộp
+141	Bữa đồ hộp, bổ dưỡng hơn đồ sống. Ăn lâu rồi cũng quen vị.
+142	Rượu lậu
+143	Uống vào thấy dễ chịu hơn. Hoặc là tưởng vậy. Đổi chác thì được.
+144	Đồ đóng lọ
+145	Không hỏng nên để được lâu, lại tốt để đổi chác.
+146	Đạn súng săn
+147	Đạn cho súng săn.
+148	Đạn súng trường
+149	Đạn cho súng trường.
+150	Thuốc thảo dược
+151	Thuốc thảo dược đơn giản. Lúc hiệu nghiệm, lúc không. Nhưng vẫn hơn không có gì.
+152	Dụng cụ tháo lắp
+153	Dụng cụ để tháo thiết bị điện và cơ khí. Tua vít, giũa, kìm cắt và đại loại vậy. Tự làm nên không bền lắm.
+154	Rau củ
+155	Ăn sống cũng được, nhưng nấu chung với đồ sống thì bữa ăn ngon hơn nhiều.
+156	Lưỡi cưa
+157	Dùng để cắt song sắt và xích, vào được những chỗ không thể vào.
+158	Thuốc lá tự trồng
+159	Thuốc lá tự trồng để cuốn thuốc. Kém xa hàng thật, nhưng tự trồng được.
+160	Thuốc lá cuốn
+161	Thuốc lá cuốn làm từ thảo mộc. Khói hắc, đắng.
+162	Thuốc lá
+163	Thuốc lá thật. Thời chiến hay dùng làm tiền.
+164	Thuốc lá cuốn chất lượng
+165	Thuốc lá cuốn pha nửa thuốc lá sợi, nửa thảo mộc. Trong hoàn cảnh này thì khá ổn.
+166	Cà phê
+167	Có người uống cà phê để có sức sống thêm một ngày. Thời chiến khan hiếm nên rất quý.
+168	Nước sạch
+169	Nước tương đối sạch. Cần để nấu bữa ngon hoặc nấu rượu.
+170	Bộ lọc
+171	Bộ lọc tự chế, dùng một lần, để lọc nước mưa hoặc chưng cồn.
+172	Tuyết
+173	Nấu chảy thành nước.
+174	Nhiên liệu
+175	Thứ đốt được trong lò sưởi để giữ ấm, hoặc trong bếp để nấu ăn. Làm từ gỗ, sách hoặc linh kiện.
+176	Sách
+177	Sách hay thì làm người khá hơn. Càng nhiều càng tốt. Lúc khó khăn thì xé ra làm nhiên liệu cho lò hay bếp.
+178	Xà beng
+179	Dụng cụ tự chế, cạy được vài cánh cửa trước khi gãy. Làm chậm và ồn.
+180	Đồ cạy khóa
+181	Dùng một lần, nhưng mở khóa nhanh và êm.
+182	Xẻng
+183	Xẻng nhỏ để lục gạch vụn.
+184	Áo giáp quân dụng
+185	Tăng mạnh cơ hội sống sót khi trúng đạn hoặc dao.
+186	Mũ sắt
+187	Chống được phần nào đạn và dao.
+188	Rìu
+189	Chặt đồ đạc được... Hoặc chặt người.
+190	Súng lục
+191	Chĩa vào người muốn làm đau.
+192	Súng trường tấn công
+193	Súng trường tấn công quân dụng, tốc độ bắn tốt.
+194	Súng trường ngắm
+195	Súng trường tấn công quân dụng lắp ống ngắm.
+196	Súng săn
+197	Vũ khí mạnh ở cự ly gần.
+198	Dao
+199	Từng là đồ dùng nhà bếp, giờ là vũ khí cận chiến nguy hiểm.
+200	Nắm đấm
+201	Trang sức
+202	Món trang sức, hàng đổi chác có giá.
+203	Chó bông
+204	Đồ chơi chó bông cho trẻ con. Gần như còn mới. Amelia lúc nào cũng thích chó. Con bé sẽ mừng lắm.
+205	Chó bông bẩn
+206	Bẩn, nhưng đúng là con chó bông tôi đã tặng Amelia.
+207	Áo nỉ của Amelia
+208	Cũ và bẩn, nhưng chắc chắn là áo nỉ của Amelia.
+209	Đèn sưởi
+210	Dùng đèn này để trồng cây trong nhà.
+211	Máy trộn
+212	Dùng để trộn thuốc súng hoặc nguyên liệu thuốc.
+213	Bộ điều nhiệt
+214	Dùng để giữ nhiệt lò sưởi ở mức tốt nhất, tiết kiệm gỗ. Muốn chưng cồn sạch thì cũng cần nó để làm máy chưng.
+215	Muốn chưng cồn sạch thì cần nó để làm máy chưng.
+216	Kiêng khem
+217	Nghiện thuốc
+218	Nghiện cà phê
+219	Thuốc lá hút mỗi ngày:
+220	Số ly cà phê mỗi ngày:
+221	Thiếu cà phê!
+222	Thiếu thuốc lá!
+223	Thiếu cà phê và thuốc lá!
+224	Chìa khóa hiệu thuốc của anh trai
+225	Anh trai tôi lúc nào cũng giữ chìa khóa trên người, lạ thật khi chúng nằm dưới đất. Có thể dùng để mở các cửa khóa trong hiệu thuốc.
+226	Suy sụp
+227	VẪN ĐÓI
+228	ĐÓI
+229	VẪN RẤT ĐÓI
+230	RẤT ĐÓI
+231	VẪN ĐÓI LẢ
+232	ĐÓI LẢ
+233	VẪN KIỆT SỨC VÌ ĐÓI
+234	KIỆT SỨC VÌ ĐÓI
+235	NO NÊ
+236	MỆT
+237	RẤT MỆT
+238	KIỆT SỨC
+239	CẠN KIỆT
+240	(ĐANG HỒI PHỤC)
+241	HƠI BỊ THƯƠNG
+242	BỊ THƯƠNG
+243	BỊ THƯƠNG NẶNG
+244	THƯƠNG CHÍ MẠNG
+245	(ĐÃ BĂNG BÓ)
+246	Bị thương
+247	HƠI ỐM
+248	ỐM
+249	ỐM NẶNG
+250	BỆNH NAN Y
+251	(ĐANG UỐNG THUỐC)
+252	Ốm
+253	NGỦ KHÔNG YÊN
+254	Hài lòng
+255	Buồn
+256	Gục ngã
+257	(Cần thuốc lá)
+258	(Cần cà phê)
+259	(Cần cà phê và thuốc lá)
+260	(Được an ủi)
+261	(Đang chơi)
+262	(Đang trò chuyện)
+263	(Đang chăm sóc)
+264	(Được chăm sóc)
+265	SAY XỈN
+266	Dư rượu
+267	Buồn ngủ
+268	Đờ đẫn
+269	Quyết tâm
+270	Chiến tranh đã kết thúc.
+271	Bạn không sống sót.
+272	Bạn đã sống sót.
+273	Bạn chỉ sống sót được ^DayOfWar^ ngày.
+274	Con thuyền cập bến an toàn.
+275	Bạn đã thoát.
+276	Bạn đã biết sự thật về số phận của Amelia.
+277	Nạn nhân chiến tranh thường mắc rối loạn tâm thần.
+278	Tôi đang tìm con gái mất tích. Một đứa tóc vàng nhỏ.
+279	Ồ, tao có thấy nó...
+280	Trời ơi! Thật à? Làm ơn, kể hết những gì anh biết!
+281	Mày giúp tao trước, rồi tao giúp mày. Tao đói lắm...
+282	Mang đồ ăn cho tao, tao sẽ kể những gì tao biết.
+283	Hay mày nói ngay đi, không thì tao đánh cho mày nhừ xương.
+284	Mày đánh tao thì tao chẳng kể gì đâu. Giết tao thì mày cũng chẳng bao giờ tìm được con gái mày.
+285	Muốn cứu nó không? Mang đồ ăn tới. Tao đợi ở đây.
+286	Đồ ăn của mày đây, đồ tham lam chết tiệt. Giờ khai đi.
+287	Đừng hỗn thế. Cũng chẳng có gì nhiều để kể. Tao thấy một đứa tóc vàng, chừng mười tuổi.
+288	Một thằng nào đó, cỡ mày, đang bế nó tới bệnh viện.
+289	Bệnh viện... Tốt nhất mày nói thật, vì chính mày.
+290	Mày phí hơi dọa tao thì tốt hơn đi tìm con gái mày.
+291	Được, tôi mang đồ ăn tới. Anh đợi ở đây.
+292	Tao có đi đâu đâu.
+293	Ồ, lại là mày à...
+294	Mày mang đồ ăn cho tao chưa?
+295	Mang đồ ăn tới đây.
+296	Tao muốn đổi đồ ăn lấy thông tin. Đồ hộp thì tốt hơn, đồ sống cũng đỡ. Thấy tao hào phóng chưa?
+297	^Scavenger^ ĐÃ VỀ
+298	ĐÊM
+299	NGÀY ^DayOfWar^
+300	^RecentlyDiedDweller^ ĐÃ CHẾT
+301	TẤT CẢ NGƯỜI SỐNG SÓT ĐÃ CHẾT.
+302	CHIẾN TRANH ĐÃ KẾT THÚC.
+303	SỐNG SÓT QUA THÁNG CUỐI CÙNG CỦA CHIẾN TRANH.
+304	BÌNH MINH ĐÃ BẮT ^Scavenger^. QUAY VỀ SẼ KHÓ HƠN.
+305	SỐNG SÓT QUA CHIẾN TRANH.
+306	NGÀY NAY CHIẾN TRANH CÓ THỂ NỔ RA BẤT CỨ LÚC NÀO
+307	Ở BẤT CỨ ĐÂU
+308	NẾU THÀNH PHỐ BỊ VÂY HÃM
+309	BẠN KHÔNG CHUẨN BỊ GÌ CẢ
+310	SỐNG SÓT
+311	Chế tạo|XPadA|
+312	Thoát|XPadB|
+313	Sẽ chế ra một ^ItemName^
+314	-|XPadLeftBumper|
+315	+|XPadRightBumper|
+316	Chế cái gì đây?
+317	Sắp xếp lại
+318	Linh kiện cần dùng
+319	Số lượng
+320	Thời gian
+321	Kỹ năng cần
+322	Không rõ
+323	Ngẫu nhiên
+324	Dạy|XPadY|
+325	g
+326	Xong
+327	OK|XPadA|
+328	Hủy|XPadB|
+329	Tiếp tục|XPadA|
+330	Có|XPadA|
+331	Áp dụng|XPadA|
+332	Không|XPadB|
+333	Hồi kết
+334	Để sau|XPadA|
+335	Tiếp tục
+336	Thoát game
+337	Bỏ cuộc
+338	Sống sót
+339	Tiếp tục
+340	Thử lại
+341	Cài đặt
+342	Sơ đồ điều khiển
+343	Tranh tường
+344	Chắc chắn muốn bỏ cuộc? Mọi tiến trình chưa lưu sẽ mất.
+345	Nhấn để bắt đầu chế độ Cổ điển của This War Of Mine
+346	Nhấn để bắt đầu chế độ Stories của This War Of Mine
+347	Thêm tập
+348	Thẻ mùa
+349	Câu chuyện mới
+350	Chọn tập
+351	Chế độ Stories
+352	Chế độ cổ điển
+353	Tắt mọi mod để chơi tốt nhất
+354	Lấy tập
+355	Mua tập
+356	Mua thẻ mùa
+357	|XPadB|Kết thúc ngày
+358	|XPadB|Chạy ra cửa
+359	Nhật ký ngày
+360	ĐÃ GHÉ ^NoOfDays^ NGÀY TRƯỚC
+361	CHUẨN BỊ|XPadX|
+362	LỤC LỌI|XPadX|
+363	Ở LẠI|XPadB|
+364	LỤC LỌI
+365	CANH GÁC
+366	NGỦ
+367	NGỦ TRÊN GIƯỜNG
+368	QUAY LẠI|XPadB|
+369	HÃY CHỌN NGƯỜI ĐI LỤC LỌI
+370	HÃY BỎ CHỌN NGƯỜI ĐI LỤC LỌI
+371	Lên kế hoạch đêm nay
+372	Nơi trú của chúng tôi
+373	Không tới được vì tuyết
+374	Không tới được vì giao tranh
+375	Đã ghé
+376	Mới
+377	Mặt trận quân đội
+378	Người đi lục lọi
+379	Đăng lên Workshop
+380	NGỦ CÙNG NGƯỜI LỚN
+381	NGỦ CÙNG TRẺ
+382	CHỌN ĐỊA ĐIỂM
+383	Không thể để Amelia ở một mình. Nhỡ có ai vào nơi trú thì sao? Tôi phải bảo vệ con bé.
+384	Tốt nhất là mang theo chó bông của Amelia. Chắc con bé nhớ nó lắm.
+385	Chắc chắn sẽ gặp người có vũ khí. Phải mang theo vũ khí thôi.
+386	TÌM AMELIA
+387	TÌM AMELIA|XPadX|
+388	Súng đang trang bị
+389	Vũ khí cận chiến đang trang bị
+390	Mũ đang đội
+391	Áo giáp đang mặc
+392	Ba lô đang mang
+393	TRANG BỊ|XPadY|
+394	BỎ|XPadA|
+395	THOÁT|XPadB|
+396	Dùng|XPadX|
+397	LẤY|XPadA|
+398	LẤY HẾT|XPadX|
+399	Chỗ trống
+400	Ba lô
+401	Đã lục
+402	Đi
+403	Sẽ dùng trang bị khi bị tấn công.
+404	Suy nghĩ
+405	KHÔNG HỨNG THÚ|XPadB|
+406	THỎA THUẬN|XPadX|
+407	Không mang nổi nhiều thế!
+408	Đổi chác nào
+409	Đồ của chúng tôi
+410	Anh muốn gì?
+411	TIẾP TỤC|XPadA|
+412	Tiếng Việt
+413	Tiếng Đức
+414	Tiếng Ba Lan
+415	Tiếng Pháp
+416	Tiếng Ý
+417	Tiếng Tây Ban Nha
+418	Tiếng Nhật
+419	Tiếng Trung
+420	Tiếng Nga
+421	Tiếng Bồ Đào Nha
+422	Mặc định
+423	Tiếng Bồ Đào Nha (Brazil)
+424	Tiếng Hàn
+425	Tiếng Thổ Nhĩ Kỳ
+426	Cực thấp
+427	Thấp
+428	Vừa
+429	Cao
+430	Rất cao
+431	CHẾ ĐỘ GỠ LỖI: CHUẨN
+432	CHẾ ĐỘ GỠ LỖI: MÙA HÈ
+433	CHẾ ĐỘ GỠ LỖI: MÙA ĐÔNG
+434	Bật
+435	Tắt
+436	Cài đặt âm thanh
+437	Cài đặt hình ảnh
+438	Cài đặt khác
+439	Âm lượng nhạc
+440	Âm lượng hiệu ứng
+441	Âm lượng giọng nói
+442	Độ phân giải
+443	Toàn màn hình
+444	Chất lượng đồ họa
+445	Ngôn ngữ
+446	Phụ đề
+447	HIỆU ỨNG BÚT CHÌ
+448	MỀM
+449	PHÁC HỌA
+450	Đơn vị nhiệt độ
+451	Độ C
+452	Độ F
+453	Chế độ điều khiển
+454	Chuột
+455	Tay cầm
+456	Giao diện điện thoại
+457	KHỞI ĐỘNG LẠI ĐỂ ÁP DỤNG
+458	Đổi hồ sơ |XPadY|
+459	Chờ tôi chút|XPadX|
+460	Không giúp được...|XPadA|
+461	Để sau|XPadY|
+462	Tôi có thể đưa:
+463	Chúng tôi cần:
+464	Kéo tới chỗ trống để đặt
+465	Quay lại|XPadB|
+466	Đặt|XPadA|
+467	Trung Âu
+468	"Chiến tranh chỉ hấp dẫn với những ai chưa từng trải qua nó"
+469	"Chiến tranh là thất bại của nhân loại"
+470	Giáo hoàng John Paul II
+471	"Trong chiến tranh hiện đại... anh sẽ chết như chó, chẳng vì lý do gì ra hồn"
+472	Ernest Hemingway
+473	“Notes on the Next War: A Serious Topical Letter,” Esquire, Sept. 1935
+474	Trò chơi này tự động lưu tiến trình. Vui lòng không tắt máy Xbox One khi thấy biểu tượng này, nếu không tiến trình hiện tại sẽ mất.
+475	Trò chơi này tự động lưu tiến trình. Vui lòng không tắt hệ máy PlayStation®4 khi thấy biểu tượng này, nếu không tiến trình hiện tại sẽ mất.
+476	Bạn sẽ mất tiến trình hiện tại. Chắc chứ?
+477	Bạn chưa đăng nhập. Cần đăng nhập để lưu tiến trình và nhận thành tựu. Đăng nhập ngay bây giờ?
+478	Tài khoản đăng nhập đã thay đổi. Trò chơi sẽ quay về màn hình tiêu đề.
+479	{mr|Tay cầm đã ngắt kết nối, vui lòng kết nối lại tay cầm.}{fr|Tay cầm không dây đã ngắt kết nối, vui lòng kết nối lại tay cầm không dây.}
+480	Chắc chắn muốn thoát? Mọi tiến trình chưa lưu sẽ mất.
+481	Không có kết nối Internet
+482	Đã hai năm kể từ khi This War of Mine ra mắt toàn cầu, và chúng tôi vẫn tiếp tục mở rộng trải nghiệm. |#color=FF3800|DLC miễn phí mới|#defaultcolor|, làm riêng cho Anniversary Edition, thêm |#color=FF3800|nhân vật mới|#defaultcolor|, |#color=FF3800|địa điểm mới|#defaultcolor| để khám phá, và quan trọng nhất là |#color=FF3800|một kết thúc hoàn toàn mới|#defaultcolor|, dẫn tới một kết cục khác của trò chơi. Tuy nhiên, lựa chọn khó khăn vẫn như cũ – bạn sẽ đi xa đến đâu để bảo vệ những người mình quan tâm? 
+483	Anniversary Edition
+484	Chọn câu chuyện
+485	Sẽ mở khóa
+486	Đã khóa
+487	Đã sống sót
+488	Chỉ sống sót ^DayOfWar^ ngày
+489	^DayOfWar^ ngày
+490	Ngẫu nhiên|XPadX|
+491	Tự viết câu chuyện
+492	Câu chuyện của tôi
+493	Tự thiết lập câu chuyện
+494	Chọn câu chuyện mới
+495	Lời hứa của người cha
+496	Thẻ mùa|XPadX|
+497	Cần xác minh bạn đủ 18 tuổi. Vui lòng nhập ngày sinh để tiếp tục.
+498	Cảnh báo! Tài khoản sẽ bị khóa nếu bạn không xác minh đủ 18 tuổi.
+499	Tài khoản đã bị khóa do yêu cầu độ tuổi.
+500	Tài khoản sẽ được mở khóa sau:
+501	Áp dụng|XPadY|
+502	Phải chọn ít nhất một nhân vật
+503	Chỉ được chọn ^count^ nhân vật
+504	Phải chọn ít nhất ^count^ địa điểm
+505	Phải nhập tên
+506	Chắc chắn muốn xóa?
+507	Chắc chắn muốn xóa kịch bản?
+508	Chắc chắn muốn xóa câu chuyện?
+509	Chắc chắn muốn xóa nhân vật?
+510	Chắc chắn muốn xóa thường dân?
+511	Chắc chắn muốn xóa bản đồ thành phố?
+512	Chắc chắn muốn ghi đè?
+513	Chắc chắn muốn ghi đè câu chuyện?
+514	Chắc chắn muốn ghi đè bản đồ thành phố?
+515	Chắc chắn muốn ghi đè thường dân?
+516	Chắc chắn muốn sửa?
+517	Chắc chắn muốn sửa thường dân?
+518	Không thể chọn nhiều hơn một trẻ em
+519	Phải chọn ít nhất một người lớn
+520	Không lưu được. Đã hết chỗ cho nội dung tùy chỉnh.
+521	Chắc chắn muốn rời câu chuyện?
+522	Số ngày đến khi ngừng bắn
+523	Độ khó
+524	Mức độ khốc liệt
+525	Nhẹ
+526	Vừa
+527	Khắc nghiệt
+528	Nhỏ
+529	Lớn
+530	Tâm bão
+531	Ngắn
+532	Dài
+533	Mùa đông đến
+534	Ngày đầu mùa đông
+535	Độ khắc nghiệt của mùa đông
+536	Độ dài mùa đông
+537	Không bao giờ
+538	Sớm
+539	Giữa chừng
+540	Muộn
+541	Câu chuyện của tôi
+542	Trình soạn kịch bản
+543	Chọn người để bắt đầu
+544	Chọn người khởi đầu
+545	Chọn người về nhà bạn
+546	Người khởi đầu trong nhà
+547	Chọn nhân vật
+548	Mùa đông
+549	Cài đặt mùa đông
+550	Bản đồ thành phố
+551	Cài đặt địa điểm
+552	Xem
+553	Chọn|XPadA|
+554	Thành phố bị cắt đứt, nhưng tình hình có thể còn tệ hơn. Thiếu vật tư là vấn đề, nhưng chưa phải quá nghiêm trọng. Tội phạm chưa tràn lan, vì người ta vẫn thích lục lọi tìm vật tư hơn là cướp của người khác. Mọi người còn hy vọng, hàng xóm thường bám víu vào nhau và giúp đỡ lẫn nhau.
+555	Tình hình trong thành phố khốc liệt. Thiếu thốn mọi thứ, giá chợ đen dao động liên tục. Các băng hôi của tấn công nhà cửa vào ban đêm, khi những người tuyệt vọng quay sang tội phạm để sống sót. Người ta vẫn còn chút hy vọng, nhưng hàng xóm không mấy vội vã giúp nhau.
+556	Cuộc vây hãm kéo dài khiến tình hình thành phố thảm khốc. Ngay cả vật tư cơ bản nhất cũng khó kiếm. Giá chợ đen tăng vọt. Những người tuyệt vọng lục sạch đường phố và đống đổ nát, không còn gì có ích. Bọn cướp lang thang khắp thành phố, không ai an toàn trong nhà mình. Người ta gần như hết hy vọng, và chẳng ai muốn giúp ai.
+557	Nơi trú được trang bị tốt.
+558	Nơi trú được trang bị khá.
+559	Nơi trú được trang bị kém.
+560	Chung cư
+561	Nhà ngoại ô
+562	Tạo thường dân mới
+563	Tạo nhân vật
+564	Người đã chọn:
+565	Thường dân đã chọn:
+566	Địa điểm đã chọn:
+567	Bản đồ thành phố của tôi
+568	Chọn địa điểm
+569	Chọn nơi trú của bạn
+570	Lưu câu chuyện|XPadY|
+571	Lưu kịch bản
+572	Tải câu chuyện|XPadX|
+573	Tải kịch bản
+574	Chọn câu chuyện đã lưu
+575	Chọn kịch bản đã lưu
+576	Danh sách câu chuyện
+577	Danh sách kịch bản
+578	Xóa|XPadY|
+579	Tải|XPadA|
+580	Lưu|XPadA|
+581	Tải bản đồ|XPadX|
+582	Tải địa điểm
+583	Lưu bản đồ|XPadY|
+584	Lưu địa điểm
+585	Bắt đầu câu chuyện
+586	Tải lên Workshop |XPadY|
+587	Cần đồng ý điều khoản pháp lý
+588	Để vật phẩm này hiển thị trên Workshop, bạn cần đồng ý điều khoản dịch vụ (http://steamcommunity.com/sharedfiles/workshoplegalagreement). Vui lòng truy cập trang của vật phẩm.
+589	Bật/tắt địa điểm |XPadA|
+590	Sửa|XPadX|
+591	Nhập tên thường dân.
+592	Nhập tên bản đồ thành phố.
+593	Nhập tên câu chuyện.
+594	PHÚT
+595	Cảnh sát
+596	Quen súng
+597	Thành thạo súng cầm tay
+598	Thành thạo súng
+599	Nhắm giỏi
+600	Chuyên gia máy tính
+601	Khéo tay sửa chữa
+602	Dùng ít linh kiện điện hơn để chế thiết bị điện
+603	Tiết kiệm linh kiện điện
+604	Y tá
+605	Được đào tạo y tế
+606	Băng bó vết thương hiệu quả hơn
+607	Chữa bệnh hiệu quả hơn
+608	Kháng bệnh tốt hơn
+609	Kiểm lâm
+610	Dùng gỗ hiệu quả hơn khi sưởi nơi trú
+611	Lục gạch vụn nhanh hơn, có hoặc không có xẻng
+612	Chế nhiên liệu lò sưởi hiệu quả hơn
+613	Lục gạch vụn nhanh hơn
+614	Sưởi ấm tốn ít gỗ hơn
+615	Nhà hóa học
+616	Dược sĩ
+617	Dùng ít nguyên liệu hơn khi nấu rượu và chế thuốc
+618	Hiểu nhiều về thuốc men
+619	Giỏi chế thuốc men
+620	Nhân viên bảo hiểm
+621	Có sức thuyết phục
+622	Kỹ năng đổi chác
+623	Nhiếp ảnh gia
+624	Không có kỹ năng đặc biệt
+625	Tinh mắt
+626	Nhà tâm lý
+627	Chịu chấn thương tinh thần tốt hơn, giỏi làm người khác vui lên
+628	Ý chí kiên định
+629	Yêu thiên nhiên
+630	Thợ chặt gỗ lành nghề
+631	Giỏi dùng rìu
+632	Tiều phu
+633	Thợ rừng
+634	Khéo tay điện tử
+635	Giới tính
+636	Nam
+637	Đàn ông
+638	Nữ
+639	Phụ nữ
+640	Nghề nghiệp
+641	Chân dung
+642	Vóc dáng
+643	Ngoại hình
+644	Mẫu
+645	Tiểu sử
+646	Câu chuyện
+647	Tên
+648	Thường dân mới
+649	Tạo nhân vật
+650	Tải ảnh của bạn lên
+651	Để tải ảnh lên, đặt tệp vào thư mục PORTRAITS trong thư mục gốc của trò chơi.
+652	Để tải ảnh lên, đặt tệp vào PORTRAITS trong Documents/This War Of Mine.
+653	Để tải ảnh lên, đặt tệp vào PORTRAITS trong Library/.../This War Of Mine.
+654	Lưu nhân vật
+655	Hiển thị
+656	Công khai
+657	Chỉ bạn bè
+658	Riêng tư
+659	Tải lên Workshop
+660	Để vật phẩm hiển thị trên Workshop, bạn cần đồng ý điều khoản dịch vụ.
+661	Câu chuyện Workshop
+662	Duyệt Workshop |XPadX|
+663	Tác giả:
+664	Bắt đầu câu chuyện |XPadY|
+665	Tên vật phẩm
+666	Mô tả vật phẩm
+667	Đăng vật phẩm mới |XPadY|
+668	Cập nhật đã có |XPadX|
+669	Duyệt Workshop để tìm vật phẩm mới
+670	Thường dân Workshop
+671	Đăng vật phẩm Workshop
+672	Đang gửi nội dung...
+673	Đã đăng thành công
+674	Đăng thất bại!
+675	Thỏa thuận giấy phép |XPadX|
+676	Phải nhập tên vật phẩm
+677	Phải nhập mô tả vật phẩm
+678	Vật phẩm đã đăng ký
+679	Trung tâm mod
+680	Không có mục mod
+681	ƯU TIÊN LÊN |XPadUp|
+682	BẬT |XPadA|
+683	TẮT |XPadA|
+684	ƯU TIÊN XUỐNG |XPadDown|
+685	Phải khởi động lại game để áp dụng
+686	Trạng thái:
+687	Xung đột với:
+688	Chưa tải
+689	Đã tải
+690	Tốt, không có xung đột!
+691	Babel
+692	Dự án BABEL là sáng kiến cộng đồng, đưa trải nghiệm This War of Mine đến mọi người trên thế giới. Nhờ công sức của tất cả người tham gia, trò chơi sẽ sớm có mặt bằng các ngôn ngữ chính, để ai cũng chơi được bằng tiếng mẹ đẻ. Bạn có thể tham gia dự án – đăng ký và bắt tay vào dịch ngay!
+693	TRẠNG THÁI:
+694	Phiên bản game:
+695	Không có ngôn ngữ nào
+696	Tải về |XPadY|
+697	Cập nhật
+698	Có phiên bản mới
+699	Hiện tại
+700	Làm mới |XPadX|
+701	Chưa tải về
+702	Tải thất bại!
+703	Đã tải về thành công
+704	Đang tải...
+705	Đã làm mới danh sách
+706	Mua|XPadA|
+707	DLC
+708	Khôi phục|XPadX|
+709	Đang tải
+710	The Little Ones khám phá gian khổ sinh tồn thời chiến từ một góc nhìn hoàn toàn mới: góc nhìn của một đứa trẻ.
+711	The Little Ones
+712	Mua bản đầy đủ
+713	Cảm ơn bạn đã ủng hộ bản chính thức.
+714	Muốn trải nghiệm thêm nội dung, bản đầy đủ chỉ 30 RMB, nhiều cảnh và vai hơn để bạn khám phá!
+715	Nhấn CÓ để bắt đầu ván mới. Nhấn KHÔNG để tiếp tục từ ngày trước khi bạn chết.
+716	Tiếp tục từ ngày hôm trước?
+717	This War of Mine
+718	BAN NGÀY
+719	BAN ĐÊM
+720	Tạm dừng
+721	Ngày
+722	Ngày ^Day^
+723	Đêm
+724	|XPadY|Đồ của chúng tôi
+725	|XPadY|Ba lô
+726	Chắc chắn kết thúc ngày?
+727	Kéo để thêm
+728	Có người gõ cửa.
+729	Không thể lục lọi khi đang giao tranh
+730	Lục lọi
+731	Giấu vũ khí
+732	Vật phẩm này đã hỏng.
+733	Tài sản tư nhân
+734	CÂU CHUYỆN CỦA TÔI
+735	Nhấn |XPadA| để tiếp tục
+736	ĐANG KIỂM TRA DỮ LIỆU ĐÃ LƯU...
+737	Đây là hết bản demo xem trước This War of Mine trên máy tính bảng. Hãy chờ trải nghiệm đầy đủ, sắp ra mắt vào tháng 7.
+738	Đang đồng bộ với đám mây
+739	Đồng bộ thất bại
+740	Dùng cần analog phải để dò đài radio.
+741	Chưa đăng nhập
+742	|XPadUp|Lục lọi
+743	Trợ giúp
+744	Dùng |LeftStick| để xem thêm
+745	Dùng |RightStick| để xem thêm
+746	Dùng |XPadLeftBack| / |XPadRightBack| để xem thêm
+747	Chế độ Anniversary Edition
+748	Khi bật tùy chọn này, bạn chắc chắn chơi được nội dung của |#color=FF3800|Anniversary Edition|#defaultcolor|, gồm địa điểm mới, nhân vật mới và kết thúc mới. Nếu không, nội dung này sẽ được chọn ngẫu nhiên.
+749	sáng
+750	chiều
+751	Có tiếng lạ phát ra từ radio.
+752	Có mục mới trong tiểu sử của Adam.
+753	Được huấn luyện chiến đấu
+754	Lục lọi lành nghề
+755	Lẻn đi êm
+756	Kỹ năng mặc cả
+757	Khỏe nhưng chậm
+758	Nấu ăn giỏi
+759	Thợ khéo tay
+760	Luật sư tài năng
+761	Giỏi toán
+762	Chạy nhanh
+763	Nâng tinh thần người khác
+764	Yêu trẻ con
+765	Khéo trồng trọt
+766	Người cha kiên định
+767	Chủ tiệm thuốc lá
+768	Cháu gái của Irina
+769	Đứa trẻ hàng xóm
+770	Cháu trai của Henrik
+771	Trẻ mồ côi chiến tranh
+772	Con gái của Christo
+773	Cậu bé lạc
+774	Con gái của Adam
+775	Cặp đôi
+776	Lính
+777	Thương nhân
+778	Các cô gái
+779	Bọn cướp
+780	Lính bắn tỉa
+781	Quân nổi dậy
+782	Vô gia cư
+783	Người đi lục lọi
+784	Cha và con trai
+785	Gia đình
+786	Thường dân
+787	Người sùng đạo
+788	Linh mục
+789	Lính bắn tỉa
+790	Thương nhân
+791	Chợ
+792	Nhiều ^ItemName^
+793	Một ít ^ItemName^
+794	Rất nhiều ^ItemName^
+795	Đồ ăn
+796	Thuốc men
+797	Nên cẩn thận
+798	Nguy hiểm
+799	Có thể đổi chác
+800	Nguyên liệu
+801	Cái rét cắt da sẽ khiến chúng ta khó sống sót hơn nhiều.
+802	Trời đang rất lạnh
+803	May quá, cái rét khủng khiếp nhất đã qua.
+804	Những ngày rét đã qua
+805	Các băng hôi của đã trở nên táo tợn. Phải cẩn thận.
+806	Tội phạm bùng phát
+807	Đội tuần tra tự vệ dân sự đã chấm dứt thời các băng hôi của có vũ trang.
+808	Kiềm chế tội phạm
+809	Bạn có ^Count^
+810	Lo quá, ^CharacterName^ ơi, phải ăn đi nhé.
+811	Mang chút đồ ăn cho ^CharacterName^ này.
+812	^CharacterName^ trông đói quá, mang đồ ăn tới đây nè.
+813	Này ^CharacterName^, ăn đi...
+814	Ăn chút gì đi chứ.
+815	Thôi nào, đừng bỏ cuộc! Phải ăn chứ!
+816	Đây, cái này sẽ giúp được.
+817	Ốm rồi, phải uống thuốc. Cầm lấy.
+818	^CharacterName^ sẽ khỏe lại thôi, uống mấy viên này đi.
+819	^CharacterName^ chảy máu rồi, để tôi băng vết thương.
+820	Cần băng gạc hả, để tôi giúp.
+821	Thôi nào ^CharacterName^, tôi băng vết thương cho.
+822	Thôi nào, uống chút rồi nói chuyện. Mọi chuyện rồi sẽ ổn.
+823	Uống với tôi đi, bạn. Tôi sẽ làm bạn vui lên!
+824	Thôi nào, đừng buồn thế. Mình cùng uống một chén!
+825	Tỉnh lại đi. Mình sẽ qua được, rồi xem. Chiến tranh không kéo dài mãi đâu!
+826	Đừng mất hy vọng, ^CharacterName^! Chiến tranh sẽ sớm kết thúc thôi, tin tôi.
+827	Bây giờ thì khốn khổ thế này, nhưng không phải mãi thế đâu. Nghĩ về tương lai đi!
+828	Menu trong game
+829	Đổi nhân vật
+830	Chuyển mục tiêu
+831	Di chuyển nhân vật
+832	(Nhấn) Thu nhỏ
+833	Camera
+834	(Nhấn) Phóng to
+835	Chuyển Lục lọi/\nChế độ chiến đấu\n
+836	Chuyển hành động
+837	Hành động / Xác nhận
+838	Quay lại / Hủy
+839	Kho đồ
+840	(Giữ) Menu tròn
+841	Nhiều loại
+842	Chiến tranh không phải sân chơi. Đôi khi hoàn cảnh buộc bạn phải đánh nhau. Có thể gặp người thù địch với bạn. Nhớ rằng bạn không hề vô phương tự vệ.
+843	Mỹ
+844	Ý
+845	Pháp
+846	Ba Lan
+847	Canada
+848	Nghệ sĩ người Canada–Mỹ Gabriel “Specter” Reese, hồi nhỏ đã vẽ và sơn các con phố ở Montreal. Ngày nay tác phẩm của anh được trưng bày trong vô số phòng tranh, và anh được đặt làm nhiều tác phẩm công cộng lớn ở Brooklyn và Manhattan.
+849	Từ đầu những năm chín mươi, SeaCreative (tên thật là Fabrizio Sarti) đã vẽ tường và toa tàu trong và quanh Milan, Ý. Hiện nay SeaCreative vẽ và trưng bày các nhân vật của riêng mình, không chỉ trong không gian triển lãm thông thường, mà còn ngay giữa đô thị Milan.
+850	Emir từng trải qua chiến tranh khi còn là một cậu bé. Anh bắt đầu chống lại lòng căm ghét chiến tranh bằng cách nghiền than củi lên những khổ tranh lớn. Bố cục của anh là suy ngẫm về thân phận con người và xã hội trong chiến tranh.
+851	M-City là dự án của Mariusz Waras, sinh năm 1978 tại Gdynia, Ba Lan. Các dự án của anh gồm hàng trăm bức tranh tường, có thể thấy trên đường phố Warsaw, Gdańsk, Berlin, Paris, Jakarta, Sao Paulo, New York, Bolzano, London và Prague, cũng như trong các phòng tranh.
+852	Người đứng sau dự án M-City, Mariusz Waras, còn là giám tuyển của phòng trưng bày biển quảng cáo 238x504 ở Gdynia, cũng như nhà lưu trữ và sưu tập viên nghệ thuật đường phố Ba Lan.
+853	Fauxreel là nghệ sĩ Canada tự học. Anh tạo ra các tác phẩm nghệ thuật đường phố dựa trên ảnh chụp ấn tượng, nhằm gợi suy ngẫm về nhiều vấn đề như bản sắc, quan hệ xã hội và những không gian ta đang sống.
+854	Mariusz Waras cũng là họa sĩ đồ họa tự do, thường được trao giải trong nhiều cuộc thi. Năm 2008, chuyên gia nghệ thuật quốc tế Tristan Manco đã đưa anh vào danh sách chính thức các nghệ sĩ quan trọng nhất thế giới trong trào lưu graffiti stencil.
+855	Trên đường phố, Specter được biết đến với các tác phẩm sắp đặt chính xác, làm sống lại những nơi bị lãng quên. Tác phẩm gắn bó với nơi đặt nó không kém gì với chính nó. Anh chọn không gian cho tác phẩm rất kỹ, và tác phẩm thường biến đổi để phản ánh địa điểm được chọn.
+856	Những khổ tranh lớn mà Emir sử dụng tạo tác động mạnh, làm nên những hình ảnh tương phản rất rõ, ấn tượng theo lối biểu hiện.
+857	Mateusz Walus là nghệ sĩ trẻ, rất tài năng đến từ Ba Lan. Anh đam mê nghệ thuật và trò chơi đến mức gần như cuồng. Mateusz đã làm một số đồ họa dùng trong This War of Mine.
+858	Xem|XPadA|
+859	Cảm ơn bạn đã ủng hộ tổ chức từ thiện War Child.
+860	Tìm thấy tại
+861	--TEXT--NOT--FOUND--
+862	"<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 bit studios S.A. 2014\n<BR>\n<BR>\n<BR>\n<HAND>\nBẮT ĐẦU TỪ MỘT Ý TƯỞNG TRUYỀN CẢM HỨNG CỦA GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HEADER>\nGIÁM ĐỐC THIẾT KẾ & TRƯỞNG DỰ ÁN\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nGIÁM ĐỐC NGHỆ THUẬT & TRƯỞNG DỰ ÁN\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n\n\n\n<HEADER>\nTRƯỞNG NHÓM THIẾT KẾ\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nTHIẾT KẾ CAO CẤP\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nTHIẾT KẾ MÀN CHƠI\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nTHIẾT KẾ AI\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nTrưởng nhóm viết\n<NAME>\nMaciej Skóra\n<BR>\n\n<HEADER>\nCÂU CHUYỆN & VIẾT LỜI\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nCÂU CHUYỆN & KỊCH BẢN BỔ SUNG\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nTrưởng nhóm mỹ thuật\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nHọa sĩ 3D cao cấp\n<NAME>\nBartek Rydel\nJakub Piotrowski\n<BR>\n\n<HEADER>\nHọa sĩ nhân vật\n<NAME>\nOlaf Pożoga\nDominik Zieliński\n<BR>\n\n<HEADER>\nHoạt họa\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPrzemysław Marszał\nTomasz Piętek\n<BR>\n\n<HEADER>\nNhiếp ảnh\n<NAME>\nTomasz Pietęk\nPrzemysław Marszał\n<BR>\n\n<HEADER>\nConcept Art & Phông nền\n<NAME>\nJakub Kowalczyk\n<BR>\n\n<HEADER>\nConcept Art bổ sung\n<NAME>\nMateusz Waluś\nJan Buczny\n<BR>\n\n<HEADER>\nHọa sĩ 3D bổ sung\n<NAME>\nMateusz Waluś\nMarcin Wawrzonowski\nKonrad Wiśniewski\nJan Buczny\n<BR>\n\n<HEADER>\nHoạt họa bổ sung\n<NAME>\nArtur Bielenica\nPiotr Chomiak\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nTRƯỞNG NHÓM LẬP TRÌNH GAME\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nLẬP TRÌNH GAME CAO CẤP\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nLẬP TRÌNH GAME\n<NAME>\nPIOTR KOWALSKI\n<BR>\n\n<HEADER>\nLẬP TRÌNH ENGINE\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nCÔNG CỤ & LẬP TRÌNH BỔ SUNG\n<NAME>\nRAFAŁ PODKOWIŃSKI\nROBERT PRZYGODA\nPIOTR KOWALSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nNHẠC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nKỸ SƯ ÂM THANH\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nÂM THANH BỔ SUNG\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nNHẠC BỔ SUNG\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSẢN XUẤT\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM QA\n<NAME>\nPAWEŁ ""The 47"" CZAPLARSKI\n<BR>\n\n\n<HEADER>\nCHUYÊN GIA QA CAO CẤP\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nKIỂM THỬ QA\n<NAME>\nPAWEŁ BONIFACIUK\nKONSTANTY MICHNIEWICZ\nBARTEK NAJDYHOR\n<BR>\n\n\n<HEADER>\nBẢN DỊCH\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nPHÁT TRIỂN KINH DOANH\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nQUAN HỆ CÔNG CHÚNG & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nQUẢN LÝ VĂN PHÒNG\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nHỖ TRỢ BỔ SUNG\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nCẢM ƠN ĐẶC BIỆT ĐẾN\n<NAME>\n<BR>\nEMIR CERIMOVIC VÌ MỌI SỰ GIÚP ĐỠ & TƯ LIỆU\n<BR>\nJOHN KEYSER VÌ MỌI SỰ ỦNG HỘ\n<BR>\nBẠN BÈ VÀ GIA ĐÌNH CHÚNG TÔI\n<BR>\nCỔ ĐÔNG 11 BIT STUDIOS\nVÌ SỰ TIN TƯỞNG VÀ TÍN NHIỆM\n<BR><BR><BR><BR>\n\n\n<HEADER>\nKIỂM THỬ FOCUS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMÔ HÌNH\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSẢN PHẨM BÊN THỨ BA\n<NAME>\nzlib – thư viện nén đa dụng\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nBộ mã nén âm thanh đa dụng Vorbis\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – ngôn ngữ kịch bản đa dụng\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nPhông Aji Hand của Ajith Rajan\n<BR>\n\nPhông Okuda của Mike Okuda\n<BR>\n\nPhông Tertre Extra Bold của Jan Schmoeger\n<BR>\n\nPhông Designosaur của Archy Studio\n<BR>\n\nPhông Covered By Your Grace của KG Fonts\n<BR>\n\nPhông Gunny Rewritten của Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>"\n\n\n\n<HEADER>\nBẢN DỊCH\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nPHÁT TRIỂN KINH DOANH\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nQUAN HỆ CÔNG CHÚNG & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nQUẢN LÝ VĂN PHÒNG\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nHỖ TRỢ BỔ SUNG\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nCẢM ƠN ĐẶC BIỆT ĐẾN\n<NAME>\n<BR>\nEMIR CERIMOVIC VÌ MỌI SỰ GIÚP ĐỠ & TƯ LIỆU\n<BR>\nJOHN KEYSER VÌ MỌI SỰ ỦNG HỘ\n<BR>\nBẠN BÈ VÀ GIA ĐÌNH CHÚNG TÔI\n<BR>\nCỔ ĐÔNG 11 BIT STUDIOS\nVÌ SỰ TIN TƯỞNG VÀ TÍN NHIỆM\n<BR><BR><BR><BR>\n\n\n<HEADER>\nKIỂM THỬ FOCUS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMÔ HÌNH\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSẢN PHẨM BÊN THỨ BA\n<NAME>\nzlib – thư viện nén đa dụng\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nBộ mã nén âm thanh đa dụng Vorbis\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – ngôn ngữ kịch bản đa dụng\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nPhông Aji Hand của Ajith Rajan\n<BR>\n\nPhông Okuda của Mike Okuda\n<BR>\n\nPhông Tertre Extra Bold của Jan Schmoeger\n<BR>\n\nPhông Designosaur của Archy Studio\n<BR>\n\nPhông Covered By Your Grace của KG Fonts\n<BR>\n\nPhông Gunny Rewritten của Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>
+863	Ghi công
+864	<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 BIT STUDIOS S.A. 2015\n<BR>\n<BR>\n<BR>\n<HAND>\nBẮT ĐẦU TỪ MỘT Ý TƯỞNG TRUYỀN CẢM HỨNG CỦA GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nGIÁM ĐỐC THIẾT KẾ & TRƯỞNG DỰ ÁN\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nGIÁM ĐỐC NGHỆ THUẬT & TRƯỞNG DỰ ÁN\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n<HAND>\nTHIS WAR OF MINE STORIES: LỜI HỨA CỦA NGƯỜI CHA\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nTHIẾT KẾ TRÒ CHƠI\n<NAME>\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nCÂU CHUYỆN\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nVIẾT LỜI\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nLẬP TRÌNH\n<NAME>\nJANUSZ KUNOWSKI\nDAMIAN WICIŃSKI\n<BR>\n\n<HEADER>\nMỸ THUẬT\n<NAME>\nJAKUB PIOTROWSKI\nTOMASZ KISILEWICZ\n<BR>\n\n<HEADER>\nSẢN XUẤT\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA\n<NAME>\nBARTŁOMIEJ GWARDIAK\n<BR>\n\n<HEADER>\nNHIẾP ẢNH\n<NAME>\nPIOTR JAGUŚ\n<BR>\n\n<HEADER>\nDỰA TRÊN NHÂN VẬT CỦA ŁUKASZ ORBITOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HAND>\nGHI CÔNG THIS WAR OF MINE\n<BR>\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM THIẾT KẾ\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM THIẾT KẾ BẢN CONSOLE\n<NAME>\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nTHIẾT KẾ CAO CẤP\n<NAME>\nKACPER KWIATKOWSKI\n<BR>\n\n<HEADER>\nTHIẾT KẾ MÀN CHƠI\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nTHIẾT KẾ AI\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nTHIẾT KẾ JUNIOR\n<NAME>\nPAWEŁ SZYSZKA\nUGO TRELIS\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM VIẾT\n<NAME>\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nCÂU CHUYỆN & VIẾT LỜI\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nCÂU CHUYỆN & KỊCH BẢN BỔ SUNG\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nTRƯỞNG NHÓM MỸ THUẬT\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nHỌA SĨ 3D CAO CẤP\n<NAME>\nBARTEK RYDEL\nJAKUB PIOTROWSKI\n<BR>\n\n<HEADER>\nHỌA SĨ NHÂN VẬT\n<NAME>\nOLAF POŻOGA\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nHOẠT HỌA\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPRZEMYSŁAW MARSZAŁ\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nNHIẾP ẢNH\n<NAME>\nTOMASZ PIETĘK\nPRZEMYSŁAW MARSZAŁ\n<BR>\n\n<HEADER>\nCONCEPT ART & PHÔNG NỀN\n<NAME>\nJAKUB KOWALCZYK\n<BR>\n\n<HEADER>\nCONCEPT ART BỔ SUNG\n<NAME>\nMATEUSZ WALUŚ\nJAN BUCZNY\n<BR>\n\n<HEADER>\nHỌA SĨ 3D BỔ SUNG\n<NAME>\nMATEUSZ WALUŚ\nMARCIN WAWRZONOWSKI\nKONRAD WIŚNIEWSKI\nJAN BUCZNY\n<BR>\n\n<HEADER>\nHOẠT HỌA BỔ SUNG\n<NAME>\nARTUR BIELENICA\nPIOTR CHOMIAK\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nTRƯỞNG NHÓM LẬP TRÌNH GAME\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nLẬP TRÌNH GAME CAO CẤP\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nLẬP TRÌNH GAME\n<NAME>\nPIOTR KOWALSKI\nJANUSZ KUNOWSKI\n<BR>\n\n<HEADER>\nLẬP TRÌNH ENGINE\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\n<BR>\n\n<HEADER>\nCHUYỂN PORT BẢN CONSOLE\n<NAME>\nRAFAŁ PODKOWINSKI\nTRISTAN RYBAK\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nCÔNG CỤ\n<NAME>\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\n<BR>\n\n<HEADER>\nLẬP TRÌNH BỔ SUNG\n<NAME>\nSZYMON JABŁOŃSKI\nDAMIAN WICIŃSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nNHẠC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nKỸ SƯ ÂM THANH\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nÂM THANH BỔ SUNG\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nNHẠC BỔ SUNG\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n<HEADER>\nSẢN XUẤT\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM QA\n<NAME>\nPAWEŁ ""THE 47"" CZAPLARSKI\n<BR>\n\n<HEADER>\nCHUYÊN GIA QA CAO CẤP\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nQA BỔ SUNG\n<NAME>\nPAWEŁ BONIFACIUK\nBARTEK NAJDYHOR\n<BR>\n<BR>\n\n<HEADER>\nBẢN DỊCH\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nPHÁT TRIỂN KINH DOANH\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nQUAN HỆ CÔNG CHÚNG & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nQUẢN LÝ VĂN PHÒNG\n<NAME>\nMARTA SKWARSKA\nMONIKA ANNA WARGOCKA\nBEATA KOSZNIK\n<BR>\n\n<HEADER>\nHỖ TRỢ BỔ SUNG\n<NAME>\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nCẢM ƠN ĐẶC BIỆT ĐẾN\n<NAME>\n<BR>\nEMIR CERIMOVIC VÌ MỌI SỰ GIÚP ĐỠ & TƯ LIỆU\n<BR>\nJOHN KEYSER VÌ MỌI SỰ ỦNG HỘ\n<BR>\nBẠN BÈ VÀ GIA ĐÌNH CHÚNG TÔI\n<BR>\nCỔ ĐÔNG 11 BIT STUDIOS\nVÌ SỰ TIN TƯỞNG VÀ TÍN NHIỆM\n<BR><BR><BR><BR>\n\n\n<HEADER>\nKIỂM THỬ FOCUS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n<HEADER>\nBẮT CHUYỂN ĐỘNG\n<NAME>\nWWW.MOCAP.PL\n<BR><BR>\n\n<HEADER>\nDÀN DIỄN VIÊN, GIÁM ĐỐC CASTING\n<NAME>\nADRIAN PERDJON\n<BR>\n\n<HEADER>\nGIÁM SÁT BẮT CHUYỂN ĐỘNG\n<NAME>\nMICHAŁ HRYDZIUSZKO\n<BR>\n\n<HEADER>\nNGƯỜI THEO DÕI BẮT CHUYỂN ĐỘNG\n<NAME>\nMATEUSZ POKS\n<BR>\n\n<HEADER>\nDIỄN VIÊN BẮT CHUYỂN ĐỘNG\n<NAME>\nADRIAN PERDJON\nALAN MARKOWSKI\nBARBARA MŁOŹNIAK\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nMÔ HÌNH\n<NAME>\nBEDNARZ MATEUSZ \nBRZOSTEK PIOTR\nCERIMOVIC EMIR\nCHMILELECKA KAROLINA \nCHODKOWSKI PIOTR \nCZAPLARSKI PAWEŁ \nDIAMOUTETE KAMELE \nDROZDOWSKI MICHAŁ \nFELDMAN PAWEŁ \nGAŹDZIŃSKA KINGA\nGRADZIŃSKA JUSTYNA \nGWAREK RADOSŁAW\nHAYATO KITABATAKE\nHUANCA-VILLAN KENAYA \nJEFIMOW MARCIN \nKACZOR MACIEJ \nKASPARIAN NELTA \nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA \nKOWALSKI JAKUB\nKOWALSKI JAN \nKOWALSKI PIOTR \nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID \nKWIATKOWSKA KINGA\nKWIATKOWSKI KACPER \nLENARTOWICZ JADWIGA \nLIVINGSTONE ALISIGWE\nLU XIN \nMACIASZEK REMIGIUSZ \nMARSZAŁ BARTOSZ \nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKA NATALIA \nMIECHOWSKI PAWEŁ \nNGUYEN DIEU CHI \nNGUYEN DIEU LINH\nNGUYEN DUY \nNGUYEN THI THUY HUAN \nPAŁKA ALBERT \nPIĘTEK TOMASZ\nPIOTROWSKA ANNA\nPIOTROWSKI JAKUB \nPIOTROWSKI PAWEŁ \nPODKOWIŃSKA SANDRA\nPODKOWIŃSKI RAFAŁ \nPOŻOGA IDA\nPOŻOGA OLAF\nRENDASZKA PAWEŁ \nROZBICKA MARIA \nRUOCHEN WU\nSETLAK WOJCIECH \nSKÓRA MACIEJ \nSTELMACH EWA\nSTEVENSON GRAMMONT \nSTYPEREK BARTOSZ \nSUŁECKI MACIEJ \nSZCZEPANOWSKA KAROLINA \nSZCZEŚNIK MACIEJ \nSZEWCZYK SARA \nSZYNKARNIKOW OLEKSANDER\nSZYSZKA PAWEŁ \nŚMIETAŃSKI ADAM \nTCHORZ KAROLINA \nTOMALAK ALEKS \nTOMALAK MAREK \nWARGOCKA MONIKA ANNA\nWASIAK HENRYK \nWASIAK MACIEJ \nWICIŃSKI DAMIAN \nWIEJAK-GRĄŻKA MARTA\nWIERZBICKA JULIA \nWIERZBICKA MAGDALENA \nWIERZBICKI MICHAŁ \nWŁOSEK RAFAŁ \nWRÓBLEWSKI MATEUSZ \nZAJĄCZKOWSKI BORYS \nZAJĄCZKOWSKI KAROL \nZALEWSKA BARBARA\nZIELIŃSKI DOMINIK \nZINSOU LORIS\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\nDEEP SILVER\n<BR><BR><BR><BR>\n\n<HEADER>\nSẢN XUẤT\n<BR><BR>\n\n<HEADER>\nGIÁM ĐỐC SẢN XUẤT QUỐC TẾ\n<NAME>\nCHRISTIAN MORIZ\n<BR><BR>\n\n<HEADER>\nQUẢN LÝ SẢN PHẨM\n<BR><BR>\n\n<HEADER>\n QUẢN LÝ SẢN PHẨM\n<NAME>\nLISA MOOSBAUER\n<BR><BR>\n\n<HEADER>\nQUẢN LÝ PHÁT HÀNH/MASTERING\n<BR><BR>\n\n<HEADER>\nQUẢN LÝ PHÁT HÀNH CAO CẤP\n<NAME>\nDANIEL GAITZSCH\n<BR>\n\n<HEADER>\nQUẢN LÝ PHÁT HÀNH\n<NAME>\nCARL BARRETT\n<BR><BR>\n\n<HEADER>\nBẢN ĐỊA HÓA & QUỐC TẾ HÓA\n<BR><BR>\n\n<HEADER>\nQUẢN LÝ QA PHÁT HÀNH & BẢN ĐỊA HÓA QUỐC TẾ\n<NAME>\nLUKAS KOTRLY\n<BR>\n\n<HEADER>\nQUẢN LÝ DỰ ÁN QA BẢN ĐỊA HÓA\n<NAME>\nALEXANDRE LELANDAIS\n<BR><BR>\n\n<HEADER>\nĐẢM BẢO CHẤT LƯỢNG\n<BR><BR>\n\n<HEADER>\nTRƯỞNG QA & QUẢN LÝ PHÁT HÀNH\n<NAME>\nCARLO SARTI\n<BR>\n\n<HEADER>\nQUẢN LÝ DỰ ÁN QA & TRƯỞNG BỘ PHẬN QA TUÂN THỦ\n<NAME>\nRAFAL BOGUSZEWSKI\n<BR>\n\n<HEADER>\nQUẢN LÝ DỰ ÁN QA\n<NAME>\nKALPESH PATEL\n<BR>\n\n<HEADER>\nHỖ TRỢ QA BỔ SUNG\n<NAME>\nKEITH RUSSELL\nCHRISTOPHER BARR\nELITSA IVANOVA\n<BR><BR>\n\n<HEADER>\nQLOC S.A.\n<BR><BR>\n\n<HEADER>\nTỔNG GIÁM ĐỐC\n<NAME>\nADAM PIESIAK\n<BR>\n\n<HEADER>\nGIÁM ĐỐC PHÁT TRIỂN KINH DOANH\n<NAME>\nPAWEL GRZYWACZEWSKI\n<BR>\n\n<HEADER>\nGIÁM ĐỐC QUẢN LÝ KHÁCH HÀNG\n<NAME>\nPAWEL ZIAJKA\n<BR>\n\n<HEADER>\nQUẢN LÝ KHÁCH HÀNG\n<NAME>\nMARTA OLEJNICZAK\nJAKUB TRUDZIK\n<BR>\n\n<HEADER>\nTRƯỞNG BỘ PHẬN ĐẢM BẢO CHẤT LƯỢNG\n<NAME>\nSERGIUSZ SLOSARCZYK\n<BR>\n\n<HEADER>\nQUẢN LÝ DỰ ÁN QA\n<NAME>\nMARCIN GORNIAK\nMACIEJ MAZUREK\n<BR>\n\n<HEADER>\nQUẢN LÝ PHÒNG LAB QA\n<NAME>\nBARTOSZ ANTECKI\nPAWEL STRZELCZYK\n<BR>\n\n<HEADER>\nTRƯỞNG NHÓM QA\n<NAME>\nPAWEL KRAWCZUK\n<BR>\n\n<HEADER>\nKỸ SƯ TUÂN THỦ\n<NAME>\nEWA ANGIELSKA\nRAFAL DABROWSKI\nADAM KOPCZYNSKI\nMICHAL NIBURSKI\nPAWEL SZCZESNY\n<BR>\n\n<HEADER>\nKIỂM THỬ QA\n<NAME>\nRICHARD BORZYMOWSKI\nPAWEL DRAGAN\nKINGA GAJEWSKA\nMICHAL GLEBICKI\nADAM HYZ\nDAWID KOZLOWSKI\nRAFAL LIPSKI\nBARTLOMIEJ RYDER\nKRZYSZTOF SETNIEWSKI\nROMAN SKURSKI\nMAYA TAKEUCHI\nRAFAL TYC\n<BR>\n\n<HEADER>\nQUẢN LÝ IT\n<NAME>\nTOMASZ DZIEDZIC\n<BR>\n\n<HEADER>\nCHUYÊN GIA R&D\n<NAME>\nBARTEK ZUKOWSKI\n<BR><BR>\n\n<HEADER>\nSẢN PHẨM BÊN THỨ BA\n<NAME>\nZLIB – THƯ VIỆN NÉN ĐA DỤNG\nCOPYRIGHT © 1995-2004\nJEAN-LOUP GAILLY AND MARK ADLER\n<BR>\n\nBỘ MÃ NÉN ÂM THANH ĐA DỤNG VORBIS\nCOPYRIGHT © 1994-2002 XIPH.ORG FOUNDATION\n<BR>\n\nLUA – NGÔN NGỮ KỊCH BẢN ĐA DỤNG\nCOPYRIGHT © 1994–2010 LUA.ORG, PUC-RIO\n<BR>\n\nCURL\nGIẤY PHÉP & BẢN QUYỀN © 1996-2013 DANIEL STENBERG\n<BR>\n\nPHÔNG AJI HAND CỦA AJITH RAJAN\n<BR>\n\nPHÔNG OKUDA CỦA MIKE OKUDA\n<BR>\n\nPHÔNG TERTRE EXTRA BOLD CỦA JAN SCHMOEGER\n<BR>\n\nPHÔNG DESIGNOSAUR CỦA ARCHY STUDIO\n<BR>\n\nPHÔNG COVERED BY YOUR GRACE CỦA KG FONTS\n<BR>\n\nPHÔNG GUNNY REWRITTEN CỦA VIT CONDAK\n<BR>\n\n\nERNEST HEMINGWAY\nNOTES ON THE NEXT WAR: A SERIOUS TOPICAL LETTER\nESQUIRE SEPT. 1935\n<BR>\n<BR>\n<BR>\n \n11 BIT STUDIOS\n2015\n<BR>\n<BR>\n<BR>"
