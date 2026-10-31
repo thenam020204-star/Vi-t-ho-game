@@ -6398,3 +6398,612 @@
 6398	Hồng y Janus? &PÝ cô là tôi sắp nhận $Rnhiệm vụ$B đầu tiên à?
 6399	Ngài ấy không chia sẻ suy nghĩ với tôi đâu, Kiyan. Ngài ấy đang cử hành thánh lễ ở $RSanctus Imriel$B. &PSắp xong rồi, cậu tới đó ngay đi.
 6400	Được. Tôi đi đây.
+6401	Cậu biết đường tới Sanctus Imriel chứ? &PNhà thờ nằm ở $Rphía đông bắc Berkel Capital$B, tức là $Rphía bắc lối đi bí mật$B của $RShadow Hall$B.
+6402	Đi đi. Gặp cậu sau.
+6403	À phải, tôi đã hứa kể cho cậu về $Rlính đánh thuê$B. Cậu may đấy: không khó lắm đâu.
+6404	Menu $RLính đánh thuê$B cho cậu biết chính xác tình hình đội quân cậu thuê.
+6405	Cậu có thể $RTuyển$B và/hoặc $RCho nghỉ$B họ ở thẻ này.
+6406	Cậu sẽ xem được chỉ số, kỹ năng và trang bị của họ.
+6407	Cậu là thủ lĩnh, nên cậu sẽ là người tấn công mục tiêu. &NHọ sẽ theo cậu.
+6408	Chạm $Rhai lần$B vào $RThông tin nhân vật$B, người của cậu sẽ tấn công mục tiêu.
+6409	Ngoài ra, chạm thêm lần nữa vào $RThông tin nhân vật$B để điều khiển người của cậu tuỳ ý.
+6410	Vào $RKỹ năng$B rồi chạm $RA.I.$B, cậu có thể đặt thành viên trong đội làm người theo sau do AI điều khiển.
+6411	Cậu không chỉ quyết định được $Rthời điểm mỗi lính đánh thuê dùng kỹ năng$B, &Pmà còn có thể vào nút $SCÀI ĐẶT$B bên dưới để chọn số lần $Rtự động phản công$B.
+6412	Lối đánh sẽ khác nhau tuỳ cách cài đặt AI, nên hãy dùng cách hợp với cậu nhất.
+6413	Còn gì nữa không?
+6414	Ánh sáng loé ra từ bức tượng.
+6415	$G(Vẫn còn vài chuyện cần giải quyết.)
+6416	....Gì...&NChuyện gì vừa xảy ra...? &PĐây là đâu...?
+6417	$RCapital$B của $REmpire$B...?&PNhưng, mình đã...
+6418	....$SEara$B đâu rồi...?
+6419	Mình đã không thể... bảo vệ... cô ấy sao...?
+6420	Rất vui được gặp cậu, lần đầu tiên trực tiếp.&PChào mừng, Kiyan. Tôi là $SElinia$B.
+6421	...Cô là ai? Cô biết tôi à?
+6422	Tất nhiên rồi. Tôi luôn dõi theo cậu.
+6423	Cậu mang một $Rđịnh mệnh$B đặc biệt.
+6424	Tôi không hiểu cô đang nói gì.
+6425	Và tôi không có thời gian cho chuyện vớ vẩn.
+6426	Tôi phải tìm Eara...
+6427	Bây giờ cậu không gặp cô ấy được đâu.
+6428	Cô biết gì đó phải không? &PEara đâu? Cô đưa cô ấy đi đâu rồi?
+6429	Bình tĩnh nào, Kiyan. Người đang gặp nguy không phải cô ấy, mà là $Scậu$B.
+6430	Đây không phải $Rthực tại$B nơi cậu thuộc về.
+6431	Đây là $Rthế giới tâm trí$B của cậu... cậu không chịu nổi sức mạnh hắc ám của Moar vĩ đại, linh hồn cậu đã rơi vào nơi này.&PCậu có thể bị kẹt ở đây... mãi mãi... không bao giờ quay về thế giới hiện tại được.
+6432	Chắc cậu từng trải qua chuyện này rồi, đúng không?
+6433	Sao cô lại...
+6434	...Rốt cuộc cô là ai?
+6435	Thôi nào, chúng ta sắp hết thời gian rồi.
+6436	Tôi không giải thích hết được, nên cậu phải tin tôi. Tôi tới đây để cứu cậu.
+6437	Nhưng một khi rời khỏi đây, một thực tại đau đớn sẽ chờ cậu, Kiyan.
+6438	Cậu có muốn quay về thế giới thực không?
+6439	Tất nhiên. Tôi không định ở đây lâu. 
+6440	Tôi sẽ không trốn tránh sự thật... Dù nó có đau đớn...
+6441	....$SEara$B... Tôi không thể bỏ cuộc.
+6442	Hehe, vậy là quá đủ rồi.
+6443	Nhắc lại, đây là $Rthế giới tâm trí$B của cậu. Nên mọi thứ ở thế giới này đều là một phần $Rký ức$B đã mất từ lâu của cậu.
+6444	Nhưng sau khi hấp thụ sức mạnh của Moar, mọi thứ trong ký ức cậu đã mất kiểm soát và đang bùng lên trong $Rcơn cuồng nộ$B.
+6445	Nếu cứ để chúng chạy loạn như bây giờ, cậu sẽ không bao giờ quay về thế giới thực được.
+6446	....Vậy tôi phải làm gì?
+6447	....Cậu không còn cách nào khác ngoài việc tiêu diệt từng ký ức đang nổi điên.
+6448	Nhưng đừng lo. Tiêu diệt chúng không có nghĩa là sẽ làm tổn hại tinh thần cậu.
+6449	Đây là nơi chứa ký ức của cậu... nên người duy nhất xử lý được chuyện này là cậu.
+6450	Nếu tin tôi thì đi theo tôi. Tôi sẽ giúp cậu thoát ra.
+6451	Nơi này là đâu...?
+6452	Đây là nơi ký ức của cậu trôi dạt sau cú sốc.
+6453	Cậu thấy lối vào chứ?
+6454	Tới đó cậu sẽ thấy tất cả ký ức đang trôi nổi.
+6455	Tiêu diệt chúng, thu thập $Rmảnh ký ức$B từ mỗi nơi, đổ đầy $Rbát ký ức$B, rồi cậu sẽ vào được $Rtầng sâu hơn của ký ức$B.
+6456	Càng vào sâu, ký ức bùng lên càng mạnh, nên hãy cẩn thận.
+6457	Vậy cậu muốn làm dịu ký ức nào trước?
+6458	Cậu đã chọn làm dịu ký ức về $REternal World$B.
+6459	Ở Eternal World sẽ có $Rsinh vật tà ác$B, $Rthiên thần chết$B và $Rhồn ma lang thang$B.
+6460	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Eternal World sẽ xuất hiện.
+6461	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Eternal World.
+6462	Vậy thì... chúc may mắn. Tôi sẽ đợi ở đây.
+6463	Cậu đã quyết định làm dịu ký ức về $RDark Woods$B.
+6464	Trong khu rừng này sẽ có $Rsói cuồng nộ$B, $Rlính Berkel điên loạn$B và $Rcung thủ Berkel điên loạn$B.
+6465	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Dark Woods sẽ xuất hiện.
+6466	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Dark Woods.
+6467	Cậu đã chọn làm dịu ký ức về $RGoblin's Lair$B.
+6468	Ở Goblin's Lair sẽ có $Rnhện cuồng bạo$B, $Rdơi cuồng bạo$B và $Rgoblin bẩn thỉu$B.
+6469	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Goblin's Lair sẽ xuất hiện.
+6470	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Goblin's Lair.
+6471	$G(...Kẹt rồi.)$B
+6472	$G(...Mấy $Rbức tượng$G kia bị lệch. Phải xem thử.)$B
+6473	Cậu đã làm dịu tất cả ký ức đang bùng lên. Hành trình chẳng dễ dàng gì, nhưng cậu đã làm rất tốt, Kiyan.
+6474	Giờ ký ức về Eternal World của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6475	Vậy cậu muốn làm dịu ký ức nào tiếp theo?
+6476	Giờ ký ức về Dark Woods của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6477	Giờ ký ức về Goblin's Lair của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6478	Cậu đã làm dịu cả ba ký ức. Tuyệt lắm, Kiyan. Giờ chúng ta có thể xuống tầng sâu hơn.
+6479	Đi qua $RBệ thờ$B kia để sang tầng tiếp theo.
+6480	Nhưng tầng sau sẽ có những cơn ác mộng mạnh và đáng sợ hơn nhiều. Cậu sẵn sàng chưa?
+6481	Khi nào muốn làm dịu thêm ký ức ở tầng này thì nói với tôi.
+6482	Ánh sáng loé ra từ Bệ thờ.
+6483	Đây là $Rtầng ký ức thứ hai$B trong thế giới tâm trí của cậu.
+6484	Tôi đã nói rồi, nhưng nhắc lại: những ký ức mạnh hơn đang chờ ở tầng tiếp theo, nên hãy cẩn thận.
+6485	Hãy làm dịu chúng giống như ở tầng thứ nhất.
+6486	Ngươi đã đánh thức bọn bất tử!! Chết đi!! Chếếếếết điii!!
+6487	Chết đi!! CHẾẾẾẾẾT ĐIIII!!
+6488	Kẻ phản bội Empire... phải chết.... TẠI ĐÂY...!
+6489	Huaaaargh! Con người... CHẾT ĐI......!
+6490	...Xong việc ở đây rồi.
+6491	Giờ phải quay về chỗ $SElinia$B.
+6492	Được. Vậy khi nào sẵn sàng thì nói với tôi.
+6493	Bước tiếp theo của cậu là gì?
+6494	Cậu đã quyết định làm dịu ký ức ở $RAbandoned Mines$B.
+6495	Ở Abandoned Mines sẽ có $Rmimic gặm ký ức$B, $Rwolrang$B và $Rngười sói cuồng nộ$B.
+6496	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Abandoned Mines sẽ xuất hiện.
+6497	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Abandoned Mines.
+6498	Cậu đã chọn làm dịu ký ức về $RBlazing Desert$B.
+6499	Ở Blazing Desert sẽ có $Rrùa sa mạc đột biến$B, $Rxương rồng bốc cháy$B và $Rlính Arnen cuồng nộ$B.
+6500	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Blazing Desert sẽ xuất hiện.
+6501	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Blazing Desert.
+6502	Cậu đã quyết định làm dịu ký ức ở $RLonely Plateaus$B.
+6503	Ở Lonely Plateaus sẽ có $Rquỷ chiến binh orc xương$B, $Rvong hồn pháp sư orc xương$B và $Rbộ xương ướt sũng$B.
+6504	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Lonely Plateaus sẽ xuất hiện.
+6505	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Lonely Plateaus.
+6506	Giờ ký ức về Abandoned Mines của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6507	Giờ ký ức về Blazing Desert của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6508	Giờ ký ức về Lonely Plateaus của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6509	Đây là $Rtầng ký ức thứ ba$B trong thế giới tâm trí của cậu.
+6510	Awoooooooooo.... Con người... chết đi...!
+6511	Không bảo vệ được Channel à? &NChuẩn bị trả giá... cho tội lỗi của ngươi đi!
+6512	Lũ người đáng nguyền rủa... giết hết...!
+6513	Cậu đã chọn làm dịu ký ức về $RWrecked Castle$B.
+6514	Ở Wrecked Castle sẽ có $Rchiến binh Darkhood$B, $Rcung thủ Darkhood$B và $Rchuột cống$B.
+6515	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Wrecked Castle sẽ xuất hiện.
+6516	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Wrecked Castle.
+6517	Cậu đã chọn làm dịu ký ức về $RLand of Death$B.
+6518	Ở Land of Death sẽ có $Rsuccubus mê hoặc$B, $Rma trơi điên loạn$B và $Rkinh thư hắc ám$B.
+6519	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Land of Death sẽ xuất hiện.
+6520	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Land of Death.
+6521	Cậu đã chọn làm dịu ký ức về $RSpiritual Forest$B.
+6522	Ở Spiritual Forest sẽ có $Rquỷ chiến binh drow$B, $Rvong hồn pháp sư drow$B và $Roogle cuồng nộ$B.
+6523	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Spiritual Forest sẽ xuất hiện.
+6524	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Spiritual Forest.
+6525	Giờ ký ức về Wrecked Castle của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6526	Giờ ký ức về Land of Death của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6527	Đây là $Rtầng ký ức thứ tư$B trong thế giới tâm trí của cậu.
+6528	Đây sẽ là mồ chôn của ngươi!
+6529	Con người... ngươi là của ta...!
+6530	Cậu đã quyết định làm dịu ký ức về $REndless Snowfield$B.
+6531	Ở Endless Snowfield sẽ có $Rgấu hoang$B, $Rrắn nanh$B và $Rbọn côn đồ$B.
+6532	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Endless Snowfield sẽ xuất hiện.
+6533	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Endless Snowfield.
+6534	Cậu đã chọn làm dịu ký ức về $RCave of Trials$B.
+6535	Ở Cave of Trials sẽ có $Rdơi ma cà rồng$B, $Rgiòi ngòi độc$B và $Rmimic răng nhọn$B.
+6536	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Cave of Trials sẽ xuất hiện.
+6537	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Cave of Trials.
+6538	Cậu đã quyết định làm dịu ký ức về $RForgotten Ruins$B.
+6539	Ở Forgotten Ruins sẽ có $Rquỷ chiến binh elf$B, $Rquỷ cung thủ elf$B và $Roogle nhiễm độc$B.
+6540	Tiêu diệt mỗi loại $R15$B con, thu thập khoảng $R30$B $Rmảnh ký ức$B để đổ đầy $Rbát ký ức$B, ký ức đáng sợ nhất về Forgotten Ruins sẽ xuất hiện.
+6541	Làm dịu ký ức đáng sợ nhất để giải trọn câu đố ký ức đã mất của Forgotten Ruins.
+6542	Giờ ký ức về Endless Snowfield của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6543	Giờ ký ức về Cave of Trials của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6544	Giờ ký ức về Forgotten Ruins của cậu đã ổn định. Nhưng nếu muốn, cậu luôn có thể quay lại để xua tan ác mộng bất cứ lúc nào.
+6545	Cậu đã làm dịu cả ba ký ức. Tuyệt lắm, Kiyan. Giờ chúng ta có thể xuống tầng sâu nhất, và cũng là tầng cuối cùng.
+6546	Đi qua $RBệ thờ$B kia để sang tầng cuối.
+6547	Những ký ức cuối cùng mạnh hơn hẳn các tầng trước. Cậu sẵn sàng chưa?
+6548	$NÁnh sáng loé ra từ Bệ thờ.$B
+6549	Đây là $Rtầng ký ức cuối cùng$B trong thế giới tâm trí của cậu.
+6550	Ở đây, ký ức của vô thức sẽ là những ký ức đáng sợ nhất, mạnh mẽ nhất.
+6551	Cậu đã chuẩn bị chưa?
+6552	Huuuuuuuuuaaaaaaaaarrrrrghh !
+6553	Hãy cháy trong địa ngục bằng ngọn lửa của ta...!
+6554	Cậu đã chuẩn bị xong mọi thứ.&PNhững ký ức cuối cùng ở ngay phía trước.
+6555	Trước tiên, cậu cần tiêu diệt $Rhài cốt người chết$B và $Rtrứng ký ức cuồng nộ$B, mỗi loại $R15$B con. Lối vào $Rký ức cuối cùng$B sẽ mở khi hoàn thành.
+6556	Tôi nhắc lại, những ký ức cuối cùng sẽ đáng sợ nhất, đen tối nhất.&PNhưng như tôi đã nói, chúng chỉ là một phần $Rký ức$B của cậu... và đây là thế giới tâm trí của cậu, Kiyan. Đừng quên điều đó.
+6557	Vậy thì... hoàn thành tất cả rồi quay lại. Tôi sẽ đợi ở đây.
+6558	Được. Khi nào sẵn sàng thì nói với tôi.
+6559	Cậu sẵn sàng chưa?
+6560	$SDarius$B…?
+6561	...Cuối cùng cậu cũng tới.
+6562	Cậu được nuôi dạy để trở thành $Rvật chứa$R hoàn hảo cho Moar.
+6563	Nếu cậu là thành viên thật sự của Shadow Tribe... Cậu nên đón nhận sự hoá thân này trong vinh quang.
+6564	... Tôi chẳng còn gì nữa. Mọi thứ tôi biết và tin tưởng... đều là dối trá.
+6565	Nhưng có một $RSự thật$B tôi không muốn từ bỏ. 
+6566	Cậu vẫn còn bám víu vào nó...
+6567	...Chính cậu tự chuốc lấy. Ta sẽ tự tay tiễn cậu tới Chaos-strider!
+6568	...Tại sao...
+6569	Ý chí của con người thật quá nhỏ bé trước bóng tối vĩ đại.
+6570	Đó là... chỗ dựa cuối cùng còn lại của tôi.
+6571	$SPortia$B...
+6572	Kiyan... Cậu nghĩ tôi đã phản bội cậu sao?
+6573	Cậu biết tôi sẽ không làm thế mà. Ý nghĩ đó thật vô lý, nên hãy đi với tôi.
+6574	Thứ cậu đang tìm kiếm chỉ là ảo ảnh. Kẻ chạy theo ảo ảnh chỉ còn lại hối tiếc. &PĐi với tôi và Azad đi. Những điều tốt đẹp... những điều hạnh phúc đang chờ chúng ta, nhé?
+6575	...Xin lỗi. Tôi không thể làm vậy.
+6576	...Cậu không cho tôi lựa chọn nào khác. Tôi đã không muốn làm thế này...
+6577	Hãy hiểu cho tôi. Tất cả là vì tôi quan tâm tới cậu.
+6578	Chà...&PCậu mạnh lên nhiều thật đấy, Kiyan.
+6579	Nếu cậu muốn đến thế... Thì tôi cũng muốn cổ vũ cho cậu...
+6580	Đó là...!
+6581	Hỡi hạt giống bóng tối,
+6582	Ngươi chẳng là gì ngoài $Rvật chứa$B của ta...
+6583	Hãy quay về làm một phần của ta...!
+6584	Argh... đồ... sâu bọ... ghê tởm....!
+6585	Hahaha.... cứ vùng vẫy tuỳ thích..... ngươi chỉ là một mảnh của ta!
+6586	Đúng vậy... Chuyện này chẳng thay đổi được gì....!
+6587	Kết thúc... rồi...
+6588	Đã tới lúc quay về $Rthực tại$B...
+6589	Quay về chỗ $SElinia$B thôi.
+6590	Cậu đã gỡ rối được tất cả ký ức của mình.
+6591	Thật đáng kinh ngạc, Kiyan. Việc này chẳng dễ dàng gì, nhưng cậu đã làm rất tốt.
+6592	Giờ cuối cùng cậu cũng có thể quay về $Rthế giới thực$B.
+6593	Tôi đã nói một lần rồi, nhưng $Rthế giới thực$B chứa nhiều đau đớn hơn hẳn những $Rký ức$B này.
+6594	Cậu vẫn muốn... quay về chứ?
+6595	...Không gì thay đổi được quyết định của tôi.
+6596	Tôi sẽ quay về thực tại.
+6597	Được rồi. Thấy cậu quyết tâm như vậy tôi yên tâm rồi.&PNếu muốn, cậu có thể quay lại đây xử lý những $Rký ức cuồng nộ$B bất cứ lúc nào.
+6598	Giờ tôi sẽ đưa cậu về thế giới hiện tại.
+6599	$STEAM LEADER$B&NJunseok Lim
+6600	$SPROJECT DIRECTOR$B&NKyoungmin Lee
+6601	$SGame System Design$B&NKyoungmin Lee&N&N$Sscenario&Game Design$B&NHyokyoung Lee, Jeongsoo Sunwoo, Kibum Kim&N&N$SGame Design2$B&NJieun Shin, Min Kwak
+6602	$SPrograming$B&NSeungyeop Lee, Byoungho Song, Sungjun Kim&N&N$SPrograming Supervise$B&NJunseok Lim
+6603	$SCharactor Design$B&NYongseong Bae, Jihee Han, Chewan Shim&N&N$SAnimation$B&NChewan Shim, Daeseong Han
+6604	$SEffect$B&NYongseong Bae, Chewan Shim, Daeseong Han&N&N$SMonster Design$B&NYongseong Bae
+6605	$SBackground$B&NHyeim Park, Kyoungmin Lee&N&N$SUI Design$B&NSoyoung Rhie, Jihee Han
+6606	$SItem Design$B&NJihee Han&N&N$SCharactor Illustration$B&NSumin Kim
+6607	$SGlocalization$B&NMinok Kwak, Jinyong Kim, Sujung Kim, Jaehyung Youn&NChuhua Jin, Huili Wang, Longquan Jin&NSujin Choi, Marine Caillault&NSara Hashemi Ghahdorijani, Simon Bernhard&NJiyoon Kim, Jeongsoo Sunwoo
+6608	$SQA$B&NMyungsup Eum, Seungwon Shin, Hongseok Jung&NHyunmin Kim, Yunchul Kang, Joohwan Ahn, yoonsoo Kim
+6609	$SSound Director$B&NHyungjun Cho&N&N$SSound Effect$B&NHyungjun Cho&N&N$SBGM$B&NHyungjun Cho, Sangmi Park, Youngjun Seo
+6610	$SMarketing$B&NSeunghun Jeon, Junhyung Kim&NJaehun Kim, Yongbiao Hwang(China)&N&N$SMonetising$B&NDongkyu Han, Sanghoon Lee&N&N$SVideo$B&NSunghoon Kim, Jiyeon Park
+6611	$SSPECIAL THANKS TO$B&NJiyoung Park
+6612	... VÀ CẢ BẠN NỮA!
+6613	Cuối cùng... chỉ còn lại $Rký ức cuối cùng$B...
+6614	...Mình không thể bị kẹt ở chỗ thế này. Dù thế nào mình cũng sẽ quay về thực tại.
+6615	$G(...Cấu trúc này, giống với những gì mình nhớ ở nhà $SIvan$G...)$B&N$G(...Phải xem kỹ hơn.)$B
+6616	Kiyan, đợi đã.
+6617	Tôi quên giải thích một chuyện.
+6618	Tôi chỉ muốn nhắc cậu vài điều. 
+6619	Cậu biết là có thể mua vật phẩm ở cửa hàng trong thị trấn đúng không? À, cậu cũng có thể bấm nút xe đẩy bên dưới nút lưu để mua ngay những vật phẩm rất hữu ích. 
+6620	Ví dụ, bấm nút xe đẩy, chọn $SSubstantial Traveler Set$B rồi bấm $Rmua$B. Làm vậy, cậu sẽ mua được $Binfinity Bag, Hero Emblem và 10 gem$B với giá rất rẻ. 
+6621	Chắc dùng cửa hàng này sẽ có nhiều lợi ích lắm.
+6622	Ừ hử. Cửa hàng đó sẽ cho cậu những vật phẩm hiếm không mua được ở thị trấn. 
+6623	Cảm ơn thông tin này.. Nó sẽ giúp tôi rất nhiều trong các nhiệm vụ sau này. 
+6624	Tôi kỳ vọng nhiều ở cậu đấy, Kiyan. 
+6625	Cảm ơn công sức của cậu! Đây là sợi dây chuyền cậu vất vả làm ra. Ừm, nếu cậu không thích thì sao không mang nguyên liệu tới lần nữa? Biết đâu được? Sợi dây chuyền tiếp theo có thể là một kiệt tác..
+6626	Lần nào cũng cảm ơn cậu. Trật tự đang trở lại thành phố.
+6627	Đúng là cậu Kiyan của tôi.&NTôi biết cậu sẽ không làm tôi thất vọng mà!
+6628	Khoảng $R5 Silver$B sẽ khiến tôi hăng hái nói hơn một chút~.
+6629	Đây... tiền bạc đây.
+6630	Làm sao tôi tin được là trả tiền thì anh sẽ nói?
+6631	Cậu có muốn trả tiền cho $SBen$B để biết cách vào trạm gác không?
+6632	Đã trả 3 Silver.
+6633	Có gì đó mờ ám. Chưa trả đồng nào cả.
+6634	Mọi tiến độ nhiệm vụ phụ sẽ bị huỷ nếu cậu quay về phòng bây giờ. Cậu chắc chắn muốn tiếp tục?
+6635	Có
+6636	Không 
+6637	Mọi tiến độ nhiệm vụ phụ sẽ bị huỷ khi cậu tới Arnen. Cậu có muốn tiếp tục không?
+6638	Chuẩn bị xong rồi. Bắt đầu kế hoạch thôi.
+6639	Xin lỗi. Hãy đợi một chút cho tới khi xử lý xong mọi chuyện.
+6640	Mọi nhiệm vụ phụ đang làm sẽ bị huỷ khi cậu sang sự kiện tiếp theo. Cậu có muốn tiếp tục không?
+6641	Mọi nhiệm vụ phụ đang làm sẽ bị huỷ khi cậu sang bản đồ tiếp theo. Cậu có muốn tiếp tục không?
+6642	Mọi nhiệm vụ phụ đang làm sẽ bị huỷ và cậu sẽ không lưu được dữ liệu trong một lúc khi sang sự kiện tiếp theo. Cậu có muốn tiếp tục không?
+6643	Tôi đã sẵn sàng. Đi thôi.
+6644	Tôi chưa sẵn sàng. Mong cậu đợi thêm chút nữa.
+6645	Không
+6646	Cậu muốn biết điều gì?
+6647	Về lên cấp và điểm kinh nghiệm
+6648	Về chỉ số
+6649	Về kỹ năng
+6650	Giờ tôi ổn rồi.
+6651	Cậu có điều gì muốn hỏi không?
+6652	Về tuyển và quản lý đội
+6653	Về điều khiển đội
+6654	Về cài đặt AI của đội
+6655	Tượng $Rgấu Bắc Cực$B. &NChạm nút để vận hành.
+6656	Đen
+6657	Cam
+6658	Tím
+6659	Tượng $Rgấu đen$B. &NChạm nút để vận hành.
+6660	Xanh dương
+6661	Trắng
+6662	Tượng $Rgấu nâu$B. &NChạm nút để vận hành.
+6663	Xanh lá
+6664	Tượng $Rgấu đỏ$B. &NChạm nút để vận hành.
+6665	Xanh đậm
+6666	Cậu muốn vào thế giới tâm trí nào trong ba nơi?
+6667	Eternal World
+6668	Dark Woods
+6669	Goblin's Lair
+6670	Cho tôi chút thời gian chuẩn bị.
+6671	Cậu có muốn sang tầng tiếp theo không?
+6672	Abandoned Mines
+6673	Blazing Desert
+6674	Lonely Plateaus
+6675	Wrecked Castle
+6676	Land of Death
+6677	Spiritual Forest
+6678	Endless Snowfield
+6679	Cave of Trials
+6680	Forgotten Ruins
+6681	Cậu muốn vào tầng ký ức nào?
+6682	Tầng 1
+6683	Tầng 2
+6684	Quay lại
+6685	Tầng 3
+6686	Tầng 4
+6687	Cậu có muốn làm dịu những ký ức cuối cùng không?
+6688	Rồi, mọi thứ đã sẵn sàng.
+6689	Vẫn cần thêm chút thời gian chuẩn bị.
+6690	Tầng 5
+6691	Thứ gì vừa đen vừa trắng, mà ai cũng đọc?
+6692	1. Gấu trúc khổng lồ
+6693	2. Ngựa vằn bị cháy nắng.
+6694	3. Tờ báo
+6695	Một cộng một bằng mấy?
+6696	1. Hai
+6697	2. Cửa sổ
+6698	3. Phép cộng
+6699	Hòn đá xanh rơi xuống Sông Đỏ thì sẽ ra sao?
+6700	1. Bị cá ăn mất.  
+6701	2. Chuyển sang màu tím.
+6702	3. Bị ướt.
+6703	Con vẹt màu cam thì gọi là gì?
+6704	1. Con chim bị ốm.
+6705	2. Loài nhiệt đới sắp tuyệt chủng.
+6706	3. Vẹt cà rốt.
+6707	Cậu muốn tôi làm thêm một sợi dây chuyền nữa à? Được thôi. Cứ mang nguyên liệu tôi cần tới đây, nhé?
+6708	Tôi sẽ đi lấy.
+6709	Tôi có việc khác phải làm.
+6710	Nếu có thời gian, cậu giúp tôi được không?&NNếu cậu giúp tôi nhặt vũ khí bị vứt bỏ và xử lý bọn đào ngũ như lần trước, thành phố này sẽ thành nơi đáng sống hơn nhiều.
+6711	Tất nhiên. Rất sẵn lòng..
+6712	Xin lỗi. 
+6713	Ồ.. Cậu lại tới giúp tôi nghiên cứu à? Cậu biết tôi cần gì rồi chứ? Mau đi lấy cho tôi. Trong lúc đó tôi sẽ chuẩn bị vũ khí cho cậu. 
+6714	Vâng, tôi đi ngay.
+6715	Tôi không thể. Tôi có việc khác cần lo.
+6716	Ám sát Bá tước Grafton
+6717	Nhiệm vụ của Shadow Tribe
+6718	Nhiệm vụ của thủ lĩnh Shadow Tribe
+6719	Lời nhờ của Lehman
+6720	Grumman bị cô lập
+6721	Chiến dịch giải cứu Channel
+6722	Căn cứ bí mật của Kamuran
+6723	Thí nghiệm lính xương
+6724	Thanh kiếm thất lạc
+6725	Sắp xếp nhà kho
+6726	Chó sói trong vùng
+6727	Trận chiến mở đầu
+6728	Channel mất tích
+6729	Trận chiến Episode 2
+6730	Thủ lĩnh quân địch
+6731	Sửa Leap-gate
+6732	Nhiệm vụ: Mở cửa
+6733	Amarok ở Dwarf Mines
+6734	Thoát khỏi Kamuran
+6735	Kho quân sự
+6736	Câu chuyện Amarok
+6737	Dwarven Mines B1
+6738	Vượt biên giới Gateway
+6739	Channel bị bắt cóc
+6740	Ngục tối của Djinn
+6741	Nhà tù Goblin
+6742	Gia đình Izelynn
+6743	Janus triệu tập
+6744	Lời nhờ của Darius
+6745	Đấu với đội trưởng Arnen Chasers
+6746	Học viên bị cô lập
+6747	Leiden mất tích
+6748	Lính bắt Leiden
+6749	Noxious Sanctum
+6750	Trận chiến Episode 4
+6751	Hwagan Canyon
+6752	Quận Bone Orc
+6753	Bộ tộc Steel Orc
+6754	Kẻ bị nhiễm bệnh
+6755	Đấu với thủ lĩnh dị giáo
+6756	Điều tra Nam tước Borgia
+6757	Đấu với Nam tước Borgia
+6758	Bảo vệ Channel
+6759	Hoàn thành nhiệm vụ phụ_ep6A
+6760	Lần theo người bảo vệ Channel
+6761	Tới Divine Knights Order
+6762	Báo cáo với Portia
+6763	Gia nhập đội giải cứu Channel
+6764	Thợ săn tiền thưởng_1
+6765	Đánh lạc hướng
+6766	Phiếu đặt hàng của Rodger
+6767	Thuốc chữa bệnh cho mẹ
+6768	Giấc mơ hồi xuân
+6769	Xin hãy nhận tình yêu của tôi!
+6770	Một chút trả thù
+6771	Kẻ không được chào đón
+6772	Giao quặng sắt
+6773	Tôi không đau.
+6774	Vượt qua cơn đói
+6775	Chuẩn bị khai mỏ
+6776	Di vật của ông nội
+6777	Truy nã
+6778	Sinh vật bí ẩn
+6779	Ẩm thực theo mùa
+6780	Rùa chiến đào tẩu
+6781	Thoả thuận của Ben
+6782	Cuốn sách kỳ lạ
+6783	Quá khứ đáng xấu hổ
+6784	Một vấn đề khác
+6785	Phép lịch sự tối thiểu
+6786	Báo thù cho gia đình
+6787	Lời nhờ của Maria
+6788	Tony trở về
+6789	Quà cho Maria
+6790	Thoát khỏi Eternal World
+6791	Fey bé nhỏ và sợi dây chuyền
+6792	Đấu với bọn trộm Blackhood
+6793	Tới Rinoen
+6794	Tung tích của Channel
+6795	Tìm hàng tiếp tế thất lạc
+6796	Truy đuổi Channel
+6797	Beacon Hill Gorge
+6798	Đấu với bọn cướp Redhood
+6799	Đoàn tụ với Eara
+6800	Lấy thuốc của Shin
+6801	Đấu với Oogle Queen
+6802	Hoàn thành nhiệm vụ phụ_ep8
+6803	Đấu với đội trưởng trinh sát
+6804	Quét sạch Blackhood 
+6805	Trộm cắp 
+6806	Kết thúc êm đềm
+6807	Có cảm hứng rồi!
+6808	Đồ quý bị trộm
+6809	Chia hàng tiếp tế
+6810	Giải cứu con tin
+6811	Tiêu diệt Queen Spider
+6812	Tìm hạt giống thất lạc
+6813	Viên đá phong ấn thứ nhất
+6814	Viên đá phong ấn thứ hai
+6815	Drow
+6816	Bệnh của Eara
+6817	White Valley
+6818	Đấu với tù trưởng Drow
+6819	Quay lại kết giới
+6820	Trận chiến Beholder
+6821	Tìm viên đá phong ấn thứ ba
+6822	Thi thể trong mộ
+6823	Viên đá phong ấn thứ ba
+6824	Đấu với Guardian Golem
+6825	Trốn thoát
+6826	Tới làng Snow Fey
+6827	Dụ bọn Chaser
+6828	Chia để trị
+6829	Chia để trị 1
+6830	Chia để trị 2
+6831	Chia để trị 3
+6832	Trại tạm thời
+6833	Thuốc nổ
+6834	Tới Snowfield Hills
+6835	Tới Snowfield Caves
+6836	Tác dụng phụ
+6837	Đêm trắng
+6838	Khiên vững chắc
+6839	Vì cô ấy xứng đáng.
+6840	Làn da khoẻ đến sáng bóng!
+6841	Hương vị lạ
+6842	Forgotten Sanctum
+6843	Trận chiến vách đá 1
+6844	Trận chiến vách đá 2
+6845	Nhà của Yirien
+6846	Lời nhờ của Sailen
+6847	Lời nhờ của Spirit Tree
+6848	Danh dự chiến binh Drow
+6849	Dấu vết con người
+6850	Lấy củi và lông thú
+6851	Tìm ra sự thật
+6852	Gãy chân
+6853	Tới Elven Sanctuary
+6854	Thị trấn kỳ lạ
+6855	Trưởng làng Ivan
+6856	Manh mối về phong ấn
+6857	Phía đông hang
+6858	Trận chiến hầm phong ấn 1
+6859	Tới chỗ thầy thuốc làng
+6860	Phía bắc hang
+6861	Lục soát nhà trưởng làng
+6862	Quay lại chỗ thầy thuốc làng
+6863	Tung tích của Domonique
+6864	Phía nam hầm ngục
+6865	Đấu với Ivan
+6866	Ivan biến mất 
+6867	Phong ấn cuối cùng
+6868	Trận chiến phong ấn cuối cùng
+6869	Trở nên uể oải
+6870	Nghiên cứu lịch sử
+6871	Công thức mới
+6872	Câu đố dưới lòng đất
+6873	Hoàn thành nhiệm vụ phụ_ep9
+6874	Đánh lạc hướng tầng ký ức 1
+6875	Trận boss Eternal World
+6876	Trận boss Dark Woods
+6877	Trận boss Goblin's Lair
+6878	Tầng ký ức 2
+6879	Tầng ký ức 1
+6880	Tầng ký ức 3
+6881	Nguyên nhân suy yếu
+6882	Trang bị tốt hơn
+6883	Tầng ký ức 4
+6884	Tầng ký ức 5
+6885	Tầng ký ức cuối cùng
+6886	Kiếm mạnh mẽ
+6887	Đại kiếm mạnh mẽ
+6888	Dao găm mạnh mẽ
+6889	Trượng mạnh mẽ
+6890	Chuỳ mạnh mẽ
+6891	Cung mạnh mẽ
+6892	Áo choàng bền chắc 1
+6893	Áo choàng bền chắc 2
+6894	Khiên bền chắc
+6895	Giáp sắt bền chắc
+6896	Giáp tấm chắc chắn
+6897	Áo choàng pháp sư chắc chắn
+6898	Khăn trùm chắc chắn
+6899	Mũ sắt bền chắc
+6900	Lời nhờ của Francis
+6901	Muỗi tấn công
+6902	Tiếng cười của Succubus
+6903	Món ăn bổ dưỡng
+6904	Lính vô đạo đức
+6905	Chúng ta phải xuống dưới...
+6906	Đảo chính
+6907	Cơn thịnh nộ của người yêu nước
+6908	Linh hồn ô uế
+6909	Câu đố ngôi nhà hoang
+6910	Ngục tối Goblin
+6911	Ben ở làng Pendrik
+6912	Mớ hỗn độn của Cornette
+6913	Tìm Channel thật
+6914	Tomb of Reality
+6915	Tomb of Abyss
+6916	Tomb of Afterlife
+6917	Tomb of Resurrection
+6918	Thợ săn tiền thưởng tập sự
+6919	Thợ săn tiền thưởng trung cấp
+6920	Thợ săn tiền thưởng cao cấp
+6921	Đá thanh tẩy dưới tầng hầm mỏ
+6922	Trưởng lão bị bắt cóc
+6923	Nhiệm vụ ẩn Episode 7
+6924	Tình thế ngặt nghèo và một kế hoạch
+6925	Tổ tiên của những điều bí ẩn
+6926	Chữa trị cho Eara
+6927	Máy hợp nhất sơ cấp
+6928	Máy hợp nhất trung cấp
+6929	Máy hợp nhất cao cấp
+6930	Hãy viết đánh giá nhé!
+6931	Dây chuyền của Baskin 1
+6932	Kẻ ngoài vòng pháp luật trên phố 1
+6933	Nghiên cứu nguy hiểm 1
+6934	Dây chuyền của Baskin 2
+6935	Kẻ ngoài vòng pháp luật trên phố 2
+6936	Nghiên cứu nguy hiểm 2
+6937	Làm tốt lắm.
+6938	$SDarius$B, phó thủ lĩnh Shadow Tribe, ra lệnh cho Kiyan $Rám sát$B $SBá tước Grafton$B. Bám theo đoàn của Bá tước, kết liễu hắn, rồi báo cáo lại với Darius.
+6939	Xử lý xong chưa?
+6940	Có kẻ đã phản bội Shadow Tribe. Hãy tiêu diệt kẻ phản bội.
+6941	Cậu đã tiêu diệt tên tù vượt ngục. Quay về chỗ Darius.
+6942	Vậy... xong chưa?
+6943	Lệnh triệu tập từ thủ lĩnh Shadow Tribe
+6944	Hồng y $SJanus$B có nhiệm vụ cho Kiyan. Tìm Janus ở $RSanctus Imriel$B, nhà thờ của Empire. Đi tới $Rlối ra phía bắc$B của $RShadow Hall$B. Sanctus Imriel nằm ở $Rphía đông bắc Berkel Capital$B.
+6945	Kiyan đó à? Cậu tới muộn.
+6946	Tới chỗ Portia
+6947	$SJanus$B ra lệnh cho Kiyan cải trang thành Hiệp sĩ Berkel để tham gia $RChiến dịch giải cứu Channel$B. Tới chỗ $SPortia$B để biết cách vào đội giải cứu. Cô ấy ở $RShadow Hall$B.
+6948	Gặp Janus rồi à? Sao mặt mũi thế kia?
+6949	Đồng phục Hiệp sĩ Berkel
+6950	Để có đồng phục hiệp sĩ, cậu cần lấy $Rthuốc thử$B và $R5 ectoplasm$B ở $RShadow Training  Dungeon 2$B. Lấy đủ rồi quay về chỗ $RPortia$B.
+6951	Nhanh thật đấy, Ki.
+6952	Giáp Hiệp sĩ Berkel
+6953	Để vào đội giải cứu, cậu cần mang $Rthư tiến cử của Janus$B tới chỗ $SLehman$B ở $RHanun Forest 1$B. Hanun Forest 1 nằm ở $Rphía đông nam$B $RBerkel Capital$B.
+6954	Tìm pháp sư
+6955	Lehman nhờ Kiyan tìm vị pháp sư được giao sửa leap-gate mà vẫn chưa tới. $SPháp sư Grumman$B đang ở đâu đó quanh $RHanun Forest 2$B.
+6956	Ai đó?
+6957	$SPháp sư Grumman$B từ chối quay về cùng Kiyan vì sợ lũ sói. Hãy giết $R5$B $Rsói hoang$B ở $RHanun Forest 2$B để Grumman yên tâm.
+6958	Mừng quá, cậu không phải sói. Chả là, tôi đang trên đường đi thì đột nhiên một $Rbầy sói$B lao tới. &NCậu bảo đi với cậu là an toàn à? Nhưng xin lỗi. Tôi sợ quá, không nhúc nhích nổi. Nếu cậu giết được $R5 con sói hoang$B thì lại là chuyện khác.
+6959	Cậu xử lũ sói rồi à? Tôi nợ cậu.
+6960	Quay về chỗ Lehman
+6961	Quay về chỗ $SLehman$B cùng $SPháp sư Grumman$B. Lehman ở $RHanun Forest 1$B.
+6962	Cậu đưa Grumman về rồi. Làm tốt lắm.
+6963	Giải cứu $AChannel$B bị người Arnen bắt cóc. Cô ấy đang ở đâu đó sâu nhất trong $AArnen Castle$B.
+6964	Đưa Channel đi trong lúc tôi chặn đợt tấn công.
+6965	Đưa Eara đang bất tỉnh đi và nhập bọn với Trung sĩ Lehman.
+6966	Trốn thoát qua leap-gate cùng Eara.
+6967	Leap-gate đã bị phá huỷ. Tới Seloah Village để dùng leap-gate khẩn cấp.
+6968	Bắt $RWolfdog Grayfang$B vào lồng thép ở $RHanun Forest 2$B, rồi quay về $SGuard Zone$B.
+6969	Này, cậu kia! Nếu cậu định lùng sục khu này thì tiện tìm giúp tôi một con $Rchó sói$B được không? Tên nó là $RGrayfang$B; tôi gần như tự tay nuôi nó lớn, nhưng hình như vào khu rừng này nó hoá hoang rồi. Nó sẽ đi cùng những con sói khác, nhưng không làm hại cậu như bọn kia đâu. Làm ơn $Rbắt$B nó mang về giúp tôi.
+6970	Cảm ơn cậu nhiều lắm. Nó như người nhà của tôi vậy.
+6971	Tới căn cứ bí mật của Kamuran
+6972	Quay về Empire of Berkel cùng Eara qua leap-gate khẩn cấp. Tới $RKamuran's Secret Base$B để dùng $Rleap-gate khẩn cấp$B.
+6973	Channel mất tích 1
+6974	$RChannel$B đã biến mất. Chắc cô ấy đã đi theo những đốm sáng phía đông. Hãy tìm dấu vết cô ấy ở $Rphía đông$B.
+6975	Channel mất tích 2
+6976	$RChannel$B đã bị goblin bắt ở $RNorthern Caves$B. Hãy tìm dấu vết cô ấy trong hang.
+6977	Bọn goblin đã khoá cửa dẫn tới Goblin's Lair. Một tên goblin giữ $Rchìa khoá cổng$B. Hạ $Rgoblin$B để tìm chìa khoá.
+6978	Cậu đã mở cổng bằng chìa khoá.
+6979	Suýt nữa thì toi
+6980	Cổng dẫn tới $RGoblin's Lair$B đã bị khoá. Tìm $Rlối khác$B để vào.
+6981	Đầu bếp của Goblin
+6982	$SĐầu bếp Robbie$B nói sẽ chỉ cậu $Rđường tới lối đi bí mật$B dẫn vào Goblin's Lair nếu cậu giúp ông ta. Mang cho Robbie $R5 thịt giòi đá vôi$B và $R5 xương sụn dơi ma cà rồng$B.
+6983	Ở đây hiếm khi có khách lắm. Tôi là $SĐầu bếp Robbie$B. Tôi bị bọn goblin bắt về nấu ăn cho chúng. Sao? Cậu tới cứu một cô gái mà cửa lại khoá à? Tệ thật, nhưng... tôi biết một $Rlối đi bí mật$B khác vào hang ổ. Nếu cậu mang cho tôi $R5 thịt giòi đá vôi$B và $R5 xương sụn dơi ma cà rồng$B, tôi sẽ chỉ đường cho cậu.
+6984	Thế này chắc là đủ.
+6985	Băng qua Spider Cave
+6986	Cậu phải băng qua $RSpider Cave$B để tới Goblin's Lair. Đi qua $Rphía bắc$B hang nhện.
+6987	Giải cứu tù nhân của Goblin
+6988	Joel, một tù nhân ở Goblin Prison, nói sẽ cho cậu biết Channel ở đâu nếu cậu thả anh ta. Lấy $Rchìa khoá nhà tù$B từ $Rbọn cai ngục goblin$B rồi mở cửa nhà tù.
+6989	Cậu đã mở cửa nhà tù bằng chìa khoá.
+6990	$RMột trong số quái vật$B có thể giữ $Rchìa khoá$B thứ hai của nhà tù. Hạ con quái đó và lấy chìa khoá.
+6991	Cửa nhà tù đã bị khoá. Cậu cần $Rchìa khoá$B để mở.
+6992	Goblin Prison 3
+6993	$RMột trong số quái vật$B có thể giữ $Rchìa khoá$B thứ ba của nhà tù. Hạ con quái đó và lấy chìa khoá.
+6994	Channel mất tích 3
+6995	Nghe nói $SEara$B đang bị giam làm con tin ở nhà tù đặc biệt trong $RHead Goblin's Lair$B. Hãy tới hang ổ để cứu Eara.
+6996	$SKinkan mù$B nói sẽ tặng cậu $Rkho báu của nó$B nếu cậu mang về $R4 thịt chuột hang$B.
+6997	Ai đó? Ta $SKinkan$B... không nhìn thấy. Kinkan đói... Đưa Kinkan đồ ăn, Kinkan cho ngươi $RKho báu Kinkan$B... Mang $R4 thịt chuột hang$B cho Kinkan, Kinkan sẽ no...
+6998	Thịt hả? Kinkan vui... Kinkan cho ngươi kho báu...
+6999	Pháp sư Nirniti
+7000	Ai đó đã tấn công và phá huỷ $RKamuran's Secret Base$B. Cậu cần $RPháp sư Nirniti$B giúp xây lại $Rleap-gate$B của căn cứ bí mật. Tìm Nirniti ở Kamuran Village.
+7001	Tôi giúp gì được cho cậu?
+7002	Lính Arnen đột kích
+7003	Cậu đã bị lính Arnen bắt. Lehman nói với Kiyan quân ta ít hơn, nên ra lệnh hạ $R8 lính canh Arnen$B.
+7004	Thâm nhập đơn độc
+7005	Lính Arnen ngày càng đông. Lehman thấy quân ta quá ít để xông lên, nên ra lệnh cho Kiyan một mình đi cứu Channel.
+7006	Thoát khỏi Arnen Castle
+7007	Cậu đã cứu được Channel đang bất tỉnh, nhưng người Arnen ngày càng đông. Mau tới $Rleap-gate$B trong lúc Lehman cầm chân lính địch.
+7008	Hạ $R2 đội trưởng lính canh Arnen$B để đánh gục sĩ khí quân địch.
+7009	Hèn gì quân địch di chuyển nhịp nhàng thế; tôi phát hiện 2 tên $Rchỉ huy$B. Có vẻ là trung sĩ. Cậu $Rhạ$B chúng giúp tôi được không? Xử xong chúng thì sĩ khí quân địch sẽ sụt giảm, xông lên sẽ dễ hơn. Bọn trung sĩ chắc mặc $Rđồng phục$B khác với lính thường, nên dễ nhận ra thôi.
