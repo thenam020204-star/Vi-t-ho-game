@@ -1,21 +1,24 @@
 #!/usr/bin/env bash
 # Dung APK tu mot APK da build san (vd test_builds/Inotia4_TEST4_vi_anh_offline.apk) khi khong co bo split goc:
-#   bash scripts/build_from_apk.sh <base.apk> <out.apk> [--smali nhom1,nhom2] [--vnfont] [--diag] [--internet]
+#   bash scripts/build_from_apk.sh <base.apk> <out.apk> [--smali nhom1,nhom2] [--vnfont] [--lib] [--diag] [--internet]
 #   --smali  : decode smali day du, ap scripts/patch_smali.py --group <nhom> (vd. net);
 #              khong co --smali: apktool -s, giu nguyen tung byte moi dex cua base;
 #   --vnfont : bien dich lai com.namp.vh (VNFont/FontData/Offline) tu java/src -> thay classes3.dex;
+#   --lib    : va lib/arm64-v8a/libgame.so bang scripts/patch_lib.py (patch nao lib nen da co thi bao "da ap"),
+#              giu nguyen kich thuoc/STORED/can 16 KB (fix_zip.py lo phan can);
 #   --diag   : them classes4.dex = com.namp.vh.diag (LaunchActivity, DiagProvider, CrashLog) + sua manifest;
 #   --internet: tra lai quyen INTERNET (chi de thu, ban phat hanh KHONG dung).
 # Can: APKTOOL (jar), BT (build-tools co d8/apksigner/zipalign), ANDROID_JAR (android.jar API >= 30).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 BASE=$(realpath "$1"); OUT=$2; shift 2
-MAN_OPTS=(); SMALI=""; VNFONT=0; DIAG=0
+MAN_OPTS=(); SMALI=""; VNFONT=0; DIAG=0; LIB=0
 while [ $# -gt 0 ]; do
   case "$1" in
     --internet) MAN_OPTS+=(--internet);;
     --smali) SMALI=$2; shift;;
     --vnfont) VNFONT=1;;
+    --lib) LIB=1;;
     --diag) DIAG=1;;
     *) echo "tham so la: $1"; exit 2;;
   esac; shift
@@ -48,6 +51,13 @@ if [ $VNFONT = 1 ]; then
   rm -rf "$W/dec/smali_classes3"; cp "$W/vnf/dex/classes.dex" "$W/dec/classes3.dex"
 fi
 
+if [ $LIB = 1 ]; then
+  echo "== 2b. va libgame.so (scripts/patch_lib.py)"
+  LIBF="$W/dec/lib/arm64-v8a/libgame.so"
+  python3 -I scripts/patch_lib.py "$LIBF" "$W/libgame_patched.so" | tee "$W/patch_lib.log"
+  cp "$W/libgame_patched.so" "$LIBF"
+fi
+
 if [ $DIAG = 1 ]; then
   echo "== 3. chan doan com.namp.vh.diag -> classes4.dex + manifest"
   mkdir -p "$W/diag/cls" "$W/diag/dex"
@@ -68,4 +78,13 @@ $J -jar "$BT/lib/apksigner.jar" sign --ks "$KS" --ks-key-alias namp --ks-pass "p
 rm -f "$OUT.idsig"
 $J -jar "$BT/lib/apksigner.jar" verify "$OUT" && echo "apksigner verify: OK"
 python3 -I scripts/check_apk.py "$OUT"
+if [ $LIB = 1 ]; then
+  python3 -I - "$OUT" "$W/libgame_patched.so" <<'PYEOF'
+import sys, zipfile, hashlib
+got = zipfile.ZipFile(sys.argv[1]).read('lib/arm64-v8a/libgame.so')
+want = open(sys.argv[2], 'rb').read()
+print('libgame.so trong APK == ban da va:', got == want, hashlib.sha256(got).hexdigest())
+sys.exit(0 if got == want else 1)
+PYEOF
+fi
 ls -la "$OUT"
