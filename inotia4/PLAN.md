@@ -35,7 +35,11 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - qua `scripts/patch_lib.py`, mỗi patch kiểm byte gốc;
   - chỉ vá khi đã chứng minh bằng disasm;
   - ghi vaddr và lý do.
-- **Font:** VNFont phóng theo `q/16` với `q = max(16, size)` (đã chốt ở TEST7). Không đổi nếu người dùng chưa phản hồi.
+- **Font:** TEST7 phóng f18 theo `q/16`, `q = max(16, size)`.
+  - Người dùng phản hồi (2026-10-31): chữ to rồi nhưng mất dấu thanh ở nhiều ký tự. Yêu cầu: **vẽ lại font f18 ở cỡ lớn thật** (T7).
+  - Font mới phải giữ dáng f18.
+  - Chỉ phóng to (hệ số ≥ 1), không thu nhỏ bitmap.
+  - Không đổi 5 method công khai của VNFont.
 - **IAP:** bấm mua thì nhận vật phẩm ngay, không gọi Google Play (người dùng đã chốt từ đầu). Native cộng vật phẩm qua callback thành công gốc (`csPurchaseCB`...). Không tự cộng ngoài luồng gốc.
 - Bytecode/smali thật được tin hơn output jadx. Disasm (`llvm-objdump`) được tin hơn suy luận.
 - Không cấp phát object trong vòng vẽ (VNFont).
@@ -186,6 +190,33 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
       - Sau đó build bản thử `test_builds/Inotia4_TEST8_vi_offline.apk` (`--smali net --vnfont --lib --diag`) + SHA256, ghi PROGRESS.
     - [ ] T3d. P2: tài liệu đề xuất (không áp).
   - Hoàn thành T3 khi: T3a–T3c đạt, T3d có đề xuất; người dùng thử TEST8 theo quy trình: game mới → lưu → tắt hẳn app → mở lại → load.
+- [ ] T7. Vẽ lại font f18 ở cỡ lớn thật (thay cách phóng q/16 đang làm mất dấu) — **Quản đốc nghiệm thu**. **Ưu tiên: ngay sau T3, trước T2/T4.**
+  - Agent: A2 đọc trước (T7a làm được bằng đọc tĩnh); chạy thật sau khi T3 xong.
+  - Đầu vào:
+    - `font/f18vn.bin`, `font/charset.txt`;
+    - `java/src/com/namp/vh/VNFont.java` (H=18, BASE=14, GAP=2);
+    - `scripts/gen_fontdata.py`; `docs/emu_shots/font_cu_moi_co24.png`;
+    - định dạng `.bin` (xem `PROGRESS.md`, `docs/PLAN_goc.md`);
+    - native thường xin size 24 (hộp rộng 565). Buffer `drawText` cao `size*1.3`.
+  - [ ] T7a. Chẩn đoán mất dấu ở TEST7.
+    - So khung glyph đã phóng với vùng native cấp cho từng đường vẽ (`drawText`, `drawTextPart`, `drawInRect`/`measureInRect`), tìm hàng bị cắt hoặc bị dòng sau đè.
+    - Tái hiện bằng unidbg (màn có chữ hoa/chữ có dấu chồng như "Ấ", "ổ") và chụp ảnh.
+    - Hoàn thành khi: kết luận có bằng chứng (số hàng, địa chỉ native hoặc dòng code), ghi vào `docs/font_lon.md`.
+  - [ ] T7b. Vẽ font mới.
+    - Giữ dáng f18, thiết kế cho size 24 (khoảng 1,5 lần f18, ô cao ~27 px); dấu thanh và dấu mũ vẽ lại rõ, không chồng lấn; cùng charset với `f18vn.bin`.
+    - Cách vẽ: vector hoá f18 rồi raster lại, hoặc phóng kiểu pixel-art rồi sửa bằng script. Không dùng nguồn font không rõ bản quyền.
+    - Sinh bằng script trong `fontgen_inotia/` hoặc `scripts/`, ra `font/f27vn.bin` (cùng định dạng, ghi H/BASE mới).
+    - Ảnh so sánh `docs/font_preview_f27.png`: f18×1,5 hiện tại và font mới, câu mẫu đủ dấu, ví dụ "Ầ Ẫ Ẩ Ấ Ậ Ể Ỗ Ữ Ự Ỹ Đ ầ ẫ ẩ ấ ậ ể ỗ ữ ự ỹ đ — Thiên đường ở phía trước!".
+  - [ ] T7c. Tích hợp vào VNFont.
+    - `size < 24` dùng f18 như trước; `size >= 24` dùng font mới với hệ số `size/24`, chỉ phóng to.
+    - Glyph phải nằm gọn trong vùng native cấp (theo T7a).
+    - Không đổi 5 method công khai; không cấp phát trong vòng vẽ.
+    - Dữ liệu font lớn: tách nhiều hằng String nếu vượt giới hạn 64 KB của một hằng.
+  - Hoàn thành T7 khi:
+    - ảnh preview và ảnh unidbg đủ dấu;
+    - build thử PASS;
+    - dex chỉ khác ở `com/namp/vh/*`;
+    - quản đốc duyệt ảnh, rồi người dùng xác nhận trên máy.
 - [ ] T4. IAP "mua miễn phí" — **Quản đốc nghiệm thu** (sau T1)
   - Việc:
     - đọc `com/com2us/module/inappv4/InAppV4` (smali) và native `InAppV4MarketListCB` / `csPurchaseCB` / `csGetProductInfoCB` / `InApp_BuyItem` / `UIPlay_CallInAppShopProc`;
@@ -226,3 +257,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Nguyên nhân: khoá rỗng ⇒ `ENCRYPT_Process2` đọc khoá vượt buffer.
   - Chốt hướng P1 (vá lõi mã hoá) + P2 (phòng thủ, chỉ đề xuất); chia T3a–T3d.
   - Giao T3 cho A1 mới (chạy); A2 mới đọc trước T4.
+- 2026-10-31 quản đốc: người dùng báo font TEST7 to nhưng mất dấu, yêu cầu vẽ lại f18 cỡ lớn ⇒ thêm T7, ưu tiên ngay sau T3. A2 chuyển từ đọc trước T4 sang đọc trước T7 (T4 lùi lại).
