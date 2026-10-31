@@ -523,3 +523,6 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 02:34 (VN) quản đốc: người dùng gửi `assets.zip` (7 nút HUD) trong lúc tạm dừng.
   - Lưu vào `assets_user/hud/`, thêm T10 (sau T8, cùng đợt T9).
   - Chưa giao việc (đang tạm dừng tới 06:41).
+- 2026-11-01 06:42 (VN) quản đốc: làm tiếp theo lịch người dùng hẹn.
+  - A1 mới chạy T7 từ dòng Bàn giao (sửa ỡ/ữ → `f24vn.bin` → `font_lon.md` → T7c → build thử).
+  - A2 mới đọc tiếp T9a (chỉ đọc), quản đốc sẽ ghi bàn giao của A2 vào mục T9.
