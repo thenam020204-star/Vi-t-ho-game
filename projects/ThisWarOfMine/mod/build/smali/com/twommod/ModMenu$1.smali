@@ -30,7 +30,7 @@
         }
     .end annotation
 
-    .line 86
+    .line 95
     iput-object p1, p0, Lcom/twommod/ModMenu$1;->val$mulLabel:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
 
     add-int/lit8 p2, p2, 0x1
 
-    .line 89
+    .line 98
     iget-object p1, p0, Lcom/twommod/ModMenu$1;->val$mulLabel:Landroid/widget/TextView;
 
     new-instance p3, Ljava/lang/StringBuilder;
@@ -64,10 +64,10 @@
 
     const/4 p1, 0x3
 
-    .line 90
+    .line 99
     invoke-static {p1, p2}, Lcom/twommod/ModMenu;->nSet(II)V
 
-    .line 91
+    .line 100
     # getter for: Lcom/twommod/ModMenu;->prefs:Landroid/content/SharedPreferences;
     invoke-static {}, Lcom/twommod/ModMenu;->access$000()Landroid/content/SharedPreferences;
 

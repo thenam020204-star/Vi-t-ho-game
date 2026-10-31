@@ -3,12 +3,12 @@
 .source "ModMenu.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/twommod/ModMenu;->sw(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;I)Landroid/widget/Switch;
+    value = Lcom/twommod/ModMenu;->build(Landroid/app/Activity;)Landroid/view/View;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,24 +18,38 @@
 
 
 # instance fields
-.field final synthetic val$id:I
+.field dx:F
 
-.field final synthetic val$key:Ljava/lang/String;
+.field dy:F
+
+.field moved:Z
+
+.field sx:F
+
+.field sy:F
+
+.field final synthetic val$a:Landroid/app/Activity;
+
+.field final synthetic val$box:Landroid/widget/ScrollView;
+
+.field final synthetic val$panel:Landroid/widget/LinearLayout;
 
 
 # direct methods
-.method constructor <init>(ILjava/lang/String;)V
-    .registers 3
+.method constructor <init>(Landroid/widget/ScrollView;Landroid/widget/LinearLayout;Landroid/app/Activity;)V
+    .registers 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .line 167
-    iput p1, p0, Lcom/twommod/ModMenu$3;->val$id:I
+    .line 147
+    iput-object p1, p0, Lcom/twommod/ModMenu$3;->val$box:Landroid/widget/ScrollView;
 
-    iput-object p2, p0, Lcom/twommod/ModMenu$3;->val$key:Ljava/lang/String;
+    iput-object p2, p0, Lcom/twommod/ModMenu$3;->val$panel:Landroid/widget/LinearLayout;
+
+    iput-object p3, p0, Lcom/twommod/ModMenu$3;->val$a:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,31 +58,251 @@
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .registers 4
+.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .registers 9
+
+    .line 150
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    .line 151
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v1, :cond_a0
+
+    if-eq v1, v3, :cond_4f
+
+    const/4 v4, 0x2
+
+    if-eq v1, v4, :cond_14
+
+    return v2
+
+    .line 156
+    :cond_14
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result v1
+
+    iget v2, p0, Lcom/twommod/ModMenu$3;->sx:F
+
+    sub-float/2addr v1, v2
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v1
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result v2
+
+    iget v4, p0, Lcom/twommod/ModMenu$3;->sy:F
+
+    sub-float/2addr v2, v4
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    add-float/2addr v1, v2
+
+    const/high16 v2, 0x41400000    # 12.0f
+
+    cmpl-float v1, v1, v2
+
+    if-lez v1, :cond_33
+
+    iput-boolean v3, p0, Lcom/twommod/ModMenu$3;->moved:Z
+
+    .line 157
+    :cond_33
+    iget-boolean v1, p0, Lcom/twommod/ModMenu$3;->moved:Z
+
+    if-eqz v1, :cond_4e
+
+    .line 158
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result v1
+
+    iget v2, p0, Lcom/twommod/ModMenu$3;->dx:F
+
+    sub-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result p2
+
+    iget v1, p0, Lcom/twommod/ModMenu$3;->dy:F
+
+    sub-float/2addr p2, v1
+
+    float-to-int p2, p2
+
+    iput p2, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 159
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_4e
+    return v3
+
+    .line 163
+    :cond_4f
+    iget-boolean p2, p0, Lcom/twommod/ModMenu$3;->moved:Z
+
+    if-nez p2, :cond_9f
+
+    .line 164
+    iget-object p2, p0, Lcom/twommod/ModMenu$3;->val$box:Landroid/widget/ScrollView;
+
+    invoke-virtual {p2}, Landroid/widget/ScrollView;->getVisibility()I
+
+    move-result p2
+
+    if-eqz p2, :cond_5d
+
+    const/4 p2, 0x1
+
+    goto :goto_5e
+
+    :cond_5d
+    const/4 p2, 0x0
+
+    :goto_5e
+    if-eqz p2, :cond_65
+
+    .line 165
+    iget-object v1, p0, Lcom/twommod/ModMenu$3;->val$panel:Landroid/widget/LinearLayout;
+
+    # invokes: Lcom/twommod/ModMenu;->refresh(Landroid/widget/LinearLayout;)V
+    invoke-static {v1}, Lcom/twommod/ModMenu;->access$100(Landroid/widget/LinearLayout;)V
+
+    .line 166
+    :cond_65
+    iget-object v1, p0, Lcom/twommod/ModMenu$3;->val$box:Landroid/widget/ScrollView;
+
+    invoke-virtual {v1}, Landroid/widget/ScrollView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    .line 167
+    iget v4, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    add-int/2addr v4, p1
+
+    iget-object p1, p0, Lcom/twommod/ModMenu$3;->val$a:Landroid/app/Activity;
+
+    const/high16 v5, 0x41000000    # 8.0f
+
+    # invokes: Lcom/twommod/ModMenu;->dp(Landroid/app/Activity;F)I
+    invoke-static {p1, v5}, Lcom/twommod/ModMenu;->access$200(Landroid/app/Activity;F)I
+
+    move-result p1
+
+    add-int/2addr v4, p1
+
+    iput v4, v1, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    iget p1, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    iget-object v0, p0, Lcom/twommod/ModMenu$3;->val$a:Landroid/app/Activity;
+
+    const/high16 v4, 0x41a00000    # 20.0f
+
+    # invokes: Lcom/twommod/ModMenu;->dp(Landroid/app/Activity;F)I
+    invoke-static {v0, v4}, Lcom/twommod/ModMenu;->access$200(Landroid/app/Activity;F)I
+
+    move-result v0
+
+    sub-int/2addr p1, v0
+
+    invoke-static {v2, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iput p1, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 168
+    iget-object p1, p0, Lcom/twommod/ModMenu$3;->val$box:Landroid/widget/ScrollView;
+
+    invoke-virtual {p1, v1}, Landroid/widget/ScrollView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 169
-    iget p1, p0, Lcom/twommod/ModMenu$3;->val$id:I
+    iget-object p1, p0, Lcom/twommod/ModMenu$3;->val$box:Landroid/widget/ScrollView;
 
-    invoke-static {p1, p2}, Lcom/twommod/ModMenu;->nSet(II)V
+    if-eqz p2, :cond_9a
 
-    .line 170
-    # getter for: Lcom/twommod/ModMenu;->prefs:Landroid/content/SharedPreferences;
-    invoke-static {}, Lcom/twommod/ModMenu;->access$000()Landroid/content/SharedPreferences;
+    goto :goto_9c
 
-    move-result-object p1
+    :cond_9a
+    const/16 v2, 0x8
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    :goto_9c
+    invoke-virtual {p1, v2}, Landroid/widget/ScrollView;->setVisibility(I)V
 
-    move-result-object p1
+    :cond_9f
+    return v3
 
-    iget-object v0, p0, Lcom/twommod/ModMenu$3;->val$key:Ljava/lang/String;
+    .line 153
+    :cond_a0
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
-    invoke-interface {p1, v0, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    move-result p1
 
-    move-result-object p1
+    iget v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    int-to-float v1, v1
 
-    return-void
+    sub-float/2addr p1, v1
+
+    iput p1, p0, Lcom/twommod/ModMenu$3;->dx:F
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result p1
+
+    iget v0, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    int-to-float v0, v0
+
+    sub-float/2addr p1, v0
+
+    iput p1, p0, Lcom/twommod/ModMenu$3;->dy:F
+
+    .line 154
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result p1
+
+    iput p1, p0, Lcom/twommod/ModMenu$3;->sx:F
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result p1
+
+    iput p1, p0, Lcom/twommod/ModMenu$3;->sy:F
+
+    iput-boolean v2, p0, Lcom/twommod/ModMenu$3;->moved:Z
+
+    return v3
 .end method

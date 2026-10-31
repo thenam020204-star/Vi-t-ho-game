@@ -13,13 +13,16 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 
 /** Menu mod chơi đơn: nút nổi "MOD" + bảng tuỳ chọn. Gọi ModMenu.attach(activity) sau setContentView. */
 public final class ModMenu {
-    static final int OPT_GOD = 0, OPT_INFBAG = 1, OPT_STACK99 = 2, OPT_LOOTMUL = 3;
+    static final int OPT_GOD = 0, OPT_INFBAG = 1, OPT_STACK99 = 2, OPT_LOOTMUL = 3, OPT_INSTANT = 4, OPT_DAYSPEED = 5;
+    /* khớp bảng SPEEDS trong twommod.c; chỉ số 4 = x1 */
+    static final String[] SPEED_TXT = {"x0.25", "x0.33", "x0.5", "x0.75", "x1 (gốc)", "x1.5", "x2", "x3", "x4"};
     static native void nSet(int id, int v);
     static native int nAvail(int id);
 
@@ -38,6 +41,8 @@ public final class ModMenu {
         nSet(OPT_INFBAG, prefs.getBoolean("bag", false) ? 1 : 0);
         nSet(OPT_STACK99, prefs.getBoolean("stack", false) ? 1 : 0);
         nSet(OPT_LOOTMUL, prefs.getInt("mul", 1));
+        nSet(OPT_INSTANT, prefs.getBoolean("instant", false) ? 1 : 0);
+        nSet(OPT_DAYSPEED, prefs.getInt("dayspeed", 4));
         a.addContentView(build(a), new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }
 
@@ -59,8 +64,11 @@ public final class ModMenu {
         panel.setBackground(bg(0xE6201C18, dp(a, 8)));
         int p = dp(a, 12);
         panel.setPadding(p, p, p, p);
-        panel.setVisibility(View.GONE);
         panel.setClickable(true);
+        // bảng cuộn được khi màn hình thấp
+        final ScrollView box = new ScrollView(a);
+        box.addView(panel);
+        box.setVisibility(View.GONE);
 
         TextView title = new TextView(a);
         title.setText("MOD — chơi đơn");
@@ -71,6 +79,7 @@ public final class ModMenu {
         panel.addView(sw(a, "Bất tử khi lục lọi (máu không về 0)", "god", OPT_GOD));
         panel.addView(sw(a, "Ba lô không giới hạn", "bag", OPT_INFBAG));
         panel.addView(sw(a, "Mỗi ô chứa 99", "stack", OPT_STACK99));
+        panel.addView(sw(a, "Công việc xong tức thì", "instant", OPT_INSTANT));
 
         final TextView mulLabel = new TextView(a);
         mulLabel.setTextColor(Color.WHITE);
@@ -96,6 +105,30 @@ public final class ModMenu {
         panel.addView(mulLabel);
         panel.addView(mul, new LinearLayout.LayoutParams(dp(a, 260), ViewGroup.LayoutParams.WRAP_CONTENT));
 
+        // kéo trái = ngày/đêm trôi chậm hơn, kéo phải = nhanh hơn
+        final TextView spLabel = new TextView(a);
+        spLabel.setTextColor(Color.WHITE);
+        spLabel.setTextSize(14);
+        final SeekBar sp = new SeekBar(a);
+        sp.setMax(SPEED_TXT.length - 1);
+        int si = Math.max(0, Math.min(SPEED_TXT.length - 1, prefs.getInt("dayspeed", 4)));
+        sp.setProgress(si);
+        spLabel.setText("Tốc độ ngày/đêm: " + SPEED_TXT[si]);
+        boolean spOk = nAvail(OPT_DAYSPEED) != 0;
+        sp.setEnabled(spOk);
+        if (!spOk) spLabel.setText("Tốc độ ngày/đêm: không khả dụng");
+        sp.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            public void onProgressChanged(SeekBar s, int v, boolean u) {
+                spLabel.setText("Tốc độ ngày/đêm: " + SPEED_TXT[v]);
+                nSet(OPT_DAYSPEED, v);
+                prefs.edit().putInt("dayspeed", v).apply();
+            }
+            public void onStartTrackingTouch(SeekBar s) {}
+            public void onStopTrackingTouch(SeekBar s) {}
+        });
+        panel.addView(spLabel);
+        panel.addView(sp, new LinearLayout.LayoutParams(dp(a, 260), ViewGroup.LayoutParams.WRAP_CONTENT));
+
         final TextView btn = new TextView(a);
         btn.setText("MOD");
         btn.setTextColor(0xFFE8D9B0);
@@ -107,8 +140,8 @@ public final class ModMenu {
         root.addView(btn, blp);
 
         FrameLayout.LayoutParams plp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        plp.leftMargin = dp(a, 64); plp.topMargin = dp(a, 40);
-        root.addView(panel, plp);
+        plp.leftMargin = dp(a, 64); plp.topMargin = dp(a, 40); plp.bottomMargin = dp(a, 8);
+        root.addView(box, plp);
 
         // chạm để mở/đóng, kéo để di chuyển nút
         btn.setOnTouchListener(new View.OnTouchListener() {
@@ -128,12 +161,12 @@ public final class ModMenu {
                         return true;
                     case MotionEvent.ACTION_UP:
                         if (!moved) {
-                            boolean show = panel.getVisibility() != View.VISIBLE;
+                            boolean show = box.getVisibility() != View.VISIBLE;
                             if (show) refresh(panel);
-                            FrameLayout.LayoutParams pl = (FrameLayout.LayoutParams) panel.getLayoutParams();
+                            FrameLayout.LayoutParams pl = (FrameLayout.LayoutParams) box.getLayoutParams();
                             pl.leftMargin = lp.leftMargin + v.getWidth() + dp(a, 8); pl.topMargin = Math.max(0, lp.topMargin - dp(a, 20));
-                            panel.setLayoutParams(pl);
-                            panel.setVisibility(show ? View.VISIBLE : View.GONE);
+                            box.setLayoutParams(pl);
+                            box.setVisibility(show ? View.VISIBLE : View.GONE);
                         }
                         return true;
                 }

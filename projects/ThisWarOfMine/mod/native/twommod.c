@@ -11,6 +11,11 @@
  *   InventoryContainer: +0x18 số phần tử, +0x20 mảng phần tử (0x40 byte), +0x70 SlotCount (<0 = không giới hạn)
  *   InventoryElement:   +0x18 config vật phẩm, +0x20 NameString, +0x28 số lượng
  *   gKosovoItemConfig:  +0x18 số mục, +0x20 mảng KosovoItemElementConfig (0x2f0 byte), +0x34 StackSize
+ *   gKosovoMainParams:  +0x44 độ dài 1 ngày (giây thật, float) — FlowStateDay::OnTick, GetDayTimeRatio, GetHourDurationInSeconds
+ *   gKosovoGlobalState: +0xe4 "ScavengeTime" (độ dài đêm lục lọi, float) — đặt ở InitScavengeScene, đọc ở FlowStateScavenge
+ *   KosovoCraftingBaseComponent: +0x44 trạng thái (3 = người đang làm), +0x50 đã làm, +0x54 tổng thời gian;
+ *                       OnTickCrafting(float) = vtable+0x130 (4 vtable: CraftingBase/Crafting/Construction/Upgrade)
+ *   gLuaWrapper:        +0x00 lua_State*; LuaWrapper::Execute(const char*, unsigned) chạy một chuỗi Lua
  */
 #include <jni.h>
 #include <dlfcn.h>
@@ -26,8 +31,11 @@
 #define LOG(...) __android_log_print(ANDROID_LOG_INFO, TAG, __VA_ARGS__)
 #define P(p, off, T) (*(T *)((char *)(p) + (off)))
 
-enum { OPT_GOD, OPT_INFBAG, OPT_STACK99, OPT_LOOTMUL, OPT_N };
-static volatile int g_opt[OPT_N] = {0, 0, 0, 1};
+enum { OPT_GOD, OPT_INFBAG, OPT_STACK99, OPT_LOOTMUL, OPT_INSTANT, OPT_DAYSPEED, OPT_N };
+static volatile int g_opt[OPT_N] = {0, 0, 0, 1, 0, 4};
+/* OPT_DAYSPEED: chỉ số vào bảng tốc độ; 4 = x1 (gốc) */
+#define NSPEED 9
+static const float SPEEDS[NSPEED] = {0.25f, 1.f / 3.f, 0.5f, 0.75f, 1.f, 1.5f, 2.f, 3.f, 4.f};
 static int g_ok[OPT_N];            /* tính năng đã kiểm tra an toàn */
 
 /* ---------------- ký hiệu từ libAndroidGame.so ---------------- */
@@ -40,6 +48,10 @@ static int (*f_GetDwellerIndex)(void *scene, void *ent);
 static int (*f_IsScavenge)(void *delegate);
 static int (*f_ContAdd)(void *cont, void *name, int n);
 static int (*f_CanTake)(void *cont, void *name, int ignore);
+static char *p_mainparams;         /* gKosovoMainParams */
+static char *p_globalstate;        /* gKosovoGlobalState */
+static void *p_lua;                /* gLuaWrapper */
+static int (*f_LuaExec)(void *lw, const char *code, unsigned nres);
 
 /* hàm gốc */
 static void (*o_ReduceHP)(void *, void *);
@@ -51,6 +63,8 @@ static int (*o_StealSpec)(void *, void *, void *, int, int);
 static int (*o_StealSpecWE)(void *, void *, void *, int, int);
 static void (*o_GiveTo)(void *, void *, unsigned, int);
 static void (*o_GiveToSib)(void *, int, int);
+static void (*o_TickCraft)(void *, float);
+static uintptr_t (*o_InitScav)(void *, void *, float, void *, void *);
 
 /* vùng mã của KosovoUIPanelInventory::* (bảng thùng đồ / kho — không gồm bảng giao dịch) */
 #define MAXR 128
@@ -288,16 +302,92 @@ static void h_GiveToSib(void *self, int a, int b) {
     int ui = in_panel(LR()); t_ui += ui; o_GiveToSib(self, a, b); t_ui -= ui;
 }
 
+/* ---------------- 5. công việc xong tức thì ---------------- */
+/* chế tạo / xây / nâng cấp (native): cho đúng phần thời gian còn lại của món đang làm, phần còn lại do mã gốc xử lý */
+static void h_TickCraft(void *c, float dt) {
+    if (g_opt[OPT_INSTANT] && P(c, 0x44, int) == 3) {
+        float done = P(c, 0x50, float), total = P(c, 0x54, float);
+        if (total > 0.f && total > done) { float need = (total - done) * 1.0001f + 1e-4f; if (dt < need) dt = need; }
+    }
+    o_TickCraft(c, dt);
+}
+
+/* hành động Lua (lục đồ, dọn, chặt, dỡ chướng ngại, mở khoá): đặt biến toàn cục TWOMMOD_INSTANT,
+   NonInstantAction:OnUpdateTime trong common.dat đã vá sẽ đọc biến này (mod/lua/patch_lua.py) */
+static void *g_luaL; static int g_luaval = -1; static unsigned g_luatick;
+static void tick_lua(void) {
+    if (!p_lua || !f_LuaExec) return;
+    void *L = *(void **)p_lua; if (!L) return;
+    int v = g_opt[OPT_INSTANT] != 0;
+    if (L == g_luaL && v == g_luaval && (++g_luatick % 600)) return;   /* đặt lại định kỳ phòng khi script nạp lại */
+    f_LuaExec(p_lua, v ? "TWOMMOD_INSTANT=true" : "TWOMMOD_INSTANT=nil", 0);
+    g_luaL = L; g_luaval = v;
+}
+
+/* ---------------- 6. tốc độ ngày / đêm ---------------- */
+static float speed(void) { int i = g_opt[OPT_DAYSPEED]; return (i >= 0 && i < NSPEED) ? SPEEDS[i] : 1.f; }
+
+/* ban ngày: đổi độ dài ngày (MainParams không nằm trong save). Mọi thứ tính theo giờ trong game
+   (chế tạo, đói, mệt, nhiên liệu, lò sưởi) đi qua giá trị này nên giãn/co cùng nhau. */
+static float g_day0, g_dayset;
+static void tick_day(void) {
+    float *p = (float *)(p_mainparams + 0x44), cur = *p, sp = speed();
+    if (g_dayset == 0.f || cur != g_dayset) {          /* chưa đặt, hoặc game nạp lại cấu hình */
+        if (!(cur > 1.f && cur < 1e6f)) return;
+        g_day0 = cur; g_dayset = 0.f;
+    }
+    if (sp == 1.f) { if (g_dayset != 0.f) { *p = g_day0; g_dayset = 0.f; } return; }
+    float want = g_day0 / sp;
+    if (cur != want) *p = want;
+    g_dayset = want;
+}
+
+/* ban đêm: độ dài đêm lục lọi được đặt mỗi đêm ở InitScavengeScene (100000 = không giới hạn, giữ nguyên) */
+#define SCAV_MAX 50000.f
+static float g_sc0, g_scset;
+static uintptr_t h_InitScav(void *gs, void *name, float t, void *g1, void *g2) {
+    float sp = speed(), t2 = (t > 0.f && t < SCAV_MAX && sp != 1.f) ? t / sp : t;
+    uintptr_t r = o_InitScav(gs, name, t2, g1, g2);
+    g_sc0 = t; g_scset = P(gs, 0xe4, float);
+    return r;
+}
+static void tick_night(void) {
+    if (!scavenging()) return;
+    float *p = (float *)(p_globalstate + 0xe4), cur = *p, sp = speed();
+    if (g_scset == 0.f || cur != g_scset) {            /* giá trị không do mod đặt (vd. vừa nạp save) */
+        if (!(cur > 0.f && cur < SCAV_MAX)) return;
+        g_sc0 = cur; g_scset = cur;
+    }
+    float want = g_sc0 / sp;
+    if (cur != want) *p = want;
+    g_scset = want;
+}
+
 /* ---------------- nhịp mỗi khung hình ---------------- */
 static void h_SceneOnTick(void *sc) {
     o_SceneOnTick(sc);
     if (p_itemcfg && !g_ok[OPT_STACK99]) { int c = check_stack_layout(); if (c == 1) g_ok[OPT_STACK99] = 1; }
     tick_stack();
     tick_bags();
+    if (g_ok[OPT_INSTANT]) tick_lua();
+    if (g_ok[OPT_DAYSPEED]) { tick_day(); tick_night(); }
 }
 
 /* ---------------- khởi tạo ---------------- */
 #define SYM(var, name) do { *(void **)&(var) = dlsym(g_lib, name); if (!(var)) LOG("thiếu %s", name); } while (0)
+
+/* thay một ô vtable, chỉ khi ô đó đang trỏ đúng hàm mong đợi */
+static int vt_hook(const char *vt, size_t off, void *expect, void *hook) {
+    char *v = dlsym(g_lib, vt);
+    if (!v || !expect) { LOG("thiếu vtable %s", vt); return 0; }
+    void **slot = (void **)(v + off);
+    if (*slot != expect && *slot != hook) { LOG("vtable %s+%#zx không khớp", vt, off); return 0; }
+    uintptr_t pg = (uintptr_t)slot & ~(uintptr_t)(getpagesize() - 1);
+    if (mprotect((void *)pg, getpagesize(), PROT_READ | PROT_WRITE)) { LOG("mprotect lỗi %s", vt); return 0; }
+    *slot = hook;
+    mprotect((void *)pg, getpagesize(), PROT_READ);
+    return 1;
+}
 
 static int install(void) {
     g_lib = dlopen("libAndroidGame.so", RTLD_NOW | RTLD_NOLOAD);
@@ -310,6 +400,11 @@ static int install(void) {
     SYM(f_IsScavenge, "_ZNK18KosovoGameDelegate10IsScavengeEv");
     SYM(f_ContAdd, "_ZN24KosovoInventoryContainer3AddERK10NameStringi");
     SYM(f_CanTake, "_ZN24KosovoInventoryContainer7CanTakeERK10NameStringb");
+    SYM(p_mainparams, "gKosovoMainParams");
+    SYM(p_globalstate, "gKosovoGlobalState");
+    SYM(p_lua, "gLuaWrapper");
+    SYM(f_LuaExec, "_ZN10LuaWrapper7ExecuteEPKcj");
+    SYM(o_TickCraft, "_ZN27KosovoCraftingBaseComponent14OnTickCraftingEf");
     collect_panel_ranges();
     int tick = got_hook("_ZN11KosovoScene6OnTickEv", h_SceneOnTick, (void **)&o_SceneOnTick);
 
@@ -327,7 +422,17 @@ static int install(void) {
         int f = got_hook("_ZN22KosovoUIItemsPresenter22GiveSelectedToSiblingsEbb", h_GiveToSib, (void **)&o_GiveToSib);
         g_ok[OPT_LOOTMUL] = a && b && c && d && e && f;
     }
-    LOG("cài xong: god=%d bag=%d loot=%d panelRanges=%d", g_ok[0], g_ok[1], g_ok[3], g_nr);
+    int vt = 0;
+    if (o_TickCraft) {
+        static const char *VT[] = {"_ZTV27KosovoCraftingBaseComponent", "_ZTV23KosovoCraftingComponent",
+                                   "_ZTV27KosovoConstructionComponent", "_ZTV22KosovoUpgradeComponent"};
+        for (int i = 0; i < 4; i++) vt += vt_hook(VT[i], 0x130, (void *)o_TickCraft, (void *)h_TickCraft);
+    }
+    g_ok[OPT_INSTANT] = tick && ((p_lua && f_LuaExec) || vt);
+    g_ok[OPT_DAYSPEED] = tick && p_mainparams && p_globalstate && p_delegate && f_IsScavenge
+        && got_hook("_ZN17KosovoGlobalState17InitScavengeSceneERK10NameStringfRK10SimpleGUIDS5_", h_InitScav, (void **)&o_InitScav);
+    LOG("cài xong: god=%d bag=%d loot=%d instant=%d (vtable %d/4, lua %d) dayspeed=%d panelRanges=%d",
+        g_ok[0], g_ok[1], g_ok[3], g_ok[4], vt, p_lua && f_LuaExec, g_ok[5], g_nr);
     return 1;
 }
 
@@ -336,6 +441,7 @@ JNIEXPORT void JNICALL Java_com_twommod_ModMenu_nSet(JNIEnv *env, jclass cls, ji
     (void)env; (void)cls;
     if (id < 0 || id >= OPT_N) return;
     if (id == OPT_LOOTMUL) { if (v < 1) v = 1; if (v > 6) v = 6; }
+    if (id == OPT_DAYSPEED) { if (v < 0) v = 0; if (v >= NSPEED) v = NSPEED - 1; }
     g_opt[id] = v;
 }
 JNIEXPORT jint JNICALL Java_com_twommod_ModMenu_nAvail(JNIEnv *env, jclass cls, jint id) {

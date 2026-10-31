@@ -28,6 +28,8 @@ print('font', mode, 'đã xử lý:', n)"
 # 2) text
 F=${FINAL:-$H/text/dp_work/final}
 python3 "$T/import_text.py" "$W/ex/2f6496cc.bin" "$W/rep/2f6496cc.bin" $F/t1.tsv $F/t2.tsv
+# 2b) MOD_LUA=1: vá NonInstantAction cho menu mod "công việc xong tức thì" (mod/lua/patch_lua.py)
+[ "${MOD_LUA:-0}" = 1 ] && python3 "$H/mod/lua/patch_lua.py" "$W/ex" "$W/rep"
 # 3) đóng gói + kiểm
 python3 "$T/datpack.py" pack "$IN/common.idx" "$IN/common.dat" "$W/rep" "$OUT/common.idx" "$OUT/common.dat"
 python3 "$T/verify.py" "$IN" "$OUT" "$W/rep"
