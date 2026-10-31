@@ -419,7 +419,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Ánh xạ dự kiến (quản đốc; người dùng xác nhận khi xem bản thử):
     - nút tải về/lưu (cột trái, trên) → `btn_save`;
     - giỏ hàng (cột trái, giữa) → `btn_shop`;
-    - bánh răng (cột trái, dưới) → `btn_pause`;
+    - bánh răng (cột trái, dưới) → `btn_pause` (**người dùng đã xác nhận 2026-11-01**);
     - nút đổi ↻ (phải, giữa) → `btn_swap`;
     - các ô kỹ năng/bình máu (khung tròn) → `btn_frame` (icon kỹ năng/bình vẫn do game vẽ đè lên);
     - nút tấn công lớn (phải, dưới) → `attack`, lúc bấm → `attack_pressed`.
