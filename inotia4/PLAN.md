@@ -129,7 +129,9 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - `logs/save_TEST7/`, xuất từ máy thật bằng TEST7: `d41d8cd98f00b204e9800998ecf8427e/save0.dat` (3192 B; thư mục = MD5 của chuỗi rỗng, tức khoá rỗng), `edf2113c684f2b822de06dad8d06b016A/thpcheckslot1.dat` (31 B), `appinfo.dat`, `envinfo.dat`;
     - chuỗi tên file `save%d.dat` @0xa5ddb, `thpcheckslot1..3.dat`;
     - log văng: `logs/may_that_TEST6_load_save_2026-10-31.txt`.
-  - Agent: A1 nhận sau khi xong T1.
+  - Agent: A2 mới (đọc trước từ lúc A1 làm T1; chạy thật khi T1 xong và quản đốc nghiệm thu).
+    - Lý do đổi: A1 làm xong T1 sẽ ở mức ~250–300k ngữ cảnh, mà T3 là RE nặng nên sẽ vượt 400k giữa chừng.
+    - Sau T1, A1 dừng; công nhân này thành người chạy duy nhất.
   - Việc:
     - với file `inotia4_save_*.zip` và báo cáo TEST7: giải mã save (`SAVE_LoadDataAsNameAndKey`, khoá rỗng), xác định bước nào của `SAVE_LoadFile` thất bại (`LoadData` / version ≤ 5 / chỉ số ô / `Inventory` / `Quest` / `Event`);
     - hoặc tái hiện bằng unidbg (T2): game mới → lưu → chạy lại → load.
