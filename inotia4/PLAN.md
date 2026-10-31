@@ -12,6 +12,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - sửa lỗi văng khi load save;
   - vẽ lại font cỡ lớn (T7);
   - **mod menu**: thanh kéo hệ số sát thương / phòng thủ / EXP, từ x1 tới x50 (T8; người dùng yêu cầu 2026-10-31 để chơi cốt truyện);
+  - **tầm nhìn rộng hơn + HUD lùi vào trong** (T9; người dùng yêu cầu 2026-10-31 kèm ảnh màn chơi): tăng màn logic, HUD cách mép trên/dưới/hai bên;
   - đồng bộ `rebuild.sh`;
   - bản phát hành, gói dự án và `BAO_CAO.md`.
 - Ngoài phạm vi (giai đoạn này):
@@ -66,6 +67,26 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - `getActiveNetwork` tạm giữ nguyên. IAP đã bỏ; chỉ xét đổi sang "không có mạng" nếu người dùng báo nút trả phí bị treo hoặc văng.
   - `CFunction.getDeviceId/getPhoneNumber/getMIN`: không vá, vì xref không có đường gọi tới. Có log văng thì mới xét.
   - Bản test kế tiếp (bản sửa T3) sẽ nhờ người dùng bấm thử: GAME KHÁC, HIVE, chọn ô save, Option → lưu đám mây, shop/gem; rồi gửi báo cáo nếu văng.
+
+- **Tầm nhìn / HUD (T9):**
+  - **Bằng chứng (quản đốc đã disasm):**
+    - `resolutioninit` 0x130894, `SGL_grpInitialize` (đoạn 0x133008–0x133080) và `SGL_ReapplyScreenSize` (~0x133440) tính màn logic:
+      - nếu W/H > 1,5 thì H_logic = 640 (hằng `0x44200000` = 640.0f), W_logic = W·640/H;
+      - ngược lại W_logic = 960 (`0x44700000` = 960.0f);
+      - kết quả lưu ở 0x2d6098 / 0x2d609c.
+    - `CalcResolutionWidth/Height` (0x130914/0x130930) = (W_logic − 960)/2 và (H_logic − 640)/2 (độ lệch của vùng thiết kế 960×640 nằm giữa).
+    - Máy người dùng 2400×1080 ⇒ 1422×640, hệ số 1,6875.
+  - **Tăng tầm nhìn** = tăng màn logic theo cùng tỉ lệ: 640 → 640·k, 960 → 960·k ở **mọi** chỗ tính (3 hàm trên và bất kỳ chỗ nào khác T9a tìm được). Vùng thiết kế 960×640 giữ nguyên.
+    - Hệ quả: mọi UI và chữ nhỏ đi theo 1/k trên màn thật. Ví dụ k = 1,25: chữ cỡ 24 từ ~40 px thật còn ~32 px. Phải báo người dùng.
+  - **Chỉnh được bằng mod menu**: thêm thanh "Tầm nhìn" (k từ 1,00 tới 1,50, bước 0,05; mặc định 1,25), lưu cùng vùng nhớ mod (int thứ 4: H_logic, 0 ⇒ 640).
+    - Áp lúc khởi động: Java ghi trong `onResume` trước khi GL khởi tạo; T9a phải chứng minh thứ tự này.
+    - Đổi giữa chừng thì báo "khởi động lại game để áp dụng", trừ khi T9a chứng minh `nativeReapplyScreenSize` áp an toàn lúc đang chạy.
+  - **HUD lùi vào trong**:
+    - ưu tiên một điểm vá chung (ví dụ trừ lề trong `CalcResolutionWidth/Height`) **chỉ khi** T9a chứng minh các hàm đó chỉ dùng để neo HUD vào mép;
+    - nếu không thì vá từng chỗ neo HUD trong màn chơi (`UIPlay_*`...);
+    - lề mặc định: ngang 24 px, dọc 16 px logic (có thể đưa lên mod menu sau);
+    - không được làm lệch vùng chạm (touch) so với hình vẽ.
+  - **Không đụng** cách vẽ map ngoài việc đổi kích thước màn logic. Chạm (touch) phải đổi theo đúng hệ số mới: T9a chứng minh native tính toạ độ chạm từ cùng các biến đó.
 
 ## Môi trường (container hiện tại, mất khi container bị thu hồi)
 - Công cụ:
@@ -340,6 +361,21 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - [ ] T8d. Kiểm.
     - unidbg gọi thẳng các hàm đã vá với Mdmg/Mdef/Mexp = 1, 2, 50 và giá trị biên (tràn số); kết quả đúng công thức.
     - Rồi build bản thử cho người dùng.
+- [ ] T9. Tầm nhìn rộng hơn + HUD lùi vào trong — **Quản đốc nghiệm thu**. Thứ tự: làm cùng đợt hoặc ngay sau T8 (dùng chung vùng nhớ mod và nhóm patch).
+  - Agent: A2 mới đọc trước T9a ngay (chỉ đọc).
+  - [ ] T9a. RE + thiết kế, ghi vào `docs/tam_nhin_hud.md`.
+    - Mọi chỗ ghi/đọc 0x2d6098/0x2d609c và mọi hằng 640/960 (int `0x280`/`0x3c0`, float `0x44200000`/`0x44700000`) có liên quan tới kích thước màn; phân loại từng chỗ.
+    - Caller của `CalcResolutionWidth/Height`, `GetResolutionWidth/Height`, `GRPX_GetScreenWidth/Height`: neo HUD vào mép hay căn giữa vùng 960×640 hay khác.
+    - Ảnh nền toàn màn (menu, tiêu đề) xử lý thế nào khi H_logic > 640 (kéo giãn, lặp hay để trống).
+    - Camera/map lấy kích thước màn từ đâu.
+    - Toạ độ chạm đổi từ màn thật sang logic ở đâu.
+    - Thứ tự `onResume` (Java) so với `SGL_grpInitialize` (lúc GL tạo surface).
+    - Đề xuất patch (vaddr, byte gốc, lệnh mới) cho tầm nhìn và cho lề HUD, kèm rủi ro từng màn (menu, hội thoại, bản đồ nhỏ, cửa hàng).
+  - [ ] T9b. Vá native (nhóm `view` trong `patch_lib.py`) + thanh "Tầm nhìn" trong `ModMenu`.
+  - [ ] T9c. Kiểm.
+    - unidbg với `-Demu.w=2400 -Demu.h=1080` chụp màn tiêu đề/intro với k = 1,0 và k = 1,25; so vị trí chạm (tap vào START vẫn trúng).
+    - Nếu T2 xong: chụp màn chơi.
+    - Rồi build bản thử cho người dùng.
 - [ ] ~~T4. IAP "mua miễn phí"~~ — **BỎ** theo người dùng (2026-10-31). Bàn giao dưới đây giữ lại để tham khảo.
   - Bàn giao (A2 đọc trước, ~70%):
     - Java `InAppV4`:
@@ -421,3 +457,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Trần sát thương 999.999, trần EXP 0xFFFFFF.
   - Kênh Java → native: `/proc/self/mem`, dự phòng `Unsafe`.
   - T8 chờ T7 xong.
+- 2026-10-31 quản đốc: người dùng gửi ảnh màn chơi.
+  - Yêu cầu tăng tầm nhìn (màn logic) và dời HUD vào trong, có khoảng hở so với mép ⇒ thêm T9.
+  - Chốt thiết kế: hệ số k chỉnh bằng mod menu, mặc định 1,25; lề HUD 24/16 px.
+  - A2 mới đọc trước T9a.
