@@ -62,6 +62,15 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - so sánh: `python3 /opt/work/apkdiff.py <a.apk> <b.apk>`.
 - Nếu container mới không có các thứ trên: dựng lại theo `emu/README.md`, `emu_android/README.md` và mục Môi trường trong `PROGRESS.md`.
 
+## Vận hành công nhân (người dùng chốt 2026-10-31)
+- Công nhân có ngữ cảnh **vượt 400k token** thì thay công nhân mới cùng vai (A1/A2), không để chạy tiếp.
+- Quản đốc đo ngữ cảnh mỗi lần kiểm tra tiến độ: lấy `usage` của lượt assistant cuối trong transcript subagent (`input + cache_read + cache_creation`).
+- Khi thay:
+  - quản đốc nhắn công nhân cũ ghi bàn giao vào dòng `Bàn giao:` dưới task đang làm (đã xong gì, file nào đã sửa, bước tiếp theo, lệnh đang dùng), rồi dừng;
+  - không trả lời được thì quản đốc dừng hẳn và tự ghi bàn giao từ transcript;
+  - công nhân mới đọc PLAN.md + dòng `Bàn giao:`, không làm lại phần đã tick.
+- Công nhân tự ghi `Bàn giao:` mỗi khi xong một bước lớn, để việc thay không mất tiến độ.
+
 ## Ràng buộc và edge case
 - Máy thật của người dùng: Xiaomi, Android 16, 2400x1080, trang nhớ 4 KB. `.so` đã căn 16 KB.
 - Bản offline không đăng nhập Hub. Mọi luồng phụ thuộc `Hub2uniqueUserId` đều nhận giá trị rỗng.
@@ -136,3 +145,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 ## Nhật ký
 - 2026-10-31 quản đốc: lập PLAN giai đoạn ổn định; T0/T0b đã xong ở phiên trước (TEST6/TEST7).
 - 2026-10-31 quản đốc: giao T1 cho A1 (chạy), A2 đọc trước T2. Người dùng gửi save (TEST7) → `logs/save_TEST7/`; T3 ưu tiên trước T2.
+- 2026-10-31 quản đốc: thêm quy tắc thay công nhân khi ngữ cảnh > 400k (người dùng chốt). Lúc ghi: A1 ~233k, A2 ~209k.
