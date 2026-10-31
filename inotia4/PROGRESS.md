@@ -28,6 +28,25 @@
 - Native libgame.so tạo 5 font: size 20/24/38/28/14, cao dòng 22/26/40/30/16 (`GRPX_CreateFont` @0x12a6ac).
 - File gốc không có trong git: đặt `base.apk` + `split_config.*.apk` vào một thư mục rồi chạy rebuild (sha256 ở `goc/SHA256.txt`).
 
+## Cập nhật 2026-10-31 (phiên 2): khoanh vùng lỗi văng TEST4
+Người dùng: máy thật chạy **Android 14–16**, **chưa từng thử TEST1**.
+
+Đã xác minh:
+- **TEST1 và TEST4 có dex, manifest và lib giống từng byte.** Chỉ khác 21 file: 10 atlas ảnh, 7 `memorytext*.dat.jpg` và 4 `res/xml` (config, hive, clause, hubjoin; chỉ đổi chữ, cấu trúc giữ nguyên).
+- **Native với toàn bộ asset của TEST4 chạy tới màn tiêu đề bình thường** (unidbg `emu/`, 600 frame; ảnh `docs/emu_shots/test4_title_unidbg.png`). Text tiếng Việt (giải nén 711.513 byte so với 619.103 bản Anh), ảnh và pool `MEM_Create` (6–8 MB) đều không làm văng lúc tải.
+- `libgame.so` và `libHercules.so` có LOAD align 0x4000, nên không lỗi trên máy trang 16 KB.
+- ⇒ Nghi phạm còn lại nằm ở phần **Java/manifest dùng chung**, chạy trên Android 14–16:
+  1. gỡ INTERNET (DNS ném `SecurityException`, là RuntimeException);
+  2. Hercules (`libHercules.so` import `exit`/`kill`/`abort`, APK đã ký lại);
+  3. lỗi ART/Android 14+ khác.
+- Giả lập Android đầy đủ không KVM: xem `emu_android/README.md`. Chạy được nhưng quá chậm (Watchdog giết system_server), nên đã dừng hướng này.
+
+Bản chẩn đoán (`scripts/diag_build.sh`, code `java/diag/`). Chỉ thêm `classes4.dex` và sửa manifest; mọi file khác giữ nguyên từng byte so với TEST4, cùng khoá ký nên cài đè được:
+- `DiagProvider` (initOrder 1000) cài `UncaughtExceptionHandler`. `LaunchActivity` là LAUNCHER trung gian: bình thường mở thẳng `MainActivity`; nếu lần trước thoát bất thường thì hiện báo cáo gồm ApplicationExitInfo (CRASH / CRASH_NATIVE kèm chuỗi tombstone / EXIT_SELF / SIGNALED / ANR), stack Java và logcat của app. Có nút Lưu vào Download / Chia sẻ / Sao chép / Vào game.
+- `test_builds/Inotia4_TEST5a_chandoan.apk` = TEST4 + chẩn đoán (vẫn KHÔNG có INTERNET).
+- `test_builds/Inotia4_TEST5b_chandoan_internet.apk` = TEST5a + trả lại quyền INTERNET (để thử giả thuyết 1).
+- Cài **đè** lên TEST4 (không gỡ): lịch sử thoát của TEST4 vẫn còn, nên ngay lần mở đầu có thể đã hiện nguyên nhân.
+
 ## LỖI MỞ: TEST4 văng ngay lúc tải trên máy thật (người dùng báo 2026-10-31)
 Màn hình: nền đen + vòng xoay tải Android, rồi văng. Emulator unidbg chỉ chạy native nên **chưa từng chạy phần Java trên ART thật**. Chưa có logcat, nên nguyên nhân CHƯA XÁC ĐỊNH.
 
