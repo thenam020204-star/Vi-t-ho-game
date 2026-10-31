@@ -1,141 +1,132 @@
-# Inotia 4 (Android 1.4.0): Việt hoá, font f18 và bản offline
+# PLAN: Inotia 4 Việt hoá offline — giai đoạn ổn định và phát hành
 
-## Bối cảnh
-Người dùng gửi `Inotia4_1.4.0.zip`/`.z01`. Đây là zip chia phần, bên trong là **APKS Android** chứ không phải J2ME: `base.apk` (dex + assets), `split_config.arm64_v8a.apk` (`libgame.so`, `libHercules.so`), `split_config.vi.apk`, `split_config.xxxhdpi.apk`.
+Kế hoạch tổng ban đầu (bối cảnh, quyết định của người dùng, pipeline) nằm ở `docs/PLAN_goc.md`. Tiến độ chi tiết các phiên trước ghi ở `PROGRESS.md`.
 
-Yêu cầu: Việt hoá toàn bộ game; mọi chữ vẽ bằng font **f18** của bộ tool NAM_P, ký tự thiếu thì vẽ tay theo nét 18px; bản **offline thật sự**, không đăng nhập, không cloud, không truy cập mạng.
+## Mục tiêu
+Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14–16: vào game, chơi, lưu và load save không văng, các nút/tính năng có mạng không làm sập app. Sau đó build bản phát hành (không kèm chẩn đoán) vào `releases/Inotia4/`.
 
-Người dùng đã chốt:
-- **Nền tảng:** làm trên bản Android này. Đầu ra là APK arm64 ký lại bằng khoá mới, nên phải gỡ bản gốc trước khi cài.
-- **Văn phong:** lời thoại tiếng Việt hiện đại. **Giữ tiếng Anh** cho tên class, kỹ năng, vật phẩm và tên riêng.
-- **Font:** f18 **phóng to theo bội số nguyên** (x1/x2/x3 tuỳ độ phân giải nội của game) để giữ pixel sắc nét.
-- **IAP:** mua miễn phí khi offline, bấm mua là nhận vật phẩm ngay.
+## Phạm vi
+- Trong phạm vi:
+  - rà các lối vào mạng còn có thể làm văng app;
+  - dựng emulator unidbg chạy qua được màn chọn save;
+  - sửa lỗi văng khi load save;
+  - IAP Google "mua miễn phí";
+  - đồng bộ `rebuild.sh`;
+  - bản phát hành, gói dự án và `BAO_CAO.md`.
+- Ngoài phạm vi (giai đoạn này):
+  - Gem trên server (socket `inotia4.com2us.net:38000`): việc RE lớn, hỏi người dùng sau.
+  - Dịch lại text. Ảnh có chữ.
 
-Các nguyên tắc nghiêm ngặt kiểu J2ME vẫn giữ ở mức tương đương:
-- bytecode/smali thật được tin hơn output của decompiler;
-- không đổi chữ ký method gốc, chỉ thay thân method;
-- không cấp phát object trong vòng vẽ;
-- mỗi bản vá có diff trước/sau và đếm đúng số chỗ khớp;
-- không đoán, chỗ nào chưa chắc thì ghi "chưa xác định".
+## Quyết định thiết kế (KHÔNG tự đổi khi implement)
+- **Không có bộ split gốc trong container.** Mọi bản build mới đi từ `test_builds/Inotia4_TEST4_vi_anh_offline.apk` qua `scripts/build_from_apk.sh`:
+  - `--smali <nhóm>`: vá smali bằng `scripts/patch_smali.py`;
+  - `--vnfont`: build lại `classes3.dex` (font);
+  - `--diag`: bản chẩn đoán;
+  - **bản phát hành KHÔNG `--diag`, KHÔNG `--internet`**.
+  - `rebuild.sh` (từ split gốc) phải áp cùng các nhóm vá.
+- **Giữ gỡ quyền INTERNET.** Lối vào mạng nào ném `SecurityException` thì xử lý giống nhánh "máy không có mạng" sẵn có của bản gốc:
+  - thêm `.catch Ljava/lang/SecurityException;` trỏ vào handler IOException có sẵn, qua cơ chế `CATCH_ADD` trong `patch_smali.py`;
+  - chỉ khi handler đó chỉ dùng API của `Throwable` (thoả verifier);
+  - không thay thân method nếu không bắt buộc.
+- **Vá smali:**
+  - chỉ thay thân method hoặc thêm `.catch`/method mới; không đổi chữ ký, tên, access flag;
+  - mỗi patch phải khớp **đúng số lần kỳ vọng**, lệch thì dừng.
+- **Vá `libgame.so`:**
+  - qua `scripts/patch_lib.py`, mỗi patch kiểm byte gốc;
+  - chỉ vá khi đã chứng minh bằng disasm;
+  - ghi vaddr và lý do.
+- **Font:** VNFont phóng theo `q/16` với `q = max(16, size)` (đã chốt ở TEST7). Không đổi nếu người dùng chưa phản hồi.
+- **IAP:** bấm mua thì nhận vật phẩm ngay, không gọi Google Play (người dùng đã chốt từ đầu). Native cộng vật phẩm qua callback thành công gốc (`csPurchaseCB`...). Không tự cộng ngoài luồng gốc.
+- Bytecode/smali thật được tin hơn output jadx. Disasm (`llvm-objdump`) được tin hơn suy luận.
+- Không cấp phát object trong vòng vẽ (VNFont).
 
-## Những gì đã xác minh (đọc file, chưa sửa gì)
-- **Tài nguyên** ở `assets/common/game_res/*.jpg`. Dạng file: `01 00` + LZMA-alone (props `5d`, dict 16 MB, kích thước u64). Riêng `font.fnt`, `i_imgfont.dat`, `i_portrait.dat`, `i_title.dat`, `i_worldmap.dat` không nén, và có một số PNG thường.
-- **Text** nằm ở `memorytext{,_en,_de,_fr,_jp,_zhhans,_zhhant}.dat`.
-  - Định dạng: `u32 count` (=35812), tiếp theo là `count` offset u24 LE, rồi các chuỗi UTF-8 kết thúc bằng `\0`. Đã kiểm: offset đầu bằng `4+3n`.
-  - Bản EN có 10.602 mục khác rỗng, 8.576 chuỗi khác nhau, khoảng 77 nghìn từ.
-  - Mã điều khiển: `$B $R $S $G $A $D $N` (màu), `&N &P` (xuống dòng/sang trang), `%d %s`.
-  - `memorytext_e.dat` chứa công thức RPN, **không dịch**.
-- **Cách vẽ chữ:** `libgame.so` có `GRPX_DrawString*` / `SGL_grpCreateFontTexture`, gọi ngược JNI `jDrawText`, `jDrawTextEx`, `jDrawTextInRect`, `jGetTextWidth`, `jGetTextHeight`, `jGetStringWidth` sang **`com/com2us/wrapper/font/CSGLFont`** (Android Canvas). Đây là điểm gắn font f18.
-- **Ngôn ngữ:** chọn qua `jGetInitialLanguage`, `GetConfigLanguage`, `SGL_SetLanguage`, `___LangPrefix`.
-- **Online:**
-  - Hive SDK (`com/hive/*`: AuthV4, iapv4, push, promotion, hercules);
-  - trong native: `C2S_HubGuestLogin`, `C2S_HubAutoLogin`, `PopupHiveLoginChoice`, `HubSave_*` (cloud save, khoá save), `HttpConnectPage`, `jGetPackageServerName/Port`;
-  - Firebase, Play Games, billing;
-  - `nativeHerculesInit` (chống gian lận).
-- **Bộ tool NAM_P:** `fonts/f18.bin` (227 ký tự: ASCII + tiếng Việt), `pixeltext_kit`, `fontgen/` và skill `dp` (dịch tay).
-- Container không có apktool, jadx, smali hay apksigner, nên phải tải về ở bước 0.
+## Môi trường (container hiện tại, mất khi container bị thu hồi)
+- Công cụ:
+  - `/opt/re/apktool_2.12.1.jar`;
+  - `/opt/re/jadx/bin/jadx`;
+  - `/opt/android/build-tools/35.0.0` (d8, apksigner, zipalign, dexdump);
+  - `/opt/android/platforms/android-34/android.jar`;
+  - `llvm-objdump`.
+- Bản decode sẵn của TEST4 trong `/opt/work`:
+  - `dec4/` (apktool);
+  - `jx4/sources` (jadx);
+  - `lib4/libgame.so`, `lib4/dis.txt` (disasm, có symbol).
+- Tra caller: `python3 scripts/re/xref.py /opt/work/lib4/dis.txt <ham>`.
+- unidbg đã build ở `/opt/unidbg` (`emu/.cp_local` đã có). Chạy:
+  - lệnh: `/opt/work/runemu.sh <OUT> <frames> "<script>" [-Dopt...]`;
+  - script dạng `frame:tap:x,y`, toạ độ 480x320; START = `240,277`;
+  - tuỳ chọn: `-Demu.tracefn=a,b` in khi vào hàm, `-Demu.w/-Demu.h` đổi màn hình;
+  - ảnh chụp ở `<OUT>/fNNNNN.png`.
+- Build từ APK nền:
+  - lệnh: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/<ten>.apk --smali net --vnfont [--diag]`;
+  - so sánh: `python3 /opt/work/apkdiff.py <a.apk> <b.apk>`.
+- Nếu container mới không có các thứ trên: dựng lại theo `emu/README.md`, `emu_android/README.md` và mục Môi trường trong `PROGRESS.md`.
 
-## Cách làm (mỗi giai đoạn một session; cập nhật `inotia4/PROGRESS.md` và `PLAN.md`)
+## Ràng buộc và edge case
+- Máy thật của người dùng: Xiaomi, Android 16, 2400x1080, trang nhớ 4 KB. `.so` đã căn 16 KB.
+- Bản offline không đăng nhập Hub. Mọi luồng phụ thuộc `Hub2uniqueUserId` đều nhận giá trị rỗng.
+- unidbg văng ở màn chọn save trong `run_quantize` (jemalloc của libc giả lập, size 0). Đây là lỗi môi trường emulator, không phải của game. Không được "sửa" bằng cách vá game.
+- Mỗi bản build phải có:
+  - `apksigner verify` OK;
+  - `zipalign -c -P 16 4` OK;
+  - `check_apk.py` PASS;
+  - diff APK so với bản trước, giải thích từng file khác.
 
-### 0. Hạ tầng
-- Tạo thư mục `inotia4/` trên nhánh `ccr-880efacd-ihhm7x`. Không commit APK gốc (quá lớn); ghi sha256 của file gốc vào `goc/SHA256.txt`.
-- Tải về `tools/` và ghi phiên bản vào `VERSIONS.md`: apktool, jadx, baksmali/smali, uber-apk-signer (gồm zipalign và apksigner), CFR.
-- Giải nén và kiểm kê bằng `scripts/inventory_apk.py`. Bước này ghi lại toàn bộ những gì ở mục "đã xác minh" ra `logs/`.
+## Checklist
+- [x] T0. Văng lúc khởi động (`CWrapperHttp` + `SecurityException`): nhóm `net` (TEST6, đã chạy trên máy thật).
+- [x] T0b. Font to hơn `q/16` + chẩn đoán xuất save (TEST7).
+- [ ] T1. Rà toàn bộ lối vào mạng Java mà native/UI gọi được — **Quản đốc nghiệm thu**
+  - Agent: A1 (chạy)
+  - Đầu vào: `/opt/work/jx4/sources`, `/opt/work/dec4/smali*`, `docs/offline_phan_tich.md`.
+  - Việc:
+    - liệt kê các class/method trong `com/com2us/**` và `com/hive/**` mở kết nối mạng: `URL.openConnection`, `Socket`, `InetAddress`, `HttpURLConnection`, `okhttp`, `WebView.loadUrl`;
+    - với mỗi method, ghi: ai gọi (native JNI theo tên trong `libgame.so`, hoặc UI), chạy trên luồng nào, bắt ngoại lệ gì;
+    - đánh dấu chỗ `SecurityException` có thể lọt ra luồng không ai bắt (văng app);
+    - với chỗ sửa được theo Quyết định thiết kế: thêm mục vào `CATCH_ADD` nhóm `net` trong `scripts/patch_smali.py`, ghi rõ số lần khớp.
+  - File: `docs/mang_offline_ra_soat.md` (bảng kết quả), `scripts/patch_smali.py`.
+  - Hoàn thành khi:
+    - bảng rà soát đầy đủ;
+    - `python3 scripts/patch_smali.py <bản sao dec4> --group net` chạy không lỗi, đúng số lần khớp;
+    - build thử `out/Inotia4_T1_check.apk` bằng `build_from_apk.sh --smali net --vnfont` PASS các kiểm tra;
+    - `diff -r` smali so với `dec4` chỉ ra đúng các dòng `.catch` thêm vào.
+- [ ] T2. unidbg chạy qua màn chọn save tới game mới — **Quản đốc nghiệm thu**
+  - Agent: A2 (chỉ đọc trước; chạy thật khi A1 ≥ 90%)
+  - Việc:
+    - tìm vì sao jemalloc của libc unidbg nhận `size 0` hoặc hỏng arena ở màn chọn save (frame khoảng 690, sau loạt `FILE_IsExist`);
+    - sửa **trong emulator** (`emu/src/*.java`, hoặc hook/thay malloc trong unidbg), không sửa game;
+    - viết script tap: START → chọn ô trống → game mới → vào màn chơi; tìm toạ độ qua ảnh chụp.
+  - File: `emu/src/*.java`, `emu/README.md`.
+  - Hoàn thành khi: chụp được ảnh đang trong màn chơi (`docs/emu_shots/emu_vao_game.png`), log không còn `UC_ERR`; ghi lệnh tái hiện vào `emu/README.md`. Giới hạn 3 hướng thử; không được thì ghi Vướng mắc.
+- [ ] T3. Sửa văng khi load save (`CHAR_GetSkillPoint` null ← `GAMESTATE_EnterPlay`) — **Quản đốc nghiệm thu** (phụ thuộc: file save người dùng gửi hoặc T2)
+  - Việc:
+    - với file `inotia4_save_*.zip` và báo cáo TEST7: giải mã save (`SAVE_LoadDataAsNameAndKey`, khoá rỗng), xác định bước nào của `SAVE_LoadFile` thất bại (`LoadData` / version ≤ 5 / chỉ số ô / `Inventory` / `Quest` / `Event`);
+    - hoặc tái hiện bằng unidbg (T2): game mới → lưu → chạy lại → load.
+  - Hoàn thành khi: nêu được nguyên nhân bằng bằng chứng (disasm + dữ liệu save); có bản vá (nếu lỗi do bản Việt hoá/offline) được kiểm bằng unidbg hoặc bằng phân tích file; ghi vào PROGRESS.
+- [ ] T4. IAP "mua miễn phí" — **Quản đốc nghiệm thu** (sau T1)
+  - Việc:
+    - đọc `com/com2us/module/inappv4/InAppV4` (smali) và native `InAppV4MarketListCB` / `csPurchaseCB` / `csGetProductInfoCB` / `InApp_BuyItem` / `UIPlay_CallInAppShopProc`;
+    - thiết kế luồng giả: `marketConnect` thành công, danh sách sản phẩm trả về, `purchase(productId)` → callback thành công đúng định dạng native đọc;
+    - viết nhóm `iap` trong `patch_smali.py` + class mới trong `java/src/com/namp/vh/` nếu cần.
+  - Hoàn thành khi:
+    - có tài liệu `docs/iap_offline.md` (định dạng callback, bằng chứng disasm);
+    - nhóm `iap` áp đúng số lần;
+    - build thử PASS;
+    - nếu T2 xong: unidbg bấm mua một gói và thấy vật phẩm/gem được cộng.
+- [ ] T5. Đồng bộ `scripts/rebuild.sh` với các bản vá mới (phụ thuộc T1, T4)
+  - Việc: nhóm smali đầy đủ (`font,lang,offline,net[,iap]`); d8 thêm `--lib android.jar` và `--lib` stub; ghi phiên bản tool vào `tools/VERSIONS.md` (apktool 2.12.1, build-tools 35.0.0, jadx 1.5.3).
+  - Hoàn thành khi: `bash -n scripts/rebuild.sh` OK; diff hợp lý; README/PROGRESS ghi rõ cách chạy.
+- [ ] T6. Bản phát hành (phụ thuộc T3, người dùng xác nhận font) — **Quản đốc nghiệm thu**
+  - Việc:
+    - `build_from_apk.sh --smali <nhóm> --vnfont` (không diag) → `releases/Inotia4/Inotia4_vi_offline_<ngay>.apk` + SHA256;
+    - `BAO_CAO.md` (đã làm, chưa làm, debug, việc tồn đọng);
+    - gói `Inotia4_du_an.zip` (theo QUY_TAC_CHUNG mục 11, không kèm APK gốc).
+  - Hoàn thành khi:
+    - mọi kiểm tra ký/align/check PASS;
+    - diff với TEST7 chỉ còn: bỏ `classes4.dex`, manifest trả LAUNCHER về `MainActivity`, cộng các nhóm vá mới;
+    - người dùng cài thử OK.
 
-### 1. Phân tích (chỉ đọc), có bằng chứng smali/disasm cho từng điểm
-1. **`CSGLFont`:** chữ ký JNI, kiểu tham số (String hay byte[] UTF-8), font size và scale đang dùng, cách trả về bitmap/texture, chỗ native dùng width/height. Xác định **độ phân giải nội** của game để chọn hệ số phóng nguyên.
-2. **Xuống dòng:** native tự ngắt dòng theo ký tự (kiểu CJK) hay theo dấu cách? Hàm nào (`GRPX_DrawStringInRect`, `GetTextWidthInRect`)? Disasm bằng `objdump -d` để xác nhận. Nếu ngắt theo ký tự thì xử lý ở phía Java (`jDrawTextInRect`) hoặc vá native.
-3. **Ngôn ngữ:** tìm cách để slot EN nạp file tiếng Việt và ép slot EN bất kể locale máy. Cách ưu tiên: thay `memorytext_en.dat` và ép `jGetInitialLanguage` trả về EN.
-4. **Luồng online:**
-   - Hive AuthV4 setup và signIn, `PopupHiveLoginChoice`, HubSave (khoá save sinh từ đâu, có phụ thuộc Hive UID không);
-   - callback IAP: native nhận `productId` rồi cộng vật phẩm ở đâu;
-   - Hercules, push, Firebase, analytics, quảng cáo/promotion, `HttpConnectPage`.
-5. **Ảnh có chữ:** soát toàn bộ PNG đã giải nén bằng lưới ảnh, ghi vào `docs/anh_co_chu.tsv`. Các ảnh dự kiến: `UI_BUT_ENG_*`, `UI_TITLEMAIN`, `ETC_ban_*`, `Googleplay`, `i_imgfont.dat` (chữ số dạng ảnh), `font.fnt`.
+## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
+- (trống)
 
-Quản đốc duyệt kết quả phân tích xong mới sang bước 2.
-
-### 2. Pipeline text
-- Viết `scripts/memtext.py` với hai lệnh:
-  - `extract`: ghi `text_can_dich.tsv` (id, gốc EN, gốc KO để tham chiếu, ghi chú, giới hạn px);
-  - `repack`: dựng lại bảng offset u24, nén LZMA alone, gắn header `01 00`.
-- **Selftest:** repack khi chưa dịch phải ra giống từng byte ở cả mức dữ liệu đã giải nén lẫn file `.jpg` (kiểm thêm tham số nén). Nếu không khớp được từng byte ở file nén, chứng minh native đọc được file nén lại: thử giải nén vòng tròn, và kiểm hàm nạp trong native không kiểm checksum.
-- `repack --check`:
-  - giữ nguyên số mã điều khiển của từng mục;
-  - không chứa ký tự ngoài charset của font;
-  - offset ≤ 0xFFFFFF;
-  - chuỗi bị native so sánh hoặc dùng làm khoá (nếu tìm ra) thì giữ nguyên.
-
-### 3. Font f18 cho Android
-- So charset của bản dịch (gồm `… ’ “ ” × ★` và mọi ký tự có trong EN) với `f18.bin`. Ký tự còn thiếu thì **vẽ tay ở lưới 18px theo nét f18**, đặt trong `fontgen_inotia/extra18.py`, rồi build ra `f18vn.bin` (cùng định dạng, charset mở rộng). Không sửa file font gốc của tool. Xuất ảnh preview để duyệt.
-- **Class Java `VNFont` cho Android:**
-  - nạp `f18vn.bin` từ assets; dựng glyph theo atlas 1bpp;
-  - render vào `Bitmap` ARGB với hệ số phóng nguyên (dùng `drawRect` hoặc `setPixels` theo khối, không lọc);
-  - cache theo màu; không cấp phát trong mỗi lần vẽ, chỉ dùng lại buffer.
-- Biên dịch bằng javac target 8, d8 ra smali, rồi **thay thân** các method vẽ/đo chữ của `CSGLFont`, giữ nguyên chữ ký.
-- Width, height và line height trả về phải là advance thật của f18 × hệ số phóng.
-
-### 4. Dịch (dùng `dp`, Claude tự dịch tay, không dịch máy, không dùng subagent dịch)
-- Lập `thuat-ngu.tsv` và `vai.md`. Tên class, kỹ năng, vật phẩm, địa danh, nhân vật giữ tiếng Anh. UI thì dùng HP, MP, EXP, ATK, DEF.
-- Dịch khoảng 8.576 chuỗi theo lô, qua nhiều session: commit và push sau mỗi khoảng 300 dòng, báo `M/N` mỗi khi dừng. `dp check` phải ra OK. Giới hạn px đo bằng f18 × hệ số phóng.
-
-### 5. Offline thật sự
-- **Java (smali):**
-  - Hive AuthV4 và luồng đăng nhập trả ngay "guest thành công" bằng một ID cục bộ cố định, không gọi mạng;
-  - bỏ `PopupHiveLoginChoice`;
-  - Hive IAP purchase gọi thẳng callback thành công với đúng `productId`, để native cộng vật phẩm;
-  - push, Firebase, analytics, promotion, webview: no-op.
-- **Native (`libgame.so`, vá nhị phân ARM64 tối thiểu, có bảng offset trước/sau):** chỉ vá khi bước 1 chứng minh cần. Gồm:
-  - `C2S_Hub*` và `HubSave` server check trả "không có save trên server", save chỉ ở máy;
-  - `HttpConnectPage` không làm gì;
-  - Hercules: giữ lại nếu chạy offline không lỗi, nếu không thì stub init.
-- **Manifest:**
-  - bỏ quyền `INTERNET`, `ACCESS_NETWORK_STATE`, `BILLING`;
-  - bỏ service/receiver của FCM, Firebase, Play Games và provider khởi tạo Firebase.
-  
-  Đây là bảo đảm cuối cùng rằng game không vào mạng. Mọi chỗ gọi mạng còn sót sẽ lộ ra thành lỗi khi test.
-
-### 6. Ảnh có chữ
-Vẽ lại bằng `pixeltext` cỡ 18 × hệ số phóng tương ứng với ảnh: một màu thân chữ, giữ kích thước và alpha, chữ dài hơn ô thì rút gọn chữ chứ không ép. Theo quy tắc NAMP thì dùng viền đen 1px, xác nhận lại khi duyệt preview. Thay logo/màn Hive và Google Play nếu có chữ quảng cáo.
-
-### 7. Build
-- `scripts/rebuild.sh` làm các bước:
-  1. ghép các split thành **một APK duy nhất** (base + lib arm64 + config);
-  2. apktool decode;
-  3. áp các bản vá smali, manifest và lib;
-  4. thay assets;
-  5. apktool build;
-  6. zipalign;
-  7. ký v2/v3 bằng keystore NAMP (keystore để ngoài repo, có hướng dẫn tạo).
-- Xuất `out/Inotia4_vi_offline.apk`. Phát hành vào `main:releases/Inotia4/` theo quy tắc của repo, kèm gói `Inotia4_du_an.zip`.
-
-## Các file chính
-- **Sẽ tạo trong `inotia4/`:**
-  - `PLAN.md`, `PROGRESS.md`;
-  - `scripts/{inventory_apk.py, memtext.py, rebuild.sh, patch_smali.py, patch_lib.py, check_offline.py}`;
-  - `java/VNFont.java`, `fontgen_inotia/extra18.py`;
-  - `dich/{text_can_dich.tsv, thuat-ngu.tsv, vai.md}`;
-  - `res_vi/`, `docs/`.
-- **Sẽ sửa (trong bản decode):**
-  - `smali*/com/com2us/wrapper/font/CSGLFont.smali`;
-  - các class Hive dùng cho auth, iap và push;
-  - `AndroidManifest.xml`;
-  - `assets/common/game_res/memorytext_en.dat.jpg` và các ảnh có chữ;
-  - `lib/arm64-v8a/libgame.so` (chỉ khi cần).
-- **Dùng lại:**
-  - `Tool_Viet_Hoa_NAM_P.zip`: `fonts/f18.bin`, `pixeltext_kit`, `fontgen/build_fonts.py` (định dạng `.bin`), `BitmapFont.java` (logic giải atlas, chuyển sang Android);
-  - skill `dp` để dịch.
-
-## Kiểm tra
-1. **Text:** selftest repack từng byte; `memtext.py repack --check` và `dp check` đều OK.
-2. **Font:** test JVM render câu mẫu và khung thoại bằng `VNFont` (stub Bitmap) ra PNG. Kiểm đủ glyph cho toàn bộ bản dịch, không có ô vuông. Kiểm phóng nguyên lần không bị mờ.
-3. **Smali:** apktool rebuild không lỗi; jadx decompile lại APK đã vá để soát. Script đếm số chỗ vá, lệch thì dừng. So sánh dex và lib trước/sau, ghi ra `logs/diff_*.txt`.
-4. **Offline:**
-   - `check_offline.py` grep manifest để chắc không còn quyền INTERNET;
-   - liệt kê các call site mạng còn lại (`HttpURLConnection`, `okhttp`, `Socket`, `WebView.loadUrl`, `getaddrinfo` trong lib) và chứng minh chúng không còn được gọi tới, hoặc sẽ thất bại một cách an toàn.
-5. **Chạy thật:**
-   - Kiểm `/dev/kvm`. Nếu có thì chạy Android emulator arm64 headless, chụp màn: tiêu đề, tạo nhân vật, hội thoại đầu, menu, shop mua miễn phí, lưu/tải.
-   - Nếu container không chạy được ARM64, ghi rõ trong `BAO_CAO.md` là **chưa test trên thiết bị** và đưa checklist để người dùng test trên máy thật. Không báo là xong khi chưa có kết quả chạy thật.
-6. **Bàn giao theo mốc:**
-   1. pipeline text + font hiện ở màn đầu;
-   2. dịch xong toàn bộ;
-   3. offline + ảnh + gói dự án hoàn chỉnh.
+## Nhật ký
+- 2026-10-31 quản đốc: lập PLAN giai đoạn ổn định; T0/T0b đã xong ở phiên trước (TEST6/TEST7).
