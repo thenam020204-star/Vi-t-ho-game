@@ -28,6 +28,17 @@
 - Native libgame.so tạo 5 font: size 20/24/38/28/14, cao dòng 22/26/40/30/16 (`GRPX_CreateFont` @0x12a6ac).
 - File gốc không có trong git: đặt `base.apk` + `split_config.*.apk` vào một thư mục rồi chạy rebuild (sha256 ở `goc/SHA256.txt`).
 
+## ĐÃ TÌM RA NGUYÊN NHÂN VĂNG (báo cáo TEST5a, Xiaomi 23113RKC6C, Android 16)
+Log đầy đủ: `logs/may_that_TEST5a_2026-10-31.txt`. Lỗi `CRASH(Java)` ở luồng `Thread-19`:
+`java.lang.SecurityException: Permission denied (missing INTERNET permission?)` tại `com.com2us.wrapper.network.CWrapperHttp$1.run` (`getResponseCode`).
+Chuỗi gọi trong `libgame.so`: `Protection::initialize` → luồng `threadDownloadHackAppData` → `Protection::NetConnectCB` → `CS_netHttpOpenEx/ConnectEx` (tải danh sách app hack) → `CWrapperHttp`.
+Thiếu quyền INTERNET thì DNS ném `SecurityException` (RuntimeException), mà luồng này chỉ bắt `IOException`, nên app văng. Emulator unidbg không gặp lỗi này vì đã stub `Protection`.
+Các SDK khác (Firebase Installations, Facebook) cũng gặp `SecurityException` nhưng tự bắt được, không làm văng.
+
+**Sửa** (`patch_smali.py`, nhóm `net`, đã đưa vào `rebuild.sh`): thêm `.catch Ljava/lang/SecurityException;` vào 2 vùng try của `CWrapperHttp$1.run()`, dùng chung handler `:catch_0` (in stack, `iHttpStatus=-1`, `nativeConnectCB(fd,-1)`). Đây đúng là nhánh "máy không có mạng" của bản gốc. Không đổi lệnh nào khác.
+Kiểm tra: smali TEST6 so với TEST4 chỉ khác 2 dòng `.catch`; `dexdump` cho thấy catch table có `IOException` và `SecurityException` cùng trỏ `0x0055`.
+- `test_builds/Inotia4_TEST6_vi_offline.apk` = TEST4 + bản sửa `net` + vẫn giữ bản chẩn đoán (để bắt lỗi kế tiếp nếu còn). Vẫn KHÔNG có INTERNET.
+
 ## Cập nhật 2026-10-31 (phiên 2): khoanh vùng lỗi văng TEST4
 Người dùng: máy thật chạy **Android 14–16**, **chưa từng thử TEST1**.
 

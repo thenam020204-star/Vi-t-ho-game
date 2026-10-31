@@ -1,0 +1,788 @@
+Inotia 4 Viet hoa - BAO CAO CHAN DOAN
+Thoi diem: 2026-10-31 23:12:01
+May: Xiaomi 23113RKC6C | Android 16 (API 36)
+ABI: arm64-v8a,armeabi-v7a,armeabi | fingerprint: Redmi/vermeer/vermeer:16/BP2A.250605.031.A3/OS3.0.307.0.WNKCNXM:user/release-keys
+pagesize: 4096
+ban app: 1.4.0
+
+===== LOI JAVA (UncaughtException) =====
+time=1793463082709 (2026-10-31 23:11:22)
+thread=Thread-19
+java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:150)
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+	at com.android.okhttp.Dns$1.lookup(Dns.java:41)
+	at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:178)
+	at com.android.okhttp.internal.http.RouteSelector.nextProxy(RouteSelector.java:144)
+	at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:86)
+	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:176)
+	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+	at com.com2us.wrapper.network.CWrapperHttp$1.run(CWrapperHttp.java:130)
+Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+	at libcore.io.Linux.android_getaddrinfo(Native Method)
+	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+	at libcore.io.BlockGuardOs.android_getaddrinfo(BlockGuardOs.java:222)
+	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:135)
+	... 15 more
+Caused by: android.system.ErrnoException: android_getaddrinfo failed: EPERM (Operation not permitted)
+	... 20 more
+
+===== ApplicationExitInfo (moi nhat truoc) =====
+[MOI] 2026-10-31 23:11:22 pid=18851 ly_do=OTHER status=0 importance=300 pss=0KB rss=0KB
+   mo ta: [ISOLATED NOT NEEDED] isolated not needed
+[MOI] 2026-10-31 23:11:22 pid=14932 ly_do=CRASH(Java) status=0 importance=100 pss=0KB rss=0KB
+   mo ta: crash
+
+===== LOGCAT CUA APP (moi nhat o cuoi) =====
+--------- beginning of main
+10-31 23:11:16.695 18227 18227 W libc    : Access denied finding property "persist.vendor.track.malloc.enable"
+10-31 23:11:16.695 18227 18227 W libc    : Access denied finding property "persist.vendor.fd.monitor.enable"
+10-31 23:11:16.829 18227 18227 W profman : profman took 133.139ms
+10-31 23:11:20.465 14932 14932 I .android.common: Using CollectorTypeCC GC.
+10-31 23:11:20.468 14932 14932 E .android.common: Not starting debugger since process cannot load the jdwp agent.
+10-31 23:11:20.472 14932 14932 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+--------- beginning of system
+10-31 23:11:20.475 14932 14932 I ActivityThread: Current dynamic renderEngine type=0
+10-31 23:11:20.484 14932 18698 D MiuiDownscaleImpl: set override inverted scale : 1.0
+10-31 23:11:20.486 14932 14932 I RENDER_TURBO: onActivityThreadCreate not in white list, pkg=com.com2us.inotia4.normal.freefull.google.global.android.common, type=vermeer
+10-31 23:11:20.490 14932 14932 I .android.common: AssetManager2(0xb4000075afd4dad8) locale list changing from [en-US] to [vi-VN]
+10-31 23:11:20.491 14932 14932 D ActivityThread: setEmbeddedParam packageName=com.com2us.inotia4.normal.freefull.google.global.android.common processName=com.com2us.inotia4.normal.freefull.google.global.android.common isEmbedded=false isIsolated=false
+10-31 23:11:20.492 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-31 23:11:20.492 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-31 23:11:20.492 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+10-31 23:11:20.495 14932 14932 D nativeloader: Configuring clns-10 for other apk /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/lib/arm64:/data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.500 14932 14932 I .android.common: AssetManager2(0xb4000075afd5d4d8) locale list changing from [] to [vi-VN]
+10-31 23:11:20.501 14932 14932 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:11:20.501 14932 14932 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:11:20.501 14932 14932 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:11:20.502 14932 14932 V GraphicsEnvironment: Currently set values for:
+10-31 23:11:20.502 14932 14932 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-31 23:11:20.502 14932 14932 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-31 23:11:20.502 14932 14932 V GraphicsEnvironment: com.com2us.inotia4.normal.freefull.google.global.android.common is not listed in per-application setting
+10-31 23:11:20.502 14932 14932 V GraphicsEnvironment: ANGLE allowlist from config: 
+10-31 23:11:20.502 14932 14932 V GraphicsEnvironment: com.com2us.inotia4.normal.freefull.google.global.android.common is not listed in ANGLE allowlist or settings, returning default
+10-31 23:11:20.503 14932 14932 V GraphicsEnvironment: The updatable driver is turned off on this device.
+10-31 23:11:20.511 14932 14932 D ResMonitorStub: The current process type is: third_party_app, process name is: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.511 14932 14932 I NAMP-DIAG: da cai handler, sdk=36
+10-31 23:11:20.514 14932 18702 D MiuiMonitorThread: Shared singleton Thread for stability monitor start
+10-31 23:11:20.514 14932 18698 D AppScoutStateMachine: 14932-ScoutStateMachinecreated
+10-31 23:11:20.517 14932 14932 I FirebaseApp: Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+10-31 23:11:20.523 14932 14932 I FirebaseInitProvider: FirebaseApp initialization successful
+10-31 23:11:20.544 14932 18702 I Perf    : Connecting to perf service.
+10-31 23:11:20.558 14932 18702 I ActivityThread: TrafficStats init done
+10-31 23:11:20.561 14932 14932 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-31 23:11:20.565 14932 14932 V Configuration: Updating configuration, locales updated from [vi_VN] to [vi]
+10-31 23:11:20.566 14932 14932 I .android.common: AssetManager2(0xb4000075afd58078) locale list changing from [] to [vi]
+10-31 23:11:20.569 14932 14932 I HiveInitializer: HiveInitializer  initialization successful
+10-31 23:11:20.569 14932 14932 D HiveInitializer: No referrer yet. Call playServiceReferrerStart()
+10-31 23:11:20.571 14932 14932 I NativeTurboSchedManager: Load libmiui_runtime
+10-31 23:11:20.572 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.573 14932 18702 I ForceDarkHelperStubImpl: initialize for com.com2us.inotia4.normal.freefull.google.global.android.common , ForceDarkOrigin
+10-31 23:11:20.626 14932 18702 D nativeloader: Load libforcedarkimpl.so using system ns (caller=/system_ext/framework/miui-framework.jar): ok
+10-31 23:11:20.630 14932 18732 D CompatChangeReporter: Compat change id reported: 288912692; UID 10396; state: ENABLED
+10-31 23:11:20.630 14932 18702 D HWUI    : JNI_OnLoad success
+10-31 23:11:20.630 14932 18702 I MiuiForceDarkConfig: setConfig density:2.250000, mainRule:0, secondaryRule:0, tertiaryRule:0
+10-31 23:11:20.636 14932 14932 W DynamiteModule: Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+10-31 23:11:20.638 14932 18702 I ActivityThread: Miui Feature Init done
+10-31 23:11:20.684 14932 14932 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+10-31 23:11:20.684 14932 14932 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+10-31 23:11:20.687 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-31 23:11:20.687 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/com.android.location.provider.jar
+10-31 23:11:20.687 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/com.android.media.remotedisplay.jar
+10-31 23:11:20.688 14932 14932 D nativeloader: Configuring clns-11 for other apk /system_ext/framework/com.android.extensions.appfunctions.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/lib/arm64:/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+10-31 23:11:20.688 14932 14932 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libmisys_jni.xiaomi.so:libpag.hyperos.so:libffavc.hyperos.so:libxiaomi_modemdumpsdx55_jni.modem.so:libxiaomi_modemdump_jni.modem.so:libmodemsmartengine_jni.modem.so:libupdateprof.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:libqesdk_ndk_platform.qti.so:liblistenjni.qti.so:libautoui_image.xiaomi.so
+10-31 23:11:20.689 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-31 23:11:20.689 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+10-31 23:11:20.692 14932 18743 I DpmTcmClient: RegisterTcmMonitor from: $Proxy3
+10-31 23:11:20.715 14932 14932 D nativeloader: Configuring clns-12 for other apk /data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/lib/arm64:/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+10-31 23:11:20.736 14932 14932 I .android.common: AssetManager2(0xb4000075afd59658) locale list changing from [] to [vi-VN]
+10-31 23:11:20.776 14932 14932 I ProviderInstaller: Installed default security provider AndroidOpenSSL (via CompatProvider)
+10-31 23:11:20.782 14932 14932 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+10-31 23:11:20.786 14932 14932 D WM-PackageManagerHelper: androidx.work.impl.background.systemjob.SystemJobService enabled
+10-31 23:11:20.786 14932 14932 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+10-31 23:11:20.787 14932 18758 D WM-ForceStopRunnable: The default process name was not specified.
+10-31 23:11:20.788 14932 18758 D WM-ForceStopRunnable: Performing cleanup operations.
+10-31 23:11:20.790 14932 14932 I ContentProvider: com.com2us.inotia4.normal.freefull.google.global.android.common.androidx-startup onCreate use 260 ms!
+10-31 23:11:20.793 14932 14932 W com.facebook.internal.Validate: No internet permissions granted for the app, please add <uses-permission android:name="android.permission.INTERNET" /> to your AndroidManifest.xml.
+10-31 23:11:20.794 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.796 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.797 14932 14932 W com.facebook.UserSettingsManager: The value for AdvertiserIDCollectionEnabled is currently set to FALSE so you're sending app events without collecting Advertiser ID. This can affect the quality of your advertising and analytics results.
+10-31 23:11:20.801 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.802 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.808 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.813 14932 14932 W libc    : Access denied finding property "vendor.boostfwk.frameprefetcher"
+10-31 23:11:20.814 14932 14932 D UnionPowerNotifier: check_union_power_ioctl -1
+10-31 23:11:20.815 14932 14932 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:11:20.815 14932 14932 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:11:20.815 14932 14932 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:11:20.815 14932 14932 D .android.common: blurUtils, initBackgroundBlurMinInterval processName(com.com2us.inotia4.normal.freefull.google.global.android.common), inWhiteLists(0)
+10-31 23:11:20.816 14932 18702 I ActivityThread: HardwareRenderer preload  done
+10-31 23:11:20.817 14932 14932 I .android.common: AssetManager2(0xb4000075afd57d58) locale list changing from [] to [vi-VN]
+10-31 23:11:20.820 14932 18776 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-31 23:11:20.825 14932 18776 W libc    : Access denied finding property "vendor.migl.debug"
+10-31 23:11:20.825 14932 18776 I libMiGL : EnableDR: 0
+10-31 23:11:20.825 14932 18776 D libMiGL : mDFIInterval: -1
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: QUALCOMM build                   : bad34dcf83, I1064ae0a1f
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: Build Date                       : 11/28/25
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: E031.41.03.64
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: Local Branch                     : 
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.13.2.0.11.00.00.856.062
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: Remote Branch                    : NONE
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: Reconstruct Branch               : NOTHING
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: Build Config                     : S P 14.1.4 AArch64
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+10-31 23:11:20.826 14932 18776 I AdrenoGLES-0: Driver Version                   : 0676.76.1
+10-31 23:11:20.833 14932 18772 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:11:20.833 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.836 14932 18764 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:11:20.839 14932 18764 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: Exception while executing runnable com.google.firebase.installations.FirebaseInstallations$$ExternalSyntheticLambda1@f226d98
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:150)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.Dns$1.lookup(Dns.java:41)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:178)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.nextProxy(RouteSelector.java:144)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:86)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:176)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:131)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getOutputStream(HttpURLConnectionImpl.java:262)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getOutputStream(DelegatingHttpsURLConnection.java:219)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:30)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.writeRequestBodyToOutputStream(FirebaseInstallationServiceClient.java:234)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.writeFIDCreateRequestBodyToOutputStream(FirebaseInstallationServiceClient.java:216)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.createFirebaseInstallation(FirebaseInstallationServiceClient.java:174)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.registerFidWithServer(FirebaseInstallations.java:533)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.doNetworkCallIfNecessary(FirebaseInstallations.java:387)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.$r8$lambda$_LVWvNUQ4Iq8r5kiH7vh8J1nAu0(FirebaseInstallations.java:372)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations$$ExternalSyntheticLambda1.run(R8$$SyntheticClass:0)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$1.run(SequentialExecutor.java:117)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$QueueWorker.workOnQueue(SequentialExecutor.java:229)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$QueueWorker.run(SequentialExecutor.java:174)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1302)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:677)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.concurrent.CustomThreadFactory.$r8$lambda$XB8AY3Hcio74byWuTzgVEC3Hiek(CustomThreadFactory.java:47)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at java.lang.Thread.run(Thread.java:1119)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at libcore.io.Linux.android_getaddrinfo(Native Method)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at libcore.io.BlockGuardOs.android_getaddrinfo(BlockGuardOs.java:222)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:135)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	... 31 more
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: Caused by: android.system.ErrnoException: android_getaddrinfo failed: EPERM (Operation not permitted)
+10-31 23:11:20.848 14932 18743 E SequentialExecutor: 	... 36 more
+10-31 23:11:20.849 14932 14932 D CompatChangeReporter: Compat change id reported: 377864165; UID 10396; state: ENABLED
+10-31 23:11:20.850 14932 14932 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+10-31 23:11:20.852 14932 14932 D DecorView: updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+10-31 23:11:20.859 14932 18776 I AdrenoGLES-0: PFP: 0x01740181, ME: 0x00000000
+10-31 23:11:20.867 14932 18735 W ServiceBindIntentUtils: Dynamic lookup for intent failed for action: com.google.android.gms.games.internal.connect.service.START
+10-31 23:11:20.886 14932 14932 D HiveInitializer: Save referrer.
+10-31 23:11:20.891 14932 18786 I .android.common: AssetManager2(0xb4000075afd59c98) locale list changing from [] to [vi-VN]
+10-31 23:11:20.916 14932 18786 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-31 23:11:20.921 14932 18786 D nativeloader: InitLlndkLibrariesProduct: libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libapexsupport.so:libavf.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-aarch64-android.so:libclang_rt.asan-arm-android.so:libclang_rt.hwasan-aarch64-android.so:libcom.android.tethering.connectivity_native.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvendorsupport.so:libvndksupport.so:libvulkan.so
+10-31 23:11:20.926 14932 18786 D nativeloader: Configuring product-clns-13 for unbundled product apk /product/app/ContentCatcherOS3_1/ContentCatcherOS3_1.apk. target_sdk_version=35, uses_libraries=, library_path=/product/app/ContentCatcherOS3_1/lib/arm64:/product/app/ContentCatcherOS3_1/ContentCatcherOS3_1.apk!/lib/arm64-v8a:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/product/lib64:/system/product/lib64
+10-31 23:11:20.927 14932 18786 D nativeloader: InitVndkspLibrariesProduct: VNDK is deprecated with product
+10-31 23:11:20.927 14932 18800 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemalarm.RescheduleReceiver
+10-31 23:11:20.930 14932 14932 D FramePredict: FramePredict init: false
+10-31 23:11:20.931 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:20.940 14932 18764 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:11:20.952 14932 18786 D ViewContentFactory: initViewContentFetcherClass
+10-31 23:11:20.952 14932 18786 D ViewContentFactory: getInterceptorPackageInfo
+10-31 23:11:20.954 14932 18776 I AdrenoUtils: <ReadGpuID:407>: Reading chip ID through GSL
+10-31 23:11:20.954 14932 18786 D ViewContentFactory: getInitialApplication took 2ms
+10-31 23:11:20.954 14932 18786 D ViewContentFactory: packageInfo.packageName: com.miui.contentcatcher
+10-31 23:11:20.955 14932 18786 D ViewContentFactory: initViewContentFetcherClass took 2ms
+10-31 23:11:20.955 14932 18786 I ContentCatcher: ViewContentFetcher : ViewContentFetcher
+10-31 23:11:20.955 14932 18786 D ViewContentFactory: createInterceptor took 3ms
+10-31 23:11:20.955 14932 18786 E SettingTrigger: getStaticObjectField error
+10-31 23:11:20.955 14932 18786 E SettingTrigger: java.lang.NoSuchFieldException: No field mContentExtensionEnabled in class Lmiui/contentcatcher/InterceptorProxy; (declaration of 'miui.contentcatcher.InterceptorProxy' appears in /system_ext/framework/miui-framework.jar)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at java.lang.Class.getDeclaredField(Native Method)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at com.miui.contentcatcher.Interceptor.<init>(Unknown Source:372)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at miui.contentcatcher.InterceptorFactory.createInterceptor(InterceptorFactory.java:50)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at miui.contentcatcher.InterceptorProxy$H.handleMessage(InterceptorProxy.java:329)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at android.os.Handler.dispatchMessage(Handler.java:114)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at android.os.Looper.loopOnce(Looper.java:274)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at android.os.Looper.loop(Looper.java:369)
+10-31 23:11:20.955 14932 18786 E SettingTrigger: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+10-31 23:11:20.955 14932 18786 I Interceptor_Catcher: notifyActivityCreate: 
+10-31 23:11:20.962 14932 18776 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:11:20.962 14932 18776 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:11:20.962 14932 18776 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:11:20.962 14932 18776 D SKIA    : [Skia] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:11:20.962 14932 18776 D SKIA    : [Skia] EnhanceVkPipelineCache is false
+10-31 23:11:20.962 14932 18776 D HWUI    : MiShaderPrecompile handle com.com2us.inotia4.normal.freefull.google.global.android.common, isSksl: 0, isAppInPreCacheList: 0, isGpuVersionChanged: 0, isSkslChanged: 0
+10-31 23:11:20.963 14932 18702 I ActivityThread: HardwareRenderer preload  done
+10-31 23:11:20.964 14932 14932 I .android.common: AssetManager2(0xb4000075afd57a38) locale list changing from [] to [vi-VN]
+10-31 23:11:20.967 14932 14932 D nativeloader: Load /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/lib/arm64/libgame.so using class loader ns clns-10 (caller=/data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk): ok
+10-31 23:11:20.971 14932 18764 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:11:20.973 14932 14932 D MiuiMultiWindowUtils: freeform resolution args raw data:{  "wide_default":{    "freeform_args": {        "vertical_portrait":{"aspect_ratio":0.626, "original_ratio":0.5643,"original_scale":0.74,"top_margin":0.168,"left_margin":0.484},        "horizontal_portrait":{"aspect_ratio":0.626, "original_ratio":0.5643,"original_scale":0.74,"top_margin":0.1222,"left_margin":0.59745},        "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":0.6992,"original_scale":0.604,"top_margin":0.2596,"left_margin":0.2624},        "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":0.6992,"original_scale":0.604,"top_margin":0.213,"left_margin":0.3758}    },    "mini_freeform_args":{        "vertical_portrait":{"original_ratio":0.147},        "horizontal_portrait":{"original_ratio":0.147},        "vertical_landscape":{"original_ratio":0.165},        "horizontal_landscape":{"original_ratio":0.165}    }  },  "narrow_default": {    "freeform_args": {        "vertical_portrait":{"aspect_ratio":0.626, "original_ratio":1,"original_scale":0.74,"top_margin":0.0753,"left_margin":-1},        "horizontal_portrait":{"aspect_ratio":0.626, "original_ratio":1,"original_scale":0.5756,"top_margin":-1,"left_margin":0.0753},        "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.587,"top_margin":0.0753,"left_margin":-1},        "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.587,"top_margin":-1,"left_margin":0.0753}    },    "mini_freeform_args":{        "vertical_portrait":{"original_ratio":0.26},        "horizontal_portrait":{"original_ratio":0.26},        "vertical_landscape":{"original_ratio":0.293},        "horizontal_landscape":{"original_ratio":0.293}    }  },  "regular_default": {    "freeform_args": {      "vertical_portrait":{"aspect_ratio":0.625, "original_ratio":1,"original_scale":0.7,"top_margin":0.109,"left_margin":-1},      "horizontal_portrait":{"aspect_ratio":0.6667, "original_ratio":1,"original_scale":0.6102,"top_margin":-1,"left_margin":0.026},      "vertical_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.5899,"top_margin":0.109,"left_margin":-1},      "horizontal_landscape":{"aspect_ratio":1.6, "original_ratio":1,"original_scale":0.5899,"top_margin":-1,"left_margin":0.026}    },    "mini_freeform_args":{      "vertical_portrait":{"original_ratio":0.25},      "horizontal_portrait":{"original_ratio":0.25},      "vertical_landscape":{"original_ratio":0.25},      "horizontal_landscape":{"original_ratio":0.25}    }  },  "pad_default": {    "freeform_args": {      "vertical_portrait":{"aspect_ratio":0.5625, "original_ratio":0.375,"original_scale":0.835,"top_margin":0.049,"left_margin":0.2775},      "horizontal_portrait":{"aspect_ratio":0.5625, "original_ratio":0.375,"original_scale":0.835,"top_margin":-1,"left_margin":0.6525},      "vertical_landscape":{"aspect_ratio":-1, "original_ratio":1,"original_scale":0.468,"top_margin":0.049,"left_margin":-1},      "horizontal_landscape":{"aspect_ratio":-1, "original_ratio":1,"original_scale":0.468,"top_margin":-1,"left_margin":0.4976}    },    "mini_freeform_args":{      "vertical_portrait":{"original_ratio":0.144},      "horizontal_portrait":{"original_ratio":0.144},      "vertical_landscape":{"original_ratio":0.2},      "horizontal_landscape":{"original_ratio":0.2}    }  }}
+10-31 23:11:20.973 14932 14932 D MiuiMultiWindowUtils: initFreeFormResolutionArgs failed, device is vermeer
+10-31 23:11:20.982 14932 14932 D DecorView: updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+10-31 23:11:20.986 14932 14932 D HWUI    : ImageDecoder_nDecodeBitmap: width = 144, height = 144, encodedFormat = 4
+10-31 23:11:20.988 14932 14932 W HWUI    : Image decoding logging dropped!
+10-31 23:11:20.991 14932 18786 I ContentCatcher: Interceptor_Catcher : Catcher list invalid for com.com2us.inotia4.normal.freefull.google.global.android.common@com.namp.vh.diag.LaunchActivity@260959497
+10-31 23:11:20.992 14932 14932 I .android.common: AssetManager2(0xb4000075afd5c218) locale list changing from [] to [vi-VN]
+10-31 23:11:20.992 14932 18786 I ContentCatcher: Interceptor_Catcher : Get featureInfo from config image_pick_mode
+10-31 23:11:20.992 14932 14932 I WebViewFactory: Loading com.google.android.webview version 156.0.8078.47 (code 807804703)
+10-31 23:11:20.992 14932 14932 I MiResource: Start adding sharedLibAssets
+10-31 23:11:20.993 14932 14932 I .android.common: AssetManager2(0xb4000075afd5c858) locale list changing from [] to [vi-VN]
+10-31 23:11:20.994 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@ec19146, old impl = android.content.res.MiuiResourcesImpl@a9122a3, new impl = android.content.res.MiuiResourcesImpl@95f5959 , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.994 14932 14932 I .android.common: AssetManager2(0xb4000075afd5e478) locale list changing from [] to [vi]
+10-31 23:11:20.994 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@8c92f1, old impl = android.content.res.MiuiResourcesImpl@931a746, new impl = android.content.res.MiuiResourcesImpl@ea8591e , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.994 14932 14932 I .android.common: AssetManager2(0xb4000075afd5db18) locale list changing from [] to [vi-VN]
+10-31 23:11:20.994 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@77263d3, old impl = android.content.res.MiuiResourcesImpl@731e721, new impl = android.content.res.MiuiResourcesImpl@40945ff , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk, /data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/split_config.vi.apk, /data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/split_config.xxxhdpi.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.994 14932 14932 I .android.common: AssetManager2(0xb4000075afd58cf8) locale list changing from [] to [vi-VN]
+10-31 23:11:20.995 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@5fb182e, old impl = android.content.res.MiuiResourcesImpl@e25ce34, new impl = android.content.res.MiuiResourcesImpl@d80afcc , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.995 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@5c40865, old impl = android.content.res.MiuiResourcesImpl@a9122a3, new impl = android.content.res.MiuiResourcesImpl@95f5959 , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.995 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@91879d6, old impl = android.content.res.MiuiResourcesImpl@a9122a3, new impl = android.content.res.MiuiResourcesImpl@95f5959 , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.995 14932 14932 I .android.common: AssetManager2(0xb4000075afd5bbd8) locale list changing from [] to [vi-VN]
+10-31 23:11:20.995 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@6145ae3, old impl = android.content.res.MiuiResourcesImpl@450f1d2, new impl = android.content.res.MiuiResourcesImpl@9233215 , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /product/app/ContentCatcherOS3_1/ContentCatcherOS3_1.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.995 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@b9cdb0e, old impl = android.content.res.MiuiResourcesImpl@450f1d2, new impl = android.content.res.MiuiResourcesImpl@9233215 , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /product/app/ContentCatcherOS3_1/ContentCatcherOS3_1.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.995 14932 14932 I .android.common: AssetManager2(0xb4000075afd65818) locale list changing from [] to [vi-VN]
+10-31 23:11:20.995 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@2cf9a1a, old impl = android.content.res.MiuiResourcesImpl@b24d45d, new impl = android.content.res.MiuiResourcesImpl@e7ce92a , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.995 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@629ef28, old impl = android.content.res.MiuiResourcesImpl@a9122a3, new impl = android.content.res.MiuiResourcesImpl@95f5959 , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.995 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@c4ca017, old impl = android.content.res.MiuiResourcesImpl@a9122a3, new impl = android.content.res.MiuiResourcesImpl@95f5959 , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.995 14932 14932 I .android.common: AssetManager2(0xb4000075afd5fd78) locale list changing from [] to [vi-VN]
+10-31 23:11:20.996 14932 14932 I MiResource: Updating cached ResourcesImpl for resources : android.content.res.MiuiResources@72c2188, old impl = android.content.res.MiuiResourcesImpl@13fbd07, new impl = android.content.res.MiuiResourcesImpl@ab6431b , new paths = [/system/framework/framework-res.apk, /odm/overlay/FrameworksResTarget_Vendor.apk, /odm/overlay/FrameworkResOverlay_vermeerNormalBatt.apk, /product/overlay/GmsCnConfigOverlay.apk, /product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk, /product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk, /product/overlay/FrameworksResCommon_Sys.apk, /product/overlay/MiuiHomeLauncherResOverlay.apk, /product/overlay/AospFrameworkResOverlay.apk, /product/overlay/DevicesAndroidOverlay.apk, /product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk, /product/overlay/AospFrameworkTelephonyResOverlay.apk, /system_ext/framework/framework-ext-res/framework-ext-res.apk, /product/overlay/MiuiFrameworkResOverlay.apk, /product/overlay/MiuiFrameworkTelephonyResOverlay.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk, /product/overlay/GestureLineOverlay.apk, /data/resource-cache/com.android.systemui-neutral-nP3x.frro, /data/resource-cache/com.android.systemui-accent-BBYM.frro, /data/resource-cache/com.android.systemui-dynamic-38ot.frro]
+10-31 23:11:20.996 14932 14932 V ResourcesManager: The following library key has been added: ResourcesKey{ mHash=6dc3c989 mResDir=null mSplitDirs=[] mOverlayDirs=[] mLibDirs=[/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk,/system/framework/android.test.base.jar] mDisplayId=0 mOverrideConfig=v36 mCompatInfo={560dpi always-compat} mLoaders=[]}
+10-31 23:11:20.996 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+10-31 23:11:20.996 14932 14932 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-31 23:11:21.005 14932 14932 W .android.common: Suspending all threads took: 6.013ms
+10-31 23:11:21.006 14932 18786 I ContentCatcher: Interceptor_Catcher : Get featureInfo from config pick_mode
+10-31 23:11:21.006 14932 14932 D nativeloader: Configuring clns-14 for other apk /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/lib/arm64:/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+10-31 23:11:21.022 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:21.023 14932 18786 D ViewContentFactory: initViewContentFetcherClass
+10-31 23:11:21.023 14932 18786 I ContentCatcher: ViewContentFetcher : ViewContentFetcher
+10-31 23:11:21.023 14932 18786 D ViewContentFactory: createInterceptor took 0ms
+10-31 23:11:21.023 14932 18786 E SettingTrigger: getStaticObjectField error
+10-31 23:11:21.023 14932 18786 E SettingTrigger: java.lang.NoSuchFieldException: No field mContentExtensionEnabled in class Lmiui/contentcatcher/InterceptorProxy; (declaration of 'miui.contentcatcher.InterceptorProxy' appears in /system_ext/framework/miui-framework.jar)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at java.lang.Class.getDeclaredField(Native Method)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at com.miui.contentcatcher.Interceptor.<init>(Unknown Source:372)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at miui.contentcatcher.InterceptorFactory.createInterceptor(InterceptorFactory.java:50)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at miui.contentcatcher.InterceptorProxy$H.handleMessage(InterceptorProxy.java:329)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at android.os.Handler.dispatchMessage(Handler.java:114)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at android.os.Looper.loopOnce(Looper.java:274)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at android.os.Looper.loop(Looper.java:369)
+10-31 23:11:21.023 14932 18786 E SettingTrigger: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+10-31 23:11:21.023 14932 18786 I Interceptor_Catcher: notifyActivityCreate: 
+10-31 23:11:21.027 14932 14932 I cr_WVCFactoryProvider: version=156.0.8078.47 (807804703) minSdkVersion=29 multiprocess=true packageId=2 splits=<none>
+10-31 23:11:21.028 14932 14932 D nativeloader: Load /data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!/lib/arm64-v8a/libwebviewchromium.so using class loader ns clns-14 (caller=/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk): ok
+10-31 23:11:21.029 14932 14932 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-14 (caller=/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk): ok
+10-31 23:11:21.035 14932 14932 D HWUI    : ImageDecoder_nDecodeBitmap: width = 37, height = 13, encodedFormat = 4
+10-31 23:11:21.035 14932 14932 W HWUI    : Image decoding logging dropped!
+10-31 23:11:21.036 14932 14932 D HWUI    : ImageDecoder_nDecodeBitmap: width = 13, height = 37, encodedFormat = 4
+10-31 23:11:21.036 14932 14932 W HWUI    : Image decoding logging dropped!
+10-31 23:11:21.054 14932 14932 I cr_LibraryLoader: Successfully loaded native library
+10-31 23:11:21.056 14932 18786 I ContentCatcher: Interceptor_Catcher : Catcher list invalid for com.com2us.inotia4.normal.freefull.google.global.android.common@com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity@123235830
+10-31 23:11:21.056 14932 18786 I ContentCatcher: Interceptor_Catcher : Get featureInfo from config image_pick_mode
+10-31 23:11:21.056 14932 18786 I ContentCatcher: Interceptor_Catcher : Get featureInfo from config pick_mode
+10-31 23:11:21.060 14932 14932 I cr_CachingUmaRecorder: Flushed 46 samples from 21 histograms, 0 samples were dropped.
+10-31 23:11:21.066 14932 14932 I cr_ChildProcLH: ScopedServiceBindingBatch.tryActivate: false
+10-31 23:11:21.069 14932 18833 I chromium: [INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-31 23:11:21.069 14932 18833 I chromium: [INFO:android_webview/browser/variations/variations_seed_loader.cc:63] Failed to open file for reading.: No such file or directory (2)
+10-31 23:11:21.070 14932 14932 I cr_CombinedPProvider: #registerProvider() provider:WV.hj@b5abe7e isPolicyCacheEnabled:false policyProvidersSize:0
+10-31 23:11:21.070 14932 14932 I cr_PolicyProvider: #setManagerAndSource() 0
+10-31 23:11:21.074 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:21.075 14932 14932 I cr_DisplayManager: Is Display Topology available: false
+10-31 23:11:21.076 14932 14932 I .android.common: AssetManager2(0xb4000075afd62618) locale list changing from [] to [vi-VN]
+10-31 23:11:21.078 14932 14932 I .android.common: AssetManager2(0xb4000075afd64238) locale list changing from [] to [vi-VN]
+10-31 23:11:21.081 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.081 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.081 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.081 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.081 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.081 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.085 14932 18833 I cr_policy: registerReceiver succeeded after 14ms
+10-31 23:11:21.096 14932 14932 I cr_CombinedPProvider: #linkNativeInternal() 1
+10-31 23:11:21.096 14932 14932 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+10-31 23:11:21.096 14932 14932 I cr_PolicyProvider: #notifySettingsAvailable() 0
+10-31 23:11:21.096 14932 14932 I cr_CombinedPProvider: #onSettingsAvailable() 0
+10-31 23:11:21.096 14932 14932 I cr_CombinedPProvider: #flushPolicies()
+10-31 23:11:21.259 14932 14932 D Activity: Activity = ActivityInfo{e06df69 com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity}, Resume onConfigurationChanged = {0.9 452mcc8mnc [vi_VN] ldltr sw480dp w1067dp h480dp 360dpi lrg long hdr widecg land uimode=12 night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_90 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.3 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+10-31 23:11:21.263 14932 18786 I ContentCatcher: SettingTrigger : register screen QA status observer com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:11:21.267 14932 18786 I ContentCatcher: SettingTrigger : register global collect status observer com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:11:21.270 14932 14932 W ANALYTICSLOG:  loadLogFile Called 
+10-31 23:11:21.270 14932 18890 D AdvertisingIdClient: Creating AdvertisingIdClient
+10-31 23:11:21.270 14932 18890 D AdvertisingIdClient: AdvertisingIdClient already created.
+10-31 23:11:21.271 14932 18890 D AdvertisingIdClient: AdvertisingIdClient is not bounded. Starting to bind it...
+10-31 23:11:21.272 14932 18786 I ContentCatcher: SettingTrigger : registerUIAgentListener com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity, uid:10396
+10-31 23:11:21.279 14932 14932 D .android.common: MiuiProcessManagerServiceStub setSchedFifo
+10-31 23:11:21.279 14932 14932 I MiuiProcessManagerImpl: setSchedFifo pid:14932, mode:3
+10-31 23:11:21.283 14932 18776 D HWUI    : TAG_DDRE, CanvasContext::setDdreActivities: 
+10-31 23:11:21.284 14932 18786 I ContentCatcher_TaplusBlackListHelper:  mActivities isEmpty
+10-31 23:11:21.285 14932 14932 D FirstFrameSpeedUp: bls: [com.xcj.hm.kangfuyixue, jp.co.jibunbank.jibunmain]
+10-31 23:11:21.285 14932 14932 I ViewRootImpl: com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity use first frame acceleration
+10-31 23:11:21.285 14932 18786 I ContentCatcher_TaplusBlackListHelper:  blackList size: 4 package is com.com2us.inotia4.normal.freefull.google.global.android.common isInTaplusWhiteList: true
+10-31 23:11:21.286 14932 14932 D InsetsController: com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity hide: statusBars navigationBars captionBar systemOverlays android.view.InsetsController@dd176aa android.view.InsetsController.applyAnimation:2241 android.view.InsetsController.applyAnimation:2212 android.view.InsetsController.hide:1439 android.view.InsetsController.hide:1349 android.view.PendingInsetsController$HideRequest.replay:277 android.view.PendingInsetsController.replayAndAttach:192 
+10-31 23:11:21.286 14932 14932 D InsetsController: Setting requestedVisibleTypes to -528 (was -9)
+10-31 23:11:21.290 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.290 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.293 14932 14932 I cr_AppResProvider: #getApplicationRestrictionsFromUserManager() Bundle[EMPTY_PARCEL]
+10-31 23:11:21.293 14932 14932 I cr_PolicyProvider: #notifySettingsAvailable() 0
+10-31 23:11:21.293 14932 14932 I cr_CombinedPProvider: #onSettingsAvailable() 0
+10-31 23:11:21.293 14932 14932 I cr_CombinedPProvider: #flushPolicies()
+10-31 23:11:21.294 14932 14932 D DecorViewImmersiveImpl: onAttachedToWindow. pkg: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:21.295 14932 14932 I ComputilityLevel: getComputilityLevel(): 5
+10-31 23:11:21.295 14932 14932 D DecorViewImmersiveImpl: com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity@7586df6 already set forced E2E by app
+10-31 23:11:21.296 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.296 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.296 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.296 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.296 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.296 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.296 14932 18786 I ContentCatcher: Interceptor_Catcher : notifyWebView view: android.webkit.WebView{f5aa13 VFEDHVC.. ......I. 0,0-0,0 #7f080257 app:id/webView}, size:1, isLoad:true
+10-31 23:11:21.303 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.303 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.303 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.316 14932 14932 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:11:21.317 14932 14932 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:11:21.319 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.319 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.319 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.319 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.319 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.319 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.319 14932 14932 D VRI[MainActivity]: vri.Setup new sync=wmsSync-VRI[MainActivity]#0
+10-31 23:11:21.322 14932 18776 I .android.common: Support FEAS
+10-31 23:11:21.336 14932 18905 I CameraManagerGlobal: Connecting to camera service
+10-31 23:11:21.369 14932 14932 D VRI[MainActivity]: vri.reportDrawFinished 0 0 Rect(0, 0 - 2400, 1080)
+10-31 23:11:21.370 14932 14932 I Choreographer: first vsync insert message into MessageQueue Head
+10-31 23:11:21.370 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.370 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.370 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.370 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.370 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.370 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.372 14932 18749 W FlagStore: Failed to commit to updated flags for com.google.android.gms.providerinstaller#com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:21.372 14932 18749 W FlagStore: java.lang.SecurityException: GoogleCertificatesRslt: not allowed: pkg=com.com2us.inotia4.normal.freefull.google.global.android.common, sha256=[cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4], atk=false, ver=264231035.true (go/gsrlt)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3361)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at android.os.Parcel.createException(Parcel.java:3345)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at android.os.Parcel.readException(Parcel.java:3328)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at android.os.Parcel.readException(Parcel.java:3270)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at acre.transactAndReadExceptionReturnVoid(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):11)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at fyfs.b(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):12)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at fycp.d(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):20)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at brhg.a(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):5)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at brcv.g(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):7)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at brfl.t(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):10)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at brfl.u(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):308)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at brfl.c(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):16)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at brfr.handleMessage(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):881)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at dqgq.lR(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):1)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at dqgq.dispatchMessage(:com.google.android.gms@264231035@26.42.31 (260400-1005867181):5)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at android.os.Looper.loopOnce(Looper.java:274)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at android.os.Looper.loop(Looper.java:369)
+10-31 23:11:21.372 14932 18749 W FlagStore: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+10-31 23:11:21.373 14932 18776 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:11:21.373 14932 18776 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:11:21.373 14932 18776 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:11:21.375 14932 18764 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:11:21.379 14932 18890 D AdvertisingIdClient: AdvertisingIdClient is bounded
+10-31 23:11:21.382 14932 18890 I AdvertisingIdClient: shouldSendLog -1
+10-31 23:11:21.382 14932 18890 I AdvertisingIdClient: GetInfoInternal elapse 112ms
+10-31 23:11:21.388 14932 18905 D CameraExtStub: init android.hardware.camera2.impl.CameraExtImplXiaoMi
+10-31 23:11:21.393 14932 18905 D CameraInjector: waitForResult: 
+10-31 23:11:21.394 14932 18938 D CameraInjector: updateCloudCameraControllerInfoAsync: E
+10-31 23:11:21.403 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.403 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.403 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.403 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.403 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.403 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.404 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.404 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.404 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.404 14932 14932 D InsetsController: com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity hide: statusBars navigationBars android.view.InsetsController@dd176aa android.view.InsetsController.applyAnimation:2241 android.view.InsetsController.applyAnimation:2212 android.view.InsetsController.onControlsChanged:1155 android.view.ViewRootImpl.onActiveControlsChanged:3365 android.view.ViewRootImpl.handleInsetsControlChanged:3319 android.view.ViewRootImpl$W.insetsControlChanged:13899 
+10-31 23:11:21.409 14932 14932 D VRI[MainActivity]: vri.Setup new sync=wmsSync-VRI[MainActivity]#2
+10-31 23:11:21.412 14932 14932 D VRI[MainActivity]: vri.reportDrawFinished 0 0 Rect(0, 0 - 2400, 1080)
+10-31 23:11:21.414 14932 18764 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:11:21.422 14932 18939 D InsetsController: default animation onReady types: 3 controller=android.view.InsetsAnimationControlImpl@ce80f86
+10-31 23:11:21.422 14932 18939 D ViewRootImplStubImpl: requestedTypes: 3
+10-31 23:11:21.423 14932 18939 D ViewRootImplStubImpl: notifyImeAnimEvent: isForShow = false, isAnimStart = true, has context = true, has AutofillManager = true, isMiuiAnim = false
+10-31 23:11:21.550 14932 14932 I HandWritingStubImpl: refreshLastKeyboardType: 1
+10-31 23:11:21.550 14932 14932 I HandWritingStubImpl: getCurrentKeyboardType: 1
+10-31 23:11:21.746 14932 18905 I CameraInjector: waitForResult: time out waiting for sUpdateCloudCameraInfoLatch isInCloudCameraAuxPackageList
+10-31 23:11:21.746 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.746 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.746 14932 18905 W CameraExtImplXiaoMi: ignore the status update of camera: 2
+10-31 23:11:21.747 14932 18905 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.747 14932 18905 D CameraInjector: waitForResult: 
+10-31 23:11:21.747 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.747 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.747 14932 18905 W CameraExtImplXiaoMi: ignore the status update of camera: 3
+10-31 23:11:21.748 14932 18905 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.748 14932 18905 D CameraInjector: waitForResult: 
+10-31 23:11:21.748 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.748 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.748 14932 18905 W CameraExtImplXiaoMi: ignore the status update of camera: 4
+10-31 23:11:21.757 14932 18905 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.757 14932 18905 D CameraInjector: waitForResult: 
+10-31 23:11:21.757 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.757 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.757 14932 18905 W CameraExtImplXiaoMi: ignore the status update of camera: 5
+10-31 23:11:21.758 14932 18905 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.758 14932 18905 D CameraInjector: waitForResult: 
+10-31 23:11:21.758 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.758 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.758 14932 18905 W CameraExtImplXiaoMi: ignore the status update of camera: 6
+10-31 23:11:21.758 14932 18905 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.758 14932 18905 D CameraInjector: waitForResult: 
+10-31 23:11:21.758 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.758 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.758 14932 18905 W CameraExtImplXiaoMi: ignore the status update of camera: 7
+10-31 23:11:21.759 14932 18905 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.759 14932 18905 D CameraInjector: waitForResult: 
+10-31 23:11:21.759 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.759 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.759 14932 18905 W CameraExtImplXiaoMi: ignore the status update of camera: 8
+10-31 23:11:21.761 14932 18905 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.761 14932 18905 D CameraInjector: waitForResult: 
+10-31 23:11:21.761 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.761 14932 18905 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.761 14932 18905 W CameraExtImplXiaoMi: ignore the status update of camera: 9
+10-31 23:11:21.764 14932 18698 W .android.common: PerfMonitor async binderTransact :  time=389ms interface=android.hardware.ICameraServiceListener code=3
+10-31 23:11:21.773 14932 18939 D InsetsAnimationCtrlImpl: notifyFinished shown: false, currentAlpha: 1,000000, currentInsets: Insets{left=0, top=0, right=0, bottom=0}
+10-31 23:11:21.773 14932 18939 D InsetsAnimationCtrlImpl: Animation finished abruptly.
+10-31 23:11:21.773 14932 18939 D InsetsController: onAnimationFinish showOnFinish: false
+10-31 23:11:21.773 14932 18698 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.773 14932 18698 D CameraInjector: waitForResult: 
+10-31 23:11:21.773 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.773 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.773 14932 18698 W CameraManagerGlobal: ignore the torch status update of camera: 2
+10-31 23:11:21.774 14932 18698 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.774 14932 18698 D CameraInjector: waitForResult: 
+10-31 23:11:21.774 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.774 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.774 14932 18698 W CameraManagerGlobal: ignore the torch status update of camera: 3
+10-31 23:11:21.775 14932 18939 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:21.775 14932 18939 D ViewRootImplStubImpl: notifyImeAnimEvent: isForShow = false, isAnimStart = false, has context = true, has AutofillManager = true, isMiuiAnim = false
+10-31 23:11:21.783 14932 18698 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.783 14932 18698 D CameraInjector: waitForResult: 
+10-31 23:11:21.783 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.783 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.783 14932 18698 W CameraManagerGlobal: ignore the torch status update of camera: 4
+10-31 23:11:21.784 14932 18698 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.784 14932 18698 D CameraInjector: waitForResult: 
+10-31 23:11:21.784 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.784 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.784 14932 18698 W CameraManagerGlobal: ignore the torch status update of camera: 5
+10-31 23:11:21.787 14932 18698 D CameraInjector: updateCloudCameraControllerInfoAsync: has aleardy start update task.
+10-31 23:11:21.787 14932 18698 D CameraInjector: waitForResult: 
+10-31 23:11:21.787 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelist"
+10-31 23:11:21.788 14932 18698 W libc    : Access denied finding property "vendor.camera.aux.packagelistext"
+10-31 23:11:21.788 14932 18698 W CameraManagerGlobal: ignore the torch status update of camera: 6
+10-31 23:11:21.923 14932 18770 W BpBinder: PerfMonitor binderTransact: time=1033ms interface=android.content.IContentProvider code=1
+10-31 23:11:21.926 14932 14932 I AdvertisingIdClient: getting error as 17: API: ClientTelemetry.API is not available on this device. Connection failed with: ConnectionResult{statusCode=API_DISABLED_FOR_CONNECTION, resolution=null, message=null, clientMethodKey=null}
+10-31 23:11:21.927 14932 14932 I .android.common: AssetManager2(0xb4000075afd62f78) locale list changing from [] to [vi-VN]
+10-31 23:11:21.930 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.930 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.930 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.930 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.930 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.930 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.932 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.932 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.932 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.932 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.932 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.932 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.950 14932 14932 D InsetsController: hide(ime(), fromIme=false)
+10-31 23:11:21.950 14932 14932 I ImeTracker: com.com2us.inotia4.normal.freefull.google.global.android.common:1ba94a72: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+10-31 23:11:21.954 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.954 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.954 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.954 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.958 14932 14932 D InsetsController: cancelAnimation of types:3 animType:1 host:com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity invokeCallback=false
+10-31 23:11:21.958 14932 14932 D InsetsController: notifyFinished. shown: false runner=android.view.InsetsAnimationThreadControlRunner@2e8513f
+10-31 23:11:21.964 14932 14932 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:21.965 14932 14932 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:11:21.964 14932 14932 W .android.common: type=1400 audit(0.0:1167008): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=508 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:21.966 14932 14932 D SurfaceView: UPDATE null, mIsCastMode = false
+10-31 23:11:21.967 14932 14932 D ViewRootImplStubImpl: onSurfaceViewAttached:
+10-31 23:11:21.967 14932 14932 D ViewRootImplStubImpl: , vri:android.view.ViewRootImpl@392937, com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:11:21.967 14932 14932 D ViewRootImplStubImpl: , vri size:2400x1080
+10-31 23:11:21.967 14932 14932 D ViewRootImplStubImpl: , surfaceView:com.com2us.wrapper.game.CCustomGLSurfaceView{19ac25b VFE...... ......ID 0,0-2400,1080}, SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity]
+10-31 23:11:21.967 14932 14932 D ViewRootImplStubImpl: , surfaceView size:2400x1080
+10-31 23:11:21.967 14932 14932 D ViewRootImplStubImpl: , surfaceControl:Surface(name=19ac25b SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity](BLAST)#478536)/@0xa6f7ea4
+10-31 23:11:21.968 14932 14932 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:11:21.972 14932 14932 W .android.common: type=1400 audit(0.0:1167009): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=508 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:11:21.975 14932 18698 D BLASTBufferQueue: onGameOptimizeParameter: new GameOptimizeInfo game: no valid app, VsyncBuffergame: no valid app, mOptimizeEnable: 0, mSuperTouchEnable: 0,mVsyncBufferEnable: 0,mPendingBufferEnable 0,mNeedDynamicDropBuffer: 0, mNeedFirstFrameDropBuffer: 0
+10-31 23:11:21.975 14932 18698 D BLASTBufferQueue: 
+10-31 23:11:21.975 14932 14932 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:11:21.977 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.977 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.977 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.977 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.977 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.977 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:21.979 14932 14932 D SurfaceView: UPDATE Surface(name=19ac25b SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity]#478535)/@0x777e110, mIsProjectionMode = false
+10-31 23:11:22.042 14932 14932 I HandWritingStubImpl: getCurrentKeyboardType: 1
+10-31 23:11:22.069 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:22.069 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:22.069 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:22.069 14932 14932 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:11:22.474 14932 18938 D CameraInjector: isMiviInfo4: use MiviInfo V3.0
+10-31 23:11:22.474 14932 18938 D CameraInjector: updateCloudCameraControllerInfoAsync: X
+10-31 23:11:22.474 14932 18938 E CameraInjector: updateCloudCameraControllerInfoAsync: latch count down error
+10-31 23:11:22.515 19091 19091 E libsigchain: Setting SIGSEGV to SIG_DFL
+10-31 23:11:22.546 19091 19091 E libsigchain:   #00 pc 000057a0  /apex/com.android.art/lib64/libsigchain.so (LogStack()+208) (BuildId: b183b45553b465e773e16f26f878b520)
+10-31 23:11:22.546 19091 19091 E libsigchain:   #01 pc 000064ac  /apex/com.android.art/lib64/libsigchain.so (sigaction64+212) (BuildId: b183b45553b465e773e16f26f878b520)
+10-31 23:11:22.546 19091 19091 E libsigchain:   #02 pc 00087f70  /apex/com.android.runtime/lib64/bionic/libc.so (ApplyAttrs(short, __posix_spawnattr* const*)+92) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:11:22.546 19091 19091 E libsigchain:   #03 pc 00087880  /apex/com.android.runtime/lib64/bionic/libc.so (posix_spawn(int*, char const*, __posix_spawn_file_actions* const*, __posix_spawnattr* const*, char* const*, char* const*, int (*)(char const*, char* const*, char* const*))+340) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:11:22.546 19091 19091 E libsigchain:   #04 pc 0008bc40  /apex/com.android.runtime/lib64/bionic/libc.so (system+420) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:11:22.546 19091 19091 E libsigchain:   #05 pc 00274cb4  /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/lib/arm64/libgame.so (Protection::isRunningMemoryHack()+320) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:11:22.546 19091 19091 E libsigchain:   #06 pc 0026f06c  /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/lib/arm64/libgame.so (Java_com_com2us_wrapper_kernel_CWrapperKernel_nativeStartClet+72) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:11:22.546 19091 19091 E libsigchain:   #07 pc 0035efec  /system/framework/arm64/boot.oat (art_jni_trampoline+108) (BuildId: 2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb)
+10-31 23:11:22.546 19091 19091 E libsigchain:   #08 pc 006a8208  /apex/com.android.art/lib64/libart.so (nterp_helper+152) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #09 pc 0078e410  /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/oat/arm64/base.vdex (com.com2us.wrapper.kernel.CWrapperKernel.-$$Nest$smnativeStartClet+0) (BuildId: )
+10-31 23:11:22.547 19091 19091 E libsigchain:   #10 pc 006a81a4  /apex/com.android.art/lib64/libart.so (nterp_helper+52) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #11 pc 0078db90  /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/oat/arm64/base.vdex (com.com2us.wrapper.kernel.CWrapperKernel$CInnerStateNativeStartClet.start+0) (BuildId: )
+10-31 23:11:22.547 19091 19091 E libsigchain:   #12 pc 006a90c4  /apex/com.android.art/lib64/libart.so (nterp_helper+3924) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #13 pc 0078ef40  /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/oat/arm64/base.vdex (com.com2us.wrapper.kernel.CWrapperKernelStateManager.setState+20) (BuildId: )
+10-31 23:11:22.547 19091 19091 E libsigchain:   #14 pc 006a81a4  /apex/com.android.art/lib64/libart.so (nterp_helper+52) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #15 pc 0078d490  /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/oat/arm64/base.vdex (com.com2us.wrapper.kernel.CWrapperKernel$5.run+4) (BuildId: )
+10-31 23:11:22.547 19091 19091 E libsigchain:   #16 pc 006a9ee4  /apex/com.android.art/lib64/libart.so (nterp_helper+7540) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #17 pc 0023cf84  /system/framework/framework.jar (android.opengl.GLSurfaceView$GLThread.guardedRun+1460) (BuildId: )
+10-31 23:11:22.547 19091 19091 E libsigchain:   #18 pc 006a90c4  /apex/com.android.art/lib64/libart.so (nterp_helper+3924) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #19 pc 0023dd22  /system/framework/framework.jar (android.opengl.GLSurfaceView$GLThread.run+122) (BuildId: )
+10-31 23:11:22.547 19091 19091 E libsigchain:   #20 pc 0034a194  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+612) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #21 pc 0028a79c  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+224) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #22 pc 004af528  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+1368) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #23 pc 0008167c  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+184) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:11:22.547 19091 19091 E libsigchain:   #24 pc 00073e5c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 56f2e102db31359cc22460be335d240c)
+--------- beginning of crash
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: FATAL EXCEPTION: Thread-19
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: Process: com.com2us.inotia4.normal.freefull.google.global.android.common, PID: 14932
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:150)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.Dns$1.lookup(Dns.java:41)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:178)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.http.RouteSelector.nextProxy(RouteSelector.java:144)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:86)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:176)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at com.com2us.wrapper.network.CWrapperHttp$1.run(CWrapperHttp.java:130)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at libcore.io.Linux.android_getaddrinfo(Native Method)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at libcore.io.BlockGuardOs.android_getaddrinfo(BlockGuardOs.java:222)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:135)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	... 15 more
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: Caused by: android.system.ErrnoException: android_getaddrinfo failed: EPERM (Operation not permitted)
+10-31 23:11:22.707 14932 19124 E AndroidRuntime: 	... 20 more
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: uncaught: time=1793463082709 (2026-10-31 23:11:22)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: thread=Thread-19
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:150)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.Dns$1.lookup(Dns.java:41)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:178)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.http.RouteSelector.nextProxy(RouteSelector.java:144)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:86)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:176)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponse(HttpURLConnectionImpl.java:411)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getResponseCode(HttpURLConnectionImpl.java:542)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at com.com2us.wrapper.network.CWrapperHttp$1.run(CWrapperHttp.java:130)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at libcore.io.Linux.android_getaddrinfo(Native Method)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at libcore.io.BlockGuardOs.android_getaddrinfo(BlockGuardOs.java:222)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:135)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	... 15 more
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: Caused by: android.system.ErrnoException: android_getaddrinfo failed: EPERM (Operation not permitted)
+10-31 23:11:22.710 14932 19124 E NAMP-DIAG: 	... 20 more
+10-31 23:11:22.713 14932 19125 W FileUtils: Failed to chmod(/data/miuilog/stability/jetrace): android.system.ErrnoException: chmod failed: EACCES (Permission denied)
+10-31 23:11:22.714 14932 19125 W RuntimeInitImpl: dump java trace fail /data/miuilog/stability/jetrace/2026-10-31-23-11-22-712_com.com2us.inotia4.normal.freefull.google.global.android.common_14932.trace.tmp: open failed: EACCES (Permission denied)
+10-31 23:11:22.714 14932 19124 W ScoutUtils: Failed to mkdir /data/miuilog/stability/hprof/
+10-31 23:11:22.739 14932 18786 I ContentCatcher: SettingTrigger : unregister status observer com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:11:22.739 14932 19124 I Process : Process is going to kill itself!
+10-31 23:11:22.739 14932 19124 I Process : java.lang.Exception
+10-31 23:11:22.739 14932 19124 I Process : 	at android.os.Process.killProcess(Process.java:1457)
+10-31 23:11:22.739 14932 19124 I Process : 	at com.android.internal.os.RuntimeInit$KillApplicationHandler.uncaughtException(RuntimeInit.java:205)
+10-31 23:11:22.739 14932 19124 I Process : 	at com.namp.vh.diag.CrashLog$1.uncaughtException(CrashLog.java:63)
+10-31 23:11:22.739 14932 19124 I Process : 	at org.chromium.base.JavaExceptionReporter.uncaughtException(chromium-SystemWebViewGoogle6432.aab-stable-807804703:32)
+10-31 23:11:22.739 14932 19124 I Process : 	at com.hive.HiveSdkLifecycle.onCreate$lambda$0(SourceFile:6)
+10-31 23:11:22.739 14932 19124 I Process : 	at com.hive.HiveSdkLifecycle.$r8$lambda$HS7LYT0qKcEuYIDYhe3is6YaEtI(SourceFile:0)
+10-31 23:11:22.739 14932 19124 I Process : 	at com.hive.HiveSdkLifecycle$$ExternalSyntheticLambda0.uncaughtException(R8$$SyntheticClass:0)
+10-31 23:11:22.739 14932 19124 I Process : 	at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1071)
+10-31 23:11:22.739 14932 19124 I Process : 	at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:1066)
+10-31 23:11:22.739 14932 19124 I Process : 	at java.lang.Thread.dispatchUncaughtException(Thread.java:2442)
+10-31 23:11:22.739 14932 19124 I Process : Sending signal. PID: 14932 SIG: 9
+10-31 23:11:22.739 14932 19124 I libc    : kill: send 9 to pid 14932
+10-31 23:11:22.739 14932 19124 I libc    : debug pid reuse, real pid 14932
+10-31 23:12:01.359 17102 17102 I .android.common: Using CollectorTypeCC GC.
+10-31 23:12:01.366 17102 17102 E .android.common: Not starting debugger since process cannot load the jdwp agent.
+10-31 23:12:01.371 17102 17102 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-31 23:12:01.375 17102 17102 I ActivityThread: Current dynamic renderEngine type=0
+10-31 23:12:01.384 17102 19801 D MiuiDownscaleImpl: set override inverted scale : 1.0
+10-31 23:12:01.386 17102 17102 I RENDER_TURBO: onActivityThreadCreate not in white list, pkg=com.com2us.inotia4.normal.freefull.google.global.android.common, type=vermeer
+10-31 23:12:01.389 17102 19801 D AppScoutStateMachine: 17102-ScoutStateMachinecreated
+10-31 23:12:01.396 17102 17102 I .android.common: AssetManager2(0xb4000075afd4dad8) locale list changing from [en-US] to [vi-VN]
+10-31 23:12:01.396 17102 17102 D ActivityThread: setEmbeddedParam packageName=com.com2us.inotia4.normal.freefull.google.global.android.common processName=com.com2us.inotia4.normal.freefull.google.global.android.common isEmbedded=false isIsolated=false
+10-31 23:12:01.397 17102 17102 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-31 23:12:01.397 17102 17102 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-31 23:12:01.397 17102 17102 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+10-31 23:12:01.423 17102 17102 D nativeloader: Configuring clns-10 for other apk /data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/lib/arm64:/data/app/~~vQ0f9tZYMJ8VP93dCFdT_w==/com.com2us.inotia4.normal.freefull.google.global.android.common-p1fFaqz8DEWt5rMRoL_VJg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:12:01.438 17102 17102 I .android.common: AssetManager2(0xb4000075afd5d4d8) locale list changing from [] to [vi-VN]
+10-31 23:12:01.440 17102 19805 D MiuiMonitorThread: Shared singleton Thread for stability monitor start
+10-31 23:12:01.440 17102 17102 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:12:01.440 17102 17102 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:12:01.440 17102 17102 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:12:01.441 17102 17102 V GraphicsEnvironment: Currently set values for:
+10-31 23:12:01.441 17102 17102 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-31 23:12:01.441 17102 17102 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-31 23:12:01.441 17102 17102 V GraphicsEnvironment: com.com2us.inotia4.normal.freefull.google.global.android.common is not listed in per-application setting
+10-31 23:12:01.441 17102 17102 V GraphicsEnvironment: ANGLE allowlist from config: 
+10-31 23:12:01.441 17102 17102 V GraphicsEnvironment: com.com2us.inotia4.normal.freefull.google.global.android.common is not listed in ANGLE allowlist or settings, returning default
+10-31 23:12:01.441 17102 17102 V GraphicsEnvironment: The updatable driver is turned off on this device.
+10-31 23:12:01.444 17102 17102 D ResMonitorStub: The current process type is: third_party_app, process name is: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:12:01.445 17102 17102 I NAMP-DIAG: da cai handler, sdk=36
+10-31 23:12:01.450 17102 19821 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-31 23:12:01.452 17102 17102 I FirebaseApp: Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+10-31 23:12:01.454 17102 19805 I Perf    : Connecting to perf service.
+10-31 23:12:01.455 17102 17102 I FirebaseInitProvider: FirebaseApp initialization successful
+10-31 23:12:01.456 17102 19805 I ActivityThread: TrafficStats init done
+10-31 23:12:01.459 17102 19805 I ForceDarkHelperStubImpl: initialize for com.com2us.inotia4.normal.freefull.google.global.android.common , ForceDarkOrigin
+10-31 23:12:01.460 17102 19805 D nativeloader: Load libforcedarkimpl.so using system ns (caller=/system_ext/framework/miui-framework.jar): ok
+10-31 23:12:01.460 17102 19805 D HWUI    : JNI_OnLoad success
+10-31 23:12:01.460 17102 19805 I MiuiForceDarkConfig: setConfig density:2.250000, mainRule:0, secondaryRule:0, tertiaryRule:0
+10-31 23:12:01.472 17102 19805 I ActivityThread: Miui Feature Init done
+10-31 23:12:01.477 17102 17102 I HiveInitializer: HiveInitializer  initialization successful
+10-31 23:12:01.477 17102 17102 D HiveInitializer: Already have referrer.
+10-31 23:12:01.477 17102 17102 I NativeTurboSchedManager: Load libmiui_runtime
+10-31 23:12:01.477 17102 17102 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:12:01.486 17102 17102 W DynamiteModule: Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+10-31 23:12:01.490 17102 17102 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+10-31 23:12:01.490 17102 17102 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+10-31 23:12:01.490 17102 19843 D CompatChangeReporter: Compat change id reported: 288912692; UID 10396; state: ENABLED
+10-31 23:12:01.490 17102 17102 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-31 23:12:01.490 17102 17102 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/com.android.location.provider.jar
+10-31 23:12:01.490 17102 17102 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/com.android.media.remotedisplay.jar
+10-31 23:12:01.494 17102 17102 D nativeloader: Configuring clns-11 for other apk /system_ext/framework/com.android.extensions.appfunctions.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/lib/arm64:/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+10-31 23:12:01.494 17102 17102 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libmisys_jni.xiaomi.so:libpag.hyperos.so:libffavc.hyperos.so:libxiaomi_modemdumpsdx55_jni.modem.so:libxiaomi_modemdump_jni.modem.so:libmodemsmartengine_jni.modem.so:libupdateprof.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:libqesdk_ndk_platform.qti.so:liblistenjni.qti.so:libautoui_image.xiaomi.so
+10-31 23:12:01.494 17102 17102 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-31 23:12:01.494 17102 17102 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+10-31 23:12:01.500 17102 17102 D nativeloader: Configuring clns-12 for other apk /data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/lib/arm64:/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+10-31 23:12:01.519 17102 17102 I .android.common: AssetManager2(0xb4000075afd5ce98) locale list changing from [] to [vi-VN]
+10-31 23:12:01.521 17102 19850 I DpmTcmClient: RegisterTcmMonitor from: $Proxy3
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: Exception while executing runnable com.google.firebase.installations.FirebaseInstallations$$ExternalSyntheticLambda1@e50fb10
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:150)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.Dns$1.lookup(Dns.java:41)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:178)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.nextProxy(RouteSelector.java:144)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:86)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:176)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:131)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getOutputStream(HttpURLConnectionImpl.java:262)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getOutputStream(DelegatingHttpsURLConnection.java:219)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:30)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.writeRequestBodyToOutputStream(FirebaseInstallationServiceClient.java:234)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.writeFIDCreateRequestBodyToOutputStream(FirebaseInstallationServiceClient.java:216)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.createFirebaseInstallation(FirebaseInstallationServiceClient.java:174)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.registerFidWithServer(FirebaseInstallations.java:533)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.doNetworkCallIfNecessary(FirebaseInstallations.java:387)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.$r8$lambda$_LVWvNUQ4Iq8r5kiH7vh8J1nAu0(FirebaseInstallations.java:372)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations$$ExternalSyntheticLambda1.run(R8$$SyntheticClass:0)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$1.run(SequentialExecutor.java:117)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$QueueWorker.workOnQueue(SequentialExecutor.java:229)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$QueueWorker.run(SequentialExecutor.java:174)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1302)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:677)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.concurrent.CustomThreadFactory.$r8$lambda$XB8AY3Hcio74byWuTzgVEC3Hiek(CustomThreadFactory.java:47)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at java.lang.Thread.run(Thread.java:1119)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at libcore.io.Linux.android_getaddrinfo(Native Method)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at libcore.io.BlockGuardOs.android_getaddrinfo(BlockGuardOs.java:222)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:135)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	... 31 more
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: Caused by: android.system.ErrnoException: android_getaddrinfo failed: EPERM (Operation not permitted)
+10-31 23:12:01.536 17102 19850 E SequentialExecutor: 	... 36 more
+10-31 23:12:01.543 17102 17102 I ProviderInstaller: Installed default security provider AndroidOpenSSL (via CompatProvider)
+10-31 23:12:01.543 17102 17102 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+10-31 23:12:01.546 17102 17102 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+10-31 23:12:01.546 17102 17102 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+10-31 23:12:01.553 17102 19855 D WM-ForceStopRunnable: The default process name was not specified.
+10-31 23:12:01.554 17102 19855 D WM-ForceStopRunnable: Performing cleanup operations.
+10-31 23:12:01.557 17102 17102 W com.facebook.internal.Validate: No internet permissions granted for the app, please add <uses-permission android:name="android.permission.INTERNET" /> to your AndroidManifest.xml.
+10-31 23:12:01.557 17102 17102 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:12:01.558 17102 17102 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:12:01.559 17102 17102 W com.facebook.UserSettingsManager: The value for AdvertiserIDCollectionEnabled is currently set to FALSE so you're sending app events without collecting Advertiser ID. This can affect the quality of your advertising and analytics results.
+10-31 23:12:01.559 17102 17102 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:12:01.560 17102 17102 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:12:01.568 17102 17102 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:12:01.588 17102 17102 W libc    : Access denied finding property "vendor.boostfwk.frameprefetcher"
+10-31 23:12:01.592 17102 19856 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:12:01.592 17102 19859 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:12:01.592 17102 17102 D UnionPowerNotifier: check_union_power_ioctl -1
+10-31 23:12:01.593 17102 17102 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:12:01.593 17102 17102 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:12:01.593 17102 17102 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:12:01.593 17102 17102 D .android.common: blurUtils, initBackgroundBlurMinInterval processName(com.com2us.inotia4.normal.freefull.google.global.android.common), inWhiteLists(0)
+10-31 23:12:01.593 17102 19856 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:12:01.593 17102 19805 I ActivityThread: HardwareRenderer preload  done
+10-31 23:12:01.593 17102 19859 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:12:01.596 17102 19872 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-31 23:12:01.614 17102 17102 I .android.common: AssetManager2(0xb4000075afd638d8) locale list changing from [] to [vi-VN]
+10-31 23:12:01.618 17102 19872 W libc    : Access denied finding property "vendor.migl.debug"
+10-31 23:12:01.618 17102 19872 I libMiGL : EnableDR: 0
+10-31 23:12:01.618 17102 19872 D libMiGL : mDFIInterval: -1
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: QUALCOMM build                   : bad34dcf83, I1064ae0a1f
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: Build Date                       : 11/28/25
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: E031.41.03.64
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: Local Branch                     : 
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.13.2.0.11.00.00.856.062
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: Remote Branch                    : NONE
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: Reconstruct Branch               : NOTHING
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: Build Config                     : S P 14.1.4 AArch64
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+10-31 23:12:01.620 17102 19872 I AdrenoGLES-0: Driver Version                   : 0676.76.1
+10-31 23:12:01.625 17102 19844 W ServiceBindIntentUtils: Dynamic lookup for intent failed for action: com.google.android.gms.games.internal.connect.service.START
+10-31 23:12:01.628 17102 17102 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common

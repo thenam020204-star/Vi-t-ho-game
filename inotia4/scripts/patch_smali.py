@@ -95,6 +95,19 @@ PATCHES = {
 }
 
 
+# Them handler bat ngoai le vao method co san (KHONG doi than lenh): sau moi dong `.catch <cu>` khop chinh xac,
+# them `.catch <moi>` cung khoang try va cung handler. (class, method header, ngoai le cu, ngoai le moi, so lan khop)
+CATCH_ADD = {
+    'net': [
+        # Khong co quyen INTERNET -> DNS nem SecurityException (RuntimeException), luong HTTP cua wrapper chi bat
+        # IOException -> sap app (log may that 2026-10-31: Protection::threadDownloadHackAppData -> NetConnectCB ->
+        # CS_netHttpConnectEx -> CWrapperHttp$1.run). Handler :catch_0 chi goi Throwable.printStackTrace roi
+        # bao native loi mang (iHttpStatus=-1, nativeConnectCB(fd,-1)) = dung nhanh "may khong co mang" cua ban goc.
+        ('com/com2us/wrapper/network/CWrapperHttp$1', '.method public run()V',
+         'Ljava/io/IOException;', 'Ljava/lang/SecurityException;', 2),
+    ],
+}
+
 # Method MOI them vao class (khong doi gi cua class goc): de lop Offline goi duoc member private.
 ADD_METHODS = {
     'offline': [
@@ -143,7 +156,26 @@ def find_class(dec, cls):
 def apply(dec, groups):
     total = 0
     for gname in groups:
-        for cls, header, newbody in PATCHES[gname]:
+        for cls, header, old, new, want in CATCH_ADD.get(gname, []):
+            path = find_class(dec, cls)
+            src = open(path, encoding='utf-8').read()
+            pat = re.compile(r'^' + re.escape(header) + r'\n.*?^\.end method$', re.S | re.M)
+            m = pat.findall(src)
+            if len(m) != 1:
+                raise SystemExit('CATCH %s %s: method khop %d lan (can 1)' % (cls, header, len(m)))
+            body = m[0]
+            if new in body:
+                raise SystemExit('CATCH %s: da co %s' % (cls, new))
+            crx = re.compile(r'^(\s*)\.catch ' + re.escape(old) + r' (\{[^}]*\}) (:\w+)$', re.M)
+            hits = crx.findall(body)
+            if len(hits) != want:
+                raise SystemExit('CATCH %s: .catch %s khop %d lan (can %d)' % (cls, old, len(hits), want))
+            nbody = crx.sub(lambda h: '%s\n%s.catch %s %s %s' % (h.group(0), h.group(1), new, h.group(2), h.group(3)), body)
+            src = src.replace(body, nbody)
+            open(path, 'w', encoding='utf-8').write(src)
+            total += 1
+            print('catch   %s %s: +%s x%d' % (cls, header, new, want))
+        for cls, header, newbody in PATCHES.get(gname, []):
             path = find_class(dec, cls)
             src = open(path, encoding='utf-8').read()
             pat = re.compile(r'^' + re.escape(header) + r'\n.*?^\.end method$', re.S | re.M)
@@ -168,7 +200,7 @@ def apply(dec, groups):
 
 if __name__ == '__main__':
     a = sys.argv[1:]
-    groups = ['font', 'lang', 'offline']
+    groups = ['font', 'lang', 'offline', 'net']
     if '--group' in a:
         groups = a[a.index('--group') + 1].split(',')
     apply(a[0], groups)

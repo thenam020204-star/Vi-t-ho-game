@@ -26,7 +26,7 @@ rm -rf "$W/dec"
 $J -jar $T/apktool_2.10.0.jar d -f -o "$W/dec" "$W/merged.apk" > logs/decode.log 2>&1
 
 echo "== 3. va smali"
-$PY scripts/patch_smali.py "$W/dec" --group font,lang,offline | tee logs/patch_smali.log
+$PY scripts/patch_smali.py "$W/dec" --group font,lang,offline,net | tee logs/patch_smali.log
 echo "== 3b. va libgame.so (offline)"
 $PY scripts/patch_lib.py "$W/dec/lib/arm64-v8a/libgame.so" "$W/libgame_patched.so" | tee logs/patch_lib.log
 cp "$W/libgame_patched.so" "$W/dec/lib/arm64-v8a/libgame.so"
