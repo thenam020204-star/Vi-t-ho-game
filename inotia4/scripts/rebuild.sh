@@ -26,8 +26,11 @@ rm -rf "$W/dec"
 $J -jar $T/apktool_2.10.0.jar d -f -o "$W/dec" "$W/merged.apk" > logs/decode.log 2>&1
 
 echo "== 3. va smali"
-$PY scripts/patch_smali.py "$W/dec" --group font,lang | tee logs/patch_smali.log
-if [ -f scripts/patch_offline.py ]; then $PY scripts/patch_offline.py "$W/dec" | tee logs/patch_offline.log; fi
+$PY scripts/patch_smali.py "$W/dec" --group font,lang,offline | tee logs/patch_smali.log
+echo "== 3b. va libgame.so (offline)"
+$PY scripts/patch_lib.py "$W/dec/lib/arm64-v8a/libgame.so" "$W/libgame_patched.so" | tee logs/patch_lib.log
+cp "$W/libgame_patched.so" "$W/dec/lib/arm64-v8a/libgame.so"
+if [ -f scripts/patch_manifest.py ]; then $PY scripts/patch_manifest.py "$W/dec/AndroidManifest.xml" | tee logs/patch_manifest.log; fi
 
 echo "== 4. text tieng Viet -> moi slot memorytext"
 G="$W/dec/assets/common/game_res"
@@ -39,9 +42,11 @@ for f in "$G"/memorytext.dat.jpg "$G"/memorytext_{en,de,fr,jp,zhhans,zhhant}.dat
 if [ -d res_vi ] && [ -n "$(ls -A res_vi 2>/dev/null)" ]; then cp -v res_vi/* "$G"/ | tee logs/res_vi.log; fi
 
 echo "== 5. VNFont -> classes3.dex"
-rm -rf "$W/vnf" && mkdir -p "$W/vnf/cls" "$W/vnf/dex"
+rm -rf "$W/vnf" && mkdir -p "$W/vnf/cls" "$W/vnf/stub" "$W/vnf/dex"
 $PY scripts/gen_fontdata.py font/f18vn.bin java/src/com/namp/vh/FontData.java
-env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -d "$W/vnf/cls" java/src/com/namp/vh/*.java
+env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -d "$W/vnf/stub" $(find java/stubs -name '*.java')
+env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -cp "$W/vnf/stub" -d "$W/vnf/cls" java/src/com/namp/vh/*.java
+# chi dong goi com/namp/vh (stub KHONG vao dex)
 $J -cp $T/r8.jar com.android.tools.r8.D8 --release --min-api 23 --output "$W/vnf/dex" "$W"/vnf/cls/com/namp/vh/*.class
 
 echo "== 6. apktool build"

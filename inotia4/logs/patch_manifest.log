@@ -1,0 +1,4 @@
+go quyen android.permission.INTERNET
+go quyen com.android.vending.BILLING
+go quyen com.google.android.c2dm.permission.RECEIVE
+go quyen com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE

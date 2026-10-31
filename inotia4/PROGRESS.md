@@ -9,7 +9,15 @@
 - Ngôn ngữ: `CFunction.getLanguage` luôn trả `"en"`; bản Việt được chép vào mọi slot `memorytext*.dat.jpg`.
 
 ## Đang làm / còn lại
-- [ ] Offline: đã phân tích luồng (xem `docs/offline_phan_tich.md`). Gem/tính năng trả phí đi qua **socket tới server game** (`Network_Connect(6)`), nên phải chọn giữa giả lập server và vá từng tính năng. Chưa vá gì.
+- [x] Offline khởi động, đã kiểm trên emulator unidbg (`emu/`):
+  - `ActiveUser.start` báo thành công ngay; AgeRange trả `(1,4)`;
+  - Hub `device/registered` trả `is_registered=false`; `auth` và mọi request khác trả `error_code=1` (offline); không tạo Peppermint;
+  - bỏ PlayGames sign-in;
+  - vá lib `0x203e68`: bỏ popup "Đăng nhập Hive?" khi bấm START;
+  - gỡ quyền INTERNET, BILLING, C2DM.
+  - Kết quả trên emulator: START vào thẳng màn chọn ô save.
+- [ ] Mua miễn phí (IAP và Gem). Gem nằm trên server game (socket `inotia4.com2us.net:38000`) nên chưa làm.
+- [ ] Emulator sập ở màn chọn save (hỏng heap trong unidbg). Theo yêu cầu người dùng thì không đào sâu; cần test máy thật.
 - [ ] Dịch 10.602 mục bằng `dp` (giữ tên class/kỹ năng/vật phẩm/tên riêng tiếng Anh).
 - [ ] Ảnh có chữ: `UI_BUT_ENG_*`, `UI_TITLEMAIN`, `ETC_ban_*`...
 - [ ] Test trên máy thật: container không có /dev/kvm nên không chạy được Android emulator.

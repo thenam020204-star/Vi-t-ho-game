@@ -4,4 +4,14 @@ patched com/com2us/wrapper/font/CFont .method public drawText([BII[I)I
 patched com/com2us/wrapper/font/CSGLFont .method public drawTextInRect([BIIIII)I
 patched com/com2us/wrapper/font/CSGLFont .method public getStringWidthHeightInRect([BIIII[I)I
 patched com/com2us/wrapper/function/CFunction .method public static getLanguage(Ljava/lang/String;)Ljava/lang/String;
-tong: 6 method
+patched com/com2us/module/activeuser/ActiveUser .method public start(Lcom/com2us/module/manager/ModuleManager$SERVER_STATE;)V
+patched com/com2us/module/activeuser/ActiveUser .method public start(Lcom/com2us/module/manager/ModuleManager$SERVER_STATE;Z)V
+patched com/com2us/module/activeuser/ActiveUser .method private jniGetAgeRange(J)V
+patched com/com2us/peppermint/HubBridge .method public static initializeEx(Ljava/lang/String;I)I
+patched com/com2us/peppermint/HubBridge .method public static asyncRequest(Ljava/lang/String;Ljava/lang/String;JJ)I
+patched com/com2us/peppermint/HubBridge .method public static auth(JJ)I
+patched com/com2us/peppermint/HubBridge .method public static authWithParam(Ljava/lang/String;JJ)I
+patched com/com2us/inotia4/normal/freefull/google/global/android/common/MainActivity .method public static setPlayGamesAuth()V
+added   com/com2us/module/activeuser/ActiveUser (2 method)
+added   com/com2us/peppermint/HubBridge (1 method)
+tong: 17 method

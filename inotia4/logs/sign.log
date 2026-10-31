@@ -7,17 +7,17 @@ keystore:
 
 	SIGN
 	file: /home/user/Vi-t-ho-game/inotia4/work/unsigned_fixed.apk (47.77 MiB)
-	checksum: 88dbdc150165162070743b7247db82ab8ca850e7cfa95ece0b7baee541167823 (sha256)
+	checksum: 60020e4c466f28d395a3583ee27d6822b4fdb21ade61eee678eaab31df97e91 (sha256)
 	- sign success
 
 	VERIFY
 	file: /home/user/Vi-t-ho-game/inotia4/work/signed/unsigned_fixed-signed.apk (47.89 MiB)
-	checksum: 46728b9948c5f851fb4f3671d35d205ef04d757ea74cd9bb186773d9fd7b1f84 (sha256)
+	checksum: 873cab9494c8979b8db0fbf6f41471d8a2bc854878a748223c9f50526665513d (sha256)
 	- signature verified [v1, v2, v3]
 		5 warnings
 		Subject: CN=NAMP Viet hoa, O=NAMP, C=VN
 		SHA256: cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4 / SHA384withRSA
 		Expires: Sun Aug 03 10:20:33 UTC 2081
 
-[Sat Oct 31 10:22:04 UTC 2026][v1.3.0]
-Successfully processed 1 APKs and 0 errors in 1.30 seconds.
+[Sat Oct 31 11:21:43 UTC 2026][v1.3.0]
+Successfully processed 1 APKs and 0 errors in 1.40 seconds.

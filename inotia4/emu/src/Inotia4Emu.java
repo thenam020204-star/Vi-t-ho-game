@@ -256,6 +256,9 @@ public class Inotia4Emu extends AbstractJni {
             }
             // ---- HubBridge offline (Peppermint): moi request tra JSON cuc bo
             case "com/com2us/peppermint/HubBridge->initializeEx(Ljava/lang/String;I)I": return 0;
+            case "com/com2us/peppermint/HubBridge->auth(JJ)I":
+                hubReply("auth", "auth", va.getLongArg(0), va.getLongArg(1));
+                return 0;
             case "com/com2us/peppermint/HubBridge->asyncRequest(Ljava/lang/String;Ljava/lang/String;JJ)I": {
                 String name = (String) va.getObjectArg(0).getValue();
                 Object pr = va.getObjectArg(1) == null ? null : va.getObjectArg(1).getValue();
@@ -374,6 +377,7 @@ public class Inotia4Emu extends AbstractJni {
     /** JSON offline cho tung request Hub (giong lop Java se dua vao APK). */
     static String offlineHubJson(String name) {
         switch (name) {
+            case "auth": return "{\"type\":\"auth\",\"error_code\":1,\"error_msg\":\"offline\"}";
             case "device/registered": return "{\"type\":\"device/registered\",\"error_code\":0,\"error_msg\":\"\",\"is_registered\":false}";
             default: return "{\"type\":\"" + name + "\",\"error_code\":0,\"error_msg\":\"\"}";
         }

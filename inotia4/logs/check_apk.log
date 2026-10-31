@@ -1,7 +1,7 @@
 ok  lib/arm64-v8a/libHercules.so STORED, can 4096
 ok  lib/arm64-v8a/libgame.so STORED, can 4096
-CO    quyen android.permission.INTERNET
+KHONG quyen android.permission.INTERNET
 CO    quyen android.permission.ACCESS_NETWORK_STATE
-CO    quyen com.android.vending.BILLING
+KHONG quyen com.android.vending.BILLING
 META-INF: ['META-INF/NAMP.SF', 'META-INF/NAMP.RSA']
 RESULT: PASS

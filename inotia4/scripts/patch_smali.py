@@ -64,12 +64,66 @@ PATCHES = {
             'move-result v0',
             'return v0')),
     ],
+    'offline': [
+        # ---- Hive ActiveUser: khong goi mang, bao thanh cong qua com.namp.vh.Offline
+        ('com/com2us/module/activeuser/ActiveUser', '.method public start(Lcom/com2us/module/manager/ModuleManager$SERVER_STATE;)V', body(
+            0, 'invoke-static {p0}, Lcom/namp/vh/Offline;->activeUserStart(Lcom/com2us/module/activeuser/ActiveUser;)V', 'return-void')),
+        ('com/com2us/module/activeuser/ActiveUser', '.method public start(Lcom/com2us/module/manager/ModuleManager$SERVER_STATE;Z)V', body(
+            0, 'invoke-static {p0}, Lcom/namp/vh/Offline;->activeUserStart(Lcom/com2us/module/activeuser/ActiveUser;)V', 'return-void')),
+        ('com/com2us/module/activeuser/ActiveUser', '.method private jniGetAgeRange(J)V', body(
+            0, 'invoke-static {p0, p1, p2}, Lcom/namp/vh/Offline;->ageRange(Lcom/com2us/module/activeuser/ActiveUser;J)V', 'return-void')),
+        # ---- Peppermint/Hub: khong tao Peppermint (moi ham khac tu tra -16), request tra JSON cuc bo
+        ('com/com2us/peppermint/HubBridge', '.method public static initializeEx(Ljava/lang/String;I)I', body(
+            1, 'const/4 v0, 0x0', 'return v0')),
+        ('com/com2us/peppermint/HubBridge', '.method public static asyncRequest(Ljava/lang/String;Ljava/lang/String;JJ)I', body(
+            1, 'invoke-static {p0, p2, p3, p4, p5}, Lcom/namp/vh/Offline;->hubAsync(Ljava/lang/String;JJ)I', 'move-result v0', 'return v0')),
+        ('com/com2us/peppermint/HubBridge', '.method public static auth(JJ)I', body(
+            1, 'const-string v0, "auth"', 'invoke-static {v0, p0, p1, p2, p3}, Lcom/namp/vh/Offline;->hubAsync(Ljava/lang/String;JJ)I', 'move-result v0', 'return v0')),
+        ('com/com2us/peppermint/HubBridge', '.method public static authWithParam(Ljava/lang/String;JJ)I', body(
+            1, 'const-string v0, "auth"', 'invoke-static {v0, p1, p2, p3, p4}, Lcom/namp/vh/Offline;->hubAsync(Ljava/lang/String;JJ)I', 'move-result v0', 'return v0')),
+        # ---- Google Play Games: khong dang nhap (ban goc khoa startClet cho toi khi sign-in xong)
+        ('com/com2us/inotia4/normal/freefull/google/global/android/common/MainActivity', '.method public static setPlayGamesAuth()V', body(
+            0, 'return-void')),
+    ],
     'lang': [
         # Luon chon slot tieng Anh (chua ban dich tieng Viet), bat ke locale may.
         ('com/com2us/wrapper/function/CFunction', '.method public static getLanguage(Ljava/lang/String;)Ljava/lang/String;', body(
             1,
             'const-string v0, "en"',
             'return-object v0')),
+    ],
+}
+
+
+# Method MOI them vao class (khong doi gi cua class goc): de lop Offline goi duoc member private.
+ADD_METHODS = {
+    'offline': [
+        ('com/com2us/module/activeuser/ActiveUser', '''
+.method public static namp_notify(Lcom/com2us/module/activeuser/ActiveUser;I)V
+    .locals 2
+
+    const/4 v0, 0x1
+    sput-boolean v0, Lcom/com2us/module/activeuser/ActiveUser;->isInitialized:Z
+    iget-wide v0, p0, Lcom/com2us/module/activeuser/ActiveUser;->jniActiveUserNotifierPointer:J
+    invoke-direct {p0, v0, v1, p1}, Lcom/com2us/module/activeuser/ActiveUser;->jniActiveUserNotifier(JI)V
+    return-void
+.end method
+
+.method public static namp_ageRange(Lcom/com2us/module/activeuser/ActiveUser;JIIIILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p8}, Lcom/com2us/module/activeuser/ActiveUser;->jniGetAgeRangeNotifier(JIIIILjava/lang/String;Ljava/lang/String;)V
+    return-void
+.end method
+'''),
+        ('com/com2us/peppermint/HubBridge', '''
+.method public static namp_cb(Ljava/lang/String;JJ)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/com2us/peppermint/HubBridge;->hubCallbackWithJSON(Ljava/lang/String;JJ)V
+    return-void
+.end method
+'''),
     ],
 }
 
@@ -100,12 +154,21 @@ def apply(dec, groups):
             open(path, 'w', encoding='utf-8').write(src)
             total += 1
             print('patched %s %s' % (cls, header))
+        for cls, code in ADD_METHODS.get(gname, []):
+            path = find_class(dec, cls)
+            src = open(path, encoding='utf-8').read()
+            name = code.split('.method ')[1].split('\n')[0]
+            if name in src:
+                raise SystemExit('ADD %s: method da ton tai: %s' % (cls, name))
+            open(path, 'w', encoding='utf-8').write(src.rstrip('\n') + '\n' + code)
+            total += code.count('.method ')
+            print('added   %s (%d method)' % (cls, code.count('.method ')))
     print('tong: %d method' % total)
 
 
 if __name__ == '__main__':
     a = sys.argv[1:]
-    groups = ['font', 'lang']
+    groups = ['font', 'lang', 'offline']
     if '--group' in a:
         groups = a[a.index('--group') + 1].split(',')
     apply(a[0], groups)
