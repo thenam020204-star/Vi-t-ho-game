@@ -31,6 +31,7 @@ echo "== 3b. va libgame.so (offline)"
 $PY scripts/patch_lib.py "$W/dec/lib/arm64-v8a/libgame.so" "$W/libgame_patched.so" | tee logs/patch_lib.log
 cp "$W/libgame_patched.so" "$W/dec/lib/arm64-v8a/libgame.so"
 if [ -f scripts/patch_manifest.py ]; then $PY scripts/patch_manifest.py "$W/dec/AndroidManifest.xml" | tee logs/patch_manifest.log; fi
+$PY scripts/plist_text.py apply "$W/dec/res/xml" dich/xml_text.tsv | tee logs/plist_text.log
 
 echo "== 4. text tieng Viet -> moi slot memorytext"
 G="$W/dec/assets/common/game_res"

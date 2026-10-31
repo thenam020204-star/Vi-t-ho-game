@@ -19,8 +19,8 @@
 - [ ] Mua miễn phí (IAP và Gem). Gem nằm trên server game (socket `inotia4.com2us.net:38000`) nên chưa làm.
 - [ ] Emulator sập ở màn chọn save (hỏng heap trong unidbg). Theo yêu cầu người dùng thì không đào sâu; cần test máy thật.
 - [x] Dịch xong 10.602 mục (8.392 chuỗi khác nhau) bằng `dp`, `dp check` OK, `memtext check` OK (đủ glyph). Credits giữ tên gốc. `dp` có thêm khoá `code0` trong meta để không coi `<...>` là mã (game không có thẻ).
-  - Build thử: `test_builds/Inotia4_TEST2_vi_full_offline.apk` (check_apk PASS). Mẫu render VNFont: `docs/emu_shots/vnfont_mau_thoai.png`.
-- [ ] Text UI trong `res/xml/{config,hive,clause,hubjoin}.xml` (plist, index 0 = EN) chưa dịch.
+  - Build thử: `test_builds/Inotia4_TEST3_vi_full_offline.apk` (check_apk PASS). Mẫu render VNFont: `docs/emu_shots/vnfont_mau_thoai.png`.
+- [x] Text UI trong `res/xml/{config,hive,clause,hubjoin}.xml`: `dich/xml_text.tsv` (30 key) → `scripts/plist_text.py apply` thay mọi ngôn ngữ trong array (154 `<string>`), đã gắn vào `rebuild.sh`.
 - [ ] Ảnh có chữ: `UI_BUT_ENG_*`, `UI_TITLEMAIN`, `ETC_ban_*`...
 - [ ] Test trên máy thật: container không có /dev/kvm nên không chạy được Android emulator.
 
