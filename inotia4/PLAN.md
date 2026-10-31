@@ -134,13 +134,58 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - `logs/save_TEST7/`, xuất từ máy thật bằng TEST7: `d41d8cd98f00b204e9800998ecf8427e/save0.dat` (3192 B; thư mục = MD5 của chuỗi rỗng, tức khoá rỗng), `edf2113c684f2b822de06dad8d06b016A/thpcheckslot1.dat` (31 B), `appinfo.dat`, `envinfo.dat`;
     - chuỗi tên file `save%d.dat` @0xa5ddb, `thpcheckslot1..3.dat`;
     - log văng: `logs/may_that_TEST6_load_save_2026-10-31.txt`.
-  - Agent: A2 mới (đọc trước từ lúc A1 làm T1; chạy thật khi T1 xong và quản đốc nghiệm thu).
-    - Lý do đổi: A1 làm xong T1 sẽ ở mức ~250–300k ngữ cảnh, mà T3 là RE nặng nên sẽ vượt 400k giữa chừng.
-    - Sau T1, A1 dừng; công nhân này thành người chạy duy nhất.
-  - Việc:
-    - với file `inotia4_save_*.zip` và báo cáo TEST7: giải mã save (`SAVE_LoadDataAsNameAndKey`, khoá rỗng), xác định bước nào của `SAVE_LoadFile` thất bại (`LoadData` / version ≤ 5 / chỉ số ô / `Inventory` / `Quest` / `Event`);
-    - hoặc tái hiện bằng unidbg (T2): game mới → lưu → chạy lại → load.
-  - Hoàn thành khi: nêu được nguyên nhân bằng bằng chứng (disasm + dữ liệu save); có bản vá (nếu lỗi do bản Việt hoá/offline) được kiểm bằng unidbg hoặc bằng phân tích file; ghi vào PROGRESS.
+  - Agent: công nhân chạy mới (A1 mới). A2 đọc trước xong ở ~261k rồi dừng; bàn giao ngay dưới đây.
+  - Bàn giao (A2 đọc trước, quản đốc đã duyệt):
+    - Chuỗi văng:
+      - `GAMESTATE_ProcessMapChange` gọi `bl SAVE_Load` @0x138264 mà bỏ qua giá trị trả về;
+      - `SAVE_Load` trả 0 (0x1d6968) thì `PLAYER_pMainPlayer` (GOT 0x2bebd8) vẫn NULL, vì nó chỉ được gán trong `SAVE_LoadCharacterAll` (0x1d8a44/0x1d8abc);
+      - tiếp đó `SetState(0)` → `EnterPlay` → `CHAR_GetSkillPoint(NULL)`.
+    - Khoá:
+      - `HubSave_GetKey` (0x12b09c) trả buffer `HubSave_key` @0x2d0ca1 (64 B). Offline thì buffer này rỗng, thư mục là MD5("") (khớp).
+      - Lúc lưu (`SAVE_Save` 0x1d5248) và lúc load (`SAVE_LoadData` 0x1d5e5c) dùng cùng khoá. `thpcheckslot` dùng khoá riêng "394572".
+    - Định dạng file:
+      - `n` byte mã + 3 byte đuôi `[Σmã, r, Σthô]` (mod 256).
+      - Công thức mã: `c_i = p_i ^ ((key[(r+i) mod L] + T[(r+i)&255]) & 255)`, với T là bảng 256 B @0xb1bb0, hàm `ENCRYPT_Process2` 0x140970.
+      - Bản thô: 8 B rác, rồi bảng 7 mục `(u16 off,u16 size)` tại p+8 (Info, Player, Chars, Inventory, Quest, Event, ETC). Info có slot, version=5, ...
+    - **Nguyên nhân (gần như chắc):**
+      - khoá rỗng ⇒ L=0 ⇒ `sdiv` chia 0 trả 0 ⇒ chỉ số `msub` = bộ đếm c, không mod;
+      - vòng lặp 0x1409e8/0x140a00/0x140a08 (mã hoá: 0x140a5c–0x140a7c) đọc `key[c]` vượt 64 B, sang `gImgUI`, `g_pSGL`, `g_pSGLDevice`, tức con trỏ heap thay đổi theo mỗi lần chạy;
+      - nên save ghi ở tiến trình A không giải mã được ở tiến trình B: Σthô sai ⇒ `SAVE_LoadData` false.
+      - Bằng chứng: trong `save0.dat`, tại i=1756/1764 (c=1895/1903 ≙ `g_pSGL` 0x2d1408, `g_pSGLDevice` 0x2d1410), phần chênh so với T là con trỏ tag `0xb4000076…`.
+      - Đây là lỗi tiềm ẩn của bản gốc, chỉ lộ khi offline (khoá rỗng), không do Việt hoá.
+    - Còn chưa xác định:
+      - Σthô lúc load chưa tính bằng script;
+      - save cũ của người dùng có lẽ không cứu được;
+      - `APPINFO` dùng khoá `UTIL_GetPhoneNumber` (0x1f0038): nếu khoá này rỗng thì `appinfo.dat` cũng dính cùng lỗi.
+  - Hướng sửa đã chốt (quản đốc):
+    - **P1**: vá lõi `ENCRYPT_Process2`, coi khoá rỗng như độ dài 1 (`key[0]`=NUL ⇒ keystream = T, tất định).
+      - Giữ thư mục MD5(""), không đổi nguồn khoá. Hướng "đổi khoá thành '1'" bị loại vì đụng `HubSave_key` ở nhiều chỗ.
+      - Bản nháp của A2: 0x1409bc `85 9e 05 94` → `b cave`; cave: `bl strlen@plt; cmp w0,#0; csinc w0,w0,wzr,ne; b 0x1409c0`.
+      - **Cave**: ưu tiên vùng đệm thật (byte 0/padding) nằm trong segment R-X đã map, cần chứng minh bằng `llvm-readelf -lS`.
+      - Chỉ khi không có vùng đệm mới mượn thân `SAVE_SaveData` (0x1d5b88). Điều kiện: chứng minh không có xref, không có reloc, không có tên `Java_` / `RegisterNatives` trỏ tới.
+    - **P2 (phòng thủ, làm sau P1)**: `SAVE_Load` trả 0 thì không vào `EnterPlay` với hero NULL. Chỉ nghiên cứu và đề xuất đích an toàn (về menu/màn chọn save), ghi vào tài liệu. **Không áp khi chưa có quản đốc duyệt.**
+  - Task con (làm theo thứ tự, mỗi bước xong ghi `Bàn giao:`):
+    - [ ] T3a. `scripts/re/save_crypto.py <libgame.so> <file> --key STR [--oob zero] [--encrypt]`: đọc T từ lib, giải mã/mã hoá, kiểm Σmã/Σthô, in bảng 7 mục.
+      - Hoàn thành khi:
+        - `thpcheckslot1.dat --key 394572` cho Σthô đúng;
+        - `save0.dat --key ""` (giả lập P1, tức key = T) báo Σthô sai và liệt kê các vị trí chênh;
+        - roundtrip mã hoá → giải mã trên dữ liệu thử là bằng nhau;
+        - định dạng ghi vào `docs/save_format.md`.
+    - [ ] T3b. P1 qua `scripts/patch_lib.py`, mỗi patch kiểm byte gốc.
+      - Thêm cơ chế "base đã có patch" cho patch 0x203e68 có sẵn trong lib của TEST4: khớp old ⇒ áp, khớp new ⇒ báo "đã áp", khác cả hai ⇒ dừng.
+      - `build_from_apk.sh` thêm `--lib`: thay `lib/arm64-v8a/libgame.so` đã vá, giữ căn 16 KB, giữ store/align như cũ.
+      - Hoàn thành khi:
+        - disasm sau vá đúng các lệnh dự kiến;
+        - `apkdiff` so TEST7 chỉ khác `libgame.so` (và manifest/dex nếu có cờ khác);
+        - diff byte của lib chỉ ở các vaddr đã khai báo.
+    - [ ] T3c. Kiểm P1 bằng unidbg gọi thẳng `ENCRYPT_Process2`, không chạy game: khoá "", ghi rác vào `HubSave_key`+64…, mã hoá rồi đổi rác, giải mã.
+      - Hoàn thành khi:
+        - trước vá: giải mã false;
+        - sau vá: true;
+        - kết quả mã hoá của lib đã vá trùng `save_crypto.py --key ""`.
+      - Sau đó build bản thử `test_builds/Inotia4_TEST8_vi_offline.apk` (`--smali net --vnfont --lib --diag`) + SHA256, ghi PROGRESS.
+    - [ ] T3d. P2: tài liệu đề xuất (không áp).
+  - Hoàn thành T3 khi: T3a–T3c đạt, T3d có đề xuất; người dùng thử TEST8 theo quy trình: game mới → lưu → tắt hẳn app → mở lại → load.
 - [ ] T4. IAP "mua miễn phí" — **Quản đốc nghiệm thu** (sau T1)
   - Việc:
     - đọc `com/com2us/module/inappv4/InAppV4` (smali) và native `InAppV4MarketListCB` / `csPurchaseCB` / `csGetProductInfoCB` / `InApp_BuyItem` / `UIPlay_CallInAppShopProc`;
@@ -177,3 +222,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Kiểm chéo trên smali gốc: `iHttpStatus=2` chỉ được gán ở `CWrapperHttp$1:620` (qua `$$Nest$fput`); `Network.sync` bọc `getByName` bằng `catch Exception`; bản build thử đã có.
   - Quyết 3 mục còn mở: ghi ở Quyết định thiết kế.
   - A1 dừng ở ~322k ngữ cảnh; A2 mới đang đọc trước T3.
+- 2026-10-31 quản đốc: A2 đọc trước T3 xong (~261k, dừng).
+  - Nguyên nhân: khoá rỗng ⇒ `ENCRYPT_Process2` đọc khoá vượt buffer.
+  - Chốt hướng P1 (vá lõi mã hoá) + P2 (phòng thủ, chỉ đề xuất); chia T3a–T3d.
+  - Giao T3 cho A1 mới (chạy); A2 mới đọc trước T4.
