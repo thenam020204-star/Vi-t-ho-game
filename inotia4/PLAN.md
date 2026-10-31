@@ -207,11 +207,21 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
         - sau vá: true;
         - kết quả mã hoá của lib đã vá trùng `save_crypto.py --key ""`.
       - Sau đó build bản thử `test_builds/Inotia4_TEST8_vi_offline.apk` (`--smali net --vnfont --lib --diag`) + SHA256, ghi PROGRESS.
-    - [ ] T3d. P2: tài liệu đề xuất (không áp).
+    - [x] T3d. P2: tài liệu đề xuất (không áp).
+  - Quản đốc nghiệm thu T3a–T3d (2026-10-31): ĐẠT.
+    - Đã tự disasm `ENCRYPT_Process2` trước/sau vá:
+      - khoá rỗng ⇒ `csinc` cho độ dài 1 ⇒ chỉ đọc `key[0]` (NUL);
+      - khoá NULL ⇒ `adr` tới "123\0" @0xa5e67;
+      - nhánh mã hoá lấy độ dài từ `x22 = x0` sau vá;
+      - không có lệnh ghi vào vùng khoá hay `sp+4`.
+    - TEST8 sha256 `a1a7b341…c70c` khớp `SHA256_TEST8.txt`.
+    - **P2 duyệt về nguyên tắc nhưng chưa áp**: chỉ áp sau khi T2 (unidbg chạy được tới màn load) kiểm được đường `SetState(4)`.
+    - Còn chờ: người dùng thử TEST8 (game mới → lưu → tắt hẳn app → mở lại → load).
   - Hoàn thành T3 khi: T3a–T3c đạt, T3d có đề xuất; người dùng thử TEST8 theo quy trình: game mới → lưu → tắt hẳn app → mở lại → load.
   - Bàn giao (A1 mới, T3a XONG): tạo `scripts/re/save_crypto.py` (đọc T từ lib qua `adr`, giải/mã hoá, `--selftest`, `--oob zero|file:`, known-plaintext) và `docs/save_format.md`. Kết quả: `thpcheckslot1.dat --key 394572` Σmã 186/Σthô 68 KHỚP; `save0.dat --key ""` Σthô lưu 16 ≠ tính 226, bảng 7 mục hợp lệ, known-plaintext (Info+21..+32 = 140, 20132, 5) sai 8/12 byte và suy ra byte nhớ `0x2d0d67=0xb4`, `0x2d0d6f=0xb4` (tag con trỏ heap trong `gImgUI`), 20 qword con trỏ nghi vấn đều nằm trên biến con trỏ (`gImgUI`, `g_pSGL*`, `s_cachedTexture`) ⇒ xác nhận nguyên nhân khoá rỗng. Roundtrip 250 ca OK. Phát hiện cho T3b: `ENCRYPT_Process2` KHÔNG có vùng đệm ≥16 B trong segment R-X (khe giữa section chỉ 8/12 B: 0x2a82c8, 0xa3e88, 0x127574), nên T3b dự định sửa ngay trong thân hàm (vùng 0x1409a4–0x1409bf, xem Bàn giao T3b khi xong). Bước tiếp: T3b (`scripts/patch_lib.py` + `build_from_apk.sh --lib`). Lệnh: `python3 -I scripts/re/save_crypto.py /opt/work/lib4/libgame.so <file> --key STR`.
   - Bàn giao (A1 mới, T3b XONG): sửa `scripts/patch_lib.py` (mỗi patch có old/new/refs/asm: khớp old ⇒ áp, khớp new ⇒ "đã áp", khác ⇒ dừng; thêm `--disasm`, `--list`, `--diff A B`) và `scripts/build_from_apk.sh` (cờ `--lib`, kiểm lib trong APK == bản đã vá). Patch P1 tại `0x1409a4..0x1409bf` (7 lệnh, trong thân `ENCRYPT_Process2`, KHÔNG dùng cave vì không có khe ≥16 B trong segment R-X: khe giữa section chỉ 8/12 B tại 0xa3e88, 0x127574, 0x2a82c8; không cần mượn `SAVE_SaveData`): trước `cbnz x3,0x1409b8; mov w8,#0x3231; add x20,sp,#4; movk w8,#0x33,lsl#16; str w8,[sp,#4]; mov x0,x20; bl strlen`; sau `cbnz x3,0x1409ac; adr x20,0xa5e67 ("123\0" có sẵn trong .rodata, refs kiểm 31 32 33 00); mov x0,x20; bl strlen; cmp w0,#0; csinc w0,w0,wzr,ne; nop` ⇒ L=max(strlen,1), khoá NULL vẫn "123", khoá khác rỗng không đổi. Lệnh kế `cbz w22,0x140a24` @0x1409c0 giữ nguyên (refs). Patch 0x203e68 cũ: lib TEST4 đã có ⇒ "đã áp". Bằng chứng: `out/Inotia4_T3b_check.apk` (`--smali net --vnfont --lib --diag`, cờ y TEST7) PASS apksigner/zipalign -P 16/check_apk; `apkdiff` vs TEST7 chỉ khác `lib/arm64-v8a/libgame.so`; `patch_lib.py --diff` lib gốc vs lib trong APK: 24 byte, 3 đoạn, đều trong vùng khai báo; lib vá sha256 `406bfe59...298f` (file `/opt/work/t3/libgame_p1.so`). Bước tiếp: T3c (unidbg gọi thẳng `ENCRYPT_Process2`, so lib gốc `/opt/work/lib4/libgame.so` với `/opt/work/t3/libgame_p1.so`). Lệnh: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/<ten>.apk --smali net --vnfont --lib --diag`.
   - Bàn giao (A1 mới, T3c XONG): tạo `emu/src/CryptoCheck.java` (gọi thẳng `ENCRYPT_Process2` + `HubSave_key` trong unidbg, không chạy game), `emu/crypto_check.sh` (chạy lib gốc + lib vá rồi so), `scripts/re/crypto_xcheck.py`, log `logs/t3c_crypto_check.log`. Kết quả (khoá rỗng, n=3189, mã hoá lúc bộ nhớ sau `HubSave_key`=rác G1): lib GỐC giải mã G1 ⇒ true, G2 ⇒ **false**; lib VÁ G1 ⇒ true, G2 ⇒ **true**. Bản mã lib vá == `save_crypto.py --key ""` (r đọc từ buf[n+1]) cả 8 ca (khoá rỗng/394572/a/63 byte/NULL "123"/n=28/n=0); lib GỐC khoá rỗng+rác == mô hình `--oob file:<dump bộ nhớ>` từng byte (chứng minh cơ chế đọc vượt buffer); khoá không rỗng/NULL: lib gốc == lib vá; `thpcheckslot1.dat` giải mã đúng ở cả hai; `save0.dat` thật vẫn false (đúng, không cứu được) và plaintext lib ghi ra == script. Build `test_builds/Inotia4_TEST8_vi_offline.apk` (`--smali net --vnfont --lib --diag`) sha256 `a1a7b341...c70c` (đủ ở `test_builds/SHA256_TEST8.txt`), apksigner/zipalign -P 16/check_apk PASS, `apkdiff` vs TEST7 chỉ khác `lib/arm64-v8a/libgame.so`, cùng chứng chỉ ký TEST7 (`cc559651...20d4`). PROGRESS.md đã ghi mục "Phiên 3". Bước tiếp: T3d (P2 chỉ tài liệu). Lệnh: `bash emu/crypto_check.sh /opt/work/lib4/libgame.so <lib vá>`.
+  - Bàn giao (A1 mới, T3d XONG, T3 chờ người dùng thử TEST8): viết `docs/p2_load_fail_guard.md` (CHỈ đề xuất, KHÔNG áp, không có dòng nào trong `patch_lib.py`/bản build). Nội dung: `SAVE_Load` chỉ có 1 caller (`GAMESTATE_ProcessMapChange` @0x138264, bỏ qua giá trị trả về); đích an toàn = `GAMESTATE_SetState(4)` (đường thoát về MainMenu có sẵn của game: `SystemMenu_ConfirmExitOK`, `GAME_Exit` không đụng hero); patch 2 chỗ: `0x138264 bl SAVE_Load` → `b 0x1d5b88` và cave 28 B trong thân `SAVE_SaveData` (0x1d5b88, đã chứng minh không caller/reloc/adrp/qword/smali) = `bl SAVE_Load; tst w0,#0xff; b.eq +8; b 0x138268; mov w0,#4; bl GAMESTATE_SetState; b 0x1382c4` (byte đủ trong tài liệu, đã dựng+disasm trên bản sao rời). Không có khe đệm ≥16 B nên mới cần cave. Chưa chạy thật (cần T2); fixture test = `save0.dat` TEST7 (vẫn không giải mã được sau P1). Chờ quản đốc duyệt mới áp.
 - [ ] T7. Vẽ lại font f18 ở cỡ lớn thật (thay cách phóng q/16 đang làm mất dấu) — **Quản đốc nghiệm thu**. **Ưu tiên: ngay sau T3, trước T2/T4.**
   - Agent: công nhân mới, chạy thật sau khi T3 xong. A2 đã đọc trước, dừng ở ~402k ngữ cảnh (vượt ngưỡng, không dùng lại).
   - Bàn giao (A2 đọc trước T7a, chưa có ảnh xác nhận):
@@ -351,3 +361,13 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-10-31 quản đốc: người dùng bỏ IAP, yêu cầu mod menu (sát thương/phòng thủ/EXP, thanh kéo x50).
   - Thêm T8 (sau T7); cập nhật Phạm vi, Quyết định thiết kế, T5.
   - A2 mới đọc trước T8a.
+- 2026-10-31 A1 (mới): T3a–T3d xong, chờ người dùng thử TEST8.
+  - Nguyên nhân đã chứng minh: khoá rỗng ⇒ `ENCRYPT_Process2` đọc `key[r+i]` vượt `HubSave_key`; known-plaintext trong `save0.dat` lộ byte nhớ `0xb4` (tag con trỏ heap) ở `gImgUI`; unidbg tái hiện và lib vá hết lỗi.
+  - Vá P1 bằng viết lại 7 lệnh trong thân `ENCRYPT_Process2` (không cave, không mượn hàm khác).
+  - `test_builds/Inotia4_TEST8_vi_offline.apk` sha256 `a1a7b341...c70c` (`test_builds/SHA256_TEST8.txt`); chỉ khác TEST7 ở `libgame.so`.
+  - Save cũ của TEST7 không cứu được (cần ghi đè ô hoặc game mới).
+  - P2: chỉ đề xuất, chờ duyệt. Điểm CHƯA XÁC ĐỊNH: khoá `appinfo.dat`, `envinfo.dat`, chữ `A` ở thư mục `thpcheckslot`, P2 chưa chạy thật.
+
+- 2026-10-31 quản đốc: nghiệm thu T3a–T3d ĐẠT, commit TEST8 (P1 vá lõi mã hoá). Gửi người dùng thử.
+  - A1 (T3) dừng ở ~350k.
+  - Giao T7 cho công nhân chạy mới.
