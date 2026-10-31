@@ -39,6 +39,10 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - **IAP:** bấm mua thì nhận vật phẩm ngay, không gọi Google Play (người dùng đã chốt từ đầu). Native cộng vật phẩm qua callback thành công gốc (`csPurchaseCB`...). Không tự cộng ngoài luồng gốc.
 - Bytecode/smali thật được tin hơn output jadx. Disasm (`llvm-objdump`) được tin hơn suy luận.
 - Không cấp phát object trong vòng vẽ (VNFont).
+- **Sau T1** (quyết theo mục 7 của `docs/mang_offline_ra_soat.md`):
+  - `getActiveNetwork` giữ trả "có mạng" để còn đi được vào luồng mua. Chỉ xét lại trong T4 nếu luồng mua giả không chạy.
+  - `CFunction.getDeviceId/getPhoneNumber/getMIN`: không vá, vì xref không có đường gọi tới. Có log văng thì mới xét.
+  - Bản test kế tiếp (bản sửa T3) sẽ nhờ người dùng bấm thử: GAME KHÁC, HIVE, chọn ô save, Option → lưu đám mây, shop/gem; rồi gửi báo cáo nếu văng.
 
 ## Môi trường (container hiện tại, mất khi container bị thu hồi)
 - Công cụ:
@@ -84,7 +88,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 ## Checklist
 - [x] T0. Văng lúc khởi động (`CWrapperHttp` + `SecurityException`): nhóm `net` (TEST6, đã chạy trên máy thật).
 - [x] T0b. Font to hơn `q/16` + chẩn đoán xuất save (TEST7).
-- [ ] T1. Rà toàn bộ lối vào mạng Java mà native/UI gọi được — **Quản đốc nghiệm thu**
+- [x] T1. Rà toàn bộ lối vào mạng Java mà native/UI gọi được — **Quản đốc nghiệm thu**
   - Agent: A1 (chạy)
   - Đầu vào: `/opt/work/jx4/sources`, `/opt/work/dec4/smali*`, `docs/offline_phan_tich.md`.
   - Việc:
@@ -99,6 +103,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - build thử `out/Inotia4_T1_check.apk` bằng `build_from_apk.sh --smali net --vnfont` PASS các kiểm tra;
     - `diff -r` smali so với `dec4` chỉ ra đúng các dòng `.catch` thêm vào.
   - Bàn giao (A1, bước 1/3 xong: rà tĩnh): đã xong — dựng bản đồ native→Java (xref `libgame.so`), quét `com/com2us`+`com/hive` bằng script phủ ngoại lệ (scratchpad `cov2.py`, theo handler `catchall`). Kết quả sơ bộ: chỉ 1 chỗ nguy hiểm thật là `CWrapperHttp$1.run` (đã có mục `CATCH_ADD['net']`); `Hercules.HttpRequest` và `Network.sync` (Hive) đã bắt `Exception`/`runCatching`; `CWrapperHttp.netHttp*Ex` bị chặn bởi `iHttpStatus==2`; WebView không ném SecurityException (WebView `app:id/webView` tạo được trong log TEST5a). Chưa sửa file nào trong repo. Bước tiếp: (2) viết `docs/mang_offline_ra_soat.md`, đọc thêm `Mercury.internalMercuryShowEx`/`ActiveUser.showUserAgreeTerms`/`WrapperUserDefined.GotoURL`; (3) `cp -r /opt/work/dec4 /opt/work/dec_t1 && python3 scripts/patch_smali.py /opt/work/dec_t1 --group net`, build `out/Inotia4_T1_check.apk` (`APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T1_check.apk --smali net --vnfont`), decode lại + `diff -r` với `/opt/work/dec4`, tick T1, ghi Nhật ký.
+  - Bàn giao (A1, T1 XONG, 3/3): đã sửa/tạo `docs/mang_offline_ra_soat.md` (bảng A/B/C + kết luận), `scripts/re/cov_exc.py` (script kiểm phủ ngoại lệ, mới). Không sửa `scripts/patch_smali.py` (chỉ có 1 chỗ nguy hiểm thật, đã có mục `CATCH_ADD['net']` ×2 từ T0). Đã kiểm: `patch_smali --group net` trên bản sao `/opt/work/dec_t1` khớp 2; build `out/Inotia4_T1_check.apk` PASS (zipalign, apksigner, check_apk); decode lại → `diff -r` với `/opt/work/dec4`: `smali/` chỉ 2 dòng `.catch`, `smali_classes2/` không khác, `smali_classes3/` khác do `--vnfont`. Việc còn lại cho quản đốc: nghiệm thu, quyết 3 mục ở mục 7 của tài liệu (chủ yếu `getActiveNetwork` khi làm T4). A1 dừng.
 - [ ] T2. unidbg chạy qua màn chọn save tới game mới — **Quản đốc nghiệm thu**
   - Agent: A2 (chỉ đọc trước; chạy thật khi A1 ≥ 90%)
   - Việc:
@@ -167,3 +172,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-10-31 quản đốc: giao T1 cho A1 (chạy), A2 đọc trước T2. Người dùng gửi save (TEST7) → `logs/save_TEST7/`; T3 ưu tiên trước T2.
 - 2026-10-31 quản đốc: thêm quy tắc thay công nhân khi ngữ cảnh > 400k (người dùng chốt). Lúc ghi: A1 ~233k, A2 ~209k.
 - 2026-10-31 quản đốc: A2 đọc xong T2 (~233k). Kế hoạch 3 hướng ghi ở "Bàn giao" dưới T2. A2 lỡ tạo rồi xoá một file ở `/tmp` (ngoài dự án), không ảnh hưởng. T2 chờ: T1 xong → T3 (ưu tiên) → T2.
+- 2026-10-31 A1: T1 xong. Chỉ 1 chỗ `SecurityException` lọt (`CWrapperHttp$1.run`, đã vá ở T0, kiểm lại: dex catch table có cả hai); `Network.sync` (Hive) và `Hercules.HttpRequest` đã bắt `Exception`; WebView không ném. Không thêm `CATCH_ADD` mới. Bảng ở `docs/mang_offline_ra_soat.md`; build thử `out/Inotia4_T1_check.apk` PASS.
+- 2026-10-31 quản đốc: nghiệm thu T1 ĐẠT.
+  - Kiểm chéo trên smali gốc: `iHttpStatus=2` chỉ được gán ở `CWrapperHttp$1:620` (qua `$$Nest$fput`); `Network.sync` bọc `getByName` bằng `catch Exception`; bản build thử đã có.
+  - Quyết 3 mục còn mở: ghi ở Quyết định thiết kế.
+  - A1 dừng ở ~322k ngữ cảnh; A2 mới đang đọc trước T3.
