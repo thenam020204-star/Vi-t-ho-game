@@ -19,9 +19,9 @@
 - [ ] Mua miễn phí (IAP và Gem). Gem nằm trên server game (socket `inotia4.com2us.net:38000`) nên chưa làm.
 - [ ] Emulator sập ở màn chọn save (hỏng heap trong unidbg). Theo yêu cầu người dùng thì không đào sâu; cần test máy thật.
 - [x] Dịch xong 10.602 mục (8.392 chuỗi khác nhau) bằng `dp`, `dp check` OK, `memtext check` OK (đủ glyph). Credits giữ tên gốc. `dp` có thêm khoá `code0` trong meta để không coi `<...>` là mã (game không có thẻ).
-  - Build thử: `test_builds/Inotia4_TEST3_vi_full_offline.apk` (check_apk PASS). Mẫu render VNFont: `docs/emu_shots/vnfont_mau_thoai.png`.
+  - Build thử: `test_builds/Inotia4_TEST4_vi_anh_offline.apk` (check_apk PASS). Mẫu render VNFont: `docs/emu_shots/vnfont_mau_thoai.png`.
 - [x] Text UI trong `res/xml/{config,hive,clause,hubjoin}.xml`: `dich/xml_text.tsv` (30 key) → `scripts/plist_text.py apply` thay mọi ngôn ngữ trong array (154 `<string>`), đã gắn vào `rebuild.sh`.
-- [ ] Ảnh có chữ: `UI_BUT_ENG_*`, `UI_TITLEMAIN`, `ETC_ban_*`...
+- [x] Ảnh có chữ: 10 atlas (`UI_BUT_ENG_001..005`, `UI_TITLEMAIN_BUT_ENG_001`, `UI_006`, `UI_008`, `UI_TITLESLOT_01`, `UI_TITLE_SETTINGS_01`) vẽ lại bằng f18 ×2/×3 qua `scripts/img_vi.py` + `res_vi/labels.json` (xoá chữ bằng nền sạch dựng từ các nút cùng kiểu/lật gương). Ảnh xem trước: `logs/anh_vi_preview.png`. Giữ nguyên: tên ngôn ngữ, logo, quảng cáo `ETC_ban_*` (bản offline không hiện), ruy băng NEW/HOT.
 - [ ] Test trên máy thật: container không có /dev/kvm nên không chạy được Android emulator.
 
 ## Ghi chú kỹ thuật

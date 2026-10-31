@@ -6,18 +6,18 @@ keystore:
 01. unsigned_fixed.apk
 
 	SIGN
-	file: /home/user/Vi-t-ho-game/inotia4/work/unsigned_fixed.apk (47.79 MiB)
-	checksum: c5c7352475b5a12908693720adf73df0f1c83fbcc2399c26eb887c89a3dcd9ee (sha256)
+	file: /home/user/Vi-t-ho-game/inotia4/work/unsigned_fixed.apk (47.55 MiB)
+	checksum: b73beb5968ad43fd6e5a68ed47b1012506ecc4f26bdf5449e770f88ac00b80d3 (sha256)
 	- sign success
 
 	VERIFY
-	file: /home/user/Vi-t-ho-game/inotia4/work/signed/unsigned_fixed-signed.apk (47.91 MiB)
-	checksum: ccd6eea7644791e7aa91747f42403df799d214bab15f22832c227a40dd765ce0 (sha256)
+	file: /home/user/Vi-t-ho-game/inotia4/work/signed/unsigned_fixed-signed.apk (47.66 MiB)
+	checksum: c7a192b59e066730637256c73a3957741a9741ad328c1ea8f3d9dc832da85614 (sha256)
 	- signature verified [v1, v2, v3]
 		5 warnings
 		Subject: CN=NAMP Viet hoa, O=NAMP, C=VN
 		SHA256: cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4 / SHA384withRSA
 		Expires: Sun Aug 03 10:20:33 UTC 2081
 
-[Sat Oct 31 12:20:16 UTC 2026][v1.3.0]
-Successfully processed 1 APKs and 0 errors in 1.27 seconds.
+[Sat Oct 31 12:53:06 UTC 2026][v1.3.0]
+Successfully processed 1 APKs and 0 errors in 1.34 seconds.

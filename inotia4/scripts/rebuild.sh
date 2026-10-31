@@ -40,7 +40,20 @@ $PY scripts/memtext.py check "$W/en.dat" dich/text_can_dich.tsv --charset font/c
 $PY scripts/memtext.py repack "$W/en.dat" dich/text_can_dich.tsv "$W/vi.dat"
 $PY scripts/memtext.py wrap "$W/vi.dat" "$W/vi.dat.jpg"
 for f in "$G"/memorytext.dat.jpg "$G"/memorytext_{en,de,fr,jp,zhhans,zhhant}.dat.jpg; do cp "$W/vi.dat.jpg" "$f"; done
-if [ -d res_vi ] && [ -n "$(ls -A res_vi 2>/dev/null)" ]; then cp -v res_vi/* "$G"/ | tee logs/res_vi.log; fi
+
+echo "== 4b. anh co chu: ve lai nhan bang f18 (res_vi/labels.json)"
+rm -rf "$W/img_goc" "$W/img_vi" && mkdir -p "$W/img_goc" "$W/img_vi"
+for n in $($PY -c "import json;print(' '.join(k for k in json.load(open('res_vi/labels.json')) if not k.startswith('_')))"); do
+  # da so la PNG tran (duoi .jpg gia); neu la container 01 00 thi giai nen
+  if [ "$(head -c 2 "$G/$n.jpg" | od -An -tx1 | tr -d ' ')" = "0100" ]; then
+    $PY scripts/memtext.py unwrap "$G/$n.jpg" "$W/img_goc/$n" >/dev/null; echo "$n" >> "$W/img_goc/.lzma"
+  else cp "$G/$n.jpg" "$W/img_goc/$n"; fi
+done
+$PY scripts/img_vi.py res_vi/labels.json "$W/img_goc" "$W/img_vi" --preview logs/anh_vi_preview.png > logs/img_vi.log
+for f in "$W"/img_vi/*.png; do n=$(basename "$f")
+  if grep -qx "$n" "$W/img_goc/.lzma" 2>/dev/null; then $PY scripts/memtext.py wrap "$f" "$G/$n.jpg" >/dev/null; else cp "$f" "$G/$n.jpg"; fi
+done
+echo "anh: $(ls "$W"/img_vi | wc -l) file"
 
 echo "== 5. VNFont -> classes3.dex"
 rm -rf "$W/vnf" && mkdir -p "$W/vnf/cls" "$W/vnf/stub" "$W/vnf/dex"
