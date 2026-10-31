@@ -187,6 +187,7 @@ public class Inotia4Emu extends AbstractJni {
                     int r = com.namp.vh.VNFont.drawInRect(buf, b, size, style, align, maxW, mode);
                     syncFont(maxW * o[1]);
                     logText(va, 0, "drawTextInRect size=" + size + " w=" + maxW);
+                    dumpFont(buf, maxW, o[1], size, b);
                     return r;
                 }
             }
@@ -345,6 +346,27 @@ public class Inotia4Emu extends AbstractJni {
         java.nio.ByteBuffer bb = java.nio.ByteBuffer.allocate(n * 4).order(java.nio.ByteOrder.LITTLE_ENDIAN);
         for (int k = 0; k < n; k++) bb.putInt(buf[k]);
         com.github.unidbg.pointer.UnidbgPointer.pointer(emulator, ptr).write(0, bb.array(), 0, n * 4);
+    }
+
+    /** -Demu.dumpfont=DIR: luu dem chu that cua drawTextInRect (w x h, 1 int/px, chu = 0xFFFFFFFF) thanh PNG
+     *  (chu trang tren nen xam dam) DIR/dump_NNN_sSS.png; toi da -Demu.dumpmax=N (mac dinh 60) anh, bo qua van ban da luu. */
+    final Set<String> dumped = new HashSet<>();
+    int dumpCount = 0;
+    void dumpFont(int[] buf, int w, int h, int size, byte[] text) {
+        String dir = System.getProperty("emu.dumpfont", "");
+        if (dir.isEmpty() || w <= 0 || h <= 0 || (long) w * h > buf.length) return;
+        if (dumpCount >= Integer.getInteger("emu.dumpmax", 60)) return;
+        String key = size + ":" + w + ":" + new String(text, java.nio.charset.StandardCharsets.UTF_8);
+        if (!dumped.add(key)) return;
+        try {
+            new File(dir).mkdirs();
+            java.awt.image.BufferedImage im = new java.awt.image.BufferedImage(w, h, java.awt.image.BufferedImage.TYPE_INT_RGB);
+            for (int y = 0; y < h; y++)
+                for (int x = 0; x < w; x++)
+                    im.setRGB(x, y, (buf[y * w + x] >>> 24) != 0 ? 0xFFFFFF : 0x202030);
+            javax.imageio.ImageIO.write(im, "png", new File(dir, String.format("dump_%03d_s%d.png", dumpCount, size)));
+            dumpCount++;
+        } catch (java.io.IOException ex) { System.out.println("[dumpfont] loi " + ex); }
     }
 
     final Set<String> textsSeen = new LinkedHashSet<>();
