@@ -17,7 +17,7 @@ Mọi đoạn thoại/mô tả dài đi theo một đường duy nhất (địa 
 
 Kết luận phần native:
 
-- Không có chỗ nào cắt hàng của bitmap chữ: native chép đúng H hàng mà Java báo, đệm đủ (2048×2048 int). Đường `drawText` (hàng = `(int)(size*1.3)` @0x2666d4) không có caller.
+- Không có chỗ nào cắt hàng của bitmap chữ: native chép đúng H hàng mà Java báo, đệm đủ (2048×2048 int). Đường `drawText` (`SGL_RenderFontToAlphaImage` 0x266678, hàng = `(int)(size*1.3)`: `fmul` với 0x3fa66666 = 1,3f @0x2666d4) chỉ được gọi từ `SGL_Font_Android::RenderToTexture` 0x265c24, hàm này không có caller trực tiếp theo `scripts/re/xref.py` (gọi qua vtable thì CHƯA XÁC ĐỊNH). Dù vậy font mới vẫn chọn H ≤ `1,3*size` để hợp cả đường này.
 - Texture chữ được lọc **tuyến tính** khi GPU phóng từ màn logic (1422×640) lên màn thật (2400×1080): hệ số 1080/640 = 1,6875.
 - Bước dòng của game `GRPX_GetFontHeight` = size+2 chỉ dùng ở các đường vẽ từng dòng; đường InRect dùng `lineH` của `VNFont`, nên không có chuyện dòng sau đè dòng trước.
 
@@ -42,7 +42,7 @@ Kết quả `mark_stats.py` (cỡ 24, `font/f18vn.bin` so với `font/f24vn.bin`
 
 Đọc kết quả:
 
-- ở TEST7 hệ số ×1,5 = `q/16` với q = 24: một điểm f18 thành khối rộng 1 hoặc 2 px (xen kẽ), nên dấu nặng, sừng ơ/ư, chấm dấu hỏi chỉ còn 1 px; GPU rồi lọc tuyến tính nên đỉnh chỉ còn 60–80% độ sáng và loang sang hai bên;
+- ở TEST7 hệ số ×1,5 = `q/16` với q = 24: một điểm f18 thành khối rộng 1 hoặc 2 px (xen kẽ), nên dấu nặng, sừng ơ/ư, chấm dấu hỏi chỉ còn 1 px; GPU rồi lọc tuyến tính nên đỉnh thấp nhất chỉ còn 152/255 (60%) và loang sang hai bên;
 - 35 trên 171 thành phần dấu (khoảng 20%) chỉ dày 1 px và 58 (khoảng 34%) có độ đậm đỉnh dưới 200/255 sau lọc. Phù hợp với phản hồi "mất dấu ở nhiều ký tự";
 - font mới: mọi thành phần dấu ≥ 2×2 px và có khối 2×2 đặc, nên đỉnh luôn 255 sau bilinear.
 
