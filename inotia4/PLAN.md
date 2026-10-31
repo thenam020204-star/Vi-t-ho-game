@@ -10,11 +10,13 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - rà các lối vào mạng còn có thể làm văng app;
   - dựng emulator unidbg chạy qua được màn chọn save;
   - sửa lỗi văng khi load save;
-  - IAP Google "mua miễn phí";
+  - vẽ lại font cỡ lớn (T7);
+  - **mod menu**: thanh kéo hệ số sát thương / phòng thủ / EXP, từ x1 tới x50 (T8; người dùng yêu cầu 2026-10-31 để chơi cốt truyện);
   - đồng bộ `rebuild.sh`;
   - bản phát hành, gói dự án và `BAO_CAO.md`.
 - Ngoài phạm vi (giai đoạn này):
-  - Gem trên server (socket `inotia4.com2us.net:38000`): việc RE lớn, hỏi người dùng sau.
+  - **IAP "mua miễn phí": BỎ** (người dùng chốt 2026-10-31: "Ko mua miễn phí nữa, tôi chỉ trải nghiệm cốt truyện").
+  - Gem trên server (socket `inotia4.com2us.net:38000`).
   - Dịch lại text. Ảnh có chữ.
 
 ## Quyết định thiết kế (KHÔNG tự đổi khi implement)
@@ -40,11 +42,28 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Font mới phải giữ dáng f18.
   - Chỉ phóng to (hệ số ≥ 1), không thu nhỏ bitmap.
   - Không đổi 5 method công khai của VNFont.
-- **IAP:** bấm mua thì nhận vật phẩm ngay, không gọi Google Play (người dùng đã chốt từ đầu). Native cộng vật phẩm qua callback thành công gốc (`csPurchaseCB`...). Không tự cộng ngoài luồng gốc.
+- **IAP:** bỏ (xem Phạm vi). Không vá luồng mua.
+- **Mod menu (T8):**
+  - **Giao diện Java.** Lớp mới `java/src/com/namp/vh/ModMenu.java`:
+    - một nút nổi nhỏ "MOD" ở góc màn hình, mở hộp thoại có 3 `SeekBar` (Sát thương, Phòng thủ, EXP), giá trị x1–x50, nút "Đặt lại x1";
+    - lưu bằng `SharedPreferences`, áp lại mỗi khi mở game;
+    - gắn vào `MainActivity` bằng một lệnh `invoke-static` thêm trong `onCreate`/`onResume` (nhóm smali `mod`, khớp đúng số lần).
+  - **Phía native.** Vá `libgame.so` (nhóm patch `mod`) tại đúng hàm tính, có bằng chứng disasm:
+    - sát thương **do phe người chơi gây ra** × Mdmg;
+    - sát thương **phe người chơi nhận** chia cho Mdef (hoặc phòng thủ × Mdef, chọn theo công thức gốc);
+    - EXP nhận × Mexp.
+  - Không đổi sát thương hay EXP của quái ngoài các điểm trên.
+  - **Tràn số:** nhân xong phải chặn ở giá trị tối đa của kiểu gốc (byte/short/int) và của giới hạn trong game (nếu có). Giữ dấu; không đổi kiểu biến.
+  - **Kênh Java → native:**
+    - 3 số nguyên đặt ở một vùng ghi được trong `libgame.so` (`.bss`/`.data` không dùng, chứng minh không có xref);
+    - Java ghi vào đó qua cơ chế đã kiểm chứng (ứng viên: `/proc/self/mem` + địa chỉ base lấy từ `/proc/self/maps`, `sun.misc.Unsafe`, hoặc kênh JNI có sẵn);
+    - **T8a phải chứng minh** cơ chế chọn chạy được trên Android 14–16;
+    - giá trị đọc được ngoài khoảng 1..50 thì native coi như 1.
+  - **Không cấp phát trong vòng lặp game.** Java chỉ ghi khi đổi thanh kéo hoặc khi `onResume`.
 - Bytecode/smali thật được tin hơn output jadx. Disasm (`llvm-objdump`) được tin hơn suy luận.
 - Không cấp phát object trong vòng vẽ (VNFont).
 - **Sau T1** (quyết theo mục 7 của `docs/mang_offline_ra_soat.md`):
-  - `getActiveNetwork` giữ trả "có mạng" để còn đi được vào luồng mua. Chỉ xét lại trong T4 nếu luồng mua giả không chạy.
+  - `getActiveNetwork` tạm giữ nguyên. IAP đã bỏ; chỉ xét đổi sang "không có mạng" nếu người dùng báo nút trả phí bị treo hoặc văng.
   - `CFunction.getDeviceId/getPhoneNumber/getMIN`: không vá, vì xref không có đường gọi tới. Có log văng thì mới xét.
   - Bản test kế tiếp (bản sửa T3) sẽ nhờ người dùng bấm thử: GAME KHÁC, HIVE, chọn ô save, Option → lưu đám mây, shop/gem; rồi gửi báo cáo nếu văng.
 
@@ -182,7 +201,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
         - disasm sau vá đúng các lệnh dự kiến;
         - `apkdiff` so TEST7 chỉ khác `libgame.so` (và manifest/dex nếu có cờ khác);
         - diff byte của lib chỉ ở các vaddr đã khai báo.
-    - [ ] T3c. Kiểm P1 bằng unidbg gọi thẳng `ENCRYPT_Process2`, không chạy game: khoá "", ghi rác vào `HubSave_key`+64…, mã hoá rồi đổi rác, giải mã.
+    - [x] T3c. Kiểm P1 bằng unidbg gọi thẳng `ENCRYPT_Process2`, không chạy game: khoá "", ghi rác vào `HubSave_key`+64…, mã hoá rồi đổi rác, giải mã.
       - Hoàn thành khi:
         - trước vá: giải mã false;
         - sau vá: true;
@@ -192,6 +211,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Hoàn thành T3 khi: T3a–T3c đạt, T3d có đề xuất; người dùng thử TEST8 theo quy trình: game mới → lưu → tắt hẳn app → mở lại → load.
   - Bàn giao (A1 mới, T3a XONG): tạo `scripts/re/save_crypto.py` (đọc T từ lib qua `adr`, giải/mã hoá, `--selftest`, `--oob zero|file:`, known-plaintext) và `docs/save_format.md`. Kết quả: `thpcheckslot1.dat --key 394572` Σmã 186/Σthô 68 KHỚP; `save0.dat --key ""` Σthô lưu 16 ≠ tính 226, bảng 7 mục hợp lệ, known-plaintext (Info+21..+32 = 140, 20132, 5) sai 8/12 byte và suy ra byte nhớ `0x2d0d67=0xb4`, `0x2d0d6f=0xb4` (tag con trỏ heap trong `gImgUI`), 20 qword con trỏ nghi vấn đều nằm trên biến con trỏ (`gImgUI`, `g_pSGL*`, `s_cachedTexture`) ⇒ xác nhận nguyên nhân khoá rỗng. Roundtrip 250 ca OK. Phát hiện cho T3b: `ENCRYPT_Process2` KHÔNG có vùng đệm ≥16 B trong segment R-X (khe giữa section chỉ 8/12 B: 0x2a82c8, 0xa3e88, 0x127574), nên T3b dự định sửa ngay trong thân hàm (vùng 0x1409a4–0x1409bf, xem Bàn giao T3b khi xong). Bước tiếp: T3b (`scripts/patch_lib.py` + `build_from_apk.sh --lib`). Lệnh: `python3 -I scripts/re/save_crypto.py /opt/work/lib4/libgame.so <file> --key STR`.
   - Bàn giao (A1 mới, T3b XONG): sửa `scripts/patch_lib.py` (mỗi patch có old/new/refs/asm: khớp old ⇒ áp, khớp new ⇒ "đã áp", khác ⇒ dừng; thêm `--disasm`, `--list`, `--diff A B`) và `scripts/build_from_apk.sh` (cờ `--lib`, kiểm lib trong APK == bản đã vá). Patch P1 tại `0x1409a4..0x1409bf` (7 lệnh, trong thân `ENCRYPT_Process2`, KHÔNG dùng cave vì không có khe ≥16 B trong segment R-X: khe giữa section chỉ 8/12 B tại 0xa3e88, 0x127574, 0x2a82c8; không cần mượn `SAVE_SaveData`): trước `cbnz x3,0x1409b8; mov w8,#0x3231; add x20,sp,#4; movk w8,#0x33,lsl#16; str w8,[sp,#4]; mov x0,x20; bl strlen`; sau `cbnz x3,0x1409ac; adr x20,0xa5e67 ("123\0" có sẵn trong .rodata, refs kiểm 31 32 33 00); mov x0,x20; bl strlen; cmp w0,#0; csinc w0,w0,wzr,ne; nop` ⇒ L=max(strlen,1), khoá NULL vẫn "123", khoá khác rỗng không đổi. Lệnh kế `cbz w22,0x140a24` @0x1409c0 giữ nguyên (refs). Patch 0x203e68 cũ: lib TEST4 đã có ⇒ "đã áp". Bằng chứng: `out/Inotia4_T3b_check.apk` (`--smali net --vnfont --lib --diag`, cờ y TEST7) PASS apksigner/zipalign -P 16/check_apk; `apkdiff` vs TEST7 chỉ khác `lib/arm64-v8a/libgame.so`; `patch_lib.py --diff` lib gốc vs lib trong APK: 24 byte, 3 đoạn, đều trong vùng khai báo; lib vá sha256 `406bfe59...298f` (file `/opt/work/t3/libgame_p1.so`). Bước tiếp: T3c (unidbg gọi thẳng `ENCRYPT_Process2`, so lib gốc `/opt/work/lib4/libgame.so` với `/opt/work/t3/libgame_p1.so`). Lệnh: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/<ten>.apk --smali net --vnfont --lib --diag`.
+  - Bàn giao (A1 mới, T3c XONG): tạo `emu/src/CryptoCheck.java` (gọi thẳng `ENCRYPT_Process2` + `HubSave_key` trong unidbg, không chạy game), `emu/crypto_check.sh` (chạy lib gốc + lib vá rồi so), `scripts/re/crypto_xcheck.py`, log `logs/t3c_crypto_check.log`. Kết quả (khoá rỗng, n=3189, mã hoá lúc bộ nhớ sau `HubSave_key`=rác G1): lib GỐC giải mã G1 ⇒ true, G2 ⇒ **false**; lib VÁ G1 ⇒ true, G2 ⇒ **true**. Bản mã lib vá == `save_crypto.py --key ""` (r đọc từ buf[n+1]) cả 8 ca (khoá rỗng/394572/a/63 byte/NULL "123"/n=28/n=0); lib GỐC khoá rỗng+rác == mô hình `--oob file:<dump bộ nhớ>` từng byte (chứng minh cơ chế đọc vượt buffer); khoá không rỗng/NULL: lib gốc == lib vá; `thpcheckslot1.dat` giải mã đúng ở cả hai; `save0.dat` thật vẫn false (đúng, không cứu được) và plaintext lib ghi ra == script. Build `test_builds/Inotia4_TEST8_vi_offline.apk` (`--smali net --vnfont --lib --diag`) sha256 `a1a7b341...c70c` (đủ ở `test_builds/SHA256_TEST8.txt`), apksigner/zipalign -P 16/check_apk PASS, `apkdiff` vs TEST7 chỉ khác `lib/arm64-v8a/libgame.so`, cùng chứng chỉ ký TEST7 (`cc559651...20d4`). PROGRESS.md đã ghi mục "Phiên 3". Bước tiếp: T3d (P2 chỉ tài liệu). Lệnh: `bash emu/crypto_check.sh /opt/work/lib4/libgame.so <lib vá>`.
 - [ ] T7. Vẽ lại font f18 ở cỡ lớn thật (thay cách phóng q/16 đang làm mất dấu) — **Quản đốc nghiệm thu**. **Ưu tiên: ngay sau T3, trước T2/T4.**
   - Agent: công nhân mới, chạy thật sau khi T3 xong. A2 đã đọc trước, dừng ở ~402k ngữ cảnh (vượt ngưỡng, không dùng lại).
   - Bàn giao (A2 đọc trước T7a, chưa có ảnh xác nhận):
@@ -246,7 +266,26 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - build thử PASS;
     - dex chỉ khác ở `com/namp/vh/*`;
     - quản đốc duyệt ảnh, rồi người dùng xác nhận trên máy.
-- [ ] T4. IAP "mua miễn phí" — **Quản đốc nghiệm thu** (sau T1). **TẠM DỪNG: giả định thiết kế sai, cần người dùng quyết phạm vi (xem Vướng mắc).**
+- [ ] T8. Mod menu: sát thương / phòng thủ / EXP, thanh kéo x1–x50 — **Quản đốc nghiệm thu**. Thứ tự: sau T7.
+  - Agent: A2 mới đọc trước T8a ngay (chỉ đọc); chạy thật sau T7.
+  - [ ] T8a. RE + thiết kế, ghi vào `docs/mod_menu.md`.
+    - Tìm hàm tính sát thương người chơi gây ra / nhận và hàm cộng EXP trong `libgame.so`, dựa vào symbol + disasm:
+      - chữ ký, kiểu dữ liệu (byte/short/int, có dấu không), giá trị tối đa;
+      - mọi caller;
+      - cách phân biệt phe người chơi với quái (cờ, con trỏ party, `PLAYER_pMainPlayer`...).
+    - Chọn điểm vá (vaddr), cave (nếu cần) và vùng nhớ 3×int không dùng (chứng minh không có xref).
+    - Chọn kênh Java → native, có bằng chứng (tài liệu Android/SELinux hoặc thử thật) rằng chạy được trên Android 14–16 với app thường; nêu phương án dự phòng.
+    - Hoàn thành khi: tài liệu đủ bảng điểm vá (vaddr, byte cũ, lệnh mới, lý do), cách chặn tràn số, kênh Java → native, kế hoạch kiểm.
+  - [ ] T8b. Vá native, nhóm `mod` trong `scripts/patch_lib.py`.
+    - Mỗi patch kiểm byte gốc; disasm trước và sau vá ghi vào tài liệu.
+    - Hoàn thành khi `patch_lib.py --diff` chỉ ra đúng các vaddr đã khai báo.
+  - [ ] T8c. `ModMenu.java` + nhóm smali `mod` (gắn vào `MainActivity`).
+    - Nhãn tiếng Việt.
+    - Hoàn thành khi: build PASS; dex chỉ khác ở `com/namp/vh/*` và `MainActivity` đúng số dòng thêm.
+  - [ ] T8d. Kiểm.
+    - unidbg gọi thẳng các hàm đã vá với Mdmg/Mdef/Mexp = 1, 2, 50 và giá trị biên (tràn số); kết quả đúng công thức.
+    - Rồi build bản thử cho người dùng.
+- [ ] ~~T4. IAP "mua miễn phí"~~ — **BỎ** theo người dùng (2026-10-31). Bàn giao dưới đây giữ lại để tham khảo.
   - Bàn giao (A2 đọc trước, ~70%):
     - Java `InAppV4`:
       - method: `marketConnect(J)V`, `getProductInfo(J)V`, `purchase(String,String,J)V`, `restore(J)V`, `transactionFinish(String,J)V`;
@@ -270,8 +309,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - nhóm `iap` áp đúng số lần;
     - build thử PASS;
     - nếu T2 xong: unidbg bấm mua một gói và thấy vật phẩm/gem được cộng.
-- [ ] T5. Đồng bộ `scripts/rebuild.sh` với các bản vá mới (phụ thuộc T1, T4)
-  - Việc: nhóm smali đầy đủ (`font,lang,offline,net[,iap]`); d8 thêm `--lib android.jar` và `--lib` stub; ghi phiên bản tool vào `tools/VERSIONS.md` (apktool 2.12.1, build-tools 35.0.0, jadx 1.5.3).
+- [ ] T5. Đồng bộ `scripts/rebuild.sh` với các bản vá mới (phụ thuộc T1, T3, T7, T8)
+  - Việc: nhóm smali đầy đủ (`font,lang,offline,net,mod`), nhóm lib (P1 của T3 + `mod`); d8 thêm `--lib android.jar` và `--lib` stub; ghi phiên bản tool vào `tools/VERSIONS.md` (apktool 2.12.1, build-tools 35.0.0, jadx 1.5.3).
   - Hoàn thành khi: `bash -n scripts/rebuild.sh` OK; diff hợp lý; README/PROGRESS ghi rõ cách chạy.
 - [ ] T6. Bản phát hành (phụ thuộc T3, người dùng xác nhận font) — **Quản đốc nghiệm thu**
   - Việc:
@@ -284,6 +323,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - người dùng cài thử OK.
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
+- ĐÃ GIẢI QUYẾT (2026-10-31): người dùng bỏ IAP, thay bằng mod menu (T8).
 - **T4 IAP** (2026-10-31): Quyết định thiết kế "native cộng vật phẩm qua callback thành công gốc" **không đúng**. Vật phẩm/gem do game server cộng sau khi nhận receipt (gói 0x39), còn native không cộng cục bộ.
   - Muốn "mua miễn phí" phải chọn một trong hai:
     - (a) giả lập trả lời server cho gói 0x39, cùng loại việc với "Gem trên server" vốn đang ngoài phạm vi;
@@ -308,3 +348,6 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-10-31 quản đốc: A2 đọc trước xong (~402k, dừng hẳn).
   - T4: rào là server cộng gem sau gói receipt 0x39 ⇒ T4 tạm dừng, ghi Vướng mắc chờ người dùng.
   - T7a: nguyên nhân khả dĩ là dấu 1 px bị `GL_LINEAR` + GPU ×1,6875 làm nhoè, không phải buffer cắt ⇒ chốt quy cách font mới `f24vn` (dấu ≥ 2×2) và tích hợp cho size ≥ 24.
+- 2026-10-31 quản đốc: người dùng bỏ IAP, yêu cầu mod menu (sát thương/phòng thủ/EXP, thanh kéo x50).
+  - Thêm T8 (sau T7); cập nhật Phạm vi, Quyết định thiết kế, T5.
+  - A2 mới đọc trước T8a.
