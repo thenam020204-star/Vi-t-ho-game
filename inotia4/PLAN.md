@@ -98,6 +98,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - `python3 scripts/patch_smali.py <bản sao dec4> --group net` chạy không lỗi, đúng số lần khớp;
     - build thử `out/Inotia4_T1_check.apk` bằng `build_from_apk.sh --smali net --vnfont` PASS các kiểm tra;
     - `diff -r` smali so với `dec4` chỉ ra đúng các dòng `.catch` thêm vào.
+  - Bàn giao (A1, bước 1/3 xong: rà tĩnh): đã xong — dựng bản đồ native→Java (xref `libgame.so`), quét `com/com2us`+`com/hive` bằng script phủ ngoại lệ (scratchpad `cov2.py`, theo handler `catchall`). Kết quả sơ bộ: chỉ 1 chỗ nguy hiểm thật là `CWrapperHttp$1.run` (đã có mục `CATCH_ADD['net']`); `Hercules.HttpRequest` và `Network.sync` (Hive) đã bắt `Exception`/`runCatching`; `CWrapperHttp.netHttp*Ex` bị chặn bởi `iHttpStatus==2`; WebView không ném SecurityException (WebView `app:id/webView` tạo được trong log TEST5a). Chưa sửa file nào trong repo. Bước tiếp: (2) viết `docs/mang_offline_ra_soat.md`, đọc thêm `Mercury.internalMercuryShowEx`/`ActiveUser.showUserAgreeTerms`/`WrapperUserDefined.GotoURL`; (3) `cp -r /opt/work/dec4 /opt/work/dec_t1 && python3 scripts/patch_smali.py /opt/work/dec_t1 --group net`, build `out/Inotia4_T1_check.apk` (`APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T1_check.apk --smali net --vnfont`), decode lại + `diff -r` với `/opt/work/dec4`, tick T1, ghi Nhật ký.
 - [ ] T2. unidbg chạy qua màn chọn save tới game mới — **Quản đốc nghiệm thu**
   - Agent: A2 (chỉ đọc trước; chạy thật khi A1 ≥ 90%)
   - Việc:
