@@ -97,7 +97,12 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - viết script tap: START → chọn ô trống → game mới → vào màn chơi; tìm toạ độ qua ảnh chụp.
   - File: `emu/src/*.java`, `emu/README.md`.
   - Hoàn thành khi: chụp được ảnh đang trong màn chơi (`docs/emu_shots/emu_vao_game.png`), log không còn `UC_ERR`; ghi lệnh tái hiện vào `emu/README.md`. Giới hạn 3 hướng thử; không được thì ghi Vướng mắc.
-- [ ] T3. Sửa văng khi load save (`CHAR_GetSkillPoint` null ← `GAMESTATE_EnterPlay`) — **Quản đốc nghiệm thu** (phụ thuộc: file save người dùng gửi hoặc T2)
+- [ ] T3. Sửa văng khi load save (`CHAR_GetSkillPoint` null ← `GAMESTATE_EnterPlay`) — **Quản đốc nghiệm thu**. **ƯU TIÊN trước T2**: đã có file save người dùng gửi.
+  - Đầu vào:
+    - `logs/save_TEST7/`, xuất từ máy thật bằng TEST7: `d41d8cd98f00b204e9800998ecf8427e/save0.dat` (3192 B; thư mục = MD5 của chuỗi rỗng, tức khoá rỗng), `edf2113c684f2b822de06dad8d06b016A/thpcheckslot1.dat` (31 B), `appinfo.dat`, `envinfo.dat`;
+    - chuỗi tên file `save%d.dat` @0xa5ddb, `thpcheckslot1..3.dat`;
+    - log văng: `logs/may_that_TEST6_load_save_2026-10-31.txt`.
+  - Agent: A1 nhận sau khi xong T1.
   - Việc:
     - với file `inotia4_save_*.zip` và báo cáo TEST7: giải mã save (`SAVE_LoadDataAsNameAndKey`, khoá rỗng), xác định bước nào của `SAVE_LoadFile` thất bại (`LoadData` / version ≤ 5 / chỉ số ô / `Inventory` / `Quest` / `Event`);
     - hoặc tái hiện bằng unidbg (T2): game mới → lưu → chạy lại → load.
@@ -130,3 +135,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 
 ## Nhật ký
 - 2026-10-31 quản đốc: lập PLAN giai đoạn ổn định; T0/T0b đã xong ở phiên trước (TEST6/TEST7).
+- 2026-10-31 quản đốc: giao T1 cho A1 (chạy), A2 đọc trước T2. Người dùng gửi save (TEST7) → `logs/save_TEST7/`; T3 ưu tiên trước T2.
