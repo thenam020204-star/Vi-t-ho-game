@@ -1,0 +1,7 @@
+19e48c4a4bfad90e4c60175ceb085d6b35ae65e7  build/libtwommod.so
+46cfa17f93a1abba2d7b00b4b29b8b695cd32c6f  smali_patch/com/android/Game11Bits/GameActivity.smali
+133e3cea81a79c6d02baf24e4d5302fee8525bb7  smali_patch/com/android/Game11Bits/GameHelper.smali
+e3b45610f9ae5cb46a2a28cc1d9ee3c202b168bd  build/smali/com/twommod/ModMenu$1.smali
+578f445cc0beed41facebf54ae96477ad0ec5d85  build/smali/com/twommod/ModMenu$2.smali
+72e93fb8b84850b5855217f1d582ca4b827841fa  build/smali/com/twommod/ModMenu$3.smali
+6b889cbb09cf1e9bcebdc8d55c209f9f6a7f980c  build/smali/com/twommod/ModMenu.smali

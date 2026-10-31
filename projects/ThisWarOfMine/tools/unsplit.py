@@ -1,6 +1,8 @@
 import struct,sys,zlib,os
-d=sys.argv[1]; out=sys.argv[2]
-parts=[open(os.path.join(d,n),'rb').read() for n in ['Download.z01','Download.z02','Download.z03','Download.zip']]
+# python3 unsplit.py <thư mục> <thư mục ra> [tên gốc, mặc định Download] — ghép zip chia phần .z01..zNN + .zip
+d=sys.argv[1]; out=sys.argv[2]; stem=sys.argv[3] if len(sys.argv)>3 else 'Download'
+names=sorted(n for n in os.listdir(d) if n.startswith(stem+'.z') and n[len(stem)+2:].isdigit())+[stem+'.zip']
+parts=[open(os.path.join(d,n),'rb').read() for n in names]
 base=[0];
 for p in parts[:-1]: base.append(base[-1]+len(p))
 allb=b''.join(parts); last=parts[-1]
@@ -20,6 +22,8 @@ for i in range(n):
     data=allb[ds:ds+cs]
     raw=zlib.decompress(data,-15) if meth==8 else data
     assert len(raw)==us and zlib.crc32(raw)==crc, 'bad '+name
+    if name.endswith('/'): p+=46+fl+el+cml; continue
+    os.makedirs(os.path.dirname(os.path.join(out,name)) or out,exist_ok=True)
     open(os.path.join(out,name),'wb').write(raw)
     p+=46+fl+el+cml
 print('ok')
