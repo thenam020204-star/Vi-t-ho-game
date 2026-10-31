@@ -107,6 +107,23 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - viết script tap: START → chọn ô trống → game mới → vào màn chơi; tìm toạ độ qua ảnh chụp.
   - File: `emu/src/*.java`, `emu/README.md`.
   - Hoàn thành khi: chụp được ảnh đang trong màn chơi (`docs/emu_shots/emu_vao_game.png`), log không còn `UC_ERR`; ghi lệnh tái hiện vào `emu/README.md`. Giới hạn 3 hướng thử; không được thì ghi Vướng mắc.
+  - Bàn giao (A2 đọc trước, chưa sửa file, transcript ~233k):
+    - Hiện trường:
+      - văng ở `libc+0x7626c` (`run_quantize(0)`), gọi từ `arena_run_first_best_fit` tại `libc+0x7782c`;
+      - nút trong `runs_avail` có `mapbits & ~0xfff == 0`, tức bản đồ chunk jemalloc hỏng;
+      - chunk 256 KB; libc nạp ở `0x12870000`.
+      - `emulate` nuốt lỗi rồi chạy tiếp, nên phải grep `UC_ERR|Invalid memory`.
+    - Hướng 1 (thử trước): unidbg `madvise` (syscall 233) là no-op trả 0.
+      - jemalloc coi `MADV_DONTNEED` thành công nghĩa là trang đã về 0, nên tái dùng chunk "zeroed" mà không khởi tạo mapbits. Game `calloc` mọi thứ (`CS_knlAlloc` = `calloc(1,n)`).
+      - Sửa: hook `madvise` trong `emu/src/Inotia4Emu.java`, `advice==4` thì ghi 0 vùng đó; thêm `-Demu.madv=zero|fail|off`; đếm số lần gọi. Số lần gọi = 0 thì bỏ hướng này.
+    - Hướng 2: `emu/src/JMalloc.java` thay `malloc/calloc/realloc/free/memalign/posix_memalign/malloc_usable_size`:
+      - địa chỉ export: `libc+0x1bb08/0x1baa0/0x1bb88/0x1bac0/0x1bb48/0x1bb68/0x1bb28`;
+      - metadata giữ phía Java; bật bằng `-Demu.malloc=java`.
+    - Hướng 3 (chẩn đoán): đặt write-hook lên mapbits bị zero, chạy lại tất định, in PC/LR của kẻ ghi. Nếu là lỗi game thì ghi Vướng mắc, không vá game.
+    - Toạ độ 480x320:
+      - ô save trống: (214,82), (214,165), (214,247); nút quay lại: (18,22). Quản đốc đã kiểm trên ảnh 960x640 `/opt/work/emuS/f00690.png`: ô đầu ở khoảng (428,165).
+      - script mẫu: `620:tap:240,277;690:shot:s0;700:tap:214,82;...`;
+      - sau khi chọn ô có thể hiện popup xác nhận hoặc `PopupNetError`.
 - [ ] T3. Sửa văng khi load save (`CHAR_GetSkillPoint` null ← `GAMESTATE_EnterPlay`) — **Quản đốc nghiệm thu**. **ƯU TIÊN trước T2**: đã có file save người dùng gửi.
   - Đầu vào:
     - `logs/save_TEST7/`, xuất từ máy thật bằng TEST7: `d41d8cd98f00b204e9800998ecf8427e/save0.dat` (3192 B; thư mục = MD5 của chuỗi rỗng, tức khoá rỗng), `edf2113c684f2b822de06dad8d06b016A/thpcheckslot1.dat` (31 B), `appinfo.dat`, `envinfo.dat`;
@@ -147,3 +164,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-10-31 quản đốc: lập PLAN giai đoạn ổn định; T0/T0b đã xong ở phiên trước (TEST6/TEST7).
 - 2026-10-31 quản đốc: giao T1 cho A1 (chạy), A2 đọc trước T2. Người dùng gửi save (TEST7) → `logs/save_TEST7/`; T3 ưu tiên trước T2.
 - 2026-10-31 quản đốc: thêm quy tắc thay công nhân khi ngữ cảnh > 400k (người dùng chốt). Lúc ghi: A1 ~233k, A2 ~209k.
+- 2026-10-31 quản đốc: A2 đọc xong T2 (~233k). Kế hoạch 3 hướng ghi ở "Bàn giao" dưới T2. A2 lỡ tạo rồi xoá một file ở `/tmp` (ngoài dự án), không ảnh hưởng. T2 chờ: T1 xong → T3 (ưu tiên) → T2.
