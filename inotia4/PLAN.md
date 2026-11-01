@@ -606,7 +606,14 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - nhóm `iap` áp đúng số lần;
     - build thử PASS;
     - nếu T2 xong: unidbg bấm mua một gói và thấy vật phẩm/gem được cộng.
-- [ ] T5. Đồng bộ `scripts/rebuild.sh` với các bản vá mới (phụ thuộc T1, T3, T7, T8)
+- [ ] T5. Đồng bộ `scripts/rebuild.sh` với các bản vá mới (phụ thuộc T1, T3, T7, T8, T9, T10)
+  - Bổ sung của quản đốc (2026-11-01), phạm vi mở rộng sau T9/T10:
+    - `rebuild.sh` phải tạo ra cùng nội dung với chuỗi build TEST12. Cụ thể:
+      - smali `net,mod` + `--vnfont` (gồm `FontData24`, `ModMenu`, `ModMem`);
+      - lib nhóm `base,p1,mod,view,hud,pool,hudbtn`;
+      - atlas HUD (`hud_swap.py`).
+    - Có cách bật/tắt bản chẩn đoán (diag) cho bản phát hành.
+    - Kiểm: build bằng `rebuild.sh` (không diag) rồi `apkdiff` với một bản build tương ứng từ `build_from_apk.sh`. Chỉ được khác chữ ký/dấu thời gian, hoặc khác có giải thích.
   - Việc: nhóm smali đầy đủ (`font,lang,offline,net,mod`), nhóm lib (P1 của T3 + `mod`); d8 thêm `--lib android.jar` và `--lib` stub; ghi phiên bản tool vào `tools/VERSIONS.md` (apktool 2.12.1, build-tools 35.0.0, jadx 1.5.3).
   - Hoàn thành khi: `bash -n scripts/rebuild.sh` OK; diff hợp lý; README/PROGRESS ghi rõ cách chạy.
 - [ ] T6. Bản phát hành (phụ thuộc T3, người dùng xác nhận font) — **Quản đốc nghiệm thu**
