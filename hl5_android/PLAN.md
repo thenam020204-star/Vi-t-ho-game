@@ -125,6 +125,10 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - `hl5_android/make_apk.sh`: áp patch guest/bridge, pack VFS, cập nhật `target-assets.json`, zip (giữ nguyên thuộc tính nén của `.so`/asset như APK gốc), zipalign, apksigner.
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
+## Mốc v0.1 — bản chơi được đầu tiên (người dùng giao chạy tự động qua đêm)
+- Thứ tự ưu tiên: T6 (chữ Việt) → T8 tối thiểu (tắt hook chữ của bridge, NEAREST, logic gốc) → T7 tối thiểu (offline, cash shop miễn phí nếu kịp) → T12 (APK ký, cập nhật sha256 `target-assets.json`) → harness chơi thử. T9/T10/T11 sau v0.1.
+- v0.1 đạt khi: APK cài được (arm64), qua tiêu đề → menu → vào game, chữ Việt hiện đúng, không cần mạng; kiểm trong harness + kiểm tĩnh bridge (không có thiết bị thật).
+
 ## Quy tắc thay công nhân (người dùng chốt)
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
