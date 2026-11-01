@@ -262,6 +262,11 @@ def make_handler(g, name):
         raise RuntimeError('guest abort()')
     # ---- mạng: luôn thất bại ----
     def neg1(): return 0xffffffff
+
+    def netlog(nm, ret=0xffffffff):   # T7: mọi lời gọi mạng libc đều ghi 'NET <tên>' vào run.log
+        def h():
+            g.log.write('NET %s\n' % nm); g.log.flush(); return ret
+        return h
     # ---- GLES ----
     def glGenTextures():
         n, p = A(0), A(1)
@@ -304,8 +309,9 @@ def make_handler(g, name):
         'rename': rename_, 'chdir': ret0, 'dup': dup_, 'fdopen': fdopen, 'fread': fread,
         'fseek': fseek, 'fclose': fclose, '__errno': errno_, 'qsort': qsort_, 'abort': abort_,
         'fcntl': ret0, 'pthread_mutex_lock': ret0, 'pthread_mutex_unlock': ret0,
-        'socket': neg1, 'connect': neg1, 'select': neg1, 'recv': neg1, 'setsockopt': neg1,
-        'getsockopt': neg1, 'shutdown': ret0, 'inet_addr': neg1,
+        'socket': netlog('socket'), 'connect': netlog('connect'), 'select': netlog('select'),
+        'recv': netlog('recv'), 'setsockopt': netlog('setsockopt'), 'getsockopt': netlog('getsockopt'),
+        'shutdown': netlog('shutdown', 0), 'inet_addr': netlog('inet_addr'),
         '__stack_chk_fail': abort_,
         'glGenTextures': glGenTextures, 'glBindTexture': glBindTexture,
         'glTexImage2D': glTexImage2D, 'glTexSubImage2D': glTexSubImage2D,
@@ -331,6 +337,7 @@ JNI_NAMES = {6: 'FindClass', 17: 'ExceptionClear', 15: 'ExceptionOccurred', 19: 
 
 def static_call(g, name, va):
     """Các hàm Java tĩnh mà MIDAS gọi. Trả về giá trị (int hoặc handle)."""
+    g.log.write('JNIC %s\n' % name)   # T7: ghi mọi lời gọi Java tĩnh (để chứng minh không có lời gọi mạng/MTX)
     if name == 'getUniqueAssetNameFromID':
         i = va.u32()
         return g.jobj(('str', g.asset_names.get(i, b'')))
