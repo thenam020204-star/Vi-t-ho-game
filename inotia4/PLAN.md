@@ -619,3 +619,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Nhảy B `c510ff17` → 0x18bb74 và C `5a10ff17` → 0x18bbac khớp bố cục.
   - Rủi ro nhỏ còn lại: cave B không chặn EXP ≤ 0, nên EXP âm (khó xảy ra) sẽ bị nhân thêm. Cave đã đầy, không còn chỗ thêm lệnh chặn ⇒ chấp nhận.
   - Giao T8c (soát) và T8d cho A1 mới.
+- 2026-11-01 07:3x (VN) quản đốc: người dùng TẠM DỪNG tới 11:41, có ping giữ cache mỗi 55 phút (08:22, 09:17, 10:12, 11:07).
+  - A1 (T8c/T8d, ~208k) dừng ở `affe1aa` sau khi ghi bàn giao.
+    - T8c: đã soát, không cần sửa, chưa tick.
+    - T8d: unidbg 21.782 ca đạt (10 ca ngoài miền: EXP âm ở B). Còn ghi log, ghi bảng vào tài liệu, build lại, apkdiff rồi tick.
+  - Khi làm tiếp: giao cho công nhân mới (ngữ cảnh A1 hiện tại vẫn < 400k, nhưng giao mới cho gọn), rồi quản đốc nghiệm thu T8 và gửi bản thử. Sau đó là T9 → T10.
