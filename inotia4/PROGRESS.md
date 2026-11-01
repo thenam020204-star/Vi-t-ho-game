@@ -110,3 +110,12 @@ Việc tiếp theo (đề xuất):
 - **VNFont**: `size<24` giữ f18 như TEST7; `size>=24` dùng f24 hệ số size/24 (chỉ phóng to). Dữ liệu `FontData24.PARTS`.
 - **`test_builds/Inotia4_TEST9_vi_offline.apk`** = TEST8 + font f24 (`--smali net --vnfont --lib --diag`). SHA256 ở `test_builds/SHA256_TEST9.txt`. So TEST8 chỉ khác `classes3.dex` (lớp `com/namp/vh/*`); cùng khoá ký ⇒ cài đè được, save giữ nguyên.
 - **Nhờ người dùng thử**: cài đè TEST9, xem chữ hội thoại/menu có đủ dấu không (đặc biệt ặ ộ ợ ự ỡ ữ Ấ Ổ), chữ có tràn khung không.
+
+## Phiên 5: mod menu (T8) — TEST10
+- **Native (`patch_lib.py` nhóm `mod`)**:
+  - `CHAR_AddDamage` 0x18b3e0: phe người chơi (byte `[char+0x311]` = 0) gây sát thương × Mdmg, trần 999.999; nhận sát thương ÷ Mdef, tối thiểu 1.
+  - `MERCENARYSYSTEM_AddExperience` 0x1c7860 và `AddExpFixed` 0x1c7a44: EXP × Mexp, trần 0xFFFFFF.
+  - Cave 236 B ở 2 hàm chết 0x18bb00..0x18bbec. Hệ số đọc từ `.bss` 0x72f780/784/788; chỉ nhận 2..50, giá trị khác coi như x1.
+- **Java**: `com.namp.vh.ModMenu` (nút MOD nổi ở lề trái, kéo thả được; 3 thanh x1–x50; lưu SharedPreferences) và `ModMem` (ghi qua `/proc/self/mem`, dự phòng `Unsafe`, đọc lại để kiểm). Gắn bằng 1 lệnh smali sau `HiveActivity.onResume` trong `MainActivity.onResume`.
+- **Kiểm**: unidbg gọi thẳng 3 điểm vá, 21.772/21.782 ca đúng công thức (10 ca ngoài miền: EXP âm). Log ở `logs/t8d_mod_check.log`, chi tiết ở `docs/mod_menu.md`.
+- **`test_builds/Inotia4_TEST10_vi_offline.apk`** = TEST9 + mod (`--smali net,mod --vnfont --lib --diag`, lib = P1 + mod). SHA256 ở `test_builds/SHA256_TEST10.txt`. So TEST9 chỉ khác `classes.dex`, `classes3.dex`, `libgame.so`; cùng khoá ký ⇒ cài đè được, save giữ nguyên.

@@ -386,6 +386,14 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
       - không cấp phát trong vòng lặp game.
     - T8d theo kế hoạch của A2: `emu_start` tại 3 điểm vá với thanh ghi và `.bss` đặt sẵn, thử Mdmg/Mdef/Mexp = 0, 1, 2, 50, 51 và biên trần; với A, đặt breakpoint ở `CHAR_AddLife` để đọc w1 = −dmg.
   - Bàn giao (A1 mới của T8, T8a XONG): tạo `docs/mod_menu.md` (bằng chứng, cave A/B/C từng lệnh, bảng điểm vá, tràn số, kênh Java→native, kế hoạch kiểm, chênh lệch so với A2), `scripts/re/mod_check.py` (kiểm bằng chứng + phân tích thanh ghi tự do; log `logs/t8a_mod_check.log` = TẤT CẢ ĐẠT), `scripts/asm/mod_cave.s` + `scripts/asm/build_mod_cave.sh` (llvm-mc + ld.lld, ra `/opt/work/t8/mod_cave.bin` 236 B sha256 `cb645162…9765`). `PT_LOAD` bss: 0x72f770 → làm tròn 4 KB và 16 KB đều 0x730000 > 0x72f78c. Cave dùng cả 2 hàm chết (0x18bb00..0x18bbec, 59 lệnh); trần sát thương 999.999 và EXP 0xFFFFFF, chỉ nhân khi giá trị gốc < trần. Điểm vá: A 0x18b3e0 `ffc301d1`→`c8010014`; B 0x1c7860 `c80d8052`→`c510ff17`; C 0x1c7a44 `f303002a`→`5a10ff17` (khác A2: `59…` vì cave dài hơn). Kênh: `/proc/self/mem` qua `RandomAccessFile` (bằng chứng SELinux/kernel/bionic AOSP trong doc; chưa thử máy thật), dự phòng `Unsafe`. Bước tiếp: T8b = nhóm `mod` trong `scripts/patch_lib.py` (thêm `--group`, cave kiểm sha256 byte gốc), ghi disasm trước/sau vào mục 10 của `docs/mod_menu.md`. Lệnh: `python3 -I scripts/re/mod_check.py /opt/work/lib4/libgame.so /opt/work/lib4/dis.txt`, `bash scripts/asm/build_mod_cave.sh`.
+  - Quản đốc nghiệm thu T8a–T8d (2026-11-01): ĐẠT (chờ người dùng thử trên máy).
+    - Đã soát cave (59 lệnh, khít 0x18bb00..0x18bbec) và `ModMem.java`:
+      - base lấy từ dòng `libgame.so` offset 0; PT_LOAD đầu có vaddr 0 ⇒ base = load bias;
+      - kiểm 16 B `rw-p` trong maps; magic ELF; ghi rồi đọc lại; Unsafe chỉ dùng làm dự phòng; không ném ngoại lệ.
+    - Tự chạy lại: `apkdiff` TEST9 → T8_check chỉ khác `classes.dex`, `classes3.dex` và `libgame.so`; apksigner OK; `zipalign -c -P 16 4` OK.
+    - unidbg: 21.772/21.782 ca đạt, 10 ca ngoài miền (EXP âm ở B, đã chấp nhận).
+    - Đóng gói `test_builds/Inotia4_TEST10_vi_offline.apk` (= `out/Inotia4_T8_check.apk`, SHA256 trong `SHA256_TEST10.txt`).
+    - Chưa tick T8: chờ người dùng xác nhận nút MOD hiện và hệ số có tác dụng trên máy thật (kênh `/proc/self/mem`/Unsafe trên Android 16 CHƯA XÁC ĐỊNH).
   - [x] T8a. RE + thiết kế, ghi vào `docs/mod_menu.md`.
     - Tìm hàm tính sát thương người chơi gây ra / nhận và hàm cộng EXP trong `libgame.so`, dựa vào symbol + disasm:
       - chữ ký, kiểu dữ liệu (byte/short/int, có dấu không), giá trị tối đa;
@@ -633,3 +641,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - A1 (T8, ~208k < 400k) chạy lại từ bàn giao của chính nó: log, bảng kết quả, build lại, apkdiff, tick T8c/T8d.
   - A1 đã đạt ≥90% khối lượng T8 ⇒ A2 mới đọc trước T10a (sprite HUD). A2 chỉ đọc, chỉ được ghi ảnh tạm vào `/opt/work/t10/`.
 - 2026-11-01 A1 (T8, lượt 2): T8c đã soát (không sửa), T8d xong: unidbg 21.782 ca, lib vá đạt 21.772 + 10 ca ngoài miền, lib gốc đạt 21.782; build lại `out/Inotia4_T8_check.apk` PASS (apkdiff với TEST9 chỉ khác `classes.dex`, `classes3.dex`, `libgame.so`; `MainActivity` +1 lệnh; ký/zipalign/check_apk/`patch_lib --diff` đạt). Tick T8c, T8d; T8 cha chờ quản đốc nghiệm thu.
+- 2026-11-01 quản đốc: nghiệm thu T8a–T8d ĐẠT; gửi TEST10 (TEST9 + mod menu). Chờ người dùng thử. Tiếp theo: T9 (công nhân chạy mới).
