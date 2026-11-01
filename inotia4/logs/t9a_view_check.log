@@ -1,0 +1,177 @@
+lib /opt/work/lib4/libgame.so sha256 df12cecc7752bcba55157fffe7989cf8f9d8bf6344b211fb3ec41122443a5d02 2917904 B
+(dis.txt: 407546 lenh)
+
+[1] 29 diem le HUD (29 diem khai bao)
+  -> DAT: co dung 29 diem 
+  -> DAT: vaddr tang dan, khong chong nhau 
+  0x167f7c UIPlay_Create          W-       sxtw x19, w0 -> sub x19, x0, #24         (137c4093 -> 136000d1) 
+  0x167f88 UIPlay_Create          H-       sxtw x24, w0 -> sub x24, x0, #16         (187c4093 -> 184000d1) 
+  0x167fb8 UIPlay_Create          x+       mov w1, #1 -> mov w1, #25              (21008052 -> 21038052) 
+  0x16800c UIPlay_Create          x+       mov w1, #1 -> mov w1, #25              (21008052 -> 21038052) 
+  0x16805c UIPlay_Create          x+       mov w1, #1 -> mov w1, #25              (21008052 -> 21038052) 
+  0x1680cc UIPlay_Create          y+       mov w2, #10 -> mov w2, #26              (42018052 -> 42038052) 
+  0x16811c UIPlay_Create          y+       mov w2, #110 -> mov w2, #126             (c20d8052 -> c20f8052) 
+  0x168168 UIPlay_Create          y+       mov w2, #210 -> mov w2, #226             (421a8052 -> 421c8052) 
+  0x1681b8 UIPlay_Create          ctr-     subs x8, x19, #458 -> subs x8, x19, #434       (682a07f1 -> 68ca06f1) 
+  0x1681bc UIPlay_Create          ctr-     sub x9, x19, #457 -> sub x9, x19, #433        (692607d1 -> 69c606d1) 
+  0x1681c8 UIPlay_Create          zero     mov x2, xzr -> mov x2, #16              (e2031faa -> 020280d2) 
+  0x168424 UIPlay_Create          subH+    sub w8, w0, #252 -> sub w8, w0, #268         (08f00351 -> 08300451) 
+  0x16842c UIPlay_Create          x+       mov w1, #10 -> mov w1, #34              (41018052 -> 41048052) 
+  0x168490 UIPlay_Create          subH+    sub w8, w0, #380 -> sub w8, w0, #396         (08f00551 -> 08300651) 
+  0x168498 UIPlay_Create          x+       mov w1, #10 -> mov w1, #34              (41018052 -> 41048052) 
+  0x1684e8 UIPlay_Create          subH+    sub w8, w0, #171 -> sub w8, w0, #187         (08ac0251 -> 08ec0251) 
+  0x1684f0 UIPlay_Create          x+       mov w1, #177 -> mov w1, #201             (21168052 -> 21198052) 
+  0x168540 UIPlay_Create          subH+    sub w8, w0, #85 -> sub w8, w0, #101         (08540151 -> 08940151) 
+  0x168548 UIPlay_Create          x+       mov w1, #91 -> mov w1, #115             (610b8052 -> 610e8052) 
+  0x168598 UIPlay_Create          subH+    sub w8, w0, #171 -> sub w8, w0, #187         (08ac0251 -> 08ec0251) 
+  0x1685a0 UIPlay_Create          x+       mov w1, #25 -> mov w1, #49              (21038052 -> 21068052) 
+  0x1685f0 UIPlay_Create          subH+    sub w8, w0, #237 -> sub w8, w0, #253         (08b40351 -> 08f40351) 
+  0x1685f8 UIPlay_Create          x+       mov w1, #91 -> mov w1, #115             (610b8052 -> 610e8052) 
+  0x1698c4 UIPlayPorting_Draw     subW+    sub w20, w0, #276 -> sub w20, w0, #300        (14500451 -> 14b00451) 
+  0x1698cc UIPlayPorting_Draw     subH+    sub w21, w0, #267 -> sub w21, w0, #283        (152c0451 -> 156c0451) 
+  0x16b234 UIPlay_MakeMinimap     x+       mov w1, #7 -> mov w1, #31              (e1008052 -> e1038052) 
+  0x16b238 UIPlay_MakeMinimap     y+       mov w2, #7 -> mov w2, #23              (e2008052 -> e2028052) 
+  0x16b264 UIPlay_MakeMinimap     x+       mov w1, #7 -> mov w1, #31              (e1008052 -> e1038052) 
+  0x16b268 UIPlay_MakeMinimap     y+       mov w2, #7 -> mov w2, #23              (e2008052 -> e2028052) 
+  -> DAT: byte goc tai 29 vaddr == bang 
+  -> DAT: ngu nghia moi diem dung (+24 px ngang / +16 px doc, tam thanh ID 4 giu nguyen) 
+  -> DAT: llvm-mc dung lai 29 lenh moi == byte "moi" cua A2 
+
+[2] ngu canh UIPlay_Create / UIPlayPorting_Draw
+    0x167f38 stp	x24, x23, [sp, #0xe0]
+    0x167f40 stp	x20, x19, [sp, #0x100]
+    0x167f48 mrs	x19, TPIDR_EL0
+    0x167f50 ldr	x8, [x19, #0x28]
+    0x167f74 str	x19, [sp, #0x18]
+    0x167f7c sxtw	x19, w0
+    0x167f88 sxtw	x24, w0
+    0x1680c4 sub	x21, x19, #0x5d
+    0x1681b8 subs	x8, x19, #0x1ca
+    0x1681bc sub	x9, x19, #0x1c9
+    0x168260 mov	x25, x24
+    0x168268 str	x19, [sp, #0x8]
+    0x16826c sub	x19, x19, #0x3
+    0x168270 add	x24, x24, #0x2
+    0x1682cc sub	x1, x19, x9
+    0x1682d0 sub	x2, x24, x8
+    0x168374 ldr	w19, [sp, #0x14]
+    0x168378 tst	w19, #0xff
+    0x168628 tst	w19, #0xff
+    0x168634 mov	w1, w19
+    0x168678 ldr	x19, [sp, #0x18]
+  lenh dung x19/x24 sau khi lay W/H (0x167f7c..0x168374): 0x167f88, 0x1680c4, 0x1681b8, 0x1681bc, 0x168260, 0x168268, 0x16826c, 0x168270, 0x1682cc, 0x1682d0
+  lenh dung x19/x24 ngoai danh sach da biet: 
+  -> DAT: x19 (W-24)/x24 (H-16) chi dung o 0x1680c4 (cot phai), 0x1681b8/bc (thanh ID 4), 0x168260..0x168270 (luu cho ID 7/0x14), 0x1682cc/d0 (6 nut ky nang) 
+  -> DAT: x19 bi nap lai sau cum nut (ldr w19,[sp,#0x14] @0x168374) 
+  UIPlay_Create: 0x167f78 Width, 0x167f80 Height, 0x168420 Height, 0x16848c Height, 0x1684e4 Height, 0x16853c Height, 0x168594 Height, 0x1685ec Height
+  UIPlayPorting_Draw: 0x1698c0 Width, 0x1698c8 Height
+  -> DAT: 6 cho `bl SGL_GetScreenHeight` cua can/mui ten co lenh `sub w8,w0,#k` duoc va ngay sau 
+  -> DAT: UIPlayPorting_Draw: 1 GetScreenWidth + 1 GetScreenHeight, ca hai duoc va (0x1698c4/0x1698cc) 
+
+[3] cave `view` 0x133454 (52 B) + diem vao 0x14709c
+  dung lai bang llvm-mc + ld.lld: 52 B sha256 2c406b7195be9b642b8d25577c26a4ffc04b8d9ea65157f0a1d57e69634da97d
+  -> DAT: cave llvm-mc == hex A2 (13 lenh) 
+  -> DAT: byte goc 0x133454..0x133488 == bang 
+  -> DAT: lenh dau cua cave == lenh goc tai 0x14709c (strb w20,[x19]) 
+  b tai 0x14709c = eeb0ff17 -> dich 0x133454
+  -> DAT: `eeb0ff17` @0x14709c nhay toi 0x133454 
+  -> DAT: b cuoi cave (0x133484) nhay lai 0x1470a0 
+  -> DAT: b.hi @0x133468 (cond=8 hi) nhay toi 0x133484 
+    0x147030 stp	x29, x30, [sp, #-0x30]!
+    0x147034 str	x21, [sp, #0x10]
+    0x147038 stp	x20, x19, [sp, #0x20]
+    0x14703c mov	x29, sp
+    0x147040 mov	x19, x1
+    0x147044 mov	w20, w0
+    0x147048 bl	0x2a87c0 <GetDeviceWidth@plt>
+    0x14704c mov	w21, w0
+    0x147050 bl	0x2a87e0 <GetDeviceHeight@plt>
+    0x147054 cmp	w21, #0x1e0
+    0x147058 mov	w8, #0x1e0              // =480
+    0x14705c b.lt	0x147090 <OriginalDisplay_ConfigInfo+0x60>
+    0x147060 lsl	w9, w0, #9
+    0x147064 cmp	w21, #0x31f
+    0x147068 sub	w10, w9, w0, lsl #5
+    0x14706c csel	w9, w9, w10, hi
+    0x147070 mov	w10, #0x200             // =512
+    0x147074 sdiv	w9, w9, w21
+    0x147078 csel	w8, w10, w8, hi
+    0x14707c sdiv	w10, w8, w9
+    0x147080 sdiv	w11, w9, w8
+    0x147084 scvtf	s1, w10
+    0x147088 scvtf	s0, w11
+    0x14708c b	0x14709c <OriginalDisplay_ConfigInfo+0x6c>
+    0x147090 movi	d0, #0000000000000000
+    0x147094 fmov	s1, #1.00000000
+    0x147098 mov	w9, #0x140              // =320
+    0x14709c strb	w20, [x19]
+    0x1470a0 strh	w8, [x19, #0x2]
+    0x1470a4 strh	w9, [x19, #0x4]
+    0x1470a8 stp	s1, s0, [x19, #0x8]
+    0x1470ac ldp	x20, x19, [sp, #0x20]
+    0x1470b0 ldr	x21, [sp, #0x10]
+    0x1470b4 ldp	x29, x30, [sp], #0x30
+    0x1470b8 ret
+  -> DAT: co dung 2 duong toi 0x14709c: `b 0x14709c` @0x14708c va roi xuong tu 0x147098; nhanh W<480 qua 0x147090 
+  -> DAT: w8=cfg.W, w9=cfg.H tren moi duong toi 0x14709c (0x147058 mov w8,#480; 0x147098 mov w9,#320; csel o 0x147078) 
+    sau 0x14709c: 0x14709c strb	w20, [x19]
+    sau 0x14709c: 0x1470a0 strh	w8, [x19, #0x2]
+    sau 0x14709c: 0x1470a4 strh	w9, [x19, #0x4]
+    sau 0x14709c: 0x1470a8 stp	s1, s0, [x19, #0x8]
+    sau 0x14709c: 0x1470ac ldp	x20, x19, [sp, #0x20]
+    sau 0x14709c: 0x1470b0 ldr	x21, [sp, #0x10]
+    sau 0x14709c: 0x1470b4 ldp	x29, x30, [sp], #0x30
+    sau 0x14709c: 0x1470b8 ret
+  -> DAT: sau 0x14709c khong doc w10/w11 va khong doc co NZCV (cave dung w10, w11, lam hong NZCV) 
+  -> DAT: s1, s0 (cfg scale) tinh TRUOC 0x14709c tu w8/w9 goc (khong doi khi P != 100: ti le giu nguyen) 
+
+[4] SGL_grpResume 0x133454..0x1338d8 la ma chet (cave 0x133454..0x133488 nam trong)
+  -> DAT: ham gom dung dai 1156 B 
+  nhay/adr/literal tu NGOAI toi trong ham: 0
+  -> DAT: 0 lenh ngoai ham nhay/adr/literal vao ham (ke ca vao diem vao 0x133454) 
+  -> DAT: khong nhanh noi bo nao nhay vao 52 B cave (0x133454..0x133488) []
+  adrp vao trang ['0x133000']: 0
+  -> DAT: 0 cap adrp+add/ldr tinh ra dia chi trong ham 
+  -> DAT: 0 PLT stub SGL_grpResume@plt 
+  -> DAT: 0 reloc theo ten SGL_grpResume (JUMP_SLOT/GLOB_DAT/ABS64) []
+  -> DAT: 0 reloc co addend trong ham (RELATIVE: .init_array, bang JNI, con tro ham) []
+    (bo qua) file off 0x7bd8 = 0x133454 trong .dynsym = st_value cua chinh symbol SGL_grpResume
+  -> DAT: 0 gia tri 64 bit trong du lieu (tru .dynsym) tro vao ham (.dynsym: 1 dong)
+  chuoi "SGL_grpResume" trong libgame.so tai file off ['0x49ace'] ; .dynstr = ['0x46540', '0x7815a']
+  -> DAT: ten chi nam trong .dynstr (khong co dlsym theo chuoi trong .rodata) 
+  -> DAT: co dung 1 symbol dong SGL_grpResume (FUNC GLOBAL, xuat) va khong co slot `__CS_grpResume` 1289: 0000000000133454  1156 FUNC    GLOBAL DEFAULT    14 SGL_grpResume
+  -> DAT: libHercules.so: 0 symbol UND dang SGL_*/grp* va chuoi "grpResume" xuat hien 0 lan []
+  -> DAT: libHercules.so khong NEEDED libgame.so (khong lien ket symbol) ['liblog.so', 'libz.so', 'libOpenSLES.so', 'libc.so', 'libm.so', 'libdl.so']
+  APK test_builds/Inotia4_TEST10_vi_offline.apk: 1462 muc, muc chua chuoi "grpResume": ['lib/arm64-v8a/libgame.so']
+  -> DAT: chi libgame.so (.dynstr) chua "grpResume": dex/smali/asset/manifest/libHercules deu KHONG 
+  dex da quet: ['classes3.dex', 'classes2.dex', 'classes.dex', 'classes4.dex']
+  -> DAT: ten ham khong co dang Java_* (khong phai JNI theo ten) 
+
+[5] pool MEM_Create 0x1456e4
+  0x145730 mov w9, #0x800000 (0910a052) -> mov w9, #0xa00000 (0914a052) ; byte trong lib: 0910a052
+  -> DAT: 0x145730: byte goc == `mov w9, #0x800000` dung lai bang llvm-mc; moi dung lai `mov w9, #0xa00000` 
+  0x145734 cmp x8, #0x800, lsl #12 (1f0160f1) -> cmp x8, #0xa00, lsl #12 (1f0168f1) ; byte trong lib: 1f0160f1
+  -> DAT: 0x145734: byte goc == `cmp x8, #0x800, lsl #12` dung lai bang llvm-mc; moi dung lai `cmp x8, #0xa00, lsl #12` 
+  -> DAT: mask `and x0,x8,#0x1fffc00` @0x145748 giu nguyen 10 MB: (0xa00000+0x3ff)&0x1fffc00 == 0xa00000 
+  -> DAT: imm12 0xa00 << 12 == 0xa00000 hop le (<= 0xfff); movz 0xa0 << 16 
+    0x145720 sub	x9, x0, #0x64, lsl #12  // =0x64000
+    0x145724 mov	w8, #0x600000           // =6291456
+    0x145728 cmp	x9, #0x600, lsl #12     // =0x600000
+    0x14572c csel	x8, x9, x8, hi
+    0x145730 mov	w9, #0x800000           // =8388608
+    0x145734 cmp	x8, #0x800, lsl #12     // =0x800000
+    0x145738 csel	x8, x8, x9, lo
+    0x14573c adrp	x9, 0x2bf000
+    0x145740 add	w8, w8, #0x3ff
+    0x145744 ldr	x9, [x9, #0x20]
+    0x145748 and	x0, x8, #0x1fffc00
+    0x14574c str	x0, [x9]
+  -> DAT: MEM_Create chi co 1 caller (startClet) va OriginalDisplay_ConfigInfo chi co 1 caller (startClet) 
+  moi lenh co hang 0x800000 trong ca lib: 0x145730(MEM_Create), 0x145734(MEM_Create), 0x231dcc(pactSqrtx), 0x2a40b8(__emutls_get_address)
+  -> DAT: chi 0x145730/0x145734 (MEM_Create) dung hang tran 8 MB cho pool; cac cho khac (neu co) khong lien quan MEM 
+  CS_knlAlloc: 261ba4 mov	x1, x0; 261ba8 mov	w0, #0x1                // =1; 261bac b	0x2ab380 <calloc@plt>
+  -> DAT: CS_knlAlloc = calloc(1, n) 
+  CS_knlGetFreeMemory: 261be8 stp	x29, x30, [sp, #-0x10]!; 261bec mov	x29, sp; 261bf0 bl	0x2b43f0 <jGetNativeAvailableMemory@plt>; 261bf4 sxtw	x0, w0; 261bf8 ldp	x29, x30, [sp], #0x10; 261bfc ret
+  -> DAT: CS_knlGetFreeMemory -> jGetNativeAvailableMemory (Java CFunction.getNativeAvailableMemory = ActivityManager.MemoryInfo.availMem) 
+
+TONG KET: TAT CA DAT
