@@ -99,8 +99,13 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - **Int thứ 4 @0x72f78c = P**, là phần trăm k×100.
       - Chỉ nhận 100..150; giá trị khác (kể cả 0) ⇒ k = 1,0, giống game gốc.
       - Thanh "Tầm nhìn" trong mod menu: 100..150, bước 5.
-      - **Mặc định tạm 120**, chốt sau khi đọc xong `RenderCore*`. Lý do: k = 1,25 cho FB rộng đúng 640, mà `RenderCoreInitialize` có nhánh theo một giá trị thuộc {240, 320, 400, 640}.
-      - Nếu RenderCore dùng texture cố định hoặc rẽ nhánh theo W thì phải giới hạn P cho an toàn.
+      - **Mặc định 120** (FB 614×276, vẽ tốn ×1,44). Đã chốt sau khi đọc `RenderCore*`: đó là mã chết; đường vẽ thật `SGL_FrameBufferToScreen` lấy W/H live, texture làm tròn lên POT.
+      - Tối đa 150. Từ 140 trở lên, tier trượt camera của menu đổi (không crash) ⇒ chấp nhận.
+      - **Cave phải ép W chẵn** (`and w8,w8,#~1`), vì pitch FB = 2W và upload GL căn 4 byte; W lẻ làm ảnh xiên. Dùng cave 52 B trong `docs/t9a_bangiao_A2.md` phần 2.
+      - **Nâng trần pool `MEM_Create` từ 8 MB lên 10 MB**: 0x145730 `mov w9,#0xa00000`, 0x145734 `cmp x8,#0xa00,lsl#12`.
+        - Lý do: `GRP_Initialize` xin `MEM_Malloc(2·W·W)` từ pool, thêm tới ~0,66 MB ở P = 150.
+        - Công nhân kiểm encoding và nguồn `CS_knlAlloc`.
+        - Nếu T9c đo được mức dùng đỉnh, ghi lại số đo.
     - **Chỉ áp khi mở lại app**, vì cfg chỉ đọc 1 lần trong `startClet`. Mod menu phải ghi rõ "khởi động lại game để áp dụng". Không gọi Reapply.
     - **Lề HUD**: 29 điểm vá, mỗi điểm 1 lệnh, không dùng cave (nhóm `hud`), lùi vào 24 px ngang / 16 px dọc.
       - Điểm neo W/H: 0x167f7c, 0x167f88. Còn lại là các hằng toạ độ trong `UIPlay_Create`, cần điều khiển, minimap, và hình nền ở `UIPlayPorting_Draw`.
@@ -439,6 +444,11 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
       - `RenderCoreInitialize`/`RenderCoreFlush`/`CSFB_grpFlushLcd`: nhánh theo {240, 320, 400, 640}, texture FB cố định?;
       - `MAP_SetFocus`, `TouchGameObject_*`;
       - unidbg dump `GRP_nDisplayW/H` (thuộc T9c).
+  - Bàn giao (A2 thứ 3, T9a ~92%, ~296k; chi tiết ở `docs/t9a_bangiao_A2.md` phần 2):
+    - `RenderCore*` là mã chết. Đường vẽ thật lấy W/H FB live, không có số cứng, mọi buffer cấp động.
+    - Cần ép W chẵn trong cave. Map hẹp hơn vùng nhìn thì căn giữa, phần thừa tô đen.
+    - Chạm thế giới không đổi tỉ lệ UI→FB, giống game gốc: CHƯA XÁC ĐỊNH, kiểm ở T9c.
+    - Còn lại của T9a: viết `docs/tam_nhin_hud.md` (gộp 2 bàn giao) và xác nhận chạm thế giới bằng unidbg ⇒ giao cho công nhân chạy T9 làm đầu tiên.
   - [ ] T9a. RE + thiết kế, ghi vào `docs/tam_nhin_hud.md`.
     - Mọi chỗ ghi/đọc 0x2d6098/0x2d609c và mọi hằng 640/960 (int `0x280`/`0x3c0`, float `0x44200000`/`0x44700000`) có liên quan tới kích thước màn; phân loại từng chỗ.
     - Caller của `CalcResolutionWidth/Height`, `GetResolutionWidth/Height`, `GRPX_GetScreenWidth/Height`: neo HUD vào mép hay căn giữa vùng 960×640 hay khác.
@@ -579,3 +589,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - ⇒ Đổi thiết kế T9 sang nhân FB theo P% (0x72f78c, 100..150). UI/HUD giữ cỡ; lề HUD 29 điểm vá 1 lệnh.
   - Bàn giao lưu ở `docs/t9a_bangiao_A2.md`. Phần còn lại của T9a (RenderCore, MAP_SetFocus) giao sau.
 - 2026-11-01 A1 (T8): T8a xong (`docs/mod_menu.md`, `scripts/re/mod_check.py`, `scripts/asm/mod_cave.s`). Bằng chứng A2 khớp disasm; thêm 4 chỗ ghi phe mà A2 chưa liệt kê; cave 236 B dùng hết 2 hàm chết, trần 999.999/0xFFFFFF không làm yếu giá trị gốc. Kênh Java→native chọn `/proc/self/mem`, dự phòng `Unsafe`; chưa thử máy thật.
+- 2026-11-01 quản đốc: A2 thứ 3 xong T9a ~92% (~296k). Chốt P mặc định 120, tối đa 150, cave ép W chẵn. Quản đốc tự đọc `MEM_Create`: pool trần 8 MB ⇒ thêm vá nâng trần 10 MB. A2 lỡ tạo file rỗng `/tmp/claude-0/scan.py` (ngoài repo), quản đốc đã xoá.

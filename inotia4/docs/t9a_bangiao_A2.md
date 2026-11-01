@@ -158,3 +158,75 @@
 4. unidbg 2400×1080 (thuộc T9c):
    - dump 0x2d6098/9c, 0x2d7ab4/ab8; kỳ vọng 1422/640 và 512/230;
    - so P = 100 và P = 120, chụp ảnh.
+
+---
+
+# T9a phần 2: bàn giao của A2 thứ 3 (2026-11-01, T9a ~92%, chỉ đọc)
+
+## RenderCore* không nằm trên đường vẽ thật
+
+- `nativeStart` 0x26edc4: nếu `jWD_GetRendererType()==0` thì gọi `RenderCoreInitialize(OrigW, OrigH, 0)`, rồi `InitializeApp` 0x26ee04 gắn bảng `__CS_grp*` = CSFB.
+- `SGL_grpInitialize` 0x132d6c (gọi từ `startClet`) ghi đè bảng ở 0x132e38..0x132e70: `__CS_grpFlushLcd` = `SGL_grpFlushLcd` (GOT 0x2bdd80).
+  - `InitializeApp` chỉ có 1 caller. `RenderCoreFlush` chỉ có 1 caller (`CSFB_grpFlushLcd` 0x25a864) ⇒ mã chết.
+- `RenderCoreInitialize`:
+  - rẽ nhánh theo `jWD_GetOriginalHeight` (480×320 do `getWrapperData` đặt), không phải FB;
+  - texture RGB565 rộng = POT(W).
+  - Lý do tránh P = 125 (640) **không còn**.
+
+## Đường vẽ thật: `SGL_grpFlushLcd` 0x133218 → `SGL_FrameBufferToScreen` 0x1327a4
+
+- Ortho (0,W_fb,0,H_fb) lấy W/H live từ `SGL_Image`+0xc/+0x10. Quad phủ viewport `glViewport(0,0,devW,devH)`.
+- Mỗi khung `glTexSubImage2D(0,0,W,H)` (0x1327f8), không có số cứng.
+- Texture `SGL_Texture::Create` 0x2647c0, kích thước POT, UV max = (W<<16)/POT(W), GL_LINEAR.
+- Hệ số kéo: 512×230 ≈ 4,69; 614×276 ≈ 3,91; 640×287 ≈ 3,75; 768×345 ≈ 3,13.
+- **W phải chẵn:**
+  - `GRP_Initialize` 0x141640 đặt `GRP_nBPL` = 2·W;
+  - `SGL_Device::CreateImageBuffer` 0x263b80 đặt pitch = (2W+3)&~3;
+  - GL alignment 4, không có `glPixelStorei`.
+  - W lẻ ⇒ ảnh bị xiên. Cave cũ cho W lẻ ở P = 105/110/130/135.
+
+## Buffer theo FB
+
+- `CreateImage` 0x263a28 → `CreateImageBuffer`: `malloc(((2W+3)&~3)·H)`.
+- `GRP_Initialize`: `MEM_Malloc(2·W·W)`: 0,5 MB ở 512; 0,75 MB ở 614; 1,18 MB ở 768.
+- Back buffer `CS_grpCreateOffScreenFrameBuffer(H,W)` đủ chứa memcpy của `GRP_SaveLCD`/`RestoreLCD`.
+- `GRP_nDisplayW/H`: 71/63 hàm đọc, đều qua GOT, tự co giãn.
+- `MENUSTATEUTIL_ResetSimpleMoveType` 0x1f061c rẽ nhánh `H≥320` (0x1f064c), `H≥220` (0x1f0670). Từ P ≥ 140 (H = 322), tier trượt camera menu đổi; không crash.
+
+## Camera / map
+
+- `MAP_SetInformation` 0x1be718, `MAP_Load` 0x1bf1b8: map hẹp hơn vùng nhìn ⇒ căn giữa, phần thừa tô đen. `MAP_DrawPartial` 0x1bc488..0x1bc4c0 luôn tô đen dải 50 px đáy.
+- `MAP_SetFocus` 0x1bf5dc kẹp focus. Không có hằng nào phụ thuộc 512.
+
+## Chạm thế giới
+
+- `TouchGameObject_AddMap` 0x14a8fc: rect (0,0,GRP_nDisplayW,H) đọc live.
+- `TouchGameObject_EventMap` 0x14a6fc: thế giới = pt + BTX·16 − BX, **không đổi tỉ lệ UI→FB** (giống game gốc).
+- CHƯA XÁC ĐỊNH: kiểm bằng unidbg, break ở 0x14a7f8.
+
+## Cave mới 52 B tại 0x133454..0x133488 (thêm ép W chẵn)
+
+```
+133454 strb w20,[x19]            74020039
+133458 adrp x10,0x72f000         ea2f0090
+13345c ldr  w10,[x10,#0x78c]     4a8d47b9
+133460 sub  w11,w10,#100         4b910151
+133464 cmp  w11,#50              7fc90071
+133468 b.hi 0x133484             e8000054
+13346c mov  w11,#100             8b0c8052
+133470 mul  w8,w8,w10            087d0a1b
+133474 udiv w8,w8,w11            0809cb1a
+133478 and  w8,w8,#0xfffffffe    08791f12
+13347c mul  w9,w9,w10            297d0a1b
+133480 udiv w9,w9,w11            2909cb1a
+133484 b    0x1470a0             074f0014
+```
+
+- Byte gốc 0x133454..0x133488: `ffc301d1fd7b02a9f91b00f9f85f04a9f65705a9f44f06a9fd83009156d03bd5490c00f0e0031f2ac81640f9291d40f9e1031f2a`.
+- Hex trên do A2 ghép tay ⇒ phải dựng lại bằng `llvm-mc` và đối chiếu.
+
+## Bổ sung của quản đốc: pool `MEM_Malloc` có trần
+
+- `MEM_Create` 0x1456e4 (gọi từ 0x17a750): pool = clamp(free − 0x64000, 6 MB, **8 MB**). Trần 8 MB ở 0x145730 (`mov w9,#0x800000`) và 0x145734 (`cmp x8,#0x800,lsl#12`).
+- `MEM_Malloc` 0x14585c so phần còn trống với kích thước, thiếu thì nhảy 0x145978.
+- `MEM_Malloc(2·W·W)` của `GRP_Initialize` tăng thêm ~0,23 MB ở P = 120 và ~0,66 MB ở P = 150 ⇒ rủi ro hết pool. Mức dùng đỉnh của game: CHƯA XÁC ĐỊNH.
