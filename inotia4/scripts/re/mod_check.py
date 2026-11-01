@@ -245,8 +245,132 @@ def main(lib, dis):
         c = [(a, f) for a, f, t in rows if re.match(r'^(bl|b)\s+0x[0-9a-f]+\s+<%s@plt>' % tgt, t)]
         print('  %s: %d cho goi: %s' % (tgt, len(c), ', '.join('%s@0x%x' % (f, a) for a, f in c)))
 
+    part7(rows)
+
     print('\nTONG KET:', 'TAT CA DAT' if ok_all else 'CO MUC KHONG DAT')
     return 0 if ok_all else 1
+
+
+# ---------------------------------------------------------------------- 7. thanh ghi tu do (phan tich luong du lieu)
+WRITE_ONLY_FIRST = None  # (khong dung)
+STORES = ('str', 'strb', 'strh', 'stur', 'sturb', 'sturh', 'stp', 'stlr', 'stlrb', 'stlrh', 'stxr', 'stlxr')
+READ_ALL = ('cmp', 'cmn', 'tst', 'ccmp', 'ccmn', 'cbz', 'cbnz', 'tbz', 'tbnz', 'br', 'prfm', 'fcmp', 'fcmpe')
+RW_FIRST = ('movk', 'bfi', 'bfxil', 'bfm', 'bfc')       # doc + ghi toan hang dau
+REG_RX = re.compile(r'\b([wx])(\d+)\b')
+
+
+def reg_effects(txt):
+    """(doc, ghi, la_goi) cua mot lenh: tap so thanh ghi 0..30 (w va x chung so)."""
+    txt = re.sub(r'\s+', ' ', txt.strip())
+    mn, _, ops = txt.partition(' ')
+    mn = mn.strip()
+    ops = ops.split('//')[0]
+    regs = [int(m.group(2)) for m in REG_RX.finditer(ops)]
+    if mn in ('bl', 'blr'):
+        rd = set(regs) if mn == 'blr' else set()
+        return rd | set(range(0, 8)), set(range(0, 19)) | {30}, True
+    if mn in ('b', 'ret') or mn.startswith('b.'):
+        return set(regs), set(), False
+    if mn in READ_ALL or mn in STORES:
+        return set(regs), set(), False
+    if mn in ('nop', 'dmb', 'dsb', 'isb', 'svc', 'brk'):
+        return set(), set(), False
+    first = REG_RX.search(ops.split(',')[0]) if ops else None
+    wr = {int(first.group(2))} if first else set()
+    rd = set(regs)
+    if mn in ('ldp', 'ldpsw', 'ldxp'):
+        sec = REG_RX.search(ops.split(',')[1]) if ops.count(',') >= 1 else None
+        wr = ({int(first.group(2))} if first else set()) | ({int(sec.group(2))} if sec else set())
+        # hang con lai (trong []) la doc
+        rd = set(int(m.group(2)) for m in REG_RX.finditer(ops[ops.find('['):])) if '[' in ops else set()
+        return rd, wr, False
+    if mn in RW_FIRST:
+        return rd, wr, False
+    rd = rd - wr if first and mn not in RW_FIRST else rd
+    # hang dau la dich; cac hang con lai (ke ca trong []) la doc. Neu dich xuat hien lai o hang sau thi van la doc.
+    later = ops.split(',', 1)[1] if ',' in ops else ''
+    rd = set(int(m.group(2)) for m in REG_RX.finditer(later))
+    if first and ('!' in ops or re.search(r'\],\s*#', ops)):
+        wr = wr | {int(m.group(2)) for m in REG_RX.finditer(ops[ops.find('['):ops.find(']') + 1])}   # writeback
+    return rd, wr, False
+
+
+def free_regs_check(rows, start, fn_end, regs, label):
+    """Tu `start` (dia chi lenh dau tien SAU cave) di moi duong trong ham; neu doc mot thanh ghi trong `regs` truoc khi ghi => khong tu do."""
+    byaddr = {a: (f, t) for a, f, t in rows}
+    order = [a for a, f, t in rows]
+    pos = {a: i for i, a in enumerate(order)}
+    seen = {}
+    work = [(start, frozenset(regs))]
+    viol = []
+    visited = 0
+    while work:
+        a, live = work.pop()
+        if a not in byaddr or a >= fn_end:
+            continue
+        key = (a, live)
+        if key in seen:
+            continue
+        seen[key] = 1
+        visited += 1
+        f, t = byaddr[a]
+        rd, wr, call = reg_effects(t)
+        bad = live & rd
+        if bad:
+            viol.append((a, t, sorted(bad)))
+            live = live - bad            # bao mot lan moi thanh ghi
+        live = frozenset(live - wr)
+        if not live:
+            continue
+        mn = t.split()[0]
+        nxt = []
+        mt = re.search(r'0x([0-9a-f]+)', t)
+        tgt = int(mt.group(1), 16) if mt else None
+        if mn == 'b':
+            nxt = [tgt] if tgt is not None and start <= tgt < fn_end else []
+        elif mn == 'ret' or mn == 'br':
+            nxt = []
+        elif mn.startswith('b.') or mn in ('cbz', 'cbnz', 'tbz', 'tbnz'):
+            nxt = [order[pos[a] + 1]] + ([tgt] if tgt is not None and 0 <= tgt < fn_end else [])
+        else:
+            nxt = [order[pos[a] + 1]] if pos[a] + 1 < len(order) else []
+        for n in nxt:
+            work.append((n, live))
+    print('  %s: duyet %d trang thai, thanh ghi %s' % (label, visited, sorted('x%d' % r for r in regs)))
+    for a, t, bad in viol[:8]:
+        print('     DOC TRUOC KHI GHI 0x%x: %s  (%s)' % (a, t, bad))
+    return not viol
+
+
+def part7(rows):
+    print('\n[7] thanh ghi dung trong cave phai TU DO tai diem tiep tuc (khong ai doc gia tri vao-ham cua chung truoc khi ghi)')
+    fn_ranges = {}
+    for a, f, t in rows:
+        lo, hi = fn_ranges.get(f, (a, a))
+        fn_ranges[f] = (min(lo, a), max(hi, a) + 4)
+    cases = [('A  x9..x13 @ 0x18b3e4 (CHAR_AddDamage)', 0x18b3e4, 'CHAR_AddDamage', range(9, 14)),
+             ('B  x9..x12 @ 0x1c7864 (MERCENARYSYSTEM_AddExperience)', 0x1c7864, 'MERCENARYSYSTEM_AddExperience', range(9, 13)),
+             ('C  x9..x12 @ 0x1c7a48 (MERCENARYSYSTEM_AddExpFixed)', 0x1c7a48, 'MERCENARYSYSTEM_AddExpFixed', range(9, 13))]
+    for label, st, fn, regs in cases:
+        lo, hi = fn_ranges[fn]
+        verdict(label, free_regs_check(rows, st, hi, set(regs), fn))
+
+    # phia nguoi goi: sau moi `bl` toi ham duoc va, x9..x13 khong duoc doc truoc khi ghi (ABI: caller-saved); neu co thi cave doi duoc gia tri song
+    sites = []
+    for tgt, regs in (('CHAR_AddDamage', range(9, 14)), ('MERCENARYSYSTEM_AddExperience', range(9, 13)), ('MERCENARYSYSTEM_AddExpFixed', range(9, 13))):
+        for i, (a, f, t) in enumerate(rows):
+            if re.match(r'^(bl)\s+0x[0-9a-f]+\s+<%s@plt>' % tgt, t) and f != 'CHAR_AddDamageByDefaultCheck':
+                sites.append((tgt, a, f, rows[i + 1][0], regs))
+    allok = True
+    for tgt, a, f, nxt, regs in sites:
+        lo, hi = fn_ranges[f]
+        ok = free_regs_check(rows, nxt, hi, set(regs), 'caller %s @0x%x' % (f, a))
+        allok = allok and ok
+    verdict('x9..x13 khong song qua loi goi o %d cho goi (phia caller)' % len(sites), allok)
+    # B va C: x8 (lenh goc `mov w8,#0x6e` do cave B tu thuc hien) va x19 (cave B/C sua) - chi can biet x13 khong dung o B/C
+    # C: x8 SONG (adrp x8 @0x1c7a40 doc o 0x1c7a48) -> cave C khong duoc dung x8
+    print('  C: x8 song tai 0x1c7a44 (adrp x8,0x2be000 @0x1c7a40; `ldr x8,[x8,#0xbd8]` @0x1c7a48) -> cave C khong dung x8: ' +
+          ('DAT' if 'x8' not in open('/home/user/Vi-t-ho-game/inotia4/scripts/asm/mod_cave.s').read().split('cave_C:')[1].replace('x8,', 'X') else 'KHONG DAT'))
 
 
 if __name__ == '__main__':
