@@ -606,7 +606,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - nhóm `iap` áp đúng số lần;
     - build thử PASS;
     - nếu T2 xong: unidbg bấm mua một gói và thấy vật phẩm/gem được cộng.
-- [ ] T5. Đồng bộ `scripts/rebuild.sh` với các bản vá mới (phụ thuộc T1, T3, T7, T8, T9, T10)
+- [x] T5. Đồng bộ `scripts/rebuild.sh` với các bản vá mới (phụ thuộc T1, T3, T7, T8, T9, T10)
   - Bổ sung của quản đốc (2026-11-01), phạm vi mở rộng sau T9/T10:
     - `rebuild.sh` phải tạo ra cùng nội dung với chuỗi build TEST12. Cụ thể:
       - smali `net,mod` + `--vnfont` (gồm `FontData24`, `ModMenu`, `ModMem`);
@@ -615,6 +615,12 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Có cách bật/tắt bản chẩn đoán (diag) cho bản phát hành.
     - Kiểm: build bằng `rebuild.sh` (không diag) rồi `apkdiff` với một bản build tương ứng từ `build_from_apk.sh`. Chỉ được khác chữ ký/dấu thời gian, hoặc khác có giải thích.
   - Việc: nhóm smali đầy đủ (`font,lang,offline,net,mod`), nhóm lib (P1 của T3 + `mod`); d8 thêm `--lib android.jar` và `--lib` stub; ghi phiên bản tool vào `tools/VERSIONS.md` (apktool 2.12.1, build-tools 35.0.0, jadx 1.5.3).
+  - Bàn giao (A1, T5 XONG; chi tiết `PROGRESS.md` Phiên 8, log `logs/t5_rebuild_check.txt`, tool `tools/VERSIONS.md`):
+    - Đã sửa/tạo: `scripts/rebuild.sh` (viết lại), `tools/VERSIONS.md` (mới), `logs/t5_rebuild_check.txt` (mới), `PROGRESS.md` (Phiên 8). Không sửa `build_from_apk.sh`, `patch_*.py` hay patch nào.
+    - `rebuild.sh` giờ: bộ tool như `build_from_apk.sh` (apktool 2.12.1, build-tools 35.0.0 gồm d8 `--lib android.jar` + stub, apksigner, zipalign `-c -P 16 4`); smali `font,lang,offline,net,mod`; `com.namp.vh` → `classes3.dex`; lib `base,p1,mod,view,hud,pool,hudbtn`; `hud_swap.py` (selftest + dán 7 ảnh); mặc định KHÔNG diag (bản phát hành), `--diag` = TEST12, `--internet` chỉ cùng `--diag`; `--out`, `--versions`; thêm `--base-apk <apk> [--base-kind vi|en]` để chạy khi không có split. Log và file tạm ở `$WORK` (mặc định `work/rebuild`), không ghi đè `logs/` đã commit.
+    - Kết quả: `rebuild.sh --base-apk TEST4` ↔ `build_from_apk.sh` cùng nhóm (không diag): 0/1453 file khác nội dung, thứ tự mục/nén/căn/CRC giống hệt (chỉ khác dấu thời gian zip và chữ ký v2/v3); nền TEST1(EN) `--base-kind en` (chạy thật plist/memtext/ảnh) cũng 0/1453; `build_from_apk.sh` ↔ TEST12 chỉ khác `classes4.dex` + `AndroidManifest.xml` (LAUNCHER); `rebuild.sh --diag` ↔ TEST12: 0/1454 file khác. apksigner v1/v2/v3, `zipalign -c -P 16 4`, `check_apk` PASS cả 4 bản. sha256 `out/Inotia4_T5_rebuild.apk` `7b85d382…334a`, `out/Inotia4_T5_ref.apk` `5a7e4f20…17ac` (không commit `out/`).
+    - Kiểm từng phần đường split: lib gốc suy ra từ lib TEST4 (sha `790bed16…7187` khớp `logs/patch_lib.log`) vá 7 nhóm một lượt ra đúng lib trong ref (`442cd19c…9494`); `patch_smali` 5 nhóm chạy hết trên bản "gần gốc"; `patch_manifest.py` khôi phục đúng byte.
+    - **CHƯA XÁC ĐỊNH**: đường `rebuild.sh <thư mục split>` chưa chạy trọn (không có split trong container): bước kiểm sha, gộp APKEditor (TEST1/TEST4 gộp bằng 1.4.1; container chỉ có 1.4.5, mới thử trên 1 `base.apk`) và apktool 2.12.1 decode bản gộp 4 split thật. Cần chạy 1 lần khi người dùng có bộ split để xác nhận trước khi T6 dùng.
   - Hoàn thành khi: `bash -n scripts/rebuild.sh` OK; diff hợp lý; README/PROGRESS ghi rõ cách chạy.
 - [ ] T6. Bản phát hành (phụ thuộc T3, người dùng xác nhận font) — **Quản đốc nghiệm thu**
   - Việc:
@@ -718,3 +724,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 quản đốc: nghiệm thu T9a–T9c ĐẠT; gửi TEST11 (TEST10 + tầm nhìn P% + lề HUD + pool 10 MB). A1 (T9) dừng ở ~435k (vượt ngưỡng, không dùng lại). Tiếp theo: T10 (công nhân chạy mới).
 - 2026-11-01 A1 (T10): T10a, T10b, T10c xong (T10 cha chờ quản đốc nghiệm thu). `docs/hud_thay_nut.md`, `scripts/re/hud_check.py`, `scripts/hud_swap.py`, `scripts/hud_mophong.py`, nhóm lib `hudbtn` (không nằm trong nhóm mặc định), cờ `--hud`. Build `out/Inotia4_T10_check.apk` PASS; `apkdiff` với TEST11 chỉ khác 2 atlas và `libgame.so` (3 byte). Chưa chụp được màn chơi (T2); mô phỏng Python ở `docs/hud/mo_phong_hud.png`.
 - 2026-11-01 quản đốc: nghiệm thu T10a–T10c ĐẠT; gửi TEST12 (TEST11 + nút HUD của người dùng). Chờ người dùng xác nhận T7/T8/T9/T10 trên máy. Tiếp theo: T2 (unidbg qua màn chọn save) rồi T5/T6.
+- 2026-11-01 A1 (T5): T5 xong. `scripts/rebuild.sh` viết lại theo chuỗi TEST12 (smali `net,mod`, lib `base..hudbtn`, `hud_swap`, d8 `--lib`, diag tùy chọn, `--base-apk`); `tools/VERSIONS.md`. Dựng bằng `rebuild.sh --base-apk` giống `build_from_apk.sh` 0/1453 file (chỉ khác dấu thời gian/chữ ký); `--diag` giống TEST12 0/1454. Đường gộp split thật CHƯA XÁC ĐỊNH (không có split). Log `logs/t5_rebuild_check.txt`.
