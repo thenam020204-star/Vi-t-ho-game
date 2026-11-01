@@ -128,7 +128,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [ ] T11. Vẽ lại ảnh có chữ tiếng Anh (độc lập) — Agent: A1
   - `img/menu.mgr`, `img/ui.mgr`, `img/touch.mgr`, `sp/imgcom/title.mgr` (+ logo "Việt hoá bởi NAM.P" như LGT r5/r6), dùng `img5/` của project và pixeltext. Định dạng `.mgr` xem BAO-CAO-KY-THUAT B12.
   - Hoàn thành khi: ảnh ghép trước/sau trong `shots/T11/`; harness hiện đúng.
-- [ ] T12. Đóng gói APK + kiểm tra cuối (phụ thuộc tất cả) — Agent: A1 — **Quản đốc nghiệm thu**
+- [x] T12. Đóng gói APK + kiểm tra cuối (phụ thuộc tất cả) — Agent: A1 — **Quản đốc nghiệm thu**
   - `hl5_android/make_apk.sh`: áp patch guest/bridge, pack VFS, cập nhật `target-assets.json`, zip (giữ nguyên thuộc tính nén của `.so`/asset như APK gốc), zipalign, apksigner.
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
@@ -140,7 +140,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: T1–T6, T8m ✓ → T12 (đang giao, công nhân mới) → T7 → T9/T10/T11.
+- A1: v0.1 ✓ (T1–T6, T8m, T12) → T7 → T9 → T10 → T11 (chờ phản hồi thử máy).
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -185,3 +185,5 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [A1] T8m xong (chờ nghiệm thu). `patch/bridge_patches.tsv` (9 vùng, mỗi dòng có byte gốc), `patch/mk_bridge_patches.py` (sinh + keystone), `patch/apply_bridge.py` (kiểm byte gốc), `patch/test_bridge.py` + `bridge_test.txt` (unicorn arm64), `patch/bridge_patch_diff.txt` (disasm trước/sau), `shots/T8/` (8 ảnh), BAO-CAO §9.8. (1) tắt hook: 0xc6c30 -> `b 0xc6d4c`, 0xc6dd8/0xc6e60 -> `mov w0,#1`; (2) W/H: 0xc5ce8..0xc5d34; (3) viewport nguyên k căn giữa 0xe1e38 + bản sao 0xe1f84 + chạm 0xcc6b8; (4) NEAREST: glTexParameterf (bridge chỉ có bản `f`) ở 0xe3770 -> cave 0xcfdd0 (callback hook đo, chết). Bảng (k,W,H,viewport): 2400x1080 (4, 600x270, 0,0,2400,1080); 1920x1080 (4, 480x270, full); 1600x720 (3, 532x240, 2,0,1596,720); 1280x720 (3, 426x240, 1,0,1278,720); 800x480 (2, 400x240, full); chạm khớp viewport cả 7 cỡ. ElfLoader: bss zero-fill theo p_memsz, map làm tròn trang hi=max(vaddr+memsz): bản vá memsz T6b an toàn. Harness (p2.so + vi.vfs, 2400 khung = 120 s): 400x240, 480x240, 600x270, 640x288 đều tiêu đề -> menu -> chọn nhân vật -> vào map/cutscene (HASH = Skip), 0 FAULT/exception. Lưu ý: chưa chạy bridge thật (không có thiết bị), chỉ kiểm tĩnh + unicorn từng hàm; chưa đi bộ 30 s ngoài cutscene (intro còn thoại khi hết kịch bản phím).
 - [quản đốc] Nghiệm thu T8m: đạt (bảng k/W/H/viewport đúng; harness 4 cỡ tới bản đồ + cutscene 0 lỗi; ảnh 600x270 đúng tỉ lệ, chữ Việt). Chấp nhận: bridge armeabi-v7a không vá (mục tiêu arm64), k=1 với màn < 400 không áp dụng cho Android 10+. Đổi thứ tự: T12 trước (ra v0.1) → T7 (v0.2).
 - [quản đốc] Vướng mắc T12 khoá ký: theo quyết định 10 → chọn (b) tạo khoá mới bằng keytool (RSA 2048, hiệu lực 30 năm, alias `hl5vi`), commit `sign/hl5vi.keystore` + `sign/README.md` (mật khẩu) để build tái lập. Ghi chú: v0.1 dùng k tự động = floor(scrH/240) (T8m) thay cho mặc định k=2 của quyết định 8; T10 sẽ làm `hd_scale.txt` + lựa chọn trong game, mặc định 2 sau khi T9 kiểm khung lớn.
+- [A1] T12 xong (chờ nghiệm thu). `make_apk.sh` (vá .so + bridge arm64, build VFS+vi.bin, cập nhật sha256 cả 2 mục của target-assets.json, zip giữ kiểu nén gốc, zipalign -p 4, apksigner v1+v2+v3; dựng 2 lần trùng byte). `dist/HL5-VI-v0.1.apk` 22,7 MB, sha256 a9e7b9f91b477e3dbc76034ff8c29d5a8fa7846b33ff732d1e8548a1190f9ed4. Khoá mới `sign/hl5vi.keystore` (alias hl5vi, mật khẩu ở sign/README.md). Kiểm: apksigner verify + zipalign -c đạt; aapt2 badging y hệt gốc; harness 600x270 từ .so+VFS trích từ APK tới bản đồ + thoại Việt (shots/T12/, 2 ảnh). Chưa vá lib/armeabi*/libHeroesLore5.so (không dùng trên arm64). `PHAT-HANH.md` đã viết. Chưa thử máy thật.
+- [quản đốc] Nghiệm thu T12: đạt — `dist/HL5-VI-v0.1.apk` (sha256 a9e7b9f9…0f9ed4, kiểm lại khớp), apksigner/zipalign đạt, build tái lập từng byte, harness chạy .so+VFS lấy từ APK. **Mốc v0.1 đạt** (trừ kiểm trên máy thật). Tiếp theo (chờ người dùng thử máy): T7 (menu offline, cash shop miễn phí, hồi sinh, rút gọn nhãn menu) → T9 → T10 → T11.
