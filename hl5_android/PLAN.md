@@ -63,19 +63,22 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Đầu ra: `hl5_android/vi/align.json` (mỗi mục Android → `K#####` hoặc `NEW`, điểm tin cậy) + `hl5_android/vi/align_report.md` (thống kê, 50 cặp điểm thấp nhất để quản đốc soát).
   - File: `hl5_android/vi/align_android.py`.
   - Hoàn thành khi: chạy lại ổn định; 184 `.scn` cùng số câu có ≥ 95% cặp điểm cao; báo số câu `NEW`.
-- [ ] T2b. Sửa ghép sau nghiệm thu T2 (phụ thuộc T2) — Agent: A1
+- [x] T2b. Sửa ghép sau nghiệm thu T2 (phụ thuộc T2) — Agent: A1
   - Quản đốc soát 50 cặp thấp nhất, kết luận: dải điểm 0.55–0.70 có nhiều cặp **sai nghĩa** (vd 00136 idx 34/36, 00144 idx 54, 00094 idx 22, 00038 idx 64 đúng; quest_* ghép với `여분` sai; item_16 câu Anh có cả mô tả kỹ năng, câu Hàn chỉ có tên+cấp → mất nội dung).
   - Sửa trong `align_android.py`: (1) cặp điểm < 0.70 → `NEW`, giữ câu Hàn đề xuất ở trường `ko_hint`; (2) câu Hàn là chỗ trống/giữ chỗ (`여분`, rỗng, chỉ mã) → `NEW`; (3) câu Anh có số đoạn `;` hoặc độ dài vượt rõ câu Hàn (tỉ lệ ký tự Anh/Hàn > 3.5 hoặc thiếu ≥ 2 đoạn) → `NEW` + `ko_hint`; (4) 2 câu dính `\u0000` (00041 idx 54, 00042 idx 24): ghi rõ cách xử lý trong report (giữ byte gốc khi build).
   - Thêm vào report: 40 cặp ngẫu nhiên (seed cố định) trong dải 0.70–0.80 để quản đốc soát; thống kê NEW mới.
   - Hoàn thành khi: chạy lại ổn định; report có mục mẫu 0.70–0.80; số NEW mới được ghi vào Nhật ký.
-- [ ] T3. Dịch câu NEW Anh → Việt (phụ thuộc T2) — Agent: A1
+- [ ] T3. Dịch câu NEW Anh → Việt (phụ thuộc T2b) — Agent: A1 — chia lô: **T3a** = 348 NEW `.scn` (thoại), **T3b** = 660 NEW `.dat` (vật phẩm/kỹ năng/nhiệm vụ/UI). Mỗi lô một tick riêng trong Nhật ký.
+  - Câu có `k_low` (ID LGT gần nhất): mở bản Việt của `k_low` trong `HL5_dich_FULL.tsv`/`override.tsv` làm gợi ý, tái dùng câu chữ/thuật ngữ đã có rồi bổ sung phần Anh thêm (vd mô tả kỹ năng `item_16`, số `100,000`), ngắt `;` theo bản Anh (bản Android đã ngắt dòng lại).
+  - Mỗi dòng `A_dich.tsv`: `A#####<TAB>file<TAB>vị trí<TAB>text_en<TAB>vi` (A##### ổn định, sinh theo thứ tự align.json).
   - Dịch tay (không dịch máy), theo `thuat-ngu.tsv`, `style-guide.md`, cách xưng hô của cùng nhân vật trong `HL5_dich_FULL.tsv`. Giữ mã điều khiển. Không dùng ký tự `' " \` ^ < [ { } $ & |` ngoài mã.
   - Đầu ra: `hl5_android/vi/A_dich.tsv`.
   - Hoàn thành khi: mọi `NEW` có bản dịch; script kiểm tra mã điều khiển báo 0 lệch; độ dài sau mã hoá ≤ cap.
 - [ ] T4. Build dữ liệu Việt cho Android (phụ thuộc T2, T3) — Agent: A1
   - `hl5_android/vi/build_android_vi.py`: import `Encoder`/luật fit từ `build_vi5.py`; nguồn dịch = `HL5_dich_FULL.tsv` + `override.tsv` + `menu_override.tsv` (theo `K#####`) + `A_dich.tsv` (theo `A#####`); ghi file Android đã thay chuỗi vào `$WORK/vi_android/res/c/...`; xuất `$WORK/vi_android/vi.bin` (định dạng do T6 chốt; tạm thời xuất `dict.txt` + các font) và `bao-cao-build.txt`.
+  - Kiểm tra số: mọi số (chuỗi chữ số) trong `text_en` phải có trong bản Việt; câu K##### lệch số (Android đổi số so với Hàn, vd mẫu #10 `100,000 Gold`) → liệt kê `bao-cao-build.txt` mục LỆCH SỐ và đưa vào `A_dich.tsv` lô bổ sung (T3c).
   - Hoàn thành khi: 0 câu quá dài (hoặc có liệt kê lý do), từ điển ≤ 5076; mọi file output đọc lại được (roundtrip parser), số bản ghi/khung code giống file Android gốc.
-- [ ] T5. Đóng gói VFS (song song được với T2–T4; chỉ đụng `hl5_android/tools/vfs_pack.py`) — Agent: A1
+- [x] T5. Đóng gói VFS (song song được với T2–T4; chỉ đụng `hl5_android/tools/vfs_pack.py`) — Agent: A1
   - `vfs_pack.py IN.vfs OUT.vfs --replace DIR [--add name=file ...]`: giữ nguyên thứ tự mục, thay dữ liệu theo khoá djb2 của đường dẫn `c/...`, thêm mục mới vào cuối.
   - Hoàn thành khi: pack không thay gì thì cho file giống hệt từng byte; pack với overlay thử (1 file `.dat`) thì harness vẫn boot tới menu chính.
 - [ ] T6. Engine chữ Việt trong guest (phụ thuộc T5) — Agent: A1 — **Quản đốc nghiệm thu**
@@ -103,7 +106,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
 ## Phân công hiện tại
-- A1: T1 ✓ → T2 ✓ (nghiệm thu một phần) → T2b → T5 (đang giao: T2b, T5).
+- A1: T1 ✓ → T2 ✓ (nghiệm thu một phần) → T2b → T5 T2b ✓ → T5 ✓ → T3a → T3b (đang giao: T3a).
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -114,3 +117,6 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [A1] T1 xong: `vi/extract_android.py` -> `vi/android_catalog.json` 14298 câu (scn 7163 / 218 file, dat 7135 / 85 file gồm 5 file VFS không tên); roundtrip 0 lỗi, chạy lại giống hệt. Lưu ý `tools/scn.py:parse` chọn sai hit ở vài file (00154...), dùng `extract_android.parse_scn/build_scn`.
 - [A1] T2 xong: `vi/align_android.py` -> `vi/align.json`, `vi/align_report.md`: ghép 13763 / NEW 535; 176 scn cùng số câu (5851 câu) điểm cao 99.5%. Chờ quản đốc nghiệm thu.
 - [quản đốc] Nghiệm thu T2: đạt tiêu chí số (99.5%), nhưng dải 0.55–0.70 có cặp sai nghĩa → giao T2b. Chấp nhận dùng `extract_android.parse_scn/build_scn` thay `tools/scn.py` cho T4.
+- [A1] T2b xong: NEW 535 -> 1008 (scn 348, dat 660); 485 NEW có ko_hint (326 do luật `;` vượt >= 2, 139 điểm < 0.70, 15 giữ chỗ, 5 dài > 3.5 lần). Luật `;` có thể quá chặt với dat (Android ngắt dòng lại) -> quản đốc cân nhắc nới. Report có mẫu 40 cặp dải 0.70-0.80; chạy lại ổn định.
+- [A1] T5 xong: `tools/vfs_pack.py`; pack không thay gì = giống hệt từng byte; overlay thử (menu_text.dat) thay đúng 1 mục (thứ tự/khoá giữ nguyên); harness (p1.so) boot tới menu chính, ảnh khung 459/579/599 giống bản gốc.
+- [quản đốc] Nghiệm thu T2b: NEW 1008 (485 có ko_hint); mẫu 0.70–0.80: 38/40 đúng, #33 (00107 idx 12) sai nghĩa, #10 lệch số → thêm kiểm tra số vào T4. Giữ luật `;` (326 câu): T3 tái dùng bản Việt của `k_low` nên chi phí thấp. Nghiệm thu T5 (roundtrip từng byte + boot harness).

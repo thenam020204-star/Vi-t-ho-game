@@ -441,7 +441,16 @@ def main():
     for it in acat:
         src, sc, meth, note = result[id(it)]
         kid = ids.get(src) if src else None
-        new = (kid is None) or sc < THR_NEW
+        reason = ''
+        new = kid is None
+        if not new:
+            ca_, sa_, pa_ = split_codes(it['text_en'], True); ck_, sk_, pk_ = split_codes(src)
+            r_ = max(1, len(pa_.strip())) / max(1, kbytes(pk_.strip()))
+            if sc < THR_HIGH: new = True; reason = 'điểm < %.2f' % THR_HIGH
+            elif not pk_.strip() or src.strip() in ('여분',):
+                new = True; reason = 'câu Hàn là chỗ giữ chỗ'
+            elif r_ > 3.5: new = True; reason = 'Anh dài hơn Hàn > 3.5 lần'
+            elif sk_ > 0 and sa_ - sk_ >= 2: new = True; reason = 'Anh nhiều đoạn ; hơn Hàn >= 2'
         e = {k: it[k] for k in ('file', 'kind') }
         for k in ('idx', 'rec', 'off', 'ps'):
             if k in it: e[k] = it[k]
@@ -450,7 +459,7 @@ def main():
         e['score'] = round(sc, 3)
         e['method'] = meth
         if src: e['ko'] = src
-        if kid and new: e['k_low'] = kid
+        if kid and new: e['k_low'] = kid; e['ko_hint'] = src; e['reason'] = reason
         if note: e['note'] = note
         out.append(e)
     json.dump(out, open(os.path.join(HERE, 'align.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
@@ -466,7 +475,7 @@ def report(out, filestat, nm, same, ktab_n, atab_n, sim, allsame):
         new = sum(1 for e in es if e['id'] == 'NEW'); hi = sum(1 for e in es if e['id'] != 'NEW' and e['score'] >= THR_HIGH)
         return len(es), len(es) - new, new, hi
     P('# Báo cáo ghép chuỗi Android <-> LGT (T2)\n')
-    P('Sinh bởi `align_android.py`. Ngưỡng: NEW nếu điểm < %.2f hoặc không có câu Hàn tương ứng; "điểm cao" >= %.2f.\n' % (THR_NEW, THR_HIGH))
+    P('Sinh bởi `align_android.py`. Ngưỡng: NEW nếu điểm < %.2f, không có câu Hàn tương ứng, câu Hàn là chỗ giữ chỗ, hoặc câu Anh dài/nhiều đoạn hơn hẳn (xem ko_hint); "điểm cao" >= %.2f.\n' % (THR_HIGH, THR_HIGH))
     P('## Tổng kết\n')
     P('| nhóm | tổng câu | ghép được (K#####) | NEW | trong đó điểm cao |')
     P('|---|---:|---:|---:|---:|')
@@ -480,7 +489,7 @@ def report(out, filestat, nm, same, ktab_n, atab_n, sim, allsame):
     P('\n## scn cùng số câu (ghép theo chỉ số)\n')
     P('- Trong %d file scn có ở cả hai bản: **%d** cùng số câu bảng chuỗi, %d khác số câu (kể cả file không có câu chữ).' % (sum(allsame), allsame[0], allsame[1]))
     P('- Số file scn Android có câu chữ = %d; trong đó cùng số câu bảng chuỗi với LGT = **%d** file (%d câu Android).' % (sum(1 for s in filestat.values() if s['kind']=='scn'), len(sf), t))
-    P('- Cặp điểm cao (>= %.2f): **%d / %d = %.1f%%**; ghép được (>= %.2f): %d (%.1f%%); NEW: %d.' % (THR_HIGH, hi, t, 100.0 * hi / max(1, t), THR_NEW, m, 100.0 * m / max(1, t), nw))
+    P('- Cặp điểm cao (>= %.2f): **%d / %d = %.1f%%**; ghép được (>= %.2f): %d (%.1f%%); NEW: %d.' % (THR_HIGH, hi, t, 100.0 * hi / max(1, t), THR_HIGH, m, 100.0 * m / max(1, t), nw))
     nok = [f for f in sf if filestat[f]['method'] != 'idx']
     P('- File cùng số câu nhưng phải dùng DP (ghép theo chỉ số cho điểm thấp): %d %s' % (len(nok), nok[:10]))
     P('\n## scn khác số câu (DP)\n')
@@ -524,6 +533,16 @@ def report(out, filestat, nm, same, ktab_n, atab_n, sim, allsame):
     def esc(s): return s.replace('|', '\\|').replace('\n', ' ')[:70]
     for i, e in enumerate(cand[:50]):
         P('| %d | %s | %s | %.2f | %s | %s | %s |' % (i + 1, e['file'], loc(e), e['score'], e['id'], esc(e['text_en']), esc(e['ko'])))
+    import random
+    rng = random.Random(20240601)
+    mid = [e for e in out if e['id'] != 'NEW' and 0.70 <= e['score'] < 0.80]
+    P('\n## Mẫu 40 cặp ngẫu nhiên (seed 20240601) trong dải 0.70-0.80 (đã ghép) để quản đốc soát; tổng %d cặp trong dải\n' % len(mid))
+    P('| # | file | vị trí | điểm | Anh | Hàn |'); P('|---:|---|---|---:|---|---|')
+    for i, e in enumerate(rng.sample(mid, min(40, len(mid)))):
+        P('| %d | %s | %s | %.2f | %s | %s |' % (i + 1, e['file'], loc(e), e['score'], esc(e['text_en']), esc(e['ko'])))
+    hint = [e for e in out if e['id'] == 'NEW' and e.get('ko_hint')]
+    P('\n## NEW có câu Hàn gợi ý (ko_hint): %d, theo lý do: %s\n' % (len(hint), dict(collections.Counter(e['reason'] for e in hint))))
+    P('Xử lý 2 câu dính `\\u0000` (c/map/00041.scn idx 54, c/map/00042.scn idx 24): khi chấm điểm bỏ đoạn `\\u0000`; khi build (T4) giữ nguyên byte gốc của câu Android nếu không dịch, còn nếu thay bằng bản dịch thì KHÔNG thêm `\\u0000` (nó là chữ rác 6 ký tự, không phải byte NUL).')
     # mẫu NEW
     news = [e for e in out if e['id'] == 'NEW']
     P('\n## Thống kê NEW theo file (20 file nhiều nhất)\n')
