@@ -14,6 +14,7 @@ Sinh bởi `align_android.py`. Ngưỡng: NEW nếu điểm < 0.70, không có c
 
 - Trong 214 file scn có ở cả hai bản: **189** cùng số câu bảng chuỗi, 25 khác số câu (kể cả file không có câu chữ).
 - Số file scn Android có câu chữ = 203; trong đó cùng số câu bảng chuỗi với LGT = **182** file (5888 câu Android).
+- Soát nghĩa thủ công T2d (`review_T2d.tsv`, SAI/LỆCH -> NEW): 66 câu {'dat/rec': 1, 'scn/dp': 64, 'scn/idx': 1}.
 - Cặp điểm cao (>= 0.70): **5844 / 5888 = 99.3%**; ghép được (>= 0.70): 5844 (99.3%); NEW: 44.
 - File cùng số câu nhưng phải dùng DP (ghép theo chỉ số cho điểm thấp): 0 []
 

@@ -74,7 +74,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Sau đó chạy lại ghép câu như T2b trên cặp file mới. Bổ sung kiểm tra nghĩa thô: câu ngắn (≤ 3 từ Anh) mà Hàn dài > 12 ký tự hoặc ngược lại → NEW.
   - Giữ ổn định ID `A_dich.tsv`: dịch đã có giữ theo khoá (file, idx, text_en); câu không còn NEW → đánh dấu cột 6 `unused`; câu NEW mới → ID nối tiếp sau A01008. Không xoá bản dịch.
   - Hoàn thành khi: chạy lại ổn định; bảng ghép file trong report; các ví dụ ở Vướng mắc T3a (00216 idx 3/4/20, 00214 idx 14, 00186 idx 18) không còn gán sai; `check_A.py` vẫn 0 lỗi; ghi số NEW mới (scn) vào Nhật ký.
-- [ ] T2d. Soát nghĩa thủ công các cặp ghép rủi ro (phụ thuộc T2c) — Agent: A1 — **Quản đốc nghiệm thu**
+- [x] T2d. Soát nghĩa thủ công các cặp ghép rủi ro (phụ thuộc T2c) — Agent: A1 — **Quản đốc nghiệm thu**
   - Lý do (quản đốc xác minh sau T2c): cặp DP vẫn sai nghĩa dù điểm 1.0 (00136 idx 1 "Must be nice for the Neveds..." ↔ "전 학자는 아니지만..", idx 4 "They have a creation myth" ↔ "알고 있나요? 우리 콜크리크 섬이.."; 00108 idx 43). Bộ chấm điểm đặc trưng không đo được nghĩa.
   - Công nhân TỰ ĐỌC từng cặp Anh ↔ Hàn (không dùng dịch máy) theo lô ~100 cặp: toàn bộ 980 cặp `scn/dp`; mẫu ngẫu nhiên seed cố định 150 cặp `scn/idx` và 150 cặp `dat/rec`. Phán quyết mỗi cặp: OK / SAI / LỆCH-NỘI-DUNG (Anh thêm/bớt ý đáng kể).
   - Ghi `vi/review_T2d.tsv` (file, vị trí, id, phán quyết, ghi chú). `align_android.py` đọc file này làm ghi đè: SAI/LỆCH → `NEW` (giữ `k_low`, `ko_hint`). Nếu một file DP có ≥ 3 SAI liên tiếp → thử đúng cặp hàng lân cận (dịch ±1..±40) và ghi đề xuất K đúng vào ghi chú nếu thấy rõ.
@@ -119,12 +119,14 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
 ## Phân công hiện tại
-- A1: T1 ✓ → T2 ✓ → T2b ✓ → T5 ✓ → T3a → T3b (T3a ✓; đang giao: T2c, sau đó T3a-bổ sung cho NEW mới của scn, rồi T3b).
+- A1: T1–T2d ✓, T3a ✓, T5 ✓ → T3a-bổ sung + T3b-1 (đang giao) → T3b-2 → T4.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
 - [A1/T3a] Aligner ghép sai theo SỐ FILE: scn Android lệch số với LGT (Android 00207 = LGT 00208, 00209 = 00211, 00210 = 00212, 00213 = 00215, 00215 = 00216, 00216 phần lớn mới). Hậu quả: một số câu KHÔNG phải NEW bị gán K sai nghĩa (vd 00216 idx 3,4,20 nhận "Phát hiện kẻ xâm nhập"/"Bắt đầu hành động loại trừ"/"Cái quái gì nữa đây..."; 00214 idx 14 "It needs some improvements." nhận "Nhà kho cũ"; 00186 idx 18 nhận "Chơi lại game..."; 00094/00108/00136/00144/00170/00174 có các K lệch 1-36 vị trí). Đề nghị quản đốc cho T2c soát lại ghép các file này trước T4. Với NEW, A_dich.tsv đã dịch từ tiếng Anh và tái dùng đúng K Việt có sẵn ở các file lệch số.
   - [A1/T2c] ĐÃ XỬ LÝ: ghép file theo bytecode; 00216 idx 3/4/20, 00214 idx 14, 00186 idx 18 nay đều NEW (không còn gán K sai).
+
+- [A1/T2d] (1) `A_dich.tsv` có 1 dòng hỏng từ trước (A01012, text_en chứa byte 0x0a thật, vỡ thành 2 dòng, làm `update_A_dich` lỗi khi chạy lại): đã sửa bộ đọc/ghi, nay ghi `\n` literal trong cột Anh (nội dung không đổi); T3/T4 cần biết. (2) 00136 sai gần cả file (26/28 dp); 00107/00170/00174 sai theo cụm. (3) Hàn `EVENT_게임오버` (00144 idx 1, 00150 idx 12) là nhãn nội bộ, đánh LỆCH.
 
 ## Nhật ký
 - [quản đốc] Lập PLAN.md; các phân tích nền nằm trong BAO-CAO-RE.md §1–7; harness + 4 patch offline đã xong.
@@ -138,3 +140,5 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [quản đốc] Nghiệm thu T3a: soát mẫu bản dịch đạt; check_A 0 lỗi; từ điển 4727/5076. Vướng mắc lệch số file: xác minh đúng (00216 idx 3 điểm 0.829 nhưng sai nghĩa) → giao T2c ghép file theo bytecode script.
 - [A1] T2c xong: ghép file scn theo nội dung (bytecode Dice 4-gram + tên/số): 13 file đổi ghép (00207->00208, 00208->00209, 00209->00211, 00210->00212, 00211->00213, 00212->00214, 00213->00215, 00215->00216; 00019/00175/00186/00214/00216 không ghép = toàn NEW). NEW mới: scn 338 (trước 348), dat 669 (trước 660), tổng 1007. A_dich.tsv: giữ nguyên 1008 dòng cũ (36 scn + 1 dat đánh `unused`), thêm A01009-A01044 (26 scn + 11 dat) chưa dịch -> cần T3a-bổ sung 26 câu scn. check_A: 348 dòng đã dịch 0 lỗi (26 báo chưa dịch). Chạy lại ổn định (md5 align.json/report/A_dich).
 - [quản đốc] Nghiệm thu T2c: đạt (13 file đổi ghép, ví dụ Vướng mắc đã sửa). Soát mẫu thấy cặp DP 00136/00108 sai nghĩa với điểm 1.0 → giao T2d soát nghĩa thủ công.
+- [A1] T2d xong: đọc tay 1280 cặp (`vi/review_T2d.tsv`, 980 dp + 150 idx + 150 dat; mẫu seed 20240601). SAI/LỆCH: dp 64/980 (SAI 61, LỆCH 3; tập trung 00136 = 26/28 sai cả file, 00107 idx 11-20, 00170, 00174, 00144 idx 55-65, 00198, 00087), idx 1/150 (0.7%), dat 1/150 (0.7%) -> dưới 3%. `align_android.py` đọc review làm ghi đè (SAI/LỆCH -> NEW, giữ k_low/ko_hint). NEW 1007 -> 1073 (scn 403, dat 670). A_dich.tsv thêm A01045-A01110 (66 ID, chưa dịch); chạy lại 2 lần md5 giống nhau; check_A: 0 lỗi thật, 91 dòng "chưa dịch" (25 cũ scn + 66 mới). Các đề xuất K đúng nằm ở cột ghi chú review.
+- [quản đốc] Nghiệm thu T2d: đạt (mẫu idx/dat 0.7% SAI < 3%; soát 6 phán quyết SAI ngẫu nhiên đều đúng). Giao tiếp: T3a-bổ sung (mọi scn chưa dịch) + T3b-1 (dat NEW nửa đầu theo thứ tự A#####), rồi T3b-2 (nửa sau) ở phiên công nhân mới.
