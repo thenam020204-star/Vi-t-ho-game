@@ -52,8 +52,47 @@ Mục tiêu (người dùng đã chốt):
 - `tools/vfs2.py`: đọc VFS và so với tài nguyên LGT.
 - Android build-tools 34 (apksigner, zipalign, aapt2, d8, dexdump) tải từ dl.google.com. Python: unicorn, capstone, keystone, lief, pyelftools.
 
-## 7. Việc tiếp theo
-1. Viết công cụ ghép lại VFS (pack) + cập nhật `target-assets.json` + ký lại APK. Thử APK không đổi gì chạy được (khớp hash).
-2. Dịch ngược hook chữ tiếng Anh của bridge (tìm bảng chuỗi và hàm hook theo symbol `BFont::*`).
-3. Harness headless: chạy guest `.so` bằng Unicorn (Python) + giả GLES/JNI để chụp khung hình và test.
-4. Việt hoá dữ liệu, rồi hook BFont, rồi HD, rồi cash shop.
+## 7. Phiên 1b: harness, offline, chữ, dữ liệu (đã kiểm chứng trong harness)
+
+### 7.1 Harness headless (`harness/`)
+- `hl5run.py` + `hl5libc.py`: Unicorn ARM32, nạp ELF, xử lý reloc, giả libc/GLES/JNI/JavaVM, VFS, lưu game. Trình tự boot như runner thật: InitKernel → InitDisplay(W,H) → FileStorage → VFS → Audio → StartApp → nativeLoop mỗi khung (50 ms ảo). Chụp texture màn hình (RGB565) ra PNG. `sheet.py` ghép ảnh.
+- Phím: `nativeKeyHandleEvent(env, this, type, key, 0)`, type 2 = nhấn, 3 = nhả (theo `CletEntry.onKeyDown/Up`). Mã: UP -1, DOWN -2, LEFT -3, RIGHT -4, OK -5, CLR -16.
+- Tài nguyên tra qua Java: `getUniqueNumberFromStrings(name)` ↔ `getUniqueAssetNameFromID(id)` (JNI `CallStatic*MethodV`, #115/#130).
+- Tốc độ khoảng 40 khung/giây ảo, đủ dùng để test.
+
+### 7.2 Patch offline (`patch/so_patches.tsv`, áp bằng `patch/apply_so.py`, có kiểm tra byte gốc)
+| vaddr | gốc → mới | ý nghĩa |
+|---|---|---|
+| 0x99bfc | `mov r2,#0` → `mov r2,#2` | Boot `StateMainMenu(5, 2)`: bỏ CheckEvent (cần mạng). Constructor tự `LoadLogoSprite(0)` khi state==2. Làm lại tĩnh việc OFFLINE_HARDENING của bridge. |
+| 0x120148 | `bne` → `b` | Bỏ popup đồng ý SMS: thẳng `LoadLogoSprite(1)` + `SetSubState(3)`, như khi cờ `[G+42]` đã đặt. |
+| 0x11fecc | `beq` → `b` | Màn tiêu đề không `DSP_Connect` kiểm tra save trên server, vào thẳng menu chính. |
+| 0x11fef8 | `mov r1,r3` → `mov r1,#1` | `DrawTitle(1)` như nhánh gốc. |
+- Kết quả trong harness: logo → mở đầu → tiêu đề → OK → **menu chính 3x3**, không có gói mạng nào.
+- Còn mạng: các mục menu UPDATE/STORAGE/SUPPORT (sẽ bỏ khỏi lưới, giống LGT r8), cash shop, hồi sinh.
+
+### 7.3 Engine chữ Android (giống LGT về thiết kế)
+- `BFont` (đối tượng font): `+0x18` = 11 mã màu, `+69` = cao dòng-2?, `+70` = độ rộng Hangul−1, `+71` = độ rộng ASCII−1; `;` = xuống dòng.
+- Bố cục (`GetWidth` 0x40e30, `GetByteLenPrintable` 0x40f24, `DrawText` lõi 0x41334, `DrawTextLine`, `DrawTextField`, `GetTextFieldPageLen`, `IsTextFieldDrawComplete`) tự tính, đọc `ldrsb [font,#70]` / `[font,#71]`.
+- Vẽ: `DrawText` gọi `MX_fntDrawString(fb, gc, fontID, x, y, str+i, len=1|2)` **cho từng ký tự**, rồi gọi tiếp `_midas_funcFntDrawString(x,y,str,len)`, rồi `_midas_funcFntDrawPixel(x, y, color, mode)`. Biến toàn cục `_mxfnt_prt` (+0x40 màu chữ, +0x44 màu đậm).
+- Chữ ở đoạn mở đầu, logo, tiêu đề, "Tap to Continue" là **ảnh** (`img/menu.mgr`, `sp/imgcom/title.mgr`…), không đi qua font.
+- Kế hoạch: dùng mã từ 2 byte của LGT (lead 0xC9.., trail 0xA1.., `dict.txt`). (1) Vá các chỗ đọc `[font,#70]` để trả bề rộng thật của từ. (2) Chặn `MX_fntDrawString`: gặp mã Việt thì vẽ bitmap (font 15px/10px ở khung gốc, 18px ở chế độ HD) bằng `_midas_funcFntDrawPixel` với màu hiện tại, còn lại gọi hàm gốc.
+- Chỗ chứa code: hàm không còn tham chiếu (`tools/deadfuncs.py`, khoảng 22 KB, ví dụ bản sao constructor C1/C2 `StateGame::StateGame(int)` 1588 B, `AndroidService` ctor 2436 B, `Map::MapMove_back` 2620 B). Dữ liệu (từ điển, font) nạp từ VFS lúc chạy. Không dùng các symbol mà bridge tra theo tên.
+
+### 7.4 Dữ liệu: bản Android là **phiên bản game mới hơn** bản LGT
+- VFS của APK này **đã Anh hoá** (chữ trong `.dat`/`.scn` và ảnh "AGES 12+", "GAMBLING"…).
+- `vi5/build_vi5.py` chạy lại được (đã sửa đường dẫn cứng trong `extract5.py`): 13.645 chỗ, 0 quá dài, từ điển 4548/5076. Overlay 258 file, trong đó 253 có trong VFS.
+- `tools/skelcheck.py` (so khung cấu trúc, bỏ chuỗi): **136 khớp, 117 khác**.
+  - `.dat`: Android có thêm bản ghi (item_00 81→86, item_18 43→49, menu_text 205→210, common_text 333→351, ingame_text 355→357, quest 152→151), một số trường số khác (skill_00/01/02, enemy_*, item_12, mission_*), `cash_expert.dat` khác định dạng.
+  - `.scn`: code kịch bản Android khác (sửa sự kiện, thêm lệnh). 168 file cùng số câu, 33 file khác số câu (vài cảnh mới: 00216 4→54, 00175 1→17, 00214 1→17…). Một số file Android chỉ còn 32 câu, cần kiểm tra lại parser (có thể bảng chuỗi khác định dạng).
+- **Hệ quả:** không được thay nguyên file bằng bản LGT. Cách làm:
+  1. Giữ file Android (cấu trúc và số liệu), chỉ thay chuỗi.
+  2. Ghép chuỗi Android (tiếng Anh) với chuỗi LGT (tiếng Hàn → bản dịch Việt của người dùng): theo chỉ số khi khung khớp, theo khoá nội dung (mã điều khiển, số, ID bản ghi) khi lệch.
+  3. Câu Android không ghép được: dịch Anh → Việt theo `thuat-ngu.tsv`/`style-guide.md`, đánh dấu riêng để người dùng duyệt.
+- File chỉ bản Android có (giữ nguyên): `ep/ep_*/s*_*.scn`, `mon/*_ai`, `map/(md)*`, `sp/cif/*`, `sp/ext/*`, `calc/calc_sk.dat`, `csv/enemy_g.dat`, `csv/rewards_*.dat`. Ảnh có chữ tiếng Anh cần vẽ lại: `img/menu.mgr`, `img/ui.mgr`, `img/touch.mgr`, `sp/imgcom/title.mgr`.
+
+## 8. Việc tiếp theo
+1. Công cụ ghép chuỗi Android ↔ LGT (`.dat` theo bản ghi/trường, `.scn` theo chỉ số + kiểm mã điều khiển), xuất danh sách câu mới cần dịch.
+2. Engine chữ Việt trong guest (C → ARM32, chèn vào hàm chết), test trong harness.
+3. Đóng gói VFS + ký APK; bridge: tắt hook chữ tiếng Anh, chế độ HD (÷k chọn trong game), lọc NEAREST.
+4. Cash shop miễn phí; bỏ mục mạng ở menu chính; hồi sinh offline.
+5. Vẽ lại ảnh có chữ.

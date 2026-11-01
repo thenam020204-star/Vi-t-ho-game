@@ -503,8 +503,8 @@ def run_frames(g):
         for k in events.get(fr, []):
             code = KEYS.get(k, None)
             if code is None: code = int(k)
-            g.call(keyf, g.env, 0, 1, code & 0xffffffff, 0)   # type 1 = press (giả định)
-            g.call(keyf, g.env, 0, 2, code & 0xffffffff, 0)   # type 2 = release
+            g.call(keyf, g.env, 0, 2, code & 0xffffffff, 0)   # 2 = nhấn (CletEntry.onKeyDown)
+            g.call(keyf, g.env, 0, 3, code & 0xffffffff, 0)   # 3 = nhả
         g.vclock += FRAME_MS
         try:
             g.call(loop, g.env, 0)
