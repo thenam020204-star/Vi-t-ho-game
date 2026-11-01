@@ -218,3 +218,38 @@ Kiểm tự động (`view_check.py` mục [1], [2]): 29/29 byte gốc khớp; 2
 3. Đọc `MEM_GetUsedPoolSize`/`TotalPoolSize` lúc tới màn sâu nhất chạy được; ghi số đo.
 4. Màn chơi: chỉ khi unidbg qua được màn chọn save (lỗi T2); nếu không thì ghi rõ.
 5. Build `out/Inotia4_T9_check.apk` (`--smali net,mod --vnfont --lib --diag`), `apkdiff` với TEST10, apksigner, `zipalign -c -P 16 4`, `check_apk`.
+
+## 12. T9b: nhóm patch trong `scripts/patch_lib.py`, mod menu, build
+
+| Nhóm | Số patch | Vùng (vaddr) | Byte khai báo → byte thật sự khác (lib TEST10 → T9) |
+|---|---|---|---|
+| `view` | 2 | 0x14709c (4 B) + cave 0x133454..0x133488 (52 B) | 56 → 54 (4 + 50) |
+| `hud` | 29 | 29 lệnh 4 B trong 0x167f7c..0x16b26c và 0x1698c4/0x1698cc | 116 → 40 |
+| `pool` | 2 | 0x145730, 0x145734 (4 B mỗi cái) | 8 → 2 |
+
+- Mỗi patch kiểm byte gốc (lệch cả bản gốc lẫn bản mới thì dừng, không ghi gì), kiểm lệnh kế tiếp (`refs`), mỗi nhóm áp trọn vẹn hoặc dừng. `--check-asm` dựng lại cave `mod`, cave `view` (llvm-mc + ld.lld) và 31 lệnh đơn `hud`/`pool` (llvm-mc) rồi so byte; `--disasm` in disasm trước/sau và so với lệnh mong đợi (39/39 khớp).
+- Lib TEST4 + 6 nhóm == lib TEST10 + `view,hud,pool` (cùng sha256 `d5af7d0a80eee990a9e2ff8af87c8c98a488b87d23c53983257a3d5577d81f98`); áp lần 2 ⇒ 39 "đã áp"; `--diff` TEST10 → T9: 96 B, 35 đoạn; TEST4 → T9: 350 B, 56 đoạn; mọi byte nằm trong vùng khai báo. 5 phép thử âm tính (byte gốc HUD/cave/pool sai, `refs` sai, nhóm HUD lệch trạng thái) đều dừng; byte lạ ngoài vùng ⇒ `--diff` báo "NGOAI VUNG".
+- `ModMenu`: thanh thứ 4 "Tầm nhìn" 100..150, bước 5, mặc định 120, hiển thị "%d%%", ghi chú "Khởi động lại game để áp dụng", ghi int thứ 4 qua `ModMem` (LOCATE_LEN = 16 B đã phủ). Nút "Đặt lại x1" chỉ đặt lại 3 thanh hệ số (`MULT_COUNT = 3`); tầm nhìn không bị đặt lại. Người dùng TEST10 chưa có khoá `view` trong SharedPreferences ⇒ nhận mặc định 120 ở lần mở đầu tiên của bản T9.
+- Build: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T9_check.apk --smali net,mod --vnfont --lib --libgroup base,p1,mod,view,hud,pool --diag`.
+
+## 13. T9c: kết quả kiểm (unidbg, 2400×1080)
+
+Lệnh: `bash emu/view_check.sh /opt/work/lib4/libgame.so <lib T9> work/viewcheck --title` rồi `scripts/re/view_xcheck.py` (log `logs/t9c_view_check.log`, dòng cuối **TẤT CẢ ĐẠT**); mô phỏng Java ghi P bằng `-Demu.poke=0x72f78c=P` trước `nativeStart` (trước `startClet`, như `onResume`).
+
+| P | `0x2d6090/94` (máy) | `0x2d6098/9c` (logic) | `0x2d7ab4/ab8` (FB) | pool dùng lúc khung 120 |
+|---|---|---|---|---|
+| lib gốc | 2400/1080 | 1422/640 | 512/230 | 1.753.864 B (pool 8 MB) |
+| chưa ghi (P=0), 99, 151, −1, 200 | 2400/1080 | 1422/640 | 512/230 | 1.753.864 B |
+| 100 | 2400/1080 | 1422/640 | 512/230 | 1.753.864 B |
+| 105 | 2400/1080 | 1422/640 | **536/241** | 1.804.168 B |
+| 120 | 2400/1080 | 1422/640 | 614/276 | 1.983.568 B (+229.704 B = 2·614² − 2·512²) |
+| 150 | 2400/1080 | 1422/640 | 768/345 | 2.409.224 B (+655.360 B) |
+
+- Cả 16 giá trị P ở 2400×1080 (100..150 bước 5, 99, 151, 0, −1, kèm "chưa ghi") và 5 giá trị P ở mỗi máy 960×640, 1920×1080, 800×480, 799×480, 600×360, 479×320 (nhánh cfg 512×H, 480×H, 480×320) khớp công thức `floor(cfg·P/100)` (W chẵn); màn logic và kích thước thật không đổi theo P.
+- P = 105 ⇒ W = **536**, không phải 538 (xem mục 4). W chẵn ở mọi P (kể cả 105, 115, 135, 145).
+- Pool: tổng 8.388.608 B (lib gốc) → 10.485.760 B (lib T9) ở mọi lần chạy. `used(P) − used(gốc)` khớp từng byte với `2·(W'² − W0²)` (`MEM_Malloc(2·W·W)` của `GRP_Initialize`) ở cả 6 kích thước máy.
+- **Mức dùng đỉnh đo được** (màn sâu nhất chạy được = màn chọn ô save, sau khi bấm BẮT ĐẦU; lấy mẫu mỗi 20 khung tới khung 760): lib gốc 3.674.063 B (3,50 MB / 8 MB); T9 P=100 3.674.063 B; T9 P=120 **3.904.879 B (3,72 MB / 10 MB)**. Trong màn chơi: **CHƯA XÁC ĐỊNH** (không tới được).
+- Màn tiêu đề / intro (`docs/emu_shots/t9c_tieu_de_P100.png`, `t9c_tieu_de_P120.png`, `t9c_chon_save_P100.png`, `t9c_chon_save_P120.png`, thu nhỏ 1200×540; bản đầy đủ 2400×1080 trong `work/viewcheck/runs/title_P*`): ở khung 400 (thanh nạp), 610 (màn tiêu đề), 640/690/720 (sau tap) ảnh của lib gốc, P=100 và P=120 **giống nhau từng pixel** (0 px khác), đúng dự đoán: nền và nút vẽ theo màn logic, không phụ thuộc FB. Tap START (240,277) ở khung 620 vẫn trúng (khung 610 → 640 đổi từ màn tiêu đề sang màn chọn ô save, 1.237.594 px khác ở cả hai P).
+- unidbg dừng ở màn chọn ô save (`UC_ERR_READ_UNMAPPED` sau lệnh vẽ chữ "Chọn một ô trống…", lỗi môi trường T2, xảy ra ở cả lib gốc); các khung sau đó đứng yên (0 px khác giữa các ảnh khung 730/760/830/880 ở P=120) nên **không chụp được màn chơi / HUD thật**.
+- **HUD (thay cho ảnh màn chơi):** `-Demu.hudcall=-1` gọi thẳng `UIPlay_Create(1)` sau khi tự gọi `InputLayer_Create` (tầng UI chỉ được game tạo khi vào state) và in mọi `ControlObject_SetRect`/`SetID`. 21 control ở màn logic 1422×640 (và 960×640) dịch đúng theo bảng mục 6 (cột trái +24 ngang; cột phải −24/+16; thanh ID 4 +16 dọc, x giữ 482; 6 kỹ năng, nút đổi, nút tấn công −24/−16; cần điều khiển, vùng chạm cần và 4 mũi tên +24/−16), w/h không đổi, thứ tự tạo control giống nhau. Chưa kiểm bằng chạy: minimap (4 điểm 0x16b234..0x16b268, `UIPlay_MakeMinimap` cần dữ liệu bản đồ) và hình nền bán nguyệt (`UIPlayPorting_Draw`): chỉ kiểm bằng disasm (mục 6).
+- APK `out/Inotia4_T9_check.apk` (sha256 `5d247dd93011281e066c60181866eb52a40a7efa94d279d8e538bd5971c96f16`, không commit): `apkdiff` với TEST10 chỉ khác `classes3.dex` và `lib/arm64-v8a/libgame.so` (1454 file chung); decode lại bằng apktool: smali chỉ khác ở `com/namp/vh/ModMenu`, `ModMenu$1..$4`, `ModMenu$FloatButton`, `ModMenu$Slot`; apksigner v1/v2/v3 đạt, cùng chứng chỉ TEST10 (`cc559651…20d4`); `zipalign -c -P 16 4` đạt; `check_apk.py` PASS. Log `logs/t9c_apk_check.txt`.

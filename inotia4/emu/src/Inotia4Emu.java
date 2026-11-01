@@ -498,6 +498,7 @@ public class Inotia4Emu extends AbstractJni {
         step("nativeStart", () -> vm.resolveClass(K).callStaticJniMethod(emulator, "nativeStart()V"));
         step("nativeStartClet", () -> vm.resolveClass(K).callStaticJniMethod(emulator, "nativeStartClet()V"));
         memReport("sau startClet", -1);
+        hudCall(-1);
         long t0 = System.currentTimeMillis();
         for (int f = 0; f < frames; f++) {
             final int ff = f;
@@ -509,6 +510,7 @@ public class Inotia4Emu extends AbstractJni {
             }
             onFrameEnd(f);
             poolSample(f);
+            hudCall(f);
             virtMs += 16;
             if (Boolean.getBoolean("emu.realtime")) {
                 long due = t0 + (f + 1) * 16L - System.currentTimeMillis();
@@ -565,6 +567,48 @@ public class Inotia4Emu extends AbstractJni {
                 System.out.println("[pool] " + label + " used=" + used + " total=" + total + " (" + String.format("%.3f / %.3f MB", used / 1048576.0, total / 1048576.0) + ")");
             } catch (Throwable t) { System.out.println("[pool] loi: " + t); }
         }
+    }
+
+    /** -Demu.hudcall=F: sau khung F (-1 = ngay sau startClet) goi thang UIPlay_Create(1) cua libgame.so (khong can toi man choi) va in moi
+     *  ControlObject_SetRect/SetID: "[hud] rect obj=0x.. x y w h" va "[hud] id obj=0x.. N" => toa do HUD that tren man logic (T9c). */
+    boolean hudHooked;
+    void hudCall(int f) {
+        String v = System.getProperty("emu.hudcall", "");
+        if (v.isEmpty() || Integer.decode(v) != f) return;
+        long base = dm.getModule().base;
+        if (!hudHooked) {
+            hudHooked = true;
+            com.github.unidbg.debugger.Debugger dbg = emulator.attach();
+            for (final String name : new String[]{"ControlObject_SetRect", "ControlObject_SetID"}) {
+                com.github.unidbg.Symbol sym = dm.getModule().findSymbolByName(name, false);
+                if (sym == null) { System.out.println("[hud] khong co symbol " + name); continue; }
+                dbg.addBreakPoint(sym.getAddress(), (emu, addr) -> {
+                    com.github.unidbg.arm.context.RegisterContext c = emu.getContext();
+                    if (name.endsWith("SetRect"))
+                        System.out.println("[hud] rect obj=0x" + Long.toHexString(c.getLongArg(0)) + " x=" + (int) c.getLongArg(1) + " y=" + (int) c.getLongArg(2)
+                                + " w=" + (int) c.getLongArg(3) + " h=" + (int) c.getLongArg(4));
+                    else System.out.println("[hud] id obj=0x" + Long.toHexString(c.getLongArg(0)) + " " + (int) c.getLongArg(1));
+                    return true;
+                });
+            }
+        }
+        System.out.println("== goi UIPlay_Create(1) sau khung " + f + " (man logic " + com.github.unidbg.pointer.UnidbgPointer.pointer(emulator, base + 0x2d6098).getInt(0)
+                + "x" + com.github.unidbg.pointer.UnidbgPointer.pointer(emulator, base + 0x2d609c).getInt(0) + ")");
+        try {
+            Number ui = dm.getModule().callFunction(emulator, "InputLayer_GetUI");
+            long uiPtr = ui.longValue();
+            if (uiPtr == 0) {          // tang UI chi duoc tao khi vao state (STATE_EnterTitle/EnterGame): tu tao nhu game (InputLayer_Create khong tham so)
+                dm.getModule().callFunction(emulator, "InputLayer_Create");
+                uiPtr = dm.getModule().callFunction(emulator, "InputLayer_GetUI").longValue();
+                System.out.println("== InputLayer_Create da goi, GetUI = 0x" + Long.toHexString(uiPtr));
+            }
+            long cnt = uiPtr == 0 ? -1 : dm.getModule().callFunction(emulator, "ControlObject_GetCount", uiPtr).intValue();
+            System.out.println("== InputLayer_GetUI = 0x" + Long.toHexString(uiPtr) + " , ControlObject_GetCount = " + cnt);
+        } catch (Throwable t) { System.out.println("!! GetUI: " + t); }
+        try {
+            Number r = dm.getModule().callFunction(emulator, "UIPlay_Create", 1);
+            System.out.println("== UIPlay_Create tra " + r);
+        } catch (Throwable t) { System.out.println("!! UIPlay_Create: " + t); }
     }
 
     /** -Demu.poolevery=N: lay mau used/total cua MEM moi N khung (de tim muc dung dinh). */

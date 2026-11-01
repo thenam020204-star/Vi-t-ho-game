@@ -25,3 +25,9 @@ LIB=<libgame.so> APK=out/Inotia4_vi_offline.apk EMU_OPTS="-Demu.shot=50" bash em
 bash emu/crypto_check.sh <libgame.so gốc> <libgame.so đã vá> [thư mục kết quả] [logs/save_TEST7]
 ```
 `emu/src/CryptoCheck.java` nạp lib, gọi thẳng `ENCRYPT_Process2` với khoá rỗng = buffer `HubSave_key`, ghi rác sau buffer (mô phỏng bộ nhớ khác nhau giữa hai tiến trình) rồi mã hoá/giải mã; `scripts/re/crypto_xcheck.py` so kết quả với `scripts/re/save_crypto.py`. Dòng cuối phải là `TONG KET: TAT CA DAT`. Log mẫu: `logs/t3c_crypto_check.log`.
+
+## Kiểm tầm nhìn / HUD / pool (T9c)
+```bash
+bash emu/view_check.sh <libgame.so gốc> <libgame.so đã vá đủ nhóm> [thư mục kết quả=work/viewcheck] [--title]
+```
+Chạy 54 lần Inotia4Emu (3 song song): `-Demu.w/-Demu.h` đổi màn hình, `-Demu.poke=0x72f78c=P` ghi int vào `.bss` trước `nativeStart` (giả lập Java ghi trong `onResume`), `-Demu.dump=addr:n,...` in n int32 ở đầu và cuối, `-Demu.pool=true` (+ `-Demu.poolevery=N`) đọc `MEM_GetUsedPoolSize/TotalPoolSize` và ghi đỉnh, `-Demu.hudcall=-1` gọi thẳng `UIPlay_Create(1)` và in rect từng control. `scripts/re/view_xcheck.py` đối chiếu với công thức; dòng cuối phải là `TONG KET: TAT CA DAT`. Log mẫu: `logs/t9c_view_check.log`.
