@@ -1,0 +1,330 @@
+lib  sha256 df12cecc7752bcba55157fffe7989cf8f9d8bf6344b211fb3ec41122443a5d02 /opt/work/lib4/libgame.so
+
+[1] Ten nhom (IMGSYS_UnitLoad @0x12ba18 -> GRPX_LoadImage(name_table + g*64))
+  -> DAT: IMGSYS_UnitLoad: ldr [GOT 0x2bddb8]; add x0,x8,x20,lsl #6; bl GRPX_LoadImage 
+  -> DAT: GOT 0x2bddb8 -> bang ten 0x2cc370 (64 B/muc), GOT 0x2bddc0 -> mang con tro nhom 0x2d0ce8 (8 B/muc) (0x2cc370, 0x2d0ce8)
+    nhom 0x15 @0x2cc8b0 = UI_014.png
+    nhom 0x16 @0x2cc8f0 = UI_015.png
+  -> DAT: nhom 0x15 = UI_014.png, 0x16 = UI_015.png 
+  -> DAT: IMGSYS_Load nap 98 nhom (0x310/8): vong `cmp x21, #0x310` 
+
+[2] Bang loc (IMGSYS_GetLoc @0x12c3a8)
+  -> DAT: GetLoc: `cmp w0,#0x61`, bang nhay byte `adr x9,0xacb60`, `br x10` (98 nhom) 
+    nhom 0x15 (UI_014.png): stride=24 base=0xaf3cc
+    nhom 0x16 (UI_015.png): stride=24 base=0xaf474
+  -> DAT: UI_014 base 0xaf3cc, UI_015 base 0xaf474, stride 24 B {21: (24, '0xaf3cc'), 22: (24, '0xaf474')}
+    so muc: UI_014 = 7 (bang ket thuc dung tai base UI_015), UI_015 = 40
+  -> DAT: UI_014 co 7 muc (0xaf3cc + 7*24 = 0xaf474), UI_015 co 40 muc (0xaf474 + 40*24 = 0xaf834) {21: 7, 22: 40}
+    UI_014.png (x, y, w, h, u4, u5):
+      loc0     2    2  458  123  0 0  
+      loc1     2  128  276  267  0 0  <== GIU  UI_014 loc1
+      loc2   281  128  159  160  0 0  <== THAY UI_014 loc2
+      loc3   281  291  159  160  0 0  <== THAY UI_014 loc3
+      loc4     2  398  105  112  0 0  
+      loc5   110  398   79   84  0 0  
+      loc6   363  454   77   37  0 0  
+    UI_015.png (x, y, w, h, u4, u5):
+      loc0     2    2   75   75  0 0  <== THAY UI_015 loc0
+      loc1    80    2   75   75  0 0  <== THAY UI_015 loc1
+      loc2   158    2   75   75  0 0  <== THAY UI_015 loc2
+      loc3   236    2   75   75  0 0  <== THAY UI_015 loc3
+      loc4   314    2   75   75  0 0  <== GIU  UI_015 loc4
+      loc5   416    2   94   94  0 0  <== GIU  UI_015 loc5
+      loc6     2   80   70   90  0 0  
+      loc7    75   80   70   90  0 0  
+      loc8   148   80   90   70  0 0  
+      loc9   241   80   90   70  0 0  
+      loc10  375   81   38   40  0 0  <== GIU  UI_015 loc10
+      loc11  416   99   94   94  0 0  <== THAY UI_015 loc11
+      loc12  334  124   79   84  0 0  
+      loc13  188  153   70   90  0 0  
+      loc14  261  153   70   90  0 0  
+      loc15    2  173   90   70  0 0  
+      loc16   95  173   90   70  0 0  
+      loc17  416  196   94   94  0 0  <== GIU  UI_015 loc17
+      loc18  334  211   79   84  0 0  
+      loc19    2  246  229  228  0 0  
+      loc20  252  246   79   60  0 0  
+      loc21  234  309  105  112  0 0  
+      loc22  342  309  105  112  0 0  
+      loc23  234  424  105   80  0 0  
+      loc24  342  424   18   36  0 0  
+      loc25  363  424   18   36  0 0  
+      loc26    2  477   60   22  0 0  
+      loc27   65  477   74   22  0 0  
+      loc28  174  477    2    4  0 0  
+      loc29  179  477   40    4  0 0  
+      loc30  229  477    2    4  0 0  
+      loc31  174  484    2    4  0 0  
+      loc32  179  484   40    4  0 0  
+      loc33  229  484    2    4  0 0  
+      loc34  174  491   33    3  0 0  
+      loc35  174  497   33    3  0 0  
+      loc36   89  502    2    2  0 0  
+      loc37   94  502   40    2  0 0  
+      loc38  137  502    2    2  0 0  
+      loc39  174  503   33    2  0 0  
+  -> DAT: UI_015 loc0  banh rang  <- btn_pause = (2, 2, 75, 75) (2, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc1  luu        <- btn_save = (80, 2, 75, 75) (80, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc2  gio hang   <- btn_shop = (158, 2, 75, 75) (158, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc3  doi (swap) <- btn_swap = (236, 2, 75, 75) (236, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc11 vong o ky nang <- btn_frame = (416, 99, 94, 94) (416, 99, 94, 94, 0, 0)
+  -> DAT: UI_014 loc2  tan cong   <- attack = (281, 128, 159, 160) (281, 128, 159, 160, 0, 0)
+  -> DAT: UI_014 loc3  tan cong bam <- attack_pressed = (281, 291, 159, 160) (281, 291, 159, 160, 0, 0)
+  -> DAT: UI_014 loc1  nen ban nguyet (GIU) = (2, 128, 276, 267) (2, 128, 276, 267, 0, 0)
+  -> DAT: UI_015 loc4  lop bam chung (GIU) = (314, 2, 75, 75) (314, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc5  nen o ky nang (GIU) = (416, 2, 94, 94) (416, 2, 94, 94, 0, 0)
+  -> DAT: UI_015 loc10 cham so luong (GIU) = (375, 81, 38, 40) (375, 81, 38, 40, 0, 0)
+  -> DAT: UI_015 loc17 o ky nang bam (GIU) = (416, 196, 94, 94) (416, 196, 94, 94, 0, 0)
+
+[3] GRPX_DrawPart (0x12a43c): kieu ve = w5 -> [sp+8] cua SGL_DrawTexturePartEx -> w20
+  -> DAT: GRPX_DrawPart: w8=w5 (kieu) -> [sp,#8]; w6 (%) -> [sp,#0x10]; rect = x3 (x,y,w,h); bl SGL_DrawTexturePartEx 
+  -> DAT: SGL_DrawTexturePartEx: w20 = [x29,#0x68] (= [sp,#8] cua nguoi goi) 
+  -> DAT: dinh dang texture [x19+0x60]: 0x1906 -> nhanh A8, 0x1907 -> RGB, 0x1908 (RGBA) -> nhanh 0x131790 
+  -> DAT: nhanh RGBA: kieu 1 -> 0x131858 (glDrawArrays), kieu 2 -> 0x1318c8, kieu > 2 -> 0x131884 
+  -> DAT: kieu 1: chi `glDrawArrays` (khong doi blend) 
+  -> DAT: kieu 2: glBlendFunc(0x302 = SRC_ALPHA, 1 = ONE); ve; tra ve (0x302, 0x303 = ONE_MINUS_SRC_ALPHA) 
+
+[4] Cac noi goi IMGSYS_GetLoc(0x15, 3) va 3 lenh `mov w5,#2`
+    tong so noi goi IMGSYS_GetLoc@plt: 539
+    noi goi voi (w0 = 0x15, w1 = 3): ['0x169ad0', '0x169b9c', '0x169be4']
+  -> DAT: dung 3 noi goi UI_014 loc3 
+    moi noi goi UI_014: 1698d8:loc1, 169a44:loc2, 169ad0:loc3, 169b9c:loc3, 169be4:loc3, 16a8e0:locNone, 16aa60:locNone, 16abb4:loc6
+  -> DAT: llvm-mc: `mov w5,#1` = 25008052 (va `mov w5,#2` = 45008052) 
+    0x169ae8: goc (45008052)
+        169ac8  mov w0, #0x15
+        169acc  mov w1, #0x3
+        169ad0  bl 0x2a8f80 <IMGSYS_GetLoc@plt>
+        169ad4  mov x3, x0
+        169ad8  mov x0, x24
+        169adc  mov w1, w22
+        169ae0  mov w2, w23
+        169ae4  mov w4, #0x2
+        169ae8  mov w5, #0x2
+        169aec  mov w6, wzr
+        169af0  bl 0x2a89a0 <GRPX_DrawPart@plt>
+  -> DAT: 0x169ae8: GetLoc(0x15,3) @0x169ad0 -> GRPX_DrawPart(x0=nhom, w1,w2=toa do, x3=loc3, w4=2 (tam), w5=2 (kieu), w6=0) 
+    0x169bb4: goc (45008052)
+        169b94  mov w0, #0x15
+        169b98  mov w1, #0x3
+        169b9c  bl 0x2a8f80 <IMGSYS_GetLoc@plt>
+        169ba0  mov x3, x0
+        169ba4  mov x0, x24
+        169ba8  mov w1, w22
+        169bac  mov w2, w23
+        169bb0  mov w4, #0x2
+        169bb4  mov w5, #0x2
+        169bb8  mov w6, wzr
+        169bbc  bl 0x2a89a0 <GRPX_DrawPart@plt>
+  -> DAT: 0x169bb4: GetLoc(0x15,3) @0x169b9c -> GRPX_DrawPart(x0=nhom, w1,w2=toa do, x3=loc3, w4=2 (tam), w5=2 (kieu), w6=0) 
+    0x169bfc: goc (45008052)
+        169bdc  mov w0, #0x15
+        169be0  mov w1, #0x3
+        169be4  bl 0x2a8f80 <IMGSYS_GetLoc@plt>
+        169be8  mov x3, x0
+        169bec  mov x0, x24
+        169bf0  mov w1, w22
+        169bf4  mov w2, w23
+        169bf8  mov w4, #0x2
+        169bfc  mov w5, #0x2
+        169c00  mov w6, wzr
+        169c04  bl 0x2a89a0 <GRPX_DrawPart@plt>
+  -> DAT: 0x169bfc: GetLoc(0x15,3) @0x169be4 -> GRPX_DrawPart(x0=nhom, w1,w2=toa do, x3=loc3, w4=2 (tam), w5=2 (kieu), w6=0) 
+    UIPlayPorting_Draw: 1698f0 kieu=1
+    UIPlayPorting_Draw: 169a5c kieu=1
+    UIPlayPorting_Draw: 169ae8 kieu=2
+    UIPlayPorting_Draw: 169bb4 kieu=2
+    UIPlayPorting_Draw: 169bfc kieu=2
+    UIPlayPorting_Draw: 169c40 kieu=1
+    UIPlayPorting_Draw: 169cbc kieu=1
+    UIPlayPorting_Draw: 169e54 kieu=1
+    UIPlayPorting_Draw: 16a0e4 kieu=2
+    UIPlayPorting_Draw: 16a290 kieu=1
+    UIPlayPorting_Draw: 16a330 kieu=1
+    UIPlayPorting_Draw: 16a380 kieu=1
+    UIPlayPorting_Draw: 16a434 kieu=1
+    UIPlayPorting_Draw: 16a52c kieu=2
+    UIPlayPorting_Draw: 16a588 kieu=1
+    UIPlayPorting_Draw: 16a5f4 kieu=1
+    UIPlayPorting_Draw: 16a72c kieu=1
+    UIPlayPorting_Draw: 16a764 kieu=1
+    UIPlayPorting_Draw: 16ada0 kieu=1
+    so noi `mov w5,#k; mov w6,wzr; bl GRPX_DrawPart` trong 0x16985c..0x16b200: 19
+
+[5] Atlas (/opt/work/dec4/assets/common/game_res)
+  -> DAT: UI_014.png.jpg: PNG PNG (512, 512) (khong phai JPEG du duoi .jpg) mode=RGBA sha256=56274c88709140b6
+  -> DAT: UI_014.png: 7 rect, deu nam trong 512x512 
+    cap rect chong len nhau: khong
+  -> DAT: UI_014.png: cac rect THAY [2, 3] khong chong len rect nao khac 
+  -> DAT: UI_015.png.jpg: PNG PNG (512, 512) (khong phai JPEG du duoi .jpg) mode=RGBA sha256=e05d2a292ec5d0ed
+  -> DAT: UI_015.png: 40 rect, deu nam trong 512x512 
+    cap rect chong len nhau: khong
+  -> DAT: UI_015.png: cac rect THAY [0, 1, 2, 3, 11] khong chong len rect nao khac 
+
+KET LUAN: TAT CA DAT
+
+=========== lib TEST11 (da vá T9) ===========
+lib  sha256 d5af7d0a80eee990a9e2ff8af87c8c98a488b87d23c53983257a3d5577d81f98 /opt/work/t10/lib_test11.so
+
+[1] Ten nhom (IMGSYS_UnitLoad @0x12ba18 -> GRPX_LoadImage(name_table + g*64))
+  -> DAT: IMGSYS_UnitLoad: ldr [GOT 0x2bddb8]; add x0,x8,x20,lsl #6; bl GRPX_LoadImage 
+  -> DAT: GOT 0x2bddb8 -> bang ten 0x2cc370 (64 B/muc), GOT 0x2bddc0 -> mang con tro nhom 0x2d0ce8 (8 B/muc) (0x2cc370, 0x2d0ce8)
+    nhom 0x15 @0x2cc8b0 = UI_014.png
+    nhom 0x16 @0x2cc8f0 = UI_015.png
+  -> DAT: nhom 0x15 = UI_014.png, 0x16 = UI_015.png 
+  -> DAT: IMGSYS_Load nap 98 nhom (0x310/8): vong `cmp x21, #0x310` 
+
+[2] Bang loc (IMGSYS_GetLoc @0x12c3a8)
+  -> DAT: GetLoc: `cmp w0,#0x61`, bang nhay byte `adr x9,0xacb60`, `br x10` (98 nhom) 
+    nhom 0x15 (UI_014.png): stride=24 base=0xaf3cc
+    nhom 0x16 (UI_015.png): stride=24 base=0xaf474
+  -> DAT: UI_014 base 0xaf3cc, UI_015 base 0xaf474, stride 24 B {21: (24, '0xaf3cc'), 22: (24, '0xaf474')}
+    so muc: UI_014 = 7 (bang ket thuc dung tai base UI_015), UI_015 = 40
+  -> DAT: UI_014 co 7 muc (0xaf3cc + 7*24 = 0xaf474), UI_015 co 40 muc (0xaf474 + 40*24 = 0xaf834) {21: 7, 22: 40}
+    UI_014.png (x, y, w, h, u4, u5):
+      loc0     2    2  458  123  0 0  
+      loc1     2  128  276  267  0 0  <== GIU  UI_014 loc1
+      loc2   281  128  159  160  0 0  <== THAY UI_014 loc2
+      loc3   281  291  159  160  0 0  <== THAY UI_014 loc3
+      loc4     2  398  105  112  0 0  
+      loc5   110  398   79   84  0 0  
+      loc6   363  454   77   37  0 0  
+    UI_015.png (x, y, w, h, u4, u5):
+      loc0     2    2   75   75  0 0  <== THAY UI_015 loc0
+      loc1    80    2   75   75  0 0  <== THAY UI_015 loc1
+      loc2   158    2   75   75  0 0  <== THAY UI_015 loc2
+      loc3   236    2   75   75  0 0  <== THAY UI_015 loc3
+      loc4   314    2   75   75  0 0  <== GIU  UI_015 loc4
+      loc5   416    2   94   94  0 0  <== GIU  UI_015 loc5
+      loc6     2   80   70   90  0 0  
+      loc7    75   80   70   90  0 0  
+      loc8   148   80   90   70  0 0  
+      loc9   241   80   90   70  0 0  
+      loc10  375   81   38   40  0 0  <== GIU  UI_015 loc10
+      loc11  416   99   94   94  0 0  <== THAY UI_015 loc11
+      loc12  334  124   79   84  0 0  
+      loc13  188  153   70   90  0 0  
+      loc14  261  153   70   90  0 0  
+      loc15    2  173   90   70  0 0  
+      loc16   95  173   90   70  0 0  
+      loc17  416  196   94   94  0 0  <== GIU  UI_015 loc17
+      loc18  334  211   79   84  0 0  
+      loc19    2  246  229  228  0 0  
+      loc20  252  246   79   60  0 0  
+      loc21  234  309  105  112  0 0  
+      loc22  342  309  105  112  0 0  
+      loc23  234  424  105   80  0 0  
+      loc24  342  424   18   36  0 0  
+      loc25  363  424   18   36  0 0  
+      loc26    2  477   60   22  0 0  
+      loc27   65  477   74   22  0 0  
+      loc28  174  477    2    4  0 0  
+      loc29  179  477   40    4  0 0  
+      loc30  229  477    2    4  0 0  
+      loc31  174  484    2    4  0 0  
+      loc32  179  484   40    4  0 0  
+      loc33  229  484    2    4  0 0  
+      loc34  174  491   33    3  0 0  
+      loc35  174  497   33    3  0 0  
+      loc36   89  502    2    2  0 0  
+      loc37   94  502   40    2  0 0  
+      loc38  137  502    2    2  0 0  
+      loc39  174  503   33    2  0 0  
+  -> DAT: UI_015 loc0  banh rang  <- btn_pause = (2, 2, 75, 75) (2, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc1  luu        <- btn_save = (80, 2, 75, 75) (80, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc2  gio hang   <- btn_shop = (158, 2, 75, 75) (158, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc3  doi (swap) <- btn_swap = (236, 2, 75, 75) (236, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc11 vong o ky nang <- btn_frame = (416, 99, 94, 94) (416, 99, 94, 94, 0, 0)
+  -> DAT: UI_014 loc2  tan cong   <- attack = (281, 128, 159, 160) (281, 128, 159, 160, 0, 0)
+  -> DAT: UI_014 loc3  tan cong bam <- attack_pressed = (281, 291, 159, 160) (281, 291, 159, 160, 0, 0)
+  -> DAT: UI_014 loc1  nen ban nguyet (GIU) = (2, 128, 276, 267) (2, 128, 276, 267, 0, 0)
+  -> DAT: UI_015 loc4  lop bam chung (GIU) = (314, 2, 75, 75) (314, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc5  nen o ky nang (GIU) = (416, 2, 94, 94) (416, 2, 94, 94, 0, 0)
+  -> DAT: UI_015 loc10 cham so luong (GIU) = (375, 81, 38, 40) (375, 81, 38, 40, 0, 0)
+  -> DAT: UI_015 loc17 o ky nang bam (GIU) = (416, 196, 94, 94) (416, 196, 94, 94, 0, 0)
+
+[3] GRPX_DrawPart (0x12a43c): kieu ve = w5 -> [sp+8] cua SGL_DrawTexturePartEx -> w20
+  -> DAT: GRPX_DrawPart: w8=w5 (kieu) -> [sp,#8]; w6 (%) -> [sp,#0x10]; rect = x3 (x,y,w,h); bl SGL_DrawTexturePartEx 
+  -> DAT: SGL_DrawTexturePartEx: w20 = [x29,#0x68] (= [sp,#8] cua nguoi goi) 
+  -> DAT: dinh dang texture [x19+0x60]: 0x1906 -> nhanh A8, 0x1907 -> RGB, 0x1908 (RGBA) -> nhanh 0x131790 
+  -> DAT: nhanh RGBA: kieu 1 -> 0x131858 (glDrawArrays), kieu 2 -> 0x1318c8, kieu > 2 -> 0x131884 
+  -> DAT: kieu 1: chi `glDrawArrays` (khong doi blend) 
+  -> DAT: kieu 2: glBlendFunc(0x302 = SRC_ALPHA, 1 = ONE); ve; tra ve (0x302, 0x303 = ONE_MINUS_SRC_ALPHA) 
+
+[4] Cac noi goi IMGSYS_GetLoc(0x15, 3) va 3 lenh `mov w5,#2`
+    tong so noi goi IMGSYS_GetLoc@plt: 539
+    noi goi voi (w0 = 0x15, w1 = 3): ['0x169ad0', '0x169b9c', '0x169be4']
+  -> DAT: dung 3 noi goi UI_014 loc3 
+    moi noi goi UI_014: 1698d8:loc1, 169a44:loc2, 169ad0:loc3, 169b9c:loc3, 169be4:loc3, 16a8e0:locNone, 16aa60:locNone, 16abb4:loc6
+  -> DAT: llvm-mc: `mov w5,#1` = 25008052 (va `mov w5,#2` = 45008052) 
+    0x169ae8: goc (45008052)
+        169ac8  mov w0, #0x15
+        169acc  mov w1, #0x3
+        169ad0  bl 0x2a8f80 <IMGSYS_GetLoc@plt>
+        169ad4  mov x3, x0
+        169ad8  mov x0, x24
+        169adc  mov w1, w22
+        169ae0  mov w2, w23
+        169ae4  mov w4, #0x2
+        169ae8  mov w5, #0x2
+        169aec  mov w6, wzr
+        169af0  bl 0x2a89a0 <GRPX_DrawPart@plt>
+  -> DAT: 0x169ae8: GetLoc(0x15,3) @0x169ad0 -> GRPX_DrawPart(x0=nhom, w1,w2=toa do, x3=loc3, w4=2 (tam), w5=2 (kieu), w6=0) 
+    0x169bb4: goc (45008052)
+        169b94  mov w0, #0x15
+        169b98  mov w1, #0x3
+        169b9c  bl 0x2a8f80 <IMGSYS_GetLoc@plt>
+        169ba0  mov x3, x0
+        169ba4  mov x0, x24
+        169ba8  mov w1, w22
+        169bac  mov w2, w23
+        169bb0  mov w4, #0x2
+        169bb4  mov w5, #0x2
+        169bb8  mov w6, wzr
+        169bbc  bl 0x2a89a0 <GRPX_DrawPart@plt>
+  -> DAT: 0x169bb4: GetLoc(0x15,3) @0x169b9c -> GRPX_DrawPart(x0=nhom, w1,w2=toa do, x3=loc3, w4=2 (tam), w5=2 (kieu), w6=0) 
+    0x169bfc: goc (45008052)
+        169bdc  mov w0, #0x15
+        169be0  mov w1, #0x3
+        169be4  bl 0x2a8f80 <IMGSYS_GetLoc@plt>
+        169be8  mov x3, x0
+        169bec  mov x0, x24
+        169bf0  mov w1, w22
+        169bf4  mov w2, w23
+        169bf8  mov w4, #0x2
+        169bfc  mov w5, #0x2
+        169c00  mov w6, wzr
+        169c04  bl 0x2a89a0 <GRPX_DrawPart@plt>
+  -> DAT: 0x169bfc: GetLoc(0x15,3) @0x169be4 -> GRPX_DrawPart(x0=nhom, w1,w2=toa do, x3=loc3, w4=2 (tam), w5=2 (kieu), w6=0) 
+    UIPlayPorting_Draw: 1698f0 kieu=1
+    UIPlayPorting_Draw: 169a5c kieu=1
+    UIPlayPorting_Draw: 169ae8 kieu=2
+    UIPlayPorting_Draw: 169bb4 kieu=2
+    UIPlayPorting_Draw: 169bfc kieu=2
+    UIPlayPorting_Draw: 169c40 kieu=1
+    UIPlayPorting_Draw: 169cbc kieu=1
+    UIPlayPorting_Draw: 169e54 kieu=1
+    UIPlayPorting_Draw: 16a0e4 kieu=2
+    UIPlayPorting_Draw: 16a290 kieu=1
+    UIPlayPorting_Draw: 16a330 kieu=1
+    UIPlayPorting_Draw: 16a380 kieu=1
+    UIPlayPorting_Draw: 16a434 kieu=1
+    UIPlayPorting_Draw: 16a52c kieu=2
+    UIPlayPorting_Draw: 16a588 kieu=1
+    UIPlayPorting_Draw: 16a5f4 kieu=1
+    UIPlayPorting_Draw: 16a72c kieu=1
+    UIPlayPorting_Draw: 16a764 kieu=1
+    UIPlayPorting_Draw: 16ada0 kieu=1
+    so noi `mov w5,#k; mov w6,wzr; bl GRPX_DrawPart` trong 0x16985c..0x16b200: 19
+
+[5] Atlas (/opt/work/dec4/assets/common/game_res)
+  -> DAT: UI_014.png.jpg: PNG PNG (512, 512) (khong phai JPEG du duoi .jpg) mode=RGBA sha256=56274c88709140b6
+  -> DAT: UI_014.png: 7 rect, deu nam trong 512x512 
+    cap rect chong len nhau: khong
+  -> DAT: UI_014.png: cac rect THAY [2, 3] khong chong len rect nao khac 
+  -> DAT: UI_015.png.jpg: PNG PNG (512, 512) (khong phai JPEG du duoi .jpg) mode=RGBA sha256=e05d2a292ec5d0ed
+  -> DAT: UI_015.png: 40 rect, deu nam trong 512x512 
+    cap rect chong len nhau: khong
+  -> DAT: UI_015.png: cac rect THAY [0, 1, 2, 3, 11] khong chong len rect nao khac 
+
+KET LUAN: TAT CA DAT
