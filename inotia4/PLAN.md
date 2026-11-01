@@ -624,3 +624,6 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - T8c: đã soát, không cần sửa, chưa tick.
     - T8d: unidbg 21.782 ca đạt (10 ca ngoài miền: EXP âm ở B). Còn ghi log, ghi bảng vào tài liệu, build lại, apkdiff rồi tick.
   - Khi làm tiếp: giao cho công nhân mới (ngữ cảnh A1 hiện tại vẫn < 400k, nhưng giao mới cho gọn), rồi quản đốc nghiệm thu T8 và gửi bản thử. Sau đó là T9 → T10.
+- 2026-11-01 11:42 (VN) quản đốc: làm tiếp theo lịch người dùng hẹn.
+  - A1 (T8, ~208k < 400k) chạy lại từ bàn giao của chính nó: log, bảng kết quả, build lại, apkdiff, tick T8c/T8d.
+  - A1 đã đạt ≥90% khối lượng T8 ⇒ A2 mới đọc trước T10a (sprite HUD). A2 chỉ đọc, chỉ được ghi ảnh tạm vào `/opt/work/t10/`.
