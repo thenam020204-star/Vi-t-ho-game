@@ -125,8 +125,11 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - `hl5_android/make_apk.sh`: áp patch guest/bridge, pack VFS, cập nhật `target-assets.json`, zip (giữ nguyên thuộc tính nén của `.so`/asset như APK gốc), zipalign, apksigner.
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
+## Quy tắc thay công nhân (người dùng chốt)
+- Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
+
 ## Phân công hiện tại
-- A1: T1–T5 ✓ → T6a (TẠM DỪNG: hết usage, chờ reset) → T6b.
+- A1: T1–T5 ✓ → T6a (tiếp tục sau reset) → T6b.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
