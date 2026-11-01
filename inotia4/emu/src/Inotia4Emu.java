@@ -494,8 +494,10 @@ public class Inotia4Emu extends AbstractJni {
         wrapperInit(PKG.replace('.', '/') + "/CUserDefined");
         step("nativeSetScreenSize", () -> obj("com/com2us/wrapper/kernel/CWrapperData").callJniMethod(emulator,
                 "nativeSetScreenSize(IIIIII)V", origW, origH, DISP_W, DISP_H, DISP_W, DISP_H));
+        pokeMem();                                   // T9c: gia lap Java ghi int o .bss trong onResume (truoc startClet)
         step("nativeStart", () -> vm.resolveClass(K).callStaticJniMethod(emulator, "nativeStart()V"));
         step("nativeStartClet", () -> vm.resolveClass(K).callStaticJniMethod(emulator, "nativeStartClet()V"));
+        memReport("sau startClet", -1);
         long t0 = System.currentTimeMillis();
         for (int f = 0; f < frames; f++) {
             final int ff = f;
@@ -506,6 +508,7 @@ public class Inotia4Emu extends AbstractJni {
                 break;
             }
             onFrameEnd(f);
+            poolSample(f);
             virtMs += 16;
             if (Boolean.getBoolean("emu.realtime")) {
                 long due = t0 + (f + 1) * 16L - System.currentTimeMillis();
@@ -513,6 +516,61 @@ public class Inotia4Emu extends AbstractJni {
             }
             if (f % 50 == 0) System.out.println("== frame " + f + " t=" + (System.currentTimeMillis() - t0) + "ms gl=" + gl.calls.size());
         }
+        memReport("cuoi", frames);
+        if (poolPeak >= 0) System.out.println("[pool] DINH used=" + poolPeak + " B (" + String.format("%.3f", poolPeak / 1048576.0) + " MB) tai frame " + poolPeakFrame + " ; total=" + poolTotal + " B");
+    }
+
+    // ------------------------------------------------------- T9c: poke / dump bo nho libgame.so, do pool MEM
+    /** -Demu.poke=0x72f78c=120,0x72f780=2 : ghi int32 vao base+addr (vd. P cua tam nhin) truoc nativeStart. */
+    void pokeMem() {
+        String pk = System.getProperty("emu.poke", "");
+        if (pk.isEmpty()) return;
+        long base = dm.getModule().base;
+        for (String kv : pk.split(",")) {
+            String[] t = kv.split("=");
+            long addr = Long.decode(t[0]);
+            int val = (int) (long) Long.decode(t[1]);
+            com.github.unidbg.pointer.UnidbgPointer.pointer(emulator, base + addr).setInt(0, val);
+            System.out.println("[poke] 0x" + Long.toHexString(addr) + " = " + val);
+        }
+    }
+
+    long poolPeak = -1, poolTotal = -1;
+    int poolPeakFrame = -1;
+
+    long nativeLong(String sym) {
+        Number n = dm.getModule().callFunction(emulator, sym);
+        return n.longValue();
+    }
+
+    /** -Demu.dump=0x2d6098:2,0x2d7ab4:2 : in `n` int32 tu base+addr. Kem -Demu.pool=true: used/total cua MEM. */
+    void memReport(String label, int frame) {
+        String d = System.getProperty("emu.dump", "");
+        long base = dm.getModule().base;
+        if (!d.isEmpty()) {
+            for (String kv : d.split(",")) {
+                String[] t = kv.split(":");
+                long addr = Long.decode(t[0]);
+                int n = t.length > 1 ? Integer.decode(t[1]) : 1;
+                StringBuilder sb = new StringBuilder("[dump] " + label + " 0x" + Long.toHexString(addr) + " =");
+                for (int k = 0; k < n; k++) sb.append(' ').append(com.github.unidbg.pointer.UnidbgPointer.pointer(emulator, base + addr + 4L * k).getInt(0));
+                System.out.println(sb);
+            }
+        }
+        if (Boolean.getBoolean("emu.pool")) {
+            try {
+                long used = nativeLong("MEM_GetUsedPoolSize"), total = nativeLong("MEM_GetTotalPoolSize");
+                poolTotal = total;
+                if (used > poolPeak) { poolPeak = used; poolPeakFrame = frame; }
+                System.out.println("[pool] " + label + " used=" + used + " total=" + total + " (" + String.format("%.3f / %.3f MB", used / 1048576.0, total / 1048576.0) + ")");
+            } catch (Throwable t) { System.out.println("[pool] loi: " + t); }
+        }
+    }
+
+    /** -Demu.poolevery=N: lay mau used/total cua MEM moi N khung (de tim muc dung dinh). */
+    void poolSample(int f) {
+        int n = Integer.getInteger("emu.poolevery", 0);
+        if (n > 0 && Boolean.getBoolean("emu.pool") && f % n == 0) memReport("frame " + f, f);
     }
 
     DirectBuffer evManage, evQueue;

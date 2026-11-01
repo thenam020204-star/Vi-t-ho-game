@@ -33,9 +33,9 @@ import java.util.Locale;
  *
  * Moi phan deu boc try/catch Throwable: mod hong thi game van chay.
  *
- * Mo rong cho T9b ("Tam nhin", int thu 4 @0x72f78c): them mot Slot vao SLOTS (vd. new Slot("view", "Tầm nhìn", "%d%%", 100, 150, 5, 120,
- * "Khởi động lại game để áp dụng")). Chi so cua Slot = chi so int trong vung nho; ModMem da kiem 16 byte rw-p.
- * T8 KHONG ghi int thu 4.
+ * T9b: Slot thu 4 "Tầm nhìn" (int thu 4 @0x72f78c = P, 100..150, buoc 5, mac dinh 120): libgame.so (nhom `view`) nhan khung dem FB cfg.W/H voi P%
+ * luc startClet (docs/tam_nhin_hud.md); chi ap khi mo lai app => ghi chu "Khởi động lại game để áp dụng". Chi so cua Slot = chi so int
+ * trong vung nho; ModMem kiem 16 byte rw-p. Nut "Đặt lại x1" chi dat lai 3 he so dau (MULT_COUNT), khong dong vao tam nhin.
  */
 public final class ModMenu {
     private ModMenu() { }
@@ -49,7 +49,7 @@ public final class ModMenu {
     static final int BAD = 0xFFFF6B6B;
     static final int GOOD = 0xFF8FD18F;
 
-    /** Mot thanh keo. Chi so trong SLOTS = chi so int32 trong vung nho native (0 = Mdmg, 1 = Mdef, 2 = Mexp). */
+    /** Mot thanh keo. Chi so trong SLOTS = chi so int32 trong vung nho native (0 = Mdmg, 1 = Mdef, 2 = Mexp, 3 = P tam nhin). */
     static final class Slot {
         final String key, label, fmt, note;
         final int min, max, step, def;
@@ -70,6 +70,7 @@ public final class ModMenu {
         int clamp(int v) {
             if (v < min) return min;
             if (v > max) return max;
+            if (step > 1) v = min + ((v - min + step / 2) / step) * step;      // thanh keo chi dung cac nac (vd. 100, 105, ..., 150)
             return v;
         }
 
@@ -82,7 +83,10 @@ public final class ModMenu {
         new Slot("dmg", "Sát thương gây ra", "x%d", 1, 50, 1, 1, null),
         new Slot("def", "Phòng thủ (giảm sát thương nhận)", "x%d", 1, 50, 1, 1, null),
         new Slot("exp", "EXP nhận", "x%d", 1, 50, 1, 1, null),
+        new Slot("view", "Tầm nhìn", "%d%%", 100, 150, 5, 120, "Khởi động lại game để áp dụng"),
     };
+    /** So thanh dau la he so x1..x50 (nut "Đặt lại x1" chi dat lai cac thanh nay). */
+    static final int MULT_COUNT = 3;
 
     private static FloatButton button;
     private static boolean failToasted;
@@ -416,7 +420,7 @@ public final class ModMenu {
             reset.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     try {
-                        for (int i = 0; i < SLOTS.length; i++) {
+                        for (int i = 0; i < MULT_COUNT; i++) {
                             Slot s = SLOTS[i];
                             s.value = s.def;
                             bars[i].setProgress((s.def - s.min) / s.step);

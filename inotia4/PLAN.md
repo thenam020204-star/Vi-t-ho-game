@@ -497,7 +497,12 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Toạ độ chạm đổi từ màn thật sang logic ở đâu.
     - Thứ tự `onResume` (Java) so với `SGL_grpInitialize` (lúc GL tạo surface).
     - Đề xuất patch (vaddr, byte gốc, lệnh mới) cho tầm nhìn và cho lề HUD, kèm rủi ro từng màn (menu, hội thoại, bản đồ nhỏ, cửa hàng).
-  - [ ] T9b. Vá native (nhóm `view` = 0x14709c + cave 0x133454, nhóm `hud` = 29 điểm lề) trong `patch_lib.py` + thanh "Tầm nhìn" (P 100..150, bước 5) trong `ModMenu`, kèm dòng "khởi động lại game để áp dụng".
+  - Bàn giao (A1 mới của T9, T9b XONG):
+    - `scripts/patch_lib.py`: thêm nhóm `view` (2 patch: 0x14709c `b 0x133454` + cave 52 B 0x133454..0x133488, byte gốc khai báo đủ 52 B), `hud` (29 patch 1 lệnh, mỗi cái kèm lệnh kế tiếp để kiểm, trừ 6 cặp kề nhau), `pool` (0x145730, 0x145734); mặc định áp cả 6 nhóm; `--check-asm` dựng lại cave `mod` + cave `view` (llvm-mc + ld.lld) + 31 lệnh đơn `hud`/`pool` (llvm-mc) và so byte. Đã thử: áp trên lib TEST4 và trên lib TEST10 (thêm `--group view,hud,pool`) ra cùng 1 file (sha256 `d5af7d0a…1f98`); áp lần 2 ⇒ 39 "đã áp"; 5 phép thử âm tính (byte gốc HUD/cave/pool sai, refs sai, HUD lệch trạng thái) đều dừng không ghi gì; `--diff` TEST10 ↔ lib vá: 96 B, 35 đoạn, đều trong vùng khai báo; diff lib TEST4 ↔ lib đủ nhóm: 350 B, 56 đoạn, đều trong vùng; byte lạ ngoài vùng ⇒ báo "NGOAI VUNG".
+    - `java/src/com/namp/vh/ModMenu.java`: Slot 4 "Tầm nhìn" (100..150, bước 5, mặc định 120, "%d%%", ghi chú "Khởi động lại game để áp dụng", ghi int thứ 4 qua `ModMem`); `clamp` đưa về nấc; nút "Đặt lại x1" chỉ đặt lại 3 thanh đầu (`MULT_COUNT`), không đụng tầm nhìn. Test JVM `java/test/ModMenuSlotTest.java` + `ModMemTest` đều đạt.
+    - Build `out/Inotia4_T9_check.apk` (`--smali net,mod --vnfont --lib --libgroup base,p1,mod,view,hud,pool --diag`) PASS apksigner/zipalign/check_apk, lib trong APK == lib vá `d5af7d0a…1f98`. T9c còn: unidbg, `apkdiff` với TEST10, rồi tick.
+    - `emu/src/Inotia4Emu.java`: thêm `-Demu.poke=addr=val,...` (ghi int vào base+addr trước nativeStart), `-Demu.dump=addr:n,...`, `-Demu.pool=true` (+ `-Demu.poolevery=N`) đọc `MEM_GetUsedPoolSize/TotalPoolSize`, ghi đỉnh.
+  - [x] T9b. Vá native (nhóm `view` = 0x14709c + cave 0x133454, nhóm `hud` = 29 điểm lề) trong `patch_lib.py` + thanh "Tầm nhìn" (P 100..150, bước 5) trong `ModMenu`, kèm dòng "khởi động lại game để áp dụng".
   - [ ] T9c. Kiểm.
     - unidbg với `-Demu.w=2400 -Demu.h=1080`:
       - dump 0x2d6098/9c (kỳ vọng 1422/640) và `GRP_nDisplayW/H` 0x2d7ab4/ab8 (kỳ vọng 512/230 khi P = 100, 614/276 khi P = 120);

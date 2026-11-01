@@ -7,7 +7,8 @@
 #              (javac can android.jar cho ModMenu). Nhom smali `mod` BAT BUOC di cung --vnfont (ModMenu nam trong classes3.dex);
 #   --lib    : va lib/arm64-v8a/libgame.so bang scripts/patch_lib.py (patch nao lib nen da co thi bao "da ap"),
 #              giu nguyen kich thuoc/STORED/can 16 KB (fix_zip.py lo phan can);
-#              mac dinh ap TAT CA nhom patch lib (base + p1 + mod); --libgroup base,p1 de ra y het TEST8/TEST9 (khong co mod);
+#              mac dinh ap TAT CA nhom patch lib (base + p1 + mod + view + hud + pool); --libgroup base,p1 de ra y het TEST8/TEST9,
+#              --libgroup base,p1,mod = TEST10; ban T9 = base,p1,mod,view,hud,pool (view/hud/pool: docs/tam_nhin_hud.md);
 #   --diag   : them classes4.dex = com.namp.vh.diag (LaunchActivity, DiagProvider, CrashLog) + sua manifest;
 #   --internet: tra lai quyen INTERNET (chi de thu, ban phat hanh KHONG dung).
 # Can: APKTOOL (jar), BT (build-tools co d8/apksigner/zipalign), ANDROID_JAR (android.jar API >= 30).
