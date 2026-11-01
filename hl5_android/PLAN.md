@@ -106,7 +106,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
 ## Phân công hiện tại
-- A1: T1 ✓ → T2 ✓ (nghiệm thu một phần) → T2b → T5 T2b ✓ → T5 ✓ → T3a → T3b (đang giao: T3a).
+- A1: T1 ✓ → T2 ✓ → T2b ✓ → T5 ✓ → T3a → T3b (đang giao: T3a, phiên công nhân mới).
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
