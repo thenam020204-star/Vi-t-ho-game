@@ -408,6 +408,26 @@ def main(lib, dis, apk, cave_bin):
     print('  CS_knlGetFreeMemory:', '; '.join('%x %s' % x for x in kg))
     verdict('CS_knlGetFreeMemory -> jGetNativeAvailableMemory (Java CFunction.getNativeAvailableMemory = ActivityManager.MemoryInfo.availMem)',
             any('jGetNativeAvailableMemory' in t for a, t in kg))
+    # ------------------------------------------------------------------ 6
+    print('\n[6] doi chieu bang trong scripts/patch_lib.py (nhom view/hud/pool) voi bang kiem doc lap o tren')
+    sys.path.insert(0, os.path.join(ROOT, 'scripts'))
+    try:
+        import patch_lib as pl
+    except Exception as e:                                  # chua co T9b
+        print('  (bo qua: khong nap duoc patch_lib: %s)' % e)
+        pl = None
+    if pl is not None:
+        pl_hud = {r[0]: (r[1], r[2]) for r in pl.HUD_ROWS}
+        mine = {va: (old, llvm_asm(a)) for va, old, a, _k, _w in HUD}
+        verdict('HUD_ROWS (patch_lib) == 29 diem kiem doc lap (vaddr, byte goc, byte moi)', pl_hud == mine and len(pl.HUD_ROWS) == 29)
+        verdict('cave view cua patch_lib == cave llvm-mc == hex A2', pl.VIEW_CAVE_NEW == built == bytes.fromhex(CAVE_A2) and
+                pl.VIEW_CAVE_OLD.hex() == CAVE_OLD and pl.VIEW_CAVE_VA == CAVE_VA and pl.VIEW_VA == VIEW_VA)
+        verdict('diem vao view: b_imm(0x14709c -> 0x133454) == eeb0ff17', pl.b_imm(VIEW_VA, CAVE_VA).hex() == 'eeb0ff17')
+        verdict('POOL_ROWS (patch_lib) == bang pool o tren', [(r[0], r[1], r[2]) for r in pl.POOL_ROWS] ==
+                [(va, llvm_asm(o), llvm_asm(n)) for va, o, n in POOL])
+        pts = [pt for pt in pl.PATCHES if pt[6] in ('view', 'hud', 'pool')]
+        verdict('nhom view/hud/pool: %d patch (view 2 + hud 29 + pool 2 = 33), byte goc khop lib' % len(pts),
+                len(pts) == 33 and all(bytes(data[pt[0]:pt[0] + len(pt[1])]) == pt[1] for pt in pts))
     print('\nTONG KET:', 'TAT CA DAT' if ok_all else 'CO MUC KHONG DAT')
     return 0 if ok_all else 1
 

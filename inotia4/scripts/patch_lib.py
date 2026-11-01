@@ -4,10 +4,12 @@
     python3 patch_lib.py <libgame.so vao> <libgame.so ra> [--disasm] [--group g1,g2]
     python3 patch_lib.py --list [--group g1,g2]
     python3 patch_lib.py --diff <lib A> <lib B> [--group g1,g2] [-v]   # moi byte khac nhau phai nam trong vung patch da khai bao
-    python3 patch_lib.py --check-asm                              # dung lai cave `mod` bang llvm-mc/ld.lld va so voi byte nhung san
+    python3 patch_lib.py --check-asm                              # dung lai cave `mod`/`view` (llvm-mc/ld.lld) va cac lenh `hud`/`pool` (llvm-mc), so voi byte nhung san
 
 Nhom patch (--group, mac dinh = tat ca): base (0x203e68, da co trong lib TEST4), p1 (T3b, ma hoa save), mod (T8b, mod menu:
-3 diem vao 0x18b3e0/0x1c7860/0x1c7a44 + cave 0x18bb00..0x18bbec, xem docs/mod_menu.md). Moi nhom phai ap tron ven: mot nhom
+3 diem vao 0x18b3e0/0x1c7860/0x1c7a44 + cave 0x18bb00..0x18bbec, xem docs/mod_menu.md), view (T9b, tam nhin: diem vao 0x14709c +
+cave 52 B 0x133454..0x133488, doc P o 0x72f78c, chi nhan 100..150, W chan), hud (T9b, 29 diem le HUD: lui vao 24 px ngang / 16 px doc),
+pool (T9b, tran pool MEM_Create 8 MB -> 10 MB: 0x145730, 0x145734); xem docs/tam_nhin_hud.md. Moi nhom phai ap tron ven: mot nhom
 vua co patch "ap" vua co patch "da ap" => DUNG.
 
 Moi patch (xem PATCHES): (vaddr, byte cu `old`, byte moi `new`, ly do, refs, asm_moi).
@@ -178,6 +180,100 @@ MOD_CAVE_ASM = [
 MOD_CAVE_ASM = [(int(l.split(' ', 1)[0], 16), l.split(' ', 1)[1]) for l in MOD_CAVE_ASM]
 
 
+# ------------------------------------------------------------ nhom `view` (T9b): tam nhin = nhan cfg.W/H cua khung dem FB voi P% (docs/tam_nhin_hud.md)
+VIEW_VA = 0x14709c                       # OriginalDisplay_ConfigInfo: `strb w20,[x19]` -> `b cave` (cave tu lam lai lenh nay)
+VIEW_CAVE_VA = 0x133454                  # than ham chet SGL_grpResume (0x133454, 1156 B: 0 caller, 0 reloc, khong PLT; scripts/re/view_check.py muc [4])
+VIEW_CAVE_OLD = bytes.fromhex('ffc301d1fd7b02a9f91b00f9f85f04a9f65705a9f44f06a9fd83009156d03bd5490c00f0e0031f2ac81640f9291d40f9e1031f2a')
+# 52 B do llvm-mc + ld.lld dung tu scripts/asm/view_cave.s (bash scripts/asm/build_view_cave.sh; `--check-asm` dung lai va so)
+VIEW_CAVE_NEW = bytes.fromhex('74020039ea2f00904a8d47b94b9101517fc90071e80000548b0c8052087d0a1b0809cb1a08791f12297d0a1b2909cb1a074f0014')
+VIEW_CAVE_ASM = [
+    (0x133454, 'strb w20, [x19]'),
+    (0x133458, 'adrp x10, 0x72f000'),
+    (0x13345c, 'ldr w10, [x10, #0x78c]'),
+    (0x133460, 'sub w11, w10, #0x64'),
+    (0x133464, 'cmp w11, #0x32'),
+    (0x133468, 'b.hi 0x133484'),
+    (0x13346c, 'mov w11, #0x64'),
+    (0x133470, 'mul w8, w8, w10'),
+    (0x133474, 'udiv w8, w8, w11'),
+    (0x133478, 'and w8, w8, #0xfffffffe'),
+    (0x13347c, 'mul w9, w9, w10'),
+    (0x133480, 'udiv w9, w9, w11'),
+    (0x133484, 'b 0x1470a0'),
+]
+
+# ------------------------------------------------------------ nhom `hud` (T9b): 29 diem le HUD, moi diem 1 lenh. (vaddr, byte goc, byte moi, lenh moi (objdump = llvm-mc), lenh ke tiep (None neu cung bi va), ly do)
+HUD_ROWS = [
+    (0x167f7c, '137c4093', '136000d1', 'sub x19, x0, #0x18', '54030594',
+     'UIPlay_Create: x19 = W (sxtw) -> W-24; dich ID 101..103, 8..13, 7, 0x14, hinh nen qua [sp,#8]'),
+    (0x167f88, '187c4093', '184000d1', 'sub x24, x0, #0x10', '219443f9',
+     'UIPlay_Create: x24 = H (sxtw) -> H-16; dich ID 8..13, 7, 0x14'),
+    (0x167fb8, '21008052', '21038052', 'mov w1, #0x19', '62138052',
+     'cot trai ID 1 (x 1 -> 25)'),
+    (0x16800c, '21008052', '21038052', 'mov w1, #0x19', '021d8052',
+     'cot trai ID 2'),
+    (0x16805c, '21008052', '21038052', 'mov w1, #0x19', 'a2268052',
+     'cot trai ID 3'),
+    (0x1680cc, '42018052', '42038052', 'mov w2, #0x1a', 'e10315aa',
+     'cot phai ID 101 (y 10 -> 26)'),
+    (0x16811c, 'c20d8052', 'c20f8052', 'mov w2, #0x7e', 'c3098052',
+     'cot phai ID 102 (y 110 -> 126)'),
+    (0x168168, '421a8052', '421c8052', 'mov w2, #0xe2', 'c3098052',
+     'cot phai ID 103 (y 210 -> 226)'),
+    (0x1681b8, '682a07f1', '68ca06f1', 'subs x8, x19, #0x1b2', None,
+     'thanh ID 4: (W-24-434) = W-458, giu tam man hinh'),
+    (0x1681bc, '692607d1', '69c606d1', 'sub x9, x19, #0x1b1', 'e00315aa',
+     'thanh ID 4 (nhanh am cua phep chia 2)'),
+    (0x1681c8, 'e2031faa', '020280d2', 'mov x2, #0x10', '43398052',
+     'thanh ID 4: y 0 -> 16'),
+    (0x168424, '08f00351', '08300451', 'sub w8, w0, #0x10c', 'e00315aa',
+     'can 0x15: y = H-252-16'),
+    (0x16842c, '41018052', '41048052', 'mov w1, #0x22', '027d4093',
+     'can 0x15: x 10 -> 34'),
+    (0x168490, '08f00551', '08300651', 'sub w8, w0, #0x18c', 'e00315aa',
+     'vung cham can 0x16: y = H-380-16'),
+    (0x168498, '41018052', '41048052', 'mov w1, #0x22', '027d4093',
+     'vung cham can 0x16: x 10 -> 34'),
+    (0x1684e8, '08ac0251', '08ec0251', 'sub w8, w0, #0xbb', 'e00315aa',
+     'mui ten 0x1e: y'),
+    (0x1684f0, '21168052', '21198052', 'mov w1, #0xc9', '027d4093',
+     'mui ten 0x1e: x 177 -> 201'),
+    (0x168540, '08540151', '08940151', 'sub w8, w0, #0x65', 'e00315aa',
+     'mui ten 0x1f: y'),
+    (0x168548, '610b8052', '610e8052', 'mov w1, #0x73', '027d4093',
+     'mui ten 0x1f: x 91 -> 115'),
+    (0x168598, '08ac0251', '08ec0251', 'sub w8, w0, #0xbb', 'e00315aa',
+     'mui ten 0x20: y'),
+    (0x1685a0, '21038052', '21068052', 'mov w1, #0x31', '027d4093',
+     'mui ten 0x20: x 25 -> 49'),
+    (0x1685f0, '08b40351', '08f40351', 'sub w8, w0, #0xfd', 'e00314aa',
+     'mui ten 0x21: y'),
+    (0x1685f8, '610b8052', '610e8052', 'mov w1, #0x73', '027d4093',
+     'mui ten 0x21: x 91 -> 115'),
+    (0x1698c4, '14500451', '14b00451', 'sub w20, w0, #0x12c', '02fd0494',
+     'UIPlayPorting_Draw: hinh nen ban nguyet x = W-276-24'),
+    (0x1698cc, '152c0451', '156c0451', 'sub w21, w0, #0x11b', 'a0028052',
+     'hinh nen ban nguyet y = H-267-16'),
+    (0x16b234, 'e1008052', 'e1038052', 'mov w1, #0x1f', None,
+     'UIPlay_MakeMinimap: rect ID 5 x 7 -> 31'),
+    (0x16b238, 'e2008052', 'e2028052', 'mov w2, #0x17', '097d191b',
+     'rect ID 5 y 7 -> 23'),
+    (0x16b264, 'e1008052', 'e1038052', 'mov w1, #0x1f', None,
+     'rect ID 6 x 7 -> 31'),
+    (0x16b268, 'e2008052', 'e2028052', 'mov w2, #0x17', '097d191b',
+     'rect ID 6 y 7 -> 23')
+]
+
+# ------------------------------------------------------------ nhom `pool` (T9b): MEM_Create 0x1456e4, tran pool 8 MB -> 10 MB
+POOL_ROWS = [
+    (0x145730, '0910a052', '0914a052', 'mov w9, #0xa00000', None,
+     'T9b / pool. MEM_Create: tran pool `mov w9,#0x800000` -> `mov w9,#0xa00000` (movz imm16 0xa0 lsl 16). Mat na `and x0,x8,#0x1fffc00` @0x145748 '
+     '(toi da 32 MB) giu nguyen 10 MB. Ly do: GRP_Initialize xin MEM_Malloc(2*W*W) tu pool, them toi ~0,66 MB o P = 150.'),
+    (0x145734, '1f0160f1', '1f0168f1', 'cmp x8, #0xa00, lsl #12', '0831899a',      # ke tiep: csel x8, x8, x9, lo
+     'T9b / pool. MEM_Create: `cmp x8,#0x800,lsl#12` -> `cmp x8,#0xa00,lsl#12` (imm12 0xa00 << 12 = 10 MB); cung tran voi 0x145730 (csel lo). '
+     'CS_knlAlloc = calloc(1,n); free = ActivityManager.MemoryInfo.availMem.'),
+]
+
 # Moi patch: (vaddr, old, new, ly do, refs, asm_moi, group, old_sha256|None). old = None cho cave (kiem sha256).
 PATCHES = [
     (0x203e68, bytes.fromhex('a0040036'), b_imm(0x203e68, 0x203f40),
@@ -222,8 +318,29 @@ PATCHES = [
      '.dynstr, libHercules khong import: scripts/re/mod_check.py muc [3]). 59 lenh chua cave A (29), B (14), C (16); doc 3 int32 o '
      '0x72f780 (Mdmg), 0x72f784 (Mdef), 0x72f788 (Mexp) trong .bss (khong ai tham chieu: muc [4]); khong ghi bo nho.',
      [], MOD_CAVE_ASM, 'mod', (MOD_CAVE_LEN, MOD_CAVE_OLD_SHA256)),
+
+    # ---- T9b: tam nhin (nhom `view`), docs/tam_nhin_hud.md muc 7
+    (VIEW_VA, bytes.fromhex('74020039'), b_imm(VIEW_VA, VIEW_CAVE_VA),
+     'T9b / view. OriginalDisplay_ConfigInfo (0x147030, 1 caller = startClet): `strb w20,[x19]` @0x14709c -> `b cave_view`. Moi duong toi day deu co '
+     'w8 = cfg.W, w9 = cfg.H (nhanh W < 480 qua 0x147090 cung vay); sau do chi con strh w8,[x19,#2]; strh w9,[x19,#4]; stp s1,s0; epilogue '
+     '(w10, w11, NZCV khong con duoc doc). Cave tu lam lai `strb w20,[x19]` roi nhan w8/w9 voi P% (P = int32 o 0x72f78c).',
+     [(0x1470a0, bytes.fromhex('68060079'))],                  # lenh ke tiep: strh w8, [x19, #2]
+     [(VIEW_VA, 'b 0x133454')], 'view', None),
+
+    (VIEW_CAVE_VA, VIEW_CAVE_OLD, VIEW_CAVE_NEW,
+     'T9b / view cave. 52 B dau than SGL_grpResume (0 caller, 0 reloc kem RELATIVE, 0 adrp/adr/literal, khong PLT, ten chi trong .dynstr; chuoi "grpResume" '
+     'khong co trong dex/smali/asset/libHercules). Cave: strb w20,[x19]; P = [0x72f78c]; neu P - 100 > 50 (khong dau; ke ca 0, am, > 150) giu nguyen; '
+     'nguoc lai W = floor(W*P/100) & ~1 (W chan: pitch FB = 2W, upload GL can 4 byte), H = floor(H*P/100); b 0x1470a0. Dung w10, w11 (chet).',
+     [], VIEW_CAVE_ASM, 'view', None),
 ]
-GROUPS = ['base', 'p1', 'mod']
+for _va, _old, _new, _asm, _nxt, _why in HUD_ROWS:
+    PATCHES.append((_va, bytes.fromhex(_old), bytes.fromhex(_new),
+                    'T9b / hud. ' + _why + ' (lui vao 24 px ngang / 16 px doc; sua rect nen hinh va vung cham cung doi)',
+                    [(_va + 4, bytes.fromhex(_nxt))] if _nxt else [], [(_va, _asm)], 'hud', None))
+for _va, _old, _new, _asm, _nxt, _why in POOL_ROWS:
+    PATCHES.append((_va, bytes.fromhex(_old), bytes.fromhex(_new), _why,
+                    [(_va + 4, bytes.fromhex(_nxt))] if _nxt else [], [(_va, _asm)], 'pool', None))
+GROUPS = ['base', 'p1', 'mod', 'view', 'hud', 'pool']
 
 
 def selected(groups):
@@ -369,7 +486,8 @@ def diff(a, b, groups=GROUPS):
 
 
 def check_asm():
-    """Dung lai cave bang scripts/asm/build_mod_cave.sh (llvm-mc + ld.lld) va so voi MOD_CAVE_NEW; so ca disasm."""
+    """Dung lai cave `mod` (build_mod_cave.sh) va cave `view` (build_view_cave.sh) bang llvm-mc + ld.lld, va cac lenh don `hud`/`pool`
+    bang llvm-mc; so voi byte nhung san va disasm mong doi."""
     import os
     import tempfile
     here = os.path.dirname(os.path.abspath(__file__))
@@ -378,8 +496,31 @@ def check_asm():
     built = open(os.path.join(out, 'mod_cave.bin'), 'rb').read()
     rows = objdump(os.path.join(out, 'mod_cave.elf'), MOD_CAVE_VA, MOD_CAVE_VA + MOD_CAVE_LEN)
     ok = built == MOD_CAVE_NEW and rows == MOD_CAVE_ASM
-    print('cave dung lai tu mod_cave.s: %d B, sha256 %s' % (len(built), hashlib.sha256(built).hexdigest()))
-    print('khop byte nhung san:', built == MOD_CAVE_NEW, '| khop disasm mong doi:', rows == MOD_CAVE_ASM)
+    print('cave `mod` dung lai tu mod_cave.s: %d B, sha256 %s' % (len(built), hashlib.sha256(built).hexdigest()))
+    print('  khop byte nhung san:', built == MOD_CAVE_NEW, '| khop disasm mong doi:', rows == MOD_CAVE_ASM)
+    outv = tempfile.mkdtemp(prefix='viewcave_')
+    subprocess.run(['bash', os.path.join(here, 'asm', 'build_view_cave.sh'), outv], check=True, capture_output=True)
+    bv = open(os.path.join(outv, 'view_cave.bin'), 'rb').read()
+    rv = objdump(os.path.join(outv, 'view_cave.elf'), VIEW_CAVE_VA, VIEW_CAVE_VA + len(VIEW_CAVE_NEW))
+    okv = bv == VIEW_CAVE_NEW and rv == VIEW_CAVE_ASM
+    print('cave `view` dung lai tu view_cave.s: %d B, sha256 %s' % (len(bv), hashlib.sha256(bv).hexdigest()))
+    print('  khop byte nhung san:', bv == VIEW_CAVE_NEW, '| khop disasm mong doi:', rv == VIEW_CAVE_ASM)
+    if rv != VIEW_CAVE_ASM:
+        print('  co  ', rv)
+        print('  muon', VIEW_CAVE_ASM)
+    ok = ok and okv
+    # lenh don (khong phu thuoc vi tri): dung bang llvm-mc theo dung thu tu bang
+    singles = [pt for pt in PATCHES if pt[6] in ('hud', 'pool')]
+    src = '.text\n' + ''.join('%s\n' % pt[5][0][1] for pt in singles)
+    open(os.path.join(outv, 'singles.s'), 'w').write(src)
+    subprocess.run(['llvm-mc', '-triple=aarch64-linux-gnu', '-mattr=+v8a', '-filetype=obj', '-o', os.path.join(outv, 'singles.o'),
+                    os.path.join(outv, 'singles.s')], check=True, capture_output=True)
+    subprocess.run(['llvm-objcopy', '-O', 'binary', '-j', '.text', os.path.join(outv, 'singles.o'), os.path.join(outv, 'singles.bin')], check=True)
+    sb = open(os.path.join(outv, 'singles.bin'), 'rb').read()
+    want = b''.join(pt[2] for pt in singles)
+    bad = [hex(singles[i][0]) for i in range(len(singles)) if sb[4 * i:4 * i + 4] != singles[i][2]]
+    print('lenh don `hud`+`pool` (%d lenh) dung lai bang llvm-mc: khop byte nhung san: %s%s' % (len(singles), sb == want, '' if sb == want else ' ; lech tai ' + ','.join(bad)))
+    ok = ok and sb == want
     return 0 if ok else 1
 
 

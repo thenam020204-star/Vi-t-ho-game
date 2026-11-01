@@ -174,4 +174,11 @@ lib /opt/work/lib4/libgame.so sha256 df12cecc7752bcba55157fffe7989cf8f9d8bf6344b
   CS_knlGetFreeMemory: 261be8 stp	x29, x30, [sp, #-0x10]!; 261bec mov	x29, sp; 261bf0 bl	0x2b43f0 <jGetNativeAvailableMemory@plt>; 261bf4 sxtw	x0, w0; 261bf8 ldp	x29, x30, [sp], #0x10; 261bfc ret
   -> DAT: CS_knlGetFreeMemory -> jGetNativeAvailableMemory (Java CFunction.getNativeAvailableMemory = ActivityManager.MemoryInfo.availMem) 
 
+[6] doi chieu bang trong scripts/patch_lib.py (nhom view/hud/pool) voi bang kiem doc lap o tren
+  -> DAT: HUD_ROWS (patch_lib) == 29 diem kiem doc lap (vaddr, byte goc, byte moi) 
+  -> DAT: cave view cua patch_lib == cave llvm-mc == hex A2 
+  -> DAT: diem vao view: b_imm(0x14709c -> 0x133454) == eeb0ff17 
+  -> DAT: POOL_ROWS (patch_lib) == bang pool o tren 
+  -> DAT: nhom view/hud/pool: 33 patch (view 2 + hud 29 + pool 2 = 33), byte goc khop lib 
+
 TONG KET: TAT CA DAT
