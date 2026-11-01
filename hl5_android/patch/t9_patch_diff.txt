@@ -1,0 +1,31 @@
+# T9 diff disasm (trước = APK gốc + patch cũ ... sau = + T9)
+== p2.so
+  14d8c0: e1500005     	cmp	r0, r5
+  14d8c4: e2844001     	add	r4, r4, #1
+  14d8c8: aa000003     	bge	0x14d8dc <_ZN9Texture2D11getHeight2nEi+0x48> @ imm = #0xc
+  14d8cc: e354000b     	cmp	r4, #11
+  14d8d0: 1afffff2     	bne	0x14d8a0 <_ZN9Texture2D11getHeight2nEi+0xc> @ imm = #-0x38
+  14d8d4: e1a00006     	mov	r0, r6
+  14d8d8: e8bd8070     	pop	{r4, r5, r6, pc}
+  14d8dc: e1a06000     	mov	r6, r0
+  14d918: e2844001     	add	r4, r4, #1
+  14d91c: aa000002     	bge	0x14d92c <_ZN9Texture2D10getWidth2nEi+0x44> @ imm = #0x8
+  14d920: e354000b     	cmp	r4, #11
+  14d924: 1afffff2     	bne	0x14d8f4 <_ZN9Texture2D10getWidth2nEi+0xc> @ imm = #-0x38
+  14d928: e3a00000     	mov	r0, #0
+  14d92c: e8bd8070     	pop	{r4, r5, r6, pc}
+== chk.so
+  14d8c0: e1500005     	cmp	r0, r5
+  14d8c4: e2844001     	add	r4, r4, #1
+  14d8c8: aa000003     	bge	0x14d8dc <_ZN9Texture2D11getHeight2nEi+0x48> @ imm = #0xc
+  14d8cc: e354000d     	cmp	r4, #13
+  14d8d0: 1afffff2     	bne	0x14d8a0 <_ZN9Texture2D11getHeight2nEi+0xc> @ imm = #-0x38
+  14d8d4: e1a00006     	mov	r0, r6
+  14d8d8: e8bd8070     	pop	{r4, r5, r6, pc}
+  14d8dc: e1a06000     	mov	r6, r0
+  14d918: e2844001     	add	r4, r4, #1
+  14d91c: aa000002     	bge	0x14d92c <_ZN9Texture2D10getWidth2nEi+0x44> @ imm = #0x8
+  14d920: e354000d     	cmp	r4, #13
+  14d924: 1afffff2     	bne	0x14d8f4 <_ZN9Texture2D10getWidth2nEi+0xc> @ imm = #-0x38
+  14d928: e3a00000     	mov	r0, #0
+  14d92c: e8bd8070     	pop	{r4, r5, r6, pc}

@@ -8,7 +8,7 @@ export WORK
 DIAG=""   # --diag A|B|C|C1 : APK chẩn đoán T13 (xem diag/ và PHAT-HANH-diag.md); mặc định rỗng = build v0.1 y hệt cũ
 if [ "${1:-}" = "--diag" ]; then DIAG="${2:?--diag cần A|B|C|C1}"; shift 2; fi
 case "$DIAG" in ""|A|B|C|C1) ;; *) echo "--diag phải là A|B|C|C1"; exit 1;; esac
-VER="${1:-0.1}"
+VER="${1:-0.2-hd}"   # v0.2-hd: có patch T9 (texture > 1024); v0.1.1 = commit trước T9
 BT=${BT:-/opt/asdk/android-14}
 ORIG_APK="${ORIG_APK:-$(ls /root/.claude/uploads/*/*heroes-lore-5*.apk 2>/dev/null | head -1)}"
 [ -f "$WORK/orig.apk" ] || cp "$ORIG_APK" "$WORK/orig.apk"

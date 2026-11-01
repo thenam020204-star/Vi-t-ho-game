@@ -30,3 +30,8 @@ af5b8	032082e004	2e62696e00	cave A (Map::MapMove_back, chết) +0x680: code engi
 41804	bdedffeb	c9b601eb	engine chữ Việt: bl MX_fntDrawString -> bl vn_draw (đường vẽ 2 byte của BFont::DrawText)
 88	202d0100	202e0100	p_memsz PT_LOAD#2 0x12d20 -> 0x12e20: bss thật dài thêm 0x100 B cho vn_state tại 0x1704c0 (hết bss cũ 0x1704a8)
 # <<< vn-engine
+# >>> T9 hd-texture (guest chạy ở khung logic > 1024 px)
+# Texture2D::getHeight2n(int) 0x14d894 / getWidth2n(int) 0x14d8e8: vòng `for i in 0..10: if pow(2,i) >= n -> return` tối đa 2^10 = 1024; với W > 1024 (vd 1200x540 = ÷2 trên máy 2400x1080) trả 0 => Texture2D::createTexture bỏ qua (r3 = [r0+0xa4] <= 0) => không có texture màn hình, màn đen. Nâng trần lên 2^12 = 4096 (đủ cho ÷1 trên 2400x1080 = 4096x2048). Luồng: cả hai hàm kết thúc bằng `pop {r4,r5,r6,pc}` (0x14d8d8/0x14d8e4/0x14d92c), r0 = pow(2,i) hoặc 0 như cũ.
+14d8cc	0b0054e3	0d0054e3	T9: getHeight2n `cmp r4,#11` -> `cmp r4,#13` (trần 1024 -> 4096)
+14d920	0b0054e3	0d0054e3	T9: getWidth2n `cmp r4,#11` -> `cmp r4,#13` (trần 1024 -> 4096)
+# <<< T9 hd-texture
