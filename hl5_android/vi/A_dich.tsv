@@ -1,436 +1,436 @@
 ID	File	Vị trí	Tiếng Anh	Tiếng Việt	Ghi chú
-A00001	c/csv/buildup.dat	rec 0 off 0 ps 1	none		
-A00002	c/csv/cash_expert.dat	rec 1 off 24 ps 1	Auto-revives once per;Expert Mode game upon;death Does not apply;to single-player;game.		
-A00003	c/csv/cash_expert.dat	rec 2 off 23 ps 1	Doubles HP natural;recovery rate in;Expert Survival Mode;1 is automatically;consumed upon playing;Survival Mode.		
-A00004	c/csv/cash_expert.dat	rec 3 off 22 ps 1	Grants 30 bonus time;in Expert Time Attack;Mode 1 is;automatically;consumed upon playing;Time Attack Mode.		
-A00005	c/csv/cash_expert.dat	rec 4 off 23 ps 1	Grants 30 bonus time;per stage in Expert;Rush Mode 1 is;automatically;consumed upon playing;Rush Mode.		
-A00006	c/csv/cash_expert.dat	rec 5 off 23 ps 1	Consumable usable;only in Expert Mode;Grants brief;invulnerability upon;use.		
-A00007	c/csv/cash_expert.dat	rec 6 off 17 ps 1	Consumable usable;only in Expert Mode;Fully restores Spirit;Gauge upon use Max;Capacity: 3		
-A00008	c/csv/cash_expert.dat	rec 7 off 13 ps 1	oAl		
-A00009	c/csv/cash_expert.dat	rec 7 off 17 ps 1	ows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.		
-A00010	c/csv/cash_network.dat	rec 7 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.		
-A00011	c/csv/cash_network.dat	rec 14 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.		
-A00012	vfs:0x831ffd41.dat	rec 2 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.		
-A00013	vfs:0x831ffd41.dat	rec 6 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.		
-A00014	vfs:0x831ffd41.dat	rec 24 off 3 ps 1	Void Necklace		
-A00015	vfs:0x831ffd41.dat	rec 24 off 19 ps 1	Increases Max HP by;15% to boost;beginners;survivability.		
-A00016	vfs:0x831ffd41.dat	rec 25 off 3 ps 1	Void T1 Weapon		
-A00017	vfs:0x831ffd41.dat	rec 25 off 20 ps 1	Required Lv 1, but;strong enough to use;until Lv 10. Grants;equipment fitting;your class directly;to Bag.		
-A00018	vfs:0x831ffd41.dat	rec 26 off 3 ps 1	Void T2 Weapon		
-A00019	vfs:0x831ffd41.dat	rec 26 off 20 ps 1	Required Lv 11, but;strong enough to use;until Lv 20. Grants;equipment fitting;your class directly;to Bag.		
-A00020	vfs:0x831ffd41.dat	rec 27 off 3 ps 1	Void T3 Weapon		
-A00021	vfs:0x831ffd41.dat	rec 27 off 20 ps 1	Required Lv 21, but;strong enough to use;until Lv 30. Grants;equipment fitting;your class directly;to Bag.		
-A00022	vfs:0x831ffd41.dat	rec 28 off 3 ps 1	Void T4 Weapon		
-A00023	vfs:0x831ffd41.dat	rec 28 off 20 ps 1	Required Lv 31, but;strong enough to use;until Lv 40. Grants;equipment fitting;your class directly;to Bag.		
-A00024	vfs:0x831ffd41.dat	rec 29 off 3 ps 1	Void T5 Weapon		
-A00025	vfs:0x831ffd41.dat	rec 29 off 20 ps 1	Required Lv 41, but;strong enough to use;until Lv 50. Grants;equipment fitting;your class directly;to Bag.		
-A00026	c/csv/cash_single.dat	rec 3 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.		
-A00027	c/csv/cash_single.dat	rec 10 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.		
-A00028	vfs:0x2b3c2959.dat	rec 2 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.		
-A00029	vfs:0x2b3c2959.dat	rec 6 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.		
-A00030	vfs:0x2b3c2959.dat	rec 24 off 3 ps 1	Void Necklace		
-A00031	vfs:0x2b3c2959.dat	rec 24 off 19 ps 1	Increases Max HP by;15% to boost;beginners;survivability.		
-A00032	vfs:0x2b3c2959.dat	rec 25 off 3 ps 1	Void T1 Weapon		
-A00033	vfs:0x2b3c2959.dat	rec 25 off 20 ps 1	Required Lv 1, but;strong enough to use;until Lv 10. Grants;equipment fitting;your class directly;to Bag.		
-A00034	vfs:0x2b3c2959.dat	rec 26 off 3 ps 1	Void T2 Weapon		
-A00035	vfs:0x2b3c2959.dat	rec 26 off 20 ps 1	Required Lv 11, but;strong enough to use;until Lv 20. Grants;equipment fitting;your class directly;to Bag.		
-A00036	vfs:0x2b3c2959.dat	rec 27 off 3 ps 1	Void T3 Weapon		
-A00037	vfs:0x2b3c2959.dat	rec 27 off 20 ps 1	Required Lv 21, but;strong enough to use;until Lv 30. Grants;equipment fitting;your class directly;to Bag.		
-A00038	vfs:0x2b3c2959.dat	rec 28 off 3 ps 1	Void T4 Weapon		
-A00039	vfs:0x2b3c2959.dat	rec 28 off 20 ps 1	Required Lv 31, but;strong enough to use;until Lv 40. Grants;equipment fitting;your class directly;to Bag.		
-A00040	vfs:0x2b3c2959.dat	rec 29 off 3 ps 1	Void T5 Weapon		
-A00041	vfs:0x2b3c2959.dat	rec 29 off 20 ps 1	Required Lv 41, but;strong enough to use;until Lv 50. Grants;equipment fitting;your class directly;to Bag.		
-A00042	c/csv/common_text.dat	rec 10 off 0 ps 1	HP		
-A00043	c/csv/common_text.dat	rec 11 off 0 ps 1	SP		
-A00044	c/csv/common_text.dat	rec 12 off 0 ps 1	EXP		
-A00045	c/csv/common_text.dat	rec 13 off 0 ps 1	LV		
-A00046	c/csv/common_text.dat	rec 14 off 0 ps 1	Point		
-A00047	c/csv/common_text.dat	rec 56 off 0 ps 1	OK		
-A00048	c/csv/common_text.dat	rec 64 off 0 ps 1	GOLD		
-A00049	c/csv/common_text.dat	rec 140 off 0 ps 1	1st		
-A00050	c/csv/common_text.dat	rec 141 off 0 ps 1	2nd		
-A00051	c/csv/common_text.dat	rec 142 off 0 ps 1	3rd		
-A00052	c/csv/common_text.dat	rec 143 off 0 ps 1	4th		
-A00053	c/csv/common_text.dat	rec 144 off 0 ps 1	5th		
-A00054	c/csv/common_text.dat	rec 162 off 0 ps 1	equipment		
-A00055	c/csv/common_text.dat	rec 182 off 0 ps 1	empty		
-A00056	c/csv/common_text.dat	rec 183 off 0 ps 1	PlayTime		
-A00057	c/csv/common_text.dat	rec 185 off 0 ps 1	Level		
-A00058	c/csv/common_text.dat	rec 190 off 0 ps 1	OFF		
-A00059	c/csv/common_text.dat	rec 191 off 0 ps 1	ON		
-A00060	c/csv/common_text.dat	rec 257 off 0 ps 1	CW		
-A00061	c/csv/common_text.dat	rec 258 off 0 ps 1	CCW		
-A00062	c/csv/common_text.dat	rec 261 off 0 ps 1	get!		
-A00063	c/csv/common_text.dat	rec 274 off 0 ps 1	map		
-A00064	c/csv/common_text.dat	rec 275 off 0 ps 1	shop		
-A00065	c/csv/common_text.dat	rec 276 off 0 ps 1	save		
-A00066	c/csv/common_text.dat	rec 283 off 0 ps 1	Total		
-A00067	c/csv/common_text.dat	rec 284 off 0 ps 1	Collection		
-A00068	c/csv/common_text.dat	rec 291 off 0 ps 1	MAX HP		
-A00069	c/csv/common_text.dat	rec 292 off 0 ps 1	MAX SP		
-A00070	c/csv/common_text.dat	rec 318 off 0 ps 1	CC-NM-110121-001		
-A00071	c/csv/common_text.dat	rec 333 off 0 ps 1	Enjoy the complete version;Real cash		
-A00072	c/csv/common_text.dat	rec 334 off 0 ps 1	^Upgrading to full;version... Do not;force close the game.		
-A00073	c/csv/common_text.dat	rec 335 off 0 ps 1	Registration of the full version is completed.		
-A00074	c/csv/common_text.dat	rec 336 off 0 ps 1	Not available in trial version.		
-A00075	c/csv/common_text.dat	rec 337 off 0 ps 1	Canceled.		
-A00076	c/csv/common_text.dat	rec 338 off 0 ps 1	You have completed registration.		
-A00077	c/csv/common_text.dat	rec 339 off 0 ps 1	Not supported in the current version.		
-A00078	c/csv/common_text.dat	rec 340 off 0 ps 1	Data transfer is not possible because data blocking is enabled when roaming.		
-A00079	c/csv/common_text.dat	rec 341 off 0 ps 1	Touch pad		
-A00080	c/csv/common_text.dat	rec 344 off 0 ps 1	This service charges a fee for information regardless of the subscription plan.		
-A00081	c/csv/common_text.dat	rec 345 off 0 ps 1	^The cost of a call depends on the tariff plan and changes accordingly.		
-A00082	c/csv/common_text.dat	rec 346 off 0 ps 1	Do you agree?		
-A00083	c/csv/common_text.dat	rec 347 off 0 ps 1	1.Agree		
-A00084	c/csv/common_text.dat	rec 348 off 0 ps 1	2.Disagree		
-A00085	c/csv/common_text.dat	rec 349 off 0 ps 1	3.Accept (stop viewing this window)		
-A00086	c/csv/common_text.dat	rec 350 off 0 ps 1	Successfully resurrected.;;&Confirm		
-A00087	c/csv/enemy_1.dat	rec 130 off 0 ps 1	^Black Enh. Sold.{		
-A00088	c/csv/enemy_2.dat	rec 130 off 0 ps 1	^Black Enh. Sold.{		
-A00089	c/csv/enemy_expert_0.dat	rec 12 off 84 ps 1	HX		
-A00090	c/csv/enemy_expert_0.dat	rec 27 off 84 ps 1	HX		
-A00091	c/csv/enemy_expert_0.dat	rec 42 off 84 ps 1	HX		
-A00092	c/csv/enemy_expert_0.dat	rec 57 off 84 ps 1	HX		
-A00093	c/csv/enemy_expert_0.dat	rec 83 off 86 ps 1	HX		
-A00094	c/csv/ingame_text.dat	rec 4 off 0 ps 1	South Hwang.		
-A00095	c/csv/ingame_text.dat	rec 5 off 0 ps 1	East Hwang.		
-A00096	c/csv/ingame_text.dat	rec 130 off 0 ps 1	FILE VER CHECK		
-A00097	c/csv/ingame_text.dat	rec 131 off 0 ps 1	FILE VER:		
-A00098	c/csv/ingame_text.dat	rec 134 off 0 ps 1	OK		
-A00099	c/csv/ingame_text.dat	rec 145 off 0 ps 1	sub		
-A00100	c/csv/ingame_text.dat	rec 152 off 0 ps 1	, welcome!		
-A00101	c/csv/ingame_text.dat	rec 328 off 0 ps 1	Failed!		
-A00102	c/csv/ingame_text.dat	rec 339 off 0 ps 1	Connecting		
-A00103	c/csv/ingame_text.dat	rec 340 off 0 ps 1	Send		
-A00104	c/csv/ingame_text.dat	rec 341 off 0 ps 1	Recieve		
-A00105	c/csv/ingame_text.dat	rec 355 off 0 ps 1	Used.		
-A00106	c/csv/ingame_text.dat	rec 356 off 0 ps 1	obtained.		
-A00107	c/csv/item_00.dat	rec 81 off 2 ps 1	Void Greatsword I		
-A00108	c/csv/item_00.dat	rec 81 off 24 ps 1	Two-Handed Sword		
-A00109	c/csv/item_00.dat	rec 82 off 2 ps 1	Void Greatsword II		
-A00110	c/csv/item_00.dat	rec 82 off 25 ps 1	Two-Handed Sword		
-A00111	c/csv/item_00.dat	rec 83 off 2 ps 1	Void Greatsword III		
-A00112	c/csv/item_00.dat	rec 83 off 26 ps 1	Two-Handed Sword		
-A00113	c/csv/item_00.dat	rec 84 off 2 ps 1	Void Greatsword IV		
-A00114	c/csv/item_00.dat	rec 84 off 25 ps 1	Two-Handed Sword		
-A00115	c/csv/item_00.dat	rec 85 off 2 ps 1	Void Greatsword V		
-A00116	c/csv/item_00.dat	rec 85 off 24 ps 1	Two-Handed Sword		
-A00117	c/csv/item_01.dat	rec 81 off 2 ps 1	T1 Void Dagger		
-A00118	c/csv/item_01.dat	rec 81 off 21 ps 1	Dagger		
-A00119	c/csv/item_01.dat	rec 82 off 2 ps 1	T2 Void Dagger		
-A00120	c/csv/item_01.dat	rec 82 off 21 ps 1	Dagger		
-A00121	c/csv/item_01.dat	rec 83 off 2 ps 1	T3 Void Dagger		
-A00122	c/csv/item_01.dat	rec 83 off 21 ps 1	Dagger		
-A00123	c/csv/item_01.dat	rec 84 off 2 ps 1	T4 Void Dagger		
-A00124	c/csv/item_01.dat	rec 84 off 21 ps 1	Dagger		
-A00125	c/csv/item_01.dat	rec 85 off 2 ps 1	T5 Void Dagger		
-A00126	c/csv/item_01.dat	rec 85 off 21 ps 1	Dagger		
-A00127	c/csv/item_02.dat	rec 81 off 2 ps 1	Void Pistol I		
-A00128	c/csv/item_02.dat	rec 81 off 20 ps 1	Light gun		
-A00129	c/csv/item_02.dat	rec 82 off 2 ps 1	Void Pistol II		
-A00130	c/csv/item_02.dat	rec 82 off 21 ps 1	Light gun		
-A00131	c/csv/item_02.dat	rec 83 off 2 ps 1	Void Pistol III		
-A00132	c/csv/item_02.dat	rec 83 off 22 ps 1	Light gun		
-A00133	c/csv/item_02.dat	rec 84 off 2 ps 1	Void Pistol IV		
-A00134	c/csv/item_02.dat	rec 84 off 21 ps 1	Light gun		
-A00135	c/csv/item_02.dat	rec 85 off 2 ps 1	Void Pistol V		
-A00136	c/csv/item_02.dat	rec 85 off 20 ps 1	Light gun		
-A00137	c/csv/item_03.dat	rec 81 off 2 ps 1	T1 Void Lance		
-A00138	c/csv/item_03.dat	rec 81 off 20 ps 1	Spear		
-A00139	c/csv/item_03.dat	rec 82 off 2 ps 1	T2 Void Lance		
-A00140	c/csv/item_03.dat	rec 82 off 20 ps 1	Spear		
-A00141	c/csv/item_03.dat	rec 83 off 2 ps 1	T3 Void Lance		
-A00142	c/csv/item_03.dat	rec 83 off 20 ps 1	Spear		
-A00143	c/csv/item_03.dat	rec 84 off 2 ps 1	T4 Void Lance		
-A00144	c/csv/item_03.dat	rec 84 off 20 ps 1	Spear		
-A00145	c/csv/item_03.dat	rec 85 off 2 ps 1	T5 Void Lance		
-A00146	c/csv/item_03.dat	rec 85 off 20 ps 1	Spear		
-A00147	c/csv/item_10.dat	rec 17 off 2 ps 1	Void Necklace		
-A00148	c/csv/item_11.dat	rec 11 off 18 ps 1	^Expert Mode Only{;Restores 40 HP 5;times, for 200 HP;total. Cannot be used;in Story Mode.		
+A00001	c/csv/buildup.dat	rec 0 off 0 ps 1	none	không có	
+A00002	c/csv/cash_expert.dat	rec 1 off 24 ps 1	Auto-revives once per;Expert Mode game upon;death Does not apply;to single-player;game.	Tự hồi sinh 1 lần;mỗi ván Expert khi;chết. Không áp dụng;cho game đơn;người chơi.	
+A00003	c/csv/cash_expert.dat	rec 2 off 23 ps 1	Doubles HP natural;recovery rate in;Expert Survival Mode;1 is automatically;consumed upon playing;Survival Mode.	Gấp đôi tốc độ hồi;HP tự nhiên trong chế;độ Expert Cầm Cự.;Tự động tiêu hao 1;cái khi chơi chế độ;Cầm Cự.	
+A00004	c/csv/cash_expert.dat	rec 3 off 22 ps 1	Grants 30 bonus time;in Expert Time Attack;Mode 1 is;automatically;consumed upon playing;Time Attack Mode.	Thêm 30 thời gian;cho chế độ Expert;Đua Thời Gian. Tự;động tiêu hao 1 cái;khi chơi chế độ;Đua Thời Gian.	
+A00005	c/csv/cash_expert.dat	rec 4 off 23 ps 1	Grants 30 bonus time;per stage in Expert;Rush Mode 1 is;automatically;consumed upon playing;Rush Mode.	Thêm 30 thời gian;mỗi tầng trong chế độ;Expert Đột Phá. Tự;động tiêu hao 1 cái;khi chơi chế độ;Đột Phá.	
+A00006	c/csv/cash_expert.dat	rec 5 off 23 ps 1	Consumable usable;only in Expert Mode;Grants brief;invulnerability upon;use.	Vật phẩm tiêu hao;chỉ dùng ở chế độ;Expert. Tạm thời;bất khả xâm phạm;khi sử dụng.	
+A00007	c/csv/cash_expert.dat	rec 6 off 17 ps 1	Consumable usable;only in Expert Mode;Fully restores Spirit;Gauge upon use Max;Capacity: 3	Vật phẩm tiêu hao;chỉ dùng ở chế độ;Expert. Hồi đầy thanh;Tinh Linh khi dùng.;Giới hạn sở hữu: 3	
+A00008	c/csv/cash_expert.dat	rec 7 off 13 ps 1	oAl	oAl	
+A00009	c/csv/cash_expert.dat	rec 7 off 17 ps 1	ows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.	Cho phép bắt đầu;chế độ Expert với SP;hoặc thanh đặc biệt;đầy. Tự động tiêu hao;1 cái khi chơi;chế độ Expert.	
+A00010	c/csv/cash_network.dat	rec 7 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.	Nhận 1 Hyper Orb;ngẫu nhiên. Hyper Orb;có thể gắn nhiều Orb;giống nhau cùng lúc.	
+A00011	c/csv/cash_network.dat	rec 14 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.	Thêm 1 Socket cho;một món trang bị.;Mỗi trang bị tối đa;5 Socket.	
+A00012	vfs:0x831ffd41.dat	rec 2 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.	Nhận 1 Hyper Orb;ngẫu nhiên. Hyper Orb;có thể gắn nhiều Orb;giống nhau cùng lúc.	
+A00013	vfs:0x831ffd41.dat	rec 6 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.	Thêm 1 Socket cho;một món trang bị.;Mỗi trang bị tối đa;5 Socket.	
+A00014	vfs:0x831ffd41.dat	rec 24 off 3 ps 1	Void Necklace	Dây Chuyền Hư Vô	
+A00015	vfs:0x831ffd41.dat	rec 24 off 19 ps 1	Increases Max HP by;15% to boost;beginners;survivability.	Tăng HP tối đa 15%;giúp người mới;nâng cao khả;năng sống sót.	
+A00016	vfs:0x831ffd41.dat	rec 25 off 3 ps 1	Void T1 Weapon	Vũ Khí Hư Vô T1	
+A00017	vfs:0x831ffd41.dat	rec 25 off 20 ps 1	Required Lv 1, but;strong enough to use;until Lv 10. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 1 nhưng;đủ mạnh để dùng;đến Lv 10. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00018	vfs:0x831ffd41.dat	rec 26 off 3 ps 1	Void T2 Weapon	Vũ Khí Hư Vô T2	
+A00019	vfs:0x831ffd41.dat	rec 26 off 20 ps 1	Required Lv 11, but;strong enough to use;until Lv 20. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 11 nhưng;đủ mạnh để dùng;đến Lv 20. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00020	vfs:0x831ffd41.dat	rec 27 off 3 ps 1	Void T3 Weapon	Vũ Khí Hư Vô T3	
+A00021	vfs:0x831ffd41.dat	rec 27 off 20 ps 1	Required Lv 21, but;strong enough to use;until Lv 30. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 21 nhưng;đủ mạnh để dùng;đến Lv 30. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00022	vfs:0x831ffd41.dat	rec 28 off 3 ps 1	Void T4 Weapon	Vũ Khí Hư Vô T4	
+A00023	vfs:0x831ffd41.dat	rec 28 off 20 ps 1	Required Lv 31, but;strong enough to use;until Lv 40. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 31 nhưng;đủ mạnh để dùng;đến Lv 40. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00024	vfs:0x831ffd41.dat	rec 29 off 3 ps 1	Void T5 Weapon	Vũ Khí Hư Vô T5	
+A00025	vfs:0x831ffd41.dat	rec 29 off 20 ps 1	Required Lv 41, but;strong enough to use;until Lv 50. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 41 nhưng;đủ mạnh để dùng;đến Lv 50. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00026	c/csv/cash_single.dat	rec 3 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.	Nhận 1 Hyper Orb;ngẫu nhiên. Hyper Orb;có thể gắn nhiều Orb;giống nhau cùng lúc.	
+A00027	c/csv/cash_single.dat	rec 10 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.	Thêm 1 Socket cho;một món trang bị.;Mỗi trang bị tối đa;5 Socket.	
+A00028	vfs:0x2b3c2959.dat	rec 2 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.	Nhận 1 Hyper Orb;ngẫu nhiên. Hyper Orb;có thể gắn nhiều Orb;giống nhau cùng lúc.	
+A00029	vfs:0x2b3c2959.dat	rec 6 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.	Thêm 1 Socket cho;một món trang bị.;Mỗi trang bị tối đa;5 Socket.	
+A00030	vfs:0x2b3c2959.dat	rec 24 off 3 ps 1	Void Necklace	Dây Chuyền Hư Vô	
+A00031	vfs:0x2b3c2959.dat	rec 24 off 19 ps 1	Increases Max HP by;15% to boost;beginners;survivability.	Tăng HP tối đa 15%;giúp người mới;nâng cao khả;năng sống sót.	
+A00032	vfs:0x2b3c2959.dat	rec 25 off 3 ps 1	Void T1 Weapon	Vũ Khí Hư Vô T1	
+A00033	vfs:0x2b3c2959.dat	rec 25 off 20 ps 1	Required Lv 1, but;strong enough to use;until Lv 10. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 1 nhưng;đủ mạnh để dùng;đến Lv 10. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00034	vfs:0x2b3c2959.dat	rec 26 off 3 ps 1	Void T2 Weapon	Vũ Khí Hư Vô T2	
+A00035	vfs:0x2b3c2959.dat	rec 26 off 20 ps 1	Required Lv 11, but;strong enough to use;until Lv 20. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 11 nhưng;đủ mạnh để dùng;đến Lv 20. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00036	vfs:0x2b3c2959.dat	rec 27 off 3 ps 1	Void T3 Weapon	Vũ Khí Hư Vô T3	
+A00037	vfs:0x2b3c2959.dat	rec 27 off 20 ps 1	Required Lv 21, but;strong enough to use;until Lv 30. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 21 nhưng;đủ mạnh để dùng;đến Lv 30. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00038	vfs:0x2b3c2959.dat	rec 28 off 3 ps 1	Void T4 Weapon	Vũ Khí Hư Vô T4	
+A00039	vfs:0x2b3c2959.dat	rec 28 off 20 ps 1	Required Lv 31, but;strong enough to use;until Lv 40. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 31 nhưng;đủ mạnh để dùng;đến Lv 40. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00040	vfs:0x2b3c2959.dat	rec 29 off 3 ps 1	Void T5 Weapon	Vũ Khí Hư Vô T5	
+A00041	vfs:0x2b3c2959.dat	rec 29 off 20 ps 1	Required Lv 41, but;strong enough to use;until Lv 50. Grants;equipment fitting;your class directly;to Bag.	Yêu cầu Lv 41 nhưng;đủ mạnh để dùng;đến Lv 50. Nhận;trang bị hợp lớp;của bạn thẳng;vào túi đồ.	
+A00042	c/csv/common_text.dat	rec 10 off 0 ps 1	HP	HP	
+A00043	c/csv/common_text.dat	rec 11 off 0 ps 1	SP	SP	
+A00044	c/csv/common_text.dat	rec 12 off 0 ps 1	EXP	EXP	
+A00045	c/csv/common_text.dat	rec 13 off 0 ps 1	LV	LV	
+A00046	c/csv/common_text.dat	rec 14 off 0 ps 1	Point	Điểm	
+A00047	c/csv/common_text.dat	rec 56 off 0 ps 1	OK	OK	
+A00048	c/csv/common_text.dat	rec 64 off 0 ps 1	GOLD	GOLD	
+A00049	c/csv/common_text.dat	rec 140 off 0 ps 1	1st	Hạng 1	
+A00050	c/csv/common_text.dat	rec 141 off 0 ps 1	2nd	Hạng 2	
+A00051	c/csv/common_text.dat	rec 142 off 0 ps 1	3rd	Hạng 3	
+A00052	c/csv/common_text.dat	rec 143 off 0 ps 1	4th	Hạng 4	
+A00053	c/csv/common_text.dat	rec 144 off 0 ps 1	5th	Hạng 5	
+A00054	c/csv/common_text.dat	rec 162 off 0 ps 1	equipment	trang bị	
+A00055	c/csv/common_text.dat	rec 182 off 0 ps 1	empty	trống	
+A00056	c/csv/common_text.dat	rec 183 off 0 ps 1	PlayTime	Thời gian chơi	
+A00057	c/csv/common_text.dat	rec 185 off 0 ps 1	Level	Cấp độ	
+A00058	c/csv/common_text.dat	rec 190 off 0 ps 1	OFF	TẮT	
+A00059	c/csv/common_text.dat	rec 191 off 0 ps 1	ON	BẬT	
+A00060	c/csv/common_text.dat	rec 257 off 0 ps 1	CW	Thuận kim	
+A00061	c/csv/common_text.dat	rec 258 off 0 ps 1	CCW	Ngược kim	
+A00062	c/csv/common_text.dat	rec 261 off 0 ps 1	get!	Nhận!	
+A00063	c/csv/common_text.dat	rec 274 off 0 ps 1	map	bản đồ	
+A00064	c/csv/common_text.dat	rec 275 off 0 ps 1	shop	cửa hàng	
+A00065	c/csv/common_text.dat	rec 276 off 0 ps 1	save	lưu	
+A00066	c/csv/common_text.dat	rec 283 off 0 ps 1	Total	Tổng	
+A00067	c/csv/common_text.dat	rec 284 off 0 ps 1	Collection	Bộ sưu tập	
+A00068	c/csv/common_text.dat	rec 291 off 0 ps 1	MAX HP	HP tối đa	
+A00069	c/csv/common_text.dat	rec 292 off 0 ps 1	MAX SP	SP tối đa	
+A00070	c/csv/common_text.dat	rec 318 off 0 ps 1	CC-NM-110121-001	CC-NM-110121-001	
+A00071	c/csv/common_text.dat	rec 333 off 0 ps 1	Enjoy the complete version;Real cash	Trải nghiệm bản đầy đủ;Tiền thật	
+A00072	c/csv/common_text.dat	rec 334 off 0 ps 1	^Upgrading to full;version... Do not;force close the game.	^Đang nâng cấp lên;bản đầy đủ... Đừng;ép đóng game.	
+A00073	c/csv/common_text.dat	rec 335 off 0 ps 1	Registration of the full version is completed.	Đã hoàn tất đăng ký bản đầy đủ.	
+A00074	c/csv/common_text.dat	rec 336 off 0 ps 1	Not available in trial version.	Không khả dụng ở bản dùng thử.	
+A00075	c/csv/common_text.dat	rec 337 off 0 ps 1	Canceled.	Đã huỷ.	
+A00076	c/csv/common_text.dat	rec 338 off 0 ps 1	You have completed registration.	Bạn đã hoàn tất đăng ký.	
+A00077	c/csv/common_text.dat	rec 339 off 0 ps 1	Not supported in the current version.	Phiên bản hiện tại không hỗ trợ.	
+A00078	c/csv/common_text.dat	rec 340 off 0 ps 1	Data transfer is not possible because data blocking is enabled when roaming.	Không thể truyền dữ liệu vì đang chặn dữ liệu khi roaming.	
+A00079	c/csv/common_text.dat	rec 341 off 0 ps 1	Touch pad	Bàn cảm ứng	
+A00080	c/csv/common_text.dat	rec 344 off 0 ps 1	This service charges a fee for information regardless of the subscription plan.	Dịch vụ này tính phí thông tin bất kể gói cước đã đăng ký.	
+A00081	c/csv/common_text.dat	rec 345 off 0 ps 1	^The cost of a call depends on the tariff plan and changes accordingly.	^Cước gọi phụ thuộc gói cước và thay đổi tương ứng.	
+A00082	c/csv/common_text.dat	rec 346 off 0 ps 1	Do you agree?	Bạn có đồng ý không?	
+A00083	c/csv/common_text.dat	rec 347 off 0 ps 1	1.Agree	1.Đồng ý	
+A00084	c/csv/common_text.dat	rec 348 off 0 ps 1	2.Disagree	2.Không đồng ý	
+A00085	c/csv/common_text.dat	rec 349 off 0 ps 1	3.Accept (stop viewing this window)	3.Chấp nhận (không hiện cửa sổ này nữa)	
+A00086	c/csv/common_text.dat	rec 350 off 0 ps 1	Successfully resurrected.;;&Confirm	Hồi sinh thành công.;;&Xác nhận	
+A00087	c/csv/enemy_1.dat	rec 130 off 0 ps 1	^Black Enh. Sold.{	^Lính Áo Đen Cường Hoá{	
+A00088	c/csv/enemy_2.dat	rec 130 off 0 ps 1	^Black Enh. Sold.{	^Lính Áo Đen Cường Hoá{	
+A00089	c/csv/enemy_expert_0.dat	rec 12 off 84 ps 1	HX	HX	
+A00090	c/csv/enemy_expert_0.dat	rec 27 off 84 ps 1	HX	HX	
+A00091	c/csv/enemy_expert_0.dat	rec 42 off 84 ps 1	HX	HX	
+A00092	c/csv/enemy_expert_0.dat	rec 57 off 84 ps 1	HX	HX	
+A00093	c/csv/enemy_expert_0.dat	rec 83 off 86 ps 1	HX	HX	
+A00094	c/csv/ingame_text.dat	rec 4 off 0 ps 1	South Hwang.	Hwang Nam.	
+A00095	c/csv/ingame_text.dat	rec 5 off 0 ps 1	East Hwang.	Hwang Đông.	
+A00096	c/csv/ingame_text.dat	rec 130 off 0 ps 1	FILE VER CHECK	KIỂM TRA PHIÊN BẢN FILE	
+A00097	c/csv/ingame_text.dat	rec 131 off 0 ps 1	FILE VER:	PHIÊN BẢN FILE:	
+A00098	c/csv/ingame_text.dat	rec 134 off 0 ps 1	OK	OK	
+A00099	c/csv/ingame_text.dat	rec 145 off 0 ps 1	sub	phụ	
+A00100	c/csv/ingame_text.dat	rec 152 off 0 ps 1	, welcome!	, chào mừng!	
+A00101	c/csv/ingame_text.dat	rec 328 off 0 ps 1	Failed!	Thất bại!	
+A00102	c/csv/ingame_text.dat	rec 339 off 0 ps 1	Connecting	Đang kết nối	
+A00103	c/csv/ingame_text.dat	rec 340 off 0 ps 1	Send	Gửi	
+A00104	c/csv/ingame_text.dat	rec 341 off 0 ps 1	Recieve	Nhận	
+A00105	c/csv/ingame_text.dat	rec 355 off 0 ps 1	Used.	Đã dùng.	
+A00106	c/csv/ingame_text.dat	rec 356 off 0 ps 1	obtained.	đã nhận được.	
+A00107	c/csv/item_00.dat	rec 81 off 2 ps 1	Void Greatsword I	Đại Kiếm Hư Vô I	
+A00108	c/csv/item_00.dat	rec 81 off 24 ps 1	Two-Handed Sword	Kiếm Hai Tay	
+A00109	c/csv/item_00.dat	rec 82 off 2 ps 1	Void Greatsword II	Đại Kiếm Hư Vô II	
+A00110	c/csv/item_00.dat	rec 82 off 25 ps 1	Two-Handed Sword	Kiếm Hai Tay	
+A00111	c/csv/item_00.dat	rec 83 off 2 ps 1	Void Greatsword III	Đại Kiếm Hư Vô III	
+A00112	c/csv/item_00.dat	rec 83 off 26 ps 1	Two-Handed Sword	Kiếm Hai Tay	
+A00113	c/csv/item_00.dat	rec 84 off 2 ps 1	Void Greatsword IV	Đại Kiếm Hư Vô IV	
+A00114	c/csv/item_00.dat	rec 84 off 25 ps 1	Two-Handed Sword	Kiếm Hai Tay	
+A00115	c/csv/item_00.dat	rec 85 off 2 ps 1	Void Greatsword V	Đại Kiếm Hư Vô V	
+A00116	c/csv/item_00.dat	rec 85 off 24 ps 1	Two-Handed Sword	Kiếm Hai Tay	
+A00117	c/csv/item_01.dat	rec 81 off 2 ps 1	T1 Void Dagger	Dao Găm Hư Vô T1	
+A00118	c/csv/item_01.dat	rec 81 off 21 ps 1	Dagger	Dao Găm	
+A00119	c/csv/item_01.dat	rec 82 off 2 ps 1	T2 Void Dagger	Dao Găm Hư Vô T2	
+A00120	c/csv/item_01.dat	rec 82 off 21 ps 1	Dagger	Dao Găm	
+A00121	c/csv/item_01.dat	rec 83 off 2 ps 1	T3 Void Dagger	Dao Găm Hư Vô T3	
+A00122	c/csv/item_01.dat	rec 83 off 21 ps 1	Dagger	Dao Găm	
+A00123	c/csv/item_01.dat	rec 84 off 2 ps 1	T4 Void Dagger	Dao Găm Hư Vô T4	
+A00124	c/csv/item_01.dat	rec 84 off 21 ps 1	Dagger	Dao Găm	
+A00125	c/csv/item_01.dat	rec 85 off 2 ps 1	T5 Void Dagger	Dao Găm Hư Vô T5	
+A00126	c/csv/item_01.dat	rec 85 off 21 ps 1	Dagger	Dao Găm	
+A00127	c/csv/item_02.dat	rec 81 off 2 ps 1	Void Pistol I	Súng Lục Hư Vô I	
+A00128	c/csv/item_02.dat	rec 81 off 20 ps 1	Light gun	Súng Nhẹ	
+A00129	c/csv/item_02.dat	rec 82 off 2 ps 1	Void Pistol II	Súng Lục Hư Vô II	
+A00130	c/csv/item_02.dat	rec 82 off 21 ps 1	Light gun	Súng Nhẹ	
+A00131	c/csv/item_02.dat	rec 83 off 2 ps 1	Void Pistol III	Súng Lục Hư Vô III	
+A00132	c/csv/item_02.dat	rec 83 off 22 ps 1	Light gun	Súng Nhẹ	
+A00133	c/csv/item_02.dat	rec 84 off 2 ps 1	Void Pistol IV	Súng Lục Hư Vô IV	
+A00134	c/csv/item_02.dat	rec 84 off 21 ps 1	Light gun	Súng Nhẹ	
+A00135	c/csv/item_02.dat	rec 85 off 2 ps 1	Void Pistol V	Súng Lục Hư Vô V	
+A00136	c/csv/item_02.dat	rec 85 off 20 ps 1	Light gun	Súng Nhẹ	
+A00137	c/csv/item_03.dat	rec 81 off 2 ps 1	T1 Void Lance	Thương Hư Vô T1	
+A00138	c/csv/item_03.dat	rec 81 off 20 ps 1	Spear	Giáo	
+A00139	c/csv/item_03.dat	rec 82 off 2 ps 1	T2 Void Lance	Thương Hư Vô T2	
+A00140	c/csv/item_03.dat	rec 82 off 20 ps 1	Spear	Giáo	
+A00141	c/csv/item_03.dat	rec 83 off 2 ps 1	T3 Void Lance	Thương Hư Vô T3	
+A00142	c/csv/item_03.dat	rec 83 off 20 ps 1	Spear	Giáo	
+A00143	c/csv/item_03.dat	rec 84 off 2 ps 1	T4 Void Lance	Thương Hư Vô T4	
+A00144	c/csv/item_03.dat	rec 84 off 20 ps 1	Spear	Giáo	
+A00145	c/csv/item_03.dat	rec 85 off 2 ps 1	T5 Void Lance	Thương Hư Vô T5	
+A00146	c/csv/item_03.dat	rec 85 off 20 ps 1	Spear	Giáo	
+A00147	c/csv/item_10.dat	rec 17 off 2 ps 1	Void Necklace	Dây Chuyền Hư Vô	
+A00148	c/csv/item_11.dat	rec 11 off 18 ps 1	^Expert Mode Only{;Restores 40 HP 5;times, for 200 HP;total. Cannot be used;in Story Mode.	^Chỉ dùng cho chế độ Expert{;Hồi 40 HP mỗi lần, 5;lần liên tiếp, tổng cộng;200 HP. Không thể dùng;trong chế độ Story.	
 A00149	c/csv/item_11.dat	rec 12 off 23 ps 1	Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.[d\n2		unused
-A00150	c/csv/item_11.dat	rec 13 off 23 ps 1	^Expert Mode Only{;Restores 200 HP 5;times, for 1000 HP;total. Cannot be used;in Story Mode.		
-A00151	c/csv/item_11.dat	rec 14 off 23 ps 1	^Expert Mode Only{;Blocks all attacks;for 6 seconds. Cannot;be used in Story;Mode.		
-A00152	c/csv/item_11.dat	rec 15 off 18 ps 1	^Expert Mode Only{;Fully restores the;Spirit Gauge. Cannot;be used in Story;Mode.		
-A00153	c/csv/item_12.dat	rec 17 off 23 ps 1	All Weapons and;Gloves Increases Hit;Rate. Combines 1-3;Reaper Orbs. ^Can only;be used on first;fuse.{		
-A00154	c/csv/item_12.dat	rec 19 off 21 ps 1	All Weapons and;Gloves Increases Crit;Rate. Combines 1-3;Bind Orbs. ^Can only;be used on first;fuse.{		
-A00155	c/csv/item_12.dat	rec 20 off 24 ps 1	Armor and Boots;Increases Crit;Resistance. Combines;1-3 Resolve Orbs. ^Can;only be used on first;fuse.{		
-A00156	c/csv/item_12.dat	rec 22 off 21 ps 1	Helmets and Gloves;Increases HP;Recovery. Combines;1-3 Echo Orbs. ^Can;only be used on first;fuse.{		
-A00157	c/csv/item_12.dat	rec 23 off 22 ps 1	All Weapons and;Gloves Absorbs enemy;HP. Combines 1-3;Leech Orbs. ^Can only;be used on first;fuse.{		
-A00158	c/csv/item_12.dat	rec 24 off 21 ps 1	Helmets and Boots;Increases Magic Hit;Rate. Combines 1-3;Sage Orbs. ^Can only;be used on first;fuse.{		
-A00159	c/csv/item_12.dat	rec 25 off 23 ps 1	All Weapons and;Gloves Increases;Resistance. Combines;1-3 Arcane Orbs. ^Can;only be used on first;fuse.{		
-A00160	c/csv/item_12.dat	rec 30 off 23 ps 1	All Weapons and;Gloves Increases Hit;Rate. Combines 2-4;Reaper Orbs. ^Can only;be used on first;fuse.{		
-A00161	c/csv/item_12.dat	rec 32 off 21 ps 1	All Weapons and;Gloves Increases Crit;Rate. Combines 2-4;Bind Orbs. ^Can only;be used on first;fuse.{		
-A00162	c/csv/item_12.dat	rec 33 off 24 ps 1	Armor and Boots;Increases Crit;Resistance. Combines;2-4 Resolve Orbs. ^Can;only be used on first;fuse.{		
-A00163	c/csv/item_12.dat	rec 35 off 21 ps 1	Helmets and Gloves;Increases HP;Recovery. Combines;2-4 Echo Orbs. ^Can;only be used on first;fuse.{		
-A00164	c/csv/item_12.dat	rec 37 off 21 ps 1	Helms, boots;Increases Magic Hit;Rate Combines 2-4;Sage Orbs. ^Only;usable on first;combine.{		
-A00165	c/csv/item_12.dat	rec 40 off 24 ps 1	All weapons Increases;ATK Combines 3-5;Thunder Orbs.^Only;usable on first;combine.{		
-A00166	c/csv/item_12.dat	rec 41 off 24 ps 1	All armor Increases;P.DEF Combines 3-5;Adamant Orbs.^Only;usable on first;combine.{		
-A00167	c/csv/item_12.dat	rec 42 off 23 ps 1	All armor Increases;M.DEF Combines 3-5;Spirit Orbs.^Only;usable on first;combine.{		
-A00168	c/csv/item_12.dat	rec 43 off 23 ps 1	All weapons, gloves;Increases Hit Rate;Combines 3-5 Reaper;Orbs.^Only usable on;first combine.{		
-A00169	c/csv/item_12.dat	rec 44 off 23 ps 1	Helms, boots;Increases Evasion;Combines 3-5 Shadow;Orbs.^Only usable on;first combine.{		
-A00170	c/csv/item_12.dat	rec 45 off 21 ps 1	All weapons, gloves;Increases Crit Rate;Combines 3-5 Bind;Orbs.^Only usable on;first combine.{		
-A00171	c/csv/item_12.dat	rec 46 off 21 ps 1	Armor, boots;Increases Crit Resist;Combines 3-5 Will;Orbs.^Only usable on;first combine.{		
-A00172	c/csv/item_12.dat	rec 47 off 24 ps 1	Armor, boots;Increases Max HP;Combines 3-5 Warlord;Orbs.^Only usable on;first combine.{		
-A00173	c/csv/item_12.dat	rec 48 off 22 ps 1	Helms, gloves;Increases HP Recovery;Combines 3-5 Reson;Orbs.^Only usable on;first combine.{		
-A00174	c/csv/item_12.dat	rec 49 off 22 ps 1	All weapons, gloves;Absorbs enemy HP;Combines 3-5 Blood;Orbs.^Only usable on;first combine.{		
-A00175	c/csv/item_12.dat	rec 50 off 21 ps 1	Helms, boots;Increases Magic Hit;Rate Combines 3-5;Sage Orbs.^Only usable;on first combine.{		
-A00176	c/csv/item_12.dat	rec 51 off 24 ps 1	All weapons, gloves;Increases Resistance;Combines 3-5 Sorcery;Orbs.^Only usable on;first combine.{		
-A00177	c/csv/item_12.dat	rec 52 off 22 ps 1	All weapons, boots;Decreases Cooldown;Combines 3-5 Storm;Orbs.^Only usable on;first combine.{		
-A00178	c/csv/item_13.dat	rec 72 off 19 ps 1	A greatsword used by;Alex. It is broken;and unusable. The;initial L is engraved;on it.		
-A00179	c/csv/item_13.dat	rec 75 off 23 ps 1	A spear used by;Evelyn. Broken,;leaving only the tip.;The initial L is;engraved on it.		
-A00180	c/csv/item_13.dat	rec 76 off 22 ps 1	Main and secondary;barrels of a heavy;tank. The initial L;is engraved on them.		
-A00181	c/csv/item_14.dat	rec 11 off 18 ps 1	An accessory proving;devotion to a;religious group;currently popular;across Moytura;Plains.		
-A00182	c/csv/item_14.dat	rec 14 off 17 ps 1	Photo of a;pink-haired girl;found in Tyr hideout.;Other than her hair;color, she looks just;like Ren.		
-A00183	c/csv/item_14.dat	rec 29 off 16 ps 1	A ring lost by a;Central mercenary. A;plain copper ring.;Best not to think;about it being inside;a bat belly.		
-A00184	c/csv/item_14.dat	rec 34 off 20 ps 1	Portrait found in;Central Tower. Shows;a purple-haired;woman. Tyr seems to;know her.		
-A00185	c/csv/item_14.dat	rec 37 off 20 ps 1	A metal scrap found;in the Frozen Sea;cavern. The woman at;the Irem library;might be interested.		
-A00186	c/csv/item_14.dat	rec 39 off 18 ps 1	A secret tool of;House Ronberg, famed;weapon smiths. It is;broken and cannot be;used as is.		
-A00187	c/csv/item_14.dat	rec 50 off 19 ps 1	Work clothes ordered;by Rockville;Development Complex.;Who would wear this?		
-A00188	c/csv/item_14.dat	rec 51 off 13 ps 1	A claw from an;Eastern Scorpion.;Cannot be eaten;before cooking.		
-A00189	c/csv/item_15.dat	rec 0 off 24 ps 1	Normal Quest Item A;recipe book teaching;how to craft Twilight;Soup Powder.		
-A00190	c/csv/item_15.dat	rec 1 off 17 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Mid Potion.		
-A00191	c/csv/item_15.dat	rec 2 off 18 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft High Potion.		
-A00192	c/csv/item_15.dat	rec 3 off 19 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Quick Potion.		
-A00193	c/csv/item_15.dat	rec 4 off 23 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Mid Quick;Potion.		
-A00194	c/csv/item_15.dat	rec 5 off 24 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft High Quick;Potion.		
-A00195	c/csv/item_15.dat	rec 7 off 20 ps 1	Normal Material A;recipe book teaching;how to craft Tough;Leather.		
-A00196	c/csv/item_15.dat	rec 8 off 19 ps 1	Normal Material A;recipe book teaching;how to craft Essence;of Life.		
-A00197	c/csv/item_15.dat	rec 9 off 20 ps 1	Normal Material A;recipe book teaching;how to craft Deadly;Poison.		
-A00198	c/csv/item_15.dat	rec 10 off 25 ps 1	Normal Material A;recipe book teaching;how to craft;Reinforced Leather.		
-A00199	c/csv/item_15.dat	rec 12 off 21 ps 1	Normal Material A;recipe book teaching;how to craft Curse of;Death.		
-A00200	c/csv/item_15.dat	rec 14 off 18 ps 1	Normal Material A;recipe book teaching;how to craft Source;of Magic.		
-A00201	c/csv/item_15.dat	rec 15 off 19 ps 1	Normal Material A;recipe book teaching;how to craft Essence;of Fire.		
-A00202	c/csv/item_15.dat	rec 16 off 19 ps 1	`Hero{ Lv 21 2H-Sword A;recipe book teaching;how to craft;`Tourangeau{.		
-A00203	c/csv/item_15.dat	rec 17 off 18 ps 1	`Hero{ Lv 21 2H-Sword A;recipe book teaching;how to craft;`Caladbolg{.		
-A00204	c/csv/item_15.dat	rec 22 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 21;Spear `Elven Wing;Spear{.		
-A00205	c/csv/item_15.dat	rec 24 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 22;Gloves `Main Combat;Gloves{.		
-A00206	c/csv/item_15.dat	rec 25 off 23 ps 1	Book to learn how to;craft `Hero{ Lv 22;Gloves `Phantom;Gloves{.		
-A00207	c/csv/item_15.dat	rec 26 off 26 ps 1	Book to learn how to;craft `Hero{ Lv 23;Shoes `Main Combat;Boots{.		
-A00208	c/csv/item_15.dat	rec 27 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 23;Shoes `Phantom;Greaves{.		
-A00209	c/csv/item_15.dat	rec 28 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 24;Armor `Main Combat;Suit{.		
-A00210	c/csv/item_15.dat	rec 33 off 23 ps 1	Book to learn how to;craft `Hero{ Lv 26;Shield `Bone;Protector{.		
-A00211	c/csv/item_15.dat	rec 35 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 43;Gloves `Kayon;Gauntlets{.		
-A00212	c/csv/item_15.dat	rec 38 off 24 ps 1	Book to learn how to;craft <Set{ Lv 44;Gloves <Angel Wing;Hand{.		
-A00213	c/csv/item_15.dat	rec 39 off 24 ps 1	Book to learn how to;craft <Set{ Lv 44;Gloves <Dragonbone;Hand{.		
-A00214	c/csv/item_15.dat	rec 40 off 26 ps 1	Book to learn how to;craft `Hero{ Lv 45 2H;Sword `Red Lion;Claymore{.		
-A00215	c/csv/item_15.dat	rec 41 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 45 2H;Sword `Blue Wyvern;Axe{.		
-A00216	c/csv/item_15.dat	rec 42 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 45 1H;Sword `Phantom;Breaker{.		
-A00217	c/csv/item_15.dat	rec 52 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 47;Shield `Requid;Defender{.		
-A00218	c/csv/item_15.dat	rec 53 off 23 ps 1	A book to learn the;recipe for `Hero{ Lv 47;Shield `Grand;Defender{.		
-A00219	c/csv/item_15.dat	rec 54 off 21 ps 1	A book to learn the;recipe for `Hero{ Lv 54;2H Sword `Divine;Saber{.		
-A00220	c/csv/item_15.dat	rec 56 off 25 ps 1	A book to learn the;recipe for `Hero{ Lv 54;1H Sword `Assault Rune;Swd{.		
-A00221	c/csv/item_15.dat	rec 62 off 25 ps 1	A book to learn the;recipe for `Hero{ Lv 57;Gloves `Titan War;Gloves{.		
-A00222	c/csv/item_15.dat	rec 63 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 57;Gloves `Skuld;Gauntlets{.		
-A00223	c/csv/item_15.dat	rec 64 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 58;Boots `Titan War;Boots{.		
-A00224	c/csv/item_15.dat	rec 93 off 25 ps 1	`Hero{ Lv.77 Shield A;book to learn the;recipe for `Garunzeel;Shield{.		
-A00225	c/csv/item_15.dat	rec 94 off 24 ps 1	<Set{ Lv.94 Gloves A;book to learn the;recipe for <Acheyaki;Gloves{.		
-A00226	c/csv/item_15.dat	rec 95 off 22 ps 1	<Set{ Lv.94 Gloves A;book to learn the;recipe for <Wyvern;Gloves{.		
-A00227	c/csv/item_15.dat	rec 96 off 22 ps 1	`Hero{ Lv.95 Gloves A;book to learn the;recipe for `Gavidu;Gloves{.		
-A00228	c/csv/item_15.dat	rec 97 off 23 ps 1	`Hero{ Lv.95 Gloves A;book to learn the;recipe for `Tyr War;Gloves{.		
-A00229	c/csv/item_15.dat	rec 101 off 26 ps 1	`Hero{ Lv.96 1H Sword A;book to learn the;recipe for `True Demon;Slayer{.		
-A00230	c/csv/item_15.dat	rec 104 off 19 ps 1	`Hero{ Lv.96 Spear A;book to learn the;recipe for `Agnar;Pike{.		
-A00231	c/csv/item_15.dat	rec 105 off 20 ps 1	`Hero{ Lv.96 Spear A;book to learn the;recipe for;`Riftressive{.		
-A00232	c/csv/item_15.dat	rec 106 off 21 ps 1	`Hero{ Lv.96 Boots A;book to learn the;recipe for `Gavidu;Boots{.		
-A00233	c/csv/item_15.dat	rec 107 off 22 ps 1	`Hero{ Lv.96 Boots A;book to learn the;recipe for `Tyr War;Boots{.		
-A00234	c/csv/item_15.dat	rec 108 off 20 ps 1	`Hero{ Lv.97 Armor A;book to learn the;recipe for `Gavidu;Coat{.		
-A00235	c/csv/item_15.dat	rec 109 off 22 ps 1	`Hero{ Lv.97 Armor A;book to learn the;recipe for `Tyr War;Armor{.		
-A00236	c/csv/item_15.dat	rec 112 off 20 ps 1	`Hero{ Lv.98 Helm A;book to learn the;recipe for `Gavidu;Helm{.		
-A00237	c/csv/item_15.dat	rec 113 off 21 ps 1	`Hero{ Lv.98 Helm A;book to learn the;recipe for `Tyr War;Helm{.		
-A00238	c/csv/item_15.dat	rec 114 off 20 ps 1	`Hero{ Lv.99 Shield A;book to learn the;recipe for;`Unbreakable{.		
-A00239	c/csv/item_15.dat	rec 115 off 24 ps 1	`Hero{ Lv.99 Shield A;book to learn the;recipe for `Grandish;Shield{.		
-A00240	c/csv/item_16.dat	rec 0 off 25 ps 1	Warrior Skillbook;Req. Level: Lv.1;Attacks enemies up to;3 times in melee;using a 2H sword or;2H axe.		
-A00241	c/csv/item_16.dat	rec 1 off 25 ps 1	Warrior Skillbook;Req. Level: Lv.4;Attacks enemies up to;3 times in melee;using a 2H sword or;2H axe.		
-A00242	c/csv/item_16.dat	rec 2 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.22;Attack enemies up to;3 times with a 2H;Sword or 2H Axe.		
-A00243	c/csv/item_16.dat	rec 3 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.1 Rush;quickly toward;enemies ahead.		
-A00244	c/csv/item_16.dat	rec 4 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.10;Rush quickly toward;enemies ahead.		
-A00245	c/csv/item_16.dat	rec 5 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.48;Rush quickly toward;enemies ahead.		
-A00246	c/csv/item_16.dat	rec 6 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.74;Rush quickly toward;enemies ahead.		
-A00247	c/csv/item_16.dat	rec 7 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.14;Leap and strike;enemies ahead to deal;melee damage.		
-A00248	c/csv/item_16.dat	rec 8 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.26;Leap and strike;enemies ahead to deal;melee damage.		
-A00249	c/csv/item_16.dat	rec 9 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.38;Leap and strike;enemies ahead to deal;melee damage.		
-A00250	c/csv/item_16.dat	rec 10 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.46;Leap and strike;enemies ahead to deal;melee damage.		
-A00251	c/csv/item_16.dat	rec 11 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.58;Leap and strike;enemies ahead to deal;melee damage.		
-A00252	c/csv/item_16.dat	rec 12 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.68;Leap and strike;enemies ahead to deal;melee damage.		
-A00253	c/csv/item_16.dat	rec 13 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.80;Leap and strike;enemies ahead to deal;melee damage.		
-A00254	c/csv/item_16.dat	rec 14 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.6;Strike enemies ahead;to knock them down.		
-A00255	c/csv/item_16.dat	rec 15 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.28;Strike enemies ahead;to knock them down.		
-A00256	c/csv/item_16.dat	rec 16 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.54;Strike enemies ahead;to knock them down.		
-A00257	c/csv/item_16.dat	rec 17 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.78;Strike enemies ahead;to knock them down.		
-A00258	c/csv/item_16.dat	rec 18 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.4;Slash upward to deal;melee damage. Grants;invulnerability.		
-A00259	c/csv/item_16.dat	rec 19 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.16;Slash upward to deal;melee damage. Grants;invulnerability.		
-A00260	c/csv/item_16.dat	rec 20 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.34;Slash upward to deal;melee damage. Grants;invulnerability.		
-A00261	c/csv/item_16.dat	rec 21 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.50;Slash upward to deal;melee damage. Grants;invulnerability.		
-A00262	c/csv/item_16.dat	rec 22 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.64;Slash upward to deal;melee damage. Grants;invulnerability.		
-A00263	c/csv/item_16.dat	rec 23 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.82;Slash upward to deal;melee damage. Grants;invulnerability.		
-A00264	c/csv/item_16.dat	rec 24 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.20;Spin and strike all;nearby enemies to;deal melee damage.		
-A00265	c/csv/item_16.dat	rec 25 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.36;Spin and strike all;nearby enemies to;deal melee damage.		
-A00266	c/csv/item_16.dat	rec 26 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.52;Spin and strike all;nearby enemies to;deal melee damage.		
-A00267	c/csv/item_16.dat	rec 27 off 20 ps 1	Warrior Skill Book;Req Lv72 Spins around;to deal melee DMG to;nearby enemies.		
-A00268	c/csv/item_16.dat	rec 28 off 20 ps 1	Warrior Skill Book;Req Lv86 Spins around;to deal melee DMG to;nearby enemies.		
-A00269	c/csv/item_16.dat	rec 29 off 16 ps 1	Warrior Skill Book;Req Lv12 Taunts;nearby foes to gather;them. Grants;invincibility.		
-A00270	c/csv/item_16.dat	rec 30 off 16 ps 1	Warrior Skill Book;Req Lv18 Taunts;nearby foes to gather;them. Grants;invincibility.		
-A00271	c/csv/item_16.dat	rec 31 off 16 ps 1	Warrior Skill Book;Req Lv40 Taunts;nearby foes to gather;them. Grants;invincibility.		
-A00272	c/csv/item_16.dat	rec 32 off 16 ps 1	Warrior Skill Book;Req Lv56 Taunts;nearby foes to gather;them. Grants;invincibility.		
-A00273	c/csv/item_16.dat	rec 33 off 16 ps 1	Warrior Skill Book;Req Lv70 Taunts;nearby foes to gather;them. Grants;invincibility.		
-A00274	c/csv/item_16.dat	rec 34 off 16 ps 1	Warrior Skill Book;Req Lv84 Taunts;nearby foes to gather;them. Grants;invincibility.		
-A00275	c/csv/item_16.dat	rec 35 off 17 ps 1	Warrior Skill Book;Req Lv24 Dashes;forward while;unleashing quick;attacks.		
-A00276	c/csv/item_16.dat	rec 36 off 17 ps 1	Warrior Skill Book;Req Lv44 Dashes;forward while;unleashing quick;attacks.		
-A00277	c/csv/item_16.dat	rec 37 off 17 ps 1	Warrior Skill Book;Req Lv66 Dashes;forward while;unleashing quick;attacks.		
-A00278	c/csv/item_16.dat	rec 38 off 17 ps 1	Warrior Skill Book;Req Lv88 Dashes;forward while;unleashing quick;attacks.		
-A00279	c/csv/item_16.dat	rec 39 off 21 ps 1	Warrior Skill Book;Req Lv8 Consumes all;SP to unleash a;powerful melee;strike.		
-A00280	c/csv/item_16.dat	rec 40 off 21 ps 1	Warrior Skill Book;Req Lv32 Consumes all;SP to unleash a;powerful melee;strike.		
-A00281	c/csv/item_16.dat	rec 41 off 21 ps 1	Warrior Skill Book;Req Lv62 Consumes all;SP to unleash a;powerful melee;strike.		
-A00282	c/csv/item_16.dat	rec 42 off 21 ps 1	Warrior Skill Book;Req Lv90 Consumes all;SP to unleash a;powerful melee;strike.		
-A00283	c/csv/item_16.dat	rec 43 off 16 ps 1	Warrior Skill Book;Req Lv30 Consumes SP;to deal melee DMG;forward.		
-A00284	c/csv/item_16.dat	rec 44 off 16 ps 1	Warrior Skill Book;Req Lv42 Consumes SP;to deal melee DMG;forward.		
-A00285	c/csv/item_16.dat	rec 45 off 16 ps 1	Warrior Skill Book;Req Lv60 Consumes SP;to deal melee DMG;forward.		
-A00286	c/csv/item_16.dat	rec 46 off 16 ps 1	Warrior Skill Book;Req Lv76 Consumes SP;to deal melee DMG;forward.		
-A00287	c/csv/item_16.dat	rec 47 off 16 ps 1	Warrior Skill Book;Req Lv92 Consumes SP;to deal melee DMG;forward.		
-A00288	c/csv/item_16.dat	rec 48 off 17 ps 1	Rogue Skill Book Req;Lv1 Strikes up to 4;times with Dagger/1H;Sword in melee.		
-A00289	c/csv/item_16.dat	rec 49 off 17 ps 1	Rogue Skill Book Req;Lv4 Strikes up to 4;times with Dagger/1H;Sword in melee.		
-A00290	c/csv/item_16.dat	rec 50 off 17 ps 1	Rogue Skill Book Req;Lv14 Strikes up to 4;times with Dagger/1H;Sword in melee.		
-A00291	c/csv/item_16.dat	rec 51 off 17 ps 1	Rogue Skill Book Req;Lv22 Strikes up to 4;times with Dagger/1H;Sword in melee.		
-A00292	c/csv/item_16.dat	rec 56 off 16 ps 1	Rogue Skillbook Req.;Level: LV8 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
-A00293	c/csv/item_16.dat	rec 57 off 16 ps 1	Rogue Skillbook Req.;Level: LV28 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
-A00294	c/csv/item_16.dat	rec 58 off 16 ps 1	Rogue Skillbook Req.;Level: LV42 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
-A00295	c/csv/item_16.dat	rec 59 off 16 ps 1	Rogue Skillbook Req.;Level: LV62 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
-A00296	c/csv/item_16.dat	rec 60 off 16 ps 1	Rogue Skillbook Req.;Level: LV78 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
-A00297	c/csv/item_16.dat	rec 61 off 16 ps 1	Rogue Skillbook Req.;Level: LV10 Perform;melee strike while;dodging sideways.;Grants Crit Orb.		
-A00298	c/csv/item_16.dat	rec 62 off 16 ps 1	Rogue Skillbook Req.;Level: LV36 Perform;melee strike while;dodging sideways.;Grants Crit Orb.		
-A00299	c/csv/item_16.dat	rec 63 off 16 ps 1	Rogue Skillbook Req.;Level: LV56 Perform;melee strike while;dodging sideways.;Grants Crit Orb.		
-A00300	c/csv/item_16.dat	rec 64 off 16 ps 1	Rogue Skillbook Req.;Level: LV82 Perform;melee strike while;dodging sideways.;Grants Crit Orb.		
-A00301	c/csv/item_16.dat	rec 65 off 18 ps 1	Rogue Skillbook Req.;Level: LV1;Temporarily increases;Evasion.		
-A00302	c/csv/item_16.dat	rec 66 off 18 ps 1	Rogue Skillbook Req.;Level: LV18;Temporarily increases;Evasion.		
-A00303	c/csv/item_16.dat	rec 67 off 18 ps 1	Rogue Skillbook Req.;Level: LV34;Temporarily increases;Evasion.		
-A00304	c/csv/item_16.dat	rec 68 off 18 ps 1	Rogue Skillbook Req.;Level: LV48;Temporarily increases;Evasion.		
-A00305	c/csv/item_16.dat	rec 69 off 18 ps 1	Rogue Skillbook Req.;Level: LV60;Temporarily increases;Evasion.		
-A00306	c/csv/item_16.dat	rec 70 off 18 ps 1	Rogue Skillbook Req.;Level: LV74;Temporarily increases;Evasion.		
-A00307	c/csv/item_16.dat	rec 71 off 16 ps 1	Rogue Skillbook Req.;Level: LV6 Step back;then dash forward to;strike. Grants Crit;Orb.		
-A00308	c/csv/item_16.dat	rec 72 off 16 ps 1	Rogue Skillbook Req.;Level: LV26 Step back;then dash forward to;strike. Grants Crit;Orb.		
-A00309	c/csv/item_16.dat	rec 73 off 16 ps 1	Rogue Skillbook Req.;Level: LV46 Step back;then dash forward to;strike. Grants Crit;Orb.		
-A00310	c/csv/item_16.dat	rec 74 off 16 ps 1	Rogue Skillbook Req.;Level: LV66 Step back;then dash forward to;strike. Grants Crit;Orb.		
-A00311	c/csv/item_16.dat	rec 75 off 16 ps 1	Rogue Skillbook Req.;Level: LV84 Step back;then dash forward to;strike. Grants Crit;Orb.		
-A00312	c/csv/item_16.dat	rec 76 off 15 ps 1	Rogue Skillbook Req.;Level: LV16 Stuns an;enemy. Consumes Crit;Orbs.		
-A00313	c/csv/item_16.dat	rec 77 off 15 ps 1	Rogue Skillbook Req:;LV32 Stuns an enemy.;Consumes Critical;Orb.		
-A00314	c/csv/item_16.dat	rec 78 off 15 ps 1	Rogue Skillbook Req:;LV44 Stuns an enemy.;Consumes Critical;Orb.		
-A00315	c/csv/item_16.dat	rec 79 off 15 ps 1	Rogue Skillbook Req:;LV54 Stuns an enemy.;Consumes Critical;Orb.		
-A00316	c/csv/item_16.dat	rec 80 off 15 ps 1	Rogue Skillbook Req:;LV72 Stuns an enemy.;Consumes Critical;Orb.		
-A00317	c/csv/item_16.dat	rec 81 off 15 ps 1	Rogue Skillbook Req:;LV86 Stuns an enemy.;Consumes Critical;Orb.		
-A00318	c/csv/item_16.dat	rec 82 off 16 ps 1	Rogue Skillbook Req:;LV24 Throws a dagger;for a ranged attack.;Generates Critical;Orb.		
-A00319	c/csv/item_16.dat	rec 83 off 16 ps 1	Rogue Skillbook Req:;LV52 Throws a dagger;for a ranged attack.;Generates Critical;Orb.		
-A00320	c/csv/item_16.dat	rec 84 off 16 ps 1	Rogue Skillbook Req:;LV70 Throws a dagger;for a ranged attack.;Generates Critical;Orb.		
-A00321	c/csv/item_16.dat	rec 85 off 16 ps 1	Rogue Skillbook Req:;LV90 Throws a dagger;for a ranged attack.;Generates Critical;Orb.		
-A00322	c/csv/item_16.dat	rec 86 off 15 ps 1	Rogue Skillbook Req:;LV20 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.		
-A00323	c/csv/item_16.dat	rec 87 off 15 ps 1	Rogue Skillbook Req:;LV40 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.		
-A00324	c/csv/item_16.dat	rec 88 off 15 ps 1	Rogue Skillbook Req:;LV68 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.		
-A00325	c/csv/item_16.dat	rec 89 off 15 ps 1	Rogue Skillbook Req:;LV88 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.		
-A00326	c/csv/item_16.dat	rec 90 off 17 ps 1	Rogue Skillbook Req:;LV30 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
-A00327	c/csv/item_16.dat	rec 91 off 17 ps 1	Rogue Skillbook Req:;LV50 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
-A00328	c/csv/item_16.dat	rec 92 off 17 ps 1	Rogue Skillbook Req:;LV64 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
-A00329	c/csv/item_16.dat	rec 93 off 17 ps 1	Rogue Skillbook Req:;LV76 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
-A00330	c/csv/item_16.dat	rec 94 off 17 ps 1	Rogue Skillbook Req:;LV92 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
-A00331	c/csv/item_17.dat	rec 0 off 21 ps 1	Gunslinger Skillbook;Req: LV1 Launches a;ranged attack using;Heavy/Light Guns.		
-A00332	c/csv/item_17.dat	rec 1 off 21 ps 1	Gunslinger Skillbook;Req: LV4 Launches a;ranged attack using;Heavy/Light Guns.		
-A00333	c/csv/item_17.dat	rec 2 off 21 ps 1	Gunslinger Skillbook;Req: LV10 Launches a;ranged attack using;Heavy/Light Guns.		
-A00334	c/csv/item_17.dat	rec 3 off 21 ps 1	Gunslinger Skillbook;Req: LV22 Launches a;ranged attack using;Heavy/Light Guns.		
-A00335	c/csv/item_17.dat	rec 4 off 20 ps 1	Gunslinger Skillbook;Req: LV1 Fires;bullets dealing;ranged DMG to;enemies.		
-A00336	c/csv/item_17.dat	rec 5 off 20 ps 1	Gunslinger Skillbook;Req: LV26 Fires;bullets dealing;ranged DMG to;enemies.		
-A00337	c/csv/item_17.dat	rec 6 off 20 ps 1	Gunslinger Skillbook;Req: LV50 Fires;bullets dealing;ranged DMG to;enemies.		
-A00338	c/csv/item_17.dat	rec 7 off 16 ps 1	Gunslinger Skillbook;Req. Level: Lv76;Fires bullets that;deal ranged damage to;enemies.		
-A00339	c/csv/item_17.dat	rec 8 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv12;Deals ranged damage;to enemies in an area;ahead.		
-A00340	c/csv/item_17.dat	rec 9 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv28;Deals ranged damage;to enemies in an area;ahead.		
-A00341	c/csv/item_17.dat	rec 10 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv48;Deals ranged damage;to enemies in an area;ahead.		
-A00342	c/csv/item_17.dat	rec 11 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv64;Deals ranged damage;to enemies in an area;ahead.		
-A00343	c/csv/item_17.dat	rec 12 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv80;Deals ranged damage;to enemies in an area;ahead.		
-A00344	c/csv/item_17.dat	rec 13 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv4 Deals;ranged damage and;continuous fire;damage to enemies;ahead.		
-A00345	c/csv/item_17.dat	rec 14 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv14;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
-A00346	c/csv/item_17.dat	rec 15 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv32;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
-A00347	c/csv/item_17.dat	rec 16 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv44;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
-A00348	c/csv/item_17.dat	rec 17 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv56;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
-A00349	c/csv/item_17.dat	rec 18 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv70;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
-A00350	c/csv/item_17.dat	rec 19 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv82;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
-A00351	c/csv/item_17.dat	rec 20 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv20;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
-A00352	c/csv/item_17.dat	rec 21 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv34;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
-A00353	c/csv/item_17.dat	rec 22 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv52;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
-A00354	c/csv/item_17.dat	rec 23 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv68;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
-A00355	c/csv/item_17.dat	rec 24 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv84;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
-A00356	c/csv/item_17.dat	rec 25 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv8;Switches to an;automatic firing;stance.		
-A00357	c/csv/item_17.dat	rec 26 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv22;Switches to an;automatic firing;stance.		
-A00358	c/csv/item_17.dat	rec 27 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv40;Switches to an;automatic firing;stance.		
-A00359	c/csv/item_17.dat	rec 28 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv60;Switches to an;automatic firing;stance.		
-A00360	c/csv/item_17.dat	rec 29 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv88;Switches to an;automatic firing;stance.		
-A00361	c/csv/item_17.dat	rec 30 off 21 ps 1	Gunslinger Skillbook;Req. Level: Lv6;Performs a ranged;attack against;enemies in front and;behind at once.		
-A00362	c/csv/item_17.dat	rec 31 off 21 ps 1	Gunslinger Skillbook;Req. Level: Lv18;Performs a ranged;attack against;enemies in front and;behind at once.		
-A00363	c/csv/item_17.dat	rec 32 off 21 ps 1	Gunslinger Tome Req.;LV42 Fires ranged;attacks;simultaneously at;foes in front and;behind.		
-A00364	c/csv/item_17.dat	rec 33 off 21 ps 1	Gunslinger Tome Req.;LV62 Fires ranged;attacks;simultaneously at;foes in front and;behind.		
-A00365	c/csv/item_17.dat	rec 34 off 21 ps 1	Gunslinger Tome Req.;LV78 Fires ranged;attacks;simultaneously at;foes in front and;behind.		
-A00366	c/csv/item_17.dat	rec 35 off 17 ps 1	Gunslinger Tome Req.;LV16 Deploys an;automated turret that;attacks enemies.		
-A00367	c/csv/item_17.dat	rec 36 off 17 ps 1	Gunslinger Tome Req.;LV38 Deploys an;automated turret that;attacks enemies.		
-A00368	c/csv/item_17.dat	rec 37 off 17 ps 1	Gunslinger Tome Req.;LV66 Deploys an;automated turret that;attacks enemies.		
-A00369	c/csv/item_17.dat	rec 38 off 17 ps 1	Gunslinger Tome Req.;LV92 Deploys an;automated turret that;attacks enemies.		
-A00370	c/csv/item_17.dat	rec 49 off 21 ps 1	Knight Tome Req. LV1;Performs up to 3;melee spear strikes;against enemies.		
-A00371	c/csv/item_17.dat	rec 50 off 21 ps 1	Knight Tome Req. LV4;Performs up to 3;melee spear strikes;against enemies.		
-A00372	c/csv/item_17.dat	rec 51 off 21 ps 1	Knight Tome Req. LV10;Performs up to 3;melee spear strikes;against enemies.		
-A00373	c/csv/item_17.dat	rec 52 off 21 ps 1	Knight Tome Req. LV22;Performs up to 3;melee spear strikes;against enemies.		
-A00374	c/csv/item_17.dat	rec 53 off 17 ps 1	Knight Tome Req. LV20;Quickly executes;melee attacks against;frontal enemies.		
-A00375	c/csv/item_17.dat	rec 54 off 17 ps 1	Knight Tome Req. LV40;Quickly executes;melee attacks against;frontal enemies.		
-A00376	c/csv/item_17.dat	rec 55 off 17 ps 1	Knight Tome Req. LV60;Quickly executes;melee attacks against;frontal enemies.		
-A00377	c/csv/item_17.dat	rec 56 off 17 ps 1	Knight Tome Req. LV80;Quickly executes;melee attacks against;frontal enemies.		
-A00378	c/csv/item_17.dat	rec 57 off 19 ps 1	Knight Skillbook Req.;Lv.4 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
-A00379	c/csv/item_17.dat	rec 58 off 19 ps 1	Knight Skillbook Req.;Lv.14 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
-A00380	c/csv/item_17.dat	rec 59 off 19 ps 1	Knight Skillbook Req.;Lv.28 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
-A00381	c/csv/item_17.dat	rec 60 off 19 ps 1	Knight Skillbook Req.;Lv.44 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
-A00382	c/csv/item_17.dat	rec 61 off 19 ps 1	Knight Skillbook Req.;Lv.54 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
-A00383	c/csv/item_17.dat	rec 62 off 19 ps 1	Knight Skillbook Req.;Lv.68 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
-A00384	c/csv/item_17.dat	rec 63 off 19 ps 1	Knight Skillbook Req.;Lv.78 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
-A00385	c/csv/item_17.dat	rec 64 off 23 ps 1	Knight Skillbook Req.;Lv.12 Melee attack;dealing extra damage;the lower your HP is.		
-A00386	c/csv/item_17.dat	rec 65 off 23 ps 1	Knight Skillbook Req.;Lv.38 Melee attack;dealing extra damage;the lower your HP is.		
-A00387	c/csv/item_17.dat	rec 66 off 23 ps 1	Knight Skillbook Req.;Lv.62 Melee attack;dealing extra damage;the lower your HP is.		
-A00388	c/csv/item_17.dat	rec 67 off 23 ps 1	Knight Skillbook Req.;Lv.84 Melee attack;dealing extra damage;the lower your HP is.		
-A00389	c/csv/item_17.dat	rec 68 off 24 ps 1	Knight Skillbook Req.;Lv.1 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
-A00390	c/csv/item_17.dat	rec 69 off 24 ps 1	Knight Skillbook Req.;Lv.18 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
-A00391	c/csv/item_17.dat	rec 70 off 24 ps 1	Knight Skillbook Req.;Lv.32 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
-A00392	c/csv/item_17.dat	rec 71 off 24 ps 1	Knight Skillbook Req.;Lv.48 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
-A00393	c/csv/item_17.dat	rec 72 off 24 ps 1	Knight Skillbook Req.;Lv.64 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
-A00394	c/csv/item_17.dat	rec 73 off 24 ps 1	Knight Skillbook Req.;Lv.76 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
-A00395	c/csv/item_17.dat	rec 74 off 16 ps 1	Knight Skillbook Req.;Lv.16 Deals melee;damage to an enemy;and pulls them in;front of you.		
-A00396	c/csv/item_17.dat	rec 75 off 16 ps 1	Knight Skillbook Req.;Lv.34 Deals melee;damage to an enemy;and pulls them in;front of you.		
-A00397	c/csv/item_17.dat	rec 76 off 16 ps 1	Knight Skillbook Req.;Lv.52 Deals melee;damage to an enemy;and pulls them in;front of you.		
-A00398	c/csv/item_17.dat	rec 77 off 16 ps 1	Knight Skillbook Req.;Lv.70 Deals melee;damage to an enemy;and pulls them in;front of you.		
-A00399	c/csv/item_17.dat	rec 78 off 16 ps 1	Knight Skillbook Req.;Lv.86 Deals melee;damage to an enemy;and pulls them in;front of you.		
-A00400	c/csv/item_17.dat	rec 79 off 23 ps 1	Knight Skillbook Req.;Lv.6 Deals melee;damage to an enemy;and reduces their;DEF.		
-A00401	c/csv/item_17.dat	rec 80 off 23 ps 1	Knight Skillbook Req.;Lv.22 Deals melee;damage to an enemy;and reduces their;DEF.		
-A00402	c/csv/item_17.dat	rec 81 off 23 ps 1	Knight Skillbook Req.;Lv.26 Deals melee;damage to an enemy;and reduces their;DEF.		
-A00403	c/csv/item_17.dat	rec 82 off 22 ps 1	Knight Skillbook Req.;Level: Lv46 Deals;melee DMG to enemy;and reduces DEF.		
-A00404	c/csv/item_17.dat	rec 83 off 22 ps 1	Knight Skillbook Req.;Level: Lv58 Deals;melee DMG to enemy;and reduces DEF.		
-A00405	c/csv/item_17.dat	rec 84 off 22 ps 1	Knight Skillbook Req.;Level: Lv82 Deals;melee DMG to enemy;and reduces DEF.		
-A00406	c/csv/item_17.dat	rec 85 off 23 ps 1	Knight Skillbook Req.;Level: Lv30 Focuses;attacks on a single;enemy.		
-A00407	c/csv/item_17.dat	rec 86 off 23 ps 1	Knight Skillbook Req.;Level: Lv50 Focuses;attacks on a single;enemy.		
-A00408	c/csv/item_17.dat	rec 87 off 23 ps 1	Knight Skillbook Req.;Level: Lv72 Focuses;attacks on a single;enemy.		
-A00409	c/csv/item_17.dat	rec 88 off 23 ps 1	Knight Skillbook Req.;Level: Lv90 Focuses;attacks on a single;enemy.		
-A00410	c/csv/item_17.dat	rec 89 off 17 ps 1	Knight Skillbook Req.;Level: Lv8 Deals;melee DMG to enemy;and reduces ATK.		
-A00411	c/csv/item_17.dat	rec 90 off 17 ps 1	Knight Skillbook Req.;Level: Lv36 Deals;melee DMG to enemy;and reduces ATK.		
-A00412	c/csv/item_17.dat	rec 91 off 17 ps 1	Knight Skillbook Req.;Level: Lv66 Deals;melee DMG to enemy;and reduces ATK.		
-A00413	c/csv/item_17.dat	rec 92 off 17 ps 1	Knight Skillbook Req.;Level: Lv88 Deals;melee DMG to enemy;and reduces ATK.		
-A00414	c/csv/item_18.dat	rec 7 off 16 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple of the same;Orb at once when;socketed.		
-A00415	c/csv/item_18.dat	rec 26 off 22 ps 1	Allows resurrection;upon death in Expert;Mode. Does not apply;in single-player.		
-A00416	c/csv/item_18.dat	rec 27 off 20 ps 1	Doubles HP natural;recovery rate in;Expert Survival Mode;1 is automatically;consumed upon playing;Survival Mode.		
-A00417	c/csv/item_18.dat	rec 28 off 19 ps 1	Grants 30 bonus time;in Expert Time Attack;Mode 1 is;automatically;consumed upon playing;Time Attack Mode.		
-A00418	c/csv/item_18.dat	rec 29 off 20 ps 1	Grants 30 bonus time;per stage in Expert;Rush Mode 1 is;automatically;consumed upon playing;Rush Mode.		
-A00419	c/csv/item_18.dat	rec 30 off 23 ps 1	Consumable usable;only in Expert Mode;Grants brief;invincibility when;used Max limit: 3		
-A00420	c/csv/item_18.dat	rec 31 off 18 ps 1	Consumable usable;only in Expert Mode;Fully restores Spirit;Gauge upon use Max;Capacity: 3		
-A00421	c/csv/item_18.dat	rec 43 off 2 ps 1	Void Necklace		
-A00422	c/csv/item_18.dat	rec 43 off 20 ps 1	Increases Max HP by;15% to boost;beginners;survivability.		
-A00423	c/csv/item_18.dat	rec 44 off 2 ps 1	Void T1 Weapon		
-A00424	c/csv/item_18.dat	rec 44 off 21 ps 1	Starter weapon for Lv;1 usable up to Lv 10.;Movement Spd up Hit;rate up Rest recovery;up		
-A00425	c/csv/item_18.dat	rec 45 off 2 ps 1	Void T2 Weapon		
-A00426	c/csv/item_18.dat	rec 45 off 21 ps 1	Starter weapon for Lv;11 usable up to Lv;20. Movement Spd up;Hit rate up Rest;recovery up		
-A00427	c/csv/item_18.dat	rec 46 off 2 ps 1	Void T3 Weapon		
-A00428	c/csv/item_18.dat	rec 46 off 21 ps 1	Starter weapon for Lv;21 usable up to Lv;30. Movement Spd up;Hit rate up Rest;recovery up		
-A00429	c/csv/item_18.dat	rec 47 off 2 ps 1	Void T4 Weapon		
-A00430	c/csv/item_18.dat	rec 47 off 21 ps 1	Starter weapon for Lv;31 usable up to Lv;40. Movement Spd up;Hit rate up Rest;recovery up		
-A00431	c/csv/item_18.dat	rec 48 off 2 ps 1	Void T5 Weapon		
-A00432	c/csv/item_18.dat	rec 48 off 21 ps 1	Starter weapon for Lv;41 usable up to Lv;50. Movement Spd up;Hit rate up Rest;recovery up		
+A00150	c/csv/item_11.dat	rec 13 off 23 ps 1	^Expert Mode Only{;Restores 200 HP 5;times, for 1000 HP;total. Cannot be used;in Story Mode.	^Chỉ dùng cho chế độ Expert{;Hồi 200 HP mỗi lần, 5;lần liên tiếp, tổng cộng;1000 HP. Không thể dùng;trong chế độ Story.	
+A00151	c/csv/item_11.dat	rec 14 off 23 ps 1	^Expert Mode Only{;Blocks all attacks;for 6 seconds. Cannot;be used in Story;Mode.	^Chỉ dùng cho chế độ Expert{;Chặn mọi đòn tấn công;trong 6 giây. Không thể;dùng trong chế độ;Story.	
+A00152	c/csv/item_11.dat	rec 15 off 18 ps 1	^Expert Mode Only{;Fully restores the;Spirit Gauge. Cannot;be used in Story;Mode.	^Chỉ dùng cho chế độ Expert{;Hồi đầy thanh năng;lượng Tinh Linh. Không;thể dùng trong chế độ;Story.	
+A00153	c/csv/item_12.dat	rec 17 off 23 ps 1	All Weapons and;Gloves Increases Hit;Rate. Combines 1-3;Reaper Orbs. ^Can only;be used on first;fuse.{	Mọi vũ khí và găng tay;Orb tăng tỉ lệ trúng;Kết hợp 1-3;Orb Tử Thần.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00154	c/csv/item_12.dat	rec 19 off 21 ps 1	All Weapons and;Gloves Increases Crit;Rate. Combines 1-3;Bind Orbs. ^Can only;be used on first;fuse.{	Mọi vũ khí và găng tay;Orb tăng chí mạng;Kết hợp 1-3;Orb Trói Buộc.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00155	c/csv/item_12.dat	rec 20 off 24 ps 1	Armor and Boots;Increases Crit;Resistance. Combines;1-3 Resolve Orbs. ^Can;only be used on first;fuse.{	Giáp và giày;Orb tăng kháng chí mạng;Kết hợp 1-3;Orb Quyết Ý.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00156	c/csv/item_12.dat	rec 22 off 21 ps 1	Helmets and Gloves;Increases HP;Recovery. Combines;1-3 Echo Orbs. ^Can;only be used on first;fuse.{	Mũ và găng tay;Orb tăng lượng hồi HP;Kết hợp 1-3;Orb Cộng Hưởng.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00157	c/csv/item_12.dat	rec 23 off 22 ps 1	All Weapons and;Gloves Absorbs enemy;HP. Combines 1-3;Leech Orbs. ^Can only;be used on first;fuse.{	Mọi vũ khí và găng tay;Orb hút HP của địch;Kết hợp 1-3;Orb Hút Máu.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00158	c/csv/item_12.dat	rec 24 off 21 ps 1	Helmets and Boots;Increases Magic Hit;Rate. Combines 1-3;Sage Orbs. ^Can only;be used on first;fuse.{	Mũ và giày;Orb tăng tỉ lệ trúng phép;Kết hợp 1-3;Orb Hiền Giả.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00159	c/csv/item_12.dat	rec 25 off 23 ps 1	All Weapons and;Gloves Increases;Resistance. Combines;1-3 Arcane Orbs. ^Can;only be used on first;fuse.{	Mọi vũ khí và găng tay;Orb tăng kháng;Kết hợp 1-3;Orb Ma Đạo.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00160	c/csv/item_12.dat	rec 30 off 23 ps 1	All Weapons and;Gloves Increases Hit;Rate. Combines 2-4;Reaper Orbs. ^Can only;be used on first;fuse.{	Mọi vũ khí và găng tay;Orb tăng tỉ lệ trúng;Kết hợp 2-4;Orb Tử Thần.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00161	c/csv/item_12.dat	rec 32 off 21 ps 1	All Weapons and;Gloves Increases Crit;Rate. Combines 2-4;Bind Orbs. ^Can only;be used on first;fuse.{	Mọi vũ khí và găng tay;Orb tăng chí mạng;Kết hợp 2-4;Orb Trói Buộc.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00162	c/csv/item_12.dat	rec 33 off 24 ps 1	Armor and Boots;Increases Crit;Resistance. Combines;2-4 Resolve Orbs. ^Can;only be used on first;fuse.{	Giáp và giày;Orb tăng kháng chí mạng;Kết hợp 2-4;Orb Quyết Ý.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00163	c/csv/item_12.dat	rec 35 off 21 ps 1	Helmets and Gloves;Increases HP;Recovery. Combines;2-4 Echo Orbs. ^Can;only be used on first;fuse.{	Mũ và găng tay;Orb tăng lượng hồi HP;Kết hợp 2-4;Orb Cộng Hưởng.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00164	c/csv/item_12.dat	rec 37 off 21 ps 1	Helms, boots;Increases Magic Hit;Rate Combines 2-4;Sage Orbs. ^Only;usable on first;combine.{	Mũ, giày;Orb tăng tỉ lệ trúng phép;Kết hợp 2-4;Orb Hiền Giả.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00165	c/csv/item_12.dat	rec 40 off 24 ps 1	All weapons Increases;ATK Combines 3-5;Thunder Orbs.^Only;usable on first;combine.{	Mọi vũ khí;Orb tăng ATK;Kết hợp 3-5 Orb Lôi Đế.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00166	c/csv/item_12.dat	rec 41 off 24 ps 1	All armor Increases;P.DEF Combines 3-5;Adamant Orbs.^Only;usable on first;combine.{	Mọi trang bị phòng thủ;Orb tăng DEF vật lý;Kết hợp 3-5 Orb Kim Cang.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00167	c/csv/item_12.dat	rec 42 off 23 ps 1	All armor Increases;M.DEF Combines 3-5;Spirit Orbs.^Only;usable on first;combine.{	Mọi trang bị phòng thủ;Orb tăng DEF phép;Kết hợp 3-5 Orb Tinh Linh.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00168	c/csv/item_12.dat	rec 43 off 23 ps 1	All weapons, gloves;Increases Hit Rate;Combines 3-5 Reaper;Orbs.^Only usable on;first combine.{	Mọi vũ khí, găng tay;Orb tăng tỉ lệ trúng;Kết hợp 3-5 Orb Tử Thần.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00169	c/csv/item_12.dat	rec 44 off 23 ps 1	Helms, boots;Increases Evasion;Combines 3-5 Shadow;Orbs.^Only usable on;first combine.{	Mũ, giày;Orb tăng né tránh;Kết hợp 3-5 Orb Linh Đế.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00170	c/csv/item_12.dat	rec 45 off 21 ps 1	All weapons, gloves;Increases Crit Rate;Combines 3-5 Bind;Orbs.^Only usable on;first combine.{	Mọi vũ khí, găng tay;Orb tăng chí mạng;Kết hợp 3-5 Orb Trói Buộc.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00171	c/csv/item_12.dat	rec 46 off 21 ps 1	Armor, boots;Increases Crit Resist;Combines 3-5 Will;Orbs.^Only usable on;first combine.{	Giáp, giày;Orb tăng kháng chí mạng;Kết hợp 3-5 Orb Quyết Ý.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00172	c/csv/item_12.dat	rec 47 off 24 ps 1	Armor, boots;Increases Max HP;Combines 3-5 Warlord;Orbs.^Only usable on;first combine.{	Giáp, giày;Orb tăng HP tối đa;Kết hợp 3-5 Orb Đấu Thần.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00173	c/csv/item_12.dat	rec 48 off 22 ps 1	Helms, gloves;Increases HP Recovery;Combines 3-5 Reson;Orbs.^Only usable on;first combine.{	Mũ, găng tay;Orb tăng lượng hồi HP;Kết hợp 3-5 Orb Cộng Hưởng.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00174	c/csv/item_12.dat	rec 49 off 22 ps 1	All weapons, gloves;Absorbs enemy HP;Combines 3-5 Blood;Orbs.^Only usable on;first combine.{	Mọi vũ khí, găng tay;Orb hút HP của địch;Kết hợp 3-5 Orb Hút Máu.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00175	c/csv/item_12.dat	rec 50 off 21 ps 1	Helms, boots;Increases Magic Hit;Rate Combines 3-5;Sage Orbs.^Only usable;on first combine.{	Mũ, giày;Orb tăng tỉ lệ trúng phép;Kết hợp 3-5 Orb Hiền Giả.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00176	c/csv/item_12.dat	rec 51 off 24 ps 1	All weapons, gloves;Increases Resistance;Combines 3-5 Sorcery;Orbs.^Only usable on;first combine.{	Mọi vũ khí, găng tay;Orb tăng kháng;Kết hợp 3-5 Orb Ma Đạo.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00177	c/csv/item_12.dat	rec 52 off 22 ps 1	All weapons, boots;Decreases Cooldown;Combines 3-5 Storm;Orbs.^Only usable on;first combine.{	Mọi vũ khí, giày;Orb giảm thời gian hồi;Kết hợp 3-5 Orb Bão Tố.;^Chỉ dùng được cho;lần kết hợp đầu tiên.{	
+A00178	c/csv/item_13.dat	rec 72 off 19 ps 1	A greatsword used by;Alex. It is broken;and unusable. The;initial L is engraved;on it.	Đại kiếm Alex từng;dùng. Đã gãy nên;không thể dùng được.;Có khắc chữ cái L;ở trên.	
+A00179	c/csv/item_13.dat	rec 75 off 23 ps 1	A spear used by;Evelyn. Broken,;leaving only the tip.;The initial L is;engraved on it.	Cây thương Evelyn;từng dùng. Đã gãy,;chỉ còn lại mũi.;Có khắc chữ cái L;ở trên.	
+A00180	c/csv/item_13.dat	rec 76 off 22 ps 1	Main and secondary;barrels of a heavy;tank. The initial L;is engraved on them.	Nòng chính và nòng;phụ của một xe tăng;hạng nặng. Có khắc chữ;cái L trên chúng.	
+A00181	c/csv/item_14.dat	rec 11 off 18 ps 1	An accessory proving;devotion to a;religious group;currently popular;across Moytura;Plains.	Phụ kiện chứng tỏ;sự sùng tín với một;giáo phái đang;thịnh hành khắp;Đồng Bằng;Moytura.	
+A00182	c/csv/item_14.dat	rec 14 off 17 ps 1	Photo of a;pink-haired girl;found in Tyr hideout.;Other than her hair;color, she looks just;like Ren.	Ảnh một cô gái;tóc hồng tìm thấy;trong nơi ẩn náu của Tir.;Trừ màu tóc, trông;cô ấy giống hệt;Ren.	
+A00183	c/csv/item_14.dat	rec 29 off 16 ps 1	A ring lost by a;Central mercenary. A;plain copper ring.;Best not to think;about it being inside;a bat belly.	Chiếc nhẫn lính đánh;thuê Central làm mất.;Một chiếc nhẫn đồng;trơn. Đừng nghĩ nó;từng nằm trong;bụng dơi.	
+A00184	c/csv/item_14.dat	rec 34 off 20 ps 1	Portrait found in;Central Tower. Shows;a purple-haired;woman. Tyr seems to;know her.	Bức chân dung tìm;thấy ở Tháp Central.;Vẽ một phụ nữ tóc tím.;Tir dường như;quen cô ấy.	
+A00185	c/csv/item_14.dat	rec 37 off 20 ps 1	A metal scrap found;in the Frozen Sea;cavern. The woman at;the Irem library;might be interested.	Mảnh kim loại tìm;thấy trong hang Biển;Băng. Người phụ nữ ở;thư viện Irem;có thể quan tâm.	
+A00186	c/csv/item_14.dat	rec 39 off 18 ps 1	A secret tool of;House Ronberg, famed;weapon smiths. It is;broken and cannot be;used as is.	Dụng cụ bí mật của;nhà Lonberg, các thợ;rèn vũ khí danh tiếng.;Đã hỏng, không thể;dùng nguyên trạng.	
+A00187	c/csv/item_14.dat	rec 50 off 19 ps 1	Work clothes ordered;by Rockville;Development Complex.;Who would wear this?	Đồng phục lao động do;Khu Phát Triển Rockville;đặt may. Ai lại;mặc cái này chứ?	
+A00188	c/csv/item_14.dat	rec 51 off 13 ps 1	A claw from an;Eastern Scorpion.;Cannot be eaten;before cooking.	Càng của Bọ Cạp;Phương Đông. Không thể;ăn trước khi;nấu chín.	
+A00189	c/csv/item_15.dat	rec 0 off 24 ps 1	Normal Quest Item A;recipe book teaching;how to craft Twilight;Soup Powder.	Vật phẩm nhiệm vụ thường;Sách học công thức;chế biến Bột Súp;Hoàng Hôn.	
+A00190	c/csv/item_15.dat	rec 1 off 17 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Mid Potion.	Vật phẩm tiêu hao;chiến đấu thường;Sách học công thức;chế biến Bình Thuốc Vừa.	
+A00191	c/csv/item_15.dat	rec 2 off 18 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft High Potion.	Vật phẩm tiêu hao;chiến đấu thường;Sách học công thức;chế biến Bình Thuốc Lớn.	
+A00192	c/csv/item_15.dat	rec 3 off 19 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Quick Potion.	Vật phẩm tiêu hao;chiến đấu thường;Sách học công thức;chế biến Bình Thuốc Nhanh.	
+A00193	c/csv/item_15.dat	rec 4 off 23 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Mid Quick;Potion.	Vật phẩm tiêu hao;chiến đấu thường;Sách học công thức;chế biến Bình Thuốc;Nhanh Vừa.	
+A00194	c/csv/item_15.dat	rec 5 off 24 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft High Quick;Potion.	Vật phẩm tiêu hao;chiến đấu thường;Sách học công thức;chế biến Bình Thuốc;Nhanh Lớn.	
+A00195	c/csv/item_15.dat	rec 7 off 20 ps 1	Normal Material A;recipe book teaching;how to craft Tough;Leather.	Nguyên liệu chế biến thường;Sách học;công thức chế biến;Da Dai.	
+A00196	c/csv/item_15.dat	rec 8 off 19 ps 1	Normal Material A;recipe book teaching;how to craft Essence;of Life.	Nguyên liệu chế biến thường;Sách học;công thức chế biến;Tinh Chất Sự Sống.	
+A00197	c/csv/item_15.dat	rec 9 off 20 ps 1	Normal Material A;recipe book teaching;how to craft Deadly;Poison.	Nguyên liệu chế biến thường;Sách học;công thức chế biến;Kịch Độc.	
+A00198	c/csv/item_15.dat	rec 10 off 25 ps 1	Normal Material A;recipe book teaching;how to craft;Reinforced Leather.	Nguyên liệu chế biến thường;Sách học;công thức chế biến;Da Cường Hoá.	
+A00199	c/csv/item_15.dat	rec 12 off 21 ps 1	Normal Material A;recipe book teaching;how to craft Curse of;Death.	Nguyên liệu chế biến thường;Sách học;công thức chế biến;Lời Nguyền Tử Vong.	
+A00200	c/csv/item_15.dat	rec 14 off 18 ps 1	Normal Material A;recipe book teaching;how to craft Source;of Magic.	Nguyên liệu chế biến thường;Sách học;công thức chế biến;Cội Nguồn Ma Lực.	
+A00201	c/csv/item_15.dat	rec 15 off 19 ps 1	Normal Material A;recipe book teaching;how to craft Essence;of Fire.	Nguyên liệu chế biến thường;Sách học;công thức chế biến;Tinh Chất Lửa.	
+A00202	c/csv/item_15.dat	rec 16 off 19 ps 1	`Hero{ Lv 21 2H-Sword A;recipe book teaching;how to craft;`Tourangeau{.	`Anh hùng{ cấp 21 kiếm 2 tay;Sách học công thức;chế biến;`Turangear{.	
+A00203	c/csv/item_15.dat	rec 17 off 18 ps 1	`Hero{ Lv 21 2H-Sword A;recipe book teaching;how to craft;`Caladbolg{.	`Anh hùng{ cấp 21 kiếm 2 tay;Sách học công thức;chế biến;`Kelabog{.	
+A00204	c/csv/item_15.dat	rec 22 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 21;Spear `Elven Wing;Spear{.	Sách học cách;chế biến `Anh hùng{;cấp 21 thương;`Elven Wingspear{.	
+A00205	c/csv/item_15.dat	rec 24 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 22;Gloves `Main Combat;Gloves{.	Sách học cách;chế biến `Anh hùng{;cấp 22 găng tay;`Main Combat Gauntlet{.	
+A00206	c/csv/item_15.dat	rec 25 off 23 ps 1	Book to learn how to;craft `Hero{ Lv 22;Gloves `Phantom;Gloves{.	Sách học cách;chế biến `Anh hùng{;cấp 22 găng tay;`Phantom Glove{.	
+A00207	c/csv/item_15.dat	rec 26 off 26 ps 1	Book to learn how to;craft `Hero{ Lv 23;Shoes `Main Combat;Boots{.	Sách học cách;chế biến `Anh hùng{;cấp 23 giày;`Main Combat Shoes{.	
+A00208	c/csv/item_15.dat	rec 27 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 23;Shoes `Phantom;Greaves{.	Sách học cách;chế biến `Anh hùng{;cấp 23 giày;`Phantom Greave{.	
+A00209	c/csv/item_15.dat	rec 28 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 24;Armor `Main Combat;Suit{.	Sách học cách;chế biến `Anh hùng{;cấp 24 giáp;`Main Combat Suit{.	
+A00210	c/csv/item_15.dat	rec 33 off 23 ps 1	Book to learn how to;craft `Hero{ Lv 26;Shield `Bone;Protector{.	Sách học cách;chế biến `Anh hùng{;cấp 26 khiên;`Bone Protector{.	
+A00211	c/csv/item_15.dat	rec 35 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 43;Gloves `Kayon;Gauntlets{.	Sách học cách;chế biến `Anh hùng{;cấp 43 găng tay;`Kaiyan Gauntlet{.	
+A00212	c/csv/item_15.dat	rec 38 off 24 ps 1	Book to learn how to;craft <Set{ Lv 44;Gloves <Angel Wing;Hand{.	Sách học cách;chế biến <Bộ{;cấp 44 găng tay;<Angel Wing Hand{.	
+A00213	c/csv/item_15.dat	rec 39 off 24 ps 1	Book to learn how to;craft <Set{ Lv 44;Gloves <Dragonbone;Hand{.	Sách học cách;chế biến <Bộ{;cấp 44 găng tay;<Dragon Bone Hand{.	
+A00214	c/csv/item_15.dat	rec 40 off 26 ps 1	Book to learn how to;craft `Hero{ Lv 45 2H;Sword `Red Lion;Claymore{.	Sách học cách;chế biến `Anh hùng{;cấp 45 kiếm 2 tay;`Đại Kiếm Sư Tử Đỏ{.	
+A00215	c/csv/item_15.dat	rec 41 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 45 2H;Sword `Blue Wyvern;Axe{.	Sách học cách;chế biến `Anh hùng{;cấp 45 kiếm 2 tay;`Rìu Long Phi Xanh{.	
+A00216	c/csv/item_15.dat	rec 42 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 45 1H;Sword `Phantom;Breaker{.	Sách học cách;chế biến `Anh hùng{;cấp 45 kiếm 1 tay;`Phantom Breaker{.	
+A00217	c/csv/item_15.dat	rec 52 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 47;Shield `Requid;Defender{.	Sách học công thức;chế biến `Anh hùng{;cấp 47 khiên;`Liquid Defender{.	
+A00218	c/csv/item_15.dat	rec 53 off 23 ps 1	A book to learn the;recipe for `Hero{ Lv 47;Shield `Grand;Defender{.	Sách học công thức;chế biến `Anh hùng{;cấp 47 khiên;`Grand Defender{.	
+A00219	c/csv/item_15.dat	rec 54 off 21 ps 1	A book to learn the;recipe for `Hero{ Lv 54;2H Sword `Divine;Saber{.	Sách học công thức;chế biến `Anh hùng{;cấp 54 kiếm 2 tay;`Divine Saber{.	
+A00220	c/csv/item_15.dat	rec 56 off 25 ps 1	A book to learn the;recipe for `Hero{ Lv 54;1H Sword `Assault Rune;Swd{.	Sách học công thức;chế biến `Anh hùng{;cấp 54 kiếm 1 tay;`Kiếm Rune Cuồng Công{.	
+A00221	c/csv/item_15.dat	rec 62 off 25 ps 1	A book to learn the;recipe for `Hero{ Lv 57;Gloves `Titan War;Gloves{.	Sách học công thức;chế biến `Anh hùng{;cấp 57 găng tay;`Titan Combat Gauntlet{.	
+A00222	c/csv/item_15.dat	rec 63 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 57;Gloves `Skuld;Gauntlets{.	Sách học công thức;chế biến `Anh hùng{;cấp 57 găng tay;`Skuld Gauntlet{.	
+A00223	c/csv/item_15.dat	rec 64 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 58;Boots `Titan War;Boots{.	Sách học công thức;chế biến `Anh hùng{;cấp 58 giày;`Titan Combat Shoes{.	
+A00224	c/csv/item_15.dat	rec 93 off 25 ps 1	`Hero{ Lv.77 Shield A;book to learn the;recipe for `Garunzeel;Shield{.	`Anh hùng{ cấp 77 khiên;Sách học công thức;chế biến;`Garunzeel Shield{.	
+A00225	c/csv/item_15.dat	rec 94 off 24 ps 1	<Set{ Lv.94 Gloves A;book to learn the;recipe for <Acheyaki;Gloves{.	<Bộ{ cấp 94 găng tay;Sách học công thức;chế biến;<Acheyaki Gauntlet{.	
+A00226	c/csv/item_15.dat	rec 95 off 22 ps 1	<Set{ Lv.94 Gloves A;book to learn the;recipe for <Wyvern;Gloves{.	<Bộ{ cấp 94 găng tay;Sách học công thức;chế biến;<Găng Tay Phi Long Xanh{.	
+A00227	c/csv/item_15.dat	rec 96 off 22 ps 1	`Hero{ Lv.95 Gloves A;book to learn the;recipe for `Gavidu;Gloves{.	`Anh hùng{ cấp 95 găng tay;Sách học công thức;chế biến;`Gabidu Gauntlet{.	
+A00228	c/csv/item_15.dat	rec 97 off 23 ps 1	`Hero{ Lv.95 Gloves A;book to learn the;recipe for `Tyr War;Gloves{.	`Anh hùng{ cấp 95 găng tay;Sách học công thức;chế biến;`Tir War Gauntlet{.	
+A00229	c/csv/item_15.dat	rec 101 off 26 ps 1	`Hero{ Lv.96 1H Sword A;book to learn the;recipe for `True Demon;Slayer{.	`Anh hùng{ cấp 96 kiếm 1 tay;Sách học công thức;chế biến;`Chân Kiếm Ma Đạo Tàn Sát{.	
+A00230	c/csv/item_15.dat	rec 104 off 19 ps 1	`Hero{ Lv.96 Spear A;book to learn the;recipe for `Agnar;Pike{.	`Anh hùng{ cấp 96 thương;Sách học công thức;chế biến;`Agnar Spear{.	
+A00231	c/csv/item_15.dat	rec 105 off 20 ps 1	`Hero{ Lv.96 Spear A;book to learn the;recipe for;`Riftressive{.	`Anh hùng{ cấp 96 thương;Sách học công thức;chế biến;`Rift Reave{.	
+A00232	c/csv/item_15.dat	rec 106 off 21 ps 1	`Hero{ Lv.96 Boots A;book to learn the;recipe for `Gavidu;Boots{.	`Anh hùng{ cấp 96 giày;Sách học công thức;chế biến;`Gabidu Boots{.	
+A00233	c/csv/item_15.dat	rec 107 off 22 ps 1	`Hero{ Lv.96 Boots A;book to learn the;recipe for `Tyr War;Boots{.	`Anh hùng{ cấp 96 giày;Sách học công thức;chế biến;`Tir War Shoes{.	
+A00234	c/csv/item_15.dat	rec 108 off 20 ps 1	`Hero{ Lv.97 Armor A;book to learn the;recipe for `Gavidu;Coat{.	`Anh hùng{ cấp 97 giáp;Sách học công thức;chế biến;`Gabidu Coat{.	
+A00235	c/csv/item_15.dat	rec 109 off 22 ps 1	`Hero{ Lv.97 Armor A;book to learn the;recipe for `Tyr War;Armor{.	`Anh hùng{ cấp 97 giáp;Sách học công thức;chế biến;`Tir War Armor{.	
+A00236	c/csv/item_15.dat	rec 112 off 20 ps 1	`Hero{ Lv.98 Helm A;book to learn the;recipe for `Gavidu;Helm{.	`Anh hùng{ cấp 98 mũ giáp;Sách học công thức;chế biến;`Gabidu Helm{.	
+A00237	c/csv/item_15.dat	rec 113 off 21 ps 1	`Hero{ Lv.98 Helm A;book to learn the;recipe for `Tyr War;Helm{.	`Anh hùng{ cấp 98 mũ giáp;Sách học công thức;chế biến;`Tir War Helm{.	
+A00238	c/csv/item_15.dat	rec 114 off 20 ps 1	`Hero{ Lv.99 Shield A;book to learn the;recipe for;`Unbreakable{.	`Anh hùng{ cấp 99 khiên;Sách học công thức;chế biến;`Unbreakable{.	
+A00239	c/csv/item_15.dat	rec 115 off 24 ps 1	`Hero{ Lv.99 Shield A;book to learn the;recipe for `Grandish;Shield{.	`Anh hùng{ cấp 99 khiên;Sách học công thức;chế biến;`Grandish Shield{.	
+A00240	c/csv/item_16.dat	rec 0 off 25 ps 1	Warrior Skillbook;Req. Level: Lv.1;Attacks enemies up to;3 times in melee;using a 2H sword or;2H axe.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.1;Tấn công địch tối đa;3 lần khi cận chiến;bằng kiếm 2 tay;hoặc rìu 2 tay.	
+A00241	c/csv/item_16.dat	rec 1 off 25 ps 1	Warrior Skillbook;Req. Level: Lv.4;Attacks enemies up to;3 times in melee;using a 2H sword or;2H axe.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.4;Tấn công địch tối đa;3 lần khi cận chiến;bằng kiếm 2 tay;hoặc rìu 2 tay.	
+A00242	c/csv/item_16.dat	rec 2 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.22;Attack enemies up to;3 times with a 2H;Sword or 2H Axe.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.22;Tấn công địch tối đa 3;lần bằng kiếm 2 tay;hoặc rìu 2 tay.	
+A00243	c/csv/item_16.dat	rec 3 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.1 Rush;quickly toward;enemies ahead.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.1 Lao;nhanh về phía;kẻ địch phía trước.	
+A00244	c/csv/item_16.dat	rec 4 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.10;Rush quickly toward;enemies ahead.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.10 Lao;nhanh về phía;kẻ địch phía trước.	
+A00245	c/csv/item_16.dat	rec 5 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.48;Rush quickly toward;enemies ahead.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.48 Lao;nhanh về phía;kẻ địch phía trước.	
+A00246	c/csv/item_16.dat	rec 6 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.74;Rush quickly toward;enemies ahead.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.74 Lao;nhanh về phía;kẻ địch phía trước.	
+A00247	c/csv/item_16.dat	rec 7 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.14;Leap and strike;enemies ahead to deal;melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.14;Nhảy lên đánh kẻ địch;phía trước, gây sát;thương cận chiến.	
+A00248	c/csv/item_16.dat	rec 8 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.26;Leap and strike;enemies ahead to deal;melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.26;Nhảy lên đánh kẻ địch;phía trước, gây sát;thương cận chiến.	
+A00249	c/csv/item_16.dat	rec 9 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.38;Leap and strike;enemies ahead to deal;melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.38;Nhảy lên đánh kẻ địch;phía trước, gây sát;thương cận chiến.	
+A00250	c/csv/item_16.dat	rec 10 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.46;Leap and strike;enemies ahead to deal;melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.46;Nhảy lên đánh kẻ địch;phía trước, gây sát;thương cận chiến.	
+A00251	c/csv/item_16.dat	rec 11 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.58;Leap and strike;enemies ahead to deal;melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.58;Nhảy lên đánh kẻ địch;phía trước, gây sát;thương cận chiến.	
+A00252	c/csv/item_16.dat	rec 12 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.68;Leap and strike;enemies ahead to deal;melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.68;Nhảy lên đánh kẻ địch;phía trước, gây sát;thương cận chiến.	
+A00253	c/csv/item_16.dat	rec 13 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.80;Leap and strike;enemies ahead to deal;melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.80;Nhảy lên đánh kẻ địch;phía trước, gây sát;thương cận chiến.	
+A00254	c/csv/item_16.dat	rec 14 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.6;Strike enemies ahead;to knock them down.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.6;Đánh kẻ địch phía trước;khiến chúng ngã xuống.	
+A00255	c/csv/item_16.dat	rec 15 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.28;Strike enemies ahead;to knock them down.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.28;Đánh kẻ địch phía trước;khiến chúng ngã xuống.	
+A00256	c/csv/item_16.dat	rec 16 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.54;Strike enemies ahead;to knock them down.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.54;Đánh kẻ địch phía trước;khiến chúng ngã xuống.	
+A00257	c/csv/item_16.dat	rec 17 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.78;Strike enemies ahead;to knock them down.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.78;Đánh kẻ địch phía trước;khiến chúng ngã xuống.	
+A00258	c/csv/item_16.dat	rec 18 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.4;Slash upward to deal;melee damage. Grants;invulnerability.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.4;Chém hất lên gây sát;thương cận chiến. Nhận;bất khả xâm phạm.	
+A00259	c/csv/item_16.dat	rec 19 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.16;Slash upward to deal;melee damage. Grants;invulnerability.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.16;Chém hất lên gây sát;thương cận chiến. Nhận;bất khả xâm phạm.	
+A00260	c/csv/item_16.dat	rec 20 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.34;Slash upward to deal;melee damage. Grants;invulnerability.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.34;Chém hất lên gây sát;thương cận chiến. Nhận;bất khả xâm phạm.	
+A00261	c/csv/item_16.dat	rec 21 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.50;Slash upward to deal;melee damage. Grants;invulnerability.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.50;Chém hất lên gây sát;thương cận chiến. Nhận;bất khả xâm phạm.	
+A00262	c/csv/item_16.dat	rec 22 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.64;Slash upward to deal;melee damage. Grants;invulnerability.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.64;Chém hất lên gây sát;thương cận chiến. Nhận;bất khả xâm phạm.	
+A00263	c/csv/item_16.dat	rec 23 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.82;Slash upward to deal;melee damage. Grants;invulnerability.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.82;Chém hất lên gây sát;thương cận chiến. Nhận;bất khả xâm phạm.	
+A00264	c/csv/item_16.dat	rec 24 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.20;Spin and strike all;nearby enemies to;deal melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.20;Xoay người đánh mọi;kẻ địch xung quanh,;gây sát thương cận chiến.	
+A00265	c/csv/item_16.dat	rec 25 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.36;Spin and strike all;nearby enemies to;deal melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.36;Xoay người đánh mọi;kẻ địch xung quanh,;gây sát thương cận chiến.	
+A00266	c/csv/item_16.dat	rec 26 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.52;Spin and strike all;nearby enemies to;deal melee damage.	Sách Kỹ Năng Warrior;Cấp giới hạn: Lv.52;Xoay người đánh mọi;kẻ địch xung quanh,;gây sát thương cận chiến.	
+A00267	c/csv/item_16.dat	rec 27 off 20 ps 1	Warrior Skill Book;Req Lv72 Spins around;to deal melee DMG to;nearby enemies.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv72 Xoay;người gây sát thương;cận chiến lên địch quanh.	
+A00268	c/csv/item_16.dat	rec 28 off 20 ps 1	Warrior Skill Book;Req Lv86 Spins around;to deal melee DMG to;nearby enemies.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv86 Xoay;người gây sát thương;cận chiến lên địch quanh.	
+A00269	c/csv/item_16.dat	rec 29 off 16 ps 1	Warrior Skill Book;Req Lv12 Taunts;nearby foes to gather;them. Grants;invincibility.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv12 Khiêu;khích địch xung quanh;để tập hợp chúng.;Nhận bất khả xâm phạm.	
+A00270	c/csv/item_16.dat	rec 30 off 16 ps 1	Warrior Skill Book;Req Lv18 Taunts;nearby foes to gather;them. Grants;invincibility.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv18 Khiêu;khích địch xung quanh;để tập hợp chúng.;Nhận bất khả xâm phạm.	
+A00271	c/csv/item_16.dat	rec 31 off 16 ps 1	Warrior Skill Book;Req Lv40 Taunts;nearby foes to gather;them. Grants;invincibility.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv40 Khiêu;khích địch xung quanh;để tập hợp chúng.;Nhận bất khả xâm phạm.	
+A00272	c/csv/item_16.dat	rec 32 off 16 ps 1	Warrior Skill Book;Req Lv56 Taunts;nearby foes to gather;them. Grants;invincibility.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv56 Khiêu;khích địch xung quanh;để tập hợp chúng.;Nhận bất khả xâm phạm.	
+A00273	c/csv/item_16.dat	rec 33 off 16 ps 1	Warrior Skill Book;Req Lv70 Taunts;nearby foes to gather;them. Grants;invincibility.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv70 Khiêu;khích địch xung quanh;để tập hợp chúng.;Nhận bất khả xâm phạm.	
+A00274	c/csv/item_16.dat	rec 34 off 16 ps 1	Warrior Skill Book;Req Lv84 Taunts;nearby foes to gather;them. Grants;invincibility.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv84 Khiêu;khích địch xung quanh;để tập hợp chúng.;Nhận bất khả xâm phạm.	
+A00275	c/csv/item_16.dat	rec 35 off 17 ps 1	Warrior Skill Book;Req Lv24 Dashes;forward while;unleashing quick;attacks.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv24 Lao;về phía trước trong khi;tung đòn tấn công;nhanh.	
+A00276	c/csv/item_16.dat	rec 36 off 17 ps 1	Warrior Skill Book;Req Lv44 Dashes;forward while;unleashing quick;attacks.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv44 Lao;về phía trước trong khi;tung đòn tấn công;nhanh.	
+A00277	c/csv/item_16.dat	rec 37 off 17 ps 1	Warrior Skill Book;Req Lv66 Dashes;forward while;unleashing quick;attacks.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv66 Lao;về phía trước trong khi;tung đòn tấn công;nhanh.	
+A00278	c/csv/item_16.dat	rec 38 off 17 ps 1	Warrior Skill Book;Req Lv88 Dashes;forward while;unleashing quick;attacks.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv88 Lao;về phía trước trong khi;tung đòn tấn công;nhanh.	
+A00279	c/csv/item_16.dat	rec 39 off 21 ps 1	Warrior Skill Book;Req Lv8 Consumes all;SP to unleash a;powerful melee;strike.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv8 Tiêu hao;toàn bộ SP để tung;một đòn cận chiến;cực mạnh.	
+A00280	c/csv/item_16.dat	rec 40 off 21 ps 1	Warrior Skill Book;Req Lv32 Consumes all;SP to unleash a;powerful melee;strike.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv32 Tiêu hao;toàn bộ SP để tung;một đòn cận chiến;cực mạnh.	
+A00281	c/csv/item_16.dat	rec 41 off 21 ps 1	Warrior Skill Book;Req Lv62 Consumes all;SP to unleash a;powerful melee;strike.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv62 Tiêu hao;toàn bộ SP để tung;một đòn cận chiến;cực mạnh.	
+A00282	c/csv/item_16.dat	rec 42 off 21 ps 1	Warrior Skill Book;Req Lv90 Consumes all;SP to unleash a;powerful melee;strike.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv90 Tiêu hao;toàn bộ SP để tung;một đòn cận chiến;cực mạnh.	
+A00283	c/csv/item_16.dat	rec 43 off 16 ps 1	Warrior Skill Book;Req Lv30 Consumes SP;to deal melee DMG;forward.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv30 Tiêu hao;SP để gây sát thương;cận chiến phía trước.	
+A00284	c/csv/item_16.dat	rec 44 off 16 ps 1	Warrior Skill Book;Req Lv42 Consumes SP;to deal melee DMG;forward.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv42 Tiêu hao;SP để gây sát thương;cận chiến phía trước.	
+A00285	c/csv/item_16.dat	rec 45 off 16 ps 1	Warrior Skill Book;Req Lv60 Consumes SP;to deal melee DMG;forward.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv60 Tiêu hao;SP để gây sát thương;cận chiến phía trước.	
+A00286	c/csv/item_16.dat	rec 46 off 16 ps 1	Warrior Skill Book;Req Lv76 Consumes SP;to deal melee DMG;forward.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv76 Tiêu hao;SP để gây sát thương;cận chiến phía trước.	
+A00287	c/csv/item_16.dat	rec 47 off 16 ps 1	Warrior Skill Book;Req Lv92 Consumes SP;to deal melee DMG;forward.	Sách Kỹ Năng Warrior;Cấp giới hạn Lv92 Tiêu hao;SP để gây sát thương;cận chiến phía trước.	
+A00288	c/csv/item_16.dat	rec 48 off 17 ps 1	Rogue Skill Book Req;Lv1 Strikes up to 4;times with Dagger/1H;Sword in melee.	Sách Kỹ Năng Rogue;Cấp giới hạn Lv1 Đánh tối;đa 4 lần cận chiến bằng;Dao Găm/kiếm 1 tay.	
+A00289	c/csv/item_16.dat	rec 49 off 17 ps 1	Rogue Skill Book Req;Lv4 Strikes up to 4;times with Dagger/1H;Sword in melee.	Sách Kỹ Năng Rogue;Cấp giới hạn Lv4 Đánh tối;đa 4 lần cận chiến bằng;Dao Găm/kiếm 1 tay.	
+A00290	c/csv/item_16.dat	rec 50 off 17 ps 1	Rogue Skill Book Req;Lv14 Strikes up to 4;times with Dagger/1H;Sword in melee.	Sách Kỹ Năng Rogue;Cấp giới hạn Lv14 Đánh tối;đa 4 lần cận chiến bằng;Dao Găm/kiếm 1 tay.	
+A00291	c/csv/item_16.dat	rec 51 off 17 ps 1	Rogue Skill Book Req;Lv22 Strikes up to 4;times with Dagger/1H;Sword in melee.	Sách Kỹ Năng Rogue;Cấp giới hạn Lv22 Đánh tối;đa 4 lần cận chiến bằng;Dao Găm/kiếm 1 tay.	
+A00292	c/csv/item_16.dat	rec 56 off 16 ps 1	Rogue Skillbook Req.;Level: LV8 Melee;strike against;frontal foes.;Consumes Crit Orbs.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV8 Đánh;cận chiến vào kẻ địch;phía trước.;Tiêu hao Cầu Chí Mạng.	
+A00293	c/csv/item_16.dat	rec 57 off 16 ps 1	Rogue Skillbook Req.;Level: LV28 Melee;strike against;frontal foes.;Consumes Crit Orbs.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV28 Đánh;cận chiến vào kẻ địch;phía trước.;Tiêu hao Cầu Chí Mạng.	
+A00294	c/csv/item_16.dat	rec 58 off 16 ps 1	Rogue Skillbook Req.;Level: LV42 Melee;strike against;frontal foes.;Consumes Crit Orbs.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV42 Đánh;cận chiến vào kẻ địch;phía trước.;Tiêu hao Cầu Chí Mạng.	
+A00295	c/csv/item_16.dat	rec 59 off 16 ps 1	Rogue Skillbook Req.;Level: LV62 Melee;strike against;frontal foes.;Consumes Crit Orbs.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV62 Đánh;cận chiến vào kẻ địch;phía trước.;Tiêu hao Cầu Chí Mạng.	
+A00296	c/csv/item_16.dat	rec 60 off 16 ps 1	Rogue Skillbook Req.;Level: LV78 Melee;strike against;frontal foes.;Consumes Crit Orbs.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV78 Đánh;cận chiến vào kẻ địch;phía trước.;Tiêu hao Cầu Chí Mạng.	
+A00297	c/csv/item_16.dat	rec 61 off 16 ps 1	Rogue Skillbook Req.;Level: LV10 Perform;melee strike while;dodging sideways.;Grants Crit Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV10 Vừa;né sang bên vừa;đánh cận chiến.;Nhận Cầu Chí Mạng.	
+A00298	c/csv/item_16.dat	rec 62 off 16 ps 1	Rogue Skillbook Req.;Level: LV36 Perform;melee strike while;dodging sideways.;Grants Crit Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV36 Vừa;né sang bên vừa;đánh cận chiến.;Nhận Cầu Chí Mạng.	
+A00299	c/csv/item_16.dat	rec 63 off 16 ps 1	Rogue Skillbook Req.;Level: LV56 Perform;melee strike while;dodging sideways.;Grants Crit Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV56 Vừa;né sang bên vừa;đánh cận chiến.;Nhận Cầu Chí Mạng.	
+A00300	c/csv/item_16.dat	rec 64 off 16 ps 1	Rogue Skillbook Req.;Level: LV82 Perform;melee strike while;dodging sideways.;Grants Crit Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV82 Vừa;né sang bên vừa;đánh cận chiến.;Nhận Cầu Chí Mạng.	
+A00301	c/csv/item_16.dat	rec 65 off 18 ps 1	Rogue Skillbook Req.;Level: LV1;Temporarily increases;Evasion.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV1;Tạm thời tăng;né tránh.	
+A00302	c/csv/item_16.dat	rec 66 off 18 ps 1	Rogue Skillbook Req.;Level: LV18;Temporarily increases;Evasion.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV18;Tạm thời tăng;né tránh.	
+A00303	c/csv/item_16.dat	rec 67 off 18 ps 1	Rogue Skillbook Req.;Level: LV34;Temporarily increases;Evasion.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV34;Tạm thời tăng;né tránh.	
+A00304	c/csv/item_16.dat	rec 68 off 18 ps 1	Rogue Skillbook Req.;Level: LV48;Temporarily increases;Evasion.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV48;Tạm thời tăng;né tránh.	
+A00305	c/csv/item_16.dat	rec 69 off 18 ps 1	Rogue Skillbook Req.;Level: LV60;Temporarily increases;Evasion.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV60;Tạm thời tăng;né tránh.	
+A00306	c/csv/item_16.dat	rec 70 off 18 ps 1	Rogue Skillbook Req.;Level: LV74;Temporarily increases;Evasion.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV74;Tạm thời tăng;né tránh.	
+A00307	c/csv/item_16.dat	rec 71 off 16 ps 1	Rogue Skillbook Req.;Level: LV6 Step back;then dash forward to;strike. Grants Crit;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV6 Lùi;lại rồi lao tới đánh.;Nhận Cầu;Chí Mạng.	
+A00308	c/csv/item_16.dat	rec 72 off 16 ps 1	Rogue Skillbook Req.;Level: LV26 Step back;then dash forward to;strike. Grants Crit;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV26 Lùi;lại rồi lao tới đánh.;Nhận Cầu;Chí Mạng.	
+A00309	c/csv/item_16.dat	rec 73 off 16 ps 1	Rogue Skillbook Req.;Level: LV46 Step back;then dash forward to;strike. Grants Crit;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV46 Lùi;lại rồi lao tới đánh.;Nhận Cầu;Chí Mạng.	
+A00310	c/csv/item_16.dat	rec 74 off 16 ps 1	Rogue Skillbook Req.;Level: LV66 Step back;then dash forward to;strike. Grants Crit;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV66 Lùi;lại rồi lao tới đánh.;Nhận Cầu;Chí Mạng.	
+A00311	c/csv/item_16.dat	rec 75 off 16 ps 1	Rogue Skillbook Req.;Level: LV84 Step back;then dash forward to;strike. Grants Crit;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV84 Lùi;lại rồi lao tới đánh.;Nhận Cầu;Chí Mạng.	
+A00312	c/csv/item_16.dat	rec 76 off 15 ps 1	Rogue Skillbook Req.;Level: LV16 Stuns an;enemy. Consumes Crit;Orbs.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV16 Làm;choáng một kẻ địch.;Tiêu hao Cầu Chí Mạng.	
+A00313	c/csv/item_16.dat	rec 77 off 15 ps 1	Rogue Skillbook Req:;LV32 Stuns an enemy.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV32 Làm;choáng kẻ địch. Tiêu;hao Cầu Chí Mạng.	
+A00314	c/csv/item_16.dat	rec 78 off 15 ps 1	Rogue Skillbook Req:;LV44 Stuns an enemy.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV44 Làm;choáng kẻ địch. Tiêu;hao Cầu Chí Mạng.	
+A00315	c/csv/item_16.dat	rec 79 off 15 ps 1	Rogue Skillbook Req:;LV54 Stuns an enemy.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV54 Làm;choáng kẻ địch. Tiêu;hao Cầu Chí Mạng.	
+A00316	c/csv/item_16.dat	rec 80 off 15 ps 1	Rogue Skillbook Req:;LV72 Stuns an enemy.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV72 Làm;choáng kẻ địch. Tiêu;hao Cầu Chí Mạng.	
+A00317	c/csv/item_16.dat	rec 81 off 15 ps 1	Rogue Skillbook Req:;LV86 Stuns an enemy.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV86 Làm;choáng kẻ địch. Tiêu;hao Cầu Chí Mạng.	
+A00318	c/csv/item_16.dat	rec 82 off 16 ps 1	Rogue Skillbook Req:;LV24 Throws a dagger;for a ranged attack.;Generates Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV24 Ném;dao găm để tấn công;tầm xa. Tạo ra;Cầu Chí Mạng.	
+A00319	c/csv/item_16.dat	rec 83 off 16 ps 1	Rogue Skillbook Req:;LV52 Throws a dagger;for a ranged attack.;Generates Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV52 Ném;dao găm để tấn công;tầm xa. Tạo ra;Cầu Chí Mạng.	
+A00320	c/csv/item_16.dat	rec 84 off 16 ps 1	Rogue Skillbook Req:;LV70 Throws a dagger;for a ranged attack.;Generates Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV70 Ném;dao găm để tấn công;tầm xa. Tạo ra;Cầu Chí Mạng.	
+A00321	c/csv/item_16.dat	rec 85 off 16 ps 1	Rogue Skillbook Req:;LV90 Throws a dagger;for a ranged attack.;Generates Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV90 Ném;dao găm để tấn công;tầm xa. Tạo ra;Cầu Chí Mạng.	
+A00322	c/csv/item_16.dat	rec 86 off 15 ps 1	Rogue Skillbook Req:;LV20 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV20 Gây;sát thương cận chiến lên;địch phía trước và giảm;độ chính xác. Tạo;Cầu Chí Mạng.	
+A00323	c/csv/item_16.dat	rec 87 off 15 ps 1	Rogue Skillbook Req:;LV40 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV40 Gây;sát thương cận chiến lên;địch phía trước và giảm;độ chính xác. Tạo;Cầu Chí Mạng.	
+A00324	c/csv/item_16.dat	rec 88 off 15 ps 1	Rogue Skillbook Req:;LV68 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV68 Gây;sát thương cận chiến lên;địch phía trước và giảm;độ chính xác. Tạo;Cầu Chí Mạng.	
+A00325	c/csv/item_16.dat	rec 89 off 15 ps 1	Rogue Skillbook Req:;LV88 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV88 Gây;sát thương cận chiến lên;địch phía trước và giảm;độ chính xác. Tạo;Cầu Chí Mạng.	
+A00326	c/csv/item_16.dat	rec 90 off 17 ps 1	Rogue Skillbook Req:;LV30 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV30 Tung;đòn cận chiến liên tiếp;vào địch phía trước.;Tiêu hao Cầu;Chí Mạng.	
+A00327	c/csv/item_16.dat	rec 91 off 17 ps 1	Rogue Skillbook Req:;LV50 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV50 Tung;đòn cận chiến liên tiếp;vào địch phía trước.;Tiêu hao Cầu;Chí Mạng.	
+A00328	c/csv/item_16.dat	rec 92 off 17 ps 1	Rogue Skillbook Req:;LV64 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV64 Tung;đòn cận chiến liên tiếp;vào địch phía trước.;Tiêu hao Cầu;Chí Mạng.	
+A00329	c/csv/item_16.dat	rec 93 off 17 ps 1	Rogue Skillbook Req:;LV76 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV76 Tung;đòn cận chiến liên tiếp;vào địch phía trước.;Tiêu hao Cầu;Chí Mạng.	
+A00330	c/csv/item_16.dat	rec 94 off 17 ps 1	Rogue Skillbook Req:;LV92 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.	Sách Kỹ Năng Rogue;Cấp giới hạn: LV92 Tung;đòn cận chiến liên tiếp;vào địch phía trước.;Tiêu hao Cầu;Chí Mạng.	
+A00331	c/csv/item_17.dat	rec 0 off 21 ps 1	Gunslinger Skillbook;Req: LV1 Launches a;ranged attack using;Heavy/Light Guns.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: LV1 Tấn;công tầm xa bằng;Súng Nặng/Súng Nhẹ.	
+A00332	c/csv/item_17.dat	rec 1 off 21 ps 1	Gunslinger Skillbook;Req: LV4 Launches a;ranged attack using;Heavy/Light Guns.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: LV4 Tấn;công tầm xa bằng;Súng Nặng/Súng Nhẹ.	
+A00333	c/csv/item_17.dat	rec 2 off 21 ps 1	Gunslinger Skillbook;Req: LV10 Launches a;ranged attack using;Heavy/Light Guns.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: LV10 Tấn;công tầm xa bằng;Súng Nặng/Súng Nhẹ.	
+A00334	c/csv/item_17.dat	rec 3 off 21 ps 1	Gunslinger Skillbook;Req: LV22 Launches a;ranged attack using;Heavy/Light Guns.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: LV22 Tấn;công tầm xa bằng;Súng Nặng/Súng Nhẹ.	
+A00335	c/csv/item_17.dat	rec 4 off 20 ps 1	Gunslinger Skillbook;Req: LV1 Fires;bullets dealing;ranged DMG to;enemies.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: LV1 Bắn;đạn gây sát thương;tầm xa lên;kẻ địch.	
+A00336	c/csv/item_17.dat	rec 5 off 20 ps 1	Gunslinger Skillbook;Req: LV26 Fires;bullets dealing;ranged DMG to;enemies.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: LV26 Bắn;đạn gây sát thương;tầm xa lên;kẻ địch.	
+A00337	c/csv/item_17.dat	rec 6 off 20 ps 1	Gunslinger Skillbook;Req: LV50 Fires;bullets dealing;ranged DMG to;enemies.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: LV50 Bắn;đạn gây sát thương;tầm xa lên;kẻ địch.	
+A00338	c/csv/item_17.dat	rec 7 off 16 ps 1	Gunslinger Skillbook;Req. Level: Lv76;Fires bullets that;deal ranged damage to;enemies.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv76;Bắn đạn gây sát thương;tầm xa lên;kẻ địch.	
+A00339	c/csv/item_17.dat	rec 8 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv12;Deals ranged damage;to enemies in an area;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv12;Gây sát thương tầm xa;lên kẻ địch trong;khu vực phía trước.	
+A00340	c/csv/item_17.dat	rec 9 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv28;Deals ranged damage;to enemies in an area;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv28;Gây sát thương tầm xa;lên kẻ địch trong;khu vực phía trước.	
+A00341	c/csv/item_17.dat	rec 10 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv48;Deals ranged damage;to enemies in an area;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv48;Gây sát thương tầm xa;lên kẻ địch trong;khu vực phía trước.	
+A00342	c/csv/item_17.dat	rec 11 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv64;Deals ranged damage;to enemies in an area;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv64;Gây sát thương tầm xa;lên kẻ địch trong;khu vực phía trước.	
+A00343	c/csv/item_17.dat	rec 12 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv80;Deals ranged damage;to enemies in an area;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv80;Gây sát thương tầm xa;lên kẻ địch trong;khu vực phía trước.	
+A00344	c/csv/item_17.dat	rec 13 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv4 Deals;ranged damage and;continuous fire;damage to enemies;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv4 Gây;sát thương tầm xa và;sát thương bắn liên tục;lên kẻ địch;phía trước.	
+A00345	c/csv/item_17.dat	rec 14 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv14;Deals ranged damage;and continuous fire;damage to enemies;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv14;Gây sát thương tầm xa;và sát thương bắn liên tục;lên kẻ địch;phía trước.	
+A00346	c/csv/item_17.dat	rec 15 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv32;Deals ranged damage;and continuous fire;damage to enemies;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv32;Gây sát thương tầm xa;và sát thương bắn liên tục;lên kẻ địch;phía trước.	
+A00347	c/csv/item_17.dat	rec 16 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv44;Deals ranged damage;and continuous fire;damage to enemies;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv44;Gây sát thương tầm xa;và sát thương bắn liên tục;lên kẻ địch;phía trước.	
+A00348	c/csv/item_17.dat	rec 17 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv56;Deals ranged damage;and continuous fire;damage to enemies;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv56;Gây sát thương tầm xa;và sát thương bắn liên tục;lên kẻ địch;phía trước.	
+A00349	c/csv/item_17.dat	rec 18 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv70;Deals ranged damage;and continuous fire;damage to enemies;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv70;Gây sát thương tầm xa;và sát thương bắn liên tục;lên kẻ địch;phía trước.	
+A00350	c/csv/item_17.dat	rec 19 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv82;Deals ranged damage;and continuous fire;damage to enemies;ahead.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv82;Gây sát thương tầm xa;và sát thương bắn liên tục;lên kẻ địch;phía trước.	
+A00351	c/csv/item_17.dat	rec 20 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv20;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv20;Gây sát thương tầm xa;lên địch xung quanh và;giảm Tốc độ;di chuyển.	
+A00352	c/csv/item_17.dat	rec 21 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv34;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv34;Gây sát thương tầm xa;lên địch xung quanh và;giảm Tốc độ;di chuyển.	
+A00353	c/csv/item_17.dat	rec 22 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv52;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv52;Gây sát thương tầm xa;lên địch xung quanh và;giảm Tốc độ;di chuyển.	
+A00354	c/csv/item_17.dat	rec 23 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv68;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv68;Gây sát thương tầm xa;lên địch xung quanh và;giảm Tốc độ;di chuyển.	
+A00355	c/csv/item_17.dat	rec 24 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv84;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv84;Gây sát thương tầm xa;lên địch xung quanh và;giảm Tốc độ;di chuyển.	
+A00356	c/csv/item_17.dat	rec 25 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv8;Switches to an;automatic firing;stance.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv8;Chuyển sang;tư thế bắn;tự động.	
+A00357	c/csv/item_17.dat	rec 26 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv22;Switches to an;automatic firing;stance.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv22;Chuyển sang;tư thế bắn;tự động.	
+A00358	c/csv/item_17.dat	rec 27 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv40;Switches to an;automatic firing;stance.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv40;Chuyển sang;tư thế bắn;tự động.	
+A00359	c/csv/item_17.dat	rec 28 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv60;Switches to an;automatic firing;stance.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv60;Chuyển sang;tư thế bắn;tự động.	
+A00360	c/csv/item_17.dat	rec 29 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv88;Switches to an;automatic firing;stance.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv88;Chuyển sang;tư thế bắn;tự động.	
+A00361	c/csv/item_17.dat	rec 30 off 21 ps 1	Gunslinger Skillbook;Req. Level: Lv6;Performs a ranged;attack against;enemies in front and;behind at once.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv6;Thực hiện đòn tấn công;tầm xa vào kẻ địch;ở phía trước và phía;sau cùng lúc.	
+A00362	c/csv/item_17.dat	rec 31 off 21 ps 1	Gunslinger Skillbook;Req. Level: Lv18;Performs a ranged;attack against;enemies in front and;behind at once.	Sách Kỹ Năng Gunslinger;Cấp giới hạn: Lv18;Thực hiện đòn tấn công;tầm xa vào kẻ địch;ở phía trước và phía;sau cùng lúc.	
+A00363	c/csv/item_17.dat	rec 32 off 21 ps 1	Gunslinger Tome Req.;LV42 Fires ranged;attacks;simultaneously at;foes in front and;behind.	Sách Kỹ Năng Gunslinger;Cấp giới hạn LV42 Bắn;tầm xa đồng thời;vào kẻ địch;ở phía trước và;phía sau.	
+A00364	c/csv/item_17.dat	rec 33 off 21 ps 1	Gunslinger Tome Req.;LV62 Fires ranged;attacks;simultaneously at;foes in front and;behind.	Sách Kỹ Năng Gunslinger;Cấp giới hạn LV62 Bắn;tầm xa đồng thời;vào kẻ địch;ở phía trước và;phía sau.	
+A00365	c/csv/item_17.dat	rec 34 off 21 ps 1	Gunslinger Tome Req.;LV78 Fires ranged;attacks;simultaneously at;foes in front and;behind.	Sách Kỹ Năng Gunslinger;Cấp giới hạn LV78 Bắn;tầm xa đồng thời;vào kẻ địch;ở phía trước và;phía sau.	
+A00366	c/csv/item_17.dat	rec 35 off 17 ps 1	Gunslinger Tome Req.;LV16 Deploys an;automated turret that;attacks enemies.	Sách Kỹ Năng Gunslinger;Cấp giới hạn LV16 Triển;khai tháp pháo tự động;tấn công kẻ địch.	
+A00367	c/csv/item_17.dat	rec 36 off 17 ps 1	Gunslinger Tome Req.;LV38 Deploys an;automated turret that;attacks enemies.	Sách Kỹ Năng Gunslinger;Cấp giới hạn LV38 Triển;khai tháp pháo tự động;tấn công kẻ địch.	
+A00368	c/csv/item_17.dat	rec 37 off 17 ps 1	Gunslinger Tome Req.;LV66 Deploys an;automated turret that;attacks enemies.	Sách Kỹ Năng Gunslinger;Cấp giới hạn LV66 Triển;khai tháp pháo tự động;tấn công kẻ địch.	
+A00369	c/csv/item_17.dat	rec 38 off 17 ps 1	Gunslinger Tome Req.;LV92 Deploys an;automated turret that;attacks enemies.	Sách Kỹ Năng Gunslinger;Cấp giới hạn LV92 Triển;khai tháp pháo tự động;tấn công kẻ địch.	
+A00370	c/csv/item_17.dat	rec 49 off 21 ps 1	Knight Tome Req. LV1;Performs up to 3;melee spear strikes;against enemies.	Sách Kỹ Năng Knight Cấp;giới hạn LV1 Tung tối đa;3 đòn đâm giáo cận chiến;vào kẻ địch.	
+A00371	c/csv/item_17.dat	rec 50 off 21 ps 1	Knight Tome Req. LV4;Performs up to 3;melee spear strikes;against enemies.	Sách Kỹ Năng Knight Cấp;giới hạn LV4 Tung tối đa;3 đòn đâm giáo cận chiến;vào kẻ địch.	
+A00372	c/csv/item_17.dat	rec 51 off 21 ps 1	Knight Tome Req. LV10;Performs up to 3;melee spear strikes;against enemies.	Sách Kỹ Năng Knight Cấp;giới hạn LV10 Tung tối đa;3 đòn đâm giáo cận chiến;vào kẻ địch.	
+A00373	c/csv/item_17.dat	rec 52 off 21 ps 1	Knight Tome Req. LV22;Performs up to 3;melee spear strikes;against enemies.	Sách Kỹ Năng Knight Cấp;giới hạn LV22 Tung tối đa;3 đòn đâm giáo cận chiến;vào kẻ địch.	
+A00374	c/csv/item_17.dat	rec 53 off 17 ps 1	Knight Tome Req. LV20;Quickly executes;melee attacks against;frontal enemies.	Sách Kỹ Năng Knight Cấp;giới hạn LV20 Nhanh;chóng tung đòn cận chiến;vào địch phía trước.	
+A00375	c/csv/item_17.dat	rec 54 off 17 ps 1	Knight Tome Req. LV40;Quickly executes;melee attacks against;frontal enemies.	Sách Kỹ Năng Knight Cấp;giới hạn LV40 Nhanh;chóng tung đòn cận chiến;vào địch phía trước.	
+A00376	c/csv/item_17.dat	rec 55 off 17 ps 1	Knight Tome Req. LV60;Quickly executes;melee attacks against;frontal enemies.	Sách Kỹ Năng Knight Cấp;giới hạn LV60 Nhanh;chóng tung đòn cận chiến;vào địch phía trước.	
+A00377	c/csv/item_17.dat	rec 56 off 17 ps 1	Knight Tome Req. LV80;Quickly executes;melee attacks against;frontal enemies.	Sách Kỹ Năng Knight Cấp;giới hạn LV80 Nhanh;chóng tung đòn cận chiến;vào địch phía trước.	
+A00378	c/csv/item_17.dat	rec 57 off 19 ps 1	Knight Skillbook Req.;Lv.4 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.4 Gây;sát thương cận chiến nặng;lên địch phía trước.;Tiêu hao;Cầu Chí Mạng.	
+A00379	c/csv/item_17.dat	rec 58 off 19 ps 1	Knight Skillbook Req.;Lv.14 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.14 Gây;sát thương cận chiến nặng;lên địch phía trước.;Tiêu hao;Cầu Chí Mạng.	
+A00380	c/csv/item_17.dat	rec 59 off 19 ps 1	Knight Skillbook Req.;Lv.28 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.28 Gây;sát thương cận chiến nặng;lên địch phía trước.;Tiêu hao;Cầu Chí Mạng.	
+A00381	c/csv/item_17.dat	rec 60 off 19 ps 1	Knight Skillbook Req.;Lv.44 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.44 Gây;sát thương cận chiến nặng;lên địch phía trước.;Tiêu hao;Cầu Chí Mạng.	
+A00382	c/csv/item_17.dat	rec 61 off 19 ps 1	Knight Skillbook Req.;Lv.54 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.54 Gây;sát thương cận chiến nặng;lên địch phía trước.;Tiêu hao;Cầu Chí Mạng.	
+A00383	c/csv/item_17.dat	rec 62 off 19 ps 1	Knight Skillbook Req.;Lv.68 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.68 Gây;sát thương cận chiến nặng;lên địch phía trước.;Tiêu hao;Cầu Chí Mạng.	
+A00384	c/csv/item_17.dat	rec 63 off 19 ps 1	Knight Skillbook Req.;Lv.78 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.78 Gây;sát thương cận chiến nặng;lên địch phía trước.;Tiêu hao;Cầu Chí Mạng.	
+A00385	c/csv/item_17.dat	rec 64 off 23 ps 1	Knight Skillbook Req.;Lv.12 Melee attack;dealing extra damage;the lower your HP is.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.12 Đòn;cận chiến, HP càng thấp;sát thương càng cao.	
+A00386	c/csv/item_17.dat	rec 65 off 23 ps 1	Knight Skillbook Req.;Lv.38 Melee attack;dealing extra damage;the lower your HP is.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.38 Đòn;cận chiến, HP càng thấp;sát thương càng cao.	
+A00387	c/csv/item_17.dat	rec 66 off 23 ps 1	Knight Skillbook Req.;Lv.62 Melee attack;dealing extra damage;the lower your HP is.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.62 Đòn;cận chiến, HP càng thấp;sát thương càng cao.	
+A00388	c/csv/item_17.dat	rec 67 off 23 ps 1	Knight Skillbook Req.;Lv.84 Melee attack;dealing extra damage;the lower your HP is.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.84 Đòn;cận chiến, HP càng thấp;sát thương càng cao.	
+A00389	c/csv/item_17.dat	rec 68 off 24 ps 1	Knight Skillbook Req.;Lv.1 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.1 Chặn;mọi đòn tấn công phía;trước trong một thời gian;và nhận Cầu Chí Mạng.	
+A00390	c/csv/item_17.dat	rec 69 off 24 ps 1	Knight Skillbook Req.;Lv.18 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.18 Chặn;mọi đòn tấn công phía;trước trong một thời gian;và nhận Cầu Chí Mạng.	
+A00391	c/csv/item_17.dat	rec 70 off 24 ps 1	Knight Skillbook Req.;Lv.32 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.32 Chặn;mọi đòn tấn công phía;trước trong một thời gian;và nhận Cầu Chí Mạng.	
+A00392	c/csv/item_17.dat	rec 71 off 24 ps 1	Knight Skillbook Req.;Lv.48 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.48 Chặn;mọi đòn tấn công phía;trước trong một thời gian;và nhận Cầu Chí Mạng.	
+A00393	c/csv/item_17.dat	rec 72 off 24 ps 1	Knight Skillbook Req.;Lv.64 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.64 Chặn;mọi đòn tấn công phía;trước trong một thời gian;và nhận Cầu Chí Mạng.	
+A00394	c/csv/item_17.dat	rec 73 off 24 ps 1	Knight Skillbook Req.;Lv.76 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.76 Chặn;mọi đòn tấn công phía;trước trong một thời gian;và nhận Cầu Chí Mạng.	
+A00395	c/csv/item_17.dat	rec 74 off 16 ps 1	Knight Skillbook Req.;Lv.16 Deals melee;damage to an enemy;and pulls them in;front of you.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.16 Gây;sát thương cận chiến lên;một địch và kéo nó;đến trước mặt bạn.	
+A00396	c/csv/item_17.dat	rec 75 off 16 ps 1	Knight Skillbook Req.;Lv.34 Deals melee;damage to an enemy;and pulls them in;front of you.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.34 Gây;sát thương cận chiến lên;một địch và kéo nó;đến trước mặt bạn.	
+A00397	c/csv/item_17.dat	rec 76 off 16 ps 1	Knight Skillbook Req.;Lv.52 Deals melee;damage to an enemy;and pulls them in;front of you.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.52 Gây;sát thương cận chiến lên;một địch và kéo nó;đến trước mặt bạn.	
+A00398	c/csv/item_17.dat	rec 77 off 16 ps 1	Knight Skillbook Req.;Lv.70 Deals melee;damage to an enemy;and pulls them in;front of you.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.70 Gây;sát thương cận chiến lên;một địch và kéo nó;đến trước mặt bạn.	
+A00399	c/csv/item_17.dat	rec 78 off 16 ps 1	Knight Skillbook Req.;Lv.86 Deals melee;damage to an enemy;and pulls them in;front of you.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.86 Gây;sát thương cận chiến lên;một địch và kéo nó;đến trước mặt bạn.	
+A00400	c/csv/item_17.dat	rec 79 off 23 ps 1	Knight Skillbook Req.;Lv.6 Deals melee;damage to an enemy;and reduces their;DEF.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.6 Gây;sát thương cận chiến lên;một địch và giảm;DEF của nó.	
+A00401	c/csv/item_17.dat	rec 80 off 23 ps 1	Knight Skillbook Req.;Lv.22 Deals melee;damage to an enemy;and reduces their;DEF.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.22 Gây;sát thương cận chiến lên;một địch và giảm;DEF của nó.	
+A00402	c/csv/item_17.dat	rec 81 off 23 ps 1	Knight Skillbook Req.;Lv.26 Deals melee;damage to an enemy;and reduces their;DEF.	Sách Kỹ Năng Knight;Cấp giới hạn Lv.26 Gây;sát thương cận chiến lên;một địch và giảm;DEF của nó.	
+A00403	c/csv/item_17.dat	rec 82 off 22 ps 1	Knight Skillbook Req.;Level: Lv46 Deals;melee DMG to enemy;and reduces DEF.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv46 Gây;sát thương cận chiến lên;địch và giảm DEF.	
+A00404	c/csv/item_17.dat	rec 83 off 22 ps 1	Knight Skillbook Req.;Level: Lv58 Deals;melee DMG to enemy;and reduces DEF.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv58 Gây;sát thương cận chiến lên;địch và giảm DEF.	
+A00405	c/csv/item_17.dat	rec 84 off 22 ps 1	Knight Skillbook Req.;Level: Lv82 Deals;melee DMG to enemy;and reduces DEF.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv82 Gây;sát thương cận chiến lên;địch và giảm DEF.	
+A00406	c/csv/item_17.dat	rec 85 off 23 ps 1	Knight Skillbook Req.;Level: Lv30 Focuses;attacks on a single;enemy.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv30 Tập;trung tấn công vào;một kẻ địch.	
+A00407	c/csv/item_17.dat	rec 86 off 23 ps 1	Knight Skillbook Req.;Level: Lv50 Focuses;attacks on a single;enemy.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv50 Tập;trung tấn công vào;một kẻ địch.	
+A00408	c/csv/item_17.dat	rec 87 off 23 ps 1	Knight Skillbook Req.;Level: Lv72 Focuses;attacks on a single;enemy.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv72 Tập;trung tấn công vào;một kẻ địch.	
+A00409	c/csv/item_17.dat	rec 88 off 23 ps 1	Knight Skillbook Req.;Level: Lv90 Focuses;attacks on a single;enemy.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv90 Tập;trung tấn công vào;một kẻ địch.	
+A00410	c/csv/item_17.dat	rec 89 off 17 ps 1	Knight Skillbook Req.;Level: Lv8 Deals;melee DMG to enemy;and reduces ATK.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv8 Gây;sát thương cận chiến lên;địch và giảm ATK.	
+A00411	c/csv/item_17.dat	rec 90 off 17 ps 1	Knight Skillbook Req.;Level: Lv36 Deals;melee DMG to enemy;and reduces ATK.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv36 Gây;sát thương cận chiến lên;địch và giảm ATK.	
+A00412	c/csv/item_17.dat	rec 91 off 17 ps 1	Knight Skillbook Req.;Level: Lv66 Deals;melee DMG to enemy;and reduces ATK.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv66 Gây;sát thương cận chiến lên;địch và giảm ATK.	
+A00413	c/csv/item_17.dat	rec 92 off 17 ps 1	Knight Skillbook Req.;Level: Lv88 Deals;melee DMG to enemy;and reduces ATK.	Sách Kỹ Năng Knight;Cấp giới hạn: Lv88 Gây;sát thương cận chiến lên;địch và giảm ATK.	
+A00414	c/csv/item_18.dat	rec 7 off 16 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple of the same;Orb at once when;socketed.	Nhận 1 Hyper Orb;ngẫu nhiên. Hyper Orb;gắn cùng lúc nhiều Orb;giống nhau khi;gắn vào Socket.	
+A00415	c/csv/item_18.dat	rec 26 off 22 ps 1	Allows resurrection;upon death in Expert;Mode. Does not apply;in single-player.	Cho phép hồi sinh;khi chết trong chế độ;Expert. Không áp dụng;cho game đơn.	
+A00416	c/csv/item_18.dat	rec 27 off 20 ps 1	Doubles HP natural;recovery rate in;Expert Survival Mode;1 is automatically;consumed upon playing;Survival Mode.	Gấp đôi tốc độ hồi;HP tự nhiên trong chế;độ Expert Cầm Cự.;Tự động tiêu hao 1;cái khi chơi chế độ;Cầm Cự.	
+A00417	c/csv/item_18.dat	rec 28 off 19 ps 1	Grants 30 bonus time;in Expert Time Attack;Mode 1 is;automatically;consumed upon playing;Time Attack Mode.	Thêm 30 thời gian;cho chế độ Expert;Đua Thời Gian. Tự;động tiêu hao 1 cái;khi chơi chế độ;Đua Thời Gian.	
+A00418	c/csv/item_18.dat	rec 29 off 20 ps 1	Grants 30 bonus time;per stage in Expert;Rush Mode 1 is;automatically;consumed upon playing;Rush Mode.	Thêm 30 thời gian;mỗi tầng trong chế độ;Expert Đột Phá. Tự;động tiêu hao 1 cái;khi chơi chế độ;Đột Phá.	
+A00419	c/csv/item_18.dat	rec 30 off 23 ps 1	Consumable usable;only in Expert Mode;Grants brief;invincibility when;used Max limit: 3	Vật phẩm tiêu hao;chỉ dùng ở chế độ;Expert. Tạm thời;bất khả xâm phạm khi;dùng Giới hạn: 3	
+A00420	c/csv/item_18.dat	rec 31 off 18 ps 1	Consumable usable;only in Expert Mode;Fully restores Spirit;Gauge upon use Max;Capacity: 3	Vật phẩm tiêu hao;chỉ dùng ở chế độ;Expert. Hồi đầy thanh;Tinh Linh khi dùng.;Giới hạn sở hữu: 3	
+A00421	c/csv/item_18.dat	rec 43 off 2 ps 1	Void Necklace	Dây Chuyền Hư Vô	
+A00422	c/csv/item_18.dat	rec 43 off 20 ps 1	Increases Max HP by;15% to boost;beginners;survivability.	Tăng HP tối đa 15%;giúp người mới;nâng cao khả;năng sống sót.	
+A00423	c/csv/item_18.dat	rec 44 off 2 ps 1	Void T1 Weapon	Vũ Khí Hư Vô T1	
+A00424	c/csv/item_18.dat	rec 44 off 21 ps 1	Starter weapon for Lv;1 usable up to Lv 10.;Movement Spd up Hit;rate up Rest recovery;up	Vũ khí khởi đầu cho Lv;1, dùng được đến Lv 10.;Tăng Tốc độ di chuyển;tăng tỉ lệ trúng, tăng;hồi phục khi nghỉ	
+A00425	c/csv/item_18.dat	rec 45 off 2 ps 1	Void T2 Weapon	Vũ Khí Hư Vô T2	
+A00426	c/csv/item_18.dat	rec 45 off 21 ps 1	Starter weapon for Lv;11 usable up to Lv;20. Movement Spd up;Hit rate up Rest;recovery up	Vũ khí khởi đầu cho Lv;11, dùng được đến Lv;20. Tăng tốc độ di chuyển;tăng tỉ lệ trúng, tăng;hồi phục khi nghỉ	
+A00427	c/csv/item_18.dat	rec 46 off 2 ps 1	Void T3 Weapon	Vũ Khí Hư Vô T3	
+A00428	c/csv/item_18.dat	rec 46 off 21 ps 1	Starter weapon for Lv;21 usable up to Lv;30. Movement Spd up;Hit rate up Rest;recovery up	Vũ khí khởi đầu cho Lv;21, dùng được đến Lv;30. Tăng tốc độ di chuyển;tăng tỉ lệ trúng, tăng;hồi phục khi nghỉ	
+A00429	c/csv/item_18.dat	rec 47 off 2 ps 1	Void T4 Weapon	Vũ Khí Hư Vô T4	
+A00430	c/csv/item_18.dat	rec 47 off 21 ps 1	Starter weapon for Lv;31 usable up to Lv;40. Movement Spd up;Hit rate up Rest;recovery up	Vũ khí khởi đầu cho Lv;31, dùng được đến Lv;40. Tăng tốc độ di chuyển;tăng tỉ lệ trúng, tăng;hồi phục khi nghỉ	
+A00431	c/csv/item_18.dat	rec 48 off 2 ps 1	Void T5 Weapon	Vũ Khí Hư Vô T5	
+A00432	c/csv/item_18.dat	rec 48 off 21 ps 1	Starter weapon for Lv;41 usable up to Lv;50. Movement Spd up;Hit rate up Rest;recovery up	Vũ khí khởi đầu cho Lv;41, dùng được đến Lv;50. Tăng tốc độ di chuyển;tăng tỉ lệ trúng, tăng;hồi phục khi nghỉ	
 A00433	c/csv/menu_text.dat	rec 20 off 0 ps 1	Equip: 2H Weapon,;Light/Heavy Armor Bars:;HP/SP Warriors dominate;the field wielding;greatswords larger than;themselves. Building SP;with basic attacks to;unleash massive skills,;they excel at clearing;hordes of foes.		
 A00434	c/csv/menu_text.dat	rec 21 off 0 ps 1	Equip: 1H Sword, Light;Armor Bars: HP/SP/Crit Orb;Rogues move like;lightning, often mistaken;for teleportation. An;expert Rogue exploits;openings in the blink of;an eye, stacking Crit Orbs;to deliver devastating;finishing blows.		
 A00435	c/csv/menu_text.dat	rec 22 off 0 ps 1	Equip: Gun, Light Armor;Bars: HP/SP Gunslingers;specialize in firearms and;explosives. Using;overwhelming firepower and;range, they keep enemies;from ever getting close.;With omnidirectional;attacks, they leave no;blind spots.		
@@ -1017,95 +1017,95 @@ A01015	c/csv/menu_text.dat	rec 180 off 0 ps 1	SMS consent confirmed.		k_low=K001
 A01016	c/csv/menu_text.dat	rec 181 off 0 ps 1	SMS consent declined.		k_low=K00170
 A01017	c/csv/menu_text.dat	rec 184 off 0 ps 1	^-Notice-;;02-559-8787		k_low=K00173
 A01018	c/csv/menu_text.dat	rec 199 off 0 ps 1	Check sent messages?		k_low=K00185
-A01019	c/map/00008.scn	idx 24	Insolent brats...!!		k_low=K04131
-A01020	c/map/00019.scn	idx 14	^Heheheh, mortals... Is this the choice you made?		
-A01021	c/map/00019.scn	idx 15	^You cast aside the avatar I gave you, and chose merely this?		
-A01022	c/map/00019.scn	idx 16	^Do you truly believe the Soltians will create a god for you?		
-A01023	c/map/00019.scn	idx 17	^To stand against me with nothing more than a wretched imitation - human mind grafted onto my remnants?		
-A01024	c/map/00019.scn	idx 18	^I shall deliver a message to the Soltians by destroying you completely..!		
-A01025	c/map/00019.scn	idx 19	^That this world does not permit a new god!		
-A01026	c/map/00026.scn	idx 10	Rufus...!! You bastard...!!		k_low=K04399
-A01027	c/map/00026.scn	idx 33	Schultz... Ren...		k_low=K04422
-A01028	c/map/00041.scn	idx 105	Together... always...?		k_low=K05180
-A01029	c/map/00042.scn	idx 31	A-Ah... Hello, Schultz!		k_low=K05219
-A01030	c/map/00054.scn	idx 35	...Ah... Chris... wait...		k_low=K05854
-A01031	c/map/00057.scn	idx 4	Did something... happen?		k_low=K06007
-A01032	c/map/00083.scn	idx 38	Amnesia? Why...?		k_low=K07422
-A01033	c/map/00108.scn	idx 46	I see.		k_low=K08243
-A01034	c/map/00151.scn	idx 128	Ugh... Why... Why?!		k_low=K08823
-A01035	c/map/00151.scn	idx 161	However... he... disappeared.		k_low=K08856
-A01036	c/map/00153.scn	idx 169	|(Evelyn... Sis...! Please...)		k_low=K09053
-A01037	c/map/00153.scn	idx 185	Theo... W-Why...		k_low=K09068
-A01038	c/map/00171.scn	idx 12	Hmm... Tyr... will...		k_low=K09391
-A01039	c/map/00175.scn	idx 0	Sanctuary Center		
-A01040	c/map/00186.scn	idx 18	If you still yearn for more, here are some hints about hidden events for Ren sake.		
-A01041	c/map/00214.scn	idx 14	It needs some improvements.		
-A01042	c/map/00216.scn	idx 3	For now... yes. Call me Rabi.		
-A01043	c/map/00216.scn	idx 4	I did not ask for your name.		
-A01044	c/map/00216.scn	idx 20	Lurain...		
+A01019	c/map/00008.scn	idx 24	Insolent brats...!!	Lũ nhóc láo xược...!!	k_low=K04131
+A01020	c/map/00019.scn	idx 14	^Heheheh, mortals... Is this the choice you made?	^Hehehe, lũ phàm nhân... Đây là lựa chọn của các ngươi sao?	
+A01021	c/map/00019.scn	idx 15	^You cast aside the avatar I gave you, and chose merely this?	^Các ngươi vứt bỏ hoá thân ta ban cho, rồi chỉ chọn thứ này thôi ư?	
+A01022	c/map/00019.scn	idx 16	^Do you truly believe the Soltians will create a god for you?	^Các ngươi thật sự tin người Soltian sẽ tạo ra một vị thần cho các ngươi?	
+A01023	c/map/00019.scn	idx 17	^To stand against me with nothing more than a wretched imitation - human mind grafted onto my remnants?	^Chỉ với một bản sao hèn mọn - trí óc con người ghép vào tàn dư của ta - mà đòi chống lại ta?	
+A01024	c/map/00019.scn	idx 18	^I shall deliver a message to the Soltians by destroying you completely..!	^Ta sẽ huỷ diệt hoàn toàn các ngươi, để gửi một thông điệp tới người Soltian..!	
+A01025	c/map/00019.scn	idx 19	^That this world does not permit a new god!	^Rằng thế giới này không cho phép một vị thần mới!	
+A01026	c/map/00026.scn	idx 10	Rufus...!! You bastard...!!	Lupus...!! Tên khốn nhà ngươi...!!	k_low=K04399
+A01027	c/map/00026.scn	idx 33	Schultz... Ren...	Anh Schurtz... chị Ren...	k_low=K04422
+A01028	c/map/00041.scn	idx 105	Together... always...?	Luôn... ở bên nhau... sao...?	k_low=K05180
+A01029	c/map/00042.scn	idx 31	A-Ah... Hello, Schultz!	À-à... Xin chào, ngài Schurtz!	k_low=K05219
+A01030	c/map/00054.scn	idx 35	...Ah... Chris... wait...	...À... Kris... khoan đã...	k_low=K05854
+A01031	c/map/00057.scn	idx 4	Did something... happen?	Đã... có chuyện gì xảy ra sao?	k_low=K06007
+A01032	c/map/00083.scn	idx 38	Amnesia? Why...?	Mất trí nhớ sao? Tại sao lại...?	k_low=K07422
+A01033	c/map/00108.scn	idx 46	I see.	Ra vậy.	k_low=K08243
+A01034	c/map/00151.scn	idx 128	Ugh... Why... Why?!	Khục... Tại sao... Tại sao chứ?!	k_low=K08823
+A01035	c/map/00151.scn	idx 161	However... he... disappeared.	Nhưng mà... gã đó... đã biến mất.	k_low=K08856
+A01036	c/map/00153.scn	idx 169	|(Evelyn... Sis...! Please...)	|(Evelyn... chị ơi...! Xin chị...)	k_low=K09053
+A01037	c/map/00153.scn	idx 185	Theo... W-Why...	Theo... s-sao lại...	k_low=K09068
+A01038	c/map/00171.scn	idx 12	Hmm... Tyr... will...	Ừm... Tir thì... sẽ...	k_low=K09391
+A01039	c/map/00175.scn	idx 0	Sanctuary Center	Trung Tâm Thánh Địa	
+A01040	c/map/00186.scn	idx 18	If you still yearn for more, here are some hints about hidden events for Ren sake.	Nếu bạn vẫn muốn khám phá thêm, đây là vài gợi ý về các sự kiện ẩn vì Ren.	
+A01041	c/map/00214.scn	idx 14	It needs some improvements.	Còn cần cải thiện thêm.	
+A01042	c/map/00216.scn	idx 3	For now... yes. Call me Rabi.	Tạm thời... đúng vậy. Cứ gọi ta là Raby.	
+A01043	c/map/00216.scn	idx 4	I did not ask for your name.	Tôi đâu có hỏi tên ngươi.	
+A01044	c/map/00216.scn	idx 20	Lurain...	Lurain...	
 A01045	c/csv/ingame_text.dat	rec 327 off 0 ps 1	Victorious!		k_low=K00732
-A01046	c/map/00087.scn	idx 34	Phew. Right now, all we can do is work hard.		k_low=K07572
-A01047	c/map/00087.scn	idx 35	Things are tougher than before, but this is the only job we have got.		k_low=K07573
-A01048	c/map/00107.scn	idx 11	I heard a rumor before...		k_low=K04729
-A01049	c/map/00107.scn	idx 12	If you cross House Wade in Central, they drag you off to Central Tower, right?		k_low=K04731
-A01050	c/map/00107.scn	idx 13	Is it true they waterboard you in some secret underground floor?		k_low=K04732
-A01051	c/map/00107.scn	idx 14	It is no exaggeration that all tech humanity currently uses came from Central Tower.		k_low=K08196
-A01052	c/map/00107.scn	idx 15	I really wish they would shut down that underground sewer.		k_low=K08197
-A01053	c/map/00107.scn	idx 16	Finding a corpse down there... Property values around here plummeted thanks to that!		k_low=K04736
-A01054	c/map/00107.scn	idx 17	I am glad my child is enjoying it.		k_low=K04737
-A01055	c/map/00107.scn	idx 18	I really wanted to show my child Central Tower, the largest and tallest building in the Republic.		k_low=K04738
-A01056	c/map/00107.scn	idx 19	There is a rumor they are developing a massive four-legged tank in the Tower basement.		k_low=K04739
-A01057	c/map/00107.scn	idx 20	Personally, I think bipedal mechs are much cooler...		k_low=K04740
-A01058	c/map/00108.scn	idx 41	Someone came by saying you sent them.		k_low=K08238
-A01059	c/map/00136.scn	idx 1	Must be nice for the Neveds. They clearly know their own origins.		k_low=K08449
-A01060	c/map/00136.scn	idx 4	They have a creation myth. They say the god who made this world created the Neved too.		k_low=K08450
-A01061	c/map/00136.scn	idx 5	Apparently that god had quite a temper, ending up fighting its creations before being sealed away.		k_low=K06436
-A01062	c/map/00136.scn	idx 6	Where that god lies buried is what they call the Sanctuary.		k_low=K06437
-A01063	c/map/00136.scn	idx 7	You mean the relic you brought me?		k_low=K08451
-A01064	c/map/00136.scn	idx 8	Unfortunately, it does not seem to be of human origin.		k_low=K08453
-A01065	c/map/00136.scn	idx 9	The inscriptions are too alien... and the material, too. Even today technology could barely replicate it.		k_low=K08454
-A01066	c/map/00136.scn	idx 10	It hardly looks like a Neved relic either. For now, its identity is a complete mystery.		k_low=K08455
-A01067	c/map/00136.scn	idx 11	Do you need it back? What are you going to use it for?		k_low=K08457
-A01068	c/map/00136.scn	idx 12	I have an idea of where it might belong, so I want to check it out...		k_low=K08458
-A01069	c/map/00136.scn	idx 14	Of course not.		k_low=K08459
-A01070	c/map/00136.scn	idx 16	I have not seen Theodore around lately. Did something happen?		k_low=K08461
-A01071	c/map/00136.scn	idx 17	Books that tell the truth are precious. Though they are always a thorn in the side of rulers.		k_low=K08462
-A01072	c/map/00136.scn	idx 18	No matter how many bans they place or books they burn, truth survives in the end.		k_low=K08463
-A01073	c/map/00136.scn	idx 21	People talk about the Republic, but its history is not even 30 years old.		k_low=K08464
-A01074	c/map/00136.scn	idx 24	It is still plenty of time for survivors of ruined houses or their loyalists to cause chaos.		k_low=K08465
-A01075	c/map/00136.scn	idx 25	What is it?		k_low=K08466
-A01076	c/map/00136.scn	idx 28	Depends on what it is.		k_low=K08467
-A01077	c/map/00136.scn	idx 30	Afraid not. We only archive published books here. This is a manuscript, not a book.		k_low=K08468
-A01078	c/map/00136.scn	idx 32	No, an acquaintance did.		k_low=K08469
-A01079	c/map/00136.scn	idx 33	Figures. You do not strike me as someone who reads or writes much anyway.		k_low=K06457
-A01080	c/map/00136.scn	idx 35	If it will not work, nothing to be done. Give it back.		k_low=K06459
-A01081	c/map/00136.scn	idx 37	...I would appreciate that.		k_low=K06461
-A01082	c/map/00136.scn	idx 38	When the war ended, demobilized soldiers turned into mercenaries.		k_low=K06462
-A01083	c/map/00136.scn	idx 41	Survival skills are crucial for mercenaries. You never know when you will be stranded.		k_low=K06465
-A01084	c/map/00136.scn	idx 43	You should learn early on to tell what is edible from what is not.		k_low=K06466
-A01085	c/map/00144.scn	idx 1	G A M E  O V E R		k_low=K08621
-A01086	c/map/00144.scn	idx 55	Now, it somehow only brings more anxiety.		k_low=K06717
-A01087	c/map/00144.scn	idx 56	I still do not regret my choice.		k_low=K06719
-A01088	c/map/00144.scn	idx 57	Can we really trust Evelyn and Theo? Lately, something feels... off.		k_low=K06720
-A01089	c/map/00144.scn	idx 59	Demanding it from Theo and Evelyn. Tsk tsk.		k_low=K06723
-A01090	c/map/00144.scn	idx 60	You know the cave east of here, right?		k_low=K06725
-A01091	c/map/00144.scn	idx 61	There used to be some barrier there, but it suddenly vanished.		k_low=K06726
-A01092	c/map/00144.scn	idx 62	Oh, it is you.		k_low=K06728
-A01093	c/map/00144.scn	idx 63	The monsters suddenly grew ferocious. More bears have shown up too.		k_low=K06729
-A01094	c/map/00144.scn	idx 65	Glad we stopped it before disaster struck.		k_low=K06732
-A01095	c/map/00150.scn	idx 12	G A M E  O V E R		k_low=K08621
-A01096	c/map/00170.scn	idx 25	I think so too.		k_low=K09313
-A01097	c/map/00170.scn	idx 26	I will make sure the Neo Graham is in peak condition by our next departure.		k_low=K09314
-A01098	c/map/00170.scn	idx 60	If we needed one, Tyr would have procured it already.		k_low=K09315
-A01099	c/map/00170.scn	idx 61	Ugh... Fair point. But I am not giving up.		k_low=K09316
-A01100	c/map/00170.scn	idx 63	I am stubborn and clingy like a leech anyway. The universally disliked type.		k_low=K09317
-A01101	c/map/00170.scn	idx 68	Tyr told me that if I am doing a test run, do it on the ship.		k_low=K09318
-A01102	c/map/00170.scn	idx 69	That way it will not hurt anyone, and in an emergency, we can dump it in the sea.		k_low=K06949
-A01103	c/map/00174.scn	idx 58	I am just taking advantage of... an unavoidable fight. And... I will end it there.		k_low=K09508
-A01104	c/map/00174.scn	idx 59	I will never become complete. I will finish it there. Absolutely.		k_low=K09509
-A01105	c/map/00174.scn	idx 71	I am sorry for placing such a heavy burden on you.		k_low=K09510
-A01106	c/map/00174.scn	idx 73	Well, of course, it is not easy.		k_low=K09512
-A01107	c/map/00174.scn	idx 90	You are... lying, are not you?		k_low=K09513
-A01108	c/map/00174.scn	idx 92	Yes, it would. You must be able to hear it slightly. Spirits also touch the divine, after all.		k_low=K09514
-A01109	c/map/00198.scn	idx 5	Mom only ever tells me to study all day.		k_low=K09936
-A01110	c/map/00198.scn	idx 28	I kept it... but I will not get arrested, right?		k_low=K09954
+A01046	c/map/00087.scn	idx 34	Phew. Right now, all we can do is work hard.	Hà. Giờ đây, chúng ta chỉ còn cách cố gắng thôi.	k_low=K07572
+A01047	c/map/00087.scn	idx 35	Things are tougher than before, but this is the only job we have got.	Giờ khó khăn hơn trước, nhưng đây là công việc duy nhất chúng ta có.	k_low=K07573
+A01048	c/map/00107.scn	idx 11	I heard a rumor before...	Trước đây tôi từng nghe một tin đồn...	k_low=K04729
+A01049	c/map/00107.scn	idx 12	If you cross House Wade in Central, they drag you off to Central Tower, right?	Đắc tội nhà Wade ở Central là bị lôi thẳng vào Tháp Central, đúng không?	k_low=K04731
+A01050	c/map/00107.scn	idx 13	Is it true they waterboard you in some secret underground floor?	Nghe nói họ tra tấn bằng cách dội nước ở một tầng hầm bí mật, có thật không?	k_low=K04732
+A01051	c/map/00107.scn	idx 14	It is no exaggeration that all tech humanity currently uses came from Central Tower.	Nói mọi công nghệ nhân loại đang dùng đều bắt nguồn từ Tháp Central cũng không ngoa.	k_low=K08196
+A01052	c/map/00107.scn	idx 15	I really wish they would shut down that underground sewer.	Ước gì họ bịt hẳn cái cống ngầm dưới đất đó đi.	k_low=K08197
+A01053	c/map/00107.scn	idx 16	Finding a corpse down there... Property values around here plummeted thanks to that!	Lại còn tìm thấy xác người dưới đó... Nhờ thế mà giá đất quanh đây rớt thảm luôn!	k_low=K04736
+A01054	c/map/00107.scn	idx 17	I am glad my child is enjoying it.	Thấy con vui là tôi mừng.	k_low=K04737
+A01055	c/map/00107.scn	idx 18	I really wanted to show my child Central Tower, the largest and tallest building in the Republic.	Tôi rất muốn cho con xem Tháp Central, toà nhà to và cao nhất Cộng Hoà.	k_low=K04738
+A01056	c/map/00107.scn	idx 19	There is a rumor they are developing a massive four-legged tank in the Tower basement.	Có tin đồn họ đang chế tạo một chiếc xe tăng bốn chân khổng lồ dưới tầng hầm Tháp.	k_low=K04739
+A01057	c/map/00107.scn	idx 20	Personally, I think bipedal mechs are much cooler...	Cá nhân tôi thấy mech hai chân ngầu hơn nhiều...	k_low=K04740
+A01058	c/map/00108.scn	idx 41	Someone came by saying you sent them.	Có người ghé qua, bảo là do cậu giới thiệu.	k_low=K08238
+A01059	c/map/00136.scn	idx 1	Must be nice for the Neveds. They clearly know their own origins.	Người Neved sướng thật. Họ biết rõ nguồn gốc của chính mình.	k_low=K08449
+A01060	c/map/00136.scn	idx 4	They have a creation myth. They say the god who made this world created the Neved too.	Họ có thần thoại sáng thế. Nghe nói vị thần tạo ra thế giới này cũng tạo ra người Neved.	k_low=K08450
+A01061	c/map/00136.scn	idx 5	Apparently that god had quite a temper, ending up fighting its creations before being sealed away.	Nghe nói vị thần ấy nóng tính lắm, rốt cuộc còn giao chiến với chính các tạo vật của mình rồi bị phong ấn.	k_low=K06436
+A01062	c/map/00136.scn	idx 6	Where that god lies buried is what they call the Sanctuary.	Nơi vị thần ấy bị chôn cất chính là cái họ gọi là Thánh Địa.	k_low=K06437
+A01063	c/map/00136.scn	idx 7	You mean the relic you brought me?	Ý cậu là di vật cậu mang đến cho tôi à?	k_low=K08451
+A01064	c/map/00136.scn	idx 8	Unfortunately, it does not seem to be of human origin.	Tiếc là nó có vẻ không phải do con người tạo ra.	k_low=K08453
+A01065	c/map/00136.scn	idx 9	The inscriptions are too alien... and the material, too. Even today technology could barely replicate it.	Chữ khắc quá xa lạ... chất liệu cũng vậy. Với công nghệ ngày nay cũng khó mà tái tạo được.	k_low=K08454
+A01066	c/map/00136.scn	idx 10	It hardly looks like a Neved relic either. For now, its identity is a complete mystery.	Nó cũng chẳng giống di vật của người Neved. Hiện tại nguồn gốc của nó vẫn là một bí ẩn hoàn toàn.	k_low=K08455
+A01067	c/map/00136.scn	idx 11	Do you need it back? What are you going to use it for?	Cậu cần lấy lại nó à? Định dùng vào việc gì vậy?	k_low=K08457
+A01068	c/map/00136.scn	idx 12	I have an idea of where it might belong, so I want to check it out...	Tôi đoán được nó có thể thuộc về đâu, nên muốn đi kiểm tra...	k_low=K08458
+A01069	c/map/00136.scn	idx 14	Of course not.	Tất nhiên là không.	k_low=K08459
+A01070	c/map/00136.scn	idx 16	I have not seen Theodore around lately. Did something happen?	Dạo này tôi không thấy Theodoro đâu cả. Có chuyện gì xảy ra à?	k_low=K08461
+A01071	c/map/00136.scn	idx 17	Books that tell the truth are precious. Though they are always a thorn in the side of rulers.	Sách chứa đựng sự thật là thứ quý giá. Dù lúc nào cũng là cái gai trong mắt kẻ thống trị.	k_low=K08462
+A01072	c/map/00136.scn	idx 18	No matter how many bans they place or books they burn, truth survives in the end.	Dù có cấm, có đốt sách thế nào, sự thật vẫn sống sót đến cùng.	k_low=K08463
+A01073	c/map/00136.scn	idx 21	People talk about the Republic, but its history is not even 30 years old.	Người ta cứ nhắc đến Cộng Hoà, nhưng lịch sử của nó còn chưa tới 30 năm.	k_low=K08464
+A01074	c/map/00136.scn	idx 24	It is still plenty of time for survivors of ruined houses or their loyalists to cause chaos.	Thế vẫn là quá đủ để những người sống sót của các gia tộc bị diệt hay phe trung thành gây loạn.	k_low=K08465
+A01075	c/map/00136.scn	idx 25	What is it?	Là gì vậy?	k_low=K08466
+A01076	c/map/00136.scn	idx 28	Depends on what it is.	Còn tuỳ là chuyện gì.	k_low=K08467
+A01077	c/map/00136.scn	idx 30	Afraid not. We only archive published books here. This is a manuscript, not a book.	Tiếc là không. Ở đây chỉ lưu trữ sách đã xuất bản. Đây là bản thảo, không phải sách.	k_low=K08468
+A01078	c/map/00136.scn	idx 32	No, an acquaintance did.	Không, một người quen viết.	k_low=K08469
+A01079	c/map/00136.scn	idx 33	Figures. You do not strike me as someone who reads or writes much anyway.	Đoán ngay mà. Nhìn cậu cũng chẳng giống người đọc hay viết nhiều.	k_low=K06457
+A01080	c/map/00136.scn	idx 35	If it will not work, nothing to be done. Give it back.	Nếu không dùng được thì đành chịu. Trả lại đây.	k_low=K06459
+A01081	c/map/00136.scn	idx 37	...I would appreciate that.	...Vậy thì tôi cảm ơn.	k_low=K06461
+A01082	c/map/00136.scn	idx 38	When the war ended, demobilized soldiers turned into mercenaries.	Khi chiến tranh kết thúc, những người lính giải ngũ đã trở thành lính đánh thuê.	k_low=K06462
+A01083	c/map/00136.scn	idx 41	Survival skills are crucial for mercenaries. You never know when you will be stranded.	Kỹ năng sinh tồn rất quan trọng với lính đánh thuê. Không biết lúc nào mình sẽ bị mắc kẹt đâu.	k_low=K06465
+A01084	c/map/00136.scn	idx 43	You should learn early on to tell what is edible from what is not.	Nên học sớm cách phân biệt thứ ăn được với thứ không ăn được.	k_low=K06466
+A01085	c/map/00144.scn	idx 1	G A M E  O V E R	G A M E  O V E R	k_low=K08621
+A01086	c/map/00144.scn	idx 55	Now, it somehow only brings more anxiety.	Giờ đây, chẳng hiểu sao nó chỉ khiến lòng thêm bất an.	k_low=K06717
+A01087	c/map/00144.scn	idx 56	I still do not regret my choice.	Tôi vẫn không hối hận về lựa chọn của mình.	k_low=K06719
+A01088	c/map/00144.scn	idx 57	Can we really trust Evelyn and Theo? Lately, something feels... off.	Chúng ta thật sự tin được Evelyn và Theo sao? Dạo này có gì đó... không ổn.	k_low=K06720
+A01089	c/map/00144.scn	idx 59	Demanding it from Theo and Evelyn. Tsk tsk.	Đòi hỏi chuyện đó ở Theo và Evelyn. Chậc chậc.	k_low=K06723
+A01090	c/map/00144.scn	idx 60	You know the cave east of here, right?	Cậu biết cái hang phía đông chỗ này chứ?	k_low=K06725
+A01091	c/map/00144.scn	idx 61	There used to be some barrier there, but it suddenly vanished.	Trước kia ở đó có một kết giới, nhưng bỗng nhiên biến mất.	k_low=K06726
+A01092	c/map/00144.scn	idx 62	Oh, it is you.	À, là cậu à.	k_low=K06728
+A01093	c/map/00144.scn	idx 63	The monsters suddenly grew ferocious. More bears have shown up too.	Quái vật bỗng trở nên hung tợn. Gấu cũng xuất hiện nhiều hơn.	k_low=K06729
+A01094	c/map/00144.scn	idx 65	Glad we stopped it before disaster struck.	May mà ngăn được trước khi thảm hoạ xảy ra.	k_low=K06732
+A01095	c/map/00150.scn	idx 12	G A M E  O V E R	G A M E  O V E R	k_low=K08621
+A01096	c/map/00170.scn	idx 25	I think so too.	Tôi cũng nghĩ vậy.	k_low=K09313
+A01097	c/map/00170.scn	idx 26	I will make sure the Neo Graham is in peak condition by our next departure.	Đến lần xuất phát tới, tôi sẽ đưa thuyền Neo Graham vào trạng thái tốt nhất.	k_low=K09314
+A01098	c/map/00170.scn	idx 60	If we needed one, Tyr would have procured it already.	Nếu cần thì Tir đã sắm từ lâu rồi.	k_low=K09315
+A01099	c/map/00170.scn	idx 61	Ugh... Fair point. But I am not giving up.	Hức... Có lý. Nhưng tôi không bỏ cuộc đâu.	k_low=K09316
+A01100	c/map/00170.scn	idx 63	I am stubborn and clingy like a leech anyway. The universally disliked type.	Dù sao tôi cũng ngoan cố và dai như đỉa. Kiểu người ai cũng ghét.	k_low=K09317
+A01101	c/map/00170.scn	idx 68	Tyr told me that if I am doing a test run, do it on the ship.	Tir bảo nếu tôi muốn chạy thử thì cứ làm trên thuyền.	k_low=K09318
+A01102	c/map/00170.scn	idx 69	That way it will not hurt anyone, and in an emergency, we can dump it in the sea.	Như vậy sẽ không làm ai bị thương, và khi khẩn cấp thì có thể quăng nó xuống biển.	k_low=K06949
+A01103	c/map/00174.scn	idx 58	I am just taking advantage of... an unavoidable fight. And... I will end it there.	Tôi chỉ đang tận dụng... một trận chiến không thể tránh khỏi. Và... sẽ dừng lại ở đó.	k_low=K09508
+A01104	c/map/00174.scn	idx 59	I will never become complete. I will finish it there. Absolutely.	Tôi sẽ không bao giờ trở nên hoàn thiện. Tôi sẽ dừng lại ở đó. Nhất định.	k_low=K09509
+A01105	c/map/00174.scn	idx 71	I am sorry for placing such a heavy burden on you.	Xin lỗi vì đã đặt lên cậu gánh nặng lớn như vậy.	k_low=K09510
+A01106	c/map/00174.scn	idx 73	Well, of course, it is not easy.	Chà, tất nhiên là không dễ rồi.	k_low=K09512
+A01107	c/map/00174.scn	idx 90	You are... lying, are not you?	Anh... đang nói dối, phải không?	k_low=K09513
+A01108	c/map/00174.scn	idx 92	Yes, it would. You must be able to hear it slightly. Spirits also touch the divine, after all.	Đúng vậy. Chắc hẳn cậu nghe thấy được một chút. Dù sao Tinh Linh cũng chạm tới cõi thần mà.	k_low=K09514
+A01109	c/map/00198.scn	idx 5	Mom only ever tells me to study all day.	Mẹ suốt ngày chỉ bắt con học.	k_low=K09936
+A01110	c/map/00198.scn	idx 28	I kept it... but I will not get arrested, right?	Tôi giữ nó lại... nhưng sẽ không bị bắt đâu, đúng không?	k_low=K09954
