@@ -1,3 +1,22 @@
+# HL5-VI v0.2-hd (bản HD thử nghiệm)
+
+**Tệp mới: `dist/HL5-VI-v0.2-hd.apk`** (22.668.446 byte), SHA-256: `65569f2a8df525b1edeefa217b371e15f51f6e767b62b3b676a1416633c5c898`
+Bản chẩn đoán kèm theo: `dist/diag/HL5-diag-v0.2-hd.apk`, SHA-256 `3bc69c7939d5755075a337268d4da7d8a7c0cf42363a5f09c88a0aeed3a71094`.
+
+## Thay đổi v0.2-hd
+- T9: game chạy ở khung logic lớn (texture tới 4096), ví dụ 1200x540 vật lý/k.
+- T10: Cài đặt có mục "Phân giải" (hiển thị "1/k" vì font gốc không có ký tự ÷). Đổi giá trị, ghi `hd_scale.txt`, **khởi động lại game** để áp dụng. Mặc định k = 2.
+- Chữ 18 px khi khung logic cao >= 480 (HD).
+- Cùng khoá ký/tên gói: cài đè được lên v0.1.1.
+
+## NHỜ NGƯỜI DÙNG THỬ
+1. Mặc định ÷2 nặng khoảng 2,7 lần CPU so với v0.1.1. Vào Cài đặt > Phân giải, thử **1/2** rồi **1/3** (khởi động lại sau mỗi lần), báo cái nào chơi mượt.
+2. Báo các cửa sổ/tab menu trong game có **quá nhỏ** không (T15 sẽ phóng to nếu cần).
+3. Nếu crash, dùng bản diag và gửi nhật ký trong Downloads.
+
+## Giới hạn đã biết
+- Nhãn menu chính ở 18 px hơi chật; cửa sổ mô tả lớp nhân vật ở HD có chữ cuộn tràn ra ngoài khung (xem Vướng mắc T10 trong PLAN.md).
+
 # HL5-VI v0.1.1 (bản chơi thử)
 
 **Tệp mới: `dist/HL5-VI-v0.1.1.apk`** (22.668.446 byte), SHA-256: `119e0f2d7bc44ebf857c175fe5fe343f4039b5570bffc23590eee8bf20b84261`
