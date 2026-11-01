@@ -167,8 +167,9 @@ $JAVAC -encoding UTF-8 --release 8 -nowarn -d "$W/vnf/stub" $(find java/stubs -n
 $JAVAC -encoding UTF-8 --release 8 -nowarn -cp "$W/vnf/stub:$ANDROID_JAR" -d "$W/vnf/cls" java/src/com/namp/vh/*.java
 # chi dong goi com/namp/vh (stub KHONG vao dex); stub la --lib thu hai cho d8
 $D8 --lib "$W/vnf/stub" --output "$W/vnf/dex" "$W"/vnf/cls/com/namp/vh/*.class
-# APK nen (TEST4) mang san VNFont cu o smali_classes3 / classes3.dex: bo di, classes3.dex moi them sau apktool b (add_dex.py)
-rm -rf "$D/smali_classes3" "$D/classes3.dex"
+# APK nen (TEST4) mang san VNFont cu o smali_classes3: bo di; classes3.dex moi dat ngay trong cay decode (apktool b chep nguyen,
+# giong build_from_apk.sh --vnfont => thu tu muc va thuoc tinh zip giong nhau). Duong split khong co classes3 san.
+rm -rf "$D/smali_classes3"; cp "$W/vnf/dex/classes.dex" "$D/classes3.dex"
 
 echo "== 5. va libgame.so: nhom $LIB_GROUPS"
 LIBF=$D/lib/arm64-v8a/libgame.so
@@ -194,9 +195,8 @@ else
   echo "== 7. KHONG chan doan (ban phat hanh): LAUNCHER giu MainActivity, khong classes4.dex"
 fi
 
-echo "== 8. apktool build + them dex + can zip"
+echo "== 8. apktool build + (diag: them classes4.dex) + can zip"
 $J -jar "$APKTOOL" b -o "$W/unsigned.apk" "$D" > "$LOGS/build.log" 2>&1
-$PY scripts/add_dex.py "$W/unsigned.apk" "$W/vnf/dex/classes.dex" classes3.dex
 if [ $DIAG = 1 ]; then $PY scripts/add_dex.py "$W/unsigned.apk" "$W/diag/dex/classes.dex" classes4.dex; fi
 $PY scripts/fix_zip.py "$W/unsigned.apk" "$W/aligned.apk"
 "$BT/zipalign" -c -P 16 4 "$W/aligned.apk" && echo "zipalign -c -P 16 4: OK"
