@@ -515,6 +515,20 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - thu ảnh người dùng bằng Lanczos, giữ alpha, căn giữa; xử lý premultiplied alpha đúng theo định dạng atlas;
     - dùng lại pipeline ảnh đã có (`scripts/img_vi.py`, đã dùng cho `UI_BUT_ENG_*`, `UI_006`...);
     - ảnh nào không tìm thấy hoặc ánh xạ không chắc thì ghi "CHƯA XÁC ĐỊNH", không đoán.
+  - Bàn giao (A2 đọc trước T10a, ~92%, ~279k; chi tiết ở `docs/t10a_bangiao_A2.md`, ảnh ở `docs/hud/`):
+    - Atlas là PNG thường 512², RGBA, alpha thẳng: `assets/common/game_res/UI_014.png.jpg` và `UI_015.png.jpg`. Bảng frame nằm trong rodata của lib.
+    - UI_015: loc0 = bánh răng, loc1 = lưu, loc2 = giỏ, loc3 = ↻ (75×75); loc11 = vòng ô kỹ năng (94×94).
+    - UI_014: loc2 = tấn công, loc3 = tấn công bấm (159×160); lớp bấm vẽ cộng đè lên loc2.
+  - Quyết định của quản đốc cho T10 (2026-11-01, đã xem `docs/hud/so_sanh_goc_moi.png` và `mock_attack_goc_moi.png`):
+    - Thay 7 rect:
+      - UI_015 loc0 ← `btn_pause`, loc1 ← `btn_save`, loc2 ← `btn_shop`, loc3 ← `btn_swap`: thu về 73 px, căn giữa trong ô 75, để giữ khe giữa các nút;
+      - UI_015 loc11 ← `btn_frame`: thu về 90 px, căn giữa trong ô 94;
+      - UI_014 loc2 ← `attack`, loc3 ← `attack_pressed`: cùng một cửa sổ, tỉ lệ 0,34 (468×471 quanh (255,258)) → 159×160.
+    - Giữ nguyên các phần người dùng không có ảnh: nền bán nguyệt, loc4, loc5, loc10, loc17, thanh HP/MP/EXP.
+    - Popup gán phím tắt cũng dùng loc3/loc11 nên đổi theo ⇒ chấp nhận (cùng phong cách).
+    - **Vá 3 lệnh kiểu vẽ** `45008052` → `25008052` tại 0x169ae8, 0x169bb4, 0x169bfc (nhóm lib `hudbtn`), để ảnh bấm vẽ alpha thường thay vì cộng (tránh cháy sáng). Phải kiểm byte gốc và ngữ cảnh disasm trước khi vá.
+    - Thu ảnh bằng Lanczos trên RGBA straight. Selftest: pixel ngoài 7 rect giống hệt gốc; atlas không đổi thì chép nguyên byte.
+    - Script mới `scripts/hud_swap.py`; cờ `--hud` trong `build_from_apk.sh`.
   - [ ] T10a. Tìm sprite HUD gốc: file atlas, toạ độ, kích thước, trạng thái thường/bấm; tìm hàm vẽ trong `UIPlay_*` để xác nhận. Xuất ảnh đối chiếu gốc ↔ mới vào `docs/hud_thay_nut.md`.
   - [ ] T10b. Ghép ảnh mới vào atlas, repack, selftest byte (atlas không đổi phải ra giống từng byte); `apkdiff` chỉ khác đúng các file atlas.
   - [ ] T10c. Kiểm: render atlas ra PNG so với ảnh gốc; nếu T2 xong thì chụp màn chơi; rồi bản thử cho người dùng.
@@ -642,3 +656,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - A1 đã đạt ≥90% khối lượng T8 ⇒ A2 mới đọc trước T10a (sprite HUD). A2 chỉ đọc, chỉ được ghi ảnh tạm vào `/opt/work/t10/`.
 - 2026-11-01 A1 (T8, lượt 2): T8c đã soát (không sửa), T8d xong: unidbg 21.782 ca, lib vá đạt 21.772 + 10 ca ngoài miền, lib gốc đạt 21.782; build lại `out/Inotia4_T8_check.apk` PASS (apkdiff với TEST9 chỉ khác `classes.dex`, `classes3.dex`, `libgame.so`; `MainActivity` +1 lệnh; ký/zipalign/check_apk/`patch_lib --diff` đạt). Tick T8c, T8d; T8 cha chờ quản đốc nghiệm thu.
 - 2026-11-01 quản đốc: nghiệm thu T8a–T8d ĐẠT; gửi TEST10 (TEST9 + mod menu). Chờ người dùng thử. Tiếp theo: T9 (công nhân chạy mới).
+- 2026-11-01 quản đốc: A2 đọc T10a xong ~92% (~279k). Ghi bàn giao vào `docs/t10a_bangiao_A2.md`, chép ảnh vào `docs/hud/`. Chốt quyết định T10: 7 rect, kích thước thu, vá 3 lệnh kiểu vẽ. T10 làm sau T9.
