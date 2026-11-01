@@ -5,6 +5,10 @@
 
 Moi patch: (class, method header chinh xac, than moi). Patch phai khop DUNG 1 lan, lech thi dung.
 Nhom 'offline' them o giai doan offline (scripts/patch_offline.py).
+Co che bo sung (khong thay than method):
+  CATCH_ADD     them `.catch` ke ben `.catch` co san (nhom net).
+  INSERT_AFTER  chen DUNG 1 dong sau dong neo (so khop theo noi dung dong da strip, phai khop dung `want` lan trong method;
+                dong chen da co san trong method => dung). Nhom mod (T8c): ModMenu.onResume sau HiveActivity.onResume.
 """
 import os, re, sys
 
@@ -108,6 +112,17 @@ CATCH_ADD = {
     ],
 }
 
+# Chen 1 dong smali sau dong neo trong mot method co san (KHONG doi so thanh ghi/than khac).
+# (class, method header, dong neo (strip), dong chen, so lan khop dong neo)
+INSERT_AFTER = {
+    'mod': [
+        # T8c: nut noi + he so mod. onResume co `.locals 1`; lenh chen chi dung p0 (MainActivity la Activity).
+        ('com/com2us/inotia4/normal/freefull/google/global/android/common/MainActivity', '.method protected onResume()V',
+         'invoke-static {p0}, Lcom/hive/HiveActivity;->onResume(Landroid/app/Activity;)V',
+         'invoke-static {p0}, Lcom/namp/vh/ModMenu;->onResume(Landroid/app/Activity;)V', 1),
+    ],
+}
+
 # Method MOI them vao class (khong doi gi cua class goc): de lop Offline goi duoc member private.
 ADD_METHODS = {
     'offline': [
@@ -186,6 +201,28 @@ def apply(dec, groups):
             open(path, 'w', encoding='utf-8').write(src)
             total += 1
             print('patched %s %s' % (cls, header))
+        for cls, header, anchor, newline, want in INSERT_AFTER.get(gname, []):
+            path = find_class(dec, cls)
+            src = open(path, encoding='utf-8').read()
+            pat = re.compile(r'^' + re.escape(header) + r'\n.*?^\.end method$', re.S | re.M)
+            m = pat.findall(src)
+            if len(m) != 1:
+                raise SystemExit('INSERT %s %s: method khop %d lan (can 1)' % (cls, header, len(m)))
+            body = m[0]
+            lines = body.split('\n')
+            if any(l.strip() == newline for l in lines):
+                raise SystemExit('INSERT %s %s: dong chen da co san: %s' % (cls, header, newline))
+            idx = [i for i, l in enumerate(lines) if l.strip() == anchor]
+            if len(idx) != want:
+                raise SystemExit('INSERT %s %s: dong neo khop %d lan (can %d): %s' % (cls, header, len(idx), want, anchor))
+            indent = re.match(r'\s*', lines[idx[0]]).group(0)
+            for i in reversed(idx):
+                lines.insert(i + 1, indent + newline)
+            nbody = '\n'.join(lines)
+            src = src.replace(body, nbody)
+            open(path, 'w', encoding='utf-8').write(src)
+            total += 1
+            print('insert  %s %s: +1 dong sau neo (x%d): %s' % (cls, header, want, newline))
         for cls, code in ADD_METHODS.get(gname, []):
             path = find_class(dec, cls)
             src = open(path, encoding='utf-8').read()

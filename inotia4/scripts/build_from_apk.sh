@@ -1,29 +1,37 @@
 #!/usr/bin/env bash
 # Dung APK tu mot APK da build san (vd test_builds/Inotia4_TEST4_vi_anh_offline.apk) khi khong co bo split goc:
-#   bash scripts/build_from_apk.sh <base.apk> <out.apk> [--smali nhom1,nhom2] [--vnfont] [--lib] [--diag] [--internet]
+#   bash scripts/build_from_apk.sh <base.apk> <out.apk> [--smali nhom1,nhom2] [--vnfont] [--lib [--libgroup g1,g2]] [--diag] [--internet]
 #   --smali  : decode smali day du, ap scripts/patch_smali.py --group <nhom> (vd. net);
 #              khong co --smali: apktool -s, giu nguyen tung byte moi dex cua base;
-#   --vnfont : bien dich lai com.namp.vh (VNFont/FontData/FontData24/Offline) tu java/src -> thay classes3.dex;
+#   --vnfont : bien dich lai com.namp.vh (VNFont/FontData/FontData24/Offline/ModMenu/ModMem) tu java/src -> thay classes3.dex
+#              (javac can android.jar cho ModMenu). Nhom smali `mod` BAT BUOC di cung --vnfont (ModMenu nam trong classes3.dex);
 #   --lib    : va lib/arm64-v8a/libgame.so bang scripts/patch_lib.py (patch nao lib nen da co thi bao "da ap"),
 #              giu nguyen kich thuoc/STORED/can 16 KB (fix_zip.py lo phan can);
+#              mac dinh ap TAT CA nhom patch lib (base + p1 + mod); --libgroup base,p1 de ra y het TEST8/TEST9 (khong co mod);
 #   --diag   : them classes4.dex = com.namp.vh.diag (LaunchActivity, DiagProvider, CrashLog) + sua manifest;
 #   --internet: tra lai quyen INTERNET (chi de thu, ban phat hanh KHONG dung).
 # Can: APKTOOL (jar), BT (build-tools co d8/apksigner/zipalign), ANDROID_JAR (android.jar API >= 30).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 BASE=$(realpath "$1"); OUT=$2; shift 2
-MAN_OPTS=(); SMALI=""; VNFONT=0; DIAG=0; LIB=0
+MAN_OPTS=(); SMALI=""; VNFONT=0; DIAG=0; LIB=0; LIBGROUP=""
 while [ $# -gt 0 ]; do
   case "$1" in
     --internet) MAN_OPTS+=(--internet);;
     --smali) SMALI=$2; shift;;
     --vnfont) VNFONT=1;;
     --lib) LIB=1;;
+    --libgroup) LIBGROUP=$2; shift;;
     --diag) DIAG=1;;
     *) echo "tham so la: $1"; exit 2;;
   esac; shift
 done
 if [ ${#MAN_OPTS[@]} -gt 0 ] && [ $DIAG = 0 ]; then echo "--internet chi dung cung --diag"; exit 2; fi
+if [ -n "$LIBGROUP" ] && [ $LIB = 0 ]; then echo "--libgroup chi dung cung --lib"; exit 2; fi
+case ",$SMALI," in *,mod,*)
+  if [ $VNFONT = 0 ]; then echo "nhom smali 'mod' goi com.namp.vh.ModMenu (classes3.dex) => can --vnfont"; exit 2; fi
+  if [ $LIB = 0 ]; then echo "CANH BAO: nhom smali 'mod' ma khong co --lib: nut MOD se ghi vao vung nho khong ai doc" >&2; fi;;
+esac
 APKTOOL=${APKTOOL:-tools/apktool_2.12.1.jar}
 BT=${BT:-/opt/android/build-tools/35.0.0}
 ANDROID_JAR=${ANDROID_JAR:-/opt/android/platforms/android-34/android.jar}
@@ -47,7 +55,7 @@ if [ $VNFONT = 1 ]; then
   python3 -I scripts/gen_fontdata.py font/f18vn.bin java/src/com/namp/vh/FontData.java
   python3 -I scripts/gen_fontdata.py font/f24vn.bin java/src/com/namp/vh/FontData24.java --parts
   env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -d "$W/vnf/stub" $(find java/stubs -name '*.java')
-  env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -cp "$W/vnf/stub" -d "$W/vnf/cls" java/src/com/namp/vh/*.java
+  env -u JAVA_TOOL_OPTIONS javac -encoding UTF-8 --release 8 -nowarn -cp "$W/vnf/stub:$ANDROID_JAR" -d "$W/vnf/cls" java/src/com/namp/vh/*.java
   $D8 --lib "$W/vnf/stub" --output "$W/vnf/dex" "$W"/vnf/cls/com/namp/vh/*.class
   rm -rf "$W/dec/smali_classes3"; cp "$W/vnf/dex/classes.dex" "$W/dec/classes3.dex"
 fi
@@ -55,7 +63,8 @@ fi
 if [ $LIB = 1 ]; then
   echo "== 2b. va libgame.so (scripts/patch_lib.py)"
   LIBF="$W/dec/lib/arm64-v8a/libgame.so"
-  python3 -I scripts/patch_lib.py "$LIBF" "$W/libgame_patched.so" | tee "$W/patch_lib.log"
+  python3 -I scripts/patch_lib.py "$LIBF" "$W/libgame_patched.so" ${LIBGROUP:+--group "$LIBGROUP"} | tee "$W/patch_lib.log"
+  python3 -I scripts/patch_lib.py --diff "$LIBF" "$W/libgame_patched.so" ${LIBGROUP:+--group "$LIBGROUP"} | tee "$W/patch_lib_diff.log"
   cp "$W/libgame_patched.so" "$LIBF"
 fi
 
