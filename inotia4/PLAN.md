@@ -563,9 +563,17 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - **Vá 3 lệnh kiểu vẽ** `45008052` → `25008052` tại 0x169ae8, 0x169bb4, 0x169bfc (nhóm lib `hudbtn`), để ảnh bấm vẽ alpha thường thay vì cộng (tránh cháy sáng). Phải kiểm byte gốc và ngữ cảnh disasm trước khi vá.
     - Thu ảnh bằng Lanczos trên RGBA straight. Selftest: pixel ngoài 7 rect giống hệt gốc; atlas không đổi thì chép nguyên byte.
     - Script mới `scripts/hud_swap.py`; cờ `--hud` trong `build_from_apk.sh`.
-  - [ ] T10a. Tìm sprite HUD gốc: file atlas, toạ độ, kích thước, trạng thái thường/bấm; tìm hàm vẽ trong `UIPlay_*` để xác nhận. Xuất ảnh đối chiếu gốc ↔ mới vào `docs/hud_thay_nut.md`.
-  - [ ] T10b. Ghép ảnh mới vào atlas, repack, selftest byte (atlas không đổi phải ra giống từng byte); `apkdiff` chỉ khác đúng các file atlas.
-  - [ ] T10c. Kiểm: render atlas ra PNG so với ảnh gốc; nếu T2 xong thì chụp màn chơi; rồi bản thử cho người dùng.
+  - Bàn giao (A1, T10a, T10b, T10c xong; T10 cha chờ quản đốc nghiệm thu; chi tiết `docs/hud_thay_nut.md`):
+    - Đã tạo/sửa: `scripts/re/hud_check.py` (mới, kiểm byte/disasm bảng loc UI_014/UI_015, kiểu vẽ, 3 lệnh, ID → loc, thứ tự vẽ ô kỹ năng; log `logs/t10a_hud_check.log` TẤT CẢ ĐẠT trên lib TEST4, TEST11 và lib trong APK T10); `scripts/hud_swap.py` (mới; `--selftest`, `--lib`, `--preview`; log `logs/t10b_hud_swap_selftest.log`); `scripts/hud_mophong.py` (mới); `scripts/patch_lib.py` (nhóm `hudbtn`, 3 lệnh 0x169ae8/0x169bb4/0x169bfc, KHÔNG nằm trong nhóm mặc định; sửa `--diff -v`); `scripts/build_from_apk.sh` (`--hud`, ràng buộc `--hud` ⇔ `hudbtn`); `docs/hud_thay_nut.md`; `docs/hud/sau_thay.png`, `docs/hud/mo_phong_hud.png`; `logs/t10c_apk_check.txt`.
+    - Kiểm lại đúng như quản đốc/A2 ghi: base loc UI_014 0xaf3cc (7 mục), UI_015 0xaf474 (40 mục), stride 24; 7 rect khớp từng số; 3 lệnh `45008052` ở đúng 3 nơi gọi `GetLoc(0x15,3)` (không còn nơi nào khác); kiểu 2 = `glBlendFunc(SRC_ALPHA, ONE)`, kiểu 1 = vẽ thường.
+    - Chi tiết thêm: ID 1/2/3/7 → loc1/2/0/3 (bằng byte); khung ô kỹ năng loc11 đều được vẽ TRƯỚC icon ở cả 3 nơi (HUD và popup gán phím tắt) nên khung đặc không che icon.
+    - Atlas ra: `UI_014` 132.023 B `d541527a…cf70`, `UI_015` 192.288 B `a04b7cc8…2606`. Selftest: pixel ngoài 7 rect == gốc từng pixel, chạy 2 lần ra cùng từng byte, atlas không có việc thì chép nguyên byte.
+    - Build `out/Inotia4_T10_check.apk` (không commit; lệnh ở đầu `docs/hud_thay_nut.md`) sha256 `2692c8ca4ae61b194cb38e713d5e7ba04c142db196437ba0364cf370f09e37e6`: `apkdiff` với TEST11 chỉ khác `UI_014.png.jpg`, `UI_015.png.jpg`, `libgame.so` (3 byte, đúng 3 vaddr); apksigner v1/v2/v3 đạt, `zipalign -c -P 16 4` đạt, `check_apk` PASS.
+    - Việc còn lại cho quản đốc: nghiệm thu, đóng gói bản thử cho người dùng (ví dụ TEST12 = `out/Inotia4_T10_check.apk`), xin người dùng xem nút trên máy thật. Ảnh chụp màn chơi vẫn cần T2; `docs/hud/mo_phong_hud.png` chỉ là mô phỏng Python.
+    - CHƯA XÁC ĐỊNH: hình thật trong màn chơi, texture atlas lọc tuyến tính hay gần nhất (không làm alpha bleed), ý nghĩa `data+0x68`, cảm giác nhấp nháy tutorial với lớp bấm alpha thường, `rebuild.sh` chưa có `--hud`/`hudbtn` (T5).
+  - [x] T10a. Tìm sprite HUD gốc: file atlas, toạ độ, kích thước, trạng thái thường/bấm; tìm hàm vẽ trong `UIPlay_*` để xác nhận. Xuất ảnh đối chiếu gốc ↔ mới vào `docs/hud_thay_nut.md`.
+  - [x] T10b. Ghép ảnh mới vào atlas, repack, selftest byte (atlas không đổi phải ra giống từng byte); `apkdiff` chỉ khác đúng các file atlas.
+  - [x] T10c. Kiểm: render atlas ra PNG so với ảnh gốc; nếu T2 xong thì chụp màn chơi; rồi bản thử cho người dùng.
 - [ ] ~~T4. IAP "mua miễn phí"~~ — **BỎ** theo người dùng (2026-10-31). Bàn giao dưới đây giữ lại để tham khảo.
   - Bàn giao (A2 đọc trước, ~70%):
     - Java `InAppV4`:
@@ -693,3 +701,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 quản đốc: A2 đọc T10a xong ~92% (~279k). Ghi bàn giao vào `docs/t10a_bangiao_A2.md`, chép ảnh vào `docs/hud/`. Chốt quyết định T10: 7 rect, kích thước thu, vá 3 lệnh kiểu vẽ. T10 làm sau T9.
 - 2026-11-01 A1 (T9): T9a, T9b, T9c xong (T9 cha chờ quản đốc nghiệm thu). `docs/tam_nhin_hud.md`, nhóm `view`/`hud`/`pool` trong `patch_lib.py`, thanh "Tầm nhìn" trong `ModMenu`, `emu/view_check.sh`. P = 105 cho W = 536 (không phải 538). Build `out/Inotia4_T9_check.apk` PASS, `apkdiff` với TEST10 chỉ khác `classes3.dex` (ModMenu*) và `libgame.so`. Không chụp được màn chơi (T2).
 - 2026-11-01 quản đốc: nghiệm thu T9a–T9c ĐẠT; gửi TEST11 (TEST10 + tầm nhìn P% + lề HUD + pool 10 MB). A1 (T9) dừng ở ~435k (vượt ngưỡng, không dùng lại). Tiếp theo: T10 (công nhân chạy mới).
+- 2026-11-01 A1 (T10): T10a, T10b, T10c xong (T10 cha chờ quản đốc nghiệm thu). `docs/hud_thay_nut.md`, `scripts/re/hud_check.py`, `scripts/hud_swap.py`, `scripts/hud_mophong.py`, nhóm lib `hudbtn` (không nằm trong nhóm mặc định), cờ `--hud`. Build `out/Inotia4_T10_check.apk` PASS; `apkdiff` với TEST11 chỉ khác 2 atlas và `libgame.so` (3 byte). Chưa chụp được màn chơi (T2); mô phỏng Python ở `docs/hud/mo_phong_hud.png`.
