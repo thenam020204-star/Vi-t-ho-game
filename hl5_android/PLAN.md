@@ -161,7 +161,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: v0.2-hd ✓ (máy thật OK) → T15a (đang chạy) → T15b → T16 → T14a → T14b → T7 → T11.
+- A1: TẠM DỪNG — v0.2-hd ✓ → T15a (giao lại) → T15b → T16 → T14a → T14b → T7 → T11.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -239,3 +239,4 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [A1/T10] XONG (chờ nghiệm thu): acceptance k đổi->ghi->khởi động lại ĐẠT (t10_accept 1200x720); ảnh `shots/T10/` (4); `dist/HL5-VI-v0.2-hd.apk` sha256 65569f2a…c898 và `dist/diag/HL5-diag-v0.2-hd.apk` sha256 3bc69c79…1094, apksigner+zipalign đạt; PHAT-HANH.md, BAO-CAO §11 cập nhật. Còn nợ: xem Vướng mắc T10. Chưa commit.
 - [quản đốc] Nghiệm thu T10: đạt (đổi k → file → khởi động lại áp dụng; rà bridge mục 9 ĐẠT, thiếu thư mục/file rỗng/lớn → k=2). Tồn: nhãn menu chính tràn ô ở 18 px (sửa ở T7, rút gọn nhãn), mô tả lớp tràn khung (lỗi sẵn có, T15). Gửi v0.2-hd + diag cho người dùng thử tốc độ ÷2/÷3. Tiếp: T15a.
 - [người dùng] v0.2-hd chạy ổn trên máy. Yêu cầu làm lại thanh hội thoại cho màn lớn → quản đốc vẽ mockup (ui_new/dialog/), thêm T16. Sắp hết lượt → cập nhật BAN-GIAO.md.
+- [quản đốc] Người dùng dừng phiên (hết hạn mức). T15a (chỉ thiết kế, không patch) bị dừng giữa chừng: phần đã viết (nếu có) ở BAO-CAO §12 và `$WORK/t15a/`; phiên sau giao lại T15a. Bản phát hành mới nhất vẫn là v0.2-hd (không có patch mới chưa đóng gói).
