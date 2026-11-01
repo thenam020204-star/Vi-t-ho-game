@@ -147,7 +147,7 @@ A00145	c/csv/item_03.dat	rec 85 off 2 ps 1	T5 Void Lance
 A00146	c/csv/item_03.dat	rec 85 off 20 ps 1	Spear		
 A00147	c/csv/item_10.dat	rec 17 off 2 ps 1	Void Necklace		
 A00148	c/csv/item_11.dat	rec 11 off 18 ps 1	^Expert Mode Only{;Restores 40 HP 5;times, for 200 HP;total. Cannot be used;in Story Mode.		
-A00149	c/csv/item_11.dat	rec 12 off 23 ps 1	Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.[d\n2		
+A00149	c/csv/item_11.dat	rec 12 off 23 ps 1	Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.[d\n2		unused
 A00150	c/csv/item_11.dat	rec 13 off 23 ps 1	^Expert Mode Only{;Restores 200 HP 5;times, for 1000 HP;total. Cannot be used;in Story Mode.		
 A00151	c/csv/item_11.dat	rec 14 off 23 ps 1	^Expert Mode Only{;Blocks all attacks;for 6 seconds. Cannot;be used in Story;Mode.		
 A00152	c/csv/item_11.dat	rec 15 off 18 ps 1	^Expert Mode Only{;Fully restores the;Spirit Gauge. Cannot;be used in Story;Mode.		
@@ -905,40 +905,40 @@ A00903	c/map/00201.scn	idx 39	I just hope it does not stir up trouble.	Chỉ mon
 A00904	c/map/00202.scn	idx 20	You know how the barrier on the cave east of the Frozen Sea suddenly vanished?	Cậu biết cái kết giới ở hang phía đông Biển Băng đột nhiên biến mất chứ?	
 A00905	c/map/00202.scn	idx 21	I asked that guy outside to check the flora and fauna to see if anything could be used as medicine.	Tôi nhờ gã bên ngoài kia xem xét động thực vật, coi có thứ gì dùng làm thuốc được không.	
 A00906	c/map/00202.scn	idx 22	Instead, he came back injured. He said while hunting <Ice Souls{, a giant worm suddenly appeared.	Thế mà anh ta lại về với thương tích. Anh ta kể lúc đang săn <Hồn Băng{ thì một con giun khổng lồ đột nhiên xuất hiện.	
-A00907	c/map/00207.scn	idx 0	Facility Chamber	Phòng trong cơ sở ngầm	
-A00908	c/map/00207.scn	idx 1	Is this... a note?	Đây là.. mẩu ghi chú à?	
-A00909	c/map/00207.scn	idx 2	What does this even say... The handwriting is terrible.	Viết cái gì thế này.. chữ xấu kinh khủng.	
-A00910	c/map/00207.scn	idx 3	}End of hallway... corner passage{...?	}Cuối hành lang.. lối đi trong góc{..?	
-A00911	c/map/00207.scn	idx 4	You can... read this?	Chữ này.. ngài đọc được à?	
-A00912	c/map/00207.scn	idx 5	Well... somehow, the handwriting feels familiar...	Ừm.. chẳng hiểu sao thấy quen nét chữ..	
-A00913	c/map/00207.scn	idx 6	These photos...	Mấy tấm ảnh này..	
-A00914	c/map/00207.scn	idx 7	They are children...?	Là trẻ con..?	
-A00915	c/map/00207.scn	idx 8	Is not this Schultz? When he was little...	Ngài Schurtz đây phải không? Hồi còn nhỏ..	
-A00916	c/map/00207.scn	idx 9	Photos of the Successors as kids, huh... This fat one must be Marc.	Ảnh hồi nhỏ của các Kế Thừa Giả à.. con lợn này chắc là Marc.	
-A00917	c/map/00207.scn	idx 10	Oh my.	Ôi chao.	
-A00918	c/map/00207.scn	idx 11	Wait, is not this Alex? He looks so young without the beard!	Cái này, chẳng phải anh Alex sao? Không có râu trông trẻ măng luôn?	
-A00919	c/map/00207.scn	idx 12	...He even has a strange }tattoo{.	.. Còn xăm cả }hình xăm{ kỳ quặc nữa.	
-A00920	c/map/00207.scn	idx 13	Chris and Tiana are here too... But wait, the background is identical in all of them?	Có cả Kris với Tiana nữa.. nhưng mà, phông nền mấy tấm ảnh đều giống hệt nhau?	
-A00921	c/map/00207.scn	idx 14	I have no memory of taking these photos, or of this place...	Chụp ảnh lúc nào, phông nền thế này, tôi chẳng nhớ gì cả..	
-A00922	c/map/00207.scn	idx 15	Just like Tyr said... having your memories manipulated just leaves a bad taste in your mouth.	Đúng như Tir nói.. chỉ thêm khó chịu thôi à. Chuyện ký ức bị thao túng.	
-A00923	c/map/00209.scn	idx 1	|(A letter...){	|(Thư...){	
-A00924	c/map/00209.scn	idx 2	|(The sender is... Tyr? Seriously?){	|(Người gửi... Tir? Không lẽ?){	
-A00925	c/map/00209.scn	idx 3	Dear Isabel,	Isabelle thân mến.	
-A00926	c/map/00209.scn	idx 4	Some idiot named Graham, claiming to be your cousin, was assigned to my unit today.	Hôm nay có thằng đần tên Graham, tự xưng là anh họ em, được điều về đơn vị ta.	
-A00927	c/map/00209.scn	idx 5	If you keep pulling strings to shove weirdos my way, you are dead.	Còn cứ đi cửa sau nhét mấy đứa kỳ quặc cho ta nữa là chết đấy.	
-A00928	c/map/00209.scn	idx 6	P.S. Stop spreading rumors about me and Brian.	P.S. Đừng tung tin đồn kỳ cục về ta với Brian nữa.	
-A00929	c/map/00209.scn	idx 7	P.S. 2. If you want something specific for an engagement gift, tell me now.	P.S. 2. Muốn quà đính hôn gì cụ thể thì nói trước đi.	
-A00930	c/map/00209.scn	idx 8	|(Dated four years ago... Was this sent while he was still in the Republic army?){	|(Đề ngày bốn năm trước... gửi lúc còn trong quân Cộng Hoà à?){	
-A00931	c/map/00209.scn	idx 9	|(Did she have a fiance...?){	|(Cô ấy đã có hôn phu rồi sao...?){	
-A00932	c/map/00209.scn	idx 10	|(Next to the letter lies a small portrait, likely of Isabel.){	|(Bên cạnh lá thư là bức chân dung nhỏ, có vẻ là Isabelle.){	
-A00933	c/map/00209.scn	idx 11	|(She is a beautiful woman with purple hair and a somewhat somber gaze.){	|(Một người phụ nữ xinh đẹp tóc tím, trông hơi u buồn.){	
-A00934	c/map/00209.scn	idx 12	Take it	Mang theo	
-A00935	c/map/00209.scn	idx 13	Leave it	Để yên	
-A00936	c/map/00210.scn	idx 0	Central 9th, Dead End	Central phố 9, ngõ cụt	
-A00937	c/map/00212.scn	idx 0	Old Warehouse	Nhà kho cũ	k_low=K10116
-A00938	c/map/00213.scn	idx 1	(Blueprints or schematics are laid out.){	(Có thứ gì như bản vẽ thiết kế đặt ở đây.){	
-A00939	c/map/00213.scn	idx 2	(It appears to explain the analysis of disassembled Rohnberg magitech.){	(Có vẻ là tài liệu giải thích kết quả tháo rời phân tích ma cụ của Lonberg.){	
-A00940	c/map/00213.scn	idx 3	|(A tool engraved with the initial L lies here. It seems heavily damaged.){	|(Có một dụng cụ khắc chữ cái L. Có vẻ hư hỏng nặng.){	
+A00907	c/map/00207.scn	idx 0	Facility Chamber	Phòng trong cơ sở ngầm	unused
+A00908	c/map/00207.scn	idx 1	Is this... a note?	Đây là.. mẩu ghi chú à?	unused
+A00909	c/map/00207.scn	idx 2	What does this even say... The handwriting is terrible.	Viết cái gì thế này.. chữ xấu kinh khủng.	unused
+A00910	c/map/00207.scn	idx 3	}End of hallway... corner passage{...?	}Cuối hành lang.. lối đi trong góc{..?	unused
+A00911	c/map/00207.scn	idx 4	You can... read this?	Chữ này.. ngài đọc được à?	unused
+A00912	c/map/00207.scn	idx 5	Well... somehow, the handwriting feels familiar...	Ừm.. chẳng hiểu sao thấy quen nét chữ..	unused
+A00913	c/map/00207.scn	idx 6	These photos...	Mấy tấm ảnh này..	unused
+A00914	c/map/00207.scn	idx 7	They are children...?	Là trẻ con..?	unused
+A00915	c/map/00207.scn	idx 8	Is not this Schultz? When he was little...	Ngài Schurtz đây phải không? Hồi còn nhỏ..	unused
+A00916	c/map/00207.scn	idx 9	Photos of the Successors as kids, huh... This fat one must be Marc.	Ảnh hồi nhỏ của các Kế Thừa Giả à.. con lợn này chắc là Marc.	unused
+A00917	c/map/00207.scn	idx 10	Oh my.	Ôi chao.	unused
+A00918	c/map/00207.scn	idx 11	Wait, is not this Alex? He looks so young without the beard!	Cái này, chẳng phải anh Alex sao? Không có râu trông trẻ măng luôn?	unused
+A00919	c/map/00207.scn	idx 12	...He even has a strange }tattoo{.	.. Còn xăm cả }hình xăm{ kỳ quặc nữa.	unused
+A00920	c/map/00207.scn	idx 13	Chris and Tiana are here too... But wait, the background is identical in all of them?	Có cả Kris với Tiana nữa.. nhưng mà, phông nền mấy tấm ảnh đều giống hệt nhau?	unused
+A00921	c/map/00207.scn	idx 14	I have no memory of taking these photos, or of this place...	Chụp ảnh lúc nào, phông nền thế này, tôi chẳng nhớ gì cả..	unused
+A00922	c/map/00207.scn	idx 15	Just like Tyr said... having your memories manipulated just leaves a bad taste in your mouth.	Đúng như Tir nói.. chỉ thêm khó chịu thôi à. Chuyện ký ức bị thao túng.	unused
+A00923	c/map/00209.scn	idx 1	|(A letter...){	|(Thư...){	unused
+A00924	c/map/00209.scn	idx 2	|(The sender is... Tyr? Seriously?){	|(Người gửi... Tir? Không lẽ?){	unused
+A00925	c/map/00209.scn	idx 3	Dear Isabel,	Isabelle thân mến.	unused
+A00926	c/map/00209.scn	idx 4	Some idiot named Graham, claiming to be your cousin, was assigned to my unit today.	Hôm nay có thằng đần tên Graham, tự xưng là anh họ em, được điều về đơn vị ta.	unused
+A00927	c/map/00209.scn	idx 5	If you keep pulling strings to shove weirdos my way, you are dead.	Còn cứ đi cửa sau nhét mấy đứa kỳ quặc cho ta nữa là chết đấy.	unused
+A00928	c/map/00209.scn	idx 6	P.S. Stop spreading rumors about me and Brian.	P.S. Đừng tung tin đồn kỳ cục về ta với Brian nữa.	unused
+A00929	c/map/00209.scn	idx 7	P.S. 2. If you want something specific for an engagement gift, tell me now.	P.S. 2. Muốn quà đính hôn gì cụ thể thì nói trước đi.	unused
+A00930	c/map/00209.scn	idx 8	|(Dated four years ago... Was this sent while he was still in the Republic army?){	|(Đề ngày bốn năm trước... gửi lúc còn trong quân Cộng Hoà à?){	unused
+A00931	c/map/00209.scn	idx 9	|(Did she have a fiance...?){	|(Cô ấy đã có hôn phu rồi sao...?){	unused
+A00932	c/map/00209.scn	idx 10	|(Next to the letter lies a small portrait, likely of Isabel.){	|(Bên cạnh lá thư là bức chân dung nhỏ, có vẻ là Isabelle.){	unused
+A00933	c/map/00209.scn	idx 11	|(She is a beautiful woman with purple hair and a somewhat somber gaze.){	|(Một người phụ nữ xinh đẹp tóc tím, trông hơi u buồn.){	unused
+A00934	c/map/00209.scn	idx 12	Take it	Mang theo	unused
+A00935	c/map/00209.scn	idx 13	Leave it	Để yên	unused
+A00936	c/map/00210.scn	idx 0	Central 9th, Dead End	Central phố 9, ngõ cụt	unused
+A00937	c/map/00212.scn	idx 0	Old Warehouse	Nhà kho cũ	unused; k_low=K10116
+A00938	c/map/00213.scn	idx 1	(Blueprints or schematics are laid out.){	(Có thứ gì như bản vẽ thiết kế đặt ở đây.){	unused
+A00939	c/map/00213.scn	idx 2	(It appears to explain the analysis of disassembled Rohnberg magitech.){	(Có vẻ là tài liệu giải thích kết quả tháo rời phân tích ma cụ của Lonberg.){	unused
+A00940	c/map/00213.scn	idx 3	|(A tool engraved with the initial L lies here. It seems heavily damaged.){	|(Có một dụng cụ khắc chữ cái L. Có vẻ hư hỏng nặng.){	unused
 A00941	c/map/00214.scn	idx 1	Finally, this day has come...	Cuối cùng, ngày này cũng đến...	
 A00942	c/map/00214.scn	idx 2	|(...Why do I have such a bad feeling about this?){	|(...Sao mình lại có linh cảm xấu về chuyện này thế?){	
 A00943	c/map/00214.scn	idx 3	Here we go! Vessel of Graham! One small step for me, one giant leap for mankind!	Bắt đầu nào! Chiến giáp của Graham! Một bước nhỏ của tôi, một bước nhảy vọt khổng lồ của nhân loại!	
@@ -954,9 +954,9 @@ A00952	c/map/00214.scn	idx 12	...You idiot...	...Đồ ngốc...
 A00953	c/map/00214.scn	idx 13	There seems to have been a <minor glitch{ in the AI...	Hình như AI bị <trục trặc nhỏ{...	
 A00954	c/map/00214.scn	idx 15	...*sigh*...	...Haizz...	
 A00955	c/map/00214.scn	idx 16	|(I am never helping this guy again...){	|(Mình sẽ không bao giờ giúp gã này nữa...){	
-A00956	c/map/00215.scn	idx 1	Intruder detected.	Phát hiện kẻ xâm nhập	k_low=K10117
+A00956	c/map/00215.scn	idx 1	Intruder detected.	Phát hiện kẻ xâm nhập	unused; k_low=K10117
 A00957	c/map/00215.scn	idx 2	Commencing elimination protocol.	Bắt đầu hành động loại trừ	k_low=K10118
-A00958	c/map/00215.scn	idx 3	What is it this time...	Cái quái gì nữa đây...	k_low=K10119
+A00958	c/map/00215.scn	idx 3	What is it this time...	Cái quái gì nữa đây...	unused; k_low=K10119
 A00959	c/map/00216.scn	idx 1	Welcome, Successor.	Hoan nghênh, Kế Thừa Giả.	k_low=K10120
 A00960	c/map/00216.scn	idx 2	...What are you?	...Ngươi là thứ gì?	
 A00961	c/map/00216.scn	idx 5	|(Finding him in Descendant ruins... is he like Krad?){	|(Gặp hắn ở di tích của Kẻ Giáng Lâm... lẽ nào cũng giống Creed?){	
@@ -1007,3 +1007,40 @@ A01005	c/map/00216.scn	idx 50	Shall we stop here? Any further, and one of us wil
 A01006	c/map/00216.scn	idx 51	I was not using my full strength, but... there is no talking you out of it.	Tôi chưa dùng hết sức, nhưng... xem ra không thể khuyên cậu bỏ ý định.	
 A01007	c/map/00216.scn	idx 52	The feeling is mutual. There is no reason for allies to spill each other blood.	Tôi cũng vậy. Đồng minh thì không có lý do gì phải đổ máu của nhau.	
 A01008	c/map/00216.scn	idx 53	It cannot be helped, then. I wish you good fortune.	Vậy thì đành chịu. Chúc cậu may mắn.	
+A01009	c/csv/common_text.dat	rec 316 off 0 ps 1	Electronic Arts;(Korea)		k_low=K00453
+A01010	c/csv/ingame_text.dat	rec 128 off 0 ps 1	Abandon this quest?		k_low=K00590
+A01011	c/csv/ingame_text.dat	rec 343 off 0 ps 1	Nickname created.		k_low=K00744
+A01012	c/csv/item_11.dat	rec 12 off 23 ps 1	Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.[d
+2		k_low=K01749
+A01013	c/csv/menu_text.dat	rec 50 off 0 ps 1	Collect trade proceeds?		k_low=K00051
+A01014	c/csv/menu_text.dat	rec 166 off 0 ps 1	Return received mail?		k_low=K00156
+A01015	c/csv/menu_text.dat	rec 180 off 0 ps 1	SMS consent confirmed.		k_low=K00169
+A01016	c/csv/menu_text.dat	rec 181 off 0 ps 1	SMS consent declined.		k_low=K00170
+A01017	c/csv/menu_text.dat	rec 184 off 0 ps 1	^-Notice-;;02-559-8787		k_low=K00173
+A01018	c/csv/menu_text.dat	rec 199 off 0 ps 1	Check sent messages?		k_low=K00185
+A01019	c/map/00008.scn	idx 24	Insolent brats...!!		k_low=K04131
+A01020	c/map/00019.scn	idx 14	^Heheheh, mortals... Is this the choice you made?		
+A01021	c/map/00019.scn	idx 15	^You cast aside the avatar I gave you, and chose merely this?		
+A01022	c/map/00019.scn	idx 16	^Do you truly believe the Soltians will create a god for you?		
+A01023	c/map/00019.scn	idx 17	^To stand against me with nothing more than a wretched imitation - human mind grafted onto my remnants?		
+A01024	c/map/00019.scn	idx 18	^I shall deliver a message to the Soltians by destroying you completely..!		
+A01025	c/map/00019.scn	idx 19	^That this world does not permit a new god!		
+A01026	c/map/00026.scn	idx 10	Rufus...!! You bastard...!!		k_low=K04399
+A01027	c/map/00026.scn	idx 33	Schultz... Ren...		k_low=K04422
+A01028	c/map/00041.scn	idx 105	Together... always...?		k_low=K05180
+A01029	c/map/00042.scn	idx 31	A-Ah... Hello, Schultz!		k_low=K05219
+A01030	c/map/00054.scn	idx 35	...Ah... Chris... wait...		k_low=K05854
+A01031	c/map/00057.scn	idx 4	Did something... happen?		k_low=K06007
+A01032	c/map/00083.scn	idx 38	Amnesia? Why...?		k_low=K07422
+A01033	c/map/00108.scn	idx 46	I see.		k_low=K08243
+A01034	c/map/00151.scn	idx 128	Ugh... Why... Why?!		k_low=K08823
+A01035	c/map/00151.scn	idx 161	However... he... disappeared.		k_low=K08856
+A01036	c/map/00153.scn	idx 169	|(Evelyn... Sis...! Please...)		k_low=K09053
+A01037	c/map/00153.scn	idx 185	Theo... W-Why...		k_low=K09068
+A01038	c/map/00171.scn	idx 12	Hmm... Tyr... will...		k_low=K09391
+A01039	c/map/00175.scn	idx 0	Sanctuary Center		
+A01040	c/map/00186.scn	idx 18	If you still yearn for more, here are some hints about hidden events for Ren sake.		
+A01041	c/map/00214.scn	idx 14	It needs some improvements.		
+A01042	c/map/00216.scn	idx 3	For now... yes. Call me Rabi.		
+A01043	c/map/00216.scn	idx 4	I did not ask for your name.		
+A01044	c/map/00216.scn	idx 20	Lurain...		

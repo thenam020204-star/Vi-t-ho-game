@@ -304,6 +304,63 @@ def align_dat_file(arecs, aspans, aitems_by_rec, krecs, kitems_by_rec, sim, band
     return [(i, j, s, rs(i, j)[1]) for i, j, s in prs], tot
 
 
+
+# ----------------------------------------------------------------- ghép FILE scn theo nội dung (T2c)
+def code_of(b):
+    """Phần script (khối Scripts A/B) của .scn, bỏ bảng chuỗi."""
+    r = EA.parse_scn(b)
+    return b[r[2]:r[0]] if r else b''
+
+
+def grams4(c):
+    return collections.Counter(c[i:i + 4] for i in range(len(c) - 3))
+
+
+def dice(a, b):
+    if not a or not b: return 0.0
+    return 2.0 * sum((a & b).values()) / (sum(a.values()) + sum(b.values()))
+
+
+FILE_ACCEPT = 0.50
+
+
+def fnum(f):
+    return int(os.path.basename(f)[:-4])
+
+
+def match_files(a_bytes, k_bytes, aitems, kscn, ktab_n, atab_n, sim, ktab_items):
+    """a_bytes {file Android: bytes}, k_bytes {file LGT: bytes} (chỉ các file LGT có câu Hàn).
+    Điểm = 0.6*bytecode(dice 4-gram) + 0.4*độ giống câu (idx nếu cùng số câu, else DP), +0.02 nếu cùng số file.
+    Gán 1-1 tham lam theo điểm giảm dần; < FILE_ACCEPT thì không ghép. Trả về (filemap, chi tiết)."""
+    ga = {f: grams4(code_of(b)) for f, b in a_bytes.items()}
+    gk = {f: grams4(code_of(b)) for f, b in k_bytes.items()}
+    bc = {}
+    for f in ga:
+        for g in gk: bc[(f, g)] = dice(ga[f], gk[g])
+    cand = []
+    for f in ga:
+        if not aitems.get(f): continue
+        top = sorted(gk, key=lambda g: -bc[(f, g)])[:6]
+        for g in set(top) | ({f} if f in gk else set()):
+            if bc[(f, g)] < 0.2 and g != f: continue
+            its = aitems[f]
+            if atab_n[f] == ktab_n.get(g):
+                ts = [sim(it['text_en'], kscn[g][it['idx']]) for it in its if it['idx'] in kscn[g]]
+                tx = sum(ts) / max(1, len(its))
+            else:
+                kidx = sorted(kscn[g])
+                pr, _ = dp_align(len(its), len(kidx), lambda i, j: sim(its[i]['text_en'], kscn[g][kidx[j]]))
+                tx = sum(p[2] for p in pr) / max(len(its), len(kidx), 1)
+            sc = 0.6 * bc[(f, g)] + 0.4 * tx + (0.02 if f == g else 0.0)
+            cand.append((sc, f, g, bc[(f, g)], tx))
+    cand.sort(key=lambda x: (-x[0], abs(fnum(x[1]) - fnum(x[2])), x[1], x[2]))
+    fm = {}; usedk = set(); det = {}
+    for sc, f, g, b_, t_ in cand:
+        if f in fm or g in usedk or sc < FILE_ACCEPT: continue
+        fm[f] = g; usedk.add(g); det[f] = (g, sc, b_, t_)
+    return fm, det, bc
+
+
 # ----------------------------------------------------------------- chính
 def main():
     acat, kcat, ids = load_all()
@@ -345,15 +402,23 @@ def main():
         if n_ and n_.startswith('c/map/') and n_.endswith('.scn') and os.path.exists(LGT + '/' + n_):
             ra = EA.parse_scn(ent[h]); rk = EA.parse_scn(open(LGT + '/' + n_, 'rb').read())
             if ra and rk: allsame[0 if len(ra[1]) == len(rk[1]) else 1] += 1
-    # --- học tên riêng từ các file scn cùng số câu
-    same = [f for f in aby if f.endswith('.scn') and f in ktab_n and atab_n[f] == ktab_n[f]]
+    # --- ghép FILE scn theo nội dung (bytecode + tên/số), không theo số file
+    a_bytes = {f: a_tab(f) for f in aby if f.endswith('.scn')}
+    k_bytes = {f: open(LGT + '/' + f, 'rb').read() for f in kscn if os.path.exists(LGT + '/' + f)}
+    aitems = {f: [it for it in aby[f]] for f in a_bytes}
+    # bước 1: học tên riêng từ cặp file chắc chắn (bytecode >= 0.9, cùng số câu, duy nhất)
+    ga = {f: grams4(code_of(b)) for f, b in a_bytes.items()}
+    gk = {f: grams4(code_of(b)) for f, b in k_bytes.items()}
     pairs0 = []
-    for f in same:
-        for it in aby[f]:
-            k = kscn[f].get(it['idx'])
-            if k: pairs0.append((it['text_en'], k))
+    for f in a_bytes:
+        sc = sorted(((dice(ga[f], gk[g]), g) for g in gk), reverse=True)[:2]
+        if sc and sc[0][0] >= 0.9 and (len(sc) < 2 or sc[1][0] < 0.9) and atab_n[f] == ktab_n.get(sc[0][1]):
+            for it in aby[f]:
+                k = kscn[sc[0][1]].get(it['idx'])
+                if k: pairs0.append((it['text_en'], k))
     nm = learn_names(pairs0, load_nameseeds())
     sim = Sim(nm)
+    filemap, fdet, _bc = match_files(a_bytes, k_bytes, aitems, kscn, ktab_n, atab_n, sim, None)
 
     result = {}   # id(item) -> (src, score, method, note)
     filestat = collections.OrderedDict()
@@ -361,14 +426,15 @@ def main():
     # --- scn
     for f, items in aby.items():
         if not f.endswith('.scn'): continue
-        if f not in kscn:
-            for it in items: result[id(it)] = (None, 0.0, 'nofile', 'LGT không có file này')
-            filestat[f] = dict(kind='scn', A=len(items), K=0, method='nofile', same=False)
+        g = filemap.get(f)
+        if g is None:
+            for it in items: result[id(it)] = (None, 0.0, 'nofile', 'không ghép được file LGT theo nội dung')
+            filestat[f] = dict(kind='scn', A=len(items), K=0, method='nofile', same=False, kfile=None)
             continue
-        res, meth = align_scn_file(f, items, ktab_n.get(f, 0), kscn[f], atab_n[f], sim)
+        res, meth = align_scn_file(f, items, ktab_n.get(g, 0), kscn[g], atab_n[f], sim)
         result.update(res)
-        filestat[f] = dict(kind='scn', A=len(items), K=len(kscn[f]), tabA=atab_n[f], tabK=ktab_n.get(f), method=meth,
-                           same=(atab_n[f] == ktab_n.get(f)))
+        filestat[f] = dict(kind='scn', A=len(items), K=len(kscn[g]), tabA=atab_n[f], tabK=ktab_n.get(g), method=meth,
+                           same=(atab_n[f] == ktab_n.get(g)), kfile=g, fscore=fdet[f][1], fbc=fdet[f][2], ftx=fdet[f][3])
 
     # --- dat
     kdat_files = {}
@@ -449,6 +515,8 @@ def main():
             if sc < THR_HIGH: new = True; reason = 'điểm < %.2f' % THR_HIGH
             elif not pk_.strip() or src.strip() in ('여분',):
                 new = True; reason = 'câu Hàn là chỗ giữ chỗ'
+            elif (len(pa_.split()) <= 3 and len(re.sub(r'\s', '', pk_)) > 12) or (len(pk_.split()) <= 3 and len(pa_.split()) > 12):
+                new = True; reason = 'câu ngắn lệch độ dài Anh/Hàn'
             elif r_ > 3.5: new = True; reason = 'Anh dài hơn Hàn > 3.5 lần'
             elif sk_ > 0 and sa_ - sk_ >= 2: new = True; reason = 'Anh nhiều đoạn ; hơn Hàn >= 2'
         e = {k: it[k] for k in ('file', 'kind') }
@@ -463,7 +531,37 @@ def main():
         if note: e['note'] = note
         out.append(e)
     json.dump(out, open(os.path.join(HERE, 'align.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
-    report(out, filestat, nm, same, ktab_n, atab_n, sim, allsame)
+    report(out, filestat, nm, None, ktab_n, atab_n, sim, allsame)
+    update_A_dich(out)
+
+
+def update_A_dich(out):
+    """Giữ ổn định ID A_dich.tsv: khoá (file, vị trí, text_en). Dòng không còn NEW -> ghi 'unused' ở cột 6;
+    NEW mới -> ID nối tiếp sau ID lớn nhất. Không đổi bản dịch/ID cũ, không xoá dòng."""
+    path = os.path.join(HERE, 'A_dich.tsv')
+    lines = open(path, encoding='utf-8').read().split('\n')
+    if lines and lines[-1] == '': lines.pop()
+    head, rows = lines[0], [l.split('\t') for l in lines[1:]]
+    for r in rows: r += [''] * (6 - len(r))
+    def pos(e): return ('idx %d' % e['idx']) if 'idx' in e else 'rec %d off %d ps %d' % (e['rec'], e['off'], e['ps'])
+    cur = collections.OrderedDict()
+    for e in out:
+        if e['id'] == 'NEW': cur[(e['file'], pos(e), e['text_en'])] = e
+    have = {}
+    for r in rows: have[(r[1], r[2], r[3])] = r
+    mx = max(int(r[0][1:]) for r in rows)
+    for k, e in cur.items():
+        if k in have:
+            r = have[k]
+            if r[5].startswith('unused'): r[5] = r[5][len('unused'):].lstrip('; ')
+        else:
+            mx += 1
+            r = ['A%05d' % mx, k[0], k[1], k[2], '', ('k_low=' + e['k_low']) if e.get('k_low') else '']
+            rows.append(r); have[k] = r
+    for k, r in have.items():
+        if k not in cur and not r[5].startswith('unused'):
+            r[5] = 'unused' + ('; ' + r[5] if r[5] else '')
+    open(path, 'w', encoding='utf-8').write('\n'.join([head] + ['\t'.join(r) for r in rows]) + '\n')
 
 
 def report(out, filestat, nm, same, ktab_n, atab_n, sim, allsame):
@@ -492,6 +590,24 @@ def report(out, filestat, nm, same, ktab_n, atab_n, sim, allsame):
     P('- Cặp điểm cao (>= %.2f): **%d / %d = %.1f%%**; ghép được (>= %.2f): %d (%.1f%%); NEW: %d.' % (THR_HIGH, hi, t, 100.0 * hi / max(1, t), THR_HIGH, m, 100.0 * m / max(1, t), nw))
     nok = [f for f in sf if filestat[f]['method'] != 'idx']
     P('- File cùng số câu nhưng phải dùng DP (ghép theo chỉ số cho điểm thấp): %d %s' % (len(nok), nok[:10]))
+    P('\n## Bảng ghép FILE scn Android -> LGT (theo nội dung, T2c)\n')
+    P('Điểm file = 0.6*bytecode (Dice 4-gram của khối script) + 0.4*độ giống câu (+0.02 nếu cùng số file); gán 1-1 tham lam; < %.2f thì không ghép (toàn bộ câu NEW).\n' % FILE_ACCEPT)
+    P('### File đổi ghép so với ghép theo số file\n')
+    P('| file Android | LGT theo số | LGT theo nội dung | điểm | bytecode | câu |'); P('|---|---|---|---:|---:|---:|')
+    nchg = 0
+    for f, st in filestat.items():
+        if st['kind'] != 'scn': continue
+        g = st.get('kfile')
+        if g != f:
+            nchg += 1
+            P('| %s | %s | %s | %s | %s | %s |' % (f, f, g or '(không ghép: NEW)', ('%.2f' % st['fscore']) if g else '-', ('%.2f' % st['fbc']) if g else '-', ('%.2f' % st['ftx']) if g else '-'))
+    P('\nTổng số file đổi ghép: **%d** (trong %d file scn có chữ).\n' % (nchg, sum(1 for st in filestat.values() if st['kind'] == 'scn')))
+    P('### Toàn bộ bảng ghép file\n')
+    P('| file Android | LGT | điểm file | bytecode | câu |'); P('|---|---|---:|---:|---:|')
+    for f, st in filestat.items():
+        if st['kind'] != 'scn': continue
+        g = st.get('kfile')
+        P('| %s | %s | %s | %s | %s |' % (f, g or '-', ('%.2f' % st['fscore']) if g else '-', ('%.2f' % st['fbc']) if g else '-', ('%.2f' % st['ftx']) if g else '-'))
     P('\n## scn khác số câu (DP)\n')
     P('| file | bảng Android | bảng LGT | câu Android có chữ | ghép | NEW |')
     P('|---|---:|---:|---:|---:|---:|')

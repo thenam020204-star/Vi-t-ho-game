@@ -8391,10 +8391,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "Electronic Arts;(Korea)",
-"id": "K00453",
+"id": "NEW",
 "score": 1.0,
 "method": "rec",
-"ko": "일렉트로닉아츠;코리아(유)"
+"ko": "일렉트로닉아츠;코리아(유)",
+"k_low": "K00453",
+"ko_hint": "일렉트로닉아츠;코리아(유)",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/common_text.dat",
@@ -21471,10 +21474,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "Abandon this quest?",
-"id": "K00590",
+"id": "NEW",
 "score": 1.0,
 "method": "rec",
-"ko": "퀘스트를 포기하시겠습니까?"
+"ko": "퀘스트를 포기하시겠습니까?",
+"k_low": "K00590",
+"ko_hint": "퀘스트를 포기하시겠습니까?",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/ingame_text.dat",
@@ -24042,10 +24048,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "Nickname created.",
-"id": "K00744",
+"id": "NEW",
 "score": 1.0,
 "method": "rec",
-"ko": "(으)로;별명을 만들었습니다."
+"ko": "(으)로;별명을 만들었습니다.",
+"k_low": "K00744",
+"ko_hint": "(으)로;별명을 만들었습니다.",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/ingame_text.dat",
@@ -38578,7 +38587,7 @@
 "ps": 1,
 "text_en": "All Weapons Increases;ATK. Combines 1-3;Thunder Orbs. ^Can;only be used on first;fuse.",
 "id": "K01785",
-"score": 0.922,
+"score": 0.88,
 "method": "rec",
 "ko": "모든 무기;공격력을 증가시키는 오브;뇌제의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다."
 },
@@ -38602,7 +38611,7 @@
 "ps": 1,
 "text_en": "All Armor Increases;P.DEF. Combines 1-3;Vajra Orbs. ^Can only;be used on first;fuse.{",
 "id": "K01787",
-"score": 0.922,
+"score": 0.88,
 "method": "rec",
 "ko": "모든 방어구;물리 방어력을 증가시키는 오브;금강의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -38626,7 +38635,7 @@
 "ps": 1,
 "text_en": "All Armor Increases;M.DEF. Combines 1-3;Spirit Orbs. ^Can only;be used on first;fuse.{",
 "id": "K01789",
-"score": 0.922,
+"score": 0.88,
 "method": "rec",
 "ko": "모든 방어구;마법 방어력을 증가시키는 오브;정령의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -38650,7 +38659,7 @@
 "ps": 1,
 "text_en": "All Weapons and;Gloves Increases Hit;Rate. Combines 1-3;Reaper Orbs. ^Can only;be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "모든 무기 및 장갑;명중률을 증가시키는 오브;사신의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01791",
@@ -38677,7 +38686,7 @@
 "ps": 1,
 "text_en": "Helmets and Boots;Increases Evasion.;Combines 1-3 Swift;Orbs. ^Can only be;used on first fuse.{",
 "id": "K01793",
-"score": 0.922,
+"score": 0.859,
 "method": "rec",
 "ko": "투구 및 신발;회피를 증가시키는 오브;영제의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -38701,7 +38710,7 @@
 "ps": 1,
 "text_en": "All Weapons and;Gloves Increases Crit;Rate. Combines 1-3;Bind Orbs. ^Can only;be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "모든 무기 및 장갑;크리티컬을 증가시키는 오브;속박의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01795",
@@ -38728,7 +38737,7 @@
 "ps": 1,
 "text_en": "Armor and Boots;Increases Crit;Resistance. Combines;1-3 Resolve Orbs. ^Can;only be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "갑옷 및 신발;크리티컬에 저항할 확률을 증가시키는 오브;결의의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01797",
@@ -38755,7 +38764,7 @@
 "ps": 1,
 "text_en": "Armor and Boots;Increases Max HP.;Combines 1-3 Champion;Orbs. ^Can only be;used on first fuse.{",
 "id": "K01799",
-"score": 0.922,
+"score": 0.859,
 "method": "rec",
 "ko": "갑옷 및 신발;HP 최대량을 증가시키는 오브;투신의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -38779,7 +38788,7 @@
 "ps": 1,
 "text_en": "Helmets and Gloves;Increases HP;Recovery. Combines;1-3 Echo Orbs. ^Can;only be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "투구 및 장갑;HP회복량을 증가시키는 오브;공명의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01801",
@@ -38806,7 +38815,7 @@
 "ps": 1,
 "text_en": "All Weapons and;Gloves Absorbs enemy;HP. Combines 1-3;Leech Orbs. ^Can only;be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "모든무기 및 장갑;적의 HP를 흡수하는 오브;흡혈의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01803",
@@ -38833,7 +38842,7 @@
 "ps": 1,
 "text_en": "Helmets and Boots;Increases Magic Hit;Rate. Combines 1-3;Sage Orbs. ^Can only;be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "투구 및 신발;마법공격의 성공률을 증가시키는 오브;현자의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01805",
@@ -38860,7 +38869,7 @@
 "ps": 1,
 "text_en": "All Weapons and;Gloves Increases;Resistance. Combines;1-3 Arcane Orbs. ^Can;only be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "모든 무기 및 장갑;저항을 증가시키는 오브;마도의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01807",
@@ -38887,7 +38896,7 @@
 "ps": 1,
 "text_en": "All Weapons and Boots;Reduces Cooldowns.;Combines 1-3 Storm;Orbs. ^Can only be;used on first fuse.{",
 "id": "K01809",
-"score": 0.922,
+"score": 0.859,
 "method": "rec",
 "ko": "모든 무기 및 신발;쿨타임을 감소시키는 오브;폭풍의 오브1~3개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -38911,7 +38920,7 @@
 "ps": 1,
 "text_en": "All Weapons Increases;ATK. Combines 2-4;Thunder Orbs. ^Can;only be used on first;fuse.{",
 "id": "K01811",
-"score": 0.922,
+"score": 0.88,
 "method": "rec",
 "ko": "모든 무기;공격력을 증가시키는 오브;뇌제의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -38935,7 +38944,7 @@
 "ps": 1,
 "text_en": "All Armor Increases;P.DEF. Combines 2-4;Vajra Orbs. ^Can only;be used on first;fuse.{",
 "id": "K01813",
-"score": 0.922,
+"score": 0.88,
 "method": "rec",
 "ko": "모든 방어구;물리 방어력을 증가시키는 오브;금강의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -38959,7 +38968,7 @@
 "ps": 1,
 "text_en": "All Armor Increases;M.DEF. Combines 2-4;Spirit Orbs. ^Can only;be used on first;fuse.{",
 "id": "K01815",
-"score": 0.922,
+"score": 0.88,
 "method": "rec",
 "ko": "모든 방어구;마법 방어력을 증가시키는 오브;정령의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -38983,7 +38992,7 @@
 "ps": 1,
 "text_en": "All Weapons and;Gloves Increases Hit;Rate. Combines 2-4;Reaper Orbs. ^Can only;be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "모든 무기 및 장갑;명중률을 증가시키는 오브;사신의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01817",
@@ -39010,7 +39019,7 @@
 "ps": 1,
 "text_en": "Helmets and Boots;Increases Evasion.;Combines 2-4 Swift;Orbs. ^Can only be;used on first fuse.{",
 "id": "K01819",
-"score": 0.922,
+"score": 0.859,
 "method": "rec",
 "ko": "투구 및 신발;회피를 증가시키는 오브;영제의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -39034,7 +39043,7 @@
 "ps": 1,
 "text_en": "All Weapons and;Gloves Increases Crit;Rate. Combines 2-4;Bind Orbs. ^Can only;be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "모든 무기 및 장갑;크리티컬을 증가시키는 오브;속박의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01821",
@@ -39061,7 +39070,7 @@
 "ps": 1,
 "text_en": "Armor and Boots;Increases Crit;Resistance. Combines;2-4 Resolve Orbs. ^Can;only be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "갑옷 및 신발;크리티컬에 저항할 확률을 증가시키는 오브;결의의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01823",
@@ -39088,7 +39097,7 @@
 "ps": 1,
 "text_en": "Armor and Boots;Increases Max HP.;Combines 2-4 Champion;Orbs. ^Can only be;used on first fuse.{",
 "id": "K01825",
-"score": 0.922,
+"score": 0.859,
 "method": "rec",
 "ko": "갑옷 및 신발;HP 최대량을 증가시키는 오브;투신의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{"
 },
@@ -39112,7 +39121,7 @@
 "ps": 1,
 "text_en": "Helmets and Gloves;Increases HP;Recovery. Combines;2-4 Echo Orbs. ^Can;only be used on first;fuse.{",
 "id": "NEW",
-"score": 0.912,
+"score": 0.85,
 "method": "rec",
 "ko": "투구 및 장갑;HP회복량을 증가시키는 오브;공명의 오브2~4개가 결합됩니다.;^최초 결합에만 사용할 수 있습니다.{",
 "k_low": "K01827",
@@ -52956,10 +52965,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "Collect trade proceeds?",
-"id": "K00051",
+"id": "NEW",
 "score": 1.0,
 "method": "rec",
-"ko": "거래 대금을;회수하시겠습니까?"
+"ko": "거래 대금을;회수하시겠습니까?",
+"k_low": "K00051",
+"ko_hint": "거래 대금을;회수하시겠습니까?",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/menu_text.dat",
@@ -54231,10 +54243,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "Return received mail?",
-"id": "K00156",
+"id": "NEW",
 "score": 1.0,
 "method": "rec",
-"ko": "받은편지를 반송하시겠습니까?"
+"ko": "받은편지를 반송하시겠습니까?",
+"k_low": "K00156",
+"ko_hint": "받은편지를 반송하시겠습니까?",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/menu_text.dat",
@@ -54327,10 +54342,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "SMS consent confirmed.",
-"id": "K00169",
+"id": "NEW",
 "score": 1.0,
 "method": "rec",
-"ko": "수신 동의가 완료되었습니다."
+"ko": "수신 동의가 완료되었습니다.",
+"k_low": "K00169",
+"ko_hint": "수신 동의가 완료되었습니다.",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/menu_text.dat",
@@ -54339,10 +54357,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "SMS consent declined.",
-"id": "K00170",
+"id": "NEW",
 "score": 1.0,
 "method": "rec",
-"ko": "수신 동의가 거부되었습니다."
+"ko": "수신 동의가 거부되었습니다.",
+"k_low": "K00170",
+"ko_hint": "수신 동의가 거부되었습니다.",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/menu_text.dat",
@@ -54375,10 +54396,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "^-Notice-;;02-559-8787",
-"id": "K00173",
+"id": "NEW",
 "score": 0.967,
 "method": "rec",
-"ko": "^-안내-;;;02-559-8787"
+"ko": "^-안내-;;;02-559-8787",
+"k_low": "K00173",
+"ko_hint": "^-안내-;;;02-559-8787",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/menu_text.dat",
@@ -54555,10 +54579,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "Check sent messages?",
-"id": "K00185",
+"id": "NEW",
 "score": 1.0,
 "method": "rec",
-"ko": "보낸편지를;확인하시겠습니까?"
+"ko": "보낸편지를;확인하시겠습니까?",
+"k_low": "K00185",
+"ko_hint": "보낸편지를;확인하시겠습니까?",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/csv/menu_text.dat",
@@ -89315,10 +89342,13 @@
 "kind": "scn",
 "idx": 24,
 "text_en": "Insolent brats...!!",
-"id": "K04131",
+"id": "NEW",
 "score": 1.0,
 "method": "idx",
-"ko": "꼬마 놈들이, 장난질을..!!"
+"ko": "꼬마 놈들이, 장난질을..!!",
+"k_low": "K04131",
+"ko_hint": "꼬마 놈들이, 장난질을..!!",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00009.scn",
@@ -90778,8 +90808,8 @@
 "text_en": "Come forth... Servant of the Descendant...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90788,8 +90818,8 @@
 "text_en": "What do you desire?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90798,8 +90828,8 @@
 "text_en": "Cut the crap.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90808,8 +90838,8 @@
 "text_en": "Relics of the past belong asleep at the bottom of the ocean.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90818,8 +90848,8 @@
 "text_en": "|(I cannot stay here long...){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90828,8 +90858,8 @@
 "text_en": "|(This should be a quick fight...){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90838,8 +90868,8 @@
 "text_en": "Still not giving up? How persistent!",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90848,8 +90878,8 @@
 "text_en": "|(No time...){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90858,8 +90888,8 @@
 "text_en": "|(I must fall back for now!){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90868,8 +90898,8 @@
 "text_en": "Useless. I will return... again and again...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90878,8 +90908,8 @@
 "text_en": "|(As expected, this was only a temporary fix.){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90888,8 +90918,8 @@
 "text_en": "|(I can feel it restoring its body already...){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
@@ -90898,68 +90928,68 @@
 "text_en": "|(Still, it bought us some time.){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
 "kind": "scn",
 "idx": 14,
 "text_en": "^Heheheh, mortals... Is this the choice you made?",
-"id": "K04277",
-"score": 1.0,
-"method": "dp",
-"ko": "^흐흐흐, 인간들이여,;선택한 것이 겨우 그거냐?"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
 "kind": "scn",
 "idx": 15,
 "text_en": "^You cast aside the avatar I gave you, and chose merely this?",
-"id": "K04278",
-"score": 1.0,
-"method": "dp",
-"ko": "^내 너희들을 위해 내려준;나의 분신을 버리고 선택한 것이;겨우 그거냐?"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
 "kind": "scn",
 "idx": 16,
 "text_en": "^Do you truly believe the Soltians will create a god for you?",
-"id": "K04279",
-"score": 0.778,
-"method": "dp",
-"ko": "^솔티안들이 진정 너희들을 위한 신을;만들어 줄거라 생각하는 거냐?"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
 "kind": "scn",
 "idx": 17,
 "text_en": "^To stand against me with nothing more than a wretched imitation - human mind grafted onto my remnants?",
-"id": "K04280",
-"score": 1.0,
-"method": "dp",
-"ko": "^기껏해야 내 찌꺼기 위에;인간의 정신을 얹은 비루한 모조품 따위로;나와 맞서겠다고?"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
 "kind": "scn",
 "idx": 18,
 "text_en": "^I shall deliver a message to the Soltians by destroying you completely..!",
-"id": "K04281",
-"score": 0.778,
-"method": "dp",
-"ko": "^솔티안들에게 전해주겠다,;너를 소멸시킴으로써..!"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00019.scn",
 "kind": "scn",
 "idx": 19,
 "text_en": "^That this world does not permit a new god!",
-"id": "K04282",
-"score": 1.0,
-"method": "dp",
-"ko": "^이 세계는,;새로운 신을 허락해주지 않는다는 것을!"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00020.scn",
@@ -92207,10 +92237,13 @@
 "kind": "scn",
 "idx": 10,
 "text_en": "Rufus...!! You bastard...!!",
-"id": "K04399",
+"id": "NEW",
 "score": 1.0,
 "method": "idx",
-"ko": "루퍼스..!! 네 놈이..!!"
+"ko": "루퍼스..!! 네 놈이..!!",
+"k_low": "K04399",
+"ko_hint": "루퍼스..!! 네 놈이..!!",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00026.scn",
@@ -92439,10 +92472,13 @@
 "kind": "scn",
 "idx": 33,
 "text_en": "Schultz... Ren...",
-"id": "K04422",
+"id": "NEW",
 "score": 0.889,
 "method": "idx",
-"ko": "슈르츠.. 형.. 렌 누나.."
+"ko": "슈르츠.. 형.. 렌 누나..",
+"k_low": "K04422",
+"ko_hint": "슈르츠.. 형.. 렌 누나..",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00026.scn",
@@ -98598,7 +98634,7 @@
 "idx": 94,
 "text_en": "You can <refine{, <combine{, or <fuse Orbs{.",
 "id": "K05007",
-"score": 1.0,
+"score": 0.926,
 "method": "idx",
 "ko": "<제련{이나, <조합{이나, <오브 결합{ 같은 걸 할 수 있지."
 },
@@ -100430,10 +100466,13 @@
 "kind": "scn",
 "idx": 105,
 "text_en": "Together... always...?",
-"id": "K05180",
+"id": "NEW",
 "score": 1.0,
 "method": "idx",
-"ko": "항상.. 함께.. 있는다고.. ?"
+"ko": "항상.. 함께.. 있는다고.. ?",
+"k_low": "K05180",
+"ko_hint": "항상.. 함께.. 있는다고.. ?",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00041.scn",
@@ -100831,10 +100870,13 @@
 "kind": "scn",
 "idx": 31,
 "text_en": "A-Ah... Hello, Schultz!",
-"id": "K05219",
+"id": "NEW",
 "score": 1.0,
 "method": "idx",
-"ko": "아.. 안녕하세요, 슈르츠님!"
+"ko": "아.. 안녕하세요, 슈르츠님!",
+"k_low": "K05219",
+"ko_hint": "아.. 안녕하세요, 슈르츠님!",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00042.scn",
@@ -107543,10 +107585,13 @@
 "kind": "scn",
 "idx": 35,
 "text_en": "...Ah... Chris... wait...",
-"id": "K05854",
+"id": "NEW",
 "score": 0.857,
 "method": "idx",
-"ko": ".. 아.. .. 스.. .. 파.."
+"ko": ".. 아.. .. 스.. .. 파..",
+"k_low": "K05854",
+"ko_hint": ".. 아.. .. 스.. .. 파..",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00054.scn",
@@ -109176,10 +109221,13 @@
 "kind": "scn",
 "idx": 4,
 "text_en": "Did something... happen?",
-"id": "K06007",
+"id": "NEW",
 "score": 1.0,
 "method": "idx",
-"ko": "무슨 일이.. 있었던 건가요?"
+"ko": "무슨 일이.. 있었던 건가요?",
+"k_low": "K06007",
+"ko_hint": "무슨 일이.. 있었던 건가요?",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00057.scn",
@@ -124063,10 +124111,13 @@
 "kind": "scn",
 "idx": 38,
 "text_en": "Amnesia? Why...?",
-"id": "K07422",
+"id": "NEW",
 "score": 0.714,
 "method": "idx",
-"ko": "기억상실이라니, 어째서.."
+"ko": "기억상실이라니, 어째서..",
+"k_low": "K07422",
+"ko_hint": "기억상실이라니, 어째서..",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00083.scn",
@@ -133179,10 +133230,13 @@
 "kind": "scn",
 "idx": 46,
 "text_en": "I see.",
-"id": "K08243",
+"id": "NEW",
 "score": 0.714,
 "method": "idx",
 "ko": "뭐, 어쨌든 여기도 꽤나 북적북적해졌네.",
+"k_low": "K08243",
+"ko_hint": "뭐, 어쨌든 여기도 꽤나 북적북적해졌네.",
+"reason": "câu ngắn lệch độ dài Anh/Hàn",
 "note": "nghi lệch +1"
 },
 {
@@ -137218,7 +137272,7 @@
 "ko": "받기야 하겠지만...",
 "k_low": "K08460",
 "ko_hint": "받기야 하겠지만...",
-"reason": "Anh dài hơn Hàn > 3.5 lần"
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00136.scn",
@@ -141755,10 +141809,13 @@
 "kind": "scn",
 "idx": 128,
 "text_en": "Ugh... Why... Why?!",
-"id": "K08823",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "크윽.. 어째서.. 어째서!!"
+"ko": "크윽.. 어째서.. 어째서!!",
+"k_low": "K08823",
+"ko_hint": "크윽.. 어째서.. 어째서!!",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00151.scn",
@@ -142085,10 +142142,13 @@
 "kind": "scn",
 "idx": 161,
 "text_en": "However... he... disappeared.",
-"id": "K08856",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "하지만.. 놈은.. 사라졌어."
+"ko": "하지만.. 놈은.. 사라졌어.",
+"k_low": "K08856",
+"ko_hint": "하지만.. 놈은.. 사라졌어.",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00151.scn",
@@ -144270,10 +144330,13 @@
 "kind": "scn",
 "idx": 169,
 "text_en": "|(Evelyn... Sis...! Please...)",
-"id": "K09053",
+"id": "NEW",
 "score": 1.0,
 "method": "idx",
-"ko": "|(에블린.. 언니..! 제발..)"
+"ko": "|(에블린.. 언니..! 제발..)",
+"k_low": "K09053",
+"ko_hint": "|(에블린.. 언니..! 제발..)",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00153.scn",
@@ -144433,10 +144496,13 @@
 "kind": "scn",
 "idx": 185,
 "text_en": "Theo... W-Why...",
-"id": "K09068",
+"id": "NEW",
 "score": 1.0,
 "method": "idx",
-"ko": "테오.. 어.. 어째서..."
+"ko": "테오.. 어.. 어째서...",
+"k_low": "K09068",
+"ko_hint": "테오.. 어.. 어째서...",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00153.scn",
@@ -149026,10 +149092,13 @@
 "kind": "scn",
 "idx": 12,
 "text_en": "Hmm... Tyr... will...",
-"id": "K09391",
+"id": "NEW",
 "score": 1.0,
 "method": "idx",
-"ko": "음.. 티르는... 이걸..."
+"ko": "음.. 티르는... 이걸...",
+"k_low": "K09391",
+"ko_hint": "음.. 티르는... 이걸...",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00171.scn",
@@ -151852,10 +151921,10 @@
 "kind": "scn",
 "idx": 0,
 "text_en": "Sanctuary Center",
-"id": "K00500",
-"score": 1.0,
-"method": "dp",
-"ko": "성역의 중심"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151864,8 +151933,8 @@
 "text_en": "Proceeding to an area where you cannot save.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151874,8 +151943,8 @@
 "text_en": "Enter",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151884,8 +151953,8 @@
 "text_en": "|(It is blocked here too... Force your way through!){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151894,8 +151963,8 @@
 "text_en": "Enter in a moment",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151904,8 +151973,8 @@
 "text_en": "I believe I told you not to do this...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151914,8 +151983,8 @@
 "text_en": "If you insist on going in, I will have no choice but to stop you.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151924,8 +151993,8 @@
 "text_en": "And if I refuse?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151934,8 +152003,8 @@
 "text_en": "I will stop you by force.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151944,8 +152013,8 @@
 "text_en": "You cannot save once battle with Lurain begins.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151954,8 +152023,8 @@
 "text_en": "I will give you a moment to think.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151964,8 +152033,8 @@
 "text_en": "If you will not turn back... I will have to stop you by force.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151974,8 +152043,8 @@
 "text_en": "Not a chance.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151984,8 +152053,8 @@
 "text_en": "...Fine. I would rather avoid unnecessary conflict too.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -151994,8 +152063,8 @@
 "text_en": "A wise choice. Then let us head back.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -152004,8 +152073,8 @@
 "text_en": "Try me.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00175.scn",
@@ -152014,8 +152083,8 @@
 "text_en": "If that is how it must be... so be it.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00176.scn",
@@ -153638,8 +153707,8 @@
 "text_en": "HEROES LORE 5; -COVENANT OF DARKNESS-",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153648,8 +153717,8 @@
 "text_en": "GAME PRODUCER; KO, WOONG-CHUL",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153658,8 +153727,8 @@
 "text_en": "DEVELOPMENT DIRECTOR; KIM, HYUN-MOOK",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153668,8 +153737,8 @@
 "text_en": "GAME DESIGNER; KIM, BOO-KANG; RYU, HYOUNG-SEOC; KIM, CHO-RONG",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153678,8 +153747,8 @@
 "text_en": "CHARACTER/UI ARTIST; JOO, JAE-HOON; LEE, JUNG-WON; LEE, DEVIN; BAEK, JU-HO",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153688,8 +153757,8 @@
 "text_en": "MONSTER/MAP ARTIST; LEE, TAEK-KI; NOH, JAE-WOOK; KIM, KYU-MIN",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153698,8 +153767,8 @@
 "text_en": "MONSTER/MAP ARTIST; ROH, HEE-JEONG; JUNG, MI-SUN; YUN, JU-HEE;",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153708,8 +153777,8 @@
 "text_en": "LOGO/WORLDMAP ARTIST; KIM, KEUN-JU; ; ILLUSTRATION; KIM, HYUN-JUNG",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153718,8 +153787,8 @@
 "text_en": "MAIN PROGRAMMER; PARK, DEOK-KWON; CHO, SUNG-MIN; SUH, JUNG-HO;",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153728,8 +153797,8 @@
 "text_en": "ENGINEERING SURPPORT; JUNG, SUNG-JUN; KIM, SOO-MAN; JANG, MYOUNG-HUN;",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153738,8 +153807,8 @@
 "text_en": "ENGINEERING SURPPORT; KIM, IN-HWAN; LEE, YOU-SIN; MUN, KYOUNG-RIM;",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153748,8 +153817,8 @@
 "text_en": "QUALITY ASSURANCE; LEE, JAE-YOON; KIM, MIN-JI; KIM, DO-YOON; LEE, HEE-KYOUNG;",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153758,8 +153827,8 @@
 "text_en": "GAME TEST; CHOI, SUNG-SU; KIM, TAE-WOO; HAN, DONG-SUN;",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153768,8 +153837,8 @@
 "text_en": "GAME TEST; SON, JONG-BEOM; PARK, HEE-YONG; SON, SANG-HEON;",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153778,8 +153847,8 @@
 "text_en": "SOUND DIRECTOR; NOH, HYOUN-JUN; (FUNNY BUGS, MAZO);",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153788,8 +153857,8 @@
 "text_en": "ELECTRONIC ARTS;MOBILE KOREA 2011",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153798,18 +153867,18 @@
 "text_en": "Did you reach the ending you wished for?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
 "kind": "scn",
 "idx": 18,
 "text_en": "If you still yearn for more, here are some hints about hidden events for Ren sake.",
-"id": "K09772",
-"score": 1.0,
-"method": "dp",
-"ko": "다음 단계의 난이도로 게임을 재시작 합니다."
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153818,8 +153887,8 @@
 "text_en": "Even after completing the Twilight Isle hidden quest }Meat Soup{, you still need Twilight Soup Powder.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153828,8 +153897,8 @@
 "text_en": "If you meet Graham before entering the Ark, try waiting for Tyr to arrive.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153838,8 +153907,8 @@
 "text_en": "Wishing that you may uncover every story woven into Heroes Lore 5...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153848,8 +153917,8 @@
 "text_en": "Restarting the game at the next difficulty level.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153858,8 +153927,8 @@
 "text_en": "Paying tribute to you who have ventured this far-",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153868,8 +153937,8 @@
 "text_en": "GAME TEST; CHOI, SUNG-SU; KIM, TAE-WOO; HAN, DONG-SUN; TAK, HYUN-MIN",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153878,8 +153947,8 @@
 "text_en": "At least, mankind has obtained a god.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153888,8 +153957,8 @@
 "text_en": "Perhaps for the people of Orbis, this is the most desirable outcome.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153898,8 +153967,8 @@
 "text_en": "However... if any regrets still linger in your heart...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153908,8 +153977,8 @@
 "text_en": "Choose the }single person{ you truly wish to protect.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153918,8 +153987,8 @@
 "text_en": "If you chose Evelyn, pursue hidden quests }Blind Faith{ and }High Alert{...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153928,8 +153997,8 @@
 "text_en": "If you chose Tiana, pursue hidden quests }Silver Earring{ and }Nightmare{...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153938,8 +154007,8 @@
 "text_en": "And at }every choice{, think only of that one person you wish to protect.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153948,8 +154017,8 @@
 "text_en": "If Schultz wins the one he wishes to protect most, and she opens her heart to him...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153958,8 +154027,8 @@
 "text_en": "This pitch-black struggle of Successors... might just lead to a different outcome.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153968,8 +154037,8 @@
 "text_en": "Best of luck to you.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153978,8 +154047,8 @@
 "text_en": "Do not rush to finish the Meadow Hill hidden quest }Pink-Haired Girl{.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00186.scn",
@@ -153988,8 +154057,8 @@
 "text_en": "Schultz past, and the battle against the Hearers, is a path you must walk toward the true finale.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00187.scn",
@@ -157638,383 +157707,380 @@
 "kind": "scn",
 "idx": 0,
 "text_en": "Facility Chamber",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10086",
+"score": 1.0,
+"method": "idx",
+"ko": "지하시설의 방"
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 1,
 "text_en": "Is this... a note?",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10087",
+"score": 1.0,
+"method": "idx",
+"ko": "이건.. 메모인가?"
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 2,
 "text_en": "What does this even say... The handwriting is terrible.",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10088",
+"score": 1.0,
+"method": "idx",
+"ko": "뭐라고 써있는거야 이건.. 엄청 악필인데."
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 3,
 "text_en": "}End of hallway... corner passage{...?",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10089",
+"score": 1.0,
+"method": "idx",
+"ko": "}복도 끝.. 구석 통로{..?"
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 4,
 "text_en": "You can... read this?",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10090",
+"score": 1.0,
+"method": "idx",
+"ko": "이 글씨를.. 알아 본거야?"
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 5,
 "text_en": "Well... somehow, the handwriting feels familiar...",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10091",
+"score": 0.857,
+"method": "idx",
+"ko": "음.. 왠지, 익숙한 글씨체라.."
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 6,
 "text_en": "These photos...",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10092",
+"score": 0.857,
+"method": "idx",
+"ko": "이 사진들은.."
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 7,
 "text_en": "They are children...?",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10093",
+"score": 1.0,
+"method": "idx",
+"ko": "아이들이네..?"
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 8,
 "text_en": "Is not this Schultz? When he was little...",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10094",
+"score": 0.889,
+"method": "idx",
+"ko": "슈르츠님이지, 이거? 어릴 땐데.."
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 9,
 "text_en": "Photos of the Successors as kids, huh... This fat one must be Marc.",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10095",
+"score": 1.0,
+"method": "idx",
+"ko": "계승자들의 어릴 적 사진인가.. 이 돼지는 마르크일테고."
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 10,
 "text_en": "Oh my.",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10096",
+"score": 1.0,
+"method": "idx",
+"ko": "어머."
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 11,
 "text_en": "Wait, is not this Alex? He looks so young without the beard!",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10097",
+"score": 0.714,
+"method": "idx",
+"ko": "여기 이거, 알렉스씨 아냐? 수염 없으니 굉장히 동안인데?"
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 12,
 "text_en": "...He even has a strange }tattoo{.",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10098",
+"score": 1.0,
+"method": "idx",
+"ko": ".. 이상한 }문신{까지 하고 있군."
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 13,
 "text_en": "Chris and Tiana are here too... But wait, the background is identical in all of them?",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10099",
+"score": 1.0,
+"method": "idx",
+"ko": "크리스랑 티아나, 언니들도 있고.. 근데, 사진들 배경이 다 똑같은 걸?"
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 14,
 "text_en": "I have no memory of taking these photos, or of this place...",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10100",
+"score": 0.857,
+"method": "idx",
+"ko": "사진을 찍은 것도, 이런 배경도 기억이 전혀 안나는데.."
 },
 {
 "file": "c/map/00207.scn",
 "kind": "scn",
 "idx": 15,
 "text_en": "Just like Tyr said... having your memories manipulated just leaves a bad taste in your mouth.",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10101",
+"score": 1.0,
+"method": "idx",
+"ko": "티르 말대로.. 찝찝해질 뿐인건가. 기억을 조작당했다는 건."
 },
 {
 "file": "c/map/00208.scn",
 "kind": "scn",
 "idx": 0,
 "text_en": "Irem, Underpass",
-"id": "K10086",
+"id": "K09773",
 "score": 1.0,
-"method": "dp",
-"ko": "지하시설의 방"
+"method": "idx",
+"ko": "이렘, 지하도"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 0,
 "text_en": "Central Tower, Private Room",
-"id": "K09773",
+"id": "K10102",
 "score": 1.0,
-"method": "dp",
-"ko": "이렘, 지하도"
+"method": "idx",
+"ko": "센트럴 타워, 개인실"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 1,
 "text_en": "|(A letter...){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10103",
+"score": 1.0,
+"method": "idx",
+"ko": "|(편지...){"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 2,
 "text_en": "|(The sender is... Tyr? Seriously?){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10104",
+"score": 1.0,
+"method": "idx",
+"ko": "|(보낸 사람이... 티르? 설마?){"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 3,
 "text_en": "Dear Isabel,",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10105",
+"score": 0.867,
+"method": "idx",
+"ko": "친애하는 이자벨에게."
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 4,
 "text_en": "Some idiot named Graham, claiming to be your cousin, was assigned to my unit today.",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10106",
+"score": 1.0,
+"method": "idx",
+"ko": "네 사촌이라고 하는 그라함이라는 얼간이가 오늘 배속되었다."
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 5,
 "text_en": "If you keep pulling strings to shove weirdos my way, you are dead.",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10107",
+"score": 1.0,
+"method": "idx",
+"ko": "자꾸 빽써서 이상한 놈 들여보내면 죽는다."
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 6,
 "text_en": "P.S. Stop spreading rumors about me and Brian.",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10108",
+"score": 1.0,
+"method": "idx",
+"ko": "PS. 자꾸 나랑 브리안 가지고 이상한 소문 내지마."
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 7,
 "text_en": "P.S. 2. If you want something specific for an engagement gift, tell me now.",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10109",
+"score": 1.0,
+"method": "idx",
+"ko": "PS2. 약혼 선물로 받고 싶은 것 있으면 미리 이야기 해."
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 8,
 "text_en": "|(Dated four years ago... Was this sent while he was still in the Republic army?){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10110",
+"score": 0.818,
+"method": "idx",
+"ko": "|(4년 전 날짜... 아직 공화국 군에 있을 때 보낸 건가?){"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 9,
 "text_en": "|(Did she have a fiance...?){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10111",
+"score": 1.0,
+"method": "idx",
+"ko": "|(약혼자가 있었나...){"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 10,
 "text_en": "|(Next to the letter lies a small portrait, likely of Isabel.){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10112",
+"score": 1.0,
+"method": "idx",
+"ko": "|(편지 옆에는 이자벨로 보이는 작은 초상화가 하나 놓여 있다.){"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 11,
 "text_en": "|(She is a beautiful woman with purple hair and a somewhat somber gaze.){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10113",
+"score": 1.0,
+"method": "idx",
+"ko": "|(보라색 머리의 조금 우울해 보이는 인상의 아름다운 여자다.){"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 12,
 "text_en": "Take it",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10114",
+"score": 1.0,
+"method": "idx",
+"ko": "가져간다"
 },
 {
 "file": "c/map/00209.scn",
 "kind": "scn",
 "idx": 13,
 "text_en": "Leave it",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10115",
+"score": 1.0,
+"method": "idx",
+"ko": "내버려둔다"
 },
 {
 "file": "c/map/00210.scn",
 "kind": "scn",
 "idx": 0,
 "text_en": "Central 9th, Dead End",
-"id": "NEW",
-"score": 0.0,
-"method": "nofile",
-"note": "LGT không có file này"
+"id": "K10116",
+"score": 1.0,
+"method": "idx",
+"ko": "센트럴 9번가, 막다른 길"
 },
 {
 "file": "c/map/00211.scn",
 "kind": "scn",
 "idx": 0,
 "text_en": "Vernal Isle, North Coast",
-"id": "K10114",
+"id": "K05628",
 "score": 1.0,
-"method": "dp",
-"ko": "가져간다"
+"method": "idx",
+"ko": "베르날 섬, 북부 해안"
 },
 {
 "file": "c/map/00212.scn",
 "kind": "scn",
 "idx": 0,
 "text_en": "Old Warehouse",
-"id": "NEW",
-"score": 0.636,
+"id": "K10077",
+"score": 1.0,
 "method": "idx",
-"ko": "센트럴 9번가, 막다른 길",
-"k_low": "K10116",
-"ko_hint": "센트럴 9번가, 막다른 길",
-"reason": "điểm < 0.70"
+"ko": "낡은 창고"
 },
 {
 "file": "c/map/00213.scn",
 "kind": "scn",
 "idx": 0,
 "text_en": "Central Tower",
-"id": "K05628",
+"id": "K03821",
 "score": 1.0,
-"method": "dp",
-"ko": "베르날 섬, 북부 해안"
+"method": "idx",
+"ko": "센트럴 타워"
 },
 {
 "file": "c/map/00213.scn",
 "kind": "scn",
 "idx": 1,
 "text_en": "(Blueprints or schematics are laid out.){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10117",
+"score": 1.0,
+"method": "idx",
+"ko": "(설계 도면 같은 것이 놓여 있다.){"
 },
 {
 "file": "c/map/00213.scn",
 "kind": "scn",
 "idx": 2,
 "text_en": "(It appears to explain the analysis of disassembled Rohnberg magitech.){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10118",
+"score": 0.778,
+"method": "idx",
+"ko": "(아무래도 론베르크의 마법기를 분해 해석한 결과를 설명하는 문서인 듯 하다.){"
 },
 {
 "file": "c/map/00213.scn",
 "kind": "scn",
 "idx": 3,
 "text_en": "|(A tool engraved with the initial L lies here. It seems heavily damaged.){",
-"id": "NEW",
-"score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"id": "K10119",
+"score": 1.0,
+"method": "idx",
+"ko": "|(이니셜 L이 새겨진 도구가 놓여 있다. 심하게 손상된 것 같다.){"
 },
 {
 "file": "c/map/00214.scn",
@@ -158023,8 +158089,8 @@
 "text_en": "Finally, this day has come...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158033,8 +158099,8 @@
 "text_en": "|(...Why do I have such a bad feeling about this?){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158043,8 +158109,8 @@
 "text_en": "Here we go! Vessel of Graham! One small step for me, one giant leap for mankind!",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158053,8 +158119,8 @@
 "text_en": "Huh?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158063,8 +158129,8 @@
 "text_en": "What the hell are you doing?!",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158073,8 +158139,8 @@
 "text_en": "I-it is not me! It is moving on its own... Aaaargh!",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158083,8 +158149,8 @@
 "text_en": "Shut that thing down right now!",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158093,8 +158159,8 @@
 "text_en": "Stopping the device!",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158103,8 +158169,8 @@
 "text_en": "Wait, why is not it working?!",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158113,8 +158179,8 @@
 "text_en": "...Seriously...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158123,8 +158189,8 @@
 "text_en": "I-I thought I was dead...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158133,8 +158199,8 @@
 "text_en": "...You idiot...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158143,18 +158209,18 @@
 "text_en": "There seems to have been a <minor glitch{ in the AI...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
 "kind": "scn",
 "idx": 14,
 "text_en": "It needs some improvements.",
-"id": "K10077",
-"score": 0.829,
-"method": "dp",
-"ko": "낡은 창고"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158163,8 +158229,8 @@
 "text_en": "...*sigh*...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00214.scn",
@@ -158173,31 +158239,28 @@
 "text_en": "|(I am never helping this guy again...){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00215.scn",
 "kind": "scn",
 "idx": 0,
 "text_en": "Central Tower, Basement",
-"id": "K03821",
+"id": "K10120",
 "score": 1.0,
 "method": "idx",
-"ko": "센트럴 타워"
+"ko": "센트럴 타워, 지하"
 },
 {
 "file": "c/map/00215.scn",
 "kind": "scn",
 "idx": 1,
 "text_en": "Intruder detected.",
-"id": "NEW",
-"score": 0.4,
+"id": "K10121",
+"score": 0.829,
 "method": "idx",
-"ko": "(설계 도면 같은 것이 놓여 있다.){",
-"k_low": "K10117",
-"ko_hint": "(설계 도면 같은 것이 놓여 있다.){",
-"reason": "điểm < 0.70"
+"ko": "침입자 발견"
 },
 {
 "file": "c/map/00215.scn",
@@ -158205,25 +158268,22 @@
 "idx": 2,
 "text_en": "Commencing elimination protocol.",
 "id": "NEW",
-"score": 0.279,
+"score": 0.829,
 "method": "idx",
-"ko": "(아무래도 론베르크의 마법기를 분해 해석한 결과를 설명하는 문서인 듯 하다.){",
-"k_low": "K10118",
-"ko_hint": "(아무래도 론베르크의 마법기를 분해 해석한 결과를 설명하는 문서인 듯 하다.){",
-"reason": "điểm < 0.70"
+"ko": "지금부터 배제 행동에 들어갑니다",
+"k_low": "K10122",
+"ko_hint": "지금부터 배제 행동에 들어갑니다",
+"reason": "câu ngắn lệch độ dài Anh/Hàn"
 },
 {
 "file": "c/map/00215.scn",
 "kind": "scn",
 "idx": 3,
 "text_en": "What is it this time...",
-"id": "NEW",
-"score": 0.21,
+"id": "K10123",
+"score": 1.0,
 "method": "idx",
-"ko": "|(이니셜 L이 새겨진 도구가 놓여 있다. 심하게 손상된 것 같다.){",
-"k_low": "K10119",
-"ko_hint": "|(이니셜 L이 새겨진 도구가 놓여 있다. 심하게 손상된 것 같다.){",
-"reason": "điểm < 0.70"
+"ko": "이건 또 뭐야..."
 },
 {
 "file": "c/map/00216.scn",
@@ -158231,12 +158291,9 @@
 "idx": 1,
 "text_en": "Welcome, Successor.",
 "id": "NEW",
-"score": 0.644,
-"method": "dp",
-"ko": "센트럴 타워, 지하",
-"k_low": "K10120",
-"ko_hint": "센트럴 타워, 지하",
-"reason": "điểm < 0.70"
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158245,28 +158302,28 @@
 "text_en": "...What are you?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
 "kind": "scn",
 "idx": 3,
 "text_en": "For now... yes. Call me Rabi.",
-"id": "K10121",
-"score": 0.829,
-"method": "dp",
-"ko": "침입자 발견"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
 "kind": "scn",
 "idx": 4,
 "text_en": "I did not ask for your name.",
-"id": "K10122",
-"score": 0.829,
-"method": "dp",
-"ko": "지금부터 배제 행동에 들어갑니다"
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158275,8 +158332,8 @@
 "text_en": "|(Finding him in Descendant ruins... is he like Krad?){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158285,8 +158342,8 @@
 "text_en": "I suppose I am what you would call a servant of the Ancient God.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158295,8 +158352,8 @@
 "text_en": "I have no wish to fight you... not yet.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158305,8 +158362,8 @@
 "text_en": "Not yet?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158315,8 +158372,8 @@
 "text_en": "Again, huh... It seems we do not have much time to talk.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158325,8 +158382,8 @@
 "text_en": "Regardless of your choice or that of the other Successor... the Second Advent will occur.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158335,8 +158392,8 @@
 "text_en": "I only hope that humans and Neved alike are properly prepared when the time comes.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158345,8 +158402,8 @@
 "text_en": "Quite thoughtful for a servant of the Ancient God, are not you?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158355,8 +158412,8 @@
 "text_en": "It is only natural for you to say that, having never seen a Descendant. If you are trying to provoke me, save your breath.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158365,8 +158422,8 @@
 "text_en": "I have seen one... in the Ark.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158375,8 +158432,8 @@
 "text_en": "That was a defective product. Like me, and like you.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158385,8 +158442,8 @@
 "text_en": "Defective?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158395,8 +158452,8 @@
 "text_en": "Wait, you sound as if you have seen one yourself.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158405,8 +158462,8 @@
 "text_en": "Do you know the tale? Long ago, during the Great War against the Descendants, the Ancient God created servants to act as his hands and feet.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158415,18 +158472,18 @@
 "text_en": "A wolf-like beast named Lucan. And one who was captured by humans and given the name Kefnes.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
 "kind": "scn",
 "idx": 20,
 "text_en": "Lurain...",
-"id": "K10123",
-"score": 1.0,
-"method": "dp",
-"ko": "이건 또 뭐야..."
+"id": "NEW",
+"score": 0.0,
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158435,8 +158492,8 @@
 "text_en": "And I, a traitor to my own kind. A being once called a Guardian.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158445,8 +158502,8 @@
 "text_en": "Despairing of the world, I summoned the Descendants, and in doing so, became an enemy of the world and a traitor.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158455,8 +158512,8 @@
 "text_en": "I have no idea what you are talking about.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158465,8 +158522,8 @@
 "text_en": "You need not understand. I am merely a ghost of a bygone era.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158475,8 +158532,8 @@
 "text_en": "I only needed the Ancient God power to survive until this age. Once your wish or Tyr is fulfilled...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158485,8 +158542,8 @@
 "text_en": "I too shall fade away alongside the Ancient God.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158495,8 +158552,8 @@
 "text_en": "This vibration... What is it?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158505,8 +158562,8 @@
 "text_en": "It is merely a shadow of the Descendant invading this world, akin to what you faced in the Ark.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158515,8 +158572,8 @@
 "text_en": "You are here...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158525,8 +158582,8 @@
 "text_en": "Where did you run off to?!",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158535,8 +158592,8 @@
 "text_en": "Truly... an irritating fellow.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158545,8 +158602,8 @@
 "text_en": "The seal was merely a brief respite to delay the Second Advent. The Second Advent is far more than mindless beasts invading this world.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158555,8 +158612,8 @@
 "text_en": "The world will soon reclaim its original form. Just as they wished.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158565,8 +158622,8 @@
 "text_en": "What are you talking about!?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158575,8 +158632,8 @@
 "text_en": "After guiding Tyr to Meadow Hill, I watched you the entire time.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158585,8 +158642,8 @@
 "text_en": "Perhaps you might become a benevolent god. Or an evil god, no better than the current one... Or perhaps a mortal burdened with power beyond control. I wonder which.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158595,8 +158652,8 @@
 "text_en": "I hope the other side... goes just as well.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158605,8 +158662,8 @@
 "text_en": "Shall we call it here? Or would you prefer to continue?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158615,8 +158672,8 @@
 "text_en": "...Let us stop. Any further, and one of us will not walk away alive.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158625,8 +158682,8 @@
 "text_en": "Then let us head back.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158635,8 +158692,8 @@
 "text_en": "Though, you are different from the rumors in Central. Were not you supposed to be a master swordsman?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158645,8 +158702,8 @@
 "text_en": "Ah... Indeed, during the Great War, I relied primarily on the sword with magic as support.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158655,8 +158712,8 @@
 "text_en": "Still, magic proved to be stronger in the end, so I made the switch.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158665,8 +158722,8 @@
 "text_en": "Facing multiple foes at once, like with the Judgment of Purification, made me realize the sword limits.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158675,8 +158732,8 @@
 "text_en": "Besides, my arms were getting too thick.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158685,8 +158742,8 @@
 "text_en": "Is that really the issue...?",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158695,8 +158752,8 @@
 "text_en": "My arms were a joke, but it was also to coordinate with Tyr. Rather than both of us swinging swords...",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158705,8 +158762,8 @@
 "text_en": "It is much better for me to support from behind.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158715,8 +158772,8 @@
 "text_en": "|(She does not show it, but she cares quite a bit...){",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158725,8 +158782,8 @@
 "text_en": "Shall we stop here? Any further, and one of us will not walk away alive.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158735,8 +158792,8 @@
 "text_en": "I was not using my full strength, but... there is no talking you out of it.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158745,8 +158802,8 @@
 "text_en": "The feeling is mutual. There is no reason for allies to spill each other blood.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 },
 {
 "file": "c/map/00216.scn",
@@ -158755,7 +158812,7 @@
 "text_en": "It cannot be helped, then. I wish you good fortune.",
 "id": "NEW",
 "score": 0.0,
-"method": "dp",
-"note": "không ghép được"
+"method": "nofile",
+"note": "không ghép được file LGT theo nội dung"
 }
 ]
