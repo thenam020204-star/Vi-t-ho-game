@@ -23853,10 +23853,13 @@
 "off": 0,
 "ps": 1,
 "text_en": "Victorious!",
-"id": "K00732",
+"id": "NEW",
 "score": 0.714,
 "method": "rec",
-"ko": "에서;승리 하였습니다."
+"ko": "에서;승리 하였습니다.",
+"k_low": "K00732",
+"ko_hint": "에서;승리 하였습니다.",
+"reason": "soát nghĩa T2d: LỆCH (Anh 'Victorious!' vs Hàn hậu tố '에서;승리 하였습니다.' (ghép sau tên địa điểm))"
 },
 {
 "file": "c/csv/ingame_text.dat",
@@ -125734,20 +125737,26 @@
 "kind": "scn",
 "idx": 34,
 "text_en": "Phew. Right now, all we can do is work hard.",
-"id": "K07572",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "조합? 누구 생각인지 안봐도 뻔하군."
+"ko": "조합? 누구 생각인지 안봐도 뻔하군.",
+"k_low": "K07572",
+"ko_hint": "조합? 누구 생각인지 안봐도 뻔하군.",
+"reason": "soát nghĩa T2d: SAI (không có Hàn; đúng K07572 ở idx 36 (NEW))"
 },
 {
 "file": "c/map/00087.scn",
 "kind": "scn",
 "idx": 35,
 "text_en": "Things are tougher than before, but this is the only job we have got.",
-"id": "K07573",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "광부들이 모여봤자 뭐 할 수 있는 일은 없다고."
+"ko": "광부들이 모여봤자 뭐 할 수 있는 일은 없다고.",
+"k_low": "K07573",
+"ko_hint": "광부들이 모여봤자 뭐 할 수 있는 일은 없다고.",
+"reason": "soát nghĩa T2d: SAI (không có Hàn; đúng K07573 ở idx 37 (NEW))"
 },
 {
 "file": "c/map/00087.scn",
@@ -132651,100 +132660,130 @@
 "kind": "scn",
 "idx": 11,
 "text_en": "I heard a rumor before...",
-"id": "K04729",
+"id": "NEW",
 "score": 0.702,
 "method": "dp",
-"ko": "지금 인간의 능력으로 만들 수 있는 최첨단의 도시인데.. 은근히 비과학적인 소문이 많다고."
+"ko": "지금 인간의 능력으로 만들 수 있는 최첨단의 도시인데.. 은근히 비과학적인 소문이 많다고.",
+"k_low": "K04729",
+"ko_hint": "지금 인간의 능력으로 만들 수 있는 최첨단의 도시인데.. 은근히 비과학적인 소문이 많다고.",
+"reason": "soát nghĩa T2d: LỆCH (EN chỉ 'I heard a rumor before...' còn Hàn dài hơn (thành phố hiện đại nhiều tin đồn phi khoa học))"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 12,
 "text_en": "If you cross House Wade in Central, they drag you off to Central Tower, right?",
-"id": "K04731",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "인류가 현재 사용하고 있는 모든 기술은 저 센트럴 타워에서 나왔다고 해도 과언이 아니야."
+"ko": "인류가 현재 사용하고 있는 모든 기술은 저 센트럴 타워에서 나왔다고 해도 과언이 아니야.",
+"k_low": "K04731",
+"ko_hint": "인류가 현재 사용하고 있는 모든 기술은 저 센트럴 타워에서 나왔다고 해도 과언이 아니야.",
+"reason": "soát nghĩa T2d: SAI (Anh 'drag you off to Central Tower' vs Hàn 'mọi công nghệ từ Central Tower'; Hàn này đúng với idx 14)"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 13,
 "text_en": "Is it true they waterboard you in some secret underground floor?",
-"id": "K04732",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "웨이드 가문은 저 안에, 도대체 얼마만큼의 천재를 모아둔 걸까?"
+"ko": "웨이드 가문은 저 안에, 도대체 얼마만큼의 천재를 모아둔 걸까?",
+"k_low": "K04732",
+"ko_hint": "웨이드 가문은 저 안에, 도대체 얼마만큼의 천재를 모아둔 걸까?",
+"reason": "soát nghĩa T2d: SAI (Anh 'waterboard' vs Hàn 'Wade gom bao nhiêu thiên tài'; không có Hàn đúng)"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 14,
 "text_en": "It is no exaggeration that all tech humanity currently uses came from Central Tower.",
-"id": "K08196",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "지하 하수구는 좀 폐쇄했으면 좋겠어."
+"ko": "지하 하수구는 좀 폐쇄했으면 좋겠어.",
+"k_low": "K08196",
+"ko_hint": "지하 하수구는 좀 폐쇄했으면 좋겠어.",
+"reason": "soát nghĩa T2d: SAI (đúng K04731 (Hàn mọi công nghệ nhân loại từ Central Tower))"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 15,
 "text_en": "I really wish they would shut down that underground sewer.",
-"id": "K08197",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "시체가 나오다니... 덕분에 이 주변 땅값이 폭락했다고."
+"ko": "시체가 나오다니... 덕분에 이 주변 땅값이 폭락했다고.",
+"k_low": "K08197",
+"ko_hint": "시체가 나오다니... 덕분에 이 주변 땅값이 폭락했다고.",
+"reason": "soát nghĩa T2d: SAI (đúng K08196 (Hàn 'đóng cống ngầm'))"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 16,
 "text_en": "Finding a corpse down there... Property values around here plummeted thanks to that!",
-"id": "K04736",
+"id": "NEW",
 "score": 0.714,
 "method": "dp",
-"ko": "아이가 즐거워 하니까 좋네요."
+"ko": "아이가 즐거워 하니까 좋네요.",
+"k_low": "K04736",
+"ko_hint": "아이가 즐거워 하니까 좋네요.",
+"reason": "soát nghĩa T2d: SAI (đúng K08197 (Hàn 'có xác chết... giá đất'))"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 17,
 "text_en": "I am glad my child is enjoying it.",
-"id": "K04737",
+"id": "NEW",
 "score": 0.739,
 "method": "dp",
-"ko": "공화국에서 가장 크고 높은 건물이라는 센트럴 타워를 아이에게 꼭 보여주고 싶었어요."
+"ko": "공화국에서 가장 크고 높은 건물이라는 센트럴 타워를 아이에게 꼭 보여주고 싶었어요.",
+"k_low": "K04737",
+"ko_hint": "공화국에서 가장 크고 높은 건물이라는 센트럴 타워를 아이에게 꼭 보여주고 싶었어요.",
+"reason": "soát nghĩa T2d: SAI (đúng K04736 (Hàn 'đứa trẻ vui thì tốt'))"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 18,
 "text_en": "I really wanted to show my child Central Tower, the largest and tallest building in the Republic.",
-"id": "K04738",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "후우.. 센트럴 타워에서 일한다고 하면 다들 부러워하지만.."
+"ko": "후우.. 센트럴 타워에서 일한다고 하면 다들 부러워하지만..",
+"k_low": "K04738",
+"ko_hint": "후우.. 센트럴 타워에서 일한다고 하면 다들 부러워하지만..",
+"reason": "soát nghĩa T2d: SAI (đúng K04737 (Hàn 'muốn cho con xem Central Tower'))"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 19,
 "text_en": "There is a rumor they are developing a massive four-legged tank in the Tower basement.",
-"id": "K04739",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "엄청 답답하다고, 항상 정해진 구역만 움직여야 되니까."
+"ko": "엄청 답답하다고, 항상 정해진 구역만 움직여야 되니까.",
+"k_low": "K04739",
+"ko_hint": "엄청 답답하다고, 항상 정해진 구역만 움직여야 되니까.",
+"reason": "soát nghĩa T2d: SAI (Anh 'xe tăng bốn chân' vs Hàn 'bức bối, chỉ đi vùng cố định'; không có Hàn đúng)"
 },
 {
 "file": "c/map/00107.scn",
 "kind": "scn",
 "idx": 20,
 "text_en": "Personally, I think bipedal mechs are much cooler...",
-"id": "K04740",
+"id": "NEW",
 "score": 0.857,
 "method": "dp",
-"ko": "연구를 담당하는 그 소문의 천재들은, 대체 어디에 있는건지 보지도 못해."
+"ko": "연구를 담당하는 그 소문의 천재들은, 대체 어디에 있는건지 보지도 못해.",
+"k_low": "K04740",
+"ko_hint": "연구를 담당하는 그 소문의 천재들은, 대체 어디에 있는건지 보지도 못해.",
+"reason": "soát nghĩa T2d: SAI (Anh 'mech hai chân' vs Hàn 'thiên tài nghiên cứu ở đâu'; không có Hàn đúng)"
 },
 {
 "file": "c/map/00107.scn",
@@ -133179,10 +133218,13 @@
 "kind": "scn",
 "idx": 41,
 "text_en": "Someone came by saying you sent them.",
-"id": "K08238",
+"id": "NEW",
 "score": 0.778,
 "method": "idx",
-"ko": "음, 그래서 슈르츠한테는... 의뢰는 없지만 개인적인 부탁이 있는데."
+"ko": "음, 그래서 슈르츠한테는... 의뢰는 없지만 개인적인 부탁이 있는데.",
+"k_low": "K08238",
+"ko_hint": "음, 그래서 슈르츠한테는... 의뢰는 없지만 개인적인 부탁이 있는데.",
+"reason": "soát nghĩa T2d: SAI (Anh 'Someone came by saying you sent them' vs Hàn 'Schultz... không có nhiệm vụ nhưng có việc riêng')"
 },
 {
 "file": "c/map/00108.scn",
@@ -137126,10 +137168,13 @@
 "kind": "scn",
 "idx": 1,
 "text_en": "Must be nice for the Neveds. They clearly know their own origins.",
-"id": "K08449",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "전 학자는 아니지만.. 새로운 지식을 알게 된다는 건 언제나 즐거워요."
+"ko": "전 학자는 아니지만.. 새로운 지식을 알게 된다는 건 언제나 즐거워요.",
+"k_low": "K08449",
+"ko_hint": "전 학자는 아니지만.. 새로운 지식을 알게 된다는 건 언제나 즐거워요.",
+"reason": "soát nghĩa T2d: SAI (Anh 'Must be nice for Neveds' vs Hàn 'Tôi không phải học giả.. biết kiến thức mới luôn vui')"
 },
 {
 "file": "c/map/00136.scn",
@@ -137156,90 +137201,117 @@
 "kind": "scn",
 "idx": 4,
 "text_en": "They have a creation myth. They say the god who made this world created the Neved too.",
-"id": "K08450",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "알고 있나요? 우리 콜크리크 섬이, 최초로 인간이 개척한 섬이라는 것을.."
+"ko": "알고 있나요? 우리 콜크리크 섬이, 최초로 인간이 개척한 섬이라는 것을..",
+"k_low": "K08450",
+"ko_hint": "알고 있나요? 우리 콜크리크 섬이, 최초로 인간이 개척한 섬이라는 것을..",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 5,
 "text_en": "Apparently that god had quite a temper, ending up fighting its creations before being sealed away.",
-"id": "K06436",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "테오도어는, 또 북쪽 동굴에 보물 찾기 하러 간것 같구먼."
+"ko": "테오도어는, 또 북쪽 동굴에 보물 찾기 하러 간것 같구먼.",
+"k_low": "K06436",
+"ko_hint": "테오도어는, 또 북쪽 동굴에 보물 찾기 하러 간것 같구먼.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 6,
 "text_en": "Where that god lies buried is what they call the Sanctuary.",
-"id": "K06437",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "요즘들어 독서나 연구에 너무 소홀한 것 같기도 헌데.."
+"ko": "요즘들어 독서나 연구에 너무 소홀한 것 같기도 헌데..",
+"k_low": "K06437",
+"ko_hint": "요즘들어 독서나 연구에 너무 소홀한 것 같기도 헌데..",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 7,
 "text_en": "You mean the relic you brought me?",
-"id": "K08451",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "어서오세요. 네베드의 수호자는 만나보셨습니까?"
+"ko": "어서오세요. 네베드의 수호자는 만나보셨습니까?",
+"k_low": "K08451",
+"ko_hint": "어서오세요. 네베드의 수호자는 만나보셨습니까?",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 8,
 "text_en": "Unfortunately, it does not seem to be of human origin.",
-"id": "K08453",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "이건... 뭐라고 말해야 할지 모르겠군요."
+"ko": "이건... 뭐라고 말해야 할지 모르겠군요.",
+"k_low": "K08453",
+"ko_hint": "이건... 뭐라고 말해야 할지 모르겠군요.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 9,
 "text_en": "The inscriptions are too alien... and the material, too. Even today technology could barely replicate it.",
-"id": "K08454",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "듣기만 해도 엄청난 모험을 하고 오신 것 같습니다."
+"ko": "듣기만 해도 엄청난 모험을 하고 오신 것 같습니다.",
+"k_low": "K08454",
+"ko_hint": "듣기만 해도 엄청난 모험을 하고 오신 것 같습니다.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 10,
 "text_en": "It hardly looks like a Neved relic either. For now, its identity is a complete mystery.",
-"id": "K08455",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "지금까지 저와 제이크가 모은 정보에, 슈르츠 씨가 전해준 이야기를 합쳤습니다."
+"ko": "지금까지 저와 제이크가 모은 정보에, 슈르츠 씨가 전해준 이야기를 합쳤습니다.",
+"k_low": "K08455",
+"ko_hint": "지금까지 저와 제이크가 모은 정보에, 슈르츠 씨가 전해준 이야기를 합쳤습니다.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 11,
 "text_en": "Do you need it back? What are you going to use it for?",
-"id": "K08457",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "한 부는 슈르츠 씨가 가지고 있어주지 않겠습니까?"
+"ko": "한 부는 슈르츠 씨가 가지고 있어주지 않겠습니까?",
+"k_low": "K08457",
+"ko_hint": "한 부는 슈르츠 씨가 가지고 있어주지 않겠습니까?",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 12,
 "text_en": "I have an idea of where it might belong, so I want to check it out...",
-"id": "K08458",
+"id": "NEW",
 "score": 0.857,
 "method": "dp",
-"ko": "어디라도 좋아요. 어딘가에 전해 주세요. 진실이 널리 퍼져서 살아남을 수 있게."
+"ko": "어디라도 좋아요. 어딘가에 전해 주세요. 진실이 널리 퍼져서 살아남을 수 있게.",
+"k_low": "K08458",
+"ko_hint": "어디라도 좋아요. 어딘가에 전해 주세요. 진실이 널리 퍼져서 살아남을 수 있게.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137256,10 +137328,13 @@
 "kind": "scn",
 "idx": 14,
 "text_en": "Of course not.",
-"id": "K08459",
+"id": "NEW",
 "score": 0.829,
 "method": "dp",
-"ko": "돕는다"
+"ko": "돕는다",
+"k_low": "K08459",
+"ko_hint": "돕는다",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137279,30 +137354,39 @@
 "kind": "scn",
 "idx": 16,
 "text_en": "I have not seen Theodore around lately. Did something happen?",
-"id": "K08461",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "어차피 아무도 믿지 않을텐데, 이런 이야기는. 이게 무슨 의미가 있는거지?"
+"ko": "어차피 아무도 믿지 않을텐데, 이런 이야기는. 이게 무슨 의미가 있는거지?",
+"k_low": "K08461",
+"ko_hint": "어차피 아무도 믿지 않을텐데, 이런 이야기는. 이게 무슨 의미가 있는거지?",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 17,
 "text_en": "Books that tell the truth are precious. Though they are always a thorn in the side of rulers.",
-"id": "K08462",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "믿지 않아도 상관없습니다. 의회는 아직 강력하죠. 저는 거짓말장이로 몰리고 쫓기는 몸이 될지도 모릅니다."
+"ko": "믿지 않아도 상관없습니다. 의회는 아직 강력하죠. 저는 거짓말장이로 몰리고 쫓기는 몸이 될지도 모릅니다.",
+"k_low": "K08462",
+"ko_hint": "믿지 않아도 상관없습니다. 의회는 아직 강력하죠. 저는 거짓말장이로 몰리고 쫓기는 몸이 될지도 모릅니다.",
+"reason": "soát nghĩa T2d: SAI (đúng K08468 (Hàn 'sách chứa sự thật quý giá'))"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 18,
 "text_en": "No matter how many bans they place or books they burn, truth survives in the end.",
-"id": "K08463",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "그래도 됩니다. 그로 인해 누구 한 명이라도 의회에 대해 조금 다르게 생각하게 되면, 의심을 품게 되면."
+"ko": "그래도 됩니다. 그로 인해 누구 한 명이라도 의회에 대해 조금 다르게 생각하게 되면, 의심을 품게 되면.",
+"k_low": "K08463",
+"ko_hint": "그래도 됩니다. 그로 인해 누구 한 명이라도 의회에 대해 조금 다르게 생각하게 되면, 의심을 품게 되면.",
+"reason": "soát nghĩa T2d: SAI (đúng K08469 (Hàn 'cấm sách đốt sách vẫn sống sót'))"
 },
 {
 "file": "c/map/00136.scn",
@@ -137329,10 +137413,13 @@
 "kind": "scn",
 "idx": 21,
 "text_en": "People talk about the Republic, but its history is not even 30 years old.",
-"id": "K08464",
+"id": "NEW",
 "score": 0.818,
 "method": "dp",
-"ko": "사람들이 조금이라도 의회가 이끌고 있는 공화국이 어디로 가는지 감시할 생각이 들게 되면, 그걸로 충분합니다."
+"ko": "사람들이 조금이라도 의회가 이끌고 있는 공화국이 어디로 가는지 감시할 생각이 들게 되면, 그걸로 충분합니다.",
+"k_low": "K08464",
+"ko_hint": "사람들이 조금이라도 의회가 이끌고 있는 공화국이 어디로 가는지 감시할 생각이 들게 되면, 그걸로 충분합니다.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137359,20 +137446,26 @@
 "kind": "scn",
 "idx": 24,
 "text_en": "It is still plenty of time for survivors of ruined houses or their loyalists to cause chaos.",
-"id": "K08465",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "적어도 시작은 충분하다고 생각해요."
+"ko": "적어도 시작은 충분하다고 생각해요.",
+"k_low": "K08465",
+"ko_hint": "적어도 시작은 충분하다고 생각해요.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 25,
 "text_en": "What is it?",
-"id": "K08466",
+"id": "NEW",
 "score": 0.714,
 "method": "dp",
-"ko": "돕지 않는다"
+"ko": "돕지 않는다",
+"k_low": "K08466",
+"ko_hint": "돕지 않는다",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137399,10 +137492,13 @@
 "kind": "scn",
 "idx": 28,
 "text_en": "Depends on what it is.",
-"id": "K08467",
+"id": "NEW",
 "score": 0.947,
 "method": "dp",
-"ko": "개인적인 사정이라는게 있어서. 그렇게 한가하지는 못해."
+"ko": "개인적인 사정이라는게 있어서. 그렇게 한가하지는 못해.",
+"k_low": "K08467",
+"ko_hint": "개인적인 사정이라는게 있어서. 그렇게 한가하지는 못해.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137419,10 +137515,13 @@
 "kind": "scn",
 "idx": 30,
 "text_en": "Afraid not. We only archive published books here. This is a manuscript, not a book.",
-"id": "K08468",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "진실을 담고 있는 책이란 귀중한거야. 언제나 지배자들한테는 눈에 가시 같지만."
+"ko": "진실을 담고 있는 책이란 귀중한거야. 언제나 지배자들한테는 눈에 가시 같지만.",
+"k_low": "K08468",
+"ko_hint": "진실을 담고 있는 책이란 귀중한거야. 언제나 지배자들한테는 눈에 가시 같지만.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137439,20 +137538,26 @@
 "kind": "scn",
 "idx": 32,
 "text_en": "No, an acquaintance did.",
-"id": "K08469",
+"id": "NEW",
 "score": 0.936,
 "method": "dp",
-"ko": "아무리 금서 조치를 취하고, 책을 불태워도 끝까지 살아 남거든."
+"ko": "아무리 금서 조치를 취하고, 책을 불태워도 끝까지 살아 남거든.",
+"k_low": "K08469",
+"ko_hint": "아무리 금서 조치를 취하고, 책을 불태워도 끝까지 살아 남거든.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 33,
 "text_en": "Figures. You do not strike me as someone who reads or writes much anyway.",
-"id": "K06457",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "나는 이 도서관에서 일한지 7년째야. 그 4년전의 혁명이 일어날 때도 도서관을 지켰지."
+"ko": "나는 이 도서관에서 일한지 7년째야. 그 4년전의 혁명이 일어날 때도 도서관을 지켰지.",
+"k_low": "K06457",
+"ko_hint": "나는 이 도서관에서 일한지 7년째야. 그 4년전의 혁명이 일어날 때도 도서관을 지켰지.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137472,10 +137577,13 @@
 "kind": "scn",
 "idx": 35,
 "text_en": "If it will not work, nothing to be done. Give it back.",
-"id": "K06459",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "불과 십수년 전까지만 해도 인간 사회엔 노예제도가 있었어."
+"ko": "불과 십수년 전까지만 해도 인간 사회엔 노예제도가 있었어.",
+"k_low": "K06459",
+"ko_hint": "불과 십수년 전까지만 해도 인간 사회엔 노예제도가 있었어.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137495,20 +137603,26 @@
 "kind": "scn",
 "idx": 37,
 "text_en": "...I would appreciate that.",
-"id": "K06461",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "그런 것들도, 다 인간이 떠안고 가야할 역사인 게야."
+"ko": "그런 것들도, 다 인간이 떠안고 가야할 역사인 게야.",
+"k_low": "K06461",
+"ko_hint": "그런 것들도, 다 인간이 떠안고 가야할 역사인 게야.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
 "kind": "scn",
 "idx": 38,
 "text_en": "When the war ended, demobilized soldiers turned into mercenaries.",
-"id": "K06462",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "용병이구먼, 쯧쯧.. 아직 나이도 어려보이는데."
+"ko": "용병이구먼, 쯧쯧.. 아직 나이도 어려보이는데.",
+"k_low": "K06462",
+"ko_hint": "용병이구먼, 쯧쯧.. 아직 나이도 어려보이는데.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -137538,10 +137652,13 @@
 "kind": "scn",
 "idx": 41,
 "text_en": "Survival skills are crucial for mercenaries. You never know when you will be stranded.",
-"id": "K06465",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "항상 싸움만 한다고 해서 지식의 축적을 게을리 해선 안돼."
+"ko": "항상 싸움만 한다고 해서 지식의 축적을 게을리 해선 안돼.",
+"k_low": "K06465",
+"ko_hint": "항상 싸움만 한다고 해서 지식의 축적을 게을리 해선 안돼.",
+"reason": "soát nghĩa T2d: SAI (đúng K06466 (Hàn 'lính đánh thuê cần biết thú hoang/địa hình'))"
 },
 {
 "file": "c/map/00136.scn",
@@ -137558,10 +137675,13 @@
 "kind": "scn",
 "idx": 43,
 "text_en": "You should learn early on to tell what is edible from what is not.",
-"id": "K06466",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "용병들에게 있어서, 야생동물이나 각 지역의 특성 같은 것은 필수적인 지식이니까."
+"ko": "용병들에게 있어서, 야생동물이나 각 지역의 특성 같은 것은 필수적인 지식이니까.",
+"k_low": "K06466",
+"ko_hint": "용병들에게 있어서, 야생동물이나 각 지역의 특성 같은 것은 필수적인 지식이니까.",
+"reason": "soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)"
 },
 {
 "file": "c/map/00136.scn",
@@ -139279,10 +139399,13 @@
 "kind": "scn",
 "idx": 1,
 "text_en": "G A M E  O V E R",
-"id": "K08621",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "EVENT_게임오버"
+"ko": "EVENT_게임오버",
+"k_low": "K08621",
+"ko_hint": "EVENT_게임오버",
+"reason": "soát nghĩa T2d: LỆCH (Hàn là nhãn nội bộ EVENT_게임오버, Anh là 'G A M E  O V E R')"
 },
 {
 "file": "c/map/00144.scn",
@@ -139822,30 +139945,39 @@
 "kind": "scn",
 "idx": 55,
 "text_en": "Now, it somehow only brings more anxiety.",
-"id": "K06717",
+"id": "NEW",
 "score": 0.973,
 "method": "dp",
-"ko": "뜨겁거나 한 것도 아니고, 순수하게 마법력으로만 마을 전체를 추위로부터 보호해주고 있답니다."
+"ko": "뜨겁거나 한 것도 아니고, 순수하게 마법력으로만 마을 전체를 추위로부터 보호해주고 있답니다.",
+"k_low": "K06717",
+"ko_hint": "뜨겁거나 한 것도 아니고, 순수하게 마법력으로만 마을 전체를 추위로부터 보호해주고 있답니다.",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00144.scn",
 "kind": "scn",
 "idx": 56,
 "text_en": "I still do not regret my choice.",
-"id": "K06719",
+"id": "NEW",
 "score": 0.947,
 "method": "dp",
-"ko": "혁명에 실패해 힘든 삶을 살게 되었지만.. 우리는 올바른 선택을 했었다고 생각해."
+"ko": "혁명에 실패해 힘든 삶을 살게 되었지만.. 우리는 올바른 선택을 했었다고 생각해.",
+"k_low": "K06719",
+"ko_hint": "혁명에 실패해 힘든 삶을 살게 되었지만.. 우리는 올바른 선택을 했었다고 생각해.",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00144.scn",
 "kind": "scn",
 "idx": 57,
 "text_en": "Can we really trust Evelyn and Theo? Lately, something feels... off.",
-"id": "K06720",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "의회는 아직도 선주종들의 땅을 포기하지 못했고, 결국은 전쟁을 부를테니까.."
+"ko": "의회는 아직도 선주종들의 땅을 포기하지 못했고, 결국은 전쟁을 부를테니까..",
+"k_low": "K06720",
+"ko_hint": "의회는 아직도 선주종들의 땅을 포기하지 못했고, 결국은 전쟁을 부를테니까..",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00144.scn",
@@ -139865,50 +139997,65 @@
 "kind": "scn",
 "idx": 59,
 "text_en": "Demanding it from Theo and Evelyn. Tsk tsk.",
-"id": "K06723",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "레반은 따뜻하고, 안전해. 편하게 둘러보라고."
+"ko": "레반은 따뜻하고, 안전해. 편하게 둘러보라고.",
+"k_low": "K06723",
+"ko_hint": "레반은 따뜻하고, 안전해. 편하게 둘러보라고.",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00144.scn",
 "kind": "scn",
 "idx": 60,
 "text_en": "You know the cave east of here, right?",
-"id": "K06725",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "이 정도면, 다른 섬의 평범한 겨울 날씨잖아?"
+"ko": "이 정도면, 다른 섬의 평범한 겨울 날씨잖아?",
+"k_low": "K06725",
+"ko_hint": "이 정도면, 다른 섬의 평범한 겨울 날씨잖아?",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00144.scn",
 "kind": "scn",
 "idx": 61,
 "text_en": "There used to be some barrier there, but it suddenly vanished.",
-"id": "K06726",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "사실.. 지난 1년간은 우리가 도망자들이라는 것조차 잊고 살 정도였어."
+"ko": "사실.. 지난 1년간은 우리가 도망자들이라는 것조차 잊고 살 정도였어.",
+"k_low": "K06726",
+"ko_hint": "사실.. 지난 1년간은 우리가 도망자들이라는 것조차 잊고 살 정도였어.",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00144.scn",
 "kind": "scn",
 "idx": 62,
 "text_en": "Oh, it is you.",
-"id": "K06728",
+"id": "NEW",
 "score": 0.787,
 "method": "dp",
-"ko": "나는 죽을때까지 이런 느긋함이 다시 찾아오지 않을 줄 알았어."
+"ko": "나는 죽을때까지 이런 느긋함이 다시 찾아오지 않을 줄 알았어.",
+"k_low": "K06728",
+"ko_hint": "나는 죽을때까지 이런 느긋함이 다시 찾아오지 않을 줄 알았어.",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00144.scn",
 "kind": "scn",
 "idx": 63,
 "text_en": "The monsters suddenly grew ferocious. More bears have shown up too.",
-"id": "K06729",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "살아남는 게 기적이라고 느껴질 정도로 힘겨운 몇 년이었다.."
+"ko": "살아남는 게 기적이라고 느껴질 정도로 힘겨운 몇 년이었다..",
+"k_low": "K06729",
+"ko_hint": "살아남는 게 기적이라고 느껴질 정도로 힘겨운 몇 년이었다..",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00144.scn",
@@ -139925,10 +140072,13 @@
 "kind": "scn",
 "idx": 65,
 "text_en": "Glad we stopped it before disaster struck.",
-"id": "K06732",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "언젠가 다시 싸울 날이 오겠지. 다들 그것만큼은 알고 있어."
+"ko": "언젠가 다시 싸울 날이 오겠지. 다들 그것만큼은 알고 있어.",
+"k_low": "K06732",
+"ko_hint": "언젠가 다시 싸울 날이 오겠지. 다들 그것만큼은 알고 있어.",
+"reason": "soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)"
 },
 {
 "file": "c/map/00145.scn",
@@ -140516,10 +140666,13 @@
 "kind": "scn",
 "idx": 12,
 "text_en": "G A M E  O V E R",
-"id": "K08621",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "EVENT_게임오버"
+"ko": "EVENT_게임오버",
+"k_low": "K08621",
+"ko_hint": "EVENT_게임오버",
+"reason": "soát nghĩa T2d: LỆCH (Hàn là nhãn nội bộ EVENT_게임오버, Anh là 'G A M E  O V E R')"
 },
 {
 "file": "c/map/00151.scn",
@@ -147742,20 +147895,26 @@
 "kind": "scn",
 "idx": 25,
 "text_en": "I think so too.",
-"id": "K09313",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "아니, 아무것도 아니야.."
+"ko": "아니, 아무것도 아니야..",
+"k_low": "K09313",
+"ko_hint": "아니, 아무것도 아니야..",
+"reason": "soát nghĩa T2d: SAI (đúng K09316 ('내 생각도 그래'))"
 },
 {
 "file": "c/map/00170.scn",
 "kind": "scn",
 "idx": 26,
 "text_en": "I will make sure the Neo Graham is in peak condition by our next departure.",
-"id": "K09314",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "앞으로 한동안은 배 쓸일이 없을 것 같으니, 다른 섬에 갈 일이 있으면 그라함의 배를 쓰도록 해."
+"ko": "앞으로 한동안은 배 쓸일이 없을 것 같으니, 다른 섬에 갈 일이 있으면 그라함의 배를 쓰도록 해.",
+"k_low": "K09314",
+"ko_hint": "앞으로 한동안은 배 쓸일이 없을 것 같으니, 다른 섬에 갈 일이 있으면 그라함의 배를 쓰도록 해.",
+"reason": "soát nghĩa T2d: SAI (đúng K09317 (Hàn 'tới lần xuất phát sau sẽ chỉnh Neo Graham ở trạng thái tốt nhất'))"
 },
 {
 "file": "c/map/00170.scn",
@@ -148082,20 +148241,26 @@
 "kind": "scn",
 "idx": 60,
 "text_en": "If we needed one, Tyr would have procured it already.",
-"id": "K09315",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "티르 오빠.. 뭔가 숨기고 있는 것 같은데."
+"ko": "티르 오빠.. 뭔가 숨기고 있는 것 같은데.",
+"k_low": "K09315",
+"ko_hint": "티르 오빠.. 뭔가 숨기고 있는 것 같은데.",
+"reason": "soát nghĩa T2d: SAI (Hàn 'Tyr hình như giấu gì đó' không khớp)"
 },
 {
 "file": "c/map/00170.scn",
 "kind": "scn",
 "idx": 61,
 "text_en": "Ugh... Fair point. But I am not giving up.",
-"id": "K09316",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "내 생각도 그래."
+"ko": "내 생각도 그래.",
+"k_low": "K09316",
+"ko_hint": "내 생각도 그래.",
+"reason": "soát nghĩa T2d: SAI (Hàn '내 생각도 그래' (đúng cho idx 25))"
 },
 {
 "file": "c/map/00170.scn",
@@ -148112,10 +148277,13 @@
 "kind": "scn",
 "idx": 63,
 "text_en": "I am stubborn and clingy like a leech anyway. The universally disliked type.",
-"id": "K09317",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "다음 출발 때까지, 또 네오그라함호를 최고의 상태로 만들어 두겠어."
+"ko": "다음 출발 때까지, 또 네오그라함호를 최고의 상태로 만들어 두겠어.",
+"k_low": "K09317",
+"ko_hint": "다음 출발 때까지, 또 네오그라함호를 최고의 상태로 만들어 두겠어.",
+"reason": "soát nghĩa T2d: SAI (Hàn về Neo Graham (đúng cho idx 26))"
 },
 {
 "file": "c/map/00170.scn",
@@ -148162,20 +148330,26 @@
 "kind": "scn",
 "idx": 68,
 "text_en": "Tyr told me that if I am doing a test run, do it on the ship.",
-"id": "K09318",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "출발인가? 목적지만 이야기하라고. 바람처럼 데려다줄 테니."
+"ko": "출발인가? 목적지만 이야기하라고. 바람처럼 데려다줄 테니.",
+"k_low": "K09318",
+"ko_hint": "출발인가? 목적지만 이야기하라고. 바람처럼 데려다줄 테니.",
+"reason": "soát nghĩa T2d: SAI (Hàn là lời Graham 'Khởi hành à?'; Anh khác ý)"
 },
 {
 "file": "c/map/00170.scn",
 "kind": "scn",
 "idx": 69,
 "text_en": "That way it will not hurt anyone, and in an emergency, we can dump it in the sea.",
-"id": "K06949",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "거래가 활발할 정도로 사람이 많은 건 아니지만, 물건은 항상 구비해두고 있습니다."
+"ko": "거래가 활발할 정도로 사람이 많은 건 아니지만, 물건은 항상 구비해두고 있습니다.",
+"k_low": "K06949",
+"ko_hint": "거래가 활발할 정도로 사람이 많은 건 아니지만, 물건은 항상 구비해두고 있습니다.",
+"reason": "soát nghĩa T2d: SAI (Hàn là lời thương nhân (K06949-lệch))"
 },
 {
 "file": "c/map/00170.scn",
@@ -150318,20 +150492,26 @@
 "kind": "scn",
 "idx": 58,
 "text_en": "I am just taking advantage of... an unavoidable fight. And... I will end it there.",
-"id": "K09508",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "힘을 위해.. 싸우겠다는 거야? 그러면.."
+"ko": "힘을 위해.. 싸우겠다는 거야? 그러면..",
+"k_low": "K09508",
+"ko_hint": "힘을 위해.. 싸우겠다는 거야? 그러면..",
+"reason": "soát nghĩa T2d: SAI (đúng K09509 (Hàn 'chỉ lợi dụng trận chiến không tránh được'))"
 },
 {
 "file": "c/map/00174.scn",
 "kind": "scn",
 "idx": 59,
 "text_en": "I will never become complete. I will finish it there. Absolutely.",
-"id": "K09509",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "피할 수 없는 싸움을.. 이용할 뿐이야. 그리고.. 거기서 끝낸다."
+"ko": "피할 수 없는 싸움을.. 이용할 뿐이야. 그리고.. 거기서 끝낸다.",
+"k_low": "K09509",
+"ko_hint": "피할 수 없는 싸움을.. 이용할 뿐이야. 그리고.. 거기서 끝낸다.",
+"reason": "soát nghĩa T2d: SAI (đúng K09510 (Hàn 'không bao giờ hoàn thành, kết thúc ở đó'))"
 },
 {
 "file": "c/map/00174.scn",
@@ -150448,10 +150628,13 @@
 "kind": "scn",
 "idx": 71,
 "text_en": "I am sorry for placing such a heavy burden on you.",
-"id": "K09510",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "절대 완성은 없어. 거기서 끝낸다. 절대로."
+"ko": "절대 완성은 없어. 거기서 끝낸다. 절대로.",
+"k_low": "K09510",
+"ko_hint": "절대 완성은 없어. 거기서 끝낸다. 절대로.",
+"reason": "soát nghĩa T2d: SAI (đúng K09514 (Hàn 'đặt gánh nặng lên cậu, xin lỗi'))"
 },
 {
 "file": "c/map/00174.scn",
@@ -150471,10 +150654,13 @@
 "kind": "scn",
 "idx": 73,
 "text_en": "Well, of course, it is not easy.",
-"id": "K09512",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "신.. 의 힘의 1/3.."
+"ko": "신.. 의 힘의 1/3..",
+"k_low": "K09512",
+"ko_hint": "신.. 의 힘의 1/3..",
+"reason": "soát nghĩa T2d: SAI (Anh 'Well, of course, it is not easy' vs Hàn 'sức mạnh của thần 1/3')"
 },
 {
 "file": "c/map/00174.scn",
@@ -150641,10 +150827,13 @@
 "kind": "scn",
 "idx": 90,
 "text_en": "You are... lying, are not you?",
-"id": "K09513",
+"id": "NEW",
 "score": 0.778,
 "method": "dp",
-"ko": "슈르츠.. 당신은 정말 이겨낼 자신이 있는 건가요?"
+"ko": "슈르츠.. 당신은 정말 이겨낼 자신이 있는 건가요?",
+"k_low": "K09513",
+"ko_hint": "슈르츠.. 당신은 정말 이겨낼 자신이 있는 건가요?",
+"reason": "soát nghĩa T2d: SAI (Anh 'You are lying, are not you?' vs Hàn 'Schultz, anh tự tin vượt qua?')"
 },
 {
 "file": "c/map/00174.scn",
@@ -150661,10 +150850,13 @@
 "kind": "scn",
 "idx": 92,
 "text_en": "Yes, it would. You must be able to hear it slightly. Spirits also touch the divine, after all.",
-"id": "K09514",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "너한테는 무거운 짐을 지우는 것 같아서 미안하게 생각하고 있어."
+"ko": "너한테는 무거운 짐을 지우는 것 같아서 미안하게 생각하고 있어.",
+"k_low": "K09514",
+"ko_hint": "너한테는 무거운 짐을 지우는 것 같아서 미안하게 생각하고 있어.",
+"reason": "soát nghĩa T2d: SAI (Hàn là lời xin lỗi gánh nặng (đúng cho idx 71))"
 },
 {
 "file": "c/map/00174.scn",
@@ -155956,10 +156148,13 @@
 "kind": "scn",
 "idx": 5,
 "text_en": "Mom only ever tells me to study all day.",
-"id": "K09936",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "완전히 속았어. 응? 속았다고."
+"ko": "완전히 속았어. 응? 속았다고.",
+"k_low": "K09936",
+"ko_hint": "완전히 속았어. 응? 속았다고.",
+"reason": "soát nghĩa T2d: SAI (Anh 'Mom only tells me to study' vs Hàn '(bị lừa hoàn toàn)')"
 },
 {
 "file": "c/map/00198.scn",
@@ -156186,10 +156381,13 @@
 "kind": "scn",
 "idx": 28,
 "text_en": "I kept it... but I will not get arrested, right?",
-"id": "K09954",
+"id": "NEW",
 "score": 1.0,
 "method": "dp",
-"ko": "또 독촉하러 왔나요?"
+"ko": "또 독촉하러 왔나요?",
+"k_low": "K09954",
+"ko_hint": "또 독촉하러 왔나요?",
+"reason": "soát nghĩa T2d: SAI (Anh 'I kept it... arrested?' vs Hàn 'Lại đến đòi nợ à?')"
 },
 {
 "file": "c/map/00198.scn",

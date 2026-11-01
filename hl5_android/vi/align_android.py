@@ -503,6 +503,7 @@ def main():
                            ident=ident, shifts=shifts.most_common(4), tot=round(tot, 1))
 
     # --- xuất align.json
+    review = load_review()
     out = []
     for it in acat:
         src, sc, meth, note = result[id(it)]
@@ -519,6 +520,12 @@ def main():
                 new = True; reason = 'câu ngắn lệch độ dài Anh/Hàn'
             elif r_ > 3.5: new = True; reason = 'Anh dài hơn Hàn > 3.5 lần'
             elif sk_ > 0 and sa_ - sk_ >= 2: new = True; reason = 'Anh nhiều đoạn ; hơn Hàn >= 2'
+            if not new:
+                pos_ = ('idx %d' % it['idx']) if 'idx' in it else 'rec %d off %d ps %d' % (it['rec'], it['off'], it['ps'])
+                rv = review.get((it['file'], pos_))
+                if rv and rv[0] in ('SAI', 'LỆCH') and rv[1] == kid:   # chỉ áp khi K vẫn đúng như lúc soát
+                    new = True; reason = 'soát nghĩa T2d: %s' % rv[0]
+                    if rv[2]: reason += ' (%s)' % rv[2]
         e = {k: it[k] for k in ('file', 'kind') }
         for k in ('idx', 'rec', 'off', 'ps'):
             if k in it: e[k] = it[k]
@@ -535,18 +542,36 @@ def main():
     update_A_dich(out)
 
 
+def load_review():
+    """vi/review_T2d.tsv (file, pos, id, verdict, note, group) -> {(file, pos): (verdict, id, note)}.
+    SAI/LỆCH (khớp id K lúc soát) bị ghi đè thành NEW; ko_hint/k_low giữ nguyên."""
+    p = os.path.join(HERE, 'review_T2d.tsv')
+    r = {}
+    if not os.path.exists(p): return r
+    for ln in open(p, encoding='utf-8').read().split('\n')[1:]:
+        c = ln.split('\t')
+        if len(c) >= 4 and c[0]: r[(c[0], c[1])] = (c[3], c[2], c[4] if len(c) > 4 else '')
+    return r
+
+
 def update_A_dich(out):
     """Giữ ổn định ID A_dich.tsv: khoá (file, vị trí, text_en). Dòng không còn NEW -> ghi 'unused' ở cột 6;
     NEW mới -> ID nối tiếp sau ID lớn nhất. Không đổi bản dịch/ID cũ, không xoá dòng."""
     path = os.path.join(HERE, 'A_dich.tsv')
     lines = open(path, encoding='utf-8').read().split('\n')
     if lines and lines[-1] == '': lines.pop()
+    # dòng không bắt đầu bằng ID là phần nối của dòng trước (text_en có byte 0x0a thật, vd item_11 rec 12) -> gộp, ghi lại dạng '\\n'
+    merged = [lines[0]]
+    for l in lines[1:]:
+        if re.match(r'A\d{5}\t', l): merged.append(l)
+        else: merged[-1] += '\\n' + l
+    lines = merged
     head, rows = lines[0], [l.split('\t') for l in lines[1:]]
     for r in rows: r += [''] * (6 - len(r))
     def pos(e): return ('idx %d' % e['idx']) if 'idx' in e else 'rec %d off %d ps %d' % (e['rec'], e['off'], e['ps'])
     cur = collections.OrderedDict()
     for e in out:
-        if e['id'] == 'NEW': cur[(e['file'], pos(e), e['text_en'])] = e
+        if e['id'] == 'NEW': cur[(e['file'], pos(e), e['text_en'].replace('\n', '\\n'))] = e
     have = {}
     for r in rows: have[(r[1], r[2], r[3])] = r
     mx = max(int(r[0][1:]) for r in rows)
@@ -587,6 +612,8 @@ def report(out, filestat, nm, same, ktab_n, atab_n, sim, allsame):
     P('\n## scn cùng số câu (ghép theo chỉ số)\n')
     P('- Trong %d file scn có ở cả hai bản: **%d** cùng số câu bảng chuỗi, %d khác số câu (kể cả file không có câu chữ).' % (sum(allsame), allsame[0], allsame[1]))
     P('- Số file scn Android có câu chữ = %d; trong đó cùng số câu bảng chuỗi với LGT = **%d** file (%d câu Android).' % (sum(1 for s in filestat.values() if s['kind']=='scn'), len(sf), t))
+    rvw = collections.Counter((e['kind'], e.get('method')) for e in out if e.get('reason', '').startswith('soát nghĩa T2d'))
+    P('- Soát nghĩa thủ công T2d (`review_T2d.tsv`, SAI/LỆCH -> NEW): %d câu %s.' % (sum(rvw.values()), dict(('%s/%s' % k, v) for k, v in rvw.items())))
     P('- Cặp điểm cao (>= %.2f): **%d / %d = %.1f%%**; ghép được (>= %.2f): %d (%.1f%%); NEW: %d.' % (THR_HIGH, hi, t, 100.0 * hi / max(1, t), THR_HIGH, m, 100.0 * m / max(1, t), nw))
     nok = [f for f in sf if filestat[f]['method'] != 'idx']
     P('- File cùng số câu nhưng phải dùng DP (ghép theo chỉ số cho điểm thấp): %d %s' % (len(nok), nok[:10]))

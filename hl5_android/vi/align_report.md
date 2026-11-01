@@ -6,15 +6,15 @@ Sinh bởi `align_android.py`. Ngưỡng: NEW nếu điểm < 0.70, không có c
 
 | nhóm | tổng câu | ghép được (K#####) | NEW | trong đó điểm cao |
 |---|---:|---:|---:|---:|
-| scn | 7163 | 6825 | 338 | 6825 |
-| dat | 7135 | 6466 | 669 | 6466 |
-| tất cả | 14298 | 13291 | 1007 | 13291 |
+| scn | 7163 | 6760 | 403 | 6760 |
+| dat | 7135 | 6465 | 670 | 6465 |
+| tất cả | 14298 | 13225 | 1073 | 13225 |
 
 ## scn cùng số câu (ghép theo chỉ số)
 
 - Trong 214 file scn có ở cả hai bản: **189** cùng số câu bảng chuỗi, 25 khác số câu (kể cả file không có câu chữ).
 - Số file scn Android có câu chữ = 203; trong đó cùng số câu bảng chuỗi với LGT = **182** file (5888 câu Android).
-- Cặp điểm cao (>= 0.70): **5845 / 5888 = 99.3%**; ghép được (>= 0.70): 5845 (99.3%); NEW: 43.
+- Cặp điểm cao (>= 0.70): **5844 / 5888 = 99.3%**; ghép được (>= 0.70): 5844 (99.3%); NEW: 44.
 - File cùng số câu nhưng phải dùng DP (ghép theo chỉ số cho điểm thấp): 0 []
 
 ## Bảng ghép FILE scn Android -> LGT (theo nội dung, T2c)
@@ -257,18 +257,18 @@ Tổng số file đổi ghép: **13** (trong 203 file scn có chữ).
 | c/map/00019.scn | None | None | 19 | 0 | 19 |
 | c/map/00030.scn | 43 | 30 | 43 | 30 | 13 |
 | c/map/00068.scn | 111 | 110 | 111 | 108 | 3 |
-| c/map/00087.scn | 99 | 96 | 99 | 96 | 3 |
-| c/map/00107.scn | 22 | 24 | 22 | 22 | 0 |
+| c/map/00087.scn | 99 | 96 | 99 | 94 | 5 |
+| c/map/00107.scn | 22 | 24 | 22 | 12 | 10 |
 | c/map/00113.scn | 29 | 28 | 29 | 24 | 5 |
-| c/map/00136.scn | 45 | 34 | 45 | 28 | 17 |
-| c/map/00144.scn | 66 | 67 | 66 | 63 | 3 |
-| c/map/00150.scn | 13 | 12 | 13 | 12 | 1 |
+| c/map/00136.scn | 45 | 34 | 45 | 2 | 43 |
+| c/map/00144.scn | 66 | 67 | 66 | 53 | 13 |
+| c/map/00150.scn | 13 | 12 | 13 | 11 | 2 |
 | c/map/00151.scn | 188 | 185 | 188 | 182 | 6 |
-| c/map/00170.scn | 149 | 103 | 148 | 103 | 45 |
-| c/map/00174.scn | 218 | 181 | 218 | 179 | 39 |
+| c/map/00170.scn | 149 | 103 | 148 | 96 | 52 |
+| c/map/00174.scn | 218 | 181 | 218 | 173 | 45 |
 | c/map/00175.scn | None | None | 17 | 0 | 17 |
 | c/map/00186.scn | None | None | 36 | 0 | 36 |
-| c/map/00198.scn | 52 | 44 | 52 | 44 | 8 |
+| c/map/00198.scn | 52 | 44 | 52 | 42 | 10 |
 | c/map/00200.scn | 19 | 16 | 19 | 16 | 3 |
 | c/map/00201.scn | 40 | 35 | 40 | 35 | 5 |
 | c/map/00202.scn | 23 | 20 | 23 | 20 | 3 |
@@ -295,7 +295,7 @@ Không có trường ID duy nhất đầu bản ghi dùng chung cho mọi file (
 | c/csv/enemy_expert_0.dat | c/csv/enemy_expert_0.dat | 142 | 142 | 142 | 142 | 0 | +0:142 | 147 | 5 |
 | c/csv/enemy_expert_1.dat | c/csv/enemy_expert_1.dat | 142 | 142 | 142 | 142 | 0 | +0:142 | 142 | 0 |
 | c/csv/enemy_expert_2.dat | c/csv/enemy_expert_2.dat | 142 | 142 | 142 | 142 | 0 | +0:142 | 142 | 0 |
-| c/csv/ingame_text.dat | c/csv/ingame_text.dat | 357 | 355 | 347 | 340 | 347 | +0:340 +1:6 +2:1 | 356 | 15 |
+| c/csv/ingame_text.dat | c/csv/ingame_text.dat | 357 | 355 | 347 | 340 | 347 | +0:340 +1:6 +2:1 | 356 | 16 |
 | c/csv/item_00.dat | c/csv/item_00.dat | 86 | 81 | 81 | 81 | 81 | +0:81 | 172 | 10 |
 | c/csv/item_01.dat | c/csv/item_01.dat | 86 | 81 | 81 | 81 | 81 | +0:81 | 172 | 10 |
 | c/csv/item_02.dat | c/csv/item_02.dat | 86 | 81 | 81 | 81 | 81 | +0:81 | 172 | 10 |
@@ -413,52 +413,52 @@ Không có trường ID duy nhất đầu bản ghi dùng chung cho mọi file (
 | 49 | c/csv/item_16.dat | rec 57@16 | 0.62 | NEW | Rogue Skillbook Req.;Level: LV28 Melee;strike against;frontal foes.;Co | 로그 스킬북;제한레벨 LV28 |
 | 50 | c/csv/item_16.dat | rec 58@16 | 0.62 | NEW | Rogue Skillbook Req.;Level: LV42 Melee;strike against;frontal foes.;Co | 로그 스킬북;제한레벨 LV42 |
 
-## Mẫu 40 cặp ngẫu nhiên (seed 20240601) trong dải 0.70-0.80 (đã ghép) để quản đốc soát; tổng 505 cặp trong dải
+## Mẫu 40 cặp ngẫu nhiên (seed 20240601) trong dải 0.70-0.80 (đã ghép) để quản đốc soát; tổng 487 cặp trong dải
 
 | # | file | vị trí | điểm | Anh | Hàn |
 |---:|---|---|---:|---|---|
 | 1 | c/csv/ingame_text.dat | rec 17@0 | 0.78 | Moitura Plain | 모이투라평야 |
-| 2 | c/map/00054.scn | idx 33 | 0.71 | If you do not want to die, do not come near us again. We will not let  | 죽고싶지 않으면 다시는 우리에게 접근하지마. 우린 누구에게도 이용당하지 않을 거니까.. |
-| 3 | c/map/00050.scn | idx 71 | 0.78 | Then I will match your taste, Schultz! | 그럼, 내가 맞춰줄게. 슈르츠님 취향. |
-| 4 | c/map/00058.scn | idx 22 | 0.78 | I would like to cook grilled east scorpion claws for Master Kastler. | 카스틀러님에게 동부전갈집게발 구이를 만들어 드리고 싶습니다. |
-| 5 | c/map/00144.scn | idx 42 | 0.71 | Heheh, what.. you are bait again? You fail every time, do not you get  | 크크 뭐야.. 또 네가 미끼냐? 계속 실패하면서 질리지도 않나 보구나. |
-| 6 | c/csv/quest_2.dat | rec 8@19 | 0.79 | I keep seeing a strange;girl. That was;definitely a dream...;Did that  | 이상한 여자애가 보인다.;그건 분명히 꿈이었는데..;날 치료해준;그 성녀라는 여자가;뭔가 수작을 부린 걸지도... |
-| 7 | c/map/00078.scn | idx 22 | 0.71 | What is the point of getting mad at kids? | 애들 상대로 열내서 뭐해. |
-| 8 | c/map/00176.scn | idx 27 | 0.71 | Why act surprised? We knew this was coming. | 뭘 새삼스럽게. 예상했던 일이잖아? |
-| 9 | c/map/00154.scn | idx 38 | 0.71 | I asked what kind of research, and he said you would know. | 무슨 연구냐고 물었더니 자네는 알거라고 하던데? |
-| 10 | c/csv/mission_text.dat | rec 63@0 | 0.78 | Achieved upon;acquiring 100,000;Gold. | 골드 획득 시 달성할 수 있습니다. |
-| 11 | c/map/00051.scn | idx 29 | 0.78 | We are going to the }Ark{ to live in peace and quiet. We will not medd | 우린 }방주{로 가서 조용히 숨어살거야. 누구에게도 간섭하지 않고, 간섭받지 않고.. 그럼 되잖아? |
-| 12 | c/map/00014.scn | idx 8 | 0.71 | Hey, if you are a mercenary, fight! You want to live, right? Leave sup | 이봐, 자네도 싸워야지 용병이면! 일단 살아야 할 것 아닌가! 지원은 나에게 맡기고.. |
-| 13 | c/csv/item_15.dat | rec 100@16 | 0.72 | `Hero{ Lv.96 1H Sword A;book to learn the;recipe for `Kravian{. | `영웅{96렙제 한손검;`크래비안{의 조합법을 배울 수 있는 책 |
-| 14 | c/map/00195.scn | idx 3 | 0.71 | They might not be mere monsters, but intelligent beings! | 그게 단순한 괴물이 아니라 지성을 존재일지도 모른단 말일세. |
-| 15 | c/map/00052.scn | idx 60 | 0.71 | R-Really, I can stay out? But will not I get on your nerves...? | 그.. 그럼 나와 있어도 되나요? 하지만 귀찮아 하실 거면서.. |
-| 16 | c/map/00068.scn | idx 61 | 0.71 | Diligent, are not you? | 부지런하군. |
-| 17 | c/map/00041.scn | idx 12 | 0.71 | Grown-ups are amazing! Dangerous beasts roam outside, yet they built a | 어른들은 참 굉장해요! 도시 밖에는 위험한 짐승들이 우글거리는데 어떻게 이런 도시를 만들었을까요? |
-| 18 | c/csv/common_text.dat | rec 129@0 | 0.78 | Select a sphere. | 오브를 선택하십시오. |
-| 19 | c/map/00035.scn | idx 38 | 0.78 | A 70-30 split. 70 for me. | 7대 3으로 하지. 내가 7. |
-| 20 | c/map/00202.scn | idx 17 | 0.78 | Check <Seals{ and <Ice Clods{. I have already examined the Snow Maiden | <물개{나 <얼음덩어리{를 살펴보면 될거야. 설녀나 얼음정령은 이미 조사를 해봤으니까... |
-| 21 | c/map/00050.scn | idx 27 | 0.78 | Sorry. The one time I try to help, this happens... I get why you are s | 미안. 진짜 오랜만에 남을 도와주려고 움직여봤는데 이 꼴이라니.. 슈르츠님이 삐뚤어진 이유를 알 것 같아. |
-| 22 | c/map/00172.scn | idx 31 | 0.71 | Incredible... Was this technology also given to the Listeners by the a | 신기하군.. 이런 것들도, 듣는 자들이 고대신에게 받은 기술인가.. |
-| 23 | c/map/00006.scn | idx 53 | 0.71 | Wait... what about the boat trip...? | 에에.. ? 배 여행은.. |
-| 24 | c/map/00151.scn | idx 109 | 0.78 | You are mine... I will never abandon you. I will not let Althena take  | 내 거다.. 절대 안 버려. 알테나 따위가 가져가게 두지 않을거라고! |
-| 25 | c/map/00155.scn | idx 6 | 0.71 | It is all because they will not use our certified equipment. Why will  | 이게 다 우리가 공인해준 장비를 사용하지 않아서 이런 거라니까. 왜 말들을 안 듣는지. |
-| 26 | c/map/00073.scn | idx 25 | 0.78 | Leave Lord Schultz to me! | 응, 슈르츠님은 내게 맡겨. |
-| 27 | c/map/00066.scn | idx 4 | 0.71 | T-Telepathy? It is not getting through?! | 전.. 전음이? 전해지지 않는다? |
-| 28 | c/map/00026.scn | idx 76 | 0.78 | I do not know.. Could it be like Eileen case..? | 모르겠어.. 설마 아일린 언니때 처럼.. |
-| 29 | c/csv/common_text.dat | rec 103@0 | 0.78 | ADVANCED | 고급제련석 |
-| 30 | c/csv/ingame_text.dat | rec 67@0 | 0.78 | To Moitura Island | 모이투라 섬으로 |
-| 31 | c/map/00088.scn | idx 9 | 0.78 | Schultz, not that way! You are moving away from the Successor presence | 슈르츠님, 그쪽이 아니야! 점점 멀어지고 있어, 계승자의 느낌으로부터.. |
-| 32 | c/map/00171.scn | idx 5 | 0.78 | What a pain... Do I have to gather soul dust again...? | 귀찮게.. 또 영혼가루를 모아야 하나.. |
-| 33 | c/map/00107.scn | idx 17 | 0.74 | I am glad my child is enjoying it. | 공화국에서 가장 크고 높은 건물이라는 센트럴 타워를 아이에게 꼭 보여주고 싶었어요. |
-| 34 | c/map/00078.scn | idx 27 | 0.71 | Oh! You guys are still in Kingsport, eh? | 오오. 너희들 아직도 킹스포트에 있었군 그래. |
-| 35 | c/csv/name.dat | rec 21@0 | 0.78 | Soldier | 일반병 |
-| 36 | c/csv/ingame_text.dat | rec 65@0 | 0.78 | Aileen | 아일린 |
-| 37 | c/map/00174.scn | idx 46 | 0.71 | Then do I really... have to become complete? Must I...? | 그럼 역시.. 완성되어야 하는 걸까, 나는.. |
-| 38 | c/map/00189.scn | idx 14 | 0.78 | Commander Tyr was strange back then, like a man possessed. Kefnes, Tyr | 그 때의 티르 대장은 뭔가 이상했습니다. 뭔가에 씌인 사람 같았어요. 케프네스, 티르, 브리안. 원정대의 세 축을 이루던 사람 |
-| 39 | c/map/00066.scn | idx 57 | 0.73 | I thought the rebels on Moytura Island were wiped out four years ago.. | 모이투라 섬의 반란군은.. 4년전에 이미 전멸했다고 알고 있는데.. |
-| 40 | c/map/00010.scn | idx 55 | 0.71 | Yeah, you know it, right? So do not go chasing bounties. Let us just k | 그래, 알고 있지? 그러니까 너도 괜히 현상금 노리고 까불지 마. 평화롭게 가자고, 평화롭게. |
+| 2 | c/map/00055.scn | idx 2 | 0.78 | He is kind, caring... I am going to marry him one day! | 자상하고, 친절하고.. 전 나중에 카스틀러님께 시집갈 거예요! |
+| 3 | c/map/00051.scn | idx 28 | 0.71 | Why... Why will not you adults just leave us alone?! | 도대체.. 어른이란 것들은 왜 우릴 가만히 내버려두질 않는거지? |
+| 4 | c/map/00058.scn | idx 27 | 0.78 | I see... You have grown into an adult who will not lift a finger unles | 그렇군요... 슈르츠님은 어느새 돈이 안되는 일이라면 손도 까딱하지 않는 어른이 되어 버리셨군요... |
+| 5 | c/map/00151.scn | idx 88 | 0.71 | What could I ever do... to atone for it...? | 나는 어떻게 해야..;보상해 줄 수 있을까.. |
+| 6 | c/csv/skill_00.dat | rec 18@56 | 0.75 | TUpgrade Trait.;Increases }spin speed\|;by }#10 lvl\| when using;the } | 강화 특성.;}회전베기\| 스킬을 사용시;}회전속도\|가;}#10단계\| 증가한다. |
+| 7 | c/map/00078.scn | idx 27 | 0.71 | Oh! You guys are still in Kingsport, eh? | 오오. 너희들 아직도 킹스포트에 있었군 그래. |
+| 8 | c/map/00192.scn | idx 3 | 0.78 | Call it a republic, but those old noble families still run everything! | 이름만 공화국이지 옛날 귀족 가문이라는 것들이 그대로 남아서 지들 멋대로 한다니까? |
+| 9 | c/map/00171.scn | idx 9 | 0.78 | ...You mean... }Soul Stones{? | ... }영혼석{.. 말이야? |
+| 10 | c/csv/mission_text.dat | rec 64@0 | 0.78 | Achieved upon;acquiring 1,000,000;Gold. | 골드 획득 시 달성할 수 있습니다. |
+| 11 | c/map/00052.scn | idx 2 | 0.71 | Hey, if you told me to jump, you should have had a plan--! | 야, 뛰어내리라고 했으면 뭔가 대책을.. |
+| 12 | c/map/00015.scn | idx 4 | 0.78 | I brushed it off as nonsense for a year... Desperation makes all the d | 난 1년 가까이 그 꿈을 개꿈으로만 여겼는데.. 절실한 사람에겐 역시 다른가. |
+| 13 | c/csv/item_18.dat | rec 2@2 | 0.73 | Listing Ext. | 판매기간연장 |
+| 14 | c/map/00053.scn | idx 19 | 0.71 | Look at these massive gems! Do they all come from this cave? | 엄청난 보석이지? 이게 다 이 동굴에서 나오는 건가봐. |
+| 15 | c/map/00068.scn | idx 91 | 0.78 | Honestly... for the past year, we almost forgot we were fugitives. | 사실.. 지난 1년간은 우리가 도망자들이라는 것조차 잊고 살 정도였어. |
+| 16 | c/map/00041.scn | idx 89 | 0.71 | Who... are you? | 너.. 뭐야. |
+| 17 | c/csv/common_text.dat | rec 129@0 | 0.78 | Select a sphere. | 오브를 선택하십시오. |
+| 18 | c/map/00035.scn | idx 87 | 0.71 | That is it? | 겨우 이거냐. |
+| 19 | c/map/00050.scn | idx 39 | 0.71 | What is this all of a sudden? | 뭐야, 갑자기. |
+| 20 | c/map/00181.scn | idx 32 | 0.78 | All thanks to the Descendant cult preparing their ritual. | 강림자의 교단, 그 신도들의 제사 준비 과정에서 말이지. |
+| 21 | c/map/00006.scn | idx 58 | 0.71 | Getting injured on top of everything... what a hassle. Why did she eve | 다치기 까지 하다니, 정말 귀찮은 짐이잖아.. 실체화 따위 안 하면 될 것을.. |
+| 22 | c/map/00155.scn | idx 6 | 0.71 | It is all because they will not use our certified equipment. Why will  | 이게 다 우리가 공인해준 장비를 사용하지 않아서 이런 거라니까. 왜 말들을 안 듣는지. |
+| 23 | c/map/00171.scn | idx 21 | 0.71 | Did they cast a new barrier...? | 결계를 새로 친 건가.. |
+| 24 | c/map/00073.scn | idx 35 | 0.78 | Still... I am really surprised. You actually helping someone on your o | 하지만.. 완전 놀랐어. 슈르츠님이 먼저 남을 위해 일을 해주다니. |
+| 25 | c/map/00066.scn | idx 23 | 0.71 | What is her name? She is like a total doll! | 이름이 뭐야? 완전 인형이네? |
+| 26 | c/map/00029.scn | idx 39 | 0.78 | Schultz... is that you...? | 슈르츠.. 냐.. |
+| 27 | c/csv/common_text.dat | rec 103@0 | 0.78 | ADVANCED | 고급제련석 |
+| 28 | c/csv/ingame_text.dat | rec 67@0 | 0.78 | To Moitura Island | 모이투라 섬으로 |
+| 29 | c/map/00088.scn | idx 15 | 0.71 | Not yet... I have not... lost yet! I still have a }last resort{...! | 아직이야.. 나는.. 아직 지지 않았어..! }최후의 수단{이 남아있다.. |
+| 30 | c/map/00176.scn | idx 1 | 0.78 | Althena is... still inside Ren. | 알테나는.. 아직 렌 안에 있어. |
+| 31 | c/map/00108.scn | idx 44 | 0.71 | What are you saying? They are hardworking and so kind! | 이상한 사람을 보내서 미안하군. |
+| 32 | c/map/00079.scn | idx 23 | 0.71 | It is all because they will not use our certified equipment. Why will  | 이게 다 우리가 공인해준 장비를 사용하지 않아서 이런 거라니까. 왜 말들을 안 듣는지. |
+| 33 | c/csv/name.dat | rec 23@0 | 0.78 | Commander | 일반지휘관 |
+| 34 | c/csv/ingame_text.dat | rec 65@0 | 0.78 | Aileen | 아일린 |
+| 35 | c/map/00182.scn | idx 5 | 0.71 | Phew... Did we clear out all the ones inside? | 후우.. 안에 들어온 놈은 전부 처리했나. |
+| 36 | c/map/00207.scn | idx 11 | 0.71 | Wait, is not this Alex? He looks so young without the beard! | 여기 이거, 알렉스씨 아냐? 수염 없으니 굉장히 동안인데? |
+| 37 | c/map/00066.scn | idx 76 | 0.71 | I really like what you just said! | 지금 그말, 완전 마음에 드는데? |
+| 38 | c/map/00010.scn | idx 56 | 0.71 | Talking about peace when you smuggled a guy like that aboard? | 그런 남자를 몰래 태워놓고 평화롭게 라니. |
+| 39 | c/map/00103.scn | idx 17 | 0.78 | Aftermath of the War | 성지전쟁의 결과 |
+| 40 | c/map/00070.scn | idx 180 | 0.78 | I am glad to have found a good ally, Schultz. | 좋은 동지를 만나 기쁘다, 슈우. |
 
-## NEW có câu Hàn gợi ý (ko_hint): 504, theo lý do: {'Anh nhiều đoạn ; hơn Hàn >= 2': 326, 'câu ngắn lệch độ dài Anh/Hàn': 25, 'điểm < 0.70': 134, 'Anh dài hơn Hàn > 3.5 lần': 4, 'câu Hàn là chỗ giữ chỗ': 15}
+## NEW có câu Hàn gợi ý (ko_hint): 570, theo lý do: {'Anh nhiều đoạn ; hơn Hàn >= 2': 326, 'câu ngắn lệch độ dài Anh/Hàn': 25, 'điểm < 0.70': 134, "soát nghĩa T2d: LỆCH (Anh 'Victorious!' vs Hàn hậu tố '에서;승리 하였습니다.' (ghép sau tên địa điểm))": 1, 'Anh dài hơn Hàn > 3.5 lần': 4, 'câu Hàn là chỗ giữ chỗ': 15, 'soát nghĩa T2d: SAI (không có Hàn; đúng K07572 ở idx 36 (NEW))': 1, 'soát nghĩa T2d: SAI (không có Hàn; đúng K07573 ở idx 37 (NEW))': 1, "soát nghĩa T2d: LỆCH (EN chỉ 'I heard a rumor before...' còn Hàn dài hơn (thành phố hiện đại nhiều tin đồn phi khoa học))": 1, "soát nghĩa T2d: SAI (Anh 'drag you off to Central Tower' vs Hàn 'mọi công nghệ từ Central Tower'; Hàn này đúng với idx 14)": 1, "soát nghĩa T2d: SAI (Anh 'waterboard' vs Hàn 'Wade gom bao nhiêu thiên tài'; không có Hàn đúng)": 1, 'soát nghĩa T2d: SAI (đúng K04731 (Hàn mọi công nghệ nhân loại từ Central Tower))': 1, "soát nghĩa T2d: SAI (đúng K08196 (Hàn 'đóng cống ngầm'))": 1, "soát nghĩa T2d: SAI (đúng K08197 (Hàn 'có xác chết... giá đất'))": 1, "soát nghĩa T2d: SAI (đúng K04736 (Hàn 'đứa trẻ vui thì tốt'))": 1, "soát nghĩa T2d: SAI (đúng K04737 (Hàn 'muốn cho con xem Central Tower'))": 1, "soát nghĩa T2d: SAI (Anh 'xe tăng bốn chân' vs Hàn 'bức bối, chỉ đi vùng cố định'; không có Hàn đúng)": 1, "soát nghĩa T2d: SAI (Anh 'mech hai chân' vs Hàn 'thiên tài nghiên cứu ở đâu'; không có Hàn đúng)": 1, "soát nghĩa T2d: SAI (Anh 'Someone came by saying you sent them' vs Hàn 'Schultz... không có nhiệm vụ nhưng có việc riêng')": 1, "soát nghĩa T2d: SAI (Anh 'Must be nice for Neveds' vs Hàn 'Tôi không phải học giả.. biết kiến thức mới luôn vui')": 1, 'soát nghĩa T2d: SAI (lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác)': 22, "soát nghĩa T2d: SAI (đúng K08468 (Hàn 'sách chứa sự thật quý giá'))": 1, "soát nghĩa T2d: SAI (đúng K08469 (Hàn 'cấm sách đốt sách vẫn sống sót'))": 1, "soát nghĩa T2d: SAI (đúng K06466 (Hàn 'lính đánh thuê cần biết thú hoang/địa hình'))": 1, "soát nghĩa T2d: LỆCH (Hàn là nhãn nội bộ EVENT_게임오버, Anh là 'G A M E  O V E R')": 2, 'soát nghĩa T2d: SAI (Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng)': 9, "soát nghĩa T2d: SAI (đúng K09316 ('내 생각도 그래'))": 1, "soát nghĩa T2d: SAI (đúng K09317 (Hàn 'tới lần xuất phát sau sẽ chỉnh Neo Graham ở trạng thái tốt nhất'))": 1, "soát nghĩa T2d: SAI (Hàn 'Tyr hình như giấu gì đó' không khớp)": 1, "soát nghĩa T2d: SAI (Hàn '내 생각도 그래' (đúng cho idx 25))": 1, 'soát nghĩa T2d: SAI (Hàn về Neo Graham (đúng cho idx 26))': 1, "soát nghĩa T2d: SAI (Hàn là lời Graham 'Khởi hành à?'; Anh khác ý)": 1, 'soát nghĩa T2d: SAI (Hàn là lời thương nhân (K06949-lệch))': 1, "soát nghĩa T2d: SAI (đúng K09509 (Hàn 'chỉ lợi dụng trận chiến không tránh được'))": 1, "soát nghĩa T2d: SAI (đúng K09510 (Hàn 'không bao giờ hoàn thành, kết thúc ở đó'))": 1, "soát nghĩa T2d: SAI (đúng K09514 (Hàn 'đặt gánh nặng lên cậu, xin lỗi'))": 1, "soát nghĩa T2d: SAI (Anh 'Well, of course, it is not easy' vs Hàn 'sức mạnh của thần 1/3')": 1, "soát nghĩa T2d: SAI (Anh 'You are lying, are not you?' vs Hàn 'Schultz, anh tự tin vượt qua?')": 1, 'soát nghĩa T2d: SAI (Hàn là lời xin lỗi gánh nặng (đúng cho idx 71))': 1, "soát nghĩa T2d: SAI (Anh 'Mom only tells me to study' vs Hàn '(bị lừa hoàn toàn)')": 1, "soát nghĩa T2d: SAI (Anh 'I kept it... arrested?' vs Hàn 'Lại đến đòi nợ à?')": 1}
 
 Xử lý 2 câu dính `\u0000` (c/map/00041.scn idx 54, c/map/00042.scn idx 24): khi chấm điểm bỏ đoạn `\u0000`; khi build (T4) giữ nguyên byte gốc của câu Android nếu không dịch, còn nếu thay bằng bản dịch thì KHÔNG thêm `\u0000` (nó là chữ rác 6 ký tự, không phải byte NUL).
 
@@ -469,10 +469,11 @@ Xử lý 2 câu dính `\u0000` (c/map/00041.scn idx 54, c/map/00042.scn idx 24):
 | c/csv/item_16.dat | 91 |
 | c/csv/item_17.dat | 83 |
 | c/map/00216.scn | 53 |
+| c/map/00170.scn | 52 |
 | c/csv/item_15.dat | 51 |
 | c/csv/common_text.dat | 46 |
-| c/map/00170.scn | 45 |
-| c/map/00174.scn | 39 |
+| c/map/00174.scn | 45 |
+| c/map/00136.scn | 43 |
 | c/map/00186.scn | 36 |
 | c/csv/smith_0.dat | 27 |
 | c/csv/item_12.dat | 25 |
@@ -481,11 +482,10 @@ Xử lý 2 câu dính `\u0000` (c/map/00041.scn idx 54, c/map/00042.scn idx 24):
 | c/map/00019.scn | 19 |
 | c/csv/smith_1.dat | 17 |
 | vfs:0xe6bbcc45.dat | 17 |
-| c/map/00136.scn | 17 |
 | c/map/00175.scn | 17 |
+| c/csv/ingame_text.dat | 16 |
 | c/csv/smith_2.dat | 16 |
 | vfs:0x92eafcd8.dat | 16 |
-| vfs:0xc28f807a.dat | 16 |
 
 ## Ghi chú kỹ thuật
 
@@ -495,4 +495,4 @@ Xử lý 2 câu dính `\u0000` (c/map/00041.scn idx 54, c/map/00042.scn idx 24):
 - Ví dụ nhiễu còn sót trong android_catalog (chuỗi .dat 2 ký tự trùng bố cục số): `HX` (enemy_expert_*), `oAl`: ghi nhận, sẽ ra NEW và khi dịch có thể bỏ qua.
 - Câu NEW của .dat thuộc bản ghi mới của Android (item_00..03/18 thêm 5-6 bản ghi, common_text +18, v.v.), của file chỉ Android, hoặc bản ghi LGT có chữ giữ chỗ `여분`.
 
-NEW chia theo lý do: {'bản ghi LGT không có chuỗi Hàn': 59, 'điểm thấp': 498, 'chuỗi thừa trong bản ghi': 15, 'bản ghi mới (không có bản ghi LGT tương ứng)': 141, 'K không có chữ Hàn ở chỉ số này': 6, 'không ghép được file LGT theo nội dung': 141, 'không ghép được': 141, 'nghi lệch +1': 3, 'nghi lệch -1': 3}
+NEW chia theo lý do: {'bản ghi LGT không có chuỗi Hàn': 59, 'điểm thấp': 564, 'chuỗi thừa trong bản ghi': 15, 'bản ghi mới (không có bản ghi LGT tương ứng)': 141, 'K không có chữ Hàn ở chỉ số này': 6, 'không ghép được file LGT theo nội dung': 141, 'không ghép được': 141, 'nghi lệch +1': 3, 'nghi lệch -1': 3}
