@@ -81,12 +81,19 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Báo tỉ lệ SAI trong mẫu idx/dat; nếu mẫu idx hoặc dat > 3% SAI → ghi Vướng mắc (quản đốc sẽ mở rộng soát).
   - Giữ quy tắc ID ổn định của `A_dich.tsv` như T2c.
   - Hoàn thành khi: 1280 cặp có phán quyết; align chạy lại ổn định; check_A 0 lỗi; Nhật ký ghi số SAI theo nhóm và số NEW mới.
-- [ ] T3. Dịch câu NEW Anh → Việt (phụ thuộc T2b) — Agent: A1 — chia lô: **T3a** = 348 NEW `.scn` (thoại), **T3b** = 660 NEW `.dat` (vật phẩm/kỹ năng/nhiệm vụ/UI). Mỗi lô một tick riêng trong Nhật ký.
+- [x] T3. Dịch câu NEW Anh → Việt (phụ thuộc T2b) — Agent: A1 — chia lô: **T3a** = 348 NEW `.scn` (thoại), **T3b** = 660 NEW `.dat` (vật phẩm/kỹ năng/nhiệm vụ/UI). Mỗi lô một tick riêng trong Nhật ký.
   - Câu có `k_low` (ID LGT gần nhất): mở bản Việt của `k_low` trong `HL5_dich_FULL.tsv`/`override.tsv` làm gợi ý, tái dùng câu chữ/thuật ngữ đã có rồi bổ sung phần Anh thêm (vd mô tả kỹ năng `item_16`, số `100,000`), ngắt `;` theo bản Anh (bản Android đã ngắt dòng lại).
   - Mỗi dòng `A_dich.tsv`: `A#####<TAB>file<TAB>vị trí<TAB>text_en<TAB>vi` (A##### ổn định, sinh theo thứ tự align.json).
   - Dịch tay (không dịch máy), theo `thuat-ngu.tsv`, `style-guide.md`, cách xưng hô của cùng nhân vật trong `HL5_dich_FULL.tsv`. Giữ mã điều khiển. Không dùng ký tự `' " \` ^ < [ { } $ & |` ngoài mã.
   - Đầu ra: `hl5_android/vi/A_dich.tsv`.
   - Hoàn thành khi: mọi `NEW` có bản dịch; script kiểm tra mã điều khiển báo 0 lệch; độ dài sau mã hoá ≤ cap.
+- [ ] T1b. Sửa trích chuỗi `.dat` bị cắt mảnh (phụ thuộc T3) — Agent: A1 — **Quản đốc nghiệm thu**
+  - Bằng chứng (quản đốc): `A00488` skill_00 rec 42 off 54 = "T+rBuff Skill. Cooldown:;...Max;HP drops b" + `A00489` off 121 = " but;ATK Spd increases..." → một chuỗi bị DP heuristic `rec_strings` tách mảnh / lệch tiền tố; tương tự A00492-93, A00495-97, A00499, A00501-02 (skill_01/02), `cash_expert` "oAl"+"ows starting..." (A00008/9). Ghi đè các mảnh khi build sẽ PHÁ dữ liệu.
+  - Việc: (1) tìm nguyên nhân bằng byte thật (giả thuyết: chuỗi chứa byte ≥ 0x80 / ký tự ngoài `_ok_text` làm DP bỏ chuỗi thật); (2) xác định bố cục trường chính xác cho mỗi file `.dat` có chuỗi (ưu tiên đọc hàm nạp trong `libHeroesLore5.so` qua `so.dis`; nếu không, dùng khung bản ghi cố định trong cùng file — mọi bản ghi cùng file phải ra cùng chuỗi kiểu trường); (3) `extract_android.py` trích theo bố cục đó; roundtrip từng byte; liệt kê mọi mục catalog thay đổi (bị gộp/tách/đổi off).
+  - Cập nhật `align.json` (chạy lại `align_android.py`) và `A_dich.tsv` theo quy tắc ID ổn định: mảnh cũ → `unused`; chuỗi gộp → ID mới, cột 6 ghi `hint=A#####,A#####` (bản dịch cũ của các mảnh) để T3c dịch lại.
+  - Sửa `check_A.py`: cap lấy từ catalog (255 ps1 / 4000 ps2), không cứng 255.
+  - Hoàn thành khi: 0 chuỗi dat bắt đầu/kết thúc giữa từ do cắt mảnh (script kiểm: mảnh liền kề cùng bản ghi mà nối lại thành 1 trường hợp lệ = 0); roundtrip 0 lỗi; check_A 0 lỗi thật; Nhật ký ghi số mục thay đổi và số ID mới cần T3c.
+- [ ] T3c. Dịch lại các chuỗi gộp từ T1b (dùng `hint`) + các câu LỆCH SỐ từ T4 — Agent: A1
 - [ ] T4. Build dữ liệu Việt cho Android (phụ thuộc T2, T3) — Agent: A1
   - `hl5_android/vi/build_android_vi.py`: import `Encoder`/luật fit từ `build_vi5.py`; nguồn dịch = `HL5_dich_FULL.tsv` + `override.tsv` + `menu_override.tsv` (theo `K#####`) + `A_dich.tsv` (theo `A#####`); ghi file Android đã thay chuỗi vào `$WORK/vi_android/res/c/...`; xuất `$WORK/vi_android/vi.bin` (định dạng do T6 chốt; tạm thời xuất `dict.txt` + các font) và `bao-cao-build.txt`.
   - Kiểm tra số: mọi số (chuỗi chữ số) trong `text_en` phải có trong bản Việt; câu K##### lệch số (Android đổi số so với Hàn, vd mẫu #10 `100,000 Gold`) → liệt kê `bao-cao-build.txt` mục LỆCH SỐ và đưa vào `A_dich.tsv` lô bổ sung (T3c).
@@ -119,7 +126,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
 ## Phân công hiện tại
-- A1: T1–T2d ✓, T3a ✓, T5 ✓ → T3a-bổ sung + T3b-1 (đang giao) → T3b-2 → T4.
+- A1: T1–T3 ✓, T5 ✓ → T1b (đang giao) → T3c → T4.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -144,3 +151,5 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [quản đốc] Nghiệm thu T2d: đạt (mẫu idx/dat 0.7% SAI < 3%; soát 6 phán quyết SAI ngẫu nhiên đều đúng). Giao tiếp: T3a-bổ sung (mọi scn chưa dịch) + T3b-1 (dat NEW nửa đầu theo thứ tự A#####), rồi T3b-2 (nửa sau) ở phiên công nhân mới.
 - [A1] T3a-bổ sung xong: 91 dòng scn chưa dịch (A01019-A01110) dịch tay từ tiếng Anh. T3b-1 xong: 431 dòng dat (A00001-A00432, vượt mốc 335 vì cùng loại item/skill), còn 239 dòng dat cho T3b-2 (A00433-A01045). Lưu ý A00008 'oAl' là mảnh tách sai của 'Allows' (A00009 dịch trọn câu, A00008 giữ nguyên). check_A --kind all: 0 lỗi thật (240 'chưa dịch' = phần T3b-2), từ điển 4762 / 5076.
 - [quản đốc] Nghiệm thu T3a-bổ sung + T3b-1: check_A 0 lỗi thật; soát mẫu đạt, tên lớp giữ tiếng Anh đúng thuật ngữ; từ điển 4762/5076. Còn 239 dòng dat → T3b-2. Lệnh kiểm: `check_A.py vi/A_dich.tsv --kind all`.
+- [A1] T3b-2 xong: 240 dòng dat còn lại (A00433-A01045, gồm A00149 unused) dịch tay -> `A_dich.tsv`; từ điển 4795 / 5076. Lưu ý cho quản đốc/T4: (1) `check_A.py` đặt cap dat = 255 cứng (key None), nhưng catalog cap = 4000 cho ps 2: 15 dòng help (A00572/576/597/629/644 + bản trùng) mã hoá 289-354 byte nên báo QUÁ DÀI giả; bản sao đã sửa cap cho 0 lỗi, cần sửa `check_A.py`. (2) Các mảnh skill (A00488-A00504, 'T+r...', 'osts...') thực ra là lát của MỘT chuỗi dài trong bản ghi (tiền tố độ dài thật nằm trước 'Costs...', các 'tiền tố' trong catalog là trùng hợp), nên T4 phải ghép/ghi lại theo cả chuỗi, không thay từng mảnh.
+- [quản đốc] Nghiệm thu T3b-2: dịch đủ, 15 "QUÁ DÀI" là lỗi cap cứng của check_A (ps2 = 4000). Phát hiện chuỗi dat bị cắt mảnh (skill_*, cash_expert) → giao T1b trước T4.
