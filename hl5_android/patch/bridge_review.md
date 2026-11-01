@@ -16,3 +16,22 @@ Quy ước bridge (đọc từ mã): hàm cài hook `0xe8834` (`uc_hook_add`) tr
 | 8 | 0xe3770 `b 0xcfdd0` + cave 0xcfdd0 | wrapper glTexParameterf (0xe373c..) | ĐẠT. Cave thực hiện lệnh gốc (`ldr s0,[x9,#8]`), nếu pname-0x2800 < 2 thì s0 = 9728.0 (GL_NEAREST), rồi `b 0xe3774` (`blr x8`); chỉ dùng w11 (caller-saved, không đọc sau). Không đụng ngăn xếp. 0xcfdd0 là callback hook đo, nay chết: chỉ `adr` ở 0xc6dc8/0xc6e50 (đoạn tới giờ không còn thực thi) tham chiếu; không có con trỏ/relocation tới nó. Giả lập: pname 0x2800/0x2801 -> 9728, 0x2802/0x2803 giữ nguyên. |
 
 Rủi ro còn lại (không kiểm được nếu không có thiết bị): phần còn lại của `nativeOnSurfaceCreated` sau 0xc6e68 (nạp ELF guest, bộ nhớ) không đổi so với bản gốc; không giả lập được. Guest .so vá + `p_memsz` (0x12d20 -> 0x12e20, cùng trang) nằm ngoài rà soát này.
+
+## 9. T10: 0xc5ce8 `b 0xcf64c` + cave_k 0xcf64c..0xcf758 (đọc `hd_scale.txt`) — rà soát A1 (disasm đầy đủ trong `patch/bridge_patch_diff.txt`)
+
+Hàm bao: nativeOnSurfaceCreated. Cave nằm trong callback hook chữ 0xcf64c; callback này chỉ được đăng ký ở vòng cài hook (đã bỏ qua bởi vá #1) nên không còn ai gọi nó: ghi đè là an toàn.
+
+**Luồng điều khiển từ điểm vá tới `ret` của hàm bao.**
+1. 0xc5ce8 `b 0xcf64c`; 0xc5cec..0xc5d34 nop. Cave kết thúc `b 0xc5d38` (điểm nối cũ; không có `ret`/throw nào ở giữa).
+2. Cave: khung 0x140 (16-aligned), lưu x29,x30,x19,x21 và khôi phục đủ ở 0xcf74c..0xcf750 trước `b 0xc5d38`; x19,x21 callee-saved nên giá trị bridge giữ nguyên. Vùng đệm: đường dẫn sp+0x20..0x120 (snprintf giới hạn 0x100), đệm đọc sp+0x128..0x130 — nằm trong 0x140.
+3. `w21=2` (=DEFAULT_K). `cbz x24` (jstring filesDir rỗng/null) -> bỏ qua toàn bộ đọc tệp, dùng k mặc định.
+4. GetStringUTFChars (vtable +0x548, x20 = JNIEnv) -> `cbz x19` (null, vd OOM) -> bỏ qua. Không gọi JNI nào khác khi có ngoại lệ treo, ngoài ReleaseStringUTFChars (+0x550) hợp lệ gọi với chuỗi vừa lấy.
+5. snprintf(buf, 0x100, "%s/hd_scale.txt", path): cắt cụt nếu quá dài, luôn có NUL. `open(buf, O_RDONLY)`; `tbnz w19,#31` (thư mục thiếu / không đọc được / không có tệp) -> bỏ qua, k mặc định.
+6. `read(fd, [sp+0x128], 8)`: ô đọc đã được xoá 0 trước (`str xzr`), kết quả trả về bị bỏ qua: tệp rỗng hoặc lỗi đọc (thư mục: EISDIR) để nguyên 0 -> byte đầu 0-0x31 > 3 (không dấu) -> `b.hi` bỏ qua, k mặc định. Tệp khổng lồ: chỉ đọc đúng 8 byte, không cấp phát. `close(fd)` luôn gọi sau khi open thành công.
+7. Chấp nhận khi byte0 ∈ '1'..'4' và byte1 < 0x21 (hết chuỗi hoặc xuống dòng/khoảng trắng); ngoài ra bỏ qua (k mặc định). Giá trị ghi ra: w21 = k (1..4).
+8. Tính: scrH (w22) < 240 -> W=400,H=240 (như cũ). Ngược lại k = min(scrH/240, w21) >= 1 (nên không chia 0); lặp giảm k đến khi W>=400 && H>=240 hoặc k=1 (kết thúc chắc chắn vì k giảm dần tới 1); W,H làm chẵn xuống, đưa vào w9 (W), w8 (H). Dùng w8..w11 cùng cờ NZCV.
+9. Sau 0xc5d38 giá trị dùng lại: x8,x9 (H,W) và x20,x23,x24,x26,x28 (không bị cave chạm hoặc đã khôi phục); x0..x7,x10..x18 không live-in (df.py). k, W, H không được dùng nơi nào khác; không có ngoại lệ nào ném trong cave (không có `bl` tới hàm có thể ném ngoài JNI Get/Release, snprintf/open/read/close của libc).
+
+**Kiểm chứng động.** `patch/test_bridge_k.py` (unicorn chạy mã bridge thật): 160 lượt = 10 kích cỡ màn x 15 nội dung tệp (15 nội dung tệp, gồm cả hợp lệ và không hợp lệ) + không có filesDir, 0 lệch so với mô hình (`patch/bridge_test_k.txt`). Thư mục thiếu/không đọc được/tệp rỗng/tệp lớn: đều rơi về k mặc định, không crash trong giả lập.
+
+**Kết luận: ĐẠT.** Rủi ro còn lại (không kiểm được nếu không có thiết bị): hành vi thật của JNI GetStringUTFChars/quyền đọc filesDir trên máy thật (nếu lỗi: k mặc định 2).

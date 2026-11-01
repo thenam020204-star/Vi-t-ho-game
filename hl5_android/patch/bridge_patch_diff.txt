@@ -189,3 +189,74 @@
   sau   cfde4: mov w11, #0x2600
   sau   cfde8: scvtf s0, w11
   sau   cfdec: b #0xe3774
+
+== T10 (0xc5ce8 -> cave_k 0xcf64c): disasm SAU
+  cf64c: stp x29, x30, [sp, #-0x140]!
+  cf650: mov x29, sp
+  cf654: stp x19, x21, [sp, #0x10]
+  cf658: mov w21, #2
+  cf65c: cbz x24, #0xcf6fc
+  cf660: ldr x8, [x20]
+  cf664: ldr x8, [x8, #0x548]
+  cf668: mov x0, x20
+  cf66c: mov x1, x24
+  cf670: mov x2, xzr
+  cf674: blr x8
+  cf678: mov x19, x0
+  cf67c: cbz x19, #0xcf6fc
+  cf680: add x0, sp, #0x20
+  cf684: mov x1, #0x100
+  cf688: adr x2, #0xcf758
+  cf68c: mov x3, x19
+  cf690: bl #0x1d2b90
+  cf694: ldr x8, [x20]
+  cf698: ldr x8, [x8, #0x550]
+  cf69c: mov x0, x20
+  cf6a0: mov x1, x24
+  cf6a4: mov x2, x19
+  cf6a8: blr x8
+  cf6ac: str xzr, [sp, #0x128]
+  cf6b0: add x0, sp, #0x20
+  cf6b4: mov w1, #0
+  cf6b8: bl #0x1d2ad0
+  cf6bc: mov w19, w0
+  cf6c0: tbnz w19, #0x1f, #0xcf6fc
+  cf6c4: mov w0, w19
+  cf6c8: add x1, sp, #0x128
+  cf6cc: mov x2, #8
+  cf6d0: bl #0x1d2ae0
+  cf6d4: mov w0, w19
+  cf6d8: bl #0x1d2ab0
+  cf6dc: ldrb w8, [sp, #0x128]
+  cf6e0: ldrb w9, [sp, #0x129]
+  cf6e4: sub w8, w8, #0x31
+  cf6e8: cmp w8, #3
+  cf6ec: b.hi #0xcf6fc
+  cf6f0: cmp w9, #0x21
+  cf6f4: b.hs #0xcf6fc
+  cf6f8: add w21, w8, #1
+  cf6fc: mov w9, #0x190
+  cf700: mov w8, #0xf0
+  cf704: cmp w22, #0xf0
+  cf708: b.lo #0xcf74c
+  cf70c: mov w10, #0xf0
+  cf710: udiv w11, w22, w10
+  cf714: cmp w11, w21
+  cf718: csel w11, w11, w21, ls
+  cf71c: udiv w9, w25, w11
+  cf720: udiv w8, w22, w11
+  cf724: cmp w11, #1
+  cf728: b.ls #0xcf744
+  cf72c: cmp w9, #0x190
+  cf730: b.lo #0xcf73c
+  cf734: cmp w8, #0xf0
+  cf738: b.hs #0xcf744
+  cf73c: sub w11, w11, #1
+  cf740: b #0xcf71c
+  cf744: and w9, w9, #0xfffffffe
+  cf748: and w8, w8, #0xfffffffe
+  cf74c: ldp x19, x21, [sp, #0x10]
+  cf750: ldp x29, x30, [sp], #0x140
+  cf754: b #0xc5d38
+  cf758: "%s/hd_scale.txt\0" (chuỗi định dạng)
+  0xc5ce8: b #0xcf64c ; 0xc5cec..0xc5d34: nop (trước: tính W/H cũ 0xc5ce8..0xc5d34, xem mục c5ce8 ở trên)
