@@ -12,6 +12,8 @@ Cac muc (moi muc in DAT / KHONG DAT, dong cuoi TAT CA DAT hoac CO MUC KHONG DAT)
   [4] Moi noi goi IMGSYS_GetLoc voi (w0 = 0x15, w1 = 3) = dung 3 noi: 0x169ad0, 0x169b9c, 0x169be4; moi noi co `mov w5,#2` o 0x169ae8, 0x169bb4, 0x169bfc
       (byte 45008052), theo sau `mov w6,wzr; bl GRPX_DrawPart`, truoc do `mov w4,#2` va `bl IMGSYS_GetLoc`; va byte moi 25008052 = `mov w5,#1` (llvm-mc).
   [5] (neu co --atlas-dir) kich thuoc atlas 512x512 RGBA va moi rect nam trong atlas, khong chong len nhau.
+  [6] Dieu khien -> loc trong UIPlayPorting_Draw (0x16985c): ID 1 -> UI_015 loc1, ID 2 -> loc2, ID 3 -> loc0, ID 7 -> loc3, ID 0x14 -> UI_014 loc2
+      (+ loc3 lop bam): nhanh nhay `cmp xID` -> khoi `GetGroup(0x16); GetLoc(0x16, loc)` trong ban dich.
 """
 import hashlib
 import os
@@ -295,6 +297,21 @@ def main():
                 n_all += 1
                 print('    UIPlayPorting_Draw: %x kieu=%d' % (a, (e.u32(a) >> 5) & 0xffff))
     print('    so noi `mov w5,#k; mov w6,wzr; bl GRPX_DrawPart` trong 0x16985c..0x16b200: %d' % n_all)
+
+    print('\n[6] Dieu khien (ControlObject_GetID) -> loc trong UIPlayPorting_Draw')
+    disp = objdump(path, 0x16a130, 0x16a320)
+    for cid, name, entry, grp, locno, gl in ((1, 'ID1 UIPlay_CallSave', 0x16a350, 0x16, 1, 0x16a368), (2, 'ID2 CallInAppShop', 0x16a260, 0x16, 2, 0x16a278),
+                                              (3, 'ID3 CallMenu', 0x16a404, 0x16, 0, 0x16a41c), (7, 'ID7 ButtonSwap', 0x16a304, 0x16, 3, 0x16a318)):
+        r = objdump(path, entry, gl + 4)
+        seq = [r.get(a) for a in range(entry, gl + 4, 4)]
+        wl = 'mov w1, wzr' if locno == 0 else 'mov w1, #0x%x' % locno
+        ok_blk = ('mov w0, #0x%x' % grp) in seq and wl in seq and seq[-1] == 'bl 0x2a8f80 <IMGSYS_GetLoc@plt>' and any(t and t.startswith('bl 0x2a8f70') for t in seq)
+        want_cmp = {1: 'cmp x22, #0x1', 2: 'cmp x22, #0x2', 3: 'cmp x22, #0x3', 7: 'cmp x22, #0x7'}[cid]
+        ok_cmp = want_cmp in disp.values() or want_cmp in objdump(path, 0x16a2fc, 0x16a304).values()
+        verdict('%s: dispatch `%s` -> khoi 0x%x: GetGroup(0x%x), GetLoc(0x%x, %d) @0x%x -> UI_015 loc%d' % (name, want_cmp, entry, grp, grp, locno, gl, locno), ok_blk and ok_cmp)
+    r = objdump(path, 0x169a28, 0x169a68)
+    verdict('ID 0x14 (tan cong): `cmp w0,#0x14` -> GetLoc(0x15, 2) @0x169a44 -> GRPX_DrawPart kieu 1 (0x169a5c `mov w5,#1`)',
+            r.get(0x169a28) == 'cmp w0, #0x14' and r.get(0x169a40) == 'mov w1, #0x2' and r.get(0x169a3c) == 'mov w0, #0x15' and r.get(0x169a5c) == 'mov w5, #0x1')
 
     if atlas_dir:
         print('\n[5] Atlas (%s)' % atlas_dir)
