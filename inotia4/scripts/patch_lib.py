@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 """Va nhi phan toi thieu libgame.so (ARM64) cho ban offline.
 
-    python3 patch_lib.py <libgame.so vao> <libgame.so ra> [--disasm]
-    python3 patch_lib.py --list
-    python3 patch_lib.py --diff <lib A> <lib B>       # moi byte khac nhau phai nam trong vung patch da khai bao
+    python3 patch_lib.py <libgame.so vao> <libgame.so ra> [--disasm] [--group g1,g2]
+    python3 patch_lib.py --list [--group g1,g2]
+    python3 patch_lib.py --diff <lib A> <lib B> [--group g1,g2] [-v]   # moi byte khac nhau phai nam trong vung patch da khai bao
+    python3 patch_lib.py --check-asm                              # dung lai cave `mod` bang llvm-mc/ld.lld va so voi byte nhung san
+
+Nhom patch (--group, mac dinh = tat ca): base (0x203e68, da co trong lib TEST4), p1 (T3b, ma hoa save), mod (T8b, mod menu:
+3 diem vao 0x18b3e0/0x1c7860/0x1c7a44 + cave 0x18bb00..0x18bbec, xem docs/mod_menu.md). Moi nhom phai ap tron ven: mot nhom
+vua co patch "ap" vua co patch "da ap" => DUNG.
 
 Moi patch (xem PATCHES): (vaddr, byte cu `old`, byte moi `new`, ly do, refs, asm_moi).
   * Doan byte tai vaddr == old  -> ap.
   * == new                      -> bao "da ap" (lib cua TEST4 da mang patch 0x203e68 tu luc dung ban dau) va bo qua.
   * khac ca hai                 -> DUNG, khong ghi gi (khong va mo).
   * refs = [(vaddr, bytes)]: du lieu/lenh CHI DOC ma patch dua vao (dich cua `adr`, lenh ke tiep). Phai khop dung.
+  * Patch cave (vung dai): `old` = None, thay vao do `old_sha256` = sha256 cua `old_len` byte goc (khong nhung 236 B cu vao file).
 Doan .text nam o LOAD dau (file offset == vaddr); moi patch phai nam trong [TEXT_BEG, TEXT_END).
 --disasm: in llvm-objdump truoc/sau moi patch va so voi `asm_moi` (can llvm-objdump).
 """
@@ -92,12 +98,92 @@ P1_ASM_OLD = [
     (0x1409bc, 'bl 0x2a83d0'),
 ]
 
+# ------------------------------------------------------------ nhom `mod` (T8b): xem docs/mod_menu.md
+MOD_CAVE_VA = 0x18bb00
+MOD_CAVE_LEN = 236                       # 59 lenh, den 0x18bbec = CHAR_AddDamageEffect (0x18bb00) + CHAR_AddDamageByDefaultCheck (0x18bb34), 2 ham chet
+MOD_CAVE_OLD_SHA256 = '48718ee58e6904aacd34067ee87fead67afd709899bcc11fa3f276ceaaf73c36'
+MOD_CAVE_NEW_SHA256 = 'cb64516299bc0de2441d8025c053b08341ac526fd24a088d673c0ac55d659765'
+# 236 B do llvm-mc + ld.lld dung tu scripts/asm/mod_cave.s (bash scripts/asm/build_mod_cave.sh; `--check-asm` dung lai va so)
+MOD_CAVE_NEW = bytes.fromhex(
+    'ffc301d15f0400714b03005429444c392a2d0090290100354b8547b96c090051'
+    '9fc10071680200544c08cb1a9f01007182159f1a0f000014c00100b409444c39'
+    '890100354b8147b96c0900519fc1007108010054ed478852ed01a0725f000d6b'
+    '8a0000544c7c0b1b9f010d6b82b18d1a1dfeff17c80d8052292d00902a8947b9'
+    '4b0900517fc1007108010054ecff9f52ec1fa0727f020c6b8a0000546b7e0a1b'
+    '7f010c6b73b18c1a2fef0014f303002a7f060071ab010054292d00902a8947b9'
+    '4b0900517fc1007108010054ecff9f52ec1fa0727f020c6b8a0000546b7e0a1b'
+    '7f010c6b73b18c1a98ef0014')
+# disasm mong doi cua cave (llvm-objdump da bo chu thich/nhan): "<vaddr> <lenh>"
+MOD_CAVE_ASM = [
+    '18bb00 sub sp, sp, #0x70',
+    '18bb04 cmp w2, #0x1',
+    '18bb08 b.lt 0x18bb70',
+    '18bb0c ldrb w9, [x1, #0x311]',
+    '18bb10 adrp x10, 0x72f000',
+    '18bb14 cbnz w9, 0x18bb38',
+    '18bb18 ldr w11, [x10, #0x784]',
+    '18bb1c sub w12, w11, #0x2',
+    '18bb20 cmp w12, #0x30',
+    '18bb24 b.hi 0x18bb70',
+    '18bb28 udiv w12, w2, w11',
+    '18bb2c cmp w12, #0x0',
+    '18bb30 csinc w2, w12, wzr, ne',
+    '18bb34 b 0x18bb70',
+    '18bb38 cbz x0, 0x18bb70',
+    '18bb3c ldrb w9, [x0, #0x311]',
+    '18bb40 cbnz w9, 0x18bb70',
+    '18bb44 ldr w11, [x10, #0x780]',
+    '18bb48 sub w12, w11, #0x2',
+    '18bb4c cmp w12, #0x30',
+    '18bb50 b.hi 0x18bb70',
+    '18bb54 mov w13, #0x423f',
+    '18bb58 movk w13, #0xf, lsl #16',
+    '18bb5c cmp w2, w13',
+    '18bb60 b.ge 0x18bb70',
+    '18bb64 mul w12, w2, w11',
+    '18bb68 cmp w12, w13',
+    '18bb6c csel w2, w12, w13, lt',
+    '18bb70 b 0x18b3e4',
+    '18bb74 mov w8, #0x6e',
+    '18bb78 adrp x9, 0x72f000',
+    '18bb7c ldr w10, [x9, #0x788]',
+    '18bb80 sub w11, w10, #0x2',
+    '18bb84 cmp w11, #0x30',
+    '18bb88 b.hi 0x18bba8',
+    '18bb8c mov w12, #0xffff',
+    '18bb90 movk w12, #0xff, lsl #16',
+    '18bb94 cmp w19, w12',
+    '18bb98 b.ge 0x18bba8',
+    '18bb9c mul w11, w19, w10',
+    '18bba0 cmp w11, w12',
+    '18bba4 csel w19, w11, w12, lt',
+    '18bba8 b 0x1c7864',
+    '18bbac mov w19, w0',
+    '18bbb0 cmp w19, #0x1',
+    '18bbb4 b.lt 0x18bbe8',
+    '18bbb8 adrp x9, 0x72f000',
+    '18bbbc ldr w10, [x9, #0x788]',
+    '18bbc0 sub w11, w10, #0x2',
+    '18bbc4 cmp w11, #0x30',
+    '18bbc8 b.hi 0x18bbe8',
+    '18bbcc mov w12, #0xffff',
+    '18bbd0 movk w12, #0xff, lsl #16',
+    '18bbd4 cmp w19, w12',
+    '18bbd8 b.ge 0x18bbe8',
+    '18bbdc mul w11, w19, w10',
+    '18bbe0 cmp w11, w12',
+    '18bbe4 csel w19, w11, w12, lt',
+    '18bbe8 b 0x1c7a48',
+]
+MOD_CAVE_ASM = [(int(l.split(' ', 1)[0], 16), l.split(' ', 1)[1]) for l in MOD_CAVE_ASM]
+
+
+# Moi patch: (vaddr, old, new, ly do, refs, asm_moi, group, old_sha256|None). old = None cho cave (kiem sha256).
 PATCHES = [
-    # (vaddr, old, new, ly do, refs, asm_moi)
     (0x203e68, bytes.fromhex('a0040036'), b_imm(0x203e68, 0x203f40),
      'STATE_EnterMainMenu (khi bam START): `bl isAuthUser; tbz w0,#0,popup_dang_nhap_Hive` -> luon di nhanh 0x203f40 = '
      'UI_SetPopupProcessInfo(1,0), y het nut NO (MainMenu_HubLoginCancel): bo popup "Dang nhap Com2uS Hive?" khi bam START.',
-     [], [(0x203e68, 'b 0x203f40')]),
+     [], [(0x203e68, 'b 0x203f40')], 'base', None),
 
     (P1_VA, P1_OLD, P1_NEW,
      'T3b / P1. ENCRYPT_Process2 (0x140970): khoa rong (strlen=0) lam `sdiv` chia 0 -> msub tra nguyen chi so -> doc key[r+i] '
@@ -109,17 +195,66 @@ PATCHES = [
      'o nho [sp,#4] khong con duoc ghi (khong ai doc ngoai x20).',
      [(STR_123, b'123\x00'),                     # dich cua adr: dung 4 byte "123\0"
       (0x1409c0, bytes.fromhex('36030034'))],    # lenh ke tiep `cbz w22, 0x140a24` khong doi
-     P1_ASM),
+     P1_ASM, 'p1', None),
+
+    # ---- T8b: mod menu (docs/mod_menu.md). 3 diem vao + cave 236 B.
+    (0x18b3e0, bytes.fromhex('ffc301d1'), b_imm(0x18b3e0, 0x18bb00),
+     'T8b / A. CHAR_AddDamage(x0 ke tan cong|NULL, x1 muc tieu, w2 sat thuong int32): lenh dau `sub sp,sp,#0x70` -> `b cave_A`. '
+     'Cave A tu lam lai `sub sp,sp,#0x70`; muc tieu phe 0 ([x1+0x311]==0) => dmg / Mdef (toi thieu 1); ke tan cong != NULL va phe 0 => '
+     'dmg * Mdmg, tran 999.999 (khong lam yeu dmg goc >= tran). He so chi nhan 2..50, ngoai khoang = 1. Dung x9..x13.',
+     [(0x18b3e4, bytes.fromhex('fd7b02a9'))],                  # lenh ke tiep: stp x29, x30, [sp, #0x20]
+     [(0x18b3e0, 'b 0x18bb00')], 'mod', None),
+
+    (0x1c7860, bytes.fromhex('c80d8052'), b_imm(0x1c7860, 0x18bb74),
+     'T8b / B. MERCENARYSYSTEM_AddExperience (giet quai): `mov w8,#0x6e` @0x1c7860 -> `b cave_B`; w19 = EXP co so * Mexp, tran 0xFFFFFF '
+     '(`w19*110` @0x1c7868 con < 2^31); w25 = w19*110/100 tinh tiep tu w19 moi. Dung x9..x12 (chet tai day).',
+     [(0x1c7864, bytes.fromhex('e9a39052'))],                  # lenh ke tiep: mov w9, #0x851f
+     [(0x1c7860, 'b 0x18bb74')], 'mod', None),
+
+    (0x1c7a44, bytes.fromhex('f303002a'), b_imm(0x1c7a44, 0x18bbac),
+     'T8b / C. MERCENARYSYSTEM_AddExpFixed (thuong nhiem vu): `mov w19,w0` @0x1c7a44 -> `b cave_C`; w19 = w0 * Mexp, tran 0xFFFFFF. '
+     'x8 SONG (adrp x8 @0x1c7a40) nen cave chi dung x9..x12.',
+     [(0x1c7a48, bytes.fromhex('08ed45f9'))],                  # lenh ke tiep: ldr x8, [x8, #0xbd8]
+     [(0x1c7a44, 'b 0x18bbac')], 'mod', None),
+
+    (MOD_CAVE_VA, None, MOD_CAVE_NEW,
+     'T8b / cave. Than 2 ham chet CHAR_AddDamageEffect + CHAR_AddDamageByDefaultCheck (0 caller, 0 reloc/adrp/literal/PLT, ten chi trong '
+     '.dynstr, libHercules khong import: scripts/re/mod_check.py muc [3]). 59 lenh chua cave A (29), B (14), C (16); doc 3 int32 o '
+     '0x72f780 (Mdmg), 0x72f784 (Mdef), 0x72f788 (Mexp) trong .bss (khong ai tham chieu: muc [4]); khong ghi bo nho.',
+     [], MOD_CAVE_ASM, 'mod', (MOD_CAVE_LEN, MOD_CAVE_OLD_SHA256)),
 ]
+GROUPS = ['base', 'p1', 'mod']
+
+
+def selected(groups):
+    for g in groups:
+        if g not in GROUPS:
+            raise SystemExit('nhom patch la: %s (co: %s)' % (g, ','.join(GROUPS)))
+    return [pt for pt in PATCHES if pt[6] in groups]
+
+
+def old_len(pt):
+    return len(pt[1]) if pt[1] is not None else pt[7][0]
+
+
+def matches_old(pt, cur):
+    if pt[1] is not None:
+        return cur == pt[1]
+    return hashlib.sha256(cur).hexdigest() == pt[7][1]
 
 
 def check_ranges():
     last = 0
-    for va, old, new, _why, _refs, _asm in sorted(PATCHES, key=lambda p: p[0]):
-        assert len(old) == len(new), 'patch 0x%x: old/new khac do dai' % va
+    for va, old, new, _why, _refs, _asm, _g, osha in sorted(PATCHES, key=lambda p: p[0]):
+        olen = len(old) if old is not None else osha[0]
+        assert olen == len(new), 'patch 0x%x: old/new khac do dai' % va
         assert TEXT_BEG <= va and va + len(new) <= TEXT_END, 'patch 0x%x ngoai .text' % va
         assert va >= last, 'patch 0x%x chong len patch truoc' % va
         last = va + len(new)
+    for va, old, new, _why, _refs, asm, _g, osha in PATCHES:
+        if osha is not None:
+            assert hashlib.sha256(new).hexdigest() == MOD_CAVE_NEW_SHA256, 'MOD_CAVE_NEW khong khop sha256 khai bao'
+            assert len(asm) == len(new) // 4, 'asm mong doi cua cave phai du %d lenh' % (len(new) // 4)
 
 
 # ------------------------------------------------------------ disasm (tuy chon)
@@ -149,32 +284,43 @@ def show_disasm(path, va, n, label, expect=None):
 
 
 # ------------------------------------------------------------ ap patch
-def apply(src, dst, disasm=False):
+def apply(src, dst, disasm=False, groups=GROUPS):
     check_ranges()
+    pts = selected(groups)
     data = bytearray(open(src, 'rb').read())
     print('vao  sha256', hashlib.sha256(data).hexdigest(), src)
+    print('nhom', ','.join(groups))
     plan = []
-    for va, old, new, why, refs, asm in PATCHES:
-        cur = bytes(data[va:va + len(old)])
-        if cur == old:
+    for pt in pts:
+        va, old, new, why, refs, asm, grp, osha = pt
+        olen = old_len(pt)
+        cur = bytes(data[va:va + olen])
+        if matches_old(pt, cur):
             state = 'ap'
         elif cur == new:
             state = 'da ap'
         else:
-            raise SystemExit('PATCH 0x%x: byte hien tai %s khac ca byte goc %s lan byte moi %s -> DUNG, khong ghi gi'
-                             % (va, cur.hex(), old.hex(), new.hex()))
+            raise SystemExit('PATCH 0x%x [%s]: byte hien tai (%d B, sha256 %s) khac ca ban goc lan ban moi -> DUNG, khong ghi gi'
+                             % (va, grp, len(cur), hashlib.sha256(cur).hexdigest()[:16]))
         for rva, rb in refs:
             got = bytes(data[rva:rva + len(rb)])
             if got != rb:
                 raise SystemExit('PATCH 0x%x: tham chieu 0x%x = %s, ky vong %s -> DUNG' % (va, rva, got.hex(), rb.hex()))
-        plan.append((va, old, new, why, asm, state))
+        plan.append((pt, state))
+    for g in groups:                                            # moi nhom phai ap tron ven
+        st = {state for pt, state in plan if pt[6] == g}
+        if len(st) > 1:
+            raise SystemExit('NHOM %s o trang thai lech (vua "ap" vua "da ap") -> DUNG, khong ghi gi' % g)
     n_new = 0
-    for va, old, new, why, asm, state in plan:
-        print('0x%06x [%s] %d B  %s -> %s' % (va, state, len(new), old.hex(), new.hex()))
+    for pt, state in plan:
+        va, old, new, why, refs, asm, grp, osha = pt
+        if osha is None:
+            print('0x%06x [%s] [%s] %d B  %s -> %s' % (va, grp, state, len(new), old.hex(), new.hex()))
+        else:
+            print('0x%06x [%s] [%s] %d B  sha256 %s -> %s' % (va, grp, state, len(new), osha[1][:16], hashlib.sha256(new).hexdigest()[:16]))
         print('    ly do: ' + why)
-        if disasm:
-            if state == 'ap':
-                show_disasm(src, va, len(old), 'truoc')
+        if disasm and state == 'ap':
+            show_disasm(src, va, old_len(pt), 'truoc')
         if state == 'ap':
             data[va:va + len(new)] = new
             n_new += 1
@@ -182,16 +328,16 @@ def apply(src, dst, disasm=False):
     print('ra   sha256', hashlib.sha256(data).hexdigest(), dst,
           '(%d patch moi, %d da co san)' % (n_new, len(plan) - n_new))
     if disasm:
-        for va, old, new, why, asm, state in plan:
-            show_disasm(dst, va, len(new), 'sau ', asm)
+        for pt, state in plan:
+            show_disasm(dst, pt[0], len(pt[2]), 'sau ', pt[5])
 
 
-def diff(a, b):
+def diff(a, b, groups=GROUPS):
     check_ranges()
     da, db = open(a, 'rb').read(), open(b, 'rb').read()
     if len(da) != len(db):
         raise SystemExit('khac do dai: %d vs %d' % (len(da), len(db)))
-    decl = [(va, va + len(new)) for va, _o, new, _w, _r, _a in PATCHES]
+    decl = [(pt[0], pt[0] + len(pt[2])) for pt in selected(groups)]
     bad = []
     runs = []
     i = 0
@@ -204,29 +350,59 @@ def diff(a, b):
             i = j + 1
         else:
             i += 1
+    verbose = '-v' in sys.argv
     for s, e in runs:
         inside = any(lo <= s and e <= hi for lo, hi in decl)
-        print('khac [0x%06x, 0x%06x) %3d B  %s' % (s, e, e - s, 'trong vung patch da khai bao' if inside else 'NGOAI VUNG KHAI BAO'))
+        if verbose or not inside:
+            print('khac [0x%06x, 0x%06x) %3d B  %s' % (s, e, e - s, 'trong vung patch da khai bao' if inside else 'NGOAI VUNG KHAI BAO'))
         if not inside:
             bad.append((s, e))
+    print('theo vung khai bao (nhom %s):' % ','.join(groups))
+    for pt in selected(groups):
+        lo, hi = pt[0], pt[0] + len(pt[2])
+        n = sum(1 for i in range(lo, hi) if da[i] != db[i])
+        kind = 'da giong nhau (patch co san / chua ap)' if n == 0 else '%d/%d byte khac' % (n, hi - lo)
+        print('  0x%06x..0x%06x [%s] %3d B: %s' % (lo, hi, pt[6], hi - lo, kind))
     print('tong %d byte khac, %d doan; %s' % (sum(e - s for s, e in runs), len(runs),
                                               'TAT CA nam trong vung khai bao' if not bad else 'CO %d doan ngoai vung!' % len(bad)))
     return 1 if bad else 0
 
 
+def check_asm():
+    """Dung lai cave bang scripts/asm/build_mod_cave.sh (llvm-mc + ld.lld) va so voi MOD_CAVE_NEW; so ca disasm."""
+    import os
+    import tempfile
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = tempfile.mkdtemp(prefix='modcave_')
+    subprocess.run(['bash', os.path.join(here, 'asm', 'build_mod_cave.sh'), out], check=True, capture_output=True)
+    built = open(os.path.join(out, 'mod_cave.bin'), 'rb').read()
+    rows = objdump(os.path.join(out, 'mod_cave.elf'), MOD_CAVE_VA, MOD_CAVE_VA + MOD_CAVE_LEN)
+    ok = built == MOD_CAVE_NEW and rows == MOD_CAVE_ASM
+    print('cave dung lai tu mod_cave.s: %d B, sha256 %s' % (len(built), hashlib.sha256(built).hexdigest()))
+    print('khop byte nhung san:', built == MOD_CAVE_NEW, '| khop disasm mong doi:', rows == MOD_CAVE_ASM)
+    return 0 if ok else 1
+
+
 def main(argv):
+    groups = GROUPS
+    if '--group' in argv:
+        k = argv.index('--group')
+        groups = argv[k + 1].split(',')
+        argv = argv[:k] + argv[k + 2:]
     if argv[:1] == ['--list']:
-        for va, old, new, why, refs, _a in PATCHES:
-            print('0x%06x %d B  %s' % (va, len(new), why))
+        for pt in selected(groups):
+            print('0x%06x %3d B [%s] %s' % (pt[0], len(pt[2]), pt[6], pt[3]))
         return 0
+    if argv[:1] == ['--check-asm']:
+        return check_asm()
     if argv[:1] == ['--diff'] and len(argv) == 3:
-        return diff(argv[1], argv[2])
+        return diff(argv[1], argv[2], groups)
     disasm = '--disasm' in argv
     args = [a for a in argv if a != '--disasm']
     if len(args) != 2:
         print(__doc__)
         return 2
-    apply(args[0], args[1], disasm)
+    apply(args[0], args[1], disasm, groups)
     return 0
 
 
