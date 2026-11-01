@@ -2,17 +2,18 @@
 # Dung lai Inotia 4 Viet hoa + offline (tuong duong TEST12, KHONG co chan doan) tu bo split goc.
 #
 #   bash scripts/rebuild.sh <thu muc chua base.apk + split_config.*.apk> [--out <apk>] [--diag [--internet]]
-#   bash scripts/rebuild.sh --base-apk <APK nen> [--out <apk>] [--diag [--internet]]
+#   bash scripts/rebuild.sh --base-apk <APK nen> [--base-kind vi|en] [--out <apk>] [--diag [--internet]]
 #   bash scripts/rebuild.sh --versions
 #
 # Mac dinh (= ban phat hanh, T6): ra out/Inotia4_vi_offline.apk, KHONG chan doan (diag), KHONG quyen INTERNET.
 #   --out <apk>   : duong dan APK ra (mac dinh out/Inotia4_vi_offline.apk).
 #   --diag        : them ban chan doan (classes4.dex = com.namp.vh.diag + LAUNCHER -> LaunchActivity) = ban TEST12 de gui nguoi dung thu.
 #   --internet    : (chi cung --diag, chi de thu) tra lai quyen INTERNET.
-#   --base-apk    : khi KHONG co bo split goc: xuat phat tu mot APK da gop + da lam buoc nen (vi du
-#                   test_builds/Inotia4_TEST4_vi_anh_offline.apk = split goc + smali font,lang,offline + go quyen manifest + text + anh).
-#                   Bo cac buoc 0-1 (kiem sha, gop split) va 3a-3d (manifest, plist, text, anh), chi ap nhom smali con thieu (net,mod).
-#                   Cac buoc con lai GIONG HET duong split. Day la cach kiem tra T5 trong container khong co split (xem PROGRESS.md "Phien 8").
+#   --base-apk    : khi KHONG co bo split goc: xuat phat tu mot APK da gop (da co smali font,lang,offline, da go quyen manifest, lib da co
+#                   patch base). Bo buoc 0-1 (kiem sha, gop split) va 3a (manifest); chi ap nhom smali con thieu (net,mod).
+#   --base-kind   : (voi --base-apk) vi = nen DA dich text + xml + anh, vd test_builds/Inotia4_TEST4_vi_anh_offline.apk (mac dinh: bo 3b-3d);
+#                   en = nen CHUA dich (text/xml/anh con la ban Anh), vd test_builds/Inotia4_TEST1_font18_offline_EN.apk: chay them 3b-3d.
+#                   Cac buoc con lai GIONG HET duong split. Day la cach kiem tra T5 trong container khong co split (PROGRESS.md "Phien 8").
 #   --versions    : in phien ban cac tool roi thoat (xem tools/VERSIONS.md).
 #
 # Cac nhom va (T5, dong bo voi chuoi build TEST12 cua scripts/build_from_apk.sh):
@@ -35,13 +36,14 @@ SMALI_BASE_HAS=font,lang,offline      # APK nen (TEST4) da mang san 3 nhom nay
 SMALI_BASE_ADD=net,mod
 LIB_GROUPS=base,p1,mod,view,hud,pool,hudbtn
 
-SPLITS=""; BASE_APK=""; OUT=out/Inotia4_vi_offline.apk; DIAG=0; MAN_OPTS=(); SHOW_VERSIONS=0
+SPLITS=""; BASE_APK=""; BASE_KIND=vi; OUT=out/Inotia4_vi_offline.apk; DIAG=0; MAN_OPTS=(); SHOW_VERSIONS=0
 while [ $# -gt 0 ]; do
   case "$1" in
     --out) OUT=${2:?"--out can duong dan"}; shift;;
     --diag) DIAG=1;;
     --internet) MAN_OPTS+=(--internet);;
     --base-apk) BASE_APK=${2:?"--base-apk can duong dan"}; shift;;
+    --base-kind) BASE_KIND=${2:?"--base-kind can vi|en"}; shift;;
     --versions) SHOW_VERSIONS=1;;
     -h|--help) sed -n '2,/^set -euo/p' "$0" | sed '$d' | sed 's/^# \{0,1\}//'; exit 0;;
     -*) echo "tham so la: $1"; exit 2;;
@@ -49,6 +51,7 @@ while [ $# -gt 0 ]; do
   esac; shift
 done
 if [ ${#MAN_OPTS[@]} -gt 0 ] && [ $DIAG = 0 ]; then echo "--internet chi dung cung --diag"; exit 2; fi
+case "$BASE_KIND" in vi|en) ;; *) echo "--base-kind phai la vi hoac en"; exit 2;; esac
 
 pick() {  # pick <bien da dat> <ung vien...> -> in duong dan dau tien ton tai
   local v=$1; shift
@@ -106,13 +109,14 @@ if [ -n "$SPLITS" ]; then
   echo "== 1. gop split -> 1 APK (APKEditor)"
   $J -jar "$APKEDITOR" m -i "$SPLITS" -o "$W/merged.apk" > "$LOGS/merge.log" 2>&1
   MERGED=$W/merged.apk
-  SMALI=$SMALI_ALL
+  SMALI=$SMALI_ALL; DO_PERM=1; DO_TEXT=1
 else
   BASE_APK=$(realpath "$BASE_APK")
-  echo "== 0-1. bo qua kiem sha + gop split: xuat phat tu APK nen $BASE_APK"
+  echo "== 0-1. bo qua kiem sha + gop split: xuat phat tu APK nen ($BASE_KIND) $BASE_APK"
   echo "   sha256 $(sha256sum "$BASE_APK" | cut -d' ' -f1)"
   MERGED=$BASE_APK
-  SMALI=$SMALI_BASE_ADD
+  SMALI=$SMALI_BASE_ADD; DO_PERM=0; DO_TEXT=0
+  if [ "$BASE_KIND" = en ]; then DO_TEXT=1; fi
 fi
 
 echo "== 2. apktool decode (smali day du)"
@@ -121,9 +125,21 @@ $J -jar "$APKTOOL" d -f -o "$D" "$MERGED" > "$LOGS/decode.log" 2>&1
 echo "== 3. va smali: nhom $SMALI"
 $PY scripts/patch_smali.py "$D" --group "$SMALI" | tee "$LOGS/patch_smali.log"
 
-if [ -n "$SPLITS" ]; then
+if [ $DO_PERM = 1 ]; then
   echo "== 3a. manifest: go quyen mang"
   $PY scripts/patch_manifest.py "$D/AndroidManifest.xml" | tee "$LOGS/patch_manifest.log"
+else
+  echo "== 3a. bo qua (APK nen da go quyen mang): chi kiem nhanh"
+  $PY - "$D" <<'PYEOF'
+import os, sys
+d = sys.argv[1]; m = open(os.path.join(d, 'AndroidManifest.xml'), encoding='utf-8').read()
+bad = [p for p in ('android.permission.INTERNET', 'com.android.vending.BILLING') if p in m]
+if bad: raise SystemExit('APK nen con quyen %s: day khong phai ban nen (TEST1/TEST4)' % bad)
+print('manifest nen: khong con INTERNET/BILLING')
+PYEOF
+fi
+
+if [ $DO_TEXT = 1 ]; then
   echo "== 3b. text UI res/xml"
   $PY scripts/plist_text.py apply "$D/res/xml" dich/xml_text.tsv | tee "$LOGS/plist_text.log"
 
@@ -136,6 +152,11 @@ if [ -n "$SPLITS" ]; then
   for f in "$G"/memorytext.dat.jpg "$G"/memorytext_{en,de,fr,jp,zhhans,zhhant}.dat.jpg; do cp "$W/vi.dat.jpg" "$f"; done
 
   echo "== 3d. anh co chu: ve lai nhan bang f18 (res_vi/labels.json)"
+  if [ ! -d tools/NAM_P/pixeltext_kit ]; then   # img_vi.py can bo pixeltext cua Tool_Viet_Hoa_NAM_P.zip (khong commit giai nen)
+    KITZIP=$ROOT/../Tool_Viet_Hoa_NAM_P.zip
+    [ -f "$KITZIP" ] || { echo "thieu tools/NAM_P/pixeltext_kit: giai nen Tool_Viet_Hoa_NAM_P.zip (goc repo) vao tools/"; exit 1; }
+    mkdir -p tools; unzip -q -o "$KITZIP" -d tools
+  fi
   mkdir -p "$W/img_goc" "$W/img_vi"
   for n in $($PY -c "import json;print(' '.join(k for k in json.load(open('res_vi/labels.json')) if not k.startswith('_')))"); do
     # da so la PNG tran (duoi .jpg gia); neu la container 01 00 thi giai nen
@@ -149,14 +170,7 @@ if [ -n "$SPLITS" ]; then
   done
   echo "anh: $(ls "$W"/img_vi | wc -l) file"
 else
-  echo "== 3a-3d. bo qua (APK nen da co manifest, text, anh): chi kiem nhanh"
-  $PY - "$D" <<'PYEOF'
-import os, sys
-d = sys.argv[1]; m = open(os.path.join(d, 'AndroidManifest.xml'), encoding='utf-8').read()
-bad = [p for p in ('android.permission.INTERNET', 'com.android.vending.BILLING') if p in m]
-if bad: raise SystemExit('APK nen con quyen %s: day khong phai ban nen (TEST4)' % bad)
-print('manifest nen: khong con INTERNET/BILLING')
-PYEOF
+  echo "== 3b-3d. bo qua (APK nen da dich text + xml + anh)"
 fi
 
 echo "== 4. com.namp.vh -> classes3.dex (javac --release 8, d8 --lib android.jar)"
