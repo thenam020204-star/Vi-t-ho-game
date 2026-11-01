@@ -150,7 +150,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: T13 chẩn đoán crash (đang giao) → sửa lỗi → T7 …
+- A1: v0.1.1 ✓ (máy thật OK) → T7 (đang giao, công nhân mới) → T9 → T10 → T11.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -203,3 +203,4 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [x] T13b. (xong, chờ nghiệm thu) v0.1.1: sửa `patch/bridge_patches.tsv` 0xc6dd8/0xc6e60 → `mov w0,#0` (00008052), xoá biến thể tạm trong make_apk.sh; rà lại MỌI patch bridge còn lại bằng cách lần luồng sau điểm vá tới return của hàm bao, ghi kết luận từng patch vào `patch/bridge_review.md`; build `dist/HL5-VI-v0.1.1.apk` + cập nhật PHAT-HANH.md — Agent: A1
 - [A1] T13b xong (chờ nghiệm thu). `patch/bridge_patches.tsv` + `mk_bridge_patches.py` + `bridge_patch_diff.txt`: 0xc6dd8/0xc6e60 = `mov w0,#0` (00008052); biến thể D bỏ khỏi make_apk.sh (còn A|B|C|C1). `patch/bridge_review.md`: 8 kết luận, tất cả ĐẠT; công cụ `diag/brreview/{df,seg,review}.py` (liveness + giả lập unicorn: đoạn 0xc6c30..0xc6e68 bản gốc/`uc_hook_add` lỗi/đã vá, cả hàm clear 0xe1f1c; nativeOnSurfaceCreated 14 KB/69 callee không giả lập trọn). Không phát hiện lỗi thứ hai trong các vá; khác biệt hành vi nhỏ: 0xe1e38 không gọi glViewport(0,0,0,0) khi W/H logic = 0 (gọi ở c58f8). Rủi ro còn lại: phần nativeOnSurfaceCreated sau 0xc6e68 (nạp guest) không kiểm được nếu thiếu thiết bị. `dist/HL5-VI-v0.1.1.apk` 22.668.446 B sha256 119e0f2d7bc44ebf857c175fe5fe343f4039b5570bffc23590eee8bf20b84261 (so v0.1 chỉ khác 8 byte bridge ở c6dd8/c6e60; apksigner, zipalign, aapt2 badging đạt); `dist/diag/HL5-diag-v0.1.1.apk` (= `--diag C` đã sửa); HL5-diag-C và C1 nay chứa bridge đã sửa (C không còn tái hiện lỗi v0.1); đã xoá HL5-diag-D.apk. PHAT-HANH.md và PHAT-HANH-diag.md cập nhật.
 - [quản đốc] Nghiệm thu T13b: đạt (chỉ khác v0.1 đúng 8 byte bridge; bridge_review.md 8/8 OK; đoạn sau 0xc6e68 chưa giả lập). Gửi v0.1.1 + diag-v0.1.1 cho người dùng thử máy.
+- [người dùng] v0.1.1 chạy tốt trên máy thật ("Tất cả oke"). → Tiếp: T7 (công nhân mới) → T9 → T10 → T11. Mỗi bản phát hành kèm bản diag tương ứng.
