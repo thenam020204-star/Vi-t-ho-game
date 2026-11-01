@@ -35,6 +35,7 @@ public class Inotia4Emu extends AbstractJni {
     static final long EPOCH_MS = 1793404800000L; // 2026-10-31 00:00 UTC
     long virtMs = 0, virtTick = 0;
     IntArray fontBuf;
+    JMalloc jmalloc;
 
     Inotia4Emu(File so, File apk, File out) {
         this.res = apk;
@@ -60,6 +61,9 @@ public class Inotia4Emu extends AbstractJni {
         vm.setJni(this);
         vm.setVerbose(Boolean.getBoolean("emu.verbose"));
         dm = vm.loadLibrary(so, true);
+        // T2 huong 2: thay malloc cua libc (jemalloc cua unidbg) bang cap phat Java (-Demu.malloc=java).
+        // libc chi duoc nap khi nap libgame.so nen cai hook sau loadLibrary; con tro cap truoc do (init cua lib) van do jemalloc goc xu ly.
+        if ("java".equals(System.getProperty("emu.malloc"))) { jmalloc = new JMalloc(emulator); jmalloc.install(); }
         fontBuf = new IntArray(vm, new int[FONT_W * FONT_H]);
         // Stub CHI trong emulator (moi truong unidbg khong co ps/system): ten=gia_tri_tra_ve
         String stubs = System.getProperty("emu.stub", "_ZN10Protection19isRunningMemoryHackEv=0,_ZN10Protection8isRootedEv=0");
@@ -573,6 +577,7 @@ public class Inotia4Emu extends AbstractJni {
             if (f % 50 == 0) System.out.println("== frame " + f + " t=" + (System.currentTimeMillis() - t0) + "ms gl=" + gl.calls.size());
         }
         madvReport();
+        if (jmalloc != null) System.out.println(jmalloc.report());
         memReport("cuoi", frames);
         if (poolPeak >= 0) System.out.println("[pool] DINH used=" + poolPeak + " B (" + String.format("%.3f", poolPeak / 1048576.0) + " MB) tai frame " + poolPeakFrame + " ; total=" + poolTotal + " B");
     }
