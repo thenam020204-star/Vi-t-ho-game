@@ -54,15 +54,20 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Bridge kiểm sha256 trong `assets/target-assets.json` (Java `TargetAssets`): mỗi lần đổi `.so`/VFS phải cập nhật.
 
 ## Checklist
-- [ ] T1. Trích danh mục chuỗi Android — Agent: A1
+- [x] T1. Trích danh mục chuỗi Android — Agent: A1
   - Đầu vào: VFS Android, danh sách file trong `$WORK/proj/HL4_project/vi5/build/overlay/res/` (253 file có trong VFS) + mọi `c/map/*.scn`, `c/csv*/*.dat` trong VFS có chuỗi ASCII đọc được.
   - Đầu ra: `hl5_android/vi/android_catalog.json`, mỗi mục `{file, kind: scn|dat, idx | (rec, off, ps), text_en, cap}`; viết `hl5_android/vi/extract_android.py`.
   - Hoàn thành khi: chạy lại script cho kết quả giống hệt; mọi `.scn` đọc bằng `tools/scn.py`; với mỗi file, ghi chuỗi đọc ra trở lại thì file giống từng byte (roundtrip); in thống kê số câu theo file/kind.
-- [ ] T2. Ghép chuỗi Android ↔ LGT (phụ thuộc T1) — Agent: A1 — **Quản đốc nghiệm thu**
+- [x] T2. Ghép chuỗi Android ↔ LGT (phụ thuộc T1) — Agent: A1 — **Quản đốc nghiệm thu**
   - `.scn`: cùng số câu thì ghép theo chỉ số, kèm kiểm tra hợp lý; khác số câu thì dóng hàng DP (đặc trưng: tỉ lệ độ dài, dấu câu `...?!`, mã màu, số, `;`, tên riêng theo `thuat-ngu.tsv` Hàn ↔ Anh). `.dat`: ghép bản ghi theo trường khoá (ID số đầu bản ghi; tự xác định bằng dữ liệu, ghi lại kết luận), rồi theo thứ tự trường chuỗi.
   - Đầu ra: `hl5_android/vi/align.json` (mỗi mục Android → `K#####` hoặc `NEW`, điểm tin cậy) + `hl5_android/vi/align_report.md` (thống kê, 50 cặp điểm thấp nhất để quản đốc soát).
   - File: `hl5_android/vi/align_android.py`.
   - Hoàn thành khi: chạy lại ổn định; 184 `.scn` cùng số câu có ≥ 95% cặp điểm cao; báo số câu `NEW`.
+- [ ] T2b. Sửa ghép sau nghiệm thu T2 (phụ thuộc T2) — Agent: A1
+  - Quản đốc soát 50 cặp thấp nhất, kết luận: dải điểm 0.55–0.70 có nhiều cặp **sai nghĩa** (vd 00136 idx 34/36, 00144 idx 54, 00094 idx 22, 00038 idx 64 đúng; quest_* ghép với `여분` sai; item_16 câu Anh có cả mô tả kỹ năng, câu Hàn chỉ có tên+cấp → mất nội dung).
+  - Sửa trong `align_android.py`: (1) cặp điểm < 0.70 → `NEW`, giữ câu Hàn đề xuất ở trường `ko_hint`; (2) câu Hàn là chỗ trống/giữ chỗ (`여분`, rỗng, chỉ mã) → `NEW`; (3) câu Anh có số đoạn `;` hoặc độ dài vượt rõ câu Hàn (tỉ lệ ký tự Anh/Hàn > 3.5 hoặc thiếu ≥ 2 đoạn) → `NEW` + `ko_hint`; (4) 2 câu dính `\u0000` (00041 idx 54, 00042 idx 24): ghi rõ cách xử lý trong report (giữ byte gốc khi build).
+  - Thêm vào report: 40 cặp ngẫu nhiên (seed cố định) trong dải 0.70–0.80 để quản đốc soát; thống kê NEW mới.
+  - Hoàn thành khi: chạy lại ổn định; report có mục mẫu 0.70–0.80; số NEW mới được ghi vào Nhật ký.
 - [ ] T3. Dịch câu NEW Anh → Việt (phụ thuộc T2) — Agent: A1
   - Dịch tay (không dịch máy), theo `thuat-ngu.tsv`, `style-guide.md`, cách xưng hô của cùng nhân vật trong `HL5_dich_FULL.tsv`. Giữ mã điều khiển. Không dùng ký tự `' " \` ^ < [ { } $ & |` ngoài mã.
   - Đầu ra: `hl5_android/vi/A_dich.tsv`.
@@ -98,7 +103,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
 ## Phân công hiện tại
-- A1: T1 → T2 → T5 (đang giao: T1, T2).
+- A1: T1 ✓ → T2 ✓ (nghiệm thu một phần) → T2b → T5 (đang giao: T2b, T5).
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -106,3 +111,6 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 
 ## Nhật ký
 - [quản đốc] Lập PLAN.md; các phân tích nền nằm trong BAO-CAO-RE.md §1–7; harness + 4 patch offline đã xong.
+- [A1] T1 xong: `vi/extract_android.py` -> `vi/android_catalog.json` 14298 câu (scn 7163 / 218 file, dat 7135 / 85 file gồm 5 file VFS không tên); roundtrip 0 lỗi, chạy lại giống hệt. Lưu ý `tools/scn.py:parse` chọn sai hit ở vài file (00154...), dùng `extract_android.parse_scn/build_scn`.
+- [A1] T2 xong: `vi/align_android.py` -> `vi/align.json`, `vi/align_report.md`: ghép 13763 / NEW 535; 176 scn cùng số câu (5851 câu) điểm cao 99.5%. Chờ quản đốc nghiệm thu.
+- [quản đốc] Nghiệm thu T2: đạt tiêu chí số (99.5%), nhưng dải 0.55–0.70 có cặp sai nghĩa → giao T2b. Chấp nhận dùng `extract_android.parse_scn/build_scn` thay `tools/scn.py` cho T4.
