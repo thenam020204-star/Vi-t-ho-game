@@ -607,3 +607,9 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 quản đốc: A2 thứ 3 xong T9a ~92% (~296k). Chốt P mặc định 120, tối đa 150, cave ép W chẵn. Quản đốc tự đọc `MEM_Create`: pool trần 8 MB ⇒ thêm vá nâng trần 10 MB. A2 lỡ tạo file rỗng `/tmp/claude-0/scan.py` (ngoài repo), quản đốc đã xoá.
 - 2026-11-01 A1 (T8): T8b xong (`patch_lib.py` nhóm `mod`, `--group`, `--check-asm`, `--diff` theo vùng; disasm trước/sau trong `docs/mod_menu.md`).
 - 2026-11-01 A1 (T8): T8c code + build kiểm PASS (`out/Inotia4_T8_check.apk`, apkdiff với TEST9 chỉ khác `classes.dex` (MainActivity +1 lệnh), `classes3.dex`, `libgame.so`); T8d unidbg (`emu/src/ModCheck.java`) viết nhưng chưa chạy. A1 dừng vì ngữ cảnh > 400k; bàn giao ở mục T8.
+- 2026-11-01 quản đốc: A1 (T8) vượt 400k (~409k) ⇒ đã ghi bàn giao, dừng ở `1b98e06`. T8a và T8b tick; T8c xong code và build nhưng chưa tick; T8d dở.
+  - Quản đốc soát cave `scripts/asm/mod_cave.s`: ĐẠT.
+    - 59 lệnh = 236 B, vừa khít 0x18bb00..0x18bbec (`CHAR_AddDamageEffect` + `CHAR_AddDamageByDefaultCheck`; hàm kế `CHAR_CalcPhysicalDefense` @0x18bbec).
+    - Nhảy B `c510ff17` → 0x18bb74 và C `5a10ff17` → 0x18bbac khớp bố cục.
+  - Rủi ro nhỏ còn lại: cave B không chặn EXP ≤ 0, nên EXP âm (khó xảy ra) sẽ bị nhân thêm. Cave đã đầy, không còn chỗ thêm lệnh chặn ⇒ chấp nhận.
+  - Giao T8c (soát) và T8d cho A1 mới.
