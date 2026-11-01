@@ -259,10 +259,82 @@ Java không cấp phát trong vòng lặp game: chỉ ghi khi bấm nút/đổi 
 |---|---|---|
 | Bằng chứng tĩnh | `mod_check.py` (log `logs/t8a_mod_check.log`) | T8a |
 | Byte | `patch_lib.py` (khớp byte gốc / "đã áp", sha256 cave, `refs`), disasm trước/sau, `--diff` đúng vaddr | T8b |
-| Hàm đã vá | unidbg `emu_start` tại 0x18b3e0 / 0x1c7860 / 0x1c7a44 với thanh ghi và `.bss` đặt sẵn; hệ số 0, 1, 2, 50, 51 và các biên; đối chiếu công thức (A: đọc `w1 = −dmg` tại 0x18b424; B: đọc `w19`, `w25` tại 0x1c7884; C: đọc `w19` tại 0x1c7a48) | T8d |
+| Hàm đã vá | unidbg `emu_start` tại 0x18b3e0 / 0x1c7860 / 0x1c7a44 với thanh ghi và `.bss` đặt sẵn; hệ số 0, 1, 2, 50, 51 và các biên; đối chiếu công thức (A: đọc `x0` = mục tiêu và `w1 = −dmg` khi vào `CHAR_AddLife` 0x18b844 (qua `bl` @0x18b434 và PLT 0x2aecc0); B: đọc `w19`, `w25` tại 0x1c7884; C: đọc `w19` tại 0x1c7a48) | T8d |
 | Kênh Java | `java/test/ModMemTest.java` chạy trên JVM của container: ghi `/proc/self/mem` vào vùng heap, đọc lại; phân tích `maps` giả (lib không tìm thấy, vùng không `rw-p`, thiếu magic) | T8c |
 | UI Java | biên dịch với `android.jar`, d8, kiểm dex (`dexdump`), soát tay; thử trên máy thật là việc của người dùng | T8c |
 | Build | `--smali net,mod --vnfont --lib --diag`; `apkdiff` với TEST9; apksigner v1/v2/v3, `zipalign -c -P 16 4`, `check_apk` | T8d |
+
+### 7.1 Kết quả kiểm thực (T8d)
+
+Lệnh: `bash emu/mod_check.sh /opt/work/lib4/libgame.so /opt/work/t8/out/libgame_mod_full.so work/modcheck 2>&1 | tee logs/t8d_mod_check.log` (3 s). Log rút gọn: `logs/t8d_mod_check.log` (dòng cuối `TONG KET: TAT CA DAT (lib va + lib goc)`); log từng ca của cả hai lib: `logs/t8d_mod_check_full.log.gz` (≈ 5,6 MB giải nén). Mã: `emu/src/ModCheck.java` (unidbg `emu_start`, không chạy game).
+
+Cách chạy: nạp lib vào unidbg, đặt 3 hệ số trực tiếp ở `base+0x72f780/84/88` (và một giá trị `0x78` ở int thứ 4 `0x72f78c`), đặt thanh ghi rác cho x0..x28 rồi chạy hàm từ điểm vào đã vá:
+
+- **A** từ 0x18b3e0: x0 = kẻ tấn công hoặc NULL, x1 = mục tiêu (hai khối 0x800 B, byte phe ở `+0x311`), w2 = sát thương, w3 = 7, w4 = 1. Chạy tới `CHAR_AddLife` 0x18b844 và đọc x0 (phải bằng mục tiêu), `w1` (= −sát thương thực nhận), x19/x21/w20/w25 (phải giữ đúng giá trị từ prologue) và SP (phải thấp hơn lúc vào đúng 0x70). Sát thương < 1: chạy tới nhánh thoát 0x18b7e4 và đọc `w2`.
+- **B** từ 0x1c7860 tới 0x1c7884: w19 = EXP cơ sở; đọc `w19` và `w25` (= `w19×110/100` theo đúng phép tính 32 bit của game, kể cả tràn của chính game khi `w19` ≥ 19.522.092).
+- **C** từ 0x1c7a44 tới 0x1c7a48: w0 = EXP; đọc `w19`, và x8 (phải nguyên), w0 (phải nguyên).
+- Sau mỗi ca: 16 B vùng hệ số phải nguyên vẹn (cave không ghi bộ nhớ, không đụng int thứ 4).
+
+Phạm vi:
+
+- Hệ số: {0, 1, 2, 3, 10, 49, 50, 51, 100, −1, INT_MIN}. Mọi cặp (Mdmg, Mdef) cho sát thương biên {−1, 0, 1, 2, 49, 50, 51, 1000, 19.999, 20.000, 999.998, 999.999, 1.000.000}; ngoài ra Mdmg = Mdef quét 19 giá trị sát thương (gồm INT_MIN, −5, 0, 1, 333.333, 499.999, 999.997..1.000.000, 40.000.000, INT_MAX).
+- Phe: đủ 3 phe mục tiêu × (3 phe kẻ tấn công + NULL) = 12 tổ hợp.
+- EXP cơ sở / cố định: {INT_MIN, −1, 0, 1, 2, 3, 100, 5000, 335.543..335.545, 16.777.213..16.777.217 (quanh 0xFFFFFF), 100.000.000, INT_MAX} × 11 hệ số Mexp.
+
+Công thức đối chiếu (mục 1/3/5): phe mục tiêu 0 ⇒ `max(1, ⌊dmg / Mdef⌋)` khi Mdef ∈ [2,50]; ngược lại kẻ tấn công ≠ NULL và phe 0 ⇒ `dmg×Mdmg` kẹp 999.999 khi dmg < 999.999 và Mdmg ∈ [2,50] (dmg ≥ 999.999 giữ nguyên); còn lại giữ nguyên; dmg < 1 giữ nguyên. EXP < 0xFFFFFF và Mexp ∈ [2,50] ⇒ `min(e×Mexp, 0xFFFFFF)` (C chỉ khi e ≥ 1); còn lại giữ nguyên.
+
+| Lib | Nhóm | Số ca | Đạt | Lệch | Ngoài miền |
+|---|---|---|---|---|---|
+| vá (sha256 `5d3ecb3b…4382`) | A `CHAR_AddDamage` | 21.384 | 21.384 | 0 | 0 |
+| vá | B `AddExperience` | 198 | 188 | 0 | 10 |
+| vá | C `AddExpFixed` | 198 | 198 | 0 | 0 |
+| vá | vùng hệ số map được, ban đầu 0, int thứ 4 ghi/đọc được | 2 | 2 | 0 | 0 |
+| **vá, tổng** | | **21.782** | **21.772** | **0** | **10** |
+| gốc TEST4 (sha256 `df12cecc…5d02`) | A + B + C + vùng hệ số | 21.782 | 21.782 | 0 | 0 |
+
+- **Lib gốc cho kết quả như hệ số 1**: ở lib gốc, mọi ca (kể cả hệ số 2..50) cho đầu ra bằng đầu vào, trùng với lib vá khi hệ số ∈ {0, 1, 51, 100, −1, INT_MIN}.
+- **Đối chứng âm tính** (test phân biệt được hai lib): lib vá chấm theo mô hình "gốc" báo 3.767 ca lệch; lib gốc chấm theo mô hình "vá" báo 3.759 ca lệch (số ca lệch đã gồm cả các ca của bảng ca biên chạy lại).
+- **Không ca nào lệch**; mọi ca A giữ nguyên x0/x19/x21/w20/w25 và SP.
+
+**10 ca ngoài miền (ghi nhận, không phải lỗi cave; quản đốc đã chấp nhận rủi ro):** tất cả là điểm B (EXP cơ sở `w19` < 0) với Mexp ∈ [2,50] hợp lệ: `w19` = −1 hoặc INT_MIN, Mexp = 2, 3, 10, 49, 50. Cave B không chặn `w19 < 1` (chỉ cave C có `cmp w19,#1`), nên nhân cả số âm (−1×2 = −2, giữ dấu; INT_MIN×2 tràn 32 bit về 0). Ca này không tới được: tại 0x1c7860 `w19` ≥ 0, vì `CAL_Calculate` trả ≥ 1 (`cmp w0,#1; b.lt` @0x1c7754), rồi nhân hệ số 2..15 chia 10 (≥ 0, @0x1c779c..0x1c77b0), rồi nhân `(GetAttr(0x72)+100)` chia 100 (@0x1c7840..0x1c785c). `w19` chỉ âm nếu `GetAttr(0x72)` < −100, mà thuộc tính này (phần trăm EXP thưởng) **CHƯA XÁC ĐỊNH** có âm được không. Chi tiết từng ca ở dòng `NGM` trong `logs/t8d_mod_check.log`.
+
+Bảng ca biên (lib vá; "→" = đầu ra):
+
+| Điểm | Điều kiện | Vào → ra |
+|---|---|---|
+| A, kẻ tấn công phe 0 → mục tiêu phe 1, Mdmg = 50 | dmg 0, 1, 2 | 0 → 0; 1 → 50; 2 → 100 |
+| | dmg 19.999 / 20.000 | → 999.950 / → 999.999 (kẹp) |
+| | dmg 999.998 / 999.999 / 1.000.000 | → 999.999 (kẹp) / → 999.999 (giữ) / → 1.000.000 (giữ, không làm yếu) |
+| A, kẻ tấn công phe 1 → mục tiêu phe 0, Mdef = 50 | dmg 0, 1, 49, 50, 51, 100 | 0 → 0; 1, 49, 50, 51 → 1 (tối thiểu 1); 100 → 2 |
+| | dmg 999.999 / 1.000.000 | → 19.999 / → 20.000 |
+| A, dmg = 1000, kẻ tấn công phe 0 → mục tiêu phe 1, Mdmg = h | h = 0, 1, 2, 3, 50, 51, −1 | 1000, 1000, 2000, 3000, 50.000, 1000, 1000 |
+| A, dmg = 1000, kẻ tấn công phe 1 → mục tiêu phe 0, Mdef = h | h = 0, 1, 2, 3, 50, 51, −1 | 1000, 1000, 500, 333, 20, 1000, 1000 |
+| A, dmg = 1000, Mdmg = Mdef = 10, (phe mục tiêu, phe kẻ tấn công) | (0, 0/1/2/NULL) | 100 (chỉ chia Mdef, kể cả phe 0 đánh phe 0) |
+| | (1, 0) / (1, 1/2/NULL) | 10.000 / 1000 |
+| | (2, 0) / (2, 1/2/NULL) | 10.000 / 1000 (NPC bị phe người chơi đánh thì bị nhân, như mục 8) |
+| B và C, Mexp = 50 | EXP 0, 1, 335.543, 335.544, 335.545 | 0, 50, 16.777.150, 16.777.200, 16.777.215 (kẹp) |
+| | EXP 16.777.214 / 16.777.215 / 16.777.216 | 16.777.215 (kẹp) / 16.777.215 (giữ) / 16.777.216 (giữ) |
+| B và C, Mexp = 2 | EXP 0, 1, 335.545, 16.777.214, 16.777.215, 16.777.216 | 0, 2, 671.090, 16.777.215 (kẹp), 16.777.215 (giữ), 16.777.216 (giữ) |
+| B và C, EXP = 1000, Mexp = h | h = 0, 1, 2, 3, 50, 51, −1 | 1000, 1000, 2000, 3000, 50.000, 1000, 1000; B còn `w25` = `w19×1,1` (vd. 55.000 khi h = 50) |
+| C | EXP ≤ 0 | giữ nguyên (cave C có `cmp w19,#1; b.lt`) |
+
+Ghi chú: ở B, `w25` luôn bằng `w19×110/100` tính từ `w19` đã nhân (ví dụ EXP 1000, Mexp 50 ⇒ `w19` 50.000, `w25` 55.000), nên mọi người nhận (chia cho 3 thành viên) đều được nhân. Ở lib gốc và ở cả lib vá, khi EXP cơ sở ≥ 19.522.092 chính phép `w19×110` của game tràn 32 bit (ví dụ 100.000.000 ⇒ `w25` = −18.849.018); trần 0xFFFFFF của mod chỉ ngăn mod tự gây tràn, và với giá trị gốc đã ≥ trần thì mod giữ nguyên hành vi của game gốc.
+
+#### Build kiểm (T8d)
+
+`out/Inotia4_T8_check.apk` (`--smali net,mod --vnfont --lib --diag`, không commit, không đặt tên TEST), dựng lại từ `test_builds/Inotia4_TEST4_vi_anh_offline.apk` lúc T8d:
+
+| Kiểm | Kết quả |
+|---|---|
+| `apkdiff` với `test_builds/Inotia4_TEST9_vi_offline.apk` | chỉ khác `classes.dex`, `classes3.dex`, `lib/arm64-v8a/libgame.so` (1454 file chung; không file nào chỉ có ở một bên); `classes2.dex`, `classes4.dex`, manifest, `res` giống hệt |
+| decode lại (apktool) và `diff -rq` với TEST9 | smali chỉ khác `MainActivity.smali` (+1 lệnh `invoke-static {p0}, Lcom/namp/vh/ModMenu;->onResume(Landroid/app/Activity;)V` sau `HiveActivity.onResume`; `diff` thấy +2 dòng vì baksmali thêm 1 dòng trống) và 10 file mới `smali_classes3/com/namp/vh/ModMem*`, `ModMenu*`; `VNFont`, `FontData*`, `Offline*` giống hệt |
+| `apksigner verify` | v1, v2, v3 = true; chứng chỉ `cc559651…20d4` (cùng TEST9) |
+| `zipalign -c -P 16 4` | OK |
+| `scripts/check_apk.py` | RESULT: PASS (không INTERNET, không BILLING; `libgame.so`, `libHercules.so` STORED, căn 4096 của 16 KB) |
+| `patch_lib.py --diff` lib gốc TEST4 ↔ lib trong APK | 254 B khác, 21 đoạn, tất cả trong vùng khai báo; lib trong APK == lib vá (sha256 `5d3ecb3b…4382`) |
+| dựng lại hai lần | nội dung 1454 file giống hệt (chỉ chữ ký/dấu thời gian khác), nên sha256 APK đổi giữa các lần dựng: lần này `467f83c3…5882` |
+
+Phần còn lại của kế hoạch (giao diện thật, kênh `/proc/self/mem` và `Unsafe` trên máy Android 14–16) chỉ kiểm được trên máy thật: **CHƯA XÁC ĐỊNH**.
 
 Danh sách thử trên máy thật (khi người dùng nhận bản thử): (1) nút MOD hiện ở lề phải, kéo được, không che HUD; (2) mở hộp thoại, kéo 3 thanh, đặt lại x1; (3) Sát thương x10: đánh quái thấy sát thương gấp ~10; (4) Phòng thủ x10: quái đánh đau ÷10, tối thiểu 1; (5) EXP x10; (6) thoát hẳn app, mở lại: giá trị còn và vẫn áp (ghi lại ở `onResume`); (7) nếu toast "Mod không chạy được trên máy này" xuất hiện thì gửi `logcat` (thẻ `NampMod`).
 
