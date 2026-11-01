@@ -1,0 +1,191 @@
+# T8m: diff disasm bridge arm64 (trước -> sau). Sinh từ patch/bridge_patches.tsv
+
+== c6c30  bỏ vòng cài 10 hook chữ BFont::* (callback 0xcf64c): nhảy thẳng 0xc6d4c (x22..x27 không được đọc trước khi gán lại)
+  trước c6c30: b #0xc6c40
+  sau   c6c30: b #0xc6d4c
+== c6dd8  hook đo GetWidth(Pciii): bỏ bl 0xe8834 (uc_hook_add); w0=1 -> cbnz đi nhánh đã cài
+  trước c6dd8: bl #0xe8834
+  sau   c6dd8: mov w0, #1
+== c6e60  hook đo GetByteLenPrintable: như trên
+  trước c6e60: bl #0xe8834
+  sau   c6e60: mov w0, #1
+== c5ce8  khung logic W=scrW/k, H=scrH/k (làm chẵn xuống), k=min(4,scrH/240) giảm tới khi W>=400 && H>=240; scrH<240 -> 400x240 như cũ
+  trước c5ce8: cmp w22, #1
+  trước c5cec: b.lt #0xc5d38
+  trước c5cf0: mov w8, #0xf0
+  trước c5cf4: mov w9, w22
+  trước c5cf8: mov w11, w25
+  trước c5cfc: umaddl x10, w25, w8, x9
+  trước c5d00: sub x10, x10, #1
+  trước c5d04: udiv x9, x10, x9
+  trước c5d08: mov w10, #0x190
+  trước c5d0c: umaddl x12, w22, w10, x11
+  trước c5d10: sub x12, x12, #1
+  trước c5d14: udiv x11, x12, x11
+  trước c5d18: cmp x9, #0x190
+  trước c5d1c: csel x9, x9, x10, hi
+  trước c5d20: add w9, w9, #1
+  trước c5d24: and w9, w9, #0xfffffffe
+  trước c5d28: cmp x11, #0xf0
+  trước c5d2c: csel x8, x11, x8, hi
+  trước c5d30: add w8, w8, #1
+  trước c5d34: and w8, w8, #0xfffffffe
+  sau   c5ce8: cmp w22, #0xf0
+  sau   c5cec: b.lo #0xc5d38
+  sau   c5cf0: mov w10, #0xf0
+  sau   c5cf4: udiv w11, w22, w10
+  sau   c5cf8: cmp w11, #4
+  sau   c5cfc: mov w12, #4
+  sau   c5d00: csel w11, w11, w12, ls
+  sau   c5d04: udiv w9, w25, w11
+  sau   c5d08: udiv w8, w22, w11
+  sau   c5d0c: cmp w11, #1
+  sau   c5d10: b.ls #0xc5d2c
+  sau   c5d14: cmp w9, #0x190
+  sau   c5d18: b.lo #0xc5d24
+  sau   c5d1c: cmp w8, #0xf0
+  sau   c5d20: b.hs #0xc5d2c
+  sau   c5d24: sub w11, w11, #1
+  sau   c5d28: b #0xc5d04
+  sau   c5d2c: and w9, w9, #0xfffffffe
+  sau   c5d30: and w8, w8, #0xfffffffe
+  sau   c5d34: nop 
+== e1e38  glViewport(x,y,w*k,h*k) căn giữa, k nguyên (NEAREST); lưu [0x38]=vw,[0x3c]=vh
+  trước e1e38: ldr x4, [x0, #0x130]
+  trước e1e3c: cbz x4, #0xe1ec4
+  trước e1e40: ldr w9, [x0, #0x50]
+  trước e1e44: cmp w9, #1
+  trước e1e48: b.lt #0xe1ec4
+  trước e1e4c: ldr w10, [x0, #0x54]
+  trước e1e50: cmp w10, #1
+  trước e1e54: b.lt #0xe1ec4
+  trước e1e58: ldr w11, [x0, #0x58]
+  trước e1e5c: mov w2, wzr
+  trước e1e60: cmp w11, #1
+  trước e1e64: b.lt #0xe1ec8
+  trước e1e68: ldr w12, [x0, #0x5c]
+  trước e1e6c: mov w3, w2
+  trước e1e70: mov w1, w2
+  trước e1e74: mov w8, w2
+  trước e1e78: cmp w12, #1
+  trước e1e7c: b.lt #0xe1eb0
+  trước e1e80: umull x13, w12, w9
+  trước e1e84: umull x8, w11, w10
+  trước e1e88: cmp x13, x8
+  trước e1e8c: b.hs #0xe1ee8
+  trước e1e90: add x8, x12, x8
+  trước e1e94: mov w1, wzr
+  trước e1e98: mov w3, w10
+  trước e1e9c: sub x8, x8, #1
+  trước e1ea0: udiv x2, x8, x12
+  trước e1ea4: subs w8, w9, w2
+  trước e1ea8: cinc w8, w8, lt
+  trước e1eac: asr w8, w8, #1
+  trước e1eb0: str w2, [x0, #0x38]
+  trước e1eb4: mov x9, x0
+  trước e1eb8: mov w0, w8
+  trước e1ebc: str w3, [x9, #0x3c]
+  trước e1ec0: br x4
+  sau   e1e38: ldr x4, [x0, #0x130]
+  sau   e1e3c: cbz x4, #0xe1ec4
+  sau   e1e40: mov x15, x0
+  sau   e1e44: ldp w9, w10, [x0, #0x50]
+  sau   e1e48: ldp w11, w12, [x0, #0x58]
+  sau   e1e4c: cmp w9, #1
+  sau   e1e50: ccmp w10, #1, #8, ge
+  sau   e1e54: ccmp w11, #1, #8, ge
+  sau   e1e58: ccmp w12, #1, #8, ge
+  sau   e1e5c: b.lt #0xe1ec4
+  sau   e1e60: udiv w13, w9, w11
+  sau   e1e64: udiv w14, w10, w12
+  sau   e1e68: cmp w13, w14
+  sau   e1e6c: csel w13, w13, w14, ls
+  sau   e1e70: cmp w13, #0
+  sau   e1e74: csinc w13, w13, wzr, ne
+  sau   e1e78: mul w2, w11, w13
+  sau   e1e7c: mul w3, w12, w13
+  sau   e1e80: sub w0, w9, w2
+  sau   e1e84: asr w0, w0, #1
+  sau   e1e88: sub w1, w10, w3
+  sau   e1e8c: asr w1, w1, #1
+  sau   e1e90: stp w2, w3, [x15, #0x38]
+  sau   e1e94: br x4
+  sau   e1e98: nop 
+  sau   e1e9c: nop 
+  sau   e1ea0: nop 
+  sau   e1ea4: nop 
+  sau   e1ea8: nop 
+  sau   e1eac: nop 
+  sau   e1eb0: nop 
+  sau   e1eb4: nop 
+  sau   e1eb8: nop 
+  sau   e1ebc: nop 
+  sau   e1ec0: nop 
+== e1f84  bản sao tính viewport trong hàm clear: tail-call 0xe1e38
+  trước e1f84: ldr x4, [x19, #0x130]
+  trước e1f88: cbz x4, #0xe200c
+  trước e1f8c: ldr w8, [x19, #0x50]
+  trước e1f90: cmp w8, #1
+  sau   e1f84: mov x0, x19
+  sau   e1f88: ldr x19, [sp, #0x10]
+  sau   e1f8c: ldp x29, x30, [sp], #0x20
+  sau   e1f90: b #0xe1e38
+== cc6b8  nativeOnTouchEvent: viewport nguyên k như 0xe1e38 (vpW,vpH,offX,offY)
+  trước cc6b8: umull x13, w10, w11
+  trước cc6bc: add x14, x12, x13
+  trước cc6c0: sub x14, x14, #1
+  trước cc6c4: udiv x14, x14, x12
+  trước cc6c8: umull x12, w12, w15
+  trước cc6cc: add x16, x10, x12
+  trước cc6d0: sub x16, x16, #1
+  trước cc6d4: udiv x10, x16, x10
+  trước cc6d8: subs w16, w15, w14
+  trước cc6dc: cinc w16, w16, lt
+  trước cc6e0: asr w16, w16, #1
+  trước cc6e4: subs w17, w11, w10
+  trước cc6e8: cinc w17, w17, lt
+  trước cc6ec: cmp x13, x12
+  trước cc6f0: asr w17, w17, #1
+  trước cc6f4: csel w12, w11, w10, hs
+  trước cc6f8: csel w10, w14, w15, hs
+  trước cc6fc: csel w11, w16, wzr, hs
+  trước cc700: csel w14, wzr, w17, hs
+  sau   cc6b8: udiv w13, w11, w12
+  sau   cc6bc: udiv w14, w15, w10
+  sau   cc6c0: cmp w13, w14
+  sau   cc6c4: csel w13, w13, w14, ls
+  sau   cc6c8: cmp w13, #0
+  sau   cc6cc: csinc w13, w13, wzr, ne
+  sau   cc6d0: mul w12, w12, w13
+  sau   cc6d4: mul w10, w10, w13
+  sau   cc6d8: sub w14, w11, w12
+  sau   cc6dc: asr w14, w14, #1
+  sau   cc6e0: sub w11, w15, w10
+  sau   cc6e4: asr w11, w11, #1
+  sau   cc6e8: nop 
+  sau   cc6ec: nop 
+  sau   cc6f0: nop 
+  sau   cc6f4: nop 
+  sau   cc6f8: nop 
+  sau   cc6fc: nop 
+  sau   cc700: nop 
+== e3770  glTexParameterf: nhảy cave để ép NEAREST cho MIN/MAG
+  trước e3770: ldr s0, [x9, #8]
+  sau   e3770: b #0xcfdd0
+== cfdd0  cave (callback hook đo 0xcfdd0, chết sau khi tắt hook): s0 = 9728.0 nếu pname là 0x2800/0x2801
+  trước cfdd0: sub sp, sp, #0x100
+  trước cfdd4: stp x29, x30, [sp, #0xa0]
+  trước cfdd8: stp x28, x27, [sp, #0xb0]
+  trước cfddc: stp x26, x25, [sp, #0xc0]
+  trước cfde0: stp x24, x23, [sp, #0xd0]
+  trước cfde4: stp x22, x21, [sp, #0xe0]
+  trước cfde8: stp x20, x19, [sp, #0xf0]
+  trước cfdec: add x29, sp, #0xa0
+  sau   cfdd0: ldr s0, [x9, #8]
+  sau   cfdd4: mov w11, #0x2800
+  sau   cfdd8: sub w11, w1, w11
+  sau   cfddc: cmp w11, #2
+  sau   cfde0: b.hs #0xe3774
+  sau   cfde4: mov w11, #0x2600
+  sau   cfde8: scvtf s0, w11
+  sau   cfdec: b #0xe3774
