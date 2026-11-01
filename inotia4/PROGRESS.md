@@ -134,3 +134,12 @@ Việc tiếp theo (đề xuất):
   - 21 control HUD dịch đúng; tap START vẫn trúng.
   - Log `logs/t9c_view_check.log`.
 - **`test_builds/Inotia4_TEST11_vi_offline.apk`** = TEST10 + view/hud/pool. So TEST10 chỉ khác `classes3.dex` và `libgame.so`. Cùng khoá ký ⇒ cài đè được.
+
+## Phiên 7: thay nút HUD bằng ảnh người dùng (T10) — TEST12
+- **Atlas**: `assets/common/game_res/UI_014.png.jpg` và `UI_015.png.jpg` là PNG RGBA 512², alpha thẳng. Bảng frame nằm trong rodata của lib (`IMGSYS_GetLoc`, 24 B/mục).
+- **Thay 7 rect** bằng `scripts/hud_swap.py` (Lanczos, căn giữa; selftest: pixel ngoài rect giống hệt gốc):
+  - UI_015 loc0/1/2/3 ← pause/save/shop/swap (73 px trong ô 75);
+  - UI_015 loc11 ← btn_frame (90 px trong ô 94);
+  - UI_014 loc2/3 ← attack/attack_pressed (cửa sổ chung tỉ lệ 0,34 → 159×160).
+- **Vá lib `hudbtn`**: 3 lệnh `mov w5,#2` → `#1` (0x169ae8, 0x169bb4, 0x169bfc) để ảnh nút tấn công lúc bấm vẽ alpha thường thay vì cộng sáng.
+- **`test_builds/Inotia4_TEST12_vi_offline.apk`** = TEST11 + atlas mới + `hudbtn` (`--libgroup base,p1,mod,view,hud,pool,hudbtn --hud`). So TEST11 chỉ khác 2 atlas và `libgame.so`. Cùng khoá ký ⇒ cài đè được.

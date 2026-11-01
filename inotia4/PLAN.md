@@ -571,6 +571,14 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Build `out/Inotia4_T10_check.apk` (không commit; lệnh ở đầu `docs/hud_thay_nut.md`) sha256 `2692c8ca4ae61b194cb38e713d5e7ba04c142db196437ba0364cf370f09e37e6`: `apkdiff` với TEST11 chỉ khác `UI_014.png.jpg`, `UI_015.png.jpg`, `libgame.so` (3 byte, đúng 3 vaddr); apksigner v1/v2/v3 đạt, `zipalign -c -P 16 4` đạt, `check_apk` PASS.
     - Việc còn lại cho quản đốc: nghiệm thu, đóng gói bản thử cho người dùng (ví dụ TEST12 = `out/Inotia4_T10_check.apk`), xin người dùng xem nút trên máy thật. Ảnh chụp màn chơi vẫn cần T2; `docs/hud/mo_phong_hud.png` chỉ là mô phỏng Python.
     - CHƯA XÁC ĐỊNH: hình thật trong màn chơi, texture atlas lọc tuyến tính hay gần nhất (không làm alpha bleed), ý nghĩa `data+0x68`, cảm giác nhấp nháy tutorial với lớp bấm alpha thường, `rebuild.sh` chưa có `--hud`/`hudbtn` (T5).
+  - Quản đốc nghiệm thu T10a–T10c (2026-11-01): ĐẠT (chờ người dùng xem trên máy).
+    - Đã xem `docs/hud/mo_phong_hud.png` và `docs/hud/sau_thay.png`: 7 rect đúng, khung ô không che icon, ảnh bấm vẽ alpha không bị cháy sáng.
+    - Tự chạy lại:
+      - `apkdiff` TEST11 → T10_check chỉ khác `UI_014.png.jpg`, `UI_015.png.jpg`, `libgame.so`;
+      - apksigner OK; `zipalign -c -P 16 4` OK.
+    - Còn lại: chưa làm alpha bleed. Vì texture lọc `GL_LINEAR` nên mép nút có thể có viền tối 1 px. Ảnh của người dùng vốn có viền tối nên chấp nhận; nếu người dùng thấy viền thì làm sau.
+    - Đóng gói `test_builds/Inotia4_TEST12_vi_offline.apk` (= `out/Inotia4_T10_check.apk`, SHA256 trong `SHA256_TEST12.txt`).
+    - Chưa tick T10: chờ người dùng xác nhận.
   - [x] T10a. Tìm sprite HUD gốc: file atlas, toạ độ, kích thước, trạng thái thường/bấm; tìm hàm vẽ trong `UIPlay_*` để xác nhận. Xuất ảnh đối chiếu gốc ↔ mới vào `docs/hud_thay_nut.md`.
   - [x] T10b. Ghép ảnh mới vào atlas, repack, selftest byte (atlas không đổi phải ra giống từng byte); `apkdiff` chỉ khác đúng các file atlas.
   - [x] T10c. Kiểm: render atlas ra PNG so với ảnh gốc; nếu T2 xong thì chụp màn chơi; rồi bản thử cho người dùng.
@@ -702,3 +710,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 A1 (T9): T9a, T9b, T9c xong (T9 cha chờ quản đốc nghiệm thu). `docs/tam_nhin_hud.md`, nhóm `view`/`hud`/`pool` trong `patch_lib.py`, thanh "Tầm nhìn" trong `ModMenu`, `emu/view_check.sh`. P = 105 cho W = 536 (không phải 538). Build `out/Inotia4_T9_check.apk` PASS, `apkdiff` với TEST10 chỉ khác `classes3.dex` (ModMenu*) và `libgame.so`. Không chụp được màn chơi (T2).
 - 2026-11-01 quản đốc: nghiệm thu T9a–T9c ĐẠT; gửi TEST11 (TEST10 + tầm nhìn P% + lề HUD + pool 10 MB). A1 (T9) dừng ở ~435k (vượt ngưỡng, không dùng lại). Tiếp theo: T10 (công nhân chạy mới).
 - 2026-11-01 A1 (T10): T10a, T10b, T10c xong (T10 cha chờ quản đốc nghiệm thu). `docs/hud_thay_nut.md`, `scripts/re/hud_check.py`, `scripts/hud_swap.py`, `scripts/hud_mophong.py`, nhóm lib `hudbtn` (không nằm trong nhóm mặc định), cờ `--hud`. Build `out/Inotia4_T10_check.apk` PASS; `apkdiff` với TEST11 chỉ khác 2 atlas và `libgame.so` (3 byte). Chưa chụp được màn chơi (T2); mô phỏng Python ở `docs/hud/mo_phong_hud.png`.
+- 2026-11-01 quản đốc: nghiệm thu T10a–T10c ĐẠT; gửi TEST12 (TEST11 + nút HUD của người dùng). Chờ người dùng xác nhận T7/T8/T9/T10 trên máy. Tiếp theo: T2 (unidbg qua màn chọn save) rồi T5/T6.
