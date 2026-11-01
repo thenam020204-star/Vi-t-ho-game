@@ -4,13 +4,15 @@
     python3 patch_lib.py <libgame.so vao> <libgame.so ra> [--disasm] [--group g1,g2]
     python3 patch_lib.py --list [--group g1,g2]
     python3 patch_lib.py --diff <lib A> <lib B> [--group g1,g2] [-v]   # moi byte khac nhau phai nam trong vung patch da khai bao
-    python3 patch_lib.py --check-asm                              # dung lai cave `mod`/`view` (llvm-mc/ld.lld) va cac lenh `hud`/`pool` (llvm-mc), so voi byte nhung san
+    python3 patch_lib.py --check-asm                              # dung lai cave `mod`/`view` (llvm-mc/ld.lld) va cac lenh `hud`/`pool`/`hudbtn` (llvm-mc), so voi byte nhung san
 
-Nhom patch (--group, mac dinh = tat ca): base (0x203e68, da co trong lib TEST4), p1 (T3b, ma hoa save), mod (T8b, mod menu:
+Nhom patch (--group, mac dinh = tat ca tru hudbtn): base (0x203e68, da co trong lib TEST4), p1 (T3b, ma hoa save), mod (T8b, mod menu:
 3 diem vao 0x18b3e0/0x1c7860/0x1c7a44 + cave 0x18bb00..0x18bbec, xem docs/mod_menu.md), view (T9b, tam nhin: diem vao 0x14709c +
 cave 52 B 0x133454..0x133488, doc P o 0x72f78c, chi nhan 100..150, W chan), hud (T9b, 29 diem le HUD: lui vao 24 px ngang / 16 px doc),
-pool (T9b, tran pool MEM_Create 8 MB -> 10 MB: 0x145730, 0x145734); xem docs/tam_nhin_hud.md. Moi nhom phai ap tron ven: mot nhom
-vua co patch "ap" vua co patch "da ap" => DUNG.
+pool (T9b, tran pool MEM_Create 8 MB -> 10 MB: 0x145730, 0x145734); xem docs/tam_nhin_hud.md. Nhom hudbtn (T10b, 3 lenh kieu ve
+`mov w5,#2` -> `mov w5,#1` tai 0x169ae8/0x169bb4/0x169bfc: lop "tan cong bam" ve alpha thuong thay vi cong; docs/hud_thay_nut.md) chi
+di cung atlas HUD moi (build_from_apk.sh --hud) nen KHONG nam trong nhom mac dinh: phai goi ro `--group ...,hudbtn`.
+Moi nhom phai ap tron ven: mot nhom vua co patch "ap" vua co patch "da ap" => DUNG.
 
 Moi patch (xem PATCHES): (vaddr, byte cu `old`, byte moi `new`, ly do, refs, asm_moi).
   * Doan byte tai vaddr == old  -> ap.
@@ -340,7 +342,27 @@ for _va, _old, _new, _asm, _nxt, _why in HUD_ROWS:
 for _va, _old, _new, _asm, _nxt, _why in POOL_ROWS:
     PATCHES.append((_va, bytes.fromhex(_old), bytes.fromhex(_new), _why,
                     [(_va + 4, bytes.fromhex(_nxt))] if _nxt else [], [(_va, _asm)], 'pool', None))
-GROUPS = ['base', 'p1', 'mod', 'view', 'hud', 'pool']
+
+# ------------------------------------------------------------ nhom `hudbtn` (T10b): kieu ve cua lop "tan cong bam" (UI_014 loc3) trong UIPlayPorting_Draw
+# Ca 3 noi goi IMGSYS_GetLoc(0x15, 3) (0x169ad0, 0x169b9c, 0x169be4; scripts/re/hud_check.py muc [4]) co dang
+#   mov w0,#0x15; mov w1,#3; bl GetLoc; mov x3,x0; mov x0,x24; mov w1,w22; mov w2,w23; mov w4,#2; mov w5,#KIEU; mov w6,wzr; bl GRPX_DrawPart
+# GRPX_DrawPart(g, x, y, loc, neo=w4, kieu=w5, %=w6): kieu 2 = glBlendFunc(SRC_ALPHA, ONE) (cong), kieu 1 = ve thuong (SRC_ALPHA, ONE_MINUS_SRC_ALPHA).
+# Anh "tan cong bam" cua nguoi dung la anh day mau (khong phai vong sang): ve cong se chay sang => doi kieu 2 -> 1 (mov w5,#2 -> mov w5,#1).
+HUDBTN_ROWS = [
+    (0x169ae8, 0x169ad0, 'nhap nhay huong dan: [0x2bec78] != 0, [x26] == 4, TutorialDescription() != 0, bo dem % 10 <= 3'),
+    (0x169bb4, 0x169b9c, 'nhap nhay huong dan: [0x2bec78] != 0, [0x2bf7b0] != 0, [x26] == 0xd, TutorialDescription() != 0, bo dem % 10 <= 3'),
+    (0x169bfc, 0x169be4, 'lop bam that: ControlObject_GetValue(control ID 0x14 = tan cong) == 1'),
+]
+for _va, _gl, _why in HUDBTN_ROWS:
+    PATCHES.append((_va, bytes.fromhex('45008052'), bytes.fromhex('25008052'),
+                    'T10b / hudbtn. UIPlayPorting_Draw: ' + _why + '. `mov w5,#2` (kieu cong) -> `mov w5,#1` (alpha thuong) cho GRPX_DrawPart(UI_014 loc3): '
+                    'ngu canh khop o 0x%x..0x%x (mov w4,#2 / mov w6,wzr / bl GRPX_DrawPart); chi doi imm 2 -> 1 trong `movz w5`.' % (_va - 4, _va + 8),
+                    [(_va - 4, bytes.fromhex('44008052')),                      # mov w4,#2 (neo = tam)
+                     (_va + 4, bytes.fromhex('e6031f2a')),                      # mov w6,wzr
+                     (_va + 8, bl(_va + 8, 0x2a89a0))],                         # bl GRPX_DrawPart@plt
+                    [(_va, 'mov w5, #0x1')], 'hudbtn', None))
+GROUPS = ['base', 'p1', 'mod', 'view', 'hud', 'pool', 'hudbtn']
+DEFAULT_GROUPS = ['base', 'p1', 'mod', 'view', 'hud', 'pool']       # hudbtn chi di cung --hud (atlas moi): phai goi ten
 
 
 def selected(groups):
@@ -401,7 +423,7 @@ def show_disasm(path, va, n, label, expect=None):
 
 
 # ------------------------------------------------------------ ap patch
-def apply(src, dst, disasm=False, groups=GROUPS):
+def apply(src, dst, disasm=False, groups=DEFAULT_GROUPS):
     check_ranges()
     pts = selected(groups)
     data = bytearray(open(src, 'rb').read())
@@ -449,7 +471,7 @@ def apply(src, dst, disasm=False, groups=GROUPS):
             show_disasm(dst, pt[0], len(pt[2]), 'sau ', pt[5])
 
 
-def diff(a, b, groups=GROUPS):
+def diff(a, b, groups=DEFAULT_GROUPS):
     check_ranges()
     da, db = open(a, 'rb').read(), open(b, 'rb').read()
     if len(da) != len(db):
@@ -487,7 +509,7 @@ def diff(a, b, groups=GROUPS):
 
 def check_asm():
     """Dung lai cave `mod` (build_mod_cave.sh) va cave `view` (build_view_cave.sh) bang llvm-mc + ld.lld, va cac lenh don `hud`/`pool`
-    bang llvm-mc; so voi byte nhung san va disasm mong doi."""
+    bang llvm-mc (gom ca 3 lenh `hudbtn`); so voi byte nhung san va disasm mong doi."""
     import os
     import tempfile
     here = os.path.dirname(os.path.abspath(__file__))
@@ -510,7 +532,7 @@ def check_asm():
         print('  muon', VIEW_CAVE_ASM)
     ok = ok and okv
     # lenh don (khong phu thuoc vi tri): dung bang llvm-mc theo dung thu tu bang
-    singles = [pt for pt in PATCHES if pt[6] in ('hud', 'pool')]
+    singles = [pt for pt in PATCHES if pt[6] in ('hud', 'pool', 'hudbtn')]
     src = '.text\n' + ''.join('%s\n' % pt[5][0][1] for pt in singles)
     open(os.path.join(outv, 'singles.s'), 'w').write(src)
     subprocess.run(['llvm-mc', '-triple=aarch64-linux-gnu', '-mattr=+v8a', '-filetype=obj', '-o', os.path.join(outv, 'singles.o'),
@@ -519,13 +541,13 @@ def check_asm():
     sb = open(os.path.join(outv, 'singles.bin'), 'rb').read()
     want = b''.join(pt[2] for pt in singles)
     bad = [hex(singles[i][0]) for i in range(len(singles)) if sb[4 * i:4 * i + 4] != singles[i][2]]
-    print('lenh don `hud`+`pool` (%d lenh) dung lai bang llvm-mc: khop byte nhung san: %s%s' % (len(singles), sb == want, '' if sb == want else ' ; lech tai ' + ','.join(bad)))
+    print('lenh don `hud`+`pool`+`hudbtn` (%d lenh) dung lai bang llvm-mc: khop byte nhung san: %s%s' % (len(singles), sb == want, '' if sb == want else ' ; lech tai ' + ','.join(bad)))
     ok = ok and sb == want
     return 0 if ok else 1
 
 
 def main(argv):
-    groups = GROUPS
+    groups = DEFAULT_GROUPS
     if '--group' in argv:
         k = argv.index('--group')
         groups = argv[k + 1].split(',')
@@ -536,7 +558,8 @@ def main(argv):
         return 0
     if argv[:1] == ['--check-asm']:
         return check_asm()
-    if argv[:1] == ['--diff'] and len(argv) == 3:
+    if argv[:1] == ['--diff'] and len([a for a in argv if a != '-v']) == 3:
+        argv = [a for a in argv if a != '-v']                        # -v do diff() doc tu sys.argv
         return diff(argv[1], argv[2], groups)
     disasm = '--disasm' in argv
     args = [a for a in argv if a != '--disasm']
