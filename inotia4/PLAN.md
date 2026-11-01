@@ -394,7 +394,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Chọn điểm vá (vaddr), cave (nếu cần) và vùng nhớ 3×int không dùng (chứng minh không có xref).
     - Chọn kênh Java → native, có bằng chứng (tài liệu Android/SELinux hoặc thử thật) rằng chạy được trên Android 14–16 với app thường; nêu phương án dự phòng.
     - Hoàn thành khi: tài liệu đủ bảng điểm vá (vaddr, byte cũ, lệnh mới, lý do), cách chặn tràn số, kênh Java → native, kế hoạch kiểm.
-  - [ ] T8b. Vá native, nhóm `mod` trong `scripts/patch_lib.py`.
+  - Bàn giao (A1 mới của T8, T8b XONG): `scripts/patch_lib.py` giờ có nhóm `base`/`p1`/`mod` (`--group`, mặc định tất cả; mỗi nhóm áp trọn vẹn hoặc dừng; patch cave kiểm sha256 byte gốc `48718ee5…3c36`; `refs` kiểm lệnh kế tiếp của 3 điểm vào; `--check-asm` dựng lại cave bằng llvm-mc và so; `--diff` in theo vùng khai báo, `-v` in từng đoạn). Lib TEST4 + `base` + `p1` + `mod` sha256 `5d3ecb3b…4382` (lib của TEST9 + `mod` ra đúng file này). `--diff` chỉ ra đúng 5 vùng khai báo (254 B khác); các phép thử âm tính (sửa byte cave/điểm B/refs, áp lệch nhóm, `--diff` sai nhóm) đều dừng. Disasm trước/sau ở mục 10 của `docs/mod_menu.md`. Bước tiếp: T8c = `java/src/com/namp/vh/ModMenu.java` (+ `ModMem.java`), `INSERT_AFTER` trong `scripts/patch_smali.py` nhóm `mod`, `build_from_apk.sh` (javac cần android.jar cho ModMenu; `--smali mod` bắt buộc `--vnfont`; thêm `--libgroup`). Lệnh: `python3 scripts/patch_lib.py <lib> <ra> --disasm`, `python3 scripts/patch_lib.py --diff <A> <B>`.
+  - [x] T8b. Vá native, nhóm `mod` trong `scripts/patch_lib.py`.
     - Mỗi patch kiểm byte gốc; disasm trước và sau vá ghi vào tài liệu.
     - Hoàn thành khi `patch_lib.py --diff` chỉ ra đúng các vaddr đã khai báo.
   - [ ] T8c. `ModMenu.java` + nhóm smali `mod` (gắn vào `MainActivity`).
@@ -590,3 +591,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Bàn giao lưu ở `docs/t9a_bangiao_A2.md`. Phần còn lại của T9a (RenderCore, MAP_SetFocus) giao sau.
 - 2026-11-01 A1 (T8): T8a xong (`docs/mod_menu.md`, `scripts/re/mod_check.py`, `scripts/asm/mod_cave.s`). Bằng chứng A2 khớp disasm; thêm 4 chỗ ghi phe mà A2 chưa liệt kê; cave 236 B dùng hết 2 hàm chết, trần 999.999/0xFFFFFF không làm yếu giá trị gốc. Kênh Java→native chọn `/proc/self/mem`, dự phòng `Unsafe`; chưa thử máy thật.
 - 2026-11-01 quản đốc: A2 thứ 3 xong T9a ~92% (~296k). Chốt P mặc định 120, tối đa 150, cave ép W chẵn. Quản đốc tự đọc `MEM_Create`: pool trần 8 MB ⇒ thêm vá nâng trần 10 MB. A2 lỡ tạo file rỗng `/tmp/claude-0/scan.py` (ngoài repo), quản đốc đã xoá.
+- 2026-11-01 A1 (T8): T8b xong (`patch_lib.py` nhóm `mod`, `--group`, `--check-asm`, `--diff` theo vùng; disasm trước/sau trong `docs/mod_menu.md`).
