@@ -380,7 +380,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
       - bọc `try/catch Throwable`; chống thêm 2 lần;
       - không cấp phát trong vòng lặp game.
     - T8d theo kế hoạch của A2: `emu_start` tại 3 điểm vá với thanh ghi và `.bss` đặt sẵn, thử Mdmg/Mdef/Mexp = 0, 1, 2, 50, 51 và biên trần; với A, đặt breakpoint ở `CHAR_AddLife` để đọc w1 = −dmg.
-  - [ ] T8a. RE + thiết kế, ghi vào `docs/mod_menu.md`.
+  - Bàn giao (A1 mới của T8, T8a XONG): tạo `docs/mod_menu.md` (bằng chứng, cave A/B/C từng lệnh, bảng điểm vá, tràn số, kênh Java→native, kế hoạch kiểm, chênh lệch so với A2), `scripts/re/mod_check.py` (kiểm bằng chứng + phân tích thanh ghi tự do; log `logs/t8a_mod_check.log` = TẤT CẢ ĐẠT), `scripts/asm/mod_cave.s` + `scripts/asm/build_mod_cave.sh` (llvm-mc + ld.lld, ra `/opt/work/t8/mod_cave.bin` 236 B sha256 `cb645162…9765`). `PT_LOAD` bss: 0x72f770 → làm tròn 4 KB và 16 KB đều 0x730000 > 0x72f78c. Cave dùng cả 2 hàm chết (0x18bb00..0x18bbec, 59 lệnh); trần sát thương 999.999 và EXP 0xFFFFFF, chỉ nhân khi giá trị gốc < trần. Điểm vá: A 0x18b3e0 `ffc301d1`→`c8010014`; B 0x1c7860 `c80d8052`→`c510ff17`; C 0x1c7a44 `f303002a`→`5a10ff17` (khác A2: `59…` vì cave dài hơn). Kênh: `/proc/self/mem` qua `RandomAccessFile` (bằng chứng SELinux/kernel/bionic AOSP trong doc; chưa thử máy thật), dự phòng `Unsafe`. Bước tiếp: T8b = nhóm `mod` trong `scripts/patch_lib.py` (thêm `--group`, cave kiểm sha256 byte gốc), ghi disasm trước/sau vào mục 10 của `docs/mod_menu.md`. Lệnh: `python3 -I scripts/re/mod_check.py /opt/work/lib4/libgame.so /opt/work/lib4/dis.txt`, `bash scripts/asm/build_mod_cave.sh`.
+  - [x] T8a. RE + thiết kế, ghi vào `docs/mod_menu.md`.
     - Tìm hàm tính sát thương người chơi gây ra / nhận và hàm cộng EXP trong `libgame.so`, dựa vào symbol + disasm:
       - chữ ký, kiểu dữ liệu (byte/short/int, có dấu không), giá trị tối đa;
       - mọi caller;
@@ -577,3 +578,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Phát hiện vùng nhìn = FB `cfg.W/H` (0x147030), không phải màn logic. Quản đốc đã tự disasm 0x147030 xác nhận.
   - ⇒ Đổi thiết kế T9 sang nhân FB theo P% (0x72f78c, 100..150). UI/HUD giữ cỡ; lề HUD 29 điểm vá 1 lệnh.
   - Bàn giao lưu ở `docs/t9a_bangiao_A2.md`. Phần còn lại của T9a (RenderCore, MAP_SetFocus) giao sau.
+- 2026-11-01 A1 (T8): T8a xong (`docs/mod_menu.md`, `scripts/re/mod_check.py`, `scripts/asm/mod_cave.s`). Bằng chứng A2 khớp disasm; thêm 4 chỗ ghi phe mà A2 chưa liệt kê; cave 236 B dùng hết 2 hàm chết, trần 999.999/0xFFFFFF không làm yếu giá trị gốc. Kênh Java→native chọn `/proc/self/mem`, dự phòng `Unsafe`; chưa thử máy thật.

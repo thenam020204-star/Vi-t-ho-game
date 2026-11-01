@@ -64,7 +64,7 @@ Phòng thủ gốc là phần trăm giảm: `dmg×(1000−def‰)/1000` (`CHAR_A
 
 ### 2.4 EXP
 
-- `MERCENARYSYSTEM_AddExperience` 0x1c7688: caller duy nhất `CHARSYSTEM_Die` 0x1a0c2c. `w19` = EXP cơ sở (≥ 1 qua `cmp w0,#1; b.lt` @0x1c7754; chỉnh theo chênh lệch cấp ở 0x1c7770..0x1c77b0 và buff 0x1c7840..0x1c785c). Từ 0x1c7860: `w25 = w19×110/100` (0x1c7868..0x1c7880), rồi chia cho 3 thành viên party (0x1c78b8/0x1c7918/0x1c7970 `CHAR_AddExperience`) và cộng dồn cho lính ngủ (0x1c79e8 `add w11,w11,w19`). Nhân `w19` ngay tại 0x1c7860 kéo theo `w25` và mọi người nhận.
+- `MERCENARYSYSTEM_AddExperience` 0x1c7688: caller duy nhất `CHARSYSTEM_Die` 0x1a0c2c. `w19` = EXP cơ sở (≥ 1 qua `cmp w0,#1; b.lt` @0x1c7754; chỉnh theo chênh lệch cấp ở 0x1c7770..0x1c77b0 và buff 0x1c7840..0x1c785c). Từ 0x1c7860: `w25 = w19×110/100` (0x1c7868..0x1c7880), rồi chia cho 3 thành viên party (0x1c78b8/0x1c7918/0x1c7970 `CHAR_AddExperience`) và cộng dồn cho lính ngủ (0x1c79ec `add w11,w11,w19`). Nhân `w19` ngay tại 0x1c7860 kéo theo `w25` và mọi người nhận.
 - `MERCENARYSYSTEM_AddExpFixed` 0x1c7a2c: caller duy nhất `QUESTSYSTEM_ApplyReward` 0x1d2718. `w19 = w0` @0x1c7a44, dùng cho `CHAR_AddExperience` (0x1c7a9c/0x1c7af4/0x1c7b44) và cộng dồn lính ngủ (0x1c7bc4).
 - `CHAR_AddExperience` 0x183964 **không hook**: có thêm 3 caller nạp EXP tồn của lính (`UIMercenary_CreateList` 0x15c974, `UIMercenary_Enter` 0x15d504, `SAVE_LoadCharacterDirectEx` 0x1d870c); hook ở đó sẽ nhân đôi EXP đã nhân.
 - Trong `CHAR_AddExperience`: `w26 = w21 + [char+0x318]` (int32); lên cấp lặp bằng `CAL_Calculate` và kẹp ở cấp tối đa (0x183acc..0x183af0) nên EXP lớn không gây vòng lặp vô hạn.
@@ -77,7 +77,7 @@ Phòng thủ gốc là phần trăm giảm: `dmg×(1000−def‰)/1000` (`CHAR_A
 - 0 reloc (JUMP_SLOT/GLOB_DAT) theo tên 2 hàm; 0 reloc RELATIVE có addend trong cave; không có PLT stub (`<CHAR_AddDamageEffect@plt>` không tồn tại; `CHAR_AddDamage@plt` có, 2 hàm này không);
 - giá trị 64 bit trỏ vào cave chỉ có 2 mục trong `.dynsym` (dòng symbol xuất khẩu của chính 2 hàm, st_value);
 - tên 2 hàm chỉ xuất hiện trong `.dynstr` (0x5873c, 0x58751 ∈ [0x46540, 0x7815a)), không có chuỗi trong `.rodata` để `dlsym` theo chuỗi; `libHercules.so` không import `CHAR_*`;
-- Java chỉ gọi `Java_*`/`RegisterNatives`, tên 2 hàm này không phải JNI.
+- Tên 2 hàm không có dạng `Java_*` (JNI gọi theo tên đó hoặc qua `RegisterNatives`, mà tên chỉ có trong `.dynstr`).
 - Chênh so với A2: cave dùng cả 8 B cuối (0x18bbe4..0x18bbec = `ldp x29,x30,[sp],#0x30` và `b CHAR_AddDamage@plt` của hàm chết). Không có lệnh nào nhảy vào 2 địa chỉ này (kiểm trong mục [3]).
 - Lưu ý: `.eh_frame` vẫn mô tả 2 hàm cũ (FDE). Cave không gọi hàm nào và không đổi `sp` ngoài `sub sp,sp,#0x70` của A (đúng như hàm gốc sẽ làm), nên không có unwind nào đi qua cave.
 
