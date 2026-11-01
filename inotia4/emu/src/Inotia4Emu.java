@@ -104,6 +104,7 @@ public class Inotia4Emu extends AbstractJni {
                 return true;
             });
         }
+        installMadvise();
         String tf = System.getProperty("emu.tracefn", "");
         if (!tf.isEmpty()) {
             com.github.unidbg.debugger.Debugger dbg = emulator.attach();
@@ -119,6 +120,59 @@ public class Inotia4Emu extends AbstractJni {
                 });
             }
         }
+    }
+
+    // ------------------------------------------------------- T2 huong 1: madvise cua unidbg la no-op
+    /** -Demu.madv=off|zero|fail (mac dinh off = hanh vi goc cua unidbg: madvise tra 0, khong lam gi).
+     *  Dat breakpoint o dau ham `madvise` cua libc va dem so lan goi theo `advice`.
+     *   zero: advice==MADV_DONTNEED(4) thi ghi 0 vung [addr, addr+len) roi tra 0 (giong nhan Linux that: trang ve 0);
+     *   fail: advice==4 thi tra -1 (jemalloc hieu "khong purge duoc" va khong coi trang la da zero);
+     *   off : chi dem. */
+    final long[] madvCount = new long[256];
+    long madvBytes, madvCalls, madvFail;
+    String madvMode = "off";
+    void installMadvise() {
+        madvMode = System.getProperty("emu.madv", "off");
+        final com.github.unidbg.Module libc = emulator.getMemory().findModule("libc.so");
+        com.github.unidbg.Symbol sym = libc.findSymbolByName("madvise", false);
+        if (sym == null) { System.out.println("[madv] khong co symbol madvise"); return; }
+        System.out.println("[madv] mode=" + madvMode + " madvise@libc+0x" + Long.toHexString(sym.getAddress() - libc.base));
+        com.github.unidbg.debugger.Debugger dbg = emulator.attach();
+        dbg.addBreakPoint(sym.getAddress(), (emu, addr) -> {
+            com.github.unidbg.arm.backend.Backend be = emu.getBackend();
+            long a = be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_X0).longValue();
+            long len = be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_X1).longValue();
+            int adv = be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_X2).intValue();
+            madvCalls++;
+            madvCount[adv & 255]++;
+            if (madvCalls <= 8 || (adv == 4 && madvCount[4] <= 8))
+                System.out.println("[madv] #" + madvCalls + " addr=0x" + Long.toHexString(a) + " len=0x" + Long.toHexString(len) + " advice=" + adv + " lr=libc+0x"
+                        + Long.toHexString(be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_LR).longValue() - libc.base));
+            if (adv != 4 || madvMode.equals("off")) return true;      // de unidbg xu ly nhu cu (tra 0)
+            long ret = 0;
+            if (madvMode.equals("fail")) { madvFail++; ret = -1; }
+            else if (madvMode.equals("zero")) {
+                if ((a & 0xfff) != 0 || len < 0 || len > (64L << 20)) ret = -1;
+                else {
+                    try {
+                        byte[] z = new byte[(int) Math.min(len, 1 << 20)];
+                        for (long off = 0; off < len; off += z.length) {
+                            int n = (int) Math.min(z.length, len - off);
+                            com.github.unidbg.pointer.UnidbgPointer.pointer(emu, a + off).write(0, z, 0, n);
+                        }
+                        madvBytes += len;
+                    } catch (Throwable t) { System.out.println("[madv] loi ghi 0: " + t); ret = -1; madvFail++; }
+                }
+            }
+            be.reg_write(unicorn.Arm64Const.UC_ARM64_REG_X0, ret);
+            be.reg_write(unicorn.Arm64Const.UC_ARM64_REG_PC, be.reg_read(unicorn.Arm64Const.UC_ARM64_REG_LR).longValue());
+            return true;
+        });
+    }
+    void madvReport() {
+        StringBuilder sb = new StringBuilder("[madv] TONG mode=" + madvMode + " calls=" + madvCalls + " DONTNEED(4)=" + madvCount[4] + " zeroed=" + madvBytes + "B fail=" + madvFail + " theo advice:");
+        for (int k = 0; k < 256; k++) if (madvCount[k] > 0) sb.append(' ').append(k).append('x').append(madvCount[k]);
+        System.out.println(sb);
     }
 
     void note(String what) {
@@ -518,6 +572,7 @@ public class Inotia4Emu extends AbstractJni {
             }
             if (f % 50 == 0) System.out.println("== frame " + f + " t=" + (System.currentTimeMillis() - t0) + "ms gl=" + gl.calls.size());
         }
+        madvReport();
         memReport("cuoi", frames);
         if (poolPeak >= 0) System.out.println("[pool] DINH used=" + poolPeak + " B (" + String.format("%.3f", poolPeak / 1048576.0) + " MB) tai frame " + poolPeakFrame + " ; total=" + poolTotal + " B");
     }

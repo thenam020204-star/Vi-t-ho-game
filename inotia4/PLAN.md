@@ -198,6 +198,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
       - ô save trống: (214,82), (214,165), (214,247); nút quay lại: (18,22). Quản đốc đã kiểm trên ảnh 960x640 `/opt/work/emuS/f00690.png`: ô đầu ở khoảng (428,165).
       - script mẫu: `620:tap:240,277;690:shot:s0;700:tap:214,82;...`;
       - sau khi chọn ô có thể hiện popup xác nhận hoặc `PopupNetError`.
+  - Bàn giao (A1 mới của T2, lượt 1, đang làm): dùng lib + APK của TEST12; file tạm `/opt/work/t2/` (`run.sh NAME FRAMES SCRIPT [opts]`, lib TEST12 ở `lib12/`).
+    - **Hướng 1 (hook `madvise`) THỬ XONG, KHÔNG HIỆU QUẢ.** `emu/src/Inotia4Emu.java` thêm `-Demu.madv=off|zero|fail` (breakpoint ở đầu `madvise` của libc, đếm theo `advice`). Chạy `-Demu.w=2400 -Demu.h=1080`, tap START ở khung 620, 720 khung: cả 3 chế độ gọi `madvise` 17120 lần, **toàn bộ advice=4 (MADV_DONTNEED)**, len=0x1000, lr=libc+0x7f5f0 (zero: ghi 0 tổng 187.351.040 B; fail: trả -1 17120 lần). Cả ba đều văng **y hệt** ở `libc+0x7626c` (`run_quantize`, x0=0, x2=0x12916a80, x9=0x12a00080, x11=0x12916c80, LR=libc+0x763c8): trạng thái thanh ghi giống từng giá trị ⇒ giả thuyết "madvise no-op làm jemalloc tái dùng trang bẩn" bị bác.
 - [x] T3. Sửa văng khi load save (`CHAR_GetSkillPoint` null ← `GAMESTATE_EnterPlay`) — **Quản đốc nghiệm thu**. **ƯU TIÊN trước T2**: đã có file save người dùng gửi.
   - Đầu vào:
     - `logs/save_TEST7/`, xuất từ máy thật bằng TEST7: `d41d8cd98f00b204e9800998ecf8427e/save0.dat` (3192 B; thư mục = MD5 của chuỗi rỗng, tức khoá rỗng), `edf2113c684f2b822de06dad8d06b016A/thpcheckslot1.dat` (31 B), `appinfo.dat`, `envinfo.dat`;
