@@ -143,3 +143,26 @@ Việc tiếp theo (đề xuất):
   - UI_014 loc2/3 ← attack/attack_pressed (cửa sổ chung tỉ lệ 0,34 → 159×160).
 - **Vá lib `hudbtn`**: 3 lệnh `mov w5,#2` → `#1` (0x169ae8, 0x169bb4, 0x169bfc) để ảnh nút tấn công lúc bấm vẽ alpha thường thay vì cộng sáng.
 - **`test_builds/Inotia4_TEST12_vi_offline.apk`** = TEST11 + atlas mới + `hudbtn` (`--libgroup base,p1,mod,view,hud,pool,hudbtn --hud`). So TEST11 chỉ khác 2 atlas và `libgame.so`. Cùng khoá ký ⇒ cài đè được.
+
+## Phiên 8: đồng bộ `scripts/rebuild.sh` (T5)
+- **`rebuild.sh` giờ ra cùng nội dung với chuỗi build TEST12**, dùng cùng bộ tool với `build_from_apk.sh` (apktool 2.12.1, build-tools 35.0.0: d8 `--lib android.jar` + stub, apksigner, zipalign; phiên bản đầy đủ ở `tools/VERSIONS.md`, in lại bằng `bash scripts/rebuild.sh --versions`):
+  - smali `font,lang,offline,net,mod`; `com.namp.vh` (VNFont, FontData, FontData24, Offline, ModMenu, ModMem) → `classes3.dex`;
+  - lib `base,p1,mod,view,hud,pool,hudbtn` (một lượt `patch_lib.py`, kèm `--diff`);
+  - atlas HUD `hud_swap.py` (selftest rồi dán 7 ảnh);
+  - **bản thường không chẩn đoán** (bản phát hành T6); `--diag` thêm `classes4.dex` + LAUNCHER → `LaunchActivity` (= TEST12); `--internet` chỉ đi cùng `--diag`.
+- **Cách chạy**
+  ```bash
+  # từ bộ split gốc (đặt base.apk + split_config.*.apk vào một thư mục; sha256 ở goc/SHA256.txt)
+  bash scripts/rebuild.sh <thư mục split> [--out out/Inotia4_vi_offline.apk] [--diag]
+  # khi không có split (như container này): xuất phát từ APK nền
+  bash scripts/rebuild.sh --base-apk test_builds/Inotia4_TEST4_vi_anh_offline.apk --out out/<tên>.apk            # nền đã dịch
+  bash scripts/rebuild.sh --base-apk test_builds/Inotia4_TEST1_font18_offline_EN.apk --base-kind en --out out/<tên>.apk  # nền chưa dịch: chạy thêm plist/memtext/ảnh
+  ```
+  Tool: biến `APKTOOL`, `APKEDITOR`, `BT`, `ANDROID_JAR`, `INOTIA_KS`, `INOTIA_KS_PASS`, `WORK` (mặc định `work/rebuild`, log ở `$WORK/logs`); thiếu thì tìm trong `tools/` rồi `/opt/re`, `/opt/android`. Chạy mất ~40 s ở chế độ `--base-apk`.
+- **Kết quả kiểm (`logs/t5_rebuild_check.txt`)**:
+  - `rebuild.sh --base-apk TEST4` ↔ `build_from_apk.sh` cùng nhóm (không diag): 0/1453 file khác nội dung; thứ tự mục, nén/STORED, đệm căn chỉnh, CRC, thuộc tính giống hệt; chỉ khác dấu thời gian zip (và chữ ký v2/v3 vì ký trên dấu thời gian; `MANIFEST.MF`/`NAMP.SF`/`NAMP.RSA` giống hệt);
+  - `rebuild.sh --base-apk TEST1(EN) --base-kind en` (chạy thật plist/memtext/ảnh) ↔ `build_from_apk.sh` từ TEST4: cũng 0/1453 file khác;
+  - `build_from_apk.sh` (không diag) ↔ `TEST12`: chỉ khác `classes4.dex` (có trong TEST12) và `AndroidManifest.xml` (TEST12: LAUNCHER ở `LaunchActivity` + `DiagProvider`; bản thường: LAUNCHER ở `MainActivity`);
+  - `rebuild.sh --base-apk TEST4 --diag` ↔ `TEST12`: 0/1454 file khác, thứ tự mục giống nhau;
+  - 4 bản: `apksigner verify` v1/v2/v3 đạt (chứng chỉ `cc559651…20d4`), `zipalign -c -P 16 4` OK, `check_apk.py` PASS.
+- **CHƯA XÁC ĐỊNH**: bước gộp split thật (APKEditor, chưa có split trong container; mới thử 1.4.5 trên 1 `base.apk`, còn bản đã dùng ra TEST1/TEST4 là 1.4.1) và bước kiểm sha `goc/SHA256.txt`; apktool 2.12.1 decode bản gộp 4 split thật (TEST1–TEST4 decode/build bằng 2.10.0 lần đầu). Lib (`base` áp mới từ lib gốc suy ra, sha khớp), manifest và text/xml/ảnh đã kiểm từng phần ở `logs/t5_rebuild_check.txt` mục A–E.

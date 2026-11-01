@@ -183,7 +183,7 @@ RESULT: PASS
 ### B. Smali: cả 5 nhóm trên bản "gần gốc"
 - TEST1 (smali font,lang,offline đã áp) decode bằng apktool 2.12.1, xoá 3 method `namp_*` (ADD_METHODS) rồi chạy
   `python3 -I scripts/patch_smali.py <dec> --group font,lang,offline,net,mod`: chạy hết, không dừng, "tong: 19 method"
-  (font 5, lang 1, offline 6 + 3 method thêm, net 1 `.catch` x2, mod 1 chèn dòng). So với cây `net,mod` (rebuild_en): chỉ khác dòng trống và thứ tự method (baksmali), cùng ngữ nghĩa.
+  (font 5, lang 1, offline 8 thay thân + 3 method thêm, net 1 mục `.catch` x2, mod 1 chèn dòng). So với cây `net,mod` (rebuild_en): chỉ khác dòng trống và thứ tự method (baksmali), cùng ngữ nghĩa.
 - Chưa chạy trên smali của `base.apk` gốc (không có file): nhóm font/lang/offline giữ nguyên từ trước T5.
 
 ### C. Manifest: patch_manifest.py
