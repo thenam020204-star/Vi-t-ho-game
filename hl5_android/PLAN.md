@@ -105,6 +105,16 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - `hl5_android/engine/vn.c` (+ `build.sh`): clang `--target=armv7a-none-eabi -marm -Os -ffreestanding -fPIC -nostdlib`, link tại địa chỉ cave; gọi hàm guest qua địa chỉ tuyệt đối tính từ base nạp (dùng PC-relative, vì `.so` là PIC). Script `engine/inject.py` sinh dòng `so_patches.tsv` + `caves.tsv`.
   - Định dạng `vi.bin` (do task này chốt và ghi vào BAO-CAO): header, bảng offset từ, chuỗi UTF-8 hoặc glyph id, 3 bộ font (15px, 10px, 18px).
   - Hoàn thành khi: trong harness, menu chính và một hộp thoại cốt truyện hiện chữ Việt đúng dấu, không lệch dòng; bản không có dữ liệu Việt vẫn chạy y hệt bản gốc (so ảnh từng byte tại 3 mốc khung).
+- [ ] T13. Bản chẩn đoán crash v0.1 (người dùng báo: "crash ngay khi vào game") — Agent: A1 — **Quản đốc nghiệm thu** — ƯU TIÊN CAO NHẤT
+  - Lớp chẩn đoán Java/smali chèn vào runner (`co.kr.eamobile.hl5.runner.MainActivity` hoặc Application), chạy TRƯỚC khi nạp bridge:
+    (1) mỗi lần mở app: ghi báo cáo lần chạy trước vào **Downloads/HL5_diag_<thời gian>.txt** qua MediaStore (Android 10+ không cần quyền) + bản sao trong `getExternalFilesDir("diag")`; nội dung: `ActivityManager.getHistoricalProcessExitReasons` (API ≥ 30: reason, description, trace/tombstone của crash native, tối đa 5 mục), `logcat -d -v threadtime` của chính app (UID mình, gồm dòng DEBUG/tombstone nếu thấy), thông tin máy (model, ABI, Android, độ phân giải màn), breadcrumb các mốc.
+    (2) `Thread.setDefaultUncaughtExceptionHandler` ghi stack Java ra file rồi chuyển tiếp handler cũ.
+    (3) breadcrumb: ghi file `diag/steps.txt` (append + flush) ở các mốc: onCreate, trước/sau System.loadLibrary bridge, trước/sau kiểm sha256 TargetAssets, trước/sau copy asset, nativeInit*, khung hình đầu (nếu chèn được ở Java), onPause/onDestroy.
+    (4) Toast ngắn "Đã lưu nhật ký chẩn đoán vào Downloads" khi có báo cáo.
+  - Bridge: tìm cờ log/verbose sẵn có (chuỗi, `__android_log_print`); nếu bật được bằng patch nhỏ thì bật trong bản chẩn đoán.
+  - Xuất 3 APK chia đôi lỗi (cùng package, cùng khoá): `diag-A` = APK gốc + lớp chẩn đoán (kiểm lớp chẩn đoán vô hại); `diag-B` = A + patch guest + VFS Việt + vi.bin (KHÔNG vá bridge, hash target-assets cập nhật); `diag-C` = v0.1 đầy đủ + lớp chẩn đoán. Nếu dễ: `diag-C1` = C nhưng bỏ riêng patch NEAREST/viewport (chỉ tắt hook chữ + logic).
+  - Tự kiểm tĩnh trước khi xuất: `aapt2 dump badging`, apksigner, baksmali/dex verify; nếu có thể, chạy thử trên emulator/headless ART có sẵn (không bắt buộc). Rà lại khả nghi tĩnh trong v0.1 (sha256 target-assets khớp file đã nén? quyền đọc asset? `p_memsz` vs ElfLoader; patch bridge chồng lấn) và ghi nhận xét.
+  - Đầu ra: `make_apk.sh --diag A|B|C|C1` → `dist/diag/*.apk`, `PHAT-HANH-diag.md` (cài lần lượt, cách lấy file log trong Downloads, gửi lại).
 - [ ] T7. Menu chính offline + cash shop miễn phí + hồi sinh offline (phụ thuộc T6 để thấy chữ; logic làm trước được) — Agent: A1
   - Bỏ UPDATE/STORAGE/SUPPORT khỏi lưới; cash shop mua ngay (phân tích `StateCashShop::*`, `MTX`, `nativeResultMTX` 0x14d568); màn chết hồi sinh không mạng.
   - Hoàn thành khi: harness điều khiển phím vào shop, mua 1 vật phẩm cash, vật phẩm vào túi, không có lời gọi socket/MTX (log); menu chính đi được hết các ô.
@@ -140,7 +150,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: v0.1 ✓ (T1–T6, T8m, T12) → T7 → T9 → T10 → T11 (chờ phản hồi thử máy).
+- A1: T13 chẩn đoán crash (đang giao) → sửa lỗi → T7 …
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -187,3 +197,4 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [quản đốc] Vướng mắc T12 khoá ký: theo quyết định 10 → chọn (b) tạo khoá mới bằng keytool (RSA 2048, hiệu lực 30 năm, alias `hl5vi`), commit `sign/hl5vi.keystore` + `sign/README.md` (mật khẩu) để build tái lập. Ghi chú: v0.1 dùng k tự động = floor(scrH/240) (T8m) thay cho mặc định k=2 của quyết định 8; T10 sẽ làm `hd_scale.txt` + lựa chọn trong game, mặc định 2 sau khi T9 kiểm khung lớn.
 - [A1] T12 xong (chờ nghiệm thu). `make_apk.sh` (vá .so + bridge arm64, build VFS+vi.bin, cập nhật sha256 cả 2 mục của target-assets.json, zip giữ kiểu nén gốc, zipalign -p 4, apksigner v1+v2+v3; dựng 2 lần trùng byte). `dist/HL5-VI-v0.1.apk` 22,7 MB, sha256 a9e7b9f91b477e3dbc76034ff8c29d5a8fa7846b33ff732d1e8548a1190f9ed4. Khoá mới `sign/hl5vi.keystore` (alias hl5vi, mật khẩu ở sign/README.md). Kiểm: apksigner verify + zipalign -c đạt; aapt2 badging y hệt gốc; harness 600x270 từ .so+VFS trích từ APK tới bản đồ + thoại Việt (shots/T12/, 2 ảnh). Chưa vá lib/armeabi*/libHeroesLore5.so (không dùng trên arm64). `PHAT-HANH.md` đã viết. Chưa thử máy thật.
 - [quản đốc] Nghiệm thu T12: đạt — `dist/HL5-VI-v0.1.apk` (sha256 a9e7b9f9…0f9ed4, kiểm lại khớp), apksigner/zipalign đạt, build tái lập từng byte, harness chạy .so+VFS lấy từ APK. **Mốc v0.1 đạt** (trừ kiểm trên máy thật). Tiếp theo (chờ người dùng thử máy): T7 (menu offline, cash shop miễn phí, hồi sinh, rút gọn nhãn menu) → T9 → T10 → T11.
+- [quản đốc] Người dùng báo v0.1 crash ngay khi vào game → giao T13 (bản chẩn đoán + 3 APK chia đôi lỗi), dừng mọi task khác.
