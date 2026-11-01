@@ -725,3 +725,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 A1 (T10): T10a, T10b, T10c xong (T10 cha chờ quản đốc nghiệm thu). `docs/hud_thay_nut.md`, `scripts/re/hud_check.py`, `scripts/hud_swap.py`, `scripts/hud_mophong.py`, nhóm lib `hudbtn` (không nằm trong nhóm mặc định), cờ `--hud`. Build `out/Inotia4_T10_check.apk` PASS; `apkdiff` với TEST11 chỉ khác 2 atlas và `libgame.so` (3 byte). Chưa chụp được màn chơi (T2); mô phỏng Python ở `docs/hud/mo_phong_hud.png`.
 - 2026-11-01 quản đốc: nghiệm thu T10a–T10c ĐẠT; gửi TEST12 (TEST11 + nút HUD của người dùng). Chờ người dùng xác nhận T7/T8/T9/T10 trên máy. Tiếp theo: T2 (unidbg qua màn chọn save) rồi T5/T6.
 - 2026-11-01 A1 (T5): T5 xong. `scripts/rebuild.sh` viết lại theo chuỗi TEST12 (smali `net,mod`, lib `base..hudbtn`, `hud_swap`, d8 `--lib`, diag tùy chọn, `--base-apk`); `tools/VERSIONS.md`. Dựng bằng `rebuild.sh --base-apk` giống `build_from_apk.sh` 0/1453 file (chỉ khác dấu thời gian/chữ ký); `--diag` giống TEST12 0/1454. Đường gộp split thật CHƯA XÁC ĐỊNH (không có split). Log `logs/t5_rebuild_check.txt`.
+- 2026-11-01 quản đốc: nghiệm thu T5 ĐẠT.
+  - `bash -n` OK. `rebuild.sh --base-apk` ra 0/1453 file khác so với bản tham chiếu. Bản `--diag` ra 0/1454 file khác so với TEST12.
+  - Đường build từ bộ split gốc CHƯA chạy được (container không có split); sẽ chạy khi người dùng cung cấp. Ghi vào tồn đọng của T6.
+  - Bản phát hành ứng viên (không diag): `out/Inotia4_T5_ref.apk`. Chờ người dùng xác nhận TEST12 rồi mới làm T6.
+  - Giao T2 (unidbg qua màn chọn save) cho công nhân mới, dùng lib của TEST12 để chụp được HUD mới.
