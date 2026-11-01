@@ -1109,5 +1109,13 @@ A01107	c/map/00174.scn	idx 90	You are... lying, are not you?	Anh... đang nói d
 A01108	c/map/00174.scn	idx 92	Yes, it would. You must be able to hear it slightly. Spirits also touch the divine, after all.	Đúng vậy. Chắc hẳn cậu nghe thấy được một chút. Dù sao Tinh Linh cũng chạm tới cõi thần mà.	k_low=K09514
 A01109	c/map/00198.scn	idx 5	Mom only ever tells me to study all day.	Mẹ suốt ngày chỉ bắt con học.	k_low=K09936
 A01110	c/map/00198.scn	idx 28	I kept it... but I will not get arrested, right?	Tôi giữ nó lại... nhưng sẽ không bị bắt đâu, đúng không?	k_low=K09954
-A01111	c/csv/cash_expert.dat	rec 7 off 14 ps 1	Allows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.		k_low=K02788; hint=A00008,A00009
-A01112	c/csv/item_11.dat	rec 12 off 22 ps 1	^Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.		k_low=K01749; hint=A01012
+A01111	c/csv/cash_expert.dat	rec 7 off 14 ps 1	Allows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.	Cho phép bắt đầu;chế độ Expert với SP hoặc;thanh đặc biệt đầy.;1 cái tự động bị tiêu;hao khi chơi chế độ;Expert.	k_low=K02788; hint=A00008,A00009
+A01112	c/csv/item_11.dat	rec 12 off 22 ps 1	^Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.	^Chỉ dùng ở chế độ Expert{;Hồi 100 HP, 5 lần,;tổng cộng 500 HP.;Không thể dùng trong;chế độ Story.	k_low=K01749; hint=A01012
+A01113	c/csv/buildup.dat	rec 26 off 0 ps 1	Shot recovery SP+#2	Hồi SP Khi Bị Đánh +#2	LECHSO; k=K00849; hint=Hồi SP Khi Bị Đánh +#1
+A01114	c/csv/menu_text.dat	rec 172 off 0 ps 1	100K	100K	LECHSO; k=K00161; hint=Triệu
+A01115	c/csv/menu_text.dat	rec 186 off 0 ps 1	^Customer Info Consent;|1.Recipient: EA Korea;02-559-8787 2.Purpose:;Advertising 3.Items:;Device model, phone no.;4.Retention period:;Discarded after 1 year	^Đồng ý dùng thông tin;|1.Bên nhận: EA Korea;02-559-8787 2.Mục đích:;Quảng cáo 3.Thông tin:;Mẫu máy, số điện thoại;4.Thời hạn lưu giữ:;Huỷ sau 1 năm	LECHSO; k=K00175; hint=^Đồng ý dùng thông tin;|1. Bên nhận:;Electronic Arts Korea;2. Mục đích: quảng cáo;3. Thông tin cung cấp:;đời máy, số điện thoại;4. Thời hạn lưu giữ:;1 năm rồi huỷ
+A01116	c/csv/mission_text.dat	rec 62 off 0 ps 1	Achieved upon;acquiring 10,000;Gold.	Đạt được khi;nhận được 10,000;Vàng.	LECHSO; k=K03561; hint=Đạt được khi nhận Vàng.
+A01117	c/csv/mission_text.dat	rec 63 off 0 ps 1	Achieved upon;acquiring 100,000;Gold.	Đạt được khi;nhận được 100,000;Vàng.	LECHSO; k=K03561; hint=Đạt được khi nhận Vàng.
+A01118	c/csv/mission_text.dat	rec 64 off 0 ps 1	Achieved upon;acquiring 1,000,000;Gold.	Đạt được khi;nhận được 1,000,000;Vàng.	LECHSO; k=K03561; hint=Đạt được khi nhận Vàng.
+A01119	c/map/00001.scn	idx 3	Appears after 5 years just to say his piece and run off.	Sau 5 năm mới xuất hiện, nói xong điều mình muốn rồi lại chạy mất tăm.	LECHSO; k=K03921; hint=Năm năm mới xuất hiện, nói xong những gì mình muốn nói rồi lại chạy mất tăm.
+A01120	c/map/00035.scn	idx 38	A 70-30 split. 70 for me.	Chia 70-30. Tôi lấy 70.	LECHSO; k=K04782; hint=Chia bảy ba. Tôi bảy.
