@@ -736,3 +736,8 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
   - Đường build từ bộ split gốc CHƯA chạy được (container không có split); sẽ chạy khi người dùng cung cấp. Ghi vào tồn đọng của T6.
   - Bản phát hành ứng viên (không diag): `out/Inotia4_T5_ref.apk`. Chờ người dùng xác nhận TEST12 rồi mới làm T6.
   - Giao T2 (unidbg qua màn chọn save) cho công nhân mới, dùng lib của TEST12 để chụp được HUD mới.
+- 2026-11-01 quản đốc: người dùng TẠM DỪNG (chưa hẹn giờ làm tiếp, không hẹn ping). A1 (T2, ~211k) dừng ở `32fcb15`.
+  - Hướng 1 (`madvise`) bị bác.
+  - Hướng 2 (`JMalloc`) dở: văng ở `pthread_mutex_lock`, nguyên nhân CHƯA XÁC ĐỊNH.
+  - Hướng 3 chưa làm.
+  - Đang chờ người dùng thử TEST12 (T7, T8, T9, T10). Sau đó làm T6 phát hành (ứng viên `out/Inotia4_T5_ref.apk`).
