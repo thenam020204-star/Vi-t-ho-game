@@ -489,6 +489,21 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Chênh lệch nhỏ so với PLAN: cave ép chẵn bằng `and` (làm tròn xuống) nên **P = 105 ⇒ W = 536, không phải 538** (512·105/100 = 537,6 → 537 → 536); H' = floor(H·P/100) không chỉnh (lệch tỉ lệ ≤ 0,4 %).
     - CHƯA XÁC ĐỊNH: tap-để-đi trên màn chơi (`TouchGameObject_EventMap` dùng thẳng toạ độ UI như đơn vị FB, như game gốc; không chạy tới màn chơi trong unidbg); thứ tự `onResume` → `startClet` trên máy thật; mũi tên `TutorialDescription` lệch 24/16 px; `INSTANTMSG_*`/`Tutorial*` không đọc lại.
     - Bước tiếp: T9b = nhóm `view`, `hud`, `pool` trong `scripts/patch_lib.py`; Slot "Tầm nhìn" trong `ModMenu.java`; build `--libgroup base,p1,mod,view,hud,pool`.
+  - Quản đốc nghiệm thu T9a–T9c (2026-11-01): ĐẠT (chờ người dùng thử trên máy).
+    - Đã soát `scripts/asm/view_cave.s`:
+      - P ngoài 100..150 ⇒ giữ như gốc;
+      - W·P và H·P < 2³¹;
+      - `and` làm tròn W xuống số chẵn (P=105 ⇒ 536; quản đốc ghi kỳ vọng 538 trong lệnh giao là sai, 536 mới đúng theo thiết kế).
+    - Đã soát diff `ModMenu`: thêm Slot "Tầm nhìn" 100..150 bước 5, mặc định 120; nút "Đặt lại x1" không đụng tầm nhìn.
+    - Tự chạy lại:
+      - `apkdiff` TEST10 → T9_check: chỉ khác `classes3.dex` và `libgame.so`;
+      - apksigner OK; `zipalign -c -P 16 4` OK.
+    - unidbg:
+      - FB P=100/120/150 = 512×230 / 614×276 / 768×345; màn logic giữ 1422×640;
+      - `UIPlay_Create` dịch đúng 21 control;
+      - pool đỉnh 3,50 → 3,72 MB (trần 10 MB).
+    - Đóng gói `test_builds/Inotia4_TEST11_vi_offline.apk` (= `out/Inotia4_T9_check.apk`, SHA256 trong `SHA256_TEST11.txt`).
+    - Chưa tick T9: chờ người dùng xác nhận trên máy (HUD, chạm, minimap, hiệu năng ở 120/150).
   - [x] T9a. RE + thiết kế, ghi vào `docs/tam_nhin_hud.md`.
     - Mọi chỗ ghi/đọc 0x2d6098/0x2d609c và mọi hằng 640/960 (int `0x280`/`0x3c0`, float `0x44200000`/`0x44700000`) có liên quan tới kích thước màn; phân loại từng chỗ.
     - Caller của `CalcResolutionWidth/Height`, `GetResolutionWidth/Height`, `GRPX_GetScreenWidth/Height`: neo HUD vào mép hay căn giữa vùng 960×640 hay khác.
@@ -677,3 +692,4 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 quản đốc: nghiệm thu T8a–T8d ĐẠT; gửi TEST10 (TEST9 + mod menu). Chờ người dùng thử. Tiếp theo: T9 (công nhân chạy mới).
 - 2026-11-01 quản đốc: A2 đọc T10a xong ~92% (~279k). Ghi bàn giao vào `docs/t10a_bangiao_A2.md`, chép ảnh vào `docs/hud/`. Chốt quyết định T10: 7 rect, kích thước thu, vá 3 lệnh kiểu vẽ. T10 làm sau T9.
 - 2026-11-01 A1 (T9): T9a, T9b, T9c xong (T9 cha chờ quản đốc nghiệm thu). `docs/tam_nhin_hud.md`, nhóm `view`/`hud`/`pool` trong `patch_lib.py`, thanh "Tầm nhìn" trong `ModMenu`, `emu/view_check.sh`. P = 105 cho W = 536 (không phải 538). Build `out/Inotia4_T9_check.apk` PASS, `apkdiff` với TEST10 chỉ khác `classes3.dex` (ModMenu*) và `libgame.so`. Không chụp được màn chơi (T2).
+- 2026-11-01 quản đốc: nghiệm thu T9a–T9c ĐẠT; gửi TEST11 (TEST10 + tầm nhìn P% + lề HUD + pool 10 MB). A1 (T9) dừng ở ~435k (vượt ngưỡng, không dùng lại). Tiếp theo: T10 (công nhân chạy mới).

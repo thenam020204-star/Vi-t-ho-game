@@ -119,3 +119,18 @@ Việc tiếp theo (đề xuất):
 - **Java**: `com.namp.vh.ModMenu` (nút MOD nổi ở lề trái, kéo thả được; 3 thanh x1–x50; lưu SharedPreferences) và `ModMem` (ghi qua `/proc/self/mem`, dự phòng `Unsafe`, đọc lại để kiểm). Gắn bằng 1 lệnh smali sau `HiveActivity.onResume` trong `MainActivity.onResume`.
 - **Kiểm**: unidbg gọi thẳng 3 điểm vá, 21.772/21.782 ca đúng công thức (10 ca ngoài miền: EXP âm). Log ở `logs/t8d_mod_check.log`, chi tiết ở `docs/mod_menu.md`.
 - **`test_builds/Inotia4_TEST10_vi_offline.apk`** = TEST9 + mod (`--smali net,mod --vnfont --lib --diag`, lib = P1 + mod). SHA256 ở `test_builds/SHA256_TEST10.txt`. So TEST9 chỉ khác `classes.dex`, `classes3.dex`, `libgame.so`; cùng khoá ký ⇒ cài đè được, save giữ nguyên.
+
+## Phiên 6: tầm nhìn rộng + HUD lùi vào trong (T9) — TEST11
+- **Phát hiện (T9a, `docs/tam_nhin_hud.md`)**:
+  - Vùng nhìn thế giới là khung đệm FB do `OriginalDisplay_ConfigInfo` 0x147030 tính, KHÔNG phải màn logic. Máy 2400×1080 có FB 512×230, được phóng ~4,69 lần.
+  - Đổi màn logic chỉ làm UI nhỏ đi.
+- **Vá (`patch_lib.py`)**:
+  - `view`: 0x14709c → cave 52 B trong `SGL_grpResume` (mã chết) 0x133454. Nhân cfg.W/H với P% (int 0x72f78c, chỉ nhận 100..150), ép W chẵn.
+  - `hud`: 29 lệnh trong `UIPlay_Create`/`UIPlayPorting_Draw`/minimap, lùi HUD vào 24 px ngang, 16 px dọc. Hình và vùng chạm cùng dời.
+  - `pool`: trần pool `MEM_Create` từ 8 lên 10 MB (`GRP_Initialize` xin 2·W² từ pool).
+- **Mod menu**: thêm thanh "Tầm nhìn" 100–150%, bước 5, mặc định 120%. Chỉ áp khi mở lại game.
+- **Kiểm (unidbg 2400×1080)**:
+  - FB 512×230 (P=100), 614×276 (P=120), 768×345 (P=150); màn logic giữ 1422×640.
+  - 21 control HUD dịch đúng; tap START vẫn trúng.
+  - Log `logs/t9c_view_check.log`.
+- **`test_builds/Inotia4_TEST11_vi_offline.apk`** = TEST10 + view/hud/pool. So TEST10 chỉ khác `classes3.dex` và `libgame.so`. Cùng khoá ký ⇒ cài đè được.
