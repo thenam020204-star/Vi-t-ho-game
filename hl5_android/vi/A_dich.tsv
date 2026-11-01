@@ -1,0 +1,1009 @@
+ID	File	Vị trí	Tiếng Anh	Tiếng Việt	Ghi chú
+A00001	c/csv/buildup.dat	rec 0 off 0 ps 1	none		
+A00002	c/csv/cash_expert.dat	rec 1 off 24 ps 1	Auto-revives once per;Expert Mode game upon;death Does not apply;to single-player;game.		
+A00003	c/csv/cash_expert.dat	rec 2 off 23 ps 1	Doubles HP natural;recovery rate in;Expert Survival Mode;1 is automatically;consumed upon playing;Survival Mode.		
+A00004	c/csv/cash_expert.dat	rec 3 off 22 ps 1	Grants 30 bonus time;in Expert Time Attack;Mode 1 is;automatically;consumed upon playing;Time Attack Mode.		
+A00005	c/csv/cash_expert.dat	rec 4 off 23 ps 1	Grants 30 bonus time;per stage in Expert;Rush Mode 1 is;automatically;consumed upon playing;Rush Mode.		
+A00006	c/csv/cash_expert.dat	rec 5 off 23 ps 1	Consumable usable;only in Expert Mode;Grants brief;invulnerability upon;use.		
+A00007	c/csv/cash_expert.dat	rec 6 off 17 ps 1	Consumable usable;only in Expert Mode;Fully restores Spirit;Gauge upon use Max;Capacity: 3		
+A00008	c/csv/cash_expert.dat	rec 7 off 13 ps 1	oAl		
+A00009	c/csv/cash_expert.dat	rec 7 off 17 ps 1	ows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.		
+A00010	c/csv/cash_network.dat	rec 7 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.		
+A00011	c/csv/cash_network.dat	rec 14 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.		
+A00012	vfs:0x831ffd41.dat	rec 2 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.		
+A00013	vfs:0x831ffd41.dat	rec 6 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.		
+A00014	vfs:0x831ffd41.dat	rec 24 off 3 ps 1	Void Necklace		
+A00015	vfs:0x831ffd41.dat	rec 24 off 19 ps 1	Increases Max HP by;15% to boost;beginners;survivability.		
+A00016	vfs:0x831ffd41.dat	rec 25 off 3 ps 1	Void T1 Weapon		
+A00017	vfs:0x831ffd41.dat	rec 25 off 20 ps 1	Required Lv 1, but;strong enough to use;until Lv 10. Grants;equipment fitting;your class directly;to Bag.		
+A00018	vfs:0x831ffd41.dat	rec 26 off 3 ps 1	Void T2 Weapon		
+A00019	vfs:0x831ffd41.dat	rec 26 off 20 ps 1	Required Lv 11, but;strong enough to use;until Lv 20. Grants;equipment fitting;your class directly;to Bag.		
+A00020	vfs:0x831ffd41.dat	rec 27 off 3 ps 1	Void T3 Weapon		
+A00021	vfs:0x831ffd41.dat	rec 27 off 20 ps 1	Required Lv 21, but;strong enough to use;until Lv 30. Grants;equipment fitting;your class directly;to Bag.		
+A00022	vfs:0x831ffd41.dat	rec 28 off 3 ps 1	Void T4 Weapon		
+A00023	vfs:0x831ffd41.dat	rec 28 off 20 ps 1	Required Lv 31, but;strong enough to use;until Lv 40. Grants;equipment fitting;your class directly;to Bag.		
+A00024	vfs:0x831ffd41.dat	rec 29 off 3 ps 1	Void T5 Weapon		
+A00025	vfs:0x831ffd41.dat	rec 29 off 20 ps 1	Required Lv 41, but;strong enough to use;until Lv 50. Grants;equipment fitting;your class directly;to Bag.		
+A00026	c/csv/cash_single.dat	rec 3 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.		
+A00027	c/csv/cash_single.dat	rec 10 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.		
+A00028	vfs:0x2b3c2959.dat	rec 2 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.		
+A00029	vfs:0x2b3c2959.dat	rec 6 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.		
+A00030	vfs:0x2b3c2959.dat	rec 24 off 3 ps 1	Void Necklace		
+A00031	vfs:0x2b3c2959.dat	rec 24 off 19 ps 1	Increases Max HP by;15% to boost;beginners;survivability.		
+A00032	vfs:0x2b3c2959.dat	rec 25 off 3 ps 1	Void T1 Weapon		
+A00033	vfs:0x2b3c2959.dat	rec 25 off 20 ps 1	Required Lv 1, but;strong enough to use;until Lv 10. Grants;equipment fitting;your class directly;to Bag.		
+A00034	vfs:0x2b3c2959.dat	rec 26 off 3 ps 1	Void T2 Weapon		
+A00035	vfs:0x2b3c2959.dat	rec 26 off 20 ps 1	Required Lv 11, but;strong enough to use;until Lv 20. Grants;equipment fitting;your class directly;to Bag.		
+A00036	vfs:0x2b3c2959.dat	rec 27 off 3 ps 1	Void T3 Weapon		
+A00037	vfs:0x2b3c2959.dat	rec 27 off 20 ps 1	Required Lv 21, but;strong enough to use;until Lv 30. Grants;equipment fitting;your class directly;to Bag.		
+A00038	vfs:0x2b3c2959.dat	rec 28 off 3 ps 1	Void T4 Weapon		
+A00039	vfs:0x2b3c2959.dat	rec 28 off 20 ps 1	Required Lv 31, but;strong enough to use;until Lv 40. Grants;equipment fitting;your class directly;to Bag.		
+A00040	vfs:0x2b3c2959.dat	rec 29 off 3 ps 1	Void T5 Weapon		
+A00041	vfs:0x2b3c2959.dat	rec 29 off 20 ps 1	Required Lv 41, but;strong enough to use;until Lv 50. Grants;equipment fitting;your class directly;to Bag.		
+A00042	c/csv/common_text.dat	rec 10 off 0 ps 1	HP		
+A00043	c/csv/common_text.dat	rec 11 off 0 ps 1	SP		
+A00044	c/csv/common_text.dat	rec 12 off 0 ps 1	EXP		
+A00045	c/csv/common_text.dat	rec 13 off 0 ps 1	LV		
+A00046	c/csv/common_text.dat	rec 14 off 0 ps 1	Point		
+A00047	c/csv/common_text.dat	rec 56 off 0 ps 1	OK		
+A00048	c/csv/common_text.dat	rec 64 off 0 ps 1	GOLD		
+A00049	c/csv/common_text.dat	rec 140 off 0 ps 1	1st		
+A00050	c/csv/common_text.dat	rec 141 off 0 ps 1	2nd		
+A00051	c/csv/common_text.dat	rec 142 off 0 ps 1	3rd		
+A00052	c/csv/common_text.dat	rec 143 off 0 ps 1	4th		
+A00053	c/csv/common_text.dat	rec 144 off 0 ps 1	5th		
+A00054	c/csv/common_text.dat	rec 162 off 0 ps 1	equipment		
+A00055	c/csv/common_text.dat	rec 182 off 0 ps 1	empty		
+A00056	c/csv/common_text.dat	rec 183 off 0 ps 1	PlayTime		
+A00057	c/csv/common_text.dat	rec 185 off 0 ps 1	Level		
+A00058	c/csv/common_text.dat	rec 190 off 0 ps 1	OFF		
+A00059	c/csv/common_text.dat	rec 191 off 0 ps 1	ON		
+A00060	c/csv/common_text.dat	rec 257 off 0 ps 1	CW		
+A00061	c/csv/common_text.dat	rec 258 off 0 ps 1	CCW		
+A00062	c/csv/common_text.dat	rec 261 off 0 ps 1	get!		
+A00063	c/csv/common_text.dat	rec 274 off 0 ps 1	map		
+A00064	c/csv/common_text.dat	rec 275 off 0 ps 1	shop		
+A00065	c/csv/common_text.dat	rec 276 off 0 ps 1	save		
+A00066	c/csv/common_text.dat	rec 283 off 0 ps 1	Total		
+A00067	c/csv/common_text.dat	rec 284 off 0 ps 1	Collection		
+A00068	c/csv/common_text.dat	rec 291 off 0 ps 1	MAX HP		
+A00069	c/csv/common_text.dat	rec 292 off 0 ps 1	MAX SP		
+A00070	c/csv/common_text.dat	rec 318 off 0 ps 1	CC-NM-110121-001		
+A00071	c/csv/common_text.dat	rec 333 off 0 ps 1	Enjoy the complete version;Real cash		
+A00072	c/csv/common_text.dat	rec 334 off 0 ps 1	^Upgrading to full;version... Do not;force close the game.		
+A00073	c/csv/common_text.dat	rec 335 off 0 ps 1	Registration of the full version is completed.		
+A00074	c/csv/common_text.dat	rec 336 off 0 ps 1	Not available in trial version.		
+A00075	c/csv/common_text.dat	rec 337 off 0 ps 1	Canceled.		
+A00076	c/csv/common_text.dat	rec 338 off 0 ps 1	You have completed registration.		
+A00077	c/csv/common_text.dat	rec 339 off 0 ps 1	Not supported in the current version.		
+A00078	c/csv/common_text.dat	rec 340 off 0 ps 1	Data transfer is not possible because data blocking is enabled when roaming.		
+A00079	c/csv/common_text.dat	rec 341 off 0 ps 1	Touch pad		
+A00080	c/csv/common_text.dat	rec 344 off 0 ps 1	This service charges a fee for information regardless of the subscription plan.		
+A00081	c/csv/common_text.dat	rec 345 off 0 ps 1	^The cost of a call depends on the tariff plan and changes accordingly.		
+A00082	c/csv/common_text.dat	rec 346 off 0 ps 1	Do you agree?		
+A00083	c/csv/common_text.dat	rec 347 off 0 ps 1	1.Agree		
+A00084	c/csv/common_text.dat	rec 348 off 0 ps 1	2.Disagree		
+A00085	c/csv/common_text.dat	rec 349 off 0 ps 1	3.Accept (stop viewing this window)		
+A00086	c/csv/common_text.dat	rec 350 off 0 ps 1	Successfully resurrected.;;&Confirm		
+A00087	c/csv/enemy_1.dat	rec 130 off 0 ps 1	^Black Enh. Sold.{		
+A00088	c/csv/enemy_2.dat	rec 130 off 0 ps 1	^Black Enh. Sold.{		
+A00089	c/csv/enemy_expert_0.dat	rec 12 off 84 ps 1	HX		
+A00090	c/csv/enemy_expert_0.dat	rec 27 off 84 ps 1	HX		
+A00091	c/csv/enemy_expert_0.dat	rec 42 off 84 ps 1	HX		
+A00092	c/csv/enemy_expert_0.dat	rec 57 off 84 ps 1	HX		
+A00093	c/csv/enemy_expert_0.dat	rec 83 off 86 ps 1	HX		
+A00094	c/csv/ingame_text.dat	rec 4 off 0 ps 1	South Hwang.		
+A00095	c/csv/ingame_text.dat	rec 5 off 0 ps 1	East Hwang.		
+A00096	c/csv/ingame_text.dat	rec 130 off 0 ps 1	FILE VER CHECK		
+A00097	c/csv/ingame_text.dat	rec 131 off 0 ps 1	FILE VER:		
+A00098	c/csv/ingame_text.dat	rec 134 off 0 ps 1	OK		
+A00099	c/csv/ingame_text.dat	rec 145 off 0 ps 1	sub		
+A00100	c/csv/ingame_text.dat	rec 152 off 0 ps 1	, welcome!		
+A00101	c/csv/ingame_text.dat	rec 328 off 0 ps 1	Failed!		
+A00102	c/csv/ingame_text.dat	rec 339 off 0 ps 1	Connecting		
+A00103	c/csv/ingame_text.dat	rec 340 off 0 ps 1	Send		
+A00104	c/csv/ingame_text.dat	rec 341 off 0 ps 1	Recieve		
+A00105	c/csv/ingame_text.dat	rec 355 off 0 ps 1	Used.		
+A00106	c/csv/ingame_text.dat	rec 356 off 0 ps 1	obtained.		
+A00107	c/csv/item_00.dat	rec 81 off 2 ps 1	Void Greatsword I		
+A00108	c/csv/item_00.dat	rec 81 off 24 ps 1	Two-Handed Sword		
+A00109	c/csv/item_00.dat	rec 82 off 2 ps 1	Void Greatsword II		
+A00110	c/csv/item_00.dat	rec 82 off 25 ps 1	Two-Handed Sword		
+A00111	c/csv/item_00.dat	rec 83 off 2 ps 1	Void Greatsword III		
+A00112	c/csv/item_00.dat	rec 83 off 26 ps 1	Two-Handed Sword		
+A00113	c/csv/item_00.dat	rec 84 off 2 ps 1	Void Greatsword IV		
+A00114	c/csv/item_00.dat	rec 84 off 25 ps 1	Two-Handed Sword		
+A00115	c/csv/item_00.dat	rec 85 off 2 ps 1	Void Greatsword V		
+A00116	c/csv/item_00.dat	rec 85 off 24 ps 1	Two-Handed Sword		
+A00117	c/csv/item_01.dat	rec 81 off 2 ps 1	T1 Void Dagger		
+A00118	c/csv/item_01.dat	rec 81 off 21 ps 1	Dagger		
+A00119	c/csv/item_01.dat	rec 82 off 2 ps 1	T2 Void Dagger		
+A00120	c/csv/item_01.dat	rec 82 off 21 ps 1	Dagger		
+A00121	c/csv/item_01.dat	rec 83 off 2 ps 1	T3 Void Dagger		
+A00122	c/csv/item_01.dat	rec 83 off 21 ps 1	Dagger		
+A00123	c/csv/item_01.dat	rec 84 off 2 ps 1	T4 Void Dagger		
+A00124	c/csv/item_01.dat	rec 84 off 21 ps 1	Dagger		
+A00125	c/csv/item_01.dat	rec 85 off 2 ps 1	T5 Void Dagger		
+A00126	c/csv/item_01.dat	rec 85 off 21 ps 1	Dagger		
+A00127	c/csv/item_02.dat	rec 81 off 2 ps 1	Void Pistol I		
+A00128	c/csv/item_02.dat	rec 81 off 20 ps 1	Light gun		
+A00129	c/csv/item_02.dat	rec 82 off 2 ps 1	Void Pistol II		
+A00130	c/csv/item_02.dat	rec 82 off 21 ps 1	Light gun		
+A00131	c/csv/item_02.dat	rec 83 off 2 ps 1	Void Pistol III		
+A00132	c/csv/item_02.dat	rec 83 off 22 ps 1	Light gun		
+A00133	c/csv/item_02.dat	rec 84 off 2 ps 1	Void Pistol IV		
+A00134	c/csv/item_02.dat	rec 84 off 21 ps 1	Light gun		
+A00135	c/csv/item_02.dat	rec 85 off 2 ps 1	Void Pistol V		
+A00136	c/csv/item_02.dat	rec 85 off 20 ps 1	Light gun		
+A00137	c/csv/item_03.dat	rec 81 off 2 ps 1	T1 Void Lance		
+A00138	c/csv/item_03.dat	rec 81 off 20 ps 1	Spear		
+A00139	c/csv/item_03.dat	rec 82 off 2 ps 1	T2 Void Lance		
+A00140	c/csv/item_03.dat	rec 82 off 20 ps 1	Spear		
+A00141	c/csv/item_03.dat	rec 83 off 2 ps 1	T3 Void Lance		
+A00142	c/csv/item_03.dat	rec 83 off 20 ps 1	Spear		
+A00143	c/csv/item_03.dat	rec 84 off 2 ps 1	T4 Void Lance		
+A00144	c/csv/item_03.dat	rec 84 off 20 ps 1	Spear		
+A00145	c/csv/item_03.dat	rec 85 off 2 ps 1	T5 Void Lance		
+A00146	c/csv/item_03.dat	rec 85 off 20 ps 1	Spear		
+A00147	c/csv/item_10.dat	rec 17 off 2 ps 1	Void Necklace		
+A00148	c/csv/item_11.dat	rec 11 off 18 ps 1	^Expert Mode Only{;Restores 40 HP 5;times, for 200 HP;total. Cannot be used;in Story Mode.		
+A00149	c/csv/item_11.dat	rec 12 off 23 ps 1	Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.[d\n2		
+A00150	c/csv/item_11.dat	rec 13 off 23 ps 1	^Expert Mode Only{;Restores 200 HP 5;times, for 1000 HP;total. Cannot be used;in Story Mode.		
+A00151	c/csv/item_11.dat	rec 14 off 23 ps 1	^Expert Mode Only{;Blocks all attacks;for 6 seconds. Cannot;be used in Story;Mode.		
+A00152	c/csv/item_11.dat	rec 15 off 18 ps 1	^Expert Mode Only{;Fully restores the;Spirit Gauge. Cannot;be used in Story;Mode.		
+A00153	c/csv/item_12.dat	rec 17 off 23 ps 1	All Weapons and;Gloves Increases Hit;Rate. Combines 1-3;Reaper Orbs. ^Can only;be used on first;fuse.{		
+A00154	c/csv/item_12.dat	rec 19 off 21 ps 1	All Weapons and;Gloves Increases Crit;Rate. Combines 1-3;Bind Orbs. ^Can only;be used on first;fuse.{		
+A00155	c/csv/item_12.dat	rec 20 off 24 ps 1	Armor and Boots;Increases Crit;Resistance. Combines;1-3 Resolve Orbs. ^Can;only be used on first;fuse.{		
+A00156	c/csv/item_12.dat	rec 22 off 21 ps 1	Helmets and Gloves;Increases HP;Recovery. Combines;1-3 Echo Orbs. ^Can;only be used on first;fuse.{		
+A00157	c/csv/item_12.dat	rec 23 off 22 ps 1	All Weapons and;Gloves Absorbs enemy;HP. Combines 1-3;Leech Orbs. ^Can only;be used on first;fuse.{		
+A00158	c/csv/item_12.dat	rec 24 off 21 ps 1	Helmets and Boots;Increases Magic Hit;Rate. Combines 1-3;Sage Orbs. ^Can only;be used on first;fuse.{		
+A00159	c/csv/item_12.dat	rec 25 off 23 ps 1	All Weapons and;Gloves Increases;Resistance. Combines;1-3 Arcane Orbs. ^Can;only be used on first;fuse.{		
+A00160	c/csv/item_12.dat	rec 30 off 23 ps 1	All Weapons and;Gloves Increases Hit;Rate. Combines 2-4;Reaper Orbs. ^Can only;be used on first;fuse.{		
+A00161	c/csv/item_12.dat	rec 32 off 21 ps 1	All Weapons and;Gloves Increases Crit;Rate. Combines 2-4;Bind Orbs. ^Can only;be used on first;fuse.{		
+A00162	c/csv/item_12.dat	rec 33 off 24 ps 1	Armor and Boots;Increases Crit;Resistance. Combines;2-4 Resolve Orbs. ^Can;only be used on first;fuse.{		
+A00163	c/csv/item_12.dat	rec 35 off 21 ps 1	Helmets and Gloves;Increases HP;Recovery. Combines;2-4 Echo Orbs. ^Can;only be used on first;fuse.{		
+A00164	c/csv/item_12.dat	rec 37 off 21 ps 1	Helms, boots;Increases Magic Hit;Rate Combines 2-4;Sage Orbs. ^Only;usable on first;combine.{		
+A00165	c/csv/item_12.dat	rec 40 off 24 ps 1	All weapons Increases;ATK Combines 3-5;Thunder Orbs.^Only;usable on first;combine.{		
+A00166	c/csv/item_12.dat	rec 41 off 24 ps 1	All armor Increases;P.DEF Combines 3-5;Adamant Orbs.^Only;usable on first;combine.{		
+A00167	c/csv/item_12.dat	rec 42 off 23 ps 1	All armor Increases;M.DEF Combines 3-5;Spirit Orbs.^Only;usable on first;combine.{		
+A00168	c/csv/item_12.dat	rec 43 off 23 ps 1	All weapons, gloves;Increases Hit Rate;Combines 3-5 Reaper;Orbs.^Only usable on;first combine.{		
+A00169	c/csv/item_12.dat	rec 44 off 23 ps 1	Helms, boots;Increases Evasion;Combines 3-5 Shadow;Orbs.^Only usable on;first combine.{		
+A00170	c/csv/item_12.dat	rec 45 off 21 ps 1	All weapons, gloves;Increases Crit Rate;Combines 3-5 Bind;Orbs.^Only usable on;first combine.{		
+A00171	c/csv/item_12.dat	rec 46 off 21 ps 1	Armor, boots;Increases Crit Resist;Combines 3-5 Will;Orbs.^Only usable on;first combine.{		
+A00172	c/csv/item_12.dat	rec 47 off 24 ps 1	Armor, boots;Increases Max HP;Combines 3-5 Warlord;Orbs.^Only usable on;first combine.{		
+A00173	c/csv/item_12.dat	rec 48 off 22 ps 1	Helms, gloves;Increases HP Recovery;Combines 3-5 Reson;Orbs.^Only usable on;first combine.{		
+A00174	c/csv/item_12.dat	rec 49 off 22 ps 1	All weapons, gloves;Absorbs enemy HP;Combines 3-5 Blood;Orbs.^Only usable on;first combine.{		
+A00175	c/csv/item_12.dat	rec 50 off 21 ps 1	Helms, boots;Increases Magic Hit;Rate Combines 3-5;Sage Orbs.^Only usable;on first combine.{		
+A00176	c/csv/item_12.dat	rec 51 off 24 ps 1	All weapons, gloves;Increases Resistance;Combines 3-5 Sorcery;Orbs.^Only usable on;first combine.{		
+A00177	c/csv/item_12.dat	rec 52 off 22 ps 1	All weapons, boots;Decreases Cooldown;Combines 3-5 Storm;Orbs.^Only usable on;first combine.{		
+A00178	c/csv/item_13.dat	rec 72 off 19 ps 1	A greatsword used by;Alex. It is broken;and unusable. The;initial L is engraved;on it.		
+A00179	c/csv/item_13.dat	rec 75 off 23 ps 1	A spear used by;Evelyn. Broken,;leaving only the tip.;The initial L is;engraved on it.		
+A00180	c/csv/item_13.dat	rec 76 off 22 ps 1	Main and secondary;barrels of a heavy;tank. The initial L;is engraved on them.		
+A00181	c/csv/item_14.dat	rec 11 off 18 ps 1	An accessory proving;devotion to a;religious group;currently popular;across Moytura;Plains.		
+A00182	c/csv/item_14.dat	rec 14 off 17 ps 1	Photo of a;pink-haired girl;found in Tyr hideout.;Other than her hair;color, she looks just;like Ren.		
+A00183	c/csv/item_14.dat	rec 29 off 16 ps 1	A ring lost by a;Central mercenary. A;plain copper ring.;Best not to think;about it being inside;a bat belly.		
+A00184	c/csv/item_14.dat	rec 34 off 20 ps 1	Portrait found in;Central Tower. Shows;a purple-haired;woman. Tyr seems to;know her.		
+A00185	c/csv/item_14.dat	rec 37 off 20 ps 1	A metal scrap found;in the Frozen Sea;cavern. The woman at;the Irem library;might be interested.		
+A00186	c/csv/item_14.dat	rec 39 off 18 ps 1	A secret tool of;House Ronberg, famed;weapon smiths. It is;broken and cannot be;used as is.		
+A00187	c/csv/item_14.dat	rec 50 off 19 ps 1	Work clothes ordered;by Rockville;Development Complex.;Who would wear this?		
+A00188	c/csv/item_14.dat	rec 51 off 13 ps 1	A claw from an;Eastern Scorpion.;Cannot be eaten;before cooking.		
+A00189	c/csv/item_15.dat	rec 0 off 24 ps 1	Normal Quest Item A;recipe book teaching;how to craft Twilight;Soup Powder.		
+A00190	c/csv/item_15.dat	rec 1 off 17 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Mid Potion.		
+A00191	c/csv/item_15.dat	rec 2 off 18 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft High Potion.		
+A00192	c/csv/item_15.dat	rec 3 off 19 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Quick Potion.		
+A00193	c/csv/item_15.dat	rec 4 off 23 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft Mid Quick;Potion.		
+A00194	c/csv/item_15.dat	rec 5 off 24 ps 1	Normal Combat;Consumable A recipe;book teaching how to;craft High Quick;Potion.		
+A00195	c/csv/item_15.dat	rec 7 off 20 ps 1	Normal Material A;recipe book teaching;how to craft Tough;Leather.		
+A00196	c/csv/item_15.dat	rec 8 off 19 ps 1	Normal Material A;recipe book teaching;how to craft Essence;of Life.		
+A00197	c/csv/item_15.dat	rec 9 off 20 ps 1	Normal Material A;recipe book teaching;how to craft Deadly;Poison.		
+A00198	c/csv/item_15.dat	rec 10 off 25 ps 1	Normal Material A;recipe book teaching;how to craft;Reinforced Leather.		
+A00199	c/csv/item_15.dat	rec 12 off 21 ps 1	Normal Material A;recipe book teaching;how to craft Curse of;Death.		
+A00200	c/csv/item_15.dat	rec 14 off 18 ps 1	Normal Material A;recipe book teaching;how to craft Source;of Magic.		
+A00201	c/csv/item_15.dat	rec 15 off 19 ps 1	Normal Material A;recipe book teaching;how to craft Essence;of Fire.		
+A00202	c/csv/item_15.dat	rec 16 off 19 ps 1	`Hero{ Lv 21 2H-Sword A;recipe book teaching;how to craft;`Tourangeau{.		
+A00203	c/csv/item_15.dat	rec 17 off 18 ps 1	`Hero{ Lv 21 2H-Sword A;recipe book teaching;how to craft;`Caladbolg{.		
+A00204	c/csv/item_15.dat	rec 22 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 21;Spear `Elven Wing;Spear{.		
+A00205	c/csv/item_15.dat	rec 24 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 22;Gloves `Main Combat;Gloves{.		
+A00206	c/csv/item_15.dat	rec 25 off 23 ps 1	Book to learn how to;craft `Hero{ Lv 22;Gloves `Phantom;Gloves{.		
+A00207	c/csv/item_15.dat	rec 26 off 26 ps 1	Book to learn how to;craft `Hero{ Lv 23;Shoes `Main Combat;Boots{.		
+A00208	c/csv/item_15.dat	rec 27 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 23;Shoes `Phantom;Greaves{.		
+A00209	c/csv/item_15.dat	rec 28 off 25 ps 1	Book to learn how to;craft `Hero{ Lv 24;Armor `Main Combat;Suit{.		
+A00210	c/csv/item_15.dat	rec 33 off 23 ps 1	Book to learn how to;craft `Hero{ Lv 26;Shield `Bone;Protector{.		
+A00211	c/csv/item_15.dat	rec 35 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 43;Gloves `Kayon;Gauntlets{.		
+A00212	c/csv/item_15.dat	rec 38 off 24 ps 1	Book to learn how to;craft <Set{ Lv 44;Gloves <Angel Wing;Hand{.		
+A00213	c/csv/item_15.dat	rec 39 off 24 ps 1	Book to learn how to;craft <Set{ Lv 44;Gloves <Dragonbone;Hand{.		
+A00214	c/csv/item_15.dat	rec 40 off 26 ps 1	Book to learn how to;craft `Hero{ Lv 45 2H;Sword `Red Lion;Claymore{.		
+A00215	c/csv/item_15.dat	rec 41 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 45 2H;Sword `Blue Wyvern;Axe{.		
+A00216	c/csv/item_15.dat	rec 42 off 24 ps 1	Book to learn how to;craft `Hero{ Lv 45 1H;Sword `Phantom;Breaker{.		
+A00217	c/csv/item_15.dat	rec 52 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 47;Shield `Requid;Defender{.		
+A00218	c/csv/item_15.dat	rec 53 off 23 ps 1	A book to learn the;recipe for `Hero{ Lv 47;Shield `Grand;Defender{.		
+A00219	c/csv/item_15.dat	rec 54 off 21 ps 1	A book to learn the;recipe for `Hero{ Lv 54;2H Sword `Divine;Saber{.		
+A00220	c/csv/item_15.dat	rec 56 off 25 ps 1	A book to learn the;recipe for `Hero{ Lv 54;1H Sword `Assault Rune;Swd{.		
+A00221	c/csv/item_15.dat	rec 62 off 25 ps 1	A book to learn the;recipe for `Hero{ Lv 57;Gloves `Titan War;Gloves{.		
+A00222	c/csv/item_15.dat	rec 63 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 57;Gloves `Skuld;Gauntlets{.		
+A00223	c/csv/item_15.dat	rec 64 off 24 ps 1	A book to learn the;recipe for `Hero{ Lv 58;Boots `Titan War;Boots{.		
+A00224	c/csv/item_15.dat	rec 93 off 25 ps 1	`Hero{ Lv.77 Shield A;book to learn the;recipe for `Garunzeel;Shield{.		
+A00225	c/csv/item_15.dat	rec 94 off 24 ps 1	<Set{ Lv.94 Gloves A;book to learn the;recipe for <Acheyaki;Gloves{.		
+A00226	c/csv/item_15.dat	rec 95 off 22 ps 1	<Set{ Lv.94 Gloves A;book to learn the;recipe for <Wyvern;Gloves{.		
+A00227	c/csv/item_15.dat	rec 96 off 22 ps 1	`Hero{ Lv.95 Gloves A;book to learn the;recipe for `Gavidu;Gloves{.		
+A00228	c/csv/item_15.dat	rec 97 off 23 ps 1	`Hero{ Lv.95 Gloves A;book to learn the;recipe for `Tyr War;Gloves{.		
+A00229	c/csv/item_15.dat	rec 101 off 26 ps 1	`Hero{ Lv.96 1H Sword A;book to learn the;recipe for `True Demon;Slayer{.		
+A00230	c/csv/item_15.dat	rec 104 off 19 ps 1	`Hero{ Lv.96 Spear A;book to learn the;recipe for `Agnar;Pike{.		
+A00231	c/csv/item_15.dat	rec 105 off 20 ps 1	`Hero{ Lv.96 Spear A;book to learn the;recipe for;`Riftressive{.		
+A00232	c/csv/item_15.dat	rec 106 off 21 ps 1	`Hero{ Lv.96 Boots A;book to learn the;recipe for `Gavidu;Boots{.		
+A00233	c/csv/item_15.dat	rec 107 off 22 ps 1	`Hero{ Lv.96 Boots A;book to learn the;recipe for `Tyr War;Boots{.		
+A00234	c/csv/item_15.dat	rec 108 off 20 ps 1	`Hero{ Lv.97 Armor A;book to learn the;recipe for `Gavidu;Coat{.		
+A00235	c/csv/item_15.dat	rec 109 off 22 ps 1	`Hero{ Lv.97 Armor A;book to learn the;recipe for `Tyr War;Armor{.		
+A00236	c/csv/item_15.dat	rec 112 off 20 ps 1	`Hero{ Lv.98 Helm A;book to learn the;recipe for `Gavidu;Helm{.		
+A00237	c/csv/item_15.dat	rec 113 off 21 ps 1	`Hero{ Lv.98 Helm A;book to learn the;recipe for `Tyr War;Helm{.		
+A00238	c/csv/item_15.dat	rec 114 off 20 ps 1	`Hero{ Lv.99 Shield A;book to learn the;recipe for;`Unbreakable{.		
+A00239	c/csv/item_15.dat	rec 115 off 24 ps 1	`Hero{ Lv.99 Shield A;book to learn the;recipe for `Grandish;Shield{.		
+A00240	c/csv/item_16.dat	rec 0 off 25 ps 1	Warrior Skillbook;Req. Level: Lv.1;Attacks enemies up to;3 times in melee;using a 2H sword or;2H axe.		
+A00241	c/csv/item_16.dat	rec 1 off 25 ps 1	Warrior Skillbook;Req. Level: Lv.4;Attacks enemies up to;3 times in melee;using a 2H sword or;2H axe.		
+A00242	c/csv/item_16.dat	rec 2 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.22;Attack enemies up to;3 times with a 2H;Sword or 2H Axe.		
+A00243	c/csv/item_16.dat	rec 3 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.1 Rush;quickly toward;enemies ahead.		
+A00244	c/csv/item_16.dat	rec 4 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.10;Rush quickly toward;enemies ahead.		
+A00245	c/csv/item_16.dat	rec 5 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.48;Rush quickly toward;enemies ahead.		
+A00246	c/csv/item_16.dat	rec 6 off 17 ps 1	Warrior Skillbook;Req. Level: Lv.74;Rush quickly toward;enemies ahead.		
+A00247	c/csv/item_16.dat	rec 7 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.14;Leap and strike;enemies ahead to deal;melee damage.		
+A00248	c/csv/item_16.dat	rec 8 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.26;Leap and strike;enemies ahead to deal;melee damage.		
+A00249	c/csv/item_16.dat	rec 9 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.38;Leap and strike;enemies ahead to deal;melee damage.		
+A00250	c/csv/item_16.dat	rec 10 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.46;Leap and strike;enemies ahead to deal;melee damage.		
+A00251	c/csv/item_16.dat	rec 11 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.58;Leap and strike;enemies ahead to deal;melee damage.		
+A00252	c/csv/item_16.dat	rec 12 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.68;Leap and strike;enemies ahead to deal;melee damage.		
+A00253	c/csv/item_16.dat	rec 13 off 15 ps 1	Warrior Skillbook;Req. Level: Lv.80;Leap and strike;enemies ahead to deal;melee damage.		
+A00254	c/csv/item_16.dat	rec 14 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.6;Strike enemies ahead;to knock them down.		
+A00255	c/csv/item_16.dat	rec 15 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.28;Strike enemies ahead;to knock them down.		
+A00256	c/csv/item_16.dat	rec 16 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.54;Strike enemies ahead;to knock them down.		
+A00257	c/csv/item_16.dat	rec 17 off 26 ps 1	Warrior Skillbook;Req. Level: Lv.78;Strike enemies ahead;to knock them down.		
+A00258	c/csv/item_16.dat	rec 18 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.4;Slash upward to deal;melee damage. Grants;invulnerability.		
+A00259	c/csv/item_16.dat	rec 19 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.16;Slash upward to deal;melee damage. Grants;invulnerability.		
+A00260	c/csv/item_16.dat	rec 20 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.34;Slash upward to deal;melee damage. Grants;invulnerability.		
+A00261	c/csv/item_16.dat	rec 21 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.50;Slash upward to deal;melee damage. Grants;invulnerability.		
+A00262	c/csv/item_16.dat	rec 22 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.64;Slash upward to deal;melee damage. Grants;invulnerability.		
+A00263	c/csv/item_16.dat	rec 23 off 23 ps 1	Warrior Skillbook;Req. Level: Lv.82;Slash upward to deal;melee damage. Grants;invulnerability.		
+A00264	c/csv/item_16.dat	rec 24 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.20;Spin and strike all;nearby enemies to;deal melee damage.		
+A00265	c/csv/item_16.dat	rec 25 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.36;Spin and strike all;nearby enemies to;deal melee damage.		
+A00266	c/csv/item_16.dat	rec 26 off 21 ps 1	Warrior Skillbook;Req. Level: Lv.52;Spin and strike all;nearby enemies to;deal melee damage.		
+A00267	c/csv/item_16.dat	rec 27 off 20 ps 1	Warrior Skill Book;Req Lv72 Spins around;to deal melee DMG to;nearby enemies.		
+A00268	c/csv/item_16.dat	rec 28 off 20 ps 1	Warrior Skill Book;Req Lv86 Spins around;to deal melee DMG to;nearby enemies.		
+A00269	c/csv/item_16.dat	rec 29 off 16 ps 1	Warrior Skill Book;Req Lv12 Taunts;nearby foes to gather;them. Grants;invincibility.		
+A00270	c/csv/item_16.dat	rec 30 off 16 ps 1	Warrior Skill Book;Req Lv18 Taunts;nearby foes to gather;them. Grants;invincibility.		
+A00271	c/csv/item_16.dat	rec 31 off 16 ps 1	Warrior Skill Book;Req Lv40 Taunts;nearby foes to gather;them. Grants;invincibility.		
+A00272	c/csv/item_16.dat	rec 32 off 16 ps 1	Warrior Skill Book;Req Lv56 Taunts;nearby foes to gather;them. Grants;invincibility.		
+A00273	c/csv/item_16.dat	rec 33 off 16 ps 1	Warrior Skill Book;Req Lv70 Taunts;nearby foes to gather;them. Grants;invincibility.		
+A00274	c/csv/item_16.dat	rec 34 off 16 ps 1	Warrior Skill Book;Req Lv84 Taunts;nearby foes to gather;them. Grants;invincibility.		
+A00275	c/csv/item_16.dat	rec 35 off 17 ps 1	Warrior Skill Book;Req Lv24 Dashes;forward while;unleashing quick;attacks.		
+A00276	c/csv/item_16.dat	rec 36 off 17 ps 1	Warrior Skill Book;Req Lv44 Dashes;forward while;unleashing quick;attacks.		
+A00277	c/csv/item_16.dat	rec 37 off 17 ps 1	Warrior Skill Book;Req Lv66 Dashes;forward while;unleashing quick;attacks.		
+A00278	c/csv/item_16.dat	rec 38 off 17 ps 1	Warrior Skill Book;Req Lv88 Dashes;forward while;unleashing quick;attacks.		
+A00279	c/csv/item_16.dat	rec 39 off 21 ps 1	Warrior Skill Book;Req Lv8 Consumes all;SP to unleash a;powerful melee;strike.		
+A00280	c/csv/item_16.dat	rec 40 off 21 ps 1	Warrior Skill Book;Req Lv32 Consumes all;SP to unleash a;powerful melee;strike.		
+A00281	c/csv/item_16.dat	rec 41 off 21 ps 1	Warrior Skill Book;Req Lv62 Consumes all;SP to unleash a;powerful melee;strike.		
+A00282	c/csv/item_16.dat	rec 42 off 21 ps 1	Warrior Skill Book;Req Lv90 Consumes all;SP to unleash a;powerful melee;strike.		
+A00283	c/csv/item_16.dat	rec 43 off 16 ps 1	Warrior Skill Book;Req Lv30 Consumes SP;to deal melee DMG;forward.		
+A00284	c/csv/item_16.dat	rec 44 off 16 ps 1	Warrior Skill Book;Req Lv42 Consumes SP;to deal melee DMG;forward.		
+A00285	c/csv/item_16.dat	rec 45 off 16 ps 1	Warrior Skill Book;Req Lv60 Consumes SP;to deal melee DMG;forward.		
+A00286	c/csv/item_16.dat	rec 46 off 16 ps 1	Warrior Skill Book;Req Lv76 Consumes SP;to deal melee DMG;forward.		
+A00287	c/csv/item_16.dat	rec 47 off 16 ps 1	Warrior Skill Book;Req Lv92 Consumes SP;to deal melee DMG;forward.		
+A00288	c/csv/item_16.dat	rec 48 off 17 ps 1	Rogue Skill Book Req;Lv1 Strikes up to 4;times with Dagger/1H;Sword in melee.		
+A00289	c/csv/item_16.dat	rec 49 off 17 ps 1	Rogue Skill Book Req;Lv4 Strikes up to 4;times with Dagger/1H;Sword in melee.		
+A00290	c/csv/item_16.dat	rec 50 off 17 ps 1	Rogue Skill Book Req;Lv14 Strikes up to 4;times with Dagger/1H;Sword in melee.		
+A00291	c/csv/item_16.dat	rec 51 off 17 ps 1	Rogue Skill Book Req;Lv22 Strikes up to 4;times with Dagger/1H;Sword in melee.		
+A00292	c/csv/item_16.dat	rec 56 off 16 ps 1	Rogue Skillbook Req.;Level: LV8 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
+A00293	c/csv/item_16.dat	rec 57 off 16 ps 1	Rogue Skillbook Req.;Level: LV28 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
+A00294	c/csv/item_16.dat	rec 58 off 16 ps 1	Rogue Skillbook Req.;Level: LV42 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
+A00295	c/csv/item_16.dat	rec 59 off 16 ps 1	Rogue Skillbook Req.;Level: LV62 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
+A00296	c/csv/item_16.dat	rec 60 off 16 ps 1	Rogue Skillbook Req.;Level: LV78 Melee;strike against;frontal foes.;Consumes Crit Orbs.		
+A00297	c/csv/item_16.dat	rec 61 off 16 ps 1	Rogue Skillbook Req.;Level: LV10 Perform;melee strike while;dodging sideways.;Grants Crit Orb.		
+A00298	c/csv/item_16.dat	rec 62 off 16 ps 1	Rogue Skillbook Req.;Level: LV36 Perform;melee strike while;dodging sideways.;Grants Crit Orb.		
+A00299	c/csv/item_16.dat	rec 63 off 16 ps 1	Rogue Skillbook Req.;Level: LV56 Perform;melee strike while;dodging sideways.;Grants Crit Orb.		
+A00300	c/csv/item_16.dat	rec 64 off 16 ps 1	Rogue Skillbook Req.;Level: LV82 Perform;melee strike while;dodging sideways.;Grants Crit Orb.		
+A00301	c/csv/item_16.dat	rec 65 off 18 ps 1	Rogue Skillbook Req.;Level: LV1;Temporarily increases;Evasion.		
+A00302	c/csv/item_16.dat	rec 66 off 18 ps 1	Rogue Skillbook Req.;Level: LV18;Temporarily increases;Evasion.		
+A00303	c/csv/item_16.dat	rec 67 off 18 ps 1	Rogue Skillbook Req.;Level: LV34;Temporarily increases;Evasion.		
+A00304	c/csv/item_16.dat	rec 68 off 18 ps 1	Rogue Skillbook Req.;Level: LV48;Temporarily increases;Evasion.		
+A00305	c/csv/item_16.dat	rec 69 off 18 ps 1	Rogue Skillbook Req.;Level: LV60;Temporarily increases;Evasion.		
+A00306	c/csv/item_16.dat	rec 70 off 18 ps 1	Rogue Skillbook Req.;Level: LV74;Temporarily increases;Evasion.		
+A00307	c/csv/item_16.dat	rec 71 off 16 ps 1	Rogue Skillbook Req.;Level: LV6 Step back;then dash forward to;strike. Grants Crit;Orb.		
+A00308	c/csv/item_16.dat	rec 72 off 16 ps 1	Rogue Skillbook Req.;Level: LV26 Step back;then dash forward to;strike. Grants Crit;Orb.		
+A00309	c/csv/item_16.dat	rec 73 off 16 ps 1	Rogue Skillbook Req.;Level: LV46 Step back;then dash forward to;strike. Grants Crit;Orb.		
+A00310	c/csv/item_16.dat	rec 74 off 16 ps 1	Rogue Skillbook Req.;Level: LV66 Step back;then dash forward to;strike. Grants Crit;Orb.		
+A00311	c/csv/item_16.dat	rec 75 off 16 ps 1	Rogue Skillbook Req.;Level: LV84 Step back;then dash forward to;strike. Grants Crit;Orb.		
+A00312	c/csv/item_16.dat	rec 76 off 15 ps 1	Rogue Skillbook Req.;Level: LV16 Stuns an;enemy. Consumes Crit;Orbs.		
+A00313	c/csv/item_16.dat	rec 77 off 15 ps 1	Rogue Skillbook Req:;LV32 Stuns an enemy.;Consumes Critical;Orb.		
+A00314	c/csv/item_16.dat	rec 78 off 15 ps 1	Rogue Skillbook Req:;LV44 Stuns an enemy.;Consumes Critical;Orb.		
+A00315	c/csv/item_16.dat	rec 79 off 15 ps 1	Rogue Skillbook Req:;LV54 Stuns an enemy.;Consumes Critical;Orb.		
+A00316	c/csv/item_16.dat	rec 80 off 15 ps 1	Rogue Skillbook Req:;LV72 Stuns an enemy.;Consumes Critical;Orb.		
+A00317	c/csv/item_16.dat	rec 81 off 15 ps 1	Rogue Skillbook Req:;LV86 Stuns an enemy.;Consumes Critical;Orb.		
+A00318	c/csv/item_16.dat	rec 82 off 16 ps 1	Rogue Skillbook Req:;LV24 Throws a dagger;for a ranged attack.;Generates Critical;Orb.		
+A00319	c/csv/item_16.dat	rec 83 off 16 ps 1	Rogue Skillbook Req:;LV52 Throws a dagger;for a ranged attack.;Generates Critical;Orb.		
+A00320	c/csv/item_16.dat	rec 84 off 16 ps 1	Rogue Skillbook Req:;LV70 Throws a dagger;for a ranged attack.;Generates Critical;Orb.		
+A00321	c/csv/item_16.dat	rec 85 off 16 ps 1	Rogue Skillbook Req:;LV90 Throws a dagger;for a ranged attack.;Generates Critical;Orb.		
+A00322	c/csv/item_16.dat	rec 86 off 15 ps 1	Rogue Skillbook Req:;LV20 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.		
+A00323	c/csv/item_16.dat	rec 87 off 15 ps 1	Rogue Skillbook Req:;LV40 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.		
+A00324	c/csv/item_16.dat	rec 88 off 15 ps 1	Rogue Skillbook Req:;LV68 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.		
+A00325	c/csv/item_16.dat	rec 89 off 15 ps 1	Rogue Skillbook Req:;LV88 Deals melee DMG;to frontal enemy and;lowers accuracy.;Generates Critical;Orb.		
+A00326	c/csv/item_16.dat	rec 90 off 17 ps 1	Rogue Skillbook Req:;LV30 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
+A00327	c/csv/item_16.dat	rec 91 off 17 ps 1	Rogue Skillbook Req:;LV50 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
+A00328	c/csv/item_16.dat	rec 92 off 17 ps 1	Rogue Skillbook Req:;LV64 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
+A00329	c/csv/item_16.dat	rec 93 off 17 ps 1	Rogue Skillbook Req:;LV76 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
+A00330	c/csv/item_16.dat	rec 94 off 17 ps 1	Rogue Skillbook Req:;LV92 Performs rapid;melee attacks on;frontal enemies.;Consumes Critical;Orb.		
+A00331	c/csv/item_17.dat	rec 0 off 21 ps 1	Gunslinger Skillbook;Req: LV1 Launches a;ranged attack using;Heavy/Light Guns.		
+A00332	c/csv/item_17.dat	rec 1 off 21 ps 1	Gunslinger Skillbook;Req: LV4 Launches a;ranged attack using;Heavy/Light Guns.		
+A00333	c/csv/item_17.dat	rec 2 off 21 ps 1	Gunslinger Skillbook;Req: LV10 Launches a;ranged attack using;Heavy/Light Guns.		
+A00334	c/csv/item_17.dat	rec 3 off 21 ps 1	Gunslinger Skillbook;Req: LV22 Launches a;ranged attack using;Heavy/Light Guns.		
+A00335	c/csv/item_17.dat	rec 4 off 20 ps 1	Gunslinger Skillbook;Req: LV1 Fires;bullets dealing;ranged DMG to;enemies.		
+A00336	c/csv/item_17.dat	rec 5 off 20 ps 1	Gunslinger Skillbook;Req: LV26 Fires;bullets dealing;ranged DMG to;enemies.		
+A00337	c/csv/item_17.dat	rec 6 off 20 ps 1	Gunslinger Skillbook;Req: LV50 Fires;bullets dealing;ranged DMG to;enemies.		
+A00338	c/csv/item_17.dat	rec 7 off 16 ps 1	Gunslinger Skillbook;Req. Level: Lv76;Fires bullets that;deal ranged damage to;enemies.		
+A00339	c/csv/item_17.dat	rec 8 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv12;Deals ranged damage;to enemies in an area;ahead.		
+A00340	c/csv/item_17.dat	rec 9 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv28;Deals ranged damage;to enemies in an area;ahead.		
+A00341	c/csv/item_17.dat	rec 10 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv48;Deals ranged damage;to enemies in an area;ahead.		
+A00342	c/csv/item_17.dat	rec 11 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv64;Deals ranged damage;to enemies in an area;ahead.		
+A00343	c/csv/item_17.dat	rec 12 off 18 ps 1	Gunslinger Skillbook;Req. Level: Lv80;Deals ranged damage;to enemies in an area;ahead.		
+A00344	c/csv/item_17.dat	rec 13 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv4 Deals;ranged damage and;continuous fire;damage to enemies;ahead.		
+A00345	c/csv/item_17.dat	rec 14 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv14;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
+A00346	c/csv/item_17.dat	rec 15 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv32;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
+A00347	c/csv/item_17.dat	rec 16 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv44;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
+A00348	c/csv/item_17.dat	rec 17 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv56;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
+A00349	c/csv/item_17.dat	rec 18 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv70;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
+A00350	c/csv/item_17.dat	rec 19 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv82;Deals ranged damage;and continuous fire;damage to enemies;ahead.		
+A00351	c/csv/item_17.dat	rec 20 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv20;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
+A00352	c/csv/item_17.dat	rec 21 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv34;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
+A00353	c/csv/item_17.dat	rec 22 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv52;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
+A00354	c/csv/item_17.dat	rec 23 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv68;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
+A00355	c/csv/item_17.dat	rec 24 off 23 ps 1	Gunslinger Skillbook;Req. Level: Lv84;Deals ranged damage;to nearby enemies and;reduces Movement;Speed.		
+A00356	c/csv/item_17.dat	rec 25 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv8;Switches to an;automatic firing;stance.		
+A00357	c/csv/item_17.dat	rec 26 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv22;Switches to an;automatic firing;stance.		
+A00358	c/csv/item_17.dat	rec 27 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv40;Switches to an;automatic firing;stance.		
+A00359	c/csv/item_17.dat	rec 28 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv60;Switches to an;automatic firing;stance.		
+A00360	c/csv/item_17.dat	rec 29 off 20 ps 1	Gunslinger Skillbook;Req. Level: Lv88;Switches to an;automatic firing;stance.		
+A00361	c/csv/item_17.dat	rec 30 off 21 ps 1	Gunslinger Skillbook;Req. Level: Lv6;Performs a ranged;attack against;enemies in front and;behind at once.		
+A00362	c/csv/item_17.dat	rec 31 off 21 ps 1	Gunslinger Skillbook;Req. Level: Lv18;Performs a ranged;attack against;enemies in front and;behind at once.		
+A00363	c/csv/item_17.dat	rec 32 off 21 ps 1	Gunslinger Tome Req.;LV42 Fires ranged;attacks;simultaneously at;foes in front and;behind.		
+A00364	c/csv/item_17.dat	rec 33 off 21 ps 1	Gunslinger Tome Req.;LV62 Fires ranged;attacks;simultaneously at;foes in front and;behind.		
+A00365	c/csv/item_17.dat	rec 34 off 21 ps 1	Gunslinger Tome Req.;LV78 Fires ranged;attacks;simultaneously at;foes in front and;behind.		
+A00366	c/csv/item_17.dat	rec 35 off 17 ps 1	Gunslinger Tome Req.;LV16 Deploys an;automated turret that;attacks enemies.		
+A00367	c/csv/item_17.dat	rec 36 off 17 ps 1	Gunslinger Tome Req.;LV38 Deploys an;automated turret that;attacks enemies.		
+A00368	c/csv/item_17.dat	rec 37 off 17 ps 1	Gunslinger Tome Req.;LV66 Deploys an;automated turret that;attacks enemies.		
+A00369	c/csv/item_17.dat	rec 38 off 17 ps 1	Gunslinger Tome Req.;LV92 Deploys an;automated turret that;attacks enemies.		
+A00370	c/csv/item_17.dat	rec 49 off 21 ps 1	Knight Tome Req. LV1;Performs up to 3;melee spear strikes;against enemies.		
+A00371	c/csv/item_17.dat	rec 50 off 21 ps 1	Knight Tome Req. LV4;Performs up to 3;melee spear strikes;against enemies.		
+A00372	c/csv/item_17.dat	rec 51 off 21 ps 1	Knight Tome Req. LV10;Performs up to 3;melee spear strikes;against enemies.		
+A00373	c/csv/item_17.dat	rec 52 off 21 ps 1	Knight Tome Req. LV22;Performs up to 3;melee spear strikes;against enemies.		
+A00374	c/csv/item_17.dat	rec 53 off 17 ps 1	Knight Tome Req. LV20;Quickly executes;melee attacks against;frontal enemies.		
+A00375	c/csv/item_17.dat	rec 54 off 17 ps 1	Knight Tome Req. LV40;Quickly executes;melee attacks against;frontal enemies.		
+A00376	c/csv/item_17.dat	rec 55 off 17 ps 1	Knight Tome Req. LV60;Quickly executes;melee attacks against;frontal enemies.		
+A00377	c/csv/item_17.dat	rec 56 off 17 ps 1	Knight Tome Req. LV80;Quickly executes;melee attacks against;frontal enemies.		
+A00378	c/csv/item_17.dat	rec 57 off 19 ps 1	Knight Skillbook Req.;Lv.4 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
+A00379	c/csv/item_17.dat	rec 58 off 19 ps 1	Knight Skillbook Req.;Lv.14 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
+A00380	c/csv/item_17.dat	rec 59 off 19 ps 1	Knight Skillbook Req.;Lv.28 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
+A00381	c/csv/item_17.dat	rec 60 off 19 ps 1	Knight Skillbook Req.;Lv.44 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
+A00382	c/csv/item_17.dat	rec 61 off 19 ps 1	Knight Skillbook Req.;Lv.54 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
+A00383	c/csv/item_17.dat	rec 62 off 19 ps 1	Knight Skillbook Req.;Lv.68 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
+A00384	c/csv/item_17.dat	rec 63 off 19 ps 1	Knight Skillbook Req.;Lv.78 Deals heavy;melee damage to;frontal enemies.;Consumes Critical;Orbs.		
+A00385	c/csv/item_17.dat	rec 64 off 23 ps 1	Knight Skillbook Req.;Lv.12 Melee attack;dealing extra damage;the lower your HP is.		
+A00386	c/csv/item_17.dat	rec 65 off 23 ps 1	Knight Skillbook Req.;Lv.38 Melee attack;dealing extra damage;the lower your HP is.		
+A00387	c/csv/item_17.dat	rec 66 off 23 ps 1	Knight Skillbook Req.;Lv.62 Melee attack;dealing extra damage;the lower your HP is.		
+A00388	c/csv/item_17.dat	rec 67 off 23 ps 1	Knight Skillbook Req.;Lv.84 Melee attack;dealing extra damage;the lower your HP is.		
+A00389	c/csv/item_17.dat	rec 68 off 24 ps 1	Knight Skillbook Req.;Lv.1 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
+A00390	c/csv/item_17.dat	rec 69 off 24 ps 1	Knight Skillbook Req.;Lv.18 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
+A00391	c/csv/item_17.dat	rec 70 off 24 ps 1	Knight Skillbook Req.;Lv.32 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
+A00392	c/csv/item_17.dat	rec 71 off 24 ps 1	Knight Skillbook Req.;Lv.48 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
+A00393	c/csv/item_17.dat	rec 72 off 24 ps 1	Knight Skillbook Req.;Lv.64 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
+A00394	c/csv/item_17.dat	rec 73 off 24 ps 1	Knight Skillbook Req.;Lv.76 Blocks all;frontal attacks for a;duration and gains;Critical Orbs.		
+A00395	c/csv/item_17.dat	rec 74 off 16 ps 1	Knight Skillbook Req.;Lv.16 Deals melee;damage to an enemy;and pulls them in;front of you.		
+A00396	c/csv/item_17.dat	rec 75 off 16 ps 1	Knight Skillbook Req.;Lv.34 Deals melee;damage to an enemy;and pulls them in;front of you.		
+A00397	c/csv/item_17.dat	rec 76 off 16 ps 1	Knight Skillbook Req.;Lv.52 Deals melee;damage to an enemy;and pulls them in;front of you.		
+A00398	c/csv/item_17.dat	rec 77 off 16 ps 1	Knight Skillbook Req.;Lv.70 Deals melee;damage to an enemy;and pulls them in;front of you.		
+A00399	c/csv/item_17.dat	rec 78 off 16 ps 1	Knight Skillbook Req.;Lv.86 Deals melee;damage to an enemy;and pulls them in;front of you.		
+A00400	c/csv/item_17.dat	rec 79 off 23 ps 1	Knight Skillbook Req.;Lv.6 Deals melee;damage to an enemy;and reduces their;DEF.		
+A00401	c/csv/item_17.dat	rec 80 off 23 ps 1	Knight Skillbook Req.;Lv.22 Deals melee;damage to an enemy;and reduces their;DEF.		
+A00402	c/csv/item_17.dat	rec 81 off 23 ps 1	Knight Skillbook Req.;Lv.26 Deals melee;damage to an enemy;and reduces their;DEF.		
+A00403	c/csv/item_17.dat	rec 82 off 22 ps 1	Knight Skillbook Req.;Level: Lv46 Deals;melee DMG to enemy;and reduces DEF.		
+A00404	c/csv/item_17.dat	rec 83 off 22 ps 1	Knight Skillbook Req.;Level: Lv58 Deals;melee DMG to enemy;and reduces DEF.		
+A00405	c/csv/item_17.dat	rec 84 off 22 ps 1	Knight Skillbook Req.;Level: Lv82 Deals;melee DMG to enemy;and reduces DEF.		
+A00406	c/csv/item_17.dat	rec 85 off 23 ps 1	Knight Skillbook Req.;Level: Lv30 Focuses;attacks on a single;enemy.		
+A00407	c/csv/item_17.dat	rec 86 off 23 ps 1	Knight Skillbook Req.;Level: Lv50 Focuses;attacks on a single;enemy.		
+A00408	c/csv/item_17.dat	rec 87 off 23 ps 1	Knight Skillbook Req.;Level: Lv72 Focuses;attacks on a single;enemy.		
+A00409	c/csv/item_17.dat	rec 88 off 23 ps 1	Knight Skillbook Req.;Level: Lv90 Focuses;attacks on a single;enemy.		
+A00410	c/csv/item_17.dat	rec 89 off 17 ps 1	Knight Skillbook Req.;Level: Lv8 Deals;melee DMG to enemy;and reduces ATK.		
+A00411	c/csv/item_17.dat	rec 90 off 17 ps 1	Knight Skillbook Req.;Level: Lv36 Deals;melee DMG to enemy;and reduces ATK.		
+A00412	c/csv/item_17.dat	rec 91 off 17 ps 1	Knight Skillbook Req.;Level: Lv66 Deals;melee DMG to enemy;and reduces ATK.		
+A00413	c/csv/item_17.dat	rec 92 off 17 ps 1	Knight Skillbook Req.;Level: Lv88 Deals;melee DMG to enemy;and reduces ATK.		
+A00414	c/csv/item_18.dat	rec 7 off 16 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple of the same;Orb at once when;socketed.		
+A00415	c/csv/item_18.dat	rec 26 off 22 ps 1	Allows resurrection;upon death in Expert;Mode. Does not apply;in single-player.		
+A00416	c/csv/item_18.dat	rec 27 off 20 ps 1	Doubles HP natural;recovery rate in;Expert Survival Mode;1 is automatically;consumed upon playing;Survival Mode.		
+A00417	c/csv/item_18.dat	rec 28 off 19 ps 1	Grants 30 bonus time;in Expert Time Attack;Mode 1 is;automatically;consumed upon playing;Time Attack Mode.		
+A00418	c/csv/item_18.dat	rec 29 off 20 ps 1	Grants 30 bonus time;per stage in Expert;Rush Mode 1 is;automatically;consumed upon playing;Rush Mode.		
+A00419	c/csv/item_18.dat	rec 30 off 23 ps 1	Consumable usable;only in Expert Mode;Grants brief;invincibility when;used Max limit: 3		
+A00420	c/csv/item_18.dat	rec 31 off 18 ps 1	Consumable usable;only in Expert Mode;Fully restores Spirit;Gauge upon use Max;Capacity: 3		
+A00421	c/csv/item_18.dat	rec 43 off 2 ps 1	Void Necklace		
+A00422	c/csv/item_18.dat	rec 43 off 20 ps 1	Increases Max HP by;15% to boost;beginners;survivability.		
+A00423	c/csv/item_18.dat	rec 44 off 2 ps 1	Void T1 Weapon		
+A00424	c/csv/item_18.dat	rec 44 off 21 ps 1	Starter weapon for Lv;1 usable up to Lv 10.;Movement Spd up Hit;rate up Rest recovery;up		
+A00425	c/csv/item_18.dat	rec 45 off 2 ps 1	Void T2 Weapon		
+A00426	c/csv/item_18.dat	rec 45 off 21 ps 1	Starter weapon for Lv;11 usable up to Lv;20. Movement Spd up;Hit rate up Rest;recovery up		
+A00427	c/csv/item_18.dat	rec 46 off 2 ps 1	Void T3 Weapon		
+A00428	c/csv/item_18.dat	rec 46 off 21 ps 1	Starter weapon for Lv;21 usable up to Lv;30. Movement Spd up;Hit rate up Rest;recovery up		
+A00429	c/csv/item_18.dat	rec 47 off 2 ps 1	Void T4 Weapon		
+A00430	c/csv/item_18.dat	rec 47 off 21 ps 1	Starter weapon for Lv;31 usable up to Lv;40. Movement Spd up;Hit rate up Rest;recovery up		
+A00431	c/csv/item_18.dat	rec 48 off 2 ps 1	Void T5 Weapon		
+A00432	c/csv/item_18.dat	rec 48 off 21 ps 1	Starter weapon for Lv;41 usable up to Lv;50. Movement Spd up;Hit rate up Rest;recovery up		
+A00433	c/csv/menu_text.dat	rec 20 off 0 ps 1	Equip: 2H Weapon,;Light/Heavy Armor Bars:;HP/SP Warriors dominate;the field wielding;greatswords larger than;themselves. Building SP;with basic attacks to;unleash massive skills,;they excel at clearing;hordes of foes.		
+A00434	c/csv/menu_text.dat	rec 21 off 0 ps 1	Equip: 1H Sword, Light;Armor Bars: HP/SP/Crit Orb;Rogues move like;lightning, often mistaken;for teleportation. An;expert Rogue exploits;openings in the blink of;an eye, stacking Crit Orbs;to deliver devastating;finishing blows.		
+A00435	c/csv/menu_text.dat	rec 22 off 0 ps 1	Equip: Gun, Light Armor;Bars: HP/SP Gunslingers;specialize in firearms and;explosives. Using;overwhelming firepower and;range, they keep enemies;from ever getting close.;With omnidirectional;attacks, they leave no;blind spots.		
+A00436	c/csv/menu_text.dat	rec 23 off 0 ps 1	Equip: Spear, Light/Heavy;Armor Bars: HP/SP/Crit Orb;Knights wield their shield;as an extension of their;body. Absorbing blows;builds Crit Orbs for;decisive strikes, proving;they possess the ultimate;spear as well as shield.		
+A00437	c/csv/menu_text.dat	rec 44 off 0 ps 1	Completed		
+A00438	c/csv/menu_text.dat	rec 158 off 0 ps 1	Select amount to exchange;for trade tokens.;^Converted funds cannot be;reverted.		
+A00439	c/csv/menu_text.dat	rec 189 off 0 ps 1	Normal		
+A00440	c/csv/menu_text.dat	rec 190 off 0 ps 1	Hard		
+A00441	c/csv/menu_text.dat	rec 191 off 0 ps 1	Hell		
+A00442	c/csv/menu_text.dat	rec 203 off 0 ps 1	Subscribing to a data plan;reduces costs. Charges;apply upon connecting to;the server. Continue?		
+A00443	c/csv/menu_text.dat	rec 205 off 0 ps 1	Backup Upload		
+A00444	c/csv/menu_text.dat	rec 206 off 0 ps 1	Backup Download		
+A00445	c/csv/menu_text.dat	rec 207 off 0 ps 1	Checking for saved data on;the server. Continue?		
+A00446	c/csv/menu_text.dat	rec 208 off 0 ps 1	Level sort is only;available for equipment.		
+A00447	c/csv/menu_text.dat	rec 209 off 0 ps 1	Register Full Ver.		
+A00448	c/csv/mission_list.dat	rec 64 off 0 ps 1	Millionaire		
+A00449	c/csv/mission_text.dat	rec 50 off 0 ps 1	Achieved upon;obtaining Spirit;items Catseye;Hairpin/Moonstone;Circlet/Ruby;Hairpin/Topaz;Circlet/Opal Hairpin.		
+A00450	c/csv/mission_text.dat	rec 85 off 0 ps 1	Achieved after 1,000;successful Refines.		
+A00451	c/csv/quest_0.dat	rec 1 off 14 ps 1	The goblins in this;area seem mostly;cleared out. Head back;to the entrance and;regroup with the;others.		
+A00452	c/csv/quest_0.dat	rec 21 off 16 ps 1	Rufus is targeting the;siblings, Chris and;Tiana, at the northwest;ruins. Annoying brats,;but cannot leave them;to die.		
+A00453	c/csv/quest_0.dat	rec 66 off 24 ps 1	The underground lab;where Successors were;created. Look around;this abandoned;facility, then head;back to the hideout.		
+A00454	c/csv/quest_0.dat	rec 126 off 3 ps 1	The Ruins		
+A00455	c/csv/quest_0.dat	rec 126 off 13 ps 1	An ancient relic might;help investigate the;ruins below Hall of;Origin.		
+A00456	c/csv/quest_0.dat	rec 135 off 3 ps 1	Buying Time		
+A00457	c/csv/quest_0.dat	rec 135 off 15 ps 1	Destroy the reviving;ancient god vessel in;Sanctuary again. It;will only buy time.		
+A00458	c/csv/quest_0.dat	rec 136 off 3 ps 1	Graham		
+A00459	c/csv/quest_0.dat	rec 136 off 10 ps 1	Graham asked for;materials to repair his;power suit.		
+A00460	c/csv/quest_0.dat	rec 138 off 3 ps 1	Spare Parts		
+A00461	c/csv/quest_0.dat	rec 138 off 15 ps 1	Spare Parts		
+A00462	c/csv/quest_1.dat	rec 1 off 14 ps 1	The goblins in this;area seem mostly;cleared out. Head back;to the entrance and;regroup with the;others.		
+A00463	c/csv/quest_1.dat	rec 21 off 16 ps 1	Rufus is targeting the;siblings, Chris and;Tiana, at the northwest;ruins. Annoying brats,;but cannot leave them;to die.		
+A00464	c/csv/quest_1.dat	rec 66 off 24 ps 1	The underground lab;where Successors were;created. Look around;this abandoned;facility, then head;back to the hideout.		
+A00465	c/csv/quest_1.dat	rec 126 off 3 ps 1	The Ruins		
+A00466	c/csv/quest_1.dat	rec 126 off 13 ps 1	An ancient relic might;help investigate the;ruins below Hall of;Origin.		
+A00467	c/csv/quest_1.dat	rec 135 off 3 ps 1	Buying Time		
+A00468	c/csv/quest_1.dat	rec 135 off 15 ps 1	Destroy the reviving;ancient god vessel in;Sanctuary again. It;will only buy time.		
+A00469	c/csv/quest_1.dat	rec 136 off 3 ps 1	Graham		
+A00470	c/csv/quest_1.dat	rec 136 off 10 ps 1	Graham asked for;materials to repair his;power suit.		
+A00471	c/csv/quest_1.dat	rec 138 off 3 ps 1	Spare Parts		
+A00472	c/csv/quest_1.dat	rec 138 off 15 ps 1	Spare Parts		
+A00473	c/csv/quest_2.dat	rec 1 off 14 ps 1	The goblins in this;area seem mostly;cleared out. Head back;to the entrance and;regroup with the;others.		
+A00474	c/csv/quest_2.dat	rec 21 off 16 ps 1	Rufus is targeting the;siblings, Chris and;Tiana, at the northwest;ruins. Annoying brats,;but cannot leave them;to die.		
+A00475	c/csv/quest_2.dat	rec 66 off 24 ps 1	The underground lab;where Successors were;created. Look around;this abandoned;facility, then head;back to the hideout.		
+A00476	c/csv/quest_2.dat	rec 126 off 3 ps 1	The Ruins		
+A00477	c/csv/quest_2.dat	rec 126 off 13 ps 1	An ancient relic might;help investigate the;ruins below Hall of;Origin.		
+A00478	c/csv/quest_2.dat	rec 135 off 3 ps 1	Buying Time		
+A00479	c/csv/quest_2.dat	rec 135 off 15 ps 1	Destroy the reviving;ancient god vessel in;Sanctuary again. It;will only buy time.		
+A00480	c/csv/quest_2.dat	rec 136 off 3 ps 1	Graham		
+A00481	c/csv/quest_2.dat	rec 136 off 10 ps 1	Graham asked for;materials to repair his;power suit.		
+A00482	c/csv/quest_2.dat	rec 138 off 3 ps 1	Spare Parts		
+A00483	c/csv/quest_2.dat	rec 138 off 15 ps 1	Spare Parts		
+A00484	c/csv/skill_00.dat	rec 13 off 61 ps 1	Stance skill.;Cooldown }#09s|. Takes;offensive stance;lowering DEF by }20%|;and raising ATK by;}20%|. Cannot use with;other stances.		
+A00485	c/csv/skill_00.dat	rec 23 off 64 ps 1	Stance Skill.;Cooldown: }#09s|. Shift;to a defensive stance;reducing Max SP by;}20%| and increasing;DEF by }20%|. Cannot;use with other;stances.		
+A00486	c/csv/skill_00.dat	rec 34 off 62 ps 1	Stance Skill.;Cooldown: }#09s|. Shift;to a mental stance;increasing SP gained;from attacks/hits by;}50%| and reducing DEF;by }30%|. Cannot use;with other stances.		
+A00487	c/csv/skill_00.dat	rec 35 off 53 ps 1	Upgrade Trait. Hits;with }Draw Sword| have;a }#10%| chance to;inflict bleed.;Bleeding targets;continuously take }1;dmg per 12 STR|.		
+A00488	c/csv/skill_00.dat	rec 42 off 54 ps 1	T+rBuff Skill. Cooldown:;}#09s|. For }#08s|, Max;HP drops b		
+A00489	c/csv/skill_00.dat	rec 42 off 121 ps 1	 but;ATK Spd increases and;Crit increases by		
+A00490	c/csv/skill_01.dat	rec 1 off 58 ps 1	Cost: }#07 SP|.;Cooldown: }#09s|.;Teleports behind the;nearest enemy within;}#06 range|. {Related;Trait|;#01Ambush - Ambush;#02Resist - Swift;Step;#03Resist - Shadow;Tread		
+A00491	c/csv/skill_01.dat	rec 23 off 60 ps 1	Buff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Duration: }#08s|. Hits;have a }5%| chance to;poison targets.;Poisoned foes take;continuous damage for;}10s|. Total damage;scales with Melee;ATK.		
+A00492	c/csv/skill_01.dat	rec 31 off 62 ps 1	T+`Buff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Reduces SP		
+A00493	c/csv/skill_01.dat	rec 31 off 122 ps 1	cost of;all skills by }50%| for;		
+A00494	c/csv/skill_01.dat	rec 42 off 61 ps 1	Costs }#07 SP|.;Cooldown: }#09s|. Deals;}#05%| Melee ATK DMG to;frontal enemies.;Grants 1 {Crit Orb| on;hit.		
+A00495	c/csv/skill_02.dat	rec 6 off 59 ps 1	osts }#07 SP|. Fires;forward and backward;simultaneously,;dealing }		
+A00496	c/csv/skill_02.dat	rec 6 off 128 ps 1	5%| Ranged;ATK dmg. {Traits|;#01Trick - Range Up		
+A00497	c/csv/skill_02.dat	rec 6 off 180 ps 1	Survival - Trick;Shot Mastery;#03Survival - Reload		
+A00498	c/csv/skill_02.dat	rec 16 off 112 ps 1	4%|;of enemy DEF. Does;not stack with;Flechette.		
+A00499	c/csv/skill_02.dat	rec 19 off 55 ps 1	TDABuff Skill. Maximizes;attack speed of;continuous fire fo		
+A00500	c/csv/skill_02.dat	rec 35 off 62 ps 1	Upgrade Trait.;Increases range of;}Rapid Fire|, }Trick;Shot|, }Impact Cannon|,;}Auto Fire|, and;}Gatling| by }#10;levels|.		
+A00501	c/csv/skill_02.dat	rec 38 off 55 ps 1	D\Set off a flashbang.;For }#08s|, nearby;enemies lose }3		
+A00502	c/csv/skill_02.dat	rec 38 off 115 ps 1	Hit;Rate and }vision falls;to }1		
+A00503	c/csv/skill_03.dat	rec 8 off 54 ps 1	Uses }#07 SP|.;Cooldown: }#09s|.;Strikes enemy weapon,;dealing }#05%| Melee;ATK damage and;reducing all ATK by;}#06%| for }#08s|.;{Related Traits|;#01Training - Wrist;Strike;#02Training - Hand;Strike		
+A00504	c/csv/skill_03.dat	rec 16 off 55 ps 1	Upgrade Trait.;Movement Speed in;}Great Lance Stance|;increases by }#10;tiers|.		
+A00505	c/csv/smith_0.dat	rec 4 off 2 ps 1	NONE		
+A00506	c/csv/smith_0.dat	rec 5 off 2 ps 1	NONE		
+A00507	c/csv/smith_0.dat	rec 6 off 2 ps 1	NONE		
+A00508	c/csv/smith_0.dat	rec 7 off 2 ps 1	NONE		
+A00509	c/csv/smith_0.dat	rec 20 off 2 ps 1	NONE		
+A00510	c/csv/smith_0.dat	rec 21 off 2 ps 1	NONE		
+A00511	c/csv/smith_0.dat	rec 22 off 2 ps 1	NONE		
+A00512	c/csv/smith_0.dat	rec 23 off 2 ps 1	NONE		
+A00513	c/csv/smith_0.dat	rec 44 off 2 ps 1	NONE		
+A00514	c/csv/smith_0.dat	rec 45 off 2 ps 1	NONE		
+A00515	c/csv/smith_0.dat	rec 46 off 2 ps 1	NONE		
+A00516	c/csv/smith_0.dat	rec 47 off 2 ps 1	NONE		
+A00517	c/csv/smith_0.dat	rec 52 off 2 ps 1	NONE		
+A00518	c/csv/smith_0.dat	rec 53 off 2 ps 1	NONE		
+A00519	c/csv/smith_0.dat	rec 54 off 2 ps 1	NONE		
+A00520	c/csv/smith_0.dat	rec 55 off 2 ps 1	NONE		
+A00521	c/csv/smith_0.dat	rec 60 off 2 ps 1	NONE		
+A00522	c/csv/smith_0.dat	rec 61 off 2 ps 1	NONE		
+A00523	c/csv/smith_0.dat	rec 62 off 2 ps 1	NONE		
+A00524	c/csv/smith_0.dat	rec 63 off 2 ps 1	NONE		
+A00525	c/csv/smith_0.dat	rec 89 off 2 ps 1	NONE		
+A00526	c/csv/smith_0.dat	rec 90 off 2 ps 1	NONE		
+A00527	c/csv/smith_0.dat	rec 91 off 2 ps 1	NONE		
+A00528	c/csv/smith_0.dat	rec 92 off 2 ps 1	NONE		
+A00529	c/csv/smith_0.dat	rec 93 off 2 ps 1	NONE		
+A00530	c/csv/smith_0.dat	rec 94 off 2 ps 1	NONE		
+A00531	c/csv/smith_0.dat	rec 95 off 2 ps 1	NONE		
+A00532	c/csv/smith_1.dat	rec 60 off 2 ps 1	NONE		
+A00533	c/csv/smith_1.dat	rec 61 off 2 ps 1	NONE		
+A00534	c/csv/smith_1.dat	rec 62 off 2 ps 1	NONE		
+A00535	c/csv/smith_1.dat	rec 63 off 2 ps 1	NONE		
+A00536	c/csv/smith_1.dat	rec 68 off 2 ps 1	NONE		
+A00537	c/csv/smith_1.dat	rec 69 off 2 ps 1	NONE		
+A00538	c/csv/smith_1.dat	rec 70 off 2 ps 1	NONE		
+A00539	c/csv/smith_1.dat	rec 71 off 2 ps 1	NONE		
+A00540	c/csv/smith_1.dat	rec 78 off 79 ps 1	GK		
+A00541	c/csv/smith_1.dat	rec 86 off 80 ps 1	HK		
+A00542	c/csv/smith_1.dat	rec 89 off 2 ps 1	NONE		
+A00543	c/csv/smith_1.dat	rec 90 off 2 ps 1	NONE		
+A00544	c/csv/smith_1.dat	rec 91 off 2 ps 1	NONE		
+A00545	c/csv/smith_1.dat	rec 92 off 2 ps 1	NONE		
+A00546	c/csv/smith_1.dat	rec 93 off 2 ps 1	NONE		
+A00547	c/csv/smith_1.dat	rec 94 off 2 ps 1	NONE		
+A00548	c/csv/smith_1.dat	rec 95 off 2 ps 1	NONE		
+A00549	c/csv/smith_2.dat	rec 60 off 2 ps 1	NONE		
+A00550	c/csv/smith_2.dat	rec 61 off 2 ps 1	NONE		
+A00551	c/csv/smith_2.dat	rec 62 off 2 ps 1	NONE		
+A00552	c/csv/smith_2.dat	rec 63 off 2 ps 1	NONE		
+A00553	c/csv/smith_2.dat	rec 68 off 2 ps 1	NONE		
+A00554	c/csv/smith_2.dat	rec 69 off 2 ps 1	NONE		
+A00555	c/csv/smith_2.dat	rec 70 off 2 ps 1	NONE		
+A00556	c/csv/smith_2.dat	rec 71 off 2 ps 1	NONE		
+A00557	c/csv/smith_2.dat	rec 78 off 80 ps 1	OK		
+A00558	c/csv/smith_2.dat	rec 89 off 2 ps 1	NONE		
+A00559	c/csv/smith_2.dat	rec 90 off 2 ps 1	NONE		
+A00560	c/csv/smith_2.dat	rec 91 off 2 ps 1	NONE		
+A00561	c/csv/smith_2.dat	rec 92 off 2 ps 1	NONE		
+A00562	c/csv/smith_2.dat	rec 93 off 2 ps 1	NONE		
+A00563	c/csv/smith_2.dat	rec 94 off 2 ps 1	NONE		
+A00564	c/csv/smith_2.dat	rec 95 off 2 ps 1	NONE		
+A00565	c/csv/tips.dat	rec 17 off 0 ps 1	Heroes Lore 5 features multiple endings.		
+A00566	vfs:0x92eafcd8.dat	rec 0 off 16 ps 2	Move: Touch and drag;left Dash: Fast drag;left / DASH button;Examine/Talk: Square;button Shortcuts:;Right icons Combo:;Right icon (yellow;box) Swap Hotbar:;Right # icon Menu:;Right arrow Cash;Shop: Top SHOP Map:;Top MAP Quicksave:;Top SAVE		
+A00567	vfs:0x92eafcd8.dat	rec 3 off 15 ps 2	Weapon: One-Handed;Sword Armor: Light;Armor HP: Recovers;over time SP:;Recovers over time;Max SP: Raised by;items/traits Crit;Orbs: Built via;skills Attack Type:;Physical		
+A00568	vfs:0x92eafcd8.dat	rec 4 off 20 ps 2	Weapon: Gun Armor:;Light HP: Regenerates;over time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits ATK;Type: Ranged		
+A00569	vfs:0x92eafcd8.dat	rec 5 off 14 ps 2	Weapon: Spear Armor:;Light/Heavy/Shield;HP: Regenerates over;time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits Crit;Orb: Acquired via;Active Block ATK;Type: Physical		
+A00570	vfs:0x92eafcd8.dat	rec 6 off 17 ps 2	STR: Melee ATK and;Melee DMG AGI: Ranged;ATK, ACC and Eva CON:;Max HP, HP Regen,;P.DEF and M.DEF SPR:;Magic ACC, M.RES,;Magic ATK, Max SP and;SP Regen;(Knight/Gunslinger)		
+A00571	vfs:0x92eafcd8.dat	rec 8 off 17 ps 2	Skills and active;traits can be;assigned to Combos.;Activate combos by;tapping the icon on;the right (yellow;box). Repeatedly;tapping uses skills;in the assigned;order. Some traits or;skills cannot be set;in combos. (See skill;details)		
+A00572	vfs:0x92eafcd8.dat	rec 9 off 18 ps 2	Traits enhance class;abilities or skills.;Each class has 3;trait trees.;;Trait Points: Gain 1;Trait Point every 2;levels. Invest points;to level up traits.;;Active and Passive:;Traits are split into;Passives (always;active) and Actives;(assigned to;hotkeys).;;Prerequisites: You;must meet the;required tree points;shown on the left to;learn a trait. Traits;connected by lines;require learning the;prerequisite trait;first.		
+A00573	vfs:0x92eafcd8.dat	rec 10 off 7 ps 2	Equip gear when;meeting type and;level requirements.;Normal: White Rare:;Yellow Epic: Blue;Hero: Purple;Legendary: Red Set:;Green Gear can be;strengthened via;Refinement and Orb;fusion. Synthesizing;allows you to reroll;item options.		
+A00574	vfs:0x92eafcd8.dat	rec 11 off 19 ps 2	Gear: Helm/Armor;(Spirit only) Skills:;Obtained via in-game;events.;;Level Up: Gains EXP;in combat and levels;up at thresholds.;;Stats: Increases upon;level up modified by;gear options.;;Spirit Gauge:;Recovers in combat.;;Tip: Spirit ATK is;affected by Spirit;stats and character;Magic ATK.		
+A00575	vfs:0x92eafcd8.dat	rec 12 off 15 ps 2	Usable after the;Spirit acquisition;event. When the;Spirit Gauge fills;enough, available;charges appear as;numbers to the left,;allowing Spirit;Summoning. Summoned;Spirits show assigned;skills tap a skill to;use it.		
+A00576	vfs:0x92eafcd8.dat	rec 13 off 10 ps 2	Refine: Consumes;Refine Stones or High;Refine Stones.;Failure may destroy;items.;;Synthesize: Combines;two Normal-Epic items;into a new one.;Original options are;randomly transferred.;;Special Combine:;Available in Skills >;Combine. Using;recipes registers new;recipes;automatically.;Requires 1-3;ingredient types;chance of failure;exists.;;Normal Combine: Craft;items handled by;Blacksmiths.;;Orb Fusion: Socket;Orbs into gear with;empty sockets.;Stacking the same Orb;grants extra bonuses.;Failure may destroy;the item.		
+A00577	vfs:0x92eafcd8.dat	rec 14 off 8 ps 2	Progress through the;game by completing;Quest objectives.;Main Quest: Essential;quests required to;advance the story.;;Sub Quest: Optional;quests offering extra;rewards. Sub quests;that become;unobtainable as the;story progresses are;deleted. Sub quests;can be abandoned at;any time.		
+A00578	vfs:0x92eafcd8.dat	rec 15 off 8 ps 2	Bonus Mode.;;Survival: Defeat;incoming waves of;enemies. The goal is;to survive as long as;possible.;;Time Attack: Defeat;the boss within the;time limit.;;Breakthrough: Destroy;hidden seals within;the time limit to;descend floors.;Consists of 3 floors.;;Expert Mode uses;Expert-exclusive;items only and;disables saving.		
+A00579	vfs:0x92eafcd8.dat	rec 16 off 14 ps 2	Optional goals;separate from the;main story. Meeting;specific criteria;unlocks achievements;automatically. View;unlocked achievements;in Main Menu >;Achievements.		
+A00580	vfs:0x92eafcd8.dat	rec 17 off 9 ps 2	Storage: Store;single-player items;on the server.;;Trade Gold: Currency;for Exchange and;Mail. Single-player;Gold can be exchanged;1:1 for Trade Gold.;;Exchange: Trade items;with other players. A;5% fee is deducted;from sales upon;collection (waived;under 2,000).;;Mailbox: Send items;or short messages to;other players.;Sending mail costs a;1,000 Trade Gold fee.		
+A00581	vfs:0x92eafcd8.dat	rec 19 off 7 ps 2	This game incurs 0;KRW per packet (512;bytes) in data fees;aside from basic;carrier rates.;Overseas network;usage incurs roaming;rates. Changing phone;numbers may cause;anti-piracy auth;errors, preventing;game execution. On;multitasking devices,;calls or the;multitasking key may;not pause the app.;;-Cash items (Tome of;Growth/Auto-loot);duration counts in;playtime.		
+A00582	vfs:0xc28f807a.dat	rec 0 off 16 ps 2	Move: Touch and drag;left Dash: Fast drag;left / DASH button;Examine/Talk: Square;button Shortcuts:;Right icons Combo:;Right icon (yellow;box) Swap Hotbar:;Right # icon Menu:;Right arrow Cash;Shop: Top SHOP Map:;Top MAP Quicksave:;Top SAVE		
+A00583	vfs:0xc28f807a.dat	rec 3 off 15 ps 2	Weapon: One-Handed;Sword Armor: Light;Armor HP: Recovers;over time SP:;Recovers over time;Max SP: Raised by;items/traits Crit;Orbs: Built via;skills Attack Type:;Physical		
+A00584	vfs:0xc28f807a.dat	rec 4 off 20 ps 2	Weapon: Gun Armor:;Light HP: Regenerates;over time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits ATK;Type: Ranged		
+A00585	vfs:0xc28f807a.dat	rec 5 off 14 ps 2	Weapon: Spear Armor:;Light/Heavy/Shield;HP: Regenerates over;time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits Crit;Orb: Acquired via;Active Block ATK;Type: Physical		
+A00586	vfs:0xc28f807a.dat	rec 6 off 17 ps 2	STR: Melee ATK and;Melee DMG AGI: Ranged;ATK, ACC and Eva CON:;Max HP, HP Regen,;P.DEF and M.DEF SPR:;Magic ACC, M.RES,;Magic ATK, Max SP and;SP Regen;(Knight/Gunslinger)		
+A00587	vfs:0xc28f807a.dat	rec 8 off 17 ps 2	Skills and active;traits can be;assigned to Combos.;Activate combos by;tapping the icon on;the right (yellow;box). Repeatedly;tapping uses skills;in the assigned;order. Some traits or;skills cannot be set;in combos. (See skill;details)		
+A00588	vfs:0xc28f807a.dat	rec 9 off 18 ps 2	Traits enhance class;abilities or skills.;Each class has 3;trait trees.;;Trait Points: Gain 1;Trait Point every 2;levels. Invest points;to level up traits.;;Active and Passive:;Traits are split into;Passives (always;active) and Actives;(assigned to;hotkeys).;;Prerequisites: You;must meet the;required tree points;shown on the left to;learn a trait. Traits;connected by lines;require learning the;prerequisite trait;first.		
+A00589	vfs:0xc28f807a.dat	rec 10 off 7 ps 2	Equip gear when;meeting type and;level requirements.;Normal: White Rare:;Yellow Epic: Blue;Hero: Purple;Legendary: Red Set:;Green Gear can be;strengthened via;Refinement and Orb;fusion. Synthesizing;allows you to reroll;item options.		
+A00590	vfs:0xc28f807a.dat	rec 11 off 19 ps 2	Gear: Helm/Armor;(Spirit only) Skills:;Obtained via in-game;events.;;Level Up: Gains EXP;in combat and levels;up at thresholds.;;Stats: Increases upon;level up modified by;gear options.;;Spirit Gauge:;Recovers in combat.;;Tip: Spirit ATK is;affected by Spirit;stats and character;Magic ATK.		
+A00591	vfs:0xc28f807a.dat	rec 12 off 15 ps 2	Usable after the;Spirit acquisition;event. When the;Spirit Gauge fills;enough, available;charges appear as;numbers to the left,;allowing Spirit;Summoning. Summoned;Spirits show assigned;skills tap a skill to;use it.		
+A00592	vfs:0xc28f807a.dat	rec 13 off 10 ps 2	Refine: Consumes;Refine Stones or High;Refine Stones.;Failure may destroy;items.;;Synthesize: Combines;two Normal-Epic items;into a new one.;Original options are;randomly transferred.;;Special Combine:;Available in Skills >;Combine. Using;recipes registers new;recipes;automatically.;Requires 1-3;ingredient types;chance of failure;exists.;;Normal Combine: Craft;items handled by;Blacksmiths.;;Orb Fusion: Socket;Orbs into gear with;empty sockets.;Stacking the same Orb;grants extra bonuses.;Failure may destroy;the item.		
+A00593	vfs:0xc28f807a.dat	rec 14 off 8 ps 2	Progress through the;game by completing;Quest objectives.;Main Quest: Essential;quests required to;advance the story.;;Sub Quest: Optional;quests offering extra;rewards. Sub quests;that become;unobtainable as the;story progresses are;deleted. Sub quests;can be abandoned at;any time.		
+A00594	vfs:0xc28f807a.dat	rec 15 off 8 ps 2	Bonus Mode.;;Survival: Defeat;incoming waves of;enemies. The goal is;to survive as long as;possible.;;Time Attack: Defeat;the boss within the;time limit.;;Breakthrough: Destroy;hidden seals within;the time limit to;descend floors.;Consists of 3 floors.;;Expert Mode uses;Expert-exclusive;items only and;disables saving.		
+A00595	vfs:0xc28f807a.dat	rec 16 off 14 ps 2	Optional goals;separate from the;main story. Meeting;specific criteria;unlocks achievements;automatically. View;unlocked achievements;in Main Menu >;Achievements.		
+A00596	vfs:0xc28f807a.dat	rec 17 off 9 ps 2	Storage: Store;single-player items;on the server.;;Trade Gold: Currency;for Exchange and;Mail. Single-player;Gold can be exchanged;1:1 for Trade Gold.;;Exchange: Trade items;with other players. A;5% fee is deducted;from sales upon;collection (waived;under 2,000).;;Mailbox: Send items;or short messages to;other players.;Sending mail costs a;1,000 Trade Gold fee.		
+A00597	vfs:0xc28f807a.dat	rec 19 off 7 ps 2	Exceeding youth data;caps blocks wireless;internet, disrupting;network connectivity.;;Overseas network;usage incurs roaming;rates.;;Changing phone;numbers may cause;anti-piracy auth;errors, preventing;game execution.;;On;LG-LH2100/LG-LV4200;models, wheel key may;malfunction.;;On multitasking;devices, calls or the;multitasking key may;not pause the app.;;-Cash items (Tome of;Growth/Auto-loot);duration counts in;playtime.		
+A00598	vfs:0xe6bbcc45.dat	rec 0 off 16 ps 2	Move: Touch and drag;left Dash: Fast drag;left / DASH button;Examine/Talk: Square;button Shortcuts:;Right icons Combo:;Right icon (yellow;box) Swap Hotbar:;Right # icon Menu:;Right arrow Cash;Shop: Top SHOP Map:;Top MAP Quicksave:;Top SAVE		
+A00599	vfs:0xe6bbcc45.dat	rec 3 off 15 ps 2	Weapon: One-Handed;Sword Armor: Light;Armor HP: Recovers;over time SP:;Recovers over time;Max SP: Raised by;items/traits Crit;Orbs: Built via;skills Attack Type:;Physical		
+A00600	vfs:0xe6bbcc45.dat	rec 4 off 20 ps 2	Weapon: Gun Armor:;Light HP: Regenerates;over time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits ATK;Type: Ranged		
+A00601	vfs:0xe6bbcc45.dat	rec 5 off 14 ps 2	Weapon: Spear Armor:;Light/Heavy/Shield;HP: Regenerates over;time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits Crit;Orb: Acquired via;Active Block ATK;Type: Physical		
+A00602	vfs:0xe6bbcc45.dat	rec 6 off 17 ps 2	STR: Melee ATK and;Melee DMG AGI: Ranged;ATK, ACC and Eva CON:;Max HP, HP Regen,;P.DEF and M.DEF SPR:;Magic ACC, M.RES,;Magic ATK, Max SP and;SP Regen;(Knight/Gunslinger)		
+A00603	vfs:0xe6bbcc45.dat	rec 8 off 17 ps 2	Skills and active;traits can be;assigned to Combos.;Activate combos by;tapping the icon on;the right (yellow;box). Repeatedly;tapping uses skills;in the assigned;order. Some traits or;skills cannot be set;in combos. (See skill;details)		
+A00604	vfs:0xe6bbcc45.dat	rec 9 off 18 ps 2	Traits enhance class;abilities or skills.;Each class has 3;trait trees.;;Trait Points: Gain 1;Trait Point every 2;levels. Invest points;to level up traits.;;Active and Passive:;Traits are split into;Passives (always;active) and Actives;(assigned to;hotkeys).;;Prerequisites: You;must meet the;required tree points;shown on the left to;learn a trait. Traits;connected by lines;require learning the;prerequisite trait;first.		
+A00605	vfs:0xe6bbcc45.dat	rec 10 off 7 ps 2	Equip gear when;meeting type and;level requirements.;Normal: White Rare:;Yellow Epic: Blue;Hero: Purple;Legendary: Red Set:;Green Gear can be;strengthened via;Refinement and Orb;fusion. Synthesizing;allows you to reroll;item options.		
+A00606	vfs:0xe6bbcc45.dat	rec 11 off 19 ps 2	Gear: Helm/Armor;(Spirit only) Skills:;Obtained via in-game;events.;;Level Up: Gains EXP;in combat and levels;up at thresholds.;;Stats: Increases upon;level up modified by;gear options.;;Spirit Gauge:;Recovers in combat.;;Tip: Spirit ATK is;affected by Spirit;stats and character;Magic ATK.		
+A00607	vfs:0xe6bbcc45.dat	rec 12 off 15 ps 2	Usable after the;Spirit acquisition;event. When the;Spirit Gauge fills;enough, available;charges appear as;numbers to the left,;allowing Spirit;Summoning. Summoned;Spirits show assigned;skills tap a skill to;use it.		
+A00608	vfs:0xe6bbcc45.dat	rec 13 off 10 ps 2	Refine: Consumes;Refine Stones or High;Refine Stones.;Failure may destroy;items.;;Synthesize: Combines;two Normal-Epic items;into a new one.;Original options are;randomly transferred.;;Special Combine:;Available in Skills >;Combine. Using;recipes registers new;recipes;automatically.;Requires 1-3;ingredient types;chance of failure;exists.;;Normal Combine: Craft;items handled by;Blacksmiths.;;Orb Fusion: Socket;Orbs into gear with;empty sockets.;Stacking the same Orb;grants extra bonuses.;Failure may destroy;the item.		
+A00609	vfs:0xe6bbcc45.dat	rec 14 off 8 ps 2	Progress through the;game by completing;Quest objectives.;Main Quest: Essential;quests required to;advance the story.;;Sub Quest: Optional;quests offering extra;rewards. Sub quests;that become;unobtainable as the;story progresses are;deleted. Sub quests;can be abandoned at;any time.		
+A00610	vfs:0xe6bbcc45.dat	rec 15 off 8 ps 2	Bonus Mode.;;Survival: Defeat;incoming waves of;enemies. The goal is;to survive as long as;possible.;;Time Attack: Defeat;the boss within the;time limit.;;Breakthrough: Destroy;hidden seals within;the time limit to;descend floors.;Consists of 3 floors.;;Expert Mode uses;Expert-exclusive;items only and;disables saving.		
+A00611	vfs:0xe6bbcc45.dat	rec 16 off 14 ps 2	Optional goals;separate from the;main story. Meeting;specific criteria;unlocks achievements;automatically. View;unlocked achievements;in Main Menu >;Achievements.		
+A00612	vfs:0xe6bbcc45.dat	rec 17 off 9 ps 2	Storage: Store;single-player items;on the server.;;Trade Gold: Currency;for Exchange and;Mail. Single-player;Gold can be exchanged;1:1 for Trade Gold.;;Exchange: Trade items;with other players. A;5% fee is deducted;from sales upon;collection (waived;under 2,000).;;Mailbox: Send items;or short messages to;other players.;Sending mail costs a;1,000 Trade Gold fee.		
+A00613	vfs:0xe6bbcc45.dat	rec 19 off 9 ps 2	Game: Heroes Lore 5;Version: Company:;Electronic Arts Korea;LLC Phone:;02-559-8787 Website:;www.eamobile.co.kr;Email:;support@eamobile.co.kr		
+A00614	vfs:0xe6bbcc45.dat	rec 20 off 7 ps 2	This game incurs 0;KRW per packet (512;bytes) in data fees;aside from basic;carrier rates.;Overseas network;usage incurs roaming;rates. Changing phone;numbers may cause;anti-piracy auth;errors, preventing;game execution. On;multitasking devices,;calls or the;multitasking key may;not pause the app.;;-Cash items (Tome of;Growth/Auto-loot);duration counts in;playtime.		
+A00615	c/csv2/help_ktf.dat	rec 3 off 15 ps 2	Weapon: One-Handed;Sword Armor: Light;Armor HP: Recovers;over time SP:;Recovers over time;Max SP: Raised by;items/traits Crit;Orbs: Built via;skills Attack Type:;Physical		
+A00616	c/csv2/help_ktf.dat	rec 4 off 20 ps 2	Weapon: Gun Armor:;Light HP: Regenerates;over time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits ATK;Type: Ranged		
+A00617	c/csv2/help_ktf.dat	rec 5 off 14 ps 2	Weapon: Spear Armor:;Light/Heavy/Shield;HP: Regenerates over;time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits Crit;Orb: Acquired via;Active Block ATK;Type: Physical		
+A00618	c/csv2/help_ktf.dat	rec 6 off 17 ps 2	STR: Melee ATK and;Melee DMG AGI: Ranged;ATK, ACC and Eva CON:;Max HP, HP Regen,;P.DEF and M.DEF SPR:;Magic ACC, M.RES,;Magic ATK, Max SP and;SP Regen;(Knight/Gunslinger)		
+A00619	c/csv2/help_ktf.dat	rec 8 off 17 ps 2	Skills and active;traits can be;assigned to Combos.;Activate combos with;the 7 key. Repeatedly;pressing 7 uses;skills in the;assigned order. Some;traits or skills;cannot be set in;combos. (See skill;details)		
+A00620	c/csv2/help_ktf.dat	rec 9 off 18 ps 2	Traits enhance class;abilities or skills.;Each class has 3;trait trees.;;Trait Points: Gain 1;Trait Point every 2;levels. Invest points;to level up traits.;;Active and Passive:;Traits are split into;Passives (always;active) and Actives;(assigned to;hotkeys).;;Prerequisites: You;must meet the;required tree points;shown on the left to;learn a trait. Traits;connected by lines;require learning the;prerequisite trait;first.		
+A00621	c/csv2/help_ktf.dat	rec 10 off 7 ps 2	Equip gear when;meeting type and;level requirements.;Normal: White Rare:;Yellow Epic: Blue;Hero: Purple;Legendary: Red Set:;Green Gear can be;strengthened via;Refinement and Orb;fusion. Synthesizing;allows you to reroll;item options.		
+A00622	c/csv2/help_ktf.dat	rec 11 off 19 ps 2	Gear: Helm/Armor;(Spirit only) Skills:;Obtained via in-game;events.;;Level Up: Gains EXP;in combat and levels;up at thresholds.;;Stats: Increases upon;level up modified by;gear options.;;Spirit Gauge:;Recovers in combat.;;Tip: Spirit ATK is;affected by Spirit;stats and character;Magic ATK.		
+A00623	c/csv2/help_ktf.dat	rec 12 off 15 ps 2	Usable after the;Spirit acquisition;event. When the;Spirit Gauge fills;enough, available;charges appear as;numbers to the left,;allowing Spirit;Summoning. Summoned;Spirits show assigned;skills press D-pad;(or 2/4/6/8) to use;them.		
+A00624	c/csv2/help_ktf.dat	rec 13 off 10 ps 2	Refine: Consumes;Refine Stones or High;Refine Stones.;Failure may destroy;items.;;Synthesize: Combines;two Normal-Epic items;into a new one.;Original options are;randomly transferred.;;Special Combine:;Available in Skills >;Combine. Using;recipes registers new;recipes;automatically.;Requires 1-3;ingredient types;chance of failure;exists.;;Normal Combine: Craft;items handled by;Blacksmiths.;;Orb Fusion: Socket;Orbs into gear with;empty sockets.;Stacking the same Orb;grants extra bonuses.;Failure may destroy;the item.		
+A00625	c/csv2/help_ktf.dat	rec 14 off 8 ps 2	Progress through the;game by completing;Quest objectives.;Main Quest: Essential;quests required to;advance the story.;;Sub Quest: Optional;quests offering extra;rewards. Sub quests;that become;unobtainable as the;story progresses are;deleted. Sub quests;can be abandoned at;any time.		
+A00626	c/csv2/help_ktf.dat	rec 15 off 8 ps 2	Bonus Mode.;;Survival: Defeat;incoming waves of;enemies. The goal is;to survive as long as;possible.;;Time Attack: Defeat;the boss within the;time limit.;;Breakthrough: Destroy;hidden seals within;the time limit to;descend floors.;Consists of 3 floors.;;Expert Mode uses;Expert-exclusive;items only and;disables saving.		
+A00627	c/csv2/help_ktf.dat	rec 16 off 14 ps 2	Optional goals;separate from the;main story. Meeting;specific criteria;unlocks achievements;automatically. View;unlocked achievements;in Main Menu >;Achievements.		
+A00628	c/csv2/help_ktf.dat	rec 17 off 9 ps 2	Storage: Store;single-player items;on the server.;;Trade Gold: Currency;for Exchange and;Mail. Single-player;Gold can be exchanged;1:1 for Trade Gold.;;Exchange: Trade items;with other players. A;5% fee is deducted;from sales upon;collection (waived;under 2,000).;;Mailbox: Send items;or short messages to;other players.;Sending mail costs a;1,000 Trade Gold fee.		
+A00629	c/csv2/help_ktf.dat	rec 19 off 7 ps 2	-This game incurs 0;KRW per packet (512;bytes) in data fees;aside from basic;carrier rates.;;-Overseas network;usage incurs roaming;rates.;;-Changing phone;numbers may cause;anti-piracy auth;errors, preventing;game execution.;;-On;LG-KH2100/LG-KV4200;models, wheel key may;malfunction.;;-On multitasking;devices, calls or the;multitasking key may;not pause the app.;;-Cash items (Tome of;Growth/Auto-loot);duration counts in;playtime.		
+A00630	c/csv2/help_lgt.dat	rec 3 off 15 ps 2	Weapon: One-Handed;Sword Armor: Light;Armor HP: Recovers;over time SP:;Recovers over time;Max SP: Raised by;items/traits Crit;Orbs: Built via;skills Attack Type:;Physical		
+A00631	c/csv2/help_lgt.dat	rec 4 off 20 ps 2	Weapon: Gun Armor:;Light HP: Regenerates;over time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits ATK;Type: Ranged		
+A00632	c/csv2/help_lgt.dat	rec 5 off 14 ps 2	Weapon: Spear Armor:;Light/Heavy/Shield;HP: Regenerates over;time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits Crit;Orb: Acquired via;Active Block ATK;Type: Physical		
+A00633	c/csv2/help_lgt.dat	rec 6 off 17 ps 2	STR: Melee ATK and;Melee DMG AGI: Ranged;ATK, ACC and Eva CON:;Max HP, HP Regen,;P.DEF and M.DEF SPR:;Magic ACC, M.RES,;Magic ATK, Max SP and;SP Regen;(Knight/Gunslinger)		
+A00634	c/csv2/help_lgt.dat	rec 8 off 17 ps 2	Skills and active;traits can be;assigned to Combos.;Activate combos with;the 7 key. Repeatedly;pressing 7 uses;skills in the;assigned order. Some;traits or skills;cannot be set in;combos. (See skill;details)		
+A00635	c/csv2/help_lgt.dat	rec 9 off 18 ps 2	Traits enhance class;abilities or skills.;Each class has 3;trait trees.;;Trait Points: Gain 1;Trait Point every 2;levels. Invest points;to level up traits.;;Active and Passive:;Traits are split into;Passives (always;active) and Actives;(assigned to;hotkeys).;;Prerequisites: You;must meet the;required tree points;shown on the left to;learn a trait. Traits;connected by lines;require learning the;prerequisite trait;first.		
+A00636	c/csv2/help_lgt.dat	rec 10 off 7 ps 2	Equip gear when;meeting type and;level requirements.;Normal: White Rare:;Yellow Epic: Blue;Hero: Purple;Legendary: Red Set:;Green Gear can be;strengthened via;Refinement and Orb;fusion. Synthesizing;allows you to reroll;item options.		
+A00637	c/csv2/help_lgt.dat	rec 11 off 19 ps 2	Gear: Helm/Armor;(Spirit only) Skills:;Obtained via in-game;events.;;Level Up: Gains EXP;in combat and levels;up at thresholds.;;Stats: Increases upon;level up modified by;gear options.;;Spirit Gauge:;Recovers in combat.;;Tip: Spirit ATK is;affected by Spirit;stats and character;Magic ATK.		
+A00638	c/csv2/help_lgt.dat	rec 12 off 15 ps 2	Usable after the;Spirit acquisition;event. When the;Spirit Gauge fills;enough, available;charges appear as;numbers to the left,;allowing Spirit;Summoning. Summoned;Spirits show assigned;skills press D-pad;(or 2/4/6/8) to use;them.		
+A00639	c/csv2/help_lgt.dat	rec 13 off 10 ps 2	Refine: Consumes;Refine Stones or High;Refine Stones.;Failure may destroy;items.;;Synthesize: Combines;two Normal-Epic items;into a new one.;Original options are;randomly transferred.;;Special Combine:;Available in Skills >;Combine. Using;recipes registers new;recipes;automatically.;Requires 1-3;ingredient types;chance of failure;exists.;;Normal Combine: Craft;items handled by;Blacksmiths.;;Orb Fusion: Socket;Orbs into gear with;empty sockets.;Stacking the same Orb;grants extra bonuses.;Failure may destroy;the item.		
+A00640	c/csv2/help_lgt.dat	rec 14 off 8 ps 2	Progress through the;game by completing;Quest objectives.;Main Quest: Essential;quests required to;advance the story.;;Sub Quest: Optional;quests offering extra;rewards. Sub quests;that become;unobtainable as the;story progresses are;deleted. Sub quests;can be abandoned at;any time.		
+A00641	c/csv2/help_lgt.dat	rec 15 off 8 ps 2	Bonus Mode.;;Survival: Defeat;incoming waves of;enemies. The goal is;to survive as long as;possible.;;Time Attack: Defeat;the boss within the;time limit.;;Breakthrough: Destroy;hidden seals within;the time limit to;descend floors.;Consists of 3 floors.;;Expert Mode uses;Expert-exclusive;items only and;disables saving.		
+A00642	c/csv2/help_lgt.dat	rec 16 off 14 ps 2	Optional goals;separate from the;main story. Meeting;specific criteria;unlocks achievements;automatically. View;unlocked achievements;in Main Menu >;Achievements.		
+A00643	c/csv2/help_lgt.dat	rec 17 off 9 ps 2	Storage: Store;single-player items;on the server.;;Trade Gold: Currency;for Exchange and;Mail. Single-player;Gold can be exchanged;1:1 for Trade Gold.;;Exchange: Trade items;with other players. A;5% fee is deducted;from sales upon;collection (waived;under 2,000).;;Mailbox: Send items;or short messages to;other players.;Sending mail costs a;1,000 Trade Gold fee.		
+A00644	c/csv2/help_lgt.dat	rec 19 off 7 ps 2	Exceeding youth data;caps blocks wireless;internet, disrupting;network connectivity.;;Overseas network;usage incurs roaming;rates.;;Changing phone;numbers may cause;anti-piracy auth;errors, preventing;game execution.;;LG-LH2100/LG-LV4200;wheel key may;malfunction.;;On multitasking;devices, calls or the;multitasking key may;not pause the app.;;Cash items (Tome of;Growth/Auto-loot);duration counts in;playtime.		
+A00645	c/csv2/help_skt.dat	rec 3 off 15 ps 2	Weapon: One-Handed;Sword Armor: Light;Armor HP: Recovers;over time SP:;Recovers over time;Max SP: Raised by;items/traits Crit;Orbs: Built via;skills Attack Type:;Physical		
+A00646	c/csv2/help_skt.dat	rec 4 off 20 ps 2	Weapon: Gun Armor:;Light HP: Regenerates;over time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits ATK;Type: Ranged		
+A00647	c/csv2/help_skt.dat	rec 5 off 14 ps 2	Weapon: Spear Armor:;Light/Heavy/Shield;HP: Regenerates over;time SP Regen:;Regenerates over time;Max SP: Raised by;SPR/item;options/traits Crit;Orb: Acquired via;Active Block ATK;Type: Physical		
+A00648	c/csv2/help_skt.dat	rec 6 off 17 ps 2	STR: Melee ATK and;Melee DMG AGI: Ranged;ATK, ACC and Eva CON:;Max HP, HP Regen,;P.DEF and M.DEF SPR:;Magic ACC, M.RES,;Magic ATK, Max SP and;SP Regen;(Knight/Gunslinger)		
+A00649	c/csv2/help_skt.dat	rec 8 off 17 ps 2	Skills and active;traits can be;assigned to Combos.;Activate combos with;the 7 key. Repeatedly;pressing 7 uses;skills in the;assigned order. Some;traits or skills;cannot be set in;combos. (See skill;details)		
+A00650	c/csv2/help_skt.dat	rec 9 off 18 ps 2	Traits enhance class;abilities or skills.;Each class has 3;trait trees.;;Trait Points: Gain 1;Trait Point every 2;levels. Invest points;to level up traits.;;Active and Passive:;Traits are split into;Passives (always;active) and Actives;(assigned to;hotkeys).;;Prerequisites: You;must meet the;required tree points;shown on the left to;learn a trait. Traits;connected by lines;require learning the;prerequisite trait;first.		
+A00651	c/csv2/help_skt.dat	rec 10 off 7 ps 2	Equip gear when;meeting type and;level requirements.;Normal: White Rare:;Yellow Epic: Blue;Hero: Purple;Legendary: Red Set:;Green Gear can be;strengthened via;Refinement and Orb;fusion. Synthesizing;allows you to reroll;item options.		
+A00652	c/csv2/help_skt.dat	rec 11 off 19 ps 2	Gear: Helm/Armor;(Spirit only) Skills:;Obtained via in-game;events.;;Level Up: Gains EXP;in combat and levels;up at thresholds.;;Stats: Increases upon;level up modified by;gear options.;;Spirit Gauge:;Recovers in combat.;;Tip: Spirit ATK is;affected by Spirit;stats and character;Magic ATK.		
+A00653	c/csv2/help_skt.dat	rec 12 off 15 ps 2	Usable after the;Spirit acquisition;event. When the;Spirit Gauge fills;enough, available;charges appear as;numbers to the left,;allowing Spirit;Summoning. Summoned;Spirits show assigned;skills press D-pad;(or 2/4/6/8) to use;them.		
+A00654	c/csv2/help_skt.dat	rec 13 off 10 ps 2	Refine: Consumes;Refine Stones or High;Refine Stones.;Failure may destroy;items.;;Synthesize: Combines;two Normal-Epic items;into a new one.;Original options are;randomly transferred.;;Special Combine:;Available in Skills >;Combine. Using;recipes registers new;recipes;automatically.;Requires 1-3;ingredient types;chance of failure;exists.;;Normal Combine: Craft;items handled by;Blacksmiths.;;Orb Fusion: Socket;Orbs into gear with;empty sockets.;Stacking the same Orb;grants extra bonuses.;Failure may destroy;the item.		
+A00655	c/csv2/help_skt.dat	rec 14 off 8 ps 2	Progress through the;game by completing;Quest objectives.;Main Quest: Essential;quests required to;advance the story.;;Sub Quest: Optional;quests offering extra;rewards. Sub quests;that become;unobtainable as the;story progresses are;deleted. Sub quests;can be abandoned at;any time.		
+A00656	c/csv2/help_skt.dat	rec 15 off 8 ps 2	Bonus Mode.;;Survival: Defeat;incoming waves of;enemies. The goal is;to survive as long as;possible.;;Time Attack: Defeat;the boss within the;time limit.;;Breakthrough: Destroy;hidden seals within;the time limit to;descend floors.;Consists of 3 floors.;;Expert Mode uses;Expert-exclusive;items only and;disables saving.		
+A00657	c/csv2/help_skt.dat	rec 16 off 14 ps 2	Optional goals;separate from the;main story. Meeting;specific criteria;unlocks achievements;automatically. View;unlocked achievements;in Main Menu >;Achievements.		
+A00658	c/csv2/help_skt.dat	rec 17 off 9 ps 2	Storage: Store;single-player items;on the server.;;Trade Gold: Currency;for Exchange and;Mail. Single-player;Gold can be exchanged;1:1 for Trade Gold.;;Exchange: Trade items;with other players. A;5% fee is deducted;from sales upon;collection (waived;under 2,000).;;Mailbox: Send items;or short messages to;other players.;Sending mail costs a;1,000 Trade Gold fee.		
+A00659	c/csv2/help_skt.dat	rec 19 off 9 ps 2	Game: Heroes Lore 5;Version: Company:;Electronic Arts Korea;LLC Phone:;02-559-8787 Website:;www.eamobile.co.kr;Email:;support@eamobile.co.kr		
+A00660	c/csv2/help_skt.dat	rec 20 off 7 ps 2	This game incurs 0;KRW per packet (512;bytes) in data fees;aside from basic;carrier rates.;Overseas network;usage incurs roaming;rates. Changing phone;numbers may cause;anti-piracy auth;errors, preventing;game execution. On;multitasking devices,;calls or the;multitasking key may;not pause the app.;Cash items (Tome of;Growth/Auto-loot);duration counts in;playtime.		
+A00661	c/map/00001.scn	idx 9	Seven sarcophagi...	Bảy cỗ quan tài...	k_low=K03927
+A00662	c/map/00003.scn	idx 24	G A M E  O V E R	G A M E  O V E R	
+A00663	c/map/00007.scn	idx 4	G A M E  O V E R	G A M E  O V E R	
+A00664	c/map/00019.scn	idx 1	Come forth... Servant of the Descendant...	Hãy hiện ra... Kẻ hầu của Kẻ Giáng Lâm...	
+A00665	c/map/00019.scn	idx 2	What do you desire?	Ngươi muốn điều gì?	
+A00666	c/map/00019.scn	idx 3	Cut the crap.	Bớt nhảm đi.	
+A00667	c/map/00019.scn	idx 4	Relics of the past belong asleep at the bottom of the ocean.	Di vật của quá khứ thì nên ngủ yên dưới đáy đại dương.	
+A00668	c/map/00019.scn	idx 5	|(I cannot stay here long...){	|(Ta không thể ở lại đây lâu...){	
+A00669	c/map/00019.scn	idx 6	|(This should be a quick fight...){	|(Trận này phải kết thúc nhanh...){	
+A00670	c/map/00019.scn	idx 7	Still not giving up? How persistent!	Vẫn chưa chịu bỏ cuộc à? Dai dẳng thật!	
+A00671	c/map/00019.scn	idx 8	|(No time...){	|(Không còn thời gian...){	
+A00672	c/map/00019.scn	idx 9	|(I must fall back for now!){	|(Trước mắt phải rút lui!){	
+A00673	c/map/00019.scn	idx 10	Useless. I will return... again and again...	Vô ích. Ta sẽ trở lại... hết lần này đến lần khác...	
+A00674	c/map/00019.scn	idx 11	|(As expected, this was only a temporary fix.){	|(Quả nhiên, đây chỉ là biện pháp tạm bợ.){	
+A00675	c/map/00019.scn	idx 12	|(I can feel it restoring its body already...){	|(Đã cảm nhận được nó đang hồi phục thân thể...){	
+A00676	c/map/00019.scn	idx 13	|(Still, it bought us some time.){	|(Dù vậy, cũng câu được chút thời gian.){	
+A00677	c/map/00023.scn	idx 31	G A M E  O V E R	G A M E  O V E R	
+A00678	c/map/00024.scn	idx 2	G A M E  O V E R	G A M E  O V E R	
+A00679	c/map/00028.scn	idx 12	G A M E  O V E R	G A M E  O V E R	
+A00680	c/map/00030.scn	idx 30	|(This is the control panel Tyr destroyed...){	|(Đây là bảng điều khiển mà Tir đã phá hỏng...){	
+A00681	c/map/00030.scn	idx 31	|(It does not seem to be working.){	|(Có vẻ không hoạt động nữa.){	
+A00682	c/map/00030.scn	idx 32	...Damn it... I saw something repulsive.	...Chết tiệt... Vừa thấy một thứ ghê tởm.	
+A00683	c/map/00030.scn	idx 33	|(It looks like it might work at most once.){	|(Có vẻ nhiều nhất chỉ dùng được một lần.){	
+A00684	c/map/00030.scn	idx 34	An event where you cannot save will begin.	Một sự kiện không thể lưu game sắp bắt đầu.	
+A00685	c/map/00030.scn	idx 35	Activate later.	Kích hoạt sau.	
+A00686	c/map/00030.scn	idx 36	Activate now.	Kích hoạt ngay.	
+A00687	c/map/00030.scn	idx 37	|(The spirit control device does not seem to work.){	|(Thiết bị điều khiển Tinh Linh có vẻ không hoạt động.){	
+A00688	c/map/00030.scn	idx 38	|(There is an empty slot in the panel. Inserting something might make it work.){	|(Trên bảng có một khe trống. Lắp thứ gì vào có thể sẽ chạy được.){	
+A00689	c/map/00030.scn	idx 39	|(I have seen this shape somewhere before...){	|(Mình từng thấy hình dạng này ở đâu đó rồi...){	
+A00690	c/map/00030.scn	idx 40	|(<Found near the Ark in the Frozen Sea...{ Was it the one given to that woman in the Irem library?)	|(<Tìm thấy gần Phương Chu ở Biển Băng...{ Có phải thứ đã đưa cho người phụ nữ ở thư viện Irem không?)	
+A00691	c/map/00030.scn	idx 41	|(I knew it. It fits...){	|(Biết ngay mà. Vừa khít...){	
+A00692	c/map/00030.scn	idx 42	|(Inserted the ancient relic into the device.){	|(Đã lắp di vật cổ đại vào thiết bị.){	
+A00693	c/map/00035.scn	idx 62	Has it been five years already? I miss the days of fighting those }Firstborn{...	Đã năm năm rồi sao? Nhớ cái thời đánh nhau với lũ }Tiên Chủng{ quá...	k_low=K04805
+A00694	c/map/00038.scn	idx 64	Failures happen too, locking the item from more refining. A Critical Failure might even break it...	Cũng có lúc thất bại, trang bị bị khoá không tôi luyện thêm được. Đại thất bại thì có khi hỏng luôn...	k_low=K04977
+A00695	c/map/00050.scn	idx 21	Who knows... But if waiting four years means he inherited his spirit four years ago...	Không rõ... Nhưng nếu đợi bốn năm nghĩa là nó đã thừa kế Tinh Linh từ bốn năm trước...	k_low=K05501
+A00696	c/map/00053.scn	idx 14	G A M E  O V E R	G A M E  O V E R	
+A00697	c/map/00056.scn	idx 11	He stopped by about two weeks ago, asking around about <House Wade{ for some reason.	Khoảng hai tuần trước có ghé đây, chẳng hiểu sao cứ dò hỏi về <nhà Wade{.	k_low=K05994
+A00698	c/map/00060.scn	idx 97	Four years ago, young folks ran wild shouting about revolution, burning farms and villages to ash...	Bốn năm trước, lũ trẻ nổi loạn hô hào cách mạng, đốt sạch cả trang trại lẫn làng mạc...	k_low=K06310
+A00699	c/map/00060.scn	idx 125	Basically, a ten-year installment plan! Some whine it is just tenant farming, but stick it out and it is yours!	Nói đơn giản là trả góp mười năm! Có người than chẳng khác gì tá điền, nhưng cứ ráng chịu thì thành đất của mình!	k_low=K06337
+A00700	c/map/00060.scn	idx 139	It was truly divine providence that this place was not burned down during the revolution four years ago...	Việc nơi này không bị thiêu rụi trong cuộc cách mạng bốn năm trước, thật sự là nhờ ơn trên...	k_low=K06351
+A00701	c/map/00068.scn	idx 38	As for the reward, is this enough to satisfy you, Mr. Picky Mercenary?	Còn tiền công, mức này chắc vừa lòng chứ, anh lính đánh thuê khó tính?	
+A00702	c/map/00068.scn	idx 86	What could have happened? In the year since the miracle light appeared, there were no casualties in the village...	Chuyện gì thế nhỉ? Từ khi ánh sáng kỳ diệu xuất hiện đến nay đã một năm, làng chưa có ai thiệt mạng...	k_low=K06721
+A00703	c/map/00068.scn	idx 96	Over the past year... everyone enjoyed the peace brought by the }Miracle Flame{, but...	Suốt một năm qua... ai cũng tận hưởng hoà bình mà }ngọn lửa kỳ diệu{ mang lại, nhưng...	k_low=K06731
+A00704	c/map/00070.scn	idx 96	Stop calling me Schultzy. Being called Lord is bad enough already...	Bỏ cái kiểu gọi Schu đó đi. Bị gọi -nim đã đủ mệt rồi...	k_low=K06853
+A00705	c/map/00070.scn	idx 185	But he hates the Listeners... and he is strong. He was a great help during the uprising four years ago...	Nhưng anh ta căm ghét Kẻ Nghe... và rất mạnh. Lần nổi dậy bốn năm trước cũng giúp ích nhiều lắm...	k_low=K06942
+A00706	c/map/00077.scn	idx 68	The Wades said that human nature would inevitably give rise to godhood, but...	Lũ nhà Wade bảo rằng bản tính con người rồi tất yếu sẽ tạo nên thần, nhưng...	k_low=K07173
+A00707	c/map/00087.scn	idx 28	Phew, it was nice when I was young...	Phù, hồi còn trẻ thích thật...	
+A00708	c/map/00087.scn	idx 36	A union? I do not even have to ask whose idea that was.	Nghiệp đoàn? Chẳng cần hỏi cũng biết là ý của ai.	
+A00709	c/map/00087.scn	idx 37	What can a bunch of miners achieve by gathering together?	Thợ mỏ có tụ tập lại thì làm được gì đâu?	
+A00710	c/map/00094.scn	idx 22	Unless you keep your gear up to par, you will not survive against the stronger foes ahead.	Nếu không giữ trang bị theo kịp, cậu sẽ không sống nổi trước những kẻ mạnh hơn phía trước.	k_low=K06951
+A00711	c/map/00108.scn	idx 28	What is up? With the guild gone, there are not any jobs...	Có chuyện gì thế? Giờ không còn hội nữa nên cũng chẳng có ủy thác đâu...	k_low=K08225
+A00712	c/map/00108.scn	idx 36	I have the building and plenty of guild funds left. I am not worried about making ends meet.	Chị còn toà nhà và kha khá quỹ hội. Chẳng phải lo cơm áo đâu.	k_low=K08233
+A00713	c/map/00108.scn	idx 47	I do not know what kind of work you are involved in, but...	Chị không biết em đang làm công việc gì ngoài đó, nhưng...	k_low=K08244
+A00714	c/map/00108.scn	idx 50	|(A place to return to...){	|(Chỗ để về à...){	k_low=K08247
+A00715	c/map/00108.scn	idx 51	If more people show up, I might not be able to handle it all alone...	Nếu có thêm nhiều người đến, một mình chị chắc xoay không xuể...	k_low=K08248
+A00716	c/map/00111.scn	idx 9	Four years ago, a smith making shoddy weapons like these would not dare show his face here.	Bốn năm trước, tay thợ rèn làm vũ khí xập xệ thế này thì đừng hòng dám ló mặt ở đây.	k_low=K08274
+A00717	c/map/00113.scn	idx 24	forgreatjustice	forgreatjustice	
+A00718	c/map/00113.scn	idx 25	whatyousay	whatyousay	
+A00719	c/map/00113.scn	idx 26	uetupusthebomb	uetupusthebomb	
+A00720	c/map/00113.scn	idx 27	AYBABTU	AYBABTU	
+A00721	c/map/00113.scn	idx 28	|(Nothing happened.) {	|(Không có chuyện gì xảy ra.) {	
+A00722	c/map/00133.scn	idx 10	Four years ago, young folks ran wild shouting about revolution, burning farms and villages to ash...	Bốn năm trước, lũ trẻ nổi loạn hô hào cách mạng, đốt sạch cả trang trại lẫn làng mạc...	k_low=K06310
+A00723	c/map/00133.scn	idx 19	It was truly divine providence that this place was not burned down during the revolution four years ago...	Việc nơi này không bị thiêu rụi trong cuộc cách mạng bốn năm trước, thật sự là nhờ ơn trên...	k_low=K06351
+A00724	c/map/00136.scn	idx 2	Ignore it.	Bỏ qua.	
+A00725	c/map/00136.scn	idx 3	Ask.	Hỏi thử.	
+A00726	c/map/00136.scn	idx 13	You are not trying to sell it off somewhere for a fortune, are you...?	Cậu không định đem bán đâu đó lấy món hời đấy chứ...?	
+A00727	c/map/00136.scn	idx 15	Well, fine. You found it after all. Just make sure to tell me if you discover anything.	Thôi được. Dù sao cũng là cậu tìm thấy. Có phát hiện gì thì nhớ báo cho tôi nhé.	k_low=K08460
+A00728	c/map/00136.scn	idx 19	I have worked in this library for seven years. I guarded it even during the revolution four years ago.	Tôi làm ở thư viện này bảy năm rồi. Cả trong cuộc cách mạng bốn năm trước tôi cũng ở lại giữ nó.	
+A00729	c/map/00136.scn	idx 20	Even as the entire island burned, House Wade spared this library. I am grateful for that.	Dù cả đảo bị thiêu rụi, nhà Wade vẫn chừa lại thư viện này. Tôi biết ơn vì điều đó.	
+A00730	c/map/00136.scn	idx 22	Bane, Riedmeyr, Wade, Ernest... The four noble houses were just biding their time to expand their power...	Baine, Ridmeyer, Wade, Ernest... Bốn danh gia chỉ đang chờ thời cơ để mở rộng quyền lực...	
+A00731	c/map/00136.scn	idx 23	That was barely 30 years ago.	Mới chỉ cách đây chưa đầy 30 năm.	
+A00732	c/map/00136.scn	idx 26	|(This person might take good care of Logan book...){	|(Người này có lẽ sẽ giữ gìn tốt cuốn sách của Logan...){	
+A00733	c/map/00136.scn	idx 27	Does this library accept donations?	Thư viện này có nhận sách quyên tặng không?	
+A00734	c/map/00136.scn	idx 29	|(Showed Logan manuscript.){	|(Đã đưa bản thảo của Logan cho xem.){	
+A00735	c/map/00136.scn	idx 31	The contents are a mess, too... Did you write this yourself?	Nội dung cũng lộn xộn nữa... Cậu tự viết đấy à?	
+A00736	c/map/00136.scn	idx 34	Regardless, for that reason...	Dù sao thì, vì lẽ đó...	k_low=K06458
+A00737	c/map/00136.scn	idx 36	I will edit this a bit, get it properly published, and then place a copy in the library.	Tôi sẽ chỉnh sửa lại một chút, cho xuất bản đàng hoàng rồi để một bản trong thư viện.	k_low=K06460
+A00738	c/map/00136.scn	idx 39	There are plenty of monsters now, so mercenaries make a living, but what when monsters dwindle?	Giờ quái vật nhiều nên lính đánh thuê còn kiếm sống được, nhưng khi quái vật ít đi thì sao?	k_low=K06463
+A00739	c/map/00136.scn	idx 42	When supplies run low, regular troops tend to get priority...	Khi nhu yếu phẩm cạn, quân chính quy thường được ưu tiên...	
+A00740	c/map/00136.scn	idx 44	For instance, wolves on Meadow Hill are an excellent source of protein.	Chẳng hạn sói ở Meadowhill là nguồn đạm tuyệt vời.	
+A00741	c/map/00144.scn	idx 54	Looking at this used to bring me peace of mind...	Trước đây nhìn thứ này tôi thấy lòng yên ổn...	k_low=K06716
+A00742	c/map/00144.scn	idx 58	People have grown too complacent. They take the flame for granted and demand more...	Người ta đã quá tự mãn. Coi ngọn lửa là lẽ đương nhiên rồi còn đòi hỏi thêm...	k_low=K06722
+A00743	c/map/00144.scn	idx 64	If you had not slain that white bear back then, it probably would have gone berserk too, right?	Nếu hồi đó cậu không hạ con gấu trắng kia, chắc nó cũng đã nổi điên rồi nhỉ?	
+A00744	c/map/00150.scn	idx 11	Did you hear something deeper inside the cave...?	Cậu có nghe thấy gì đó sâu trong hang không...?	
+A00745	c/map/00151.scn	idx 112	As long as you are by my side... Althena will sleep forever...	Chừng nào ngươi còn ở bên ta... thì Altena sẽ ngủ vĩnh viễn...	k_low=K08807
+A00746	c/map/00151.scn	idx 185	I thought it was over... That man never makes it easy, even to the end...	Tưởng đã xong rồi... Gã đó đến phút cuối cũng không chịu để yên...	
+A00747	c/map/00151.scn	idx 186	I will stay here and research how to stop the Descendant Ruins.	Tôi sẽ ở lại đây nghiên cứu cách ngăn Di Tích của Kẻ Giáng Lâm.	
+A00748	c/map/00151.scn	idx 187	Rufus must have lost most of his power... but stay alert. He is a Hearer.	Lupus chắc đã mất phần lớn sức mạnh... nhưng đừng lơ là. Hắn là Kẻ Nghe.	
+A00749	c/map/00153.scn	idx 148	To be precise, all six human Successors... to complete Althena.	Nói chính xác thì là cả sáu Kế Thừa Giả loài người... để hoàn thành Altena.	k_low=K09032
+A00750	c/map/00153.scn	idx 182	These past three years, thanks to you... I was happy. But...	Suốt ba năm qua, nhờ có cậu... tôi đã được hạnh phúc. Nhưng...	k_low=K09065
+A00751	c/map/00153.scn	idx 237	So looking down from above... I will not regret...	Để khi tôi ở trên trời nhìn xuống... sẽ không phải hối tiếc...	k_low=K09117
+A00752	c/map/00170.scn	idx 22	No, it is nothing...	Không, không có gì...	
+A00753	c/map/00170.scn	idx 23	I will not need the boat for a while, so if you need to travel to another island, use Graham ship.	Một thời gian nữa tôi chưa cần dùng thuyền, nếu cần đến đảo khác thì cứ dùng thuyền của Graham nhé.	
+A00754	c/map/00170.scn	idx 24	Tyr seems to be hiding something...	Anh Tir.. hình như đang giấu điều gì đó thì phải..	
+A00755	c/map/00170.scn	idx 27	I will let you witness the historic test run of my powered armor. Care to join?	Để cậu chứng kiến buổi chạy thử lịch sử của bộ giáp trợ lực của tôi nhé. Đi cùng chứ?	
+A00756	c/map/00170.scn	idx 28	Not going	Không đi	
+A00757	c/map/00170.scn	idx 29	...Really?	...Thật à?	
+A00758	c/map/00170.scn	idx 30	I do not want to go.	Tôi không muốn đi.	
+A00759	c/map/00170.scn	idx 32	|(He looks a bit dejected...){	|(Trông anh ta hơi ủ rũ...){	
+A00760	c/map/00170.scn	idx 33	I am busy with other things.	Tôi bận việc khác rồi.	
+A00761	c/map/00170.scn	idx 34	Mm. That is fine. You will see it on the battlefield soon enough.	Ừm. Cũng được. Sớm muộn gì cậu cũng thấy nó ngoài chiến trường thôi.	
+A00762	c/map/00170.scn	idx 35	...I will go.	...Tôi đi.	
+A00763	c/map/00170.scn	idx 36	I feel like you are more than 75% reluctant to come along?	Sao tôi có cảm giác cậu miễn cưỡng đi cùng đến hơn 75% thế nhỉ?	
+A00764	c/map/00170.scn	idx 37	Just your imagination. Do not worry about it.	Cậu tưởng tượng thôi. Đừng bận tâm.	
+A00765	c/map/00170.scn	idx 38	As a soldier, just steering a ship without fighting... My skills will rust away.	Là lính mà chỉ lái tàu không được đánh nhau... tay nghề của tôi sẽ mục mất.	
+A00766	c/map/00170.scn	idx 39	Do you even have skills to rust?	Anh có tay nghề nào để mà mục không?	
+A00767	c/map/00170.scn	idx 40	What are you saying? I am a top-notch powered armor pilot, you know.	Nói gì thế? Tôi là phi công giáp trợ lực hạng nhất đấy nhé.	
+A00768	c/map/00170.scn	idx 41	During the Great War, they even called me the Republic White Devil.	Hồi Đại Chiến, người ta còn gọi tôi là Bạch Quỷ của Cộng Hoà đấy.	
+A00769	c/map/00170.scn	idx 42	Though that was self-proclaimed.	Dù là tự phong thôi.	
+A00770	c/map/00170.scn	idx 43	Self-proclaimed...? And where is this armor anyway?	Tự phong...? Mà bộ giáp đó giờ ở đâu?	
+A00771	c/map/00170.scn	idx 44	Lady Lurain gloriously smashed it during the war... We were enemies back then...	Hồi chiến tranh, tiểu thư Lurain đã đập nát nó một cách vẻ vang... Khi đó bọn tôi là kẻ thù...	
+A00772	c/map/00170.scn	idx 45	I am keeping it here and fixing it when I can. But I am low on materials.	Tôi cất ở đây và sửa dần khi có thể. Nhưng đang thiếu nguyên liệu.	
+A00773	c/map/00170.scn	idx 46	Could you spare some if you have any leftovers?	Nếu cậu còn dư thì nhường cho tôi một ít được không?	
+A00774	c/map/00170.scn	idx 47	I do not know how good you actually are...	Tôi chẳng biết anh thật sự giỏi đến đâu...	
+A00775	c/map/00170.scn	idx 48	Seeing Tyr keep you around means you are no dead weight. Better than nothing, right?	Tir còn giữ anh bên cạnh nghĩa là anh không phải gánh nặng. Có còn hơn không, nhỉ?	
+A00776	c/map/00170.scn	idx 49	Right, right, of course!	Phải phải, tất nhiên rồi!	
+A00777	c/map/00170.scn	idx 50	Fine.	Được rồi.	
+A00778	c/map/00170.scn	idx 51	I suppose I could.	Chắc tôi giúp được.	
+A00779	c/map/00170.scn	idx 52	Great! Once you gather the materials, come back here and we will boot it right up.	Tuyệt! Gom đủ nguyên liệu thì quay lại đây, ta khởi động nó ngay.	
+A00780	c/map/00170.scn	idx 53	Hey... is not this quite a lot?	Này... thế này có nhiều quá không?	
+A00781	c/map/00170.scn	idx 54	Hahaha, I never learned how to Combine, you see.	Ha ha ha, tôi chưa từng học cách Chế biến mà.	
+A00782	c/map/00170.scn	idx 55	However, I refuse.	Nhưng tôi từ chối.	
+A00783	c/map/00170.scn	idx 56	What!?	Cái gì!?	
+A00784	c/map/00170.scn	idx 57	One of my favorite things to do is saying NO to guys who think they are hot stuff.	Một trong những thú vui của tôi là nói KHÔNG với mấy gã tưởng mình ghê gớm.	
+A00785	c/map/00170.scn	idx 58	You have got a terrible personality...	Tính cách của anh tệ thật...	
+A00786	c/map/00170.scn	idx 59	Honestly, a clunky powered armor has no place in the fights ahead.	Thật lòng mà nói, bộ giáp trợ lực cồng kềnh chẳng có chỗ đứng trong những trận chiến sắp tới.	
+A00787	c/map/00170.scn	idx 62	Persistent, are not you...	Dai dẳng thật đấy...	
+A00788	c/map/00170.scn	idx 64	Do not say something so pathetic about yourself...	Đừng tự nói về mình những lời thảm hại thế...	
+A00789	c/map/00170.scn	idx 65	It is here, it is finally here! The time has come!	Đến rồi, cuối cùng cũng đến rồi! Thời khắc đã tới!	
+A00790	c/map/00170.scn	idx 66	I will fix it right up and test run it! On the ship!	Tôi sẽ sửa ngay rồi chạy thử! Ngay trên tàu!	
+A00791	c/map/00170.scn	idx 67	...Why on the ship?	...Sao lại trên tàu?	
+A00792	c/map/00170.scn	idx 70	...Why do I feel extremely... uneasy about this...?	...Sao tôi lại thấy cực kỳ... bất an về chuyện này nhỉ...?	
+A00793	c/map/00170.scn	idx 71	So? Care to join me?	Sao nào? Đi cùng tôi chứ?	
+A00794	c/map/00170.scn	idx 72	I have a strong feeling I should save my game before tagging along.	Tôi có linh cảm mạnh là nên lưu game trước khi đi cùng.	
+A00795	c/map/00170.scn	idx 73	Hold on. Give me a moment to think.	Khoan đã. Cho tôi một lát để suy nghĩ.	
+A00796	c/map/00170.scn	idx 74	There are not many people around to trade, but our wares are always stocked.	Tuy không có nhiều người đến mua bán, nhưng hàng hoá của chúng tôi lúc nào cũng đủ.	
+A00797	c/map/00174.scn	idx 38	...If four remain, does that mean their power... is about a quarter of a Complete Being?	...Nếu còn lại bốn người, vậy sức mạnh của họ... bằng khoảng một phần tư thể hoàn chỉnh sao?	k_low=K09489
+A00798	c/map/00174.scn	idx 57	You are fighting... just for power? If you do that...	Ngài định chiến đấu... chỉ vì sức mạnh sao? Nếu vậy thì...	
+A00799	c/map/00174.scn	idx 60	Trust me.	Tin tôi đi.	
+A00800	c/map/00174.scn	idx 61	A third... of a god power...	Một phần ba... sức mạnh của thần...	
+A00801	c/map/00174.scn	idx 62	Schultz... Are you truly confident you can overcome it?	Schurtz... cậu thật sự tự tin sẽ vượt qua được sao?	
+A00802	c/map/00174.scn	idx 63	|(It is blocked...){	|(Bị chặn rồi...){	
+A00803	c/map/00174.scn	idx 64	|(Still, with my current strength, I should be able to force my way in...){	|(Nhưng với sức mạnh hiện giờ, chắc mình vẫn cưỡng ép tiến vào được...){	
+A00804	c/map/00174.scn	idx 65	Give Up	Bỏ cuộc	
+A00805	c/map/00174.scn	idx 66	|(Lurain is right. Going in right now would be foolish.){	|(Lurain nói đúng. Giờ mà vào thì quá dại dột.){	
+A00806	c/map/00174.scn	idx 67	|(It is uneasy, but let us trust Lurain.){	|(Lo thì có lo, nhưng hãy tin Lurain.){	
+A00807	c/map/00174.scn	idx 68	Enter	Tiến vào	
+A00808	c/map/00174.scn	idx 69	|(...It is pointless if Lurain cannot hold out.){	|(...Nếu Lurain không trụ nổi thì mọi thứ đều vô nghĩa.){	
+A00809	c/map/00174.scn	idx 70	|(I am not the same as back then. I can do this.){	|(Mình không còn như hồi đó. Mình làm được.){	
+A00810	c/map/00174.scn	idx 72	Are you all right? You look exhausted.	Cô không sao chứ? Trông cô kiệt sức lắm.	k_low=K09511
+A00811	c/map/00174.scn	idx 74	As the ancient god regains power, the toll on me grows heavier.	Cổ Thần càng lấy lại sức mạnh thì gánh nặng đè lên tôi càng lớn.	
+A00812	c/map/00174.scn	idx 75	What does it feel like?	Cảm giác thế nào?	
+A00813	c/map/00174.scn	idx 76	Like someone is always watching, peering into my mind...	Như có ai đó luôn dõi theo, nhìn xuyên vào tâm trí tôi...	
+A00814	c/map/00174.scn	idx 77	It finds what I want to forget, what I deny, yet yearn for most, deep inside, and whispers it.	Nó tìm ra điều tôi muốn quên, điều tôi chối bỏ mà sâu thẳm lại khao khát nhất, rồi thì thầm điều đó vào tai tôi.	
+A00815	c/map/00174.scn	idx 78	It tells me to obey, promising to grant whatever I desire...	Nó bảo tôi hãy phục tùng, hứa ban cho mọi điều tôi mong muốn...	
+A00816	c/map/00174.scn	idx 79	A repulsive yet sweet numbness... tempting me to give up and surrender to its voice.	Một thứ tê dại vừa ghê tởm vừa ngọt ngào... dụ tôi buông xuôi và đầu hàng tiếng nói của nó.	
+A00817	c/map/00174.scn	idx 80	How do you endure that?	Làm sao cô chịu đựng được?	
+A00818	c/map/00174.scn	idx 81	Because I have already made that mistake once before.	Vì tôi đã từng mắc sai lầm đó một lần rồi.	
+A00819	c/map/00174.scn	idx 82	Because I know it is a lie. Despite that mistake, everyone trusted, relied on, and forgave me.	Vì tôi biết đó là lời dối trá. Dù mắc sai lầm ấy, mọi người vẫn tin tưởng, nương tựa và tha thứ cho tôi.	
+A00820	c/map/00174.scn	idx 83	I cannot make the same mistake twice.	Tôi không thể phạm cùng một sai lầm hai lần.	
+A00821	c/map/00174.scn	idx 84	I am not alone. Imperfect as that makes me, it is why I can endure.	Tôi không cô độc. Dù điều đó khiến tôi không hoàn hảo, nhưng chính vì vậy tôi mới chịu đựng được.	
+A00822	c/map/00174.scn	idx 85	I see... sort of. Is there any other way to help? Even just to buy a little time.	Tôi hiểu... phần nào. Còn cách nào khác để giúp không? Dù chỉ là câu thêm chút thời gian.	
+A00823	c/map/00174.scn	idx 86	...There is no...	...Không có...	
+A00824	c/map/00174.scn	idx 87	If you destroy the ancient god vessel reconstructing in the Rift once more...	Nếu phá huỷ vật chứa của Cổ Thần đang tái tạo trong Vết Nứt thêm một lần nữa...	
+A00825	c/map/00174.scn	idx 88	|(What is that? A voice...?){	|(Cái gì vậy? Có tiếng nói...?){	
+A00826	c/map/00174.scn	idx 89	...There is nothing.	...Không có gì cả.	
+A00827	c/map/00174.scn	idx 91	If we destroy the ancient god vessel reconstructing in the Rift... would not that buy us some time?	Nếu ta phá huỷ vật chứa của Cổ Thần đang tái tạo trong Vết Nứt... chẳng phải sẽ câu được chút thời gian sao?	
+A00828	c/map/00174.scn	idx 93	You are not wrong. Just like when you first came to the Sanctuary, doing that would buy us some time.	Cậu nói không sai. Giống như lần đầu cậu đến Thánh Địa, làm vậy sẽ câu được chút thời gian.	
+A00829	c/map/00174.scn	idx 94	But the danger is too great. The Sleeper has regained much strength it cannot compare to back then.	Nhưng quá nguy hiểm. Kẻ Ngủ Say đã lấy lại nhiều sức mạnh, không thể so với hồi đó.	
+A00830	c/map/00174.scn	idx 95	Still... to think you heard it. Is it because your Spirit nears completion... or because this is the Sanctuary?	Vậy mà... cậu lại nghe được. Là vì Tinh Linh của cậu sắp hoàn thiện... hay vì đây là Thánh Địa?	
+A00831	c/map/00174.scn	idx 96	It would be best if you did not linger here for long.	Tốt nhất cậu đừng ở lại đây lâu.	
+A00832	c/map/00174.scn	idx 97	Still, even so...	Dù vậy, dẫu thế...	
+A00833	c/map/00174.scn	idx 98	Is that so...	Vậy sao...	
+A00834	c/map/00174.scn	idx 99	Yes. So, Schultz, you should focus on your own tasks first.	Phải. Vì vậy, Schurtz, cậu hãy lo việc của mình trước đã.	
+A00835	c/map/00174.scn	idx 100	...Understood.	...Tôi hiểu rồi.	
+A00836	c/map/00175.scn	idx 1	Proceeding to an area where you cannot save.	Sắp đến khu vực không thể lưu game.	
+A00837	c/map/00175.scn	idx 2	Enter	Tiến vào	
+A00838	c/map/00175.scn	idx 3	|(It is blocked here too... Force your way through!){	|(Ở đây cũng bị chặn... Cứ cưỡng ép xông qua!){	
+A00839	c/map/00175.scn	idx 4	Enter in a moment	Lát nữa hãy vào	
+A00840	c/map/00175.scn	idx 5	I believe I told you not to do this...	Tôi nhớ là đã bảo cậu đừng làm thế rồi mà...	
+A00841	c/map/00175.scn	idx 6	If you insist on going in, I will have no choice but to stop you.	Nếu cậu nhất quyết đi vào, tôi buộc phải ngăn cậu lại.	
+A00842	c/map/00175.scn	idx 7	And if I refuse?	Nếu tôi từ chối thì sao?	
+A00843	c/map/00175.scn	idx 8	I will stop you by force.	Tôi sẽ dùng vũ lực ngăn cậu.	
+A00844	c/map/00175.scn	idx 9	You cannot save once battle with Lurain begins.	Không thể lưu game khi trận chiến với Lurain đã bắt đầu.	
+A00845	c/map/00175.scn	idx 10	I will give you a moment to think.	Tôi cho cậu một lát để suy nghĩ.	
+A00846	c/map/00175.scn	idx 11	If you will not turn back... I will have to stop you by force.	Nếu cậu không chịu quay lại... tôi sẽ phải dùng vũ lực ngăn cậu.	
+A00847	c/map/00175.scn	idx 12	Not a chance.	Còn lâu.	
+A00848	c/map/00175.scn	idx 13	...Fine. I would rather avoid unnecessary conflict too.	...Được thôi. Tôi cũng không muốn xung đột không cần thiết.	
+A00849	c/map/00175.scn	idx 14	A wise choice. Then let us head back.	Lựa chọn khôn ngoan. Vậy hãy quay về thôi.	
+A00850	c/map/00175.scn	idx 15	Try me.	Thử xem.	
+A00851	c/map/00175.scn	idx 16	If that is how it must be... so be it.	Nếu buộc phải thế... thì đành vậy.	
+A00852	c/map/00181.scn	idx 57	I risked my life investigating... Cut me some slack, Shuu.	Tôi liều mạng điều tra đấy... Châm chước cho tôi chút đi, Schu.	k_low=K09733
+A00853	c/map/00186.scn	idx 1	HEROES LORE 5; -COVENANT OF DARKNESS-	HEROES LORE 5; -KHẾ ƯỚC HẮC ÁM-	
+A00854	c/map/00186.scn	idx 2	GAME PRODUCER; KO, WOONG-CHUL	NHÀ SẢN XUẤT GAME; KO, WOONG-CHUL	
+A00855	c/map/00186.scn	idx 3	DEVELOPMENT DIRECTOR; KIM, HYUN-MOOK	GIÁM ĐỐC PHÁT TRIỂN; KIM, HYUN-MOOK	
+A00856	c/map/00186.scn	idx 4	GAME DESIGNER; KIM, BOO-KANG; RYU, HYOUNG-SEOC; KIM, CHO-RONG	THIẾT KẾ GAME; KIM, BOO-KANG; RYU, HYOUNG-SEOC; KIM, CHO-RONG	
+A00857	c/map/00186.scn	idx 5	CHARACTER/UI ARTIST; JOO, JAE-HOON; LEE, JUNG-WON; LEE, DEVIN; BAEK, JU-HO	HOẠ SĨ NHÂN VẬT/UI; JOO, JAE-HOON; LEE, JUNG-WON; LEE, DEVIN; BAEK, JU-HO	
+A00858	c/map/00186.scn	idx 6	MONSTER/MAP ARTIST; LEE, TAEK-KI; NOH, JAE-WOOK; KIM, KYU-MIN	HOẠ SĨ QUÁI/BẢN ĐỒ; LEE, TAEK-KI; NOH, JAE-WOOK; KIM, KYU-MIN	
+A00859	c/map/00186.scn	idx 7	MONSTER/MAP ARTIST; ROH, HEE-JEONG; JUNG, MI-SUN; YUN, JU-HEE;	HOẠ SĨ QUÁI/BẢN ĐỒ; ROH, HEE-JEONG; JUNG, MI-SUN; YUN, JU-HEE;	
+A00860	c/map/00186.scn	idx 8	LOGO/WORLDMAP ARTIST; KIM, KEUN-JU; ; ILLUSTRATION; KIM, HYUN-JUNG	HOẠ SĨ LOGO/BẢN ĐỒ THẾ GIỚI; KIM, KEUN-JU; ; MINH HOẠ; KIM, HYUN-JUNG	
+A00861	c/map/00186.scn	idx 9	MAIN PROGRAMMER; PARK, DEOK-KWON; CHO, SUNG-MIN; SUH, JUNG-HO;	LẬP TRÌNH CHÍNH; PARK, DEOK-KWON; CHO, SUNG-MIN; SUH, JUNG-HO;	
+A00862	c/map/00186.scn	idx 10	ENGINEERING SURPPORT; JUNG, SUNG-JUN; KIM, SOO-MAN; JANG, MYOUNG-HUN;	HỖ TRỢ KỸ THUẬT; JUNG, SUNG-JUN; KIM, SOO-MAN; JANG, MYOUNG-HUN;	
+A00863	c/map/00186.scn	idx 11	ENGINEERING SURPPORT; KIM, IN-HWAN; LEE, YOU-SIN; MUN, KYOUNG-RIM;	HỖ TRỢ KỸ THUẬT; KIM, IN-HWAN; LEE, YOU-SIN; MUN, KYOUNG-RIM;	
+A00864	c/map/00186.scn	idx 12	QUALITY ASSURANCE; LEE, JAE-YOON; KIM, MIN-JI; KIM, DO-YOON; LEE, HEE-KYOUNG;	ĐẢM BẢO CHẤT LƯỢNG; LEE, JAE-YOON; KIM, MIN-JI; KIM, DO-YOON; LEE, HEE-KYOUNG;	
+A00865	c/map/00186.scn	idx 13	GAME TEST; CHOI, SUNG-SU; KIM, TAE-WOO; HAN, DONG-SUN;	KIỂM THỬ GAME; CHOI, SUNG-SU; KIM, TAE-WOO; HAN, DONG-SUN;	
+A00866	c/map/00186.scn	idx 14	GAME TEST; SON, JONG-BEOM; PARK, HEE-YONG; SON, SANG-HEON;	KIỂM THỬ GAME; SON, JONG-BEOM; PARK, HEE-YONG; SON, SANG-HEON;	
+A00867	c/map/00186.scn	idx 15	SOUND DIRECTOR; NOH, HYOUN-JUN; (FUNNY BUGS, MAZO);	GIÁM ĐỐC ÂM THANH; NOH, HYOUN-JUN; (FUNNY BUGS, MAZO);	
+A00868	c/map/00186.scn	idx 16	ELECTRONIC ARTS;MOBILE KOREA 2011	ELECTRONIC ARTS;MOBILE KOREA 2011	
+A00869	c/map/00186.scn	idx 17	Did you reach the ending you wished for?	Bạn đã đến được cái kết mình mong muốn chưa?	
+A00870	c/map/00186.scn	idx 19	Even after completing the Twilight Isle hidden quest }Meat Soup{, you still need Twilight Soup Powder.	Dù đã hoàn thành nhiệm vụ ẩn }Súp Thịt{ ở đảo Hoàng Hôn, bạn vẫn cần Bột Súp Hoàng Hôn.	
+A00871	c/map/00186.scn	idx 20	If you meet Graham before entering the Ark, try waiting for Tyr to arrive.	Nếu gặp Graham trước khi vào Phương Chu, hãy thử đợi Tir đến.	
+A00872	c/map/00186.scn	idx 21	Wishing that you may uncover every story woven into Heroes Lore 5...	Mong bạn khám phá hết mọi câu chuyện được dệt nên trong Heroes Lore 5...	
+A00873	c/map/00186.scn	idx 22	Restarting the game at the next difficulty level.	Chơi lại game với độ khó ở cấp tiếp theo.	
+A00874	c/map/00186.scn	idx 23	Paying tribute to you who have ventured this far-	Xin gửi lời tri ân đến bạn, người đã đi đến tận đây-	
+A00875	c/map/00186.scn	idx 24	GAME TEST; CHOI, SUNG-SU; KIM, TAE-WOO; HAN, DONG-SUN; TAK, HYUN-MIN	KIỂM THỬ GAME; CHOI, SUNG-SU; KIM, TAE-WOO; HAN, DONG-SUN; TAK, HYUN-MIN	
+A00876	c/map/00186.scn	idx 25	At least, mankind has obtained a god.	Ít nhất, nhân loại đã có được một vị thần.	
+A00877	c/map/00186.scn	idx 26	Perhaps for the people of Orbis, this is the most desirable outcome.	Có lẽ với người dân Orbis, đây là kết cục đáng mong muốn nhất.	
+A00878	c/map/00186.scn	idx 27	However... if any regrets still linger in your heart...	Nhưng... nếu trong lòng bạn vẫn còn nuối tiếc...	
+A00879	c/map/00186.scn	idx 28	Choose the }single person{ you truly wish to protect.	Hãy chọn }một người{ mà bạn thực sự muốn bảo vệ.	
+A00880	c/map/00186.scn	idx 29	If you chose Evelyn, pursue hidden quests }Blind Faith{ and }High Alert{...	Nếu bạn chọn Evelyn, hãy theo đuổi nhiệm vụ ẩn }Đức Tin Mù Quáng{ và }Báo Động Cao{...	
+A00881	c/map/00186.scn	idx 30	If you chose Tiana, pursue hidden quests }Silver Earring{ and }Nightmare{...	Nếu bạn chọn Tiana, hãy theo đuổi nhiệm vụ ẩn }Hoa Tai Bạc{ và }Ác Mộng{...	
+A00882	c/map/00186.scn	idx 31	And at }every choice{, think only of that one person you wish to protect.	Và ở }mỗi lựa chọn{, chỉ hãy nghĩ đến người mà bạn muốn bảo vệ.	
+A00883	c/map/00186.scn	idx 32	If Schultz wins the one he wishes to protect most, and she opens her heart to him...	Nếu Schurtz giành được người cậu ấy muốn bảo vệ nhất, và cô ấy mở lòng với cậu ấy...	
+A00884	c/map/00186.scn	idx 33	This pitch-black struggle of Successors... might just lead to a different outcome.	Cuộc đấu tranh đen tối của các Kế Thừa Giả này... có thể sẽ dẫn đến một kết cục khác.	
+A00885	c/map/00186.scn	idx 34	Best of luck to you.	Chúc bạn may mắn.	
+A00886	c/map/00186.scn	idx 35	Do not rush to finish the Meadow Hill hidden quest }Pink-Haired Girl{.	Đừng vội hoàn thành nhiệm vụ ẩn }Cô Gái Tóc Hồng{ ở Meadowhill.	
+A00887	c/map/00186.scn	idx 36	Schultz past, and the battle against the Hearers, is a path you must walk toward the true finale.	Quá khứ của Schurtz và trận chiến với Kẻ Nghe là con đường bạn phải đi để đến hồi kết thật sự.	
+A00888	c/map/00198.scn	idx 3	I want to eat meat...	Cháu muốn ăn thịt...	
+A00889	c/map/00198.scn	idx 6	I was completely duped. Huh? Cheated blind.	Bị lừa trắng trợn rồi. Hả? Bị lừa đấy.	
+A00890	c/map/00198.scn	idx 24	I have decided. I am leaving soon. I cannot take this anymore.	Tôi quyết định rồi. Sắp tới tôi sẽ đi. Không chịu nổi nữa.	
+A00891	c/map/00198.scn	idx 25	Tilling the soil is hard. My kids have to make something of themselves...	Làm ruộng cực lắm. Con tôi phải nên người...	
+A00892	c/map/00198.scn	idx 26	I heard the cargo ship was attacked...	Nghe nói tàu chở hàng bị tấn công...	
+A00893	c/map/00198.scn	idx 27	The next day, someone left a sack of grain at our door.	Hôm sau, có người để lại một bao lúa ngay trước cửa nhà tôi.	
+A00894	c/map/00198.scn	idx 29	Are you here to press for payment again?	Lại đến đòi nữa à?	
+A00895	c/map/00198.scn	idx 51	Across the Frozen Sea, is there really a tax-free village?	Bên kia Biển Băng, có thật là có ngôi làng không phải đóng thuế không?	
+A00896	c/map/00200.scn	idx 16	When I was in Central, I heard rumors of human experimentation to create an invincible army.	Hồi ở Central, tôi nghe đồn có thí nghiệm trên người để tạo ra đội quân bất khả chiến bại.	
+A00897	c/map/00200.scn	idx 17	Soldiers who follow any order unconditionally... and the result was the Black Guard.	Những người lính tuân lệnh vô điều kiện... và kết quả là lính Áo Đen.	
+A00898	c/map/00200.scn	idx 18	They said the commander is Kefnes. Could it be true?	Nghe nói chỉ huy là Kefnes. Chẳng lẽ là thật?	
+A00899	c/map/00201.scn	idx 16	Everyone gathered here has their own stories and motives.	Ai tụ tập ở đây cũng có câu chuyện và động cơ riêng.	
+A00900	c/map/00201.scn	idx 17	Someone needs to be the central pillar, but I do not know what Theodore or Evelyn are thinking lately.	Cần có người làm trụ cột, nhưng dạo này tôi không biết Theodoro hay Evelyn đang nghĩ gì.	
+A00901	c/map/00201.scn	idx 37	That person has been saying some dangerous things lately.	Dạo này người đó hay nói những điều nguy hiểm.	
+A00902	c/map/00201.scn	idx 38	They were always the type who is never satisfied unless they are leading, but...	Vốn là kiểu người không thoả mãn nếu không được đứng đầu, nhưng...	
+A00903	c/map/00201.scn	idx 39	I just hope it does not stir up trouble.	Chỉ mong là không gây ra rắc rối.	
+A00904	c/map/00202.scn	idx 20	You know how the barrier on the cave east of the Frozen Sea suddenly vanished?	Cậu biết cái kết giới ở hang phía đông Biển Băng đột nhiên biến mất chứ?	
+A00905	c/map/00202.scn	idx 21	I asked that guy outside to check the flora and fauna to see if anything could be used as medicine.	Tôi nhờ gã bên ngoài kia xem xét động thực vật, coi có thứ gì dùng làm thuốc được không.	
+A00906	c/map/00202.scn	idx 22	Instead, he came back injured. He said while hunting <Ice Souls{, a giant worm suddenly appeared.	Thế mà anh ta lại về với thương tích. Anh ta kể lúc đang săn <Hồn Băng{ thì một con giun khổng lồ đột nhiên xuất hiện.	
+A00907	c/map/00207.scn	idx 0	Facility Chamber	Phòng trong cơ sở ngầm	
+A00908	c/map/00207.scn	idx 1	Is this... a note?	Đây là.. mẩu ghi chú à?	
+A00909	c/map/00207.scn	idx 2	What does this even say... The handwriting is terrible.	Viết cái gì thế này.. chữ xấu kinh khủng.	
+A00910	c/map/00207.scn	idx 3	}End of hallway... corner passage{...?	}Cuối hành lang.. lối đi trong góc{..?	
+A00911	c/map/00207.scn	idx 4	You can... read this?	Chữ này.. ngài đọc được à?	
+A00912	c/map/00207.scn	idx 5	Well... somehow, the handwriting feels familiar...	Ừm.. chẳng hiểu sao thấy quen nét chữ..	
+A00913	c/map/00207.scn	idx 6	These photos...	Mấy tấm ảnh này..	
+A00914	c/map/00207.scn	idx 7	They are children...?	Là trẻ con..?	
+A00915	c/map/00207.scn	idx 8	Is not this Schultz? When he was little...	Ngài Schurtz đây phải không? Hồi còn nhỏ..	
+A00916	c/map/00207.scn	idx 9	Photos of the Successors as kids, huh... This fat one must be Marc.	Ảnh hồi nhỏ của các Kế Thừa Giả à.. con lợn này chắc là Marc.	
+A00917	c/map/00207.scn	idx 10	Oh my.	Ôi chao.	
+A00918	c/map/00207.scn	idx 11	Wait, is not this Alex? He looks so young without the beard!	Cái này, chẳng phải anh Alex sao? Không có râu trông trẻ măng luôn?	
+A00919	c/map/00207.scn	idx 12	...He even has a strange }tattoo{.	.. Còn xăm cả }hình xăm{ kỳ quặc nữa.	
+A00920	c/map/00207.scn	idx 13	Chris and Tiana are here too... But wait, the background is identical in all of them?	Có cả Kris với Tiana nữa.. nhưng mà, phông nền mấy tấm ảnh đều giống hệt nhau?	
+A00921	c/map/00207.scn	idx 14	I have no memory of taking these photos, or of this place...	Chụp ảnh lúc nào, phông nền thế này, tôi chẳng nhớ gì cả..	
+A00922	c/map/00207.scn	idx 15	Just like Tyr said... having your memories manipulated just leaves a bad taste in your mouth.	Đúng như Tir nói.. chỉ thêm khó chịu thôi à. Chuyện ký ức bị thao túng.	
+A00923	c/map/00209.scn	idx 1	|(A letter...){	|(Thư...){	
+A00924	c/map/00209.scn	idx 2	|(The sender is... Tyr? Seriously?){	|(Người gửi... Tir? Không lẽ?){	
+A00925	c/map/00209.scn	idx 3	Dear Isabel,	Isabelle thân mến.	
+A00926	c/map/00209.scn	idx 4	Some idiot named Graham, claiming to be your cousin, was assigned to my unit today.	Hôm nay có thằng đần tên Graham, tự xưng là anh họ em, được điều về đơn vị ta.	
+A00927	c/map/00209.scn	idx 5	If you keep pulling strings to shove weirdos my way, you are dead.	Còn cứ đi cửa sau nhét mấy đứa kỳ quặc cho ta nữa là chết đấy.	
+A00928	c/map/00209.scn	idx 6	P.S. Stop spreading rumors about me and Brian.	P.S. Đừng tung tin đồn kỳ cục về ta với Brian nữa.	
+A00929	c/map/00209.scn	idx 7	P.S. 2. If you want something specific for an engagement gift, tell me now.	P.S. 2. Muốn quà đính hôn gì cụ thể thì nói trước đi.	
+A00930	c/map/00209.scn	idx 8	|(Dated four years ago... Was this sent while he was still in the Republic army?){	|(Đề ngày bốn năm trước... gửi lúc còn trong quân Cộng Hoà à?){	
+A00931	c/map/00209.scn	idx 9	|(Did she have a fiance...?){	|(Cô ấy đã có hôn phu rồi sao...?){	
+A00932	c/map/00209.scn	idx 10	|(Next to the letter lies a small portrait, likely of Isabel.){	|(Bên cạnh lá thư là bức chân dung nhỏ, có vẻ là Isabelle.){	
+A00933	c/map/00209.scn	idx 11	|(She is a beautiful woman with purple hair and a somewhat somber gaze.){	|(Một người phụ nữ xinh đẹp tóc tím, trông hơi u buồn.){	
+A00934	c/map/00209.scn	idx 12	Take it	Mang theo	
+A00935	c/map/00209.scn	idx 13	Leave it	Để yên	
+A00936	c/map/00210.scn	idx 0	Central 9th, Dead End	Central phố 9, ngõ cụt	
+A00937	c/map/00212.scn	idx 0	Old Warehouse	Nhà kho cũ	k_low=K10116
+A00938	c/map/00213.scn	idx 1	(Blueprints or schematics are laid out.){	(Có thứ gì như bản vẽ thiết kế đặt ở đây.){	
+A00939	c/map/00213.scn	idx 2	(It appears to explain the analysis of disassembled Rohnberg magitech.){	(Có vẻ là tài liệu giải thích kết quả tháo rời phân tích ma cụ của Lonberg.){	
+A00940	c/map/00213.scn	idx 3	|(A tool engraved with the initial L lies here. It seems heavily damaged.){	|(Có một dụng cụ khắc chữ cái L. Có vẻ hư hỏng nặng.){	
+A00941	c/map/00214.scn	idx 1	Finally, this day has come...	Cuối cùng, ngày này cũng đến...	
+A00942	c/map/00214.scn	idx 2	|(...Why do I have such a bad feeling about this?){	|(...Sao mình lại có linh cảm xấu về chuyện này thế?){	
+A00943	c/map/00214.scn	idx 3	Here we go! Vessel of Graham! One small step for me, one giant leap for mankind!	Bắt đầu nào! Chiến giáp của Graham! Một bước nhỏ của tôi, một bước nhảy vọt khổng lồ của nhân loại!	
+A00944	c/map/00214.scn	idx 4	Huh?	Hả?	
+A00945	c/map/00214.scn	idx 5	What the hell are you doing?!	Anh làm cái quái gì thế?!	
+A00946	c/map/00214.scn	idx 6	I-it is not me! It is moving on its own... Aaaargh!	K-không phải tôi! Nó tự cử động... Aaaaa!	
+A00947	c/map/00214.scn	idx 7	Shut that thing down right now!	Tắt cái thứ đó ngay!	
+A00948	c/map/00214.scn	idx 8	Stopping the device!	Đang dừng thiết bị!	
+A00949	c/map/00214.scn	idx 9	Wait, why is not it working?!	Khoan, sao lại không có tác dụng?!	
+A00950	c/map/00214.scn	idx 10	...Seriously...	...Thật tình...	
+A00951	c/map/00214.scn	idx 11	I-I thought I was dead...	T-tôi tưởng mình chết rồi...	
+A00952	c/map/00214.scn	idx 12	...You idiot...	...Đồ ngốc...	
+A00953	c/map/00214.scn	idx 13	There seems to have been a <minor glitch{ in the AI...	Hình như AI bị <trục trặc nhỏ{...	
+A00954	c/map/00214.scn	idx 15	...*sigh*...	...Haizz...	
+A00955	c/map/00214.scn	idx 16	|(I am never helping this guy again...){	|(Mình sẽ không bao giờ giúp gã này nữa...){	
+A00956	c/map/00215.scn	idx 1	Intruder detected.	Phát hiện kẻ xâm nhập	k_low=K10117
+A00957	c/map/00215.scn	idx 2	Commencing elimination protocol.	Bắt đầu hành động loại trừ	k_low=K10118
+A00958	c/map/00215.scn	idx 3	What is it this time...	Cái quái gì nữa đây...	k_low=K10119
+A00959	c/map/00216.scn	idx 1	Welcome, Successor.	Hoan nghênh, Kế Thừa Giả.	k_low=K10120
+A00960	c/map/00216.scn	idx 2	...What are you?	...Ngươi là thứ gì?	
+A00961	c/map/00216.scn	idx 5	|(Finding him in Descendant ruins... is he like Krad?){	|(Gặp hắn ở di tích của Kẻ Giáng Lâm... lẽ nào cũng giống Creed?){	
+A00962	c/map/00216.scn	idx 6	I suppose I am what you would call a servant of the Ancient God.	Có lẽ ta chính là thứ mà ngươi gọi là kẻ hầu của Cổ Thần.	
+A00963	c/map/00216.scn	idx 7	I have no wish to fight you... not yet.	Ta không muốn giao chiến với ngươi... chưa phải lúc.	
+A00964	c/map/00216.scn	idx 8	Not yet?	Chưa phải lúc?	
+A00965	c/map/00216.scn	idx 9	Again, huh... It seems we do not have much time to talk.	Lại nữa sao... Có vẻ chúng ta không còn nhiều thời gian để nói chuyện.	
+A00966	c/map/00216.scn	idx 10	Regardless of your choice or that of the other Successor... the Second Advent will occur.	Bất kể lựa chọn của ngươi hay của Kế Thừa Giả kia... Lần Giáng Lâm Thứ Hai vẫn sẽ xảy ra.	
+A00967	c/map/00216.scn	idx 11	I only hope that humans and Neved alike are properly prepared when the time comes.	Ta chỉ mong cả con người lẫn Neved đều chuẩn bị tử tế khi thời điểm đến.	
+A00968	c/map/00216.scn	idx 12	Quite thoughtful for a servant of the Ancient God, are not you?	Chu đáo thật đấy, với một kẻ hầu của Cổ Thần nhỉ?	
+A00969	c/map/00216.scn	idx 13	It is only natural for you to say that, having never seen a Descendant. If you are trying to provoke me, save your breath.	Ngươi nói vậy cũng phải thôi, vì chưa từng thấy Kẻ Giáng Lâm. Nếu định khiêu khích ta thì đừng phí lời.	
+A00970	c/map/00216.scn	idx 14	I have seen one... in the Ark.	Ta từng thấy một kẻ... trong Phương Chu.	
+A00971	c/map/00216.scn	idx 15	That was a defective product. Like me, and like you.	Đó chỉ là một sản phẩm lỗi. Giống như ta, và giống như ngươi.	
+A00972	c/map/00216.scn	idx 16	Defective?	Sản phẩm lỗi?	
+A00973	c/map/00216.scn	idx 17	Wait, you sound as if you have seen one yourself.	Khoan, nghe cứ như chính ngươi cũng từng thấy một kẻ vậy.	
+A00974	c/map/00216.scn	idx 18	Do you know the tale? Long ago, during the Great War against the Descendants, the Ancient God created servants to act as his hands and feet.	Ngươi biết câu chuyện đó chứ? Thuở xa xưa, trong Đại Chiến chống lại Kẻ Giáng Lâm, Cổ Thần đã tạo ra những kẻ hầu làm tay chân cho mình.	
+A00975	c/map/00216.scn	idx 19	A wolf-like beast named Lucan. And one who was captured by humans and given the name Kefnes.	Một con thú giống sói tên Lucan. Và một kẻ bị loài người bắt được rồi đặt tên là Kefnes.	
+A00976	c/map/00216.scn	idx 21	And I, a traitor to my own kind. A being once called a Guardian.	Còn ta, kẻ phản bội đồng loại. Một tồn tại từng được gọi là Hộ Vệ.	
+A00977	c/map/00216.scn	idx 22	Despairing of the world, I summoned the Descendants, and in doing so, became an enemy of the world and a traitor.	Tuyệt vọng với thế giới, ta đã triệu hồi Kẻ Giáng Lâm, và vì thế trở thành kẻ thù của thế giới, một kẻ phản bội.	
+A00978	c/map/00216.scn	idx 23	I have no idea what you are talking about.	Tôi chẳng hiểu ngươi đang nói gì.	
+A00979	c/map/00216.scn	idx 24	You need not understand. I am merely a ghost of a bygone era.	Ngươi không cần hiểu. Ta chỉ là bóng ma của một thời đã qua.	
+A00980	c/map/00216.scn	idx 25	I only needed the Ancient God power to survive until this age. Once your wish or Tyr is fulfilled...	Ta chỉ cần sức mạnh của Cổ Thần để sống sót đến thời đại này. Khi nguyện vọng của ngươi hoặc của Tir được thực hiện...	
+A00981	c/map/00216.scn	idx 26	I too shall fade away alongside the Ancient God.	Ta cũng sẽ tan biến cùng với Cổ Thần.	
+A00982	c/map/00216.scn	idx 27	This vibration... What is it?	Chấn động này... là gì vậy?	
+A00983	c/map/00216.scn	idx 28	It is merely a shadow of the Descendant invading this world, akin to what you faced in the Ark.	Đó chỉ là cái bóng của Kẻ Giáng Lâm đang xâm nhập thế giới này, giống như thứ ngươi đã đối mặt trong Phương Chu.	
+A00984	c/map/00216.scn	idx 29	You are here...	Ngươi ở đây...	
+A00985	c/map/00216.scn	idx 30	Where did you run off to?!	Ngươi chạy đi đâu mất rồi?!	
+A00986	c/map/00216.scn	idx 31	Truly... an irritating fellow.	Thật là... một gã đáng bực mình.	
+A00987	c/map/00216.scn	idx 32	The seal was merely a brief respite to delay the Second Advent. The Second Advent is far more than mindless beasts invading this world.	Phong ấn chỉ là khoảng nghỉ ngắn ngủi để trì hoãn Lần Giáng Lâm Thứ Hai. Lần Giáng Lâm Thứ Hai không chỉ là bầy thú vô tri xâm chiếm thế giới này.	
+A00988	c/map/00216.scn	idx 33	The world will soon reclaim its original form. Just as they wished.	Thế giới sẽ sớm lấy lại hình dạng ban đầu. Đúng như họ mong muốn.	
+A00989	c/map/00216.scn	idx 34	What are you talking about!?	Ngươi đang nói gì vậy!?	
+A00990	c/map/00216.scn	idx 35	After guiding Tyr to Meadow Hill, I watched you the entire time.	Sau khi dẫn Tir đến Meadowhill, ta đã dõi theo ngươi suốt từ đó.	
+A00991	c/map/00216.scn	idx 36	Perhaps you might become a benevolent god. Or an evil god, no better than the current one... Or perhaps a mortal burdened with power beyond control. I wonder which.	Có lẽ ngươi sẽ trở thành một vị thần nhân từ. Hoặc một ác thần, chẳng hơn gì vị hiện tại... Hoặc chỉ là phàm nhân mang sức mạnh vượt quá tầm kiểm soát. Không biết sẽ là gì.	
+A00992	c/map/00216.scn	idx 37	I hope the other side... goes just as well.	Ta mong phía bên kia... cũng suôn sẻ như vậy.	
+A00993	c/map/00216.scn	idx 38	Shall we call it here? Or would you prefer to continue?	Dừng ở đây nhé? Hay cậu muốn tiếp tục?	
+A00994	c/map/00216.scn	idx 39	...Let us stop. Any further, and one of us will not walk away alive.	...Dừng lại thôi. Đi xa hơn nữa thì một trong hai ta sẽ không sống mà rời khỏi đây.	
+A00995	c/map/00216.scn	idx 40	Then let us head back.	Vậy ta quay về thôi.	
+A00996	c/map/00216.scn	idx 41	Though, you are different from the rumors in Central. Were not you supposed to be a master swordsman?	Mà này, cô khác với tin đồn ở Central đấy. Chẳng phải cô được đồn là kiếm sĩ bậc thầy sao?	
+A00997	c/map/00216.scn	idx 42	Ah... Indeed, during the Great War, I relied primarily on the sword with magic as support.	À... đúng vậy, trong Đại Chiến tôi chủ yếu dùng kiếm, ma pháp chỉ để hỗ trợ.	
+A00998	c/map/00216.scn	idx 43	Still, magic proved to be stronger in the end, so I made the switch.	Nhưng rốt cuộc ma pháp mạnh hơn, nên tôi đã chuyển sang dùng nó.	
+A00999	c/map/00216.scn	idx 44	Facing multiple foes at once, like with the Judgment of Purification, made me realize the sword limits.	Đối mặt nhiều kẻ địch cùng lúc, như với Phán Quyết Thanh Tẩy, tôi nhận ra giới hạn của kiếm.	
+A01000	c/map/00216.scn	idx 45	Besides, my arms were getting too thick.	Với lại, cánh tay tôi cứ to lên mãi.	
+A01001	c/map/00216.scn	idx 46	Is that really the issue...?	Đó mới là vấn đề thật sao...?	
+A01002	c/map/00216.scn	idx 47	My arms were a joke, but it was also to coordinate with Tyr. Rather than both of us swinging swords...	Chuyện cánh tay chỉ là đùa thôi, còn lý do thật là để phối hợp với Tir. Thay vì cả hai cùng vung kiếm...	
+A01003	c/map/00216.scn	idx 48	It is much better for me to support from behind.	Tôi yểm trợ từ phía sau thì tốt hơn nhiều.	
+A01004	c/map/00216.scn	idx 49	|(She does not show it, but she cares quite a bit...){	|(Cô ấy không thể hiện ra, nhưng quan tâm khá nhiều...){	
+A01005	c/map/00216.scn	idx 50	Shall we stop here? Any further, and one of us will not walk away alive.	Dừng ở đây nhé? Đi xa hơn nữa thì một trong hai ta sẽ không sống mà rời khỏi đây.	
+A01006	c/map/00216.scn	idx 51	I was not using my full strength, but... there is no talking you out of it.	Tôi chưa dùng hết sức, nhưng... xem ra không thể khuyên cậu bỏ ý định.	
+A01007	c/map/00216.scn	idx 52	The feeling is mutual. There is no reason for allies to spill each other blood.	Tôi cũng vậy. Đồng minh thì không có lý do gì phải đổ máu của nhau.	
+A01008	c/map/00216.scn	idx 53	It cannot be helped, then. I wish you good fortune.	Vậy thì đành chịu. Chúc cậu may mắn.	

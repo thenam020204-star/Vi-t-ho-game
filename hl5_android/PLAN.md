@@ -68,6 +68,12 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Sửa trong `align_android.py`: (1) cặp điểm < 0.70 → `NEW`, giữ câu Hàn đề xuất ở trường `ko_hint`; (2) câu Hàn là chỗ trống/giữ chỗ (`여분`, rỗng, chỉ mã) → `NEW`; (3) câu Anh có số đoạn `;` hoặc độ dài vượt rõ câu Hàn (tỉ lệ ký tự Anh/Hàn > 3.5 hoặc thiếu ≥ 2 đoạn) → `NEW` + `ko_hint`; (4) 2 câu dính `\u0000` (00041 idx 54, 00042 idx 24): ghi rõ cách xử lý trong report (giữ byte gốc khi build).
   - Thêm vào report: 40 cặp ngẫu nhiên (seed cố định) trong dải 0.70–0.80 để quản đốc soát; thống kê NEW mới.
   - Hoàn thành khi: chạy lại ổn định; report có mục mẫu 0.70–0.80; số NEW mới được ghi vào Nhật ký.
+- [ ] T2c. Ghép FILE scn theo nội dung, không theo số (phụ thuộc T2b, T3a) — Agent: A1 — **Quản đốc nghiệm thu**
+  - Lý do (quản đốc xác minh): 00216 idx 3 "For now... yes. Call me Rabi." bị gán 침입자 발견 với điểm 0.829 → bộ chấm điểm đặc trưng không phân biệt được nghĩa; sai từ khâu chọn file.
+  - Ghép file: với mỗi scn Android, chấm mọi scn LGT bằng (a) độ giống phần **bytecode script** (khối Scripts A/B, bỏ bảng chuỗi; difflib/so khớp n-gram), (b) chuỗi tên riêng/số/mã màu, (c) số câu; gán 1-1 toàn cục (Hungarian / tham lam theo điểm), file không đủ điểm → toàn bộ NEW. Ghi bảng ghép file + điểm vào `align_report.md`; so với ghép theo số, liệt kê mọi file đổi ghép.
+  - Sau đó chạy lại ghép câu như T2b trên cặp file mới. Bổ sung kiểm tra nghĩa thô: câu ngắn (≤ 3 từ Anh) mà Hàn dài > 12 ký tự hoặc ngược lại → NEW.
+  - Giữ ổn định ID `A_dich.tsv`: dịch đã có giữ theo khoá (file, idx, text_en); câu không còn NEW → đánh dấu cột 6 `unused`; câu NEW mới → ID nối tiếp sau A01008. Không xoá bản dịch.
+  - Hoàn thành khi: chạy lại ổn định; bảng ghép file trong report; các ví dụ ở Vướng mắc T3a (00216 idx 3/4/20, 00214 idx 14, 00186 idx 18) không còn gán sai; `check_A.py` vẫn 0 lỗi; ghi số NEW mới (scn) vào Nhật ký.
 - [ ] T3. Dịch câu NEW Anh → Việt (phụ thuộc T2b) — Agent: A1 — chia lô: **T3a** = 348 NEW `.scn` (thoại), **T3b** = 660 NEW `.dat` (vật phẩm/kỹ năng/nhiệm vụ/UI). Mỗi lô một tick riêng trong Nhật ký.
   - Câu có `k_low` (ID LGT gần nhất): mở bản Việt của `k_low` trong `HL5_dich_FULL.tsv`/`override.tsv` làm gợi ý, tái dùng câu chữ/thuật ngữ đã có rồi bổ sung phần Anh thêm (vd mô tả kỹ năng `item_16`, số `100,000`), ngắt `;` theo bản Anh (bản Android đã ngắt dòng lại).
   - Mỗi dòng `A_dich.tsv`: `A#####<TAB>file<TAB>vị trí<TAB>text_en<TAB>vi` (A##### ổn định, sinh theo thứ tự align.json).
@@ -106,11 +112,11 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Hoàn thành khi: `apksigner verify` đạt; harness chạy `.so`+VFS lấy từ APK đã đóng gói; báo cáo phát hành `hl5_android/PHAT-HANH.md`.
 
 ## Phân công hiện tại
-- A1: T1 ✓ → T2 ✓ → T2b ✓ → T5 ✓ → T3a → T3b (đang giao: T3a, phiên công nhân mới).
+- A1: T1 ✓ → T2 ✓ → T2b ✓ → T5 ✓ → T3a → T3b (T3a ✓; đang giao: T2c, sau đó T3a-bổ sung cho NEW mới của scn, rồi T3b).
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
-- (trống)
+- [A1/T3a] Aligner ghép sai theo SỐ FILE: scn Android lệch số với LGT (Android 00207 = LGT 00208, 00209 = 00211, 00210 = 00212, 00213 = 00215, 00215 = 00216, 00216 phần lớn mới). Hậu quả: một số câu KHÔNG phải NEW bị gán K sai nghĩa (vd 00216 idx 3,4,20 nhận "Phát hiện kẻ xâm nhập"/"Bắt đầu hành động loại trừ"/"Cái quái gì nữa đây..."; 00214 idx 14 "It needs some improvements." nhận "Nhà kho cũ"; 00186 idx 18 nhận "Chơi lại game..."; 00094/00108/00136/00144/00170/00174 có các K lệch 1-36 vị trí). Đề nghị quản đốc cho T2c soát lại ghép các file này trước T4. Với NEW, A_dich.tsv đã dịch từ tiếng Anh và tái dùng đúng K Việt có sẵn ở các file lệch số.
 
 ## Nhật ký
 - [quản đốc] Lập PLAN.md; các phân tích nền nằm trong BAO-CAO-RE.md §1–7; harness + 4 patch offline đã xong.
@@ -120,3 +126,5 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [A1] T2b xong: NEW 535 -> 1008 (scn 348, dat 660); 485 NEW có ko_hint (326 do luật `;` vượt >= 2, 139 điểm < 0.70, 15 giữ chỗ, 5 dài > 3.5 lần). Luật `;` có thể quá chặt với dat (Android ngắt dòng lại) -> quản đốc cân nhắc nới. Report có mẫu 40 cặp dải 0.70-0.80; chạy lại ổn định.
 - [A1] T5 xong: `tools/vfs_pack.py`; pack không thay gì = giống hệt từng byte; overlay thử (menu_text.dat) thay đúng 1 mục (thứ tự/khoá giữ nguyên); harness (p1.so) boot tới menu chính, ảnh khung 459/579/599 giống bản gốc.
 - [quản đốc] Nghiệm thu T2b: NEW 1008 (485 có ko_hint); mẫu 0.70–0.80: 38/40 đúng, #33 (00107 idx 12) sai nghĩa, #10 lệch số → thêm kiểm tra số vào T4. Giữ luật `;` (326 câu): T3 tái dùng bản Việt của `k_low` nên chi phí thấp. Nghiệm thu T5 (roundtrip từng byte + boot harness).
+- [A1] T3a xong: 348 NEW scn dịch tay -> `vi/A_dich.tsv` (A00661-A01008; A00001-A00660 giữ chỗ cho 660 dat, cột Việt trống chờ T3b) + `vi/check_A.py` (mã điều khiển, ký tự cấm, số, độ dài bằng `Encoder` của build_vi5, từ điển mới; `--kind dat|all` cho T3b). Kết quả: 0 lỗi, dài nhất 123 byte (cap 254), từ điển 4548 -> 4727 / 5076 (còn 349 cho T3b). T3 chưa tick (chờ T3b).
+- [quản đốc] Nghiệm thu T3a: soát mẫu bản dịch đạt; check_A 0 lỗi; từ điển 4727/5076. Vướng mắc lệch số file: xác minh đúng (00216 idx 3 điểm 0.829 nhưng sai nghĩa) → giao T2c ghép file theo bytecode script.
