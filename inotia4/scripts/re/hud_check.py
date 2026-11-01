@@ -14,6 +14,8 @@ Cac muc (moi muc in DAT / KHONG DAT, dong cuoi TAT CA DAT hoac CO MUC KHONG DAT)
   [5] (neu co --atlas-dir) kich thuoc atlas 512x512 RGBA va moi rect nam trong atlas, khong chong len nhau.
   [6] Dieu khien -> loc trong UIPlayPorting_Draw (0x16985c): ID 1 -> UI_015 loc1, ID 2 -> loc2, ID 3 -> loc0, ID 7 -> loc3, ID 0x14 -> UI_014 loc2
       (+ loc3 lop bam): nhanh nhay `cmp xID` -> khoi `GetGroup(0x16); GetLoc(0x16, loc)` trong ban dich.
+  [7] Thu tu ve o khung ky nang (loc11 se dung khung dac): nen loc5 -> vong loc11 -> icon (`CONVERTSKILL_GetIconGroup`) o ca 3 ham: SHORTCUTPorting_Draw (HUD),
+      UIShortcutMenu_Draw va UIShortcutMenu_DrawShortcutControl (popup gan phim tat) => khung dac khong che icon.
 """
 import hashlib
 import os
@@ -312,6 +314,16 @@ def main():
     r = objdump(path, 0x169a28, 0x169a68)
     verdict('ID 0x14 (tan cong): `cmp w0,#0x14` -> GetLoc(0x15, 2) @0x169a44 -> GRPX_DrawPart kieu 1 (0x169a5c `mov w5,#1`)',
             r.get(0x169a28) == 'cmp w0, #0x14' and r.get(0x169a40) == 'mov w1, #0x2' and r.get(0x169a3c) == 'mov w0, #0x15' and r.get(0x169a5c) == 'mov w5, #0x1')
+
+    print('\n[7] Thu tu ve o ky nang: loc5 -> loc11 -> icon')
+    PLT_ICONGROUP = 0x2a8fa0
+    for fn, lo, hi in (('SHORTCUTPorting_Draw', 0x1d0e00, 0x1d1000), ('UIShortcutMenu_Draw', 0x170340, 0x170430),
+                       ('UIShortcutMenu_DrawShortcutControl', 0x1705a0, 0x170660)):
+        l5 = [a for a, w0, w1 in sites if lo <= a < hi and w0 == 0x16 and w1 == 5]
+        l11 = [a for a, w0, w1 in sites if lo <= a < hi and w0 == 0x16 and w1 == 11]
+        ic = [a for a in range(lo, hi, 4) if (e.u32(a) >> 26) == 0x25 and a + sx(e.u32(a) & 0x3ffffff, 26) * 4 == PLT_ICONGROUP]
+        verdict('%s: GetLoc(0x16,5) @%s < GetLoc(0x16,11) @%s < GetIconGroup @%s' % (fn, [hex(a) for a in l5], [hex(a) for a in l11], [hex(a) for a in ic[:1]]),
+                bool(l5 and l11 and ic) and l5[0] < l11[0] < ic[0])
 
     if atlas_dir:
         print('\n[5] Atlas (%s)' % atlas_dir)

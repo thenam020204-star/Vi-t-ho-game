@@ -1,0 +1,115 @@
+# hud_swap --selftest, lan 1
+[1] SHA256 vao (atlas goc + 7 anh nguoi dung) da kiem trong build(): neu sai se DUNG truoc khi toi day
+  -> DAT: UI_014.png.jpg goc sha256 56274c88709140b6... 
+  -> DAT: UI_015.png.jpg goc sha256 e05d2a292ec5d0ed... 
+[2] pixel ngoai 7 rect == goc (tung pixel), moi atlas
+  -> DAT: UI_014.png.jpg: ngoai rect giong het goc (211264 pixel ngoai, 50880 pixel trong rect, 46964 pixel trong rect doi) 
+  -> DAT: UI_015.png.jpg: ngoai rect giong het goc (230808 pixel ngoai, 31336 pixel trong rect, 27054 pixel trong rect doi) 
+[3] trong tung rect
+  -> DAT: UI_015 loc0: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc0 <- btn_pause.png: 296 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc0: co alpha day (max 255), bbox alpha (1, 1, 74, 74) 
+  -> DAT: UI_015 loc0: mau TB theo alpha khop anh nguoi dung ((92.2, 63.7, 43.3) vs (92.2, 63.7, 43.2)) 
+  -> DAT: UI_015 loc1: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc1 <- btn_save.png: 296 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc1: co alpha day (max 255), bbox alpha (1, 1, 74, 74) 
+  -> DAT: UI_015 loc1: mau TB theo alpha khop anh nguoi dung ((101.4, 72.2, 51.3) vs (101.3, 72.1, 51.2)) 
+  -> DAT: UI_015 loc2: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc2 <- btn_shop.png: 296 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc2: co alpha day (max 255), bbox alpha (1, 1, 74, 74) 
+  -> DAT: UI_015 loc2: mau TB theo alpha khop anh nguoi dung ((105.8, 116.0, 98.6) vs (105.7, 115.8, 98.4)) 
+  -> DAT: UI_015 loc3: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc3 <- btn_swap.png: 296 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc3: co alpha day (max 255), bbox alpha (1, 1, 74, 74) 
+  -> DAT: UI_015 loc3: mau TB theo alpha khop anh nguoi dung ((99.7, 73.3, 57.3) vs (100.0, 73.5, 57.2)) 
+  -> DAT: UI_015 loc11: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc11 <- btn_frame.png: 736 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc11: co alpha day (max 255), bbox alpha (2, 2, 92, 92) 
+  -> DAT: UI_015 loc11: mau TB theo alpha khop anh nguoi dung ((74.9, 46.7, 26.2) vs (74.8, 46.7, 26.0)) 
+  -> DAT: UI_014 loc2: noi dung rect == noi dung da dung 
+  -> DAT: UI_014 loc2 <- attack.png: 0 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_014 loc2: co alpha day (max 255), bbox alpha (13, 11, 149, 145) 
+  -> DAT: UI_014 loc2: mau TB theo alpha khop anh nguoi dung ((155.4, 79.4, 83.7) vs (154.7, 79.6, 83.4)) 
+  -> DAT: UI_014 loc3: noi dung rect == noi dung da dung 
+  -> DAT: UI_014 loc3 <- attack_pressed.png: 0 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_014 loc3: co alpha day (max 255), bbox alpha (0, 0, 159, 160) 
+  -> DAT: UI_014 loc3: mau TB theo alpha khop anh nguoi dung ((182.3, 94.6, 84.4) vs (181.5, 94.7, 84.1)) 
+[4] chay lan 2 ra cung tung byte
+  -> DAT: UI_014.png.jpg: 132023 B, sha256 d541527a4bae960d 
+  -> DAT: UI_015.png.jpg: 192288 B, sha256 a04b7cc8ad19e0b8 
+[5] atlas khong co viec => chep nguyen byte
+  -> DAT: UI_014 (khong co viec) == goc tung byte 
+  -> DAT: UI_015 (co viec) == ket qua day du 
+  -> DAT: khong viec nao: ca hai atlas == goc tung byte 
+[6] PNG ra hop le
+  -> DAT: UI_014.png.jpg: IHDR (512, 512, 8, 6, 0, 0, 0) (512x512, 8 bit, mau 6 = RGBA, nen 0, loc 0, xen ke 0); chunk ['IHDR', 'iCCP', 'IEND', 'IDAT x2'] 
+  -> DAT: UI_014.png.jpg: giai ma lai duoc, RGBA (512, 512) 
+  -> DAT: UI_015.png.jpg: IHDR (512, 512, 8, 6, 0, 0, 0) (512x512, 8 bit, mau 6 = RGBA, nen 0, loc 0, xen ke 0); chunk ['IHDR', 'iCCP', 'IEND', 'IDAT x3'] 
+  -> DAT: UI_015.png.jpg: giai ma lai duoc, RGBA (512, 512) 
+[7] rect == bang loc doc tu /opt/work/lib4/libgame.so
+  -> DAT: UI_015 loc0 == (2, 2, 75, 75) (2, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc1 == (80, 2, 75, 75) (80, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc2 == (158, 2, 75, 75) (158, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc3 == (236, 2, 75, 75) (236, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc11 == (416, 99, 94, 94) (416, 99, 94, 94, 0, 0)
+  -> DAT: UI_014 loc2 == (281, 128, 159, 160) (281, 128, 159, 160, 0, 0)
+  -> DAT: UI_014 loc3 == (281, 291, 159, 160) (281, 291, 159, 160, 0, 0)
+KET LUAN: TAT CA DAT
+
+# lan 2
+[1] SHA256 vao (atlas goc + 7 anh nguoi dung) da kiem trong build(): neu sai se DUNG truoc khi toi day
+  -> DAT: UI_014.png.jpg goc sha256 56274c88709140b6... 
+  -> DAT: UI_015.png.jpg goc sha256 e05d2a292ec5d0ed... 
+[2] pixel ngoai 7 rect == goc (tung pixel), moi atlas
+  -> DAT: UI_014.png.jpg: ngoai rect giong het goc (211264 pixel ngoai, 50880 pixel trong rect, 46964 pixel trong rect doi) 
+  -> DAT: UI_015.png.jpg: ngoai rect giong het goc (230808 pixel ngoai, 31336 pixel trong rect, 27054 pixel trong rect doi) 
+[3] trong tung rect
+  -> DAT: UI_015 loc0: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc0 <- btn_pause.png: 296 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc0: co alpha day (max 255), bbox alpha (1, 1, 74, 74) 
+  -> DAT: UI_015 loc0: mau TB theo alpha khop anh nguoi dung ((92.2, 63.7, 43.3) vs (92.2, 63.7, 43.2)) 
+  -> DAT: UI_015 loc1: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc1 <- btn_save.png: 296 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc1: co alpha day (max 255), bbox alpha (1, 1, 74, 74) 
+  -> DAT: UI_015 loc1: mau TB theo alpha khop anh nguoi dung ((101.4, 72.2, 51.3) vs (101.3, 72.1, 51.2)) 
+  -> DAT: UI_015 loc2: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc2 <- btn_shop.png: 296 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc2: co alpha day (max 255), bbox alpha (1, 1, 74, 74) 
+  -> DAT: UI_015 loc2: mau TB theo alpha khop anh nguoi dung ((105.8, 116.0, 98.6) vs (105.7, 115.8, 98.4)) 
+  -> DAT: UI_015 loc3: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc3 <- btn_swap.png: 296 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc3: co alpha day (max 255), bbox alpha (1, 1, 74, 74) 
+  -> DAT: UI_015 loc3: mau TB theo alpha khop anh nguoi dung ((99.7, 73.3, 57.3) vs (100.0, 73.5, 57.2)) 
+  -> DAT: UI_015 loc11: noi dung rect == noi dung da dung 
+  -> DAT: UI_015 loc11 <- btn_frame.png: 736 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_015 loc11: co alpha day (max 255), bbox alpha (2, 2, 92, 92) 
+  -> DAT: UI_015 loc11: mau TB theo alpha khop anh nguoi dung ((74.9, 46.7, 26.2) vs (74.8, 46.7, 26.0)) 
+  -> DAT: UI_014 loc2: noi dung rect == noi dung da dung 
+  -> DAT: UI_014 loc2 <- attack.png: 0 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_014 loc2: co alpha day (max 255), bbox alpha (13, 11, 149, 145) 
+  -> DAT: UI_014 loc2: mau TB theo alpha khop anh nguoi dung ((155.4, 79.4, 83.7) vs (154.7, 79.6, 83.4)) 
+  -> DAT: UI_014 loc3: noi dung rect == noi dung da dung 
+  -> DAT: UI_014 loc3 <- attack_pressed.png: 0 pixel ngoai vung anh moi == (0,0,0,0) 
+  -> DAT: UI_014 loc3: co alpha day (max 255), bbox alpha (0, 0, 159, 160) 
+  -> DAT: UI_014 loc3: mau TB theo alpha khop anh nguoi dung ((182.3, 94.6, 84.4) vs (181.5, 94.7, 84.1)) 
+[4] chay lan 2 ra cung tung byte
+  -> DAT: UI_014.png.jpg: 132023 B, sha256 d541527a4bae960d 
+  -> DAT: UI_015.png.jpg: 192288 B, sha256 a04b7cc8ad19e0b8 
+[5] atlas khong co viec => chep nguyen byte
+  -> DAT: UI_014 (khong co viec) == goc tung byte 
+  -> DAT: UI_015 (co viec) == ket qua day du 
+  -> DAT: khong viec nao: ca hai atlas == goc tung byte 
+[6] PNG ra hop le
+  -> DAT: UI_014.png.jpg: IHDR (512, 512, 8, 6, 0, 0, 0) (512x512, 8 bit, mau 6 = RGBA, nen 0, loc 0, xen ke 0); chunk ['IHDR', 'iCCP', 'IEND', 'IDAT x2'] 
+  -> DAT: UI_014.png.jpg: giai ma lai duoc, RGBA (512, 512) 
+  -> DAT: UI_015.png.jpg: IHDR (512, 512, 8, 6, 0, 0, 0) (512x512, 8 bit, mau 6 = RGBA, nen 0, loc 0, xen ke 0); chunk ['IHDR', 'iCCP', 'IEND', 'IDAT x3'] 
+  -> DAT: UI_015.png.jpg: giai ma lai duoc, RGBA (512, 512) 
+[7] rect == bang loc doc tu /opt/work/lib4/libgame.so
+  -> DAT: UI_015 loc0 == (2, 2, 75, 75) (2, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc1 == (80, 2, 75, 75) (80, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc2 == (158, 2, 75, 75) (158, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc3 == (236, 2, 75, 75) (236, 2, 75, 75, 0, 0)
+  -> DAT: UI_015 loc11 == (416, 99, 94, 94) (416, 99, 94, 94, 0, 0)
+  -> DAT: UI_014 loc2 == (281, 128, 159, 160) (281, 128, 159, 160, 0, 0)
+  -> DAT: UI_014 loc3 == (281, 291, 159, 160) (281, 291, 159, 160, 0, 0)
+KET LUAN: TAT CA DAT
