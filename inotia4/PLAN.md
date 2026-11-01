@@ -88,6 +88,25 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - lề mặc định: ngang 24 px, dọc 16 px logic (có thể đưa lên mod menu sau);
     - không được làm lệch vùng chạm (touch) so với hình vẽ.
   - **Không đụng** cách vẽ map ngoài việc đổi kích thước màn logic. Chạm (touch) phải đổi theo đúng hệ số mới: T9a chứng minh native tính toạ độ chạm từ cùng các biến đó.
+  - **ĐỔI THIẾT KẾ sau T9a (quản đốc, 2026-11-01). Mục này thay các dòng "Tăng tầm nhìn" và "Chỉnh được bằng mod menu" ở trên.**
+    - Bằng chứng:
+      - Vùng nhìn thế giới (map, camera) KHÔNG lấy từ màn logic 0x2d6098/9c. Nó lấy từ khung đệm FB, có kích thước `cfg.W/H` do `OriginalDisplay_ConfigInfo` 0x147030 tính.
+      - Quản đốc đã tự disasm hàm này: W > 799 ⇒ (512, H·512/W); 480 ≤ W ≤ 799 ⇒ (480, H·480/W); W < 480 ⇒ (480, 320).
+      - Máy 2400×1080 ⇒ FB **512×230**, phóng ~4,69 lần lên màn thật.
+      - `MAP_*` và camera đọc `GRP_nDisplayW/H` (= kích thước FB).
+      - Đổi màn logic chỉ làm UI nhỏ đi, map không rộng thêm.
+    - **Tăng tầm nhìn = nhân cfg.W/H với k (phương án A của A2)**. Màn logic, UI, chữ và HUD **giữ nguyên cỡ**. **Không** vá 4 hằng 0x133048/58 và 0x1333f8/0c.
+    - **Int thứ 4 @0x72f78c = P**, là phần trăm k×100.
+      - Chỉ nhận 100..150; giá trị khác (kể cả 0) ⇒ k = 1,0, giống game gốc.
+      - Thanh "Tầm nhìn" trong mod menu: 100..150, bước 5.
+      - **Mặc định tạm 120**, chốt sau khi đọc xong `RenderCore*`. Lý do: k = 1,25 cho FB rộng đúng 640, mà `RenderCoreInitialize` có nhánh theo một giá trị thuộc {240, 320, 400, 640}.
+      - Nếu RenderCore dùng texture cố định hoặc rẽ nhánh theo W thì phải giới hạn P cho an toàn.
+    - **Chỉ áp khi mở lại app**, vì cfg chỉ đọc 1 lần trong `startClet`. Mod menu phải ghi rõ "khởi động lại game để áp dụng". Không gọi Reapply.
+    - **Lề HUD**: 29 điểm vá, mỗi điểm 1 lệnh, không dùng cave (nhóm `hud`), lùi vào 24 px ngang / 16 px dọc.
+      - Điểm neo W/H: 0x167f7c, 0x167f88. Còn lại là các hằng toạ độ trong `UIPlay_Create`, cần điều khiển, minimap, và hình nền ở `UIPlayPorting_Draw`.
+      - Danh sách byte đầy đủ: `docs/t9a_bangiao_A2.md`.
+      - Vì sửa rect của control nên hình và vùng chạm cùng dời.
+      - **Không áp** bản vá tuỳ chọn vùng chạm màn tiêu đề (0x2051b0/b4): màn logic không đổi nên giữ như gốc.
 
 ## Môi trường (container hiện tại, mất khi container bị thu hồi)
 - Công cụ:
@@ -408,6 +427,17 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
       - ảnh nền khi H > 640 (`GAMELOADER_DrawBackGround`, `STATE_DrawMainMenu`, `DrawTitle_Title`, `RenderCoreFlush` 640f);
       - nửa sau `UIPlay_Create`, `UIPlayPorting_Draw`, minimap, phím ảo;
       - rủi ro theo từng màn.
+  - Bàn giao (A2 thứ 2 đọc trước T9a, xong ~75%, dừng ở ~355k ngữ cảnh; chi tiết, byte và asm ở `docs/t9a_bangiao_A2.md`):
+    - **Vùng nhìn thế giới = FB `cfg.W/H`** (`OriginalDisplay_ConfigInfo` 0x147030), không phải màn logic ⇒ đổi thiết kế (xem "ĐỔI THIẾT KẾ sau T9a").
+    - Ghi k trong `onResume` là kịp, vì `startClet` đọc cfg 1 lần sau `onSurfaceCreated` + 500 ms. Reapply không tạo lại FB ⇒ chỉ áp khi mở lại app.
+    - MAP/camera:
+      - không có hằng 640/960 nào giới hạn vùng vẽ (0x280 ở `MAP_*` là stride tile);
+      - chạm UI đọc W/H logic live tại 0x17a1e4..0x17a230.
+    - HUD: 29 điểm vá 1 lệnh (bảng trong tài liệu). Patch tầm nhìn: 1 điểm 0x14709c + cave 48 B trong thân `SGL_grpResume` 0x133454.
+    - Còn lại (~25%):
+      - `RenderCoreInitialize`/`RenderCoreFlush`/`CSFB_grpFlushLcd`: nhánh theo {240, 320, 400, 640}, texture FB cố định?;
+      - `MAP_SetFocus`, `TouchGameObject_*`;
+      - unidbg dump `GRP_nDisplayW/H` (thuộc T9c).
   - [ ] T9a. RE + thiết kế, ghi vào `docs/tam_nhin_hud.md`.
     - Mọi chỗ ghi/đọc 0x2d6098/0x2d609c và mọi hằng 640/960 (int `0x280`/`0x3c0`, float `0x44200000`/`0x44700000`) có liên quan tới kích thước màn; phân loại từng chỗ.
     - Caller của `CalcResolutionWidth/Height`, `GetResolutionWidth/Height`, `GRPX_GetScreenWidth/Height`: neo HUD vào mép hay căn giữa vùng 960×640 hay khác.
@@ -416,9 +446,11 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Toạ độ chạm đổi từ màn thật sang logic ở đâu.
     - Thứ tự `onResume` (Java) so với `SGL_grpInitialize` (lúc GL tạo surface).
     - Đề xuất patch (vaddr, byte gốc, lệnh mới) cho tầm nhìn và cho lề HUD, kèm rủi ro từng màn (menu, hội thoại, bản đồ nhỏ, cửa hàng).
-  - [ ] T9b. Vá native (nhóm `view` trong `patch_lib.py`) + thanh "Tầm nhìn" trong `ModMenu`.
+  - [ ] T9b. Vá native (nhóm `view` = 0x14709c + cave 0x133454, nhóm `hud` = 29 điểm lề) trong `patch_lib.py` + thanh "Tầm nhìn" (P 100..150, bước 5) trong `ModMenu`, kèm dòng "khởi động lại game để áp dụng".
   - [ ] T9c. Kiểm.
-    - unidbg với `-Demu.w=2400 -Demu.h=1080` chụp màn tiêu đề/intro với k = 1,0 và k = 1,25; so vị trí chạm (tap vào START vẫn trúng).
+    - unidbg với `-Demu.w=2400 -Demu.h=1080`:
+      - dump 0x2d6098/9c (kỳ vọng 1422/640) và `GRP_nDisplayW/H` 0x2d7ab4/ab8 (kỳ vọng 512/230 khi P = 100, 614/276 khi P = 120);
+      - chụp màn tiêu đề/intro ở P = 100 và P = 120; so vị trí chạm (tap vào START vẫn trúng).
     - Nếu T2 xong: chụp màn chơi.
     - Rồi build bản thử cho người dùng.
 - [ ] T10. Thay nút HUD màn chơi bằng ảnh của người dùng — **Quản đốc nghiệm thu**. Thứ tự: sau T8; làm cùng đợt với T9 nếu tiện (cùng là HUD).
@@ -541,3 +573,7 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
 - 2026-11-01 quản đốc: người dùng xác nhận TEST8 load save OK trên máy thật ⇒ tick T3. Người dùng cũng xác nhận bánh răng → `btn_pause` (T10).
 - 2026-11-01 A1 (T7, lượt 2): T7a xong (`docs/font_lon.md`, `-Demu.dumpfont`, ảnh unidbg); T7c xong (VNFont 2 mặt chữ, FontData24); build `out/Inotia4_T7_check.apk` PASS, `apkdiff` với TEST8 chỉ khác `classes3.dex` (`com/namp/vh/*`). Chờ quản đốc nghiệm thu.
 - 2026-11-01 quản đốc: nghiệm thu T7a–T7c ĐẠT; gửi TEST9 (TEST8 + font f24vn cho chữ cỡ ≥24). Chờ người dùng xác nhận font trên máy. Giao T8 cho công nhân chạy mới; A2 vẫn đọc T9a.
+- 2026-11-01 quản đốc: A2 thứ 2 đọc T9a xong ~75% (~355k, dừng).
+  - Phát hiện vùng nhìn = FB `cfg.W/H` (0x147030), không phải màn logic. Quản đốc đã tự disasm 0x147030 xác nhận.
+  - ⇒ Đổi thiết kế T9 sang nhân FB theo P% (0x72f78c, 100..150). UI/HUD giữ cỡ; lề HUD 29 điểm vá 1 lệnh.
+  - Bàn giao lưu ở `docs/t9a_bangiao_A2.md`. Phần còn lại của T9a (RenderCore, MAP_SetFocus) giao sau.
