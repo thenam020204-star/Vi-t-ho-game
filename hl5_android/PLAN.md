@@ -115,6 +115,9 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Xuất 3 APK chia đôi lỗi (cùng package, cùng khoá): `diag-A` = APK gốc + lớp chẩn đoán (kiểm lớp chẩn đoán vô hại); `diag-B` = A + patch guest + VFS Việt + vi.bin (KHÔNG vá bridge, hash target-assets cập nhật); `diag-C` = v0.1 đầy đủ + lớp chẩn đoán. Nếu dễ: `diag-C1` = C nhưng bỏ riêng patch NEAREST/viewport (chỉ tắt hook chữ + logic).
   - Tự kiểm tĩnh trước khi xuất: `aapt2 dump badging`, apksigner, baksmali/dex verify; nếu có thể, chạy thử trên emulator/headless ART có sẵn (không bắt buộc). Rà lại khả nghi tĩnh trong v0.1 (sha256 target-assets khớp file đã nén? quyền đọc asset? `p_memsz` vs ElfLoader; patch bridge chồng lấn) và ghi nhận xét.
   - Đầu ra: `make_apk.sh --diag A|B|C|C1` → `dist/diag/*.apk`, `PHAT-HANH-diag.md` (cài lần lượt, cách lấy file log trong Downloads, gửi lại).
+- [ ] T15. Phóng to cửa sổ/tab menu trong game ở HD (sau T10, trước T14b) — Agent: A1 — **Quản đốc nghiệm thu**
+  - Yêu cầu người dùng: tab menu trong game (túi đồ, trang bị, kỹ năng, nhiệm vụ, cửa hàng, popup) quá nhỏ ở ÷2 → phóng to (hệ số nguyên s = max(1, floor(H/270)), vd 1200x540 → ×2), giữ NEAREST, căn giữa.
+  - T15a thiết kế (quản đốc duyệt): so sánh (a) guest vẽ menu vào buffer khung nhỏ (W/s × H/s) rồi phóng ×s lên khung chính khi đang ở state menu; (b) bridge phóng vùng; (c) sửa toạ độ/kích thước từng cửa sổ. Phải tính cả vùng chạm (toạ độ chạm chia s), chữ 18px vs 15px khi phóng (tránh chữ to gấp đôi), chi phí CPU. T15b implement.
 - [ ] T14a. Kiểm kê UI cảm ứng (sau T10) — Agent: A1
   - Ai vẽ nút cảm ứng (guest `touch.mgr`/`ui.mgr` hay bridge/Java), danh sách sprite + trạng thái (thường/nhấn), vị trí/cỡ theo khung logic, vùng chạm, phím ảo tương ứng (mã phím guest). Contact sheet `shots/T14/ui_hien_tai.png` đánh số từng nút.
   - Đề xuất ánh xạ 7 ảnh mới trong `ui_new/` (01 emblem, 02 emblem phát sáng, 03 khung rỗng, 04 tạm dừng, 05 lưu/tải, 06 "Cửa hàng", 07 đổi) → nút hiện tại, và cách vẽ nét ở HD (vẽ ở độ phân giải thật hay theo khung logic). Quản đốc hỏi người dùng chốt ánh xạ trước T14b.
@@ -155,7 +158,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: v0.1.1 ✓ → T7 (tạm dừng) → T9 → T10 → T14a → T14b → T7 tiếp.
+- A1: v0.1.1 ✓, T9 ✓ → T10 (đang giao) → T15 → T14a → T14b → T7 → T11.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -223,3 +226,4 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [người dùng] Gửi ảnh trong game v0.1.1 (`ui_new/ref_ingame_v011.jpg`); có nút DASH chưa có ảnh → tự vẽ. Sắp hết giới hạn tuần → viết `BAN-GIAO.md`; tiếp tục làm.
 - [A1] T9 xong (chờ nghiệm thu). Lỗi chặn duy nhất: `Texture2D::getWidth2n/getHeight2n` (0x14d894/0x14d8e8) chỉ thử 2^0..2^10, nên W hoặc H logic > 1024 (1200x540 = ÷2, 2400x1080 = ÷1) cho texture 0 -> `createTexture` 0x14e114 thoát sớm -> MÀN ĐEN (không crash, v0.1.1 chưa gặp vì k=4 = 600x270). Vá `cmp r4,#11` -> `#13` ở 0x14d8cc và 0x14d920 (khối `T9 hd-texture` cuối `patch/so_patches.tsv`, mỗi dòng kiểm byte gốc; luồng: hai hàm kết thúc `pop {..,pc}`; diff `patch/t9_patch_diff.txt`); sau vá texture 2048x1024 và 4096x2048. Harness (6 cỡ 400x240, 600x270, 800x360, 960x432, 1200x540, 2400x1080; tiêu đề -> menu -> slot -> lớp -> skip cutscene -> bản đồ đầu -> đi ~32 s + đánh goblin -> menu trong game, thêm lượt Túi/Trang bị/Liên kích ở 1200x540): 0 crash/exception, HUD/hộp thoại/menu đúng chỗ, 0,3 cấp phát và 32 B/khung (không tỉ lệ W*H); quét hằng 400/240 trong so.dis không còn mảng cố định. Còn mở: xem Vướng mắc [A1/T9]. `make_apk.sh`: VER mặc định đổi sang `0.2-hd` (v0.1.1 không còn giống từng byte vì .so đổi); chưa dựng APK. Ảnh `shots/T9/` (12), BAO-CAO §10.
 - [quản đốc] Nghiệm thu T9: đạt (vá giới hạn texture 2^n 1024→4096 ở 0x14d8cc/0x14d920; 6 cỡ chạy hết lộ trình, ảnh 1200x540 đúng). Ghi nhận cho T10/T14: ở ÷2 HUD/nút/chữ chỉ còn nửa cỡ vật lý → T10 phải có chữ 18 px, T14 phải vẽ nút + HUD to hơn (hệ số theo k) — không chỉ thay ảnh. CPU ÷2 ≈ 2.7× v0.1.1 → mặc định ÷2 cần người dùng thử máy; nếu chậm thì mặc định ÷3.
+- [người dùng] Tab menu trong game phóng to nếu quá nhỏ → thêm T15 (sau T10, trước T14).
