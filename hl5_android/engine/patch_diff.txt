@@ -5,7 +5,7 @@
 41510  trước: ldrsb r3, [r5, #0x46]      sau: bl #0xaef98   [vn_th2 -> 0xaef98]
 4170c  trước: ldrsb r3, [r5, #0x46]      sau: bl #0xaefc8   [vn_th3 -> 0xaefc8]
 4178c  trước: ldrsb sl, [r5, #0x46]      sau: bl #0xaeff8   [vn_th4 -> 0xaeff8]
-41804  trước: bl #0x3cf00                sau: bl #0xaf330   [vn_draw -> 0xaf330]
+41804  trước: bl #0x3cf00                sau: bl #0xaf368   [vn_draw -> 0xaf368]
 88  p_memsz: 0x12d20 -> 0x12e20 (bss tới 0x1705a8; vn_state 0x1704c0..0x170500)
 
 # Thunk (cave A):

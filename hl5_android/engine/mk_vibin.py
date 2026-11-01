@@ -15,6 +15,7 @@ Bố cục (little-endian):
       chars   : u16 codepoint[nchars] (chỉ để debug) ở cuối file
 """
 import sys, struct, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 def read_font(p):
     d = open(p, 'rb').read()
@@ -85,7 +86,7 @@ def build(dirv):
         blk += struct.pack('<%dH' % N, *goff) + f['bits']
         while len(blk) % 4: blk += b'\0'
         fblocks.append(blk)
-    head = 32
+    head = 36                      # +4: u32 off_t10 (khối chuỗi T10) ở offset 32
     off_widx = head
     wi = struct.pack('<%dH' % len(widx), *widx)
     off_words = off_widx + len(wi)
@@ -95,13 +96,23 @@ def build(dirv):
     offs = []
     for b in fblocks: offs.append(o); o += len(b)
     chars_off = o
+    chars_len = nch * 2
+    t10_off = (chars_off + chars_len + 3) & ~3
+    try:
+        import t10_text
+        t10 = t10_text.enc(t10_text.NOTE, words)
+        t10_blob = bytes([1, len(t10)]) + t10
+    except Exception as e:
+        raise SystemExit('T10: không mã hoá được chuỗi bằng từ điển: %r' % (e,))
     out = bytearray(b'HLVI' + struct.pack('<HHHBB', 1, len(words), nch, 3, sw))
     out += struct.pack('<5I', off_widx, off_words, *offs)
+    out += struct.pack('<I', t10_off)
     out += wi
     out += b'\0' * (off_words - len(out)); out += words_blob
     out += b'\0' * (offs[0] - len(out))
     for b in fblocks: out += b
     out += struct.pack('<%dH' % nch, *[ord(c) for c in chars])
+    out += b'\0' * (t10_off - len(out)); out += t10_blob
     return bytes(out), dict(words=len(words), chars=nch, sizes=[len(b) for b in fblocks], spaceW=sw)
 
 if __name__ == '__main__':

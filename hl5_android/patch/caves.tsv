@@ -1,3 +1,4 @@
 # vùng	bắt đầu	kích thước	dùng	chủ	ghi chú
-cave A	0xaef38	2620	đã dùng 1669 B (0xaef38..0xaf5bd)	vn.c	Map::MapMove_back (chết, refscan 0 tham chiếu); còn trống 951 B
 bss	0x1704c0	64	vn_state	vn.c	sau .bss cũ (0x1704a8); cần p_memsz +0x100 (patch 0x88)
+cave A	0xaef38	2620	đã dùng 1725 B (0xaef38..0xaf5f5)	vn.c	Map::MapMove_back (chết, refscan 0 tham chiếu); còn trống 895 B
+cave B	0x14afb4	2436	đã dùng 877 B (0x14afb4..0x14b321)	t10.c	AndroidService::AndroidService C2 (chết, refscan §9.3); còn trống 1559 B

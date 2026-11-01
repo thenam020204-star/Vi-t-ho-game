@@ -7,26 +7,12 @@
  * chết, image link đúng tại vaddr cave). Trạng thái ở bss 0x1704c0 (vn_state, 64 B).
  * Hàm/biến guest khai báo `hidden extern` và được ld.lld gán địa chỉ tuyệt đối bằng --defsym (build.sh).
  */
-typedef unsigned char u8;
-typedef signed char s8;
-typedef unsigned short u16;
-typedef unsigned int u32;
+#include "vn_state.h"
 
-#define H __attribute__((visibility("hidden")))
 extern H int MX_fntDrawString(int fb, int gc, int fid, int x, int y, const u8 *s, int len);
 extern H void _midas_funcFntDrawPixel(int x, int y, int color, int mode);
 extern H u8 *StaticUtil_LoadRes(const char *name, int *size);
 extern H u32 vn_got_mxfnt[];           /* ô GOT của _mxfnt_prt: giá trị = &_mxfnt_prt (đã reloc lúc nạp) */
-typedef struct {
-    int status;                       /* 0 chưa nạp, 1 sẵn sàng, -1 lỗi/không có vi.bin */
-    const u8 *buf;
-    int nwords, nch;                  /* nch: số ký tự đã căn 4 */
-    const u16 *widx;
-    const u8 *words;
-    const u8 *font[3];
-    int hd;                           /* 1: dùng bộ 18 px (T10 đặt) */
-} vn_state_t;
-extern H vn_state_t vn_state[];
 
 static const char vn_name[] = "/c/vi/vi.bin";
 
@@ -47,6 +33,8 @@ static void vn_load(vn_state_t *s) {
         if (o + 8 > (u32)size) return;
         s->font[i] = b + o;
     }
+    s->t10 = 0;                             /* khối chuỗi T10 (header >= 36 B: u32 off ở +32) */
+    if (oi >= 36) { u32 t = rd32(b + 32); if (t && t < (u32)size) s->t10 = t; }
     s->buf = b; s->nwords = nw; s->nch = (nc + 3) & ~3;
     s->widx = (const u16 *)(b + oi);        /* oi căn 4 nên đọc u16 được; vẫn đọc từng byte để chắc */
     s->words = b + ow;

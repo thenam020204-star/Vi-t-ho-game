@@ -1,0 +1,15 @@
+0014b314 t hd_name
+0014afcc T t10_L
+0014afe4 T t10_OK
+0014afb4 T t10_R
+0014b2f4 t t10_gsh
+0014b070 T t10_gshth
+0014b2c0 t t10_h1
+0014b058 T t10_h1th
+0014b0d8 t t10_k
+0014b018 T t10_lbls
+0014b008 T t10_lblu
+0014b078 t t10_step
+0014b028 T t10_type
+0014b16c t t10_val
+0014b038 T t10_valth
