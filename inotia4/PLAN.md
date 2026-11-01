@@ -483,7 +483,13 @@ Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14�
     - Cần ép W chẵn trong cave. Map hẹp hơn vùng nhìn thì căn giữa, phần thừa tô đen.
     - Chạm thế giới không đổi tỉ lệ UI→FB, giống game gốc: CHƯA XÁC ĐỊNH, kiểm ở T9c.
     - Còn lại của T9a: viết `docs/tam_nhin_hud.md` (gộp 2 bàn giao) và xác nhận chạm thế giới bằng unidbg ⇒ giao cho công nhân chạy T9 làm đầu tiên.
-  - [ ] T9a. RE + thiết kế, ghi vào `docs/tam_nhin_hud.md`.
+  - Bàn giao (A1 mới của T9, T9a XONG):
+    - Đã tạo `docs/tam_nhin_hud.md` (gộp 2 bàn giao A2, bảng 29 điểm lề HUD, cave 52 B, pool, bằng chứng mã chết, rủi ro, kế hoạch T9c), `scripts/re/view_check.py` (log `logs/t9a_view_check.log`, dòng cuối TẤT CẢ ĐẠT), `scripts/asm/view_cave.s` + `build_view_cave.sh` (llvm-mc + ld.lld ra đúng 52 B của A2, sha256 `2c406b71…da97d`).
+    - Kiểm lại: 29/29 byte gốc khớp, 29/29 lệnh mới dựng lại bằng `llvm-mc` khớp, delta ngữ nghĩa +24 ngang/+16 dọc đúng từng điểm; `SGL_grpResume` mã chết (0 caller, 0 reloc kể cả RELATIVE, 0 adrp+add, 0 PLT, tên chỉ ở `.dynstr`; chuỗi `grpResume` chỉ có trong `libgame.so` của APK TEST10 (mọi dex/smali/asset) và 0 trong `libHercules.so`); pool: `0910a052`/`1f0160f1` → `0914a052`/`1f0168f1` dựng lại khớp, mặt nạ 0x1fffc00 giữ 10 MB; `CS_knlAlloc` = `calloc(1,n)`, `CS_knlGetFreeMemory` = `ActivityManager.MemoryInfo.availMem`.
+    - Chênh lệch nhỏ so với PLAN: cave ép chẵn bằng `and` (làm tròn xuống) nên **P = 105 ⇒ W = 536, không phải 538** (512·105/100 = 537,6 → 537 → 536); H' = floor(H·P/100) không chỉnh (lệch tỉ lệ ≤ 0,4 %).
+    - CHƯA XÁC ĐỊNH: tap-để-đi trên màn chơi (`TouchGameObject_EventMap` dùng thẳng toạ độ UI như đơn vị FB, như game gốc; không chạy tới màn chơi trong unidbg); thứ tự `onResume` → `startClet` trên máy thật; mũi tên `TutorialDescription` lệch 24/16 px; `INSTANTMSG_*`/`Tutorial*` không đọc lại.
+    - Bước tiếp: T9b = nhóm `view`, `hud`, `pool` trong `scripts/patch_lib.py`; Slot "Tầm nhìn" trong `ModMenu.java`; build `--libgroup base,p1,mod,view,hud,pool`.
+  - [x] T9a. RE + thiết kế, ghi vào `docs/tam_nhin_hud.md`.
     - Mọi chỗ ghi/đọc 0x2d6098/0x2d609c và mọi hằng 640/960 (int `0x280`/`0x3c0`, float `0x44200000`/`0x44700000`) có liên quan tới kích thước màn; phân loại từng chỗ.
     - Caller của `CalcResolutionWidth/Height`, `GetResolutionWidth/Height`, `GRPX_GetScreenWidth/Height`: neo HUD vào mép hay căn giữa vùng 960×640 hay khác.
     - Ảnh nền toàn màn (menu, tiêu đề) xử lý thế nào khi H_logic > 640 (kéo giãn, lặp hay để trống).
