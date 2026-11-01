@@ -292,4 +292,189 @@ Danh sách thử trên máy thật (khi người dùng nhận bản thử): (1) 
 
 ## 10. Disasm trước/sau (T8b)
 
-(Sẽ được điền ở bước T8b bằng `python3 scripts/patch_lib.py <lib> <ra> --disasm --group mod`.)
+Sinh bằng `python3 scripts/patch_lib.py <lib> <ra> --group mod --disasm` (llvm-objdump; script tự so disasm "sau" với danh sách lệnh dự kiến trong `patch_lib.py` và dừng nếu lệch: kết quả "khớp 1/1/1/59 lệnh dự kiến"). Chạy trên lib của TEST9 (đã có `base` + `p1`):
+
+**A  CHAR_AddDamage 0x18b3e0**
+
+Trước:
+
+```
+0x18b3e0  sub sp, sp, #0x70
+```
+
+Sau:
+
+```
+0x18b3e0  b 0x18bb00
+```
+
+**B  MERCENARYSYSTEM_AddExperience 0x1c7860**
+
+Trước:
+
+```
+0x1c7860  mov w8, #0x6e
+```
+
+Sau:
+
+```
+0x1c7860  b 0x18bb74
+```
+
+**C  MERCENARYSYSTEM_AddExpFixed 0x1c7a44**
+
+Trước:
+
+```
+0x1c7a44  mov w19, w0
+```
+
+Sau:
+
+```
+0x1c7a44  b 0x18bbac
+```
+
+**cave 0x18bb00..0x18bbec (2 hàm chết)**
+
+Trước:
+
+```
+0x18bb00  cbz x0, 0x18bb30
+0x18bb04  ldrb w8, [x0, #0x311]
+0x18bb08  tst w2, #0xff
+0x18bb0c  mov w9, #0x3
+0x18bb10  mov w10, #0x1
+0x18bb14  cinc w9, w9, ne
+0x18bb18  ldrsh w2, [x0, #0x2]
+0x18bb1c  cinc w10, w10, ne
+0x18bb20  cmp w8, #0x0
+0x18bb24  ldrsh w3, [x0, #0x4]
+0x18bb28  csel w0, w9, w10, eq
+0x18bb2c  b 0x2aecd0
+0x18bb30  ret
+0x18bb34  stp x29, x30, [sp, #-0x30]!
+0x18bb38  str x21, [sp, #0x10]
+0x18bb3c  stp x20, x19, [sp, #0x20]
+0x18bb40  mov x29, sp
+0x18bb44  mov x19, x1
+0x18bb48  tst w3, #0xff
+0x18bb4c  mov x20, x0
+0x18bb50  b.eq 0x18bb64
+0x18bb54  mov x1, x19
+0x18bb58  bl 0x2aed40
+0x18bb5c  mov w2, w0
+0x18bb60  b 0x18bbcc
+0x18bb64  ldrb w8, [x19, #0x15]
+0x18bb68  tbnz w8, #0x3, 0x18bba4
+0x18bb6c  mov x0, x19
+0x18bb70  mov w1, #0xb
+0x18bb74  mov w21, w2
+0x18bb78  bl 0x2ae5e0
+0x18bb7c  ldrb w9, [x19, #0x15]
+0x18bb80  ldr w8, [x19, #0x50]
+0x18bb84  mov w2, w21
+0x18bb88  orr w9, w9, #0x8
+0x18bb8c  cmp w8, #0x2ef
+0x18bb90  strb w9, [x19, #0x15]
+0x18bb94  b.lt 0x18bba8
+0x18bb98  mov w8, #0x2ee
+0x18bb9c  str w8, [x19, #0x50]
+0x18bba0  b 0x18bba8
+0x18bba4  ldr w8, [x19, #0x50]
+0x18bba8  mov w9, #0x3e8
+0x18bbac  sub w8, w9, w8
+0x18bbb0  mov w9, #0x4dd3
+0x18bbb4  mul w8, w8, w2
+0x18bbb8  movk w9, #0x1062, lsl #16
+0x18bbbc  smull x8, w8, w9
+0x18bbc0  lsr x9, x8, #63
+0x18bbc4  asr x8, x8, #38
+0x18bbc8  add w2, w8, w9
+0x18bbcc  mov x0, x20
+0x18bbd0  mov x1, x19
+0x18bbd4  mov w3, wzr
+0x18bbd8  mov w4, wzr
+0x18bbdc  ldp x20, x19, [sp, #0x20]
+0x18bbe0  ldr x21, [sp, #0x10]
+0x18bbe4  ldp x29, x30, [sp], #0x30
+0x18bbe8  b 0x2aecb0
+```
+
+Sau:
+
+```
+0x18bb00  sub sp, sp, #0x70
+0x18bb04  cmp w2, #0x1
+0x18bb08  b.lt 0x18bb70
+0x18bb0c  ldrb w9, [x1, #0x311]
+0x18bb10  adrp x10, 0x72f000
+0x18bb14  cbnz w9, 0x18bb38
+0x18bb18  ldr w11, [x10, #0x784]
+0x18bb1c  sub w12, w11, #0x2
+0x18bb20  cmp w12, #0x30
+0x18bb24  b.hi 0x18bb70
+0x18bb28  udiv w12, w2, w11
+0x18bb2c  cmp w12, #0x0
+0x18bb30  csinc w2, w12, wzr, ne
+0x18bb34  b 0x18bb70
+0x18bb38  cbz x0, 0x18bb70
+0x18bb3c  ldrb w9, [x0, #0x311]
+0x18bb40  cbnz w9, 0x18bb70
+0x18bb44  ldr w11, [x10, #0x780]
+0x18bb48  sub w12, w11, #0x2
+0x18bb4c  cmp w12, #0x30
+0x18bb50  b.hi 0x18bb70
+0x18bb54  mov w13, #0x423f
+0x18bb58  movk w13, #0xf, lsl #16
+0x18bb5c  cmp w2, w13
+0x18bb60  b.ge 0x18bb70
+0x18bb64  mul w12, w2, w11
+0x18bb68  cmp w12, w13
+0x18bb6c  csel w2, w12, w13, lt
+0x18bb70  b 0x18b3e4
+0x18bb74  mov w8, #0x6e
+0x18bb78  adrp x9, 0x72f000
+0x18bb7c  ldr w10, [x9, #0x788]
+0x18bb80  sub w11, w10, #0x2
+0x18bb84  cmp w11, #0x30
+0x18bb88  b.hi 0x18bba8
+0x18bb8c  mov w12, #0xffff
+0x18bb90  movk w12, #0xff, lsl #16
+0x18bb94  cmp w19, w12
+0x18bb98  b.ge 0x18bba8
+0x18bb9c  mul w11, w19, w10
+0x18bba0  cmp w11, w12
+0x18bba4  csel w19, w11, w12, lt
+0x18bba8  b 0x1c7864
+0x18bbac  mov w19, w0
+0x18bbb0  cmp w19, #0x1
+0x18bbb4  b.lt 0x18bbe8
+0x18bbb8  adrp x9, 0x72f000
+0x18bbbc  ldr w10, [x9, #0x788]
+0x18bbc0  sub w11, w10, #0x2
+0x18bbc4  cmp w11, #0x30
+0x18bbc8  b.hi 0x18bbe8
+0x18bbcc  mov w12, #0xffff
+0x18bbd0  movk w12, #0xff, lsl #16
+0x18bbd4  cmp w19, w12
+0x18bbd8  b.ge 0x18bbe8
+0x18bbdc  mul w11, w19, w10
+0x18bbe0  cmp w11, w12
+0x18bbe4  csel w19, w11, w12, lt
+0x18bbe8  b 0x1c7a48
+```
+
+Kiểm thêm (T8b, tất cả chạy trên `/opt/work/lib4/libgame.so` và lib của TEST9):
+
+| Phép thử | Kết quả |
+|---|---|
+| `patch_lib.py --check-asm` (dựng lại cave bằng `llvm-mc` + `ld.lld`) | 236 B, sha256 `cb645162…9765`, khớp byte nhúng sẵn và khớp 59 lệnh dự kiến |
+| áp nhóm `mod` lên lib TEST4 và lib TEST9 | cùng một kết quả: sha256 `5d3ecb3bba3dda01d1bffa17aad157a06c16246bbdd49978e2e595fbd48b4382` (TEST4 + `base` + `p1` + `mod`) |
+| áp lại lên lib đã vá | 6/6 "đã áp", file ra giống từng byte |
+| `--diff` lib TEST4 ↔ lib đã vá | 254 byte khác, 21 đoạn, **tất cả trong vùng khai báo** (0x1409a4..0x1409c0, 0x18b3e0..0x18b3e4, 0x1c7860..0x1c7864, 0x1c7a44..0x1c7a48, 0x18bb00..0x18bbec) |
+| `--diff` lib TEST9 ↔ lib đã vá `--group mod` | 230 byte khác, 18 đoạn, tất cả trong 4 vùng của nhóm `mod` |
+| đối chứng âm tính: cùng `--diff` nhưng `--group base,p1` | báo "NGOÀI VÙNG KHAI BÁO", mã thoát 1 |
+| sửa 1 byte trong cave gốc / sửa lệnh ở điểm B / sửa lệnh kế tiếp của C (refs) | dừng, không ghi gì (sha256 cave sai / byte khác cả gốc lẫn mới / `refs` sai) |
+| chỉ áp điểm A (nhóm `mod` lệch trạng thái) | dừng: "NHÓM mod ở trạng thái lệch" |
