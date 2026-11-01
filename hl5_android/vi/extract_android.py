@@ -108,54 +108,84 @@ def build_dat(recs):
     return bytes(out)
 
 
-def _ok_text(t, strict=False):
-    """chuỗi ASCII in được (cho phép \\n), có ít nhất 1 chữ cái.
-    strict (dùng cho .dat): chuỗi < 4 ký tự phải có >= 2 chữ cái và chỉ gồm chữ/số/space/./: (loại nhiễu của trường số)."""
-    has = False
+def _ok_text(t, hi=True, strict=True):
+    """chuỗi văn bản: >= 2 ký tự, in được (cho phép \\n và byte >= 0x80 lẻ như 0xf1 trong common_text rec 137),
+    có ít nhất 1 chữ cái. Chuỗi trường số / giữ chỗ (' ', '-') bị loại."""
     if len(t) < 2:
         return False
-    if strict and len(t) < 4:
+    if strict and len(t) < 4:   # chuỗi rất ngắn (1M, 10K, 1K...) phải có >= 2 chữ cái, chỉ gồm chữ/số/space/./:
         if sum(1 for c in t if (65 <= c <= 90) or (97 <= c <= 122)) < 2:
             return False
         if not all(chr(c).isalnum() or c in b" .:" for c in t):
             return False
+    has = False
     for c in t:
-        if c == 0x0a or 0x20 <= c <= 0x7e:
-            if (65 <= c <= 90) or (97 <= c <= 122):
-                has = True
+        if (65 <= c <= 90) or (97 <= c <= 122):
+            has = True
+        elif c == 0x0a or 0x20 <= c <= 0x7e or (hi and c >= 0x80):
+            pass
         else:
             return False
     return has
 
 
-def rec_strings(r):
-    """Chuỗi ASCII có tiền tố độ dài u8/u16 trong 1 bản ghi; DP cực đại độ phủ chữ cái.
-    Trả về [(off, ps, n)]."""
-    L = len(r)
-    best = [0] * (L + 1); choice = [None] * (L + 1)
-    for i in range(L - 1, -1, -1):
-        best[i] = best[i + 1]
-        n = r[i]
-        if n >= 1 and i + 1 + n <= L and _ok_text(r[i + 1:i + 1 + n], True):
-            t = r[i + 1:i + 1 + n]
-            v = sum(1 for c in t if 65 <= c <= 122 and (c <= 90 or c >= 97)) * 2 + 1 + best[i + 1 + n]
-            if v > best[i]:
-                best[i] = v; choice[i] = (1, n)
-        if i + 1 < L:
-            n2 = n | (r[i + 1] << 8)
-            if n2 >= 2 and i + 2 + n2 <= L and _ok_text(r[i + 2:i + 2 + n2], True):
-                t = r[i + 2:i + 2 + n2]
-                v = sum(1 for c in t if 65 <= c <= 122 and (c <= 90 or c >= 97)) * 2 + 1 + best[i + 2 + n2]
-                if v > best[i]:
-                    best[i] = v; choice[i] = (2, n2)
-    out = []; i = 0
-    while i < L:
-        c = choice[i]
-        if c:
-            out.append((i, c[0], c[1])); i += c[0] + c[1]
+# ---------------- bố cục bản ghi .dat (T1b) ----------------
+# Lý do cũ sai: rec_strings (DP "cực đại độ phủ chữ cái") đoán chuỗi theo tiền tố độ dài u8/u16 trong từng bản ghi.
+# Byte độ dài của chuỗi thật thường là chữ cái in được ('o'=111, 'D'=68, ';'=59, ' '=32...), nên DP chọn cách cắt
+# khác (một chuỗi dài bị tách thành 2-3 mảnh, hoặc chuỗi bắt đầu giữa từ). KHÔNG phải do byte >= 0x80.
+# Bố cục đúng là cố định theo từng file: dãy (bỏ k byte | chuỗi tiền tố độ dài u8/u16), hết bản ghi đúng bằng 'đuôi' k.
+# Bằng chứng: hàm nạp trong libHeroesLore5.so (địa chỉ ở BAO-CAO / PLAN Nhật ký T1b) và mọi bản ghi của file đều tiêu đúng
+# từng byte theo bố cục (kiểm trong extract_file; sai là lỗi, không phải bỏ qua).
+def _item(tail):   # id(2) | tên u8 | int32 | mô tả u8 | đuôi        (ItemTable::LoadItemTable 0x9f82c)
+    return [('k', 2), ('s', 1), ('k', 4), ('s', 1), ('k', tail)]
+
+
+_TXT = [('s', 1), ('k', 0)]                # cả bản ghi = 1 chuỗi u8 (TextMgr::LoadRes 0x13fd54)
+_CASH = lambda t: [('k', 3), ('s', 1), ('k', 2), ('s', 1), ('k', t)]   # CashShop::LoadCashShopData 0xd9f04
+_HELP = [('s', 2), ('s', 2), ('k', 0)]     # tiêu đề u16 | nội dung u16     (TextMgr::LoadHelpString 0x13fc2c)
+DAT_LAYOUT = {
+    'c/csv/common_text.dat': _TXT, 'c/csv/ingame_text.dat': _TXT, 'c/csv/menu_text.dat': _TXT,
+    'c/csv/mission_text.dat': _TXT, 'c/csv/name.dat': _TXT, 'c/csv/tips.dat': _TXT,
+    'c/csv/buildup.dat': [('s', 1), ('k', 14)],
+    'c/csv/class.dat': [('s', 1), ('k', 59)],                    # HERO::LoadResClassInfo 0x881f0
+    'c/csv/mission_list.dat': [('s', 1), ('k', 34)],             # Mission::LoadMissionTable 0x87a78
+    'c/csv/set_option.dat': [('s', 1), ('k', 8)],
+    'c/csv/cash_expert.dat': _CASH(2), 'c/csv/cash_network.dat': _CASH(2), 'c/csv/cash_single.dat': _CASH(2),
+    'vfs:0x2b3c2959.dat': _CASH(6), 'vfs:0x831ffd41.dat': _CASH(6),   # cash_*_android.dat
+    'c/csv/quest_0.dat': [('k', 3), ('s', 1), ('s', 1), ('s', 1), ('k', 38)],   # StateInGameMenu::SetMapMode 0xe553c (insn e5854-e5884)
+    'c/csv/quest_1.dat': [('k', 3), ('s', 1), ('s', 1), ('s', 1), ('k', 38)],
+    'c/csv/quest_2.dat': [('k', 3), ('s', 1), ('s', 1), ('s', 1), ('k', 38)],
+    'c/csv/skill_00.dat': [('s', 1), ('k', 47), ('s', 1), ('k', 0)],            # HERO::LoadResSkillInfo 0x87ee0
+    'c/csv/skill_01.dat': [('s', 1), ('k', 47), ('s', 1), ('k', 0)],
+    'c/csv/skill_02.dat': [('s', 1), ('k', 47), ('s', 1), ('k', 0)],
+    'c/csv/skill_03.dat': [('s', 1), ('k', 47), ('s', 1), ('k', 0)],
+    'c/csv/skill_05.dat': [('s', 1), ('k', 47), ('s', 1), ('k', 0)],
+    'c/csv/smith_0.dat': [('k', 2), ('s', 1), ('k', 4), ('s', 1), ('k', 13)],   # HERO::LoadMixSmithTableInfo 0x87c94
+    'c/csv/smith_1.dat': [('k', 2), ('s', 1), ('k', 4), ('s', 1), ('k', 13)],
+    'c/csv/smith_2.dat': [('k', 2), ('s', 1), ('k', 4), ('s', 1), ('k', 13)],
+    'c/csv2/help_ktf.dat': _HELP, 'c/csv2/help_lgt.dat': _HELP, 'c/csv2/help_skt.dat': _HELP,
+    'vfs:0x92eafcd8.dat': _HELP, 'vfs:0xc28f807a.dat': _HELP, 'vfs:0xe6bbcc45.dat': _HELP,   # help_android_*.dat
+}
+for _f in ('enemy_0', 'enemy_1', 'enemy_2', 'enemy_expert_0', 'enemy_expert_1', 'enemy_expert_2'):
+    DAT_LAYOUT['c/csv/%s.dat' % _f] = [('s', 1), ('k', 128)]     # Monster::setEnemyData 0xbd990
+for _i, _t in enumerate([21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 4, 2, 0, 0, 13, 4, 4, 2]):
+    DAT_LAYOUT['c/csv/item_%02d.dat' % _i] = _item(_t)           # case _i của ItemTable::LoadItemTable
+
+
+def walk_rec(r, layout):
+    """Đi bản ghi theo bố cục. Trả về [(off, ps, n)] của mọi trường chuỗi, hoặc None nếu không tiêu đúng hết bản ghi."""
+    p = 0; out = []
+    for t, v in layout:
+        if t == 'k':
+            p += v
         else:
-            i += 1
-    return out
+            if p + v > len(r):
+                return None
+            n = int.from_bytes(r[p:p + v], 'little')
+            if p + v + n > len(r):
+                return None
+            out.append((p, v, n)); p += v + n
+    return out if p == len(r) else None
 
 
 # ---------------- trích ----------------
@@ -170,33 +200,33 @@ def extract_file(name, b, kind):
         for i, s in enumerate(r[1]):
             nul = 1 if s.endswith(b'\0') else 0
             t = s[:-1] if nul else s
-            if not _ok_text(t):
+            if not _ok_text(t, False, False):
                 continue
             items.append({'file': name, 'kind': 'scn', 'idx': i, 'text_en': t.decode('latin-1'),
                           'nul': nul, 'cap': (254 if wS == 1 else 65534)})
     else:
         recs = parse_dat(b)
-        if recs is None:
+        lay = DAT_LAYOUT.get(name)
+        if recs is None or lay is None:
             return None
         for ri, r in enumerate(recs):
-            for (o, ps, n) in rec_strings(r):
-                items.append({'file': name, 'kind': 'dat', 'rec': ri, 'off': o, 'ps': ps,
-                              'text_en': r[o + ps:o + ps + n].decode('latin-1'),
-                              'cap': 255 if ps == 1 else 4000})
+            w = walk_rec(r, lay)
+            if w is None:
+                raise ValueError('%s rec %d không khớp bố cục' % (name, ri))
+            for (o, ps, n) in w:
+                t = r[o + ps:o + ps + n]
+                if _ok_text(t):
+                    items.append({'file': name, 'kind': 'dat', 'rec': ri, 'off': o, 'ps': ps,
+                                  'text_en': t.decode('latin-1'), 'cap': 255 if ps == 1 else 4000})
     return items
 
 
-def classify(name, b):
+def classify(name, b):   # name: 'c/...' hoặc 'vfs:0xHASH.dat' cho entry không có tên LGT
     """'scn' | 'dat' | None cho entry VFS ứng viên."""
     if name and name.startswith('c/map/') and name.endswith('.scn'):
         return 'scn'
-    if name and (name.startswith('c/csv/') or name.startswith('c/csv2/')) and name.endswith('.dat'):
+    if name in DAT_LAYOUT:
         return 'dat'
-    if name is None:   # entry không tên: nhận .dat nếu parse khớp EOF và có chuỗi ASCII
-        if len(b) > 4 and not b.startswith((b'OggS', b'\x89PNG')):
-            recs = parse_dat(b)
-            if recs and any(rec_strings(r) for r in recs):
-                return 'dat'
     return None
 
 
@@ -206,10 +236,10 @@ def run(vfs_path, lgt_root):
     cat = []; files = {}; stats = collections.OrderedDict()
     for h in order:
         b = ent[h]; nm = names.get(h)
-        kind = classify(nm, b)
+        fname = nm or ('vfs:0x%08x.dat' % h)
+        kind = classify(fname, b)
         if not kind:
             continue
-        fname = nm or ('vfs:0x%08x.dat' % h)
         items = extract_file(fname, b, kind)
         if items is None:
             stats[fname] = {'kind': kind, 'error': 'parse'}
@@ -246,6 +276,22 @@ def apply_file(kind, b, items, newtext=None):
             r[off:off + ps + old_n] = len(t).to_bytes(ps, 'little') + t
         recs[ri] = bytes(r)
     return build_dat(recs)
+
+
+def frag_check(cat):
+    """Mảnh cắt dở: 2 mục liền kề (không hở byte) cùng bản ghi mà mục sau bắt đầu chữ thường ngay sau chữ cái cuối của mục trước
+    (nối lại thành 1 chuỗi hợp lệ giữa từ). Phải = 0."""
+    byr = collections.defaultdict(list)
+    for it in cat:
+        if it['kind'] == 'dat':
+            byr[(it['file'], it['rec'])].append(it)
+    bad = []
+    for k, l in byr.items():
+        l.sort(key=lambda e: e['off'])
+        for a, b in zip(l, l[1:]):
+            if a['off'] + a['ps'] + len(a['text_en']) == b['off'] and b['text_en'][0].islower() and a['text_en'][-1].isalpha():
+                bad.append((k, a['text_en'][-10:], b['text_en'][:10]))
+    return bad
 
 
 def roundtrip(files, cat):
@@ -295,10 +341,14 @@ def main():
           '(scn %d, dat %d)' % (sum(1 for k, _ in files.values() if k == 'scn'), sum(1 for k, _ in files.values() if k == 'dat')))
     print('file parse lỗi:', [f for f, s in stats.items() if 'error' in s])
     print('roundtrip lỗi:', bad if bad else 0)
+    fr = frag_check(cat)
+    print('mảnh cắt giữa từ (dat):', fr if fr else 0)
+    nrec = sum(len(parse_dat(b)) for k, b in files.values() if k == 'dat')
+    print('dat: %d bản ghi / %d file đều tiêu đúng bố cục (extract_file báo lỗi nếu không)' % (nrec, sum(1 for k, _ in files.values() if k == 'dat')))
     print('--- số câu theo file ---')
     for f, n in sorted(per.items()):
         print('%-28s %5d' % (f, n))
-    return 1 if bad else 0
+    return 1 if (bad or fr) else 0
 
 
 if __name__ == '__main__':

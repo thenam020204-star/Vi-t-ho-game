@@ -1137,18 +1137,9 @@
 "file": "c/csv/cash_expert.dat",
 "kind": "dat",
 "rec": 7,
-"off": 13,
+"off": 14,
 "ps": 1,
-"text_en": "oAl",
-"cap": 255
-},
-{
-"file": "c/csv/cash_expert.dat",
-"kind": "dat",
-"rec": 7,
-"off": 17,
-"ps": 1,
-"text_en": "ows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.",
+"text_en": "Allows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.",
 "cap": 255
 },
 {
@@ -4659,6 +4650,15 @@
 "off": 0,
 "ps": 1,
 "text_en": "Do you want to combine?",
+"cap": 255
+},
+{
+"file": "c/csv/common_text.dat",
+"kind": "dat",
+"rec": 137,
+"off": 0,
+"ps": 1,
+"text_en": "Success: ñombined",
 "cap": 255
 },
 {
@@ -11144,15 +11144,6 @@
 {
 "file": "c/csv/enemy_expert_0.dat",
 "kind": "dat",
-"rec": 12,
-"off": 84,
-"ps": 1,
-"text_en": "HX",
-"cap": 255
-},
-{
-"file": "c/csv/enemy_expert_0.dat",
-"kind": "dat",
 "rec": 13,
 "off": 0,
 "ps": 1,
@@ -11283,15 +11274,6 @@
 "off": 0,
 "ps": 1,
 "text_en": "Gate",
-"cap": 255
-},
-{
-"file": "c/csv/enemy_expert_0.dat",
-"kind": "dat",
-"rec": 27,
-"off": 84,
-"ps": 1,
-"text_en": "HX",
 "cap": 255
 },
 {
@@ -11432,15 +11414,6 @@
 {
 "file": "c/csv/enemy_expert_0.dat",
 "kind": "dat",
-"rec": 42,
-"off": 84,
-"ps": 1,
-"text_en": "HX",
-"cap": 255
-},
-{
-"file": "c/csv/enemy_expert_0.dat",
-"kind": "dat",
 "rec": 43,
 "off": 0,
 "ps": 1,
@@ -11571,15 +11544,6 @@
 "off": 0,
 "ps": 1,
 "text_en": "Gate",
-"cap": 255
-},
-{
-"file": "c/csv/enemy_expert_0.dat",
-"kind": "dat",
-"rec": 57,
-"off": 84,
-"ps": 1,
-"text_en": "HX",
 "cap": 255
 },
 {
@@ -11814,15 +11778,6 @@
 "off": 0,
 "ps": 1,
 "text_en": "Altena",
-"cap": 255
-},
-{
-"file": "c/csv/enemy_expert_0.dat",
-"kind": "dat",
-"rec": 83,
-"off": 86,
-"ps": 1,
-"text_en": "HX",
 "cap": 255
 },
 {
@@ -28551,9 +28506,9 @@
 "file": "c/csv/item_11.dat",
 "kind": "dat",
 "rec": 12,
-"off": 23,
+"off": 22,
 "ps": 1,
-"text_en": "Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.[d\n2",
+"text_en": "^Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.",
 "cap": 255
 },
 {
@@ -34149,9 +34104,9 @@
 "file": "c/csv/item_15.dat",
 "kind": "dat",
 "rec": 110,
-"off": 21,
+"off": 20,
 "ps": 1,
-"text_en": "Set{ Lv.97 Helm A book;to learn the recipe;for <Jackal Helm{",
+"text_en": "<Set{ Lv.97 Helm A book;to learn the recipe;for <Jackal Helm{.",
 "cap": 255
 },
 {
@@ -34167,9 +34122,9 @@
 "file": "c/csv/item_15.dat",
 "kind": "dat",
 "rec": 111,
-"off": 22,
+"off": 21,
 "ps": 1,
-"text_en": "Set{ Lv.97 Helm A book;to learn the recipe;for <Sigmund Helm",
+"text_en": "<Set{ Lv.97 Helm A book;to learn the recipe;for <Sigmund Helm{.",
 "cap": 255
 },
 {
@@ -54039,10 +53994,10 @@
 "file": "c/csv/skill_00.dat",
 "kind": "dat",
 "rec": 18,
-"off": 56,
-"ps": 2,
-"text_en": "TUpgrade Trait.;Increases }spin speed|;by }#10 lvl| when using;the }Whirlwind| skill",
-"cap": 4000
+"off": 58,
+"ps": 1,
+"text_en": "Upgrade Trait.;Increases }spin speed|;by }#10 lvl| when using;the }Whirlwind| skill.",
+"cap": 255
 },
 {
 "file": "c/csv/skill_00.dat",
@@ -54471,18 +54426,9 @@
 "file": "c/csv/skill_00.dat",
 "kind": "dat",
 "rec": 42,
-"off": 54,
+"off": 57,
 "ps": 1,
-"text_en": "T+rBuff Skill. Cooldown:;}#09s|. For }#08s|, Max;HP drops b",
-"cap": 255
-},
-{
-"file": "c/csv/skill_00.dat",
-"kind": "dat",
-"rec": 42,
-"off": 121,
-"ps": 1,
-"text_en": " but;ATK Spd increases and;Crit increases by",
+"text_en": "Buff Skill. Cooldown:;}#09s|. For }#08s|, Max;HP drops by }30%|, but;ATK Spd increases and;Crit increases by }20|.",
 "cap": 255
 },
 {
@@ -54948,10 +54894,10 @@
 "file": "c/csv/skill_01.dat",
 "kind": "dat",
 "rec": 25,
-"off": 62,
-"ps": 2,
-"text_en": "APassive Skill.;Increases healing;from }Recovery Items|;by }#10%|.",
-"cap": 4000
+"off": 64,
+"ps": 1,
+"text_en": "Passive Skill.;Increases healing;from }Recovery Items|;by }#10%|.",
+"cap": 255
 },
 {
 "file": "c/csv/skill_01.dat",
@@ -55056,18 +55002,9 @@
 "file": "c/csv/skill_01.dat",
 "kind": "dat",
 "rec": 31,
-"off": 62,
+"off": 65,
 "ps": 1,
-"text_en": "T+`Buff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Reduces SP",
-"cap": 255
-},
-{
-"file": "c/csv/skill_01.dat",
-"kind": "dat",
-"rec": 31,
-"off": 122,
-"ps": 1,
-"text_en": "cost of;all skills by }50%| for;",
+"text_en": "Buff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Reduces SP cost of;all skills by }50%| for;}#08s|.",
 "cap": 255
 },
 {
@@ -55389,27 +55326,9 @@
 "file": "c/csv/skill_02.dat",
 "kind": "dat",
 "rec": 6,
-"off": 59,
+"off": 58,
 "ps": 1,
-"text_en": "osts }#07 SP|. Fires;forward and backward;simultaneously,;dealing }",
-"cap": 255
-},
-{
-"file": "c/csv/skill_02.dat",
-"kind": "dat",
-"rec": 6,
-"off": 128,
-"ps": 1,
-"text_en": "5%| Ranged;ATK dmg. {Traits|;#01Trick - Range Up",
-"cap": 255
-},
-{
-"file": "c/csv/skill_02.dat",
-"kind": "dat",
-"rec": 6,
-"off": 180,
-"ps": 1,
-"text_en": "Survival - Trick;Shot Mastery;#03Survival - Reload",
+"text_en": "Costs }#07 SP|. Fires;forward and backward;simultaneously,;dealing }#05%| Ranged;ATK dmg. {Traits|;#01Trick - Range Up;#02Survival - Trick;Shot Mastery;#03Survival - Reload",
 "cap": 255
 },
 {
@@ -55587,18 +55506,9 @@
 "file": "c/csv/skill_02.dat",
 "kind": "dat",
 "rec": 16,
-"off": 52,
+"off": 55,
 "ps": 1,
-"text_en": "T+iBuff Skill. Load AP;rounds for }#08s|.;Attacks ignore }#",
-"cap": 255
-},
-{
-"file": "c/csv/skill_02.dat",
-"kind": "dat",
-"rec": 16,
-"off": 112,
-"ps": 1,
-"text_en": "4%|;of enemy DEF. Does;not stack with;Flechette.",
+"text_en": "Buff Skill. Load AP;rounds for }#08s|.;Attacks ignore }#04%|;of enemy DEF. Does;not stack with;Flechette.",
 "cap": 255
 },
 {
@@ -55650,9 +55560,9 @@
 "file": "c/csv/skill_02.dat",
 "kind": "dat",
 "rec": 19,
-"off": 55,
+"off": 58,
 "ps": 1,
-"text_en": "TDABuff Skill. Maximizes;attack speed of;continuous fire fo",
+"text_en": "Buff Skill. Maximizes;attack speed of;continuous fire for;}#08s|.",
 "cap": 255
 },
 {
@@ -55992,18 +55902,9 @@
 "file": "c/csv/skill_02.dat",
 "kind": "dat",
 "rec": 38,
-"off": 55,
+"off": 57,
 "ps": 1,
-"text_en": "D\\Set off a flashbang.;For }#08s|, nearby;enemies lose }3",
-"cap": 255
-},
-{
-"file": "c/csv/skill_02.dat",
-"kind": "dat",
-"rec": 38,
-"off": 115,
-"ps": 1,
-"text_en": "Hit;Rate and }vision falls;to }1",
+"text_en": "Set off a flashbang.;For }#08s|, nearby;enemies lose }30| Hit;Rate and }vision falls;to }1|.",
 "cap": 255
 },
 {
@@ -56505,10 +56406,10 @@
 "file": "c/csv/skill_03.dat",
 "kind": "dat",
 "rec": 23,
-"off": 62,
-"ps": 2,
-"text_en": "CPassive Skill.;Increases SP;recovered on;successful Block by;}#13",
-"cap": 4000
+"off": 64,
+"ps": 1,
+"text_en": "Passive Skill.;Increases SP;recovered on;successful Block by;}#13|.",
+"cap": 255
 },
 {
 "file": "c/csv/skill_03.dat",
@@ -56847,9 +56748,9 @@
 "file": "c/csv/skill_03.dat",
 "kind": "dat",
 "rec": 42,
-"off": 54,
+"off": 58,
 "ps": 1,
-"text_en": ";T>VBuff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Perfectly blocks all;attacks for }#08",
+"text_en": "Buff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Perfectly blocks all;attacks for }#08s|.",
 "cap": 255
 },
 {
@@ -59978,15 +59879,6 @@
 {
 "file": "c/csv/smith_1.dat",
 "kind": "dat",
-"rec": 78,
-"off": 79,
-"ps": 1,
-"text_en": "GK",
-"cap": 255
-},
-{
-"file": "c/csv/smith_1.dat",
-"kind": "dat",
 "rec": 79,
 "off": 2,
 "ps": 1,
@@ -60126,15 +60018,6 @@
 "off": 22,
 "ps": 1,
 "text_en": "Beast Claw 11 / Mid;Runestone 1 / 88mm;Barrel 1",
-"cap": 255
-},
-{
-"file": "c/csv/smith_1.dat",
-"kind": "dat",
-"rec": 86,
-"off": 80,
-"ps": 1,
-"text_en": "HK",
 "cap": 255
 },
 {
@@ -61584,15 +61467,6 @@
 "off": 20,
 "ps": 1,
 "text_en": "Golem Heart 23 / High;Runestone 3 / 88mm;Barrel 1",
-"cap": 255
-},
-{
-"file": "c/csv/smith_2.dat",
-"kind": "dat",
-"rec": 78,
-"off": 80,
-"ps": 1,
-"text_en": "OK",
 "cap": 255
 },
 {

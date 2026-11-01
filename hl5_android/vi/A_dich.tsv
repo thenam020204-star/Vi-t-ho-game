@@ -6,8 +6,8 @@ A00004	c/csv/cash_expert.dat	rec 3 off 22 ps 1	Grants 30 bonus time;in Expert Ti
 A00005	c/csv/cash_expert.dat	rec 4 off 23 ps 1	Grants 30 bonus time;per stage in Expert;Rush Mode 1 is;automatically;consumed upon playing;Rush Mode.	Thêm 30 thời gian;mỗi tầng trong chế độ;Expert Đột Phá. Tự;động tiêu hao 1 cái;khi chơi chế độ;Đột Phá.	
 A00006	c/csv/cash_expert.dat	rec 5 off 23 ps 1	Consumable usable;only in Expert Mode;Grants brief;invulnerability upon;use.	Vật phẩm tiêu hao;chỉ dùng ở chế độ;Expert. Tạm thời;bất khả xâm phạm;khi sử dụng.	
 A00007	c/csv/cash_expert.dat	rec 6 off 17 ps 1	Consumable usable;only in Expert Mode;Fully restores Spirit;Gauge upon use Max;Capacity: 3	Vật phẩm tiêu hao;chỉ dùng ở chế độ;Expert. Hồi đầy thanh;Tinh Linh khi dùng.;Giới hạn sở hữu: 3	
-A00008	c/csv/cash_expert.dat	rec 7 off 13 ps 1	oAl	oAl	
-A00009	c/csv/cash_expert.dat	rec 7 off 17 ps 1	ows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.	Cho phép bắt đầu;chế độ Expert với SP;hoặc thanh đặc biệt;đầy. Tự động tiêu hao;1 cái khi chơi;chế độ Expert.	
+A00008	c/csv/cash_expert.dat	rec 7 off 13 ps 1	oAl	oAl	unused
+A00009	c/csv/cash_expert.dat	rec 7 off 17 ps 1	ows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.	Cho phép bắt đầu;chế độ Expert với SP;hoặc thanh đặc biệt;đầy. Tự động tiêu hao;1 cái khi chơi;chế độ Expert.	unused
 A00010	c/csv/cash_network.dat	rec 7 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.	Nhận 1 Hyper Orb;ngẫu nhiên. Hyper Orb;có thể gắn nhiều Orb;giống nhau cùng lúc.	
 A00011	c/csv/cash_network.dat	rec 14 off 22 ps 1	Adds 1 socket to an;equipment item.;Equipment limit is 5;sockets.	Thêm 1 Socket cho;một món trang bị.;Mỗi trang bị tối đa;5 Socket.	
 A00012	vfs:0x831ffd41.dat	rec 2 off 15 ps 1	Obtain 1 random Hyper;Orb Hyper Orbs embed;multiple identical;Orbs at once.	Nhận 1 Hyper Orb;ngẫu nhiên. Hyper Orb;có thể gắn nhiều Orb;giống nhau cùng lúc.	
@@ -87,11 +87,11 @@ A00085	c/csv/common_text.dat	rec 349 off 0 ps 1	3.Accept (stop viewing this wind
 A00086	c/csv/common_text.dat	rec 350 off 0 ps 1	Successfully resurrected.;;&Confirm	Hồi sinh thành công.;;&Xác nhận	
 A00087	c/csv/enemy_1.dat	rec 130 off 0 ps 1	^Black Enh. Sold.{	^Lính Áo Đen Cường Hoá{	
 A00088	c/csv/enemy_2.dat	rec 130 off 0 ps 1	^Black Enh. Sold.{	^Lính Áo Đen Cường Hoá{	
-A00089	c/csv/enemy_expert_0.dat	rec 12 off 84 ps 1	HX	HX	
-A00090	c/csv/enemy_expert_0.dat	rec 27 off 84 ps 1	HX	HX	
-A00091	c/csv/enemy_expert_0.dat	rec 42 off 84 ps 1	HX	HX	
-A00092	c/csv/enemy_expert_0.dat	rec 57 off 84 ps 1	HX	HX	
-A00093	c/csv/enemy_expert_0.dat	rec 83 off 86 ps 1	HX	HX	
+A00089	c/csv/enemy_expert_0.dat	rec 12 off 84 ps 1	HX	HX	unused
+A00090	c/csv/enemy_expert_0.dat	rec 27 off 84 ps 1	HX	HX	unused
+A00091	c/csv/enemy_expert_0.dat	rec 42 off 84 ps 1	HX	HX	unused
+A00092	c/csv/enemy_expert_0.dat	rec 57 off 84 ps 1	HX	HX	unused
+A00093	c/csv/enemy_expert_0.dat	rec 83 off 86 ps 1	HX	HX	unused
 A00094	c/csv/ingame_text.dat	rec 4 off 0 ps 1	South Hwang.	Hwang Nam.	
 A00095	c/csv/ingame_text.dat	rec 5 off 0 ps 1	East Hwang.	Hwang Đông.	
 A00096	c/csv/ingame_text.dat	rec 130 off 0 ps 1	FILE VER CHECK	KIỂM TRA PHIÊN BẢN FILE	
@@ -486,21 +486,21 @@ A00484	c/csv/skill_00.dat	rec 13 off 61 ps 1	Stance skill.;Cooldown }#09s|. Take
 A00485	c/csv/skill_00.dat	rec 23 off 64 ps 1	Stance Skill.;Cooldown: }#09s|. Shift;to a defensive stance;reducing Max SP by;}20%| and increasing;DEF by }20%|. Cannot;use with other;stances.	Kỹ năng Thế.;Thời gian hồi: }#09s|.;Chuyển sang thế phòng;thủ, giảm SP tối đa;}20%| và tăng DEF;}20%|. Không thể dùng;cùng các Thế;khác.	
 A00486	c/csv/skill_00.dat	rec 34 off 62 ps 1	Stance Skill.;Cooldown: }#09s|. Shift;to a mental stance;increasing SP gained;from attacks/hits by;}50%| and reducing DEF;by }30%|. Cannot use;with other stances.	Kỹ năng Thế.;Thời gian hồi: }#09s|.;Chuyển sang thế tinh;thần, tăng SP nhận;khi đánh/bị đánh;}50%| và giảm DEF;}30%|. Không thể dùng;cùng các Thế khác.	
 A00487	c/csv/skill_00.dat	rec 35 off 53 ps 1	Upgrade Trait. Hits;with }Draw Sword| have;a }#10%| chance to;inflict bleed.;Bleeding targets;continuously take }1;dmg per 12 STR|.	Đặc tính tăng cường.;Đòn trúng của }Bạt đao|;có }#10%| tỉ lệ gây;chảy máu. Mục tiêu;chảy máu liên tục chịu;}1 sát thương;mỗi 12 STR|.	
-A00488	c/csv/skill_00.dat	rec 42 off 54 ps 1	T+rBuff Skill. Cooldown:;}#09s|. For }#08s|, Max;HP drops b	T+rKỹ năng buff. Thời gian hồi:;}#09s|. Trong }#08s|, HP tối;đa giảm	
-A00489	c/csv/skill_00.dat	rec 42 off 121 ps 1	 but;ATK Spd increases and;Crit increases by	 nhưng;tốc độ đánh tăng và;chí mạng tăng	
+A00488	c/csv/skill_00.dat	rec 42 off 54 ps 1	T+rBuff Skill. Cooldown:;}#09s|. For }#08s|, Max;HP drops b	T+rKỹ năng buff. Thời gian hồi:;}#09s|. Trong }#08s|, HP tối;đa giảm	unused
+A00489	c/csv/skill_00.dat	rec 42 off 121 ps 1	 but;ATK Spd increases and;Crit increases by	 nhưng;tốc độ đánh tăng và;chí mạng tăng	unused
 A00490	c/csv/skill_01.dat	rec 1 off 58 ps 1	Cost: }#07 SP|.;Cooldown: }#09s|.;Teleports behind the;nearest enemy within;}#06 range|. {Related;Trait|;#01Ambush - Ambush;#02Resist - Swift;Step;#03Resist - Shadow;Tread	Tiêu hao: }#07 SP|.;Thời gian hồi: }#09s|.;Dịch chuyển tức thời ra;sau lưng kẻ địch gần;nhất trong }#06 tầm dò|.;{Đặc tính liên quan|;#01Ám tập - Ám tập;#02Kháng cự - Súc địa;nhanh;#03Kháng cự - Giẫm;bóng	
 A00491	c/csv/skill_01.dat	rec 23 off 60 ps 1	Buff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Duration: }#08s|. Hits;have a }5%| chance to;poison targets.;Poisoned foes take;continuous damage for;}10s|. Total damage;scales with Melee;ATK.	Kỹ năng buff. Tiêu hao }#07;SP|. Thời gian hồi: }#09s|.;Duy trì: }#08s|. Đòn trúng;có }5%| tỉ lệ đầu độc;mục tiêu. Kẻ địch bị;nhiễm độc chịu sát;thương liên tục trong;}10s|. Tổng sát thương;tăng theo ATK cận;chiến.	
-A00492	c/csv/skill_01.dat	rec 31 off 62 ps 1	T+`Buff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Reduces SP	T+`Kỹ năng buff. Tiêu hao }#07;SP|. Thời gian hồi: }#09s|.;Giảm lượng SP	
-A00493	c/csv/skill_01.dat	rec 31 off 122 ps 1	cost of;all skills by }50%| for;	tiêu hao của;mọi kỹ năng }50%| trong;	
+A00492	c/csv/skill_01.dat	rec 31 off 62 ps 1	T+`Buff Skill. Costs }#07;SP|. Cooldown: }#09s|.;Reduces SP	T+`Kỹ năng buff. Tiêu hao }#07;SP|. Thời gian hồi: }#09s|.;Giảm lượng SP	unused
+A00493	c/csv/skill_01.dat	rec 31 off 122 ps 1	cost of;all skills by }50%| for;	tiêu hao của;mọi kỹ năng }50%| trong;	unused
 A00494	c/csv/skill_01.dat	rec 42 off 61 ps 1	Costs }#07 SP|.;Cooldown: }#09s|. Deals;}#05%| Melee ATK DMG to;frontal enemies.;Grants 1 {Crit Orb| on;hit.	Tiêu hao }#07 SP|.;Thời gian hồi: }#09s|. Gây;}#05%| sát thương ATK cận;chiến lên địch phía trước.;Nhận 1 {Cầu Chí Mạng|;khi trúng đòn.	
-A00495	c/csv/skill_02.dat	rec 6 off 59 ps 1	osts }#07 SP|. Fires;forward and backward;simultaneously,;dealing }	Tiêu hao }#07 SP|. Bắn;đồng thời ra phía;trước và phía sau,;gây }	
-A00496	c/csv/skill_02.dat	rec 6 off 128 ps 1	5%| Ranged;ATK dmg. {Traits|;#01Trick - Range Up	5%| sát thương ATK;tầm xa. {Đặc tính|;#01Xảo Kỹ - Tăng tầm bắn	
-A00497	c/csv/skill_02.dat	rec 6 off 180 ps 1	Survival - Trick;Shot Mastery;#03Survival - Reload	Sinh tồn - Thục luyện;Trick Shot;#03Sinh tồn - Nạp đạn	
-A00498	c/csv/skill_02.dat	rec 16 off 112 ps 1	4%|;of enemy DEF. Does;not stack with;Flechette.	4%|;DEF của địch. Không;dùng chung với;đạn chêm.	
-A00499	c/csv/skill_02.dat	rec 19 off 55 ps 1	TDABuff Skill. Maximizes;attack speed of;continuous fire fo	TDAKỹ năng buff. Tối đa;hoá tốc độ bắn của;chuỗi bắn liên tiếp trong	
+A00495	c/csv/skill_02.dat	rec 6 off 59 ps 1	osts }#07 SP|. Fires;forward and backward;simultaneously,;dealing }	Tiêu hao }#07 SP|. Bắn;đồng thời ra phía;trước và phía sau,;gây }	unused
+A00496	c/csv/skill_02.dat	rec 6 off 128 ps 1	5%| Ranged;ATK dmg. {Traits|;#01Trick - Range Up	5%| sát thương ATK;tầm xa. {Đặc tính|;#01Xảo Kỹ - Tăng tầm bắn	unused
+A00497	c/csv/skill_02.dat	rec 6 off 180 ps 1	Survival - Trick;Shot Mastery;#03Survival - Reload	Sinh tồn - Thục luyện;Trick Shot;#03Sinh tồn - Nạp đạn	unused
+A00498	c/csv/skill_02.dat	rec 16 off 112 ps 1	4%|;of enemy DEF. Does;not stack with;Flechette.	4%|;DEF của địch. Không;dùng chung với;đạn chêm.	unused
+A00499	c/csv/skill_02.dat	rec 19 off 55 ps 1	TDABuff Skill. Maximizes;attack speed of;continuous fire fo	TDAKỹ năng buff. Tối đa;hoá tốc độ bắn của;chuỗi bắn liên tiếp trong	unused
 A00500	c/csv/skill_02.dat	rec 35 off 62 ps 1	Upgrade Trait.;Increases range of;}Rapid Fire|, }Trick;Shot|, }Impact Cannon|,;}Auto Fire|, and;}Gatling| by }#10;levels|.	Đặc tính tăng cường.;Tăng tầm bắn của các kỹ;năng }Bắn Liên Thanh|,;}Phát Bắn Xảo|, }Pháo xung kích|,;}Tự động xạ kích| và;}Xả đạn| thêm }#10;cấp|.	
-A00501	c/csv/skill_02.dat	rec 38 off 55 ps 1	D\Set off a flashbang.;For }#08s|, nearby;enemies lose }3	D\Cho nổ đạn chớp sáng.;Trong }#08s|, kẻ địch;ở gần mất }3	
-A00502	c/csv/skill_02.dat	rec 38 off 115 ps 1	Hit;Rate and }vision falls;to }1	khả năng trúng;và }tầm nhìn giảm;còn }1	
+A00501	c/csv/skill_02.dat	rec 38 off 55 ps 1	D\Set off a flashbang.;For }#08s|, nearby;enemies lose }3	D\Cho nổ đạn chớp sáng.;Trong }#08s|, kẻ địch;ở gần mất }3	unused
+A00502	c/csv/skill_02.dat	rec 38 off 115 ps 1	Hit;Rate and }vision falls;to }1	khả năng trúng;và }tầm nhìn giảm;còn }1	unused
 A00503	c/csv/skill_03.dat	rec 8 off 54 ps 1	Uses }#07 SP|.;Cooldown: }#09s|.;Strikes enemy weapon,;dealing }#05%| Melee;ATK damage and;reducing all ATK by;}#06%| for }#08s|.;{Related Traits|;#01Training - Wrist;Strike;#02Training - Hand;Strike	Dùng }#07 SP|.;Thời gian hồi: }#09s|.;Đánh vào vũ khí địch,;gây }#05%| sát thương;ATK cận chiến và giảm;mọi ATK }#06%| trong;}#08s|.;{Đặc tính liên quan|;#01Rèn luyện - Đập;cổ tay;#02Rèn luyện - Đấm;mu bàn tay	
 A00504	c/csv/skill_03.dat	rec 16 off 55 ps 1	Upgrade Trait.;Movement Speed in;}Great Lance Stance|;increases by }#10;tiers|.	Đặc tính tăng cường.;Tốc độ di chuyển khi ở;}thế Cự Thương|;tăng thêm }#10;cấp|.	
 A00505	c/csv/smith_0.dat	rec 4 off 2 ps 1	NONE	KHÔNG	
@@ -538,8 +538,8 @@ A00536	c/csv/smith_1.dat	rec 68 off 2 ps 1	NONE	KHÔNG
 A00537	c/csv/smith_1.dat	rec 69 off 2 ps 1	NONE	KHÔNG	
 A00538	c/csv/smith_1.dat	rec 70 off 2 ps 1	NONE	KHÔNG	
 A00539	c/csv/smith_1.dat	rec 71 off 2 ps 1	NONE	KHÔNG	
-A00540	c/csv/smith_1.dat	rec 78 off 79 ps 1	GK	GK	
-A00541	c/csv/smith_1.dat	rec 86 off 80 ps 1	HK	HK	
+A00540	c/csv/smith_1.dat	rec 78 off 79 ps 1	GK	GK	unused
+A00541	c/csv/smith_1.dat	rec 86 off 80 ps 1	HK	HK	unused
 A00542	c/csv/smith_1.dat	rec 89 off 2 ps 1	NONE	KHÔNG	
 A00543	c/csv/smith_1.dat	rec 90 off 2 ps 1	NONE	KHÔNG	
 A00544	c/csv/smith_1.dat	rec 91 off 2 ps 1	NONE	KHÔNG	
@@ -555,7 +555,7 @@ A00553	c/csv/smith_2.dat	rec 68 off 2 ps 1	NONE	KHÔNG
 A00554	c/csv/smith_2.dat	rec 69 off 2 ps 1	NONE	KHÔNG	
 A00555	c/csv/smith_2.dat	rec 70 off 2 ps 1	NONE	KHÔNG	
 A00556	c/csv/smith_2.dat	rec 71 off 2 ps 1	NONE	KHÔNG	
-A00557	c/csv/smith_2.dat	rec 78 off 80 ps 1	OK	OK	
+A00557	c/csv/smith_2.dat	rec 78 off 80 ps 1	OK	OK	unused
 A00558	c/csv/smith_2.dat	rec 89 off 2 ps 1	NONE	KHÔNG	
 A00559	c/csv/smith_2.dat	rec 90 off 2 ps 1	NONE	KHÔNG	
 A00560	c/csv/smith_2.dat	rec 91 off 2 ps 1	NONE	KHÔNG	
@@ -1010,7 +1010,7 @@ A01008	c/map/00216.scn	idx 53	It cannot be helped, then. I wish you good fortune
 A01009	c/csv/common_text.dat	rec 316 off 0 ps 1	Electronic Arts;(Korea)	Electronic Arts;(Hàn Quốc)	k_low=K00453
 A01010	c/csv/ingame_text.dat	rec 128 off 0 ps 1	Abandon this quest?	Bạn có muốn từ bỏ nhiệm vụ này?	k_low=K00590
 A01011	c/csv/ingame_text.dat	rec 343 off 0 ps 1	Nickname created.	Đã tạo biệt danh.	k_low=K00744
-A01012	c/csv/item_11.dat	rec 12 off 23 ps 1	Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.[d\n2	Chỉ dùng ở chế độ Expert{;Hồi 100 HP, 5 lần,;tổng cộng 500 HP.;Không thể dùng trong;chế độ Story.[d\n2	k_low=K01749
+A01012	c/csv/item_11.dat	rec 12 off 23 ps 1	Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.[d\n2	Chỉ dùng ở chế độ Expert{;Hồi 100 HP, 5 lần,;tổng cộng 500 HP.;Không thể dùng trong;chế độ Story.[d\n2	unused; k_low=K01749
 A01013	c/csv/menu_text.dat	rec 50 off 0 ps 1	Collect trade proceeds?	Thu tiền giao dịch?	k_low=K00051
 A01014	c/csv/menu_text.dat	rec 166 off 0 ps 1	Return received mail?	Hoàn trả thư đã nhận?	k_low=K00156
 A01015	c/csv/menu_text.dat	rec 180 off 0 ps 1	SMS consent confirmed.	Đã xác nhận đồng ý nhận SMS.	k_low=K00169
@@ -1109,3 +1109,5 @@ A01107	c/map/00174.scn	idx 90	You are... lying, are not you?	Anh... đang nói d
 A01108	c/map/00174.scn	idx 92	Yes, it would. You must be able to hear it slightly. Spirits also touch the divine, after all.	Đúng vậy. Chắc hẳn cậu nghe thấy được một chút. Dù sao Tinh Linh cũng chạm tới cõi thần mà.	k_low=K09514
 A01109	c/map/00198.scn	idx 5	Mom only ever tells me to study all day.	Mẹ suốt ngày chỉ bắt con học.	k_low=K09936
 A01110	c/map/00198.scn	idx 28	I kept it... but I will not get arrested, right?	Tôi giữ nó lại... nhưng sẽ không bị bắt đâu, đúng không?	k_low=K09954
+A01111	c/csv/cash_expert.dat	rec 7 off 14 ps 1	Allows starting;Expert Mode with full;SP or special gauge 1;is automatically;consumed upon playing;Expert Mode.		k_low=K02788; hint=A00008,A00009
+A01112	c/csv/item_11.dat	rec 12 off 22 ps 1	^Expert Mode Only{;Restores 100 HP 5;times, for 500 HP;total. Cannot be used;in Story Mode.		k_low=K01749; hint=A01012

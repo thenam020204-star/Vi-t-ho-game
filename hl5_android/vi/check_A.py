@@ -23,14 +23,15 @@ enc = Encoder(fc)
 old_dict = [l.rstrip('\n') for l in open(os.path.join(V5, 'build/overlay/vi5/dict.txt'), encoding='utf-8')]
 base = set(old_dict)
 rows = [l.rstrip('\n').split('\t') for l in open(tsv, encoding='utf-8')][1:]
-bad = []; n = 0; maxlen = (0, '')
+bad = []; pending = []; n = 0; maxlen = (0, ''); unused = 0
 def err(i, m): bad.append('%s: %s' % (i, m))
 for r in rows:
     r += [''] * (6 - len(r))
     i, f, pos, en, vi, note = r[:6]
     k = 'scn' if f.endswith('.scn') else 'dat'
     if kind != 'all' and k != kind: continue
-    if not vi.strip(): err(i, 'chưa dịch'); continue
+    if note.startswith('unused'): unused += 1; continue          # mảnh/dòng không còn dùng (T2c/T1b)
+    if not vi.strip(): pending.append(i); continue                # chưa dịch: không phải lỗi, liệt kê riêng
     n += 1
     # 1. mã điều khiển giống hệt tiếng Anh
     for m in check_codes(en, vi): err(i, 'lệch mã ' + m)
@@ -46,14 +47,15 @@ for r in rows:
     # 4. độ dài mã hoá
     e = enc.encode(vi)
     if enc.missing: err(i, 'thiếu glyph %s' % dict(enc.missing)); enc.missing.clear()
-    try: c = int(pos.split()[1]) if k == 'scn' else None
-    except ValueError: c = None
-    key = (f, k, c) if k == 'scn' else None
-    cp = cap.get(key, 254 if k == 'scn' else 255)
+    m = re.match(r'rec (\d+) off (\d+) ps (\d+)', pos)
+    if k == 'scn': key = (f, k, int(pos.split()[1]))
+    else: key = (f, k, tuple(int(x) for x in m.groups())) if m else None
+    cp = cap.get(key, 254 if k == 'scn' else 255)   # cap lấy từ catalog (scn 254/65534; dat ps1 255, ps2 4000)
     if len(e) > cp: err(i, 'QUÁ DÀI %d > %d' % (len(e), cp))
     if len(e) > maxlen[0]: maxlen = (len(e), i)
 newd = [w for w in enc.dict if w not in base]
-print('đã kiểm %d dòng (%s); lỗi %d; dài nhất %d byte (%s)' % (n, kind, len(bad), maxlen[0], maxlen[1]))
+print('đã kiểm %d dòng (%s); lỗi %d; chưa dịch %d; unused bỏ qua %d; dài nhất %d byte (%s)' % (n, kind, len(bad), len(pending), unused, maxlen[0], maxlen[1]))
+if pending: print('chưa dịch:', ' '.join(pending[:60]) + (' ...' if len(pending) > 60 else ''))
 print('từ điển: cũ %d + mới %d = %d / %d' % (len(base), len(newd), len(base) + len(newd), DICT_BUDGET))
 for b in bad: print('  ' + b)
 sys.exit(1 if bad else 0)

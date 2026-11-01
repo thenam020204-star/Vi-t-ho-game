@@ -581,7 +581,18 @@ def update_A_dich(out):
             if r[5].startswith('unused'): r[5] = r[5][len('unused'):].lstrip('; ')
         else:
             mx += 1
-            r = ['A%05d' % mx, k[0], k[1], k[2], '', ('k_low=' + e['k_low']) if e.get('k_low') else '']
+            # T1b: chuỗi dat gộp/đổi vị trí -> hint = ID các dòng cũ cùng bản ghi sắp thành 'unused' (T3c dịch lại từ chúng)
+            hint = ''
+            mrec = re.match(r'rec (\d+) ', k[1])
+            if mrec:
+                olds = []
+                for kk, x in have.items():
+                    m2 = re.match(r'rec (\d+) ', kk[1])
+                    if kk[0] == k[0] and kk not in cur and m2 and m2.group(1) == mrec.group(1):
+                        olds.append(x[0])
+                if olds: hint = 'hint=' + ','.join(sorted(olds))
+            note = '; '.join(x for x in (('k_low=' + e['k_low']) if e.get('k_low') else '', hint) if x)
+            r = ['A%05d' % mx, k[0], k[1], k[2], '', note]
             rows.append(r); have[k] = r
     for k, r in have.items():
         if k not in cur and not r[5].startswith('unused'):
