@@ -1,0 +1,3 @@
+# vùng	bắt đầu	kích thước	dùng	chủ	ghi chú
+cave A	0xaef38	2620	đã dùng 1669 B (0xaef38..0xaf5bd)	vn.c	Map::MapMove_back (chết, refscan 0 tham chiếu); còn trống 951 B
+bss	0x1704c0	64	vn_state	vn.c	sau .bss cũ (0x1704a8); cần p_memsz +0x100 (patch 0x88)

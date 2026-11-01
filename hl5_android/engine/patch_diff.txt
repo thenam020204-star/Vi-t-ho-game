@@ -1,0 +1,76 @@
+# Diff disasm các điểm vá engine chữ Việt (trước/sau)
+
+40ee8  trước: ldrsb r0, [sb, #0x46]      sau: bl #0xaef38   [vn_th0 -> 0xaef38]
+40f6c  trước: ldrsb r3, [r6, #0x46]      sau: bl #0xaef68   [vn_th1 -> 0xaef68]
+41510  trước: ldrsb r3, [r5, #0x46]      sau: bl #0xaef98   [vn_th2 -> 0xaef98]
+4170c  trước: ldrsb r3, [r5, #0x46]      sau: bl #0xaefc8   [vn_th3 -> 0xaefc8]
+4178c  trước: ldrsb sl, [r5, #0x46]      sau: bl #0xaeff8   [vn_th4 -> 0xaeff8]
+41804  trước: bl #0x3cf00                sau: bl #0xaf330   [vn_draw -> 0xaf330]
+88  p_memsz: 0x12d20 -> 0x12e20 (bss tới 0x1705a8; vn_state 0x1704c0..0x170500)
+
+# Thunk (cave A):
+vn_th0 @ 0xaef38:
+   aef38: push {r0, r1, r2, r3, r4, sl, ip, lr}
+   aef3c: add r0, sl, r5
+   aef40: ldrsb r1, [sb, #0x46]
+   aef44: mvn r2, #0x80000000
+   aef48: mov r3, #1
+   aef4c: mov r4, sp
+   aef50: bic sp, sp, #7
+   aef54: bl #0xaf028
+   aef58: mov sp, r4
+   aef5c: str r0, [sp]
+   aef60: pop {r0, r1, r2, r3, r4, sl, ip, lr}
+   aef64: bx lr
+vn_th1 @ 0xaef68:
+   aef68: push {r0, r1, r2, r3, r4, sl, ip, lr}
+   aef6c: add r0, r5, r8
+   aef70: ldrsb r1, [r6, #0x46]
+   aef74: ldr r2, [sp, #0x50]
+   aef78: mov r3, r4
+   aef7c: mov r4, sp
+   aef80: bic sp, sp, #7
+   aef84: bl #0xaf028
+   aef88: mov sp, r4
+   aef8c: str r0, [sp, #0xc]
+   aef90: pop {r0, r1, r2, r3, r4, sl, ip, lr}
+   aef94: bx lr
+vn_th2 @ 0xaef98:
+   aef98: push {r0, r1, r2, r3, r4, sl, ip, lr}
+   aef9c: add r0, r6, r4
+   aefa0: ldrsb r1, [r5, #0x46]
+   aefa4: ldr r2, [sp, #0x78]
+   aefa8: mov r3, r7
+   aefac: mov r4, sp
+   aefb0: bic sp, sp, #7
+   aefb4: bl #0xaf028
+   aefb8: mov sp, r4
+   aefbc: str r0, [sp, #0xc]
+   aefc0: pop {r0, r1, r2, r3, r4, sl, ip, lr}
+   aefc4: bx lr
+vn_th3 @ 0xaefc8:
+   aefc8: push {r0, r1, r2, r3, r4, sl, ip, lr}
+   aefcc: add r0, r6, r4
+   aefd0: ldrsb r1, [r5, #0x46]
+   aefd4: ldr r2, [sp, #0x78]
+   aefd8: mov r3, r7
+   aefdc: mov r4, sp
+   aefe0: bic sp, sp, #7
+   aefe4: bl #0xaf028
+   aefe8: mov sp, r4
+   aefec: str r0, [sp, #0xc]
+   aeff0: pop {r0, r1, r2, r3, r4, sl, ip, lr}
+   aeff4: bx lr
+vn_th4 @ 0xaeff8:
+   aeff8: push {r0, r1, r2, r3, r4, sl, ip, lr}
+   aeffc: add r0, r6, r4
+   af000: ldrsb r1, [r5, #0x46]
+   af004: ldr r2, [sp, #0x78]
+   af008: mov r3, r7
+   af00c: mov r4, sp
+   af010: bic sp, sp, #7
+   af014: bl #0xaf028
+   af018: mov sp, r4
+   af01c: str r0, [sp, #0x14]
+   af020: pop {r0, r1, r2, r3, r4, sl, ip, lr}
+   af024: bx lr

@@ -101,7 +101,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [x] T5. Đóng gói VFS (song song được với T2–T4; chỉ đụng `hl5_android/tools/vfs_pack.py`) — Agent: A1
   - `vfs_pack.py IN.vfs OUT.vfs --replace DIR [--add name=file ...]`: giữ nguyên thứ tự mục, thay dữ liệu theo khoá djb2 của đường dẫn `c/...`, thêm mục mới vào cuối.
   - Hoàn thành khi: pack không thay gì thì cho file giống hệt từng byte; pack với overlay thử (1 file `.dat`) thì harness vẫn boot tới menu chính.
-- [ ] T6. (T6a ✓ thiết kế §9) Engine chữ Việt trong guest (phụ thuộc T5) — Agent: A1 — **Quản đốc nghiệm thu**
+- [x] T6. (T6a ✓ thiết kế §9; T6b ✓, chờ quản đốc nghiệm thu) Engine chữ Việt trong guest (phụ thuộc T5) — Agent: A1 — **Quản đốc nghiệm thu**
   - `hl5_android/engine/vn.c` (+ `build.sh`): clang `--target=armv7a-none-eabi -marm -Os -ffreestanding -fPIC -nostdlib`, link tại địa chỉ cave; gọi hàm guest qua địa chỉ tuyệt đối tính từ base nạp (dùng PC-relative, vì `.so` là PIC). Script `engine/inject.py` sinh dòng `so_patches.tsv` + `caves.tsv`.
   - Định dạng `vi.bin` (do task này chốt và ghi vào BAO-CAO): header, bảng offset từ, chuỗi UTF-8 hoặc glyph id, 3 bộ font (15px, 10px, 18px).
   - Hoàn thành khi: trong harness, menu chính và một hộp thoại cốt truyện hiện chữ Việt đúng dấu, không lệch dòng; bản không có dữ liệu Việt vẫn chạy y hệt bản gốc (so ảnh từng byte tại 3 mốc khung).
@@ -112,6 +112,13 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Tắt vòng cài hook chữ (vòng ở 0xc6c30..0xc6d4c lặp 10 symbol `BFont::*`, callback 0xcf64c) và hook font metrics (0xc8cfc). Công thức khung logic ở 0xc5cc0..0xc5d44 (đặt `[x26+0x58]` và biến toàn cục 0x1fdac8) đổi sang ÷k. Tìm chỗ gọi `glTexParameter*` và viewport/ortho trong `nativeOnDrawFrame` 0xcb7e4, đổi sang NEAREST + phóng số nguyên. Toạ độ chạm phải chia đúng k và offset căn giữa (`nativeOnTouchEvent` 0xcc614).
   - Patch bridge ghi vào `patch/bridge_patches.tsv` (cùng định dạng), áp cả bản armeabi-v7a nếu là cùng code (kiểm tra; nếu khác thì ghi Vướng mắc).
   - Hoàn thành khi: kiểm tra tĩnh (disasm trước/sau) + giả lập các hàm đã sửa bằng unicorn arm64 với đầu vào 2400x1080, k=1..4 cho ra W,H,viewport đúng.
+- [ ] T8m. Bridge tối thiểu cho v0.1 (phụ thuộc T6) — Agent: A1 — **Quản đốc nghiệm thu**
+  - (1) Tắt hook chữ theo BAO-CAO §9.4: bỏ vòng 10 hook (0xc6c30 → 0xc6d4c) + 2 `bl 0xe8834` (metrics, 0xc6dd8/0xc6e60) → `mov w0,#1`; xác minh lại địa chỉ bằng br.dis trước khi vá.
+  - (2) Logic = màn ÷ k, k mặc định = max(1, floor(scrH/240)) (T10 sau này cho chọn ÷1..÷4): sửa đoạn tính W/H 0xc5cc0–0xc5d44 thành W = scrW/k, H = scrH/k (làm chẵn), giữ min 400x240 thì giảm k.
+  - (3) Lọc NEAREST (GL_TEXTURE_MIN/MAG_FILTER = GL_NEAREST 0x2600 thay GL_LINEAR 0x2601) cho texture màn hình + viewport = W*k x H*k căn giữa (phần dư viền đen), không kéo giãn lệch tỉ lệ.
+  - (4) Kiểm ElfLoader của bridge: cách ánh xạ PT_LOAD/zero bss (cho bản vá p_memsz T6b) — ghi kết luận vào BAO-CAO.
+  - Patch ghi `patch/bridge_patches.tsv` (off, gốc, mới, ghi chú; script áp dụng kiểm byte gốc) + diff disasm trước/sau. Giả lập hàm tính W/H bằng unicorn arm64 với 2400x1080, 1920x1080, 1600x720, 1280x720, 800x480 → bảng (k, W, H, viewport).
+  - Harness: guest chạy được ở các W×H đó (ít nhất 600x270, 640x288, 480x240, 400x240): tiêu đề → menu → vào game → đi 30 s, không crash; ảnh vào `shots/T8/` (≤ 8 file).
 - [ ] T9. Guest chạy đúng ở khung lớn (phụ thuộc T6) — Agent: A1 — **Quản đốc nghiệm thu**
   - Harness ở 400x240, 534x240, 800x360, 1200x540, 2400x1080: ghi lỗi (UI neo sai, mảng cố định, camera, crash). Sửa trong guest.
   - Hoàn thành khi: 5 cỡ đều đi được tiêu đề → menu → vào game → di chuyển 30 s không crash, UI đúng chỗ (ảnh trong `shots/T9/`).
@@ -133,13 +140,14 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: T1–T5, T6a ✓ → T6b (đang giao, công nhân mới) → T8 tối thiểu → T7 → T12.
+- A1: T1–T6 ✓ → T8m (đang giao) → T7 tối thiểu → T12.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
 - [A1/T3a] Aligner ghép sai theo SỐ FILE: scn Android lệch số với LGT (Android 00207 = LGT 00208, 00209 = 00211, 00210 = 00212, 00213 = 00215, 00215 = 00216, 00216 phần lớn mới). Hậu quả: một số câu KHÔNG phải NEW bị gán K sai nghĩa (vd 00216 idx 3,4,20 nhận "Phát hiện kẻ xâm nhập"/"Bắt đầu hành động loại trừ"/"Cái quái gì nữa đây..."; 00214 idx 14 "It needs some improvements." nhận "Nhà kho cũ"; 00186 idx 18 nhận "Chơi lại game..."; 00094/00108/00136/00144/00170/00174 có các K lệch 1-36 vị trí). Đề nghị quản đốc cho T2c soát lại ghép các file này trước T4. Với NEW, A_dich.tsv đã dịch từ tiếng Anh và tái dùng đúng K Việt có sẵn ở các file lệch số.
   - [A1/T2c] ĐÃ XỬ LÝ: ghép file theo bytecode; 00216 idx 3/4/20, 00214 idx 14, 00186 idx 18 nay đều NEW (không còn gán K sai).
 
+- [A1/T6b] p_memsz ở file offset 0x88 (BAO-CAO §9.3 ghi nhầm 0x98); bridge ElfLoader có map/zero đúng memsz hay không vẫn là việc T8.
 - [A1/T6a] (1) Hook đo của bridge (xem Nhật ký T6a, BAO-CAO §9.4) làm engine vô hiệu trên máy thật nếu không vá T8; harness không chạy bridge nên T6b không kiểm được, cần quyết: vá bridge hay đổi tên symbol guest (trái quyết định #2). (2) Từ rộng hơn hộp nhỏ nhất gây vòng lặp vô hạn trong GetTextFieldPageLen. (3) Danh sách rủi ro còn lại: BAO-CAO §9.6.
 - [A1/T2d] (1) `A_dich.tsv` có 1 dòng hỏng từ trước (A01012, text_en chứa byte 0x0a thật, vỡ thành 2 dòng, làm `update_A_dich` lỗi khi chạy lại): đã sửa bộ đọc/ghi, nay ghi `\n` literal trong cột Anh (nội dung không đổi); T3/T4 cần biết. (2) 00136 sai gần cả file (26/28 dp); 00107/00170/00174 sai theo cụm. (3) Hàn `EVENT_게임오버` (00144 idx 1, 00150 idx 12) là nhãn nội bộ, đánh LỆCH.
 
@@ -170,3 +178,5 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [A1] T6a xong (thiết kế, chưa implement): `BAO-CAO-RE.md` mục 9; script chứng minh cave `$WORK/t6a/refscan.py` + `refscan.out`. Kết luận chính: (1) hook tối thiểu = vá 5 `ldrsb [font,#70]` (0x40ee8, 0x40f6c, 0x41510, 0x4170c, 0x4178c) thành `bl thunk` + vá `bl MX_fntDrawString` tại 0x41804 (đường vẽ 2 byte duy nhất của DrawText); GetLineCount/PageLen/IsTextFieldDrawComplete/DrawTextLine/Field đều đi qua GetByteLenPrintable nên không cần móc. (2) `vi.bin` ~40 KB (4788 từ u8-glyph + 3 atlas fontcus 15/10/18), nạp lười bằng `StaticUtil::LoadRes` 0x1417a4, ~56 KB RAM. (3) Cave A = `Map::MapMove_back` 0xaef38 (2620 B), B dự phòng = `AndroidService` ctor 0x14afb4; cave không ghi được nên trạng thái đặt ở bss 0x1704c0 + vá p_memsz (file off 0x98). (4) BRIDGE: có hook đo (callback 0xcfdd0, cài ở 0xc6dd8 GetWidth(Pciii) và 0xc6e60 GetByteLenPrintable) đặt R0 và PC=LR nên BỎ QUA thân hàm guest; T8 BẮT BUỘC thay hai `bl 0xe8834` bằng `mov w0,#1`; nên bỏ cả vòng 10 hook chữ (c6c30 `b` -> c6d4c). Địa chỉ 0xc8cfc trong T8 là nhánh lỗi, không phải chỗ cài. Chờ quản đốc duyệt.
 
 - [quản đốc] Duyệt T6a (BAO-CAO §9): ĐỒNG Ý thiết kế (vá 5 `ldrsb [font,#70]` + `bl` 0x41804 → `vn_draw`; cave MapMove_back; trạng thái bss 0x1704c0 + vá p_memsz). Điều kiện cho T6b: (a) không được treo vòng page-len — từ rộng hơn hộp phải vẫn tiến ≥ 1 đơn vị/dòng (test bằng hộp hẹp nhất); (b) `vn_draw` không phải mã Việt → đường gốc y hệt (so ảnh từng byte bản không vi.bin tại 3 mốc); (c) xác minh mode/màu bằng test 3 trước khi vẽ chữ Việt; (d) ở 18 px bỏ mode 1/2 như đề xuất. Kiểm ElfLoader bridge (ánh xạ/zero bss) chuyển sang T8.
+- [A1] T6b xong (chờ nghiệm thu). `engine/{vn.c,build.sh,inject.py,mk_vibin.py,test_vn.py,patch_diff.txt}`; 21 dòng vào `patch/so_patches.tsv` (khối `# >>> vn-engine`, mỗi dòng kiểm byte gốc), `patch/caves.tsv`; `vi.bin` 47608 B thêm vào VFS bằng `vfs_pack --add c/vi/vi.bin=...`. Kiểm: (1) harness: menu chính ("Bắt đầu, Chuyên Gia, Vào kho đồ...") và hộp thoại cốt truyện đúng dấu, không lệch dòng, ảnh `shots/T6/`; (2) KHÔNG vi.bin: ảnh khung 459/579/599 và run.log giống từng byte bản gốc p1.so; (3) `test_vn.py`: hộp 1..200 px với 6 từ rộng nhất (90 px) không treo (PageLen/LineCount); (4) 0 relocation sau link; (5) diff disasm ở `engine/patch_diff.txt`. Điều kiện (a)-(d) đã đáp ứng; mode/màu lấy đúng theo mã máy `_midas_funcFntDrawString` (màu thể hiện đúng ở menu/thoại; chưa so từng điểm với VnFont Java). Chưa kiểm: bridge thật (T8), chế độ 18 px (cờ `vn_state.hd` mặc định 0, đường cơ sở 18 px để T10). Dùng tạm: `python3 patch/apply_so.py p1.so p2.so` rồi `hl5run.py --so p2.so --vfs vi.vfs`.
+- [quản đốc] Nghiệm thu T6b: đạt (menu + hộp thoại tiếng Việt đúng dấu; không vi.bin = y hệt gốc; 0 reloc; không treo). Ghi chú: nhãn menu chính dài tràn ô ("Vào kho đồ", "Hỗ trợ game", "Cập nhật") → rút gọn ở T7 (menu_override). Giao T8m.
