@@ -58,7 +58,7 @@ void t10_val(u32 *fr, u32 got, int y, int idx, u32 gidx, int x11) {
     u32 gfx = **(u32 **)(got + gidx);
     u32 font = **(u32 **)(got + fr[0x38 / 4]);
     int fb = Graphic_GetFB(gfx);
-    u8 v[4] = {'/', '0' + t10_k(), 0, 0};
+    u8 v[4] = {'1', '/', '0' + t10_k(), 0};   /* font gốc không có '÷' (đã thử 0xA1BF: trống) -> "1/k" */
     BFont_DrawText(font, fb, x11 + 118, y, v, 1, 0xFFFFFF);
     const u8 *this_ = (const u8 *)fr[0x2c / 4];
     if ((s8)this_[15] == 9) {

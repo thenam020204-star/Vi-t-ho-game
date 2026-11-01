@@ -57,10 +57,12 @@ static const u8 *vn_word(vn_state_t *s, int k) {
     return s->words + rd16((const u8 *)s->widx + 2 * k);
 }
 
-/* font (0=15px,1=10px,2=18px) và độ nén của một từ; 18 px bỏ mode 1/2 (điều kiện (d)) */
+/* font (0=15px,1=10px,2=18px) và độ nén của một từ */
 static void vn_sel(vn_state_t *s, const u8 *w, int *f, int *tight) {
     int m = w[0];
-    if (s->hd) { *f = 2; *tight = 0; }
+    if (s->hd) {                      /* T10: HD = 18 px; từ đã đánh dấu 10 px (ô chật) dùng 15 px nén, mode 1 dùng 18 px nén */
+        if (m == 2) { *f = 0; *tight = 1; } else { *f = 2; *tight = m == 1; }
+    }
     else if (m == 2) { *f = 1; *tight = 1; }
     else { *f = 0; *tight = m == 1; }
 }

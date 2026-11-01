@@ -66,9 +66,9 @@ t10_h1th @ 0x14b058:
    14b058: stmib sp, {r7, ip}
    14b05c: push {r0, r1, r2, r3, ip, lr}
    14b060: add r0, sp, #0x18
-   14b064: bl #0x14b2c0
+   14b064: bl #0x14b2c4
    14b068: pop {r0, r1, r2, r3, ip, lr}
    14b06c: bx lr
 t10_gshth @ 0x14b070:
    14b070: mov r1, r5
-   14b074: b #0x14b2f4
+   14b074: b #0x14b2f8

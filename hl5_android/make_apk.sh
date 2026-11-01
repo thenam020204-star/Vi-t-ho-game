@@ -32,7 +32,8 @@ fi
 echo "[2] VFS Việt + vi.bin"
 python3 "$HERE/vi/build_android_vi.py" >"$B/build_vi.log" 2>&1 || { tail "$B/build_vi.log"; exit 1; }
 python3 "$HERE/engine/mk_vibin.py" "$WORK/vi_android" "$B/vi.bin"
-python3 "$HERE/tools/vfs_pack.py" "$WORK/vi_android/data.vfs.mp3" "$B/data.vfs.mp3" --add c/vi/vi.bin="$B/vi.bin"
+python3 "$HERE/patch/t10_data.py" "$WORK/vi_android" "$B/ovl"   # T10: nhãn "Phân giải" -> common_text rec 210
+python3 "$HERE/tools/vfs_pack.py" "$WORK/vi_android/data.vfs.mp3" "$B/data.vfs.mp3" --replace "$B/ovl" --add c/vi/vi.bin="$B/vi.bin"
 fi
 [ -n "$DIAG" ] && { echo "[2b] lớp chẩn đoán"; "$HERE/diag/build_diag.sh" "$WORK/orig.apk" "$B"; }
 
@@ -75,4 +76,8 @@ OUT="$B/HL5-VI-v$VER.apk"
 "$BT/apksigner" verify --verbose "$OUT" | head -8
 "$BT/zipalign" -c -p 4 "$OUT" && echo "zipalign OK"
 sha256sum "$OUT"; ls -l "$OUT"
-if [ -n "$DIAG" ]; then mkdir -p "$HERE/dist/diag"; cp "$OUT" "$HERE/dist/diag/HL5-diag-$DIAG.apk"; echo "-> dist/diag/HL5-diag-$DIAG.apk"; fi
+if [ -n "$DIAG" ]; then
+  mkdir -p "$HERE/dist/diag"
+  case "$DIAG" in C) N="HL5-diag-v$VER.apk";; *) N="HL5-diag-$DIAG-v$VER.apk";; esac   # C = bản đầy đủ + lớp chẩn đoán
+  cp "$OUT" "$HERE/dist/diag/$N"; echo "-> dist/diag/$N"
+else mkdir -p "$HERE/dist"; cp "$OUT" "$HERE/dist/HL5-VI-v$VER.apk"; echo "-> dist/HL5-VI-v$VER.apk"; fi

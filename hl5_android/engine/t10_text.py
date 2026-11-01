@@ -1,7 +1,7 @@
 """Chuỗi tiếng Việt của T10, mã hoá bằng chính từ điển của bản build (dict.txt): mỗi từ = 2 byte (lead 0xC9.., trail 0xA1..),
 cách nhau bằng dấu cách ASCII (đúng như Encoder của build_vi5). Mọi từ phải có sẵn trong từ điển (dạng thường, không tiền tố \\x01/\\x02)."""
 
-LABEL = 'Độ phân giải'                    # common_text rec 210 (nhãn mục Cài đặt, trước là "Hiển thị ngang")
+LABEL = 'Phân giải'                    # common_text rec 210 (nhãn mục Cài đặt, trước là "Hiển thị ngang")
 NOTE = 'Khởi động lại để áp dụng'         # khối chuỗi T10 trong vi.bin (chuỗi 0)
 LABEL_REC = 210
 

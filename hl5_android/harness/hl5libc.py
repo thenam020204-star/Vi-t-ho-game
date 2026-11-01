@@ -1,5 +1,6 @@
 """libc / GLES / JNI giả cho hl5run.py (ABI armeabi soft-float)."""
 import os, struct, math, time, zlib
+from unicorn import UC_HOOK_CODE
 from unicorn.arm_const import *
 
 VFS_FD = 3
@@ -418,6 +419,13 @@ def boot(g):
     for i in range(8):
         g.wr32(vt + i * 4, g.stub('JVM_%d' % i, vm_env if i in (4, 6, 7) else (lambda: 0)))
     g.javavm = g.misc_alloc(4); g.wr32(g.javavm, vt)
+    # T10: AndroidService (JNI Java) không có trong harness nên getAvailableStorageSpace = 0 -> MC_fsOpen trả -13 (mọi lần ghi tệp
+    # thất bại, cả LOCAL.sav). Giả lập còn dung lượng để thử ghi hd_scale.txt.
+    sp = g.syms.get('_ZN18MIDASKernelManager24getAvailableStorageSpaceEi')
+    if sp:
+        def avail(uc, addr, size, ud):
+            uc.reg_write(UC_ARM_REG_R0, 0x40000000); uc.reg_write(UC_ARM_REG_PC, uc.reg_read(UC_ARM_REG_LR))
+        g.uc.hook_add(UC_HOOK_CODE, avail, begin=sp, end=sp)
     g.storage_int = '/data/hl5/int'
     g.storage_ext = '/data/hl5/ext'
 
