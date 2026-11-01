@@ -20,8 +20,8 @@ def patch(va, src, why, pad_to=None):
 
 # (1) tắt hook chữ
 patch(0xc6c30, 'b #0xc6d4c', 'bỏ vòng cài 10 hook chữ BFont::* (callback 0xcf64c): nhảy thẳng 0xc6d4c (x22..x27 không được đọc trước khi gán lại)')
-patch(0xc6dd8, 'mov w0, #1', 'hook đo GetWidth(Pciii): bỏ bl 0xe8834 (uc_hook_add); w0=1 -> cbnz đi nhánh đã cài')
-patch(0xc6e60, 'mov w0, #1', 'hook đo GetByteLenPrintable: như trên')
+patch(0xc6dd8, 'mov w0, #0', 'hook đo GetWidth(Pciii): bỏ bl 0xe8834 (uc_hook_add); w0=0 = thành công (cbnz w0 -> 0xc8cec là throw); T13b sửa từ #1')
+patch(0xc6e60, 'mov w0, #0', 'hook đo GetByteLenPrintable: như trên (w0=0 = thành công)')
 
 # (2) khung logic = màn / k; k = min(4, scrH/240), giảm k nếu W<400 hoặc H<240. w25=scrW, w22=scrH; ra w9=W, w8=H (-> 0xc5d38)
 patch(0xc5ce8, """

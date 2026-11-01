@@ -5,9 +5,9 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 : "${WORK:=/tmp/claude-0/-home-user-Vi-t-ho-game/31266a47-2a55-5b6d-86d1-5e3a70f1f083/scratchpad}"
 export WORK
-DIAG=""   # --diag A|B|C|C1|D : APK chẩn đoán T13 (xem diag/ và PHAT-HANH-diag.md); mặc định rỗng = build v0.1 y hệt cũ
-if [ "${1:-}" = "--diag" ]; then DIAG="${2:?--diag cần A|B|C|C1|D}"; shift 2; fi
-case "$DIAG" in ""|A|B|C|C1|D) ;; *) echo "--diag phải là A|B|C|C1|D"; exit 1;; esac
+DIAG=""   # --diag A|B|C|C1 : APK chẩn đoán T13 (xem diag/ và PHAT-HANH-diag.md); mặc định rỗng = build v0.1 y hệt cũ
+if [ "${1:-}" = "--diag" ]; then DIAG="${2:?--diag cần A|B|C|C1}"; shift 2; fi
+case "$DIAG" in ""|A|B|C|C1) ;; *) echo "--diag phải là A|B|C|C1"; exit 1;; esac
 VER="${1:-0.1}"
 BT=${BT:-/opt/asdk/android-14}
 ORIG_APK="${ORIG_APK:-$(ls /root/.claude/uploads/*/*heroes-lore-5*.apk 2>/dev/null | head -1)}"
@@ -25,9 +25,6 @@ BTSV="$HERE/patch/bridge_patches.tsv"
 case "$DIAG" in
   C1) # bỏ NEAREST + viewport/chạm (e1e38 e1f84 cc6b8 e3770 cfdd0); giữ tắt hook chữ + logic ÷k
       BTSV="$B/bridge_C1.tsv"; grep -Ev '^(e1e38|e1f84|cc6b8|e3770|cfdd0)	' "$HERE/patch/bridge_patches.tsv" >"$BTSV";;
-  D)  # sửa lỗi v0.1: uc_hook_add trả 0 = thành công; `mov w0,#1` làm cbnz nhảy vào throw "Cannot install verified font metrics hook"
-      BTSV="$B/bridge_D.tsv"; sed -E 's/^(c6dd8|c6e60)(	[0-9a-f]+	)20008052(	)/\1\200008052\3/' "$HERE/patch/bridge_patches.tsv" >"$BTSV"
-      [ "$(grep -c '	00008052	' "$BTSV")" = 2 ] || { echo "D: sửa tsv hỏng"; exit 1; };;
 esac
 python3 -I "$HERE/patch/apply_bridge.py" "$WORK/apk/lib/arm64-v8a/libhl5_arm64_bridge.so" "$B/bridge_arm64.so" "$BTSV"
 fi

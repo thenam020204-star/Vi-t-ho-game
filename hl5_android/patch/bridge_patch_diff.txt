@@ -5,10 +5,10 @@
   sau   c6c30: b #0xc6d4c
 == c6dd8  hook đo GetWidth(Pciii): bỏ bl 0xe8834 (uc_hook_add); w0=1 -> cbnz đi nhánh đã cài
   trước c6dd8: bl #0xe8834
-  sau   c6dd8: mov w0, #1
+  sau   c6dd8: mov w0, #0
 == c6e60  hook đo GetByteLenPrintable: như trên
   trước c6e60: bl #0xe8834
-  sau   c6e60: mov w0, #1
+  sau   c6e60: mov w0, #0
 == c5ce8  khung logic W=scrW/k, H=scrH/k (làm chẵn xuống), k=min(4,scrH/240) giảm tới khi W>=400 && H>=240; scrH<240 -> 400x240 như cũ
   trước c5ce8: cmp w22, #1
   trước c5cec: b.lt #0xc5d38

@@ -1,8 +1,18 @@
-# HL5-VI v0.1 (bản chơi thử đầu tiên)
+# HL5-VI v0.1.1 (bản chơi thử)
+
+**Tệp mới: `dist/HL5-VI-v0.1.1.apk`** (22.668.446 byte), SHA-256: `119e0f2d7bc44ebf857c175fe5fe343f4039b5570bffc23590eee8bf20b84261`
+
+## Thay đổi v0.1.1
+- **Sửa crash khi mở app** (v0.1 đóng ngay khi tạo bề mặt GL): hai bản vá bridge ở 0xc6dd8 và 0xc6e60 trả w0=1 thay vì 0 làm bridge ném ngoại lệ "Cannot install verified font metrics hook". Nay trả 0 (thành công). Chỉ đổi 2 lệnh (8 byte) trong `libhl5_arm64_bridge.so`; mọi tệp khác y hệt v0.1.
+- Rà lại toàn bộ 9 vùng vá bridge (kết luận từng cái ở `patch/bridge_review.md`).
+- Cùng tên gói, cùng versionCode và cùng khoá ký với v0.1: cài đè được lên v0.1; nếu lỗi lạ thì gỡ rồi cài lại.
+- Chưa thử trên máy thật. Nếu vẫn crash, dùng `dist/diag/HL5-diag-v0.1.1.apk` (xem `PHAT-HANH-diag.md`) rồi gửi file nhật ký trong Downloads.
+
+# (lịch sử) HL5-VI v0.1 (bản chơi thử đầu tiên)
 
 Tệp: `dist/HL5-VI-v0.1.apk` (22,7 MB, 21.6 MiB). Gói `co.kr.eamobile.hl5` giữ nguyên tên gói và versionCode so với bản gốc 1.0.5.
 
-SHA-256: `a9e7b9f91b477e3dbc76034ff8c29d5a8fa7846b33ff732d1e8548a1190f9ed4`
+SHA-256 v0.1 (BỊ CRASH, không dùng): `a9e7b9f91b477e3dbc76034ff8c29d5a8fa7846b33ff732d1e8548a1190f9ed4`
 
 ## Cách cài
 1. **Gỡ bản gốc Heroes Lore 5 trước.** APK này ký bằng khoá mới (`sign/hl5vi.keystore`), khác chữ ký bản gốc nên Android không cho cài đè. Gỡ sẽ mất dữ liệu lưu của bản gốc.
