@@ -1,0 +1,223 @@
+##### patched: /opt/work/t8/out/libgame_mod_full.so (sha256 5d3ecb3bba3dda01)
+
+lib=/opt/work/t8/out/libgame_mod_full.so che do=patched base=0x12000000 bss(he so)=0x1272f780
+NGM  B EXP co so=-2147483648 Mexp=2 w19=0 (mong doi -2147483648) w25=0 (mong doi 0) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-1 Mexp=2 w19=-2 (mong doi -1) w25=-2 (mong doi -1) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-2147483648 Mexp=3 w19=-2147483648 (mong doi -2147483648) w25=0 (mong doi 0) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-1 Mexp=3 w19=-3 (mong doi -1) w25=-3 (mong doi -1) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-2147483648 Mexp=10 w19=0 (mong doi -2147483648) w25=0 (mong doi 0) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-1 Mexp=10 w19=-10 (mong doi -1) w25=-11 (mong doi -1) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-2147483648 Mexp=49 w19=-2147483648 (mong doi -2147483648) w25=0 (mong doi 0) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-1 Mexp=49 w19=-49 (mong doi -1) w25=-53 (mong doi -1) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-2147483648 Mexp=50 w19=0 (mong doi -2147483648) w25=0 (mong doi 0) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+NGM  B EXP co so=-1 Mexp=50 w19=-50 (mong doi -1) w25=-55 (mong doi -1) [ngoai mien: EXP co so < 0 khong toi duoc @0x1c7860]
+=== BANG CA BIEN (patched): dmg/EXP vao -> ra ===
+--- A: ke tan cong phe 0 -> muc tieu phe 1 (nhan Mdmg=50): quanh tran 999.999, nhan 2 so
+DAT  A dmg=0 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w2=0 sp-0x70 ket qua=0 mong doi=0
+DAT  A dmg=1 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-50 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=50 mong doi=50
+DAT  A dmg=2 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-100 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=100 mong doi=100
+DAT  A dmg=19999 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-999950 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=999950 mong doi=999950
+DAT  A dmg=20000 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-999999 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=999999 mong doi=999999
+DAT  A dmg=999998 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-999999 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=999999 mong doi=999999
+DAT  A dmg=999999 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-999999 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=999999 mong doi=999999
+DAT  A dmg=1000000 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-1000000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000000 mong doi=1000000
+--- A: ke tan cong phe 1 -> muc tieu phe 0 (chia Mdef=50): dmg nho, min 1
+DAT  A dmg=0 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w2=0 sp-0x70 ket qua=0 mong doi=0
+DAT  A dmg=1 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-1 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1 mong doi=1
+DAT  A dmg=49 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-1 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1 mong doi=1
+DAT  A dmg=50 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-1 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1 mong doi=1
+DAT  A dmg=51 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-1 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1 mong doi=1
+DAT  A dmg=100 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-2 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=2 mong doi=2
+DAT  A dmg=999999 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-19999 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=19999 mong doi=19999
+DAT  A dmg=1000000 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-20000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=20000 mong doi=20000
+--- A: dmg=1000, he so Mdmg=Mdef=h, ke tan cong phe 0 -> muc tieu phe 1 / ke tan cong phe 1 -> muc tieu phe 0
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=0 Mdef=0 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=0 Mdef=0 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=1 Mdef=1 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=1 Mdef=1 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=2 Mdef=2 w1=-2000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=2000 mong doi=2000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=2 Mdef=2 w1=-500 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=500 mong doi=500
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=3 Mdef=3 w1=-3000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=3000 mong doi=3000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=3 Mdef=3 w1=-333 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=333 mong doi=333
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-50000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=50000 mong doi=50000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-20 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=20 mong doi=20
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=51 Mdef=51 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=51 Mdef=51 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=-1 Mdef=-1 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=-1 Mdef=-1 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+--- A: dmg=1000, Mdmg=10, Mdef=10, du phe (muc tieu, ke tan cong)
+DAT  A dmg=1000 tgtPhe=0 attPhe=0 Mdmg=10 Mdef=10 w1=-100 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=100 mong doi=100
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=10 Mdef=10 w1=-100 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=100 mong doi=100
+DAT  A dmg=1000 tgtPhe=0 attPhe=2 Mdmg=10 Mdef=10 w1=-100 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=100 mong doi=100
+DAT  A dmg=1000 tgtPhe=0 attPhe=NULL Mdmg=10 Mdef=10 w1=-100 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=100 mong doi=100
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=10 Mdef=10 w1=-10000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=10000 mong doi=10000
+DAT  A dmg=1000 tgtPhe=1 attPhe=1 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=2 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=NULL Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=2 attPhe=0 Mdmg=10 Mdef=10 w1=-10000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=10000 mong doi=10000
+DAT  A dmg=1000 tgtPhe=2 attPhe=1 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=2 attPhe=2 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=2 attPhe=NULL Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+--- B/C: EXP quanh tran 0xFFFFFF, Mexp=50 va Mexp=2
+DAT  B EXP co so=0 Mexp=50 w19=0 (mong doi 0) w25=0 (mong doi 0)
+DAT  C EXP co dinh=0 Mexp=50 w19=0 (mong doi 0) x8 nguyen w0 nguyen
+DAT  B EXP co so=1 Mexp=50 w19=50 (mong doi 50) w25=55 (mong doi 55)
+DAT  C EXP co dinh=1 Mexp=50 w19=50 (mong doi 50) x8 nguyen w0 nguyen
+DAT  B EXP co so=335543 Mexp=50 w19=16777150 (mong doi 16777150) w25=18454865 (mong doi 18454865)
+DAT  C EXP co dinh=335543 Mexp=50 w19=16777150 (mong doi 16777150) x8 nguyen w0 nguyen
+DAT  B EXP co so=335544 Mexp=50 w19=16777200 (mong doi 16777200) w25=18454920 (mong doi 18454920)
+DAT  C EXP co dinh=335544 Mexp=50 w19=16777200 (mong doi 16777200) x8 nguyen w0 nguyen
+DAT  B EXP co so=335545 Mexp=50 w19=16777215 (mong doi 16777215) w25=18454936 (mong doi 18454936)
+DAT  C EXP co dinh=335545 Mexp=50 w19=16777215 (mong doi 16777215) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777214 Mexp=50 w19=16777215 (mong doi 16777215) w25=18454936 (mong doi 18454936)
+DAT  C EXP co dinh=16777214 Mexp=50 w19=16777215 (mong doi 16777215) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777215 Mexp=50 w19=16777215 (mong doi 16777215) w25=18454936 (mong doi 18454936)
+DAT  C EXP co dinh=16777215 Mexp=50 w19=16777215 (mong doi 16777215) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777216 Mexp=50 w19=16777216 (mong doi 16777216) w25=18454937 (mong doi 18454937)
+DAT  C EXP co dinh=16777216 Mexp=50 w19=16777216 (mong doi 16777216) x8 nguyen w0 nguyen
+DAT  B EXP co so=0 Mexp=2 w19=0 (mong doi 0) w25=0 (mong doi 0)
+DAT  C EXP co dinh=0 Mexp=2 w19=0 (mong doi 0) x8 nguyen w0 nguyen
+DAT  B EXP co so=1 Mexp=2 w19=2 (mong doi 2) w25=2 (mong doi 2)
+DAT  C EXP co dinh=1 Mexp=2 w19=2 (mong doi 2) x8 nguyen w0 nguyen
+DAT  B EXP co so=335543 Mexp=2 w19=671086 (mong doi 671086) w25=738194 (mong doi 738194)
+DAT  C EXP co dinh=335543 Mexp=2 w19=671086 (mong doi 671086) x8 nguyen w0 nguyen
+DAT  B EXP co so=335544 Mexp=2 w19=671088 (mong doi 671088) w25=738196 (mong doi 738196)
+DAT  C EXP co dinh=335544 Mexp=2 w19=671088 (mong doi 671088) x8 nguyen w0 nguyen
+DAT  B EXP co so=335545 Mexp=2 w19=671090 (mong doi 671090) w25=738199 (mong doi 738199)
+DAT  C EXP co dinh=335545 Mexp=2 w19=671090 (mong doi 671090) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777214 Mexp=2 w19=16777215 (mong doi 16777215) w25=18454936 (mong doi 18454936)
+DAT  C EXP co dinh=16777214 Mexp=2 w19=16777215 (mong doi 16777215) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777215 Mexp=2 w19=16777215 (mong doi 16777215) w25=18454936 (mong doi 18454936)
+DAT  C EXP co dinh=16777215 Mexp=2 w19=16777215 (mong doi 16777215) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777216 Mexp=2 w19=16777216 (mong doi 16777216) w25=18454937 (mong doi 18454937)
+DAT  C EXP co dinh=16777216 Mexp=2 w19=16777216 (mong doi 16777216) x8 nguyen w0 nguyen
+--- B/C: EXP=1000, Mexp = 0, 1, 2, 3, 50, 51, -1
+DAT  B EXP co so=1000 Mexp=0 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=0 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=1 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=1 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=2 w19=2000 (mong doi 2000) w25=2200 (mong doi 2200)
+DAT  C EXP co dinh=1000 Mexp=2 w19=2000 (mong doi 2000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=3 w19=3000 (mong doi 3000) w25=3300 (mong doi 3300)
+DAT  C EXP co dinh=1000 Mexp=3 w19=3000 (mong doi 3000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=50 w19=50000 (mong doi 50000) w25=55000 (mong doi 55000)
+DAT  C EXP co dinh=1000 Mexp=50 w19=50000 (mong doi 50000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=51 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=51 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=-1 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=-1 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+=== TONG HOP (patched) ===
+  A (CHAR_AddDamage)   DAT=21384 LOI=0 ngoai mien=0
+  B (AddExperience)    DAT=188 LOI=0 ngoai mien=10
+  C (AddExpFixed)      DAT=198 LOI=0 ngoai mien=0
+  khac                 DAT=2 LOI=0 ngoai mien=0
+KET QUA patched: tong 21782 ca, DAT=21772 LOI=0 NGOAI_MIEN(ghi nhan)=10
+TONG KET (patched): TAT CA DAT
+##### orig: /opt/work/lib4/libgame.so (sha256 df12cecc7752bcba)
+
+lib=/opt/work/lib4/libgame.so che do=orig base=0x12000000 bss(he so)=0x1272f780
+=== BANG CA BIEN (orig): dmg/EXP vao -> ra ===
+--- A: ke tan cong phe 0 -> muc tieu phe 1 (nhan Mdmg=50): quanh tran 999.999, nhan 2 so
+DAT  A dmg=0 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w2=0 sp-0x70 ket qua=0 mong doi=0
+DAT  A dmg=1 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-1 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1 mong doi=1
+DAT  A dmg=2 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-2 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=2 mong doi=2
+DAT  A dmg=19999 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-19999 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=19999 mong doi=19999
+DAT  A dmg=20000 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-20000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=20000 mong doi=20000
+DAT  A dmg=999998 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-999998 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=999998 mong doi=999998
+DAT  A dmg=999999 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-999999 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=999999 mong doi=999999
+DAT  A dmg=1000000 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-1000000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000000 mong doi=1000000
+--- A: ke tan cong phe 1 -> muc tieu phe 0 (chia Mdef=50): dmg nho, min 1
+DAT  A dmg=0 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w2=0 sp-0x70 ket qua=0 mong doi=0
+DAT  A dmg=1 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-1 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1 mong doi=1
+DAT  A dmg=49 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-49 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=49 mong doi=49
+DAT  A dmg=50 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-50 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=50 mong doi=50
+DAT  A dmg=51 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-51 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=51 mong doi=51
+DAT  A dmg=100 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-100 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=100 mong doi=100
+DAT  A dmg=999999 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-999999 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=999999 mong doi=999999
+DAT  A dmg=1000000 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-1000000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000000 mong doi=1000000
+--- A: dmg=1000, he so Mdmg=Mdef=h, ke tan cong phe 0 -> muc tieu phe 1 / ke tan cong phe 1 -> muc tieu phe 0
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=0 Mdef=0 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=0 Mdef=0 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=1 Mdef=1 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=1 Mdef=1 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=2 Mdef=2 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=2 Mdef=2 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=3 Mdef=3 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=3 Mdef=3 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=50 Mdef=50 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=50 Mdef=50 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=51 Mdef=51 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=51 Mdef=51 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=-1 Mdef=-1 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=-1 Mdef=-1 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+--- A: dmg=1000, Mdmg=10, Mdef=10, du phe (muc tieu, ke tan cong)
+DAT  A dmg=1000 tgtPhe=0 attPhe=0 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=1 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=2 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=0 attPhe=NULL Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=0 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=1 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=2 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=1 attPhe=NULL Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=2 attPhe=0 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=2 attPhe=1 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=2 attPhe=2 Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+DAT  A dmg=1000 tgtPhe=2 attPhe=NULL Mdmg=10 Mdef=10 w1=-1000 sp-0x70 w20=7 w25=1 (x0/x19/x21/w20/w25 giu dung) ket qua=1000 mong doi=1000
+--- B/C: EXP quanh tran 0xFFFFFF, Mexp=50 va Mexp=2
+DAT  B EXP co so=0 Mexp=50 w19=0 (mong doi 0) w25=0 (mong doi 0)
+DAT  C EXP co dinh=0 Mexp=50 w19=0 (mong doi 0) x8 nguyen w0 nguyen
+DAT  B EXP co so=1 Mexp=50 w19=1 (mong doi 1) w25=1 (mong doi 1)
+DAT  C EXP co dinh=1 Mexp=50 w19=1 (mong doi 1) x8 nguyen w0 nguyen
+DAT  B EXP co so=335543 Mexp=50 w19=335543 (mong doi 335543) w25=369097 (mong doi 369097)
+DAT  C EXP co dinh=335543 Mexp=50 w19=335543 (mong doi 335543) x8 nguyen w0 nguyen
+DAT  B EXP co so=335544 Mexp=50 w19=335544 (mong doi 335544) w25=369098 (mong doi 369098)
+DAT  C EXP co dinh=335544 Mexp=50 w19=335544 (mong doi 335544) x8 nguyen w0 nguyen
+DAT  B EXP co so=335545 Mexp=50 w19=335545 (mong doi 335545) w25=369099 (mong doi 369099)
+DAT  C EXP co dinh=335545 Mexp=50 w19=335545 (mong doi 335545) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777214 Mexp=50 w19=16777214 (mong doi 16777214) w25=18454935 (mong doi 18454935)
+DAT  C EXP co dinh=16777214 Mexp=50 w19=16777214 (mong doi 16777214) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777215 Mexp=50 w19=16777215 (mong doi 16777215) w25=18454936 (mong doi 18454936)
+DAT  C EXP co dinh=16777215 Mexp=50 w19=16777215 (mong doi 16777215) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777216 Mexp=50 w19=16777216 (mong doi 16777216) w25=18454937 (mong doi 18454937)
+DAT  C EXP co dinh=16777216 Mexp=50 w19=16777216 (mong doi 16777216) x8 nguyen w0 nguyen
+DAT  B EXP co so=0 Mexp=2 w19=0 (mong doi 0) w25=0 (mong doi 0)
+DAT  C EXP co dinh=0 Mexp=2 w19=0 (mong doi 0) x8 nguyen w0 nguyen
+DAT  B EXP co so=1 Mexp=2 w19=1 (mong doi 1) w25=1 (mong doi 1)
+DAT  C EXP co dinh=1 Mexp=2 w19=1 (mong doi 1) x8 nguyen w0 nguyen
+DAT  B EXP co so=335543 Mexp=2 w19=335543 (mong doi 335543) w25=369097 (mong doi 369097)
+DAT  C EXP co dinh=335543 Mexp=2 w19=335543 (mong doi 335543) x8 nguyen w0 nguyen
+DAT  B EXP co so=335544 Mexp=2 w19=335544 (mong doi 335544) w25=369098 (mong doi 369098)
+DAT  C EXP co dinh=335544 Mexp=2 w19=335544 (mong doi 335544) x8 nguyen w0 nguyen
+DAT  B EXP co so=335545 Mexp=2 w19=335545 (mong doi 335545) w25=369099 (mong doi 369099)
+DAT  C EXP co dinh=335545 Mexp=2 w19=335545 (mong doi 335545) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777214 Mexp=2 w19=16777214 (mong doi 16777214) w25=18454935 (mong doi 18454935)
+DAT  C EXP co dinh=16777214 Mexp=2 w19=16777214 (mong doi 16777214) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777215 Mexp=2 w19=16777215 (mong doi 16777215) w25=18454936 (mong doi 18454936)
+DAT  C EXP co dinh=16777215 Mexp=2 w19=16777215 (mong doi 16777215) x8 nguyen w0 nguyen
+DAT  B EXP co so=16777216 Mexp=2 w19=16777216 (mong doi 16777216) w25=18454937 (mong doi 18454937)
+DAT  C EXP co dinh=16777216 Mexp=2 w19=16777216 (mong doi 16777216) x8 nguyen w0 nguyen
+--- B/C: EXP=1000, Mexp = 0, 1, 2, 3, 50, 51, -1
+DAT  B EXP co so=1000 Mexp=0 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=0 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=1 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=1 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=2 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=2 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=3 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=3 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=50 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=50 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=51 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=51 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+DAT  B EXP co so=1000 Mexp=-1 w19=1000 (mong doi 1000) w25=1100 (mong doi 1100)
+DAT  C EXP co dinh=1000 Mexp=-1 w19=1000 (mong doi 1000) x8 nguyen w0 nguyen
+=== TONG HOP (orig) ===
+  A (CHAR_AddDamage)   DAT=21384 LOI=0 ngoai mien=0
+  B (AddExperience)    DAT=198 LOI=0 ngoai mien=0
+  C (AddExpFixed)      DAT=198 LOI=0 ngoai mien=0
+  khac                 DAT=2 LOI=0 ngoai mien=0
+KET QUA orig: tong 21782 ca, DAT=21782 LOI=0 NGOAI_MIEN(ghi nhan)=0
+TONG KET (orig): TAT CA DAT
+DOI CHUNG AM TINH: lib 5d3ecb3b voi mo hinh 'orig' phai bao LOI: KET QUA orig: tong 21831 ca, DAT=18064 LOI=3767 NGOAI_MIEN(ghi nhan)=0 => OK
+DOI CHUNG AM TINH: lib df12cecc voi mo hinh 'patched' phai bao LOI: KET QUA patched: tong 21831 ca, DAT=18062 LOI=3759 NGOAI_MIEN(ghi nhan)=10 => OK
+TONG KET: TAT CA DAT (lib va + lib goc)
