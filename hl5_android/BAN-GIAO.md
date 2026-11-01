@@ -3,7 +3,12 @@
 File này đủ để một phiên mới (người hoặc Claude) làm tiếp mà không cần lịch sử chat.
 Nguồn sự thật chi tiết: `PLAN.md` (checklist, quyết định thiết kế, Nhật ký, Vướng mắc) và `BAO-CAO-RE.md` (phân tích mã máy).
 
-## 1. Trạng thái (cập nhật lúc bàn giao)
+## 0. Cập nhật mới nhất
+- **v0.2-hd** (`dist/HL5-VI-v0.2-hd.apk`, diag `dist/diag/HL5-diag-v0.2-hd.apk`): người dùng xác nhận **chạy ổn trên máy**. Có: chọn "Phân giải" 1/1–1/4 trong Cài đặt (mặc định 1/2, file `hd_scale.txt`), chữ 18 px khi khung cao ≥ 480, giới hạn texture 4096.
+- Thứ tự còn lại: **T15** (phóng to tab/menu trong game; T15a thiết kế có thể đang dở → xem BAO-CAO §12 nếu có) → **T16** (khung hội thoại mới, mockup `ui_new/dialog/mockup_dialog_hd.jpg`) → T14a/T14b (nút cảm ứng mới + vẽ DASH) → T7 (menu offline, cash shop miễn phí, rút gọn nhãn menu chính bị tràn ở 18 px) → T11.
+- Tồn đọng đã biết: nhãn menu chính tràn ô ở 18 px; mô tả lớp nhân vật tràn khung (lỗi sẵn có); ÷2 tốn CPU ~2.7× v0.1.1.
+
+## 1. Trạng thái (bàn giao lần 1)
 - **Bản ổn định:** `dist/HL5-VI-v0.1.1.apk` (sha256 `119e0f2d7bc44ebf857c175fe5fe343f4039b5570bffc23590eee8bf20b84261`), **người dùng đã chạy tốt trên máy thật** (arm64, Android 10+).
   Có: chữ Việt (14282/14284 chuỗi), offline khởi động, logic = màn ÷ k tự động (k = floor(cao/240)), NEAREST, viewport số nguyên, chạm đúng.
 - Bản chẩn đoán đi kèm: `dist/diag/HL5-diag-v0.1.1.apk` (ghi log vào Downloads; xem `PHAT-HANH-diag.md`).
