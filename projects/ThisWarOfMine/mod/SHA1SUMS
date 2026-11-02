@@ -1,0 +1,9 @@
+6dcacc6d44932df23572728216f2ac4cc49b82ca  build/libtwommod.so
+46cfa17f93a1abba2d7b00b4b29b8b695cd32c6f  smali_patch/com/android/Game11Bits/GameActivity.smali
+133e3cea81a79c6d02baf24e4d5302fee8525bb7  smali_patch/com/android/Game11Bits/GameHelper.smali
+c25075c9b53e078398b1ec47927adc728f08e30b  build/smali/com/twommod/ModMenu$1.smali
+f8eda7c75c1288d3ca483f3175550c5b8c5efc47  build/smali/com/twommod/ModMenu$2.smali
+c8a78236cda90c73d698f32e0338a75bce0851c5  build/smali/com/twommod/ModMenu$3.smali
+7de8be22b795d83ae5993ae41d1b654ec301d08b  build/smali/com/twommod/ModMenu$4.smali
+aa725fbd136c4033972194bd795d7249531f5ba8  build/smali/com/twommod/ModMenu.smali
+859a7e956cd1c5c179b2f6d05893478ac4dc4736  lua/patch_lua.py

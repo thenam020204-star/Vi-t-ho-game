@@ -1,0 +1,1 @@
+{"fmt": "tsv", "nl": "\n", "tail": true, "bom": false, "hdr": true, "cols": {"src": 1, "dst": 2, "ctx": 3}, "file": "/home/user/Vi-t-ho-game/projects/ThisWarOfMine/text/t1.tsv", "lang": "en", "codes": "\\^[A-Za-z]+\\^|\\{[mf][rs]\\||\\}|\\|XPad\\w*\\|", "enc": "utf-8", "args": {"src": null, "dst": null, "ctx": null, "lim": null, "sheet": null, "enc": "utf-8"}}

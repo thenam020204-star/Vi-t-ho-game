@@ -1,0 +1,864 @@
+1	Tools
+2	Consumables
+3	Weapons
+4	Household Items
+5	Materials
+6	Equipment
+7	Other
+8	Basic Items
+9	Improvement
+10	Workshops
+11	Crude Stove
+12	It's as simple as they get: just burn some fuel made up of wood, books or components and use some water to cook a meal more nutritious than raw food.
+13	Improved Stove
+14	A more efficient stove. Allows us to prepare cooked food more efficiently, saving fuel.
+15	Herbal Garden
+16	Using fertilizer we can grow some herbs here and use them to make medication or cheap cigarettes. We can improve it to grow vegetables.
+17	Herbal Workshop
+18	A table with some simple equipment where we can prepare herbal meds, bandages and low quality roll-up cigarettes. We can upgrade it to make real meds and good quality cigarettes.
+19	Simple Heater
+20	Allows us to heat the shelter, so that we don't get ill. We can prepare fuel for it using wood, books or various components.
+21	Improved Heater
+22	It heats up the shelter much more efficiently using less fuel.
+23	Bed
+24	Offers a decent sleep without back pain, no matter if it's night or day.
+25	Radio
+26	It would be great to listen to current news and weather forecasts. We could be better prepared to deal with hardships if we knew about them well in advance. When there's nothing on the news, we can listen to music and brighten up our mood.
+27	Moonshine Still
+28	With a bit of patience, some water and sugar we can make a foul-tasting but strong booze. We could then barter it for things we need. Just don't expect too much.
+29	Alcohol Distiller
+30	Distills moonshine into pure, high-quality alcohol, component for meds and bandages, or a much better bartering item.
+31	Simple Workshop
+32	An improvised workbench for making simple equipment, furniture and other useful stuff, such as beds or chairs. We can upgrade it to make even more useful things.
+33	Improved Workshop
+34	Enables the manufacture of more sophisticated items and appliances, providing us with more options to get food or meds, and trade goods. We can upgrade it further to make electrical improvements.
+35	Rainwater Collector
+36	A simple contraption to collect and filter rainwater needed for cooking and making alcohol. It might be wise to build a couple of them.
+37	Pile of Snow
+38	Armchair
+39	An armchair is a comfortable piece of furniture. If you sit in it with a good book, you can almost forget about the war.
+40	Chair
+41	It's better to sit on a chair than on the floor. We should build it to make this place more like home. It will make us feel better in these tough times.
+42	Trap for small animals
+43	The only small animals left seem to be rats... Still, meat is a rare commodity in wartime. We simply have to put in some bait and wait.
+44	Advanced Workshop
+45	This advanced workshop allows us to make useful electrical appliances, such as heat lamps for gardens and mixers for herbal workshops or for metal workshops.
+46	Guitar
+47	Having something to occupy time is important. A guitar can brighten up our mood, especially if the person playing it knows what they are doing.
+48	We can grow vegetables here using water and fertilizer, but it takes time.
+49	Vegetable Garden
+50	Reinforced Door
+51	Once we board up holes and windows in the shelter, we can think of reinforcing the door and installing a simple alarm system.
+52	Board up
+53	We can board up holes and windows in the building for more protection against looters.
+54	Metal Workshop
+55	Allows us to make tools, such as shovels for clearing rubble, crowbars for breaking doors and knives for self-defense. Later we could use it to build more advanced tools or even repair firearms.
+56	Improved Metal Workshop
+57	Apart from making more tools such as an axe or saw blade, we can also fix simple broken firearms and helmets here. We can upgrade it even further to make ammo and fix bulletproof vests.
+58	Advanced Metal Workshop
+59	Apart from making tools we can fix all broken firearms here, as well as vests and helmets, and refill empty shell casings to reuse them.
+60	Improved Herbal workshop
+61	It enables the manufacture of real meds and quality roll-up cigarettes.
+62	Swing
+63	It's just a simple swing, but for a kid it's a never-ending source of fun.
+64	Kids' desk
+65	It's important for kids to have their own place in the shelter. They can draw here, read books and play with toys. It helps them forget about the war.
+66	Toy Box
+67	It contains everything! A teddy bear, dolls, pocket planes and cars. Even toy soldiers...
+68	Snowman
+69	Winter is harsh for adults, but for kids it's a time to play.
+70	Ball
+71	Which child doesn't like to play with a ball?
+72	Jump Rope
+73	It's amazing how a simple piece of rope can keep children entertained for so many hours.
+74	Makeshift bridge
+75	A makeshift bridge leading to the other wing of the house.
+76	Wood
+77	An essential component for all kinds of stuff, plus we can chop it to fuel stoves and heaters.
+78	Components
+79	Various components needed to make just about anything. Nails, duct tape, plastic containers, scrap, things like that.
+80	Gunpowder
+81	Gunpowder is used to manufacture ammunition and explosives.
+82	Weapon Parts
+83	Various weapon parts. Blades, barrels, springs, locks and so on.
+84	Sugar
+85	There'd be no moonshine without sugar. Essential for the fermentation process.
+86	Parts
+87	Various mechanical parts. Used for building and fixing complex devices.
+88	Herbs
+89	Tobacco
+90	We can make expensive cigarettes from this tobacco.
+91	Various herbs that can be used to make herbal medications and roll-up cigarettes.
+92	Med ingredients
+93	Old pills and animal meds. With a little bit of knowledge they can be used to make normal meds.
+94	Empty shotgun shells. We could use them to make shotgun ammo.
+95	Shotgun Shells
+96	Shell Casings
+97	Empty shell casings. We could make firearm ammo out of them.
+98	Rifle Shells
+99	Empty rifle shells. We could make rifle ammo out of them.
+100	Fertilizer
+101	Organic waste that we can use as fertilizer in our garden to grow herbs or vegetables, or as bait in a trap for small animals.
+102	Electric Parts
+103	Some electric parts. They will come in handy if we want to introduce advanced improvements to our shelter.
+104	Speaker
+105	An essential part of any radio receiver.
+106	Broken Pistol
+107	An old weapon with a few missing parts.
+108	Broken Assault Rifle
+109	It used to be a deadly weapon, but it doesn't work anymore.
+110	Broken Shotgun
+111	A half-dismantled shotgun.
+112	Damaged helmet
+113	It's damaged so badly it can't be used, but after some repairs it could save someone's head.
+114	Damaged Vest
+115	Damaged military vest. Some repairs are needed before it can be used again.
+116	Broken Guitar
+117	It's broken, but not beyond repair. It would be cool to pass the time with nice music.
+118	Broken Toy
+119	This toy has seen better days. It's broken now, but it certainly brought a lot of joy to its previous owner.
+120	Conduct Pass
+121	A safe conduct pass issued by the local army headquarters to Robert Zhigajev. It’s useless to us, but could be quite valuable for someone with access to a skilled forger.
+122	Karel’s note
+123	It’s a note from Karel confirming that you paid for the passage. It contains directions that will lead you to a safe house once you disembark.
+124	Makeshift bridge main part
+125	This part is required to build the makeshift bridge.
+126	Crayons
+127	A colorful set of crayons. It’s almost complete. Amelia could draw whatever she wanted with them.
+128	Raw Food
+129	It's edible but would be more nutritious when cooked.
+130	Cooked Food
+131	A simple cooked meal, more nutritious and tastier than raw food. It gets even better and more filling with vegetables.
+132	Ammunition
+133	Ammunition for firearms.
+134	Pure Alcohol
+135	A small flask of pure alcohol. You can drink it, you can trade it or you can use it to produce meds or bandages.
+136	Medications
+137	Their taste is terrible, but they can save your life in sickness.
+138	Bandages
+139	Used to dress wounds.
+140	Canned Food
+141	A canned meal, more nutritious than raw food. With time, you'll get used to its taste.
+142	Moonshine
+143	Things get easier when you drink it. Or so it seems. It's a good trading item.
+144	Jarred Food
+145	It doesn't spoil so we can store it longer, and it's good for trade.
+146	Shotgun Ammo
+147	Ammunition for shotguns.
+148	Rifle Ammo
+149	Ammunition for rifles.
+150	Herbal Meds
+151	Simple medications based on herbs. Sometimes they help, sometimes they don't. Still, they're better than nothing.
+152	Dismantling Tools
+153	Tools for dismantling electrical and mechanical devices. Screwdrivers, files, cutters and the like. They're homemade, so not very durable.
+154	Vegetables
+155	We can eat them as is, but they make a much better meal when cooked with some raw food.
+156	Saw Blade
+157	We can use it to cut through metal bars and chains to get to otherwise inaccessible places.
+158	Homegrown Tobacco
+159	Homegrown tobacco for making roll-up cigarettes. Not nearly as good as the real thing, but we can grow it ourselves.
+160	Roll-up Cigarette
+161	Roll-up cigarette made from herbs. It reeks acrid, bitter smoke.
+162	Cigarette
+163	Real tobacco cigarette. Often used as currency in times of war.
+164	Quality Roll-up
+165	Roll-up made from equal parts of tobacco and herbs. Quite good under the circumstances.
+166	Coffee
+167	Some of us drink coffee to find strength in order to survive another day. Its limited availability in wartime makes it a valuable commodity.
+168	Clean Water
+169	Some relatively clean water. You'll need it to prepare a good meal or make alcohol.
+170	Filter
+171	Homemade single-use filter to purify rainwater or distill alcohol.
+172	Snow
+173	We can melt it into water.
+174	Fuel
+175	Everything that we can burn in the heater to warm up our place, or in the stove to cook food. We can make it from wood, books or components.
+176	Book
+177	A good book is uplifting. The more we have, the better. If times are hard, we can make them into fuel for our heater or stove.
+178	Crowbar
+179	Homemade tool you can use to pry open a few doors before it breaks. It does the job slowly and loudly.
+180	Lock Pick
+181	It's single use but it opens locks quickly and quietly.
+182	Shovel
+183	A small shovel for picking through rubble.
+184	Military Vest
+185	Vastly increases the chances of surviving a bullet or blade hit.
+186	Helmet
+187	It gives some protection against bullets and knives.
+188	Hatchet
+189	We can use it to chop furniture... Or people.
+190	Pistol
+191	Point at a person you want to hurt.
+192	Assault Rifle
+193	Military assault rifle, with a good rate of fire.
+194	Scoped Rifle
+195	Military assault rifle fitted with a scope.
+196	Shotgun
+197	A powerful weapon for short distances.
+198	Knife
+199	It used to be a kitchen utensil, but now it's a dangerous melee weapon.
+200	Fists
+201	Jewelry
+202	A piece of jewelry, valuable bartering item.
+203	Plush Dog
+204	A fluffy dog toy for kids. Looks almost like new. Amelia has always loved dogs. She’ll be delighted to have it.
+205	Filthy Plush Dog
+206	It's dirty, but it definitely is the Plush Doggie I gave to Amelia.
+207	Amelia's Hoodie
+208	Well-worn and dirty, but it undoubtedly is Amelia's hoodie.
+209	Heat Lamp
+210	We can use this lamp to grow plants indoors.
+211	Mixer
+212	We can use it to mix gunpowder or medicine ingredients.
+213	Thermo regulator
+214	We can use it to maintain optimum temperature of the heater and save wood. We'll also need it to make a distiller if we want to purify alcohol.
+215	We'll need it to make a distiller if we want to purify alcohol.
+216	Abstinent
+217	Smoker
+218	Coffee Drinker
+219	Cigarettes consumed per day:
+220	Cups of coffee consumed per day:
+221	We lack coffee!
+222	We lack cigarettes!
+223	We lack coffee and cigarettes!
+224	Brother's Pharmacy keys
+225	My brother has always kept his keys on him, it's strange that they were lying on the ground. I can use them to open locked doors in the pharmacy.
+226	Depressed
+227	STILL HUNGRY
+228	HUNGRY
+229	STILL VERY HUNGRY
+230	VERY HUNGRY
+231	STILL STARVING
+232	STARVING
+233	STILL EXTREMELY STARVED
+234	EXTREMELY STARVED
+235	WELL FED
+236	TIRED
+237	VERY TIRED
+238	EXHAUSTED
+239	EXTREMELY EXHAUSTED
+240	(RECOVERING)
+241	SLIGHTLY WOUNDED
+242	WOUNDED
+243	SEVERELY WOUNDED
+244	LETHALLY WOUNDED
+245	(BANDAGED)
+246	Wounded
+247	SLIGHTLY SICK
+248	SICK
+249	SEVERELY ILL
+250	TERMINALLY ILL
+251	(ON MEDS)
+252	Sick
+253	SLEPT POORLY
+254	Content
+255	Sad
+256	Broken
+257	(I need cigarettes)
+258	(I need coffee)
+259	(I need coffee and cigarette)
+260	(Comforted)
+261	(Playing)
+262	(Talking)
+263	(Looking after)
+264	(Looked after)
+265	DRUNK
+266	Hangover
+267	Drowsy
+268	Unresponsive
+269	Determined
+270	The War is Over.
+271	You Didn't Make It.
+272	You've survived.
+273	You've survived only for ^DayOfWar^ days.
+274	The boat reaches a safe shore.
+275	You have escaped.
+276	You've learned the truth about Amelia's fate.
+277	Victims of war often suffer from mental disorders.
+278	I'm looking for my missing daughter. A little blonde girl.
+279	Oh yeah, I've seen her...
+280	Oh my God! Really? Please, tell me everything you know!
+281	You help me first, then I help you. I'm very hungry...
+282	If you bring me some food, I'll tell you what I know.
+283	How about you tell me now and I don't kick the shit out of you?
+284	Oh, I won't tell you anything if you hurt me. And if you kill me, you'll never find your daughter.
+285	Want to save her? Bring me the food. I'll wait here.
+286	Here's your food, you greedy bastard. Now spill it.
+287	No need to be rude. There isn't much to tell. I've seen a blonde girl, maybe ten years old.
+288	Some guy, about your size, was carrying her towards the hospital.
+289	The hospital... You'd better be right. For your own sake.
+290	You can waste your breath threatening me or go look for your daughter.
+291	Alright, I'll bring you food. Wait here.
+292	I'm not going anywhere.
+293	Oh, it's you again...
+294	Did you bring me the food?
+295	Bring me food.
+296	I want food in exchange for information. I prefer canned food, but raw food will do in a pinch. See how generous I am?
+297	^Scavenger^ IS BACK
+298	THE NIGHT
+299	DAY ^DayOfWar^
+300	^RecentlyDiedDweller^ DIED
+301	ALL THE SURVIVORS ARE DEAD.
+302	THE WAR IS OVER.
+303	SURVIVE THE LAST MONTH OF WAR.
+304	THE DAWN HAS CAUGHT ^Scavenger^. IT WILL BE HARDER TO RETURN.
+305	SURVIVE THE WAR.
+306	THESE DAYS WAR CAN BREAK OUT ANYTIME
+307	ANYWHERE
+308	IF YOUR CITY COMES UNDER SIEGE
+309	YOU'RE NOT PREPARED FOR IT
+310	SURVIVE
+311	Make|XPadA|
+312	Exit|XPadB|
+313	One ^ItemName^ will be made
+314	-|XPadLeftBumper|
+315	+|XPadRightBumper|
+316	What should I make?
+317	Rearrange
+318	Components we need
+319	How many
+320	How long
+321	Required Skill
+322	I don't know
+323	Random
+324	Teach|XPadY|
+325	h
+326	Done
+327	OK|XPadA|
+328	Cancel|XPadB|
+329	Continue|XPadA|
+330	Yes|XPadA|
+331	Apply|XPadA|
+332	No|XPadB|
+333	Epilogue
+334	Later|XPadA|
+335	Resume
+336	Quit Game
+337	Leave
+338	Survive
+339	Continue
+340	Another try
+341	Settings
+342	Control Scheme
+343	Graffiti
+344	Are you sure you want to leave? All unsaved progress will be lost.
+345	Press to start This War Of Mine Classic Modes
+346	Press to start This War Of Mine Stories Mode
+347	More Episodes
+348	Season Pass
+349	New Story
+350	Choose Episode
+351	Stories Mode
+352	Classic Modes
+353	Disable all mods for best experience
+354	Get Episode
+355	Buy Episode
+356	Buy Season Pass
+357	|XPadB|End Day
+358	|XPadB|Run To Exit
+359	Day Log
+360	VISITED ^NoOfDays^ DAYS AGO
+361	PREPARE|XPadX|
+362	SCAVENGE|XPadX|
+363	STAY|XPadB|
+364	SCAVENGE
+365	GUARD
+366	SLEEP
+367	SLEEP IN BED
+368	BACK|XPadB|
+369	PLEASE SELECT A SCAVENGER
+370	PLEASE UNSELECT A SCAVENGER
+371	Plan the night
+372	Our Shelter
+373	Can't get there due to snow
+374	Can't get there due to fighting
+375	Visited
+376	New
+377	ArmyFront
+378	Scavenger
+379	Publish on Workshop
+380	SLEEP WITH ADULT
+381	SLEEP WITH CHILD
+382	CHOOSE LOCATION
+383	I can’t leave Amelia on her own. What if someone comes into our shelter? I need to protect her.
+384	I'd better take Amelia's plush dog. I'm sure she misses it.
+385	I'm certain to meet armed men. I'd better take some weapon with me.
+386	LOOK FOR AMELIA
+387	LOOK FOR AMELIA|XPadX|
+388	Equipped Firearm
+389	Equipped Melee Weapon
+390	Current Headgear
+391	Current Body Armor
+392	Current Backpack
+393	EQUIP|XPadY|
+394	DROP|XPadA|
+395	EXIT|XPadB|
+396	Use|XPadX|
+397	TAKE|XPadA|
+398	GRAB ALL|XPadX|
+399	Space
+400	Backpack
+401	Searched
+402	Go
+403	We'll use the equipment during attack.
+404	Some Thoughts
+405	NOT INTERESTED|XPadB|
+406	DEAL|XPadX|
+407	I can't carry that much!
+408	Let's trade
+409	Our things
+410	What do you want?
+411	CONTINUE|XPadA|
+412	English
+413	Deutsch
+414	Polski
+415	French
+416	Italiano
+417	Spanish
+418	Japanese
+419	Chinese
+420	Russian
+421	Portuguese
+422	Default
+423	Brazilian
+424	Korean
+425	Turkish
+426	Ultra Low
+427	Low
+428	Medium
+429	High
+430	Very High
+431	DEBUG MODE: STANDARD
+432	DEBUG MODE: SUMMER ALL
+433	DEBUG MODE: WINTER ALL
+434	On
+435	Off
+436	Audio Settings
+437	Video Settings
+438	Misc Settings
+439	Music Volume
+440	SFX Volume
+441	Voice Volume
+442	Resolution
+443	Full Screen
+444	GFX Quality
+445	Language
+446	Subtitles
+447	PENCIL EFFECT
+448	SOFT
+449	SKETCHY
+450	Temp. Scale
+451	Celsius
+452	Fahrenheit
+453	Control Mode
+454	Mouse
+455	Controller
+456	PhoneUI
+457	RESTART TO APPLY CHANGES
+458	Change Profile |XPadY|
+459	Give me a sec|XPadX|
+460	Can't help you...|XPadA|
+461	Maybe later|XPadY|
+462	I can give you:
+463	We need:
+464	Drag to place on empty destination
+465	Back|XPadB|
+466	Place|XPadA|
+467	Central Europe
+468	"War is delightful only to those who have had no experience of it"
+469	"War is a defeat for humanity"
+470	Pope John Paul II
+471	"In modern war... you will die like a dog for no good reason"
+472	Ernest Hemingway
+473	“Notes on the Next War: A Serious Topical Letter,” Esquire, Sept. 1935
+474	This game automatically saves your game progress. Please do not turn off your Xbox One console when you see this icon or your current progress will be lost.
+475	This game automatically saves your game progress. Please do not turn off your PlayStation®4 system when you see this icon or your current progress will be lost.
+476	You will lose your current progress, are you sure?
+477	You have not signed in. You need to sign in to save your progress and be awarded Achievements. Do you want to sign in now?
+478	Sign-in change has occurred. The game will return to the title screen.
+479	{mr|Controller has been disconnected, please reconnect the controller.}{fr|The wireless controller has been disconnected, please reconnect the wireless controller.}
+480	Are you sure you want to exit? Any unsaved game progress will be lost.
+481	No Internet Connection
+482	It's been two years since This War of Mine global release and we're still expanding the experience. This |#color=FF3800|new free DLC|#defaultcolor|, created especially for the Anniversary Edition, adds |#color=FF3800|new characters|#defaultcolor|, |#color=FF3800|new locations|#defaultcolor| to explore, and most importantly - a |#color=FF3800|whole new ending|#defaultcolor|, leading to a different outcome to the game. The dilemma though remains the same – how far will you go, to protect the ones you care about? 
+483	Anniversary Edition
+484	Choose Your Story
+485	To be unlocked
+486	Locked
+487	Survived
+488	Survived only ^DayOfWar^ days
+489	^DayOfWar^ days
+490	Random|XPadX|
+491	Write my own story
+492	My own story
+493	Define my own story
+494	Choose New Story
+495	Father's Promise
+496	Season Pass|XPadX|
+497	You need to verify that you are over 18, please enter your birth date to continue
+498	Warning! Your account shall become locked unless you verify that you are over 18
+499	Your account has been locked due to age requirements
+500	Your account shall be unlocked in:
+501	Apply|XPadY|
+502	You must choose at least one character
+503	You can choose only ^count^ characters
+504	You must select at least ^count^ locations
+505	You must enter a name
+506	Are you sure you want to delete?
+507	Are you sure you want to delete scenario?
+508	Are you sure you want to delete story?
+509	Are you sure you want to delete character?
+510	Are you sure you want to delete civilian?
+511	Are you sure you want to delete city map?
+512	Are you sure you want to overwrite?
+513	Are you sure you want to overwrite story?
+514	Are you sure you want to overwrite city map?
+515	Are you sure you want to overwrite civilian?
+516	Are you sure you want to edit?
+517	Are you sure you want to edit civilian?
+518	You can't select more than one child
+519	You have to select at least one adult
+520	Can't save content. You've reached max custom content space
+521	Are you sure you want to leave your story?
+522	Days until ceasefire
+523	Difficulty
+524	Intensity of the conflict
+525	Mild
+526	Moderate
+527	Severe
+528	Minor
+529	Major
+530	Center of the storm
+531	Short
+532	Long
+533	Winter comes
+534	First day of winter
+535	Winter harshness
+536	Winter Length
+537	Never
+538	Early
+539	Halfway through
+540	Late
+541	My Story
+542	Scenario Editor
+543	Choose people to start with
+544	Choose starting people
+545	Choose people to your home
+546	Starting people in your house
+547	Select Character
+548	Winter
+549	Winter Settings
+550	City Map
+551	Locations Settings
+552	View
+553	Select|XPadA|
+554	The city is cut off, but the situation could be worse. The shortages of supplies are a problem, but not a drastic one yet. Crime is not rampant yet, as people still prefer to scavenge for supplies rather than rob others. People are hopeful, and neighbours often stick together and try to help one another.
+555	The situation in the city is severe. There are shortages of everything, and black market prices fluctuate. Bands of looters attack homes at night, as desperate people turn to crime to survive. People have some hope, but neighbours aren’t quick to help one another.
+556	The ongoing siege means the situation in the city is dire. Even the most basic supplies are difficult to get. Black market prices skyrocket. Desperate people scour the streets and ruins clean of everything of any use. Bandits roam the city and nobody is safe in their home. People have little hope, and are unwilling to help one another.
+557	Well equipped shelter.
+558	Decently equipped shelter.
+559	Poorly equipped shelter.
+560	Tenement
+561	Suburban house
+562	Define new civilian
+563	Create Character
+564	People chosen:
+565	Civilians chosen:
+566	Locations chosen:
+567	My City Map
+568	Select Locations
+569	Choose Your Shelter
+570	Save My Story|XPadY|
+571	Save Scenario
+572	Load My Story|XPadX|
+573	Load Scenario
+574	Choose Saved Story
+575	Select Saved Scenario
+576	Story List
+577	Scenario List
+578	Delete|XPadY|
+579	Load|XPadA|
+580	Save|XPadA|
+581	Load City Map|XPadX|
+582	Load Locations
+583	Save City Map|XPadY|
+584	Save Locations
+585	Start My Story
+586	Upload to Workshop |XPadY|
+587	Legal agreement required
+588	To make this item visible in Workshop, you need to agree to terms of service (http://steamcommunity.com/sharedfiles/workshoplegalagreement). Please visit your item's page.
+589	Toggle Location |XPadA|
+590	Edit|XPadX|
+591	Enter civilian name.
+592	Enter City Map name.
+593	Enter Story name.
+594	MIN
+595	Police Officer
+596	Familiar with guns
+597	Firearms proficiency
+598	Proficient with firearms
+599	Good aim
+600	Computer specialist
+601	Knack for tinkering
+602	Uses fewer electric parts to make electric appliances
+603	Saves electric parts
+604	Nurse
+605	Medical training
+606	More efficient wound treatment
+607	More efficient illness treatment
+608	More resistant to disease
+609	Forester
+610	Uses wood more efficiently when trying to warm the shelter
+611	Can dig through rubble faster with or without a shovel
+612	Makes heater fuel more efficiently
+613	Digs through rubble faster
+614	Uses less wood for heating
+615	Chemist
+616	Pharmacist
+617	Uses fewer ingredients when making alcohol and medications
+618	Knows much about meds
+619	Good at making meds
+620	Insurance agent
+621	Persuasive
+622	Bartering skills
+623	Photographer
+624	No special skill
+625	Keen eye for detail
+626	Psychologist
+627	More resistant to trauma, better at cheering up others
+628	Strong willed
+629	Loves nature
+630	Skilled woodchopper
+631	Good with a hatchet
+632	Woodsman
+633	Lumberjack
+634	Knack for electronics
+635	Gender
+636	Male
+637	Man
+638	Female
+639	Woman
+640	Occupation
+641	Portrait
+642	Physique
+643	Apperance
+644	Model
+645	Bio
+646	Story
+647	Name
+648	New Civilian
+649	Character Creation
+650	Upload Your Photo
+651	To upload your photo, place the file in PORTRAITS in main game folder.
+652	To upload your photo, place the file in PORTRAITS in Documents/This War Of Mine.
+653	To upload your photo, place the file in PORTRAITS in Library/.../This War Of Mine.
+654	Save Character
+655	Visibility
+656	Public
+657	Friends Only
+658	Private
+659	Upload to Workshop
+660	To make this item visible in Workshop, you need to agree to terms of service.
+661	Workshop Story
+662	Browse Workshop |XPadX|
+663	By:
+664	Start Story |XPadY|
+665	Item Name
+666	Item Description
+667	Publish New Item |XPadY|
+668	Update Existing |XPadX|
+669	Browse Workshop to discover new items
+670	Workshop Civillian
+671	Publish Workshop Item
+672	Sending item content...
+673	Item Published Successfully
+674	Publishing item failed!
+675	License Agreement |XPadX|
+676	You must provide an item name
+677	You must provide an item description
+678	Subscribed items
+679	Modding Centre
+680	No modding items
+681	PRIORITY UP |XPadUp|
+682	ENABLE |XPadA|
+683	DISABLE |XPadA|
+684	PRIORITY DOWN |XPadDown|
+685	You must restart game to apply changes
+686	Status:
+687	Conflict with:
+688	Not loaded
+689	Loaded
+690	Hooray, no conflicts!
+691	Babel
+692	BABEL project is a community based initiative, that will allow to bring This War of Mine experience to people all around the world. Thanks to the effort of all participants, soon the game will be available in all major languages, allowing everyone to play in his native language. You can be a part of the project – register and start working on the translation right away!
+693	STATUS:
+694	Game Version:
+695	No languages avalible
+696	Download |XPadY|
+697	Update
+698	New version is available
+699	Current
+700	Refresh |XPadX|
+701	Not downloaded
+702	Downloading item failed!
+703	Item Downloaded Successfully
+704	Downloading item...
+705	List refreshed successfully
+706	Buy|XPadA|
+707	DLC
+708	Restore|XPadX|
+709	Loading
+710	The Little Ones explores the hardships of wartime survival as seen from an entirely new perspective, that of a child.
+711	The Little Ones
+712	Purchase the full version
+713	Thank you for support official version.
+714	If you want to experience more contents, only 30 RMB for the full version, more scenes and roles for you to experience!
+715	Click YES to start a new game. Click NO to continue from the last day before you died.
+716	Do you want to continue from the day before?
+717	This War of Mine
+718	DAY TIME
+719	NIGHT TIME
+720	Paused
+721	Day
+722	Day ^Day^
+723	Night
+724	|XPadY|Our things
+725	|XPadY|Backpack
+726	Are you sure you want to end the day?
+727	Drag for more
+728	Someone's at the door.
+729	I can't scavenge during combat
+730	Scavenge
+731	Hide Weapon
+732	This item has broken.
+733	Private Property
+734	MY STORY
+735	Press |XPadA| to continue
+736	CHECKING SAVED DATA...
+737	This is the end of the preview demo of This War of Mine on tablets. Look out for the full experience to be released soon in July.
+738	Synchronizing with cloud
+739	Synchronizing failed
+740	Use right stick to tune radio.
+741	Not signed in
+742	|XPadUp|Scavenge
+743	Help
+744	Use |LeftStick| to see more
+745	Use |RightStick| to see more
+746	Use |XPadLeftBack| / |XPadRightBack| to see more
+747	Anniversary Edition Mode
+748	With this option enabled, you can be sure you'll be playing the content of |#color=FF3800|Anniversary Edition|#defaultcolor|, including new locations, new characters and new ending. Otherwise it will be included at random.
+749	am
+750	pm
+751	Strange sounds coming from radio.
+752	New entry in Adam's bio.
+753	Trained In Combat
+754	Skilled Scavenger
+755	Sneaks Quietly
+756	Bargaining Skills
+757	Strong But Slow
+758	Good Cook
+759	Handyman
+760	Talented Lawyer
+761	Good Mathematician
+762	Fast Runner
+763	Bolsters Spirits
+764	Loves Children
+765	Green Thumb
+766	Determined Father
+767	Tobacconist
+768	Irina's niece
+769	Neighborhood kid
+770	Henrik's grandson
+771	War orphan
+772	Christo's daughter
+773	Lost boy
+774	Adam's daughter
+775	Couple
+776	Soldiers
+777	Trader
+778	Girls
+779	Bandits
+780	Snipers
+781	Rebels
+782	Homeless
+783	Scavengers
+784	Father and Son
+785	Familly
+786	Civilians
+787	Faithful
+788	Priest
+789	Sniper
+790	Traders
+791	Market
+792	Lots of ^ItemName^
+793	Some ^ItemName^
+794	Huge amounts of ^ItemName^
+795	Food
+796	Meds
+797	Caution advised
+798	Danger
+799	Possible trade
+800	Ingredients
+801	Bitter cold will make it much more difficult for us to survive.
+802	It is getting very cold
+803	Thank goodness, the worst colds are over.
+804	Cold days have passed
+805	Bands of looters have become audacious. We had better watch out.
+806	Outbreak of crime
+807	Civic self-defense patrols have put an end to the reign of armed bands of looters.
+808	Curb on crime
+809	You have ^Count^
+810	I'm worried about you ^CharacterName^, you must eat.
+811	I brought you something to eat, ^CharacterName^.
+812	You look hungry ^CharacterName^, here I brought you some food.
+813	Here ^CharacterName^, you have to eat...
+814	You really should eat something.
+815	Come on, don't give up! You gotta eat!
+816	Here, these will help you.
+817	You're sick, you need medicine. Take this.
+818	You will get better ^CharacterName^, just take some of these.
+819	^CharacterName^ you're bleeding, let me dress that wound.
+820	You need bandages, let me help you.
+821	Come on ^CharacterName^, I'll dress your wound.
+822	Come on, let's have a drink and talk. Everything will be fine.
+823	Drink with me, friend. I'll cheer you up!
+824	Come on, don't be so blue. Let's have a drink together!
+825	Get a grip. We'll make it, you'll see. This war can't last forever!
+826	Don't give up hope, ^CharacterName^! This war will be over soon, trust me.
+827	I know it's grim now, but It won't always be like that. Think about the future!
+828	In-game Menu
+829	Switch Character
+830	Target cycle
+831	Character movement
+832	(Press) Zoom out
+833	Camera
+834	(Press) Zoom in
+835	Toggle Scavenge/\nCombat Mode\n
+836	Toggle Action
+837	Action / Accept
+838	Back / Cancel
+839	Inventory
+840	(Press and hold) Radial menu
+841	Various
+842	War is not a playground. Sometimes the situation will force you to get into a fight. You can meet people who will be hostile towards you. Remember that you are not defenseless.
+843	USA
+844	Italy
+845	France
+846	Poland
+847	Canada
+848	Canadian-American artist Gabriel “Specter” Reese as a kid sketched and painted the streets of Montreal. Nowadays his work has been featured in countless gallery shows and he’s been commissioned to do several large public works in Brooklyn and Manhattan.
+849	Since the early nineties, SeaCreative whose real name is Fabrizio Sarti has been painting walls and train cars in and around Milan, Italy. Today SeaCreative paints and shows his own characters, not just in the more conventional setting of an exhibition, but still throughout the urban setting of Milan.
+850	Emir personally experienced war as a boy. He began to repulse the hatred for war by crushing charcoal on large formats. His compositions are reflections on human condition and our society during the war.
+851	M-City is a project of Mariusz Waras, born 1978 in Gdynia, Poland. His projects including several hundred murals, may be seen in the streets of Warsaw, Gdańsk, Berlin, Paris, Jakarta, Sao Paulo, New York, Bolzano, London and Prague, as well as in art galleries.
+852	Man behind M-City project Mariusz Waras is is also a curator of the 238x504 billboard gallery in Gdynia as well as an archivist and collector of Polish street art.
+853	Fauxreel is a self tought Canadian artist. He creates stunning photo based street art to provoke reflection upon many issues like identity, social relationships and the spaces that we inhabit.
+854	Mariusz Waras is also a freelance graphic artist, frequently awarded in various contests. In 2008 Tristan Manco, an international art expert included him in the official list of the worlds's most important artists of the stencil-graffiti scene.
+855	In the street, Specter is known for precise installations that revitalize forgotten places. The work is as much about the piece as it is about where it is placed. He specifically chooses the environments for his work and it often evolves to reflect the chosen location.
+856	Large formats that Emir utilizes in his work allowed for better impact making very contrasted images quite impressive in an expressionist way.
+857	Mateusz Walus is a young and very talented artist from Poland. He is insanely passionate about art and games. Mateusz created some of the graphics used in This War of Mine.
+858	View|XPadA|
+859	Thank you for supporting the charity War Child.
+860	Found on
+861	--TEXT--NOT--FOUND--
+862	"<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 bit studios S.A. 2014\n<BR>\n<BR>\n<BR>\n<HAND>\nSTARTED AS AN INSPIRING IDEA OF GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HEADER>\nDESIGN DIRECTOR & PROJECT LEAD\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nART DIRECTOR & PROJECT LEAD\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n\n\n\n<HEADER>\nLEAD DESIGNER\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nSENIOR DESIGNERS\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nLEVEL DESIGN\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nAI DESIGNER\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nLead Writer\n<NAME>\nMaciej Skóra\n<BR>\n\n<HEADER>\nSTORY & WRITING\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nADDITIONAL STORY & SCRIPT\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLead Artist\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nSenior 3D Artists\n<NAME>\nBartek Rydel\nJakub Piotrowski\n<BR>\n\n<HEADER>\nCharacter Artists\n<NAME>\nOlaf Pożoga\nDominik Zieliński\n<BR>\n\n<HEADER>\nAnimations\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPrzemysław Marszał\nTomasz Piętek\n<BR>\n\n<HEADER>\nPhotography\n<NAME>\nTomasz Pietęk\nPrzemysław Marszał\n<BR>\n\n<HEADER>\nConcept Art & Backgrounds\n<NAME>\nJakub Kowalczyk\n<BR>\n\n<HEADER>\nAdditional Concept Art\n<NAME>\nMateusz Waluś\nJan Buczny\n<BR>\n\n<HEADER>\nAdditional 3D Artists\n<NAME>\nMateusz Waluś\nMarcin Wawrzonowski\nKonrad Wiśniewski\nJan Buczny\n<BR>\n\n<HEADER>\nAdditional Animations\n<NAME>\nArtur Bielenica\nPiotr Chomiak\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD GAME PROGRAMMER\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nSENIOR GAME PROGRAMMER\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nGAME PROGRAMMER\n<NAME>\nPIOTR KOWALSKI\n<BR>\n\n<HEADER>\nENGINE PROGRAMMING\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nTOOLS & ADDITIONAL PROGRAMMING\n<NAME>\nRAFAŁ PODKOWIŃSKI\nROBERT PRZYGODA\nPIOTR KOWALSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nMUSIC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nSOUND ENGINEER\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nADDITIONAL SOUNDS\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nADDITIONAL MUSIC\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nPRODUCTION\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA LEAD\n<NAME>\nPAWEŁ ""The 47"" CZAPLARSKI\n<BR>\n\n\n<HEADER>\nSENIOR QA SPECIALISTS\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nQA TESTERS\n<NAME>\nPAWEŁ BONIFACIUK\nKONSTANTY MICHNIEWICZ\nBARTEK NAJDYHOR\n<BR>\n\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMODELS\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nzlib – general purpose compression library\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nThe Vorbis General Audio Compression Codec\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – general scripting language\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nAji Hand Font by Ajith Rajan\n<BR>\n\nOkuda font by Mike Okuda\n<BR>\n\nTertre Extra Bold font by Jan Schmoeger\n<BR>\n\nDesignosaur Font by Archy Studio\n<BR>\n\nCovered By Your Grace Font by KG Fonts\n<BR>\n\nGunny Rewritten Font by Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>"\n\n\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMODELS\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nzlib – general purpose compression library\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nThe Vorbis General Audio Compression Codec\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – general scripting language\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nAji Hand Font by Ajith Rajan\n<BR>\n\nOkuda font by Mike Okuda\n<BR>\n\nTertre Extra Bold font by Jan Schmoeger\n<BR>\n\nDesignosaur Font by Archy Studio\n<BR>\n\nCovered By Your Grace Font by KG Fonts\n<BR>\n\nGunny Rewritten Font by Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>
+863	Credits
+864	<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 BIT STUDIOS S.A. 2015\n<BR>\n<BR>\n<BR>\n<HAND>\nSTARTED AS AN INSPIRING IDEA OF GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nDESIGN DIRECTOR & PROJECT LEAD\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nART DIRECTOR & PROJECT LEAD\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n<HAND>\nTHIS WAR OF MINE STORIES: FATHER'S PROMISE\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nGAME DESIGN\n<NAME>\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nSTORY\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nWRITING\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nPROGRAMMING\n<NAME>\nJANUSZ KUNOWSKI\nDAMIAN WICIŃSKI\n<BR>\n\n<HEADER>\nART\n<NAME>\nJAKUB PIOTROWSKI\nTOMASZ KISILEWICZ\n<BR>\n\n<HEADER>\nPRODUCTION\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA\n<NAME>\nBARTŁOMIEJ GWARDIAK\n<BR>\n\n<HEADER>\nPHOTOGRAPHY\n<NAME>\nPIOTR JAGUŚ\n<BR>\n\n<HEADER>\nBASED ON CHARACTERS BY ŁUKASZ ORBITOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HAND>\nTHIS WAR OF MINE CREDITS\n<BR>\n<BR>\n\n<HEADER>\nLEAD DESIGNER\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nCONSOLE VERSION LEAD DESIGNER\n<NAME>\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nSENIOR DESIGNER\n<NAME>\nKACPER KWIATKOWSKI\n<BR>\n\n<HEADER>\nLEVEL DESIGN\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nAI DESIGNER\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nJUNIOR DESIGNERS\n<NAME>\nPAWEŁ SZYSZKA\nUGO TRELIS\n<BR>\n\n<HEADER>\nLEAD WRITER\n<NAME>\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nSTORY & WRITING\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nADDITIONAL STORY & SCRIPT\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD ARTIST\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nSENIOR 3D ARTISTS\n<NAME>\nBARTEK RYDEL\nJAKUB PIOTROWSKI\n<BR>\n\n<HEADER>\nCHARACTER ARTISTS\n<NAME>\nOLAF POŻOGA\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nANIMATIONS\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPRZEMYSŁAW MARSZAŁ\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nPHOTOGRAPHY\n<NAME>\nTOMASZ PIETĘK\nPRZEMYSŁAW MARSZAŁ\n<BR>\n\n<HEADER>\nCONCEPT ART & BACKGROUNDS\n<NAME>\nJAKUB KOWALCZYK\n<BR>\n\n<HEADER>\nADDITIONAL CONCEPT ART\n<NAME>\nMATEUSZ WALUŚ\nJAN BUCZNY\n<BR>\n\n<HEADER>\nADDITIONAL 3D ARTISTS\n<NAME>\nMATEUSZ WALUŚ\nMARCIN WAWRZONOWSKI\nKONRAD WIŚNIEWSKI\nJAN BUCZNY\n<BR>\n\n<HEADER>\nADDITIONAL ANIMATIONS\n<NAME>\nARTUR BIELENICA\nPIOTR CHOMIAK\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD GAME PROGRAMMER\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nSENIOR GAME PROGRAMMER\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nGAME PROGRAMMERS\n<NAME>\nPIOTR KOWALSKI\nJANUSZ KUNOWSKI\n<BR>\n\n<HEADER>\nENGINE PROGRAMMING\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\n<BR>\n\n<HEADER>\nCONSOLE PORTING\n<NAME>\nRAFAŁ PODKOWINSKI\nTRISTAN RYBAK\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nTOOLS\n<NAME>\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\n<BR>\n\n<HEADER>\nADDITIONAL PROGRAMMING\n<NAME>\nSZYMON JABŁOŃSKI\nDAMIAN WICIŃSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nMUSIC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nSOUND ENGINEER\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nADDITIONAL SOUNDS\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nADDITIONAL MUSIC\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n<HEADER>\nPRODUCTION\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA LEAD\n<NAME>\nPAWEŁ ""THE 47"" CZAPLARSKI\n<BR>\n\n<HEADER>\nSENIOR QA SPECIALISTS\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nADDITIONAL QA\n<NAME>\nPAWEŁ BONIFACIUK\nBARTEK NAJDYHOR\n<BR>\n<BR>\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA ANNA WARGOCKA\nBEATA KOSZNIK\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n<HEADER>\nMOTION CAPTURE\n<NAME>\nWWW.MOCAP.PL\n<BR><BR>\n\n<HEADER>\nCAST, CASTING DIRECTOR\n<NAME>\nADRIAN PERDJON\n<BR>\n\n<HEADER>\nMOTION CAPTURE SUPERVISOR\n<NAME>\nMICHAŁ HRYDZIUSZKO\n<BR>\n\n<HEADER>\nMOTION CAPTURE TRACKER\n<NAME>\nMATEUSZ POKS\n<BR>\n\n<HEADER>\nMOTION CAPTURE ACTORS\n<NAME>\nADRIAN PERDJON\nALAN MARKOWSKI\nBARBARA MŁOŹNIAK\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nMODELS\n<NAME>\nBEDNARZ MATEUSZ \nBRZOSTEK PIOTR\nCERIMOVIC EMIR\nCHMILELECKA KAROLINA \nCHODKOWSKI PIOTR \nCZAPLARSKI PAWEŁ \nDIAMOUTETE KAMELE \nDROZDOWSKI MICHAŁ \nFELDMAN PAWEŁ \nGAŹDZIŃSKA KINGA\nGRADZIŃSKA JUSTYNA \nGWAREK RADOSŁAW\nHAYATO KITABATAKE\nHUANCA-VILLAN KENAYA \nJEFIMOW MARCIN \nKACZOR MACIEJ \nKASPARIAN NELTA \nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA \nKOWALSKI JAKUB\nKOWALSKI JAN \nKOWALSKI PIOTR \nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID \nKWIATKOWSKA KINGA\nKWIATKOWSKI KACPER \nLENARTOWICZ JADWIGA \nLIVINGSTONE ALISIGWE\nLU XIN \nMACIASZEK REMIGIUSZ \nMARSZAŁ BARTOSZ \nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKA NATALIA \nMIECHOWSKI PAWEŁ \nNGUYEN DIEU CHI \nNGUYEN DIEU LINH\nNGUYEN DUY \nNGUYEN THI THUY HUAN \nPAŁKA ALBERT \nPIĘTEK TOMASZ\nPIOTROWSKA ANNA\nPIOTROWSKI JAKUB \nPIOTROWSKI PAWEŁ \nPODKOWIŃSKA SANDRA\nPODKOWIŃSKI RAFAŁ \nPOŻOGA IDA\nPOŻOGA OLAF\nRENDASZKA PAWEŁ \nROZBICKA MARIA \nRUOCHEN WU\nSETLAK WOJCIECH \nSKÓRA MACIEJ \nSTELMACH EWA\nSTEVENSON GRAMMONT \nSTYPEREK BARTOSZ \nSUŁECKI MACIEJ \nSZCZEPANOWSKA KAROLINA \nSZCZEŚNIK MACIEJ \nSZEWCZYK SARA \nSZYNKARNIKOW OLEKSANDER\nSZYSZKA PAWEŁ \nŚMIETAŃSKI ADAM \nTCHORZ KAROLINA \nTOMALAK ALEKS \nTOMALAK MAREK \nWARGOCKA MONIKA ANNA\nWASIAK HENRYK \nWASIAK MACIEJ \nWICIŃSKI DAMIAN \nWIEJAK-GRĄŻKA MARTA\nWIERZBICKA JULIA \nWIERZBICKA MAGDALENA \nWIERZBICKI MICHAŁ \nWŁOSEK RAFAŁ \nWRÓBLEWSKI MATEUSZ \nZAJĄCZKOWSKI BORYS \nZAJĄCZKOWSKI KAROL \nZALEWSKA BARBARA\nZIELIŃSKI DOMINIK \nZINSOU LORIS\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\nDEEP SILVER\n<BR><BR><BR><BR>\n\n<HEADER>\nPRODUCTION\n<BR><BR>\n\n<HEADER>\nINTERNATIONAL DIRECTOR PRODUCTION\n<NAME>\nCHRISTIAN MORIZ\n<BR><BR>\n\n<HEADER>\nPRODUCT MANAGEMENT\n<BR><BR>\n\n<HEADER>\n PRODUCT MANAGER\n<NAME>\nLISA MOOSBAUER\n<BR><BR>\n\n<HEADER>\nRELEASE MANAGEMENT/MASTERING\n<BR><BR>\n\n<HEADER>\nSENIOR PRODUCT RELEASE MANAGER\n<NAME>\nDANIEL GAITZSCH\n<BR>\n\n<HEADER>\nPRODUCT RELEASE MANAGER\n<NAME>\nCARL BARRETT\n<BR><BR>\n\n<HEADER>\nLOCALIZATION & INTERNATIONALIZATION\n<BR><BR>\n\n<HEADER>\nINTERNATIONAL RELEASE & LOCALIZATION QA MANAGER\n<NAME>\nLUKAS KOTRLY\n<BR>\n\n<HEADER>\nLOCALIZATION QA PROJECT MANAGER\n<NAME>\nALEXANDRE LELANDAIS\n<BR><BR>\n\n<HEADER>\nQUALITY ASSURANCE\n<BR><BR>\n\n<HEADER>\nHEAD OF QA & RELEASE MANAGER\n<NAME>\nCARLO SARTI\n<BR>\n\n<HEADER>\nQA PROJECT MANAGER & HEAD OF COMPLIANCE QA\n<NAME>\nRAFAL BOGUSZEWSKI\n<BR>\n\n<HEADER>\nQA PROJECT MANAGER\n<NAME>\nKALPESH PATEL\n<BR>\n\n<HEADER>\nADDITIONAL QA SUPPORT\n<NAME>\nKEITH RUSSELL\nCHRISTOPHER BARR\nELITSA IVANOVA\n<BR><BR>\n\n<HEADER>\nQLOC S.A.\n<BR><BR>\n\n<HEADER>\nGENERAL MANAGER\n<NAME>\nADAM PIESIAK\n<BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT DIRECTOR\n<NAME>\nPAWEL GRZYWACZEWSKI\n<BR>\n\n<HEADER>\nDIRECTOR OF ACCOUNT MANAGEMENT\n<NAME>\nPAWEL ZIAJKA\n<BR>\n\n<HEADER>\nACCOUNT MANAGERS\n<NAME>\nMARTA OLEJNICZAK\nJAKUB TRUDZIK\n<BR>\n\n<HEADER>\nHEAD OF QUALITY ASSURANCE\n<NAME>\nSERGIUSZ SLOSARCZYK\n<BR>\n\n<HEADER>\nQA PROJECT MANAGERS\n<NAME>\nMARCIN GORNIAK\nMACIEJ MAZUREK\n<BR>\n\n<HEADER>\nQA LAB MANAGERS\n<NAME>\nBARTOSZ ANTECKI\nPAWEL STRZELCZYK\n<BR>\n\n<HEADER>\nQA TEAM LEADERS\n<NAME>\nPAWEL KRAWCZUK\n<BR>\n\n<HEADER>\nCOMPLIANCE ENGINEERS\n<NAME>\nEWA ANGIELSKA\nRAFAL DABROWSKI\nADAM KOPCZYNSKI\nMICHAL NIBURSKI\nPAWEL SZCZESNY\n<BR>\n\n<HEADER>\nQA TESTERS\n<NAME>\nRICHARD BORZYMOWSKI\nPAWEL DRAGAN\nKINGA GAJEWSKA\nMICHAL GLEBICKI\nADAM HYZ\nDAWID KOZLOWSKI\nRAFAL LIPSKI\nBARTLOMIEJ RYDER\nKRZYSZTOF SETNIEWSKI\nROMAN SKURSKI\nMAYA TAKEUCHI\nRAFAL TYC\n<BR>\n\n<HEADER>\nIT MANAGER\n<NAME>\nTOMASZ DZIEDZIC\n<BR>\n\n<HEADER>\nR&D SPECIALIST\n<NAME>\nBARTEK ZUKOWSKI\n<BR><BR>\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nZLIB – GENERAL PURPOSE COMPRESSION LIBRARY\nCOPYRIGHT © 1995-2004\nJEAN-LOUP GAILLY AND MARK ADLER\n<BR>\n\nTHE VORBIS GENERAL AUDIO COMPRESSION CODEC\nCOPYRIGHT © 1994-2002 XIPH.ORG FOUNDATION\n<BR>\n\nLUA – GENERAL SCRIPTING LANGUAGE\nCOPYRIGHT © 1994–2010 LUA.ORG, PUC-RIO\n<BR>\n\nCURL\nLICENSE COPYRIGHT © 1996-2013 DANIEL STENBERG\n<BR>\n\nAJI HAND FONT BY AJITH RAJAN\n<BR>\n\nOKUDA FONT BY MIKE OKUDA\n<BR>\n\nTERTRE EXTRA BOLD FONT BY JAN SCHMOEGER\n<BR>\n\nDESIGNOSAUR FONT BY ARCHY STUDIO\n<BR>\n\nCOVERED BY YOUR GRACE FONT BY KG FONTS\n<BR>\n\nGUNNY REWRITTEN FONT BY VIT CONDAK\n<BR>\n\n\nERNEST HEMINGWAY\nNOTES ON THE NEXT WAR: A SERIOUS TOPICAL LETTER\nESQUIRE SEPT. 1935\n<BR>\n<BR>\n<BR>\n \n11 BIT STUDIOS\n2015\n<BR>\n<BR>\n<BR>"

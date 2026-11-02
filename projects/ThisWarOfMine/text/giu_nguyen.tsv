@@ -1,0 +1,221 @@
+id	src	dst	ctx
+DailyLog/SecondDayLogDescription			DailyLog/SecondDayLogDescription
+Dialogues/WarStories/Story1/WhereIsAmelia/006_school/01/004			Dialogues/WarStories/Story1/WhereIsAmelia/006_school/01/004
+Dialogues/WarStories/Story1/WhereIsAmelia/006_school/01/005			Dialogues/WarStories/Story1/WhereIsAmelia/006_school/01/005
+Dialogues/WarStories/Story1/WhereIsAmelia/006_school/01/006			Dialogues/WarStories/Story1/WhereIsAmelia/006_school/01/006
+Dialogues/WarStories/Story1/WhereIsAmelia/006_school/01/007			Dialogues/WarStories/Story1/WhereIsAmelia/006_school/01/007
+UI/MessageBox/ConfirmDelete			UI/MessageBox/ConfirmDelete
+UI/Modding/Delete			UI/Modding/Delete
+LocationsTexts/003_scav_domekM_nu/WS_Story1_FirstEnterComment			LocationsTexts/003_scav_domekM_nu/WS_Story1_FirstEnterComment
+LocationsTexts/005_scav_domek_kidnapers/WS_Story1_FirstEnterComment			LocationsTexts/005_scav_domek_kidnapers/WS_Story1_FirstEnterComment
+LocationsTexts/007_scav_domek_warehouse/WS_Story1_FirstEnterComment			LocationsTexts/007_scav_domek_warehouse/WS_Story1_FirstEnterComment
+LocationsTexts/009_scav_domekR_nu/WS_Story1_FirstEnterComment			LocationsTexts/009_scav_domekR_nu/WS_Story1_FirstEnterComment
+LocationsTexts/010_scav_domek_twin/WS_Story1_FirstEnterComment			LocationsTexts/010_scav_domek_twin/WS_Story1_FirstEnterComment
+LocationsTexts/013_construction_site/WS_Story1_FirstEnterComment			LocationsTexts/013_construction_site/WS_Story1_FirstEnterComment
+LocationsTexts/015_violator/WS_Story1_FirstEnterComment			LocationsTexts/015_violator/WS_Story1_FirstEnterComment
+LocationsTexts/016_sniper/WS_Story1_FirstEnterComment			LocationsTexts/016_sniper/WS_Story1_FirstEnterComment
+LocationsTexts/017_scav_domek_church/WS_Story1_FirstEnterComment			LocationsTexts/017_scav_domek_church/WS_Story1_FirstEnterComment
+LocationsTexts/021_airport/StoryItem_01			LocationsTexts/021_airport/StoryItem_01
+Traders/BeggarFood/NoPlayerOfferSpeech/00			Traders/BeggarFood/NoPlayerOfferSpeech/00
+CharacterBios/ScenarioEditorCharacters/Nurse/EndLog/GoodAlternate			CharacterBios/ScenarioEditorCharacters/Nurse/EndLog/GoodAlternate
+CharacterBios/ScenarioEditorCharacters/Nurse/EndLog/MixedAlternate			CharacterBios/ScenarioEditorCharacters/Nurse/EndLog/MixedAlternate
+CharacterBios/ScenarioEditorCharacters/Nurse/EndLog/BadAlternate			CharacterBios/ScenarioEditorCharacters/Nurse/EndLog/BadAlternate
+CharacterBios/ScenarioEditorCharacters/Police_officer/EndLog/GoodAlternate			CharacterBios/ScenarioEditorCharacters/Police_officer/EndLog/GoodAlternate
+CharacterBios/ScenarioEditorCharacters/Police_officer/EndLog/MixedAlternate			CharacterBios/ScenarioEditorCharacters/Police_officer/EndLog/MixedAlternate
+CharacterBios/ScenarioEditorCharacters/Police_officer/EndLog/BadAlternate			CharacterBios/ScenarioEditorCharacters/Police_officer/EndLog/BadAlternate
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferedItemGrades/-2/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferedItemGrades/-2/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferedItemGrades/-1/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferedItemGrades/-1/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferedItemGrades/1/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferedItemGrades/1/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferedItemGrades/2/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferedItemGrades/2/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/-2/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/-2/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/-1/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/-1/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/0/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/0/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/1/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/1/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/2/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/AcceptedItemGrades/2/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/-2/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/-2/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/-1/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/-1/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/0/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/0/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/1/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/1/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/2/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/OldManTrader/OfferGrades/2/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/visitSuccess/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/visitSuccess/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/visitFailer/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/visitFailer/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/postponed/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/postponed/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/visitFailure/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/visitFailure/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/visitNoDesided/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorWoman/NPCSpeeches/Visitor/visitNoDesided/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/visitSuccess/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/visitSuccess/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/visitFailer/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/visitFailer/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/postponed/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/postponed/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/visitFailure/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/visitFailure/00
+NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/visitNoDesided/00			NPCSpeeches/LEVEL_SPECIFIC/WarStories/Story1/VisitorBrother/NPCSpeeches/Visitor/visitNoDesided/00
+Names/Matey	Matey		Names/Matey
+Names/Leon	Leon		Names/Leon
+Names/Arkadi	Arkadi		Names/Arkadi
+Names/Jakob	Jakob		Names/Jakob
+Names/Joso	Joso		Names/Joso
+Names/Marius	Marius		Names/Marius
+Names/Neda	Neda		Names/Neda
+Names/Aleksey	Aleksey		Names/Aleksey
+Names/Silvio	Silvio		Names/Silvio
+Names/Grisha	Grisha		Names/Grisha
+Names/Denis	Denis		Names/Denis
+Names/Eva	Eva		Names/Eva
+Names/Pyotr	Pyotr		Names/Pyotr
+Names/Jurek	Jurek		Names/Jurek
+Names/Lazar	Lazar		Names/Lazar
+Names/Gabriela	Gabriela		Names/Gabriela
+Names/Emir	Emir		Names/Emir
+Names/Ina	Ina		Names/Ina
+Names/Blaz	Blaz		Names/Blaz
+Names/Oliver	Oliver		Names/Oliver
+Names/Tamara	Tamara		Names/Tamara
+Names/Grga	Grga		Names/Grga
+Names/Zoran	Zoran		Names/Zoran
+Names/Yan	Yan		Names/Yan
+Names/Viktor	Viktor		Names/Viktor
+Names/Elena	Elena		Names/Elena
+Names/Kasper	Kasper		Names/Kasper
+Names/Pavel	Pavel		Names/Pavel
+Names/Martin	Martin		Names/Martin
+Names/Borko	Borko		Names/Borko
+Names/Danilo	Danilo		Names/Danilo
+Names/Stas	Stas		Names/Stas
+Names/Klaudio	Klaudio		Names/Klaudio
+Names/Mirko	Mirko		Names/Mirko
+Names/Aron	Aron		Names/Aron
+Names/Andrei	Andrei		Names/Andrei
+Names/Jagoda	Jagoda		Names/Jagoda
+Names/Emil	Emil		Names/Emil
+Names/Bartol	Bartol		Names/Bartol
+Names/Vanja	Vanja		Names/Vanja
+Names/Robert	Robert		Names/Robert
+Names/Vanya	Vanya		Names/Vanya
+Names/Oleg	Oleg		Names/Oleg
+Names/Dimitri	Dimitri		Names/Dimitri
+Names/Hana	Hana		Names/Hana
+Names/Dejan	Dejan		Names/Dejan
+Names/Bozena	Bozena		Names/Bozena
+Names/Ivana	Ivana		Names/Ivana
+Names/Olga	Olga		Names/Olga
+Names/Ela	Ela		Names/Ela
+Names/Marek	Marek		Names/Marek
+Names/Alexander	Alexander		Names/Alexander
+Names/Bojan	Bojan		Names/Bojan
+Names/Filip	Filip		Names/Filip
+Names/Dominik	Dominik		Names/Dominik
+Names/Vasil	Vasil		Names/Vasil
+Names/Hankin	Hankin		Names/Hankin
+Names/Adam	Adam		Names/Adam
+Names/Ivica	Ivica		Names/Ivica
+Names/Drago	Drago		Names/Drago
+Names/Ivan	Ivan		Names/Ivan
+Names/Javor	Javor		Names/Javor
+Names/Marta	Marta		Names/Marta
+Names/Leo	Leo		Names/Leo
+Names/Ciorba	Ciorba		Names/Ciorba
+Names/Darko	Darko		Names/Darko
+Names/Radmila	Radmila		Names/Radmila
+Names/Frano	Frano		Names/Frano
+Names/Denys	Denys		Names/Denys
+Names/Kyrylo	Kyrylo		Names/Kyrylo
+Names/Pejo	Pejo		Names/Pejo
+Names/Bohdan	Bohdan		Names/Bohdan
+Names/Gleb	Gleb		Names/Gleb
+Names/Jelena	Jelena		Names/Jelena
+Names/Bernard	Bernard		Names/Bernard
+Names/Luba	Luba		Names/Luba
+Names/Igor	Igor		Names/Igor
+Names/Vladimir	Vladimir		Names/Vladimir
+Names/Sasha	Sasha		Names/Sasha
+Names/Marika	Marika		Names/Marika
+Names/Lena	Lena		Names/Lena
+Names/Branko	Branko		Names/Branko
+Names/David	David		Names/David
+Names/Mateo	Mateo		Names/Mateo
+Names/Petar	Petar		Names/Petar
+Names/Slavko	Slavko		Names/Slavko
+Names/Irena	Irena		Names/Irena
+Names/Petra	Petra		Names/Petra
+Names/Diana	Diana		Names/Diana
+Names/Bojana	Bojana		Names/Bojana
+Names/Juro	Juro		Names/Juro
+Names/Lubomir	Lubomir		Names/Lubomir
+Names/Slavomir	Slavomir		Names/Slavomir
+Names/Fedir	Fedir		Names/Fedir
+Names/Gregor	Gregor		Names/Gregor
+Names/Nord	Nord		Names/Nord
+Names/Premyslav	Premyslav		Names/Premyslav
+Names/Tatjana	Tatjana		Names/Tatjana
+Names/Olek	Olek		Names/Olek
+Names/Patrik	Patrik		Names/Patrik
+Names/Ruslan	Ruslan		Names/Ruslan
+Names/Zoya	Zoya		Names/Zoya
+Names/Monika	Monika		Names/Monika
+Names/Barbara	Barbara		Names/Barbara
+Names/Anita	Anita		Names/Anita
+Names/Nina	Nina		Names/Nina
+Names/Iva	Iva		Names/Iva
+Names/Damian	Damian		Names/Damian
+Names/Laura	Laura		Names/Laura
+Names/Julian	Julian		Names/Julian
+Names/Yanko	Yanko		Names/Yanko
+Names/Zlatan	Zlatan		Names/Zlatan
+Names/Radoslav	Radoslav		Names/Radoslav
+Names/Sandu	Sandu		Names/Sandu
+Names/Valter	Valter		Names/Valter
+Names/Karol	Karol		Names/Karol
+Names/Vladimira	Vladimira		Names/Vladimira
+Names/Agata	Agata		Names/Agata
+Names/Nikola	Nikola		Names/Nikola
+Names/Augustin	Augustin		Names/Augustin
+Names/Kliment	Kliment		Names/Kliment
+Names/Henrik	Henrik		Names/Henrik
+Names/Yosyp	Yosyp		Names/Yosyp
+Names/Blago	Blago		Names/Blago
+Names/Voyt	Voyt		Names/Voyt
+Names/Nenad	Nenad		Names/Nenad
+Names/Maya	Maya		Names/Maya
+Names/Mara	Mara		Names/Mara
+Names/Zora	Zora		Names/Zora
+Names/Zyhu	Zyhu		Names/Zyhu
+Names/Olivera	Olivera		Names/Olivera
+Names/Franko	Franko		Names/Franko
+Names/Bruno	Bruno		Names/Bruno
+Names/Marin	Marin		Names/Marin
+Names/Arica	Arica		Names/Arica
+Names/Emilia	Emilia		Names/Emilia
+Names/Anton	Anton		Names/Anton
+Names/Boris	Boris		Names/Boris
+Names/Marko	Marko		Names/Marko
+Names/Pavle	Pavle		Names/Pavle
+Names/Zlata	Zlata		Names/Zlata
+Names/Cveta	Cveta		Names/Cveta
+Names/Katia	Katia		Names/Katia
+Names/Roman	Roman		Names/Roman
+Names/TESTCHARACTER	Debagoslav		Names/TESTCHARACTER
+Names/Ivano	Ivano		Names/Ivano
+Names/Krasimir	Krasimir		Names/Krasimir
+Names/Lydia	Lydia		Names/Lydia
+Names/Misha	Misha		Names/Misha
+Names/Kalina	Kalina		Names/Kalina
+Names/Sergei	Sergei		Names/Sergei
+Names/Christo	Christo		Names/Christo
+Names/Christo_Protector	Daddy		Names/Christo_Protector
+Names/Iskra	Iskra		Names/Iskra
+Names/Irina	Irina		Names/Irina
+Names/Irina_Protector	Auntie		Names/Irina_Protector
+Names/Henrik_Protector	Grandpa		Names/Henrik_Protector
+Names/Male_Protector	Uncle		Names/Male_Protector
+Names/Female_Protector	Aunt		Names/Female_Protector
+Names/Daniel	Daniel		Names/Daniel
+Names/Grozdan	Grozdan		Names/Grozdan
+Names/Evgeni	Evgeni		Names/Evgeni
+Names/Vinko	Vinko		Names/Vinko
+Names/Josef	Josef		Names/Josef
+Names/Vuk	Vuk		Names/Vuk
+Names/Karel	Karel		Names/Karel
+Names/Milan	Milan		Names/Milan
+Names/Amelia	Amelia		Names/Amelia
+Names/Adam_ws	Adam		Names/Adam_ws
+Names/Bogdan	Bogdan		Names/Bogdan
+Names/Goran	Goran		Names/Goran
+Names/Stefan	Stefan		Names/Stefan

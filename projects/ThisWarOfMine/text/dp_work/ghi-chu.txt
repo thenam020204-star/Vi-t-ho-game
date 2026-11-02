@@ -1,0 +1,26 @@
+DwellerComfort/Kid_0x, KidComfort/Altruistic, Survivalist_02: không rõ người nói là trẻ hay người lớn; dịch trung tính, tránh xưng hô cứng. 739 'I hate you' dịch 'Cháu ghét mọi người!' vì không rõ giới người nghe.
+Kids_Play/Kid_Dialog (riddle/tongue twister): dịch chuyển ý, câu đố chơi chữ 'Bee' giữ nguyên chữ Bee; vần líu lưỡi đổi sang câu Việt tương đương.
+1196 'ADAM DAJE JEDZENIE - QUEST COMPLETED' là chuỗi nội bộ (tiếng Ba Lan), giữ nguyên. Story1/Br*: 'brother' dịch 'anh bạn', xưng tôi–cậu.
+1656-1659,1678-1685: gốc là tiếng Ba Lan (lẫn trong slot en), dịch nghĩa sang Việt. Story1: brother của Adam = em trai.
+4034-4042: gốc có thẻ lỗi {fr||she} (hai dấu |); giữ nguyên cấu trúc {fr||...}.
+4475 gốc tiếng Ba Lan, dịch nghĩa.
+4853, 4861: chuỗi debug 'ISKRA DIED ENDLOG DEBUG TEXT'/'BEBUG ISKRA DEATH LOG TEXT' giữ nguyên.
+5647-5653 gốc tiếng Ba Lan, dịch nghĩa.
+5890-5895 gốc tiếng Ba Lan, dịch nghĩa.
+6296-6297 gốc 'Confederacy/Confederate' (các dòng khác là Gramodian Federation), dịch 'Liên bang láng giềng/quân Liên bang'.
+6330-6332 gốc tiếng Ba Lan (hội thoại Adam/Nina), dịch nghĩa, giữ mã màu; 'Nieznany głos' = Giọng lạ.
+6333-6338, 6347, 6349 gốc tiếng Ba Lan, dịch nghĩa; 6334 'Swiat znowu zniknal' và 'glownego planu' mơ hồ, dịch sát.
+6359-6369 (NeedMeds) khách là trẻ em nhưng key không ghi Kid, giữ xưng hô trung tính (chúng tôi / các anh chị).
+6571-6572, 6579-6582 gốc tiếng Ba Lan (Adam kể), dịch nghĩa; 'Amelka' -> Amelia.
+6585-6586, 6589-6590, 6595-6596 gốc tiếng Ba Lan (Adam kể), dịch nghĩa.
+Xưng hô trẻ/người lớn (làm lại theo quản đốc), các ca mơ hồ: 756-759 (Dweller_Weak) coi A là trẻ, B người lớn; 763-765 (ParentDied) B coi là người lớn báo tin; 886-889, 898-901, 920-924, 932-973 (không dấu hiệu người lớn) giữ tớ–cậu; Kids_Grieving 988-1002 (01, 02) giữ tớ–cậu vì không rõ A; Grieving 00 và 03 coi A là người lớn, B là trẻ; 885 nguồn có {mr|..}{ms|..} lệch thẻ, giữ nguyên.
+T2: 412-425 (tên ngôn ngữ trong Settings): dịch sang tiếng Việt (Tiếng Anh, Tiếng Đức, Tiếng Ba Lan...) để đồng bộ giao diện; nếu muốn giữ tên bản địa (Deutsch, Polski...) thì sửa 412-425 và 423.
+T2: 226-240, 241-251, 257-264 (trạng thái nhân vật): dịch ngắn theo mức (VẪN ĐÓI / ĐÓI LẢ / KIỆT SỨC...). '(I need cigarettes)' là suy nghĩ nhân vật, dịch '(Cần thuốc lá)' không ngôi.
+T2: 235 'WELL FED' dịch 'NO NÊ' (khẩu ngữ), 271 'You Didn't Make It.' dịch 'Bạn không sống sót.'
+T2: 278-290 (đoạn hội thoại WarStories): người nói không ghi trong key. Giả định Adam (tôi, anh) nói với kẻ lạ (mày, tao) ở 281-290; 278 và 291 là Adam, 279, 292-296 là kẻ lạ. Nếu đảo vai thì đổi xưng hô.
+T2: 809-812 (TakingCareOf/*/Kids): người nói là người lớn không rõ giới, nên lược đại từ ngôi 2 (theo vai.md), không tự đoán chú/cô. 813-827 dịch trung tính.
+T2: 479 (ControllerDisconnect) giữ cặp {mr|}{fr|}: nhánh mr 'Tay cầm', nhánh fr 'Tay cầm không dây' theo gốc.
+T2: 862 và 864 (Credits): giữ nguyên tên người, tên công ty (ROBOTO TRANSLATION, QLOC S.A., DEEP SILVER, EVOLVE PR, WWW.MOCAP.PL), chức danh và tiêu đề dịch sang Việt. Trong 864 có khoảng trắng đầu của ' PRODUCT MANAGER' giữ nguyên. Đã sửa 1 dấu xuống dòng thừa ở 864 (ngay trước 'BẮT CHUYỂN ĐỘNG') để check qua.
+T2: 'STORIES' (chế độ/tiêu đề) giữ Latin; 'Babel', 'The Little Ones', 'Anniversary Edition', 'PhoneUI' (dịch thành 'Giao diện điện thoại') là tên sản phẩm/tên kỹ thuật.
+T2: 861 '--TEXT--NOT--FOUND--' là chuỗi DEBUG, giữ nguyên.
+T2: 'h' (đơn vị giờ, 325) dịch 'g' cho gọn.

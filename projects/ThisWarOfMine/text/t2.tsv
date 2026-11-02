@@ -1,0 +1,897 @@
+id	src	dst	ctx
+Items/Groups/Tools	Tools		Items/Groups/Tools
+Items/Groups/Consumables	Consumables		Items/Groups/Consumables
+Items/Groups/Guns	Weapons		Items/Groups/Guns
+Items/Groups/ShelterItems	Household Items		Items/Groups/ShelterItems
+Items/Groups/Materials	Materials		Items/Groups/Materials
+Items/Groups/Equipment	Equipment		Items/Groups/Equipment
+Items/Groups/Other	Other		Items/Groups/Other
+Items/Groups/BasicItems	Basic Items		Items/Groups/BasicItems
+Items/Groups/Improvement	Improvement		Items/Groups/Improvement
+Items/Groups/Crafters	Workshops		Items/Groups/Crafters
+Items/Groups/Weapon	Weapons		Items/Groups/Weapon
+Items/ShelterItems/Cooker_Name	Crude Stove		Items/ShelterItems/Cooker_Name
+Items/ShelterItems/Cooker_Description	It's as simple as they get: just burn some fuel made up of wood, books or components and use some water to cook a meal more nutritious than raw food.		Items/ShelterItems/Cooker_Description
+Items/ShelterItems/Cooker2_Name	Improved Stove		Items/ShelterItems/Cooker2_Name
+Items/ShelterItems/Cooker2_Description	A more efficient stove. Allows us to prepare cooked food more efficiently, saving fuel.		Items/ShelterItems/Cooker2_Description
+Items/ShelterItems/Garden_Name	Herbal Garden		Items/ShelterItems/Garden_Name
+Items/ShelterItems/Garden_Description	Using fertilizer we can grow some herbs here and use them to make medication or cheap cigarettes. We can improve it to grow vegetables.		Items/ShelterItems/Garden_Description
+Items/ShelterItems/HerbalWorkshop_Name	Herbal Workshop		Items/ShelterItems/HerbalWorkshop_Name
+Items/ShelterItems/HerbalWorkshop_Description	A table with some simple equipment where we can prepare herbal meds, bandages and low quality roll-up cigarettes. We can upgrade it to make real meds and good quality cigarettes.		Items/ShelterItems/HerbalWorkshop_Description
+Items/ShelterItems/Heater_Name	Simple Heater		Items/ShelterItems/Heater_Name
+Items/ShelterItems/Heater_Description	Allows us to heat the shelter, so that we don't get ill. We can prepare fuel for it using wood, books or various components.		Items/ShelterItems/Heater_Description
+Items/ShelterItems/Heater2_Name	Improved Heater		Items/ShelterItems/Heater2_Name
+Items/ShelterItems/Heater2_Description	It heats up the shelter much more efficiently using less fuel.		Items/ShelterItems/Heater2_Description
+Items/ShelterItems/Bed_Name	Bed		Items/ShelterItems/Bed_Name
+Items/ShelterItems/Bed_Description	Offers a decent sleep without back pain, no matter if it's night or day.		Items/ShelterItems/Bed_Description
+Items/ShelterItems/Radio_Name	Radio		Items/ShelterItems/Radio_Name
+Items/ShelterItems/Radio_Description	It would be great to listen to current news and weather forecasts. We could be better prepared to deal with hardships if we knew about them well in advance. When there's nothing on the news, we can listen to music and brighten up our mood.		Items/ShelterItems/Radio_Description
+Items/ShelterItems/HoochGear_Name	Moonshine Still		Items/ShelterItems/HoochGear_Name
+Items/ShelterItems/HoochGear_Description	With a bit of patience, some water and sugar we can make a foul-tasting but strong booze. We could then barter it for things we need. Just don't expect too much.		Items/ShelterItems/HoochGear_Description
+Items/ShelterItems/HoochGear2_Name	Alcohol Distiller		Items/ShelterItems/HoochGear2_Name
+Items/ShelterItems/HoochGear2_Description	Distills moonshine into pure, high-quality alcohol, component for meds and bandages, or a much better bartering item.		Items/ShelterItems/HoochGear2_Description
+Items/ShelterItems/BasicWorkshop_Name	Simple Workshop		Items/ShelterItems/BasicWorkshop_Name
+Items/ShelterItems/BasicWorkshop_Description	An improvised workbench for making simple equipment, furniture and other useful stuff, such as beds or chairs. We can upgrade it to make even more useful things.		Items/ShelterItems/BasicWorkshop_Description
+Items/ShelterItems/BasicWorkshop2_Name	Improved Workshop		Items/ShelterItems/BasicWorkshop2_Name
+Items/ShelterItems/BasicWorkshop2_Description	Enables the manufacture of more sophisticated items and appliances, providing us with more options to get food or meds, and trade goods. We can upgrade it further to make electrical improvements.		Items/ShelterItems/BasicWorkshop2_Description
+Items/ShelterItems/WaterCollector_Name	Rainwater Collector		Items/ShelterItems/WaterCollector_Name
+Items/ShelterItems/WaterCollector_Description	A simple contraption to collect and filter rainwater needed for cooking and making alcohol. It might be wise to build a couple of them.		Items/ShelterItems/WaterCollector_Description
+Items/ShelterItems/SnowCollector_Name	Pile of Snow		Items/ShelterItems/SnowCollector_Name
+Items/ShelterItems/Armchair_Name	Armchair		Items/ShelterItems/Armchair_Name
+Items/ShelterItems/Armchair_Description	An armchair is a comfortable piece of furniture. If you sit in it with a good book, you can almost forget about the war.		Items/ShelterItems/Armchair_Description
+Items/ShelterItems/Chair_Name	Chair		Items/ShelterItems/Chair_Name
+Items/ShelterItems/Chair_Description	It's better to sit on a chair than on the floor. We should build it to make this place more like home. It will make us feel better in these tough times.		Items/ShelterItems/Chair_Description
+Items/ShelterItems/Trap_Name	Trap for small animals		Items/ShelterItems/Trap_Name
+Items/ShelterItems/Trap_Description	The only small animals left seem to be rats... Still, meat is a rare commodity in wartime. We simply have to put in some bait and wait.		Items/ShelterItems/Trap_Description
+Items/ShelterItems/BasicWorkshop3_Name	Advanced Workshop		Items/ShelterItems/BasicWorkshop3_Name
+Items/ShelterItems/BasicWorkshop3_Description	This advanced workshop allows us to make useful electrical appliances, such as heat lamps for gardens and mixers for herbal workshops or for metal workshops.		Items/ShelterItems/BasicWorkshop3_Description
+Items/ShelterItems/Guitar_Name	Guitar		Items/ShelterItems/Guitar_Name
+Items/ShelterItems/Guitar_Description	Having something to occupy time is important. A guitar can brighten up our mood, especially if the person playing it knows what they are doing.		Items/ShelterItems/Guitar_Description
+Items/ShelterItems/Garden2_Description	We can grow vegetables here using water and fertilizer, but it takes time.		Items/ShelterItems/Garden2_Description
+Items/ShelterItems/Garden2_Name	Vegetable Garden		Items/ShelterItems/Garden2_Name
+Items/ShelterItems/HighVoltageDoor_Name	Reinforced Door		Items/ShelterItems/HighVoltageDoor_Name
+Items/ShelterItems/HighVoltageDoor_Description	Once we board up holes and windows in the shelter, we can think of reinforcing the door and installing a simple alarm system.		Items/ShelterItems/HighVoltageDoor_Description
+Items/ShelterItems/BlockedHole_Name	Board up		Items/ShelterItems/BlockedHole_Name
+Items/ShelterItems/BlockedHole_Description	We can board up holes and windows in the building for more protection against looters.		Items/ShelterItems/BlockedHole_Description
+Items/ShelterItems/MetalWorkshop_Name	Metal Workshop		Items/ShelterItems/MetalWorkshop_Name
+Items/ShelterItems/MetalWorkshop_Description	Allows us to make tools, such as shovels for clearing rubble, crowbars for breaking doors and knives for self-defense. Later we could use it to build more advanced tools or even repair firearms.		Items/ShelterItems/MetalWorkshop_Description
+Items/ShelterItems/MetalWorkshop2_Name	Improved Metal Workshop		Items/ShelterItems/MetalWorkshop2_Name
+Items/ShelterItems/MetalWorkshop2_Description	Apart from making more tools such as an axe or saw blade, we can also fix simple broken firearms and helmets here. We can upgrade it even further to make ammo and fix bulletproof vests.		Items/ShelterItems/MetalWorkshop2_Description
+Items/ShelterItems/MetalWorkshop3_Name	Advanced Metal Workshop		Items/ShelterItems/MetalWorkshop3_Name
+Items/ShelterItems/MetalWorkshop3_Description	Apart from making tools we can fix all broken firearms here, as well as vests and helmets, and refill empty shell casings to reuse them.		Items/ShelterItems/MetalWorkshop3_Description
+Items/ShelterItems/HerbalWorkshop2_Name	Improved Herbal workshop		Items/ShelterItems/HerbalWorkshop2_Name
+Items/ShelterItems/HerbalWorkshop2_Description	It enables the manufacture of real meds and quality roll-up cigarettes.		Items/ShelterItems/HerbalWorkshop2_Description
+Items/ShelterItems/Swing_Name	Swing		Items/ShelterItems/Swing_Name
+Items/ShelterItems/Swing_Description	It's just a simple swing, but for a kid it's a never-ending source of fun.		Items/ShelterItems/Swing_Description
+Items/ShelterItems/DrawingTable_Name	Kids' desk		Items/ShelterItems/DrawingTable_Name
+Items/ShelterItems/DrawingTable_Description	It's important for kids to have their own place in the shelter. They can draw here, read books and play with toys. It helps them forget about the war.		Items/ShelterItems/DrawingTable_Description
+Items/ShelterItems/ToyBox_Name	Toy Box		Items/ShelterItems/ToyBox_Name
+Items/ShelterItems/ToyBox_Description	It contains everything! A teddy bear, dolls, pocket planes and cars. Even toy soldiers...		Items/ShelterItems/ToyBox_Description
+Items/ShelterItems/Snowman_Name	Snowman		Items/ShelterItems/Snowman_Name
+Items/ShelterItems/Snowman_Description	Winter is harsh for adults, but for kids it's a time to play.		Items/ShelterItems/Snowman_Description
+Items/ShelterItems/Ball_Name	Ball		Items/ShelterItems/Ball_Name
+Items/ShelterItems/Ball_Description	Which child doesn't like to play with a ball?		Items/ShelterItems/Ball_Description
+Items/ShelterItems/JumpRope_Name	Jump Rope		Items/ShelterItems/JumpRope_Name
+Items/ShelterItems/JumpRope_Description	It's amazing how a simple piece of rope can keep children entertained for so many hours.		Items/ShelterItems/JumpRope_Description
+Items/ShelterItems/ShelterBridge_Name	Makeshift bridge		Items/ShelterItems/ShelterBridge_Name
+Items/ShelterItems/ShelterBridge_Description	A makeshift bridge leading to the other wing of the house.		Items/ShelterItems/ShelterBridge_Description
+Items/Materials/Wood_Name	Wood		Items/Materials/Wood_Name
+Items/Materials/Wood_Description	An essential component for all kinds of stuff, plus we can chop it to fuel stoves and heaters.		Items/Materials/Wood_Description
+Items/Materials/Materials_Name	Components		Items/Materials/Materials_Name
+Items/Materials/Materials_Description	Various components needed to make just about anything. Nails, duct tape, plastic containers, scrap, things like that.		Items/Materials/Materials_Description
+Items/Materials/GunPowder_Name	Gunpowder		Items/Materials/GunPowder_Name
+Items/Materials/GunPowder_Description	Gunpowder is used to manufacture ammunition and explosives.		Items/Materials/GunPowder_Description
+Items/Materials/WeaponParts_Name	Weapon Parts		Items/Materials/WeaponParts_Name
+Items/Materials/WeaponParts_Description	Various weapon parts. Blades, barrels, springs, locks and so on.		Items/Materials/WeaponParts_Description
+Items/Materials/Sugar_Name	Sugar		Items/Materials/Sugar_Name
+Items/Materials/Sugar_Description	There'd be no moonshine without sugar. Essential for the fermentation process.		Items/Materials/Sugar_Description
+Items/Materials/Parts_Name	Parts		Items/Materials/Parts_Name
+Items/Materials/Parts_Description	Various mechanical parts. Used for building and fixing complex devices.		Items/Materials/Parts_Description
+Items/Materials/Herbs_Name	Herbs		Items/Materials/Herbs_Name
+Items/Materials/Tobacco_Name	Tobacco		Items/Materials/Tobacco_Name
+Items/Materials/Tobacco_Description	We can make expensive cigarettes from this tobacco.		Items/Materials/Tobacco_Description
+Items/Materials/Plants_Description	Various herbs that can be used to make herbal medications and roll-up cigarettes.		Items/Materials/Plants_Description
+Items/Materials/Plants_Name	Herbs		Items/Materials/Plants_Name
+Items/Materials/MedIngredients_Name	Med ingredients		Items/Materials/MedIngredients_Name
+Items/Materials/MedIngredients_Description	Old pills and animal meds. With a little bit of knowledge they can be used to make normal meds.		Items/Materials/MedIngredients_Description
+Items/Materials/ShotgunShells_Description	Empty shotgun shells. We could use them to make shotgun ammo.		Items/Materials/ShotgunShells_Description
+Items/Materials/ShotgunShells_Name	Shotgun Shells		Items/Materials/ShotgunShells_Name
+Items/Materials/PistolShells_Name	Shell Casings		Items/Materials/PistolShells_Name
+Items/Materials/PistolShells_Description	Empty shell casings. We could make firearm ammo out of them.		Items/Materials/PistolShells_Description
+Items/Materials/RfileShells_Name	Rifle Shells		Items/Materials/RfileShells_Name
+Items/Materials/RifleShells_Description	Empty rifle shells. We could make rifle ammo out of them.		Items/Materials/RifleShells_Description
+Items/Materials/StaleFood_Name	Fertilizer		Items/Materials/StaleFood_Name
+Items/Materials/StaleFood_Description	Organic waste that we can use as fertilizer in our garden to grow herbs or vegetables, or as bait in a trap for small animals.		Items/Materials/StaleFood_Description
+Items/Materials/ElectricParts_Name	Electric Parts		Items/Materials/ElectricParts_Name
+Items/Materials/ElectricParts_Description	Some electric parts. They will come in handy if we want to introduce advanced improvements to our shelter.		Items/Materials/ElectricParts_Description
+Items/UniqueMaterials/Speaker_Name	Speaker		Items/UniqueMaterials/Speaker_Name
+Items/UniqueMaterials/Speaker_Description	An essential part of any radio receiver.		Items/UniqueMaterials/Speaker_Description
+Items/UniqueMaterials/Pistol_broken_Name	Broken Pistol		Items/UniqueMaterials/Pistol_broken_Name
+Items/UniqueMaterials/Pistol_broken_Description	An old weapon with a few missing parts.		Items/UniqueMaterials/Pistol_broken_Description
+Items/UniqueMaterials/Machinegun_broken_Name	Broken Assault Rifle		Items/UniqueMaterials/Machinegun_broken_Name
+Items/UniqueMaterials/Machinegun_broken_Description	It used to be a deadly weapon, but it doesn't work anymore.		Items/UniqueMaterials/Machinegun_broken_Description
+Items/UniqueMaterials/Shotgun_broken_Name	Broken Shotgun		Items/UniqueMaterials/Shotgun_broken_Name
+Items/UniqueMaterials/Shotgun_broken_Description	A half-dismantled shotgun.		Items/UniqueMaterials/Shotgun_broken_Description
+Items/UniqueMaterials/Helmet_broken_Name	Damaged helmet		Items/UniqueMaterials/Helmet_broken_Name
+Items/UniqueMaterials/Helmet_broken_Description	It's damaged so badly it can't be used, but after some repairs it could save someone's head.		Items/UniqueMaterials/Helmet_broken_Description
+Items/UniqueMaterials/Vest_broken_Name	Damaged Vest		Items/UniqueMaterials/Vest_broken_Name
+Items/UniqueMaterials/Vest_broken_Description	Damaged military vest. Some repairs are needed before it can be used again.		Items/UniqueMaterials/Vest_broken_Description
+Items/UniqueMaterials/Guitar_broken_Name	Broken Guitar		Items/UniqueMaterials/Guitar_broken_Name
+Items/UniqueMaterials/Guitar_broken_Description	It's broken, but not beyond repair. It would be cool to pass the time with nice music.		Items/UniqueMaterials/Guitar_broken_Description
+Items/UniqueMaterials/BrokenToy_Name	Broken Toy		Items/UniqueMaterials/BrokenToy_Name
+Items/UniqueMaterials/BrokenToy_Description	This toy has seen better days. It's broken now, but it certainly brought a lot of joy to its previous owner.		Items/UniqueMaterials/BrokenToy_Description
+Items/UniqueMaterials/ConductPass_Name	Conduct Pass		Items/UniqueMaterials/ConductPass_Name
+Items/UniqueMaterials/ConductPass_Description	A safe conduct pass issued by the local army headquarters to Robert Zhigajev. It’s useless to us, but could be quite valuable for someone with access to a skilled forger.		Items/UniqueMaterials/ConductPass_Description
+Items/UniqueMaterials/KarelNote_Name	Karel’s note		Items/UniqueMaterials/KarelNote_Name
+Items/UniqueMaterials/KarelNote_Description	It’s a note from Karel confirming that you paid for the passage. It contains directions that will lead you to a safe house once you disembark.		Items/UniqueMaterials/KarelNote_Description
+Items/UniqueMaterials/ShelterBridgePart_Name	Makeshift bridge main part		Items/UniqueMaterials/ShelterBridgePart_Name
+Items/UniqueMaterials/ShelterBridgePart_Description	This part is required to build the makeshift bridge.		Items/UniqueMaterials/ShelterBridgePart_Description
+Items/UniqueMaterials/Crayons_Name	Crayons		Items/UniqueMaterials/Crayons_Name
+Items/UniqueMaterials/Crayons_Description	A colorful set of crayons. It’s almost complete. Amelia could draw whatever she wanted with them.		Items/UniqueMaterials/Crayons_Description
+Items/Consumables/RawFood_Name	Raw Food		Items/Consumables/RawFood_Name
+Items/Consumables/RawFood_Description	It's edible but would be more nutritious when cooked.		Items/Consumables/RawFood_Description
+Items/Consumables/CookedFood_Name	Cooked Food		Items/Consumables/CookedFood_Name
+Items/Consumables/CookedFood_Description	A simple cooked meal, more nutritious and tastier than raw food. It gets even better and more filling with vegetables.		Items/Consumables/CookedFood_Description
+Items/Consumables/PistolAmmo_Name	Ammunition		Items/Consumables/PistolAmmo_Name
+Items/Consumables/PistolAmmo_Description	Ammunition for firearms.		Items/Consumables/PistolAmmo_Description
+Items/Consumables/Alcohol_Name	Pure Alcohol		Items/Consumables/Alcohol_Name
+Items/Consumables/Alcohol_Description	A small flask of pure alcohol. You can drink it, you can trade it or you can use it to produce meds or bandages.		Items/Consumables/Alcohol_Description
+Items/Consumables/Meds_Name	Medications		Items/Consumables/Meds_Name
+Items/Consumables/Meds_Description	Their taste is terrible, but they can save your life in sickness.		Items/Consumables/Meds_Description
+Items/Consumables/Bandages_Name	Bandages		Items/Consumables/Bandages_Name
+Items/Consumables/Bandages_Description	Used to dress wounds.		Items/Consumables/Bandages_Description
+Items/Consumables/CannedFood_Name	Canned Food		Items/Consumables/CannedFood_Name
+Items/Consumables/CannedFood_Description	A canned meal, more nutritious than raw food. With time, you'll get used to its taste.		Items/Consumables/CannedFood_Description
+Items/Consumables/Hooch_Name	Moonshine		Items/Consumables/Hooch_Name
+Items/Consumables/Hooch_Description	Things get easier when you drink it. Or so it seems. It's a good trading item.		Items/Consumables/Hooch_Description
+Items/Consumables/JaredFood_Name	Jarred Food		Items/Consumables/JaredFood_Name
+Items/Consumables/JaredFood_Description	It doesn't spoil so we can store it longer, and it's good for trade.		Items/Consumables/JaredFood_Description
+Items/Consumables/ShotgunAmmo_Name	Shotgun Ammo		Items/Consumables/ShotgunAmmo_Name
+Items/Consumables/ShotgunAmmo_Description	Ammunition for shotguns.		Items/Consumables/ShotgunAmmo_Description
+Items/Consumables/RifleAmmo_Name	Rifle Ammo		Items/Consumables/RifleAmmo_Name
+Items/Consumables/RifleAmmo_Description	Ammunition for rifles.		Items/Consumables/RifleAmmo_Description
+Items/Consumables/HerbalMeds_Name	Herbal Meds		Items/Consumables/HerbalMeds_Name
+Items/Consumables/HerbalMeds_Description	Simple medications based on herbs. Sometimes they help, sometimes they don't. Still, they're better than nothing.		Items/Consumables/HerbalMeds_Description
+Items/Consumables/DismantlingTools_Name	Dismantling Tools		Items/Consumables/DismantlingTools_Name
+Items/Consumables/DismantlingTools_Description	Tools for dismantling electrical and mechanical devices. Screwdrivers, files, cutters and the like. They're homemade, so not very durable.		Items/Consumables/DismantlingTools_Description
+Items/Consumables/Vegetables_Name	Vegetables		Items/Consumables/Vegetables_Name
+Items/Consumables/Vegetables_description	We can eat them as is, but they make a much better meal when cooked with some raw food.		Items/Consumables/Vegetables_description
+Items/Consumables/SawBlade_Name	Saw Blade		Items/Consumables/SawBlade_Name
+Items/Consumables/SawBlade_Description	We can use it to cut through metal bars and chains to get to otherwise inaccessible places.		Items/Consumables/SawBlade_Description
+Items/Consumables/HomeGrownTobacco_Name	Homegrown Tobacco		Items/Consumables/HomeGrownTobacco_Name
+Items/Consumables/HomeGrownTobacco_Description	Homegrown tobacco for making roll-up cigarettes. Not nearly as good as the real thing, but we can grow it ourselves.		Items/Consumables/HomeGrownTobacco_Description
+Items/Consumables/Joint_Name	Roll-up Cigarette		Items/Consumables/Joint_Name
+Items/Consumables/Joint_Description	Roll-up cigarette made from herbs. It reeks acrid, bitter smoke.		Items/Consumables/Joint_Description
+Items/Consumables/Cigarette_Name	Cigarette		Items/Consumables/Cigarette_Name
+Items/Consumables/Cigarette_Description	Real tobacco cigarette. Often used as currency in times of war.		Items/Consumables/Cigarette_Description
+Items/Consumables/QualityJoint_Name	Quality Roll-up		Items/Consumables/QualityJoint_Name
+Items/Consumables/QualityJoint_Description	Roll-up made from equal parts of tobacco and herbs. Quite good under the circumstances.		Items/Consumables/QualityJoint_Description
+Items/Consumables/Coffee_Name	Coffee		Items/Consumables/Coffee_Name
+Items/Consumables/Coffee_Description	Some of us drink coffee to find strength in order to survive another day. Its limited availability in wartime makes it a valuable commodity.		Items/Consumables/Coffee_Description
+Items/Fuels/Water_Name	Clean Water		Items/Fuels/Water_Name
+Items/Fuels/Water_Description	Some relatively clean water. You'll need it to prepare a good meal or make alcohol.		Items/Fuels/Water_Description
+Items/Fuels/Filter_Name	Filter		Items/Fuels/Filter_Name
+Items/Fuels/Filter_Description	Homemade single-use filter to purify rainwater or distill alcohol.		Items/Fuels/Filter_Description
+Items/Fuels/Snow_Name	Snow		Items/Fuels/Snow_Name
+Items/Fuels/Snow_Description	We can melt it into water.		Items/Fuels/Snow_Description
+Items/Fuels/HeaterFuel_Name	Fuel		Items/Fuels/HeaterFuel_Name
+Items/Fuels/HeaterFuel_Description	Everything that we can burn in the heater to warm up our place, or in the stove to cook food. We can make it from wood, books or components.		Items/Fuels/HeaterFuel_Description
+Items/Fuels/Book_Name	Book		Items/Fuels/Book_Name
+Items/Fuels/Book_Description	A good book is uplifting. The more we have, the better. If times are hard, we can make them into fuel for our heater or stove.		Items/Fuels/Book_Description
+Items/Tools/Crowbar_Name	Crowbar		Items/Tools/Crowbar_Name
+Items/Tools/Crowbar_Description	Homemade tool you can use to pry open a few doors before it breaks. It does the job slowly and loudly.		Items/Tools/Crowbar_Description
+Items/Tools/LockPick_Name	Lock Pick		Items/Tools/LockPick_Name
+Items/Tools/LockPick_Description	It's single use but it opens locks quickly and quietly.		Items/Tools/LockPick_Description
+Items/Tools/Shovel_Name	Shovel		Items/Tools/Shovel_Name
+Items/Tools/Shovel_Description	A small shovel for picking through rubble.		Items/Tools/Shovel_Description
+Items/Tools/Vest_Name	Military Vest		Items/Tools/Vest_Name
+Items/Tools/Vest_Description	Vastly increases the chances of surviving a bullet or blade hit.		Items/Tools/Vest_Description
+Items/Tools/Helmet_Name	Helmet		Items/Tools/Helmet_Name
+Items/Tools/Helmet_Description	It gives some protection against bullets and knives.		Items/Tools/Helmet_Description
+Items/Tools/Hatchet_Name	Hatchet		Items/Tools/Hatchet_Name
+Items/Tools/Hatchet_Description	We can use it to chop furniture... Or people.		Items/Tools/Hatchet_Description
+Items/Guns/Pistol_Name	Pistol		Items/Guns/Pistol_Name
+Items/Guns/Pistol_Description	Point at a person you want to hurt.		Items/Guns/Pistol_Description
+Items/Guns/Machinegun_Name	Assault Rifle		Items/Guns/Machinegun_Name
+Items/Guns/Machinegun_Description	Military assault rifle, with a good rate of fire.		Items/Guns/Machinegun_Description
+Items/Guns/SniperRifle_Name	Scoped Rifle		Items/Guns/SniperRifle_Name
+Items/Guns/SniperRifle_Description	Military assault rifle fitted with a scope.		Items/Guns/SniperRifle_Description
+Items/Guns/Shotgun_Name	Shotgun		Items/Guns/Shotgun_Name
+Items/Guns/Shotgun_Description	A powerful weapon for short distances.		Items/Guns/Shotgun_Description
+Items/Melee/Knife_Name	Knife		Items/Melee/Knife_Name
+Items/Melee/Knife_Description	It used to be a kitchen utensil, but now it's a dangerous melee weapon.		Items/Melee/Knife_Description
+Items/Melee/Fists	Fists		Items/Melee/Fists
+Items/TradingItems/TradingItem_Name	Jewelry		Items/TradingItems/TradingItem_Name
+Items/TradingItems/TradingItem_Description	A piece of jewelry, valuable bartering item.		Items/TradingItems/TradingItem_Description
+Items/TradingItems/PlushDog_Name	Plush Dog		Items/TradingItems/PlushDog_Name
+Items/TradingItems/PlushDog_Description	A fluffy dog toy for kids. Looks almost like new. Amelia has always loved dogs. She’ll be delighted to have it.		Items/TradingItems/PlushDog_Description
+Items/TradingItems/BrokenPlushDog_Name	Filthy Plush Dog		Items/TradingItems/BrokenPlushDog_Name
+Items/TradingItems/BrokenPlushDog_Description	It's dirty, but it definitely is the Plush Doggie I gave to Amelia.		Items/TradingItems/BrokenPlushDog_Description
+Items/TradingItems/AmeliaHoodie_Name	Amelia's Hoodie		Items/TradingItems/AmeliaHoodie_Name
+Items/TradingItems/AmeliaHoodie_Description	Well-worn and dirty, but it undoubtedly is Amelia's hoodie.		Items/TradingItems/AmeliaHoodie_Description
+Items/ElectricTier/HeatLamp_Name	Heat Lamp		Items/ElectricTier/HeatLamp_Name
+Items/ElectricTier/HeatLamp_Description	We can use this lamp to grow plants indoors.		Items/ElectricTier/HeatLamp_Description
+Items/ElectricTier/Mixer_Name	Mixer		Items/ElectricTier/Mixer_Name
+Items/ElectricTier/Mixer_Description	We can use it to mix gunpowder or medicine ingredients.		Items/ElectricTier/Mixer_Description
+Items/ElectricTier/TermoRegulator_Name	Thermo regulator		Items/ElectricTier/TermoRegulator_Name
+Items/ElectricTier/TermoRegulator_Description	We can use it to maintain optimum temperature of the heater and save wood. We'll also need it to make a distiller if we want to purify alcohol.		Items/ElectricTier/TermoRegulator_Description
+Items/ElectricTier/TermoRegulator_alt_Description	We'll need it to make a distiller if we want to purify alcohol.		Items/ElectricTier/TermoRegulator_alt_Description
+Items/StimulantsDescription/Abstinent	Abstinent		Items/StimulantsDescription/Abstinent
+Items/StimulantsDescription/Smoker	Smoker		Items/StimulantsDescription/Smoker
+Items/StimulantsDescription/CoffeeDrinker	Coffee Drinker		Items/StimulantsDescription/CoffeeDrinker
+Items/StimulantsDescription/ConsumeCigarettes	Cigarettes consumed per day:		Items/StimulantsDescription/ConsumeCigarettes
+Items/StimulantsDescription/ConsumeCoffee	Cups of coffee consumed per day:		Items/StimulantsDescription/ConsumeCoffee
+Items/StimulantsDescription/LackOfCoffee	We lack coffee!		Items/StimulantsDescription/LackOfCoffee
+Items/StimulantsDescription/LackOfCigarettes	We lack cigarettes!		Items/StimulantsDescription/LackOfCigarettes
+Items/StimulantsDescription/LackOfCoffeeAndCigarettes	We lack coffee and cigarettes!		Items/StimulantsDescription/LackOfCoffeeAndCigarettes
+Items/Keys/KeyPharmacyBackDoor_Name	Brother's Pharmacy keys		Items/Keys/KeyPharmacyBackDoor_Name
+Items/Keys/KeyPharmacyBackDoor_Description	My brother has always kept his keys on him, it's strange that they were lying on the ground. I can use them to open locked doors in the pharmacy.		Items/Keys/KeyPharmacyBackDoor_Description
+CharacterParameters/Depressed/StateName	Depressed		CharacterParameters/Depressed/StateName
+CharacterParameters/Hungry/Levels/1_f	STILL HUNGRY		CharacterParameters/Hungry/Levels/1_f
+CharacterParameters/Hungry/Levels/1	HUNGRY		CharacterParameters/Hungry/Levels/1
+CharacterParameters/Hungry/Levels/2_f	STILL VERY HUNGRY		CharacterParameters/Hungry/Levels/2_f
+CharacterParameters/Hungry/Levels/2	VERY HUNGRY		CharacterParameters/Hungry/Levels/2
+CharacterParameters/Hungry/Levels/3_f	STILL STARVING		CharacterParameters/Hungry/Levels/3_f
+CharacterParameters/Hungry/Levels/3	STARVING		CharacterParameters/Hungry/Levels/3
+CharacterParameters/Hungry/Levels/4_f	STILL EXTREMELY STARVED		CharacterParameters/Hungry/Levels/4_f
+CharacterParameters/Hungry/Levels/4	EXTREMELY STARVED		CharacterParameters/Hungry/Levels/4
+CharacterParameters/Hungry/Levels/-1	WELL FED		CharacterParameters/Hungry/Levels/-1
+CharacterParameters/Tired/Levels/1	TIRED		CharacterParameters/Tired/Levels/1
+CharacterParameters/Tired/Levels/2	VERY TIRED		CharacterParameters/Tired/Levels/2
+CharacterParameters/Tired/Levels/3	EXHAUSTED		CharacterParameters/Tired/Levels/3
+CharacterParameters/Tired/Levels/4	EXTREMELY EXHAUSTED		CharacterParameters/Tired/Levels/4
+CharacterParameters/Tired/Notes/Recovery	(RECOVERING)		CharacterParameters/Tired/Notes/Recovery
+CharacterParameters/Wounded/Levels/1	SLIGHTLY WOUNDED		CharacterParameters/Wounded/Levels/1
+CharacterParameters/Wounded/Levels/2	WOUNDED		CharacterParameters/Wounded/Levels/2
+CharacterParameters/Wounded/Levels/3	SEVERELY WOUNDED		CharacterParameters/Wounded/Levels/3
+CharacterParameters/Wounded/Levels/4	LETHALLY WOUNDED		CharacterParameters/Wounded/Levels/4
+CharacterParameters/Wounded/Notes/Bandages_delayed_influence	(BANDAGED)		CharacterParameters/Wounded/Notes/Bandages_delayed_influence
+CharacterParameters/Wounded/StateName	Wounded		CharacterParameters/Wounded/StateName
+CharacterParameters/Sick/Levels/1	SLIGHTLY SICK		CharacterParameters/Sick/Levels/1
+CharacterParameters/Sick/Levels/2	SICK		CharacterParameters/Sick/Levels/2
+CharacterParameters/Sick/Levels/3	SEVERELY ILL		CharacterParameters/Sick/Levels/3
+CharacterParameters/Sick/Levels/4	TERMINALLY ILL		CharacterParameters/Sick/Levels/4
+CharacterParameters/Sick/Notes/Meds_delayed_influence	(ON MEDS)		CharacterParameters/Sick/Notes/Meds_delayed_influence
+CharacterParameters/Sick/StateName	Sick		CharacterParameters/Sick/StateName
+CharacterParameters/BadSleep/Levels/1	SLEPT POORLY		CharacterParameters/BadSleep/Levels/1
+CharacterParameters/Morale/Levels/0	Content		CharacterParameters/Morale/Levels/0
+CharacterParameters/Morale/Levels/2	Sad		CharacterParameters/Morale/Levels/2
+CharacterParameters/Morale/Levels/3	Depressed		CharacterParameters/Morale/Levels/3
+CharacterParameters/Morale/Levels/4	Broken		CharacterParameters/Morale/Levels/4
+CharacterParameters/Morale/NeedSmoke	(I need cigarettes)		CharacterParameters/Morale/NeedSmoke
+CharacterParameters/Morale/NeedCoffee	(I need coffee)		CharacterParameters/Morale/NeedCoffee
+CharacterParameters/Morale/NeedBoth	(I need coffee and cigarette)		CharacterParameters/Morale/NeedBoth
+CharacterParameters/Morale/BeingComforted	(Comforted)		CharacterParameters/Morale/BeingComforted
+CharacterParameters/Morale/Playing	(Playing)		CharacterParameters/Morale/Playing
+CharacterParameters/Morale/Talking	(Talking)		CharacterParameters/Morale/Talking
+CharacterParameters/Morale/LookingAfter	(Looking after)		CharacterParameters/Morale/LookingAfter
+CharacterParameters/Morale/LookedAfter	(Looked after)		CharacterParameters/Morale/LookedAfter
+CharacterParameters/Drunk/Levels/1	DRUNK		CharacterParameters/Drunk/Levels/1
+CharacterParameters/Drunk/StateName	DRUNK		CharacterParameters/Drunk/StateName
+CharacterParameters/Hangover/Levels/1	Hangover		CharacterParameters/Hangover/Levels/1
+CharacterParameters/Sleepy/Levels/1	Drowsy		CharacterParameters/Sleepy/Levels/1
+CharacterParameters/WarStories/Nina	Unresponsive		CharacterParameters/WarStories/Nina
+CharacterParameters/WarStories/Determined	Determined		CharacterParameters/WarStories/Determined
+GameFlow/Ending/Win	The War is Over.		GameFlow/Ending/Win
+GameFlow/Ending/Lose	You Didn't Make It.		GameFlow/Ending/Lose
+GameFlow/Ending/WinDays	You've survived.		GameFlow/Ending/WinDays
+GameFlow/Ending/LoseDays	You've survived only for ^DayOfWar^ days.		GameFlow/Ending/LoseDays
+GameFlow/Ending/Win_alternative	The boat reaches a safe shore.		GameFlow/Ending/Win_alternative
+GameFlow/Ending/WinDays_alternative	You have escaped.		GameFlow/Ending/WinDays_alternative
+GameFlow/Ending/WS1_suicide	You've learned the truth about Amelia's fate.		GameFlow/Ending/WS1_suicide
+GameFlow/Ending/WS1_suicide_days	Victims of war often suffer from mental disorders.		GameFlow/Ending/WS1_suicide_days
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/00	I'm looking for my missing daughter. A little blonde girl.		GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/00
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/01	Oh yeah, I've seen her...		GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/01
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/02	Oh my God! Really? Please, tell me everything you know!		GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/02
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/03	You help me first, then I help you. I'm very hungry...		GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/03
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/04	If you bring me some food, I'll tell you what I know.		GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/04
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/05	How about you tell me now and I don't kick the shit out of you?		GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/05
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/06	Oh, I won't tell you anything if you hurt me. And if you kill me, you'll never find your daughter.		GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/06
+GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/07	Want to save her? Bring me the food. I'll wait here.		GameFlow/Quests/WarStories/Story1/NeedFood/DialogBefore/07
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/00	Here's your food, you greedy bastard. Now spill it.		GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/00
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/01	No need to be rude. There isn't much to tell. I've seen a blonde girl, maybe ten years old.		GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/01
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/02	Some guy, about your size, was carrying her towards the hospital.		GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/02
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/03	The hospital... You'd better be right. For your own sake.		GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/03
+GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/04	You can waste your breath threatening me or go look for your daughter.		GameFlow/Quests/WarStories/Story1/NeedFood/OnYesDialog/04
+GameFlow/Quests/WarStories/Story1/NeedFood/OnPostponeDialog/00	Alright, I'll bring you food. Wait here.		GameFlow/Quests/WarStories/Story1/NeedFood/OnPostponeDialog/00
+GameFlow/Quests/WarStories/Story1/NeedFood/OnPostponeDialog/01	I'm not going anywhere.		GameFlow/Quests/WarStories/Story1/NeedFood/OnPostponeDialog/01
+GameFlow/Quests/WarStories/Story1/NeedFood/OnReturn/00	Oh, it's you again...		GameFlow/Quests/WarStories/Story1/NeedFood/OnReturn/00
+GameFlow/Quests/WarStories/Story1/NeedFood/OnReturn/01	Did you bring me the food?		GameFlow/Quests/WarStories/Story1/NeedFood/OnReturn/01
+GameFlow/Quests/WarStories/Story1/NeedFood/Title	Bring me food.		GameFlow/Quests/WarStories/Story1/NeedFood/Title
+GameFlow/Quests/WarStories/Story1/NeedFood/Description	I want food in exchange for information. I prefer canned food, but raw food will do in a pinch. See how generous I am?		GameFlow/Quests/WarStories/Story1/NeedFood/Description
+GameFlow/BackFromScavenge	^Scavenger^ IS BACK		GameFlow/BackFromScavenge
+GameFlow/NightIsComing	THE NIGHT		GameFlow/NightIsComing
+GameFlow/NewDay	DAY ^DayOfWar^		GameFlow/NewDay
+GameFlow/ScavengerDied	^RecentlyDiedDweller^ DIED		GameFlow/ScavengerDied
+GameFlow/AllDwellersDied	ALL THE SURVIVORS ARE DEAD.		GameFlow/AllDwellersDied
+GameFlow/Victory	THE WAR IS OVER.		GameFlow/Victory
+GameFlow/GameObjective	SURVIVE THE LAST MONTH OF WAR.		GameFlow/GameObjective
+GameFlow/ScavengeTimeout	THE DAWN HAS CAUGHT ^Scavenger^. IT WILL BE HARDER TO RETURN.		GameFlow/ScavengeTimeout
+GameFlow/GameObjectiveE3	SURVIVE THE WAR.		GameFlow/GameObjectiveE3
+GameFlow/Intro_01	THESE DAYS WAR CAN BREAK OUT ANYTIME		GameFlow/Intro_01
+GameFlow/Intro_02	ANYWHERE		GameFlow/Intro_02
+GameFlow/Intro_03	IF YOUR CITY COMES UNDER SIEGE		GameFlow/Intro_03
+GameFlow/Intro_04	YOU'RE NOT PREPARED FOR IT		GameFlow/Intro_04
+GameFlow/Intro_05	SURVIVE		GameFlow/Intro_05
+UI/Crafting/Make	Make|XPadA|		UI/Crafting/Make
+UI/Crafting/Exit	Exit|XPadB|		UI/Crafting/Exit
+UI/Crafting/OneItemCreated	One ^ItemName^ will be made		UI/Crafting/OneItemCreated
+UI/Crafting/Decrease	-|XPadLeftBumper|		UI/Crafting/Decrease
+UI/Crafting/Increase	+|XPadRightBumper|		UI/Crafting/Increase
+UI/Crafting/SelectItemToCraft	What should I make?		UI/Crafting/SelectItemToCraft
+UI/Crafting/Rearrange	Rearrange		UI/Crafting/Rearrange
+UI/Crafting/RequiredComponents	Components we need		UI/Crafting/RequiredComponents
+UI/Crafting/Amount	How many		UI/Crafting/Amount
+UI/Crafting/CraftingTime	How long		UI/Crafting/CraftingTime
+UI/Crafting/RequiredSkill	Required Skill		UI/Crafting/RequiredSkill
+UI/Crafting/TrapTimeUnknown	I don't know		UI/Crafting/TrapTimeUnknown
+UI/Crafting/RandomTime	Random		UI/Crafting/RandomTime
+UI/Crafting/Teach	Teach|XPadY|		UI/Crafting/Teach
+UI/Crafting/Hour	h		UI/Crafting/Hour
+UI/Buttons/Done	Done		UI/Buttons/Done
+UI/Buttons/Ok	OK|XPadA|		UI/Buttons/Ok
+UI/Buttons/Cancel	Cancel|XPadB|		UI/Buttons/Cancel
+UI/Buttons/Continue	Continue|XPadA|		UI/Buttons/Continue
+UI/Buttons/Yes	Yes|XPadA|		UI/Buttons/Yes
+UI/Buttons/Apply	Apply|XPadA|		UI/Buttons/Apply
+UI/Buttons/No	No|XPadB|		UI/Buttons/No
+UI/Buttons/Epilogue	Epilogue		UI/Buttons/Epilogue
+UI/Buttons/Later	Later|XPadA|		UI/Buttons/Later
+UI/Menu/Resume	Resume		UI/Menu/Resume
+UI/Menu/Quit	Quit Game		UI/Menu/Quit
+UI/Menu/Surrender	Leave		UI/Menu/Surrender
+UI/Menu/Survive	Survive		UI/Menu/Survive
+UI/Menu/Continue	Continue		UI/Menu/Continue
+UI/Menu/StartNew	Another try		UI/Menu/StartNew
+UI/Menu/Settings	Settings		UI/Menu/Settings
+UI/Menu/Gamepad	Control Scheme		UI/Menu/Gamepad
+UI/Menu/WarChildGraffiti	Graffiti		UI/Menu/WarChildGraffiti
+UI/Menu/SurrenderConfirmation	Are you sure you want to leave? All unsaved progress will be lost.		UI/Menu/SurrenderConfirmation
+UI/Menu/ModeSelection_01	Press to start This War Of Mine Classic Modes		UI/Menu/ModeSelection_01
+UI/Menu/ModeSelection_02	Press to start This War Of Mine Stories Mode		UI/Menu/ModeSelection_02
+UI/Menu/MoreEpisodes	More Episodes		UI/Menu/MoreEpisodes
+UI/Menu/SeasonPass	Season Pass		UI/Menu/SeasonPass
+UI/Menu/NewStory	New Story		UI/Menu/NewStory
+UI/Menu/ChooseEpisode	Choose Episode		UI/Menu/ChooseEpisode
+UI/Menu/StoriesMode	Stories Mode		UI/Menu/StoriesMode
+UI/Menu/ClassicModes	Classic Modes		UI/Menu/ClassicModes
+UI/Menu/DisableMods	Disable all mods for best experience		UI/Menu/DisableMods
+UI/Menu/GetEpisode	Get Episode		UI/Menu/GetEpisode
+UI/Menu/BuyEpisode	Buy Episode		UI/Menu/BuyEpisode
+UI/Menu/BuySeasonPass	Buy Season Pass		UI/Menu/BuySeasonPass
+UI/HUD/EndDay	|XPadB|End Day		UI/HUD/EndDay
+UI/HUD/RunToExit	|XPadB|Run To Exit		UI/HUD/RunToExit
+UI/Log/Title	Day Log		UI/Log/Title
+UI/Scavenge/VisitedXDaysAgo	VISITED ^NoOfDays^ DAYS AGO		UI/Scavenge/VisitedXDaysAgo
+UI/Scavenge/GoForScavenge	PREPARE|XPadX|		UI/Scavenge/GoForScavenge
+UI/Scavenge/GoForScavengeInv	SCAVENGE|XPadX|		UI/Scavenge/GoForScavengeInv
+UI/Scavenge/JustSleep	STAY|XPadB|		UI/Scavenge/JustSleep
+UI/Scavenge/ButtonScavenge	SCAVENGE		UI/Scavenge/ButtonScavenge
+UI/Scavenge/ButtonGuard	GUARD		UI/Scavenge/ButtonGuard
+UI/Scavenge/ButtonSleep	SLEEP		UI/Scavenge/ButtonSleep
+UI/Scavenge/ButtonSleepInBed	SLEEP IN BED		UI/Scavenge/ButtonSleepInBed
+UI/Scavenge/Back	BACK|XPadB|		UI/Scavenge/Back
+UI/Scavenge/CannotScavenge	PLEASE SELECT A SCAVENGER		UI/Scavenge/CannotScavenge
+UI/Scavenge/CannotStay	PLEASE UNSELECT A SCAVENGER		UI/Scavenge/CannotStay
+UI/Scavenge/PlanNight	Plan the night		UI/Scavenge/PlanNight
+UI/Scavenge/Home	Our Shelter		UI/Scavenge/Home
+UI/Scavenge/notInWinter	Can't get there due to snow		UI/Scavenge/notInWinter
+UI/Scavenge/notDuringFights	Can't get there due to fighting		UI/Scavenge/notDuringFights
+UI/Scavenge/Visited	Visited		UI/Scavenge/Visited
+UI/Scavenge/New	New		UI/Scavenge/New
+UI/Scavenge/ArmyFront	ArmyFront		UI/Scavenge/ArmyFront
+UI/Scavenge/Scavenger	Scavenger		UI/Scavenge/Scavenger
+UI/Scavenge/WorkshopUpload	Publish on Workshop		UI/Scavenge/WorkshopUpload
+UI/Scavenge/ButtonSleepWithParent	SLEEP WITH ADULT		UI/Scavenge/ButtonSleepWithParent
+UI/Scavenge/ButtonSleepWithChild	SLEEP WITH CHILD		UI/Scavenge/ButtonSleepWithChild
+UI/Scavenge/CannotScavengeLocation	CHOOSE LOCATION		UI/Scavenge/CannotScavengeLocation
+UI/Scavenge/WS_Story1_ScavengeBlockade	I can’t leave Amelia on her own. What if someone comes into our shelter? I need to protect her.		UI/Scavenge/WS_Story1_ScavengeBlockade
+UI/Scavenge/WS_Story1_TakeToyOnScavenge	I'd better take Amelia's plush dog. I'm sure she misses it.		UI/Scavenge/WS_Story1_TakeToyOnScavenge
+UI/Scavenge/WS_Story1_TakeWeaponOnScavenge	I'm certain to meet armed men. I'd better take some weapon with me.		UI/Scavenge/WS_Story1_TakeWeaponOnScavenge
+UI/Scavenge/WS_Story1_ButtonScavengeAmelia	LOOK FOR AMELIA		UI/Scavenge/WS_Story1_ButtonScavengeAmelia
+UI/Scavenge/WS_Story1_GoForScavengeInvAmelia	LOOK FOR AMELIA|XPadX|		UI/Scavenge/WS_Story1_GoForScavengeInvAmelia
+UI/InventoryScreen/EquipmentSlots/Gun	Equipped Firearm		UI/InventoryScreen/EquipmentSlots/Gun
+UI/InventoryScreen/EquipmentSlots/Meelee	Equipped Melee Weapon		UI/InventoryScreen/EquipmentSlots/Meelee
+UI/InventoryScreen/EquipmentSlots/Head	Current Headgear		UI/InventoryScreen/EquipmentSlots/Head
+UI/InventoryScreen/EquipmentSlots/Torso	Current Body Armor		UI/InventoryScreen/EquipmentSlots/Torso
+UI/InventoryScreen/EquipmentSlots/Backpack	Current Backpack		UI/InventoryScreen/EquipmentSlots/Backpack
+UI/InventoryScreen/EquipButton	EQUIP|XPadY|		UI/InventoryScreen/EquipButton
+UI/InventoryScreen/DropButton	DROP|XPadA|		UI/InventoryScreen/DropButton
+UI/InventoryScreen/ExitButton	EXIT|XPadB|		UI/InventoryScreen/ExitButton
+UI/InventoryScreen/UseButton	Use|XPadX|		UI/InventoryScreen/UseButton
+UI/InventoryScreen/TakeButton	TAKE|XPadA|		UI/InventoryScreen/TakeButton
+UI/InventoryScreen/GraballButton	GRAB ALL|XPadX|		UI/InventoryScreen/GraballButton
+UI/InventoryScreen/Slots	Space		UI/InventoryScreen/Slots
+UI/InventoryScreen/Backpack	Backpack		UI/InventoryScreen/Backpack
+UI/InventoryScreen/Searched	Searched		UI/InventoryScreen/Searched
+UI/InventoryScreen/go	Go		UI/InventoryScreen/go
+UI/InventoryScreen/autoEquipped	We'll use the equipment during attack.		UI/InventoryScreen/autoEquipped
+UI/InventoryScreen/ShelterInfoTitle	Some Thoughts		UI/InventoryScreen/ShelterInfoTitle
+UI/Trading/NotInterested	NOT INTERESTED|XPadB|		UI/Trading/NotInterested
+UI/Trading/Deal	DEAL|XPadX|		UI/Trading/Deal
+UI/Trading/NotEnoughSpace	I can't carry that much!		UI/Trading/NotEnoughSpace
+UI/Trading/Header	Let's trade		UI/Trading/Header
+UI/Trading/OurItems	Our things		UI/Trading/OurItems
+UI/Trading/HisItems	What do you want?		UI/Trading/HisItems
+UI/StoryItem/Continue	CONTINUE|XPadA|		UI/StoryItem/Continue
+UI/Settings/LanguageNames/English	English		UI/Settings/LanguageNames/English
+UI/Settings/LanguageNames/German	Deutsch		UI/Settings/LanguageNames/German
+UI/Settings/LanguageNames/Polish	Polski		UI/Settings/LanguageNames/Polish
+UI/Settings/LanguageNames/French	French		UI/Settings/LanguageNames/French
+UI/Settings/LanguageNames/Italian	Italiano		UI/Settings/LanguageNames/Italian
+UI/Settings/LanguageNames/Spanish	Spanish		UI/Settings/LanguageNames/Spanish
+UI/Settings/LanguageNames/Japanese	Japanese		UI/Settings/LanguageNames/Japanese
+UI/Settings/LanguageNames/Chinese	Chinese		UI/Settings/LanguageNames/Chinese
+UI/Settings/LanguageNames/Russian	Russian		UI/Settings/LanguageNames/Russian
+UI/Settings/LanguageNames/Portuguese	Portuguese		UI/Settings/LanguageNames/Portuguese
+UI/Settings/LanguageNames/Default	Default		UI/Settings/LanguageNames/Default
+UI/Settings/LanguageNames/Brazilian	Brazilian		UI/Settings/LanguageNames/Brazilian
+UI/Settings/LanguageNames/Korean	Korean		UI/Settings/LanguageNames/Korean
+UI/Settings/LanguageNames/Turkish	Turkish		UI/Settings/LanguageNames/Turkish
+UI/Settings/QualityLevels/UltraLow	Ultra Low		UI/Settings/QualityLevels/UltraLow
+UI/Settings/QualityLevels/Low	Low		UI/Settings/QualityLevels/Low
+UI/Settings/QualityLevels/Medium	Medium		UI/Settings/QualityLevels/Medium
+UI/Settings/QualityLevels/High	High		UI/Settings/QualityLevels/High
+UI/Settings/QualityLevels/VeryHigh	Very High		UI/Settings/QualityLevels/VeryHigh
+UI/Settings/Debug/DMStandard	DEBUG MODE: STANDARD		UI/Settings/Debug/DMStandard
+UI/Settings/Debug/DMSummer	DEBUG MODE: SUMMER ALL		UI/Settings/Debug/DMSummer
+UI/Settings/Debug/DMWinter	DEBUG MODE: WINTER ALL		UI/Settings/Debug/DMWinter
+UI/Settings/On	On		UI/Settings/On
+UI/Settings/Off	Off		UI/Settings/Off
+UI/Settings/AudioSettings	Audio Settings		UI/Settings/AudioSettings
+UI/Settings/VideoSettings	Video Settings		UI/Settings/VideoSettings
+UI/Settings/MiscSettings	Misc Settings		UI/Settings/MiscSettings
+UI/Settings/MusicVolume	Music Volume		UI/Settings/MusicVolume
+UI/Settings/SFXVolume	SFX Volume		UI/Settings/SFXVolume
+UI/Settings/VoiceVolume	Voice Volume		UI/Settings/VoiceVolume
+UI/Settings/Resolution	Resolution		UI/Settings/Resolution
+UI/Settings/FullScreen	Full Screen		UI/Settings/FullScreen
+UI/Settings/GFXQuality	GFX Quality		UI/Settings/GFXQuality
+UI/Settings/Language	Language		UI/Settings/Language
+UI/Settings/Subtitles	Subtitles		UI/Settings/Subtitles
+UI/Settings/OptionsHeader	Settings		UI/Settings/OptionsHeader
+UI/Settings/PencilEffect	PENCIL EFFECT		UI/Settings/PencilEffect
+UI/Settings/Soft	SOFT		UI/Settings/Soft
+UI/Settings/Hard	SKETCHY		UI/Settings/Hard
+UI/Settings/TemperatureScale	Temp. Scale		UI/Settings/TemperatureScale
+UI/Settings/Celsius	Celsius		UI/Settings/Celsius
+UI/Settings/Fahrenheit	Fahrenheit		UI/Settings/Fahrenheit
+UI/Settings/ControlMode	Control Mode		UI/Settings/ControlMode
+UI/Settings/ControlMouse	Mouse		UI/Settings/ControlMouse
+UI/Settings/ControlGamepad	Controller		UI/Settings/ControlGamepad
+UI/Settings/PhoneUI	PhoneUI		UI/Settings/PhoneUI
+UI/Settings/UIChangeInformation	RESTART TO APPLY CHANGES		UI/Settings/UIChangeInformation
+UI/Settings/ChangeAccount	Change Profile |XPadY|		UI/Settings/ChangeAccount
+UI/Visit/WaitButton	Give me a sec|XPadX|		UI/Visit/WaitButton
+UI/Visit/CantHelpButton	Can't help you...|XPadA|		UI/Visit/CantHelpButton
+UI/Visit/PostponeButton	Maybe later|XPadY|		UI/Visit/PostponeButton
+UI/Visit/OfferTitle	I can give you:		UI/Visit/OfferTitle
+UI/Visit/DemandTitle	We need:		UI/Visit/DemandTitle
+UI/Game/itemPlace	Drag to place on empty destination		UI/Game/itemPlace
+UI/Game/cancel	Back|XPadB|		UI/Game/cancel
+UI/Game/place	Place|XPadA|		UI/Game/place
+UI/Game/done	Done		UI/Game/done
+UI/Game/DayTitle	Central Europe		UI/Game/DayTitle
+UI/Game_Start/Headphones	"War is delightful only to those who have had no experience of it"		UI/Game_Start/Headphones
+UI/Game_Start/Pope_1	"War is a defeat for humanity"		UI/Game_Start/Pope_1
+UI/Game_Start/Pope_2	Pope John Paul II		UI/Game_Start/Pope_2
+UI/Game_Start/Ernest_1	"In modern war... you will die like a dog for no good reason"		UI/Game_Start/Ernest_1
+UI/Game_Start/Ernest_2	Ernest Hemingway		UI/Game_Start/Ernest_2
+UI/Game_Start/Ernest_3	“Notes on the Next War: A Serious Topical Letter,” Esquire, Sept. 1935		UI/Game_Start/Ernest_3
+UI/Game_Start/SaveInfoXB1	This game automatically saves your game progress. Please do not turn off your Xbox One console when you see this icon or your current progress will be lost.		UI/Game_Start/SaveInfoXB1
+UI/Game_Start/SaveInfoPS4	This game automatically saves your game progress. Please do not turn off your PlayStation®4 system when you see this icon or your current progress will be lost.		UI/Game_Start/SaveInfoPS4
+UI/MessageBox/StartNewGameConfirm	You will lose your current progress, are you sure?		UI/MessageBox/StartNewGameConfirm
+UI/MessageBox/ConsoleAccountConfirm	You have not signed in. You need to sign in to save your progress and be awarded Achievements. Do you want to sign in now?		UI/MessageBox/ConsoleAccountConfirm
+UI/MessageBox/Sign-InChange	Sign-in change has occurred. The game will return to the title screen.		UI/MessageBox/Sign-InChange
+UI/MessageBox/ControllerDisconnected	{mr|Controller has been disconnected, please reconnect the controller.}{fr|The wireless controller has been disconnected, please reconnect the wireless controller.}		UI/MessageBox/ControllerDisconnected
+UI/MessageBox/LossProgressWarning	Are you sure you want to exit? Any unsaved game progress will be lost.		UI/MessageBox/LossProgressWarning
+UI/MessageBox/NoInternetConnection	No Internet Connection		UI/MessageBox/NoInternetConnection
+UI/MessageBox/NewContentAnniversaryEdition	It's been two years since This War of Mine global release and we're still expanding the experience. This |#color=FF3800|new free DLC|#defaultcolor|, created especially for the Anniversary Edition, adds |#color=FF3800|new characters|#defaultcolor|, |#color=FF3800|new locations|#defaultcolor| to explore, and most importantly - a |#color=FF3800|whole new ending|#defaultcolor|, leading to a different outcome to the game. The dilemma though remains the same – how far will you go, to protect the ones you care about? 		UI/MessageBox/NewContentAnniversaryEdition
+UI/MessageBox/NewContentAnniversaryEdition_title	Anniversary Edition		UI/MessageBox/NewContentAnniversaryEdition_title
+UI/ScenarioSelect/header	Choose Your Story		UI/ScenarioSelect/header
+UI/ScenarioSelect/soon	To be unlocked		UI/ScenarioSelect/soon
+UI/ScenarioSelect/locked	Locked		UI/ScenarioSelect/locked
+UI/ScenarioSelect/survived	Survived		UI/ScenarioSelect/survived
+UI/ScenarioSelect/notsurvived	Survived only ^DayOfWar^ days		UI/ScenarioSelect/notsurvived
+UI/ScenarioSelect/days	^DayOfWar^ days		UI/ScenarioSelect/days
+UI/ScenarioSelect/new	New		UI/ScenarioSelect/new
+UI/ScenarioSelect/random	Random|XPadX|		UI/ScenarioSelect/random
+UI/ScenarioSelect/custom	Write my own story		UI/ScenarioSelect/custom
+UI/ScenarioSelect/custom2	My own story		UI/ScenarioSelect/custom2
+UI/ScenarioSelect/custom3	Define my own story		UI/ScenarioSelect/custom3
+UI/ScenarioSelect/header_ws	Choose New Story		UI/ScenarioSelect/header_ws
+UI/ScenarioSelect/title1_ws	Father's Promise		UI/ScenarioSelect/title1_ws
+UI/ScenarioSelect/season_ws	Season Pass|XPadX|		UI/ScenarioSelect/season_ws
+UI/AgeVerification/EnterAgeMessage	You need to verify that you are over 18, please enter your birth date to continue		UI/AgeVerification/EnterAgeMessage
+UI/AgeVerification/FirstTryWrongAgeMessage	Warning! Your account shall become locked unless you verify that you are over 18		UI/AgeVerification/FirstTryWrongAgeMessage
+UI/AgeVerification/SecondTryWrongAgeMessage	Your account has been locked due to age requirements		UI/AgeVerification/SecondTryWrongAgeMessage
+UI/AgeVerification/WaitForUnlockMessage	Your account shall be unlocked in:		UI/AgeVerification/WaitForUnlockMessage
+UI/AgeVerification/Apply	Apply|XPadY|		UI/AgeVerification/Apply
+UI/ScenarioEditor/Messages/SelectDweller	You must choose at least one character		UI/ScenarioEditor/Messages/SelectDweller
+UI/ScenarioEditor/Messages/TooManyDwellers	You can choose only ^count^ characters		UI/ScenarioEditor/Messages/TooManyDwellers
+UI/ScenarioEditor/Messages/NotEnoughLocations	You must select at least ^count^ locations		UI/ScenarioEditor/Messages/NotEnoughLocations
+UI/ScenarioEditor/Messages/EmptyName	You must enter a name		UI/ScenarioEditor/Messages/EmptyName
+UI/ScenarioEditor/Messages/EmptyCharacterName	You must enter a name		UI/ScenarioEditor/Messages/EmptyCharacterName
+UI/ScenarioEditor/Messages/SureYouWantToDelete	Are you sure you want to delete?		UI/ScenarioEditor/Messages/SureYouWantToDelete
+UI/ScenarioEditor/Messages/SureYouWantToDelete2	Are you sure you want to delete scenario?		UI/ScenarioEditor/Messages/SureYouWantToDelete2
+UI/ScenarioEditor/Messages/SureYouWantToDelete3	Are you sure you want to delete story?		UI/ScenarioEditor/Messages/SureYouWantToDelete3
+UI/ScenarioEditor/Messages/SureYouWantToDelete4	Are you sure you want to delete character?		UI/ScenarioEditor/Messages/SureYouWantToDelete4
+UI/ScenarioEditor/Messages/SureYouWantToDelete5	Are you sure you want to delete civilian?		UI/ScenarioEditor/Messages/SureYouWantToDelete5
+UI/ScenarioEditor/Messages/SureYouWantToDelete6	Are you sure you want to delete city map?		UI/ScenarioEditor/Messages/SureYouWantToDelete6
+UI/ScenarioEditor/Messages/SureYouWantToOverwrite	Are you sure you want to overwrite?		UI/ScenarioEditor/Messages/SureYouWantToOverwrite
+UI/ScenarioEditor/Messages/SureYouWantToOverwrite2	Are you sure you want to overwrite story?		UI/ScenarioEditor/Messages/SureYouWantToOverwrite2
+UI/ScenarioEditor/Messages/SureYouWantToOverwrite3	Are you sure you want to overwrite city map?		UI/ScenarioEditor/Messages/SureYouWantToOverwrite3
+UI/ScenarioEditor/Messages/SureYouWantToOverwrite4	Are you sure you want to overwrite civilian?		UI/ScenarioEditor/Messages/SureYouWantToOverwrite4
+UI/ScenarioEditor/Messages/SureYouWantToEdit	Are you sure you want to edit?		UI/ScenarioEditor/Messages/SureYouWantToEdit
+UI/ScenarioEditor/Messages/SureYouWantToEdit2	Are you sure you want to edit civilian?		UI/ScenarioEditor/Messages/SureYouWantToEdit2
+UI/ScenarioEditor/Messages/NoMoreThanOneChild	You can't select more than one child		UI/ScenarioEditor/Messages/NoMoreThanOneChild
+UI/ScenarioEditor/Messages/AtLeastOneAdult	You have to select at least one adult		UI/ScenarioEditor/Messages/AtLeastOneAdult
+UI/ScenarioEditor/Messages/NotEnoughSpace	Can't save content. You've reached max custom content space		UI/ScenarioEditor/Messages/NotEnoughSpace
+UI/ScenarioEditor/Messages/SureYouWantToLeave	Are you sure you want to leave your story?		UI/ScenarioEditor/Messages/SureYouWantToLeave
+UI/ScenarioEditor/WarDuration	Days until ceasefire		UI/ScenarioEditor/WarDuration
+UI/ScenarioEditor/Difficulty	Difficulty		UI/ScenarioEditor/Difficulty
+UI/ScenarioEditor/Difficulty2	Intensity of the conflict		UI/ScenarioEditor/Difficulty2
+UI/ScenarioEditor/Low	Low		UI/ScenarioEditor/Low
+UI/ScenarioEditor/WinterLow	Mild		UI/ScenarioEditor/WinterLow
+UI/ScenarioEditor/WinterMedium	Moderate		UI/ScenarioEditor/WinterMedium
+UI/ScenarioEditor/WinterHard	Severe		UI/ScenarioEditor/WinterHard
+UI/ScenarioEditor/Low2	Minor		UI/ScenarioEditor/Low2
+UI/ScenarioEditor/Medium	Moderate		UI/ScenarioEditor/Medium
+UI/ScenarioEditor/Medium2	Major		UI/ScenarioEditor/Medium2
+UI/ScenarioEditor/Hard	High		UI/ScenarioEditor/Hard
+UI/ScenarioEditor/Hard2	Center of the storm		UI/ScenarioEditor/Hard2
+UI/ScenarioEditor/Short	Short		UI/ScenarioEditor/Short
+UI/ScenarioEditor/Long	Long		UI/ScenarioEditor/Long
+UI/ScenarioEditor/WinterStart	Winter comes		UI/ScenarioEditor/WinterStart
+UI/ScenarioEditor/WinterStart2	First day of winter		UI/ScenarioEditor/WinterStart2
+UI/ScenarioEditor/WinterPower	Winter harshness		UI/ScenarioEditor/WinterPower
+UI/ScenarioEditor/WinterDuration	Winter Length		UI/ScenarioEditor/WinterDuration
+UI/ScenarioEditor/Never	Never		UI/ScenarioEditor/Never
+UI/ScenarioEditor/Early	Early		UI/ScenarioEditor/Early
+UI/ScenarioEditor/Middle	Halfway through		UI/ScenarioEditor/Middle
+UI/ScenarioEditor/Late	Late		UI/ScenarioEditor/Late
+UI/ScenarioEditor/Title	My Story		UI/ScenarioEditor/Title
+UI/ScenarioEditor/Title_old	Scenario Editor		UI/ScenarioEditor/Title_old
+UI/ScenarioEditor/SelectCharacters	Choose people to start with		UI/ScenarioEditor/SelectCharacters
+UI/ScenarioEditor/SelectCharacters2	Choose starting people		UI/ScenarioEditor/SelectCharacters2
+UI/ScenarioEditor/SelectCharacters3	Choose people to your home		UI/ScenarioEditor/SelectCharacters3
+UI/ScenarioEditor/SelectCharacters4	Starting people in your house		UI/ScenarioEditor/SelectCharacters4
+UI/ScenarioEditor/SelectCharacters_old	Select Character		UI/ScenarioEditor/SelectCharacters_old
+UI/ScenarioEditor/WinterConfig	Winter		UI/ScenarioEditor/WinterConfig
+UI/ScenarioEditor/WinterConfig_old	Winter Settings		UI/ScenarioEditor/WinterConfig_old
+UI/ScenarioEditor/LocationsSettings	City Map		UI/ScenarioEditor/LocationsSettings
+UI/ScenarioEditor/LocationsSettings_old	Locations Settings		UI/ScenarioEditor/LocationsSettings_old
+UI/ScenarioEditor/Select	View		UI/ScenarioEditor/Select
+UI/ScenarioEditor/Select_old	Select|XPadA|		UI/ScenarioEditor/Select_old
+UI/ScenarioEditor/LowDescription	The city is cut off, but the situation could be worse. The shortages of supplies are a problem, but not a drastic one yet. Crime is not rampant yet, as people still prefer to scavenge for supplies rather than rob others. People are hopeful, and neighbours often stick together and try to help one another.		UI/ScenarioEditor/LowDescription
+UI/ScenarioEditor/MediumDescription	The situation in the city is severe. There are shortages of everything, and black market prices fluctuate. Bands of looters attack homes at night, as desperate people turn to crime to survive. People have some hope, but neighbours aren’t quick to help one another.		UI/ScenarioEditor/MediumDescription
+UI/ScenarioEditor/HardDescription	The ongoing siege means the situation in the city is dire. Even the most basic supplies are difficult to get. Black market prices skyrocket. Desperate people scour the streets and ruins clean of everything of any use. Bandits roam the city and nobody is safe in their home. People have little hope, and are unwilling to help one another.		UI/ScenarioEditor/HardDescription
+UI/ScenarioEditor/ShelterItemsGood	Well equipped shelter.		UI/ScenarioEditor/ShelterItemsGood
+UI/ScenarioEditor/ShelterItemsNormal	Decently equipped shelter.		UI/ScenarioEditor/ShelterItemsNormal
+UI/ScenarioEditor/ShelterItemsPoor	Poorly equipped shelter.		UI/ScenarioEditor/ShelterItemsPoor
+UI/ScenarioEditor/ShelterA_Name	Tenement		UI/ScenarioEditor/ShelterA_Name
+UI/ScenarioEditor/ShelterB_Name	Suburban house		UI/ScenarioEditor/ShelterB_Name
+UI/ScenarioEditor/NewCharacter	Define new civilian		UI/ScenarioEditor/NewCharacter
+UI/ScenarioEditor/NewCharacter_old	Create Character		UI/ScenarioEditor/NewCharacter_old
+UI/ScenarioEditor/CharacterCount	People chosen:		UI/ScenarioEditor/CharacterCount
+UI/ScenarioEditor/CharacterCount2	Civilians chosen:		UI/ScenarioEditor/CharacterCount2
+UI/ScenarioEditor/LocationsCount	Locations chosen:		UI/ScenarioEditor/LocationsCount
+UI/ScenarioEditor/SelectLocations	My City Map		UI/ScenarioEditor/SelectLocations
+UI/ScenarioEditor/SelectLocations_old	Select Locations		UI/ScenarioEditor/SelectLocations_old
+UI/ScenarioEditor/SelectShelter	Choose Your Shelter		UI/ScenarioEditor/SelectShelter
+UI/ScenarioEditor/SaveScenario	Save My Story|XPadY|		UI/ScenarioEditor/SaveScenario
+UI/ScenarioEditor/SaveScenario_old	Save Scenario		UI/ScenarioEditor/SaveScenario_old
+UI/ScenarioEditor/LoadScenario	Load My Story|XPadX|		UI/ScenarioEditor/LoadScenario
+UI/ScenarioEditor/LoadScenario_old	Load Scenario		UI/ScenarioEditor/LoadScenario_old
+UI/ScenarioEditor/SelectScenario	Choose Saved Story		UI/ScenarioEditor/SelectScenario
+UI/ScenarioEditor/SelectScenario_old	Select Saved Scenario		UI/ScenarioEditor/SelectScenario_old
+UI/ScenarioEditor/ScnarioList	Story List		UI/ScenarioEditor/ScnarioList
+UI/ScenarioEditor/ScnarioList_old	Scenario List		UI/ScenarioEditor/ScnarioList_old
+UI/ScenarioEditor/Delete	Delete|XPadY|		UI/ScenarioEditor/Delete
+UI/ScenarioEditor/Load	Load|XPadA|		UI/ScenarioEditor/Load
+UI/ScenarioEditor/Save	Save|XPadA|		UI/ScenarioEditor/Save
+UI/ScenarioEditor/LoadLocations	Load City Map|XPadX|		UI/ScenarioEditor/LoadLocations
+UI/ScenarioEditor/LoadLocations_old	Load Locations		UI/ScenarioEditor/LoadLocations_old
+UI/ScenarioEditor/SaveLocations	Save City Map|XPadY|		UI/ScenarioEditor/SaveLocations
+UI/ScenarioEditor/SaveLocations_old	Save Locations		UI/ScenarioEditor/SaveLocations_old
+UI/ScenarioEditor/StartNewStory	Start My Story		UI/ScenarioEditor/StartNewStory
+UI/ScenarioEditor/UploadToWorkshop	Upload to Workshop |XPadY|		UI/ScenarioEditor/UploadToWorkshop
+UI/ScenarioEditor/WorkshopLicenseAgreementTitle	Legal agreement required		UI/ScenarioEditor/WorkshopLicenseAgreementTitle
+UI/ScenarioEditor/WorkshopLicenseAgreementMessage	To make this item visible in Workshop, you need to agree to terms of service (http://steamcommunity.com/sharedfiles/workshoplegalagreement). Please visit your item's page.		UI/ScenarioEditor/WorkshopLicenseAgreementMessage
+UI/ScenarioEditor/ToggleLocations	Toggle Location |XPadA|		UI/ScenarioEditor/ToggleLocations
+UI/ScenarioEditor/Edit	Edit|XPadX|		UI/ScenarioEditor/Edit
+UI/ScenarioEditor/TextboxTitle_Name	Enter civilian name.		UI/ScenarioEditor/TextboxTitle_Name
+UI/ScenarioEditor/TextboxTitle_Mappack	Enter City Map name.		UI/ScenarioEditor/TextboxTitle_Mappack
+UI/ScenarioEditor/TextboxTitle_Scenario	Enter Story name.		UI/ScenarioEditor/TextboxTitle_Scenario
+UI/ScenarioEditor/Min	MIN		UI/ScenarioEditor/Min
+UI/CharacterEditor/Patterns/PoliceOfficer	Police Officer		UI/CharacterEditor/Patterns/PoliceOfficer
+UI/CharacterEditor/Patterns/PoliceOfficer_charskill1	Familiar with guns		UI/CharacterEditor/Patterns/PoliceOfficer_charskill1
+UI/CharacterEditor/Patterns/PoliceOfficer_charskillBackup	Firearms proficiency		UI/CharacterEditor/Patterns/PoliceOfficer_charskillBackup
+UI/CharacterEditor/Patterns/PoliceOfficer_charskill2	Proficient with firearms		UI/CharacterEditor/Patterns/PoliceOfficer_charskill2
+UI/CharacterEditor/Patterns/PoliceOfficer_charskill3	Good aim		UI/CharacterEditor/Patterns/PoliceOfficer_charskill3
+UI/CharacterEditor/Patterns/Computer_specialist	Computer specialist		UI/CharacterEditor/Patterns/Computer_specialist
+UI/CharacterEditor/Patterns/Computer_specialist_charskill1	Knack for tinkering		UI/CharacterEditor/Patterns/Computer_specialist_charskill1
+UI/CharacterEditor/Patterns/Computer_specialist_charskill2	Uses fewer electric parts to make electric appliances		UI/CharacterEditor/Patterns/Computer_specialist_charskill2
+UI/CharacterEditor/Patterns/Computer_specialist_charskill3	Saves electric parts		UI/CharacterEditor/Patterns/Computer_specialist_charskill3
+UI/CharacterEditor/Patterns/Nurse	Nurse		UI/CharacterEditor/Patterns/Nurse
+UI/CharacterEditor/Patterns/Nurse_charskill1	Medical training		UI/CharacterEditor/Patterns/Nurse_charskill1
+UI/CharacterEditor/Patterns/Nurse_charskill2	More efficient wound treatment		UI/CharacterEditor/Patterns/Nurse_charskill2
+UI/CharacterEditor/Patterns/Nurse_charskill3	More efficient illness treatment		UI/CharacterEditor/Patterns/Nurse_charskill3
+UI/CharacterEditor/Patterns/Nurse_charskill4	More resistant to disease		UI/CharacterEditor/Patterns/Nurse_charskill4
+UI/CharacterEditor/Patterns/Forester	Forester		UI/CharacterEditor/Patterns/Forester
+UI/CharacterEditor/Patterns/Forester_charskill1	Uses wood more efficiently when trying to warm the shelter		UI/CharacterEditor/Patterns/Forester_charskill1
+UI/CharacterEditor/Patterns/Forester_charskill2	Can dig through rubble faster with or without a shovel		UI/CharacterEditor/Patterns/Forester_charskill2
+UI/CharacterEditor/Patterns/Forester_charskill3	Makes heater fuel more efficiently		UI/CharacterEditor/Patterns/Forester_charskill3
+UI/CharacterEditor/Patterns/Forester_charskill4	Digs through rubble faster		UI/CharacterEditor/Patterns/Forester_charskill4
+UI/CharacterEditor/Patterns/Forester_charskill5	Uses less wood for heating		UI/CharacterEditor/Patterns/Forester_charskill5
+UI/CharacterEditor/Patterns/ChemistBackup	Chemist		UI/CharacterEditor/Patterns/ChemistBackup
+UI/CharacterEditor/Patterns/Chemist	Pharmacist		UI/CharacterEditor/Patterns/Chemist
+UI/CharacterEditor/Patterns/Chemist_charskill1	Uses fewer ingredients when making alcohol and medications		UI/CharacterEditor/Patterns/Chemist_charskill1
+UI/CharacterEditor/Patterns/Chemist_charskill2	Knows much about meds		UI/CharacterEditor/Patterns/Chemist_charskill2
+UI/CharacterEditor/Patterns/Chemist_charskill2_Backup	Good at making meds		UI/CharacterEditor/Patterns/Chemist_charskill2_Backup
+UI/CharacterEditor/Patterns/Insurance_agent	Insurance agent		UI/CharacterEditor/Patterns/Insurance_agent
+UI/CharacterEditor/Patterns/Insurance_agent_charskill1	Persuasive		UI/CharacterEditor/Patterns/Insurance_agent_charskill1
+UI/CharacterEditor/Patterns/Insurance_agent_charskill1_Backup	Bartering skills		UI/CharacterEditor/Patterns/Insurance_agent_charskill1_Backup
+UI/CharacterEditor/Patterns/Photographer	Photographer		UI/CharacterEditor/Patterns/Photographer
+UI/CharacterEditor/Patterns/Photographer_charskill1	No special skill		UI/CharacterEditor/Patterns/Photographer_charskill1
+UI/CharacterEditor/Patterns/Photographer_charskill2	Keen eye for detail		UI/CharacterEditor/Patterns/Photographer_charskill2
+UI/CharacterEditor/Patterns/Psychologist	Psychologist		UI/CharacterEditor/Patterns/Psychologist
+UI/CharacterEditor/Patterns/Psychologist_charskill1	More resistant to trauma, better at cheering up others		UI/CharacterEditor/Patterns/Psychologist_charskill1
+UI/CharacterEditor/Patterns/Psychologist_charskill2	Strong willed		UI/CharacterEditor/Patterns/Psychologist_charskill2
+UI/CharacterEditor/Patterns/Forester_no_skill	Loves nature		UI/CharacterEditor/Patterns/Forester_no_skill
+UI/CharacterEditor/Patterns/Lumberjack_hatchet_skill	Skilled woodchopper		UI/CharacterEditor/Patterns/Lumberjack_hatchet_skill
+UI/CharacterEditor/Patterns/Lumberjack_hatchet_skillBackup	Good with a hatchet		UI/CharacterEditor/Patterns/Lumberjack_hatchet_skillBackup
+UI/CharacterEditor/Patterns/Lumberjack	Woodsman		UI/CharacterEditor/Patterns/Lumberjack
+UI/CharacterEditor/Patterns/LumberjackBackup	Lumberjack		UI/CharacterEditor/Patterns/LumberjackBackup
+UI/CharacterEditor/Patterns/Computer_specialist_charskill4	Knack for electronics		UI/CharacterEditor/Patterns/Computer_specialist_charskill4
+UI/CharacterEditor/Gender	Gender		UI/CharacterEditor/Gender
+UI/CharacterEditor/GenderMale	Male		UI/CharacterEditor/GenderMale
+UI/CharacterEditor/GenderMale2	Man		UI/CharacterEditor/GenderMale2
+UI/CharacterEditor/GenderFemale	Female		UI/CharacterEditor/GenderFemale
+UI/CharacterEditor/GenderFemale2	Woman		UI/CharacterEditor/GenderFemale2
+UI/CharacterEditor/Pattern	Occupation		UI/CharacterEditor/Pattern
+UI/CharacterEditor/Portrait	Portrait		UI/CharacterEditor/Portrait
+UI/CharacterEditor/Model	Physique		UI/CharacterEditor/Model
+UI/CharacterEditor/Model2	Apperance		UI/CharacterEditor/Model2
+UI/CharacterEditor/Model_old	Model		UI/CharacterEditor/Model_old
+UI/CharacterEditor/Bio	Bio		UI/CharacterEditor/Bio
+UI/CharacterEditor/Bio_old	Story		UI/CharacterEditor/Bio_old
+UI/CharacterEditor/Name	Name		UI/CharacterEditor/Name
+UI/CharacterEditor/Title	New Civilian		UI/CharacterEditor/Title
+UI/CharacterEditor/Title_old	Character Creation		UI/CharacterEditor/Title_old
+UI/CharacterEditor/UploadPhoto	Upload Your Photo		UI/CharacterEditor/UploadPhoto
+UI/CharacterEditor/UploadPhoto_STEAM	To upload your photo, place the file in PORTRAITS in main game folder.		UI/CharacterEditor/UploadPhoto_STEAM
+UI/CharacterEditor/UploadPhoto_DRMFree	To upload your photo, place the file in PORTRAITS in Documents/This War Of Mine.		UI/CharacterEditor/UploadPhoto_DRMFree
+UI/CharacterEditor/UploadPhoto_MacAppStore	To upload your photo, place the file in PORTRAITS in Library/.../This War Of Mine.		UI/CharacterEditor/UploadPhoto_MacAppStore
+UI/CharacterEditor/Save	Save Character		UI/CharacterEditor/Save
+UI/Workshop/VisibilitySettingTitle	Visibility		UI/Workshop/VisibilitySettingTitle
+UI/Workshop/VisibilityPublic	Public		UI/Workshop/VisibilityPublic
+UI/Workshop/VisibilityFriendsOnly	Friends Only		UI/Workshop/VisibilityFriendsOnly
+UI/Workshop/VisibilityPrivate	Private		UI/Workshop/VisibilityPrivate
+UI/Workshop/UploadToWorkshop	Upload to Workshop		UI/Workshop/UploadToWorkshop
+UI/Workshop/LicenseAgreementTitle	Legal agreement required		UI/Workshop/LicenseAgreementTitle
+UI/Workshop/LicenseAgreementMessage	To make this item visible in Workshop, you need to agree to terms of service.		UI/Workshop/LicenseAgreementMessage
+UI/Workshop/LoadTitle	Workshop Story		UI/Workshop/LoadTitle
+UI/Workshop/Browse	Browse Workshop |XPadX|		UI/Workshop/Browse
+UI/Workshop/Author	By:		UI/Workshop/Author
+UI/Workshop/StartScenario	Start Story |XPadY|		UI/Workshop/StartScenario
+UI/Workshop/ItemName	Item Name		UI/Workshop/ItemName
+UI/Workshop/ItemDescription	Item Description		UI/Workshop/ItemDescription
+UI/Workshop/PublishNew	Publish New Item |XPadY|		UI/Workshop/PublishNew
+UI/Workshop/UpdateExisting	Update Existing |XPadX|		UI/Workshop/UpdateExisting
+UI/Workshop/NoWorkshopItems	Browse Workshop to discover new items		UI/Workshop/NoWorkshopItems
+UI/Workshop/WorkshopMenu	Workshop Story		UI/Workshop/WorkshopMenu
+UI/Workshop/WorkshopCharacter	Workshop Civillian		UI/Workshop/WorkshopCharacter
+UI/Workshop/PublishItemTitle	Publish Workshop Item		UI/Workshop/PublishItemTitle
+UI/Workshop/PublishMessage	Sending item content...		UI/Workshop/PublishMessage
+UI/Workshop/PublishCompleted	Item Published Successfully		UI/Workshop/PublishCompleted
+UI/Workshop/PublishError	Publishing item failed!		UI/Workshop/PublishError
+UI/Workshop/LicenseAgreement	License Agreement |XPadX|		UI/Workshop/LicenseAgreement
+UI/Workshop/EmptyName	You must provide an item name		UI/Workshop/EmptyName
+UI/Workshop/EmptyDescription	You must provide an item description		UI/Workshop/EmptyDescription
+UI/Workshop/SubscribedItems	Subscribed items		UI/Workshop/SubscribedItems
+UI/Modding/ModdingCentre	Modding Centre		UI/Modding/ModdingCentre
+UI/Modding/NoModdingItems	No modding items		UI/Modding/NoModdingItems
+UI/Modding/PriorityUp	PRIORITY UP |XPadUp|		UI/Modding/PriorityUp
+UI/Modding/Enable	ENABLE |XPadA|		UI/Modding/Enable
+UI/Modding/Disable	DISABLE |XPadA|		UI/Modding/Disable
+UI/Modding/PriorityDown	PRIORITY DOWN |XPadDown|		UI/Modding/PriorityDown
+UI/Modding/Restart	You must restart game to apply changes		UI/Modding/Restart
+UI/Modding/Status	Status:		UI/Modding/Status
+UI/Modding/ConflictWith	Conflict with:		UI/Modding/ConflictWith
+UI/Modding/NotLoaded	Not loaded		UI/Modding/NotLoaded
+UI/Modding/Loaded	Loaded		UI/Modding/Loaded
+UI/Modding/NoConflicts	Hooray, no conflicts!		UI/Modding/NoConflicts
+UI/Modding/NoModdingItemsNW	No modding items		UI/Modding/NoModdingItemsNW
+UI/Babel/Title	Babel		UI/Babel/Title
+UI/Babel/Info	BABEL project is a community based initiative, that will allow to bring This War of Mine experience to people all around the world. Thanks to the effort of all participants, soon the game will be available in all major languages, allowing everyone to play in his native language. You can be a part of the project – register and start working on the translation right away!		UI/Babel/Info
+UI/Babel/Status	STATUS:		UI/Babel/Status
+UI/Babel/GameVersion	Game Version:		UI/Babel/GameVersion
+UI/Babel/NoLanguages	No languages avalible		UI/Babel/NoLanguages
+UI/Babel/Download	Download |XPadY|		UI/Babel/Download
+UI/Babel/Update	Update		UI/Babel/Update
+UI/Babel/NewVersionAvailable	New version is available		UI/Babel/NewVersionAvailable
+UI/Babel/Current	Current		UI/Babel/Current
+UI/Babel/Connect	Refresh |XPadX|		UI/Babel/Connect
+UI/Babel/NotDownloaded	Not downloaded		UI/Babel/NotDownloaded
+UI/Babel/DownloadFailed	Downloading item failed!		UI/Babel/DownloadFailed
+UI/Babel/DownloadCompleted	Item Downloaded Successfully		UI/Babel/DownloadCompleted
+UI/Babel/Downloading	Downloading item...		UI/Babel/Downloading
+UI/Babel/RefreshCompleted	List refreshed successfully		UI/Babel/RefreshCompleted
+UI/InAppPurchase/Buy	Buy|XPadA|		UI/InAppPurchase/Buy
+UI/InAppPurchase/DLC	DLC		UI/InAppPurchase/DLC
+UI/InAppPurchase/Restore	Restore|XPadX|		UI/InAppPurchase/Restore
+UI/InAppPurchase/Loading	Loading		UI/InAppPurchase/Loading
+UI/InAppPurchase/TLODescription	The Little Ones explores the hardships of wartime survival as seen from an entirely new perspective, that of a child.		UI/InAppPurchase/TLODescription
+UI/InAppPurchase/TLOName	The Little Ones		UI/InAppPurchase/TLOName
+UI/InAppPurchase/UnlockGameTitle	Purchase the full version		UI/InAppPurchase/UnlockGameTitle
+UI/InAppPurchase/UnlockGameName	Thank you for support official version.		UI/InAppPurchase/UnlockGameName
+UI/InAppPurchase/UnlockGameDescription	If you want to experience more contents, only 30 RMB for the full version, more scenes and roles for you to experience!		UI/InAppPurchase/UnlockGameDescription
+UI/WarStories/SaveWindow	Click YES to start a new game. Click NO to continue from the last day before you died.		UI/WarStories/SaveWindow
+UI/WarStories/ContinueBox	Do you want to continue from the day before?		UI/WarStories/ContinueBox
+UI/GameTitle	This War of Mine		UI/GameTitle
+UI/DAY_TIME	DAY TIME		UI/DAY_TIME
+UI/NIGHT_TIME	NIGHT TIME		UI/NIGHT_TIME
+UI/Loading	LOADING...		UI/Loading
+UI/Pause	Paused		UI/Pause
+UI/Day	Day		UI/Day
+UI/DayNumber	Day ^Day^		UI/DayNumber
+UI/Night	Night		UI/Night
+UI/Inventory	Our things		UI/Inventory
+UI/Inventory_Btn	|XPadY|Our things		UI/Inventory_Btn
+UI/Backpack	Backpack		UI/Backpack
+UI/Backpack_Btn	|XPadY|Backpack		UI/Backpack_Btn
+UI/EndDayConfirm	Are you sure you want to end the day?		UI/EndDayConfirm
+UI/DragForMore	Drag for more		UI/DragForMore
+UI/guest	Someone's at the door.		UI/guest
+UI/ScavengeIcons	I can't scavenge during combat		UI/ScavengeIcons
+UI/ButtonScavenge	Scavenge		UI/ButtonScavenge
+UI/HideWeapon	Hide Weapon		UI/HideWeapon
+UI/ItemBroken	This item has broken.		UI/ItemBroken
+UI/PrivateProperty	Private Property		UI/PrivateProperty
+UI/MyStory	MY STORY		UI/MyStory
+UI/ConsoleWelcome	Press |XPadA| to continue		UI/ConsoleWelcome
+UI/LoadingProfile	CHECKING SAVED DATA...		UI/LoadingProfile
+UI/PressPreviewEnd	This is the end of the preview demo of This War of Mine on tablets. Look out for the full experience to be released soon in July.		UI/PressPreviewEnd
+UI/SynchronizingCloud	Synchronizing with cloud		UI/SynchronizingCloud
+UI/SynchronizingFailed	Synchronizing failed		UI/SynchronizingFailed
+UI/ChangeRadioStation	Use right stick to tune radio.		UI/ChangeRadioStation
+UI/NotSignedIn	Not signed in		UI/NotSignedIn
+UI/ButtonScavengeWithControl	|XPadUp|Scavenge		UI/ButtonScavengeWithControl
+UI/Help	Help		UI/Help
+UI/LStickForMore	Use |LeftStick| to see more		UI/LStickForMore
+UI/RStickForMore	Use |RightStick| to see more		UI/RStickForMore
+UI/BumpersForMore	Use |XPadLeftBack| / |XPadRightBack| to see more		UI/BumpersForMore
+UI/ForceNewContent	Anniversary Edition Mode		UI/ForceNewContent
+UI/ForceNewContentPopUp	With this option enabled, you can be sure you'll be playing the content of |#color=FF3800|Anniversary Edition|#defaultcolor|, including new locations, new characters and new ending. Otherwise it will be included at random.		UI/ForceNewContentPopUp
+UI/AM	am		UI/AM
+UI/PM	pm		UI/PM
+UI/NewRadioMessage	Strange sounds coming from radio.		UI/NewRadioMessage
+UI/NewBioText	New entry in Adam's bio.		UI/NewBioText
+CharacterSkills/Warrior	Trained In Combat		CharacterSkills/Warrior
+CharacterSkills/Scavenger	Skilled Scavenger		CharacterSkills/Scavenger
+CharacterSkills/Thief	Sneaks Quietly		CharacterSkills/Thief
+CharacterSkills/Trader	Bargaining Skills		CharacterSkills/Trader
+CharacterSkills/Misiek	Strong But Slow		CharacterSkills/Misiek
+CharacterSkills/Cook	Good Cook		CharacterSkills/Cook
+CharacterSkills/Crafter	Handyman		CharacterSkills/Crafter
+CharacterSkills/Lawyer	Talented Lawyer		CharacterSkills/Lawyer
+CharacterSkills/Mathematician	Good Mathematician		CharacterSkills/Mathematician
+CharacterSkills/Star	Fast Runner		CharacterSkills/Star
+CharacterSkills/Student	Bolsters Spirits		CharacterSkills/Student
+CharacterSkills/Teacher	Loves Children		CharacterSkills/Teacher
+CharacterSkills/Irina	Green Thumb		CharacterSkills/Irina
+CharacterSkills/Christo	Determined Father		CharacterSkills/Christo
+CharacterSkills/Henrik	Tobacconist		CharacterSkills/Henrik
+CharacterSkills/Lydia	Irina's niece		CharacterSkills/Lydia
+CharacterSkills/Misha	Neighborhood kid		CharacterSkills/Misha
+CharacterSkills/Ivano	Henrik's grandson		CharacterSkills/Ivano
+CharacterSkills/Kalina	War orphan		CharacterSkills/Kalina
+CharacterSkills/Iskra	Christo's daughter		CharacterSkills/Iskra
+CharacterSkills/Sergei	Lost boy		CharacterSkills/Sergei
+CharacterSkills/Amelia	Adam's daughter		CharacterSkills/Amelia
+LocationDescriptions/ScenarioEditor/Setups_titles/Couple	Couple		LocationDescriptions/ScenarioEditor/Setups_titles/Couple
+LocationDescriptions/ScenarioEditor/Setups_titles/Soldiers	Soldiers		LocationDescriptions/ScenarioEditor/Setups_titles/Soldiers
+LocationDescriptions/ScenarioEditor/Setups_titles/Trader	Trader		LocationDescriptions/ScenarioEditor/Setups_titles/Trader
+LocationDescriptions/ScenarioEditor/Setups_titles/Girls	Girls		LocationDescriptions/ScenarioEditor/Setups_titles/Girls
+LocationDescriptions/ScenarioEditor/Setups_titles/Bandits	Bandits		LocationDescriptions/ScenarioEditor/Setups_titles/Bandits
+LocationDescriptions/ScenarioEditor/Setups_titles/Snipers	Snipers		LocationDescriptions/ScenarioEditor/Setups_titles/Snipers
+LocationDescriptions/ScenarioEditor/Setups_titles/Rebels	Rebels		LocationDescriptions/ScenarioEditor/Setups_titles/Rebels
+LocationDescriptions/ScenarioEditor/Setups_titles/Homeless	Homeless		LocationDescriptions/ScenarioEditor/Setups_titles/Homeless
+LocationDescriptions/ScenarioEditor/Setups_titles/Scavenger	Scavenger		LocationDescriptions/ScenarioEditor/Setups_titles/Scavenger
+LocationDescriptions/ScenarioEditor/Setups_titles/Scavengers	Scavengers		LocationDescriptions/ScenarioEditor/Setups_titles/Scavengers
+LocationDescriptions/ScenarioEditor/Setups_titles/Father_and_son	Father and Son		LocationDescriptions/ScenarioEditor/Setups_titles/Father_and_son
+LocationDescriptions/ScenarioEditor/Setups_titles/Familly	Familly		LocationDescriptions/ScenarioEditor/Setups_titles/Familly
+LocationDescriptions/ScenarioEditor/Setups_titles/Civilians	Civilians		LocationDescriptions/ScenarioEditor/Setups_titles/Civilians
+LocationDescriptions/ScenarioEditor/Setups_titles/Faithful	Faithful		LocationDescriptions/ScenarioEditor/Setups_titles/Faithful
+LocationDescriptions/ScenarioEditor/Setups_titles/Priest	Priest		LocationDescriptions/ScenarioEditor/Setups_titles/Priest
+LocationDescriptions/ScenarioEditor/Setups_titles/Sniper	Sniper		LocationDescriptions/ScenarioEditor/Setups_titles/Sniper
+LocationDescriptions/ScenarioEditor/Setups_titles/Traders	Traders		LocationDescriptions/ScenarioEditor/Setups_titles/Traders
+LocationDescriptions/ScenarioEditor/Setups_titles/Market	Market		LocationDescriptions/ScenarioEditor/Setups_titles/Market
+LocationDescriptions/LotsOf	Lots of ^ItemName^		LocationDescriptions/LotsOf
+LocationDescriptions/Some	Some ^ItemName^		LocationDescriptions/Some
+LocationDescriptions/HugeAmounts	Huge amounts of ^ItemName^		LocationDescriptions/HugeAmounts
+LocationDescriptions/Food	Food		LocationDescriptions/Food
+LocationDescriptions/Scrap	Materials		LocationDescriptions/Scrap
+LocationDescriptions/Weapon	Weapons		LocationDescriptions/Weapon
+LocationDescriptions/Tools	Tools		LocationDescriptions/Tools
+LocationDescriptions/Meds	Meds		LocationDescriptions/Meds
+LocationDescriptions/Cautious	Caution advised		LocationDescriptions/Cautious
+LocationDescriptions/Danger	Danger		LocationDescriptions/Danger
+LocationDescriptions/Trader	Possible trade		LocationDescriptions/Trader
+LocationDescriptions/Parts	Parts		LocationDescriptions/Parts
+LocationDescriptions/Ingredients	Ingredients		LocationDescriptions/Ingredients
+Events/WinterStart	Bitter cold will make it much more difficult for us to survive.		Events/WinterStart
+Events/WinterStartTitle	It is getting very cold		Events/WinterStartTitle
+Events/WinterEnd	Thank goodness, the worst colds are over.		Events/WinterEnd
+Events/WinterEndTitle	Cold days have passed		Events/WinterEndTitle
+Events/BanditAttacksStart	Bands of looters have become audacious. We had better watch out.		Events/BanditAttacksStart
+Events/BanditAttacksStartTitle	Outbreak of crime		Events/BanditAttacksStartTitle
+Events/BanditAttacksEnd	Civic self-defense patrols have put an end to the reign of armed bands of looters.		Events/BanditAttacksEnd
+Events/BanditAttacksEndTitle	Curb on crime		Events/BanditAttacksEndTitle
+TEST/YOU_HAVE	You have ^Count^		TEST/YOU_HAVE
+TakingCareOf/GiveFood/Kids/00	I'm worried about you ^CharacterName^, you must eat.		TakingCareOf/GiveFood/Kids/00
+TakingCareOf/GiveFood/Kids/01	I brought you something to eat, ^CharacterName^.		TakingCareOf/GiveFood/Kids/01
+TakingCareOf/GiveFood/Kids/02	You look hungry ^CharacterName^, here I brought you some food.		TakingCareOf/GiveFood/Kids/02
+TakingCareOf/GiveFood/00	Here ^CharacterName^, you have to eat...		TakingCareOf/GiveFood/00
+TakingCareOf/GiveFood/01	You really should eat something.		TakingCareOf/GiveFood/01
+TakingCareOf/GiveFood/02	Come on, don't give up! You gotta eat!		TakingCareOf/GiveFood/02
+TakingCareOf/GiveMeds/00	Here, these will help you.		TakingCareOf/GiveMeds/00
+TakingCareOf/GiveMeds/01	You're sick, you need medicine. Take this.		TakingCareOf/GiveMeds/01
+TakingCareOf/GiveMeds/02	You will get better ^CharacterName^, just take some of these.		TakingCareOf/GiveMeds/02
+TakingCareOf/Bandages/00	^CharacterName^ you're bleeding, let me dress that wound.		TakingCareOf/Bandages/00
+TakingCareOf/Bandages/01	You need bandages, let me help you.		TakingCareOf/Bandages/01
+TakingCareOf/Bandages/02	Come on ^CharacterName^, I'll dress your wound.		TakingCareOf/Bandages/02
+TakingCareOf/DrinkTogether/00	Come on, let's have a drink and talk. Everything will be fine.		TakingCareOf/DrinkTogether/00
+TakingCareOf/DrinkTogether/01	Drink with me, friend. I'll cheer you up!		TakingCareOf/DrinkTogether/01
+TakingCareOf/DrinkTogether/02	Come on, don't be so blue. Let's have a drink together!		TakingCareOf/DrinkTogether/02
+TakingCareOf/Comforts/00	Get a grip. We'll make it, you'll see. This war can't last forever!		TakingCareOf/Comforts/00
+TakingCareOf/Comforts/01	Don't give up hope, ^CharacterName^! This war will be over soon, trust me.		TakingCareOf/Comforts/01
+TakingCareOf/Comforts/02	I know it's grim now, but It won't always be like that. Think about the future!		TakingCareOf/Comforts/02
+Gamepad/Settings	In-game Menu		Gamepad/Settings
+Gamepad/LB	Switch Character		Gamepad/LB
+Gamepad/RB	Switch Character		Gamepad/RB
+Gamepad/LT	Target cycle		Gamepad/LT
+Gamepad/RT	\nAttack		Gamepad/RT
+Gamepad/LStick	Character movement		Gamepad/LStick
+Gamepad/LStickPress	(Press) Zoom out		Gamepad/LStickPress
+Gamepad/RStick	Camera		Gamepad/RStick
+Gamepad/RStickPress	(Press) Zoom in		Gamepad/RStickPress
+Gamepad/updown	Toggle Scavenge/\nCombat Mode\n		Gamepad/updown
+Gamepad/leftright	Toggle Action		Gamepad/leftright
+Gamepad/A	Action / Accept		Gamepad/A
+Gamepad/B	Back / Cancel		Gamepad/B
+Gamepad/Y	Inventory		Gamepad/Y
+Gamepad/YHold	(Press and hold) Radial menu		Gamepad/YHold
+Gamepad/X	Various		Gamepad/X
+Gamepad/CombatSplashScreen	War is not a playground. Sometimes the situation will force you to get into a fight. You can meet people who will be hostile towards you. Remember that you are not defenseless.		Gamepad/CombatSplashScreen
+DLC/Title/01	USA		DLC/Title/01
+DLC/Title/02	Italy		DLC/Title/02
+DLC/Title/03	France		DLC/Title/03
+DLC/Title/04	Poland		DLC/Title/04
+DLC/Title/05	Poland		DLC/Title/05
+DLC/Title/06	Canada		DLC/Title/06
+DLC/Title/07	Poland		DLC/Title/07
+DLC/Title/08	USA		DLC/Title/08
+DLC/Title/09	France		DLC/Title/09
+DLC/Title/10	Poland		DLC/Title/10
+DLC/Description/01	Canadian-American artist Gabriel “Specter” Reese as a kid sketched and painted the streets of Montreal. Nowadays his work has been featured in countless gallery shows and he’s been commissioned to do several large public works in Brooklyn and Manhattan.		DLC/Description/01
+DLC/Description/02	Since the early nineties, SeaCreative whose real name is Fabrizio Sarti has been painting walls and train cars in and around Milan, Italy. Today SeaCreative paints and shows his own characters, not just in the more conventional setting of an exhibition, but still throughout the urban setting of Milan.		DLC/Description/02
+DLC/Description/03	Emir personally experienced war as a boy. He began to repulse the hatred for war by crushing charcoal on large formats. His compositions are reflections on human condition and our society during the war.		DLC/Description/03
+DLC/Description/04	M-City is a project of Mariusz Waras, born 1978 in Gdynia, Poland. His projects including several hundred murals, may be seen in the streets of Warsaw, Gdańsk, Berlin, Paris, Jakarta, Sao Paulo, New York, Bolzano, London and Prague, as well as in art galleries.		DLC/Description/04
+DLC/Description/05	Man behind M-City project Mariusz Waras is is also a curator of the 238x504 billboard gallery in Gdynia as well as an archivist and collector of Polish street art.		DLC/Description/05
+DLC/Description/06	Fauxreel is a self tought Canadian artist. He creates stunning photo based street art to provoke reflection upon many issues like identity, social relationships and the spaces that we inhabit.		DLC/Description/06
+DLC/Description/07	Mariusz Waras is also a freelance graphic artist, frequently awarded in various contests. In 2008 Tristan Manco, an international art expert included him in the official list of the worlds's most important artists of the stencil-graffiti scene.		DLC/Description/07
+DLC/Description/08	In the street, Specter is known for precise installations that revitalize forgotten places. The work is as much about the piece as it is about where it is placed. He specifically chooses the environments for his work and it often evolves to reflect the chosen location.		DLC/Description/08
+DLC/Description/09	Large formats that Emir utilizes in his work allowed for better impact making very contrasted images quite impressive in an expressionist way.		DLC/Description/09
+DLC/Description/10	Mateusz Walus is a young and very talented artist from Poland. He is insanely passionate about art and games. Mateusz created some of the graphics used in This War of Mine.		DLC/Description/10
+DLC/View	View		DLC/View
+DLC/ViewA	View|XPadA|		DLC/ViewA
+DLC/ThankYou	Thank you for supporting the charity War Child.		DLC/ThankYou
+DLC/Found	Found on		DLC/Found
+DLC/Locked	Locked		DLC/Locked
+DEBUGTEXT	--TEXT--NOT--FOUND--		DEBUGTEXT
+Credits	"<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 bit studios S.A. 2014\n<BR>\n<BR>\n<BR>\n<HAND>\nSTARTED AS AN INSPIRING IDEA OF GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HEADER>\nDESIGN DIRECTOR & PROJECT LEAD\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nART DIRECTOR & PROJECT LEAD\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n\n\n\n<HEADER>\nLEAD DESIGNER\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nSENIOR DESIGNERS\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nLEVEL DESIGN\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nAI DESIGNER\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nLead Writer\n<NAME>\nMaciej Skóra\n<BR>\n\n<HEADER>\nSTORY & WRITING\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nADDITIONAL STORY & SCRIPT\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLead Artist\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nSenior 3D Artists\n<NAME>\nBartek Rydel\nJakub Piotrowski\n<BR>\n\n<HEADER>\nCharacter Artists\n<NAME>\nOlaf Pożoga\nDominik Zieliński\n<BR>\n\n<HEADER>\nAnimations\n<NAME>\nDominik Zieliński\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPrzemysław Marszał\nTomasz Piętek\n<BR>\n\n<HEADER>\nPhotography\n<NAME>\nTomasz Pietęk\nPrzemysław Marszał\n<BR>\n\n<HEADER>\nConcept Art & Backgrounds\n<NAME>\nJakub Kowalczyk\n<BR>\n\n<HEADER>\nAdditional Concept Art\n<NAME>\nMateusz Waluś\nJan Buczny\n<BR>\n\n<HEADER>\nAdditional 3D Artists\n<NAME>\nMateusz Waluś\nMarcin Wawrzonowski\nKonrad Wiśniewski\nJan Buczny\n<BR>\n\n<HEADER>\nAdditional Animations\n<NAME>\nArtur Bielenica\nPiotr Chomiak\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD GAME PROGRAMMER\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nSENIOR GAME PROGRAMMER\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nGAME PROGRAMMER\n<NAME>\nPIOTR KOWALSKI\n<BR>\n\n<HEADER>\nENGINE PROGRAMMING\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nTOOLS & ADDITIONAL PROGRAMMING\n<NAME>\nRAFAŁ PODKOWIŃSKI\nROBERT PRZYGODA\nPIOTR KOWALSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nMUSIC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nSOUND ENGINEER\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nADDITIONAL SOUNDS\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nADDITIONAL MUSIC\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nPRODUCTION\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA LEAD\n<NAME>\nPAWEŁ ""The 47"" CZAPLARSKI\n<BR>\n\n\n<HEADER>\nSENIOR QA SPECIALISTS\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nQA TESTERS\n<NAME>\nPAWEŁ BONIFACIUK\nKONSTANTY MICHNIEWICZ\nBARTEK NAJDYHOR\n<BR>\n\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMODELS\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nzlib – general purpose compression library\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nThe Vorbis General Audio Compression Codec\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – general scripting language\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nAji Hand Font by Ajith Rajan\n<BR>\n\nOkuda font by Mike Okuda\n<BR>\n\nTertre Extra Bold font by Jan Schmoeger\n<BR>\n\nDesignosaur Font by Archy Studio\n<BR>\n\nCovered By Your Grace Font by KG Fonts\n<BR>\n\nGunny Rewritten Font by Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>"\n\n\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA WARGOCKA\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nPAWEŁ SZYSZKA\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\nSZYMON JABŁOŃSKI\nBARTEK NAJDYHOR\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nMODELS\n<NAME>\nCHODKOWSKI PIOTR\nCZAPLARSKI PAWEŁ\nDROZDOWSKI MICHAŁ\nFELDMAN PAWEŁ\nGWARDIAK BARTŁOMIEJ\nGWAREK RADOSŁAW\nJEFIMOW MARCIN\nKACZOR MACIEJ\nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA\nKOWALSKI JAKUB\nKOWALSKI PIOTR\nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID\nKWIATKOWSKA JUSTYNA\nKWIATKOWSKI KACPER\nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKI PAWEŁ\nPIOTROWSKI JAKUB\nPODKOWIŃSKI RAFAŁ\nPOŻOGA OLAF\nRENDASZKA PAWEŁ\nROZBICKA MARIA\nSETLAK WOJCIECH\nSKÓRA MACIEJ\nSKWARSKA MARTA\nSTYPEREK BARTOSZ\nSZCZEPANOWSKA KAROLINA\nSZCZEŚNIK MACIEK\nŚMIETAŃSKI ADAM\nWARGOCKA MONIKA\nWASIAK MACIEJ\nWŁOSEK RAFAŁ\nWRÓBLEWSKI MATEUSZ\nZAJĄCZKOWSKI BORYS\nZAJĄCZKOWSKI KAROL\nZALEWSKA BARBARA\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nzlib – general purpose compression library\nCopyright © 1995-2004\nJean-loup Gailly and Mark Adler\n<BR>\n\nThe Vorbis General Audio Compression Codec\nCopyright © 1994-2002 Xiph.org Foundation\n<BR>\n\nLua – general scripting language\nCopyright © 1994–2010 Lua.org, PUC-Rio\n<BR>\n\ncURL\nLicense Copyright © 1996-2013 Daniel Stenberg\n<BR>\n\nAji Hand Font by Ajith Rajan\n<BR>\n\nOkuda font by Mike Okuda\n<BR>\n\nTertre Extra Bold font by Jan Schmoeger\n<BR>\n\nDesignosaur Font by Archy Studio\n<BR>\n\nCovered By Your Grace Font by KG Fonts\n<BR>\n\nGunny Rewritten Font by Vit Condak\n<BR>\n\n\nErnest Hemingway\nNotes on the Next War: A Serious Topical Letter\nEsquire Sept. 1935\n<BR>\n<BR>\n<BR>\n \n11 bit studios\n2014\n<BR>\n<BR>\n<BR>		Credits
+Credits_Title	Credits		Credits_Title
+DEBUGTEXT_FINAL	…		DEBUGTEXT_FINAL
+CreditsStories	<NAME>\nTHIS WAR OF MINE\n<HEADER>\n© 11 BIT STUDIOS S.A. 2015\n<BR>\n<BR>\n<BR>\n<HAND>\nSTARTED AS AN INSPIRING IDEA OF GRZEGORZ MIECHOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nDESIGN DIRECTOR & PROJECT LEAD\n<NAME>\nMICHAŁ DROZDOWSKI\n<BR><BR><BR>\n\n<HEADER>\nART DIRECTOR & PROJECT LEAD\n<NAME>\nPRZEMYSŁAW MARSZAŁ\n<BR><BR><BR>\n<BR><BR><BR>\n<BR><BR>\n\n<HAND>\nTHIS WAR OF MINE STORIES: FATHER'S PROMISE\n<BR>\n<BR>\n<BR>\n\n<HEADER>\nGAME DESIGN\n<NAME>\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nSTORY\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nWRITING\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nPROGRAMMING\n<NAME>\nJANUSZ KUNOWSKI\nDAMIAN WICIŃSKI\n<BR>\n\n<HEADER>\nART\n<NAME>\nJAKUB PIOTROWSKI\nTOMASZ KISILEWICZ\n<BR>\n\n<HEADER>\nPRODUCTION\n<NAME>\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA\n<NAME>\nBARTŁOMIEJ GWARDIAK\n<BR>\n\n<HEADER>\nPHOTOGRAPHY\n<NAME>\nPIOTR JAGUŚ\n<BR>\n\n<HEADER>\nBASED ON CHARACTERS BY ŁUKASZ ORBITOWSKI\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n<BR>\n\n\n<HAND>\nTHIS WAR OF MINE CREDITS\n<BR>\n<BR>\n\n<HEADER>\nLEAD DESIGNER\n<NAME>\nRAFAŁ WŁOSEK\n<BR>\n\n<HEADER>\nCONSOLE VERSION LEAD DESIGNER\n<NAME>\nMACIEJ SUŁECKI\n<BR>\n\n<HEADER>\nSENIOR DESIGNER\n<NAME>\nKACPER KWIATKOWSKI\n<BR>\n\n<HEADER>\nLEVEL DESIGN\n<NAME>\nKACPER KWIATKOWSKI\nMACIEJ SUŁECKI\nMACIEJ WASIAK\n<BR>\n\n<HEADER>\nAI DESIGNER\n<NAME>\nRADOSŁAW GWAREK\n<BR>\n\n<HEADER>\nJUNIOR DESIGNERS\n<NAME>\nPAWEŁ SZYSZKA\nUGO TRELIS\n<BR>\n\n<HEADER>\nLEAD WRITER\n<NAME>\nMACIEJ SKÓRA\n<BR>\n\n<HEADER>\nSTORY & WRITING\n<NAME>\nKACPER KWIATKOWSKI\nWOJTEK SETLAK\n<BR>\n\n<HEADER>\nADDITIONAL STORY & SCRIPT\n<NAME>\nPAWEŁ MIECHOWSKI\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD ARTIST\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nSENIOR 3D ARTISTS\n<NAME>\nBARTEK RYDEL\nJAKUB PIOTROWSKI\n<BR>\n\n<HEADER>\nCHARACTER ARTISTS\n<NAME>\nOLAF POŻOGA\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nANIMATIONS\n<NAME>\nDOMINIK ZIELIŃSKI\n<BR>\n\n<HEADER>\nUI\n<NAME>\nPRZEMYSŁAW MARSZAŁ\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nPHOTOGRAPHY\n<NAME>\nTOMASZ PIETĘK\nPRZEMYSŁAW MARSZAŁ\n<BR>\n\n<HEADER>\nCONCEPT ART & BACKGROUNDS\n<NAME>\nJAKUB KOWALCZYK\n<BR>\n\n<HEADER>\nADDITIONAL CONCEPT ART\n<NAME>\nMATEUSZ WALUŚ\nJAN BUCZNY\n<BR>\n\n<HEADER>\nADDITIONAL 3D ARTISTS\n<NAME>\nMATEUSZ WALUŚ\nMARCIN WAWRZONOWSKI\nKONRAD WIŚNIEWSKI\nJAN BUCZNY\n<BR>\n\n<HEADER>\nADDITIONAL ANIMATIONS\n<NAME>\nARTUR BIELENICA\nPIOTR CHOMIAK\n<BR><BR><BR><BR>\n\n\n\n<HEADER>\nLEAD GAME PROGRAMMER\n<NAME>\nGRZEGORZ MAZUR\n<BR>\n\n<HEADER>\nSENIOR GAME PROGRAMMER\n<NAME>\nALEKSANDER KAUCH\n<BR>\n\n<HEADER>\nGAME PROGRAMMERS\n<NAME>\nPIOTR KOWALSKI\nJANUSZ KUNOWSKI\n<BR>\n\n<HEADER>\nENGINE PROGRAMMING\n<NAME>\nBARTOSZ BRZOSTEK\nRAFAŁ PODKOWINSKI\n<BR>\n\n<HEADER>\nCONSOLE PORTING\n<NAME>\nRAFAŁ PODKOWINSKI\nTRISTAN RYBAK\nROBERT PRZYGODA\nSZYMON JABŁOŃSKI\n<BR>\n\n<HEADER>\nTOOLS\n<NAME>\nRAFAŁ PODKOWINSKI\nROBERT PRZYGODA\n<BR>\n\n<HEADER>\nADDITIONAL PROGRAMMING\n<NAME>\nSZYMON JABŁOŃSKI\nDAMIAN WICIŃSKI\n<BR><BR><BR><BR>\n\n\n\n\n<HEADER>\nMUSIC\n<NAME>\nPIOTR MUSIAŁ\n<BR>\n\n<HEADER>\nSOUND ENGINEER\n<NAME>\nKRZYSZTOF LIPKA\n<BR>\n\n<HEADER>\nADDITIONAL SOUNDS\n<NAME>\nGUILLAUME MULLER\nADAM SKORUPA\nPAWEL DAUDZWARD\n<BR>\n\n<HEADER>\nADDITIONAL MUSIC\n<NAME>\nGRZEGORZ MAZUR\n<BR><BR><BR><BR>\n\n<HEADER>\nPRODUCTION\n<NAME>\nMARCIN JEFIMOW\nMAREK ZIEMAK\nBŁAŻEJ ŻYWICZYŃSKI\n<BR>\n\n<HEADER>\nQA LEAD\n<NAME>\nPAWEŁ ""THE 47"" CZAPLARSKI\n<BR>\n\n<HEADER>\nSENIOR QA SPECIALISTS\n<NAME>\nBARTEK GWARDIAK\n<BR>\n\n<HEADER>\nADDITIONAL QA\n<NAME>\nPAWEŁ BONIFACIUK\nBARTEK NAJDYHOR\n<BR>\n<BR>\n\n<HEADER>\nTRANSLATIONS\n<NAME>\nROBOTO TRANSLATION\nLUKAS KOTRLY\nALEXANDRE LELANDAIS\nBORYS ZAJĄCZKOWSKI\nPEDRO JOSÉ SEPÚLVEDA\n<BR><BR><BR><BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT\n<NAME>\nPAWEŁ FELDMAN\nGRZEGORZ MIECHOWSKI\n<BR>\n\n<HEADER>\nPR & MARKETING\n<NAME>\nBARTOSZ BRZOSTEK\nPAWEŁ MIECHOWSKI\nKAROL ZAJĄCZKOWSKI\nDAWID KUROWSKI\nMARCIN WOJTULEWICZ\nPATRYK GRZESZCZUK\nPIOTR CHODKOWSKI\nEVOLVE PR\n<BR>\n\n<HEADER>\nOFFICE MANAGEMENT\n<NAME>\nMARTA SKWARSKA\nMONIKA ANNA WARGOCKA\nBEATA KOSZNIK\n<BR>\n\n<HEADER>\nADDITIONAL SUPPORT\n<NAME>\nMAŁGORZATA KAUCH\nJAN BEŁCZĄCKI\n<BR><BR><BR><BR>\n\n\n<HEADER>\nSPECIAL THANKS TO\n<NAME>\n<BR>\nEMIR CERIMOVIC FOR ALL HELP & MATERIALS\n<BR>\nJOHN KEYSER FOR ALL THE SUPPORT\n<BR>\nOUR FRIENDS AND FAMILIES\n<BR>\n11 BIT STUDIOS SHAREHOLDERS\nFOR TRUST AND CONFIDENCE\n<BR><BR><BR><BR>\n\n\n<HEADER>\nFOCUS TESTERS\n<NAME>\nGRZEGORZ WALIGÓRA \nRAFAŁ SAŁAK\nBARTŁOMIEJ JADCZAK\nKASIA JAWORSKA\nBARTOSZ ŁUKASIK\nKAROL RYCHWALSKI\nJĘDRZEJ KWAPIŃSKI\nKAROL URBAŃSKI\nMARCIN MALCZAK\nMICHAŁ MALISZEWSKI\nMARCIN GRZYBOWSKI\nADAM MIŁOSZ\nBARTOSZ POLAŃCZYK\nZOFIA LUDWISZEWSKA\nCEZARY NOJSZEWSKI\nKLAUDIA MILLER\nRADEK NAŁĘCZ\nRAFAŁ KURPIEWSKI\nMARCIN SZUSTAK\nFILIP ŁAWIŃSKI\nALEKSANDRA KAMIŃSKA\nJURIJ PORTIANKIN\nRADEK SUCHECKI\nADAM KRECZMAŃSKI\nJAKUB ZIEMBIŃSKI\nBARTŁOMIEJ CZARNAK\nMAREK KRUCZKOWSKI\nŁUKASZ BOGUCKI\nPIOTR SZCZEPAŃŚKI\nKAMILA KRASNODĘBSKA \nANDRZEJ SKŁADANOWSKI\nJOANNA KADYSZEWSKA\nKAMIL SZELĄGOWSKI\nMALWINA RYBCZYŃSKA\nADAM PRAZMO\nDOMINIKA STALA\nKAROLINA SIECZKA\nMACIEJ WALCZAK\nANDRZEJ CHRZANOWSKI\nŁUKASZ SOŁTYSIAK\nPIOTR SALEJKO\nANDRZEJ PANKOWSKI\n<BR><BR><BR><BR>\n\n<HEADER>\nMOTION CAPTURE\n<NAME>\nWWW.MOCAP.PL\n<BR><BR>\n\n<HEADER>\nCAST, CASTING DIRECTOR\n<NAME>\nADRIAN PERDJON\n<BR>\n\n<HEADER>\nMOTION CAPTURE SUPERVISOR\n<NAME>\nMICHAŁ HRYDZIUSZKO\n<BR>\n\n<HEADER>\nMOTION CAPTURE TRACKER\n<NAME>\nMATEUSZ POKS\n<BR>\n\n<HEADER>\nMOTION CAPTURE ACTORS\n<NAME>\nADRIAN PERDJON\nALAN MARKOWSKI\nBARBARA MŁOŹNIAK\nTOMASZ PIĘTEK\n<BR>\n\n<HEADER>\nMODELS\n<NAME>\nBEDNARZ MATEUSZ \nBRZOSTEK PIOTR\nCERIMOVIC EMIR\nCHMILELECKA KAROLINA \nCHODKOWSKI PIOTR \nCZAPLARSKI PAWEŁ \nDIAMOUTETE KAMELE \nDROZDOWSKI MICHAŁ \nFELDMAN PAWEŁ \nGAŹDZIŃSKA KINGA\nGRADZIŃSKA JUSTYNA \nGWAREK RADOSŁAW\nHAYATO KITABATAKE\nHUANCA-VILLAN KENAYA \nJEFIMOW MARCIN \nKACZOR MACIEJ \nKASPARIAN NELTA \nKAUCH ALEKSANDER\nKAUCH MAŁGORZATA \nKOWALSKI JAKUB\nKOWALSKI JAN \nKOWALSKI PIOTR \nKRZYŻEWSKI KRZYSZTOF\nKUROWSKI DAWID \nKWIATKOWSKA KINGA\nKWIATKOWSKI KACPER \nLENARTOWICZ JADWIGA \nLIVINGSTONE ALISIGWE\nLU XIN \nMACIASZEK REMIGIUSZ \nMARSZAŁ BARTOSZ \nMARSZAŁ PRZEMYSŁAW\nMIECHOWSKA NATALIA \nMIECHOWSKI PAWEŁ \nNGUYEN DIEU CHI \nNGUYEN DIEU LINH\nNGUYEN DUY \nNGUYEN THI THUY HUAN \nPAŁKA ALBERT \nPIĘTEK TOMASZ\nPIOTROWSKA ANNA\nPIOTROWSKI JAKUB \nPIOTROWSKI PAWEŁ \nPODKOWIŃSKA SANDRA\nPODKOWIŃSKI RAFAŁ \nPOŻOGA IDA\nPOŻOGA OLAF\nRENDASZKA PAWEŁ \nROZBICKA MARIA \nRUOCHEN WU\nSETLAK WOJCIECH \nSKÓRA MACIEJ \nSTELMACH EWA\nSTEVENSON GRAMMONT \nSTYPEREK BARTOSZ \nSUŁECKI MACIEJ \nSZCZEPANOWSKA KAROLINA \nSZCZEŚNIK MACIEJ \nSZEWCZYK SARA \nSZYNKARNIKOW OLEKSANDER\nSZYSZKA PAWEŁ \nŚMIETAŃSKI ADAM \nTCHORZ KAROLINA \nTOMALAK ALEKS \nTOMALAK MAREK \nWARGOCKA MONIKA ANNA\nWASIAK HENRYK \nWASIAK MACIEJ \nWICIŃSKI DAMIAN \nWIEJAK-GRĄŻKA MARTA\nWIERZBICKA JULIA \nWIERZBICKA MAGDALENA \nWIERZBICKI MICHAŁ \nWŁOSEK RAFAŁ \nWRÓBLEWSKI MATEUSZ \nZAJĄCZKOWSKI BORYS \nZAJĄCZKOWSKI KAROL \nZALEWSKA BARBARA\nZIELIŃSKI DOMINIK \nZINSOU LORIS\nZIOMBSKA BARBARA\n<BR><BR><BR><BR>\n\nDEEP SILVER\n<BR><BR><BR><BR>\n\n<HEADER>\nPRODUCTION\n<BR><BR>\n\n<HEADER>\nINTERNATIONAL DIRECTOR PRODUCTION\n<NAME>\nCHRISTIAN MORIZ\n<BR><BR>\n\n<HEADER>\nPRODUCT MANAGEMENT\n<BR><BR>\n\n<HEADER>\n PRODUCT MANAGER\n<NAME>\nLISA MOOSBAUER\n<BR><BR>\n\n<HEADER>\nRELEASE MANAGEMENT/MASTERING\n<BR><BR>\n\n<HEADER>\nSENIOR PRODUCT RELEASE MANAGER\n<NAME>\nDANIEL GAITZSCH\n<BR>\n\n<HEADER>\nPRODUCT RELEASE MANAGER\n<NAME>\nCARL BARRETT\n<BR><BR>\n\n<HEADER>\nLOCALIZATION & INTERNATIONALIZATION\n<BR><BR>\n\n<HEADER>\nINTERNATIONAL RELEASE & LOCALIZATION QA MANAGER\n<NAME>\nLUKAS KOTRLY\n<BR>\n\n<HEADER>\nLOCALIZATION QA PROJECT MANAGER\n<NAME>\nALEXANDRE LELANDAIS\n<BR><BR>\n\n<HEADER>\nQUALITY ASSURANCE\n<BR><BR>\n\n<HEADER>\nHEAD OF QA & RELEASE MANAGER\n<NAME>\nCARLO SARTI\n<BR>\n\n<HEADER>\nQA PROJECT MANAGER & HEAD OF COMPLIANCE QA\n<NAME>\nRAFAL BOGUSZEWSKI\n<BR>\n\n<HEADER>\nQA PROJECT MANAGER\n<NAME>\nKALPESH PATEL\n<BR>\n\n<HEADER>\nADDITIONAL QA SUPPORT\n<NAME>\nKEITH RUSSELL\nCHRISTOPHER BARR\nELITSA IVANOVA\n<BR><BR>\n\n<HEADER>\nQLOC S.A.\n<BR><BR>\n\n<HEADER>\nGENERAL MANAGER\n<NAME>\nADAM PIESIAK\n<BR>\n\n<HEADER>\nBUSINESS DEVELOPMENT DIRECTOR\n<NAME>\nPAWEL GRZYWACZEWSKI\n<BR>\n\n<HEADER>\nDIRECTOR OF ACCOUNT MANAGEMENT\n<NAME>\nPAWEL ZIAJKA\n<BR>\n\n<HEADER>\nACCOUNT MANAGERS\n<NAME>\nMARTA OLEJNICZAK\nJAKUB TRUDZIK\n<BR>\n\n<HEADER>\nHEAD OF QUALITY ASSURANCE\n<NAME>\nSERGIUSZ SLOSARCZYK\n<BR>\n\n<HEADER>\nQA PROJECT MANAGERS\n<NAME>\nMARCIN GORNIAK\nMACIEJ MAZUREK\n<BR>\n\n<HEADER>\nQA LAB MANAGERS\n<NAME>\nBARTOSZ ANTECKI\nPAWEL STRZELCZYK\n<BR>\n\n<HEADER>\nQA TEAM LEADERS\n<NAME>\nPAWEL KRAWCZUK\n<BR>\n\n<HEADER>\nCOMPLIANCE ENGINEERS\n<NAME>\nEWA ANGIELSKA\nRAFAL DABROWSKI\nADAM KOPCZYNSKI\nMICHAL NIBURSKI\nPAWEL SZCZESNY\n<BR>\n\n<HEADER>\nQA TESTERS\n<NAME>\nRICHARD BORZYMOWSKI\nPAWEL DRAGAN\nKINGA GAJEWSKA\nMICHAL GLEBICKI\nADAM HYZ\nDAWID KOZLOWSKI\nRAFAL LIPSKI\nBARTLOMIEJ RYDER\nKRZYSZTOF SETNIEWSKI\nROMAN SKURSKI\nMAYA TAKEUCHI\nRAFAL TYC\n<BR>\n\n<HEADER>\nIT MANAGER\n<NAME>\nTOMASZ DZIEDZIC\n<BR>\n\n<HEADER>\nR&D SPECIALIST\n<NAME>\nBARTEK ZUKOWSKI\n<BR><BR>\n\n<HEADER>\nTHIRD PARTY PRODUCTS\n<NAME>\nZLIB – GENERAL PURPOSE COMPRESSION LIBRARY\nCOPYRIGHT © 1995-2004\nJEAN-LOUP GAILLY AND MARK ADLER\n<BR>\n\nTHE VORBIS GENERAL AUDIO COMPRESSION CODEC\nCOPYRIGHT © 1994-2002 XIPH.ORG FOUNDATION\n<BR>\n\nLUA – GENERAL SCRIPTING LANGUAGE\nCOPYRIGHT © 1994–2010 LUA.ORG, PUC-RIO\n<BR>\n\nCURL\nLICENSE COPYRIGHT © 1996-2013 DANIEL STENBERG\n<BR>\n\nAJI HAND FONT BY AJITH RAJAN\n<BR>\n\nOKUDA FONT BY MIKE OKUDA\n<BR>\n\nTERTRE EXTRA BOLD FONT BY JAN SCHMOEGER\n<BR>\n\nDESIGNOSAUR FONT BY ARCHY STUDIO\n<BR>\n\nCOVERED BY YOUR GRACE FONT BY KG FONTS\n<BR>\n\nGUNNY REWRITTEN FONT BY VIT CONDAK\n<BR>\n\n\nERNEST HEMINGWAY\nNOTES ON THE NEXT WAR: A SERIOUS TOPICAL LETTER\nESQUIRE SEPT. 1935\n<BR>\n<BR>\n<BR>\n \n11 BIT STUDIOS\n2015\n<BR>\n<BR>\n<BR>"		CreditsStories
