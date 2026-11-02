@@ -1,0 +1,72 @@
+=== Phần 1
+đã áp 3924 bản dịch
+đã vá 51 chuỗi trong 7 class
+64 lời gọi đã chuyển hướng trong 20 class
+ProGuard, version 7.4.2
+Thêm: ['BitmapFont.class', 'VnFont.class', 'font/f15c.bin']
+Xoá: []
+Đổi: ['META-INF/MANIFEST.MF', 'XConnection.class', 'XMessage.class', 'a/a/a/a.class', 'a/a/a/a/a.class', 'a/a/a/a/b.class', 'b/a.class', 'b/b.class', 'b/c.class', 'b/d.class', 'b/e.class', 'b/f.class', 'b/g.class', 'b/h.class', 'b/i.class', 'b/j.class', 'b/k.class', 'b/l.class', 'b/m.class', 'b/n.class', 'b/o.class', 'b/q.class', 'b/r.class', 'b/s.class', 'b/u.class', 'c.dat', 'c/a.class', 'c/b.class', 'c/c.class', 'c/d.class', 'c/e.class', 'c/f.class', 'c/g.class', 'd/a.class', 'd/b.class', 'd/d.class', 'd/e.class', 'd/f.class', 'd/g.class', 'd/h.class', 'e/a.class', 'f/a.class', 'f/b.class', 'f/c.class', 'f/d.class', 'fb_skill.dat', 'g/a.class', 'g/b.class', 'g/c.class', 'g/d.class', 'g/e.class', 'g/f.class', 'g/g.class', 'g/h.class', 'g/i.class', 'g/j.class', 'g/k.class', 'g/l.class', 'h/a.class', 'h/b.class', 'i.dat', 'i/a.class', 'item15.dat', 'main/b.class', 'main/c.class', 'main/d.class', 'map.dat', 'map/0.m', 'map/1.m', 'map/10.m', 'map/104.m', 'map/105.m', 'map/106.m', 'map/107.m', 'map/108.m', 'map/109.m', 'map/11.m', 'map/110.m', 'map/111.m', 'map/112.m', 'map/113.m', 'map/115.m', 'map/116.m', 'map/118.m', 'map/119.m', 'map/12.m', 'map/13.m', 'map/14.m', 'map/15.m', 'map/16.m', 'map/17.m', 'map/18.m', 'map/19.m', 'map/2.m', 'map/3.m', 'map/4.m', 'map/5.m', 'map/50.m', 'map/51.m', 'map/52.m', 'map/53.m', 'map/54.m', 'map/55.m', 'map/56.m', 'map/57.m', 'map/59.m', 'map/6.m', 'map/60.m', 'map/61.m', 'map/62.m', 'map/63.m', 'map/64.m', 'map/65.m', 'map/66.m', 'map/67.m', 'map/68.m', 'map/69.m', 'map/7.m', 'map/70.m', 'map/72.m', 'map/73.m', 'map/8.m', 'map/9.m', 'mm.pak', 'monster.dat', 't.dat', 't2.dat', 'tips.dat']
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.endsWith(Ljava/lang/String;)Z (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Image.createRGBImage([IIIZ)Ljavax/microedition/lcdui/Image; (xác nhận máy đích có)
+RESULT: PASS
+=== Phần 2
+đã áp 5189 bản dịch
+đã vá 89 chuỗi trong 10 class
+66 lời gọi đã chuyển hướng trong 20 class
+ProGuard, version 7.4.2
+Thêm: ['BitmapFont.class', 'VnFont.class', 'font/f15c.bin']
+Xoá: []
+Đổi: ['META-INF/MANIFEST.MF', 'a/a/a/a.class', 'a/a/a/a/a.class', 'a/a/a/a/b.class', 'b/a.class', 'b/b.class', 'b/c.class', 'b/d.class', 'b/e.class', 'b/f.class', 'b/g.class', 'c.dat', 'c/a.class', 'c/b.class', 'c/c.class', 'c/d.class', 'c/e.class', 'c/f.class', 'c/g.class', 'c/h.class', 'c/i.class', 'c/j.class', 'c/k.class', 'c/l.class', 'c/m.class', 'c/n.class', 'c/o.class', 'c/p.class', 'c/r.class', 'c/s.class', 'c/t.class', 'd/a.class', 'd/b.class', 'd/c.class', 'd/d.class', 'd/e.class', 'd/f.class', 'd/g.class', 'd/h.class', 'd/i.class', 'd/j.class', 'd/k.class', 'd/l.class', 'd/m.class', 'e/a/a.class', 'e/a/b.class', 'e/a/c.class', 'e/b/a.class', 'e/b/b.class', 'e/b/c.class', 'e/b/d.class', 'f/a.class', 'f/b.class', 'f/c.class', 'g/a/a.class', 'help.dat', 'i.dat', 'item15.dat', 'main/MainMIDlet.class', 'main/b.class', 'main/c.class', 'map/10.m', 'map/105.m', 'map/107.m', 'map/108.m', 'map/109.m', 'map/110.m', 'map/111.m', 'map/112.m', 'map/113.m', 'map/120.m', 'map/122.m', 'map/123.m', 'map/124.m', 'map/125.m', 'map/126.m', 'map/127.m', 'map/128.m', 'map/129.m', 'map/130.m', 'map/131.m', 'map/132.m', 'map/133.m', 'map/134.m', 'map/136.m', 'map/137.m', 'map/138.m', 'map/139.m', 'map/140.m', 'map/142.m', 'map/143.m', 'map/144.m', 'map/145.m', 'map/146.m', 'map/147.m', 'map/148.m', 'map/149.m', 'map/150.m', 'map/151.m', 'map/152.m', 'map/153.m', 'map/154.m', 'map/155.m', 'map/156.m', 'map/157.m', 'map/158.m', 'map/159.m', 'map/160.m', 'map/162.m', 'map/163.m', 'map/164.m', 'map/165.m', 'map/168.m', 'map/169.m', 'map/17.m', 'map/170.m', 'map/171.m', 'map/172.m', 'map/173.m', 'map/174.m', 'map/175.m', 'map/176.m', 'map/177.m', 'map/178.m', 'map/179.m', 'map/18.m', 'map/180.m', 'map/181.m', 'map/182.m', 'map/183.m', 'map/184.m', 'map/186.m', 'map/188.m', 'mm.pak', 'monster.dat', 't.dat', 'tips.dat']
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Image.createRGBImage([IIIZ)Ljavax/microedition/lcdui/Image; (xác nhận máy đích có)
+RESULT: PASS
+=== Phần 3
+đã áp 3801 bản dịch
+đã vá 198 chuỗi trong 27 class
+132 lời gọi đã chuyển hướng trong 12 class
+ProGuard, version 7.4.2
+Thêm: ['BitmapFont.class', 'VnFont.class', 'font/f15c.bin']
+Xoá: []
+Đổi: ['META-INF/MANIFEST.MF', 'a/a.class', 'a/b.class', 'a/c.class', 'a/d.class', 'a/e.class', 'a/f.class', 'a/g.class', 'b/a/a.class', 'b/a/b.class', 'b/a/c.class', 'b/a/d.class', 'b/b/a.class', 'b/b/b.class', 'b/b/c.class', 'b/b/e.class', 'b/b/f.class', 'b/b/g.class', 'b/b/h.class', 'b/b/i.class', 'b/b/l.class', 'b/b/m.class', 'b/b/n.class', 'b/b/o.class', 'b/c/a.class', 'b/c/b.class', 'b/c/c.class', 'b/e/a.class', 'b/e/b.class', 'b/e/c.class', 'b/e/d.class', 'b/f/a.class', 'b/f/b.class', 'c.dat', 'c/a.class', 'c/b.class', 'c/c.class', 'c/d.class', 'c/e.class', 'c/f.class', 'c/g.class', 'c/i.class', 'c/j.class', 'c/k.class', 'c/l.class', 'c/m.class', 'c/n.class', 'd/a.class', 'd/b.class', 'd/c.class', 'd/d.class', 'd/e.class', 'd/f.class', 'd/g.class', 'd/h.class', 'd/i.class', 'd/j.class', 'd/k.class', 'd/l.class', 'e/a.class', 'e/b.class', 'e/c.class', 'e/e.class', 'f/a.class', 'f/b.class', 'f/c.class', 'g/a.class', 'g/b.class', 'h/a.class', 'help.dat', 'i.dat', 'item15.dat', 'lk_tips.dat', 'main/a.class', 'map/1.m2', 'map/158.m2', 'map/160.m2', 'map/161.m2', 'map/162.m2', 'map/163.m2', 'map/164.m2', 'map/169.m2', 'map/170.m2', 'map/173.m2', 'map/180.m2', 'map/181.m2', 'map/182.m2', 'map/183.m2', 'map/184.m2', 'map/186.m2', 'map/188.m2', 'map/189.m2', 'map/190.m2', 'map/191.m2', 'map/192.m2', 'map/193.m2', 'map/195.m2', 'map/196.m2', 'map/197.m2', 'map/198.m2', 'map/199.m2', 'map/2.m2', 'map/200.m2', 'map/201.m2', 'map/202.m2', 'map/203.m2', 'map/204.m2', 'map/205.m2', 'map/206.m2', 'map/207.m2', 'map/208.m2', 'map/209.m2', 'map/210.m2', 'map/211.m2', 'map/212.m2', 'map/213.m2', 'map/214.m2', 'map/215.m2', 'map/216.m2', 'map/217.m2', 'map/218.m2', 'map/219.m2', 'map/220.m2', 'map/221.m2', 'map/222.m2', 'map/223.m2', 'map/224.m2', 'map/225.m2', 'map/226.m2', 'map/227.m2', 'map/228.m2', 'map/229.m2', 'map/230.m2', 'map/232.m2', 'map/233.m2', 'map/234.m2', 'map/235.m2', 'map/236.m2', 'map/237.m2', 'map/238.m2', 'map/239.m2', 'map/240.m2', 'map/241.m2', 'map/242.m2', 'map/243.m2', 'map/244.m2', 'map/245.m2', 'map/246.m2', 'map/247.m2', 'map/248.m2', 'map/249.m2', 'map/250.m2', 'map/251.m2', 'map/252.m2', 'map/253.m2', 'map/254.m2', 'map/255.m2', 'map/256.m2', 'map/257.m2', 'map/3.m2', 'mm.pak', 'monster.dat', 't.dat', 'tips.dat']
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.valueOf(Ljava/lang/Object;)Ljava/lang/String; (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Image.createRGBImage([IIIZ)Ljavax/microedition/lcdui/Image; (xác nhận máy đích có)
+RESULT: PASS
+=== Phần 4
+đã áp 2860 bản dịch
+đã vá 203 chuỗi trong 27 class
+131 lời gọi đã chuyển hướng trong 11 class
+ProGuard, version 7.4.2
+Thêm: ['BitmapFont.class', 'VnFont.class', 'font/f15c.bin']
+Xoá: []
+Đổi: ['META-INF/MANIFEST.MF', 'XConnection.class', 'XMessage.class', 'a/a.class', 'a/b.class', 'a/c.class', 'a/d.class', 'a/e.class', 'a/f.class', 'a/g.class', 'b/a/a.class', 'b/a/b.class', 'b/a/c.class', 'b/a/d.class', 'b/b/a.class', 'b/b/b.class', 'b/b/c.class', 'b/b/e.class', 'b/b/f.class', 'b/b/g.class', 'b/b/h.class', 'b/b/i.class', 'b/b/l.class', 'b/b/m.class', 'b/b/n.class', 'b/b/o.class', 'b/c/a.class', 'b/c/b.class', 'b/c/c.class', 'b/e/a.class', 'b/e/b.class', 'b/e/c.class', 'b/e/d.class', 'b/f/a.class', 'b/f/b.class', 'c.dat', 'c/a.class', 'c/b.class', 'c/c.class', 'c/d.class', 'c/e.class', 'c/f.class', 'c/g.class', 'c/i.class', 'c/j.class', 'c/k.class', 'c/l.class', 'c/m.class', 'c/n.class', 'd/a.class', 'd/b.class', 'd/c.class', 'd/d.class', 'd/e.class', 'd/f.class', 'd/g.class', 'd/h.class', 'd/i.class', 'd/j.class', 'd/k.class', 'd/l.class', 'e/a.class', 'e/b.class', 'e/c.class', 'e/e.class', 'f/a.class', 'f/b.class', 'f/c.class', 'g/a.class', 'g/b.class', 'h/a.class', 'help.dat', 'i.dat', 'item15.dat', 'main/a.class', 'map/158.m2', 'map/160.m2', 'map/161.m2', 'map/162.m2', 'map/163.m2', 'map/164.m2', 'map/170.m2', 'map/180.m2', 'map/181.m2', 'map/182.m2', 'map/183.m2', 'map/184.m2', 'map/205.m2', 'map/206.m2', 'map/207.m2', 'map/208.m2', 'map/209.m2', 'map/210.m2', 'map/213.m2', 'map/221.m2', 'map/223.m2', 'map/224.m2', 'map/225.m2', 'map/226.m2', 'map/227.m2', 'map/228.m2', 'map/229.m2', 'map/237.m2', 'map/238.m2', 'map/239.m2', 'map/254.m2', 'map/255.m2', 'map/256.m2', 'map/257.m2', 'map/258.m2', 'map/259.m2', 'map/260.m2', 'map/261.m2', 'map/262.m2', 'map/263.m2', 'map/264.m2', 'map/266.m2', 'map/267.m2', 'map/268.m2', 'map/269.m2', 'map/270.m2', 'map/271.m2', 'map/273.m2', 'map/274.m2', 'map/276.m2', 'map/277.m2', 'map/278.m2', 'map/280.m2', 'map/284.m2', 'map/285.m2', 'map/286.m2', 'map/288.m2', 'map/289.m2', 'map/290.m2', 'map/291.m2', 'map/292.m2', 'map/293.m2', 'map/294.m2', 'map/298.m2', 'map/299.m2', 'map/446.m2', 'map/447.m2', 'map/448.m2', 'map/458.m2', 'mm.pak', 'monster.dat', 't.dat', 'tips.dat']
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.valueOf(Ljava/lang/Object;)Ljava/lang/String; (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Image.createRGBImage([IIIZ)Ljavax/microedition/lcdui/Image; (xác nhận máy đích có)
+RESULT: PASS
+=== Phần 5
+đã áp 3114 bản dịch
+đã vá 203 chuỗi trong 27 class
+142 lời gọi đã chuyển hướng trong 11 class
+ProGuard, version 7.4.2
+Thêm: ['BitmapFont.class', 'VnFont.class', 'font/f15c.bin']
+Xoá: []
+Đổi: ['META-INF/MANIFEST.MF', 'a/a/a.class', 'a/a/b.class', 'a/a/c.class', 'a/a/e.class', 'a/a/f.class', 'a/a/g.class', 'a/a/i.class', 'a/a/k.class', 'a/a/l.class', 'a/a/m.class', 'a/a/n.class', 'a/a/o.class', 'a/b/a.class', 'a/b/b.class', 'a/b/c.class', 'a/c/a.class', 'a/c/b.class', 'a/c/c.class', 'a/c/d.class', 'a/d/a.class', 'a/d/b.class', 'a/e/a.class', 'a/e/b.class', 'a/e/c.class', 'a/e/d.class', 'b/a.class', 'b/b.class', 'b/c.class', 'b/d.class', 'b/e.class', 'b/f.class', 'b/g.class', 'c.dat', 'c/a.class', 'c/b.class', 'c/c.class', 'c/d.class', 'c/e.class', 'c/f.class', 'c/g.class', 'c/h.class', 'c/i.class', 'c/j.class', 'c/k.class', 'c/l.class', 'd/a.class', 'd/b.class', 'e/a.class', 'e/b.class', 'e/c.class', 'e/d.class', 'e/e.class', 'e/f.class', 'e/g.class', 'e/h.class', 'e/i.class', 'e/j.class', 'e/k.class', 'e/l.class', 'e/m.class', 'f/a.class', 'f/b.class', 'f/c.class', 'g/a.class', 'g/b.class', 'g/c.class', 'g/d.class', 'h/a.class', 'help.dat', 'i.dat', 'item15.dat', 'main/MainMIDlet.class', 'main/a.class', 'map/1.m2', 'map/158.m2', 'map/160.m2', 'map/161.m2', 'map/162.m2', 'map/163.m2', 'map/164.m2', 'map/170.m2', 'map/180.m2', 'map/181.m2', 'map/182.m2', 'map/183.m2', 'map/184.m2', 'map/401.m2', 'map/402.m2', 'map/403.m2', 'map/404.m2', 'map/405.m2', 'map/406.m2', 'map/407.m2', 'map/408.m2', 'map/409.m2', 'map/410.m2', 'map/419.m2', 'map/420.m2', 'map/421.m2', 'map/422.m2', 'map/423.m2', 'map/424.m2', 'map/425.m2', 'map/426.m2', 'map/427.m2', 'map/428.m2', 'map/429.m2', 'map/430.m2', 'map/431.m2', 'map/432.m2', 'map/446.m2', 'map/447.m2', 'map/448.m2', 'map/455.m2', 'map/456.m2', 'map/457.m2', 'map/458.m2', 'mm.pak', 'monster.dat', 't.dat', 'tips.dat']
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/lang/String.valueOf(Ljava/lang/Object;)Ljava/lang/String; (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Image.createRGBImage([IIIZ)Ljavax/microedition/lcdui/Image; (xác nhận máy đích có)
+RESULT: PASS
+Xong: /home/user/Vi-t-ho-game/hs_du_an/out

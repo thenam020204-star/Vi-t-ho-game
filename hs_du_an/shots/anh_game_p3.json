@@ -1,0 +1,12 @@
+{
+ "shots": [
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/anh_game_p3/menu.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/anh_game_p3/ingame_menu.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/anh_game_p3/ingame2.png"
+ ],
+ "emu_alive_at_end": true,
+ "exceptions": [
+  "java.lang.NullPointerException: Cannot invoke \"javax.sound.midi.Sequencer.isRunning()\" because \"javax.microedition.media.Manager.exclusiveSequencers[<local0>]\" is null"
+ ],
+ "log": "/home/user/Vi-t-ho-game/hs_du_an/shots/anh_game_p3/emu.log"
+}

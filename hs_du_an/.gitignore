@@ -1,0 +1,2 @@
+scripts/harness/*.class
+__pycache__/

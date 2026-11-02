@@ -1,0 +1,16 @@
+{
+ "shots": [
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/logo_p3/l1.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/logo_p3/l2.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/logo_p3/l3.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/logo_p3/title.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/logo_p3/menu.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/logo_p3/skill.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/logo_p3/skill2.png"
+ ],
+ "emu_alive_at_end": true,
+ "exceptions": [
+  "java.lang.NullPointerException: Cannot invoke \"javax.sound.midi.Sequencer.isRunning()\" because \"javax.microedition.media.Manager.exclusiveSequencers[<local0>]\" is null"
+ ],
+ "log": "/home/user/Vi-t-ho-game/hs_du_an/shots/logo_p3/emu.log"
+}

@@ -1,0 +1,3 @@
+MIDlet-Name: Xuan-Yuan Sword - The Scar of Sky I
+MIDlet-1: Xuan-Yuan Sword - The Scar of Sky I, icon.png, main.MainMIDlet
+MIDlet-Description: Xuan-Yuan Sword - The Scar of Sky I

@@ -1,0 +1,41 @@
+[INFO] org.recompile.mobile.MobilePlatform: Accompanying JAD found! Parsing additional MIDlet properties.
+[INFO] Loading MIDlet: Xuan-Yuan Sword - The Scar of Sky I | Main Class: main.MainMIDlet
+[ERROR] javax.microedition.media.Manager: Couldn't open Tone Player: Can not open line
+[INFO] javax.microedition.midlet.MIDlet: Create MIDlet
+[INFO] javax.microedition.lcdui.Canvas: Create Canvas:240, 320
+javax.microedition.rms.RecordStoreNotFoundException: Record Store Doesn't Exist: Xuan-Yuan Sword - The Scar of Sky I/fc55500f06c3dkx3bs.rms
+	at javax.microedition.rms.RecordStore.loadRecordStore(Unknown Source)
+	at javax.microedition.rms.RecordStore.<init>(Unknown Source)
+	at javax.microedition.rms.RecordStore.openRecordStore(Unknown Source)
+	at h.b.c(Unknown Source)
+	at d.a.p(Unknown Source)
+	at g.j.a(Unknown Source)
+	at main.b.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at d.a.c(Unknown Source)
+	at g.d.a(Unknown Source)
+	at main.b.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'ani/.ani' in jar: file:/home/user/Vi-t-ho-game/hs_du_an/out/hs1_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'ani/.ani' in jar: file:/home/user/Vi-t-ho-game/hs_du_an/out/hs1_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'ani/.ani' in jar: file:/home/user/Vi-t-ho-game/hs_du_an/out/hs1_vi.jar
+[ERROR] org.recompile.mobile.MIDletLoader: Couldn't find resource 'ani/.ani' in jar: file:/home/user/Vi-t-ho-game/hs_du_an/out/hs1_vi.jar
+java.lang.NullPointerException: Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at javax.microedition.media.Manager.retrieveAvailableSynthIndex(Unknown Source)
+[ERROR] org.recompile.mobile.players.MIDIPlayer: Failed to clean MIDI sequencer and start playback:Cannot invoke "javax.sound.midi.Sequencer.isRunning()" because "javax.microedition.media.Manager.exclusiveSequencers[<local0>]" is null
+	at org.recompile.mobile.players.MIDIPlayer.prepareMidiSubsystem(Unknown Source)
+	at org.recompile.mobile.players.MIDIPlayer.start(Unknown Source)
+	at org.recompile.mobile.PlatformPlayer.start(Unknown Source)
+	at d.a.c(Unknown Source)
+	at main.d.a(Unknown Source)
+	at main.d.h(Unknown Source)
+	at main.d.a(Unknown Source)
+	at g.l.b(Unknown Source)
+	at main.b.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

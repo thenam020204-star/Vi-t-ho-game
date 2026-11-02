@@ -1,0 +1,5 @@
+k7565 {浮云龙玉} (gốc viết 浮 thay 泛) dịch thành Phiếm Vân Long Ngọc cho thống nhất
+k8277 gốc '我娘子{玉儿}' (Trương Liệt nói) có vẻ nhầm 月儿; dịch sát: vợ ta {Ngọc Nhi}
+k9199-9206,9256-9267: mảnh ghép với số (vd 你正在激活+n+次), dp ép khoảng trắng đầu/cuối theo gốc nên chỗ nối số cần quản đốc thêm khoảng trắng khi ghép
+k9362: gốc "[D~傷激活]" lẫn chữ Hán lạ, dịch "[D~Kích hoạt]"
+k9172 亚格瑞斯 dịch phiên âm Hán Việt Á Cách Thụy Tư

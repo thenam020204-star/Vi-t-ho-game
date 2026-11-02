@@ -1,0 +1,202 @@
+id	file	offset	goc	dich	ghi_chu	gioi_han
+p4:class/b/f/a#666	class/b/f/a.class	666	上传存档失败!		code: ? a@3873 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/b/f/a#667	class/b/f/a.class	667	上传存档成功!		code: ? a@3867 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/b/f/a#668	class/b/f/a.class	668	上传成就		code: KHOA a@3769 → String.equals(Ljava/lang/Object;)Z | gs main/MainMIDlet.aLmain/MainMIDlet; | gs main/a.aLm	
+p4:class/b/f/a#669	class/b/f/a.class	669	不用了		code: ? <clinit>@28 → ps b/f/a.z[Ljava/lang/String; | ps b/f/a.A[Ljava/lang/String; | ps b/f/a.B[Ljava/lang/Stri	
+p4:class/b/f/a#670	class/b/f/a.class	670	习得万能钥匙技能		code: ? a@2734 → c/i.a(Ljava/lang/String;II)Z | a/f.d(Z)V | a/f.a(II)I | String.valueOf(I)Ljava/lang/String	
+p4:class/b/f/a#671	class/b/f/a.class	671	交易成功!		code: ? a@5130 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/b/f/a#672	class/b/f/a.class	672	你的成就值达到了:		code: HIEN a@3723 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gs a/f.bS | StringBuffer	
+p4:class/b/f/a#673	class/b/f/a.class	673	卖出		code: KHOA a@3521 → String.equals(Ljava/lang/Object;)Z | c/k.<init>()V | b/b/h.a(Lb/b/l;)V | b/b/m.k()I | ps b	
+p4:class/b/f/a#674	class/b/f/a.class	674	存档		code: KHOA a@5173 → String.equals(Ljava/lang/Object;)Z | gs main/a.dI | gs main/a.hI | gs main/a.eI | gs main/	
+p4:class/b/f/a#675	class/b/f/a.class	675	开启!		code: KHOA a@2713 → String.equals(Ljava/lang/Object;)Z | a/f.t()Z | c/i.a(Ljava/lang/String;II)Z | a/f.d(Z)V |	
+p4:class/b/f/a#676	class/b/f/a.class	676	数量不足!		code: ? a@5060 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | gf b/f/b.iS | gf b/f/b.jS | a/f.b(II)Z 	
+p4:class/b/f/a#677	class/b/f/a.class	677	未登陆,上传存档失败!		code: ? a@3879 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/b/f/a#678	class/b/f/a.class	678	离开		code: ? <clinit>@50 → ps b/f/a.A[Ljava/lang/String; | ps b/f/a.B[Ljava/lang/String; | return	
+p4:class/b/f/a#679	class/b/f/a.class	679	背包已满!		code: ? a@5091 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | gf b/f/b.gS | gf b/f/b.hS | a/f.c(II)Z 	
+p4:class/b/f/a#680	class/b/f/a.class	680	花费2元, 习得万能钥匙技能,可以无限次开启珍贵宝箱		code: ? a@2677 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | gs b/f/a.B[Ljava/lang/String; | b/b/g.a	
+p4:class/b/f/a#681	class/b/f/a.class	681	谢谢您的支持,已成功习得万能钥匙技能		code: ? a@2772 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | b/f/b.c()V | b/f/b.c()V | gf b/f/b.oI |	
+p4:class/b/f/a#682	class/b/f/a.class	682	购买		code: KHOA a@3476 → String.equals(Ljava/lang/Object;)Z | gs b/f/b.u[I | gs b/f/b.u[I | gs b/f/b.u[I | c/j.<ini	
+p4:class/b/f/a#683	class/b/f/a.class	683	返回		code: ? <clinit>@11 → ps b/f/a.y[Ljava/lang/String; | ps b/f/a.z[Ljava/lang/String; | ps b/f/a.A[Ljava/lang/Stri	
+p4:class/b/c/a#228	class/b/c/a.class	228	不遇敌		code: ? a@208 → c/i.a(Ljava/lang/String;II)Z | String.valueOf(I)Ljava/lang/String; | g/a.a(Ljava/lang/Stri	
+p4:class/b/c/a#229	class/b/c/a.class	229	不遇敌功能已关闭!		code: ? a@182 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/b/c/a#230	class/b/c/a.class	230	不遇敌功能已开启!		code: ? a@167 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b	
+p4:class/b/c/a#231	class/b/c/a.class	231	付费失败!		code: ? a@263 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/b/c/a#232	class/b/c/a.class	232	任务		code: KHOA a@134 → String.equals(Ljava/lang/Object;)Z | b/c/a.v()V | return	
+p4:class/f/a#83	class/f/a.class	83	其它		code: ? <clinit>@64 → ps f/a.b[Ljava/lang/String; | return	
+p4:class/f/a#84	class/f/a.class	84	恢复		code: ? <clinit>@39 → ps f/a.b[Ljava/lang/String; | return	
+p4:class/f/a#85	class/f/a.class	85	法宝		code: ? <clinit>@49 → ps f/a.b[Ljava/lang/String; | return	
+p4:class/f/a#86	class/f/a.class	86	活物		code: ? <clinit>@59 → ps f/a.b[Ljava/lang/String; | return	
+p4:class/f/a#87	class/f/a.class	87	装备		code: ? <clinit>@54 → ps f/a.b[Ljava/lang/String; | return	
+p4:class/f/a#88	class/f/a.class	88	辅助		code: ? <clinit>@44 → ps f/a.b[Ljava/lang/String; | return	
+p4:class/f/b#128	class/f/b.class	128	,并带有		code: HIEN a@206 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.qS | StringBuffer	
+p4:class/f/b#175	class/f/b.class	175	体		code: HIEN a@812 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.tS | StringBuffer	
+p4:class/f/b#176	class/f/b.class	176	像		code: HIEN c@149 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.u[S | StringBuffe	
+p4:class/f/b#177	class/f/b.class	177	像攻击		code: HIEN a@227 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p4:class/f/b#178	class/f/b.class	178	命		code: HIEN a@694 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.rS | StringBuffer	
+p4:class/f/b#179	class/f/b.class	179	攻		code: HIEN a@871 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.iS | StringBuffer	
+p4:class/f/b#180	class/f/b.class	180	敏		code: HIEN a@989 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.kS | StringBuffer	
+p4:class/f/b#181	class/f/b.class	181	消耗		code: HIEN a@663 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.vS | StringBuffer	
+p4:class/f/b#182	class/f/b.class	182	灵		code: HIEN a@753 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.sS | StringBuffer	
+p4:class/f/b#183	class/f/b.class	183	点		code: HIEN a@218 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(Ljav	
+p4:class/f/b#184	class/f/b.class	184	点体力,		code: HIEN a@675 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.rS | StringBuffer	
+p4:class/f/b#185	class/f/b.class	185	防		code: HIEN a@930 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/b.jS | StringBuffer	
+p4:class/f/c#232	class/f/c.class	232	伤害,		code: HIEN a@708 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p4:class/f/c#233	class/f/c.class	233	体力		code: HIEN a@905 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.i[S | StringBuffe	
+p4:class/f/c#234	class/f/c.class	234	体力 		code: HIEN f@81 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p4:class/f/c#235	class/f/c.class	235	全体		code: ? a@28 → return	
+p4:class/f/c#236	class/f/c.class	236	单体		code: ? a@31 → return	
+p4:class/f/c#237	class/f/c.class	237	恢复		code: HIEN a@788 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.gB | f/c.a(I)Ljav	
+p4:class/f/c#238	class/f/c.class	238	最少		code: HIEN a@1060 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.i[S | StringBuffe	
+p4:class/f/c#239	class/f/c.class	239	正常		code: HIEN a@670 → StringBuffer.<init>()V | StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; |	
+p4:class/f/c#240	class/f/c.class	240	消耗		code: HIEN f@9 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.i[S | StringBuffe	
+p4:class/f/c#241	class/f/c.class	241	灵力		code: HIEN a@864 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.i[S | StringBuffe	
+p4:class/f/c#242	class/f/c.class	242	灵力 		code: HIEN f@42 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p4:class/f/c#243	class/f/c.class	243	点		code: HIEN a@638 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p4:class/f/c#244	class/f/c.class	244	点,		code: HIEN a@927 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | f/c.f()Ljava/lang/String	
+p4:class/f/c#245	class/f/c.class	245	点以上的正常伤害		code: HIEN a@1079 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p4:class/f/c#246	class/f/c.class	246	生命		code: HIEN a@823 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/c.i[S | StringBuffe	
+p4:class/f/c#247	class/f/c.class	247	象		code: HIEN a@687 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p4:class/f/c#248	class/f/c.class	248	造成		code: HIEN a@602 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf f/a.gB | f/c.a(I)Ljav	
+p4:class/c/a#115	class/c/a.class	115	< 关		code: HIEN a@98 → StringBuffer.<init>()V | StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; |	
+p4:class/c/a#116	class/c/a.class	116	< 关 >		code: ? a@63 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/a.bLb/b/i; | StringBuffer.<init>()V 	
+p4:class/c/a#154	class/c/a.class	154	保存		code: ? <clinit>@27 → return	
+p4:class/c/a#155	class/c/a.class	155	关		code: ? a@128 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/a.bLb/b/i; | gs a/f.l[Z | b/b/i.a(Lj	
+p4:class/c/a#156	class/c/a.class	156	动态地图		code: ? a@137 → gs a/f.l[Z | b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/a.bLb/b/i; | gs a/f.l[Z	
+p4:class/c/a#157	class/c/a.class	157	开		code: ? a@123 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/a.bLb/b/i; | gs a/f.l[Z | b/b/i.a(Lj	
+p4:class/c/a#158	class/c/a.class	158	简单战斗		code: ? a@113 → gs a/f.l[Z | b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/a.bLb/b/i; | gs a/f.l[Z	
+p4:class/c/a#159	class/c/a.class	159	菜单效果		code: ? a@161 → gs a/f.l[Z | b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/a.bLb/b/i; | b/b/i.a(Lj	
+p4:class/c/a#160	class/c/a.class	160	设置		code: ? <init>@1 → b/b/l.<init>(Ljava/lang/String;)V | pf c/a.bLb/b/i; | pf b/b/l.kB | return	
+p4:class/c/a#161	class/c/a.class	161	返回		code: ? <clinit>@6 → ps c/a.a[Ljava/lang/String; | return	
+p4:class/c/a#162	class/c/a.class	162	返回标题		code: ? a@185 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/a.bLb/b/i; | b/b/l.a(Lb/b/d;)V | ret	
+p4:class/c/a#163	class/c/a.class	163	音乐状态		code: ? a@61 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/a.bLb/b/i; | StringBuffer.<init>()V 	
+p4:class/c/b#134	class/c/b.class	134	任务		code: ? <clinit>@42 → gs a/f.o[Ljava/lang/String; | ps c/b.t[Ljava/lang/String; | return	
+p4:class/c/d#190	class/c/d.class	190	使用		code: KHOA a@131 → String.equals(Ljava/lang/Object;)Z | gf c/d.cLa/g; | return	
+p4:class/c/d#191	class/c/d.class	191	全部		code: ? a@230 → gs a/f.A[La/g; | gs a/f.A[La/g; | gs a/f.A[La/g; | gf a/b.pLjava/lang/String;	
+p4:class/c/d#192	class/c/d.class	192	灵力不足!		code: ? a@174 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/c/d#193	class/c/d.class	193	返回		code: ? a@235 → gs a/f.A[La/g; | gs a/f.A[La/g; | gs a/f.A[La/g; | gf a/b.pLjava/lang/String; | b/b/g.a([L	
+p4:class/c/e#131	class/c/e.class	131	使用一次性付费,\n游戏中不再需要扣费,超强装备,金钱完全免费用,\n还有更多惊喜等着你!\n按右键秘籍菜单可查看		code: ? a@132 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | gs main/a.aLmain/a; | gf main/a.kLd/k; 	
+p4:class/c/e#132	class/c/e.class	132	读取		code: KHOA a@95 → String.equals(Ljava/lang/Object;)Z | ps a/f.wLb/c/a; | a/f.t()Z | gs main/a.aLmain/a; | gf	
+p4:class/c/e#133	class/c/e.class	133	返回		code: ? <clinit>@6 → ps c/e.c[Ljava/lang/String; | return	
+p4:class/c/f#144	class/c/f.class	144	< 关 >		code: ? a@85 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | StringBuffer.<init>()V 	
+p4:class/c/f#190	class/c/f.class	190	保存		code: ? <clinit>@27 → return	
+p4:class/c/f#191	class/c/f.class	191	关		code: ? a@150 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | gs a/f.l[Z | b/b/i.a(Lj	
+p4:class/c/f#192	class/c/f.class	192	动态地图		code: ? a@159 → gs a/f.l[Z | b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | gs a/f.l[Z	
+p4:class/c/f#193	class/c/f.class	193	存档		code: ? a@55 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | b/b/i.a(Ljava/lang/Stri	
+p4:class/c/f#194	class/c/f.class	194	开		code: ? a@145 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | gs a/f.l[Z | b/b/i.a(Lj	
+p4:class/c/f#195	class/c/f.class	195	此地图无法存档!		code: ? a@135 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | gs main/a.dI | gs main/a.hI | gs main/a	
+p4:class/c/f#196	class/c/f.class	196	简单战斗		code: ? a@135 → gs a/f.l[Z | b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | gs a/f.l[Z	
+p4:class/c/f#197	class/c/f.class	197	菜单效果		code: ? a@183 → gs a/f.l[Z | b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | b/b/i.a(Lj	
+p4:class/c/f#198	class/c/f.class	198	设置		code: ? <init>@1 → b/b/l.<init>(Ljava/lang/String;)V | pf c/f.bLb/b/i; | pf b/b/l.kB | return	
+p4:class/c/f#199	class/c/f.class	199	读取		code: ? a@66 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gs a/f.mB | gf c/f.bLb/b/i; | b/b/i.a(Lja	
+p4:class/c/f#200	class/c/f.class	200	返回		code: ? <clinit>@6 → ps c/f.a[Ljava/lang/String; | return	
+p4:class/c/f#201	class/c/f.class	201	返回标题		code: ? a@207 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | b/b/l.a(Lb/b/d;)V | ret	
+p4:class/c/f#202	class/c/f.class	202	音乐状态		code: ? a@83 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/f.bLb/b/i; | StringBuffer.<init>()V 	
+p4:class/c/g#169	class/c/g.class	169	卸下		code: KHOA a@257 → String.equals(Ljava/lang/Object;)Z | gf c/g.dLb/b/i; | b/b/i.c()I | gf c/g.bLa/g; | a/g.f(	
+p4:class/c/g#170	class/c/g.class	170	无		code: ? a@95 → gf f/a.eLjava/lang/String; | gf c/g.dLb/b/i; | gs a/g.E[Ljava/lang/String; | b/b/i.a(Ljava	
+p4:class/c/g#171	class/c/g.class	171	装备		code: KHOA a@96 → String.equals(Ljava/lang/Object;)Z | gf c/g.dLb/b/i; | b/b/i.c()I | gs main/a.dI | gs main	
+p4:class/c/g#172	class/c/g.class	172	返回		code: ? <clinit>@16 → ps c/g.a[Ljava/lang/String; | return	
+p4:class/c/i#198	class/c/i.class	198	10元		code: ? a@109 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/i.mLb/b/i; | b/b/l.a(Lb/b/d;)V | gf 	
+p4:class/c/i#199	class/c/i.class	199	2元		code: ? a@65 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/i.mLb/b/i; | b/b/i.a(Ljava/lang/Stri	
+p4:class/c/i#254	class/c/i.class	254	一次性付费		code: ? a@107 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/i.mLb/b/i; | b/b/l.a(Lb/b/d;)V | gf 	
+p4:class/c/i#255	class/c/i.class	255	一次性付费,游戏中不再需要扣费,可任意使用游戏中所有增值服务.		code: ? <clinit>@101 → ps c/i.c[Ljava/lang/String; | ps c/i.d[Ljava/lang/String; | ps c/i.l[Ljava/lang/String; | 	
+p4:class/c/i#256	class/c/i.class	256	不遇敌		code: ? a@96 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/i.mLb/b/i; | b/b/i.a(Ljava/lang/Stri	
+p4:class/c/i#257	class/c/i.class	257	不遇敌,购买后按0键可以开关此功能		code: ? <clinit>@96 → ps c/i.c[Ljava/lang/String; | ps c/i.d[Ljava/lang/String;	
+p4:class/c/i#258	class/c/i.class	258	两倍经验		code: ? <clinit>@123 → ps c/i.d[Ljava/lang/String; | ps c/i.l[Ljava/lang/String; | return	
+p4:class/c/i#259	class/c/i.class	259	两倍金钱		code: ? <clinit>@118 → ps c/i.d[Ljava/lang/String; | ps c/i.l[Ljava/lang/String; | return	
+p4:class/c/i#260	class/c/i.class	260	兑换3000金钱		code: ? <clinit>@81 → ps c/i.c[Ljava/lang/String;	
+p4:class/c/i#261	class/c/i.class	261	兑换金钱		code: ? a@63 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/i.mLb/b/i; | b/b/i.a(Ljava/lang/Stri	
+p4:class/c/i#262	class/c/i.class	262	关闭了不遇敌功能!		code: ? a@257 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | a/f.t()Z | gs c/i.d[Ljava/lang/String; 	
+p4:class/c/i#263	class/c/i.class	263	双倍经验		code: ? a@85 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/i.mLb/b/i; | b/b/i.a(Ljava/lang/Stri	
+p4:class/c/i#264	class/c/i.class	264	双倍金钱		code: ? a@74 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/i.mLb/b/i; | b/b/i.a(Ljava/lang/Stri	
+p4:class/c/i#265	class/c/i.class	265	多好的东西,不买真是可惜!		code: ? a@450 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b	
+p4:class/c/i#266	class/c/i.class	266	开启了不遇敌功能!		code: ? a@242 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b	
+p4:class/c/i#267	class/c/i.class	267	您已经购买了双倍经验		code: ? a@197 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | a/f.w()Z | gs a/f.aZ | ps a/f.aZ | b/b/	
+p4:class/c/i#268	class/c/i.class	268	您已经购买了双倍金钱		code: ? a@171 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | a/f.m()Z | b/b/g.a(Ljava/lang/String;J)	
+p4:class/c/i#269	class/c/i.class	269	按0键可以开关此功能!		code: ? a@407 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | a/f.b(Z)V | a/f.a(II)I | a/f.o()Z | Str	
+p4:class/c/i#270	class/c/i.class	270	服务		code: ? <init>@1 → b/b/l.<init>(Ljava/lang/String;)V | pf c/i.mLb/b/i; | pf c/i.nLb/b/b; | return	
+p4:class/c/i#271	class/c/i.class	271	购买		code: KHOA a@114 → String.equals(Ljava/lang/Object;)Z | a/f.l()Z | b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/	
+p4:class/c/i#272	class/c/i.class	272	购买成功!		code: ? a@318 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | a/f.a(II)I | gs a/f.CI | ps a/f.CI | a/	
+p4:class/c/i#273	class/c/i.class	273	购买永久两倍经验(所有存档)		code: ? <clinit>@91 → ps c/i.c[Ljava/lang/String; | ps c/i.d[Ljava/lang/String;	
+p4:class/c/i#274	class/c/i.class	274	购买永久两倍金钱(所有存档)		code: ? <clinit>@86 → ps c/i.c[Ljava/lang/String; | ps c/i.d[Ljava/lang/String;	
+p4:class/c/i#275	class/c/i.class	275	赠送2个元宝(用于换高级装备),请记得存档!		code: HIEN c@47 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.toString()L	
+p4:class/c/i#276	class/c/i.class	276	返回		code: ? <clinit>@150 → ps c/i.l[Ljava/lang/String; | return	
+p4:class/c/j#183	class/c/j.class	183	2元		code: ? c@10 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/j.aLjava/util/Vector; | Vector.size(	
+p4:class/c/j#239	class/c/j.class	239	兑换失败!		code: ? a@584 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/c/j#240	class/c/j.class	240	[D~傷激活]		code: ? a@533 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | gf c/j.mLb/b/b; | StringBuffer.<init>()	
+p4:class/c/j#241	class/c/j.class	241	兑换金钱		code: ? c@8 → b/b/i.a(Ljava/lang/String;Ljava/lang/String;)V | gf c/j.aLjava/util/Vector; | Vector.size(	
+p4:class/c/j#242	class/c/j.class	242	拥有金钱:		code: HIEN a@61 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gs a/f.CI | StringBuffer	
+p4:class/c/j#243	class/c/j.class	243	确定购买		code: KHOA a@624 → String.equals(Ljava/lang/Object;)Z | gf c/j.dI | gf c/j.dI | gs a/f.CI | b/b/g.a(Ljava/lan	
+p4:class/c/j#244	class/c/j.class	244	背包已满		code: ? a@327 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | gf c/j.dI | gf f/a.fS | pf c/j.dI | gf 	
+p4:class/c/j#245	class/c/j.class	245	[D~傷激活]		code: ? a@533 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | gf c/j.mLb/b/b; | StringBuffer.<init>()	
+p4:class/c/j#246	class/c/j.class	246	返回		code: ? <clinit>@6 → ps c/j.p[Ljava/lang/String; | return	
+p4:class/c/j#247	class/c/j.class	247	金钱不足		code: ? a@649 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/c/j#248	class/c/j.class	248	需要金钱:		code: HIEN a@163 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf c/j.dI | StringBuffer	
+p4:class/c/k#218	class/c/k.class	218	卖出		code: ? <init>@1 → b/b/l.<init>(Ljava/lang/String;)V | pf c/k.aLb/b/i; | pf c/k.bLb/b/b; | pf c/k.cLb/b/b; | 	
+p4:class/c/k#219	class/c/k.class	219	卖出成功!		code: ? e@322 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/c/k#220	class/c/k.class	220	拥有金钱:		code: HIEN a@61 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gs a/f.CI | StringBuffer	
+p4:class/c/k#221	class/c/k.class	221	物品价值:		code: HIEN a@149 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gf c/k.nI | StringBuffer	
+p4:class/c/k#222	class/c/k.class	222	物品价值:0		code: ? a@156 → b/b/b.a(Ljava/lang/String;)V | gf c/k.cLb/b/b; | b/b/l.a(Lb/b/d;)V | gf c/k.cLb/b/b; | gf 	
+p4:class/c/k#223	class/c/k.class	223	确定卖出		code: KHOA a@450 → String.equals(Ljava/lang/Object;)Z | c/k.e()V | return	
+p4:class/c/k#224	class/c/k.class	224	返回		code: ? <clinit>@6 → ps c/k.o[Ljava/lang/String; | return	
+p4:class/c/l#222	class/c/l.class	222	命 		code: HIEN a@670 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(Ljav	
+p4:class/c/l#223	class/c/l.class	223	攻 		code: HIEN a@514 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(Ljav	
+p4:class/c/l#224	class/c/l.class	224	敏 		code: HIEN a@618 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(Ljav	
+p4:class/c/l#225	class/c/l.class	225	灵 		code: HIEN a@722 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(Ljav	
+p4:class/c/l#226	class/c/l.class	226	装备		code: ? <init>@1 → b/b/l.<init>(Ljava/lang/String;)V | pf c/l.aLf/b; | pf c/l.bB | pf c/l.cLb/b/i; | pf c/l.d	
+p4:class/c/l#227	class/c/l.class	227	防 		code: HIEN a@566 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(Ljav	
+p4:class/c/m#95	class/c/m.class	95	覆盖		code: KHOA a@104 → String.equals(Ljava/lang/Object;)Z | a/f.a(I)V | c/m.c()V | return	
+p4:class/c/m#96	class/c/m.class	96	返回		code: ? <clinit>@6 → ps c/m.c[Ljava/lang/String; | return	
+p4:class/c/n#207	class/c/n.class	207	丢弃		code: KHOA a@562 → String.equals(Ljava/lang/Object;)Z | a/f.d(II)Z | gf c/n.dLb/b/i; | b/b/i.a(I)V | gf c/n.l	
+p4:class/c/n#208	class/c/n.class	208	使用		code: KHOA a@196 → String.equals(Ljava/lang/Object;)Z | gf f/a.gB | gs a/f.A[La/g; | gs a/f.A[La/g; | gf a/b.	
+p4:class/c/n#209	class/c/n.class	209	全部		code: ? a@429 → b/b/g.a([Ljava/lang/String;BBZ)Lb/b/g; | b/b/m.k()I | b/b/g.a()Ljava/lang/String; | String	
+p4:class/c/n#210	class/c/n.class	210	返回		code: ? a@434 → b/b/g.a([Ljava/lang/String;BBZ)Lb/b/g; | b/b/m.k()I | b/b/g.a()Ljava/lang/String; | String	
+p4:class/g/a#1310	class/g/a.class	1310	。		code: HIEN A@893 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(I)Lj	
+p4:class/g/a#1311	class/g/a.class	1311	元		code: KHOA b@80 → String.equals(Ljava/lang/Object;)Z | StringBuffer.<init>()V | StringBuffer.append(I)Ljava/	
+p4:class/g/a#1312	class/g/a.class	1312	，		code: HIEN run@826 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | g/a.a(II)Ljava/lang/Stri	
+p4:class/g/b#1362	class/g/b.class	1362	火		code: HIEN b@106 → Font.stringWidth(Ljava/lang/String;)I | StringBuffer.<init>()V | StringBuffer.append(Ljava	
+p4:class/g/b#1363	class/g/b.class	1363	火……		code: HIEN c@438 → Font.stringWidth(Ljava/lang/String;)I | StringBuffer.<init>()V | String.length()I | gf g/b	
+p4:class/g/b#1364	class/g/b.class	1364	（		code: HIEN a@141 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(Ljav	
+p4:class/g/b#1366	class/g/b.class	1366	：		code: HIEN c@165 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | e/c.a(Ljava/lang/String;	
+p4:class/a/f#868	class/a/f.class	868	动态地图		code: ? <clinit>@172 → ps a/f.l[Z | ps a/f.mB | ps a/f.nZ | ps a/f.o[Ljava/lang/String; | Hashtable.<init>()V | p	
+p4:class/a/f#869	class/a/f.class	869	未知物品类型:		code: HIEN a@119 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(I)Lj	
+p4:class/a/f#870	class/a/f.class	870	简单战斗		code: ? <clinit>@167 → ps a/f.l[Z | ps a/f.mB | ps a/f.nZ | ps a/f.o[Ljava/lang/String; | Hashtable.<init>()V | p	
+p4:class/a/f#871	class/a/f.class	871	菜单效果		code: ? <clinit>@176 → ps a/f.l[Z | ps a/f.mB | ps a/f.nZ | ps a/f.o[Ljava/lang/String; | Hashtable.<init>()V | p	
+p4:class/a/f#872	class/a/f.class	872	音乐状态		code: ? <clinit>@162 → ps a/f.l[Z | ps a/f.mB | ps a/f.nZ | ps a/f.o[Ljava/lang/String;	
+p4:class/a/g#541	class/a/g.class	541	土		code: ? m@64 → return	
+p4:class/a/g#542	class/a/g.class	542	木		code: ? m@55 → return	
+p4:class/a/g#543	class/a/g.class	543	水		code: ? m@58 → return	
+p4:class/a/g#544	class/a/g.class	544	火		code: ? m@61 → return	
+p4:class/a/g#545	class/a/g.class	545	金		code: ? m@52 → return	
+p4:class/d/a#293	class/d/a.class	293	了解你的轩辕剑成就,找攻略,对轩辕剑评分,评论.请进入主菜单"社区".		code: ? a@12 → gs main/a.dI | b/e/a.a(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIII)I | gf d/	
+p4:class/d/d#846	class/d/d.class	846	(存活的)		code: HIEN a@56 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | gs a/f.o[Ljava/lang/Stri	
+p4:class/d/d#1027	class/d/d.class	1027	全体复活		code: ? a@1099 → b/b/g.a([Ljava/lang/String;BBZ)Lb/b/g; | b/b/m.k()I | b/b/g.a()Ljava/lang/String; | String	
+p4:class/d/d#1028	class/d/d.class	1028	全体复活,并全体增加一倍攻击力,直到战斗结束!每场战斗只能复活3次!		code: ? a@1081 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | b/b/g.a([Ljava/lang/String;BBZ)Lb/b/g; 	
+p4:class/d/d#1029	class/d/d.class	1029	商店		code: KHOA a@19 → String.equals(Ljava/lang/Object;)Z | gs main/a.dI | gs main/a.hI | gs main/a.eI | gs main/	
+p4:class/d/d#1030	class/d/d.class	1030	复活成功!		code: ? a@1250 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/d/d#1031	class/d/d.class	1031	是否花费2元全体复活?赠送2个元宝(用于换高级装备),请记得存档!		code: ? a@1136 → a/f.t()Z | c/i.a(Ljava/lang/String;II)Z | gs d/d.eI | ps d/d.eI | String.valueOf(I)Ljava/l	
+p4:class/d/d#1032	class/d/d.class	1032	法宝经验值		code: HIEN a@94 → StringBuffer.append(Ljava/lang/String;)Ljava/lang/StringBuffer; | StringBuffer.append(C)Lj	
+p4:class/d/d#1033	class/d/d.class	1033	返回		code: ? a@1104 → b/b/g.a([Ljava/lang/String;BBZ)Lb/b/g; | b/b/m.k()I | b/b/g.a()Ljava/lang/String; | String	
+p4:class/d/e#205	class/d/e.class	205	体力不足!		code: ? a@173 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/d/e#206	class/d/e.class	206	奇术		code: ? <init>@10 → b/b/l.<init>(Ljava/lang/String;)V | pf d/e.mLd/d; | pf d/e.aLb/b/i; | pf d/e.bLb/b/b; | pf	
+p4:class/d/e#207	class/d/e.class	207	法宝		code: ? <init>@5 → b/b/l.<init>(Ljava/lang/String;)V | pf d/e.mLd/d; | pf d/e.aLb/b/i; | pf d/e.bLb/b/b; | pf	
+p4:class/d/e#208	class/d/e.class	208	灵力不足!		code: ? a@136 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/d/f#177	class/d/f.class	177	体力不足!		code: ? a@173 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/d/f#178	class/d/f.class	178	灵力不足!		code: ? a@136 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/d/f#179	class/d/f.class	179	绝技		code: ? <init>@1 → b/b/l.<init>(Ljava/lang/String;)V | pf d/f.lLd/d; | pf d/f.aLb/b/i; | pf d/f.bLb/b/b; | pf	
+p4:class/d/g#214	class/d/g.class	214	空位		code: ? a@150 → gf d/g.lLd/d; | gf d/d.f[La/g; | gf a/b.pLjava/lang/String; | gf d/g.lLd/d; | gf d/d.f[La/	
+p4:class/d/h#386	class/d/h.class	386	下载存档失败!		code: ? a@470 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | return	
+p4:class/d/h#387	class/d/h.class	387	下载存档成功!		code: ? a@397 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | a/f.z()V | a/c.e()V | a/f.a(II)I | b/b/	
+p4:class/d/h#388	class/d/h.class	388	下载第三章存档		code: KHOA a@334 → String.equals(Ljava/lang/Object;)Z | b/b/g.a([Ljava/lang/String;BBZ)Lb/b/g; | b/b/m.k()I |	
+p4:class/d/h#389	class/d/h.class	389	下载轩辕剑-第一章		code: KHOA a@683 → String.equals(Ljava/lang/Object;)Z | StringBuffer.<init>()V | StringBuffer.append(Ljava/la	
+p4:class/d/h#390	class/d/h.class	390	下载轩辕剑-第三章		code: KHOA a@738 → String.equals(Ljava/lang/Object;)Z | StringBuffer.<init>()V | StringBuffer.append(Ljava/la	
+p4:class/d/h#391	class/d/h.class	391	下载轩辕剑-第二章		code: KHOA a@628 → String.equals(Ljava/lang/Object;)Z | StringBuffer.<init>()V | StringBuffer.append(Ljava/la	
+p4:class/d/h#392	class/d/h.class	392	下载魔导纪元		code: KHOA a@793 → String.equals(Ljava/lang/Object;)Z | StringBuffer.<init>()V | StringBuffer.append(Ljava/la	
+p4:class/d/h#393	class/d/h.class	393	已继承上一章级数与法宝!		code: ? a@424 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b	
+p4:class/d/h#394	class/d/h.class	394	帮助		code: ? a@1020 → b/b/a.<init>(Ljava/lang/String;Ljava/lang/String;)V | pf b/b/l.kB | b/b/f.a(Lb/b/l;)V | b/	
+p4:class/d/h#395	class/d/h.class	395	并赠送两倍金钱的服务!		code: ? a@436 → b/b/g.a(Ljava/lang/String;J)Lb/b/g; | b/b/m.k()I | a/f.m(I)V | a/f.o()Z | d/j.<init>()V | 	
+p4:class/d/h#396	class/d/h.class	396	新开游戏		code: KHOA a@310 → String.equals(Ljava/lang/Object;)Z | a/f.z()V | d/j.<init>()V | d/k.a(Ld/k;)V | return	
+p4:class/d/h#397	class/d/h.class	397	轩辕剑-天之痕-四章		code: ? a@879 → gs main/a.dI | gs main/a.eI | g/b.a(Ljavax/microedition/midlet/MIDlet;Ljavax/microedition/	
+p4:class/d/h#398	class/d/h.class	398	轩辕剑-天之痕-第四章\n拉阔游戏出品\n© 2009 gameislive\n\n轩辕剑系列由台湾大宇正式授权\nsoftstar\n© 2008 Softstar Mobile\n\n拉阔游戏发行\n邮箱:kefu@gameislive.com\n电话:020-86001126\n\n制作群:\n午时三刻工作室\n项目负责:飞鱼\n游戏策划:迪奇马丁\n主程序:飞鱼\n人物动画:桑尼\n地图制作:医神\n技能效果/游戏界面:鬼丝,阿力克斯\n质量监控:文森特,赌后,风铃\n		code: ? a@1094 → b/b/a.<init>(Ljava/lang/String;Ljava/lang/String;)V | pf b/b/l.kB | b/b/f.a(Lb/b/l;)V | b/	
+p4:class/d/h#399	class/d/h.class	399	返回		code: KHOA a@585 → String.equals(Ljava/lang/Object;)Z | gs main/MainMIDlet.aLmain/MainMIDlet; | MIDlet.getApp	
+p4:class/d/h#400	class/d/h.class	400	连网方式1		code: ? a@350 → b/b/g.a([Ljava/lang/String;BBZ)Lb/b/g; | b/b/m.k()I | b/b/g.a()Ljava/lang/String; | String	
+p4:class/d/h#401	class/d/h.class	401	连网方式2		code: ? a@355 → b/b/g.a([Ljava/lang/String;BBZ)Lb/b/g; | b/b/m.k()I | b/b/g.a()Ljava/lang/String; | String	

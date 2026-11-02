@@ -1,0 +1,37 @@
+Summary for jars/hs1.jar
+Decompiled with CFR 0.152
+
+
+a.a.a.a
+----------------------------
+
+a(javax.microedition.midlet.MIDlet )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+d.a
+----------------------------
+
+a(java.lang.String e.a )
+  Unable to fully structure code
+
+
+g.b
+----------------------------
+
+a(b.j )
+  Unable to fully structure code
+  Could not resolve type clashes
+a(byte byte int int )
+  Unable to fully structure code
+a(byte )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+i.a
+----------------------------
+
+a(java.lang.String java.lang.String )
+  Loose catch block

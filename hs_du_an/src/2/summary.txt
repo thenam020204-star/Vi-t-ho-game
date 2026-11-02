@@ -1,0 +1,21 @@
+Summary for jars/hs2.jar
+Decompiled with CFR 0.152
+
+
+a.a.a.a
+----------------------------
+
+a(javax.microedition.midlet.MIDlet )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+d.c
+----------------------------
+
+a(c.k )
+  Unable to fully structure code
+  Could not resolve type clashes
+a(byte byte int int )
+  Unable to fully structure code
+  Could not resolve type clashes

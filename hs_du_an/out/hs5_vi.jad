@@ -1,0 +1,14 @@
+MIDlet-Name: Xuan-Yuan Sword - The Scar of Sky Final
+CP: 0
+MIDlet-1: Xuan-Yuan Sword - The Scar of Sky Final, icon.png, main.MainMIDlet
+locale: cn
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Install-Notify: http://59.42.254.3:8081/pay/install.do?gameid=0118&ua=N73&gv=1.7.0&cpid=0
+MIDlet-Icon: icon.png
+MIDlet-Vendor: Gameislive
+UA: N73
+MIDlet-Version: 1.7.0
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Description: Xuan-Yuan Sword - The Scar of Sky Final
+MIDlet-Jar-URL: hs5_vi.jar
+MIDlet-Jar-Size: 1079645

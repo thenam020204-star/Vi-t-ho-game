@@ -1,0 +1,41 @@
+Summary for jars/hs3.jar
+Decompiled with CFR 0.152
+
+
+b.f.a
+----------------------------
+
+a()
+  Unable to fully structure code
+
+
+d.d
+----------------------------
+
+a(b.b.c )
+  Unable to fully structure code
+a(byte byte int int )
+  Unable to fully structure code
+
+
+e.a
+----------------------------
+
+a(int )
+  Unable to fully structure code
+
+
+g.a
+----------------------------
+
+commandAction(javax.microedition.lcdui.Command javax.microedition.lcdui.Displayable )
+  Handled duff style switch with additional control
+a(java.util.Hashtable boolean java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+h.a
+----------------------------
+
+a(h.a boolean java.lang.String byte )
+  Loose catch block

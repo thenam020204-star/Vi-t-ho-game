@@ -1,0 +1,18 @@
+{
+ "shots": [
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/a1.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/a2.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/a3.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/a4.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/a5.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/a6.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/a7.png",
+  "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/a8.png"
+ ],
+ "emu_alive_at_end": true,
+ "exceptions": [
+  "java.lang.NullPointerException: Cannot invoke \"javax.sound.midi.Sequencer.isRunning()\" because \"javax.microedition.media.Manager.exclusiveSequencers[<local0>]\" is null",
+  "javax.microedition.rms.RecordStoreNotFoundException: Record Store Doesn't Exist: Xuan-Yuan Sword - The Scar of Sky II/bf31222a11c3dkxzjfcxffcgw_.rms"
+ ],
+ "log": "/home/user/Vi-t-ho-game/hs_du_an/shots/dich_p2/emu.log"
+}

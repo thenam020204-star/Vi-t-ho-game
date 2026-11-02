@@ -1,0 +1,9 @@
+Thêm: ['BitmapFont.class', 'VnFont.class', 'font/f15c.bin']
+Xoá: []
+Đổi: ['a/a/a/a.class', 'a/a/a/a/a.class', 'a/a/a/a/b.class', 'b/a.class', 'b/b.class', 'b/c.class', 'b/d.class', 'b/e.class', 'b/f.class', 'b/g.class', 'c/a.class', 'c/b.class', 'c/c.class', 'c/d.class', 'c/e.class', 'c/f.class', 'c/g.class', 'c/h.class', 'c/i.class', 'c/j.class', 'c/k.class', 'c/l.class', 'c/m.class', 'c/n.class', 'c/o.class', 'c/p.class', 'c/r.class', 'c/s.class', 'c/t.class', 'd/a.class', 'd/b.class', 'd/c.class', 'd/d.class', 'd/e.class', 'd/f.class', 'd/g.class', 'd/h.class', 'd/i.class', 'd/j.class', 'd/k.class', 'd/l.class', 'd/m.class', 'e/a/a.class', 'e/a/b.class', 'e/a/c.class', 'e/b/a.class', 'e/b/b.class', 'e/b/c.class', 'e/b/d.class', 'f/a.class', 'f/b.class', 'f/c.class', 'g/a/a.class', 'main/MainMIDlet.class', 'main/b.class', 'main/c.class']
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: java/io/DataInputStream.readUnsignedByte()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Graphics.getColor()I (xác nhận máy đích có)
+WARN BitmapFont.class: API mới so với bản gốc: javax/microedition/lcdui/Image.createRGBImage([IIIZ)Ljavax/microedition/lcdui/Image; (xác nhận máy đích có)
+RESULT: PASS
