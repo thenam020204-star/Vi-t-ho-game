@@ -1,0 +1,74 @@
+# T10: diff disasm các điểm vá (trước/sau); thunk trong cave B
+
+11ebe8  trước: b #0x11ed68                    sau: b #0x14afe4                         [b t10_OK (0x14afe4)]
+11ebec  trước: b #0x11edb8                    sau: b #0x14afb4                         [b t10_R (0x14afb4)]
+11ebf0  trước: b #0x11ee0c                    sau: b #0x14afcc                         [b t10_L (0x14afcc)]
+11ee90  trước: cmp r0, #0x8000000             sau: cmp r0, #0x9000000                  [cmp r0, #0x9000000]
+11ee9c  trước: sub r2, r2, #9                 sau: sub r2, r2, #0xa                    [sub r2, r2, #10]
+11eee0  trước: add r2, r2, #9                 sau: add r2, r2, #0xa                    [add r2, r2, #10]
+11a3bc  trước: mov lr, #9                     sau: mov lr, #0xa                        [mov lr, #10]
+11a4b4  trước: ldrsh r1, [sb]                 sau: bl #0x14b008                        [bl t10_lblu (0x14b008)]
+11a8c8  trước: ldrsh r1, [r1, #-0x1c]         sau: bl #0x14b018                        [bl t10_lbls (0x14b018)]
+11a540  trước: ldrsb r3, [r3, #-0xc]          sau: bl #0x14b028                        [bl t10_type (0x14b028)]
+11a54c  trước: b #0x11a5d8                    sau: b #0x14b038                         [b t10_valth (0x14b038)]
+118994  trước: cmp ip, #3                     sau: cmp ip, #4                          [cmp r12, #4]
+1189f4  trước: mov r3, #8                     sau: mov r3, #9                          [mov r3, #9]
+9987c  trước: stmib sp, {r7, ip}             sau: bl #0x14b058                        [bl t10_h1th (0x14b058)]
+414d8  trước: bl #0x31af4                    sau: bl #0x14b070                        [bl t10_gshth (0x14b070)]
+
+# Thunk (cave B):
+t10_R @ 0x14afb4:
+   14afb4: ldrsb ip, [r5, #0xf]
+   14afb8: cmp ip, #9
+   14afbc: bne #0x11edb8
+   14afc0: mov r0, #1
+   14afc4: bl #0x14b078
+   14afc8: b #0x11ec1c
+t10_L @ 0x14afcc:
+   14afcc: ldrsb ip, [r5, #0xf]
+   14afd0: cmp ip, #9
+   14afd4: bne #0x11ee0c
+   14afd8: mvn r0, #0
+   14afdc: bl #0x14b078
+   14afe0: b #0x11ec1c
+t10_OK @ 0x14afe4:
+   14afe4: ldrsb r3, [r5, #0xf]
+   14afe8: cmp r3, #9
+   14afec: beq #0x14affc
+   14aff0: cmp r3, #8
+   14aff4: bne #0x11ec84
+   14aff8: b #0x11ed74
+t10_lblu @ 0x14b008:
+   14b008: ldrsh r1, [sb]
+   14b00c: cmp r7, #9
+   14b010: moveq r1, #0xd2
+   14b014: bx lr
+t10_lbls @ 0x14b018:
+   14b018: ldrsh r1, [r1, #-0x1c]
+   14b01c: cmp r7, #9
+   14b020: moveq r1, #0xd2
+   14b024: bx lr
+t10_type @ 0x14b028:
+   14b028: ldrsb r3, [r3, #-0xc]
+   14b02c: cmp r7, #9
+   14b030: moveq r3, #5
+   14b034: bx lr
+t10_valth @ 0x14b038:
+   14b038: mov r0, sp
+   14b03c: mov r1, r4
+   14b040: mov r2, r5
+   14b044: mov r3, r7
+   14b048: push {sl, fp}
+   14b04c: bl #0x14b16c
+   14b050: add sp, sp, #8
+   14b054: b #0x11a5d8
+t10_h1th @ 0x14b058:
+   14b058: stmib sp, {r7, ip}
+   14b05c: push {r0, r1, r2, r3, ip, lr}
+   14b060: add r0, sp, #0x18
+   14b064: bl #0x14b2c4
+   14b068: pop {r0, r1, r2, r3, ip, lr}
+   14b06c: bx lr
+t10_gshth @ 0x14b070:
+   14b070: mov r1, r5
+   14b074: b #0x14b2f8

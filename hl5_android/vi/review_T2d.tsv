@@ -1,0 +1,1281 @@
+file	pos	id	verdict	note	group
+c/map/00000.scn	idx 1	K03880	OK		dp
+c/map/00000.scn	idx 2	K03881	OK		dp
+c/map/00000.scn	idx 3	K03882	OK		dp
+c/map/00000.scn	idx 4	K03883	OK		dp
+c/map/00000.scn	idx 5	K03884	OK		dp
+c/map/00000.scn	idx 6	K03885	OK		dp
+c/map/00000.scn	idx 7	K03886	OK		dp
+c/map/00000.scn	idx 8	K03887	OK		dp
+c/map/00000.scn	idx 9	K03888	OK		dp
+c/map/00000.scn	idx 10	K03889	OK		dp
+c/map/00000.scn	idx 11	K03890	OK		dp
+c/map/00000.scn	idx 12	K03891	OK		dp
+c/map/00000.scn	idx 13	K03892	OK		dp
+c/map/00000.scn	idx 14	K03893	OK		dp
+c/map/00000.scn	idx 15	K03894	OK		dp
+c/map/00000.scn	idx 16	K03895	OK		dp
+c/map/00000.scn	idx 17	K03896	OK		dp
+c/map/00000.scn	idx 18	K03897	OK		dp
+c/map/00030.scn	idx 0	K04627	OK		dp
+c/map/00030.scn	idx 1	K04628	OK		dp
+c/map/00030.scn	idx 2	K04629	OK		dp
+c/map/00030.scn	idx 3	K04630	OK		dp
+c/map/00030.scn	idx 4	K04631	OK		dp
+c/map/00030.scn	idx 5	K04632	OK		dp
+c/map/00030.scn	idx 6	K04633	OK		dp
+c/map/00030.scn	idx 7	K04634	OK		dp
+c/map/00030.scn	idx 8	K04635	OK		dp
+c/map/00030.scn	idx 9	K04636	OK		dp
+c/map/00030.scn	idx 10	K04637	OK		dp
+c/map/00030.scn	idx 11	K04638	OK		dp
+c/map/00030.scn	idx 12	K04639	OK		dp
+c/map/00030.scn	idx 13	K04640	OK		dp
+c/map/00030.scn	idx 14	K04641	OK		dp
+c/map/00030.scn	idx 15	K04642	OK		dp
+c/map/00030.scn	idx 16	K04643	OK		dp
+c/map/00030.scn	idx 17	K04644	OK		dp
+c/map/00030.scn	idx 18	K04645	OK		dp
+c/map/00030.scn	idx 19	K04646	OK		dp
+c/map/00030.scn	idx 20	K04647	OK		dp
+c/map/00030.scn	idx 21	K04648	OK		dp
+c/map/00030.scn	idx 22	K04649	OK		dp
+c/map/00030.scn	idx 23	K04650	OK		dp
+c/map/00030.scn	idx 24	K04651	OK		dp
+c/map/00030.scn	idx 25	K04652	OK		dp
+c/map/00030.scn	idx 26	K04653	OK		dp
+c/map/00030.scn	idx 27	K04654	OK		dp
+c/map/00030.scn	idx 28	K04655	OK		dp
+c/map/00030.scn	idx 29	K04656	OK		dp
+c/map/00068.scn	idx 0	K06637	OK		dp
+c/map/00068.scn	idx 1	K06638	OK		dp
+c/map/00068.scn	idx 2	K06639	OK		dp
+c/map/00068.scn	idx 3	K06640	OK		dp
+c/map/00068.scn	idx 4	K06641	OK		dp
+c/map/00068.scn	idx 5	K06642	OK		dp
+c/map/00068.scn	idx 6	K06643	OK		dp
+c/map/00068.scn	idx 7	K06644	OK		dp
+c/map/00068.scn	idx 8	K06645	OK		dp
+c/map/00068.scn	idx 9	K06646	OK		dp
+c/map/00068.scn	idx 10	K06647	OK		dp
+c/map/00068.scn	idx 11	K06648	OK		dp
+c/map/00068.scn	idx 12	K06649	OK		dp
+c/map/00068.scn	idx 13	K06650	OK		dp
+c/map/00068.scn	idx 14	K06651	OK		dp
+c/map/00068.scn	idx 15	K05177	OK		dp
+c/map/00068.scn	idx 16	K06652	OK		dp
+c/map/00068.scn	idx 17	K06653	OK		dp
+c/map/00068.scn	idx 18	K06654	OK		dp
+c/map/00068.scn	idx 19	K06655	OK		dp
+c/map/00068.scn	idx 20	K06656	OK		dp
+c/map/00068.scn	idx 21	K06657	OK		dp
+c/map/00068.scn	idx 22	K06658	OK		dp
+c/map/00068.scn	idx 23	K06659	OK		dp
+c/map/00068.scn	idx 24	K06660	OK		dp
+c/map/00068.scn	idx 25	K06661	OK		dp
+c/map/00068.scn	idx 26	K06662	OK		dp
+c/map/00068.scn	idx 27	K06663	OK		dp
+c/map/00068.scn	idx 28	K06664	OK		dp
+c/map/00068.scn	idx 29	K06665	OK		dp
+c/map/00068.scn	idx 30	K06666	OK		dp
+c/map/00068.scn	idx 31	K06667	OK		dp
+c/map/00068.scn	idx 32	K06668	OK		dp
+c/map/00068.scn	idx 33	K06669	OK		dp
+c/map/00068.scn	idx 34	K06670	OK		dp
+c/map/00068.scn	idx 35	K06671	OK		dp
+c/map/00068.scn	idx 36	K06672	OK		dp
+c/map/00068.scn	idx 37	K06673	OK		dp
+c/map/00068.scn	idx 39	K06674	OK		dp
+c/map/00068.scn	idx 40	K06675	OK		dp
+c/map/00068.scn	idx 41	K06676	OK		dp
+c/map/00068.scn	idx 42	K06677	OK		dp
+c/map/00068.scn	idx 43	K06678	OK		dp
+c/map/00068.scn	idx 44	K06679	OK		dp
+c/map/00068.scn	idx 45	K06680	OK		dp
+c/map/00068.scn	idx 46	K06681	OK		dp
+c/map/00068.scn	idx 47	K06682	OK		dp
+c/map/00068.scn	idx 48	K06683	OK		dp
+c/map/00068.scn	idx 49	K06684	OK		dp
+c/map/00068.scn	idx 50	K06685	OK		dp
+c/map/00068.scn	idx 51	K06686	OK		dp
+c/map/00068.scn	idx 52	K06687	OK		dp
+c/map/00068.scn	idx 53	K06688	OK		dp
+c/map/00068.scn	idx 54	K06689	OK		dp
+c/map/00068.scn	idx 55	K06690	OK		dp
+c/map/00068.scn	idx 56	K06691	OK		dp
+c/map/00068.scn	idx 57	K06692	OK		dp
+c/map/00068.scn	idx 58	K06693	OK		dp
+c/map/00068.scn	idx 59	K06694	OK		dp
+c/map/00068.scn	idx 60	K06695	OK		dp
+c/map/00068.scn	idx 61	K06696	OK		dp
+c/map/00068.scn	idx 62	K06697	OK		dp
+c/map/00068.scn	idx 63	K06698	OK		dp
+c/map/00068.scn	idx 64	K06699	OK		dp
+c/map/00068.scn	idx 65	K06700	OK		dp
+c/map/00068.scn	idx 66	K06701	OK		dp
+c/map/00068.scn	idx 67	K06702	OK		dp
+c/map/00068.scn	idx 68	K06703	OK		dp
+c/map/00068.scn	idx 69	K06704	OK		dp
+c/map/00068.scn	idx 70	K06705	OK		dp
+c/map/00068.scn	idx 71	K06706	OK		dp
+c/map/00068.scn	idx 72	K06707	OK		dp
+c/map/00068.scn	idx 73	K06708	OK		dp
+c/map/00068.scn	idx 74	K06709	OK		dp
+c/map/00068.scn	idx 75	K06710	OK		dp
+c/map/00068.scn	idx 76	K06711	OK		dp
+c/map/00068.scn	idx 77	K06712	OK		dp
+c/map/00068.scn	idx 78	K06713	OK		dp
+c/map/00068.scn	idx 79	K06714	OK		dp
+c/map/00068.scn	idx 80	K06715	OK		dp
+c/map/00068.scn	idx 81	K06716	OK		dp
+c/map/00068.scn	idx 82	K06717	OK		dp
+c/map/00068.scn	idx 83	K06718	OK		dp
+c/map/00068.scn	idx 84	K06719	OK		dp
+c/map/00068.scn	idx 85	K06720	OK		dp
+c/map/00068.scn	idx 87	K06722	OK		dp
+c/map/00068.scn	idx 88	K06723	OK		dp
+c/map/00068.scn	idx 89	K06724	OK		dp
+c/map/00068.scn	idx 90	K06725	OK		dp
+c/map/00068.scn	idx 91	K06726	OK		dp
+c/map/00068.scn	idx 92	K06727	OK		dp
+c/map/00068.scn	idx 93	K06728	OK		dp
+c/map/00068.scn	idx 94	K06729	OK		dp
+c/map/00068.scn	idx 95	K06730	OK		dp
+c/map/00068.scn	idx 97	K06732	OK		dp
+c/map/00068.scn	idx 98	K06733	OK		dp
+c/map/00068.scn	idx 99	K06734	OK		dp
+c/map/00068.scn	idx 100	K06735	OK		dp
+c/map/00068.scn	idx 101	K06736	OK		dp
+c/map/00068.scn	idx 102	K06737	OK		dp
+c/map/00068.scn	idx 103	K06738	OK		dp
+c/map/00068.scn	idx 104	K06739	OK		dp
+c/map/00068.scn	idx 105	K06740	OK		dp
+c/map/00068.scn	idx 106	K06741	OK		dp
+c/map/00068.scn	idx 107	K06742	OK		dp
+c/map/00068.scn	idx 108	K06743	OK		dp
+c/map/00068.scn	idx 109	K06744	OK		dp
+c/map/00068.scn	idx 110	K06745	OK		dp
+c/map/00087.scn	idx 0	K04498	OK		dp
+c/map/00087.scn	idx 1	K07541	OK		dp
+c/map/00087.scn	idx 2	K07542	OK		dp
+c/map/00087.scn	idx 3	K07543	OK		dp
+c/map/00087.scn	idx 4	K07544	OK		dp
+c/map/00087.scn	idx 5	K07545	OK		dp
+c/map/00087.scn	idx 6	K07546	OK		dp
+c/map/00087.scn	idx 7	K07547	OK		dp
+c/map/00087.scn	idx 8	K07548	OK		dp
+c/map/00087.scn	idx 9	K07549	OK		dp
+c/map/00087.scn	idx 10	K07550	OK		dp
+c/map/00087.scn	idx 11	K07551	OK		dp
+c/map/00087.scn	idx 12	K07552	OK		dp
+c/map/00087.scn	idx 13	K07553	OK		dp
+c/map/00087.scn	idx 14	K07554	OK		dp
+c/map/00087.scn	idx 15	K07555	OK		dp
+c/map/00087.scn	idx 16	K07556	OK		dp
+c/map/00087.scn	idx 17	K07557	OK		dp
+c/map/00087.scn	idx 18	K07558	OK		dp
+c/map/00087.scn	idx 19	K07559	OK		dp
+c/map/00087.scn	idx 20	K07560	OK		dp
+c/map/00087.scn	idx 21	K07561	OK		dp
+c/map/00087.scn	idx 22	K07562	OK		dp
+c/map/00087.scn	idx 23	K07563	OK		dp
+c/map/00087.scn	idx 24	K05230	OK		dp
+c/map/00087.scn	idx 25	K07564	OK		dp
+c/map/00087.scn	idx 26	K07565	OK		dp
+c/map/00087.scn	idx 27	K07566	OK		dp
+c/map/00087.scn	idx 29	K07567	OK		dp
+c/map/00087.scn	idx 30	K07568	OK		dp
+c/map/00087.scn	idx 31	K07569	OK		dp
+c/map/00087.scn	idx 32	K07570	OK		dp
+c/map/00087.scn	idx 33	K07571	OK		dp
+c/map/00087.scn	idx 34	K07572	SAI	không có Hàn; đúng K07572 ở idx 36 (NEW)	dp
+c/map/00087.scn	idx 35	K07573	SAI	không có Hàn; đúng K07573 ở idx 37 (NEW)	dp
+c/map/00087.scn	idx 38	K07574	OK		dp
+c/map/00087.scn	idx 39	K07575	OK		dp
+c/map/00087.scn	idx 40	K07576	OK		dp
+c/map/00087.scn	idx 41	K07577	OK		dp
+c/map/00087.scn	idx 42	K07578	OK		dp
+c/map/00087.scn	idx 43	K07579	OK		dp
+c/map/00087.scn	idx 44	K07580	OK		dp
+c/map/00087.scn	idx 45	K07581	OK		dp
+c/map/00087.scn	idx 46	K07582	OK		dp
+c/map/00087.scn	idx 47	K07583	OK		dp
+c/map/00087.scn	idx 48	K07584	OK		dp
+c/map/00087.scn	idx 49	K07585	OK		dp
+c/map/00087.scn	idx 50	K07586	OK		dp
+c/map/00087.scn	idx 51	K07587	OK		dp
+c/map/00087.scn	idx 52	K07588	OK		dp
+c/map/00087.scn	idx 53	K07589	OK		dp
+c/map/00087.scn	idx 54	K07590	OK		dp
+c/map/00087.scn	idx 55	K07591	OK		dp
+c/map/00087.scn	idx 56	K07592	OK		dp
+c/map/00087.scn	idx 57	K07593	OK		dp
+c/map/00087.scn	idx 58	K07594	OK		dp
+c/map/00087.scn	idx 59	K07595	OK		dp
+c/map/00087.scn	idx 60	K07596	OK		dp
+c/map/00087.scn	idx 61	K07597	OK		dp
+c/map/00087.scn	idx 62	K07598	OK		dp
+c/map/00087.scn	idx 63	K07599	OK		dp
+c/map/00087.scn	idx 64	K07600	OK		dp
+c/map/00087.scn	idx 65	K07601	OK		dp
+c/map/00087.scn	idx 66	K07602	OK		dp
+c/map/00087.scn	idx 67	K07603	OK		dp
+c/map/00087.scn	idx 68	K07604	OK		dp
+c/map/00087.scn	idx 69	K07605	OK		dp
+c/map/00087.scn	idx 70	K07606	OK		dp
+c/map/00087.scn	idx 71	K07607	OK		dp
+c/map/00087.scn	idx 72	K07608	OK		dp
+c/map/00087.scn	idx 73	K07609	OK		dp
+c/map/00087.scn	idx 74	K07610	OK		dp
+c/map/00087.scn	idx 75	K07611	OK		dp
+c/map/00087.scn	idx 76	K07612	OK		dp
+c/map/00087.scn	idx 77	K07613	OK		dp
+c/map/00087.scn	idx 78	K07614	OK		dp
+c/map/00087.scn	idx 79	K07615	OK		dp
+c/map/00087.scn	idx 80	K07616	OK		dp
+c/map/00087.scn	idx 81	K07617	OK		dp
+c/map/00087.scn	idx 82	K07618	OK		dp
+c/map/00087.scn	idx 83	K07619	OK		dp
+c/map/00087.scn	idx 84	K07620	OK		dp
+c/map/00087.scn	idx 85	K07621	OK		dp
+c/map/00087.scn	idx 86	K06284	OK		dp
+c/map/00087.scn	idx 87	K07622	OK		dp
+c/map/00087.scn	idx 88	K06288	OK		dp
+c/map/00087.scn	idx 89	K07623	OK		dp
+c/map/00087.scn	idx 90	K07624	OK		dp
+c/map/00087.scn	idx 91	K07625	OK		dp
+c/map/00087.scn	idx 92	K07626	OK		dp
+c/map/00087.scn	idx 93	K07627	OK		dp
+c/map/00087.scn	idx 94	K07628	OK		dp
+c/map/00087.scn	idx 95	K07629	OK		dp
+c/map/00087.scn	idx 96	K07630	OK		dp
+c/map/00087.scn	idx 97	K07631	OK		dp
+c/map/00087.scn	idx 98	K07632	OK		dp
+c/map/00107.scn	idx 0	K04702	OK		dp
+c/map/00107.scn	idx 1	K08190	OK		dp
+c/map/00107.scn	idx 2	K08191	OK		dp
+c/map/00107.scn	idx 3	K08192	OK		dp
+c/map/00107.scn	idx 4	K04722	OK		dp
+c/map/00107.scn	idx 5	K04723	OK		dp
+c/map/00107.scn	idx 6	K08193	OK		dp
+c/map/00107.scn	idx 7	K08194	OK		dp
+c/map/00107.scn	idx 8	K08195	OK		dp
+c/map/00107.scn	idx 9	K04726	OK		dp
+c/map/00107.scn	idx 10	K04727	OK		dp
+c/map/00107.scn	idx 11	K04729	LỆCH	EN chỉ 'I heard a rumor before...' còn Hàn dài hơn (thành phố hiện đại nhiều tin đồn phi khoa học)	dp
+c/map/00107.scn	idx 12	K04731	SAI	Anh 'drag you off to Central Tower' vs Hàn 'mọi công nghệ từ Central Tower'; Hàn này đúng với idx 14	dp
+c/map/00107.scn	idx 13	K04732	SAI	Anh 'waterboard' vs Hàn 'Wade gom bao nhiêu thiên tài'; không có Hàn đúng	dp
+c/map/00107.scn	idx 14	K08196	SAI	đúng K04731 (Hàn mọi công nghệ nhân loại từ Central Tower)	dp
+c/map/00107.scn	idx 15	K08197	SAI	đúng K08196 (Hàn 'đóng cống ngầm')	dp
+c/map/00107.scn	idx 16	K04736	SAI	đúng K08197 (Hàn 'có xác chết... giá đất')	dp
+c/map/00107.scn	idx 17	K04737	SAI	đúng K04736 (Hàn 'đứa trẻ vui thì tốt')	dp
+c/map/00107.scn	idx 18	K04738	SAI	đúng K04737 (Hàn 'muốn cho con xem Central Tower')	dp
+c/map/00107.scn	idx 19	K04739	SAI	Anh 'xe tăng bốn chân' vs Hàn 'bức bối, chỉ đi vùng cố định'; không có Hàn đúng	dp
+c/map/00107.scn	idx 20	K04740	SAI	Anh 'mech hai chân' vs Hàn 'thiên tài nghiên cứu ở đâu'; không có Hàn đúng	dp
+c/map/00107.scn	idx 21	K08198	OK		dp
+c/map/00113.scn	idx 0	K05022	OK		dp
+c/map/00113.scn	idx 1	K08309	OK		dp
+c/map/00113.scn	idx 2	K08310	OK		dp
+c/map/00113.scn	idx 3	K08311	OK		dp
+c/map/00113.scn	idx 4	K08312	OK		dp
+c/map/00113.scn	idx 5	K08313	OK		dp
+c/map/00113.scn	idx 6	K08314	OK		dp
+c/map/00113.scn	idx 7	K08315	OK		dp
+c/map/00113.scn	idx 8	K08316	OK		dp
+c/map/00113.scn	idx 9	K08317	OK		dp
+c/map/00113.scn	idx 10	K08318	OK		dp
+c/map/00113.scn	idx 11	K08319	OK		dp
+c/map/00113.scn	idx 12	K08320	OK		dp
+c/map/00113.scn	idx 13	K08321	OK		dp
+c/map/00113.scn	idx 14	K08322	OK		dp
+c/map/00113.scn	idx 15	K08323	OK		dp
+c/map/00113.scn	idx 16	K08324	OK		dp
+c/map/00113.scn	idx 17	K08325	OK		dp
+c/map/00113.scn	idx 18	K08326	OK		dp
+c/map/00113.scn	idx 19	K08327	OK		dp
+c/map/00113.scn	idx 20	K08328	OK		dp
+c/map/00113.scn	idx 21	K08329	OK		dp
+c/map/00113.scn	idx 22	K08330	OK		dp
+c/map/00113.scn	idx 23	K08331	OK		dp
+c/map/00136.scn	idx 0	K06381	OK		dp
+c/map/00136.scn	idx 1	K08449	SAI	Anh 'Must be nice for Neveds' vs Hàn 'Tôi không phải học giả.. biết kiến thức mới luôn vui'	dp
+c/map/00136.scn	idx 4	K08450	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 5	K06436	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 6	K06437	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 7	K08451	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 8	K08453	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 9	K08454	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 10	K08455	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 11	K08457	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 12	K08458	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 14	K08459	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 16	K08461	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 17	K08462	SAI	đúng K08468 (Hàn 'sách chứa sự thật quý giá')	dp
+c/map/00136.scn	idx 18	K08463	SAI	đúng K08469 (Hàn 'cấm sách đốt sách vẫn sống sót')	dp
+c/map/00136.scn	idx 21	K08464	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 24	K08465	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 25	K08466	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 28	K08467	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 30	K08468	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 32	K08469	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 33	K06457	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 35	K06459	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 37	K06461	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 38	K06462	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00136.scn	idx 40	K06464	OK		dp
+c/map/00136.scn	idx 41	K06465	SAI	đúng K06466 (Hàn 'lính đánh thuê cần biết thú hoang/địa hình')	dp
+c/map/00136.scn	idx 43	K06466	SAI	lệch hàng cả file 00136; Hàn ở hàng này thuộc ý khác	dp
+c/map/00144.scn	idx 0	K06637	OK		dp
+c/map/00144.scn	idx 1	K08621	LỆCH	Hàn là nhãn nội bộ EVENT_게임오버, Anh là 'G A M E  O V E R'	dp
+c/map/00144.scn	idx 2	K04204	OK		dp
+c/map/00144.scn	idx 3	K04205	OK		dp
+c/map/00144.scn	idx 4	K04206	OK		dp
+c/map/00144.scn	idx 5	K06664	OK		dp
+c/map/00144.scn	idx 6	K06665	OK		dp
+c/map/00144.scn	idx 7	K08622	OK		dp
+c/map/00144.scn	idx 8	K08623	OK		dp
+c/map/00144.scn	idx 9	K08624	OK		dp
+c/map/00144.scn	idx 10	K08625	OK		dp
+c/map/00144.scn	idx 11	K08626	OK		dp
+c/map/00144.scn	idx 12	K08627	OK		dp
+c/map/00144.scn	idx 13	K08628	OK		dp
+c/map/00144.scn	idx 14	K08629	OK		dp
+c/map/00144.scn	idx 15	K08630	OK		dp
+c/map/00144.scn	idx 16	K08631	OK		dp
+c/map/00144.scn	idx 17	K08632	OK		dp
+c/map/00144.scn	idx 18	K08633	OK		dp
+c/map/00144.scn	idx 19	K08634	OK		dp
+c/map/00144.scn	idx 20	K08635	OK		dp
+c/map/00144.scn	idx 21	K08636	OK		dp
+c/map/00144.scn	idx 22	K08637	OK		dp
+c/map/00144.scn	idx 23	K08638	OK		dp
+c/map/00144.scn	idx 24	K08639	OK		dp
+c/map/00144.scn	idx 25	K08640	OK		dp
+c/map/00144.scn	idx 26	K08641	OK		dp
+c/map/00144.scn	idx 27	K08642	OK		dp
+c/map/00144.scn	idx 28	K08643	OK		dp
+c/map/00144.scn	idx 29	K08644	OK		dp
+c/map/00144.scn	idx 30	K08645	OK		dp
+c/map/00144.scn	idx 31	K08646	OK		dp
+c/map/00144.scn	idx 32	K08647	OK		dp
+c/map/00144.scn	idx 33	K08648	OK		dp
+c/map/00144.scn	idx 34	K08649	OK		dp
+c/map/00144.scn	idx 35	K08650	OK		dp
+c/map/00144.scn	idx 36	K08651	OK		dp
+c/map/00144.scn	idx 37	K08652	OK		dp
+c/map/00144.scn	idx 38	K08653	OK		dp
+c/map/00144.scn	idx 39	K08654	OK		dp
+c/map/00144.scn	idx 40	K08655	OK		dp
+c/map/00144.scn	idx 41	K08656	OK		dp
+c/map/00144.scn	idx 42	K08657	OK		dp
+c/map/00144.scn	idx 43	K08658	OK		dp
+c/map/00144.scn	idx 44	K08659	OK		dp
+c/map/00144.scn	idx 45	K08660	OK		dp
+c/map/00144.scn	idx 46	K08661	OK		dp
+c/map/00144.scn	idx 47	K08662	OK		dp
+c/map/00144.scn	idx 48	K08663	OK		dp
+c/map/00144.scn	idx 49	K08664	OK		dp
+c/map/00144.scn	idx 50	K08665	OK		dp
+c/map/00144.scn	idx 51	K08666	OK		dp
+c/map/00144.scn	idx 52	K08667	OK		dp
+c/map/00144.scn	idx 53	K08668	OK		dp
+c/map/00144.scn	idx 55	K06717	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00144.scn	idx 56	K06719	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00144.scn	idx 57	K06720	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00144.scn	idx 59	K06723	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00144.scn	idx 60	K06725	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00144.scn	idx 61	K06726	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00144.scn	idx 62	K06728	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00144.scn	idx 63	K06729	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00144.scn	idx 65	K06732	SAI	Hàn là câu của 00068 (K0671x..) khác cảnh; không có Hàn đúng	dp
+c/map/00150.scn	idx 0	K07028	OK		dp
+c/map/00150.scn	idx 1	K08694	OK		dp
+c/map/00150.scn	idx 2	K08695	OK		dp
+c/map/00150.scn	idx 3	K08696	OK		dp
+c/map/00150.scn	idx 4	K08697	OK		dp
+c/map/00150.scn	idx 5	K08698	OK		dp
+c/map/00150.scn	idx 6	K08699	OK		dp
+c/map/00150.scn	idx 7	K08700	OK		dp
+c/map/00150.scn	idx 8	K08701	OK		dp
+c/map/00150.scn	idx 9	K08702	OK		dp
+c/map/00150.scn	idx 10	K08703	OK		dp
+c/map/00150.scn	idx 12	K08621	LỆCH	Hàn là nhãn nội bộ EVENT_게임오버, Anh là 'G A M E  O V E R'	dp
+c/map/00151.scn	idx 0	K07038	OK		dp
+c/map/00151.scn	idx 1	K07706	OK		dp
+c/map/00151.scn	idx 2	K08704	OK		dp
+c/map/00151.scn	idx 3	K08705	OK		dp
+c/map/00151.scn	idx 4	K08706	OK		dp
+c/map/00151.scn	idx 5	K08707	OK		dp
+c/map/00151.scn	idx 6	K08708	OK		dp
+c/map/00151.scn	idx 7	K08709	OK		dp
+c/map/00151.scn	idx 8	K08710	OK		dp
+c/map/00151.scn	idx 9	K08711	OK		dp
+c/map/00151.scn	idx 10	K08712	OK		dp
+c/map/00151.scn	idx 11	K08713	OK		dp
+c/map/00151.scn	idx 12	K08714	OK		dp
+c/map/00151.scn	idx 13	K08715	OK		dp
+c/map/00151.scn	idx 14	K08716	OK		dp
+c/map/00151.scn	idx 15	K08717	OK		dp
+c/map/00151.scn	idx 16	K08718	OK		dp
+c/map/00151.scn	idx 17	K08719	OK		dp
+c/map/00151.scn	idx 18	K08720	OK		dp
+c/map/00151.scn	idx 19	K08721	OK		dp
+c/map/00151.scn	idx 20	K08722	OK		dp
+c/map/00151.scn	idx 21	K08723	OK		dp
+c/map/00151.scn	idx 22	K08724	OK		dp
+c/map/00151.scn	idx 23	K08725	OK		dp
+c/map/00151.scn	idx 24	K08726	OK		dp
+c/map/00151.scn	idx 25	K08727	OK		dp
+c/map/00151.scn	idx 26	K08728	OK		dp
+c/map/00151.scn	idx 27	K08729	OK		dp
+c/map/00151.scn	idx 28	K04596	OK		dp
+c/map/00151.scn	idx 29	K04597	OK		dp
+c/map/00151.scn	idx 30	K04598	OK		dp
+c/map/00151.scn	idx 31	K08730	OK		dp
+c/map/00151.scn	idx 32	K08731	OK		dp
+c/map/00151.scn	idx 33	K08732	OK		dp
+c/map/00151.scn	idx 34	K08733	OK		dp
+c/map/00151.scn	idx 35	K08734	OK		dp
+c/map/00151.scn	idx 36	K08735	OK		dp
+c/map/00151.scn	idx 37	K08736	OK		dp
+c/map/00151.scn	idx 38	K08737	OK		dp
+c/map/00151.scn	idx 39	K08738	OK		dp
+c/map/00151.scn	idx 40	K08739	OK		dp
+c/map/00151.scn	idx 41	K08740	OK		dp
+c/map/00151.scn	idx 42	K04651	OK		dp
+c/map/00151.scn	idx 43	K04653	OK		dp
+c/map/00151.scn	idx 44	K08741	OK		dp
+c/map/00151.scn	idx 45	K08742	OK		dp
+c/map/00151.scn	idx 46	K08743	OK		dp
+c/map/00151.scn	idx 47	K08744	OK		dp
+c/map/00151.scn	idx 48	K06037	OK		dp
+c/map/00151.scn	idx 49	K08745	OK		dp
+c/map/00151.scn	idx 50	K08746	OK		dp
+c/map/00151.scn	idx 51	K08747	OK		dp
+c/map/00151.scn	idx 52	K08748	OK		dp
+c/map/00151.scn	idx 53	K08749	OK		dp
+c/map/00151.scn	idx 54	K08750	OK		dp
+c/map/00151.scn	idx 55	K08751	OK		dp
+c/map/00151.scn	idx 56	K08752	OK		dp
+c/map/00151.scn	idx 57	K08753	OK		dp
+c/map/00151.scn	idx 58	K08754	OK		dp
+c/map/00151.scn	idx 59	K08755	OK		dp
+c/map/00151.scn	idx 60	K08756	OK		dp
+c/map/00151.scn	idx 61	K08757	OK		dp
+c/map/00151.scn	idx 62	K08758	OK		dp
+c/map/00151.scn	idx 63	K08759	OK		dp
+c/map/00151.scn	idx 64	K08760	OK		dp
+c/map/00151.scn	idx 65	K08761	OK		dp
+c/map/00151.scn	idx 66	K08762	OK		dp
+c/map/00151.scn	idx 67	K08763	OK		dp
+c/map/00151.scn	idx 68	K08764	OK		dp
+c/map/00151.scn	idx 69	K08765	OK		dp
+c/map/00151.scn	idx 70	K08766	OK		dp
+c/map/00151.scn	idx 71	K08767	OK		dp
+c/map/00151.scn	idx 72	K08768	OK		dp
+c/map/00151.scn	idx 73	K08769	OK		dp
+c/map/00151.scn	idx 74	K08770	OK		dp
+c/map/00151.scn	idx 75	K08771	OK		dp
+c/map/00151.scn	idx 76	K08772	OK		dp
+c/map/00151.scn	idx 77	K08773	OK		dp
+c/map/00151.scn	idx 78	K08774	OK		dp
+c/map/00151.scn	idx 79	K08775	OK		dp
+c/map/00151.scn	idx 80	K08776	OK		dp
+c/map/00151.scn	idx 81	K08777	OK		dp
+c/map/00151.scn	idx 82	K08778	OK		dp
+c/map/00151.scn	idx 83	K08779	OK		dp
+c/map/00151.scn	idx 84	K08780	OK		dp
+c/map/00151.scn	idx 85	K08781	OK		dp
+c/map/00151.scn	idx 86	K08782	OK		dp
+c/map/00151.scn	idx 87	K08783	OK		dp
+c/map/00151.scn	idx 88	K08784	OK		dp
+c/map/00151.scn	idx 89	K08785	OK		dp
+c/map/00151.scn	idx 90	K08786	OK		dp
+c/map/00151.scn	idx 91	K08787	OK		dp
+c/map/00151.scn	idx 92	K08788	OK		dp
+c/map/00151.scn	idx 93	K08789	OK		dp
+c/map/00151.scn	idx 94	K08790	OK		dp
+c/map/00151.scn	idx 95	K08791	OK		dp
+c/map/00151.scn	idx 96	K08792	OK		dp
+c/map/00151.scn	idx 97	K08793	OK		dp
+c/map/00151.scn	idx 98	K08794	OK		dp
+c/map/00151.scn	idx 99	K08795	OK		dp
+c/map/00151.scn	idx 100	K08796	OK		dp
+c/map/00151.scn	idx 101	K08797	OK		dp
+c/map/00151.scn	idx 102	K08798	OK		dp
+c/map/00151.scn	idx 103	K04693	OK		dp
+c/map/00151.scn	idx 104	K08799	OK		dp
+c/map/00151.scn	idx 105	K08800	OK		dp
+c/map/00151.scn	idx 106	K08801	OK		dp
+c/map/00151.scn	idx 107	K08802	OK		dp
+c/map/00151.scn	idx 108	K08803	OK		dp
+c/map/00151.scn	idx 109	K08804	OK		dp
+c/map/00151.scn	idx 110	K08805	OK		dp
+c/map/00151.scn	idx 111	K08806	OK		dp
+c/map/00151.scn	idx 113	K08808	OK		dp
+c/map/00151.scn	idx 114	K08809	OK		dp
+c/map/00151.scn	idx 115	K08810	OK		dp
+c/map/00151.scn	idx 116	K08811	OK		dp
+c/map/00151.scn	idx 117	K08812	OK		dp
+c/map/00151.scn	idx 118	K08813	OK		dp
+c/map/00151.scn	idx 119	K08814	OK		dp
+c/map/00151.scn	idx 120	K08815	OK		dp
+c/map/00151.scn	idx 121	K08816	OK		dp
+c/map/00151.scn	idx 122	K08817	OK		dp
+c/map/00151.scn	idx 123	K08818	OK		dp
+c/map/00151.scn	idx 124	K08819	OK		dp
+c/map/00151.scn	idx 125	K08820	OK		dp
+c/map/00151.scn	idx 126	K08821	OK		dp
+c/map/00151.scn	idx 127	K08822	OK		dp
+c/map/00151.scn	idx 129	K08824	OK		dp
+c/map/00151.scn	idx 130	K08825	OK		dp
+c/map/00151.scn	idx 131	K08826	OK		dp
+c/map/00151.scn	idx 132	K08827	OK		dp
+c/map/00151.scn	idx 133	K08828	OK		dp
+c/map/00151.scn	idx 134	K08829	OK		dp
+c/map/00151.scn	idx 135	K08830	OK		dp
+c/map/00151.scn	idx 136	K08831	OK		dp
+c/map/00151.scn	idx 137	K08832	OK		dp
+c/map/00151.scn	idx 138	K08833	OK		dp
+c/map/00151.scn	idx 139	K08834	OK		dp
+c/map/00151.scn	idx 140	K08835	OK		dp
+c/map/00151.scn	idx 141	K08836	OK		dp
+c/map/00151.scn	idx 142	K08837	OK		dp
+c/map/00151.scn	idx 143	K08838	OK		dp
+c/map/00151.scn	idx 144	K08839	OK		dp
+c/map/00151.scn	idx 145	K08840	OK		dp
+c/map/00151.scn	idx 146	K08841	OK		dp
+c/map/00151.scn	idx 147	K08842	OK		dp
+c/map/00151.scn	idx 148	K08843	OK		dp
+c/map/00151.scn	idx 149	K08844	OK		dp
+c/map/00151.scn	idx 150	K08845	OK		dp
+c/map/00151.scn	idx 151	K08846	OK		dp
+c/map/00151.scn	idx 152	K08847	OK		dp
+c/map/00151.scn	idx 153	K08848	OK		dp
+c/map/00151.scn	idx 154	K08849	OK		dp
+c/map/00151.scn	idx 155	K08850	OK		dp
+c/map/00151.scn	idx 156	K08851	OK		dp
+c/map/00151.scn	idx 157	K08852	OK		dp
+c/map/00151.scn	idx 158	K08853	OK		dp
+c/map/00151.scn	idx 159	K08854	OK		dp
+c/map/00151.scn	idx 160	K08855	OK		dp
+c/map/00151.scn	idx 162	K08857	OK		dp
+c/map/00151.scn	idx 163	K08858	OK		dp
+c/map/00151.scn	idx 164	K04634	OK		dp
+c/map/00151.scn	idx 165	K08859	OK		dp
+c/map/00151.scn	idx 166	K08860	OK		dp
+c/map/00151.scn	idx 167	K08861	OK		dp
+c/map/00151.scn	idx 168	K08862	OK		dp
+c/map/00151.scn	idx 169	K08863	OK		dp
+c/map/00151.scn	idx 170	K08864	OK		dp
+c/map/00151.scn	idx 171	K08865	OK		dp
+c/map/00151.scn	idx 172	K08866	OK		dp
+c/map/00151.scn	idx 173	K08867	OK		dp
+c/map/00151.scn	idx 174	K08868	OK		dp
+c/map/00151.scn	idx 175	K08869	OK		dp
+c/map/00151.scn	idx 176	K08870	OK		dp
+c/map/00151.scn	idx 177	K08871	OK		dp
+c/map/00151.scn	idx 178	K08872	OK		dp
+c/map/00151.scn	idx 179	K08873	OK		dp
+c/map/00151.scn	idx 180	K07077	OK		dp
+c/map/00151.scn	idx 181	K08874	OK		dp
+c/map/00151.scn	idx 182	K08875	OK		dp
+c/map/00151.scn	idx 183	K04341	OK		dp
+c/map/00151.scn	idx 184	K04342	OK		dp
+c/map/00170.scn	idx 0	K07788	OK		dp
+c/map/00170.scn	idx 1	K09293	OK		dp
+c/map/00170.scn	idx 2	K09294	OK		dp
+c/map/00170.scn	idx 3	K09295	OK		dp
+c/map/00170.scn	idx 4	K09296	OK		dp
+c/map/00170.scn	idx 5	K09297	OK		dp
+c/map/00170.scn	idx 6	K09298	OK		dp
+c/map/00170.scn	idx 7	K09299	OK		dp
+c/map/00170.scn	idx 8	K09300	OK		dp
+c/map/00170.scn	idx 9	K09301	OK		dp
+c/map/00170.scn	idx 10	K09302	OK		dp
+c/map/00170.scn	idx 11	K09303	OK		dp
+c/map/00170.scn	idx 12	K09304	OK		dp
+c/map/00170.scn	idx 13	K09305	OK		dp
+c/map/00170.scn	idx 14	K05351	OK		dp
+c/map/00170.scn	idx 15	K09306	OK		dp
+c/map/00170.scn	idx 16	K09307	OK		dp
+c/map/00170.scn	idx 17	K09308	OK		dp
+c/map/00170.scn	idx 18	K09309	OK		dp
+c/map/00170.scn	idx 19	K09310	OK		dp
+c/map/00170.scn	idx 20	K09311	OK		dp
+c/map/00170.scn	idx 21	K09312	OK		dp
+c/map/00170.scn	idx 25	K09313	SAI	đúng K09316 ('내 생각도 그래')	dp
+c/map/00170.scn	idx 26	K09314	SAI	đúng K09317 (Hàn 'tới lần xuất phát sau sẽ chỉnh Neo Graham ở trạng thái tốt nhất')	dp
+c/map/00170.scn	idx 60	K09315	SAI	Hàn 'Tyr hình như giấu gì đó' không khớp	dp
+c/map/00170.scn	idx 61	K09316	SAI	Hàn '내 생각도 그래' (đúng cho idx 25)	dp
+c/map/00170.scn	idx 63	K09317	SAI	Hàn về Neo Graham (đúng cho idx 26)	dp
+c/map/00170.scn	idx 68	K09318	SAI	Hàn là lời Graham 'Khởi hành à?'; Anh khác ý	dp
+c/map/00170.scn	idx 69	K06949	SAI	Hàn là lời thương nhân (K06949-lệch)	dp
+c/map/00170.scn	idx 75	K04255	OK		dp
+c/map/00170.scn	idx 76	K04256	OK		dp
+c/map/00170.scn	idx 77	K04257	OK		dp
+c/map/00170.scn	idx 78	K06950	OK		dp
+c/map/00170.scn	idx 79	K06951	OK		dp
+c/map/00170.scn	idx 80	K04959	OK		dp
+c/map/00170.scn	idx 81	K04960	OK		dp
+c/map/00170.scn	idx 82	K04961	OK		dp
+c/map/00170.scn	idx 83	K04962	OK		dp
+c/map/00170.scn	idx 84	K09319	OK		dp
+c/map/00170.scn	idx 85	K09320	OK		dp
+c/map/00170.scn	idx 86	K05283	OK		dp
+c/map/00170.scn	idx 87	K09321	OK		dp
+c/map/00170.scn	idx 88	K09322	OK		dp
+c/map/00170.scn	idx 89	K09323	OK		dp
+c/map/00170.scn	idx 90	K09324	OK		dp
+c/map/00170.scn	idx 91	K09325	OK		dp
+c/map/00170.scn	idx 92	K09326	OK		dp
+c/map/00170.scn	idx 93	K09327	OK		dp
+c/map/00170.scn	idx 94	K09328	OK		dp
+c/map/00170.scn	idx 95	K09329	OK		dp
+c/map/00170.scn	idx 96	K09330	OK		dp
+c/map/00170.scn	idx 97	K09331	OK		dp
+c/map/00170.scn	idx 98	K09332	OK		dp
+c/map/00170.scn	idx 99	K09333	OK		dp
+c/map/00170.scn	idx 100	K09334	OK		dp
+c/map/00170.scn	idx 101	K09335	OK		dp
+c/map/00170.scn	idx 102	K09336	OK		dp
+c/map/00170.scn	idx 103	K09337	OK		dp
+c/map/00170.scn	idx 104	K09338	OK		dp
+c/map/00170.scn	idx 105	K09339	OK		dp
+c/map/00170.scn	idx 106	K09340	OK		dp
+c/map/00170.scn	idx 107	K09341	OK		dp
+c/map/00170.scn	idx 108	K09342	OK		dp
+c/map/00170.scn	idx 109	K09343	OK		dp
+c/map/00170.scn	idx 110	K09344	OK		dp
+c/map/00170.scn	idx 111	K09345	OK		dp
+c/map/00170.scn	idx 112	K09346	OK		dp
+c/map/00170.scn	idx 113	K09347	OK		dp
+c/map/00170.scn	idx 114	K09348	OK		dp
+c/map/00170.scn	idx 115	K09349	OK		dp
+c/map/00170.scn	idx 116	K09350	OK		dp
+c/map/00170.scn	idx 117	K09351	OK		dp
+c/map/00170.scn	idx 118	K09352	OK		dp
+c/map/00170.scn	idx 119	K09353	OK		dp
+c/map/00170.scn	idx 120	K09354	OK		dp
+c/map/00170.scn	idx 121	K09355	OK		dp
+c/map/00170.scn	idx 122	K09356	OK		dp
+c/map/00170.scn	idx 123	K09357	OK		dp
+c/map/00170.scn	idx 124	K09358	OK		dp
+c/map/00170.scn	idx 125	K09359	OK		dp
+c/map/00170.scn	idx 126	K09360	OK		dp
+c/map/00170.scn	idx 127	K09361	OK		dp
+c/map/00170.scn	idx 128	K09362	OK		dp
+c/map/00170.scn	idx 129	K09363	OK		dp
+c/map/00170.scn	idx 130	K09364	OK		dp
+c/map/00170.scn	idx 131	K09365	OK		dp
+c/map/00170.scn	idx 132	K09366	OK		dp
+c/map/00170.scn	idx 133	K09367	OK		dp
+c/map/00170.scn	idx 134	K09368	OK		dp
+c/map/00170.scn	idx 135	K05109	OK		dp
+c/map/00170.scn	idx 136	K09369	OK		dp
+c/map/00170.scn	idx 137	K09370	OK		dp
+c/map/00170.scn	idx 138	K07860	OK		dp
+c/map/00170.scn	idx 139	K09371	OK		dp
+c/map/00170.scn	idx 140	K09372	OK		dp
+c/map/00170.scn	idx 141	K09373	OK		dp
+c/map/00170.scn	idx 142	K09374	OK		dp
+c/map/00170.scn	idx 143	K09375	OK		dp
+c/map/00170.scn	idx 144	K09376	OK		dp
+c/map/00170.scn	idx 145	K09377	OK		dp
+c/map/00170.scn	idx 146	K09378	OK		dp
+c/map/00170.scn	idx 147	K09379	OK		dp
+c/map/00170.scn	idx 148	K09380	OK		dp
+c/map/00174.scn	idx 0	K07921	OK		dp
+c/map/00174.scn	idx 1	K09452	OK		dp
+c/map/00174.scn	idx 2	K09453	OK		dp
+c/map/00174.scn	idx 3	K09454	OK		dp
+c/map/00174.scn	idx 4	K09455	OK		dp
+c/map/00174.scn	idx 5	K09456	OK		dp
+c/map/00174.scn	idx 6	K09457	OK		dp
+c/map/00174.scn	idx 7	K09458	OK		dp
+c/map/00174.scn	idx 8	K09459	OK		dp
+c/map/00174.scn	idx 9	K09460	OK		dp
+c/map/00174.scn	idx 10	K09461	OK		dp
+c/map/00174.scn	idx 11	K09462	OK		dp
+c/map/00174.scn	idx 12	K09463	OK		dp
+c/map/00174.scn	idx 13	K09464	OK		dp
+c/map/00174.scn	idx 14	K09465	OK		dp
+c/map/00174.scn	idx 15	K09466	OK		dp
+c/map/00174.scn	idx 16	K09467	OK		dp
+c/map/00174.scn	idx 17	K09468	OK		dp
+c/map/00174.scn	idx 18	K09469	OK		dp
+c/map/00174.scn	idx 19	K09470	OK		dp
+c/map/00174.scn	idx 20	K09471	OK		dp
+c/map/00174.scn	idx 21	K09472	OK		dp
+c/map/00174.scn	idx 22	K09473	OK		dp
+c/map/00174.scn	idx 23	K09474	OK		dp
+c/map/00174.scn	idx 24	K09475	OK		dp
+c/map/00174.scn	idx 25	K09476	OK		dp
+c/map/00174.scn	idx 26	K09477	OK		dp
+c/map/00174.scn	idx 27	K09478	OK		dp
+c/map/00174.scn	idx 28	K09479	OK		dp
+c/map/00174.scn	idx 29	K09480	OK		dp
+c/map/00174.scn	idx 30	K09481	OK		dp
+c/map/00174.scn	idx 31	K09482	OK		dp
+c/map/00174.scn	idx 32	K09483	OK		dp
+c/map/00174.scn	idx 33	K09484	OK		dp
+c/map/00174.scn	idx 34	K09485	OK		dp
+c/map/00174.scn	idx 35	K09486	OK		dp
+c/map/00174.scn	idx 36	K09487	OK		dp
+c/map/00174.scn	idx 37	K09488	OK		dp
+c/map/00174.scn	idx 39	K09490	OK		dp
+c/map/00174.scn	idx 40	K09491	OK		dp
+c/map/00174.scn	idx 41	K09492	OK		dp
+c/map/00174.scn	idx 42	K09493	OK		dp
+c/map/00174.scn	idx 43	K09494	OK		dp
+c/map/00174.scn	idx 44	K09495	OK		dp
+c/map/00174.scn	idx 45	K09496	OK		dp
+c/map/00174.scn	idx 46	K09497	OK		dp
+c/map/00174.scn	idx 47	K09498	OK		dp
+c/map/00174.scn	idx 48	K09499	OK		dp
+c/map/00174.scn	idx 49	K09500	OK		dp
+c/map/00174.scn	idx 50	K09501	OK		dp
+c/map/00174.scn	idx 51	K09502	OK		dp
+c/map/00174.scn	idx 52	K09503	OK		dp
+c/map/00174.scn	idx 53	K09504	OK		dp
+c/map/00174.scn	idx 54	K09505	OK		dp
+c/map/00174.scn	idx 55	K09506	OK		dp
+c/map/00174.scn	idx 56	K09507	OK		dp
+c/map/00174.scn	idx 58	K09508	SAI	đúng K09509 (Hàn 'chỉ lợi dụng trận chiến không tránh được')	dp
+c/map/00174.scn	idx 59	K09509	SAI	đúng K09510 (Hàn 'không bao giờ hoàn thành, kết thúc ở đó')	dp
+c/map/00174.scn	idx 71	K09510	SAI	đúng K09514 (Hàn 'đặt gánh nặng lên cậu, xin lỗi')	dp
+c/map/00174.scn	idx 73	K09512	SAI	Anh 'Well, of course, it is not easy' vs Hàn 'sức mạnh của thần 1/3'	dp
+c/map/00174.scn	idx 90	K09513	SAI	Anh 'You are lying, are not you?' vs Hàn 'Schultz, anh tự tin vượt qua?'	dp
+c/map/00174.scn	idx 92	K09514	SAI	Hàn là lời xin lỗi gánh nặng (đúng cho idx 71)	dp
+c/map/00174.scn	idx 101	K09515	OK		dp
+c/map/00174.scn	idx 102	K06605	OK		dp
+c/map/00174.scn	idx 103	K09516	OK		dp
+c/map/00174.scn	idx 104	K09517	OK		dp
+c/map/00174.scn	idx 105	K09518	OK		dp
+c/map/00174.scn	idx 106	K09519	OK		dp
+c/map/00174.scn	idx 107	K09520	OK		dp
+c/map/00174.scn	idx 108	K09521	OK		dp
+c/map/00174.scn	idx 109	K09522	OK		dp
+c/map/00174.scn	idx 110	K09523	OK		dp
+c/map/00174.scn	idx 111	K09524	OK		dp
+c/map/00174.scn	idx 112	K09525	OK		dp
+c/map/00174.scn	idx 113	K09526	OK		dp
+c/map/00174.scn	idx 114	K09527	OK		dp
+c/map/00174.scn	idx 115	K09528	OK		dp
+c/map/00174.scn	idx 116	K09529	OK		dp
+c/map/00174.scn	idx 117	K09530	OK		dp
+c/map/00174.scn	idx 118	K09531	OK		dp
+c/map/00174.scn	idx 119	K09532	OK		dp
+c/map/00174.scn	idx 120	K09533	OK		dp
+c/map/00174.scn	idx 121	K09534	OK		dp
+c/map/00174.scn	idx 122	K09535	OK		dp
+c/map/00174.scn	idx 123	K09536	OK		dp
+c/map/00174.scn	idx 124	K09537	OK		dp
+c/map/00174.scn	idx 125	K09538	OK		dp
+c/map/00174.scn	idx 126	K09539	OK		dp
+c/map/00174.scn	idx 127	K09540	OK		dp
+c/map/00174.scn	idx 128	K09541	OK		dp
+c/map/00174.scn	idx 129	K09542	OK		dp
+c/map/00174.scn	idx 130	K09543	OK		dp
+c/map/00174.scn	idx 131	K09544	OK		dp
+c/map/00174.scn	idx 132	K09545	OK		dp
+c/map/00174.scn	idx 133	K09546	OK		dp
+c/map/00174.scn	idx 134	K09547	OK		dp
+c/map/00174.scn	idx 135	K09548	OK		dp
+c/map/00174.scn	idx 136	K09549	OK		dp
+c/map/00174.scn	idx 137	K09550	OK		dp
+c/map/00174.scn	idx 138	K09551	OK		dp
+c/map/00174.scn	idx 139	K09552	OK		dp
+c/map/00174.scn	idx 140	K09553	OK		dp
+c/map/00174.scn	idx 141	K09554	OK		dp
+c/map/00174.scn	idx 142	K09555	OK		dp
+c/map/00174.scn	idx 143	K09556	OK		dp
+c/map/00174.scn	idx 144	K09557	OK		dp
+c/map/00174.scn	idx 145	K04255	OK		dp
+c/map/00174.scn	idx 146	K04256	OK		dp
+c/map/00174.scn	idx 147	K04257	OK		dp
+c/map/00174.scn	idx 148	K09558	OK		dp
+c/map/00174.scn	idx 149	K09559	OK		dp
+c/map/00174.scn	idx 150	K08043	OK		dp
+c/map/00174.scn	idx 151	K05241	OK		dp
+c/map/00174.scn	idx 152	K09560	OK		dp
+c/map/00174.scn	idx 153	K09561	OK		dp
+c/map/00174.scn	idx 154	K08076	OK		dp
+c/map/00174.scn	idx 155	K04960	OK		dp
+c/map/00174.scn	idx 156	K04961	OK		dp
+c/map/00174.scn	idx 157	K04962	OK		dp
+c/map/00174.scn	idx 158	K09562	OK		dp
+c/map/00174.scn	idx 159	K09563	OK		dp
+c/map/00174.scn	idx 160	K09564	OK		dp
+c/map/00174.scn	idx 161	K09565	OK		dp
+c/map/00174.scn	idx 162	K09566	OK		dp
+c/map/00174.scn	idx 163	K09567	OK		dp
+c/map/00174.scn	idx 164	K09568	OK		dp
+c/map/00174.scn	idx 165	K08544	OK		dp
+c/map/00174.scn	idx 166	K09569	OK		dp
+c/map/00174.scn	idx 167	K09570	OK		dp
+c/map/00174.scn	idx 168	K09571	OK		dp
+c/map/00174.scn	idx 169	K09572	OK		dp
+c/map/00174.scn	idx 170	K09573	OK		dp
+c/map/00174.scn	idx 171	K09574	OK		dp
+c/map/00174.scn	idx 172	K09575	OK		dp
+c/map/00174.scn	idx 173	K09576	OK		dp
+c/map/00174.scn	idx 174	K09577	OK		dp
+c/map/00174.scn	idx 175	K09578	OK		dp
+c/map/00174.scn	idx 176	K09579	OK		dp
+c/map/00174.scn	idx 177	K09580	OK		dp
+c/map/00174.scn	idx 178	K09581	OK		dp
+c/map/00174.scn	idx 179	K09582	OK		dp
+c/map/00174.scn	idx 180	K09583	OK		dp
+c/map/00174.scn	idx 181	K09584	OK		dp
+c/map/00174.scn	idx 182	K09585	OK		dp
+c/map/00174.scn	idx 183	K09586	OK		dp
+c/map/00174.scn	idx 184	K08556	OK		dp
+c/map/00174.scn	idx 185	K09587	OK		dp
+c/map/00174.scn	idx 186	K09588	OK		dp
+c/map/00174.scn	idx 187	K09589	OK		dp
+c/map/00174.scn	idx 188	K09590	OK		dp
+c/map/00174.scn	idx 189	K08561	OK		dp
+c/map/00174.scn	idx 190	K09591	OK		dp
+c/map/00174.scn	idx 191	K08563	OK		dp
+c/map/00174.scn	idx 192	K09592	OK		dp
+c/map/00174.scn	idx 193	K08564	OK		dp
+c/map/00174.scn	idx 194	K09593	OK		dp
+c/map/00174.scn	idx 195	K09594	OK		dp
+c/map/00174.scn	idx 196	K09595	OK		dp
+c/map/00174.scn	idx 197	K09596	OK		dp
+c/map/00174.scn	idx 198	K09597	OK		dp
+c/map/00174.scn	idx 199	K09598	OK		dp
+c/map/00174.scn	idx 200	K09599	OK		dp
+c/map/00174.scn	idx 201	K08568	OK		dp
+c/map/00174.scn	idx 202	K09600	OK		dp
+c/map/00174.scn	idx 203	K09601	OK		dp
+c/map/00174.scn	idx 204	K09602	OK		dp
+c/map/00174.scn	idx 205	K09603	OK		dp
+c/map/00174.scn	idx 206	K09604	OK		dp
+c/map/00174.scn	idx 207	K09605	OK		dp
+c/map/00174.scn	idx 208	K09606	OK		dp
+c/map/00174.scn	idx 209	K09607	OK		dp
+c/map/00174.scn	idx 210	K09608	OK		dp
+c/map/00174.scn	idx 211	K09609	OK		dp
+c/map/00174.scn	idx 212	K09610	OK		dp
+c/map/00174.scn	idx 213	K09611	OK		dp
+c/map/00174.scn	idx 214	K09612	OK		dp
+c/map/00174.scn	idx 215	K09613	OK		dp
+c/map/00174.scn	idx 216	K09614	OK		dp
+c/map/00174.scn	idx 217	K09615	OK		dp
+c/map/00198.scn	idx 0	K09932	OK		dp
+c/map/00198.scn	idx 1	K09933	OK		dp
+c/map/00198.scn	idx 2	K09934	OK		dp
+c/map/00198.scn	idx 4	K09935	OK		dp
+c/map/00198.scn	idx 5	K09936	SAI	Anh 'Mom only tells me to study' vs Hàn '(bị lừa hoàn toàn)'	dp
+c/map/00198.scn	idx 7	K09937	OK		dp
+c/map/00198.scn	idx 8	K09938	OK		dp
+c/map/00198.scn	idx 9	K09939	OK		dp
+c/map/00198.scn	idx 10	K09940	OK		dp
+c/map/00198.scn	idx 11	K09941	OK		dp
+c/map/00198.scn	idx 12	K09942	OK		dp
+c/map/00198.scn	idx 13	K09943	OK		dp
+c/map/00198.scn	idx 14	K09944	OK		dp
+c/map/00198.scn	idx 15	K09945	OK		dp
+c/map/00198.scn	idx 16	K09946	OK		dp
+c/map/00198.scn	idx 17	K09947	OK		dp
+c/map/00198.scn	idx 18	K09948	OK		dp
+c/map/00198.scn	idx 19	K09949	OK		dp
+c/map/00198.scn	idx 20	K09950	OK		dp
+c/map/00198.scn	idx 21	K09951	OK		dp
+c/map/00198.scn	idx 22	K09952	OK		dp
+c/map/00198.scn	idx 23	K09953	OK		dp
+c/map/00198.scn	idx 28	K09954	SAI	Anh 'I kept it... arrested?' vs Hàn 'Lại đến đòi nợ à?'	dp
+c/map/00198.scn	idx 30	K09955	OK		dp
+c/map/00198.scn	idx 31	K09956	OK		dp
+c/map/00198.scn	idx 32	K09957	OK		dp
+c/map/00198.scn	idx 33	K09958	OK		dp
+c/map/00198.scn	idx 34	K09959	OK		dp
+c/map/00198.scn	idx 35	K09960	OK		dp
+c/map/00198.scn	idx 36	K09961	OK		dp
+c/map/00198.scn	idx 37	K07249	OK		dp
+c/map/00198.scn	idx 38	K09962	OK		dp
+c/map/00198.scn	idx 39	K09963	OK		dp
+c/map/00198.scn	idx 40	K09964	OK		dp
+c/map/00198.scn	idx 41	K09965	OK		dp
+c/map/00198.scn	idx 42	K09966	OK		dp
+c/map/00198.scn	idx 43	K09967	OK		dp
+c/map/00198.scn	idx 44	K09968	OK		dp
+c/map/00198.scn	idx 45	K09969	OK		dp
+c/map/00198.scn	idx 46	K09970	OK		dp
+c/map/00198.scn	idx 47	K09971	OK		dp
+c/map/00198.scn	idx 48	K09972	OK		dp
+c/map/00198.scn	idx 49	K09973	OK		dp
+c/map/00198.scn	idx 50	K09974	OK		dp
+c/map/00200.scn	idx 0	K09993	OK		dp
+c/map/00200.scn	idx 1	K09994	OK		dp
+c/map/00200.scn	idx 2	K09995	OK		dp
+c/map/00200.scn	idx 3	K09996	OK		dp
+c/map/00200.scn	idx 4	K09997	OK		dp
+c/map/00200.scn	idx 5	K09998	OK		dp
+c/map/00200.scn	idx 6	K09999	OK		dp
+c/map/00200.scn	idx 7	K10000	OK		dp
+c/map/00200.scn	idx 8	K10001	OK		dp
+c/map/00200.scn	idx 9	K08570	OK		dp
+c/map/00200.scn	idx 10	K10002	OK		dp
+c/map/00200.scn	idx 11	K10003	OK		dp
+c/map/00200.scn	idx 12	K10004	OK		dp
+c/map/00200.scn	idx 13	K10005	OK		dp
+c/map/00200.scn	idx 14	K10006	OK		dp
+c/map/00200.scn	idx 15	K10007	OK		dp
+c/map/00201.scn	idx 0	K09993	OK		dp
+c/map/00201.scn	idx 1	K10008	OK		dp
+c/map/00201.scn	idx 2	K10009	OK		dp
+c/map/00201.scn	idx 3	K10010	OK		dp
+c/map/00201.scn	idx 4	K10011	OK		dp
+c/map/00201.scn	idx 5	K10012	OK		dp
+c/map/00201.scn	idx 6	K10013	OK		dp
+c/map/00201.scn	idx 7	K10014	OK		dp
+c/map/00201.scn	idx 8	K10015	OK		dp
+c/map/00201.scn	idx 9	K10016	OK		dp
+c/map/00201.scn	idx 10	K10017	OK		dp
+c/map/00201.scn	idx 11	K10018	OK		dp
+c/map/00201.scn	idx 12	K10019	OK		dp
+c/map/00201.scn	idx 13	K10020	OK		dp
+c/map/00201.scn	idx 14	K10021	OK		dp
+c/map/00201.scn	idx 15	K10022	OK		dp
+c/map/00201.scn	idx 18	K10023	OK		dp
+c/map/00201.scn	idx 19	K10024	OK		dp
+c/map/00201.scn	idx 20	K10025	OK		dp
+c/map/00201.scn	idx 21	K10026	OK		dp
+c/map/00201.scn	idx 22	K10027	OK		dp
+c/map/00201.scn	idx 23	K10028	OK		dp
+c/map/00201.scn	idx 24	K10029	OK		dp
+c/map/00201.scn	idx 25	K10030	OK		dp
+c/map/00201.scn	idx 26	K10031	OK		dp
+c/map/00201.scn	idx 27	K10032	OK		dp
+c/map/00201.scn	idx 28	K10033	OK		dp
+c/map/00201.scn	idx 29	K10034	OK		dp
+c/map/00201.scn	idx 30	K10035	OK		dp
+c/map/00201.scn	idx 31	K10036	OK		dp
+c/map/00201.scn	idx 32	K10037	OK		dp
+c/map/00201.scn	idx 33	K10038	OK		dp
+c/map/00201.scn	idx 34	K10039	OK		dp
+c/map/00201.scn	idx 35	K10040	OK		dp
+c/map/00201.scn	idx 36	K10041	OK		dp
+c/map/00202.scn	idx 0	K09993	OK		dp
+c/map/00202.scn	idx 1	K10042	OK		dp
+c/map/00202.scn	idx 2	K10043	OK		dp
+c/map/00202.scn	idx 3	K10044	OK		dp
+c/map/00202.scn	idx 4	K10045	OK		dp
+c/map/00202.scn	idx 5	K10046	OK		dp
+c/map/00202.scn	idx 6	K10047	OK		dp
+c/map/00202.scn	idx 7	K10048	OK		dp
+c/map/00202.scn	idx 8	K10049	OK		dp
+c/map/00202.scn	idx 9	K10050	OK		dp
+c/map/00202.scn	idx 10	K10051	OK		dp
+c/map/00202.scn	idx 11	K10052	OK		dp
+c/map/00202.scn	idx 12	K10053	OK		dp
+c/map/00202.scn	idx 13	K10054	OK		dp
+c/map/00202.scn	idx 14	K10055	OK		dp
+c/map/00202.scn	idx 15	K10056	OK		dp
+c/map/00202.scn	idx 16	K10057	OK		dp
+c/map/00202.scn	idx 17	K10058	OK		dp
+c/map/00202.scn	idx 18	K09909	OK		dp
+c/map/00202.scn	idx 19	K10059	OK		dp
+c/map/00005.scn	idx 37	K04026	OK		idx
+c/map/00006.scn	idx 20	K04063	OK		idx
+c/map/00010.scn	idx 52	K04189	OK		idx
+c/map/00021.scn	idx 3	K04296	OK		idx
+c/map/00021.scn	idx 7	K04300	OK		idx
+c/map/00021.scn	idx 43	K04336	OK		idx
+c/map/00021.scn	idx 45	K04338	OK		idx
+c/map/00023.scn	idx 27	K04369	OK		idx
+c/map/00023.scn	idx 33	K04374	OK		idx
+c/map/00026.scn	idx 62	K04451	OK		idx
+c/map/00026.scn	idx 67	K04456	OK		idx
+c/map/00029.scn	idx 39	K04536	OK		idx
+c/map/00029.scn	idx 48	K04545	OK		idx
+c/map/00029.scn	idx 90	K04584	OK		idx
+c/map/00029.scn	idx 117	K04610	OK		idx
+c/map/00031.scn	idx 6	K04662	OK		idx
+c/map/00031.scn	idx 8	K04664	OK		idx
+c/map/00031.scn	idx 38	K04694	OK		idx
+c/map/00034.scn	idx 1	K04703	OK		idx
+c/map/00035.scn	idx 69	K04812	OK		idx
+c/map/00035.scn	idx 103	K04846	OK		idx
+c/map/00037.scn	idx 48	K04905	OK		idx
+c/map/00038.scn	idx 58	K04971	OK		idx
+c/map/00038.scn	idx 73	K04986	OK		idx
+c/map/00039.scn	idx 14	K05021	OK		idx
+c/map/00040.scn	idx 35	K05057	OK		idx
+c/map/00041.scn	idx 20	K05099	OK		idx
+c/map/00041.scn	idx 47	K05125	OK		idx
+c/map/00041.scn	idx 90	K05168	OK		idx
+c/map/00044.scn	idx 36	K05359	OK		idx
+c/map/00045.scn	idx 16	K05396	OK		idx
+c/map/00046.scn	idx 26	K05432	OK		idx
+c/map/00050.scn	idx 36	K05513	OK		idx
+c/map/00050.scn	idx 49	K05526	OK		idx
+c/map/00051.scn	idx 2	K05560	OK		idx
+c/map/00051.scn	idx 26	K05584	OK		idx
+c/map/00051.scn	idx 48	K05605	OK		idx
+c/map/00051.scn	idx 53	K05610	OK		idx
+c/map/00051.scn	idx 62	K05618	OK		idx
+c/map/00052.scn	idx 7	K05634	OK		idx
+c/map/00053.scn	idx 29	K05738	OK		idx
+c/map/00053.scn	idx 51	K05760	OK		idx
+c/map/00053.scn	idx 55	K05764	OK		idx
+c/map/00054.scn	idx 25	K05844	OK		idx
+c/map/00054.scn	idx 92	K05909	OK		idx
+c/map/00054.scn	idx 125	K05941	OK		idx
+c/map/00054.scn	idx 136	K04257	OK		idx
+c/map/00055.scn	idx 10	K05962	OK		idx
+c/map/00055.scn	idx 12	K05964	OK		idx
+c/map/00057.scn	idx 3	K06006	OK		idx
+c/map/00057.scn	idx 12	K06015	OK		idx
+c/map/00057.scn	idx 38	K06041	OK		idx
+c/map/00057.scn	idx 61	K06064	OK		idx
+c/map/00057.scn	idx 106	K06109	OK		idx
+c/map/00058.scn	idx 43	K06154	OK		idx
+c/map/00059.scn	idx 6	K06162	OK		idx
+c/map/00059.scn	idx 40	K06194	OK		idx
+c/map/00060.scn	idx 47	K06261	OK		idx
+c/map/00060.scn	idx 49	K06263	OK		idx
+c/map/00060.scn	idx 131	K06343	OK		idx
+c/map/00063.scn	idx 3	K06384	OK		idx
+c/map/00063.scn	idx 31	K06412	OK		idx
+c/map/00063.scn	idx 64	K06445	OK		idx
+c/map/00064.scn	idx 8	K06477	OK		idx
+c/map/00065.scn	idx 0	K06479	OK		idx
+c/map/00066.scn	idx 19	K06516	OK		idx
+c/map/00066.scn	idx 67	K06564	OK		idx
+c/map/00067.scn	idx 11	K06622	OK		idx
+c/map/00067.scn	idx 17	K06628	OK		idx
+c/map/00070.scn	idx 10	K06772	OK		idx
+c/map/00070.scn	idx 22	K06783	OK		idx
+c/map/00070.scn	idx 124	K06881	OK		idx
+c/map/00070.scn	idx 174	K06931	OK		idx
+c/map/00070.scn	idx 188	K06945	OK		idx
+c/map/00072.scn	idx 36	K06986	OK		idx
+c/map/00075.scn	idx 10	K07048	OK		idx
+c/map/00075.scn	idx 11	K07049	OK		idx
+c/map/00075.scn	idx 30	K07066	OK		idx
+c/map/00077.scn	idx 0	K07106	OK		idx
+c/map/00077.scn	idx 1	K07107	OK		idx
+c/map/00077.scn	idx 6	K07112	OK		idx
+c/map/00077.scn	idx 12	K07118	OK		idx
+c/map/00078.scn	idx 19	K07205	OK		idx
+c/map/00079.scn	idx 0	K07239	OK		idx
+c/map/00079.scn	idx 24	K07263	OK		idx
+c/map/00081.scn	idx 13	K07321	OK		idx
+c/map/00081.scn	idx 17	K04593	OK		idx
+c/map/00081.scn	idx 28	K07335	OK		idx
+c/map/00081.scn	idx 31	K07338	OK		idx
+c/map/00081.scn	idx 34	K07341	OK		idx
+c/map/00082.scn	idx 17	K07379	OK		idx
+c/map/00083.scn	idx 0	K07385	OK		idx
+c/map/00083.scn	idx 23	K07407	OK		idx
+c/map/00083.scn	idx 45	K07429	OK		idx
+c/map/00085.scn	idx 25	K07464	OK		idx
+c/map/00086.scn	idx 17	K07485	OK		idx
+c/map/00088.scn	idx 2	K07634	OK		idx
+c/map/00089.scn	idx 78	K07729	OK		idx
+c/map/00089.scn	idx 85	K07736	OK		idx
+c/map/00089.scn	idx 130	K04375	OK		idx
+c/map/00090.scn	idx 5	K07786	OK		idx
+c/map/00094.scn	idx 4	K07792	OK		idx
+c/map/00094.scn	idx 19	K04256	OK		idx
+c/map/00095.scn	idx 10	K07828	OK		idx
+c/map/00097.scn	idx 5	K05283	OK		idx
+c/map/00097.scn	idx 11	K07886	OK		idx
+c/map/00098.scn	idx 63	K07984	OK		idx
+c/map/00098.scn	idx 69	K07990	OK		idx
+c/map/00100.scn	idx 2	K08103	OK		idx
+c/map/00103.scn	idx 15	K08146	OK		idx
+c/map/00105.scn	idx 22	K08181	OK		idx
+c/map/00108.scn	idx 41	K08238	SAI	Anh 'Someone came by saying you sent them' vs Hàn 'Schultz... không có nhiệm vụ nhưng có việc riêng'	idx
+c/map/00114.scn	idx 12	K05111	OK		idx
+c/map/00116.scn	idx 6	K05329	OK		idx
+c/map/00124.scn	idx 0	K05558	OK		idx
+c/map/00130.scn	idx 27	K08370	OK		idx
+c/map/00130.scn	idx 31	K08374	OK		idx
+c/map/00131.scn	idx 10	K08397	OK		idx
+c/map/00132.scn	idx 14	K08416	OK		idx
+c/map/00132.scn	idx 27	K08429	OK		idx
+c/map/00134.scn	idx 1	K06374	OK		idx
+c/map/00139.scn	idx 25	K08494	OK		idx
+c/map/00140.scn	idx 88	K08585	OK		idx
+c/map/00140.scn	idx 117	K08614	OK		idx
+c/map/00140.scn	idx 119	K08616	OK		idx
+c/map/00146.scn	idx 12	K08679	OK		idx
+c/map/00146.scn	idx 13	K08680	OK		idx
+c/map/00148.scn	idx 0	K06952	OK		idx
+c/map/00153.scn	idx 34	K08926	OK		idx
+c/map/00153.scn	idx 103	K08989	OK		idx
+c/map/00153.scn	idx 211	K09094	OK		idx
+c/map/00153.scn	idx 217	K09099	OK		idx
+c/map/00154.scn	idx 8	K09135	OK		idx
+c/map/00154.scn	idx 62	K09188	OK		idx
+c/map/00154.scn	idx 79	K07233	OK		idx
+c/map/00155.scn	idx 8	K07264	OK		idx
+c/map/00157.scn	idx 6	K09201	OK		idx
+c/map/00157.scn	idx 21	K09214	OK		idx
+c/map/00162.scn	idx 29	K09248	OK		idx
+c/map/00164.scn	idx 0	K04293	OK		idx
+c/map/00171.scn	idx 11	K09390	OK		idx
+c/map/00171.scn	idx 16	K09395	OK		idx
+c/map/00172.scn	idx 39	K09444	OK		idx
+c/map/00181.scn	idx 23	K09700	OK		idx
+c/map/00181.scn	idx 29	K09706	OK		idx
+c/map/00181.scn	idx 79	K09755	OK		idx
+c/map/00189.scn	idx 18	K09819	OK		idx
+c/map/00189.scn	idx 35	K09836	OK		idx
+c/map/00197.scn	idx 18	K09907	OK		idx
+c/map/00204.scn	idx 3	K10062	OK		idx
+c/csv/buildup.dat	rec 109 off 0 ps 1	K00932	OK		dat
+c/csv/cash_network.dat	rec 8 off 23 ps 1	K02716	OK		dat
+c/csv/cash_network.dat	rec 11 off 3 ps 1	K02719	OK		dat
+c/csv/cash_single.dat	rec 0 off 3 ps 1	K02778	OK		dat
+vfs:0x2b3c2959.dat	rec 1 off 13 ps 1	K02801	OK		dat
+c/csv/common_text.dat	rec 121 off 0 ps 1	K00293	OK		dat
+c/csv/common_text.dat	rec 260 off 0 ps 1	K00412	OK		dat
+c/csv/common_text.dat	rec 311 off 0 ps 1	K00448	OK		dat
+c/csv/enemy_0.dat	rec 33 off 0 ps 1	K00632	OK		dat
+c/csv/enemy_0.dat	rec 51 off 0 ps 1	K03617	OK		dat
+c/csv/enemy_0.dat	rec 137 off 0 ps 1	K03638	OK		dat
+c/csv/enemy_1.dat	rec 3 off 0 ps 1	K00611	OK		dat
+c/csv/enemy_1.dat	rec 18 off 0 ps 1	K00610	OK		dat
+c/csv/enemy_1.dat	rec 125 off 0 ps 1	K00654	OK		dat
+c/csv/enemy_1.dat	rec 126 off 0 ps 1	K03634	OK		dat
+c/csv/enemy_1.dat	rec 155 off 0 ps 1	K03655	OK		dat
+c/csv/enemy_2.dat	rec 131 off 0 ps 1	K00697	OK		dat
+c/csv/enemy_expert_0.dat	rec 39 off 0 ps 1	K03665	OK		dat
+c/csv/enemy_expert_0.dat	rec 69 off 0 ps 1	K03665	OK		dat
+c/csv/enemy_expert_0.dat	rec 97 off 0 ps 1	K00645	OK		dat
+c/csv/enemy_expert_0.dat	rec 124 off 0 ps 1	K00641	OK		dat
+c/csv/enemy_expert_1.dat	rec 41 off 0 ps 1	K00656	OK		dat
+c/csv/enemy_expert_1.dat	rec 55 off 0 ps 1	K00697	OK		dat
+c/csv/enemy_expert_1.dat	rec 58 off 0 ps 1	K00645	OK		dat
+c/csv/enemy_expert_1.dat	rec 90 off 0 ps 1	K03669	OK		dat
+c/csv/enemy_expert_1.dat	rec 130 off 0 ps 1	K03675	OK		dat
+c/csv/enemy_expert_2.dat	rec 20 off 0 ps 1	K00636	OK		dat
+c/csv/enemy_expert_2.dat	rec 30 off 0 ps 1	K03665	OK		dat
+c/csv/enemy_expert_2.dat	rec 97 off 0 ps 1	K00645	OK		dat
+c/csv/ingame_text.dat	rec 9 off 0 ps 1	K00477	OK		dat
+c/csv/ingame_text.dat	rec 39 off 0 ps 1	K00507	OK		dat
+c/csv/ingame_text.dat	rec 55 off 0 ps 1	K00523	OK		dat
+c/csv/ingame_text.dat	rec 127 off 0 ps 1	K00589	OK		dat
+c/csv/ingame_text.dat	rec 188 off 0 ps 1	K00532	OK		dat
+c/csv/ingame_text.dat	rec 234 off 0 ps 1	K00629	OK		dat
+c/csv/ingame_text.dat	rec 254 off 0 ps 1	K00654	OK		dat
+c/csv/ingame_text.dat	rec 261 off 0 ps 1	K00687	OK		dat
+c/csv/ingame_text.dat	rec 296 off 0 ps 1	K00706	OK		dat
+c/csv/ingame_text.dat	rec 327 off 0 ps 1	K00732	LỆCH	Anh 'Victorious!' vs Hàn hậu tố '에서;승리 하였습니다.' (ghép sau tên địa điểm)	dat
+c/csv/item_00.dat	rec 7 off 2 ps 1	K00957	OK		dat
+c/csv/item_00.dat	rec 58 off 2 ps 1	K01008	OK		dat
+c/csv/item_01.dat	rec 49 off 2 ps 1	K01082	OK		dat
+c/csv/item_02.dat	rec 24 off 15 ps 1	K01118	OK		dat
+c/csv/item_02.dat	rec 51 off 2 ps 1	K01167	OK		dat
+c/csv/item_02.dat	rec 57 off 20 ps 1	K01115	OK		dat
+c/csv/item_03.dat	rec 18 off 2 ps 1	K01216	OK		dat
+c/csv/item_03.dat	rec 33 off 2 ps 1	K01231	OK		dat
+c/csv/item_03.dat	rec 61 off 2 ps 1	K01259	OK		dat
+c/csv/item_03.dat	rec 69 off 2 ps 1	K01267	OK		dat
+c/csv/item_03.dat	rec 72 off 2 ps 1	K01270	OK		dat
+c/csv/item_05.dat	rec 26 off 2 ps 1	K01307	OK		dat
+c/csv/item_05.dat	rec 29 off 2 ps 1	K01310	OK		dat
+c/csv/item_05.dat	rec 44 off 2 ps 1	K01325	OK		dat
+c/csv/item_05.dat	rec 65 off 2 ps 1	K01346	OK		dat
+c/csv/item_05.dat	rec 70 off 2 ps 1	K01351	OK		dat
+c/csv/item_06.dat	rec 11 off 2 ps 1	K01382	OK		dat
+c/csv/item_06.dat	rec 46 off 2 ps 1	K01417	OK		dat
+c/csv/item_07.dat	rec 10 off 2 ps 1	K01473	OK		dat
+c/csv/item_08.dat	rec 24 off 2 ps 1	K01568	OK		dat
+c/csv/item_08.dat	rec 67 off 2 ps 1	K01611	OK		dat
+c/csv/item_09.dat	rec 15 off 2 ps 1	K01640	OK		dat
+c/csv/item_09.dat	rec 38 off 2 ps 1	K01663	OK		dat
+c/csv/item_09.dat	rec 47 off 2 ps 1	K01672	OK		dat
+c/csv/item_10.dat	rec 6 off 2 ps 1	K01712	OK		dat
+c/csv/item_12.dat	rec 2 off 2 ps 1	K01760	OK		dat
+c/csv/item_12.dat	rec 24 off 2 ps 1	K01804	OK		dat
+c/csv/item_13.dat	rec 29 off 2 ps 1	K01905	OK		dat
+c/csv/item_13.dat	rec 33 off 24 ps 1	K01911	OK		dat
+c/csv/item_13.dat	rec 43 off 18 ps 1	K01929	OK		dat
+c/csv/item_13.dat	rec 50 off 2 ps 1	K01941	OK		dat
+c/csv/item_13.dat	rec 57 off 2 ps 1	K01955	OK		dat
+c/csv/item_13.dat	rec 65 off 19 ps 1	K01972	OK		dat
+c/csv/item_13.dat	rec 77 off 20 ps 1	K01996	OK		dat
+c/csv/item_15.dat	rec 11 off 2 ps 1	K01963	OK		dat
+c/csv/item_15.dat	rec 68 off 2 ps 1	K02229	OK		dat
+c/csv/item_16.dat	rec 5 off 2 ps 1	K02334	OK		dat
+c/csv/item_16.dat	rec 39 off 2 ps 1	K02401	OK		dat
+c/csv/item_16.dat	rec 64 off 2 ps 1	K02451	OK		dat
+c/csv/item_16.dat	rec 78 off 2 ps 1	K02478	OK		dat
+c/csv/item_17.dat	rec 0 off 2 ps 1	K02512	OK		dat
+c/csv/item_17.dat	rec 75 off 2 ps 1	K02657	OK		dat
+c/csv/item_17.dat	rec 97 off 2 ps 1	K02700	OK		dat
+c/csv/menu_text.dat	rec 1 off 0 ps 1	K00002	OK		dat
+c/csv/menu_text.dat	rec 3 off 0 ps 1	K00004	OK		dat
+c/csv/menu_text.dat	rec 24 off 0 ps 1	K00025	OK		dat
+c/csv/mission_list.dat	rec 19 off 0 ps 1	K03418	OK		dat
+c/csv/mission_list.dat	rec 55 off 0 ps 1	K03453	OK		dat
+c/csv/mission_text.dat	rec 18 off 0 ps 1	K03518	OK		dat
+c/csv/name.dat	rec 28 off 0 ps 1	K00790	OK		dat
+c/csv/name.dat	rec 54 off 0 ps 1	K00816	OK		dat
+c/csv/quest_0.dat	rec 14 off 18 ps 1	K03697	OK		dat
+c/csv/quest_0.dat	rec 18 off 146 ps 1	K03696	OK		dat
+c/csv/quest_0.dat	rec 20 off 10 ps 1	K03703	OK		dat
+c/csv/quest_0.dat	rec 25 off 101 ps 1	K03682	OK		dat
+c/csv/quest_0.dat	rec 45 off 18 ps 1	K03728	OK		dat
+c/csv/quest_0.dat	rec 45 off 109 ps 1	K03682	OK		dat
+c/csv/quest_0.dat	rec 46 off 144 ps 1	K03682	OK		dat
+c/csv/quest_0.dat	rec 57 off 3 ps 1	K00562	OK		dat
+c/csv/quest_0.dat	rec 66 off 143 ps 1	K03682	OK		dat
+c/csv/quest_0.dat	rec 115 off 16 ps 1	K03803	OK		dat
+c/csv/quest_0.dat	rec 118 off 3 ps 1	K03808	OK		dat
+c/csv/quest_0.dat	rec 120 off 3 ps 1	K00617	OK		dat
+c/csv/quest_0.dat	rec 128 off 100 ps 1	K03783	OK		dat
+c/csv/quest_1.dat	rec 5 off 18 ps 1	K03687	OK		dat
+c/csv/quest_1.dat	rec 10 off 20 ps 1	K03692	OK		dat
+c/csv/quest_1.dat	rec 11 off 130 ps 1	K03682	OK		dat
+c/csv/quest_1.dat	rec 36 off 3 ps 1	K00545	OK		dat
+c/csv/quest_1.dat	rec 46 off 144 ps 1	K03682	OK		dat
+c/csv/quest_1.dat	rec 50 off 22 ps 1	K03733	OK		dat
+c/csv/quest_1.dat	rec 52 off 3 ps 1	K00558	OK		dat
+c/csv/quest_1.dat	rec 74 off 19 ps 1	K03757	OK		dat
+c/csv/quest_1.dat	rec 75 off 21 ps 1	K03758	OK		dat
+c/csv/quest_1.dat	rec 80 off 147 ps 1	K03682	OK		dat
+c/csv/quest_1.dat	rec 122 off 3 ps 1	K03812	OK		dat
+c/csv/quest_1.dat	rec 132 off 15 ps 1	K03827	OK		dat
+c/csv/quest_1.dat	rec 144 off 71 ps 1	K03783	OK		dat
+c/csv/quest_2.dat	rec 4 off 3 ps 1	K00515	OK		dat
+c/csv/quest_2.dat	rec 35 off 139 ps 1	K03696	OK		dat
+c/csv/quest_2.dat	rec 46 off 144 ps 1	K03682	OK		dat
+c/csv/quest_2.dat	rec 49 off 3 ps 1	K00556	OK		dat
+c/csv/quest_2.dat	rec 61 off 3 ps 1	K00566	OK		dat
+c/csv/quest_2.dat	rec 66 off 3 ps 1	K00571	OK		dat
+c/csv/quest_2.dat	rec 67 off 16 ps 1	K03750	OK		dat
+c/csv/quest_2.dat	rec 116 off 3 ps 1	K03804	OK		dat
+c/csv/quest_2.dat	rec 121 off 73 ps 1	K03783	OK		dat
+c/csv/quest_2.dat	rec 125 off 85 ps 1	K03783	OK		dat
+c/csv/quest_2.dat	rec 136 off 63 ps 1	K03783	OK		dat
+c/csv/quest_2.dat	rec 147 off 22 ps 1	K03836	OK		dat
+c/csv/quest_2.dat	rec 148 off 3 ps 1	K02080	OK		dat
+c/csv/skill_00.dat	rec 18 off 56 ps 2	K03069	OK		dat
+c/csv/skill_00.dat	rec 38 off 60 ps 1	K03109	OK		dat
+c/csv/skill_01.dat	rec 7 off 53 ps 1	K03133	OK		dat
+c/csv/skill_02.dat	rec 18 off 0 ps 1	K03239	OK		dat
+c/csv/skill_02.dat	rec 32 off 0 ps 1	K03265	OK		dat
+c/csv/skill_02.dat	rec 40 off 61 ps 1	K03281	OK		dat
+c/csv/skill_03.dat	rec 5 off 55 ps 1	K03297	OK		dat
+c/csv/skill_03.dat	rec 32 off 57 ps 1	K03348	OK		dat
+c/csv/smith_0.dat	rec 11 off 2 ps 1	K01547	OK		dat
+c/csv/smith_0.dat	rec 76 off 2 ps 1	K00993	OK		dat
+c/csv/smith_0.dat	rec 79 off 19 ps 1	K02874	OK		dat
+c/csv/smith_0.dat	rec 82 off 2 ps 1	K02011	OK		dat
+c/csv/smith_1.dat	rec 44 off 2 ps 1	K01333	OK		dat
+c/csv/smith_1.dat	rec 74 off 18 ps 1	K02946	OK		dat
+c/csv/smith_2.dat	rec 48 off 17 ps 1	K03005	OK		dat
+c/csv/smith_2.dat	rec 64 off 18 ps 1	K03017	OK		dat
+c/csv/smith_2.dat	rec 79 off 19 ps 1	K03028	OK		dat
+vfs:0x92eafcd8.dat	rec 7 off 18 ps 2	K03859	OK		dat
+vfs:0xe6bbcc45.dat	rec 9 off 0 ps 2	K03862	OK		dat
+vfs:0xe6bbcc45.dat	rec 15 off 0 ps 2	K00333	OK		dat
+c/csv2/help_ktf.dat	rec 0 off 16 ps 2	K03845	OK		dat
