@@ -1,0 +1,79 @@
+UI_BUT_ENG_001.png           XOÁ            {'box': (294, 27, 391, 55), 'at': (322, 25, 40, 26), 'color': (216, 192, 168), 'outline': None}
+UI_BUT_ENG_001.png           VÀO ĐỘI        {'box': (82, 108, 144, 137), 'at': (68, 106, 90, 30), 'color': (216, 192, 168), 'outline': None}
+UI_BUT_ENG_001.png           RỜI ĐỘI        {'box': (314, 108, 371, 137), 'at': (298, 106, 90, 30), 'color': (216, 192, 168), 'outline': None}
+UI_BUT_ENG_001.png           CAO            {'box': (138, 186, 188, 210), 'at': (143, 188, 40, 20), 'color': (248, 232, 200), 'outline': None}
+UI_BUT_ENG_001.png           ÍT             {'box': (247, 186, 293, 210), 'at': (258, 182, 24, 26), 'color': (248, 232, 200), 'outline': None}
+UI_BUT_ENG_001.png           BỎ             {'box': (346, 186, 411, 210), 'at': (366, 180, 26, 28), 'color': (248, 232, 200), 'outline': None}
+UI_BUT_ENG_001.png           MẶC            {'box': (189, 257, 268, 284), 'at': (206, 254, 44, 34), 'color': (248, 232, 200), 'outline': (120, 104, 80)}
+UI_BUT_ENG_001.png           THÁO           {'box': (332, 257, 430, 284), 'at': (352, 254, 58, 30), 'color': (248, 232, 200), 'outline': (120, 104, 80)}
+UI_BUT_ENG_001.png           DÙNG           {'box': (48, 335, 105, 363), 'at': (48, 333, 58, 30), 'color': (248, 232, 200), 'outline': (120, 104, 80)}
+UI_BUT_ENG_001.png           HUỶ            {'box': (181, 335, 278, 363), 'at': (208, 331, 44, 32), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_BUT_ENG_001.png           HỌC            {'box': (339, 335, 422, 363), 'at': (358, 339, 44, 28), 'color': (248, 232, 200), 'outline': (120, 104, 80)}
+UI_BUT_ENG_001.png           GÁN PHÍM       {'box': (26, 414, 128, 441), 'at': (22, 412, 110, 30), 'color': (248, 232, 200), 'outline': (112, 96, 80)}
+UI_BUT_ENG_001.png           GỠ PHÍM        {'box': (176, 414, 282, 441), 'at': (181, 412, 96, 30), 'color': (248, 232, 200), 'outline': (112, 96, 72)}
+UI_BUT_ENG_001.png           OK             {'box': (358, 414, 403, 441), 'at': (366, 418, 30, 24), 'color': (248, 232, 200), 'outline': (128, 120, 104)}
+UI_BUT_ENG_001.png           CHỈ SỐ         {'box': (464, 24, 500, 110), 'at': (465, 26, 34, 82), 'color': (255, 244, 224), 'outline': (179, 119, 52)}
+UI_BUT_ENG_001.png           ĐỒ             {'box': (464, 158, 500, 248), 'at': (465, 188, 34, 30), 'color': (255, 244, 224), 'outline': (179, 119, 52)}
+UI_BUT_ENG_001.png           KỸ NĂNG        {'box': (464, 286, 500, 372), 'at': (467, 281, 30, 96), 'color': (255, 244, 224), 'outline': (179, 119, 52)}
+UI_BUT_ENG_001.png           Chủ động       {'box': (12, 464, 66, 484), 'at': (12, 469, 53, 13), 'color': (111, 111, 111), 'outline': None}
+UI_BUT_ENG_001.png           Phụ trợ        {'box': (80, 464, 148, 484), 'at': (90, 469, 47, 12), 'color': (111, 111, 111), 'outline': None}
+UI_BUT_ENG_001.png           Bị động        {'box': (12, 484, 66, 504), 'at': (16, 489, 46, 13), 'color': (111, 111, 111), 'outline': None}
+UI_BUT_ENG_001.png           Lính thuê      {'box': (80, 484, 148, 504), 'at': (84, 489, 60, 10), 'color': (111, 111, 111), 'outline': None}
+UI_BUT_ENG_002.png           XONG           {'box': (72, 113, 160, 141), 'at': (89, 117, 54, 20), 'color': (216, 192, 168), 'outline': None}
+UI_BUT_ENG_002.png           ĐẶT LẠI        {'box': (306, 110, 394, 137), 'at': (303, 108, 94, 34), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_BUT_ENG_002.png           THOÁT          {'box': (66, 198, 132, 226), 'at': (66, 196, 66, 26), 'color': (216, 192, 168), 'outline': None}
+UI_BUT_ENG_002.png           CÓ             {'box': (246, 192, 300, 218), 'at': (258, 189, 30, 30), 'color': (248, 232, 200), 'outline': (120, 104, 80)}
+UI_BUT_ENG_002.png           KHÔNG          {'box': (406, 192, 447, 218), 'at': (390, 189, 72, 30), 'color': (248, 232, 200), 'outline': (128, 120, 104)}
+UI_BUT_ENG_002.png           BÁN            {'box': (46, 437, 108, 463), 'at': (55, 434, 44, 30), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_BUT_ENG_002.png           MUA            {'box': (202, 438, 258, 464), 'at': (208, 441, 44, 24), 'color': (248, 232, 200), 'outline': (136, 120, 96)}
+UI_BUT_ENG_002.png           CÓ             {'box': (6, 252, 118, 306), 'at': (47, 263, 30, 30), 'color': (255, 255, 255), 'outline': (224, 134, 40)}
+UI_BUT_ENG_002.png           CÓ             {'box': (114, 252, 214, 306), 'at': (149, 263, 30, 30), 'color': (255, 240, 96), 'outline': (224, 160, 16)}
+UI_BUT_ENG_002.png           KHÔNG          {'box': (2, 304, 120, 360), 'at': (25, 316, 72, 30), 'color': (255, 255, 255), 'outline': (224, 134, 40)}
+UI_BUT_ENG_002.png           KHÔNG          {'box': (116, 304, 216, 360), 'at': (130, 316, 72, 30), 'color': (255, 240, 96), 'outline': (224, 160, 16)}
+UI_BUT_ENG_002.png           CÀI ĐẶT        {'box': (446, 260, 482, 358), 'at': (447, 262, 34, 94), 'color': (255, 244, 224), 'outline': (179, 119, 52)}
+UI_BUT_ENG_003.png           LƯU            {'box': (182, 162, 294, 204), 'at': (205, 165, 66, 39), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_BUT_ENG_003.png           TRỢ GIÚP       {'box': (180, 277, 294, 319), 'at': (154, 274, 165, 51), 'color': (248, 232, 200), 'outline': (112, 96, 72)}
+UI_BUT_ENG_003.png           MENU CHÍNH     {'box': (117, 392, 356, 434), 'at': (133, 389, 207, 45), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_BUT_ENG_004.png           ĐỔ             {'box': (378, 26, 450, 54), 'at': (399, 20, 30, 34), 'color': (248, 240, 224), 'outline': (152, 128, 104)}
+UI_BUT_ENG_004.png           ĐỔ             {'box': (378, 104, 450, 132), 'at': (401, 98, 26, 30), 'color': (74, 68, 60), 'outline': None}
+UI_BUT_ENG_004.png           THÊM           {'box': (384, 181, 444, 209), 'at': (385, 179, 58, 30), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_BUT_ENG_004.png           HỢP NHẤT       {'box': (48, 111, 183, 141), 'at': (62, 106, 108, 38), 'color': (248, 248, 248), 'outline': (88, 72, 56)}
+UI_BUT_ENG_004.png           HỢP NHẤT       {'box': (48, 196, 183, 226), 'at': (64, 191, 104, 34), 'color': (74, 68, 60), 'outline': None}
+UI_BUT_ENG_004.png           LƯU            {'box': (54, 283, 127, 311), 'at': (68, 285, 44, 26), 'color': (248, 232, 200), 'outline': (64, 64, 56)}
+UI_BUT_ENG_004.png           HUỶ            {'box': (217, 283, 329, 311), 'at': (251, 279, 44, 32), 'color': (248, 232, 200), 'outline': (72, 64, 56)}
+UI_BUT_ENG_004.png           HỢP NHẤT       {'box': (258, 368, 378, 397), 'at': (262, 362, 108, 38), 'color': (248, 248, 248), 'outline': (96, 80, 56)}
+UI_BUT_ENG_004.png           THÊM           {'box': (58, 448, 112, 476), 'at': (62, 446, 52, 26), 'color': (240, 216, 184), 'outline': None}
+UI_TITLEMAIN_BUT_ENG_001.png BẮT ĐẦU        {'box': (104, 42, 268, 88), 'at': (114, 35, 144, 51), 'color': (240, 240, 232), 'outline': (0, 0, 0)}
+UI_TITLEMAIN_BUT_ENG_001.png BẮT ĐẦU        {'box': (104, 169, 268, 215), 'at': (114, 162, 144, 51), 'color': (248, 248, 240), 'outline': (160, 80, 88)}
+UI_TITLEMAIN_BUT_ENG_001.png CÀI ĐẶT        {'box': (438, 30, 612, 64), 'at': (478, 31, 94, 34), 'color': (248, 248, 248), 'outline': (24, 16, 8)}
+UI_TITLEMAIN_BUT_ENG_001.png CÀI ĐẶT        {'box': (438, 124, 612, 159), 'at': (478, 126, 94, 34), 'color': (248, 248, 240), 'outline': (72, 24, 32)}
+UI_TITLEMAIN_BUT_ENG_001.png GAME KHÁC      {'box': (720, 30, 934, 64), 'at': (765, 31, 124, 30), 'color': (248, 248, 248), 'outline': (64, 48, 32)}
+UI_TITLEMAIN_BUT_ENG_001.png GAME KHÁC      {'box': (720, 124, 934, 159), 'at': (765, 126, 124, 30), 'color': (248, 248, 240), 'outline': (64, 24, 24)}
+UI_TITLEMAIN_BUT_ENG_001.png BẮT ĐẦU        {'box': (0, 268, 358, 404), 'at': (107, 301, 138, 45), 'color': (255, 255, 255), 'outline': None}
+UI_TITLEMAIN_BUT_ENG_001.png BẬT            {'box': (94, 514, 156, 554), 'at': (94, 510, 63, 51), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_TITLEMAIN_BUT_ENG_001.png TẮT            {'box': (334, 514, 414, 554), 'at': (342, 504, 63, 51), 'color': (248, 232, 200), 'outline': (120, 104, 80)}
+UI_TITLEMAIN_BUT_ENG_001.png LƯU            {'box': (574, 514, 672, 554), 'at': (590, 516, 66, 39), 'color': (248, 232, 200), 'outline': (112, 96, 72)}
+UI_TITLEMAIN_BUT_ENG_001.png TẢI            {'box': (820, 514, 924, 554), 'at': (840, 507, 63, 48), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_TITLEMAIN_BUT_ENG_001.png BẮT ĐẦU        {'box': (420, 602, 546, 642), 'at': (411, 592, 144, 51), 'color': (248, 248, 248), 'outline': (120, 120, 120)}
+UI_BUT_ENG_005.png           HOT!!          {'box': (30, 64, 80, 81), 'at': (40, 68, 31, 10), 'color': (208, 176, 128), 'outline': None}
+UI_BUT_ENG_005.png           MUA GEM        {'box': (112, 64, 186, 81), 'at': (126, 68, 46, 10), 'color': (208, 176, 128), 'outline': None}
+UI_BUT_ENG_005.png           VẬT PHẨM       {'box': (220, 64, 276, 81), 'at': (222, 62, 53, 17), 'color': (208, 176, 128), 'outline': None}
+UI_BUT_ENG_005.png           VŨ KHÍ         {'box': (314, 64, 378, 81), 'at': (327, 64, 38, 13), 'color': (208, 176, 128), 'outline': None}
+UI_BUT_ENG_005.png           GIÁP           {'box': (414, 64, 472, 81), 'at': (430, 64, 27, 13), 'color': (208, 176, 128), 'outline': None}
+UI_BUT_ENG_005.png           TRỌN GÓI       {'box': (16, 156, 86, 173), 'at': (25, 156, 52, 15), 'color': (208, 176, 128), 'outline': None}
+UI_BUT_ENG_005.png           MUA            {'box': (176, 118, 238, 146), 'at': (185, 122, 44, 24), 'color': (248, 232, 200), 'outline': (120, 104, 88)}
+UI_BUT_ENG_005.png           Quà hằng ngày  {'box': (32, 190, 364, 254), 'at': (69, 201, 258, 45), 'color': (248, 240, 208), 'outline': None}
+UI_006.png                   CÓ             {'box': (2, 234, 100, 288), 'at': (38, 245, 26, 26), 'color': (255, 255, 255), 'outline': None}
+UI_006.png                   CÓ             {'box': (96, 234, 196, 288), 'at': (133, 245, 26, 26), 'color': (255, 240, 96), 'outline': None}
+UI_006.png                   KHÔNG          {'box': (8, 288, 98, 340), 'at': (19, 298, 68, 26), 'color': (255, 255, 255), 'outline': None}
+UI_006.png                   KHÔNG          {'box': (102, 288, 194, 340), 'at': (114, 298, 68, 26), 'color': (255, 240, 96), 'outline': None}
+UI_006.png                   LƯU            {'box': (72, 404, 188, 456), 'at': (108, 418, 44, 26), 'color': (240, 228, 196), 'outline': (96, 72, 48)}
+UI_006.png                   TRỢ GIÚP       {'box': (324, 404, 442, 456), 'at': (329, 414, 108, 34), 'color': (240, 228, 196), 'outline': (96, 72, 48)}
+UI_006.png                   CÀI ĐẶT        {'box': (24, 458, 234, 508), 'at': (82, 467, 94, 34), 'color': (240, 228, 196), 'outline': (96, 72, 48)}
+UI_006.png                   MENU CHÍNH     {'box': (262, 458, 506, 508), 'at': (315, 467, 138, 30), 'color': (240, 228, 196), 'outline': (96, 72, 48)}
+UI_008.png                   BỎ QUA         {'box': (152, 98, 226, 130), 'at': (142, 96, 78, 30), 'color': (248, 216, 152), 'outline': None}
+UI_008.png                   CHỌN           {'box': (314, 174, 378, 198), 'at': (332, 181, 27, 12), 'color': (255, 255, 255), 'outline': None}
+UI_008.png                   VẬT PHẨM       {'box': (324, 198, 368, 222), 'at': (320, 199, 53, 17), 'color': (255, 255, 255), 'outline': None}
+UI_008.png                   NGUYÊN LIỆU    {'box': (254, 312, 346, 328), 'at': (263, 312, 74, 15), 'color': (208, 184, 144), 'outline': None}
+UI_TITLESLOT_01.png          TRỐNG          {'box': (798, 8, 992, 64), 'at': (844, 6, 102, 45), 'color': (92, 92, 108), 'outline': None}
+UI_TITLE_SETTINGS_01.png     ĐĂNG XUẤT      {'box': (22, 328, 172, 364), 'at': (36, 326, 122, 34), 'color': (240, 224, 200), 'outline': (48, 36, 24)}

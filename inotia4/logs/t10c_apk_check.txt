@@ -1,0 +1,48 @@
+== sha256
+2692c8ca4ae61b194cb38e713d5e7ba04c142db196437ba0364cf370f09e37e6  out/Inotia4_T10_check.apk
+
+== apkdiff vs TEST11
+chi co o Inotia4_TEST11_vi_offline.apk []
+chi co o Inotia4_T10_check.apk []
+khac noi dung: ['assets/common/game_res/UI_014.png.jpg', 'assets/common/game_res/UI_015.png.jpg', 'lib/arm64-v8a/libgame.so'] / 1454 file chung
+
+== apksigner verify -v
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=NAMP Viet hoa, O=NAMP, C=VN
+Signer #1 certificate SHA-256 digest: cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4
+Signer #1 certificate SHA-1 digest: 78afec73b9980128fc7278a0276236e0413dac92
+Signer #1 certificate MD5 digest: b2dba7bde4c70600dff0f031e17ed0bc
+
+== zipalign -c -P 16 4
+49867615 META-INF/MANIFEST.MF (OK - compressed)
+Verification succesful
+exit 0
+
+== check_apk
+ok  lib/arm64-v8a/libHercules.so STORED, can 4096
+ok  lib/arm64-v8a/libgame.so STORED, can 4096
+KHONG quyen android.permission.INTERNET
+CO    quyen android.permission.ACCESS_NETWORK_STATE
+KHONG quyen com.android.vending.BILLING
+META-INF: ['META-INF/NAMP.SF', 'META-INF/NAMP.RSA']
+RESULT: PASS
+
+== patch_lib --diff TEST11 lib -> T10 lib (nhom day du + hudbtn)
+khac [0x169ae8, 0x169ae9)   1 B  trong vung patch da khai bao
+khac [0x169bb4, 0x169bb5)   1 B  trong vung patch da khai bao
+khac [0x169bfc, 0x169bfd)   1 B  trong vung patch da khai bao
+theo vung khai bao (nhom base,p1,mod,view,hud,pool,hudbtn):
+  0x169ae8..0x169aec [hudbtn]   4 B: 1/4 byte khac
+  0x169bb4..0x169bb8 [hudbtn]   4 B: 1/4 byte khac
+  0x169bfc..0x169c00 [hudbtn]   4 B: 1/4 byte khac
+tong 3 byte khac, 3 doan; TAT CA nam trong vung khai bao
+
+== lib trong APK == lib vá tu TEST4 nhom day du
+GIONG

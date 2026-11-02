@@ -1,0 +1,203 @@
+# T5: kiem rebuild.sh so voi build_from_apk.sh va TEST12 (2026-11-01)
+
+## Lenh
+ref     : APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T5_ref.apk --smali net,mod --vnfont --lib --libgroup base,p1,mod,view,hud,pool,hudbtn --hud
+rebuild : bash scripts/rebuild.sh --base-apk test_builds/Inotia4_TEST4_vi_anh_offline.apk --out out/Inotia4_T5_rebuild.apk
+diag    : bash scripts/rebuild.sh --base-apk test_builds/Inotia4_TEST4_vi_anh_offline.apk --diag --out out/Inotia4_T5_rebuild_diag.apk
+nen EN  : bash scripts/rebuild.sh --base-apk test_builds/Inotia4_TEST1_font18_offline_EN.apk --base-kind en --out out/Inotia4_T5_rebuild_en.apk
+so sanh : python3 /opt/work/apkdiff.py <a> <b>   (ten, noi dung; bo META-INF)   va   apkcmp (them: thu tu muc, nen/STORED, extra, CRC, thuoc tinh, can 16K)
+
+## sha256
+5a7e4f2003bc0152c48803fdd58e48e1af7d2b8a22d5a72bf3e55948923017ac  out/Inotia4_T5_ref.apk
+7b85d382363b0b6916e4e7c70aa8797a2b0fb8ca223897d5d9355c6fdd4e334a  out/Inotia4_T5_rebuild.apk
+251bb0fd2866b6013d6f9cca778a6cc60cdbb2210d50ce47a56e45ef8eb7c5e8  out/Inotia4_T5_rebuild_diag.apk
+12a9fc337e69177f734fc5474bcb6c3f56d26a3f0383b4c3020bbd7b308a8054  out/Inotia4_T5_rebuild_en.apk
+2692c8ca4ae61b194cb38e713d5e7ba04c142db196437ba0364cf370f09e37e6  test_builds/Inotia4_TEST12_vi_offline.apk
+
+## apkdiff out/Inotia4_T5_rebuild.apk  <->  out/Inotia4_T5_ref.apk
+chi co o Inotia4_T5_rebuild.apk []
+chi co o Inotia4_T5_ref.apk []
+khac noi dung: [] / 1453 file chung
+so muc (khong META-INF): 1453 1453
+thu tu muc giong nhau: True
+noidung        0 []
+compress       0 []
+crc            0 []
+extra_len      0 []
+date           1453 [('AndroidManifest.xml', (2026, 11, 1, 6, 27, 16), (2026, 11, 1, 6, 15, 26)), ('DebugProbesKt.bin', (2026, 11, 1, 6, 27, 16), (2026, 11, 1, 6, 15, 26)
+attr           0 []
+flag           0 []
+create_system  0 []
+can 16K (.so/arsc) giong nhau: True {'resources.arsc': 5312, 'lib/arm64-v8a/libHercules.so': 0, 'lib/arm64-v8a/libgame.so': 0}
+META-INF A: ['META-INF/MANIFEST.MF', 'META-INF/NAMP.RSA', 'META-INF/NAMP.SF']
+META-INF B: ['META-INF/MANIFEST.MF', 'META-INF/NAMP.RSA', 'META-INF/NAMP.SF']
+
+## apkdiff out/Inotia4_T5_rebuild_en.apk  <->  out/Inotia4_T5_ref.apk
+chi co o Inotia4_T5_rebuild_en.apk []
+chi co o Inotia4_T5_ref.apk []
+khac noi dung: [] / 1453 file chung
+so muc (khong META-INF): 1453 1453
+thu tu muc giong nhau: True
+noidung        0 []
+compress       0 []
+crc            0 []
+extra_len      0 []
+date           1453 [('AndroidManifest.xml', (2026, 11, 1, 6, 24, 10), (2026, 11, 1, 6, 15, 26)), ('DebugProbesKt.bin', (2026, 11, 1, 6, 24, 12), (2026, 11, 1, 6, 15, 26)
+attr           0 []
+flag           0 []
+create_system  0 []
+can 16K (.so/arsc) giong nhau: True {'resources.arsc': 5312, 'lib/arm64-v8a/libHercules.so': 0, 'lib/arm64-v8a/libgame.so': 0}
+META-INF A: ['META-INF/MANIFEST.MF', 'META-INF/NAMP.RSA', 'META-INF/NAMP.SF']
+META-INF B: ['META-INF/MANIFEST.MF', 'META-INF/NAMP.RSA', 'META-INF/NAMP.SF']
+
+## apkdiff out/Inotia4_T5_ref.apk  <->  test_builds/Inotia4_TEST12_vi_offline.apk
+chi co o Inotia4_T5_ref.apk []
+chi co o Inotia4_TEST12_vi_offline.apk ['classes4.dex']
+khac noi dung: ['AndroidManifest.xml'] / 1453 file chung
+so muc (khong META-INF): 1453 1454
+thu tu muc giong nhau: False
+  cung tap ten: False
+noidung        1 ['AndroidManifest.xml']
+compress       0 []
+crc            1 ['AndroidManifest.xml']
+extra_len      2 [('assets/dexopt/baseline.prof', 7, 6), ('lib/arm64-v8a/libHercules.so', 7785, 7673)]
+date           1453 [('AndroidManifest.xml', (2026, 11, 1, 6, 15, 26), (2026, 11, 1, 5, 34, 56)), ('DebugProbesKt.bin', (2026, 11, 1, 6, 15, 26), (2026, 11, 1, 5, 34, 56)
+attr           0 []
+flag           0 []
+create_system  0 []
+can 16K (.so/arsc) giong nhau: True {'resources.arsc': 5312, 'lib/arm64-v8a/libHercules.so': 0, 'lib/arm64-v8a/libgame.so': 0}
+META-INF A: ['META-INF/MANIFEST.MF', 'META-INF/NAMP.RSA', 'META-INF/NAMP.SF']
+META-INF B: ['META-INF/MANIFEST.MF', 'META-INF/NAMP.RSA', 'META-INF/NAMP.SF']
+
+## apkdiff out/Inotia4_T5_rebuild_diag.apk  <->  test_builds/Inotia4_TEST12_vi_offline.apk
+chi co o Inotia4_T5_rebuild_diag.apk []
+chi co o Inotia4_TEST12_vi_offline.apk []
+khac noi dung: [] / 1454 file chung
+so muc (khong META-INF): 1454 1454
+thu tu muc giong nhau: True
+noidung        0 []
+compress       0 []
+crc            0 []
+extra_len      0 []
+date           1454 [('AndroidManifest.xml', (2026, 11, 1, 6, 28, 4), (2026, 11, 1, 5, 34, 56)), ('DebugProbesKt.bin', (2026, 11, 1, 6, 28, 4), (2026, 11, 1, 5, 34, 56)),
+attr           0 []
+flag           0 []
+create_system  0 []
+can 16K (.so/arsc) giong nhau: True {'resources.arsc': 5312, 'lib/arm64-v8a/libHercules.so': 0, 'lib/arm64-v8a/libgame.so': 0}
+META-INF A: ['META-INF/MANIFEST.MF', 'META-INF/NAMP.RSA', 'META-INF/NAMP.SF']
+META-INF B: ['META-INF/MANIFEST.MF', 'META-INF/NAMP.RSA', 'META-INF/NAMP.SF']
+
+## AndroidManifest.xml: TEST12 <-> ref (aapt2 dump xmltree, bo so dong)
+115a116,120
+>                     A: http://schemas.android.com/apk/res/android:name(0x01010003)="android.intent.action.MAIN" (Raw: "android.intent.action.MAIN")
+>                   E: category
+>                     A: http://schemas.android.com/apk/res/android:name(0x01010003)="android.intent.category.LAUNCHER" (Raw: "android.intent.category.LAUNCHER")
+>               E: intent-filter
+>                   E: action
+574,588d578
+<           E: activity
+<             A: http://schemas.android.com/apk/res/android:theme(0x01010000)=@0x01030009
+<             A: http://schemas.android.com/apk/res/android:name(0x01010003)="com.namp.vh.diag.LaunchActivity" (Raw: "com.namp.vh.diag.LaunchActivity")
+<             A: http://schemas.android.com/apk/res/android:exported(0x01010010)=true
+<             A: http://schemas.android.com/apk/res/android:configChanges(0x0101001f)=0x00000da0
+<               E: intent-filter
+<                   E: action
+<                     A: http://schemas.android.com/apk/res/android:name(0x01010003)="android.intent.action.MAIN" (Raw: "android.intent.action.MAIN")
+<                   E: category
+<                     A: http://schemas.android.com/apk/res/android:name(0x01010003)="android.intent.category.LAUNCHER" (Raw: "android.intent.category.LAUNCHER")
+<           E: provider
+<             A: http://schemas.android.com/apk/res/android:name(0x01010003)="com.namp.vh.diag.DiagProvider" (Raw: "com.namp.vh.diag.DiagProvider")
+<             A: http://schemas.android.com/apk/res/android:exported(0x01010010)=false
+<             A: http://schemas.android.com/apk/res/android:authorities(0x01010018)="com.com2us.inotia4.normal.freefull.google.global.android.common.namp_diag" (Raw: "com
+<             A: http://schemas.android.com/apk/res/android:initOrder(0x0101001a)=1000
+(ref <-> rebuild: giong)
+
+## kiem ky/align/check_apk: out/Inotia4_T5_ref.apk
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Number of signers: 1
+Signer #1 certificate SHA-256 digest: cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4
+zipalign -c -P 16 4: OK
+ok  lib/arm64-v8a/libHercules.so STORED, can 4096
+ok  lib/arm64-v8a/libgame.so STORED, can 4096
+KHONG quyen android.permission.INTERNET
+CO    quyen android.permission.ACCESS_NETWORK_STATE
+KHONG quyen com.android.vending.BILLING
+RESULT: PASS
+
+## kiem ky/align/check_apk: out/Inotia4_T5_rebuild.apk
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Number of signers: 1
+Signer #1 certificate SHA-256 digest: cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4
+zipalign -c -P 16 4: OK
+ok  lib/arm64-v8a/libHercules.so STORED, can 4096
+ok  lib/arm64-v8a/libgame.so STORED, can 4096
+KHONG quyen android.permission.INTERNET
+CO    quyen android.permission.ACCESS_NETWORK_STATE
+KHONG quyen com.android.vending.BILLING
+RESULT: PASS
+
+## kiem ky/align/check_apk: out/Inotia4_T5_rebuild_diag.apk
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Number of signers: 1
+Signer #1 certificate SHA-256 digest: cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4
+zipalign -c -P 16 4: OK
+ok  lib/arm64-v8a/libHercules.so STORED, can 4096
+ok  lib/arm64-v8a/libgame.so STORED, can 4096
+KHONG quyen android.permission.INTERNET
+CO    quyen android.permission.ACCESS_NETWORK_STATE
+KHONG quyen com.android.vending.BILLING
+RESULT: PASS
+
+## kiem ky/align/check_apk: out/Inotia4_T5_rebuild_en.apk
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Number of signers: 1
+Signer #1 certificate SHA-256 digest: cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4
+zipalign -c -P 16 4: OK
+ok  lib/arm64-v8a/libHercules.so STORED, can 4096
+ok  lib/arm64-v8a/libgame.so STORED, can 4096
+KHONG quyen android.permission.INTERNET
+CO    quyen android.permission.ACCESS_NETWORK_STATE
+KHONG quyen com.android.vending.BILLING
+RESULT: PASS
+
+## Kiểm bổ sung đường split (không có split gốc trong container, nên chia nhỏ từng phần)
+
+### A. Lib: dựng lại lib gốc từ lib TEST4 rồi vá đủ 7 nhóm một lượt
+- lib TEST4 sha256 df12cecc7752bcba55157fffe7989cf8f9d8bf6344b211fb3ec41122443a5d02; trả 4 byte @0x203e68 `36000014` -> `a0040036` (đảo patch `base`)
+  => sha256 790bed16917129a9331cc1b0dfd4c76757fc5617306190ea18cc14293b007187 = KHỚP "goc sha256" ghi trong logs/patch_lib.log (lib split gốc).
+- `python3 -I scripts/patch_lib.py <lib gốc suy ra> <ra> --group base,p1,mod,view,hud,pool,hudbtn` => "42 patch moi, 0 da co san",
+  sha256 442cd19c41bc65e1df9bee410495c2d2a0a5c1f7c3e8b621a60f56cb36b39494 = lib trong out/Inotia4_T5_ref.apk (KHỚP).
+
+### B. Smali: cả 5 nhóm trên bản "gần gốc"
+- TEST1 (smali font,lang,offline đã áp) decode bằng apktool 2.12.1, xoá 3 method `namp_*` (ADD_METHODS) rồi chạy
+  `python3 -I scripts/patch_smali.py <dec> --group font,lang,offline,net,mod`: chạy hết, không dừng, "tong: 19 method"
+  (font 5, lang 1, offline 8 thay thân + 3 method thêm, net 1 mục `.catch` x2, mod 1 chèn dòng). So với cây `net,mod` (rebuild_en): chỉ khác dòng trống và thứ tự method (baksmali), cùng ngữ nghĩa.
+- Chưa chạy trên smali của `base.apk` gốc (không có file): nhóm font/lang/offline giữ nguyên từ trước T5.
+
+### C. Manifest: patch_manifest.py
+- Thêm lại 4 `<uses-permission>` (INTERNET, BILLING, C2DM RECEIVE, BIND_GET_INSTALL_REFERRER_SERVICE) vào manifest decode của TEST1 rồi chạy `scripts/patch_manifest.py`:
+  ra giống manifest TEST1 từng byte.
+
+### D. Text/xml/ảnh: đường split chạy thật trên nền chưa dịch
+- `rebuild.sh --base-apk TEST1(EN) --base-kind en` chạy plist_text (154 string, 30 key), memtext (10602/10602 mục), img_vi (10 ảnh)
+  => APK ra khác `out/Inotia4_T5_ref.apk` (dựng từ TEST4 đã dịch) 0/1453 file nội dung; thứ tự mục, nén/STORED, extra, CRC, thuộc tính giống hệt (chỉ dấu thời gian zip khác).
+
+### E. Gộp split (APKEditor)
+- `java -jar /opt/re/APKEditor-1.4.5.jar m -i <thư mục chỉ có base.apk = TEST4> -o merged.apk`: chạy 1,9 s; `apktool 2.12.1 d` merged.apk
+  => cây decode giống cây decode thẳng TEST4, chỉ `apktool.yml` khác 2 dòng (apkFileName; mất `- so` trong doNotCompress, fix_zip.py ghi lại .so STORED nên vô hại).
+- Gộp 4 split thật (sha256 ở goc/SHA256.txt): CHƯA CHẠY. Đường split của rebuild.sh (bước 0 kiểm sha, bước 1 APKEditor, decode bản gộp) CHƯA XÁC ĐỊNH.
+
+### F. Kiểm tham số
+- `rebuild.sh --internet` => "--internet chi dung cung --diag" (rc 2); `rebuild.sh` không đối số => rc 2; `rebuild.sh /khong/co` => "khong thay thu muc split" (rc 1); `bash -n scripts/rebuild.sh` OK.

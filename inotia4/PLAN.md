@@ -1,0 +1,743 @@
+# PLAN: Inotia 4 Việt hoá offline — giai đoạn ổn định và phát hành
+
+Kế hoạch tổng ban đầu (bối cảnh, quyết định của người dùng, pipeline) nằm ở `docs/PLAN_goc.md`. Tiến độ chi tiết các phiên trước ghi ở `PROGRESS.md`.
+
+## Mục tiêu
+Bản APK Việt hoá offline chạy ổn định trên máy thật Android 14–16: vào game, chơi, lưu và load save không văng, các nút/tính năng có mạng không làm sập app. Sau đó build bản phát hành (không kèm chẩn đoán) vào `releases/Inotia4/`.
+
+## Phạm vi
+- Trong phạm vi:
+  - rà các lối vào mạng còn có thể làm văng app;
+  - dựng emulator unidbg chạy qua được màn chọn save;
+  - sửa lỗi văng khi load save;
+  - vẽ lại font cỡ lớn (T7);
+  - **mod menu**: thanh kéo hệ số sát thương / phòng thủ / EXP, từ x1 tới x50 (T8; người dùng yêu cầu 2026-10-31 để chơi cốt truyện);
+  - **thay nút HUD bằng bộ ảnh của người dùng** (T10; `assets_user/hud/`, gửi 2026-11-01);
+  - **tầm nhìn rộng hơn + HUD lùi vào trong** (T9; người dùng yêu cầu 2026-10-31 kèm ảnh màn chơi): tăng màn logic, HUD cách mép trên/dưới/hai bên;
+  - đồng bộ `rebuild.sh`;
+  - bản phát hành, gói dự án và `BAO_CAO.md`.
+- Ngoài phạm vi (giai đoạn này):
+  - **IAP "mua miễn phí": BỎ** (người dùng chốt 2026-10-31: "Ko mua miễn phí nữa, tôi chỉ trải nghiệm cốt truyện").
+  - Gem trên server (socket `inotia4.com2us.net:38000`).
+  - Dịch lại text. Ảnh có chữ.
+
+## Quyết định thiết kế (KHÔNG tự đổi khi implement)
+- **Không có bộ split gốc trong container.** Mọi bản build mới đi từ `test_builds/Inotia4_TEST4_vi_anh_offline.apk` qua `scripts/build_from_apk.sh`:
+  - `--smali <nhóm>`: vá smali bằng `scripts/patch_smali.py`;
+  - `--vnfont`: build lại `classes3.dex` (font);
+  - `--diag`: bản chẩn đoán;
+  - **bản phát hành KHÔNG `--diag`, KHÔNG `--internet`**.
+  - `rebuild.sh` (từ split gốc) phải áp cùng các nhóm vá.
+- **Giữ gỡ quyền INTERNET.** Lối vào mạng nào ném `SecurityException` thì xử lý giống nhánh "máy không có mạng" sẵn có của bản gốc:
+  - thêm `.catch Ljava/lang/SecurityException;` trỏ vào handler IOException có sẵn, qua cơ chế `CATCH_ADD` trong `patch_smali.py`;
+  - chỉ khi handler đó chỉ dùng API của `Throwable` (thoả verifier);
+  - không thay thân method nếu không bắt buộc.
+- **Vá smali:**
+  - chỉ thay thân method hoặc thêm `.catch`/method mới; không đổi chữ ký, tên, access flag;
+  - mỗi patch phải khớp **đúng số lần kỳ vọng**, lệch thì dừng.
+- **Vá `libgame.so`:**
+  - qua `scripts/patch_lib.py`, mỗi patch kiểm byte gốc;
+  - chỉ vá khi đã chứng minh bằng disasm;
+  - ghi vaddr và lý do.
+- **Font:** TEST7 phóng f18 theo `q/16`, `q = max(16, size)`.
+  - Người dùng phản hồi (2026-10-31): chữ to rồi nhưng mất dấu thanh ở nhiều ký tự. Yêu cầu: **vẽ lại font f18 ở cỡ lớn thật** (T7).
+  - Font mới phải giữ dáng f18.
+  - Chỉ phóng to (hệ số ≥ 1), không thu nhỏ bitmap.
+  - Không đổi 5 method công khai của VNFont.
+- **IAP:** bỏ (xem Phạm vi). Không vá luồng mua.
+- **Mod menu (T8):**
+  - **Giao diện Java.** Lớp mới `java/src/com/namp/vh/ModMenu.java`:
+    - một nút nổi nhỏ "MOD" ở góc màn hình, mở hộp thoại có 3 `SeekBar` (Sát thương, Phòng thủ, EXP), giá trị x1–x50, nút "Đặt lại x1";
+    - lưu bằng `SharedPreferences`, áp lại mỗi khi mở game;
+    - gắn vào `MainActivity` bằng một lệnh `invoke-static` thêm trong `onCreate`/`onResume` (nhóm smali `mod`, khớp đúng số lần).
+  - **Phía native.** Vá `libgame.so` (nhóm patch `mod`) tại đúng hàm tính, có bằng chứng disasm:
+    - sát thương **do phe người chơi gây ra** × Mdmg;
+    - sát thương **phe người chơi nhận** chia cho Mdef (hoặc phòng thủ × Mdef, chọn theo công thức gốc);
+    - EXP nhận × Mexp.
+  - Không đổi sát thương hay EXP của quái ngoài các điểm trên.
+  - **Tràn số:** nhân xong phải chặn ở giá trị tối đa của kiểu gốc (byte/short/int) và của giới hạn trong game (nếu có). Giữ dấu; không đổi kiểu biến.
+  - **Kênh Java → native:**
+    - 3 số nguyên đặt ở một vùng ghi được trong `libgame.so` (`.bss`/`.data` không dùng, chứng minh không có xref);
+    - Java ghi vào đó qua cơ chế đã kiểm chứng (ứng viên: `/proc/self/mem` + địa chỉ base lấy từ `/proc/self/maps`, `sun.misc.Unsafe`, hoặc kênh JNI có sẵn);
+    - **T8a phải chứng minh** cơ chế chọn chạy được trên Android 14–16;
+    - giá trị đọc được ngoài khoảng 1..50 thì native coi như 1.
+  - **Không cấp phát trong vòng lặp game.** Java chỉ ghi khi đổi thanh kéo hoặc khi `onResume`.
+- Bytecode/smali thật được tin hơn output jadx. Disasm (`llvm-objdump`) được tin hơn suy luận.
+- Không cấp phát object trong vòng vẽ (VNFont).
+- **Sau T1** (quyết theo mục 7 của `docs/mang_offline_ra_soat.md`):
+  - `getActiveNetwork` tạm giữ nguyên. IAP đã bỏ; chỉ xét đổi sang "không có mạng" nếu người dùng báo nút trả phí bị treo hoặc văng.
+  - `CFunction.getDeviceId/getPhoneNumber/getMIN`: không vá, vì xref không có đường gọi tới. Có log văng thì mới xét.
+  - Bản test kế tiếp (bản sửa T3) sẽ nhờ người dùng bấm thử: GAME KHÁC, HIVE, chọn ô save, Option → lưu đám mây, shop/gem; rồi gửi báo cáo nếu văng.
+
+- **Tầm nhìn / HUD (T9):**
+  - **Bằng chứng (quản đốc đã disasm):**
+    - `resolutioninit` 0x130894, `SGL_grpInitialize` (đoạn 0x133008–0x133080) và `SGL_ReapplyScreenSize` (~0x133440) tính màn logic:
+      - nếu W/H > 1,5 thì H_logic = 640 (hằng `0x44200000` = 640.0f), W_logic = W·640/H;
+      - ngược lại W_logic = 960 (`0x44700000` = 960.0f);
+      - kết quả lưu ở 0x2d6098 / 0x2d609c.
+    - `CalcResolutionWidth/Height` (0x130914/0x130930) = (W_logic − 960)/2 và (H_logic − 640)/2 (độ lệch của vùng thiết kế 960×640 nằm giữa).
+    - Máy người dùng 2400×1080 ⇒ 1422×640, hệ số 1,6875.
+  - **Tăng tầm nhìn** = tăng màn logic theo cùng tỉ lệ: 640 → 640·k, 960 → 960·k ở **mọi** chỗ tính (3 hàm trên và bất kỳ chỗ nào khác T9a tìm được). Vùng thiết kế 960×640 giữ nguyên.
+    - Hệ quả: mọi UI và chữ nhỏ đi theo 1/k trên màn thật. Ví dụ k = 1,25: chữ cỡ 24 từ ~40 px thật còn ~32 px. Phải báo người dùng.
+  - **Chỉnh được bằng mod menu**: thêm thanh "Tầm nhìn" (k từ 1,00 tới 1,50, bước 0,05; mặc định 1,25), lưu cùng vùng nhớ mod (int thứ 4: H_logic, 0 ⇒ 640).
+    - Áp lúc khởi động: Java ghi trong `onResume` trước khi GL khởi tạo; T9a phải chứng minh thứ tự này.
+    - Đổi giữa chừng thì báo "khởi động lại game để áp dụng", trừ khi T9a chứng minh `nativeReapplyScreenSize` áp an toàn lúc đang chạy.
+  - **HUD lùi vào trong**:
+    - ưu tiên một điểm vá chung (ví dụ trừ lề trong `CalcResolutionWidth/Height`) **chỉ khi** T9a chứng minh các hàm đó chỉ dùng để neo HUD vào mép;
+    - nếu không thì vá từng chỗ neo HUD trong màn chơi (`UIPlay_*`...);
+    - lề mặc định: ngang 24 px, dọc 16 px logic (có thể đưa lên mod menu sau);
+    - không được làm lệch vùng chạm (touch) so với hình vẽ.
+  - **Không đụng** cách vẽ map ngoài việc đổi kích thước màn logic. Chạm (touch) phải đổi theo đúng hệ số mới: T9a chứng minh native tính toạ độ chạm từ cùng các biến đó.
+  - **ĐỔI THIẾT KẾ sau T9a (quản đốc, 2026-11-01). Mục này thay các dòng "Tăng tầm nhìn" và "Chỉnh được bằng mod menu" ở trên.**
+    - Bằng chứng:
+      - Vùng nhìn thế giới (map, camera) KHÔNG lấy từ màn logic 0x2d6098/9c. Nó lấy từ khung đệm FB, có kích thước `cfg.W/H` do `OriginalDisplay_ConfigInfo` 0x147030 tính.
+      - Quản đốc đã tự disasm hàm này: W > 799 ⇒ (512, H·512/W); 480 ≤ W ≤ 799 ⇒ (480, H·480/W); W < 480 ⇒ (480, 320).
+      - Máy 2400×1080 ⇒ FB **512×230**, phóng ~4,69 lần lên màn thật.
+      - `MAP_*` và camera đọc `GRP_nDisplayW/H` (= kích thước FB).
+      - Đổi màn logic chỉ làm UI nhỏ đi, map không rộng thêm.
+    - **Tăng tầm nhìn = nhân cfg.W/H với k (phương án A của A2)**. Màn logic, UI, chữ và HUD **giữ nguyên cỡ**. **Không** vá 4 hằng 0x133048/58 và 0x1333f8/0c.
+    - **Int thứ 4 @0x72f78c = P**, là phần trăm k×100.
+      - Chỉ nhận 100..150; giá trị khác (kể cả 0) ⇒ k = 1,0, giống game gốc.
+      - Thanh "Tầm nhìn" trong mod menu: 100..150, bước 5.
+      - **Mặc định 120** (FB 614×276, vẽ tốn ×1,44). Đã chốt sau khi đọc `RenderCore*`: đó là mã chết; đường vẽ thật `SGL_FrameBufferToScreen` lấy W/H live, texture làm tròn lên POT.
+      - Tối đa 150. Từ 140 trở lên, tier trượt camera của menu đổi (không crash) ⇒ chấp nhận.
+      - **Cave phải ép W chẵn** (`and w8,w8,#~1`), vì pitch FB = 2W và upload GL căn 4 byte; W lẻ làm ảnh xiên. Dùng cave 52 B trong `docs/t9a_bangiao_A2.md` phần 2.
+      - **Nâng trần pool `MEM_Create` từ 8 MB lên 10 MB**: 0x145730 `mov w9,#0xa00000`, 0x145734 `cmp x8,#0xa00,lsl#12`.
+        - Lý do: `GRP_Initialize` xin `MEM_Malloc(2·W·W)` từ pool, thêm tới ~0,66 MB ở P = 150.
+        - Công nhân kiểm encoding và nguồn `CS_knlAlloc`.
+        - Nếu T9c đo được mức dùng đỉnh, ghi lại số đo.
+    - **Chỉ áp khi mở lại app**, vì cfg chỉ đọc 1 lần trong `startClet`. Mod menu phải ghi rõ "khởi động lại game để áp dụng". Không gọi Reapply.
+    - **Lề HUD**: 29 điểm vá, mỗi điểm 1 lệnh, không dùng cave (nhóm `hud`), lùi vào 24 px ngang / 16 px dọc.
+      - Điểm neo W/H: 0x167f7c, 0x167f88. Còn lại là các hằng toạ độ trong `UIPlay_Create`, cần điều khiển, minimap, và hình nền ở `UIPlayPorting_Draw`.
+      - Danh sách byte đầy đủ: `docs/t9a_bangiao_A2.md`.
+      - Vì sửa rect của control nên hình và vùng chạm cùng dời.
+      - **Không áp** bản vá tuỳ chọn vùng chạm màn tiêu đề (0x2051b0/b4): màn logic không đổi nên giữ như gốc.
+
+## Môi trường (container hiện tại, mất khi container bị thu hồi)
+- Công cụ:
+  - `/opt/re/apktool_2.12.1.jar`;
+  - `/opt/re/jadx/bin/jadx`;
+  - `/opt/android/build-tools/35.0.0` (d8, apksigner, zipalign, dexdump);
+  - `/opt/android/platforms/android-34/android.jar`;
+  - `llvm-objdump`.
+- Bản decode sẵn của TEST4 trong `/opt/work`:
+  - `dec4/` (apktool);
+  - `jx4/sources` (jadx);
+  - `lib4/libgame.so`, `lib4/dis.txt` (disasm, có symbol).
+- Tra caller: `python3 scripts/re/xref.py /opt/work/lib4/dis.txt <ham>`.
+- unidbg đã build ở `/opt/unidbg` (`emu/.cp_local` đã có). Chạy:
+  - lệnh: `/opt/work/runemu.sh <OUT> <frames> "<script>" [-Dopt...]`;
+  - script dạng `frame:tap:x,y`, toạ độ 480x320; START = `240,277`;
+  - tuỳ chọn: `-Demu.tracefn=a,b` in khi vào hàm, `-Demu.w/-Demu.h` đổi màn hình;
+  - ảnh chụp ở `<OUT>/fNNNNN.png`.
+- Build từ APK nền:
+  - lệnh: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/<ten>.apk --smali net --vnfont [--diag]`;
+  - so sánh: `python3 /opt/work/apkdiff.py <a.apk> <b.apk>`.
+- Nếu container mới không có các thứ trên: dựng lại theo `emu/README.md`, `emu_android/README.md` và mục Môi trường trong `PROGRESS.md`.
+
+## Vận hành công nhân (người dùng chốt 2026-10-31)
+- Công nhân có ngữ cảnh **vượt 400k token** thì thay công nhân mới cùng vai (A1/A2), không để chạy tiếp.
+- Quản đốc đo ngữ cảnh mỗi lần kiểm tra tiến độ: lấy `usage` của lượt assistant cuối trong transcript subagent (`input + cache_read + cache_creation`).
+- Khi thay:
+  - quản đốc nhắn công nhân cũ ghi bàn giao vào dòng `Bàn giao:` dưới task đang làm (đã xong gì, file nào đã sửa, bước tiếp theo, lệnh đang dùng), rồi dừng;
+  - không trả lời được thì quản đốc dừng hẳn và tự ghi bàn giao từ transcript;
+  - công nhân mới đọc PLAN.md + dòng `Bàn giao:`, không làm lại phần đã tick.
+- Công nhân tự ghi `Bàn giao:` mỗi khi xong một bước lớn, để việc thay không mất tiến độ.
+
+## Ràng buộc và edge case
+- Máy thật của người dùng: Xiaomi, Android 16, 2400x1080, trang nhớ 4 KB. `.so` đã căn 16 KB.
+- Bản offline không đăng nhập Hub. Mọi luồng phụ thuộc `Hub2uniqueUserId` đều nhận giá trị rỗng.
+- unidbg văng ở màn chọn save trong `run_quantize` (jemalloc của libc giả lập, size 0). Đây là lỗi môi trường emulator, không phải của game. Không được "sửa" bằng cách vá game.
+- Mỗi bản build phải có:
+  - `apksigner verify` OK;
+  - `zipalign -c -P 16 4` OK;
+  - `check_apk.py` PASS;
+  - diff APK so với bản trước, giải thích từng file khác.
+
+## Checklist
+- [x] T0. Văng lúc khởi động (`CWrapperHttp` + `SecurityException`): nhóm `net` (TEST6, đã chạy trên máy thật).
+- [x] T0b. Font to hơn `q/16` + chẩn đoán xuất save (TEST7).
+- [x] T1. Rà toàn bộ lối vào mạng Java mà native/UI gọi được — **Quản đốc nghiệm thu**
+  - Agent: A1 (chạy)
+  - Đầu vào: `/opt/work/jx4/sources`, `/opt/work/dec4/smali*`, `docs/offline_phan_tich.md`.
+  - Việc:
+    - liệt kê các class/method trong `com/com2us/**` và `com/hive/**` mở kết nối mạng: `URL.openConnection`, `Socket`, `InetAddress`, `HttpURLConnection`, `okhttp`, `WebView.loadUrl`;
+    - với mỗi method, ghi: ai gọi (native JNI theo tên trong `libgame.so`, hoặc UI), chạy trên luồng nào, bắt ngoại lệ gì;
+    - đánh dấu chỗ `SecurityException` có thể lọt ra luồng không ai bắt (văng app);
+    - với chỗ sửa được theo Quyết định thiết kế: thêm mục vào `CATCH_ADD` nhóm `net` trong `scripts/patch_smali.py`, ghi rõ số lần khớp.
+  - File: `docs/mang_offline_ra_soat.md` (bảng kết quả), `scripts/patch_smali.py`.
+  - Hoàn thành khi:
+    - bảng rà soát đầy đủ;
+    - `python3 scripts/patch_smali.py <bản sao dec4> --group net` chạy không lỗi, đúng số lần khớp;
+    - build thử `out/Inotia4_T1_check.apk` bằng `build_from_apk.sh --smali net --vnfont` PASS các kiểm tra;
+    - `diff -r` smali so với `dec4` chỉ ra đúng các dòng `.catch` thêm vào.
+  - Bàn giao (A1, bước 1/3 xong: rà tĩnh): đã xong — dựng bản đồ native→Java (xref `libgame.so`), quét `com/com2us`+`com/hive` bằng script phủ ngoại lệ (scratchpad `cov2.py`, theo handler `catchall`). Kết quả sơ bộ: chỉ 1 chỗ nguy hiểm thật là `CWrapperHttp$1.run` (đã có mục `CATCH_ADD['net']`); `Hercules.HttpRequest` và `Network.sync` (Hive) đã bắt `Exception`/`runCatching`; `CWrapperHttp.netHttp*Ex` bị chặn bởi `iHttpStatus==2`; WebView không ném SecurityException (WebView `app:id/webView` tạo được trong log TEST5a). Chưa sửa file nào trong repo. Bước tiếp: (2) viết `docs/mang_offline_ra_soat.md`, đọc thêm `Mercury.internalMercuryShowEx`/`ActiveUser.showUserAgreeTerms`/`WrapperUserDefined.GotoURL`; (3) `cp -r /opt/work/dec4 /opt/work/dec_t1 && python3 scripts/patch_smali.py /opt/work/dec_t1 --group net`, build `out/Inotia4_T1_check.apk` (`APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T1_check.apk --smali net --vnfont`), decode lại + `diff -r` với `/opt/work/dec4`, tick T1, ghi Nhật ký.
+  - Bàn giao (A1, T1 XONG, 3/3): đã sửa/tạo `docs/mang_offline_ra_soat.md` (bảng A/B/C + kết luận), `scripts/re/cov_exc.py` (script kiểm phủ ngoại lệ, mới). Không sửa `scripts/patch_smali.py` (chỉ có 1 chỗ nguy hiểm thật, đã có mục `CATCH_ADD['net']` ×2 từ T0). Đã kiểm: `patch_smali --group net` trên bản sao `/opt/work/dec_t1` khớp 2; build `out/Inotia4_T1_check.apk` PASS (zipalign, apksigner, check_apk); decode lại → `diff -r` với `/opt/work/dec4`: `smali/` chỉ 2 dòng `.catch`, `smali_classes2/` không khác, `smali_classes3/` khác do `--vnfont`. Việc còn lại cho quản đốc: nghiệm thu, quyết 3 mục ở mục 7 của tài liệu (chủ yếu `getActiveNetwork` khi làm T4). A1 dừng.
+- [ ] T2. unidbg chạy qua màn chọn save tới game mới — **Quản đốc nghiệm thu**
+  - Agent: A2 (chỉ đọc trước; chạy thật khi A1 ≥ 90%)
+  - Việc:
+    - tìm vì sao jemalloc của libc unidbg nhận `size 0` hoặc hỏng arena ở màn chọn save (frame khoảng 690, sau loạt `FILE_IsExist`);
+    - sửa **trong emulator** (`emu/src/*.java`, hoặc hook/thay malloc trong unidbg), không sửa game;
+    - viết script tap: START → chọn ô trống → game mới → vào màn chơi; tìm toạ độ qua ảnh chụp.
+  - File: `emu/src/*.java`, `emu/README.md`.
+  - Hoàn thành khi: chụp được ảnh đang trong màn chơi (`docs/emu_shots/emu_vao_game.png`), log không còn `UC_ERR`; ghi lệnh tái hiện vào `emu/README.md`. Giới hạn 3 hướng thử; không được thì ghi Vướng mắc.
+  - Bàn giao (A2 đọc trước, chưa sửa file, transcript ~233k):
+    - Hiện trường:
+      - văng ở `libc+0x7626c` (`run_quantize(0)`), gọi từ `arena_run_first_best_fit` tại `libc+0x7782c`;
+      - nút trong `runs_avail` có `mapbits & ~0xfff == 0`, tức bản đồ chunk jemalloc hỏng;
+      - chunk 256 KB; libc nạp ở `0x12870000`.
+      - `emulate` nuốt lỗi rồi chạy tiếp, nên phải grep `UC_ERR|Invalid memory`.
+    - Hướng 1 (thử trước): unidbg `madvise` (syscall 233) là no-op trả 0.
+      - jemalloc coi `MADV_DONTNEED` thành công nghĩa là trang đã về 0, nên tái dùng chunk "zeroed" mà không khởi tạo mapbits. Game `calloc` mọi thứ (`CS_knlAlloc` = `calloc(1,n)`).
+      - Sửa: hook `madvise` trong `emu/src/Inotia4Emu.java`, `advice==4` thì ghi 0 vùng đó; thêm `-Demu.madv=zero|fail|off`; đếm số lần gọi. Số lần gọi = 0 thì bỏ hướng này.
+    - Hướng 2: `emu/src/JMalloc.java` thay `malloc/calloc/realloc/free/memalign/posix_memalign/malloc_usable_size`:
+      - địa chỉ export: `libc+0x1bb08/0x1baa0/0x1bb88/0x1bac0/0x1bb48/0x1bb68/0x1bb28`;
+      - metadata giữ phía Java; bật bằng `-Demu.malloc=java`.
+    - Hướng 3 (chẩn đoán): đặt write-hook lên mapbits bị zero, chạy lại tất định, in PC/LR của kẻ ghi. Nếu là lỗi game thì ghi Vướng mắc, không vá game.
+    - Toạ độ 480x320:
+      - ô save trống: (214,82), (214,165), (214,247); nút quay lại: (18,22). Quản đốc đã kiểm trên ảnh 960x640 `/opt/work/emuS/f00690.png`: ô đầu ở khoảng (428,165).
+      - script mẫu: `620:tap:240,277;690:shot:s0;700:tap:214,82;...`;
+      - sau khi chọn ô có thể hiện popup xác nhận hoặc `PopupNetError`.
+  - Bàn giao (A1 mới của T2, lượt 1, đang làm): dùng lib + APK của TEST12; file tạm `/opt/work/t2/` (`run.sh NAME FRAMES SCRIPT [opts]`, lib TEST12 ở `lib12/`).
+    - **Hướng 1 (hook `madvise`) THỬ XONG, KHÔNG HIỆU QUẢ.** `emu/src/Inotia4Emu.java` thêm `-Demu.madv=off|zero|fail` (breakpoint ở đầu `madvise` của libc, đếm theo `advice`). Chạy `-Demu.w=2400 -Demu.h=1080`, tap START ở khung 620, 720 khung: cả 3 chế độ gọi `madvise` 17120 lần, **toàn bộ advice=4 (MADV_DONTNEED)**, len=0x1000, lr=libc+0x7f5f0 (zero: ghi 0 tổng 187.351.040 B; fail: trả -1 17120 lần). Cả ba đều văng **y hệt** ở `libc+0x7626c` (`run_quantize`, x0=0, x2=0x12916a80, x9=0x12a00080, x11=0x12916c80, LR=libc+0x763c8): trạng thái thanh ghi giống từng giá trị ⇒ giả thuyết "madvise no-op làm jemalloc tái dùng trang bẩn" bị bác.
+    - **Hướng 2 (`JMalloc`) ĐANG DỞ, TẠM DỪNG theo lệnh người dùng, chưa có kết luận.** File đã tạo/sửa: `emu/src/JMalloc.java` (mới, biên dịch và chạy được), `emu/src/Inotia4Emu.java` (thêm `-Demu.malloc=java`, gọi `JMalloc.install()` SAU `vm.loadLibrary` vì libc chỉ nạp cùng libgame; in `jmalloc.report()` ở cuối). Thiết kế: breakpoint đầu `malloc/calloc/realloc/free/memalign/posix_memalign/malloc_usable_size` của libc, arena 768 MB ảo mmap trong emulator, lớp kích thước 16/32/48/64 rồi 4 bước mỗi lần gấp đôi, danh sách trống theo lớp, siêu dữ liệu ở Java; con trỏ không phải của JMalloc thì callback trả `true` không đổi thanh ghi để hàm gốc của libc chạy. Cờ phụ: `-Demu.jmalloc.mb=N`, `-Demu.jmalloc.poison=true`, `-Demu.jmalloc.trace=true` (+ `tracemax=N`, in `[jm] op(args) -> kq lr=module+off`).
+    - **Kết quả lần chạy đầu:** game văng sớm ngay trong `nativeStartClet` (drawCalls=0), `UC_ERR_READ_UNMAPPED` ở `pthread_mutex_lock` (`libc+0x68d00`, gọi từ `libc+0x7b2a4`, x0=0xcb29d3a7653a7457 là rác), tức là jemalloc đọc "arena" từ vùng đệm không phải của nó. Thống kê: malloc=0, calloc=13, realloc=1 (con trỏ ngoài 0x12a60000, lr=libgame+0x26e95c, để hàm gốc chạy), free=0. Vết `calloc` cuối trước khi văng: `calloc(1,0xa00000)` (pool MEM 10 MB, libgame+0x145754), `calloc(1,0xa11a1)`, `calloc(1,0x400000)` (libgame+0x23c0b8). Nghi (CHƯA XÁC ĐỊNH, chưa kiểm): có đường libc đưa con trỏ của arena JMalloc vào jemalloc mà không qua các wrapper đã hook (`free`/`realloc`/`malloc_usable_size` gọi thẳng `je_*`), hoặc `malloc`/`free` không bị bắt breakpoint (malloc=0, free=0 là bất thường vì lib còn gọi nhiều chỗ khác).
+    - **Bước tiếp theo:** (1) chạy lại `/opt/work/t2/run.sh j3 20 "" -Demu.w=2400 -Demu.h=1080 -Demu.malloc=java -Demu.jmalloc.trace=true -Demu.jmalloc.tracemax=100000` và đọc `j3.log`: tìm lệnh gọi libc ngay trước khi văng (thêm in LR ở `pthread_mutex_lock` hoặc đặt breakpoint ở `libc+0x7b2a4`); (2) kiểm vì sao `malloc`/`free` đếm 0 (so địa chỉ libc `malloc` = libc+0x1bb08, `free` = +0x1bac0 với địa chỉ libgame thực sự gọi; có thể libgame/libstdc++ resolve sang bản khác); (3) nếu JMalloc chạy được tới màn chơi thì tick T2; nếu không thì làm Hướng 3 (write-hook lên mapbits của run bị zero ở jemalloc gốc, tức chạy KHÔNG có `-Demu.malloc=java`; vị trí văng ở `run_quantize` libc+0x7626c, x2=0x12916a80, x11=0x12916c80, chunk 256 KB tại 0x12900000) và ghi Vướng mắc nếu cũng bí. Hướng 1 đã dùng 1/3, Hướng 2 đã dùng 2/3 (đang dở), Hướng 3 chưa làm. Chưa làm: script tap vào ô save, ảnh `docs/emu_shots/emu_vao_game*.png`, mục lệnh tái hiện trong `emu/README.md`, tick T2, dòng Nhật ký.
+    - **Lệnh đang dùng:** `/opt/work/t2/run.sh NAME FRAMES "SCRIPT" [opts]` (tự đặt `LIB=/opt/work/t2/lib12/libgame.so` = lib trích từ TEST12 sha256 `442cd19c…9494`, `APK=test_builds/Inotia4_TEST12_vi_offline.apk`, `-Demu.resxml=/opt/work/dec4/res/xml`; log `/opt/work/t2/NAME.log`, ảnh `/opt/work/t2/NAME/`). Tái hiện lỗi gốc: `/opt/work/t2/run.sh r0 720 "620:tap:240,277;690:shot:s690" -Demu.w=2400 -Demu.h=1080` (~2 phút, văng ở log dòng ~920). File tạm trong `/opt/work/t2/`: `r0*` (lỗi gốc), `m_off|zero|fail*` (Hướng 1), `j1*`, `j2*` (JMalloc, j2 có trace), `libc64.dis` (disasm libc sdk23 lib64 của unidbg).
+- [x] T3. Sửa văng khi load save (`CHAR_GetSkillPoint` null ← `GAMESTATE_EnterPlay`) — **Quản đốc nghiệm thu**. **ƯU TIÊN trước T2**: đã có file save người dùng gửi.
+  - Đầu vào:
+    - `logs/save_TEST7/`, xuất từ máy thật bằng TEST7: `d41d8cd98f00b204e9800998ecf8427e/save0.dat` (3192 B; thư mục = MD5 của chuỗi rỗng, tức khoá rỗng), `edf2113c684f2b822de06dad8d06b016A/thpcheckslot1.dat` (31 B), `appinfo.dat`, `envinfo.dat`;
+    - chuỗi tên file `save%d.dat` @0xa5ddb, `thpcheckslot1..3.dat`;
+    - log văng: `logs/may_that_TEST6_load_save_2026-10-31.txt`.
+  - Agent: công nhân chạy mới (A1 mới). A2 đọc trước xong ở ~261k rồi dừng; bàn giao ngay dưới đây.
+  - Bàn giao (A2 đọc trước, quản đốc đã duyệt):
+    - Chuỗi văng:
+      - `GAMESTATE_ProcessMapChange` gọi `bl SAVE_Load` @0x138264 mà bỏ qua giá trị trả về;
+      - `SAVE_Load` trả 0 (0x1d6968) thì `PLAYER_pMainPlayer` (GOT 0x2bebd8) vẫn NULL, vì nó chỉ được gán trong `SAVE_LoadCharacterAll` (0x1d8a44/0x1d8abc);
+      - tiếp đó `SetState(0)` → `EnterPlay` → `CHAR_GetSkillPoint(NULL)`.
+    - Khoá:
+      - `HubSave_GetKey` (0x12b09c) trả buffer `HubSave_key` @0x2d0ca1 (64 B). Offline thì buffer này rỗng, thư mục là MD5("") (khớp).
+      - Lúc lưu (`SAVE_Save` 0x1d5248) và lúc load (`SAVE_LoadData` 0x1d5e5c) dùng cùng khoá. `thpcheckslot` dùng khoá riêng "394572".
+    - Định dạng file:
+      - `n` byte mã + 3 byte đuôi `[Σmã, r, Σthô]` (mod 256).
+      - Công thức mã: `c_i = p_i ^ ((key[(r+i) mod L] + T[(r+i)&255]) & 255)`, với T là bảng 256 B @0xb1bb0, hàm `ENCRYPT_Process2` 0x140970.
+      - Bản thô: 8 B rác, rồi bảng 7 mục `(u16 off,u16 size)` tại p+8 (Info, Player, Chars, Inventory, Quest, Event, ETC). Info có slot, version=5, ...
+    - **Nguyên nhân (gần như chắc):**
+      - khoá rỗng ⇒ L=0 ⇒ `sdiv` chia 0 trả 0 ⇒ chỉ số `msub` = bộ đếm c, không mod;
+      - vòng lặp 0x1409e8/0x140a00/0x140a08 (mã hoá: 0x140a5c–0x140a7c) đọc `key[c]` vượt 64 B, sang `gImgUI`, `g_pSGL`, `g_pSGLDevice`, tức con trỏ heap thay đổi theo mỗi lần chạy;
+      - nên save ghi ở tiến trình A không giải mã được ở tiến trình B: Σthô sai ⇒ `SAVE_LoadData` false.
+      - Bằng chứng: trong `save0.dat`, tại i=1756/1764 (c=1895/1903 ≙ `g_pSGL` 0x2d1408, `g_pSGLDevice` 0x2d1410), phần chênh so với T là con trỏ tag `0xb4000076…`.
+      - Đây là lỗi tiềm ẩn của bản gốc, chỉ lộ khi offline (khoá rỗng), không do Việt hoá.
+    - Còn chưa xác định:
+      - Σthô lúc load chưa tính bằng script;
+      - save cũ của người dùng có lẽ không cứu được;
+      - `APPINFO` dùng khoá `UTIL_GetPhoneNumber` (0x1f0038): nếu khoá này rỗng thì `appinfo.dat` cũng dính cùng lỗi.
+  - Hướng sửa đã chốt (quản đốc):
+    - **P1**: vá lõi `ENCRYPT_Process2`, coi khoá rỗng như độ dài 1 (`key[0]`=NUL ⇒ keystream = T, tất định).
+      - Giữ thư mục MD5(""), không đổi nguồn khoá. Hướng "đổi khoá thành '1'" bị loại vì đụng `HubSave_key` ở nhiều chỗ.
+      - Bản nháp của A2: 0x1409bc `85 9e 05 94` → `b cave`; cave: `bl strlen@plt; cmp w0,#0; csinc w0,w0,wzr,ne; b 0x1409c0`.
+      - **Cave**: ưu tiên vùng đệm thật (byte 0/padding) nằm trong segment R-X đã map, cần chứng minh bằng `llvm-readelf -lS`.
+      - Chỉ khi không có vùng đệm mới mượn thân `SAVE_SaveData` (0x1d5b88). Điều kiện: chứng minh không có xref, không có reloc, không có tên `Java_` / `RegisterNatives` trỏ tới.
+    - **P2 (phòng thủ, làm sau P1)**: `SAVE_Load` trả 0 thì không vào `EnterPlay` với hero NULL. Chỉ nghiên cứu và đề xuất đích an toàn (về menu/màn chọn save), ghi vào tài liệu. **Không áp khi chưa có quản đốc duyệt.**
+  - Task con (làm theo thứ tự, mỗi bước xong ghi `Bàn giao:`):
+    - [x] T3a. `scripts/re/save_crypto.py <libgame.so> <file> --key STR [--oob zero] [--encrypt]`: đọc T từ lib, giải mã/mã hoá, kiểm Σmã/Σthô, in bảng 7 mục.
+      - Hoàn thành khi:
+        - `thpcheckslot1.dat --key 394572` cho Σthô đúng;
+        - `save0.dat --key ""` (giả lập P1, tức key = T) báo Σthô sai và liệt kê các vị trí chênh;
+        - roundtrip mã hoá → giải mã trên dữ liệu thử là bằng nhau;
+        - định dạng ghi vào `docs/save_format.md`.
+    - [x] T3b. P1 qua `scripts/patch_lib.py`, mỗi patch kiểm byte gốc.
+      - Thêm cơ chế "base đã có patch" cho patch 0x203e68 có sẵn trong lib của TEST4: khớp old ⇒ áp, khớp new ⇒ báo "đã áp", khác cả hai ⇒ dừng.
+      - `build_from_apk.sh` thêm `--lib`: thay `lib/arm64-v8a/libgame.so` đã vá, giữ căn 16 KB, giữ store/align như cũ.
+      - Hoàn thành khi:
+        - disasm sau vá đúng các lệnh dự kiến;
+        - `apkdiff` so TEST7 chỉ khác `libgame.so` (và manifest/dex nếu có cờ khác);
+        - diff byte của lib chỉ ở các vaddr đã khai báo.
+    - [x] T3c. Kiểm P1 bằng unidbg gọi thẳng `ENCRYPT_Process2`, không chạy game: khoá "", ghi rác vào `HubSave_key`+64…, mã hoá rồi đổi rác, giải mã.
+      - Hoàn thành khi:
+        - trước vá: giải mã false;
+        - sau vá: true;
+        - kết quả mã hoá của lib đã vá trùng `save_crypto.py --key ""`.
+      - Sau đó build bản thử `test_builds/Inotia4_TEST8_vi_offline.apk` (`--smali net --vnfont --lib --diag`) + SHA256, ghi PROGRESS.
+    - [x] T3d. P2: tài liệu đề xuất (không áp).
+  - Quản đốc nghiệm thu T3a–T3d (2026-10-31): ĐẠT.
+    - Đã tự disasm `ENCRYPT_Process2` trước/sau vá:
+      - khoá rỗng ⇒ `csinc` cho độ dài 1 ⇒ chỉ đọc `key[0]` (NUL);
+      - khoá NULL ⇒ `adr` tới "123\0" @0xa5e67;
+      - nhánh mã hoá lấy độ dài từ `x22 = x0` sau vá;
+      - không có lệnh ghi vào vùng khoá hay `sp+4`.
+    - TEST8 sha256 `a1a7b341…c70c` khớp `SHA256_TEST8.txt`.
+    - **P2 duyệt về nguyên tắc nhưng chưa áp**: chỉ áp sau khi T2 (unidbg chạy được tới màn load) kiểm được đường `SetState(4)`.
+    - **Người dùng xác nhận 2026-11-01: TEST8 lưu → tắt hẳn app → mở lại → load OK trên máy thật** ⇒ T3 XONG (P2 vẫn chờ T2).
+  - Hoàn thành T3 khi: T3a–T3c đạt, T3d có đề xuất; người dùng thử TEST8 theo quy trình: game mới → lưu → tắt hẳn app → mở lại → load.
+  - Bàn giao (A1 mới, T3a XONG): tạo `scripts/re/save_crypto.py` (đọc T từ lib qua `adr`, giải/mã hoá, `--selftest`, `--oob zero|file:`, known-plaintext) và `docs/save_format.md`. Kết quả: `thpcheckslot1.dat --key 394572` Σmã 186/Σthô 68 KHỚP; `save0.dat --key ""` Σthô lưu 16 ≠ tính 226, bảng 7 mục hợp lệ, known-plaintext (Info+21..+32 = 140, 20132, 5) sai 8/12 byte và suy ra byte nhớ `0x2d0d67=0xb4`, `0x2d0d6f=0xb4` (tag con trỏ heap trong `gImgUI`), 20 qword con trỏ nghi vấn đều nằm trên biến con trỏ (`gImgUI`, `g_pSGL*`, `s_cachedTexture`) ⇒ xác nhận nguyên nhân khoá rỗng. Roundtrip 250 ca OK. Phát hiện cho T3b: `ENCRYPT_Process2` KHÔNG có vùng đệm ≥16 B trong segment R-X (khe giữa section chỉ 8/12 B: 0x2a82c8, 0xa3e88, 0x127574), nên T3b dự định sửa ngay trong thân hàm (vùng 0x1409a4–0x1409bf, xem Bàn giao T3b khi xong). Bước tiếp: T3b (`scripts/patch_lib.py` + `build_from_apk.sh --lib`). Lệnh: `python3 -I scripts/re/save_crypto.py /opt/work/lib4/libgame.so <file> --key STR`.
+  - Bàn giao (A1 mới, T3b XONG): sửa `scripts/patch_lib.py` (mỗi patch có old/new/refs/asm: khớp old ⇒ áp, khớp new ⇒ "đã áp", khác ⇒ dừng; thêm `--disasm`, `--list`, `--diff A B`) và `scripts/build_from_apk.sh` (cờ `--lib`, kiểm lib trong APK == bản đã vá). Patch P1 tại `0x1409a4..0x1409bf` (7 lệnh, trong thân `ENCRYPT_Process2`, KHÔNG dùng cave vì không có khe ≥16 B trong segment R-X: khe giữa section chỉ 8/12 B tại 0xa3e88, 0x127574, 0x2a82c8; không cần mượn `SAVE_SaveData`): trước `cbnz x3,0x1409b8; mov w8,#0x3231; add x20,sp,#4; movk w8,#0x33,lsl#16; str w8,[sp,#4]; mov x0,x20; bl strlen`; sau `cbnz x3,0x1409ac; adr x20,0xa5e67 ("123\0" có sẵn trong .rodata, refs kiểm 31 32 33 00); mov x0,x20; bl strlen; cmp w0,#0; csinc w0,w0,wzr,ne; nop` ⇒ L=max(strlen,1), khoá NULL vẫn "123", khoá khác rỗng không đổi. Lệnh kế `cbz w22,0x140a24` @0x1409c0 giữ nguyên (refs). Patch 0x203e68 cũ: lib TEST4 đã có ⇒ "đã áp". Bằng chứng: `out/Inotia4_T3b_check.apk` (`--smali net --vnfont --lib --diag`, cờ y TEST7) PASS apksigner/zipalign -P 16/check_apk; `apkdiff` vs TEST7 chỉ khác `lib/arm64-v8a/libgame.so`; `patch_lib.py --diff` lib gốc vs lib trong APK: 24 byte, 3 đoạn, đều trong vùng khai báo; lib vá sha256 `406bfe59...298f` (file `/opt/work/t3/libgame_p1.so`). Bước tiếp: T3c (unidbg gọi thẳng `ENCRYPT_Process2`, so lib gốc `/opt/work/lib4/libgame.so` với `/opt/work/t3/libgame_p1.so`). Lệnh: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/<ten>.apk --smali net --vnfont --lib --diag`.
+  - Bàn giao (A1 mới, T3c XONG): tạo `emu/src/CryptoCheck.java` (gọi thẳng `ENCRYPT_Process2` + `HubSave_key` trong unidbg, không chạy game), `emu/crypto_check.sh` (chạy lib gốc + lib vá rồi so), `scripts/re/crypto_xcheck.py`, log `logs/t3c_crypto_check.log`. Kết quả (khoá rỗng, n=3189, mã hoá lúc bộ nhớ sau `HubSave_key`=rác G1): lib GỐC giải mã G1 ⇒ true, G2 ⇒ **false**; lib VÁ G1 ⇒ true, G2 ⇒ **true**. Bản mã lib vá == `save_crypto.py --key ""` (r đọc từ buf[n+1]) cả 8 ca (khoá rỗng/394572/a/63 byte/NULL "123"/n=28/n=0); lib GỐC khoá rỗng+rác == mô hình `--oob file:<dump bộ nhớ>` từng byte (chứng minh cơ chế đọc vượt buffer); khoá không rỗng/NULL: lib gốc == lib vá; `thpcheckslot1.dat` giải mã đúng ở cả hai; `save0.dat` thật vẫn false (đúng, không cứu được) và plaintext lib ghi ra == script. Build `test_builds/Inotia4_TEST8_vi_offline.apk` (`--smali net --vnfont --lib --diag`) sha256 `a1a7b341...c70c` (đủ ở `test_builds/SHA256_TEST8.txt`), apksigner/zipalign -P 16/check_apk PASS, `apkdiff` vs TEST7 chỉ khác `lib/arm64-v8a/libgame.so`, cùng chứng chỉ ký TEST7 (`cc559651...20d4`). PROGRESS.md đã ghi mục "Phiên 3". Bước tiếp: T3d (P2 chỉ tài liệu). Lệnh: `bash emu/crypto_check.sh /opt/work/lib4/libgame.so <lib vá>`.
+  - Bàn giao (A1 mới, T3d XONG, T3 chờ người dùng thử TEST8): viết `docs/p2_load_fail_guard.md` (CHỈ đề xuất, KHÔNG áp, không có dòng nào trong `patch_lib.py`/bản build). Nội dung: `SAVE_Load` chỉ có 1 caller (`GAMESTATE_ProcessMapChange` @0x138264, bỏ qua giá trị trả về); đích an toàn = `GAMESTATE_SetState(4)` (đường thoát về MainMenu có sẵn của game: `SystemMenu_ConfirmExitOK`, `GAME_Exit` không đụng hero); patch 2 chỗ: `0x138264 bl SAVE_Load` → `b 0x1d5b88` và cave 28 B trong thân `SAVE_SaveData` (0x1d5b88, đã chứng minh không caller/reloc/adrp/qword/smali) = `bl SAVE_Load; tst w0,#0xff; b.eq +8; b 0x138268; mov w0,#4; bl GAMESTATE_SetState; b 0x1382c4` (byte đủ trong tài liệu, đã dựng+disasm trên bản sao rời). Không có khe đệm ≥16 B nên mới cần cave. Chưa chạy thật (cần T2); fixture test = `save0.dat` TEST7 (vẫn không giải mã được sau P1). Chờ quản đốc duyệt mới áp.
+- [ ] T7. Vẽ lại font f18 ở cỡ lớn thật (thay cách phóng q/16 đang làm mất dấu) — **Quản đốc nghiệm thu**. **Ưu tiên: ngay sau T3, trước T2/T4.**
+  - Agent: công nhân mới, chạy thật sau khi T3 xong. A2 đã đọc trước, dừng ở ~402k ngữ cảnh (vượt ngưỡng, không dùng lại).
+  - Bàn giao (A2 đọc trước T7a, chưa có ảnh xác nhận):
+    - **Không phải do buffer cắt.**
+      - Đường chính của game: `SGL_grpCreateStringImageInRect` 0x1340bc → `RenderToTextureInRect` 0x265eb8 → `SGL_RenderFontToAlphaImageInRect` 0x266ac8 → `measureInRect` + `drawInRect`.
+      - Native chép đúng H hàng mà `measureInRect` trả, buffer `int[2048*2048]` (`CWrapperActivity:139`).
+      - Đường `drawText` (rows = `(int)(size*1.3)` @0x2666d4) không có caller.
+    - **Nguyên nhân khả dĩ nhất: dấu trong f18 quá nhỏ.**
+      - Kích thước dấu: nặng 1 px (hàng 16); sừng ơ/ư 1 px (cột 6, hàng 8); sắc/huyền 2 px chéo; hỏi 3–4 px; ngã 4 px. Dấu chồng (Ấ, ổ) nằm ở hàng 0–4.
+      - Phóng q/16 với q = 16–24 thì dấu nặng và sừng vẫn chỉ 1×1 px ảo.
+      - Texture chữ lọc `GL_LINEAR` (`SGL_Texture::Create` @0x2648fc/0x26490c đặt `0x2601`), GPU lại phóng ×1,6875, nên texel đơn bị nhoè mờ, trông như mất dấu. Ảnh xem trước dùng nearest nên không thấy lỗi.
+    - Phụ:
+      - bước dòng của game `GRPX_GetFontHeight` = size+2 (rodata 0xac3c0/0xac270), còn `lineH` của VNFont lớn hơn, nên dòng sau đè dòng trước 3–7 px ở các đường vẽ từng dòng;
+      - cỡ 14/20 (f18) cũng có dấu 1 px.
+    - Chưa xác định: chưa có ảnh máy thật; giá trị `[g_pSGL+0x14]` (hệ số size ở 0x135118).
+  - Quyết định của quản đốc cho T7 (dựa trên bàn giao):
+    - **Kích thước tối thiểu:** mọi dấu ≥ 2×2 px ở cỡ thiết kế.
+      - Dấu nặng 2×2; sừng 2×2 ở hàng x-height; sắc/huyền nét dày 2 px, dài 4–5 px; hỏi ~3×4; ngã dày 2 px, rộng ~6 px.
+      - Dấu cách thân chữ ≥ 1 hàng; dấu chồng cách nhau ≥ 1 hàng.
+    - **Ô font mới** cho size 24, tỉ lệ 1:1:
+      - H ≤ 28 (gợi ý: vùng dấu hàng 0–8, chữ hoa 9–23, BASE = 23, đuôi 24–27);
+      - H ≤ `1.3*size` để vẫn hợp đường `drawText`;
+      - đặt tên `font/f24vn.bin` thay cho `f27vn.bin` ở trên.
+    - **Tích hợp:**
+      - size ≥ 24 dùng font mới, hệ số `size/24` (làm tròn xuống như `sc()`);
+      - `measureInRect` và `drawInRect` dùng chung `lineH`;
+      - **size < 24 giữ f18 q/16 như TEST7**; xét lại khi có ảnh/phản hồi của người dùng về chữ nhỏ.
+    - **Loại** vá `GL_LINEAR → GL_NEAREST` (0x2648fc/0x26490c): ảnh hưởng mọi texture SGL. Chỉ xét lại nếu font mới vẫn nhoè.
+    - **T7a đạt khi** có ảnh mô phỏng: render buffer chữ (nearest) rồi phóng bilinear ×1,6875 bằng Python, so f18×1,5 với font mới. Ghi vào `docs/font_lon.md`.
+  - Đầu vào:
+    - `font/f18vn.bin`, `font/charset.txt`;
+    - `java/src/com/namp/vh/VNFont.java` (H=18, BASE=14, GAP=2);
+    - `scripts/gen_fontdata.py`; `docs/emu_shots/font_cu_moi_co24.png`;
+    - định dạng `.bin` (xem `PROGRESS.md`, `docs/PLAN_goc.md`);
+    - native thường xin size 24 (hộp rộng 565). Buffer `drawText` cao `size*1.3`.
+  - [x] T7a. Chẩn đoán mất dấu ở TEST7.
+    - So khung glyph đã phóng với vùng native cấp cho từng đường vẽ (`drawText`, `drawTextPart`, `drawInRect`/`measureInRect`), tìm hàng bị cắt hoặc bị dòng sau đè.
+    - Tái hiện bằng unidbg (màn có chữ hoa/chữ có dấu chồng như "Ấ", "ổ") và chụp ảnh.
+    - Hoàn thành khi: kết luận có bằng chứng (số hàng, địa chỉ native hoặc dòng code), ghi vào `docs/font_lon.md`.
+  - [x] T7b. Vẽ font mới.
+    - Giữ dáng f18, thiết kế cho size 24 (khoảng 1,5 lần f18, ô cao ~27 px); dấu thanh và dấu mũ vẽ lại rõ, không chồng lấn; cùng charset với `f18vn.bin`.
+    - Cách vẽ: vector hoá f18 rồi raster lại, hoặc phóng kiểu pixel-art rồi sửa bằng script. Không dùng nguồn font không rõ bản quyền.
+    - Sinh bằng script trong `fontgen_inotia/` hoặc `scripts/`, ra `font/f27vn.bin` (cùng định dạng, ghi H/BASE mới).
+    - Ảnh so sánh `docs/font_preview_f24.png`: f18×1,5 hiện tại và font mới (cả bản nearest và bản bilinear ×1,6875), câu mẫu đủ dấu, ví dụ "Ầ Ẫ Ẩ Ấ Ậ Ể Ỗ Ữ Ự Ỹ Đ ầ ẫ ẩ ấ ậ ể ỗ ữ ự ỹ đ — Thiên đường ở phía trước!".
+  - [x] T7c. Tích hợp vào VNFont.
+    - `size < 24` dùng f18 như trước; `size >= 24` dùng font mới với hệ số `size/24`, chỉ phóng to.
+    - Glyph phải nằm gọn trong vùng native cấp (theo T7a).
+    - Không đổi 5 method công khai; không cấp phát trong vòng vẽ.
+    - Dữ liệu font lớn: tách nhiều hằng String nếu vượt giới hạn 64 KB của một hằng.
+  - Bàn giao (A1 mới, TẠM DỪNG theo lệnh người dùng — chưa tick T7a/T7b/T7c, chưa sửa `VNFont`/build/`PLAN` ngoài dòng này):
+    - **T7a (bằng chứng native đã có, CHƯA ghi `docs/font_lon.md`):** `SGL_Font_Android::RenderToTextureInRect` 0x265eb8 gọi `SGL_GetTextSizeInRect` (→ `measureInRect`), làm tròn W/H lên luỹ thừa 2 (0x265f4c–0x265fa0), `malloc` đệm A8, gọi `SGL_RenderFontToAlphaImageInRect` 0x266ac8 (→ `jDrawTextInRect`, rồi chép **byte 3 = alpha** của từng int, nguồn stride = width, đúng `height` hàng; 0x266bd4 `ldrb [x5,#3]`), tạo texture `GL_ALPHA/UNSIGNED_BYTE` (0x2660b8) rồi `glTexSubImage2D`; `SGL_Texture::Create` 0x2648f8–0x26490c đặt MIN và MAG = 0x2601 (GL_LINEAR). ⇒ không có chỗ nào cắt hàng; buffer đủ H hàng. Kết luận khả dĩ nhất (khớp bàn giao A2): dấu 1 px của f18 bị `GL_LINEAR` ×1,6875 làm nhoè. Mô phỏng Python (nearest và bilinear) đã chạy: `/opt/work/t7/prev1.png` (f18×1,5 mờ/mất dấu, f24 rõ). unidbg KHÔNG cho ảnh chữ thật: màn chọn ô save chỉ ghi log `[text] drawTextInRect size=24 w=659` rồi văng `UC_ERR_READ_UNMAPPED` (lỗi T2) nên chữ không lên ảnh; cách thay thế dự kiến: thêm `-Demu.dumpfont=DIR` vào `emu/src/Inotia4Emu.java` (lưu `fontBuf` PNG sau `drawTextInRect`) — chưa làm.
+    - **T7b (sắp xong, `font/f24vn.bin` CHƯA ghi vào repo):** đã tạo `fontgen_inotia/gen_f24.py` (bút 2×2 từ f18: cột `XM=[0,1,3,4,6,7,8,10,...]`, hàng `ym(y)=9+(y-5)*13/9`; ô H=28, BASE=23, chữ hoa hàng 9–23, x-height 15–23, ADV=11, space 8; chữ vẽ tay A K M N R V X Y k v w x y; dấu vẽ lại trên lưới 24 và ghép: sắc/huyền 3×4, hỏi 4×4, ngã 9×3, mũ/á 7×3 có khối 2×2 đặc, nặng 2×2; dấu chồng cách ≥1 hàng), `fontgen_inotia/check_f24.py` (kiểm: charset == f18vn, H≤28, lưới, mọi thành phần dấu bbox ≥2×2, nét ≥2, cách thân ≥1 hàng, Chebyshev ≥2, dấu chồng, sừng, đ/Đ), `fontgen_inotia/preview_f24.py` (ảnh so sánh f18×1,5 và f24, nearest + bilinear ×1,6875; ghi `docs/font_preview_f24.png`). Kết quả kiểm gần nhất trên bản thử `/opt/work/t7/f24_try.bin`: 233 glyph, 132 glyph có dấu/sừng, 169 thành phần dấu (169 có khối 2×2 đặc), **còn 4 vi phạm: `ỡ ữ Ỡ Ữ`** (dấu ngã cách sừng 1 px) — sửa bằng cách dịch dấu ngã sang trái thêm 1 cột hoặc cắt cột phải cho riêng glyph có sừng trong `build()` (dòng `cx - 1 if (horn and tone == 'tilde')`). Còn lại: ghi `font/f24vn.bin` (`python3 fontgen_inotia/gen_f24.py font/f18vn.bin font/f24vn.bin`), chạy `check_f24.py ... ` = 0 vi phạm, xem lại ảnh các glyph `Q & % 4 m n` (hơi dày nhưng đọc được), sinh `docs/font_preview_f24.png`, viết `docs/font_lon.md`.
+    - **T7c (CHƯA làm):** kế hoạch — `VNFont` thêm lớp trong `Face` (h, base, gap, den 16 hoặc 24, mảng widths/offsets/bits/chars) với 2 mặt chữ; `size<24` → f18 q=max(16,size) mẫu 16; `size>=24` → f24 q=size mẫu 24; `sc(v,q,den)`; gạch chân 2 hàng cho f24; thêm `FontData24.java` (`String[] PARTS`, mỗi phần ≤16000 byte) sinh từ `font/f24vn.bin` bằng `scripts/gen_fontdata.py` (mở rộng) và thêm bước sinh vào `scripts/build_from_apk.sh` (sau dòng 47), `scripts/rebuild.sh` (dòng 60), `emu/run.sh` (danh sách javac). Sau đó build `out/Inotia4_T7_check.apk` và `apkdiff` với TEST8 (chỉ được khác `classes3.dex`).
+    - File tạm: `/opt/work/t7/` (`f24_try.bin`, `prev1.png`, `pv.py`, `variants.py`, `exp1.py`, log unidbg `emu0|1|2`). Lệnh: `python3 fontgen_inotia/gen_f24.py font/f18vn.bin /opt/work/t7/f24_try.bin && python3 fontgen_inotia/check_f24.py font/f18vn.bin /opt/work/t7/f24_try.bin --list && python3 fontgen_inotia/preview_f24.py font/f18vn.bin /opt/work/t7/f24_try.bin /opt/work/t7/prev.png --glyphs /opt/work/t7/glyphs.png`.
+  - Bàn giao (A1 thứ 2, T7a/T7b/T7c XONG, T7 chờ quản đốc duyệt ảnh + người dùng thử trên máy): 
+    - T7b: `font/f24vn.bin` (233 glyph, H=28, BASE=23), `check_f24.py` = 0 vi phạm (sửa `ỡ ữ Ỡ Ữ` bằng dấu `tilde_h` 7 cột trong `fontgen_inotia/gen_f24.py`); ảnh `docs/font_preview_f24.png`.
+    - T7a: `docs/font_lon.md` (bằng chứng native đã kiểm lại bằng disasm, số đo `fontgen_inotia/mark_stats.py`: f18×1,5 có 35/171 dấu chỉ dày 1 px và 58 dấu đỉnh < 200/255 sau bilinear, f24 là 0/187; kết luận: dấu 1 px + `GL_LINEAR` ×1,6875, CHƯA XÁC ĐỊNH ở máy thật). `-Demu.dumpfont=DIR` đã thêm vào `emu/src/Inotia4Emu.java` (làm được ngay lần thử 1); ảnh unidbg `docs/emu_shots/font_dump_f18_s24.png`, `font_dump_f24_s24.png`, `font_dump_so_sanh_gpu.png` (công cụ `fontgen_inotia/gpu_sim.py`). unidbg vẫn văng `UC_ERR_READ_UNMAPPED` sau lệnh vẽ (lỗi T2), nên `fNNNNN.png` không có chữ, dump đệm thì có.
+    - T7c: `java/src/com/namp/vh/VNFont.java` (2 mặt chữ; `size<24` giống hệt TEST7, kiểm CRC 10 size × 4 kiểu; `size>=24` f24 chỉ phóng to; 5 method công khai giữ nguyên), `java/src/com/namp/vh/FontData24.java` (`PARTS`, ≤16000 B/phần), `scripts/gen_fontdata.py` (`--parts`), bước sinh trong `scripts/build_from_apk.sh`, `scripts/rebuild.sh`, `emu/run.sh`; `java/test/VNFontTest.java` thêm kiểm không cắt hàng ở 24/28/38.
+    - Build `out/Inotia4_T7_check.apk` (`--smali net --vnfont --lib --diag`, sha256 `f355d923…b5d7`, không commit): apksigner v1/v2/v3 OK, `zipalign -c -P 16 4` OK, `check_apk.py` PASS, cùng chứng chỉ ký TEST8 (`cc559651…20d4`), `apkdiff` với TEST8 chỉ khác `classes3.dex`; trong dex chỉ có lớp `com/namp/vh/*` (FontData, Offline, Offline$1-3 giống hệt TEST8; VNFont đổi; thêm FontData24, VNFont$Face).
+    - Việc còn lại cho quản đốc: duyệt `docs/font_preview_f24.png` + `docs/emu_shots/font_dump_so_sanh_gpu.png`; nếu duyệt thì đóng gói bản thử cho người dùng xác nhận trên máy (chữ cỡ 24/28/38 dùng f24, chữ nhỏ vẫn f18). Lệnh build: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/<ten>.apk --smali net --vnfont --lib --diag`.
+  - Quản đốc nghiệm thu T7a–T7c (2026-11-01): ĐẠT.
+    - Đã xem `docs/font_preview_f24.png` (phóng to từng đoạn) và `docs/emu_shots/font_dump_so_sanh_gpu.png`: f24 đủ dấu ở cả nearest lẫn bilinear ×1,6875; ỡ/ữ không còn dính sừng.
+    - Đã soát diff `VNFont`: `size<24` giữ đường f18 cũ; f24 chỉ phóng ≥1; `lineH` = 1,25·q ở cả 2 mặt chữ (giữ như TEST7); `topFor` = 0 ở 24/28/38 nên glyph nằm gọn bộ đệm `drawText` (size·1,3); chỉ cấp phát trong `init`; hàm công khai vẫn `synchronized`.
+    - Tự chạy lại: `apkdiff` TEST8 → T7_check chỉ khác `classes3.dex`; apksigner v1/v2/v3 OK; `zipalign -c -P 16 4` OK.
+    - Đóng gói `test_builds/Inotia4_TEST9_vi_offline.apk` (= `out/Inotia4_T7_check.apk`, SHA256 trong `SHA256_TEST9.txt`) gửi người dùng. Còn chờ người dùng xác nhận trên máy ⇒ chưa tick T7.
+  - Hoàn thành T7 khi:
+    - ảnh preview và ảnh unidbg đủ dấu;
+    - build thử PASS;
+    - dex chỉ khác ở `com/namp/vh/*`;
+    - quản đốc duyệt ảnh, rồi người dùng xác nhận trên máy.
+- [ ] T8. Mod menu: sát thương / phòng thủ / EXP, thanh kéo x1–x50 — **Quản đốc nghiệm thu**. Thứ tự: sau T7.
+  - Agent: công nhân chạy mới sau T7. A2 đọc trước T8a xong (~312k, dừng).
+  - Bàn giao (A2 đọc trước T8a, chưa chạy gì):
+    - **Điểm chặn:**
+      - `CHAR_AddDamage` 0x18b3e0: x0 = kẻ tấn công (có thể NULL), x1 = mục tiêu, w2 = sát thương int32 (< 1 thì thoát);
+      - `MERCENARYSYSTEM_AddExperience` 0x1c7688 (giết quái; gọi từ `CHARSYSTEM_Die`);
+      - `MERCENARYSYSTEM_AddExpFixed` 0x1c7a2c (thưởng nhiệm vụ).
+      - Không hook `CHAR_AddExperience` 0x183964: nó còn 3 caller nạp EXP tồn của lính, hook sẽ nhân đôi.
+      - Sát thương kịch bản `EVTSYSTEM_Process` (`AddLife(-N)`) không được phủ.
+    - **Phe:** byte `[char+0x311]`: 0 = người chơi (party, main player, triệu hồi chép phe chủ), 1 = quái, 2 = NPC.
+    - **Phòng thủ gốc:** `dmg×(1000−def‰)/1000`, phép bị chặn ≤ 750‰ (0x18bde4), nên không thể "phòng thủ ×50" ⇒ **chia sát thương nhận cho Mdef**.
+    - **Patch:**
+      - A 0x18b3e0 `ffc301d1` → `c8010014` (b 0x18bb00);
+      - B 0x1c7860 `c80d8052` → `c510ff17` (b 0x18bb74);
+      - C 0x1c7a44 `f303002a` → `5910ff17` (b 0x18bba8).
+      - Cave 228 B ở 0x18bb00..0x18bbe4 (sha256[:16] của byte gốc `e35d270c3ba4b6ee`), mượn 2 hàm chết `CHAR_AddDamageEffect` và `CHAR_AddDamageByDefaultCheck`. Bằng chứng: 0 caller, 0 reloc/adrp/literal trỏ vào, không có stub PLT, `libHercules` không import.
+      - Mã asm và hex đầy đủ có trong báo cáo A2 (quản đốc đã lưu, công nhân T8 dựng lại bằng `llvm-mc` theo quy cách dưới đây).
+    - **Vùng nhớ:** Mdmg/Mdef/Mexp = int32 @0x72f780/0x72f784/0x72f788.
+      - Nằm ở đuôi trang cuối `.bss` (bss kết thúc 0x72f770, trang kết thúc 0x730000).
+      - 0 adrp vào trang 0x72f000/0x730000; reloc duy nhất gần đó có addend 0x72f770, nhỏ hơn 0x72f780.
+    - **Kênh Java → native:**
+      - `sun.misc.Unsafe`: `hiddenapi-flags` ghi `putInt(JI)V` là `unsupported`, tức không bị chặn ở targetSdk 36.
+      - `/proc/self/mem`: SELinux `allow domain self:file rw_file_perms`; ghi vào VMA có `VM_WRITE` không cần `FOLL_FORCE`.
+      - Base lấy từ `/proc/self/maps` (lib được giải nén, offset 0).
+    - **Gắn:** `MainActivity.onResume` (smali `.locals 1`), ngay sau `invoke-static {p0}, Lcom/hive/HiveActivity;->onResume(Landroid/app/Activity;)V` (khớp 1 lần). Nút nổi thêm bằng `addContentView` trên UI thread.
+  - Quyết định của quản đốc cho T8 (dựa trên bàn giao; đã tự disasm đầu `CHAR_AddDamage`: hàm gốc đọc `[x1,#0x2c9]` không kiểm null sau `cmp w2,#1`, nên cave đọc `[x1,#0x311]` cùng thứ tự là không thêm rủi ro):
+    - Dùng 3 điểm A/B/C, cave và vùng nhớ như bàn giao.
+      - T8a phải kiểm lại: (p_vaddr + p_memsz) của PT_LOAD chứa `.bss` làm tròn lên trang 4 KB và 16 KB đều > 0x72f78c.
+      - Phía Java kiểm lúc chạy: dòng `maps` phủ 0x72f780..0x72f78c phải là `rw-p`.
+    - **Hệ số:** chỉ nhận 2..50; giá trị khác (kể cả 0 mặc định) coi như 1, tức như game gốc.
+    - **Sát thương phe người chơi gây ra** (kẻ tấn công ≠ NULL và phe 0) × Mdmg, **chặn trần 999.999**, không phải 0x7FFFFFFF như A2 đề xuất.
+      - Lý do: tránh tràn `dmg×80` @0x18b48c và `[atk+0x19c]×dmg` @0x18b4e8.
+      - Hằng: `mov w13,#0x423f; movk w13,#0xf,lsl#16`.
+    - **Sát thương phe người chơi nhận** (mục tiêu phe 0) chia Mdef, tối thiểu 1.
+    - **EXP** × Mexp, chặn trần 0xFFFFFF (`w19×110` @0x1c7868 tràn khi > 19,5M).
+    - **Kênh Java → native:**
+      - **chính**: `/proc/self/mem` (lỗi chỉ là IOException);
+      - **dự phòng**: `Unsafe.putInt`, chỉ khi đã kiểm magic ELF tại base và vùng đích `rw-p`;
+      - ghi xong đọc lại để kiểm;
+      - cả hai đều hỏng thì toast "Mod không chạy được trên máy này", game vẫn chạy bình thường.
+      - Ghi lại cả 3 giá trị ở mỗi `onResume`, vì `.bss` về 0 mỗi lần mở app.
+    - **Smali:** thêm cơ chế `INSERT_AFTER` vào `patch_smali.py` (dòng neo khớp đúng 1 lần trong method, chèn 1 dòng sau), thay vì thay cả thân `onResume`.
+    - **Nút nổi:**
+      - nhỏ, kéo thả được, không che vùng 960×640 giữa màn: đặt ở lề trái/phải, vì màn logic 1422×640 dư mỗi bên 231 px;
+      - bọc `try/catch Throwable`; chống thêm 2 lần;
+      - không cấp phát trong vòng lặp game.
+    - T8d theo kế hoạch của A2: `emu_start` tại 3 điểm vá với thanh ghi và `.bss` đặt sẵn, thử Mdmg/Mdef/Mexp = 0, 1, 2, 50, 51 và biên trần; với A, đặt breakpoint ở `CHAR_AddLife` để đọc w1 = −dmg.
+  - Bàn giao (A1 mới của T8, T8a XONG): tạo `docs/mod_menu.md` (bằng chứng, cave A/B/C từng lệnh, bảng điểm vá, tràn số, kênh Java→native, kế hoạch kiểm, chênh lệch so với A2), `scripts/re/mod_check.py` (kiểm bằng chứng + phân tích thanh ghi tự do; log `logs/t8a_mod_check.log` = TẤT CẢ ĐẠT), `scripts/asm/mod_cave.s` + `scripts/asm/build_mod_cave.sh` (llvm-mc + ld.lld, ra `/opt/work/t8/mod_cave.bin` 236 B sha256 `cb645162…9765`). `PT_LOAD` bss: 0x72f770 → làm tròn 4 KB và 16 KB đều 0x730000 > 0x72f78c. Cave dùng cả 2 hàm chết (0x18bb00..0x18bbec, 59 lệnh); trần sát thương 999.999 và EXP 0xFFFFFF, chỉ nhân khi giá trị gốc < trần. Điểm vá: A 0x18b3e0 `ffc301d1`→`c8010014`; B 0x1c7860 `c80d8052`→`c510ff17`; C 0x1c7a44 `f303002a`→`5a10ff17` (khác A2: `59…` vì cave dài hơn). Kênh: `/proc/self/mem` qua `RandomAccessFile` (bằng chứng SELinux/kernel/bionic AOSP trong doc; chưa thử máy thật), dự phòng `Unsafe`. Bước tiếp: T8b = nhóm `mod` trong `scripts/patch_lib.py` (thêm `--group`, cave kiểm sha256 byte gốc), ghi disasm trước/sau vào mục 10 của `docs/mod_menu.md`. Lệnh: `python3 -I scripts/re/mod_check.py /opt/work/lib4/libgame.so /opt/work/lib4/dis.txt`, `bash scripts/asm/build_mod_cave.sh`.
+  - Quản đốc nghiệm thu T8a–T8d (2026-11-01): ĐẠT (chờ người dùng thử trên máy).
+    - Đã soát cave (59 lệnh, khít 0x18bb00..0x18bbec) và `ModMem.java`:
+      - base lấy từ dòng `libgame.so` offset 0; PT_LOAD đầu có vaddr 0 ⇒ base = load bias;
+      - kiểm 16 B `rw-p` trong maps; magic ELF; ghi rồi đọc lại; Unsafe chỉ dùng làm dự phòng; không ném ngoại lệ.
+    - Tự chạy lại: `apkdiff` TEST9 → T8_check chỉ khác `classes.dex`, `classes3.dex` và `libgame.so`; apksigner OK; `zipalign -c -P 16 4` OK.
+    - unidbg: 21.772/21.782 ca đạt, 10 ca ngoài miền (EXP âm ở B, đã chấp nhận).
+    - Đóng gói `test_builds/Inotia4_TEST10_vi_offline.apk` (= `out/Inotia4_T8_check.apk`, SHA256 trong `SHA256_TEST10.txt`).
+    - Chưa tick T8: chờ người dùng xác nhận nút MOD hiện và hệ số có tác dụng trên máy thật (kênh `/proc/self/mem`/Unsafe trên Android 16 CHƯA XÁC ĐỊNH).
+  - [x] T8a. RE + thiết kế, ghi vào `docs/mod_menu.md`.
+    - Tìm hàm tính sát thương người chơi gây ra / nhận và hàm cộng EXP trong `libgame.so`, dựa vào symbol + disasm:
+      - chữ ký, kiểu dữ liệu (byte/short/int, có dấu không), giá trị tối đa;
+      - mọi caller;
+      - cách phân biệt phe người chơi với quái (cờ, con trỏ party, `PLAYER_pMainPlayer`...).
+    - Chọn điểm vá (vaddr), cave (nếu cần) và vùng nhớ 3×int không dùng (chứng minh không có xref).
+    - Chọn kênh Java → native, có bằng chứng (tài liệu Android/SELinux hoặc thử thật) rằng chạy được trên Android 14–16 với app thường; nêu phương án dự phòng.
+    - Hoàn thành khi: tài liệu đủ bảng điểm vá (vaddr, byte cũ, lệnh mới, lý do), cách chặn tràn số, kênh Java → native, kế hoạch kiểm.
+  - Bàn giao (A1 mới của T8, T8b XONG): `scripts/patch_lib.py` giờ có nhóm `base`/`p1`/`mod` (`--group`, mặc định tất cả; mỗi nhóm áp trọn vẹn hoặc dừng; patch cave kiểm sha256 byte gốc `48718ee5…3c36`; `refs` kiểm lệnh kế tiếp của 3 điểm vào; `--check-asm` dựng lại cave bằng llvm-mc và so; `--diff` in theo vùng khai báo, `-v` in từng đoạn). Lib TEST4 + `base` + `p1` + `mod` sha256 `5d3ecb3b…4382` (lib của TEST9 + `mod` ra đúng file này). `--diff` chỉ ra đúng 5 vùng khai báo (254 B khác); các phép thử âm tính (sửa byte cave/điểm B/refs, áp lệch nhóm, `--diff` sai nhóm) đều dừng. Disasm trước/sau ở mục 10 của `docs/mod_menu.md`. Bước tiếp: T8c = `java/src/com/namp/vh/ModMenu.java` (+ `ModMem.java`), `INSERT_AFTER` trong `scripts/patch_smali.py` nhóm `mod`, `build_from_apk.sh` (javac cần android.jar cho ModMenu; `--smali mod` bắt buộc `--vnfont`; thêm `--libgroup`). Lệnh: `python3 scripts/patch_lib.py <lib> <ra> --disasm`, `python3 scripts/patch_lib.py --diff <A> <B>`.
+  - [x] T8b. Vá native, nhóm `mod` trong `scripts/patch_lib.py`.
+    - Mỗi patch kiểm byte gốc; disasm trước và sau vá ghi vào tài liệu.
+    - Hoàn thành khi `patch_lib.py --diff` chỉ ra đúng các vaddr đã khai báo.
+  - Bàn giao (A1 của T8, DỪNG vì ngữ cảnh > 400k; T8a, T8b XONG; T8c code + build XONG, chưa tick; T8d mới bắt đầu):
+    - **Đã xong**:
+      - T8a `docs/mod_menu.md`, `scripts/re/mod_check.py` (log `logs/t8a_mod_check.log`), `scripts/asm/mod_cave.s` + `build_mod_cave.sh`.
+      - T8b `scripts/patch_lib.py` nhóm `base`/`p1`/`mod` (`--group`, `--check-asm`, `--diff` theo vùng).
+      - T8c: `java/src/com/namp/vh/ModMem.java` (kênh `/proc/self/mem` qua `RandomAccessFile` + dự phòng `Unsafe`, chỉ java.*), `ModMenu.java` (nút nổi kéo thả hút về lề trái/phải, mặc định phải cao 30 %; hộp thoại overlay trong cùng cửa sổ có 3 `SeekBar`, "Đặt lại x1", "Đóng"; `Slot[] SLOTS` để T9b thêm thanh thứ 4 "Tầm nhìn"), `java/test/ModMemTest.java` (JVM của container: DAT tất cả, ghi thật vào `/proc/self/mem`), `INSERT_AFTER` trong `scripts/patch_smali.py` (nhóm `mod`: 1 dòng sau `HiveActivity.onResume` trong `MainActivity.onResume`; đã thử âm tính: neo 0 lần/2 lần/dòng đã có ⇒ dừng), `scripts/build_from_apk.sh` (`--libgroup`; `--smali mod` bắt buộc `--vnfont`; javac có `android.jar`; chạy `patch_lib --diff` sau khi vá).
+    - **Build kiểm đã chạy, PASS** (chưa commit APK): `out/Inotia4_T8_check.apk` sha256 `27bb32d4…7c68` (`--smali net,mod --vnfont --lib --diag`). apkdiff với TEST9: chỉ khác `classes.dex`, `classes3.dex`, `lib/arm64-v8a/libgame.so` (1454 file chung). Decode lại + diff với TEST9: smali chỉ khác `MainActivity.smali` (+1 lệnh `invoke-static {p0}, Lcom/namp/vh/ModMenu;->onResume(Landroid/app/Activity;)V`, baksmali thêm 1 dòng trống) và 10 file mới `smali_classes3/com/namp/vh/ModMem*`, `ModMenu*`; `VNFont`/`FontData*`/`Offline*` giống hệt. `patch_lib --diff` trong build: 254 B khác, 21 đoạn, đều trong vùng khai báo; lib trong APK == lib đã vá (sha256 `5d3ecb3b…4382`). apksigner v1/v2/v3 true, `zipalign -c -P 16 4` OK, `check_apk` PASS, cùng chứng chỉ TEST9 (`cc559651…20d4`). Log: `/opt/work/t8/build_t8.log`, `/opt/work/t8/apkdiff_t8.txt`.
+    - **Còn dở (làm tiếp)**:
+      1. T8c: đọc soát lại `ModMenu.java` một lần (chưa chạy trên máy, chỉ biên dịch bằng javac+d8; UI không thể kiểm trong container); rồi tick T8c.
+      2. T8d, phần unidbg: `emu/src/ModCheck.java` ĐÃ VIẾT NHƯNG CHƯA BIÊN DỊCH/CHẠY (dở). Cần: viết `emu/mod_check.sh` (theo mẫu `emu/crypto_check.sh`: `javac -cp "$(cat emu/.cp_local)" -d work/emucls_mc emu/src/ModCheck.java`, rồi `java -Xss8m -cp work/emucls_mc:$CP ModCheck <lib> patched|orig`); chạy với lib vá `/opt/work/t8/out/libgame_mod_full.so` (patched) và lib gốc TEST4 `/opt/work/lib4/libgame.so` (orig, đối chứng: mọi ca phải bằng giá trị đầu vào), ghi `logs/t8d_mod_check.log`. Có thể phải sửa: `mem.malloc(...).getPointer().peer`, thanh ghi dùng `Arm64Const.UC_ARM64_REG_X0 + i`, `TPIDR_EL0` đặt tay, vùng 0x72f780 có map được trong unidbg không (nếu không thì `be.mem_map`). Ca A dừng ở 0x18b434 (đọc w1 = −dmg), dmg < 1 dừng ở 0x18b7e4; B dừng ở 0x1c7884 (w19, w25); C dừng ở 0x1c7a48 (w19, x8 nguyên). Hệ số thử 0, 1, 2, 3, 10, 49, 50, 51, 100, −1, INT_MIN; biên trần 999.999 và 0xFFFFFF (±1). Kết quả phải đúng công thức mục 1/3/5 của `docs/mod_menu.md`.
+      3. T8d, build cuối: chạy lại `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T8_check.apk --smali net,mod --vnfont --lib --diag` sau mọi sửa Java, rồi `python3 /opt/work/apkdiff.py test_builds/Inotia4_TEST9_vi_offline.apk out/Inotia4_T8_check.apk`. Không commit `out/`, không đặt tên TEST, không gửi người dùng (quản đốc nghiệm thu).
+      4. Cập nhật `docs/mod_menu.md` mục 7 (kết quả kiểm thực), PROGRESS.md nếu cần, tick T8c/T8d, dòng Nhật ký.
+    - **File tạm** `/opt/work/t8/`: `mod_cave.bin|elf|dis`, `out/libgame_mod_full.so` (lib vá đủ), `out/t9mod.so`, `out/*.so` (mẫu âm tính), `dec_t8` (smali sau `--group net,mod`), `d9`/`d8c` (apktool decode TEST9 và T8_check), `jt/` (class test JVM), `apk4`/`apk9` (lib trích từ APK), `domain*.te`, `base_android*.c`, `linker_phdr16.cpp` (nguồn AOSP/kernel đã tải để dẫn chứng).
+    - **Lệnh**: `python3 -I scripts/re/mod_check.py /opt/work/lib4/libgame.so /opt/work/lib4/dis.txt`; `bash scripts/asm/build_mod_cave.sh`; `python3 scripts/patch_lib.py --check-asm`; `python3 scripts/patch_lib.py <lib> <ra> --disasm`; `python3 scripts/patch_lib.py --diff <A> <B> [--group mod]`; `javac --release 8 -cp /opt/android/platforms/android-34/android.jar -d <out> java/src/com/namp/vh/ModMem.java java/src/com/namp/vh/ModMenu.java`; test JVM: `javac -cp <cls> -d <test> java/test/ModMemTest.java && java -cp <test>:<cls> ModMemTest`.
+    - **CHƯA XÁC ĐỊNH**: (a) `/proc/self/mem` và `Unsafe` trên máy thật Xiaomi Android 16 (chỉ có bằng chứng SELinux/kernel/bionic AOSP và thử trên Linux của container); (b) giá trị tối đa của `[atk+0x19c]` (thuộc tính 0x5e, nhân với dmg ở 0x18b4e8: tràn nếu > 2147 khi dmg = 999.999, chỉ ảnh hưởng aggro); (c) UI vẽ sát thương 6 chữ số; (d) ai dùng bộ ba con trỏ 0x2cfbb0..0x2cfbc8 (end = 0x72f770, kết thúc trước vùng hệ số); (e) giao diện nút/hộp thoại chưa thấy trên màn thật (vị trí mặc định lề phải cao 30 % suy từ ảnh HUD gốc); (f) `scripts/rebuild.sh` dòng javac `java/src/com/namp/vh/*.java` chỉ có stub, sẽ lỗi vì ModMenu cần `android.jar` (thuộc T5, chưa sửa).
+  - Bàn giao (A1 thứ 2 của T8, TẠM DỪNG theo lệnh người dùng; chưa tick T8c/T8d; PLAN chỉ sửa dòng này):
+    - **T8c (đọc soát XONG, KHÔNG sửa gì, chưa tick):** đã đọc `ModMenu.java`, `ModMem.java` và smali `mod` theo quyết định thiết kế, không thấy chỗ lệch. Nút nổi lề trái/phải kéo thả hút lề, chống thêm 2 lần (`findViewById(ID_BUTTON)` + biến tĩnh), mọi đường bọc `try/catch Throwable`; `SharedPreferences` `namp_mod`; `onResume` ghi lại đủ 3 giá trị (`push`); `/proc/self/mem` chính, `Unsafe` dự phòng chỉ khi magic ELF và vùng `rw-p`; đọc lại để kiểm; toast "Mod không chạy được trên máy này" khi hỏng (1 lần/tiến trình); chỉ ghi 3 int (không đụng int thứ 4); Java không cấp phát trong vòng lặp game. `MainActivity.<clinit>` nạp `libgame` trước `onResume`; manifest không có `extractNativeLibs` (mặc định true) nên `maps` có `/libgame.so` offset 0. Vị trí mặc định nút (lề phải, cao 30 %) trống trong ảnh HUD gốc. Còn để tick T8c: chạy lại build cuối (xem T8d) rồi kiểm `apkdiff` (dex chỉ khác `com/namp/vh/*` + `MainActivity` +1 dòng; kết quả build lần trước đã PASS).
+    - **T8d, phần unidbg (CHẠY ĐƯỢC, kết quả đạt):** `emu/src/ModCheck.java` biên dịch được và đã sửa (mô hình `w25` đúng phép tính 32 bit của game; đủ 3x3 phe + kẻ tấn công NULL; mọi cặp (Mdmg, Mdef) trong {0,1,2,3,10,49,50,51,100,-1,INT_MIN}; kiểm cave không ghi vùng hệ số, int thứ 4 giữ nguyên; A dừng tại `CHAR_AddLife` 0x18b844 đọc x0 và w1 = −sát thương; bảng ca biên; log đầy đủ từng ca) và `emu/mod_check.sh` (mới; chạy lib vá rồi lib gốc, thêm 2 đối chứng âm tính). Kết quả lần chạy cuối (lib vá `/opt/work/t8/out/libgame_mod_full.so` sha256 `5d3ecb3b…4382`, lib gốc `/opt/work/lib4/libgame.so`): lib vá 21 782 ca, DAT 21 772, LOI 0, 10 ca ngoài miền (B với EXP cơ sở < 0, ghi nhận); lib gốc 21 782 ca, DAT 21 782, LOI 0; đối chứng âm tính 2/2 báo LOI đúng; dòng cuối "TONG KET: TAT CA DAT (lib va + lib goc)".
+    - **Chưa làm:** (1) chạy `bash emu/mod_check.sh /opt/work/lib4/libgame.so /opt/work/t8/out/libgame_mod_full.so work/modcheck 2>&1 | tee logs/t8d_mod_check.log` (log đầy đủ từng ca ở `work/modcheck/{patched,orig}.full.log`, có thể nén gz đưa vào `logs/`); (2) ghi bảng kết quả vào `docs/mod_menu.md` mục 7 (bảng ca biên lấy từ phần "BANG CA BIEN" của log, số ca theo nhóm A/B/C); (3) build cuối `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T8_check.apk --smali net,mod --vnfont --lib --diag` (Java không đổi nên APK `out/Inotia4_T8_check.apk` sha256 `27bb32d4…7c68` có thể dùng lại), `python3 /opt/work/apkdiff.py test_builds/Inotia4_TEST9_vi_offline.apk out/Inotia4_T8_check.apk`, apksigner verify, `zipalign -c -P 16 4`, `check_apk`; (4) tick T8c/T8d, dòng Nhật ký. KHÔNG tick T8 cha.
+    - **File tạm** `/opt/work/t8/`: `mc1/ mc2/ mc3/` (kết quả các lần chạy `mod_check.sh`, `*.log`, `*.full.log`), cùng các file của bàn giao trước (`out/libgame_mod_full.so`, `d9`, `d8c`, `mod_cave.*`...).
+    - **CHƯA XÁC ĐỊNH:** (a) `/proc/self/mem` và `Unsafe` trên máy thật Android 14–16; (b) EXP cơ sở âm tại điểm B: cave B không chặn `w19 < 1` (chỉ cave C chặn), nhưng disasm cho thấy `w19 >= 0` tại 0x1c7860 (≥ 1 sau `cmp w0,#1` @0x1c7754, nhân hệ số 2..15 rồi ÷10, rồi nhân `(GetAttr(0x72)+100)` rồi ÷100); chỉ âm nếu `GetAttr(0x72) < −100`, chưa kiểm ⇒ 10 ca ngoài miền, không coi là lỗi cave; (c) `[atk+0x19c]` và UI sát thương 6 chữ số (như bàn giao trước); (d) nút MOD và hộp thoại chưa thấy trên máy thật.
+  - Bàn giao (A1 thứ 2 của T8, T8c + T8d XONG, đã tick; T8 cha chờ quản đốc nghiệm thu):
+    - T8c: đọc soát `ModMenu.java`/`ModMem.java`/smali `mod`, không sửa (chi tiết ở Bàn giao ngay trên). Build kiểm dựng lại: `out/Inotia4_T8_check.apk` sha256 `467f83c351c1b1e1e51f5740eb8faa800a900c739d96d2328b5294a028d85882` (không commit; nội dung 1454 file giống hệt bản dựng trước `27bb32d4…7c68`, chỉ khác chữ ký/dấu thời gian). `apkdiff` với TEST9: chỉ khác `classes.dex`, `classes3.dex`, `libgame.so`. Decode lại + `diff -rq` với TEST9: `MainActivity.smali` +1 lệnh (`invoke-static {p0}, Lcom/namp/vh/ModMenu;->onResume(Landroid/app/Activity;)V`, `diff` thấy +2 dòng vì baksmali thêm dòng trống) và 10 file mới `com/namp/vh/ModMem*`, `ModMenu*`; manifest, `res`, `classes2.dex`, `classes4.dex` giống hệt. apksigner v1/v2/v3 true, chứng chỉ `cc559651…20d4`; `zipalign -c -P 16 4` OK; `check_apk.py` PASS; `patch_lib.py --diff` lib TEST4 ↔ lib trong APK: 254 B, 21 đoạn, đều trong vùng khai báo, lib == `5d3ecb3b…4382`.
+    - T8d: `emu/mod_check.sh` + `emu/src/ModCheck.java` (log `logs/t8d_mod_check.log`, từng ca `logs/t8d_mod_check_full.log.gz`). Lib vá 21.782 ca: đạt 21.772, lệch 0, ngoài miền 10 (EXP cơ sở âm ở điểm B, chỉ khi `GetAttr(0x72) < −100`; quản đốc đã chấp nhận); lib gốc 21.782/21.782; 2 đối chứng âm tính đều báo lệch. Bảng kết quả và bảng ca biên ở `docs/mod_menu.md` mục 7.1.
+    - Việc còn lại cho quản đốc: nghiệm thu T8, tick T8 cha, đóng gói bản thử (chưa đặt tên TEST, chưa gửi người dùng). Lệnh: `bash emu/mod_check.sh /opt/work/lib4/libgame.so /opt/work/t8/out/libgame_mod_full.so work/modcheck`; build: `APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T8_check.apk --smali net,mod --vnfont --lib --diag`. File tạm `/opt/work/t8/` (`mc_final.out`, `build_final.log`, `apkdiff_final.txt`, `d8f` = decode bản dựng lại, `fin/libgame.so`).
+    - CHƯA XÁC ĐỊNH: (a) `/proc/self/mem`/`Unsafe` trên máy thật Android 14–16; (b) `GetAttr(0x72)` có âm được không (10 ca ngoài miền ở B); (c) `[atk+0x19c]` tràn khi sát thương lớn (chỉ ảnh hưởng thù hận) và UI vẽ sát thương 6 chữ số; (d) giao diện nút MOD/hộp thoại trên màn thật; (e) `scripts/rebuild.sh` chưa dựng được ModMenu (thuộc T5); (f) Hive `setContentView` sau `onResume` (nếu có) làm mất nút tới lần `onResume` kế (chưa thấy đường gọi trong luồng offline).
+  - [x] T8c. `ModMenu.java` + nhóm smali `mod` (gắn vào `MainActivity`).
+    - Nhãn tiếng Việt.
+    - Hoàn thành khi: build PASS; dex chỉ khác ở `com/namp/vh/*` và `MainActivity` đúng số dòng thêm.
+  - [x] T8d. Kiểm.
+    - unidbg gọi thẳng các hàm đã vá với Mdmg/Mdef/Mexp = 1, 2, 50 và giá trị biên (tràn số); kết quả đúng công thức.
+    - Rồi build bản thử cho người dùng.
+- [ ] T9. Tầm nhìn rộng hơn + HUD lùi vào trong — **Quản đốc nghiệm thu**. Thứ tự: làm cùng đợt hoặc ngay sau T8 (dùng chung vùng nhớ mod và nhóm patch).
+  - Agent: A2 mới đọc trước T9a ngay (chỉ đọc).
+  - Bàn giao (A2 đọc trước T9a, TẠM DỪNG ~40%, ~145k ngữ cảnh; chưa có patch nào đủ bằng chứng):
+    - **Biến:**
+      - 0x2d6090/94 là W/H thật; 0x2d6098/9c là W/H logic.
+      - Hai hàm ghi: `SGL_grpInitialize` (0x133030/3c, 0x13307c/80) và `SGL_ReapplyScreenSize` (0x1333e0/e8, 0x133440/44).
+      - `resolutioninit` có 0 caller, là mã chết.
+    - **4 hằng cần đổi để tăng tầm nhìn:** 0x133048, 0x133058 (grpInitialize), 0x1333f8, 0x13340c (Reapply), dạng `mov w8,#0x44200000/0x44700000`.
+      - Nhánh 960 phải thành 1,5×H_logic, vì `GetScalePlusW/H` (0x130968/0x1309c0) còn so W_logic với 960.
+      - Cần cave mới (cave 0x18bb00 đã dành cho T8).
+    - **Chiếu hình:** `SGL_LoadProjectionView_Screen` 0x132a84 dùng `glOrthox(0,W_logic,0,H_logic)`, viewport kín màn ⇒ đổi W/H logic là toàn cảnh co giãn nhất quán.
+      - Reapply gọi `glViewport` + `LoadProjectionView`, và chỉ chạy từ `nativeReapplyScreenSize`.
+    - **`CalcResolution*` chỉ dùng cho menu/popup (căn giữa 960×640), KHÔNG dùng cho HUD màn chơi** ⇒ không có "1 điểm chung" để lùi HUD.
+      - HUD màn chơi neo thẳng vào W/H logic qua `SGL_GetScreenWidth/Height` (0x131928/0x131984, hơn 70 caller) trong `UIPlay_Create` 0x167f28 và `UIPlayPorting_Draw` 0x16985c.
+    - **`UIPlay_Create`** (đọc tới 0x168340):
+      - cột trái x=1, y=155/232/309, ô 75×75;
+      - cột phải x=W−93, y=10/110/210;
+      - thanh ID 4 căn giữa (W−458)/2, y=0;
+      - 6 nút kỹ năng x=(W−3)−off, y=(H+2)−off (mảng off ở rodata 0xac410/0xac5e0/0xac1e0/0xac280/0xac1d0).
+      - `ControlObject_SetRect` = vùng chạm ⇒ vá ở đây thì hình và chạm cùng dời, với điều kiện vá `UIPlayPorting_Draw` theo.
+    - **Chạm:**
+      - `Point_ChangeGameBufferPosToUIBufferPos` 0x13ec20 nhân theo `SGL_GetScreenWidth/Height` ⇒ tự theo W/H logic;
+      - `SimulateTouchPress` 0x1e906c: `x·480/W_logic`.
+      - Đường từ Java tới `handleCletEventImpl` chưa đọc.
+    - **Còn phải đọc:**
+      - thứ tự `onResume` so với `SGL_grpInitialize`;
+      - `MAP_DrawPartial`/`MAP_*` (hằng 640/960, camera);
+      - ảnh nền khi H > 640 (`GAMELOADER_DrawBackGround`, `STATE_DrawMainMenu`, `DrawTitle_Title`, `RenderCoreFlush` 640f);
+      - nửa sau `UIPlay_Create`, `UIPlayPorting_Draw`, minimap, phím ảo;
+      - rủi ro theo từng màn.
+  - Bàn giao (A2 thứ 2 đọc trước T9a, xong ~75%, dừng ở ~355k ngữ cảnh; chi tiết, byte và asm ở `docs/t9a_bangiao_A2.md`):
+    - **Vùng nhìn thế giới = FB `cfg.W/H`** (`OriginalDisplay_ConfigInfo` 0x147030), không phải màn logic ⇒ đổi thiết kế (xem "ĐỔI THIẾT KẾ sau T9a").
+    - Ghi k trong `onResume` là kịp, vì `startClet` đọc cfg 1 lần sau `onSurfaceCreated` + 500 ms. Reapply không tạo lại FB ⇒ chỉ áp khi mở lại app.
+    - MAP/camera:
+      - không có hằng 640/960 nào giới hạn vùng vẽ (0x280 ở `MAP_*` là stride tile);
+      - chạm UI đọc W/H logic live tại 0x17a1e4..0x17a230.
+    - HUD: 29 điểm vá 1 lệnh (bảng trong tài liệu). Patch tầm nhìn: 1 điểm 0x14709c + cave 48 B trong thân `SGL_grpResume` 0x133454.
+    - Còn lại (~25%):
+      - `RenderCoreInitialize`/`RenderCoreFlush`/`CSFB_grpFlushLcd`: nhánh theo {240, 320, 400, 640}, texture FB cố định?;
+      - `MAP_SetFocus`, `TouchGameObject_*`;
+      - unidbg dump `GRP_nDisplayW/H` (thuộc T9c).
+  - Bàn giao (A2 thứ 3, T9a ~92%, ~296k; chi tiết ở `docs/t9a_bangiao_A2.md` phần 2):
+    - `RenderCore*` là mã chết. Đường vẽ thật lấy W/H FB live, không có số cứng, mọi buffer cấp động.
+    - Cần ép W chẵn trong cave. Map hẹp hơn vùng nhìn thì căn giữa, phần thừa tô đen.
+    - Chạm thế giới không đổi tỉ lệ UI→FB, giống game gốc: CHƯA XÁC ĐỊNH, kiểm ở T9c.
+    - Còn lại của T9a: viết `docs/tam_nhin_hud.md` (gộp 2 bàn giao) và xác nhận chạm thế giới bằng unidbg ⇒ giao cho công nhân chạy T9 làm đầu tiên.
+  - Bàn giao (A1 mới của T9, T9a XONG):
+    - Đã tạo `docs/tam_nhin_hud.md` (gộp 2 bàn giao A2, bảng 29 điểm lề HUD, cave 52 B, pool, bằng chứng mã chết, rủi ro, kế hoạch T9c), `scripts/re/view_check.py` (log `logs/t9a_view_check.log`, dòng cuối TẤT CẢ ĐẠT), `scripts/asm/view_cave.s` + `build_view_cave.sh` (llvm-mc + ld.lld ra đúng 52 B của A2, sha256 `2c406b71…da97d`).
+    - Kiểm lại: 29/29 byte gốc khớp, 29/29 lệnh mới dựng lại bằng `llvm-mc` khớp, delta ngữ nghĩa +24 ngang/+16 dọc đúng từng điểm; `SGL_grpResume` mã chết (0 caller, 0 reloc kể cả RELATIVE, 0 adrp+add, 0 PLT, tên chỉ ở `.dynstr`; chuỗi `grpResume` chỉ có trong `libgame.so` của APK TEST10 (mọi dex/smali/asset) và 0 trong `libHercules.so`); pool: `0910a052`/`1f0160f1` → `0914a052`/`1f0168f1` dựng lại khớp, mặt nạ 0x1fffc00 giữ 10 MB; `CS_knlAlloc` = `calloc(1,n)`, `CS_knlGetFreeMemory` = `ActivityManager.MemoryInfo.availMem`.
+    - Chênh lệch nhỏ so với PLAN: cave ép chẵn bằng `and` (làm tròn xuống) nên **P = 105 ⇒ W = 536, không phải 538** (512·105/100 = 537,6 → 537 → 536); H' = floor(H·P/100) không chỉnh (lệch tỉ lệ ≤ 0,4 %).
+    - CHƯA XÁC ĐỊNH: tap-để-đi trên màn chơi (`TouchGameObject_EventMap` dùng thẳng toạ độ UI như đơn vị FB, như game gốc; không chạy tới màn chơi trong unidbg); thứ tự `onResume` → `startClet` trên máy thật; mũi tên `TutorialDescription` lệch 24/16 px; `INSTANTMSG_*`/`Tutorial*` không đọc lại.
+    - Bước tiếp: T9b = nhóm `view`, `hud`, `pool` trong `scripts/patch_lib.py`; Slot "Tầm nhìn" trong `ModMenu.java`; build `--libgroup base,p1,mod,view,hud,pool`.
+  - Quản đốc nghiệm thu T9a–T9c (2026-11-01): ĐẠT (chờ người dùng thử trên máy).
+    - Đã soát `scripts/asm/view_cave.s`:
+      - P ngoài 100..150 ⇒ giữ như gốc;
+      - W·P và H·P < 2³¹;
+      - `and` làm tròn W xuống số chẵn (P=105 ⇒ 536; quản đốc ghi kỳ vọng 538 trong lệnh giao là sai, 536 mới đúng theo thiết kế).
+    - Đã soát diff `ModMenu`: thêm Slot "Tầm nhìn" 100..150 bước 5, mặc định 120; nút "Đặt lại x1" không đụng tầm nhìn.
+    - Tự chạy lại:
+      - `apkdiff` TEST10 → T9_check: chỉ khác `classes3.dex` và `libgame.so`;
+      - apksigner OK; `zipalign -c -P 16 4` OK.
+    - unidbg:
+      - FB P=100/120/150 = 512×230 / 614×276 / 768×345; màn logic giữ 1422×640;
+      - `UIPlay_Create` dịch đúng 21 control;
+      - pool đỉnh 3,50 → 3,72 MB (trần 10 MB).
+    - Đóng gói `test_builds/Inotia4_TEST11_vi_offline.apk` (= `out/Inotia4_T9_check.apk`, SHA256 trong `SHA256_TEST11.txt`).
+    - Chưa tick T9: chờ người dùng xác nhận trên máy (HUD, chạm, minimap, hiệu năng ở 120/150).
+  - [x] T9a. RE + thiết kế, ghi vào `docs/tam_nhin_hud.md`.
+    - Mọi chỗ ghi/đọc 0x2d6098/0x2d609c và mọi hằng 640/960 (int `0x280`/`0x3c0`, float `0x44200000`/`0x44700000`) có liên quan tới kích thước màn; phân loại từng chỗ.
+    - Caller của `CalcResolutionWidth/Height`, `GetResolutionWidth/Height`, `GRPX_GetScreenWidth/Height`: neo HUD vào mép hay căn giữa vùng 960×640 hay khác.
+    - Ảnh nền toàn màn (menu, tiêu đề) xử lý thế nào khi H_logic > 640 (kéo giãn, lặp hay để trống).
+    - Camera/map lấy kích thước màn từ đâu.
+    - Toạ độ chạm đổi từ màn thật sang logic ở đâu.
+    - Thứ tự `onResume` (Java) so với `SGL_grpInitialize` (lúc GL tạo surface).
+    - Đề xuất patch (vaddr, byte gốc, lệnh mới) cho tầm nhìn và cho lề HUD, kèm rủi ro từng màn (menu, hội thoại, bản đồ nhỏ, cửa hàng).
+  - Bàn giao (A1 mới của T9, T9b XONG):
+    - `scripts/patch_lib.py`: thêm nhóm `view` (2 patch: 0x14709c `b 0x133454` + cave 52 B 0x133454..0x133488, byte gốc khai báo đủ 52 B), `hud` (29 patch 1 lệnh, mỗi cái kèm lệnh kế tiếp để kiểm, trừ 6 cặp kề nhau), `pool` (0x145730, 0x145734); mặc định áp cả 6 nhóm; `--check-asm` dựng lại cave `mod` + cave `view` (llvm-mc + ld.lld) + 31 lệnh đơn `hud`/`pool` (llvm-mc) và so byte. Đã thử: áp trên lib TEST4 và trên lib TEST10 (thêm `--group view,hud,pool`) ra cùng 1 file (sha256 `d5af7d0a…1f98`); áp lần 2 ⇒ 39 "đã áp"; 5 phép thử âm tính (byte gốc HUD/cave/pool sai, refs sai, HUD lệch trạng thái) đều dừng không ghi gì; `--diff` TEST10 ↔ lib vá: 96 B, 35 đoạn, đều trong vùng khai báo; diff lib TEST4 ↔ lib đủ nhóm: 350 B, 56 đoạn, đều trong vùng; byte lạ ngoài vùng ⇒ báo "NGOAI VUNG".
+    - `java/src/com/namp/vh/ModMenu.java`: Slot 4 "Tầm nhìn" (100..150, bước 5, mặc định 120, "%d%%", ghi chú "Khởi động lại game để áp dụng", ghi int thứ 4 qua `ModMem`); `clamp` đưa về nấc; nút "Đặt lại x1" chỉ đặt lại 3 thanh đầu (`MULT_COUNT`), không đụng tầm nhìn. Test JVM `java/test/ModMenuSlotTest.java` + `ModMemTest` đều đạt.
+    - Build `out/Inotia4_T9_check.apk` (`--smali net,mod --vnfont --lib --libgroup base,p1,mod,view,hud,pool --diag`) PASS apksigner/zipalign/check_apk, lib trong APK == lib vá `d5af7d0a…1f98`. T9c còn: unidbg, `apkdiff` với TEST10, rồi tick.
+    - `emu/src/Inotia4Emu.java`: thêm `-Demu.poke=addr=val,...` (ghi int vào base+addr trước nativeStart), `-Demu.dump=addr:n,...`, `-Demu.pool=true` (+ `-Demu.poolevery=N`) đọc `MEM_GetUsedPoolSize/TotalPoolSize`, ghi đỉnh.
+  - [x] T9b. Vá native (nhóm `view` = 0x14709c + cave 0x133454, nhóm `hud` = 29 điểm lề) trong `patch_lib.py` + thanh "Tầm nhìn" (P 100..150, bước 5) trong `ModMenu`, kèm dòng "khởi động lại game để áp dụng".
+  - Bàn giao (A1 mới của T9, T9c XONG; T9 cha CHƯA tick, chờ quản đốc nghiệm thu):
+    - Công cụ mới: `emu/view_check.sh` (54 lần chạy unidbg, 3 song song, ~6 phút với `--title`) + `scripts/re/view_xcheck.py` (đối chiếu với công thức); `Inotia4Emu` thêm `-Demu.poke`, `-Demu.dump`, `-Demu.pool`, `-Demu.poolevery`, `-Demu.hudcall`. Log: `logs/t9c_view_check.log` (dòng cuối TẤT CẢ ĐẠT), `logs/t9c_apk_check.txt`; ảnh `docs/emu_shots/t9c_*.png`; kết quả đầy đủ ở `docs/tam_nhin_hud.md` mục 12–13.
+    - Số dump (máy 2400×1080): màn logic 0x2d6098/9c = 1422/640 ở mọi P; FB 0x2d7ab4/ab8: P = 100 ⇒ 512/230, P = 120 ⇒ 614/276, **P = 105 ⇒ 536/241** (W chẵn; không phải 538), P = 150 ⇒ 768/345; P = 0/99/151/−1/200 ⇒ 512/230 như gốc. Công thức đúng ở thêm 6 kích thước máy (960×640, 1920×1080, 800×480, 799×480, 600×360, 479×320).
+    - Pool: tổng 8 MB (lib gốc) → 10 MB (T9). `used` khớp từng byte với +2·(W'² − W0²) (P=120: +229.704 B; P=150: +655.360 B). Đỉnh đo được ở màn sâu nhất chạy được (chọn ô save, tới khung 760): lib gốc 3,50 MB; T9 P=120 3,72 MB. Trong màn chơi: CHƯA XÁC ĐỊNH.
+    - Ảnh: màn tiêu đề (khung 610) và màn chọn ô save (khung 640, sau tap START (240,277) ở khung 620) của lib gốc, P=100, P=120 giống nhau từng pixel; tap START vẫn trúng. unidbg vẫn văng `UC_ERR_READ_UNMAPPED` ở màn chọn ô save (T2) ⇒ KHÔNG chụp được màn chơi/HUD. Thay vào đó gọi thẳng `UIPlay_Create(1)` trong unidbg: 21 control dịch đúng bảng (ngang ±24, dọc ±16), w/h không đổi.
+    - APK `out/Inotia4_T9_check.apk` sha256 `5d247dd93011281e066c60181866eb52a40a7efa94d279d8e538bd5971c96f16` (không commit): `apkdiff` với TEST10 chỉ khác `classes3.dex` (smali chỉ khác ở `com/namp/vh/ModMenu*`) và `libgame.so`; apksigner v1/v2/v3 đạt (cùng chứng chỉ `cc559651…20d4`); `zipalign -c -P 16 4` đạt; `check_apk` PASS; `patch_lib --diff` TEST10 → T9: 96 B, đều trong vùng khai báo.
+    - CHƯA XÁC ĐỊNH: HUD/chạm thật ở màn chơi trên máy; minimap + hình nền bán nguyệt chỉ kiểm bằng disasm (không chạy được); tap-để-đi (`TouchGameObject_EventMap`); thứ tự `onResume` → `startClet` trên máy thật; mức dùng pool trong màn chơi; mũi tên `TutorialDescription`; `INSTANTMSG_*`/`Tutorial*` không đọc lại.
+    - Việc cho quản đốc: nghiệm thu T9, quyết gói bản thử (chưa đặt tên TEST, chưa gửi người dùng). Báo người dùng: thanh "Tầm nhìn" chỉ có tác dụng sau khi mở lại game; P mặc định 120; "Đặt lại x1" không đụng thanh này.
+  - [x] T9c. Kiểm.
+    - unidbg với `-Demu.w=2400 -Demu.h=1080`:
+      - dump 0x2d6098/9c (kỳ vọng 1422/640) và `GRP_nDisplayW/H` 0x2d7ab4/ab8 (kỳ vọng 512/230 khi P = 100, 614/276 khi P = 120);
+      - chụp màn tiêu đề/intro ở P = 100 và P = 120; so vị trí chạm (tap vào START vẫn trúng).
+    - Nếu T2 xong: chụp màn chơi.
+    - Rồi build bản thử cho người dùng.
+- [ ] T10. Thay nút HUD màn chơi bằng ảnh của người dùng — **Quản đốc nghiệm thu**. Thứ tự: sau T8; làm cùng đợt với T9 nếu tiện (cùng là HUD).
+  - Đầu vào: `assets_user/hud/` (PNG RGBA, SHA256 trong `SHA256.txt`; ảnh xem nhanh `assets_user/hud_preview.png`):
+    - `btn_save` (116²), `btn_shop` (116², có sẵn chữ "Cửa hàng"), `btn_pause` (116²), `btn_frame` (116², khung tròn trống), `btn_swap` (186²);
+    - `attack` + `attack_pressed` (512², vùng có hình khoảng 425×408 và 507×507).
+    - Ảnh HUD gốc trên máy thật: `docs/emu_shots/may_that_man_choi_hud_goc.jpg`.
+  - Ánh xạ dự kiến (quản đốc; người dùng xác nhận khi xem bản thử):
+    - nút tải về/lưu (cột trái, trên) → `btn_save`;
+    - giỏ hàng (cột trái, giữa) → `btn_shop`;
+    - bánh răng (cột trái, dưới) → `btn_pause` (**người dùng đã xác nhận 2026-11-01**);
+    - nút đổi ↻ (phải, giữa) → `btn_swap`;
+    - các ô kỹ năng/bình máu (khung tròn) → `btn_frame` (icon kỹ năng/bình vẫn do game vẽ đè lên);
+    - nút tấn công lớn (phải, dưới) → `attack`, lúc bấm → `attack_pressed`.
+  - Quy tắc:
+    - giữ nguyên kích thước ô sprite gốc trong atlas, để layout và vùng chạm không đổi;
+    - thu ảnh người dùng bằng Lanczos, giữ alpha, căn giữa; xử lý premultiplied alpha đúng theo định dạng atlas;
+    - dùng lại pipeline ảnh đã có (`scripts/img_vi.py`, đã dùng cho `UI_BUT_ENG_*`, `UI_006`...);
+    - ảnh nào không tìm thấy hoặc ánh xạ không chắc thì ghi "CHƯA XÁC ĐỊNH", không đoán.
+  - Bàn giao (A2 đọc trước T10a, ~92%, ~279k; chi tiết ở `docs/t10a_bangiao_A2.md`, ảnh ở `docs/hud/`):
+    - Atlas là PNG thường 512², RGBA, alpha thẳng: `assets/common/game_res/UI_014.png.jpg` và `UI_015.png.jpg`. Bảng frame nằm trong rodata của lib.
+    - UI_015: loc0 = bánh răng, loc1 = lưu, loc2 = giỏ, loc3 = ↻ (75×75); loc11 = vòng ô kỹ năng (94×94).
+    - UI_014: loc2 = tấn công, loc3 = tấn công bấm (159×160); lớp bấm vẽ cộng đè lên loc2.
+  - Quyết định của quản đốc cho T10 (2026-11-01, đã xem `docs/hud/so_sanh_goc_moi.png` và `mock_attack_goc_moi.png`):
+    - Thay 7 rect:
+      - UI_015 loc0 ← `btn_pause`, loc1 ← `btn_save`, loc2 ← `btn_shop`, loc3 ← `btn_swap`: thu về 73 px, căn giữa trong ô 75, để giữ khe giữa các nút;
+      - UI_015 loc11 ← `btn_frame`: thu về 90 px, căn giữa trong ô 94;
+      - UI_014 loc2 ← `attack`, loc3 ← `attack_pressed`: cùng một cửa sổ, tỉ lệ 0,34 (468×471 quanh (255,258)) → 159×160.
+    - Giữ nguyên các phần người dùng không có ảnh: nền bán nguyệt, loc4, loc5, loc10, loc17, thanh HP/MP/EXP.
+    - Popup gán phím tắt cũng dùng loc3/loc11 nên đổi theo ⇒ chấp nhận (cùng phong cách).
+    - **Vá 3 lệnh kiểu vẽ** `45008052` → `25008052` tại 0x169ae8, 0x169bb4, 0x169bfc (nhóm lib `hudbtn`), để ảnh bấm vẽ alpha thường thay vì cộng (tránh cháy sáng). Phải kiểm byte gốc và ngữ cảnh disasm trước khi vá.
+    - Thu ảnh bằng Lanczos trên RGBA straight. Selftest: pixel ngoài 7 rect giống hệt gốc; atlas không đổi thì chép nguyên byte.
+    - Script mới `scripts/hud_swap.py`; cờ `--hud` trong `build_from_apk.sh`.
+  - Bàn giao (A1, T10a, T10b, T10c xong; T10 cha chờ quản đốc nghiệm thu; chi tiết `docs/hud_thay_nut.md`):
+    - Đã tạo/sửa: `scripts/re/hud_check.py` (mới, kiểm byte/disasm bảng loc UI_014/UI_015, kiểu vẽ, 3 lệnh, ID → loc, thứ tự vẽ ô kỹ năng; log `logs/t10a_hud_check.log` TẤT CẢ ĐẠT trên lib TEST4, TEST11 và lib trong APK T10); `scripts/hud_swap.py` (mới; `--selftest`, `--lib`, `--preview`; log `logs/t10b_hud_swap_selftest.log`); `scripts/hud_mophong.py` (mới); `scripts/patch_lib.py` (nhóm `hudbtn`, 3 lệnh 0x169ae8/0x169bb4/0x169bfc, KHÔNG nằm trong nhóm mặc định; sửa `--diff -v`); `scripts/build_from_apk.sh` (`--hud`, ràng buộc `--hud` ⇔ `hudbtn`); `docs/hud_thay_nut.md`; `docs/hud/sau_thay.png`, `docs/hud/mo_phong_hud.png`; `logs/t10c_apk_check.txt`.
+    - Kiểm lại đúng như quản đốc/A2 ghi: base loc UI_014 0xaf3cc (7 mục), UI_015 0xaf474 (40 mục), stride 24; 7 rect khớp từng số; 3 lệnh `45008052` ở đúng 3 nơi gọi `GetLoc(0x15,3)` (không còn nơi nào khác); kiểu 2 = `glBlendFunc(SRC_ALPHA, ONE)`, kiểu 1 = vẽ thường.
+    - Chi tiết thêm: ID 1/2/3/7 → loc1/2/0/3 (bằng byte); khung ô kỹ năng loc11 đều được vẽ TRƯỚC icon ở cả 3 nơi (HUD và popup gán phím tắt) nên khung đặc không che icon.
+    - Atlas ra: `UI_014` 132.023 B `d541527a…cf70`, `UI_015` 192.288 B `a04b7cc8…2606`. Selftest: pixel ngoài 7 rect == gốc từng pixel, chạy 2 lần ra cùng từng byte, atlas không có việc thì chép nguyên byte.
+    - Build `out/Inotia4_T10_check.apk` (không commit; lệnh ở đầu `docs/hud_thay_nut.md`) sha256 `2692c8ca4ae61b194cb38e713d5e7ba04c142db196437ba0364cf370f09e37e6`: `apkdiff` với TEST11 chỉ khác `UI_014.png.jpg`, `UI_015.png.jpg`, `libgame.so` (3 byte, đúng 3 vaddr); apksigner v1/v2/v3 đạt, `zipalign -c -P 16 4` đạt, `check_apk` PASS.
+    - Việc còn lại cho quản đốc: nghiệm thu, đóng gói bản thử cho người dùng (ví dụ TEST12 = `out/Inotia4_T10_check.apk`), xin người dùng xem nút trên máy thật. Ảnh chụp màn chơi vẫn cần T2; `docs/hud/mo_phong_hud.png` chỉ là mô phỏng Python.
+    - CHƯA XÁC ĐỊNH: hình thật trong màn chơi, texture atlas lọc tuyến tính hay gần nhất (không làm alpha bleed), ý nghĩa `data+0x68`, cảm giác nhấp nháy tutorial với lớp bấm alpha thường, `rebuild.sh` chưa có `--hud`/`hudbtn` (T5).
+  - Quản đốc nghiệm thu T10a–T10c (2026-11-01): ĐẠT (chờ người dùng xem trên máy).
+    - Đã xem `docs/hud/mo_phong_hud.png` và `docs/hud/sau_thay.png`: 7 rect đúng, khung ô không che icon, ảnh bấm vẽ alpha không bị cháy sáng.
+    - Tự chạy lại:
+      - `apkdiff` TEST11 → T10_check chỉ khác `UI_014.png.jpg`, `UI_015.png.jpg`, `libgame.so`;
+      - apksigner OK; `zipalign -c -P 16 4` OK.
+    - Còn lại: chưa làm alpha bleed. Vì texture lọc `GL_LINEAR` nên mép nút có thể có viền tối 1 px. Ảnh của người dùng vốn có viền tối nên chấp nhận; nếu người dùng thấy viền thì làm sau.
+    - Đóng gói `test_builds/Inotia4_TEST12_vi_offline.apk` (= `out/Inotia4_T10_check.apk`, SHA256 trong `SHA256_TEST12.txt`).
+    - Chưa tick T10: chờ người dùng xác nhận.
+  - [x] T10a. Tìm sprite HUD gốc: file atlas, toạ độ, kích thước, trạng thái thường/bấm; tìm hàm vẽ trong `UIPlay_*` để xác nhận. Xuất ảnh đối chiếu gốc ↔ mới vào `docs/hud_thay_nut.md`.
+  - [x] T10b. Ghép ảnh mới vào atlas, repack, selftest byte (atlas không đổi phải ra giống từng byte); `apkdiff` chỉ khác đúng các file atlas.
+  - [x] T10c. Kiểm: render atlas ra PNG so với ảnh gốc; nếu T2 xong thì chụp màn chơi; rồi bản thử cho người dùng.
+- [ ] ~~T4. IAP "mua miễn phí"~~ — **BỎ** theo người dùng (2026-10-31). Bàn giao dưới đây giữ lại để tham khảo.
+  - Bàn giao (A2 đọc trước, ~70%):
+    - Java `InAppV4`:
+      - method: `marketConnect(J)V`, `getProductInfo(J)V`, `purchase(String,String,J)V`, `restore(J)V`, `transactionFinish(String,J)V`;
+      - kết quả về qua `glView.queueEvent`, chỉ khi `glView != null` và `cbRef != 0`;
+      - callback `cs{MarketList,GetProductInfo,Purchase}CB(JIILjava/lang/String;Ljava/lang/Object;)V`, đối tượng kèm theo lần lượt là `int[]`, `InAppV4$ProductInfo[]`, `InAppV4$ReceiptInfo[]`;
+      - shim JNI ở 0x278580, 0x27867c, 0x2790e4.
+    - Native:
+      - `InAppV4MarketListCB` @0x212bbc: thành công khi err == 0 và count ≠ 0.
+      - `InAppV4ProductInfoCB` @0x213138 (struct 0x68 B) rồi tới `C2S_HubBeginWithFlow`.
+      - Mua: `NetworkStore_Process` @0x20d518 (state 12) → `InApp_BuyItem` @0x212c74 → `CS_IapV4Purchase(pid, "%d", Inotia_ReceiptInfoCB @0x213954)`.
+    - **Rào chính:** khi err == 0, `Inotia_SendGameServerReceipt` @0x213b08 chuyển sang state 13 → `Network_SendData(0x39)` (gửi receipt lên socket `inotia4.com2us.net:38000`).
+      - Native **không tự cộng vật phẩm**: state 14 chỉ gọi `Transaction_Finish` và hiện popup.
+      - Vì vậy chỉ giả `csPurchaseCB` thì không nhận được gì.
+    - Chưa xác định: gói trả lời của server cho 0x39 và ai cộng gem; nhánh `getActiveNetwork == 1` @0x16ae04 (popup 78).
+  - Việc:
+    - đọc `com/com2us/module/inappv4/InAppV4` (smali) và native `InAppV4MarketListCB` / `csPurchaseCB` / `csGetProductInfoCB` / `InApp_BuyItem` / `UIPlay_CallInAppShopProc`;
+    - thiết kế luồng giả: `marketConnect` thành công, danh sách sản phẩm trả về, `purchase(productId)` → callback thành công đúng định dạng native đọc;
+    - viết nhóm `iap` trong `patch_smali.py` + class mới trong `java/src/com/namp/vh/` nếu cần.
+  - Hoàn thành khi:
+    - có tài liệu `docs/iap_offline.md` (định dạng callback, bằng chứng disasm);
+    - nhóm `iap` áp đúng số lần;
+    - build thử PASS;
+    - nếu T2 xong: unidbg bấm mua một gói và thấy vật phẩm/gem được cộng.
+- [x] T5. Đồng bộ `scripts/rebuild.sh` với các bản vá mới (phụ thuộc T1, T3, T7, T8, T9, T10)
+  - Bổ sung của quản đốc (2026-11-01), phạm vi mở rộng sau T9/T10:
+    - `rebuild.sh` phải tạo ra cùng nội dung với chuỗi build TEST12. Cụ thể:
+      - smali `net,mod` + `--vnfont` (gồm `FontData24`, `ModMenu`, `ModMem`);
+      - lib nhóm `base,p1,mod,view,hud,pool,hudbtn`;
+      - atlas HUD (`hud_swap.py`).
+    - Có cách bật/tắt bản chẩn đoán (diag) cho bản phát hành.
+    - Kiểm: build bằng `rebuild.sh` (không diag) rồi `apkdiff` với một bản build tương ứng từ `build_from_apk.sh`. Chỉ được khác chữ ký/dấu thời gian, hoặc khác có giải thích.
+  - Việc: nhóm smali đầy đủ (`font,lang,offline,net,mod`), nhóm lib (P1 của T3 + `mod`); d8 thêm `--lib android.jar` và `--lib` stub; ghi phiên bản tool vào `tools/VERSIONS.md` (apktool 2.12.1, build-tools 35.0.0, jadx 1.5.3).
+  - Bàn giao (A1, T5 XONG; chi tiết `PROGRESS.md` Phiên 8, log `logs/t5_rebuild_check.txt`, tool `tools/VERSIONS.md`):
+    - Đã sửa/tạo: `scripts/rebuild.sh` (viết lại), `tools/VERSIONS.md` (mới), `logs/t5_rebuild_check.txt` (mới), `PROGRESS.md` (Phiên 8). Không sửa `build_from_apk.sh`, `patch_*.py` hay patch nào.
+    - `rebuild.sh` giờ: bộ tool như `build_from_apk.sh` (apktool 2.12.1, build-tools 35.0.0 gồm d8 `--lib android.jar` + stub, apksigner, zipalign `-c -P 16 4`); smali `font,lang,offline,net,mod`; `com.namp.vh` → `classes3.dex`; lib `base,p1,mod,view,hud,pool,hudbtn`; `hud_swap.py` (selftest + dán 7 ảnh); mặc định KHÔNG diag (bản phát hành), `--diag` = TEST12, `--internet` chỉ cùng `--diag`; `--out`, `--versions`; thêm `--base-apk <apk> [--base-kind vi|en]` để chạy khi không có split. Log và file tạm ở `$WORK` (mặc định `work/rebuild`), không ghi đè `logs/` đã commit.
+    - Kết quả: `rebuild.sh --base-apk TEST4` ↔ `build_from_apk.sh` cùng nhóm (không diag): 0/1453 file khác nội dung, thứ tự mục/nén/căn/CRC giống hệt (chỉ khác dấu thời gian zip và chữ ký v2/v3); nền TEST1(EN) `--base-kind en` (chạy thật plist/memtext/ảnh) cũng 0/1453; `build_from_apk.sh` ↔ TEST12 chỉ khác `classes4.dex` + `AndroidManifest.xml` (LAUNCHER); `rebuild.sh --diag` ↔ TEST12: 0/1454 file khác. apksigner v1/v2/v3, `zipalign -c -P 16 4`, `check_apk` PASS cả 4 bản. sha256 `out/Inotia4_T5_rebuild.apk` `7b85d382…334a`, `out/Inotia4_T5_ref.apk` `5a7e4f20…17ac` (không commit `out/`).
+    - Kiểm từng phần đường split: lib gốc suy ra từ lib TEST4 (sha `790bed16…7187` khớp `logs/patch_lib.log`) vá 7 nhóm một lượt ra đúng lib trong ref (`442cd19c…9494`); `patch_smali` 5 nhóm chạy hết trên bản "gần gốc"; `patch_manifest.py` khôi phục đúng byte.
+    - **CHƯA XÁC ĐỊNH**: đường `rebuild.sh <thư mục split>` chưa chạy trọn (không có split trong container): bước kiểm sha, gộp APKEditor (TEST1/TEST4 gộp bằng 1.4.1; container chỉ có 1.4.5, mới thử trên 1 `base.apk`) và apktool 2.12.1 decode bản gộp 4 split thật. Cần chạy 1 lần khi người dùng có bộ split để xác nhận trước khi T6 dùng.
+  - Hoàn thành khi: `bash -n scripts/rebuild.sh` OK; diff hợp lý; README/PROGRESS ghi rõ cách chạy.
+- [ ] T6. Bản phát hành (phụ thuộc T3, người dùng xác nhận font) — **Quản đốc nghiệm thu**
+  - Việc:
+    - `build_from_apk.sh --smali <nhóm> --vnfont` (không diag) → `releases/Inotia4/Inotia4_vi_offline_<ngay>.apk` + SHA256;
+    - `BAO_CAO.md` (đã làm, chưa làm, debug, việc tồn đọng);
+    - gói `Inotia4_du_an.zip` (theo QUY_TAC_CHUNG mục 11, không kèm APK gốc).
+  - Hoàn thành khi:
+    - mọi kiểm tra ký/align/check PASS;
+    - diff với TEST7 chỉ còn: bỏ `classes4.dex`, manifest trả LAUNCHER về `MainActivity`, cộng các nhóm vá mới;
+    - người dùng cài thử OK.
+
+## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
+- ĐÃ GIẢI QUYẾT (2026-10-31): người dùng bỏ IAP, thay bằng mod menu (T8).
+- **T4 IAP** (2026-10-31): Quyết định thiết kế "native cộng vật phẩm qua callback thành công gốc" **không đúng**. Vật phẩm/gem do game server cộng sau khi nhận receipt (gói 0x39), còn native không cộng cục bộ.
+  - Muốn "mua miễn phí" phải chọn một trong hai:
+    - (a) giả lập trả lời server cho gói 0x39, cùng loại việc với "Gem trên server" vốn đang ngoài phạm vi;
+    - (b) vá native để tự cộng vật phẩm ở state 14.
+  - Cả hai đều cần RE lớn. Chờ người dùng quyết; tạm làm T7 → T2 trước.
+
+## Nhật ký
+- 2026-10-31 quản đốc: lập PLAN giai đoạn ổn định; T0/T0b đã xong ở phiên trước (TEST6/TEST7).
+- 2026-10-31 quản đốc: giao T1 cho A1 (chạy), A2 đọc trước T2. Người dùng gửi save (TEST7) → `logs/save_TEST7/`; T3 ưu tiên trước T2.
+- 2026-10-31 quản đốc: thêm quy tắc thay công nhân khi ngữ cảnh > 400k (người dùng chốt). Lúc ghi: A1 ~233k, A2 ~209k.
+- 2026-10-31 quản đốc: A2 đọc xong T2 (~233k). Kế hoạch 3 hướng ghi ở "Bàn giao" dưới T2. A2 lỡ tạo rồi xoá một file ở `/tmp` (ngoài dự án), không ảnh hưởng. T2 chờ: T1 xong → T3 (ưu tiên) → T2.
+- 2026-10-31 A1: T1 xong. Chỉ 1 chỗ `SecurityException` lọt (`CWrapperHttp$1.run`, đã vá ở T0, kiểm lại: dex catch table có cả hai); `Network.sync` (Hive) và `Hercules.HttpRequest` đã bắt `Exception`; WebView không ném. Không thêm `CATCH_ADD` mới. Bảng ở `docs/mang_offline_ra_soat.md`; build thử `out/Inotia4_T1_check.apk` PASS.
+- 2026-10-31 quản đốc: nghiệm thu T1 ĐẠT.
+  - Kiểm chéo trên smali gốc: `iHttpStatus=2` chỉ được gán ở `CWrapperHttp$1:620` (qua `$$Nest$fput`); `Network.sync` bọc `getByName` bằng `catch Exception`; bản build thử đã có.
+  - Quyết 3 mục còn mở: ghi ở Quyết định thiết kế.
+  - A1 dừng ở ~322k ngữ cảnh; A2 mới đang đọc trước T3.
+- 2026-10-31 quản đốc: A2 đọc trước T3 xong (~261k, dừng).
+  - Nguyên nhân: khoá rỗng ⇒ `ENCRYPT_Process2` đọc khoá vượt buffer.
+  - Chốt hướng P1 (vá lõi mã hoá) + P2 (phòng thủ, chỉ đề xuất); chia T3a–T3d.
+  - Giao T3 cho A1 mới (chạy); A2 mới đọc trước T4.
+- 2026-10-31 quản đốc: người dùng báo font TEST7 to nhưng mất dấu, yêu cầu vẽ lại f18 cỡ lớn ⇒ thêm T7, ưu tiên ngay sau T3. A2 chuyển từ đọc trước T4 sang đọc trước T7 (T4 lùi lại).
+- 2026-10-31 quản đốc: A2 đọc trước xong (~402k, dừng hẳn).
+  - T4: rào là server cộng gem sau gói receipt 0x39 ⇒ T4 tạm dừng, ghi Vướng mắc chờ người dùng.
+  - T7a: nguyên nhân khả dĩ là dấu 1 px bị `GL_LINEAR` + GPU ×1,6875 làm nhoè, không phải buffer cắt ⇒ chốt quy cách font mới `f24vn` (dấu ≥ 2×2) và tích hợp cho size ≥ 24.
+- 2026-10-31 quản đốc: người dùng bỏ IAP, yêu cầu mod menu (sát thương/phòng thủ/EXP, thanh kéo x50).
+  - Thêm T8 (sau T7); cập nhật Phạm vi, Quyết định thiết kế, T5.
+  - A2 mới đọc trước T8a.
+- 2026-10-31 A1 (mới): T3a–T3d xong, chờ người dùng thử TEST8.
+  - Nguyên nhân đã chứng minh: khoá rỗng ⇒ `ENCRYPT_Process2` đọc `key[r+i]` vượt `HubSave_key`; known-plaintext trong `save0.dat` lộ byte nhớ `0xb4` (tag con trỏ heap) ở `gImgUI`; unidbg tái hiện và lib vá hết lỗi.
+  - Vá P1 bằng viết lại 7 lệnh trong thân `ENCRYPT_Process2` (không cave, không mượn hàm khác).
+  - `test_builds/Inotia4_TEST8_vi_offline.apk` sha256 `a1a7b341...c70c` (`test_builds/SHA256_TEST8.txt`); chỉ khác TEST7 ở `libgame.so`.
+  - Save cũ của TEST7 không cứu được (cần ghi đè ô hoặc game mới).
+  - P2: chỉ đề xuất, chờ duyệt. Điểm CHƯA XÁC ĐỊNH: khoá `appinfo.dat`, `envinfo.dat`, chữ `A` ở thư mục `thpcheckslot`, P2 chưa chạy thật.
+
+- 2026-10-31 quản đốc: nghiệm thu T3a–T3d ĐẠT, commit TEST8 (P1 vá lõi mã hoá). Gửi người dùng thử.
+  - A1 (T3) dừng ở ~350k.
+  - Giao T7 cho công nhân chạy mới.
+- 2026-10-31 quản đốc: A2 đọc trước T8a xong (~312k, dừng).
+  - Chốt 3 điểm chặn (`CHAR_AddDamage`, `MERCENARYSYSTEM_AddExperience`, `AddExpFixed`), cave trong 2 hàm chết, vùng nhớ đuôi `.bss`.
+  - Trần sát thương 999.999, trần EXP 0xFFFFFF.
+  - Kênh Java → native: `/proc/self/mem`, dự phòng `Unsafe`.
+  - T8 chờ T7 xong.
+- 2026-10-31 quản đốc: người dùng gửi ảnh màn chơi.
+  - Yêu cầu tăng tầm nhìn (màn logic) và dời HUD vào trong, có khoảng hở so với mép ⇒ thêm T9.
+  - Chốt thiết kế: hệ số k chỉnh bằng mod menu, mặc định 1,25; lề HUD 24/16 px.
+  - A2 mới đọc trước T9a.
+- 2026-11-01 02:3x (giờ VN) quản đốc: **TẠM DỪNG theo người dùng; làm tiếp lúc 06:41.**
+  - Có ping giữ cache mỗi 55 phút.
+  - A1 (T7) dừng ở ~316k, đã ghi bàn giao ⇒ lúc làm tiếp giao T7 cho công nhân mới.
+  - A2 (T9a) dừng ở ~40%, ~145k ⇒ quản đốc đã ghi bàn giao dưới T9.
+  - Thứ tự khi làm tiếp: T7 (chạy) và T9a (đọc trước, phần còn lại) → T8 → T9b/c.
+- 2026-11-01 02:34 (VN) quản đốc: người dùng gửi `assets.zip` (7 nút HUD) trong lúc tạm dừng.
+  - Lưu vào `assets_user/hud/`, thêm T10 (sau T8, cùng đợt T9).
+  - Chưa giao việc (đang tạm dừng tới 06:41).
+- 2026-11-01 06:42 (VN) quản đốc: làm tiếp theo lịch người dùng hẹn.
+  - A1 mới chạy T7 từ dòng Bàn giao (sửa ỡ/ữ → `f24vn.bin` → `font_lon.md` → T7c → build thử).
+  - A2 mới đọc tiếp T9a (chỉ đọc), quản đốc sẽ ghi bàn giao của A2 vào mục T9.
+- 2026-11-01 A1 (T7, lượt 2): T7b xong, `font/f24vn.bin` check_f24 = 0 vi phạm; ảnh `docs/font_preview_f24.png`.
+- 2026-11-01 quản đốc: người dùng xác nhận TEST8 load save OK trên máy thật ⇒ tick T3. Người dùng cũng xác nhận bánh răng → `btn_pause` (T10).
+- 2026-11-01 A1 (T7, lượt 2): T7a xong (`docs/font_lon.md`, `-Demu.dumpfont`, ảnh unidbg); T7c xong (VNFont 2 mặt chữ, FontData24); build `out/Inotia4_T7_check.apk` PASS, `apkdiff` với TEST8 chỉ khác `classes3.dex` (`com/namp/vh/*`). Chờ quản đốc nghiệm thu.
+- 2026-11-01 quản đốc: nghiệm thu T7a–T7c ĐẠT; gửi TEST9 (TEST8 + font f24vn cho chữ cỡ ≥24). Chờ người dùng xác nhận font trên máy. Giao T8 cho công nhân chạy mới; A2 vẫn đọc T9a.
+- 2026-11-01 quản đốc: A2 thứ 2 đọc T9a xong ~75% (~355k, dừng).
+  - Phát hiện vùng nhìn = FB `cfg.W/H` (0x147030), không phải màn logic. Quản đốc đã tự disasm 0x147030 xác nhận.
+  - ⇒ Đổi thiết kế T9 sang nhân FB theo P% (0x72f78c, 100..150). UI/HUD giữ cỡ; lề HUD 29 điểm vá 1 lệnh.
+  - Bàn giao lưu ở `docs/t9a_bangiao_A2.md`. Phần còn lại của T9a (RenderCore, MAP_SetFocus) giao sau.
+- 2026-11-01 A1 (T8): T8a xong (`docs/mod_menu.md`, `scripts/re/mod_check.py`, `scripts/asm/mod_cave.s`). Bằng chứng A2 khớp disasm; thêm 4 chỗ ghi phe mà A2 chưa liệt kê; cave 236 B dùng hết 2 hàm chết, trần 999.999/0xFFFFFF không làm yếu giá trị gốc. Kênh Java→native chọn `/proc/self/mem`, dự phòng `Unsafe`; chưa thử máy thật.
+- 2026-11-01 quản đốc: A2 thứ 3 xong T9a ~92% (~296k). Chốt P mặc định 120, tối đa 150, cave ép W chẵn. Quản đốc tự đọc `MEM_Create`: pool trần 8 MB ⇒ thêm vá nâng trần 10 MB. A2 lỡ tạo file rỗng `/tmp/claude-0/scan.py` (ngoài repo), quản đốc đã xoá.
+- 2026-11-01 A1 (T8): T8b xong (`patch_lib.py` nhóm `mod`, `--group`, `--check-asm`, `--diff` theo vùng; disasm trước/sau trong `docs/mod_menu.md`).
+- 2026-11-01 A1 (T8): T8c code + build kiểm PASS (`out/Inotia4_T8_check.apk`, apkdiff với TEST9 chỉ khác `classes.dex` (MainActivity +1 lệnh), `classes3.dex`, `libgame.so`); T8d unidbg (`emu/src/ModCheck.java`) viết nhưng chưa chạy. A1 dừng vì ngữ cảnh > 400k; bàn giao ở mục T8.
+- 2026-11-01 quản đốc: A1 (T8) vượt 400k (~409k) ⇒ đã ghi bàn giao, dừng ở `1b98e06`. T8a và T8b tick; T8c xong code và build nhưng chưa tick; T8d dở.
+  - Quản đốc soát cave `scripts/asm/mod_cave.s`: ĐẠT.
+    - 59 lệnh = 236 B, vừa khít 0x18bb00..0x18bbec (`CHAR_AddDamageEffect` + `CHAR_AddDamageByDefaultCheck`; hàm kế `CHAR_CalcPhysicalDefense` @0x18bbec).
+    - Nhảy B `c510ff17` → 0x18bb74 và C `5a10ff17` → 0x18bbac khớp bố cục.
+  - Rủi ro nhỏ còn lại: cave B không chặn EXP ≤ 0, nên EXP âm (khó xảy ra) sẽ bị nhân thêm. Cave đã đầy, không còn chỗ thêm lệnh chặn ⇒ chấp nhận.
+  - Giao T8c (soát) và T8d cho A1 mới.
+- 2026-11-01 07:3x (VN) quản đốc: người dùng TẠM DỪNG tới 11:41, có ping giữ cache mỗi 55 phút (08:22, 09:17, 10:12, 11:07).
+  - A1 (T8c/T8d, ~208k) dừng ở `affe1aa` sau khi ghi bàn giao.
+    - T8c: đã soát, không cần sửa, chưa tick.
+    - T8d: unidbg 21.782 ca đạt (10 ca ngoài miền: EXP âm ở B). Còn ghi log, ghi bảng vào tài liệu, build lại, apkdiff rồi tick.
+  - Khi làm tiếp: giao cho công nhân mới (ngữ cảnh A1 hiện tại vẫn < 400k, nhưng giao mới cho gọn), rồi quản đốc nghiệm thu T8 và gửi bản thử. Sau đó là T9 → T10.
+- 2026-11-01 11:42 (VN) quản đốc: làm tiếp theo lịch người dùng hẹn.
+  - A1 (T8, ~208k < 400k) chạy lại từ bàn giao của chính nó: log, bảng kết quả, build lại, apkdiff, tick T8c/T8d.
+  - A1 đã đạt ≥90% khối lượng T8 ⇒ A2 mới đọc trước T10a (sprite HUD). A2 chỉ đọc, chỉ được ghi ảnh tạm vào `/opt/work/t10/`.
+- 2026-11-01 A1 (T8, lượt 2): T8c đã soát (không sửa), T8d xong: unidbg 21.782 ca, lib vá đạt 21.772 + 10 ca ngoài miền, lib gốc đạt 21.782; build lại `out/Inotia4_T8_check.apk` PASS (apkdiff với TEST9 chỉ khác `classes.dex`, `classes3.dex`, `libgame.so`; `MainActivity` +1 lệnh; ký/zipalign/check_apk/`patch_lib --diff` đạt). Tick T8c, T8d; T8 cha chờ quản đốc nghiệm thu.
+- 2026-11-01 quản đốc: nghiệm thu T8a–T8d ĐẠT; gửi TEST10 (TEST9 + mod menu). Chờ người dùng thử. Tiếp theo: T9 (công nhân chạy mới).
+- 2026-11-01 quản đốc: A2 đọc T10a xong ~92% (~279k). Ghi bàn giao vào `docs/t10a_bangiao_A2.md`, chép ảnh vào `docs/hud/`. Chốt quyết định T10: 7 rect, kích thước thu, vá 3 lệnh kiểu vẽ. T10 làm sau T9.
+- 2026-11-01 A1 (T9): T9a, T9b, T9c xong (T9 cha chờ quản đốc nghiệm thu). `docs/tam_nhin_hud.md`, nhóm `view`/`hud`/`pool` trong `patch_lib.py`, thanh "Tầm nhìn" trong `ModMenu`, `emu/view_check.sh`. P = 105 cho W = 536 (không phải 538). Build `out/Inotia4_T9_check.apk` PASS, `apkdiff` với TEST10 chỉ khác `classes3.dex` (ModMenu*) và `libgame.so`. Không chụp được màn chơi (T2).
+- 2026-11-01 quản đốc: nghiệm thu T9a–T9c ĐẠT; gửi TEST11 (TEST10 + tầm nhìn P% + lề HUD + pool 10 MB). A1 (T9) dừng ở ~435k (vượt ngưỡng, không dùng lại). Tiếp theo: T10 (công nhân chạy mới).
+- 2026-11-01 A1 (T10): T10a, T10b, T10c xong (T10 cha chờ quản đốc nghiệm thu). `docs/hud_thay_nut.md`, `scripts/re/hud_check.py`, `scripts/hud_swap.py`, `scripts/hud_mophong.py`, nhóm lib `hudbtn` (không nằm trong nhóm mặc định), cờ `--hud`. Build `out/Inotia4_T10_check.apk` PASS; `apkdiff` với TEST11 chỉ khác 2 atlas và `libgame.so` (3 byte). Chưa chụp được màn chơi (T2); mô phỏng Python ở `docs/hud/mo_phong_hud.png`.
+- 2026-11-01 quản đốc: nghiệm thu T10a–T10c ĐẠT; gửi TEST12 (TEST11 + nút HUD của người dùng). Chờ người dùng xác nhận T7/T8/T9/T10 trên máy. Tiếp theo: T2 (unidbg qua màn chọn save) rồi T5/T6.
+- 2026-11-01 A1 (T5): T5 xong. `scripts/rebuild.sh` viết lại theo chuỗi TEST12 (smali `net,mod`, lib `base..hudbtn`, `hud_swap`, d8 `--lib`, diag tùy chọn, `--base-apk`); `tools/VERSIONS.md`. Dựng bằng `rebuild.sh --base-apk` giống `build_from_apk.sh` 0/1453 file (chỉ khác dấu thời gian/chữ ký); `--diag` giống TEST12 0/1454. Đường gộp split thật CHƯA XÁC ĐỊNH (không có split). Log `logs/t5_rebuild_check.txt`.
+- 2026-11-01 quản đốc: nghiệm thu T5 ĐẠT.
+  - `bash -n` OK. `rebuild.sh --base-apk` ra 0/1453 file khác so với bản tham chiếu. Bản `--diag` ra 0/1454 file khác so với TEST12.
+  - Đường build từ bộ split gốc CHƯA chạy được (container không có split); sẽ chạy khi người dùng cung cấp. Ghi vào tồn đọng của T6.
+  - Bản phát hành ứng viên (không diag): `out/Inotia4_T5_ref.apk`. Chờ người dùng xác nhận TEST12 rồi mới làm T6.
+  - Giao T2 (unidbg qua màn chọn save) cho công nhân mới, dùng lib của TEST12 để chụp được HUD mới.
+- 2026-11-01 quản đốc: người dùng TẠM DỪNG (chưa hẹn giờ làm tiếp, không hẹn ping). A1 (T2, ~211k) dừng ở `32fcb15`.
+  - Hướng 1 (`madvise`) bị bác.
+  - Hướng 2 (`JMalloc`) dở: văng ở `pthread_mutex_lock`, nguyên nhân CHƯA XÁC ĐỊNH.
+  - Hướng 3 chưa làm.
+  - Đang chờ người dùng thử TEST12 (T7, T8, T9, T10). Sau đó làm T6 phát hành (ứng viên `out/Inotia4_T5_ref.apk`).

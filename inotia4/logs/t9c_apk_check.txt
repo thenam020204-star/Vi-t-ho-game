@@ -1,0 +1,64 @@
+# T9c: kiem APK out/Inotia4_T9_check.apk (2026-11-01)
+# build: APKTOOL=/opt/re/apktool_2.12.1.jar bash scripts/build_from_apk.sh test_builds/Inotia4_TEST4_vi_anh_offline.apk out/Inotia4_T9_check.apk --smali net,mod --vnfont --lib --libgroup base,p1,mod,view,hud,pool --diag
+
+== sha256
+5d247dd93011281e066c60181866eb52a40a7efa94d279d8e538bd5971c96f16  out/Inotia4_T9_check.apk
+467f83c351c1b1e1e51f5740eb8faa800a900c739d96d2328b5294a028d85882  test_builds/Inotia4_TEST10_vi_offline.apk
+
+== apkdiff TEST10 -> T9_check
+chi co o Inotia4_TEST10_vi_offline.apk []
+chi co o Inotia4_T9_check.apk []
+khac noi dung: ['classes3.dex', 'lib/arm64-v8a/libgame.so'] / 1454 file chung
+
+== diff smali (apktool d, bo META-INF/apktool.yml): chi com/namp/vh/ModMenu* va libgame.so
+Files d10/lib/arm64-v8a/libgame.so and d9c/lib/arm64-v8a/libgame.so differ
+Files d10/smali_classes3/com/namp/vh/ModMenu$1.smali and d9c/smali_classes3/com/namp/vh/ModMenu$1.smali differ
+Files d10/smali_classes3/com/namp/vh/ModMenu$2.smali and d9c/smali_classes3/com/namp/vh/ModMenu$2.smali differ
+Files d10/smali_classes3/com/namp/vh/ModMenu$3.smali and d9c/smali_classes3/com/namp/vh/ModMenu$3.smali differ
+Files d10/smali_classes3/com/namp/vh/ModMenu$4.smali and d9c/smali_classes3/com/namp/vh/ModMenu$4.smali differ
+Files d10/smali_classes3/com/namp/vh/ModMenu$FloatButton.smali and d9c/smali_classes3/com/namp/vh/ModMenu$FloatButton.smali differ
+Files d10/smali_classes3/com/namp/vh/ModMenu$Slot.smali and d9c/smali_classes3/com/namp/vh/ModMenu$Slot.smali differ
+Files d10/smali_classes3/com/namp/vh/ModMenu.smali and d9c/smali_classes3/com/namp/vh/ModMenu.smali differ
+
+== apksigner / zipalign / check_apk
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=NAMP Viet hoa, O=NAMP, C=VN
+Signer #1 certificate SHA-256 digest: cc5596513df8057b28e39bb12b1cb88b3c0e674ef50fd3e621bcdae9b07520d4
+Signer #1 certificate SHA-1 digest: 78afec73b9980128fc7278a0276236e0413dac92
+Signer #1 certificate MD5 digest: b2dba7bde4c70600dff0f031e17ed0bc
+--- zipalign
+zipalign -c -P 16 4: OK
+--- check_apk
+ok  lib/arm64-v8a/libHercules.so STORED, can 4096
+ok  lib/arm64-v8a/libgame.so STORED, can 4096
+KHONG quyen android.permission.INTERNET
+CO    quyen android.permission.ACCESS_NETWORK_STATE
+KHONG quyen com.android.vending.BILLING
+META-INF: ['META-INF/NAMP.SF', 'META-INF/NAMP.RSA']
+RESULT: PASS
+5d247dd93011281e066c60181866eb52a40a7efa94d279d8e538bd5971c96f16  out/Inotia4_T9_check.apk
+467f83c351c1b1e1e51f5740eb8faa800a900c739d96d2328b5294a028d85882  test_builds/Inotia4_TEST10_vi_offline.apk
+
+== patch_lib --diff (lib TEST10 trong APK) -> (lib T9 trong APK), nhom view,hud,pool
+  0x16b268..0x16b26c [hud]   4 B: 1/4 byte khac
+  0x145730..0x145734 [pool]   4 B: 1/4 byte khac
+  0x145734..0x145738 [pool]   4 B: 1/4 byte khac
+tong 96 byte khac, 35 doan; TAT CA nam trong vung khai bao
+
+== patch_lib --diff (lib TEST4 goc) -> (lib T9 trong APK), tat ca nhom
+  0x145734..0x145738 [pool]   4 B: 1/4 byte khac
+tong 350 byte khac, 56 doan; TAT CA nam trong vung khai bao
+
+== patch_lib --check-asm
+cave `mod` dung lai tu mod_cave.s: 236 B, sha256 cb64516299bc0de2441d8025c053b08341ac526fd24a088d673c0ac55d659765
+  khop byte nhung san: True | khop disasm mong doi: True
+cave `view` dung lai tu view_cave.s: 52 B, sha256 2c406b7195be9b642b8d25577c26a4ffc04b8d9ea65157f0a1d57e69634da97d
+  khop byte nhung san: True | khop disasm mong doi: True
+lenh don `hud`+`pool` (31 lenh) dung lai bang llvm-mc: khop byte nhung san: True

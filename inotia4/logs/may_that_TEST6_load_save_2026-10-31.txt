@@ -1,0 +1,1062 @@
+Inotia 4 Viet hoa - BAO CAO CHAN DOAN
+Thoi diem: 2026-10-31 23:22:55
+May: Xiaomi 23113RKC6C | Android 16 (API 36)
+ABI: arm64-v8a,armeabi-v7a,armeabi | fingerprint: Redmi/vermeer/vermeer:16/BP2A.250605.031.A3/OS3.0.307.0.WNKCNXM:user/release-keys
+pagesize: 4096
+ban app: 1.4.0
+
+===== ApplicationExitInfo (moi nhat truoc) =====
+[MOI] 2026-10-31 23:22:50 pid=23467 ly_do=OTHER status=0 importance=300 pss=28151KB rss=100140KB
+   mo ta: [ISOLATED NOT NEEDED] isolated not needed
+[MOI] 2026-10-31 23:22:50 pid=20582 ly_do=CRASH_NATIVE status=11 importance=100 pss=184828KB rss=286996KB
+   mo ta: crash
+   --- trace ---
+QRedmi/vermeer/vermeer:16/BP2A.250605.031.A3/OS3.0.307.0.WNKCNXM:user/release-keys
+0""2026-10-31 23:22:49.995015886+0700(
+QB)u:r:untrusted_app:s0:c140,c257,c512,c768
+J?com.com2us.inotia4.normal.freefull.google.global.android.commonR
+SIGSEGV
+SEGV_MAPERR@
+null pointer dereference
+GLThread 158843
+CHAR_GetSkillPoint2
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.soB(f2829c860080726861c5fa0a23ab89e880fcee8e"
+GAMESTATE_EnterPlay(T2
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.soB(f2829c860080726861c5fa0a23ab89e880fcee8e"
+GAMESTATE_SetState(
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.soB(f2829c860080726861c5fa0a23ab89e880fcee8e"
+GAMESTATE_ProcessMapChange(
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.soB(f2829c860080726861c5fa0a23ab89e880fcee8e"
+STATE_ProcessGame(t2
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.soB(f2829c860080726861c5fa0a23ab89e880fcee8e"
+MainProcess(
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.soB(f2829c860080726861c5fa0a23ab89e880fcee8e"
+TM_Run(
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.soB(f2829c860080726861c5fa0a23ab89e880fcee8e"
+";Java_com_com2us_wrapper_kernel_CWrapperKernel_nativeProcess(
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.soB(f2829c860080726861c5fa0a23ab89e880fcee8e"t
+art_jni_trampoline(l2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"f
+"/com.com2us.wrapper.kernel.CWrapperTimer$1$1.run(82
+/memfd:jit-cache (deleted)8
+nterp_helper(
+;2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"n
+"0android.opengl.GLSurfaceView$GLThread.guardedRun(
+/system/framework/framework.jar8
+nterp_helper(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"f
+")android.opengl.GLSurfaceView$GLThread.run(z2
+/system/framework/framework.jar8
+art_quick_invoke_stub(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"\art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+""art::Thread::CreateCallback(void*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c*
+'[anon:dalvik-main space (region space)]
+/memfd:jit-cache (deleted)
+'[anon:dalvik-main space (region space)]
+[anon:.bss]
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so
+[anon:.bss]
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so
+h&@9
+[anon:.bss]
+[anon:.bss]
+[anon:.bss]
+[anon:.bss]
+[anon:stack_and_tls:23616]
+Thread-12
+([anon:dalvik-/system/framework/boot.art]
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+H3_o
+[anon:stack_and_tls:23616]
+Thread-12
+[anon:stack_and_tls:23616]
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so
+[anon:stack_and_tls:23616]
+Thread-12
+stack_and_tls:23616
+undefined symbol: glDisableDriverControlQCOM
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so
+h&@9
+*[anon:dalvik-free list large object space]
+ThreadPoolForeg
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"A__futex_wait_ex(void volatile*, bool, int, bool, timespec const*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"y
+pthread_cond_wait(L2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+Firebase-Messag
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"~
+art::Thread::Park(bool, long)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"lart::Unsafe_park(_JNIEnv*, _jobject*, unsigned char, long) (.__uniq.319429422067363160645159987129209045680)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"t
+art_jni_trampoline(p2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"Kjava.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"Fjava.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"k
+[DEDUPED]($2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"/java.util.concurrent.ThreadPoolExecutor.getTask(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"1java.util.concurrent.ThreadPoolExecutor.runWorker(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"2java.util.concurrent.ThreadPoolExecutor$Worker.run(@2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"m
+nterp_helper(
+;2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/oat/arm64/base.vdex.yXPe3I.tmp (deleted)"u
+java.lang.Thread.run(H2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"v
+art_quick_invoke_stub(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"\art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+""art::Thread::CreateCallback(void*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+binder:20582_4
+__ioctl(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"n
+ioctl(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"-android::IPCThreadState::talkWithDriver(bool)(
+/system/lib64/libbinder.soB ccfe8ccb843181178da7a91ae1bcf845"
+"-android::IPCThreadState::joinThreadPool(bool)(
+/system/lib64/libbinder.soB ccfe8ccb843181178da7a91ae1bcf845"u
+"!android::PoolThread::threadLoop()(
+/system/lib64/libbinder.soB ccfe8ccb843181178da7a91ae1bcf845"w
+"#android::Thread::_threadLoop(void*)(
+/system/lib64/libutils.soB 3e45b78f1a54bef7ad5274050b3915a7"
+"/android::AndroidRuntime::javaThreadShell(void*)(
+2#/system/lib64/libandroid_runtime.soB 6aec34d4fa90c5c2fa557be47dc39a0b"
+"Rlibutil_thread_trampoline(void*) (.__uniq.226528677032898775202282855395389835431)(
+/system/lib64/libutils.soB 3e45b78f1a54bef7ad5274050b3915a7"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+CleanupReferenc
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"6art::ConditionVariable::WaitHoldingLocks(art::Thread*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"eart::Monitor::Wait(art::Thread*, art::ObjPtr<art::mirror::Object>, long, int, bool, art::ThreadState)(
+12%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"t
+art_jni_trampoline(X2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"#java.lang.ref.ReferenceQueue.remove(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"#java.lang.ref.ReferenceQueue.remove((2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"m
+nterp_helper(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+WV.yv.run(
+2a/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk8
+art_quick_invoke_stub(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"\art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+""art::Thread::CreateCallback(void*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+Chrome_InProcGp
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"A__futex_wait_ex(void volatile*, bool, int, bool, timespec const*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"y
+pthread_cond_wait(L2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+Signal Catcher
+__rt_sigtimedwait(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"q
+sigwait64(l2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+art::SignalCatcher::Run(void*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+ThreadPoolForeg
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"A__futex_wait_ex(void volatile*, bool, int, bool, timespec const*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"y
+pthread_cond_wait(L2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+Binder:intercep
+__epoll_pwait(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"2android::Looper::pollOnce(int, int*, int*, void**)(
+/system/lib64/libutils.soB 3e45b78f1a54bef7ad5274050b3915a7"
+"Oandroid::android_os_MessageQueue_nativePollOnce(_JNIEnv*, _jobject*, long, int)(02#/system/lib64/libandroid_runtime.soB 6aec34d4fa90c5c2fa557be47dc39a0b"~
+art_jni_trampoline(p2*/system/framework/arm64/boot-framework.oatB(31fb23cbfd9a7ac9136a24f24440855297f8bec7"
+""android.os.MessageQueue.nextLegacy(
+2*/system/framework/arm64/boot-framework.oatB(31fb23cbfd9a7ac9136a24f24440855297f8bec7"
+android.os.MessageQueue.next(,2*/system/framework/arm64/boot-framework.oatB(31fb23cbfd9a7ac9136a24f24440855297f8bec7"
+android.os.Looper.loopOnce(`2*/system/framework/arm64/boot-framework.oatB(31fb23cbfd9a7ac9136a24f24440855297f8bec7"
+android.os.Looper.loop(
+2*/system/framework/arm64/boot-framework.oatB(31fb23cbfd9a7ac9136a24f24440855297f8bec7"
+android.os.HandlerThread.run(
+2*/system/framework/arm64/boot-framework.oatB(31fb23cbfd9a7ac9136a24f24440855297f8bec7"v
+art_quick_invoke_stub(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"\art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+""art::Thread::CreateCallback(void*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+HeapTaskDaemon
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"6art::ConditionVariable::WaitHoldingLocks(art::Thread*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"1art::gc::TaskProcessor::RunAllTasks(art::Thread*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+art_jni_trampoline(p2,/system/framework/arm64/boot-core-libart.oatB(ec643f7317ac8066bd61f70fe4b68cba31e5fd36"
+",java.lang.Daemons$HeapTaskDaemon.runInternal(
+2,/system/framework/arm64/boot-core-libart.oatB(ec643f7317ac8066bd61f70fe4b68cba31e5fd36"
+java.lang.Daemons$Daemon.run(|2,/system/framework/arm64/boot-core-libart.oatB(ec643f7317ac8066bd61f70fe4b68cba31e5fd36"u
+java.lang.Thread.run(H2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"v
+art_quick_invoke_stub(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"\art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+""art::Thread::CreateCallback(void*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+HwBinder:20582_
+__ioctl(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"n
+ioctl(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"7android::hardware::IPCThreadState::joinThreadPool(bool)(
+/system/lib64/libhidlbase.soB 7e05a8191256f4cbd82f9b7757dc7820"
+"+android::hardware::PoolThread::threadLoop()(
+/system/lib64/libhidlbase.soB 7e05a8191256f4cbd82f9b7757dc7820"w
+"#android::Thread::_threadLoop(void*)(
+/system/lib64/libutils.soB 3e45b78f1a54bef7ad5274050b3915a7"
+"/android::AndroidRuntime::javaThreadShell(void*)(
+2#/system/lib64/libandroid_runtime.soB 6aec34d4fa90c5c2fa557be47dc39a0b"
+"Rlibutil_thread_trampoline(void*) (.__uniq.226528677032898775202282855395389835431)(
+/system/lib64/libutils.soB 3e45b78f1a54bef7ad5274050b3915a7"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+ThreadPoolSingl
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"A__futex_wait_ex(void volatile*, bool, int, bool, timespec const*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"y
+pthread_cond_wait(L2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+Firebase Backgr
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"~
+art::Thread::Park(bool, long)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"lart::Unsafe_park(_JNIEnv*, _jobject*, unsigned char, long) (.__uniq.319429422067363160645159987129209045680)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"t
+art_jni_trampoline(p2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"Kjava.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"-java.util.concurrent.LinkedBlockingQueue.take(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"/java.util.concurrent.ThreadPoolExecutor.getTask(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"1java.util.concurrent.ThreadPoolExecutor.runWorker(
+2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"
+"2java.util.concurrent.ThreadPoolExecutor$Worker.run(@2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"m
+nterp_helper(
+;2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/oat/arm64/base.vdex.yXPe3I.tmp (deleted)"l
+nterp_helper(42%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/oat/arm64/base.vdex.yXPe3I.tmp (deleted)"u
+java.lang.Thread.run(H2 /system/framework/arm64/boot.oatB(2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb"v
+art_quick_invoke_stub(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+"\art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+""art::Thread::CreateCallback(void*)(
+2%/apex/com.android.art/lib64/libart.soB 0ad01b6ca8a34734d6e3bc59b8bde143"
+__pthread_start(void*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"v
+__start_thread(D2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c0
+ThreadPoolPrese
+syscall( 2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+"A__futex_wait_ex(void volatile*, bool, int, bool, timespec const*)(
+2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"y
+pthread_cond_wait(L2./apex/com.android.runtime/lib64/bionic/libc.soB 56f2e102db31359cc22460be335d240c"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+B(f05d9e8e6bd1664e939c55afebc7be456f1d1b40"
+2w/data/app/~~CVW1Hk73MEr8q4aTk0gEKw==/com.google.android.webview-4fSwbzELhpxlIin6uWA3wg==/base.apk!libwebviewchromium.so8
+
+[cu]  2026-10-31 23:17:25 pid=17102 ly_do=PACKAGE_UPDATED status=0 importance=400 pss=59290KB rss=148648KB
+   mo ta: stop com.com2us.inotia4.normal.freefull.google.global.android.common due to installPackageLI
+[cu]  2026-10-31 23:11:22 pid=18851 ly_do=OTHER status=0 importance=300 pss=0KB rss=0KB
+   mo ta: [ISOLATED NOT NEEDED] isolated not needed
+[cu]  2026-10-31 23:11:22 pid=14932 ly_do=CRASH(Java) status=0 importance=100 pss=0KB rss=0KB
+   mo ta: crash
+
+===== LOGCAT CUA APP (moi nhat o cuoi) =====
+--------- beginning of system
+10-31 23:21:34.392 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.392 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.392 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:21:34.392 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.392 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.392 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:21:34.392 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+--------- beginning of main
+10-31 23:21:34.396 20582 20582 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:21:34.400 20582 23541 D BLASTBufferQueue: onGameOptimizeParameter: new GameOptimizeInfo game: no valid app, VsyncBuffergame: no valid app, mOptimizeEnable: 0, mSuperTouchEnable: 0,mVsyncBufferEnable: 0,mPendingBufferEnable 0,mNeedDynamicDropBuffer: 0, mNeedFirstFrameDropBuffer: 0
+10-31 23:21:34.400 20582 23541 D BLASTBufferQueue: 
+10-31 23:21:34.404 20582 20582 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:21:34.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.411 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.411 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:21:34.412 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:21:34.412 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.414 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:21:34.416 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.419 20582 20582 D VRI[MainActivity]: vri.Setup new sync=wmsSync-VRI[MainActivity]#18
+10-31 23:21:34.447 20582 20582 D VRI[MainActivity]: vri.reportDrawFinished 0 0 Rect(592, 443 - 1912, 705)
+10-31 23:21:34.452 20582 20582 I Choreographer: first vsync insert message into MessageQueue Head
+10-31 23:21:34.476 20582 23375 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:21:34.476 20582 23375 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:21:34.476 20582 23375 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:21:34.479 20582 20582 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Dialog$$ExternalSyntheticLambda2@5dd58c6
+10-31 23:21:34.480 20582 20582 D DecorViewImmersiveImpl: onDetachedFromWindow
+10-31 23:21:34.484 20582 23375 D BufferQueueProducer: [VRI[MainActivity]#8(BLAST Consumer)8](id:506600000008,api:1,p:20582,c:20582) disconnect: api 1 (caller=20582)
+10-31 23:21:34.485 20582 20582 W .android.common: Binder 0xb4000075ffd92920 destroyed after setInheritRt before being parceled.
+10-31 23:21:34.494 20582 24299 D BufferQueueConsumer: [VRI[MainActivity]#8(BLAST Consumer)8](id:506600000008,api:0,p:-1,c:20582) disconnect: caller 0
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:21:34.495 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:34.533 20582 27325 I AudioTrack: stop(sessionID=252153), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:21:34.533 20582 27325 D AudioTrack: stop(116081): prior state:STATE_ACTIVE
+10-31 23:21:35.500 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.500 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.500 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.500 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.500 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.500 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.522 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.522 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.522 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.522 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.522 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.522 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.567 20582 23381 I ContentCatcher: SettingTrigger : unregister status observer com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:21:35.568 20582 23381 I ContentCatcher: SettingTrigger : unregisterUIAgentListener com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity, uid:10396
+10-31 23:21:35.576 20582 23616 D BufferQueueProducer: [7f685f5 SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity]#7(BLAST Consumer)7](id:506600000007,api:1,p:20582,c:20582) disconnect: api 1 (caller=20582)
+10-31 23:21:35.580 20582 20582 D BufferQueueProducer: [7f685f5 SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity]#7(BLAST Consumer)7](id:506600000007,api:0,p:-1,c:20582) disconnect: api -1 (caller=20582)
+10-31 23:21:35.580 20582 20582 W .android.common: Binder 0xb4000075ffd9fdc0 destroyed after setInheritRt before being parceled.
+10-31 23:21:35.581 20582 20582 D BufferQueueConsumer: [7f685f5 SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity]#7(BLAST Consumer)7](id:506600000007,api:0,p:-1,c:20582) disconnect: caller 20582
+10-31 23:21:35.582 20582 20582 D ViewRootImplStubImpl: onSurfaceViewDetached:
+10-31 23:21:35.582 20582 20582 D ViewRootImplStubImpl: , vri:android.view.ViewRootImpl@3f68c71, com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:21:35.582 20582 20582 D ViewRootImplStubImpl: , vri size:2400x1080
+10-31 23:21:35.582 20582 20582 D ViewRootImplStubImpl: , surfaceView:com.com2us.wrapper.game.CCustomGLSurfaceView{7f685f5 VFE...... ........ 0,0-2400,1080}, SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity]
+10-31 23:21:35.582 20582 20582 D ViewRootImplStubImpl: , surfaceView size:2400x1080
+10-31 23:21:35.582 20582 20582 D ViewRootImplStubImpl: , surfaceControl:Surface(name=7f685f5 SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity](BLAST)#479174)/@0x1c4bda9
+10-31 23:21:35.601 20582 23375 D BufferQueueProducer: [VRI[MainActivity]#6(BLAST Consumer)6](id:506600000006,api:1,p:20582,c:20582) disconnect: api 1 (caller=20582)
+10-31 23:21:35.605 20582 23375 D BufferQueueConsumer: [VRI[MainActivity]#6(BLAST Consumer)6](id:506600000006,api:0,p:-1,c:20582) disconnect: caller 20582
+10-31 23:21:35.607 20582 23375 W .android.common: Binder 0xb4000075ffdadc80 destroyed after setInheritRt before being parceled.
+10-31 23:21:35.615 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:35.616 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:21:38.730 20582 20582 I Choreographer: Skipped 373 frames!  The application may be doing too much work on its main thread.
+10-31 23:22:41.943 20582 23319 I PerformanceMemoryEnhance: ItgsaMsg App: HeapSize：36161 HeapLimit:524288
+10-31 23:22:42.688 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.688 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.688 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.688 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.689 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.689 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.699 20582 20582 D Activity: Activity = ActivityInfo{5c246b1 com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity}, Resume onConfigurationChanged = {0.9 452mcc8mnc [vi_VN] ldltr sw480dp w1067dp h480dp 360dpi lrg long hdr widecg land uimode=12 night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2400, 1080) mAppBounds=Rect(0, 0 - 2400, 1080) mMaxBounds=Rect(0, 0 - 2400, 1080) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_90 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.3 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+10-31 23:22:42.747 20582 23381 I ContentCatcher: SettingTrigger : register screen QA status observer com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:22:42.765 20582 20582 W ANALYTICSLOG:  loadLogFile Called 
+10-31 23:22:42.773 20582 27860 D AdvertisingIdClient: AdvertisingIdClient already created.
+10-31 23:22:42.773 20582 27860 D AdvertisingIdClient: AdvertisingIdClient is not bounded. Starting to bind it...
+10-31 23:22:42.778 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.778 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.778 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.778 20582 20582 D InsetsController: com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity hide: statusBars navigationBars android.view.InsetsController@6092770 android.view.InsetsController.applyAnimation:2241 android.view.InsetsController.applyAnimation:2212 android.view.InsetsController.onControlsChanged:1155 android.view.ViewRootImpl.onActiveControlsChanged:3365 android.view.ViewRootImpl.handleInsetsControlChanged:3319 android.view.ViewRootImpl.relayoutWindow:11405 
+10-31 23:22:42.780 20582 23536 D InsetsController: default animation onReady types: 3 controller=android.view.InsetsAnimationControlImpl@cf8b968
+10-31 23:22:42.780 20582 23536 D ViewRootImplStubImpl: requestedTypes: 3
+10-31 23:22:42.781 20582 20582 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:22:42.781 20582 23536 D ViewRootImplStubImpl: notifyImeAnimEvent: isForShow = false, isAnimStart = true, has context = true, has AutofillManager = true, isMiuiAnim = false
+10-31 23:22:42.783 20582 20582 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:22:42.783 20582 23319 D BLASTBufferQueue: onGameOptimizeParameter: new GameOptimizeInfo game: no valid app, VsyncBuffergame: no valid app, mOptimizeEnable: 0, mSuperTouchEnable: 0,mVsyncBufferEnable: 0,mPendingBufferEnable 0,mNeedDynamicDropBuffer: 0, mNeedFirstFrameDropBuffer: 0
+10-31 23:22:42.783 20582 23319 D BLASTBufferQueue: 
+10-31 23:22:42.784 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.784 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.784 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.784 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.784 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.784 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.791 20582 20582 D ViewRootImplStubImpl: onSurfaceViewAttached:
+10-31 23:22:42.791 20582 20582 D ViewRootImplStubImpl: , vri:android.view.ViewRootImpl@3f68c71, com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:22:42.791 20582 20582 D ViewRootImplStubImpl: , vri size:2400x1080
+10-31 23:22:42.791 20582 20582 D ViewRootImplStubImpl: , surfaceView:com.com2us.wrapper.game.CCustomGLSurfaceView{7f685f5 VFE...... ......ID 0,0-2400,1080}, SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity]
+10-31 23:22:42.791 20582 20582 D ViewRootImplStubImpl: , surfaceView size:2400x1080
+10-31 23:22:42.791 20582 20582 D ViewRootImplStubImpl: , surfaceControl:Surface(name=7f685f5 SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity](BLAST)#479364)/@0x938b226
+10-31 23:22:42.791 20582 20582 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:22:42.792 20582 23319 D BLASTBufferQueue: onGameOptimizeParameter: new GameOptimizeInfo game: no valid app, VsyncBuffergame: no valid app, mOptimizeEnable: 0, mSuperTouchEnable: 0,mVsyncBufferEnable: 0,mPendingBufferEnable 0,mNeedDynamicDropBuffer: 0, mNeedFirstFrameDropBuffer: 0
+10-31 23:22:42.792 20582 23319 D BLASTBufferQueue: 
+10-31 23:22:42.793 20582 20582 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:22:42.797 20582 20582 D SurfaceView: UPDATE Surface(name=7f685f5 SurfaceView[com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity]#479363)/@0xf540414, mIsProjectionMode = false
+10-31 23:22:42.798 20582 20582 D VRI[MainActivity]: vri.Setup new sync=wmsSync-VRI[MainActivity]#21
+10-31 23:22:42.806 20582 23381 I ContentCatcher: SettingTrigger : register global collect status observer com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity
+10-31 23:22:42.807 20582 23381 I ContentCatcher: SettingTrigger : registerUIAgentListener com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity, uid:10396
+10-31 23:22:42.821 20582 20582 D VRI[MainActivity]: vri.reportDrawFinished 0 0 Rect(0, 0 - 2400, 1080)
+10-31 23:22:42.824 20582 23381 I ContentCatcher_TaplusBlackListHelper:  mActivities isEmpty
+10-31 23:22:42.825 20582 23381 I ContentCatcher_TaplusBlackListHelper:  blackList size: 4 package is com.com2us.inotia4.normal.freefull.google.global.android.common isInTaplusWhiteList: true
+10-31 23:22:42.826 20582 20582 D VRI[MainActivity]: vri.Setup new sync=wmsSync-VRI[MainActivity]#23
+10-31 23:22:42.833 20582 20582 D VRI[MainActivity]: vri.reportDrawFinished 0 0 Rect(0, 0 - 2400, 1080)
+10-31 23:22:42.840 20582 27860 D AdvertisingIdClient: AdvertisingIdClient is bounded
+10-31 23:22:42.843 20582 20582 I HandWritingStubImpl: refreshLastKeyboardType: 1
+10-31 23:22:42.844 20582 20582 I HandWritingStubImpl: getCurrentKeyboardType: 1
+10-31 23:22:42.855 20582 20582 D InsetsController: hide(ime(), fromIme=false)
+10-31 23:22:42.855 20582 20582 I ImeTracker: com.com2us.inotia4.normal.freefull.google.global.android.common:33b5c3a2: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+10-31 23:22:42.861 20582 27860 I AdvertisingIdClient: shouldSendLog 1402667812
+10-31 23:22:42.861 20582 27860 I AdvertisingIdClient: GetInfoInternal elapse 88ms
+10-31 23:22:42.889 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.889 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:42.889 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.129 20582 23536 D InsetsAnimationCtrlImpl: notifyFinished shown: false, currentAlpha: 1,000000, currentInsets: Insets{left=0, top=0, right=0, bottom=0}
+10-31 23:22:43.129 20582 23536 D InsetsAnimationCtrlImpl: Animation finished abruptly.
+10-31 23:22:43.129 20582 23536 D InsetsController: onAnimationFinish showOnFinish: false
+10-31 23:22:43.129 20582 20582 D InsetsController: cancelAnimation of types:3 animType:1 host:com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity invokeCallback=false
+10-31 23:22:43.129 20582 23536 D ViewRootImplStubImpl: notifyImeAnimEvent: isForShow = false, isAnimStart = false, has context = true, has AutofillManager = true, isMiuiAnim = false
+10-31 23:22:43.129 20582 20582 D InsetsController: notifyFinished. shown: false runner=android.view.InsetsAnimationThreadControlRunner@7a2667b
+10-31 23:22:43.376 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.376 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.376 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.376 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.376 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.376 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.407 27916 27916 E libsigchain: Setting SIGSEGV to SIG_DFL
+10-31 23:22:43.408 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.408 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.408 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.408 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.408 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.408 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.409 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.410 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.410 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.410 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.410 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.410 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.410 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:43.463 27916 27916 E libsigchain:   #00 pc 000057a0  /apex/com.android.art/lib64/libsigchain.so (LogStack()+208) (BuildId: b183b45553b465e773e16f26f878b520)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #01 pc 000064ac  /apex/com.android.art/lib64/libsigchain.so (sigaction64+212) (BuildId: b183b45553b465e773e16f26f878b520)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #02 pc 00087f70  /apex/com.android.runtime/lib64/bionic/libc.so (ApplyAttrs(short, __posix_spawnattr* const*)+92) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #03 pc 00087880  /apex/com.android.runtime/lib64/bionic/libc.so (posix_spawn(int*, char const*, __posix_spawn_file_actions* const*, __posix_spawnattr* const*, char* const*, char* const*, int (*)(char const*, char* const*, char* const*))+340) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #04 pc 0008bc40  /apex/com.android.runtime/lib64/bionic/libc.so (system+420) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #05 pc 00274cb4  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (Protection::isRunningMemoryHack()+320) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #06 pc 0026f200  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (Java_com_com2us_wrapper_kernel_CWrapperKernel_nativeResumeClet+72) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #07 pc 0035efec  /system/framework/arm64/boot.oat (art_jni_trampoline+108) (BuildId: 2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #08 pc 006a8208  /apex/com.android.art/lib64/libart.so (nterp_helper+152) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #09 pc 0078e3e0  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/oat/arm64/base.vdex.yXPe3I.tmp (deleted) (+0) (BuildId: )
+10-31 23:22:43.463 27916 27916 E libsigchain:   #10 pc 006a81a4  /apex/com.android.art/lib64/libart.so (nterp_helper+52) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #11 pc 0078dac4  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/oat/arm64/base.vdex.yXPe3I.tmp (deleted) (+0) (BuildId: )
+10-31 23:22:43.463 27916 27916 E libsigchain:   #12 pc 006a90c4  /apex/com.android.art/lib64/libart.so (nterp_helper+3924) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #13 pc 0078ef40  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/oat/arm64/base.vdex.yXPe3I.tmp (deleted) (+0) (BuildId: )
+10-31 23:22:43.463 27916 27916 E libsigchain:   #14 pc 006a81a4  /apex/com.android.art/lib64/libart.so (nterp_helper+52) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #15 pc 0078d52c  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/oat/arm64/base.vdex.yXPe3I.tmp (deleted) (+0) (BuildId: )
+10-31 23:22:43.463 27916 27916 E libsigchain:   #16 pc 006a9ee4  /apex/com.android.art/lib64/libart.so (nterp_helper+7540) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #17 pc 0023cf84  /system/framework/framework.jar (android.opengl.GLSurfaceView$GLThread.guardedRun+1460) (BuildId: )
+10-31 23:22:43.463 27916 27916 E libsigchain:   #18 pc 006a90c4  /apex/com.android.art/lib64/libart.so (nterp_helper+3924) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #19 pc 0023dd22  /system/framework/framework.jar (android.opengl.GLSurfaceView$GLThread.run+122) (BuildId: )
+10-31 23:22:43.463 27916 27916 E libsigchain:   #20 pc 0034a194  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+612) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #21 pc 0028a79c  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+224) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #22 pc 004af528  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+1368) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #23 pc 0008167c  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+184) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:22:43.463 27916 27916 E libsigchain:   #24 pc 00073e5c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:22:43.480 27920 27920 W ps      : type=1400 audit(0.0:1170696): avc:  denied  { read } for  name="pid_max" dev="proc" ino=214903978 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:proc_pid_max:s0 tclass=file permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:44.299 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973856452, downTime=973856452, phoneEventTime=1793463764294 } moveCount:0
+10-31 23:22:44.300 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:44.337 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973856492, downTime=973856452, phoneEventTime=1793463764334 } moveCount:0
+10-31 23:22:44.733 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973856887, downTime=973856887, phoneEventTime=1793463764729 } moveCount:0
+10-31 23:22:44.733 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:44.760 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973856915, downTime=973856887, phoneEventTime=1793463764758 } moveCount:0
+10-31 23:22:44.771 20582 27933 E AudioTrack: Failed to load XML file: /odm/etc/audio/audio_lowpower_app_list.xml
+10-31 23:22:44.772 20582 23784 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:44.772 20582 23784 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252065
+10-31 23:22:44.772 20582 23784 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:44.772 20582 27933 I AudioTrackImpl: initAudioTrackImpl()
+10-31 23:22:44.772 20582 23784 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252081
+10-31 23:22:44.772 20582 27933 D AudioTrack: set(): (sessionId=0), mcallback is 1, streamType -1, sampleRate 44100, format 0x1, channelMask 0x1, frameCount 0, flags 0, notificationFrames 0,transferType 0, mClientAttributionSource AttributionSourceState{pid: -1, uid: -1, deviceId: 0, packageName: com.com2us.inotia4.normal.freefull.google.global.android.common, attributionTag: (null), token: binder:0xb40000768fe6e290, renouncedPermissions: (null), next: []}
+10-31 23:22:44.781 20582 27933 V xlog_client: xlog_check_permission event name audio_track_message level 0
+10-31 23:22:44.781 20582 27933 V xlog_client: xlog_check_permission event name audio_repeat_start_stop level 0
+10-31 23:22:44.781 20582 27933 V xlog_client: xlog_check_permission event name audio_zero_data level 0
+10-31 23:22:44.782 20582 27933 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:44.782 20582 27933 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252161
+10-31 23:22:44.782 20582 27933 I AudioTrack: start(116082): prior state:STATE_STOPPED packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:44.851 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck], enter: uid = 10396, session = 252161, uidnowTime = 1793463693
+10-31 23:22:44.851 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck] isAnomaly = 0
+10-31 23:22:44.851 20582 27933 D AudioTrack: ~AudioTrack(sessionID=252153)
+10-31 23:22:44.851 20582 27933 I AudioTrack: stop(sessionID=252153), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:44.851 20582 27933 D AudioTrack: stop(116081): prior state:STATE_STOPPED
+10-31 23:22:44.851 20582 23784 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:44.851 20582 23784 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252161
+10-31 23:22:44.993 20582 27933 I AudioTrack: stop(sessionID=252161), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:44.993 20582 27933 D AudioTrack: stop(116082): prior state:STATE_ACTIVE
+10-31 23:22:45.822 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973857977, downTime=973857977, phoneEventTime=1793463765820 } moveCount:0
+10-31 23:22:45.823 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:45.906 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973858059, downTime=973857977, phoneEventTime=1793463765901 } moveCount:0
+10-31 23:22:46.633 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973858786, downTime=973858786, phoneEventTime=1793463766628 } moveCount:0
+10-31 23:22:46.634 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:46.690 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973858843, downTime=973858786, phoneEventTime=1793463766686 } moveCount:0
+10-31 23:22:46.692 20582 27933 E AudioTrack: Failed to load XML file: /odm/etc/audio/audio_lowpower_app_list.xml
+10-31 23:22:46.692 20582 24586 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:46.692 20582 27933 I AudioTrackImpl: initAudioTrackImpl()
+10-31 23:22:46.693 20582 24586 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252065
+10-31 23:22:46.693 20582 27933 D AudioTrack: set(): (sessionId=0), mcallback is 1, streamType -1, sampleRate 44100, format 0x1, channelMask 0x1, frameCount 0, flags 0, notificationFrames 0,transferType 0, mClientAttributionSource AttributionSourceState{pid: -1, uid: -1, deviceId: 0, packageName: com.com2us.inotia4.normal.freefull.google.global.android.common, attributionTag: (null), token: binder:0xb40000768fe665d0, renouncedPermissions: (null), next: []}
+10-31 23:22:46.693 20582 24586 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:46.693 20582 24586 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252081
+10-31 23:22:46.709 20582 27933 V xlog_client: xlog_check_permission event name audio_track_message level 0
+10-31 23:22:46.709 20582 27933 V xlog_client: xlog_check_permission event name audio_repeat_start_stop level 0
+10-31 23:22:46.709 20582 27933 V xlog_client: xlog_check_permission event name audio_zero_data level 0
+10-31 23:22:46.709 20582 27933 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:46.710 20582 27933 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252177
+10-31 23:22:46.710 20582 27933 I AudioTrack: start(116084): prior state:STATE_STOPPED packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:46.756 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck], enter: uid = 10396, session = 252177, uidnowTime = 1793463764
+10-31 23:22:46.756 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck] isAnomaly = 0
+10-31 23:22:46.757 20582 27933 D AudioTrack: ~AudioTrack(sessionID=252161)
+10-31 23:22:46.757 20582 27933 I AudioTrack: stop(sessionID=252161), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:46.757 20582 27933 D AudioTrack: stop(116082): prior state:STATE_STOPPED
+10-31 23:22:46.762 20582 24586 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:46.762 20582 24586 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252177
+10-31 23:22:46.772 20582 20582 V MediaPlayer: resetDrmState:  mDrmInfo=null mDrmProvisioningThread=null mPrepareDrmInProgress=false mActiveDrmScheme=false
+10-31 23:22:46.772 20582 20582 V MediaPlayer: cleanDrmObj: mDrmObj=null mDrmSessionId=null
+10-31 23:22:46.772 20582 20582 D MediaPlayer: _release native called
+10-31 23:22:46.782 20582 20582 D MediaPlayer: _release native finished
+10-31 23:22:47.053 20582 20582 D DecorView: updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+10-31 23:22:47.054 20582 27991 W System.err: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+10-31 23:22:47.055 20582 27991 W System.err: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:150)
+10-31 23:22:47.055 20582 27991 W System.err: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+10-31 23:22:47.055 20582 27991 W System.err: 	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+10-31 23:22:47.055 20582 27991 W System.err: 	at com.android.okhttp.Dns$1.lookup(Dns.java:41)
+10-31 23:22:47.055 20582 27991 W System.err: 	at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:178)
+10-31 23:22:47.055 20582 27991 W System.err: 	at com.android.okhttp.internal.http.RouteSelector.nextProxy(RouteSelector.java:144)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:86)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:176)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:131)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getOutputStream(HttpURLConnectionImpl.java:262)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getOutputStream(DelegatingHttpsURLConnection.java:219)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:30)
+10-31 23:22:47.056 20582 27991 W System.err: 	at com.com2us.wrapper.network.CWrapperHttp$1.run(CWrapperHttp.java:120)
+10-31 23:22:47.056 20582 27991 W System.err: Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+10-31 23:22:47.056 20582 27991 W System.err: 	at libcore.io.Linux.android_getaddrinfo(Native Method)
+10-31 23:22:47.056 20582 27991 W System.err: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:22:47.056 20582 27991 W System.err: 	at libcore.io.BlockGuardOs.android_getaddrinfo(BlockGuardOs.java:222)
+10-31 23:22:47.056 20582 27991 W System.err: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:22:47.056 20582 27991 W System.err: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:135)
+10-31 23:22:47.056 20582 27991 W System.err: 	... 17 more
+10-31 23:22:47.056 20582 27991 W System.err: Caused by: android.system.ErrnoException: android_getaddrinfo failed: EPERM (Operation not permitted)
+10-31 23:22:47.056 20582 27991 W System.err: 	... 22 more
+10-31 23:22:47.057 20582 20582 D ScrollerOptimizationManager: registerConfigChangedListener
+10-31 23:22:47.060 20582 20582 D ScrollerOptimizationManager: registerConfigChangedListener
+10-31 23:22:47.065 20582 23375 D HWUI    : TAG_DDRE, CanvasContext::setDdreActivities: 
+10-31 23:22:47.065 20582 20582 I ViewRootImpl: com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity use first frame acceleration
+10-31 23:22:47.072 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.072 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.075 20582 20582 D DecorViewImmersiveImpl: onAttachedToWindow. pkg: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:47.075 20582 20582 I ComputilityLevel: getComputilityLevel(): 5
+10-31 23:22:47.075 20582 20582 D DecorViewImmersiveImpl: com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity@b2b7242 already set forced E2E by app
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.076 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.080 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.080 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.080 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.080 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.081 20582 20582 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:22:47.076 20582 20582 W .android.common: type=1400 audit(0.0:1170714): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=508 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:47.081 20582 23784 D BLASTBufferQueue: onGameOptimizeParameter: new GameOptimizeInfo game: no valid app, VsyncBuffergame: no valid app, mOptimizeEnable: 0, mSuperTouchEnable: 0,mVsyncBufferEnable: 0,mPendingBufferEnable 0,mNeedDynamicDropBuffer: 0, mNeedFirstFrameDropBuffer: 0
+10-31 23:22:47.081 20582 23784 D BLASTBufferQueue: 
+10-31 23:22:47.080 20582 20582 W .android.common: type=1400 audit(0.0:1170715): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=508 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:47.082 20582 20582 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+10-31 23:22:47.083 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.084 20582 20582 D VRI[MainActivity]: vri.Setup new sync=wmsSync-VRI[MainActivity]#25
+10-31 23:22:47.088 20582 20582 D VRI[MainActivity]: vri.reportDrawFinished 0 0 Rect(592, 409 - 1912, 671)
+10-31 23:22:47.088 20582 20582 I Choreographer: first vsync insert message into MessageQueue Head
+10-31 23:22:47.089 20582 20582 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Dialog$$ExternalSyntheticLambda2@6fea59d
+10-31 23:22:47.089 20582 20582 D DecorViewImmersiveImpl: onDetachedFromWindow
+10-31 23:22:47.096 20582 23375 D BufferQueueProducer: [VRI[MainActivity]#11(BLAST Consumer)11](id:50660000000b,api:1,p:20582,c:20582) disconnect: api 1 (caller=20582)
+10-31 23:22:47.096 20582 20582 W .android.common: Binder 0xb4000075ffdb6c80 destroyed after setInheritRt before being parceled.
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =36 hasIntersection =false
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =104 hasIntersection =false
+10-31 23:22:47.102 20582 20582 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-31 23:22:47.104 20582 24586 D BufferQueueConsumer: [VRI[MainActivity]#11(BLAST Consumer)11](id:50660000000b,api:0,p:-1,c:20582) disconnect: caller 0
+10-31 23:22:47.117 20582 20582 I HandWritingStubImpl: refreshLastKeyboardType: 1
+10-31 23:22:47.117 20582 20582 I HandWritingStubImpl: getCurrentKeyboardType: 1
+10-31 23:22:47.119 20582 20582 D InsetsController: hide(ime(), fromIme=false)
+10-31 23:22:47.119 20582 20582 I ImeTracker: com.com2us.inotia4.normal.freefull.google.global.android.common:8c28a702: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+10-31 23:22:47.352 20582 27933 I AudioTrack: stop(sessionID=252177), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:47.352 20582 27933 D AudioTrack: stop(116084): prior state:STATE_ACTIVE
+10-31 23:22:48.011 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973860166, downTime=973860166, phoneEventTime=1793463768008 } moveCount:0
+10-31 23:22:48.011 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:48.091 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973860245, downTime=973860166, phoneEventTime=1793463768087 } moveCount:0
+10-31 23:22:48.096 20582 27933 E AudioTrack: Failed to load XML file: /odm/etc/audio/audio_lowpower_app_list.xml
+10-31 23:22:48.096 20582 24586 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.096 20582 27933 I AudioTrackImpl: initAudioTrackImpl()
+10-31 23:22:48.096 20582 27933 D AudioTrack: set(): (sessionId=0), mcallback is 1, streamType -1, sampleRate 44100, format 0x1, channelMask 0x1, frameCount 0, flags 0, notificationFrames 0,transferType 0, mClientAttributionSource AttributionSourceState{pid: -1, uid: -1, deviceId: 0, packageName: com.com2us.inotia4.normal.freefull.google.global.android.common, attributionTag: (null), token: binder:0xb40000768fe6c8d0, renouncedPermissions: (null), next: []}
+10-31 23:22:48.097 20582 24586 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252065
+10-31 23:22:48.097 20582 24586 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.097 20582 24586 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252081
+10-31 23:22:48.112 20582 27933 V xlog_client: xlog_check_permission event name audio_track_message level 0
+10-31 23:22:48.112 20582 27933 V xlog_client: xlog_check_permission event name audio_repeat_start_stop level 0
+10-31 23:22:48.112 20582 27933 V xlog_client: xlog_check_permission event name audio_zero_data level 0
+10-31 23:22:48.112 20582 27933 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.112 20582 27933 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252185
+10-31 23:22:48.112 20582 27933 I AudioTrack: start(116085): prior state:STATE_STOPPED packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.191 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck], enter: uid = 10396, session = 252185, uidnowTime = 1793463766
+10-31 23:22:48.191 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck] uid = 10396, uidbeforeTimeGap = 2, uidnowTimeGap = 2, consecutiveStartCnt = 2
+10-31 23:22:48.191 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck] isAnomaly = 0
+10-31 23:22:48.191 20582 27933 D AudioTrack: ~AudioTrack(sessionID=252177)
+10-31 23:22:48.191 20582 24586 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.191 20582 27933 I AudioTrack: stop(sessionID=252177), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.191 20582 27933 D AudioTrack: stop(116084): prior state:STATE_STOPPED
+10-31 23:22:48.191 20582 24586 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252185
+10-31 23:22:48.231 20582 27933 I AudioTrack: stop(sessionID=252185), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.231 20582 27933 D AudioTrack: stop(116085): prior state:STATE_ACTIVE
+10-31 23:22:48.422 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973860576, downTime=973860576, phoneEventTime=1793463768418 } moveCount:0
+10-31 23:22:48.422 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:48.490 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973860643, downTime=973860576, phoneEventTime=1793463768486 } moveCount:0
+10-31 23:22:48.497 20582 27933 E AudioTrack: Failed to load XML file: /odm/etc/audio/audio_lowpower_app_list.xml
+10-31 23:22:48.497 20582 23912 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.497 20582 23912 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252065
+10-31 23:22:48.498 20582 23912 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.498 20582 23912 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252081
+10-31 23:22:48.498 20582 27933 I AudioTrackImpl: initAudioTrackImpl()
+10-31 23:22:48.498 20582 27933 D AudioTrack: set(): (sessionId=0), mcallback is 1, streamType -1, sampleRate 44100, format 0x1, channelMask 0x1, frameCount 0, flags 0, notificationFrames 0,transferType 0, mClientAttributionSource AttributionSourceState{pid: -1, uid: -1, deviceId: 0, packageName: com.com2us.inotia4.normal.freefull.google.global.android.common, attributionTag: (null), token: binder:0xb40000768fe8c350, renouncedPermissions: (null), next: []}
+10-31 23:22:48.524 20582 27933 V xlog_client: xlog_check_permission event name audio_track_message level 0
+10-31 23:22:48.524 20582 27933 V xlog_client: xlog_check_permission event name audio_repeat_start_stop level 0
+10-31 23:22:48.524 20582 27933 V xlog_client: xlog_check_permission event name audio_zero_data level 0
+10-31 23:22:48.524 20582 27933 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.524 20582 27933 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252193
+10-31 23:22:48.524 20582 27933 I AudioTrack: start(116086): prior state:STATE_STOPPED packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.583 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck], enter: uid = 10396, session = 252193, uidnowTime = 1793463768
+10-31 23:22:48.583 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck] uid = 10396, uidbeforeTimeGap = 2, uidnowTimeGap = 0, consecutiveStartCnt = 3
+10-31 23:22:48.583 20582 27933 D AudioRepeatStartCheck: [AudioRepeatStartStopCheck] isAnomaly = 0
+10-31 23:22:48.583 20582 27933 D AudioTrack: ~AudioTrack(sessionID=252185)
+10-31 23:22:48.583 20582 27933 I AudioTrack: stop(sessionID=252185), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.583 20582 27933 D AudioTrack: stop(116085): prior state:STATE_STOPPED
+10-31 23:22:48.583 20582 23912 I AudioTrackImpl: before scaleVolumeForVideo L:1.000000 R:1.000000 and the pakage is com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:48.583 20582 23912 D AudioTrack: AudioTrack::setVolume L:1.000000 R:1.000000 sessionid=252193
+10-31 23:22:48.775 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973860929, downTime=973860929, phoneEventTime=1793463768771 } moveCount:0
+10-31 23:22:48.776 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:48.789 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973860945, downTime=973860929, phoneEventTime=1793463768787 } moveCount:0
+10-31 23:22:48.904 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973861058, downTime=973861058, phoneEventTime=1793463768901 } moveCount:0
+10-31 23:22:48.904 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:48.985 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973861141, downTime=973861058, phoneEventTime=1793463768983 } moveCount:5
+10-31 23:22:49.109 20582 27933 I AudioTrack: stop(sessionID=252193), packageName: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:49.109 20582 27933 D AudioTrack: stop(116086): prior state:STATE_ACTIVE
+10-31 23:22:49.232 27997 27997 W linker64: type=1400 audit(0.0:1170717): avc:  denied  { search } for  name="tests" dev="dm-57" ino=411 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:49.232 27997 27997 W linker64: type=1400 audit(0.0:1170718): avc:  denied  { search } for  name="tests" dev="dm-57" ino=411 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:49.232 27997 27997 W linker64: type=1400 audit(0.0:1170719): avc:  denied  { search } for  name="tests" dev="dm-57" ino=411 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:49.232 27997 27997 W linker64: type=1400 audit(0.0:1170720): avc:  denied  { search } for  name="tests" dev="dm-57" ino=411 scontext=u:r:untrusted_app:s0:c140,c257,c512,c768 tcontext=u:object_r:shell_test_data_file:s0 tclass=dir permissive=0 app=com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:49.237 27997 27997 W libc    : Access denied finding property "persist.vendor.track.malloc.enable"
+10-31 23:22:49.237 27997 27997 W libc    : Access denied finding property "persist.vendor.fd.monitor.enable"
+10-31 23:22:49.851 27997 27997 W chromium: [1031/232249.848396:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.851 27997 27997 W chromium: [1031/232249.851516:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.851 27997 27997 W chromium: [1031/232249.851980:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.863 27997 27997 W chromium: [1031/232249.863936:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.864 27997 27997 W chromium: [1031/232249.864335:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.864 27997 27997 W chromium: [1031/232249.864564:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.867 27997 27997 W chromium: [1031/232249.867085:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.867 27997 27997 W chromium: [1031/232249.867266:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.868 27997 27997 W chromium: [1031/232249.868190:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.868 27997 27997 W chromium: [1031/232249.868374:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.868 27997 27997 W chromium: [1031/232249.868564:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.868 27997 27997 W chromium: [1031/232249.868725:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.868 27997 27997 W chromium: [1031/232249.868889:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.869 27997 27997 W chromium: [1031/232249.869402:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.869 27997 27997 W chromium: [1031/232249.869574:WARNING:third_party/crashpad/crashpad/snapshot/linux/thread_snapshot_linux.cc:112] Unknown scheduling policy 1073741824
+10-31 23:22:49.882 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973861792, downTime=973861792, phoneEventTime=1793463769634 } moveCount:0
+10-31 23:22:49.883 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:49.885 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973861966, downTime=973861792, phoneEventTime=1793463769809 } moveCount:1
+10-31 23:22:49.889 27997 27997 I libcrashpad_handler_trampoline.so: hook_module_exit libgui_unisoc_utils.so over, handle:0x0
+10-31 23:22:49.895 20582 23616 I libc    : handling signal: 11
+--------- beginning of crash
+10-31 23:22:49.895 20582 23616 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x328 in tid 23616 (GLThread 158843), pid 20582 (.android.common)
+10-31 23:22:49.895 20582 23616 I libc    : debuggerd_dispatch_pseudothread start. crashing tid: 23616
+10-31 23:22:49.908 20582 23616 I libc    : crash_dump pid: 28009
+10-31 23:22:49.929 28009 28009 W libc    : Access denied finding property "persist.vendor.track.malloc.enable"
+10-31 23:22:49.929 28009 28009 W libc    : Access denied finding property "persist.vendor.fd.monitor.enable"
+10-31 23:22:49.935 28009 28009 I crash_dump64: crash_dump start
+10-31 23:22:49.935 28009 28009 I crash_dump64: Fork in crash_dump. child pid: 28010
+10-31 23:22:49.977 28010 28010 I crash_dump64: fork_exit_write reset
+10-31 23:22:49.978 28010 28010 I crash_dump64: obtaining output fd from tombstoned, type: kDebuggerdTombstoneProto
+10-31 23:22:49.985 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_DOWN, id[0]=0, pointerCount=1, eventTime=973862141, downTime=973862141, phoneEventTime=1793463769983 } moveCount:0
+10-31 23:22:49.985 20582 20582 D VRI[MainActivity]: getMiuiFreeformStackInfo mTmpFrames.miuiFreeFormStackInfo: null
+10-31 23:22:49.987 28010 28010 I crash_dump64: g_tombstoned_connected is 1
+10-31 23:22:49.987 28010 28010 I crash_dump64: performing dump of process 20582 (target tid = 23616)
+10-31 23:22:49.994 28010 28010 I crash_dump64: engrave_tomstone start
+10-31 23:22:50.051 20582 20582 I MIUIInput: [MotionEvent] ViewRootImpl windowName 'com.com2us.inotia4.normal.freefull.google.global.android.common/com.com2us.inotia4.normal.freefull.google.global.android.common.MainActivity', { action=ACTION_UP, id[0]=0, pointerCount=1, eventTime=973862207, downTime=973862141, phoneEventTime=1793463770049 } moveCount:0
+10-31 23:22:50.417 28010 28010 I crash_dump: engrave_tombstone_proto end
+10-31 23:22:50.421 28010 28010 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+10-31 23:22:50.421 28010 28010 F DEBUG   : Build fingerprint: 'Redmi/vermeer/vermeer:16/BP2A.250605.031.A3/OS3.0.307.0.WNKCNXM:user/release-keys'
+10-31 23:22:50.421 28010 28010 F DEBUG   : Revision: '0'
+10-31 23:22:50.421 28010 28010 F DEBUG   : ABI: 'arm64'
+10-31 23:22:50.421 28010 28010 F DEBUG   : Timestamp: 2026-10-31 23:22:49.995015886+0700
+10-31 23:22:50.421 28010 28010 F DEBUG   : Process uptime: 636s
+10-31 23:22:50.421 28010 28010 F DEBUG   : Cmdline: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:50.421 28010 28010 F DEBUG   : pid: 20582, tid: 23616, name: GLThread 158843  >>> com.com2us.inotia4.normal.freefull.google.global.android.common <<<
+10-31 23:22:50.421 28010 28010 F DEBUG   : uid: 10396
+10-31 23:22:50.421 28010 28010 F DEBUG   : tagged_addr_ctrl: 0000000000000001 (PR_TAGGED_ADDR_ENABLE)
+10-31 23:22:50.421 28010 28010 F DEBUG   : pac_enabled_keys: 000000000000000f (PR_PAC_APIAKEY, PR_PAC_APIBKEY, PR_PAC_APDAKEY, PR_PAC_APDBKEY)
+10-31 23:22:50.421 28010 28010 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0000000000000328
+10-31 23:22:50.421 28010 28010 F DEBUG   : Cause: null pointer dereference
+10-31 23:22:50.421 28010 28010 F DEBUG   :     x0  0000000000000000  x1  0000000000000000  x2  000000001bdad86a  x3  00000000aca78c40
+10-31 23:22:50.421 28010 28010 F DEBUG   :     x4  000000000000000a  x5  0000000003306fe0  x6  0000000000000000  x7  0000000000000000
+10-31 23:22:50.421 28010 28010 F DEBUG   :     x8  00000074eb0fc3fa  x9  0000000000000001  x10 00000074eaf5461c  x11 00000074eaf54518
+10-31 23:22:50.421 28010 28010 F DEBUG   :     x12 00000074eb119dc0  x13 00000074eaf5442c  x14 00000074eaf54a4c  x15 0000187fda57469a
+10-31 23:22:50.421 28010 28010 F DEBUG   :     x16 00000074eb0de6d8  x17 00000074eaf9c1b8  x18 0000007500a10000  x19 00000074eb1154e8
+10-31 23:22:50.421 28010 28010 F DEBUG   :     x20 00000074eb119db8  x21 00000074eb119db0  x22 000000000000003c  x23 00000074eb0fe7b8
+10-31 23:22:50.421 28010 28010 F DEBUG   :     x24 0000000000000009  x25 000000751bdd5fa8  x26 000000006f71aec8  x27 0000000000000e38
+10-31 23:22:50.421 28010 28010 F DEBUG   :     x28 000000751bdd6080  x29 000000751bdd5d80
+10-31 23:22:50.421 28010 28010 F DEBUG   :     lr  00000074eaf54410  sp  000000751bdd5d80  pc  00000074eaf9c1b8  pst 0000000080001400
+10-31 23:22:50.421 28010 28010 F DEBUG   : 19 total frames
+10-31 23:22:50.421 28010 28010 F DEBUG   : backtrace:
+10-31 23:22:50.421 28010 28010 F DEBUG   :       #00 pc 00000000001801b8  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (CHAR_GetSkillPoint+0) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:50.421 28010 28010 F DEBUG   :       #01 pc 000000000013840c  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (GAMESTATE_EnterPlay+84) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:50.421 28010 28010 F DEBUG   :       #02 pc 00000000002035ec  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (GAMESTATE_SetState+416) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:50.421 28010 28010 F DEBUG   :       #03 pc 000000000013823c  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (GAMESTATE_ProcessMapChange+140) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:50.421 28010 28010 F DEBUG   :       #04 pc 000000000020309c  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (STATE_ProcessGame+116) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #05 pc 000000000017a094  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (MainProcess+448) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #06 pc 0000000000275c9c  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (TM_Run+180) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #07 pc 000000000026f018  /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64/libgame.so (Java_com_com2us_wrapper_kernel_CWrapperKernel_nativeProcess+12) (BuildId: f2829c860080726861c5fa0a23ab89e880fcee8e)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #08 pc 000000000035efec  /system/framework/arm64/boot.oat (art_jni_trampoline+108) (BuildId: 2bd726a65a7d03d5cfc8bd4f9fa5e60fa2bb57fb)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #09 pc 0000000002000c78  /memfd:jit-cache (deleted) (offset 0x2000000) (com.com2us.wrapper.kernel.CWrapperTimer$1$1.run+56)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #10 pc 00000000006a9f44  /apex/com.android.art/lib64/libart.so (nterp_helper+7636) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #11 pc 000000000023cf84  /system/framework/framework.jar (offset 0x1235000) (android.opengl.GLSurfaceView$GLThread.guardedRun+1460)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #12 pc 00000000006a90c4  /apex/com.android.art/lib64/libart.so (nterp_helper+3924) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #13 pc 000000000023dd22  /system/framework/framework.jar (offset 0x1235000) (android.opengl.GLSurfaceView$GLThread.run+122)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #14 pc 000000000034a194  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+612) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #15 pc 000000000028a79c  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+224) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #16 pc 00000000004af528  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+1368) (BuildId: 0ad01b6ca8a34734d6e3bc59b8bde143)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #17 pc 000000000008167c  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+184) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:22:50.422 28010 28010 F DEBUG   :       #18 pc 0000000000073e5c  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+68) (BuildId: 56f2e102db31359cc22460be335d240c)
+10-31 23:22:50.450 28010 28010 I libc    : tombstoned_notify_completion, socket: 8
+10-31 23:22:50.450 28010 28010 I crash_dump64: notify_completion complete
+10-31 23:22:50.455 28010 28010 E MIUINDBG: miui_native_debug_process_O
+10-31 23:22:50.464 28010 28010 E MIUINDBG: crash_dump(miuindbg) client read ack success
+10-31 23:22:50.464 28010 28010 E MIUINDBG: core type: 0 
+10-31 23:22:50.464 28010 28010 E MIUINDBG: unable to connect to mqsas native socket
+10-31 23:22:55.683 22659 22659 I .android.common: Using CollectorTypeCC GC.
+10-31 23:22:55.688 22659 22659 E .android.common: Not starting debugger since process cannot load the jdwp agent.
+10-31 23:22:55.701 22659 22659 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-31 23:22:55.707 22659 22659 I ActivityThread: Current dynamic renderEngine type=0
+10-31 23:22:55.722 22659 28143 D MiuiDownscaleImpl: set override inverted scale : 1.0
+10-31 23:22:55.725 22659 22659 I RENDER_TURBO: onActivityThreadCreate not in white list, pkg=com.com2us.inotia4.normal.freefull.google.global.android.common, type=vermeer
+10-31 23:22:55.731 22659 22659 I .android.common: AssetManager2(0xb4000075afd4dad8) locale list changing from [en-US] to [vi-VN]
+10-31 23:22:55.732 22659 22659 D ActivityThread: setEmbeddedParam packageName=com.com2us.inotia4.normal.freefull.google.global.android.common processName=com.com2us.inotia4.normal.freefull.google.global.android.common isEmbedded=false isIsolated=false
+10-31 23:22:55.732 22659 22659 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-31 23:22:55.732 22659 22659 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-31 23:22:55.732 22659 22659 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+10-31 23:22:55.737 22659 28142 D AppScoutStateMachine: 22659-ScoutStateMachinecreated
+10-31 23:22:55.747 22659 22659 D nativeloader: Configuring clns-10 for other apk /data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/lib/arm64:/data/app/~~aP-3U54umPjsZhic1smSkg==/com.com2us.inotia4.normal.freefull.google.global.android.common-qm8SBkhqZY6FvlO7UX6L9w==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.750 22659 22659 I .android.common: AssetManager2(0xb4000075afd5d4d8) locale list changing from [] to [vi-VN]
+10-31 23:22:55.751 22659 28147 D MiuiMonitorThread: Shared singleton Thread for stability monitor start
+10-31 23:22:55.752 22659 22659 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:22:55.752 22659 22659 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:22:55.752 22659 22659 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:22:55.752 22659 22659 V GraphicsEnvironment: Currently set values for:
+10-31 23:22:55.752 22659 22659 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-31 23:22:55.752 22659 22659 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-31 23:22:55.752 22659 22659 V GraphicsEnvironment: com.com2us.inotia4.normal.freefull.google.global.android.common is not listed in per-application setting
+10-31 23:22:55.752 22659 22659 V GraphicsEnvironment: ANGLE allowlist from config: 
+10-31 23:22:55.752 22659 22659 V GraphicsEnvironment: com.com2us.inotia4.normal.freefull.google.global.android.common is not listed in ANGLE allowlist or settings, returning default
+10-31 23:22:55.752 22659 22659 V GraphicsEnvironment: The updatable driver is turned off on this device.
+10-31 23:22:55.754 22659 28147 I Perf    : Connecting to perf service.
+10-31 23:22:55.754 22659 22659 D ResMonitorStub: The current process type is: third_party_app, process name is: com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.755 22659 22659 I NAMP-DIAG: da cai handler, sdk=36
+10-31 23:22:55.757 22659 22659 I FirebaseApp: Device unlocked: initializing all Firebase APIs for app [DEFAULT]
+10-31 23:22:55.757 22659 22659 I FirebaseInitProvider: FirebaseApp initialization successful
+10-31 23:22:55.758 22659 28147 I ActivityThread: TrafficStats init done
+10-31 23:22:55.759 22659 28154 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-31 23:22:55.761 22659 28147 I ForceDarkHelperStubImpl: initialize for com.com2us.inotia4.normal.freefull.google.global.android.common , ForceDarkOrigin
+10-31 23:22:55.762 22659 28147 D nativeloader: Load libforcedarkimpl.so using system ns (caller=/system_ext/framework/miui-framework.jar): ok
+10-31 23:22:55.763 22659 28147 D HWUI    : JNI_OnLoad success
+10-31 23:22:55.763 22659 28147 I MiuiForceDarkConfig: setConfig density:2.250000, mainRule:0, secondaryRule:0, tertiaryRule:0
+10-31 23:22:55.769 22659 22659 I HiveInitializer: HiveInitializer  initialization successful
+10-31 23:22:55.769 22659 22659 D HiveInitializer: Already have referrer.
+10-31 23:22:55.769 22659 28147 I ActivityThread: Miui Feature Init done
+10-31 23:22:55.770 22659 22659 I NativeTurboSchedManager: Load libmiui_runtime
+10-31 23:22:55.770 22659 22659 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.774 22659 22659 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+10-31 23:22:55.775 22659 22659 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+10-31 23:22:55.775 22659 22659 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+10-31 23:22:55.776 22659 28168 D WM-ForceStopRunnable: The default process name was not specified.
+10-31 23:22:55.777 22659 28168 D WM-ForceStopRunnable: Performing cleanup operations.
+10-31 23:22:55.780 22659 22659 W DynamiteModule: Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+10-31 23:22:55.782 22659 22659 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+10-31 23:22:55.782 22659 22659 W ProviderInstaller: Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+10-31 23:22:55.782 22659 28166 D CompatChangeReporter: Compat change id reported: 288912692; UID 10396; state: ENABLED
+10-31 23:22:55.783 22659 22659 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-31 23:22:55.783 22659 22659 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/com.android.location.provider.jar
+10-31 23:22:55.783 22659 22659 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/com.android.media.remotedisplay.jar
+10-31 23:22:55.784 22659 22659 D nativeloader: Configuring clns-11 for other apk /system_ext/framework/com.android.extensions.appfunctions.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/lib/arm64:/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+10-31 23:22:55.784 22659 22659 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libmisys_jni.xiaomi.so:libpag.hyperos.so:libffavc.hyperos.so:libxiaomi_modemdumpsdx55_jni.modem.so:libxiaomi_modemdump_jni.modem.so:libmodemsmartengine_jni.modem.so:libupdateprof.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:libqesdk_ndk_platform.qti.so:liblistenjni.qti.so:libautoui_image.xiaomi.so
+10-31 23:22:55.784 22659 22659 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-31 23:22:55.784 22659 22659 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+10-31 23:22:55.787 22659 22659 D nativeloader: Configuring clns-12 for other apk /data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/lib/arm64:/data/app/~~uay2K6122MJIO8iFtFReBw==/com.google.android.gms-ISSwRs1MLPkCBlFFWhC0ow==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+10-31 23:22:55.790 22659 22659 I .android.common: AssetManager2(0xb4000075afd5c538) locale list changing from [] to [vi-VN]
+10-31 23:22:55.793 22659 28173 I DpmTcmClient: RegisterTcmMonitor from: $Proxy3
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: Exception while executing runnable com.google.firebase.installations.FirebaseInstallations$$ExternalSyntheticLambda1@d7df58
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:150)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:103)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at java.net.InetAddress.getAllByName(InetAddress.java:1152)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.Dns$1.lookup(Dns.java:41)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:178)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.nextProxy(RouteSelector.java:144)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:86)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.findConnection(StreamAllocation.java:176)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.findHealthyConnection(StreamAllocation.java:128)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.http.StreamAllocation.newStream(StreamAllocation.java:97)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:289)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:232)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:465)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:131)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpURLConnectionImpl.getOutputStream(HttpURLConnectionImpl.java:262)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.huc.DelegatingHttpsURLConnection.getOutputStream(DelegatingHttpsURLConnection.java:219)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.android.okhttp.internal.huc.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:30)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.writeRequestBodyToOutputStream(FirebaseInstallationServiceClient.java:234)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.writeFIDCreateRequestBodyToOutputStream(FirebaseInstallationServiceClient.java:216)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.installations.remote.FirebaseInstallationServiceClient.createFirebaseInstallation(FirebaseInstallationServiceClient.java:174)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.registerFidWithServer(FirebaseInstallations.java:533)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.doNetworkCallIfNecessary(FirebaseInstallations.java:387)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations.$r8$lambda$_LVWvNUQ4Iq8r5kiH7vh8J1nAu0(FirebaseInstallations.java:372)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.installations.FirebaseInstallations$$ExternalSyntheticLambda1.run(R8$$SyntheticClass:0)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$1.run(SequentialExecutor.java:117)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$QueueWorker.workOnQueue(SequentialExecutor.java:229)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.concurrent.SequentialExecutor$QueueWorker.run(SequentialExecutor.java:174)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1302)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:677)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.concurrent.CustomThreadFactory.$r8$lambda$XB8AY3Hcio74byWuTzgVEC3Hiek(CustomThreadFactory.java:47)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at java.lang.Thread.run(Thread.java:1119)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at libcore.io.Linux.android_getaddrinfo(Native Method)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at libcore.io.BlockGuardOs.android_getaddrinfo(BlockGuardOs.java:222)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:133)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	at java.net.Inet6AddressImpl.lookupHostByName(Inet6AddressImpl.java:135)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	... 31 more
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: Caused by: android.system.ErrnoException: android_getaddrinfo failed: EPERM (Operation not permitted)
+10-31 23:22:55.796 22659 28173 E SequentialExecutor: 	... 36 more
+10-31 23:22:55.804 22659 28168 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemalarm.RescheduleReceiver
+10-31 23:22:55.886 22659 22659 I ProviderInstaller: Installed default security provider AndroidOpenSSL (via CompatProvider)
+10-31 23:22:55.887 22659 22659 W com.facebook.internal.Validate: No internet permissions granted for the app, please add <uses-permission android:name="android.permission.INTERNET" /> to your AndroidManifest.xml.
+10-31 23:22:55.887 22659 22659 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.890 22659 22659 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.891 22659 22659 W com.facebook.UserSettingsManager: The value for AdvertiserIDCollectionEnabled is currently set to FALSE so you're sending app events without collecting Advertiser ID. This can affect the quality of your advertising and analytics results.
+10-31 23:22:55.891 22659 22659 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.892 22659 22659 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.896 22659 22659 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.906 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.906 22659 28181 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.906 22659 28181 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.907 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.916 22659 22659 W libc    : Access denied finding property "vendor.boostfwk.frameprefetcher"
+10-31 23:22:55.917 22659 22659 D UnionPowerNotifier: check_union_power_ioctl -1
+10-31 23:22:55.917 22659 22659 D FramePredict: FramePredict init: false
+10-31 23:22:55.918 22659 22659 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.920 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.925 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.926 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.926 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.929 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.932 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.933 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.934 22659 22659 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-31 23:22:55.935 22659 22659 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-31 23:22:55.935 22659 22659 D HWUI    : [HWUI] Flag ddre enabled
+10-31 23:22:55.935 22659 22659 D .android.common: blurUtils, initBackgroundBlurMinInterval processName(com.com2us.inotia4.normal.freefull.google.global.android.common), inWhiteLists(0)
+10-31 23:22:55.935 22659 28147 I ActivityThread: HardwareRenderer preload  done
+10-31 23:22:55.936 22659 22659 I .android.common: AssetManager2(0xb4000075afd5d7f8) locale list changing from [] to [vi-VN]
+10-31 23:22:55.936 22659 28183 E com.facebook.GraphResponse: GraphRequest can't be used when Facebook SDK isn't fully initialized
+10-31 23:22:55.939 22659 28197 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-31 23:22:55.941 22659 22659 E TurboSchedMonitor: failed to find setSchedAffinity method com.com2us.inotia4.normal.freefull.google.global.android.common
+10-31 23:22:55.947 22659 28202 I .android.common: AssetManager2(0xb4000075afd5a5f8) locale list changing from [] to [vi-VN]
+10-31 23:22:55.948 22659 28197 W libc    : Access denied finding property "vendor.migl.debug"
+10-31 23:22:55.948 22659 28197 I libMiGL : EnableDR: 0
+10-31 23:22:55.948 22659 28197 D libMiGL : mDFIInterval: -1
+10-31 23:22:55.950 22659 28163 W ServiceBindIntentUtils: Dynamic lookup for intent failed for action: com.google.android.gms.games.internal.connect.service.START
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: QUALCOMM build                   : bad34dcf83, I1064ae0a1f
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: Build Date                       : 11/28/25
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: E031.41.03.64
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: Local Branch                     : 
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.13.2.0.11.00.00.856.062
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: Remote Branch                    : NONE
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: Reconstruct Branch               : NOTHING
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: Build Config                     : S P 14.1.4 AArch64
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+10-31 23:22:55.951 22659 28197 I AdrenoGLES-0: Driver Version                   : 0676.76.1
+10-31 23:22:55.961 22659 28202 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-31 23:22:55.966 22659 28197 I AdrenoGLES-0: PFP: 0x01740181, ME: 0x00000000

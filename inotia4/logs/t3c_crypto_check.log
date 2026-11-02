@@ -1,0 +1,81 @@
+##### orig: /opt/work/lib4/libgame.so
+
+lib=/opt/work/lib4/libgame.so ENCRYPT_Process2=base+0x140970 HubSave_key=base+0x2d0ca1
+CASE A_empty_zero           ma hoa n=3189 ret=true r=198 sum_ma=155 sum_tho=209
+CASE A_empty_zero           giai ma ret=true plaintext_giong_ban_dau=true
+CASE B_empty_garbageG1      ma hoa n=3189 ret=true r=126 sum_ma=19 sum_tho=209
+CASE B_dec_same_G1          giai ma ret=true plaintext_giong_ban_dau=true
+CASE B_dec_other_G2         giai ma ret=false plaintext_giong_ban_dau=false
+KET QUA B: giai ma khi bo nho GIONG=true ; khi bo nho KHAC (tien trinh khac)=false
+CASE C_key_394572           ma hoa n=3189 ret=true r=129 sum_ma=58 sum_tho=209
+CASE C_key_394572           giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_key_a                ma hoa n=3189 ret=true r=107 sum_ma=127 sum_tho=209
+CASE C_key_a                giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_key_63               ma hoa n=3189 ret=true r=75 sum_ma=120 sum_tho=209
+CASE C_key_63               giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_key_NULL123          ma hoa n=3189 ret=true r=251 sum_ma=232 sum_tho=209
+CASE C_key_NULL123          giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_small_n28            ma hoa n=28 ret=true r=226 sum_ma=217 sum_tho=242
+CASE C_small_n28            giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_empty_n0             ma hoa n=0 ret=true r=251 sum_ma=0 sum_tho=0
+CASE C_empty_n0             giai ma ret=true plaintext_giong_ban_dau=true
+CASE D_thpcheckslot1        giai ma ret=true plaintext_giong_ban_dau=n/a
+KET QUA D thpcheckslot1 (khoa 394572): true
+CASE D_save0_key_empty      giai ma ret=false plaintext_giong_ban_dau=n/a
+KET QUA D save0.dat (khoa rong, bo nho = 0): false (mong doi false: save goc dung keystream co rac)
+XONG
+##### patched: /opt/work/t3/libgame_t3b.so
+
+lib=/opt/work/t3/libgame_t3b.so ENCRYPT_Process2=base+0x140970 HubSave_key=base+0x2d0ca1
+CASE A_empty_zero           ma hoa n=3189 ret=true r=198 sum_ma=155 sum_tho=209
+CASE A_empty_zero           giai ma ret=true plaintext_giong_ban_dau=true
+CASE B_empty_garbageG1      ma hoa n=3189 ret=true r=126 sum_ma=73 sum_tho=209
+CASE B_dec_same_G1          giai ma ret=true plaintext_giong_ban_dau=true
+CASE B_dec_other_G2         giai ma ret=true plaintext_giong_ban_dau=true
+KET QUA B: giai ma khi bo nho GIONG=true ; khi bo nho KHAC (tien trinh khac)=true
+CASE C_key_394572           ma hoa n=3189 ret=true r=129 sum_ma=58 sum_tho=209
+CASE C_key_394572           giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_key_a                ma hoa n=3189 ret=true r=107 sum_ma=127 sum_tho=209
+CASE C_key_a                giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_key_63               ma hoa n=3189 ret=true r=75 sum_ma=120 sum_tho=209
+CASE C_key_63               giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_key_NULL123          ma hoa n=3189 ret=true r=251 sum_ma=232 sum_tho=209
+CASE C_key_NULL123          giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_small_n28            ma hoa n=28 ret=true r=226 sum_ma=217 sum_tho=242
+CASE C_small_n28            giai ma ret=true plaintext_giong_ban_dau=true
+CASE C_empty_n0             ma hoa n=0 ret=true r=251 sum_ma=0 sum_tho=0
+CASE C_empty_n0             giai ma ret=true plaintext_giong_ban_dau=true
+CASE D_thpcheckslot1        giai ma ret=true plaintext_giong_ban_dau=n/a
+KET QUA D thpcheckslot1 (khoa 394572): true
+CASE D_save0_key_empty      giai ma ret=false plaintext_giong_ban_dau=n/a
+KET QUA D save0.dat (khoa rong, bo nho = 0): false (mong doi false: save goc dung keystream co rac)
+XONG
+== 1. ban VA == save_crypto.py (keystream = T khi khoa rong; r doc tu buf[n+1])
+A_empty_zero (n=3189, r=198, khoa b'')                         DAT 
+B_empty_garbageG1 (n=3189, r=126, khoa b'')                    DAT 
+C_key_394572 (n=3189, r=129, khoa b'394572')                   DAT 
+C_key_a (n=3189, r=107, khoa b'a')                             DAT 
+C_key_63 (n=3189, r=75, khoa b'ABCDEFGH..')                    DAT 
+C_key_NULL123 (n=3189, r=251, khoa b'123')                     DAT 
+C_small_n28 (n=28, r=226, khoa b'394572')                      DAT 
+C_empty_n0 (n=0, r=251, khoa b'')                              DAT 
+== 2. ban GOC, khoa rong + rac: ban ma == save_crypto --oob file:<dump luc ma hoa>
+A_empty_zero: lib goc == mo hinh doc vuot buffer (r=198)       DAT 
+      (so voi keystream T thuan: GIONG)
+B_empty_garbageG1: lib goc == mo hinh doc vuot buffer (r=126)  DAT 
+      (so voi keystream T thuan: KHAC - rac anh huong)
+== 3. khoa khong rong / NULL: lib GOC == lib VA (khong hoi quy)
+C_key_394572                                                   DAT 
+C_key_a                                                        DAT 
+C_key_63                                                       DAT 
+C_key_NULL123                                                  DAT 
+C_small_n28                                                    DAT 
+C_empty_n0                                                     DAT 
+A_empty_zero                                                   DAT 
+== 4. D_save0 (file that, giai ma that bai): plaintext lib ghi ra == save_crypto --key ""
+D_save0 [orig] byte plaintext == save_crypto                   DAT 
+D_save0 [patched] byte plaintext == save_crypto                DAT 
+== 5. thpcheckslot1 (khoa 394572): ca hai ban giai ma dung, plaintext == b'2|000001|99|99|99|99|99|END|'
+D_thpcheckslot1 [orig]                                         DAT 
+D_thpcheckslot1 [patched]                                      DAT 
+TONG KET: TAT CA DAT

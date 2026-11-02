@@ -1,0 +1,243 @@
+#!/usr/bin/env python3
+"""Thay THAN method smali (giu nguyen chu ky) trong cay apktool da decode.
+
+    python3 patch_smali.py <dec_dir> [--group font,lang,...]
+
+Moi patch: (class, method header chinh xac, than moi). Patch phai khop DUNG 1 lan, lech thi dung.
+Nhom 'offline' them o giai doan offline (scripts/patch_offline.py).
+Co che bo sung (khong thay than method):
+  CATCH_ADD     them `.catch` ke ben `.catch` co san (nhom net).
+  INSERT_AFTER  chen DUNG 1 dong sau dong neo (so khop theo noi dung dong da strip, phai khop dung `want` lan trong method;
+                dong chen da co san trong method => dung). Nhom mod (T8c): ModMenu.onResume sau HiveActivity.onResume.
+"""
+import os, re, sys
+
+FONT = 'Lcom/com2us/wrapper/font/CFont;'
+VN = 'Lcom/namp/vh/VNFont;'
+
+
+def body(locals_, *lines):
+    return '    .locals %d\n\n' % locals_ + ''.join('    %s\n' % l for l in lines)
+
+
+PATCHES = {
+    'font': [
+        ('com/com2us/wrapper/font/CFont', '.method public getStringWidth([BII)I', body(
+            1,
+            'invoke-static {p1, p2, p3}, %s->getStringWidth([BII)I' % VN,
+            'move-result v0',
+            'return v0')),
+        ('com/com2us/wrapper/font/CFont', '.method public drawText([BII)I', body(
+            1,
+            'iget-object v0, p0, %s->mPixelbuffer:[I' % FONT,
+            'invoke-static {v0, p1, p2, p3}, %s->drawText([I[BII)I' % VN,
+            'move-result v0',
+            'return v0')),
+        ('com/com2us/wrapper/font/CFont', '.method public drawText([BII[I)I', body(
+            6,
+            'iget-object v0, p0, %s->mPixelbuffer:[I' % FONT,
+            'iget v1, p0, %s->mTextWidth:I' % FONT,
+            'move-object v2, p1',
+            'move v3, p2',
+            'move v4, p3',
+            'move-object v5, p4',
+            'invoke-static/range {v0 .. v5}, %s->drawTextPart([II[BII[I)I' % VN,
+            'move-result v0',
+            'return v0')),
+        ('com/com2us/wrapper/font/CSGLFont', '.method public drawTextInRect([BIIIII)I', body(
+            7,
+            'iget-object v0, p0, %s->mPixelbuffer:[I' % FONT,
+            'move-object v1, p1',
+            'move v2, p2',
+            'move v3, p3',
+            'move v4, p4',
+            'move v5, p5',
+            'move/from16 v6, p6',
+            'invoke-static/range {v0 .. v6}, %s->drawInRect([I[BIIIII)I' % VN,
+            'move-result v0',
+            'return v0')),
+        ('com/com2us/wrapper/font/CSGLFont', '.method public getStringWidthHeightInRect([BIIII[I)I', body(
+            6,
+            'move-object v0, p1',
+            'move v1, p2',
+            'move v2, p3',
+            'move v3, p4',
+            'move v4, p5',
+            'move-object/from16 v5, p6',
+            'invoke-static/range {v0 .. v5}, %s->measureInRect([BIIII[I)I' % VN,
+            'move-result v0',
+            'return v0')),
+    ],
+    'offline': [
+        # ---- Hive ActiveUser: khong goi mang, bao thanh cong qua com.namp.vh.Offline
+        ('com/com2us/module/activeuser/ActiveUser', '.method public start(Lcom/com2us/module/manager/ModuleManager$SERVER_STATE;)V', body(
+            0, 'invoke-static {p0}, Lcom/namp/vh/Offline;->activeUserStart(Lcom/com2us/module/activeuser/ActiveUser;)V', 'return-void')),
+        ('com/com2us/module/activeuser/ActiveUser', '.method public start(Lcom/com2us/module/manager/ModuleManager$SERVER_STATE;Z)V', body(
+            0, 'invoke-static {p0}, Lcom/namp/vh/Offline;->activeUserStart(Lcom/com2us/module/activeuser/ActiveUser;)V', 'return-void')),
+        ('com/com2us/module/activeuser/ActiveUser', '.method private jniGetAgeRange(J)V', body(
+            0, 'invoke-static {p0, p1, p2}, Lcom/namp/vh/Offline;->ageRange(Lcom/com2us/module/activeuser/ActiveUser;J)V', 'return-void')),
+        # ---- Peppermint/Hub: khong tao Peppermint (moi ham khac tu tra -16), request tra JSON cuc bo
+        ('com/com2us/peppermint/HubBridge', '.method public static initializeEx(Ljava/lang/String;I)I', body(
+            1, 'const/4 v0, 0x0', 'return v0')),
+        ('com/com2us/peppermint/HubBridge', '.method public static asyncRequest(Ljava/lang/String;Ljava/lang/String;JJ)I', body(
+            1, 'invoke-static {p0, p2, p3, p4, p5}, Lcom/namp/vh/Offline;->hubAsync(Ljava/lang/String;JJ)I', 'move-result v0', 'return v0')),
+        ('com/com2us/peppermint/HubBridge', '.method public static auth(JJ)I', body(
+            1, 'const-string v0, "auth"', 'invoke-static {v0, p0, p1, p2, p3}, Lcom/namp/vh/Offline;->hubAsync(Ljava/lang/String;JJ)I', 'move-result v0', 'return v0')),
+        ('com/com2us/peppermint/HubBridge', '.method public static authWithParam(Ljava/lang/String;JJ)I', body(
+            1, 'const-string v0, "auth"', 'invoke-static {v0, p1, p2, p3, p4}, Lcom/namp/vh/Offline;->hubAsync(Ljava/lang/String;JJ)I', 'move-result v0', 'return v0')),
+        # ---- Google Play Games: khong dang nhap (ban goc khoa startClet cho toi khi sign-in xong)
+        ('com/com2us/inotia4/normal/freefull/google/global/android/common/MainActivity', '.method public static setPlayGamesAuth()V', body(
+            0, 'return-void')),
+    ],
+    'lang': [
+        # Luon chon slot tieng Anh (chua ban dich tieng Viet), bat ke locale may.
+        ('com/com2us/wrapper/function/CFunction', '.method public static getLanguage(Ljava/lang/String;)Ljava/lang/String;', body(
+            1,
+            'const-string v0, "en"',
+            'return-object v0')),
+    ],
+}
+
+
+# Them handler bat ngoai le vao method co san (KHONG doi than lenh): sau moi dong `.catch <cu>` khop chinh xac,
+# them `.catch <moi>` cung khoang try va cung handler. (class, method header, ngoai le cu, ngoai le moi, so lan khop)
+CATCH_ADD = {
+    'net': [
+        # Khong co quyen INTERNET -> DNS nem SecurityException (RuntimeException), luong HTTP cua wrapper chi bat
+        # IOException -> sap app (log may that 2026-10-31: Protection::threadDownloadHackAppData -> NetConnectCB ->
+        # CS_netHttpConnectEx -> CWrapperHttp$1.run). Handler :catch_0 chi goi Throwable.printStackTrace roi
+        # bao native loi mang (iHttpStatus=-1, nativeConnectCB(fd,-1)) = dung nhanh "may khong co mang" cua ban goc.
+        ('com/com2us/wrapper/network/CWrapperHttp$1', '.method public run()V',
+         'Ljava/io/IOException;', 'Ljava/lang/SecurityException;', 2),
+    ],
+}
+
+# Chen 1 dong smali sau dong neo trong mot method co san (KHONG doi so thanh ghi/than khac).
+# (class, method header, dong neo (strip), dong chen, so lan khop dong neo)
+INSERT_AFTER = {
+    'mod': [
+        # T8c: nut noi + he so mod. onResume co `.locals 1`; lenh chen chi dung p0 (MainActivity la Activity).
+        ('com/com2us/inotia4/normal/freefull/google/global/android/common/MainActivity', '.method protected onResume()V',
+         'invoke-static {p0}, Lcom/hive/HiveActivity;->onResume(Landroid/app/Activity;)V',
+         'invoke-static {p0}, Lcom/namp/vh/ModMenu;->onResume(Landroid/app/Activity;)V', 1),
+    ],
+}
+
+# Method MOI them vao class (khong doi gi cua class goc): de lop Offline goi duoc member private.
+ADD_METHODS = {
+    'offline': [
+        ('com/com2us/module/activeuser/ActiveUser', '''
+.method public static namp_notify(Lcom/com2us/module/activeuser/ActiveUser;I)V
+    .locals 2
+
+    const/4 v0, 0x1
+    sput-boolean v0, Lcom/com2us/module/activeuser/ActiveUser;->isInitialized:Z
+    iget-wide v0, p0, Lcom/com2us/module/activeuser/ActiveUser;->jniActiveUserNotifierPointer:J
+    invoke-direct {p0, v0, v1, p1}, Lcom/com2us/module/activeuser/ActiveUser;->jniActiveUserNotifier(JI)V
+    return-void
+.end method
+
+.method public static namp_ageRange(Lcom/com2us/module/activeuser/ActiveUser;JIIIILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p8}, Lcom/com2us/module/activeuser/ActiveUser;->jniGetAgeRangeNotifier(JIIIILjava/lang/String;Ljava/lang/String;)V
+    return-void
+.end method
+'''),
+        ('com/com2us/peppermint/HubBridge', '''
+.method public static namp_cb(Ljava/lang/String;JJ)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/com2us/peppermint/HubBridge;->hubCallbackWithJSON(Ljava/lang/String;JJ)V
+    return-void
+.end method
+'''),
+    ],
+}
+
+
+def find_class(dec, cls):
+    hits = []
+    for d in sorted(os.listdir(dec)):
+        if d.startswith('smali'):
+            p = os.path.join(dec, d, cls + '.smali')
+            if os.path.exists(p):
+                hits.append(p)
+    if len(hits) != 1:
+        raise SystemExit('class %s: tim thay %d file' % (cls, len(hits)))
+    return hits[0]
+
+
+def apply(dec, groups):
+    total = 0
+    for gname in groups:
+        for cls, header, old, new, want in CATCH_ADD.get(gname, []):
+            path = find_class(dec, cls)
+            src = open(path, encoding='utf-8').read()
+            pat = re.compile(r'^' + re.escape(header) + r'\n.*?^\.end method$', re.S | re.M)
+            m = pat.findall(src)
+            if len(m) != 1:
+                raise SystemExit('CATCH %s %s: method khop %d lan (can 1)' % (cls, header, len(m)))
+            body = m[0]
+            if new in body:
+                raise SystemExit('CATCH %s: da co %s' % (cls, new))
+            crx = re.compile(r'^(\s*)\.catch ' + re.escape(old) + r' (\{[^}]*\}) (:\w+)$', re.M)
+            hits = crx.findall(body)
+            if len(hits) != want:
+                raise SystemExit('CATCH %s: .catch %s khop %d lan (can %d)' % (cls, old, len(hits), want))
+            nbody = crx.sub(lambda h: '%s\n%s.catch %s %s %s' % (h.group(0), h.group(1), new, h.group(2), h.group(3)), body)
+            src = src.replace(body, nbody)
+            open(path, 'w', encoding='utf-8').write(src)
+            total += 1
+            print('catch   %s %s: +%s x%d' % (cls, header, new, want))
+        for cls, header, newbody in PATCHES.get(gname, []):
+            path = find_class(dec, cls)
+            src = open(path, encoding='utf-8').read()
+            pat = re.compile(r'^' + re.escape(header) + r'\n.*?^\.end method$', re.S | re.M)
+            m = pat.findall(src)
+            if len(m) != 1:
+                raise SystemExit('PATCH %s %s: khop %d lan (can 1)' % (cls, header, len(m)))
+            src = pat.sub(lambda _: header + '\n' + newbody + '.end method', src)
+            open(path, 'w', encoding='utf-8').write(src)
+            total += 1
+            print('patched %s %s' % (cls, header))
+        for cls, header, anchor, newline, want in INSERT_AFTER.get(gname, []):
+            path = find_class(dec, cls)
+            src = open(path, encoding='utf-8').read()
+            pat = re.compile(r'^' + re.escape(header) + r'\n.*?^\.end method$', re.S | re.M)
+            m = pat.findall(src)
+            if len(m) != 1:
+                raise SystemExit('INSERT %s %s: method khop %d lan (can 1)' % (cls, header, len(m)))
+            body = m[0]
+            lines = body.split('\n')
+            if any(l.strip() == newline for l in lines):
+                raise SystemExit('INSERT %s %s: dong chen da co san: %s' % (cls, header, newline))
+            idx = [i for i, l in enumerate(lines) if l.strip() == anchor]
+            if len(idx) != want:
+                raise SystemExit('INSERT %s %s: dong neo khop %d lan (can %d): %s' % (cls, header, len(idx), want, anchor))
+            indent = re.match(r'\s*', lines[idx[0]]).group(0)
+            for i in reversed(idx):
+                lines.insert(i + 1, indent + newline)
+            nbody = '\n'.join(lines)
+            src = src.replace(body, nbody)
+            open(path, 'w', encoding='utf-8').write(src)
+            total += 1
+            print('insert  %s %s: +1 dong sau neo (x%d): %s' % (cls, header, want, newline))
+        for cls, code in ADD_METHODS.get(gname, []):
+            path = find_class(dec, cls)
+            src = open(path, encoding='utf-8').read()
+            name = code.split('.method ')[1].split('\n')[0]
+            if name in src:
+                raise SystemExit('ADD %s: method da ton tai: %s' % (cls, name))
+            open(path, 'w', encoding='utf-8').write(src.rstrip('\n') + '\n' + code)
+            total += code.count('.method ')
+            print('added   %s (%d method)' % (cls, code.count('.method ')))
+    print('tong: %d method' % total)
+
+
+if __name__ == '__main__':
+    a = sys.argv[1:]
+    groups = ['font', 'lang', 'offline', 'net']
+    if '--group' in a:
+        groups = a[a.index('--group') + 1].split(',')
+    apply(a[0], groups)

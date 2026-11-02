@@ -1,0 +1,1 @@
+c7a192b59e066730637256c73a3957741a9741ad328c1ea8f3d9dc832da85614  test_builds/Inotia4_TEST4_vi_anh_offline.apk

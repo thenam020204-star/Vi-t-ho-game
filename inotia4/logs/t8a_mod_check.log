@@ -1,0 +1,97 @@
+lib /opt/work/lib4/libgame.so sha256 df12cecc7752bcba55157fffe7989cf8f9d8bf6344b211fb3ec41122443a5d02 2917904 B
+
+[1] PT_LOAD chua .bss
+  p_vaddr=0x2cc320 p_filesz=0x38a8 p_memsz=0x463450 p_align=0x4000 flags=0x6 (RW=6)
+  p_vaddr+p_memsz = 0x72f770 ; lam tron 4 KB = 0x730000 ; lam tron 16 KB = 0x730000 ; can phu 0x72f790
+  -> DAT: rounding 4 KB  > 0x72f78c 
+  -> DAT: rounding 16 KB > 0x72f78c 
+  -> DAT: vung 0x72f780..0x72f790 nam ngoai .bss that (>= 0x72f770) nhung trong trang 
+  -> DAT: segment ghi duoc (PF_W) 
+
+[2] byte goc 3 diem va
+  A 0x18b3e0 (CHAR_AddDamage): ffc301d1  18b3e0:      	sub	sp, sp, #0x70
+  B 0x1c7860 (MERCENARYSYSTEM_AddExperience): c80d8052  1c7860:      	mov	w8, #0x6e               // =110
+  C 0x1c7a44 (MERCENARYSYSTEM_AddExpFixed): f303002a  1c7a44:      	mov	w19, w0
+
+(dis.txt: 407546 lenh)
+
+[3] cave 0x18bb00..0x18bbec (CHAR_AddDamageEffect + CHAR_AddDamageByDefaultCheck)
+  ham nam trong cave: ['CHAR_AddDamageByDefaultCheck', 'CHAR_AddDamageEffect']
+  -> DAT: cave gom dung 2 ham chet 
+  nhay/adr/literal tu NGOAI vao cave: 0
+  -> DAT: 0 lenh ngoai cave tro vao cave (b/bl/b.cond/cbz/tbz/adr/ldr literal) 
+  adrp vao trang 0x18b000: 0
+  -> DAT: 0 adrp vao trang chua cave 
+  reloc nhac toi 2 symbol: 0
+  -> DAT: 0 reloc (JUMP_SLOT/GLOB_DAT/ABS64) theo ten 2 ham 
+  reloc RELATIVE co addend trong cave: 0
+  -> DAT: 0 reloc RELATIVE tro vao cave 
+    (bo qua) file off 0x7218 = 0x18bb34 nam trong .dynsym = dong symbol xuat khau cua chinh 2 ham
+    (bo qua) file off 0x11508 = 0x18bb00 nam trong .dynsym = dong symbol xuat khau cua chinh 2 ham
+  -> DAT: 0 gia tri 64 bit (moi vi tri canh 4 B, tru .dynsym/.rela) nam trong cave 
+  -> DAT: 0 PLT stub cho 2 ham 
+  ten xuat hien tai file off ['0x5873c', '0x58751'] ; .dynstr = ['0x46540', '0x7815a']
+  -> DAT: ten chi nam trong .dynstr (khong co dlsym theo chuoi trong .rodata) 
+  -> DAT: libHercules.so khong import CHAR_* (/opt/work/lib4/libHercules.so)
+
+[4] vung nho 0x72f780..0x72f790
+  trang can kiem (adrp): ['0x72c000', '0x72f000', '0x730000']
+  adrp vao cac trang do: 0
+  -> DAT: 0 adrp vao trang 0x72f000 / 0x730000 / 0x72c000 / 0x730000 (4 KB va 16 KB) 
+  reloc co offset hoac addend trong 0x72f000..0x730000: 1
+     00000000002cfbc0  0000000000000403 R_AARCH64_RELATIVE                72f770
+  -> DAT: khong reloc nao ghi/tro vao [0x72f780, 0x72f790) 
+  symbol dong co gia tri trong 0x72f000..0x730000: 0
+  -> DAT: khong symbol nao nam trong vung 
+  -> DAT: 0 gia tri 64 bit trong file (tru .dynsym/.rela) nam trong [0x72f780, 0x72f7a0) 
+  3 reloc RELATIVE lien tiep (begin=0x72ef70, begin, cap=0x72f770): 3 dong
+  -> DAT: 0 lenh co hang so 0x72fxxx / 0x730000 (mov/add) 
+
+[5] ghi byte phe [char+0x311]
+   0x191948 CHAR_Act_Summon                    strb	w9, [x21, #0x311]
+   0x19f358 CHARLOCSYSTEM_Load                 strb	wzr, [x23, #0x311]
+   0x19f484 CHARLOCSYSTEM_Load                 strb	w8, [x23, #0x311]
+   0x19fdf8 CHARSYSTEM_Produce                 strb	wzr, [x19, #0x311]
+   0x1a0028 CHARSYSTEM_Produce                 strb	w20, [x19, #0x311]
+   0x1a006c CHARSYSTEM_Produce                 strb	w8, [x19, #0x311]
+   0x1a7668 EVTSYSTEM_Process                  strb	w20, [x0, #0x311]
+   0x1c74ac MERCENARYSYSTEM_IncludeParty       strb	wzr, [x19, #0x311]
+   0x1cdd60 PARTY_SetMember                    strb	wzr, [x1, #0x311]
+   0x1cde68 PARTY_AddMember                    strb	wzr, [x19, #0x311]
+   0x1cdf98 PARTY_Include                      strb	wzr, [x19, #0x311]
+   0x1ce18c PARTY_Exclude                      strb	w8, [x0, #0x311]
+   0x1cff90 PLAYER_SetMainPlayer               strb	wzr, [x19, #0x311]
+   0x1d7c2c SAVE_LoadCharacter                 strb	wzr, [x19, #0x311]
+   0x1d8a40 SAVE_LoadCharacterAll              strb	wzr, [x21, #0x311]
+   0x1d8ab8 SAVE_LoadCharacterAll              strb	wzr, [x21, #0x311]
+  16 cho ghi, doc boi 36 ham
+
+[6] caller
+  CHAR_AddDamage: 11 cho goi: CHAR_AddDamageByDefaultCheck@0x18bbe8, CHAR_AttrAttackDamageByType@0x18c0c8, CHAR_AttrAttackDamage@0x18c1a0, CHAR_AttrAttackDamage@0x18c39c, CHAR_Act_DD@0x18d098, CHAR_SuccessOnPhysicalAttack@0x18e56c, CHAR_SuccessOnPhysicalAttack@0x18eb20, CHAR_Act_M_DD@0x18f260, CHAR_SuccessOnMagicalAttack@0x18fbf0, CHAR_ApplyDot@0x1915b4, CHAR_ProcessActUnit@0x194b18
+  MERCENARYSYSTEM_AddExperience: 1 cho goi: CHARSYSTEM_Die@0x1a0c2c
+  MERCENARYSYSTEM_AddExpFixed: 1 cho goi: QUESTSYSTEM_ApplyReward@0x1d2718
+  CHAR_AddExperience: 9 cho goi: UIMercenary_CreateList@0x15c974, UIMercenary_Enter@0x15d504, MERCENARYSYSTEM_AddExperience@0x1c78b8, MERCENARYSYSTEM_AddExperience@0x1c7918, MERCENARYSYSTEM_AddExperience@0x1c7970, MERCENARYSYSTEM_AddExpFixed@0x1c7a9c, MERCENARYSYSTEM_AddExpFixed@0x1c7af4, MERCENARYSYSTEM_AddExpFixed@0x1c7b44, SAVE_LoadCharacterDirectEx@0x1d870c
+
+[7] thanh ghi dung trong cave phai TU DO tai diem tiep tuc (khong ai doc gia tri vao-ham cua chung truoc khi ghi)
+  CHAR_AddDamage: duyet 33 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  -> DAT: A  x9..x13 @ 0x18b3e4 (CHAR_AddDamage) 
+  MERCENARYSYSTEM_AddExperience: duyet 9 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x9']
+  -> DAT: B  x9..x12 @ 0x1c7864 (MERCENARYSYSTEM_AddExperience) 
+  MERCENARYSYSTEM_AddExpFixed: duyet 11 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x9']
+  -> DAT: C  x9..x12 @ 0x1c7a48 (MERCENARYSYSTEM_AddExpFixed) 
+  caller CHAR_AttrAttackDamageByType @0x18c0c8: duyet 1 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_AttrAttackDamage @0x18c1a0: duyet 5 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_AttrAttackDamage @0x18c39c: duyet 1 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_Act_DD @0x18d098: duyet 12 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_SuccessOnPhysicalAttack @0x18e56c: duyet 5 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_SuccessOnPhysicalAttack @0x18eb20: duyet 6 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_Act_M_DD @0x18f260: duyet 12 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_SuccessOnMagicalAttack @0x18fbf0: duyet 66 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_ApplyDot @0x1915b4: duyet 1 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHAR_ProcessActUnit @0x194b18: duyet 3 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x13', 'x9']
+  caller CHARSYSTEM_Die @0x1a0c2c: duyet 2 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x9']
+  caller QUESTSYSTEM_ApplyReward @0x1d2718: duyet 6 trang thai, thanh ghi ['x10', 'x11', 'x12', 'x9']
+  -> DAT: x9..x13 khong song qua loi goi o 12 cho goi (phia caller) 
+  C: x8 song tai 0x1c7a44 (adrp x8,0x2be000 @0x1c7a40; `ldr x8,[x8,#0xbd8]` @0x1c7a48) -> cave C khong dung x8: DAT
+
+TONG KET: TAT CA DAT

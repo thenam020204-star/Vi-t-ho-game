@@ -1,0 +1,159 @@
+thu muc work/viewcheck : 54 lan chay
+
+[1] kich thuoc FB theo (man hinh, P) va man logic
+  2400x1080  P=unset  cfg 512x230 -> FB mong doi 512x230, do duoc [512, 230] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=100    cfg 512x230 -> FB mong doi 512x230, do duoc [512, 230] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=105    cfg 512x230 -> FB mong doi 536x241, do duoc [536, 241] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=110    cfg 512x230 -> FB mong doi 562x253, do duoc [562, 253] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=115    cfg 512x230 -> FB mong doi 588x264, do duoc [588, 264] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=120    cfg 512x230 -> FB mong doi 614x276, do duoc [614, 276] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=125    cfg 512x230 -> FB mong doi 640x287, do duoc [640, 287] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=130    cfg 512x230 -> FB mong doi 664x299, do duoc [664, 299] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=135    cfg 512x230 -> FB mong doi 690x310, do duoc [690, 310] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=140    cfg 512x230 -> FB mong doi 716x322, do duoc [716, 322] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=145    cfg 512x230 -> FB mong doi 742x333, do duoc [742, 333] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=150    cfg 512x230 -> FB mong doi 768x345, do duoc [768, 345] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=99     cfg 512x230 -> FB mong doi 512x230, do duoc [512, 230] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=151    cfg 512x230 -> FB mong doi 512x230, do duoc [512, 230] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=0      cfg 512x230 -> FB mong doi 512x230, do duoc [512, 230] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  2400x1080  P=-1     cfg 512x230 -> FB mong doi 512x230, do duoc [512, 230] ; that [2400, 1080] logic [1422, 640] (mong doi 1422x640)
+  1920x1080  P=unset  cfg 512x288 -> FB mong doi 512x288, do duoc [512, 288] ; that [1920, 1080] logic [1137, 640] (mong doi 1137x640)
+  1920x1080  P=100    cfg 512x288 -> FB mong doi 512x288, do duoc [512, 288] ; that [1920, 1080] logic [1137, 640] (mong doi 1137x640)
+  1920x1080  P=105    cfg 512x288 -> FB mong doi 536x302, do duoc [536, 302] ; that [1920, 1080] logic [1137, 640] (mong doi 1137x640)
+  1920x1080  P=120    cfg 512x288 -> FB mong doi 614x345, do duoc [614, 345] ; that [1920, 1080] logic [1137, 640] (mong doi 1137x640)
+  1920x1080  P=150    cfg 512x288 -> FB mong doi 768x432, do duoc [768, 432] ; that [1920, 1080] logic [1137, 640] (mong doi 1137x640)
+  960x640    P=unset  cfg 512x341 -> FB mong doi 512x341, do duoc [512, 341] ; that [960, 640] logic [960, 640] (mong doi 960x640)
+  960x640    P=100    cfg 512x341 -> FB mong doi 512x341, do duoc [512, 341] ; that [960, 640] logic [960, 640] (mong doi 960x640)
+  960x640    P=105    cfg 512x341 -> FB mong doi 536x358, do duoc [536, 358] ; that [960, 640] logic [960, 640] (mong doi 960x640)
+  960x640    P=120    cfg 512x341 -> FB mong doi 614x409, do duoc [614, 409] ; that [960, 640] logic [960, 640] (mong doi 960x640)
+  960x640    P=150    cfg 512x341 -> FB mong doi 768x511, do duoc [768, 511] ; that [960, 640] logic [960, 640] (mong doi 960x640)
+  800x480    P=unset  cfg 512x307 -> FB mong doi 512x307, do duoc [512, 307] ; that [800, 480] logic [1066, 640] (mong doi 1066x640)
+  800x480    P=100    cfg 512x307 -> FB mong doi 512x307, do duoc [512, 307] ; that [800, 480] logic [1066, 640] (mong doi 1066x640)
+  800x480    P=105    cfg 512x307 -> FB mong doi 536x322, do duoc [536, 322] ; that [800, 480] logic [1066, 640] (mong doi 1066x640)
+  800x480    P=120    cfg 512x307 -> FB mong doi 614x368, do duoc [614, 368] ; that [800, 480] logic [1066, 640] (mong doi 1066x640)
+  800x480    P=150    cfg 512x307 -> FB mong doi 768x460, do duoc [768, 460] ; that [800, 480] logic [1066, 640] (mong doi 1066x640)
+  799x480    P=unset  cfg 480x288 -> FB mong doi 480x288, do duoc [480, 288] ; that [799, 480] logic [1065, 640] (mong doi 1065x640)
+  799x480    P=100    cfg 480x288 -> FB mong doi 480x288, do duoc [480, 288] ; that [799, 480] logic [1065, 640] (mong doi 1065x640)
+  799x480    P=105    cfg 480x288 -> FB mong doi 504x302, do duoc [504, 302] ; that [799, 480] logic [1065, 640] (mong doi 1065x640)
+  799x480    P=120    cfg 480x288 -> FB mong doi 576x345, do duoc [576, 345] ; that [799, 480] logic [1065, 640] (mong doi 1065x640)
+  799x480    P=150    cfg 480x288 -> FB mong doi 720x432, do duoc [720, 432] ; that [799, 480] logic [1065, 640] (mong doi 1065x640)
+  600x360    P=unset  cfg 480x288 -> FB mong doi 480x288, do duoc [480, 288] ; that [600, 360] logic [1066, 640] (mong doi 1066x640)
+  600x360    P=100    cfg 480x288 -> FB mong doi 480x288, do duoc [480, 288] ; that [600, 360] logic [1066, 640] (mong doi 1066x640)
+  600x360    P=105    cfg 480x288 -> FB mong doi 504x302, do duoc [504, 302] ; that [600, 360] logic [1066, 640] (mong doi 1066x640)
+  600x360    P=120    cfg 480x288 -> FB mong doi 576x345, do duoc [576, 345] ; that [600, 360] logic [1066, 640] (mong doi 1066x640)
+  600x360    P=150    cfg 480x288 -> FB mong doi 720x432, do duoc [720, 432] ; that [600, 360] logic [1066, 640] (mong doi 1066x640)
+  479x320    P=unset  cfg 480x320 -> FB mong doi 480x320, do duoc [480, 320] ; that [479, 320] logic [960, 641] (mong doi 960x641)
+  479x320    P=100    cfg 480x320 -> FB mong doi 480x320, do duoc [480, 320] ; that [479, 320] logic [960, 641] (mong doi 960x641)
+  479x320    P=105    cfg 480x320 -> FB mong doi 504x336, do duoc [504, 336] ; that [479, 320] logic [960, 641] (mong doi 960x641)
+  479x320    P=120    cfg 480x320 -> FB mong doi 576x384, do duoc [576, 384] ; that [479, 320] logic [960, 641] (mong doi 960x641)
+  479x320    P=150    cfg 480x320 -> FB mong doi 720x480, do duoc [720, 480] ; that [479, 320] logic [960, 641] (mong doi 960x641)
+  -> DAT: 46 ca (man hinh x P): FB = cong thuc, W chan, ngoai [100,150] = nhu goc, man logic va kich thuoc that khong doi 
+  -> DAT: 2400x1080: P = 100 -> 512/230; P = 120 -> 614/276; P = 105 -> 536/241 (W chan, khong phai 537) 
+  -> DAT: 2400x1080: man logic = 1422/640 o moi P 
+
+[2] pool MEM
+  2400x1080  P=100  used 1753864 (goc P=0: 1753864), chenh 0, mong doi 2*(512^2-512^2) = 0 
+  2400x1080  P=105  used 1804168 (goc P=0: 1753864), chenh 50304, mong doi 2*(536^2-512^2) = 50304 
+  2400x1080  P=120  used 1983568 (goc P=0: 1753864), chenh 229704, mong doi 2*(614^2-512^2) = 229704 
+  2400x1080  P=150  used 2409224 (goc P=0: 1753864), chenh 655360, mong doi 2*(768^2-512^2) = 655360 
+  1920x1080  P=100  used 1753864 (goc P=0: 1753864), chenh 0, mong doi 2*(512^2-512^2) = 0 
+  1920x1080  P=105  used 1804168 (goc P=0: 1753864), chenh 50304, mong doi 2*(536^2-512^2) = 50304 
+  1920x1080  P=120  used 1983568 (goc P=0: 1753864), chenh 229704, mong doi 2*(614^2-512^2) = 229704 
+  1920x1080  P=150  used 2409224 (goc P=0: 1753864), chenh 655360, mong doi 2*(768^2-512^2) = 655360 
+  960x640    P=100  used 1753864 (goc P=0: 1753864), chenh 0, mong doi 2*(512^2-512^2) = 0 
+  960x640    P=105  used 1804168 (goc P=0: 1753864), chenh 50304, mong doi 2*(536^2-512^2) = 50304 
+  960x640    P=120  used 1983568 (goc P=0: 1753864), chenh 229704, mong doi 2*(614^2-512^2) = 229704 
+  960x640    P=150  used 2409224 (goc P=0: 1753864), chenh 655360, mong doi 2*(768^2-512^2) = 655360 
+  800x480    P=100  used 1753864 (goc P=0: 1753864), chenh 0, mong doi 2*(512^2-512^2) = 0 
+  800x480    P=105  used 1804168 (goc P=0: 1753864), chenh 50304, mong doi 2*(536^2-512^2) = 50304 
+  800x480    P=120  used 1983568 (goc P=0: 1753864), chenh 229704, mong doi 2*(614^2-512^2) = 229704 
+  800x480    P=150  used 2409224 (goc P=0: 1753864), chenh 655360, mong doi 2*(768^2-512^2) = 655360 
+  799x480    P=100  used 1690376 (goc P=0: 1690376), chenh 0, mong doi 2*(480^2-480^2) = 0 
+  799x480    P=105  used 1737608 (goc P=0: 1690376), chenh 47232, mong doi 2*(504^2-480^2) = 47232 
+  799x480    P=120  used 1893128 (goc P=0: 1690376), chenh 202752, mong doi 2*(576^2-480^2) = 202752 
+  799x480    P=150  used 2266376 (goc P=0: 1690376), chenh 576000, mong doi 2*(720^2-480^2) = 576000 
+  600x360    P=100  used 1690376 (goc P=0: 1690376), chenh 0, mong doi 2*(480^2-480^2) = 0 
+  600x360    P=105  used 1737608 (goc P=0: 1690376), chenh 47232, mong doi 2*(504^2-480^2) = 47232 
+  600x360    P=120  used 1893128 (goc P=0: 1690376), chenh 202752, mong doi 2*(576^2-480^2) = 202752 
+  600x360    P=150  used 2266376 (goc P=0: 1690376), chenh 576000, mong doi 2*(720^2-480^2) = 576000 
+  479x320    P=100  used 1690376 (goc P=0: 1690376), chenh 0, mong doi 2*(480^2-480^2) = 0 
+  479x320    P=105  used 1737608 (goc P=0: 1690376), chenh 47232, mong doi 2*(504^2-480^2) = 47232 
+  479x320    P=120  used 1893128 (goc P=0: 1690376), chenh 202752, mong doi 2*(576^2-480^2) = 202752 
+  479x320    P=150  used 2266376 (goc P=0: 1690376), chenh 576000, mong doi 2*(720^2-480^2) = 576000 
+  -> DAT: pool tong = 10.485.760 B o moi lan chay (lib va) 
+  -> DAT: used(P) - used(P goc) == 2*(W'^2 - W0^2) (MEM_Malloc(2*W*W) cua GRP_Initialize), khop tung byte 
+  -> DAT: lib goc (chua va): pool tong = 8.388.608 B, FB 512x230, man logic 1422x640 
+  -> DAT: lib va (P chua ghi) == lib goc ve used: 1753864 == 1753864 
+  title_P100: dinh used = 3674063 B (3.504 MB), total = 10485760
+  title_P120: dinh used = 3904879 B (3.724 MB), total = 10485760
+  title_orig: dinh used = 3674063 B (3.504 MB), total = 8388608
+
+[3] HUD: rect that cua UIPlay_Create (goi truc tiep trong unidbg)
+  2400x1080 ID   1 goc (1, 155, 75, 75)       moi (25, 155, 75, 75)      d=(+24,+0)
+  2400x1080 ID   2 goc (1, 232, 75, 75)       moi (25, 232, 75, 75)      d=(+24,+0)
+  2400x1080 ID   3 goc (1, 309, 75, 75)       moi (25, 309, 75, 75)      d=(+24,+0)
+  2400x1080 ID 101 goc (1329, 10, 78, 81)     moi (1305, 26, 78, 81)     d=(-24,+16)
+  2400x1080 ID 102 goc (1329, 110, 78, 81)    moi (1305, 126, 78, 81)    d=(-24,+16)
+  2400x1080 ID 103 goc (1329, 210, 78, 81)    moi (1305, 226, 78, 81)    d=(-24,+16)
+  2400x1080 ID   4 goc (482, 0, 458, 123)     moi (482, 16, 458, 123)    d=(+0,+16)
+  2400x1080 ID   8 goc (957, 553, 80, 80)     moi (933, 537, 80, 80)     d=(-24,-16)
+  2400x1080 ID   9 goc (1057, 553, 80, 80)    moi (1033, 537, 80, 80)    d=(-24,-16)
+  2400x1080 ID  10 goc (1157, 553, 80, 80)    moi (1133, 537, 80, 80)    d=(-24,-16)
+  2400x1080 ID  11 goc (1170, 463, 80, 80)    moi (1146, 447, 80, 80)    d=(-24,-16)
+  2400x1080 ID  12 goc (1238, 400, 80, 80)    moi (1214, 384, 80, 80)    d=(-24,-16)
+  2400x1080 ID  13 goc (1332, 397, 80, 80)    moi (1308, 381, 80, 80)    d=(-24,-16)
+  2400x1080 ID   7 goc (1344, 313, 75, 75)    moi (1320, 297, 75, 75)    d=(-24,-16)
+  2400x1080 ID  20 goc (1260, 480, 159, 160)  moi (1236, 464, 159, 160)  d=(-24,-16)
+  2400x1080 ID  21 goc (10, 388, 252, 252)    moi (34, 372, 252, 252)    d=(+24,-16)
+  2400x1080 ID  22 goc (10, 260, 380, 380)    moi (34, 244, 380, 380)    d=(+24,-16)
+  2400x1080 ID  30 goc (177, 469, 70, 90)     moi (201, 453, 70, 90)     d=(+24,-16)
+  2400x1080 ID  31 goc (91, 555, 90, 70)      moi (115, 539, 90, 70)     d=(+24,-16)
+  2400x1080 ID  32 goc (25, 469, 70, 90)      moi (49, 453, 70, 90)      d=(+24,-16)
+  2400x1080 ID  33 goc (91, 403, 90, 70)      moi (115, 387, 90, 70)     d=(+24,-16)
+  -> DAT: 2400x1080: 21 control dich dung bang (ngang +-24, doc +-16), w/h khong doi, thu tu tao giong nhau 
+  960x640   ID   1 goc (1, 155, 75, 75)       moi (25, 155, 75, 75)      d=(+24,+0)
+  960x640   ID   2 goc (1, 232, 75, 75)       moi (25, 232, 75, 75)      d=(+24,+0)
+  960x640   ID   3 goc (1, 309, 75, 75)       moi (25, 309, 75, 75)      d=(+24,+0)
+  960x640   ID 101 goc (867, 10, 78, 81)      moi (843, 26, 78, 81)      d=(-24,+16)
+  960x640   ID 102 goc (867, 110, 78, 81)     moi (843, 126, 78, 81)     d=(-24,+16)
+  960x640   ID 103 goc (867, 210, 78, 81)     moi (843, 226, 78, 81)     d=(-24,+16)
+  960x640   ID   4 goc (251, 0, 458, 123)     moi (251, 16, 458, 123)    d=(+0,+16)
+  960x640   ID   8 goc (495, 553, 80, 80)     moi (471, 537, 80, 80)     d=(-24,-16)
+  960x640   ID   9 goc (595, 553, 80, 80)     moi (571, 537, 80, 80)     d=(-24,-16)
+  960x640   ID  10 goc (695, 553, 80, 80)     moi (671, 537, 80, 80)     d=(-24,-16)
+  960x640   ID  11 goc (708, 463, 80, 80)     moi (684, 447, 80, 80)     d=(-24,-16)
+  960x640   ID  12 goc (776, 400, 80, 80)     moi (752, 384, 80, 80)     d=(-24,-16)
+  960x640   ID  13 goc (870, 397, 80, 80)     moi (846, 381, 80, 80)     d=(-24,-16)
+  960x640   ID   7 goc (882, 313, 75, 75)     moi (858, 297, 75, 75)     d=(-24,-16)
+  960x640   ID  20 goc (798, 480, 159, 160)   moi (774, 464, 159, 160)   d=(-24,-16)
+  960x640   ID  21 goc (10, 388, 252, 252)    moi (34, 372, 252, 252)    d=(+24,-16)
+  960x640   ID  22 goc (10, 260, 380, 380)    moi (34, 244, 380, 380)    d=(+24,-16)
+  960x640   ID  30 goc (177, 469, 70, 90)     moi (201, 453, 70, 90)     d=(+24,-16)
+  960x640   ID  31 goc (91, 555, 90, 70)      moi (115, 539, 90, 70)     d=(+24,-16)
+  960x640   ID  32 goc (25, 469, 70, 90)      moi (49, 453, 70, 90)      d=(+24,-16)
+  960x640   ID  33 goc (91, 403, 90, 70)      moi (115, 387, 90, 70)     d=(+24,-16)
+  -> DAT: 960x640: 21 control dich dung bang (ngang +-24, doc +-16), w/h khong doi, thu tu tao giong nhau 
+
+[4] man tieu de / chon save (2400x1080): anh
+  title_P100 vs title_P120 t610: 0 px khac
+  -> DAT: title_P100 == title_P120 (t610) 
+  title_P100 vs title_P120 s640: 0 px khac
+  -> DAT: title_P100 == title_P120 (s640) 
+  title_P100 vs title_P120 s720: 0 px khac
+  -> DAT: title_P100 == title_P120 (s720) 
+  title_orig vs title_P100 t610: 0 px khac
+  -> DAT: title_orig == title_P100 (t610) 
+  title_orig vs title_P100 s640: 0 px khac
+  -> DAT: title_orig == title_P100 (s640) 
+  title_orig vs title_P100 s720: 0 px khac
+  -> DAT: title_orig == title_P100 (s720) 
+  title_orig vs title_P120 t610: 0 px khac
+  -> DAT: title_orig == title_P120 (t610) 
+  title_orig vs title_P120 s640: 0 px khac
+  -> DAT: title_orig == title_P120 (s640) 
+  title_orig vs title_P120 s720: 0 px khac
+  -> DAT: title_orig == title_P120 (s720) 
+  -> DAT: title_P100: tap START (240,277) @khung 620 doi man (t610 -> s640: 1237594 px khac) 
+  -> DAT: title_P120: tap START (240,277) @khung 620 doi man (t610 -> s640: 1237594 px khac) 
+
+TONG KET: TAT CA DAT

@@ -1,0 +1,41 @@
+diff --git a/unidbg-android/src/main/java/com/github/unidbg/linux/android/dvm/DalvikVM64.java b/unidbg-android/src/main/java/com/github/unidbg/linux/android/dvm/DalvikVM64.java
+index 7f34768..7b6e641 100644
+--- a/unidbg-android/src/main/java/com/github/unidbg/linux/android/dvm/DalvikVM64.java
++++ b/unidbg-android/src/main/java/com/github/unidbg/linux/android/dvm/DalvikVM64.java
+@@ -3657,14 +3657,16 @@ public class DalvikVM64 extends BaseVM implements VM {
+         Pointer _GetDirectBufferAddress = svcMemory.registerSvc(new Arm64Svc() {
+             @Override
+             public long handle(Emulator<?> emulator) {
+-                throw new UnsupportedOperationException();
++                DvmObject<?> o = getObject(emulator.getContext().getPointerArg(1).toIntPeer());
++                return o instanceof DirectBuffer ? ((DirectBuffer) o).getValue().peer : 0;
+             }
+         });
+ 
+         Pointer _GetDirectBufferCapacity = svcMemory.registerSvc(new Arm64Svc() {
+             @Override
+             public long handle(Emulator<?> emulator) {
+-                throw new UnsupportedOperationException();
++                DvmObject<?> o = getObject(emulator.getContext().getPointerArg(1).toIntPeer());
++                return o instanceof DirectBuffer ? ((DirectBuffer) o).capacity : -1;
+             }
+         });
+ 
+diff --git a/unidbg-android/src/main/java/com/github/unidbg/linux/android/dvm/DirectBuffer.java b/unidbg-android/src/main/java/com/github/unidbg/linux/android/dvm/DirectBuffer.java
+new file mode 100644
+index 0000000..babaec1
+--- /dev/null
++++ b/unidbg-android/src/main/java/com/github/unidbg/linux/android/dvm/DirectBuffer.java
+@@ -0,0 +1,12 @@
++package com.github.unidbg.linux.android.dvm;
++
++import com.github.unidbg.pointer.UnidbgPointer;
++
++/** java.nio.ByteBuffer.allocateDirect gia: bo nho nam trong emulator. (them cho du an Inotia4) */
++public class DirectBuffer extends DvmObject<UnidbgPointer> {
++    public final long capacity;
++    public DirectBuffer(VM vm, UnidbgPointer ptr, long capacity) {
++        super(vm.resolveClass("java/nio/DirectByteBuffer"), ptr);
++        this.capacity = capacity;
++    }
++}
