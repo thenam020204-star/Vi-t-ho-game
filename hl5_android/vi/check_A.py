@@ -4,7 +4,7 @@
 WORK lấy từ env WORK (mặc định scratchpad của phiên)."""
 import sys, os, re, json
 HERE = os.path.dirname(os.path.abspath(__file__))
-WORK = os.environ.get('WORK', '/tmp/claude-0/-home-user-Vi-t-ho-game/31266a47-2a55-5b6d-86d1-5e3a70f1f083/scratchpad')
+WORK = os.environ.get('WORK', os.path.expanduser('~/hl5work'))
 V5 = os.path.join(WORK, 'proj/HL4_project/vi5')
 sys.path.insert(0, V5)
 from build_vi5 import Encoder, load_font_chars, CTRL, check_codes   # noqa: E402

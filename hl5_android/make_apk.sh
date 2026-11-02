@@ -3,14 +3,14 @@
 # Cần: python3 (pyelftools), zipalign/apksigner (build-tools 34), sign/hl5vi.keystore (+ sign/README.md).
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
-: "${WORK:=/tmp/claude-0/-home-user-Vi-t-ho-game/31266a47-2a55-5b6d-86d1-5e3a70f1f083/scratchpad}"
+: "${WORK:=$HOME/hl5work}"
 export WORK
 DIAG=""   # --diag A|B|C|C1 : APK chẩn đoán T13 (xem diag/ và PHAT-HANH-diag.md); mặc định rỗng = build v0.1 y hệt cũ
 if [ "${1:-}" = "--diag" ]; then DIAG="${2:?--diag cần A|B|C|C1}"; shift 2; fi
 case "$DIAG" in ""|A|B|C|C1) ;; *) echo "--diag phải là A|B|C|C1"; exit 1;; esac
 VER="${1:-0.2-hd}"   # v0.2-hd: có patch T9 (texture > 1024); v0.1.1 = commit trước T9
 BT=${BT:-/opt/asdk/android-14}
-ORIG_APK="${ORIG_APK:-$(ls /root/.claude/uploads/*/*heroes-lore-5*.apk 2>/dev/null | head -1)}"
+ORIG_APK="${ORIG_APK:-$HERE/env/inputs/heroes-lore-5-v1.0.5.apk}"
 [ -f "$WORK/orig.apk" ] || cp "$ORIG_APK" "$WORK/orig.apk"
 B="$WORK/build_apk"; [ -n "$DIAG" ] && B="$WORK/build_diag_$DIAG"; rm -rf "$B"; mkdir -p "$B"
 KS="$HERE/sign/hl5vi.keystore"

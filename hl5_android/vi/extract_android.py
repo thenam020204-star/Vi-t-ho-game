@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(os.path.dirname(HERE), 'tools'))
 import scn as SCN
 
-WORK = os.environ.get('WORK', '/tmp/claude-0/-home-user-Vi-t-ho-game/31266a47-2a55-5b6d-86d1-5e3a70f1f083/scratchpad')
+WORK = os.environ.get('WORK', os.path.expanduser('~/hl5work'))
 
 
 def djb(s):

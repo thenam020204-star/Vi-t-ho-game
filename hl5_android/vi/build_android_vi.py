@@ -16,7 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.join(REPO, 'tools'))
-WORK = os.environ.get('WORK', '/tmp/claude-0/-home-user-Vi-t-ho-game/31266a47-2a55-5b6d-86d1-5e3a70f1f083/scratchpad')
+WORK = os.environ.get('WORK', os.path.expanduser('~/hl5work'))
 V5 = os.path.join(WORK, 'proj/HL4_project/vi5')
 sys.path.insert(0, V5)
 import extract_android as EA                                    # noqa: E402

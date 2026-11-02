@@ -21,11 +21,14 @@ Nguồn sự thật chi tiết: `PLAN.md` (checklist, quyết định thiết k�
 - Trên màn hiện có: chữ "bản đồ / cửa hàng / lưu" ở trên (thay bằng nút 05/06, "bản đồ" dùng khung 03 + biểu tượng tự vẽ), cột kỹ năng phải, nút DASH (chữ, **không có ảnh mới → tự vẽ cùng phong cách viền cam/đen**), nút tấn công tròn cam, nút đổi `#`, ô vật phẩm.
 - Ở HD nên vẽ nút theo độ phân giải thật (T14a xác định ai vẽ: guest `touch.mgr` hay bridge).
 
-## 3. Dựng lại môi trường
-1. Thư mục làm việc WORK (tạm, mất khi container khởi động lại): chạy
-   `WORK=/đường/dẫn UP=/thư/mục/upload hl5_android/setup_work.sh`
-   (cần 3 file upload gốc: APK `heroes-lore-5-v1.0.5.apk`, `HL_project*.zip`, `Tool_Viet_Hoa_NAM_P*.zip`).
-2. Build: `hl5_android/make_apk.sh` (mặc định ra v0.1.1 trùng từng byte; `--diag A|B|C|C1` cho bản chẩn đoán).
+## 3. Dựng lại môi trường (1 lệnh, ~40 giây, KHÔNG cần upload lại)
+**Bước đầu tiên của phiên mới:**
+```
+hl5_android/env/setup_env.sh --build      # WORK mặc định ~/hl5work (đặt WORK=... để đổi)
+```
+Script tự: kiểm sha256 đầu vào (`env/SHA256SUMS`), cài gói Python thiếu, cài/giải nén Android build-tools 34 từ `env/sdk/` vào `/opt/asdk/android-14`, chép jar smali vào `$WORK/tools_dl`, giải nén 3 đầu vào gốc từ `env/inputs/` (APK gốc, `HL_project*.zip`, `Tool_Viet_Hoa_NAM_P.zip`), build vi5 LGT, disasm `so.dis`/`br.dis`, rồi (`--build`) dựng APK và so với `dist/HL5-VI-v0.2-hd.apk` đã commit — đã thử từ thư mục trống: **trùng từng byte**.
+1. Các script đều đọc `WORK` từ biến môi trường (mặc định `~/hl5work`); không còn đường dẫn scratchpad cứng.
+2. Build: `hl5_android/make_apk.sh [VERSION]` (mặc định `0.2-hd`; `--diag A|B|C|C1` cho bản chẩn đoán; `ORIG_APK` mặc định `env/inputs/heroes-lore-5-v1.0.5.apk`).
 3. Kiểm guest headless: `python3 -I hl5_android/harness/hl5run.py --so <so> --vfs <vfs> --out <dir> --w 600 --h 270 --frames N --keys ...`
 4. Công cụ: clang-18/ld.lld, keystone/capstone/unicorn, pyelftools, Android build-tools 34 (`/opt/asdk/android-14`).
 5. Khoá ký: `sign/hl5vi.keystore`, mật khẩu trong `sign/README.md`. Người dùng phải gỡ bản gốc trước khi cài.
