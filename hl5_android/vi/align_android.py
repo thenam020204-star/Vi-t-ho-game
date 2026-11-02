@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(HERE), 'tools'))
 import extract_android as EA
 import scn as SCN
 
-WORK = os.environ.get('WORK', '/tmp/claude-0/-home-user-Vi-t-ho-game/31266a47-2a55-5b6d-86d1-5e3a70f1f083/scratchpad')
+WORK = os.environ.get('WORK', os.path.expanduser('~/hl5work'))
 V5 = WORK + '/proj/HL4_project/vi5'
 LGT = WORK + '/lgt5/j/res'
 VFS = WORK + '/apk/assets/data.vfs.mp3'
