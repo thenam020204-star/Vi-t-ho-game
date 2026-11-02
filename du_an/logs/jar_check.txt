@@ -1,0 +1,10 @@
+Thêm: ['VH.class', 'font/f12.bin']
+Xoá: ['BG', 'CActor.java', 'CDebug.java', 'CEntity.java', 'CGame.java', 'CLink.java', 'CPBG.java', 'CParallel.java', 'CSms.java', 'CWnd.java', 'Const.java', 'IMARPG22.java', 'logo_G', 'm0', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'p1', 'p2', 'p3', 'res/p.png', 'sound.mid']
+Đổi: ['LOAD', 'anim.bin', 'c.class', 'i.class', 'link', 'p0', 'png43', 'png55', 'png64', 'png7', 'png74', 'splashAnim', 'string.pak']
+WARN VH.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: java/io/DataInputStream.readUTF()Ljava/lang/String; (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: java/lang/Exception.printStackTrace()V (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: java/lang/String.indexOf(II)I (xác nhận máy đích có)
+WARN c.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN c.class: API mới so với bản gốc: java/io/DataInputStream.readFully([BII)V (xác nhận máy đích có)
+RESULT: PASS

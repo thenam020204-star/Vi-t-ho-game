@@ -1,0 +1,7 @@
+PATCH OK
+ProGuard, version 7.4.2
+WARN VH.class: API mới so với bản gốc: java/lang/Exception.printStackTrace()V (xác nhận máy đích có)
+WARN VH.class: API mới so với bản gốc: java/lang/String.indexOf(II)I (xác nhận máy đích có)
+WARN c.class: API mới so với bản gốc: java/io/DataInputStream.readFully([B)V (xác nhận máy đích có)
+WARN c.class: API mới so với bản gốc: java/io/DataInputStream.readFully([BII)V (xác nhận máy đích có)
+RESULT: PASS

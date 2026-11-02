@@ -1,0 +1,2756 @@
+1	Cao dâu tằm
+2	Nước sâm ngọt
+3	Huyền Linh Huyết
+4	Huyền Linh Trí
+5	Hồn Hình Thiên
+6	Hồn Chúc Long
+7	Hồn Thao Thiết
+8	Hồn Khoa Phụ
+9	Hồn Đế Giang
+10	Hồn Câu Mang
+11	Sâm núi trăm năm
+12	Cửu Huyền Đan
+13	Tinh thiết đỏ
+14	Xương cá
+15	Rong nước
+16	Rong biển
+17	Trái cường lực
+18	Trái linh xảo
+19	Trái trí tuệ
+20	Trái cường tráng
+21	Thuốc giải trừ
+22	Thuốc HP nhỏ
+23	Thuốc HP
+24	Thuốc HP lớn
+25	Thuốc HP đặc chế
+26	Thuốc MP nhỏ
+27	Thuốc MP
+28	Thuốc MP lớn
+29	Thuốc MP đặc chế
+30	Hồi dược đỏ
+31	Hồi dược lam
+32	Thuốc hồi sinh
+33	Hồi sinh đặc chế
+34	Cá nướng giòn
+35	Cá hồi hấp
+36	Thịt nướng ngon
+37	Canh cua
+38	Nước dừa lạnh
+39	Bánh thịt cua
+40	Canh xương cá
+41	Canh rong biển
+42	Bánh trứng dừa
+43	Cường Lực Quả
+44	Trí Tuệ Quả
+45	Cường Tráng Quả
+46	Linh Xảo Quả
+47	Cua cay tê
+48	Hương liệu
+49	Tàng bảo đồ 1
+50	Tàng bảo đồ 2
+51	Tàng bảo đồ 3
+52	Tàng bảo đồ 4
+53	Tàng bảo đồ 5
+54	Tàng bảo đồ 6
+55	Tàng bảo đồ 7
+56	Tàng bảo đồ 8
+57	Mảnh vòng xoáy
+58	Dây chuyền hỏng
+59	Nanh sói
+60	Xe lăn
+61	Da thú
+62	Lông vũ
+63	Xương
+64	Cá nước ngọt
+65	Cá kẹo
+66	Cá ngũ sắc
+67	Tôm cô đơn
+68	Cao dâu tằm: thuốc bổ làm từ dâu tằm tươi và mật ong, hồi 200 HP
+69	Nước sâm ngọt: nước thảo dược bổ khí ôn hòa, hồi 150 MP
+70	Huyền Linh Huyết: thuốc bổ chiết từ máu huyền linh, hồi 600 HP
+71	Huyền Linh Trí: thuốc bổ chiết từ máu huyền linh, hồi 300 MP
+72	Hồn Hình Thiên: nguyên liệu quý
+73	Hồn Chúc Long: nguyên liệu quý
+74	Hồn Thao Thiết: nguyên liệu quý
+75	Hồn Khoa Phụ: nguyên liệu quý
+76	Hồn Đế Giang: nguyên liệu quý
+77	Hồn Câu Mang: nguyên liệu quý
+78	Sâm núi trăm năm: dược liệu quý, nghe nói cải tử hoàn sinh. Hồi sinh 1 người, hồi HP20%.
+79	Đan dược cực quý, người dùng lên thẳng cấp Thiên Huyền.
+80	Tinh thiết bí ẩn ánh đỏ, có lẽ là nguyên liệu rèn binh khí cực tốt.
+81	Xương cá, chẳng biết ai vứt rác bừa bãi, có thể nấu ăn
+82	Rong nước, thứ này hình như vô dụng thật
+83	Rong biển, món canh rong biển ngon đang chờ bạn, có thể nấu ăn
+84	Trái cường lực, trái cây bí ẩn, nấu chín sẽ tăng thuộc tính
+85	Trái linh xảo, trái cây bí ẩn, nấu chín sẽ tăng thuộc tính
+86	Trái trí tuệ, trái cây bí ẩn, nấu chín sẽ tăng thuộc tính
+87	Trái cường tráng, trái cây bí ẩn, nấu chín sẽ tăng thuộc tính
+88	Thuốc giải trừ: giải trạng thái xấu cho 1 người
+89	Thuốc HP nhỏ, hồi HP50
+90	Thuốc HP, hồi HP50%+75
+91	Thuốc HP lớn, hồi HP80%+120
+92	Thuốc HP đặc chế, hồi HP100%
+93	Thuốc MP nhỏ, hồi MP35
+94	Thuốc MP, hồi MP40%+55
+95	Thuốc MP lớn, hồi MP55%+80
+96	Thuốc MP đặc chế, hồi MP85%
+97	Hồi dược đỏ, cả đội hồi HP75%+100
+98	Hồi dược lam, cả đội hồi MP60%+70
+99	Thuốc hồi sinh, hồi sinh hoặc hồi HP45%
+100	Hồi sinh đặc chế, hồi sinh hoặc hồi HP100%
+101	Cá nướng giòn, tăng vĩnh viễn HP tối đa 10
+102	Cá hồi hấp, hồi MP15%
+103	Thịt nướng ngon, hồi HP25%
+104	Canh cua, tăng DEF 20% trong trận, kéo dài 3 lượt.
+105	Nước dừa lạnh, hồi MP10%
+106	Bánh thịt cua, tăng CRIT 5% trong trận, kéo dài 3 lượt
+107	Canh xương cá, bốc mùi hôi thối, 10% khiến địch hỗn loạn.
+108	Canh rong biển, hồi HP100% cho 1 người
+109	Bánh trứng dừa, tăng vĩnh viễn MP tối đa 10
+110	Cường Lực Quả, nấu từ trái bí ẩn, tăng vĩnh viễn 5 ATK
+111	Trí Tuệ Quả, nấu từ trái bí ẩn, tăng vĩnh viễn MP tối đa 10
+112	Cường Tráng Quả, nấu từ trái bí ẩn, tăng vĩnh viễn HP tối đa 10
+113	Linh Xảo Quả, nấu từ trái bí ẩn, tăng vĩnh viễn SPD 1
+114	Cua cay tê, gây 100 sát thương cho địch
+115	Hương liệu, nguyên liệu nấu ăn thông dụng
+116	Tàng bảo đồ 1, một góc của tấm tàng bảo đồ bí ẩn.
+117	Tàng bảo đồ 2, một góc của tấm tàng bảo đồ bí ẩn.
+118	Tàng bảo đồ 3, một góc của tấm tàng bảo đồ bí ẩn.
+119	Tàng bảo đồ 4, một góc của tấm tàng bảo đồ bí ẩn.
+120	Tàng bảo đồ 5, một góc của tấm tàng bảo đồ bí ẩn.
+121	Tàng bảo đồ 6, một góc của tấm tàng bảo đồ bí ẩn.
+122	Tàng bảo đồ 7, một góc của tấm tàng bảo đồ bí ẩn.
+123	Tàng bảo đồ 8, một góc của tấm tàng bảo đồ bí ẩn.
+124	Mảnh vòng xoáy, làm từ vật chất bí ẩn, gom đủ các mảnh sẽ mở cốt truyện hoàn mỹ
+125	Dây chuyền hỏng, nguyên liệu chế tác
+126	Nanh sói, nguyên liệu chế tác
+127	Vật phẩm cần cho nhiệm vụ phụ
+128	Da thú, nguyên liệu chế tác
+129	Lông vũ, nguyên liệu chế tác
+130	Xương, nguyên liệu chế tác
+131	Cá nước ngọt, hồi HP3%
+132	Cá kẹo, hồi MP3%
+133	Cá ngũ sắc, hồi MP3%
+134	Tôm cô đơn, hồi HP3%
+135	Kiếm hộ thân
+136	Kiếm hộ thân 2
+137	Sáo trúc
+138	Sáo trúc 2
+139	Nga My thích
+140	Nga My thích 2
+141	Áo gấm
+142	Áo gấm 2
+143	Xiêm bạch liên
+144	Xiêm bạch liên 2
+145	Áo lụa hồng
+146	Áo lụa hồng 2
+147	Hài gấm
+148	Hài gấm 2
+149	Hài bạch liên
+150	Hài bạch liên 2
+151	Hài lụa hồng
+152	Hài lụa hồng 2
+153	Nhẫn đồng
+154	Nhẫn đồng 2
+155	Nhẫn sắt
+156	Nhẫn sắt 2
+157	Kiếm long văn
+158	Kiếm long văn 2
+159	Sáo tường văn
+160	Sáo tường văn 2
+161	Song chủy lửa
+162	Song chủy lửa 2
+163	Áo kim tuyến
+164	Áo kim tuyến 2
+165	Áo Trần Tuyết
+166	Áo Trần Tuyết 2
+167	Lụa Sơ Dương
+168	Lụa Sơ Dương 2
+169	Hài kim tuyến
+170	Hài kim tuyến 2
+171	Hài Trần Tuyết
+172	Hài Trần Tuyết 2
+173	Hài Sơ Dương
+174	Hài Sơ Dương 2
+175	Nhẫn vàng
+176	Nhẫn vàng 2
+177	Nhẫn bạc
+178	Nhẫn bạc 2
+179	Nhẫn ngọc
+180	Nhẫn ngọc 2
+181	Nhẫn Huyền Quy
+182	Nhẫn Huyền Quy 2
+183	Kiếm Lẫm Tâm
+184	Sáo Tố Tâm
+185	Chủy Yên Tâm
+186	Áo ngọc bạch
+187	Xiêm Ngưng Sương
+188	Lụa Tinh Diễm
+189	Chuỗi ngọc LV2
+190	Vòng ái thần LV1
+191	Bộ trang bị 1
+192	Kiếm hộ thân: Quân Mạc Tà LV1 dùng được, ATK+20
+193	Kiếm hộ thân 2: Quân Mạc Tà LV1 dùng được, ATK+40
+194	Sáo trúc: Quản Thanh Hàn LV1 dùng được, ATK+15
+195	Sáo trúc 2: Quản Thanh Hàn LV1 dùng được, ATK+30
+196	Nga My thích: Độc Cô Tiểu Nghệ LV1 dùng được, ATK+25
+197	Nga My thích 2: Độc Cô Tiểu Nghệ LV1 dùng được, ATK+50
+198	Áo gấm: Quân Mạc Tà LV1 dùng được, DEF+5
+199	Áo gấm 2: Quân Mạc Tà LV1 dùng được, DEF+10
+200	Xiêm bạch liên: Quản Thanh Hàn LV1 dùng được, DEF+6
+201	Xiêm bạch liên 2: Quản Thanh Hàn LV1 dùng được, DEF+12
+202	Áo lụa hồng: Độc Cô Tiểu Nghệ LV1 dùng được, DEF+4
+203	Áo lụa hồng 2: Độc Cô Tiểu Nghệ LV1 dùng được, DEF+8
+204	Hài gấm: LV1 dùng được, DEF+1, EVA+1
+205	Hài gấm 2: LV1 dùng được, DEF+2, EVA+2
+206	Hài bạch liên: LV1 dùng được, DEF+1, EVA+1
+207	Hài bạch liên 2: LV1 dùng được, DEF+2, EVA+2
+208	Hài lụa hồng: LV1 dùng được, DEF+1, EVA+1
+209	Hài lụa hồng 2: LV1 dùng được, DEF+2, EVA+2
+210	Nhẫn đồng: LV5 dùng được, CRIT+1
+211	Nhẫn đồng 2: LV5 dùng được, CRIT+2, EVA+2
+212	Nhẫn sắt: LV5 dùng được, HP tối đa+25
+213	Nhẫn sắt 2: LV5 dùng được, HP tối đa+50
+214	Kiếm long văn: Quân Mạc Tà LV10 dùng được, ATK+60
+215	Kiếm long văn 2: Quân Mạc Tà LV10 dùng được, ATK+100
+216	Sáo tường văn: Quản Thanh Hàn LV10 dùng được, ATK+40
+217	Sáo tường văn 2: Quản Thanh Hàn LV10 dùng được, ATK+80
+218	Song chủy lửa: Độc Cô Tiểu Nghệ LV10 dùng được, ATK+60
+219	Song chủy lửa 2: Độc Cô Tiểu Nghệ LV10 dùng được, ATK+120
+220	Áo kim tuyến: Quân Mạc Tà LV6 dùng được, DEF+20
+221	Áo kim tuyến 2: Quân Mạc Tà LV6 dùng được, DEF+40
+222	Áo Trần Tuyết: Quản Thanh Hàn LV6 dùng được, DEF+24
+223	Áo Trần Tuyết 2: Quản Thanh Hàn LV6 dùng được, DEF+48
+224	Lụa Sơ Dương: Độc Cô Tiểu Nghệ LV6 dùng được, DEF+16
+225	Lụa Sơ Dương 2: Độc Cô Tiểu Nghệ LV6 dùng được, DEF+32
+226	Hài kim tuyến: Quân Mạc Tà LV8 dùng được, DEF+2, EVA+1, CRIT+1
+227	Hài kim tuyến 2: Quân Mạc Tà LV8 dùng được, DEF+4, EVA+2, CRIT+2
+228	Hài Trần Tuyết: Quản Thanh Hàn LV8 dùng được, DEF+2, EVA+1, CRIT+1
+229	Hài Trần Tuyết 2: Quản Thanh Hàn LV8 dùng được, DEF+4, EVA+2, CRIT+2
+230	Hài Sơ Dương: Độc Cô Tiểu Nghệ LV8 dùng được, DEF+2, EVA+1, CRIT+1
+231	Hài Sơ Dương 2: Độc Cô Tiểu Nghệ LV8 dùng được, DEF+4, EVA+2, CRIT+2
+232	Nhẫn vàng: LV15 dùng được, CRIT+2
+233	Nhẫn vàng 2: LV15 dùng được, CRIT+4, HP+5
+234	Nhẫn bạc: LV15 dùng được, HP tối đa+50
+235	Nhẫn bạc 2: LV15 dùng được, HP tối đa+100
+236	Nhẫn ngọc: LV15 dùng được, MP tối đa+25
+237	Nhẫn ngọc 2: LV15 dùng được, MP tối đa+50
+238	Thần khí Nhẫn Huyền Quy: LV15 dùng được, MP tối đa+50, DEF+20
+239	Thần khí Nhẫn Huyền Quy 2: LV15 dùng được, MP tối đa+100, DEF+40
+240	Kiếm Lẫm Tâm:
+241	Sáo Tố Tâm:
+242	Chủy Yên Tâm:
+243	Áo ngọc bạch:
+244	Xiêm Ngưng Sương:
+245	Lụa Tinh Diễm:
+246	Hài ngọc bạch:
+247	Hài Ngưng Sương:
+248	Hài Tinh Diễm:
+249	Chuỗi ngọc LV2, EVA+7, MP+28, HP+28
+250	Vòng ái thần LV1, MP+100, HP+100
+251	LV55 dùng được (cấp cao nhất) DEF+255 EVA+6 SPD+5
+252	Thần thú, giết tức khắc mọi sinh vật.
+253	1 địch chịu 180% ST, tốn 40 MP
+254	1 địch chịu 240% ST, tốn 75 MP
+255	1 địch chịu 300% ST, tốn 135 MP
+256	1 địch chịu 360% ST, tốn 200 MP
+257	1 đồng đội CRIT+30% EVA+10% trong 3 lượt, tốn 60 MP
+258	1 đồng đội CRIT+45% EVA+20% trong 3 lượt, tốn 120 MP
+259	1 đồng đội CRIT+60% EVA+30% trong 3 lượt, tốn 200 MP
+260	1 đồng đội CRIT+80% EVA+40% trong 3 lượt, tốn 300 MP
+261	Toàn bộ địch chịu 150% ST, tốn 80 MP
+262	Toàn bộ địch chịu 200% ST, tốn 120 MP
+263	Toàn bộ địch chịu 250% ST, tốn 200 MP
+264	Toàn bộ địch chịu 300% ST, tốn 300 MP
+265	1 địch chịu 200% ST, 20% làm tê liệt 3 lượt, tốn 100 MP
+266	1 địch chịu 300% ST, 30% làm tê liệt 3 lượt, tốn 175 MP
+267	1 địch chịu 400% ST, 40% làm tê liệt 3 lượt, tốn 250 MP
+268	1 địch chịu 500% ST, 50% làm tê liệt 3 lượt, tốn 325 MP
+269	Bản thân DEF+999% trong 2 lượt, tốn 200 MP
+270	Bản thân DEF+999% trong 3 lượt, tốn 350 MP
+271	Bản thân DEF+999% trong 4 lượt, tốn 550 MP
+272	Bản thân DEF+999% trong 5 lượt, tốn 800 MP
+273	1 đồng đội HP+20%+60, tốn 75 MP
+274	1 đồng đội HP+30%+120, tốn 125 MP
+275	1 đồng đội HP+40%+180, tốn 175 MP
+276	1 đồng đội HP+50%+240, tốn 250 MP
+277	1 đồng đội giải trạng thái xấu, DEF+50% trong 3 lượt, tốn 50 MP
+278	1 đồng đội giải trạng thái xấu, DEF+100% trong 3 lượt, tốn 125 MP
+279	1 đồng đội giải trạng thái xấu, DEF+150% trong 3 lượt, tốn 215 MP
+280	1 đồng đội giải trạng thái xấu, DEF+200% trong 3 lượt, tốn 300 MP
+281	Toàn bộ địch chịu 140% ST, 20% SPD-2 trong 3 lượt, tốn 80 MP
+282	Toàn bộ địch chịu 180% ST, 25% SPD-3 trong 3 lượt, tốn 120 MP
+283	Toàn bộ địch chịu 220% ST, 30% SPD-4 trong 3 lượt, tốn 200 MP
+284	Toàn bộ địch chịu 260% ST, 35% SPD-5 trong 3 lượt, tốn 300 MP
+285	Cả đội HP+18%+50, tốn 85 MP
+286	Cả đội HP+25%+75, tốn 175 MP
+287	Cả đội HP+30%+100, tốn 225 MP
+288	Cả đội HP+35%+125, tốn 350 MP
+289	Hồi sinh 1 đồng đội, HP+5%, tốn 100 MP
+290	Hồi sinh 1 đồng đội, HP+20%, tốn 150 MP
+291	Hồi sinh 1 đồng đội, HP+35%, tốn 250 MP
+292	Hồi sinh 1 đồng đội, HP+50%, tốn 380 MP
+293	1 địch chịu 170% ST, 25% trúng độc trong 3 lượt, tốn 40 MP
+294	1 địch chịu 225% ST, 50% trúng độc trong 3 lượt, tốn 75 MP
+295	1 địch chịu 290% ST, 75% trúng độc trong 3 lượt, tốn 135 MP
+296	1 địch chịu 350% ST, 100% trúng độc trong 3 lượt, tốn 200 MP
+297	1 đồng đội SPD+1 EVA+10% trong 3 lượt, tốn 60 MP
+298	1 đồng đội SPD+2 EVA+20% trong 3 lượt, tốn 115 MP
+299	1 đồng đội SPD+3 EVA+30% trong 3 lượt, tốn 170 MP
+300	1 đồng đội SPD+4 EVA+40% trong 3 lượt, tốn 225 MP
+301	1 địch chịu 225% ST, tốn 100 MP
+302	1 địch chịu 350% ST, tốn 150 MP
+303	1 địch chịu 475% ST, tốn 200 MP
+304	1 địch chịu 600% ST, tốn 250 MP
+305	Toàn bộ địch chịu 150% ST, 25% trúng độc trong 3 lượt, tốn 80 MP
+306	Toàn bộ địch chịu 200% ST, 50% trúng độc trong 3 lượt, tốn 120 MP
+307	Toàn bộ địch chịu 250% ST, 75% trúng độc trong 3 lượt, tốn 200 MP
+308	Toàn bộ địch chịu 300% ST, 100% trúng độc trong 3 lượt, tốn 300 MP
+309	Đơn thể ST 125%
+310	Đơn thể ST 120%
+311	Đơn thể ST 150%
+312	SPD+1
+313	Đơn thể ST 99999
+314	Vô số người máy bom hủy diệt kẻ địch, 5000 ST, tốn MP10
+315	Song thể ST 80 (nâng cấp được)
+316	Giải phóng sức mạnh Hồng Quân Tháp! Mọi sinh vật chống lại Dị Thế Tà Quân đều phải chết.
+317	Thức tỉnh, đánh thức sức mạnh tiềm ẩn trong Chí Nam, hồi đầy trạng thái, không tốn lượt.
+318	Song thể ST 200 (cấp tối đa)
+319	Lưu manh TEST
+320	Cường đạo TEST
+321	Đại hán TEST
+322	Công tử TEST
+323	Gia đinh TEST
+324	Thích khách TEST
+325	Lý Phong TEST
+326	Sói TEST
+327	Ong vò vẽ TEST
+328	Huyền thú TEST
+329	Oán binh TEST
+330	Oán binh 2TEST
+331	Tiểu lưu manh
+332	Tiểu đạo tặc
+333	Vô lại chợ búa
+334	Hồng Quân thú
+335	Lý Phong
+336	Đầy tớ Lý Phong
+337	Sói đói
+338	Ong khổng lồ
+339	Huyền thú yếu
+340	Sát thủ áo đen
+341	Gia đinh hạ đẳng
+342	Tặc cướp đường
+343	Ác bá chặn đường
+344	Thây ma đầm sâu
+345	Kim Huyền khách
+346	Xác sống rừng u
+347	Gia đinh mất hồn
+348	Công tử sa cơ
+349	Công tử sa cơ 2
+350	Kim Huyền đỉnh
+351	Công tử điên
+352	Cua
+353	Côn trùng bay
+354	Gấu
+355	Sói trắng
+356	Ưng
+357	Phi mã
+358	Trứng
+359	U hồn
+360	Người máy
+361	Nữ binh ngư nhân
+362	Binh ngư nhân
+363	Mới đến nơi lạ
+364	Tiếng nhạc trời
+365	Đi thám thính
+366	Sách khổng lồ
+367	Khai Thiên công
+368	Tới sòng bạc
+369	Chuẩn bị cược
+370	Mau rời đi
+371	Tiểu Nghệ mời
+372	Tửu quán Tống Ký
+373	Quay về đường cũ
+374	Đường Nguyên mời
+375	Dự tiệc Túy Tiên
+376	Tìm Linh Mộng
+377	Lò cổ kỳ lạ
+378	Đọc lại sách
+379	Âm Dương Độn
+380	Thiên Hương cháy
+381	Tìm ngọn ngành
+382	Bá nghiệp dị thế
+383	Chủ tuyến 20
+384	Chủ tuyến 21
+385	Chủ tuyến 22
+386	Chủ tuyến 23
+387	Chủ tuyến 24
+388	Chủ tuyến 25
+389	Chủ tuyến 26
+390	Chủ tuyến 27
+391	Chủ tuyến 28
+392	Chủ tuyến 29
+393	Chủ tuyến 30
+394	Chủ tuyến 31
+395	Chủ tuyến 32
+396	Chủ tuyến 33
+397	Chủ tuyến 34
+398	Chủ tuyến 35
+399	Chủ tuyến 36
+400	Chủ tuyến 37
+401	Chủ tuyến 38
+402	Chủ tuyến 39
+403	Chủ tuyến 40
+404	Chủ tuyến 41
+405	Chủ tuyến 42
+406	Chủ tuyến 43
+407	Chủ tuyến 44
+408	Chủ tuyến 45
+409	Chủ tuyến 46
+410	Chủ tuyến 47
+411	Chủ tuyến 48
+412	Chủ tuyến 49
+413	Chủ tuyến 50
+414	Chủ tuyến 51
+415	Chủ tuyến 52
+416	Chủ tuyến 53
+417	Chủ tuyến 54
+418	Chủ tuyến 55
+419	Chủ tuyến 56
+420	Chủ tuyến 57
+421	Chủ tuyến 58
+422	Chủ tuyến 59
+423	Chủ tuyến 60
+424	NV tàng bảo đồ
+425	NV lão ngư
+426	Phương Phương 1
+427	Phương Phương 2
+428	NV Tiểu Mỹ
+429	NV Mã Ngọc 0
+430	NV Mã Ngọc 1
+431	Vừa xuyên không tới, còn chưa biết mình trông ra sao... Đến trước gương trong phòng nhấn phím 5 xem thử.
+432	Tiếng sáo thê lương vang vọng trong sân... Hãy tìm người thổi sáo trong đình viện.
+433	Mọi thứ còn xa lạ... Cứ dạo quanh thế giới mới vừa xuyên không tới xem sao.
+434	Trong Hồng Quân Tháp hiện lên một quyển sách khổng lồ... Hãy điều tra quyển sách lơ lửng giữa không trung.
+435	Trong sách ghi chép bí kíp võ công cực mạnh... Đọc sách, thử học Khai Thiên Tạo Hóa Công xem.
+436	Được gã béo Đường Nguyên nhờ vả, phải tới Thiên Kim Đường ra mặt giúp hắn... Đi sang phải, qua khu thành cũ, tìm sòng bạc Thiên Kim Đường.
+437	Đã tìm thấy Thiên Kim Đường, Độc Cô Tiểu Nghệ cứ đòi theo... Vào Thiên Kim Đường xem thử.
+438	Bất đắc dĩ phải động thủ ở Thiên Kim Đường... Mau rời đi thôi.
+439	Độc Cô Tiểu Nghệ mời uống rượu ngon nhất thành Thiên Hương... Đi sang phải ra khỏi thành, tới tửu quán Tống Ký.
+440	Đã vào được đường mòn tửu quán Tống Ký... Trên bản đồ lớn chọn đường mòn tửu quán Tống Ký, rồi men theo đường tìm tửu quán.
+441	Đã đánh cược với Tống lão tam... Giờ quay về thành Thiên Hương theo đường cũ trước đã.
+442	Được Đường Nguyên mời... Ra khỏi phủ họ Quân, tới Túy Tiên Lâu ở khu chợ thành Thiên Hương.
+443	Đã biết Túy Tiên Lâu ở đâu... Vào Túy Tiên Lâu dự tiệc thôi.
+444	Bị Độc Cô Tiểu Nghệ ép đi cùng... Đi xuống ra khỏi thành Thiên Hương, tới rừng ngoại thành tìm công chúa Linh Mộng.
+445	Cái lò khổng lồ trong Hồng Quân Tháp có dị động... Hãy điều tra cái lò khổng lồ.
+446	Quyển sách khổng lồ trong Hồng Quân Tháp lại hiện lên... Hãy điều tra quyển sách khổng lồ.
+447	Lối ra khỏi rừng hình như bị chặn... Nhấn phím 9 mở Âm Dương Độn, vượt chướng ngại, ra khỏi rừng từ góc dưới bên trái.
+448	Thành Thiên Hương lửa cháy ngút trời... Vào khu quý tộc từ cửa Tây, điều tra xem sao.
+449	Khu quý tộc Thiên Hương tiếng chém giết rung trời... Hãy tìm xem rốt cuộc kẻ nào đang đồ thành.
+450	Chữa khỏi cho Quân Vô Ý, bước bước đầu tiên trên con đường bá nghiệp dị thế.
+451	Nhấn phím 9 để bay, mở bốn rương báu trên đỉnh núi đơn độc
+452	Mau tới phía đông cầu treo bắt ong độc
+453	Mang ong độc về giao cho Âu Dương Khắc
+454	Bận rộn cả ngày, mệt quá, về phòng nghỉ thôi
+455	Tới gần cầu treo ngoài Bạch Đà sơn trang lén xem Âu Dương Phong luyện công
+456	Tới chính sảnh Bạch Đà sơn trang xem Âu Dương Phong có dặn dò gì không
+457	Lên tầng một núi Bạch Đà tìm Nhện độc đốm hoa, đánh bại nó rồi mang cho Âu Dương Phong. Lối lên tầng một ở phía đông cầu treo.
+458	Mang thanh kiếm kỳ lạ và Nhện độc đốm hoa về cho Âu Dương Phong ở chính sảnh Bạch Đà sơn trang
+459	Giao [Nhện độc đốm hoa] vừa đánh được cho Âu Dương Phong
+460	Chẳng còn việc gì làm, về phòng nghỉ thôi
+461	Tới gần cầu treo trên đỉnh núi Bạch Đà lén xem Âu Dương Phong luyện công
+462	Tới chính sảnh Bạch Đà sơn trang xem Âu Dương Phong dặn dò gì
+463	Xuống núi tới hang động ở [thành La Ta] khiêu chiến Độc Cáp ngàn năm
+464	Mang xác Độc Cáp về núi Bạch Đà giao cho Âu Dương Phong
+465	Tới Đại Luân Tự ở thành La Ta dạy cho Kim Luân Lạt Ma một bài học
+466	Cô gái bí ẩn chạy về phía cổng thành, đuổi theo hỏi cho rõ
+467	Về huyện Thanh Hà một chuyến trước, có vẻ sẽ giải được bí ẩn.
+468	Tới chính sảnh Bạch Đà sơn trang xem Âu Dương Phong triệu tập mọi người có việc gì
+469	Về phòng bàn bạc với Tây Mã
+470	Rời núi Bạch Đà
+471	Rời núi Bạch Đà, vào Lâm An từ bản đồ lớn
+472	Lấy ít tiền bố thí cho người ăn xin cạnh chiếu cói
+473	Tới tửu lâu trong thành tìm một khách áo xanh, đòi lại gà ăn mày cho người ăn xin
+474	Tìm Hồng Thất Công trong thành Lâm An hỏi nơi có ba vị dược liệu
+475	Đi tìm ba vị dược liệu, nghe nói linh chi ở Tương Dương, cứ tới Tương Dương xem trước
+476	Tới biệt viện Trần gia ở Tương Dương lấy linh chi
+477	Rời biệt viện Trần gia, đi tìm hai vị dược liệu còn lại
+478	Tới thảo nguyên Mông Cổ tìm xạ hương
+479	Hỏi người Mông Cổ phía trước về xạ hương
+480	Tới nhà Thiết Mộc Chân hỏi tin về xạ hương, cái lều phía trước chính là nhà hắn
+481	Vào sâu trong thảo nguyên tìm Thiết Mộc Chân, đi về phía bắc có lối vào sâu thảo nguyên
+482	Vào sâu trong thảo nguyên giải cứu Thiết Mộc Chân
+483	Tới Hoa Sơn tìm xương báo đen
+484	Lên đỉnh Hoa Sơn tìm báo đen
+485	Vào vương phủ Đại Lý giết Vương Trùng Dương
+486	Tới Hoạt Tử Nhân Mộ giao thư tay của Vương Trùng Dương cho Lâm Triều Anh, đổi lấy xương báo đen
+487	Rời Hoạt Tử Nhân Mộ, tới Lâm An tìm Hoàng Dược Sư
+488	Đi xem thanh thần kiếm kia
+489	Tới biệt viện Trần gia ở Tương Dương tìm Trần đại hiệp báo thù cho Tây Mã
+490	Lên đỉnh Hoa Sơn dự Hoa Sơn luận kiếm, đoạt thiên hạ đệ nhất để lấy [Cửu Âm Chân Kinh]
+491	Xuống núi tìm cô gái bí ẩn lúc nãy
+492	Thu thập đủ tàng bảo đồ, mở lối tới hòn đảo bí ẩn.
+493	Câu ba con cá mè giao cho lão ngư.
+494	Giúp Phương Phương sửa lại dây chuyền, đó là món đồ duy nhất anh trai để lại cho cô.
+495	Làm cho Phương Phương một chiếc xe lăn, như vậy cô mới đi tìm anh trai được.
+496	Giúp em gái hái trái trên cây xuống.
+497	Tới doanh trại ngoại thành Tương Dương giúp người phụ nữ họ Tôn ở Lâm An tìm chồng là Mã Đan Dương
+498	Báo cho Tôn thị ở Lâm An biết Mã Đan Dương đã đổi tên thành Mã Ngọc, đầu quân Toàn Chân giáo
+499	Tất sát
+500	Tật Không Sát 1
+501	Tật Không Sát 2
+502	Tật Không Sát 3
+503	Tật Không Sát 4
+504	Thiểm Điện LV1
+505	Thiểm Điện LV2
+506	Thiểm Điện LV3
+507	Thiểm Điện LV4
+508	Vạn Quân LV1
+509	Vạn Quân LV2
+510	Vạn Quân LV3
+511	Vạn Quân LV4
+512	Lạc Ưng Sát LV1
+513	Lạc Ưng Sát LV2
+514	Lạc Ưng Sát LV3
+515	Lạc Ưng Sát LV4
+516	Khai Thiên LV1
+517	Khai Thiên LV2
+518	Khai Thiên LV3
+519	Khai Thiên LV4
+520	Thanh Tâm LV1
+521	Thanh Tâm LV2
+522	Thanh Tâm LV3
+523	Thanh Tâm LV4
+524	Băng Cơ LV1
+525	Băng Cơ LV2
+526	Băng Cơ LV3
+527	Băng Cơ LV4
+528	Hàn Mai LV1
+529	Hàn Mai LV2
+530	Hàn Mai LV3
+531	Hàn Mai LV4
+532	Thanh Phong LV1
+533	Thanh Phong LV2
+534	Thanh Phong LV3
+535	Thanh Phong LV4
+536	Hồi Thiên LV1
+537	Hồi Thiên LV2
+538	Hồi Thiên LV3
+539	Hồi Thiên LV4
+540	Nhất Tiếu LV1
+541	Nhất Tiếu LV2
+542	Nhất Tiếu LV3
+543	Nhất Tiếu LV4
+544	Đạp Tuyết LV1
+545	Đạp Tuyết LV2
+546	Đạp Tuyết LV3
+547	Đạp Tuyết LV4
+548	Hồng Tụ Thiên Hương 1
+549	Hồng Tụ Thiên Hương 2
+550	Hồng Tụ Thiên Hương 3
+551	Hồng Tụ Thiên Hương 4
+552	Phượng Vũ LV1
+553	Phượng Vũ LV2
+554	Phượng Vũ LV3
+555	Phượng Vũ LV4
+556	Bạo huyền khí
+557	Nhị liên kích
+558	Bạo Viêm Thuật
+559	Liên Hoàn Trảo
+560	Chích điên cuồng
+561	Tam liên trảm
+562	Tích Lịch Đạn
+563	Nhắm mắt đánh
+564	Tự lấy can đảm
+565	Bạo Kim Huyền
+566	Hồng Lang KN3
+567	Thái Âm KN
+568	Thức tỉnh
+569	Lục Dực KN1
+570	Lục Dực KN2
+571	Lục Dực đánh
+572	Thức tỉnh 2
+573	Gấp đôi EXP, tiền
+574	Đôi cánh
+575	Mua đạo cụ
+576	Mua tiền vàng
+577	Phá giới hạn cấp
+578	Kích hoạt
+579	Hồi sinh tại chỗ
+580	Diệt
+581	Quân Mạc Tà
+582	Độc Cô Tiểu Nghệ
+583	Quản Thanh Hàn
+584	Quân Vô Ý
+585	Điều kiện: mở rương báu trong phòng ngủ Quân Mạc Tà. Thưởng: 100 lượng bạc, Cao dâu tằm, Ma Hồn Tinh Phách.
+586	Bước vào thời kỳ nhuyễn kiếm: nhuyễn kiếm vô thường, vô chiêu bất phá. Nhận điểm: 40.
+587	Bước vào thời kỳ trọng kiếm: trọng kiếm vô phong, đại xảo bất công. Nhận điểm: 50.
+588	Bước vào thời kỳ mộc kiếm: mộc kiếm vô trệ, tâm kiếm hợp nhất. Nhận điểm: 60.
+589	Thắng mọi đối thủ trong tỷ võ chiêu thân. Nhận điểm: 50.
+590	Khiêu chiến Đông Tà Hoàng Dược Sư ở Lâm An và thắng. Nhận điểm: 80.
+591	Khiêu chiến Bắc Cái Hồng Thất Công ở Lâm An và thắng. Nhận điểm: 80.
+592	Khiêu chiến Nam Đế Đoàn Trí Hưng ở Đại Lý và thắng. Nhận điểm: 80.
+593	Khiêu chiến Trung Thần Thông Vương Trùng Dương ở Đại Lý và thắng. Nhận điểm: 80.
+594	Khiêu chiến Lâm Triều Anh ở Cổ Mộ và thắng. Nhận điểm: 80.
+595	Thắng Đông Tà, Nam Đế, Bắc Cái, Trung Thần Thông trong khiêu chiến. Nhận điểm: 120.
+596	Mang theo đủ 100.000 lượng bạc. Nhận điểm: 150.
+597	Giết Kha Trấn Ác, Trần công tử. Nhận điểm: 50.
+598	Độc Cô học được 10 môn võ công. Nhận điểm: 120.
+599	Cùng lúc có Tử Vi nhuyễn kiếm, Lân Hàn nhuyễn kiếm, Không Minh nhuyễn kiếm. Nhận điểm: 130.
+600	Cùng lúc có Huyền Thiết trọng kiếm, Hàn Thiết trọng kiếm, Xích Thiết trọng kiếm. Nhận điểm: 130.
+601	Chữa khỏi cho Tây Mã. Nhận điểm: 280.
+602	Giết được Nhện độc đốm hoa, Độc Cáp ngàn năm, Mãng Cổ Chu Cáp. Nhận điểm: 120.
+603	Mua đồ được giảm 20%.
+604	Tăng vĩnh viễn: ATK+20, MATK+20, CRIT+2, EVA+2.
+605	Tăng vĩnh viễn: ATK+50, MATK+50, CRIT+5, EVA+5.
+606	Tăng vĩnh viễn: ATK+80, MATK+80, CRIT+8, EVA+8.
+607	Tăng vĩnh viễn: ATK+100, MATK+100, CRIT+10, EVA+10.
+608	Tăng vĩnh viễn: ATK+200, MATK+200, CRIT+20, EVA+20.
+609	Sơ nhập giang hồ DESC
+610	Bước vào thời kỳ lợi kiếm: lợi kiếm vô ý, vô kiên bất tồi.
+611	Bước vào thời kỳ nhuyễn kiếm: nhuyễn kiếm vô thường.
+612	Bước vào thời kỳ trọng kiếm: trọng kiếm vô phong, đại xảo bất công.
+613	Bước vào thời kỳ mộc kiếm: mộc kiếm vô trệ.
+614	Sơ nhập giang hồ
+615	Dây nanh sói
+616	Chuỗi ngọc trai
+617	Dây nanh sói LV1, CRIT+5, EVA+5, MP+20
+618	Chuỗi ngọc trai LV1, EVA+5, MP+20, HP+20
+619	Thuốc
+620	Nguyên liệu
+621	Vũ khí
+622	Y giáp
+623	Giày
+624	Trang sức
+625	Đến từ Thiên giới, thật khó tin quá.
+626	Chí Nam nói gì vậy?
+627	À, không có gì. Haha.
+628	Phải rồi, Lan. Trước đây Lan chưa từng thấy biển sao?
+629	Chỉ thấy trong tư liệu thôi.
+630	Khi thấy biển thật, Lan nhất định sẽ rất vui.
+631	Vậy sao? Lan mong lắm. (Hảo cảm +1)
+632	Đi ra từ phía nam làng là thấy biển rồi.
+633	Hihi, mong quá đi.
+634	Rốt cuộc Lan đang làm gì vậy?
+635	Không lẽ thật sự gặp nguy hiểm?
+636	Vẫn nên chạy qua xem sao.
+637	Lan, vết thương còn đau không?
+638	Chỉ trầy xước chút thôi, đừng lo.
+639	Nếu để lại sẹo thì xấu lắm đấy.
+640	Tốt nhất nên về làng bôi thuốc ngay.
+641	Ừm, cảm ơn Chí Nam đã quan tâm. (Hảo cảm +1)
+642	Con sói vừa rồi hình như khác hẳn mấy con thường thấy.
+643	Có lẽ bị ảnh hưởng bởi khí tức từ Thiên giới.
+644	Có điều, tình hình cụ thể Lan cũng không rõ lắm.
+645	Lan, chúng ta quay về theo đường cũ đi.
+646	Ừm, được.
+647	Nguy hiểm quá, Lan. Bọn đó là người thế nào vậy?
+648	Kẻ mặc áo xanh tự xưng là thần tướng Thái Âm.
+649	Nhưng theo tư liệu của Bộ Trị An Thiên giới, các thần tướng lẽ ra đều đã chết...
+650	Vậy sao? Biết đâu là giả mạo thì sao.
+651	Nhưng Lan cảm thấy hắn không giống đang nói dối.
+652	Ra vậy, thần tướng rốt cuộc là người thế nào?
+653	Trước đây tôi từng đọc trong tư liệu, thần tướng tổng cộng có mười hai người.
+654	Từng là kẻ thống trị Thiên giới, nhưng vì chuyên chế mà bị lật đổ.
+655	Và tất cả đều đã chết trong cuộc bạo loạn.
+656	Nói vậy thì người vừa rồi chẳng phải là kẻ rất nguy hiểm sao.
+657	Ừm, tôi nghĩ đó cũng là lý do Lan được phái xuống nhân gian bảo vệ Chí Nam.
+658	Vết thương của Lan sao rồi, mau cho tôi xem.
+659	Dùng thuốc vừa lấy được, giờ hết đau hẳn rồi.
+660	Người mặc áo đỏ kia, sao lại giúp chúng ta nhỉ?
+661	Không rõ lắm, nhưng Lan cứ thấy người đó rất giống anh trai của Lan...
+662	Cái gì? Vậy sao vừa rồi hắn lại...
+663	Lan cũng không rõ lắm, Lan và anh trai đã thất lạc nhau rất lâu rồi.
+664	Biết đâu Lan nhận nhầm người. Hihi...
+665	Lan, không sao đâu. Có tôi ở bên cạnh mà.
+666	Hihi, cảm ơn nhé. (Hảo cảm +1)
+667	Cầm thanh kiếm này trong tay thấy sức mạnh tràn trề.
+668	Nhưng lại có cảm giác bất an trong lòng.
+669	Trước khi được người cá giúp đỡ.
+670	Chí Nam tốt nhất nên cẩn thận khi dùng, không thì có thể rất nguy hiểm.
+671	Ừm, vậy chúng ta mau đi tìm người cá thôi.
+672	Được.
+673	Chúng ta đi hỏi viện trưởng về truyền thuyết tộc người cá đi.
+674	Viện trưởng giờ đang ở đâu?
+675	Ngay trước cổng cô nhi viện cạnh nhà tôi.
+676	Ừm, vậy mau qua đó thôi.
+677	Trước đây từng thấy ghi chép về tộc người cá trong tư liệu của Bộ Trị An.
+678	Hóa ra tộc người cá có thật à.
+679	Ừm, họ sống giữa biển khơi. Nghe nói là con dân được Hải Thần che chở.
+680	Nửa thân trên giống loài người, nửa thân dưới lại như loài cá.
+681	Mà nghe nói tộc người cá toàn trai đẹp gái xinh đấy.
+682	A haha, vậy sao...
+683	Chí Nam, người chúng ta cần tìm ở đâu vậy?
+684	Chắc là ở bãi Mực phía tây nam làng, trước đây tôi hay ra đó câu cá.
+685	Ừm, vậy mau qua đó thôi.
+686	Người này trông hơi kỳ lạ nhỉ.
+687	Hihi, Lan thích kiểu người thế này lắm. Mau đi nói chuyện với ông ấy đi.
+688	Ừm.
+689	Haha, tay nghề nấu ăn của tôi khá thật.
+690	Hihi, trông có vẻ ngon lắm.
+691	Nào, Lan nếm thử xem. (cầm lên một miếng nhỏ)
+692	A-- ừm-- (nhai nhai...)
+693	Ừm, ngon lắm.
+694	Hihi, ối. Chết rồi, còn phải đem giao cho thuyền trưởng nữa.
+695	Cuối cùng cũng sắp tới đảo Người Cá, hơi hồi hộp nha.
+696	Hihi, trông Chí Nam vui quá.
+697	Ừm, phiêu lưu là sở thích lớn nhất của tôi mà, a haha.
+698	Hihi, nghe vậy Lan cũng thấy vui lây.
+699	Chuẩn bị xong thì chúng ta đi nói chuyện với thuyền trưởng nhé.
+700	Cảm giác bay thích thật, nếu học được sớm hơn thì tốt.
+701	Có khi giờ đã tới đảo Người Cá rồi.
+702	Ưm...
+703	Lan, Lan sao vậy? Sắc mặt trông không tốt lắm.
+704	Không có gì, chỉ hơi khó chịu thôi.
+705	Không sao chứ, Lan.
+706	Ừm, không sao đâu.
+707	Chiu chiu.
+708	Hihi, Thú Thú cũng đừng lo nhé.
+709	Lan, nhìn kìa. Trên mặt biển có một hòn đảo rất lớn, chắc chắn đó là đảo Người Cá.
+710	Ừm, chúng ta mau tới đó thôi.
+711	Chiu... chiu.
+712	Lan, Lan không sao chứ.
+713	Hơi mệt rồi, không giúp Chí Nam bay được nữa. Xin lỗi nhé.
+714	Không sao đâu, Lan. Là do tôi không để ý. Nếu biết phải tiêu hao năng lượng của Lan...
+715	Tôi nhất định đã không bay lung tung rồi...
+716	Ừm, không sao đâu. Lan nghỉ một lát là khỏe thôi.
+717	Người cá hình như sống sâu trong đảo.
+718	Ừm, Lan. Đi sau tôi, để tôi mở đường.
+719	Hihi, Chí Nam thật đáng tin cậy.
+720	Tộc người cá trông có vẻ không thân thiện lắm.
+721	Có lẽ vì ít tiếp xúc với bên ngoài nên khá đề phòng.
+722	Lan thấy tộc người cá hẳn là một chủng tộc rất lương thiện.
+723	Vậy sao. Nhưng tôi thấy họ ai cũng đẹp thật, a haha.
+724	Tộc trưởng người cá chắc là ở phía nào nhỉ.
+725	Cứ tìm thử là biết thôi, chỗ này hình như cũng không lớn.
+726	Tộc trưởng trông là người rất hiền hòa.
+727	Mà còn xinh đẹp nữa.
+728	Haha, vậy sao. Tôi thấy Lan vẫn đẹp hơn.
+729	Chiu chiu chiu...
+730	Thú Thú hình như có ý kiến kìa.
+731	(Cái con nhỏ này đang ghen à...)
+732	Tộc trưởng bảo chúng ta đi tìm y sư trong tộc.
+733	Không biết là người thế nào nhỉ.
+734	Tìm thử đi, chắc ở gần đây thôi.
+735	Chị này trông có vẻ tốt bụng quá.
+736	Người ta tặng đồ là thấy người ta tốt, Lan đúng là trẻ con.
+737	Ghét ghê, lẽ nào Chí Nam không nghĩ vậy sao.
+738	Hehe, thật ra tôi cũng nghĩ thế.
+739	Vậy mới đúng chứ.
+740	Rương báu phải dùng Sao biển mới mở được.
+741	Không biết bên trong có những món gì hay nhỉ.
+742	Mở ra xem chẳng phải sẽ biết sao.
+743	Ừm, hơi mong chờ đấy.
+744	Không ngờ người cá có thể biến ra đôi chân người.
+745	Tôi là y sư và dược sư giỏi nhất tộc người cá đấy.
+746	Nếu muốn, tôi cũng có thể làm các cậu mọc đuôi cá đấy.
+747	Vậy sao?
+748	Nếu có dịp, Lan muốn thử lắm.
+749	Hihi, được thôi.
+750	Chị Leila là y sư của tộc người cá sao?
+751	Ừm, đúng vậy.
+752	Nói vậy tộc người cá cũng bị bệnh à.
+753	Thật ra con dân tộc người cá rất ít khi đổ bệnh.
+754	Nhưng từ khi năng lượng của Tháp Đại Dương suy yếu, thể chất tộc người cá ngày càng kém.
+755	Có lúc y sư như tôi bận tối tăm mặt mũi.
+756	Nên lần này điều tra Tháp Đại Dương, tôi phải đi cùng các cậu.
+757	Ra là vậy.
+758	Này này, hai người đừng tán gẫu mãi được không, còn phải đi đường nữa.
+759	Hihi, Chí Nam sốt ruột rồi kìa.
+760	Lần sau tán gẫu rủ Chí Nam theo là được.
+761	Ơ...
+762	Chị Leila, Tháp Đại Dương là nơi thế nào vậy?
+763	Từ lúc tôi biết nhớ nó đã tồn tại rồi.
+764	Với tộc người cá, Tháp Đại Dương giống như thánh địa vậy.
+765	Truyền thuyết kể nơi đó từng là chỗ ở của Hải Thần.
+766	Ba vị thần thượng cổ: biển cả, đại địa và bầu trời.
+767	Bầu trời tượng trưng cho chân lý và hy vọng, đại địa là kiên nhẫn và chân thật, biển cả là lãng mạn và ước mơ.
+768	Chị Leila biết nhiều thật đấy.
+769	Hihi, chị rất hứng thú với mấy chuyện này mà.
+770	Vậy lần này tới Tháp Đại Dương có khả năng gặp nguy hiểm không?
+771	Cái này thì không rõ.
+772	Ưm, cứ có linh cảm chẳng lành.
+773	Hihi, Chí Nam sao vậy? Chẳng giống phong cách của cậu chút nào.
+774	Ơ, chắc là đói bụng (ọt ọt...)
+775	Hihi, đúng là vậy mà.
+776	Còn bao lâu mới tới Tháp Đại Dương vậy?
+777	Từ đây cứ đi thẳng lên phía bắc là tới.
+778	Chí Nam trông uể oải quá, chị có thuốc tỉnh táo đây.
+779	Oa, không uống thuốc đâu. Vừa đắng vừa khó nuốt...
+780	Ngoan nào, uống vào tốt cho cậu đấy.
+781	Đúng đó, Chí Nam nên nghe lời chị Leila.
+782	Ưm, đừng lại đây. Không uống thuốc đâu.
+783	Hừ hừ, Lan giữ Chí Nam giúp chị.
+784	Hihi.
+785	Oa oa, hôi quá. Đừng sáp lại gần.
+786	Hu hu hu... (ực ực...)
+787	Ôi, cuối cùng cũng uống rồi. Được rồi được rồi, lát nữa sẽ tỉnh táo gấp trăm lần.
+788	Hihi, trông Chí Nam tội nghiệp ghê.
+789	Ơ, nước! Cho tôi nước, đắng quá...
+790	Haha, mau theo kịp đi. Sao hai người đi chậm thế.
+791	Chí Nam thật là. Sao đi nhanh vậy chứ.
+792	Thuốc hình như có tác dụng rồi.
+793	Này này, mau lên chứ. Lẽ nào muốn tôi đẩy hai người đi sao.
+794	Ơ, tinh lực hình như hơi dư thừa rồi.
+795	Hihi, có vẻ vậy.
+796	Cứ đi thẳng lên bắc, sẽ sớm tới Tháp Đại Dương thôi.
+797	Ưm, Lan thấy hơi lạnh.
+798	Phải đó, tôi cũng thấy lành lạnh.
+799	Vậy sao, chị có thuốc làm người ta ấm lên đây.
+800	A... cái đó, giờ tôi chẳng lạnh chút nào. Haha, còn thấy như sắp đổ mồ hôi nữa.
+801	Ưm? Vậy sao.
+802	Phải phải, a haha.
+803	Vẻ mặt Chí Nam kỳ lạ quá...
+804	Đâu có, a... haha... ha, hắt xì!
+805	...Hình như bị cảm rồi.
+806	Ơ, không có không có. Chúng ta tiếp tục đi thôi...
+807	Sao tự dưng chạy mất vậy.
+808	Chị Leila, rốt cuộc chúng ta phải tìm gì vậy?
+809	Điều tra nguyên nhân năng lượng trong tháp suy yếu, nhưng hiện vẫn chưa có manh mối.
+810	Chúng ta tiếp tục thám hiểm vào sâu bên trong đi.
+811	Chí Nam, sắc mặt cậu...
+812	Không sao, có lẽ trận chiến vừa rồi quá kịch liệt thôi.
+813	Lan không muốn Chí Nam biến thành người mà Lan không quen...
+814	Yên tâm đi, Lan. Sao tôi có thể biến thành người Lan không quen được chứ.
+815	(khẽ nói) Đồ ngốc...
+816	Ưm, chị Leila nói gì vậy?
+817	Ưm, nguy cơ của Tháp Đại Dương đã được giải quyết, giúp tộc người cá một việc lớn rồi.
+818	Tộc trưởng nhất định sẽ thưởng hậu cho cậu.
+819	A haha, vậy sao. Vậy chúng ta mau về thôi.
+820	Vừa nghe có thưởng là tự dưng hăng hái hẳn lên.
+821	Lan, Lan đang nghĩ gì vậy?
+822	Lan đang nghĩ chuyện Thanh Long, Lan thấy thần tướng hình như không xấu như đã nói trước đây.
+823	Tuy không hiểu lắm, nhưng tôi cũng thấy Thanh Long đúng là người tốt.
+824	Chí Nam cũng nghĩ vậy sao? Lan vui quá.
+825	Quay về chỗ tộc trưởng người cá, các cậu chắc chắn sẽ được thưởng.
+826	Cứ đi thẳng về phía nam là tới ngay.
+827	Ừm? Phải làm gì nhỉ?
+828	À, đúng rồi. Phải lên lầu lấy gia vị.
+829	Cốt truyện chọn kiếm
+830	Cảm giác thật kỳ lạ...
+831	Cứ như đang nằm mơ vậy...
+832	Ưm, không mặc quần áo...
+833	Phù phù, nghĩ bậy gì thế.
+834	Đi lấy cho cô ấy bộ quần áo đi.
+835	Tiền
+836	Sao biển
+837	Tiêu phí
+838	Hạ địch
+839	Thắng
+840	Cấp đồ
+841	Giảm giá
+842	Điểm
+843	Thành tựu
+844	Danh hiệu
+845	Cả đội tăng HP
+846	Cả đội tăng MP
+847	Cả đội tăng ATK
+848	Cả đội tăng DEF
+849	Cả đội tăng CRIT
+850	Cả đội tăng EVA
+851	Cả đội tăng SPD
+852	Cấp chưa đủ, không thể trang bị
+853	Thiếu trang bị, không thể rèn
+854	Nhân vật này không thể đổi trang bị
+855	Vật phẩm này không thể dùng
+856	Đọc bản lưu này?
+857	Ghi đè bản lưu?
+858	Lưu game?
+859	Lưu thành công
+860	Đang lưu, xin chờ
+861	Bản lưu 1
+862	Bản lưu 2
+863	Bản lưu 3
+864	Không
+865	Trống
+866	Vũ khí:Không
+867	Giáp:Không
+868	Phụ kiện:Không
+869	Chọn
+870	Lùi lại
+871	Tiệm tùy thân
+872	Y phục
+873	Bí kíp
+874	Phím phải mở thương thành để kích hoạt cánh
+875	Không đủ tiền!
+876	Cấp chưa đủ!
+877	Mua chứ?
+878	Bán chứ?
+879	Nâng cấp chứ?
+880	Kích hoạt chứ?
+881	Kỹ năng này chưa kích hoạt!
+882	Kỹ năng này đã đạt cấp cao nhất!
+883	Học kỹ năng
+884	Trang bị này không thể nâng cấp hoặc đã đạt cấp cao nhất
+885	(kỹ năng)
+886	lên cấp
+887	HP
+888	MP
+889	ATK
+890	MATK
+891	DEF
+892	CRIT
+893	EVA
+894	SPD
+895	Trang bị
+896	Rèn
+897	Hủy
+898	Rèn thành công!
+899	Thoát game?
+900	Về menu chính?
+901	Hướng dẫn
+902	Mua thành công
+903	Đổi trang bị
+904	Tháo ra
+905	Vật phẩm
+906	Dùng vật phẩm
+907	Thông tin
+908	Có
+909	Không
+910	Không thể dùng kỹ năng!
+911	Không có kỹ năng!
+912	Không có vật phẩm!
+913	Không đủ MP!
+914	Không đủ thể lực!
+915	Chưa hết thời gian hồi!
+916	Chiến thắng!
+917	Thất bại!
+918	Toàn đội bị diệt!
+919	Chạy thoát!
+920	Chạy thất bại!
+921	Không thể chạy!
+922	Nhận EXP
+923	Nhận vật phẩm
+924	Nhận tiền
+925	Lên cấp
+926	Học được
+927	Đánh
+928	Đội không thể ít hơn 1 người
+929	Đội không thể nhiều hơn 3 người
+930	Trống
+931	HP đã đầy
+932	MP đã đầy
+933	HP và MP đều đã đầy
+934	Bật âm thanh?
+935	Tăng tốc
+936	Bỏ qua
+937	Dùng thành công
+938	Học thành công
+939	Lên/Xuống chọn số lượng
+940	Mua:
+941	Bán:
+942	Tổng:
+943	Thắng bại là chuyện thường của binh gia, đại hiệp xin làm lại từ đầu!
+944	Chưa kích hoạt lưu nhanh
+945	Hiện không thể lưu
+946	Không thể dùng!
+947	Hạ hắc y nhân có thể nhận được không ít lợi lộc đấy.
+948	Trong rương báu có những món đồ tốt không ngờ đấy.
+949	Trong chiến đấu, dùng kỹ năng hợp lý rất quan trọng đấy.
+950	NPC thường cho bạn thông tin hữu ích.
+951	Khi đánh không lại quái, thử nâng cấp trang bị xem.
+952	Muốn qua màn hoàn mỹ thì cần thám hiểm đấy.
+953	Gợi ý nhiệm vụ
+954	Chính
+955	Phụ
+956	Vật phẩm không đủ!
+957	OK
+958	Trở về
+959	Tắt tiếng
+960	Tên
+961	Số lượng
+962	Đơn giá
+963	Kỹ năng
+964	Tiêu hao
+965	Cấp
+966	Cài đặt
+967	Bật âm thanh?
+968	Dễ
+969	Thường
+970	Khó
+971	Cực khó
+972	Tạm thời chưa thể nhận!
+973	Nhận
+974	Trạng thái:
+975	Xong
+976	Chưa xong
+977	Hướng dẫn
+978	Thao tác
+979	Phím mềm trái:
+980	Xác nhận, mở menu
+981	Phím mềm phải:
+982	Trở về, hủy
+983	(Phím 5/giữa)/xác nhận
+984	(Phím 2, phím lên)
+985	Nhân vật/con trỏ lên
+986	(Phím 8, phím xuống)
+987	Nhân vật/con trỏ xuống
+988	(Phím 4, phím trái)
+989	Nhân vật/con trỏ sang trái
+990	(Phím 6, phím phải)
+991	Nhân vật/con trỏ sang phải
+992	(Phím 9)
+993	Đạo cụ bay
+994	Trong menu game,
+995	chọn mục Nhiệm vụ
+996	để xem nhiệm vụ
+997	Bản Việt hoá:
+998	NAM.P
+999	Đã gỡ bỏ toàn bộ
+1000	nội dung nhà mạng,
+1001	SMS và kết nối mạng.
+1002	Chúc chơi vui!
+1003	Giới thiệu
+1004	Tên game:
+1005	Dị Thế Tà Quân
+1006	Nhà phát triển:
+1007	Ái Tư Thiên Cơ
+1008	Việt hoá:
+1009	NAM.P
+1010	Phiên bản:
+1011	Ghi chú:
+1012	sms@sohu-
+1013	SMS, kết nối mạng.
+1014	Chúc chơi vui!
+1015	Bạn có chắc muốn thoát game?
+1016	Tính năng này đã mở
+1017	Đang xử lý, xin chờ...
+1018	Thành công, nhấn phím phải để trở về
+1019	Thất bại
+1020	Cửa hàng chưa mở!
+1021	(Hiệu quả này không tự lưu, hãy lưu game kịp thời)
+1022	Hồi sinh tại chỗ!
+1023	Thưởng cốt truyện
+1024	Nhận điểm
+1025	Điểm hiện tại:
+1026	Bảng xếp hạng trực tuyến đã được gỡ bỏ.
+1027	Điểm hiện tại là 0
+1028	Tiểu khất cái:
+1029	Độc Cô:
+1030	Thắng ở tỷ võ chiêu thân:
+1031	Thắng khi khiêu chiến:
+1032	Mang theo 10 vạn lượng:
+1033	Sở hữu các thần kiếm:
+1034	Thành tựu:
+1035	Đã giết các tà vật:
+1036	Đã thắng các đối thủ:
+1037	Hợp thành
+1038	Nguyên liệu cần
+1039	Hợp thành thành công, nhận
+1040	Hợp thành thất bại, thiếu
+1041	Thiếu
+1042	Độ thuần thục quá thấp
+1043	Thiếu hồn lực
+1044	So sánh thuộc tính
+1045	Không thể dùng cho nhân vật này
+1046	Gợi ý
+1047	Nhấn phím "0" để chọn
+1048	Quân Mạc Tà, công tử ăn chơi bị nam chính xuyên không nhập vào.
+1049	Độc Cô Tiểu Nghệ, một trong các quý tộc Thiên Hương.
+1050	Quản Thanh Hàn, chưa qua cửa nhà họ Quân đã thủ tiết đến nay.
+1051	Thiếu Sao biển
+1052	Thử lại
+1053	Hoàng cung này hơi chật thì phải... thế này trẫm mất mặt quá!
+1054	Hoàng đế Thiên Hương
+1055	Trốn ở đây thì chẳng ai ám sát được ta.
+1056	Công chúa Linh Mộng
+1057	Đừng đắc ý, ở cảnh này ta không phải nữ hầu nhà họ Quân của ngươi đâu!
+1058	Thị nữ
+1059	Ghét ghê~
+1060	Ngày ngày đứng ngay dưới mắt hoàng đế, chịu không nổi!
+1061	Vệ binh Thiên Hương
+1062	Zzzz... Zzzz...
+1063	Hoàng thượng! Quân Chiến Thiên ta xuất thân nghèo khổ, dựa vào quân công mà lên tới Huyết Lan Hoa công tước của đế quốc.
+1064	Quân Chiến Thiên
+1065	Hai con trai ta là Quân Vô Hối, Quân Vô Tình đều là đại tướng đế quốc, mười năm trước đã tử trận sa trường!
+1066	Lão tam /rQuân Vô Ý/b cũng trọng thương, đến nay vẫn bại liệt...
+1067	Quân Chiến Thiên khảng khái hùng hồn
+1068	Quân gia ta có thể nói là cả nhà trung liệt! Đúng không?
+1069	Haizz, không sai! Có thể nói không có Quân gia thì không có đế quốc Thiên Hương của trẫm!
+1070	Ba năm trước, hai cháu ta là Quân Mạc Ưu, Quân Mạc Sầu cũng cùng tử trận trong một trận đại chiến!
+1071	Giờ Quân gia chỉ còn lại một mầm độc đinh: /rQuân Mạc Tà/b!
+1072	Hoàng thượng, cho nên, lão phu... lão phu cầu xin người... cầu xin người...
+1073	Cầu xin người... gả công chúa Linh Mộng cho cháu ta là Quân Mạc Tà!
+1074	Quân ái khanh, chẳng phải quả nhân không muốn nể mặt ái khanh...
+1075	Nhưng quả nhân cũng là người làm cha, Linh Mộng lại là đứa con gái quả nhân yêu thương nhất. Trẫm sao có thể để con gái mình gả cho... haizz!
+1076	Hoàng thượng. Lão phu cũng biết thằng cháu ta là thứ bùn nhão...
+1077	Nhưng mong hoàng thượng nể mặt cha nó đã vì nước hy sinh mà ưng thuận chuyện này!
+1078	Như vậy lão phu cũng có thể nhắm mắt rồi!
+1079	Phụ hoàng! Nếu người muốn gả con cho tên đại vô lại đó... con, Linh Mộng con... thà đập đầu chết ở Kim Loan điện này!!
+1080	Quân ái khanh, khanh xem này... trẫm thật sự rất khó xử!
+1081	Hoàng thượng...
+1082	Haizz! Cũng muộn rồi, ái khanh nếu không còn việc gì thì sớm về nghỉ ngơi đi.
+1083	Linh Mộng, con cũng về nghỉ đi...
+1084	Vâng, phụ hoàng...
+1085	(Haizz, nếu là mười năm trước, lúc Quân gia hưng thịnh nhất, chỉ cần lão phu nhắc tới hôn sự...)
+1086	(Lão hoàng đế ngươi chẳng phải mừng như điên sao?)
+1087	Quân Chiến Thiên thở dài một tiếng
+1088	Haizz! Nhân tình ấm lạnh, như người uống nước, nóng lạnh tự biết!
+1089	Bẩm công tước, phủ vừa báo tin, cháu ngài là Quân Mạc Tà nửa đêm bị thích khách ám sát!
+1090	Gia thần
+1091	Cái gì! Cháu ta Quân Mạc Tà sao rồi?!
+1092	Vẫn hôn mê bất tỉnh ở nhà!
+1093	Thật coi Quân gia hết người rồi sao? Hừ, lão tử còn chưa chết đâu!!
+1094	Mau chuẩn bị xe! Về nhà!
+1095	Có lẽ, năm đó không nên...
+1096	Không ngờ giữa cảnh núi non tươi đẹp này lại có một tửu quán u nhã như vậy.
+1097	Hehe, hay nghe mấy ca ca ta nói rượu ở đây ngon, chỉ là đắt quá. Hôm nay bản cô nương làm chủ, chơi sang một bữa, khao huynh một chầu!
+1098	Khách quan khen rượu Tống lão tam ta ủ như vậy, nhìn là biết người sành rượu, haha!
+1099	Tống lão tam
+1100	Ta mới tới lần đầu, mau mang rượu lên!
+1101	Được, ba vị mời ngồi!
+1102	Rượu này nhạt quá...
+1103	Quán của Tống lão tam tuy không lớn nhưng rượu thì nổi danh khắp kinh thành, người sành rượu ai cũng mong mỏi, vậy mà huynh lại chê nhạt.
+1104	Ca ca ta nói đây là rượu thượng hạng, mạnh, cay nồng, đó mới là rượu của nam nhi.
+1105	Mạnh, cay nồng? Sao ta uống cứ như nước lã vậy?
+1106	Rượu này mỗi ngày chỉ bán 20 vò, nếu không phải hôm nay thắng tiền, ta mới không dẫn huynh tới đây!
+1107	Trời đất, thứ rượu rác rưởi này mà cũng dám bán giới hạn??!!
+1108	Tống lão tam vỗ một chưởng làm vỡ vò rượu lớn
+1109	Đế quốc Thiên Hương quả nhiên lắm người tài. Ngay cả chủ một tửu quán cũng có công lực Thiên Huyền...
+1110	Lão già áo đen
+1111	Các hạ mắt sáng như đuốc, lão hủ bội phục. Có điều lão hủ chỉ là kẻ gần đất xa trời, ở đây cũng chỉ tạm kiếm miếng cơm, sống nốt quãng đời còn lại thôi.
+1112	(Tống lão tam này là cao thủ cấp /rThiên Huyền/b sao... Lão già áo đen kia thực lực càng sâu không lường được...)
+1113	Haha, Tống lão tam đừng nổi giận. Đập vỡ vò rượu nhà mình thì không hay đâu.
+1114	Có điều, rượu lão tử tự ủ quả thật ngon hơn thứ này nhiều...
+1115	Lão phu ủ rượu mấy chục năm, về đạo ủ rượu thường tự hào thiên hạ không ai sánh kịp, vậy mà hôm nay...
+1116	Đó là vì ngươi chưa từng uống rượu ngon thật sự!
+1117	Nói hươu nói vượn!!!
+1118	Quân Mạc Tà, đừng nói nữa.
+1119	Sợ gì, ta chỉ có công lực huyền khí tứ phẩm cỏn con, hắn là Thiên Huyền mà còn mặt mũi ra tay với ta sao?!
+1120	Ta, ngươi, ta, ngươi...
+1121	Tiểu tử vô sỉ, nói năng xằng bậy...
+1122	Quân Mạc Tà đảo mắt một vòng
+1123	Tống lão tam, ngoài trời còn có trời, sau rượu ngon có lẽ còn có rượu quý hơn.
+1124	Nếu ta thật sự lấy ra được rượu ngon gấp trăm lần rượu của ngươi thì sao?
+1125	Vậy ta sẽ bái ngươi làm sư phụ!
+1126	Một lời đã định! Ba ngày sau ta mang rượu tới!
+1127	Thú vị đấy, cuộc đấu rượu ba ngày sau để ta làm giám khảo!
+1128	Dám hỏi các hạ là...
+1129	Chẳng là ai cả, chỉ là kẻ mê rượu...
+1130	Lão già áo đen thoắt cái đã biến mất
+1131	Thân pháp nhanh đến mức khiến Tống lão tam rùng mình
+1132	Lại cá cược, thú vị đấy, ta cũng muốn tham gia~
+1133	Ăn nói bừa bãi, sao ta chưa từng nghe nói huynh biết ủ rượu?
+1134	Hehe, cứ chờ xem. Trời tối rồi, chúng ta đi trước!
+1135	Dù sao rượu này cũng chẳng ngon.
+1136	Hà tất phải nói thêm câu đó...
+1137	Trời đã sẩm tối, /rquay về đường cũ/b là lối tắt tốt nhất.
+1138	Tống lão tam ta muốn xem rượu ngươi ủ trong ba ngày ngon tới mức nào.
+1139	Có rượu ngon bầu bạn, trực gác ở đây đúng là việc béo bở!
+1140	Ta, Quân Tà, vua sát thủ...
+1141	Chỉ cần là ủy thác thích hợp, mục tiêu thích hợp, hoặc chỉ đơn giản là ta nhìn không thuận mắt.
+1142	Bất kỳ ai cũng có thể chết trong tay ta mà không một tiếng động.
+1143	Nhưng không ngờ một lần xuyên không chẳng hề báo trước lại khiến sinh mệnh ta...
+1144	Hoàn toàn nở rộ!
+1145	Trong phòng có tấm gương... Ta phải xem thử mình ở thế giới này trông ra sao đã.
+1146	Quân Tà
+1147	/rHồng Quân Tháp/b là quốc bảo của Trung Quốc, sao để các ngươi tùy tiện bán ra nước ngoài!
+1148	100 vệ sĩ các ngươi cùng xông lên cũng không cản nổi đại sát thủ Quân ta!
+1149	Đầu đau quá...
+1150	Thiếu gia... thiếu gia tỉnh rồi ạ?
+1151	Thị nữ nhà họ Quân
+1152	Không đúng! Chẳng phải ta đang chiến đấu sao!
+1153	Thiếu gia... người cẩn thận chút...
+1154	Hồng Quân Tháp ta vừa cướp được hình như đã chui vào trong cơ thể ta!
+1155	Khoan đã... đây là... Trung Quốc cổ đại??!!!
+1156	Thiếu gia... người không sao chứ?
+1157	Các ngươi ra ngoài hết đi!
+1158	Vâng... vâng!
+1159	(Gọi ta là thiếu gia? Không phải chứ? Lẽ nào là xuyên không?)
+1160	(Bên kia vừa hay có tấm gương, qua xem rốt cuộc ta xuyên vào người nào.)
+1161	Nhấn phím /r4/b, /r6/b, /r2/b, /r8/b để điều khiển nhân vật tới trước gương, rồi nhấn /r5/b để điều tra.
+1162	Gợi ý
+1163	Quân Mạc Tà thở dài
+1164	Phải nói là tên này trông cũng không tệ.
+1165	Ừm... khá thanh tú, chỉ là hơi trắng trẻo quá, ẻo lả quá.
+1166	Tại sao... trong đầu cứ hiện lên tòa bảo tháp đó, nó ở trong cơ thể ta sao?
+1167	Cộc cộc cộc!
+1168	Cửa phòng bị gõ vang rầm rầm
+1169	Quân Mạc Tà! Quân Mạc Tà!
+1170	Ai ở ngoài làm ồn thế...
+1171	Quân Mạc Tà? Cái tên này sao giống tên ta thế... A!
+1172	Hửm? Người đâu?
+1173	Chẳng phải hôn mê bất tỉnh sao? Lẽ ra phải nằm trên giường mới đúng chứ!
+1174	Mẹ kiếp...
+1175	Quân Mạc Tà, cháu tỉnh rồi à, sao lại ngồi trong xó xỉnh này?
+1176	Nói thừa... ông đột nhiên xông vào...
+1177	(Khoan đã... /rQuân Mạc Tà/b? Lẽ nào đang gọi ta? Biệt hiệu của ta là Tà Quân, tên là Quân Tà, còn hắn tên Mạc Tà; thế này chẳng phải trời sinh khắc nhau sao?)
+1178	Quân Tà không khỏi nhìn kỹ lão già trước mặt, nhắm mắt lại, lướt qua đại khái ký ức của vị Quân đại thiếu này...
+1179	(Hóa ra lão già này là gia gia của ta, "Quân Chiến Thiên")
+1180	(Còn tên của ta ở thế giới này là /rQuân Mạc Tà/b...)
+1181	(Hừ, cái thân xác tồi tàn, cái danh tiếng tồi tệ này rơi vào tay ta thì vẫn lấy mạng kẻ khác như thường!)
+1182	Quân Chiến Thiên sắc mặt u ám
+1183	Quân Mạc Tà, nhớ kỹ lại xem, rốt cuộc là kẻ nào tới hành thích cháu?!
+1184	Quân Mạc Tà giả vờ hổ thẹn
+1185	Không, không nhìn thấy...
+1186	Đồ khốn, bị người ta ngầm hạ độc thủ mà cũng không biết! Cháu xem cháu kìa, không thể có chút tiền đồ nào sao?!
+1187	(Mẹ nó, kiếp trước lão tử là vua sát thủ, kiếp này đứa nào không có mắt tới ám sát lão tử, vừa hay để luyện tay!)
+1188	(Với cái tính bao cỏ của thằng nhóc này, sao lại im lặng thế? Hình như còn có vẻ chẳng thèm để tâm?! Ta không nhìn nhầm chứ!)
+1189	Hai người im lặng hồi lâu
+1190	À, còn một chuyện, sau này cháu không được tới đeo bám công chúa Linh Mộng nữa...
+1191	Chuyện này không có gì để bàn, cứ thế mà thôi! Cháu, cháu hết hy vọng đi... haizz!
+1192	À, cháu biết rồi!
+1193	(Ngã một cái mà tính tình lại thay đổi? Nếu là trước kia, thằng nhóc này nhất định đã nhảy dựng lên rồi!)
+1194	Ừm, cháu nói này, đầu vẫn hơi choáng, cháu nghĩ cháu nên ra ngoài hít thở chút không khí trong lành!
+1195	Hê, thằng nhóc này... hôm nay sao lại...
+1196	Có điều... có lẽ sự thay đổi này... chính là điều ta mong đợi...
+1197	Rương báu đã trống rỗng
+1198	Nhận được: /rCao dâu tằm/bx1
+1199	Xin lỗi, vệ binh Thiên Hương đang lục soát thành viên Sát Thủ Công Hội phía trước, dân thường không được lại gần!
+1200	Từ đây cứ đi thẳng lên phía bắc là tới Hoàng Hoa Đường.
+1201	Giờ ta không tiện gây chú ý quá, trận chiến dọc đường cứ giao cho các ngươi trước.
+1202	Không vấn đề, xuất phát!
+1203	Tối nay phải làm một vụ lớn, khuyên ngươi tốt nhất đừng nhúng tay.
+1204	Tiểu tử, biết ít một chút thì sống lâu hơn một chút.
+1205	Tới Hoàng Hoa Đường thì phải đi lên phía bắc mới đúng...
+1206	Ra khỏi thành bằng cửa Nam thì hơn...
+1207	Tỷ tỷ tới Hoàng Hoa Đường thăm ca ca, đã hai ngày chưa về rồi... hu hu.
+1208	Đứa trẻ đang khóc
+1209	Thấy ta quen mắt không, lúc nãy đã gặp huynh đệ ăn mặc giống ta rồi phải không?
+1210	Hắc y nhân bí ẩn
+1211	Còn nhớ chúng ta là thành viên của tổ chức nào không?
+1212	Các ngươi là...
+1213	Thành viên Sát Thủ Công Hội
+1214	Thành viên Hội Chữ Thập Đỏ
+1215	Vậy thì, đây là quà gặp mặt.
+1216	Nhận được: /rHuyền Linh Huyết/bx1
+1217	Xem ra các ngươi rất thích tặng quà nhỉ...
+1218	Hehe, sau này không dễ tặng như thế nữa đâu.
+1219	Đúng là một đám người kỳ quặc.
+1220	Không đúng không đúng, nghĩ lại đi.
+1221	Nhiệm vụ tiếp đón của ta đã xong. Nơi này loạn dân rất nhiều, công tử nên cẩn thận.
+1222	Xem ra vị công tử này năng lực phi phàm! Thử trả lời câu hỏi của ta đi, đáp đúng sẽ có quà tốt đấy.
+1223	Người bí ẩn
+1224	Ồ? Còn có chuyện hời như vậy sao?
+1225	Đúng vậy, gặp người ăn mặc na ná ta thường đều có lợi lộc... khụ khụ, nguyên nhân cụ thể sau này sẽ nói, giờ mời trả lời câu hỏi của ta.
+1226	Ta luôn thấy trên bản đồ có cái đầu lâu rất rất to, người thường không thấy được đâu.
+1227	Hình như từng thấy vài cái..., sau đó thường sẽ gặp một trận đại chiến.
+1228	Giỏi lắm giỏi lắm! Hoàn toàn chính xác, có điều chỗ ta thật chẳng còn gì nữa. Hôm khác hẵng nói nhé!
+1229	Túy Tiên Lâu của ta là tửu lâu nổi tiếng nhất hoàng thành Thiên Hương. Nếu Tống lão tam chịu qua ủ rượu giúp ta thì càng tốt.
+1230	Chưởng quỹ Túy Tiên Lâu
+1231	Yên tâm, ca ca nhất định sẽ thương muội thật nhiều~
+1232	Thiếu bang chủ
+1233	Công tử, đừng vậy mà, mọi người đang nhìn kìa...
+1234	Như Hoa muội
+1235	Không sao, đứa nào dám nhìn muội, ca ca đánh đứa đó~
+1236	Làm ở đây cả ngày mà kiếm chẳng được nửa lạng bạc, mệt chết đi được... A, lời vừa rồi ngàn vạn lần đừng nói với chưởng quỹ nhé.
+1237	Rút dao chém nước nước càng chảy, mượn rượu giải sầu sầu càng sầu, haizz.
+1238	Khách
+1239	Ta trời sinh đã mê bánh bao, một bữa ăn được mười xửng!
+1240	Chúng ta phải ăn nhanh lên, lát nữa còn phải tới Thiên Kim Đường đứng gác!
+1241	Mạc Tà huynh đệ, cuối cùng đệ cũng tới. Mau ngồi đi, cơm rượu chuẩn bị xong cả rồi.
+1242	Đường Nguyên
+1243	Ừm, vậy chúng ta không khách sáo nữa.
+1244	...Haizz.
+1245	Quân Tà nhíu mày nhìn chén rượu trước mặt
+1246	Thảo nào lão Tống lão tam kia tự hào như vậy, so ra thì rượu của lão ngon hơn hẳn.
+1247	Hehe, tiếc là vẫn không bằng kỹ thuật ủ rượu hiện đại của ta, ta từng làm trưởng phòng kỹ thuật ủ rượu đấy!
+1248	Haizz...
+1249	Haizz!!!
+1250	Ta nói này gã béo, nhà ngươi rốt cuộc mất cái gì? Ngươi ủ dột như mang thù sâu biển máu, làm lão tử uống rượu cũng không trôi.
+1251	Mạc Tà huynh đệ... ca ca khổ lắm!
+1252	Hôm qua người nhà ta tới Thiên Kim Đường tìm mấy tên khốn kia tính sổ, kết quả về nhà phát hiện đồ bị trộm mất!
+1253	Lão tử nguyền rủa bọn trộm đó... nguyền rủa cả nhà chúng nó đều tàn tạ...
+1254	(Quả nhiên, viên đan dược quý hôm qua là của Đường gia!)
+1255	Ơ, đồ gì mà làm huynh ra nông nỗi này...
+1256	Mạc Tà huynh đệ, lần này nhà ta mất là thứ vô cùng ghê gớm!
+1257	Đường Nguyên khóc chảy một dòng nước mũi
+1258	Lấy tay trái quệt đi
+1259	Là /rCửu Huyền Đan/b cực phẩm! Nếu cường giả Thiên Huyền trung giai dùng, thậm chí có thể một bước xông tới cảnh giới /rChí Tôn Thần Huyền/b!
+1260	Công hiệu cao vậy sao?
+1261	Ai khoác lác thì chết cả nhà! Nếu không phải thứ hiếm có trong thiên hạ, lão gia nhà ta đâu nổi trận lôi đình như thế?
+1262	Đường Nguyên vừa chửi vừa chảy một dòng nước mũi
+1263	Lấy tay phải quệt đi
+1264	(Nói vậy thì ta thật sự không thể trả lại cho ngươi rồi!)
+1265	(Nếu dùng viên Huyền Đan này tạo ra một siêu cường giả cho gia tộc mình, chẳng phải tốt hơn nhiều so với để ở Đường gia lãng phí sao?)
+1266	Ca ca giờ sống một ngày dài như một năm... cũng chỉ có thể kể khổ với đệ thôi.
+1267	Hu hu hu hu...
+1268	Đường Nguyên hai dòng nước mũi cùng chảy
+1269	Nhưng chẳng còn tay sạch nào để quệt
+1270	Bèn dùng hai ngón tay véo lấy
+1271	Ra sức vẩy một cái...
+1272	Nước mũi vừa vặn văng lên mặt một người...
+1273	Long lanh trong suốt, từ từ rủ xuống...
+1274	Á! Hóa ra công tử thích treo đầy nước mũi trên mặt, ghê quá~ Tạm biệt!
+1275	Ơ? Như Hoa muội, đừng đi mà, Như Hoa muội!...
+1276	Ai? Đứa nào vẩy nước mũi bậy bạ? Ra đây cho lão tử! Xem lão tử có diệt cửu tộc nó không!!
+1277	Cái này... cũng chuẩn quá đi.
+1278	Phụt...
+1279	Phụt hahahahahaha... Không được không được, cười chết ta mất.
+1280	Không phải ta ngắm chuẩn hết thuốc chữa, mà là vận khí của tên này quá nghịch thiên...
+1281	Thằng béo chết tiệt, muốn chết à! Còn ngươi, tên mặt trắng, cười cái gì hả!? Nhường con nhỏ bên cạnh cho ta thì ta tha cho!
+1282	Tên háo sắc nhà ngươi đúng là chán sống rồi!
+1283	Lão tử đang bực, ngươi còn dám gào khóc trước mặt lão tử, lão tử vẩy nước mũi vào ngươi là nể mặt ngươi, ngươi còn dám chửi lão tử!
+1284	Phi, dám làm càn trước mặt bổn thiếu bang chủ! Mọi người xông lên! Dạy cho chúng một bài học!
+1285	Haha, sợ rồi chứ gì, bổn thiếu bang chủ có hộ vệ thân cận đấy!
+1286	Các, các ngươi...
+1287	Ta là con trai Tần Hổ, bang chủ Bắc Thành Bang, đứa nào dám động vào ta!
+1288	Không sai, con trai Tần Hổ ta, xem đứa nào dám động!
+1289	Tần Hổ
+1290	Cha!
+1291	Tần Hổ là cái thá gì? Con trai ngươi dám mạo phạm Quân Mạc huynh đệ nhà ta, còn dám trêu ghẹo Độc Cô Tiểu Nghệ đại nhân, gan to thật đấy!
+1292	Cái gì...
+1293	Quân... Quân Mạc Tà khét tiếng! Độc Cô... Tiểu Nghệ!
+1294	Tần Hổ lập tức mặt cắt không còn giọt máu
+1295	Tên béo kia hẳn là Đường Nguyên rồi...
+1296	Con trai ngoan của ta ơi, hôm nay con chọc phải ba ông lớn của hoàng thành Thiên Hương rồi...
+1297	Xem ra... đành phải dùng tuyệt kỹ của lão phu thôi!
+1298	Khuyển tử vô lễ, Đường đại thiếu dạy dỗ là phải! Tần Hổ ta xin tạ tội tại đây!
+1299	Thật mất hứng! Thôi, giải tán đi, giải tán đi!
+1300	Mạc Tà huynh đệ, chúng ta đi. Không ăn nữa.
+1301	Quân Mạc Tà đã biết được bí mật về /rCửu Huyền Đan/b từ miệng Đường Nguyên. Trong lòng đã có tính toán, kế hoạch phục hưng gia tộc của hắn cũng từ đây mở màn...
+1302	Nhóm Quân Mạc Tà rời khỏi Túy Tiên Lâu
+1303	Đây... đây là...
+1304	Không gian này, lẽ nào là bên trong Hồng Quân Tháp!
+1305	Bảo tháp này nhập vào cơ thể ta, đưa ta tới thế giới này, hôm nay lại dẫn ta vào bên trong tháp... nhất định có điều kỳ lạ...
+1306	Ồ? Sách bay lơ lửng?
+1307	Linh lung cửu tầng tháp, thiên cổ đệ nhất công?
+1308	/rKhai/b, /rThiên/b, /rTạo/b, /rHóa/b, /rCông/b? ...là bí kíp võ công sao?
+1309	Quân Mạc Tà mở bí kíp ra đọc.
+1310	Ngân Huyền khởi, Kim Huyền lên, Ngọc Huyền xanh biếc mở như ý, dưới Cửu Huyền thảy sâu kiến; Địa Huyền nứt, Thiên Huyền không, Chí Tôn Thần Huyền vô ảnh hình, một vào cửu tiêu liền hóa rồng!
+1311	Hóa ra võ công ở thế giới này được chia thành nhiều cấp bậc theo độ mạnh yếu của huyền khí.
+1312	Theo thứ tự từ yếu đến mạnh là /rnhất đến cửu phẩm/b, /rNgân phẩm/b, /rKim phẩm/b, /rNgọc phẩm/b...
+1313	Phía sau còn có /rĐịa Huyền/b, /rThiên Huyền/b, /rChí Tôn Thần Huyền/b mạnh hơn nữa...
+1314	Quân Mạc Tà tiếp tục đọc bí kíp Khai Thiên Tạo Hóa Công, phát hiện nội dung càng lúc càng phức tạp, cũng càng huyền diệu vô cùng. Bất tri bất giác, cơ thể cũng dần nóng lên...
+1315	Công pháp huyền dị như vậy, há lại là vật tầm thường! Nhưng sao cơ thể càng lúc càng nóng...
+1316	Còn đọc tiếp không?
+1317	Hình như rất nguy hiểm, thôi bỏ đi...
+1318	Nhịn nóng đọc tiếp...
+1319	Nóng quá, thôi bỏ đi.
+1320	Tiếp tục đọc Khai Thiên Tạo Hóa Công
+1321	Tầng thứ nhất: linh quang tính động, quang chiếu đại diễn; ý thượng cửu tiêu, túc đạp tiên tuyền...
+1322	Cơ thể bắt đầu nóng rực! Ơ... a... cảm giác gì thế này, Khai Thiên Tạo Hóa Công này...
+1323	Nóng mấy cũng phải đọc tiếp!
+1324	Không chịu nổi nữa... bí kíp này nguy hiểm thật!
+1325	Tầng thứ nhất: càn khôn tự nắm, tâm tức bảo sơn; thần phách cửu luyện, bất đọa hoàng tuyền...
+1326	Ơ, nóng quá!!!
+1327	Nóng quá, cảm giác trong cơ thể tụ lại năng lượng khổng lồ! Sắp bốc cháy rồi!
+1328	Thứ gì đây!
+1329	Gào~!!
+1330	Hộ Tháp Thần Thú
+1331	Xì, lúc này lại tới ra oai sao? Ngươi tìm nhầm người rồi!
+1332	Quân Mạc Tà sắc mặt chợt lạnh băng
+1333	Hồn sát thủ kiếp trước lại nhập vào thân
+1334	Tới đúng lúc lắm! Bổn sát thủ đang có một bụng nhiệt lượng không chỗ phát tiết!
+1335	Gợi ý: chú ý thanh hành động phía trên màn hình, khi ảnh nhân vật tới tận cùng bên phải là có thể hành động. Ảnh di chuyển nhanh hay chậm tùy vào "tốc độ" của nhân vật. Trong trận hãy chú ý hướng đi của thanh hành động để phán đoán thứ tự hành động của từng nhân vật nhé.
+1336	Gợi ý: muốn hạ địch nhanh có thể dùng kỹ năng tấn công. Trong menu lệnh chọn "Kỹ", rồi chọn kỹ năng muốn dùng là được. Kỹ năng mạnh hơn đánh thường nhiều, nhưng sẽ tiêu hao một ít huyền khí.
+1337	Xì!
+1338	Người dễ chịu hơn nhiều rồi...
+1339	Lại gì nữa đây?
+1340	Hồng Quân Tháp ngân vang như chuông lớn
+1341	Một giọng nói chui vào đầu Quân Mạc Tà
+1342	Ơ... Tà... Quân?
+1343	Đầu choáng quá...
+1344	Thứ trông như cái lò này không có phản ứng gì...
+1345	Ngọn lửa thần bí này mang phù văn... không biết là thứ gì.
+1346	Thanh kiếm thần bí lơ lửng giữa không trung, nhưng như không khí, chẳng thể chạm vào!
+1347	Ừm, hoa đầy cây, hương ngát sân~ Sân viện không tệ.
+1348	Vừa hay có thể tĩnh tâm sắp xếp lại suy nghĩ...
+1349	Ta nhớ có rất nhiều hắc y nhân nổ súng vào ta, ta theo phản xạ dùng Hồng Quân Tháp trong tay che mặt... rồi một luồng bạch quang chói mắt lóe lên... ta ngất đi...
+1350	Tỉnh lại thì đã tới đây...
+1351	Là Hồng Quân Tháp đã bảo vệ ta sao...
+1352	Từ xa vọng lại tiếng sáo du dương
+1353	Dư âm vấn vương...
+1354	Nhưng mang nỗi u sầu vô hạn
+1355	Ai đang thổi sáo... tựa như tiếng nhạc trời... mà sao thê lương đến thế?
+1356	Quân Mạc Tà say mê
+1357	Hình như vọng tới từ phía đông...
+1358	Dấu hiệu đặc biệt như thế này chính là hướng của /rđích đến/b trong cốt truyện chính.
+1359	Cứ men theo tiếng sáo tìm tới, bái phỏng người thổi sáo xem sao...
+1360	Nhưng đây là bước đầu tiên trong bá nghiệp của ta
+1361	Thế giới không gian vặn vẹo này
+1362	Quân gia nơi ta đang ở
+1363	Tiếng sáo vọng tới từ phía đông, cứ đi về phía đông trước đã.
+1364	Sau này không có lệnh của ta, không được để bất kỳ ai xông cửa vào, nghe chưa.
+1365	Vâng, thiếu gia...
+1366	Đại tiểu thư của ta ơi, ta phải đi ngủ rồi...
+1367	Ồ...
+1368	Muội còn định theo ta nữa à?
+1369	A, không có không có. Ta chỉ là... ở bên cạnh huynh quen rồi thôi.
+1370	Mạc Tà ca ca, huynh nghỉ ngơi đi. Mai ta lại tới tìm huynh chơi.
+1371	Công tử, để nô tỳ hầu người đi ngủ.
+1372	Không cần. Ngươi canh ngoài cửa, không có lệnh của ta không ai được vào.
+1373	Vâng.
+1374	Nhìn cho kỹ, ta bắt đầu đây.
+1375	...Trâu nhai mẫu đơn...
+1376	Huynh nói gì?
+1377	Haizz, huyền công của các người chẳng chú trọng chiêu thức chút nào, toàn dựa vào huyền lực, haizz, đao tốt thế này mà muội lại dùng đao pháp kiểu đó, đúng là phí của trời!
+1378	Huynh nói đao pháp của ta không tốt?
+1379	Hehe, xem ta đây.
+1380	Oa!
+1381	Mạc Tà ca ca đẹp trai quá!! Đao pháp đẹp thật đấy!
+1382	Hồng Tụ Đao, tổng cộng chín chiêu, Hồng Tụ đao múa hồn phách tiêu! Có thể nói là đao pháp hạng nhất, muội có muốn học không?
+1383	Đương nhiên muốn học!
+1384	Nào, thủ thế trước cho ta xem.
+1385	Ừm~
+1386	Không đúng không đúng, động tác của muội tệ quá.
+1387	Phải thế này...
+1388	Trong lúc vô ý
+1389	Môi hai người chạm vào nhau...
+1390	A...
+1391	Độc Cô Tiểu Nghệ hét lớn một tiếng, khuôn mặt xinh như ngọc lập tức đỏ bừng, ôm mặt quay người đi...
+1392	Tai nạn, thật sự là tai nạn...
+1393	Độc Cô tiểu thư, muội, muội quay lại đi, cứ che mắt thế này thì học đao pháp kiểu gì?
+1394	Đồ đại bại hoại nhà huynh, còn gọi ta là Độc Cô tiểu thư?!
+1395	Trời ạ, ta đã làm gì muội đâu?
+1396	Vậy ta nên gọi muội thế nào?
+1397	Hừ! Tự huynh hiểu lấy!
+1398	Ta biết rồi.
+1399	Tiểu nha đầu đồ đệ, để vi sư dạy muội đao pháp tinh diệu!
+1400	Đồ đầu gỗ! Ai là đồ đệ của huynh!!
+1401	Bổn tiểu thư nói cho huynh biết, đừng tưởng biết múa đao là không phải công tử bột, làm bộ làm tịch là không phá gia chi tử! Đồ đại bại hoại!
+1402	Thật không thể nói lý! Sao ta lại là công tử bột phá gia chi tử, sao ta lại là đại bại hoại? Thôi, lão tử không thèm dạy nữa!
+1403	...Huynh bắt nạt ta... hu hu... ta sẽ đi tìm Quân tam thúc, tìm Quân gia gia, mách họ huynh bắt nạt ta, hu... ta hận huynh! Ta hận chết huynh!
+1404	Bà cô của ta ơi, rốt cuộc muội muốn thế nào? Ta sai rồi được chưa?
+1405	Buông tay! Nam nữ thụ thụ bất thân, huynh kéo ta thế này còn ra thể thống gì?
+1406	Bà cô ơi, ta, ta dạy muội ngay đây!
+1407	Hừ! Coi như huynh biết điều!
+1408	Khụ khụ, nhìn kỹ đây, Hồng Tụ Đao có chín chiêu...
+1409	Cứ thế, hai người qua lại luyện đao...
+1410	Một đời sát thủ Quân Mạc Tà, nay đối diện Tiểu Nghệ ngực vẫn còn phập phồng, chỉ đành cẩn thận truyền thụ đao pháp, đến thở mạnh cũng không dám.
+1411	Độc Cô Tiểu Nghệ vốn nổi danh khắp thành Thiên Hương là "khắc tinh của công tử bột", nay lại say đắm trong động tác phong độ của Quân Mạc Tà, và cảm giác khi hắn chạm vào người mình lúc truyền đao pháp...
+1412	Tiểu Nghệ học được /rHồng Tụ Thiên Hương/b!
+1413	Mạc...
+1414	Ừm, lưỡi đao ở chỗ này vung như vậy trông vẫn rất đẹp...
+1415	Ta... đẹp... Mạc Tà ca ca... cũng đẹp trai quá...
+1416	Đao pháp hay!! Thằng nhóc thối, hóa ra ngươi chưa chết!!
+1417	Huyền khí tuy không cao nhưng chiêu thức tinh diệu lắm!
+1418	Ưng Bác Không
+1419	Ông là... lão già áo đen ở tửu quán Tống Ký!
+1420	Không sai! Lão phu rất mong chờ tài ủ rượu của ngươi đấy!
+1421	Ha, ta đang định đi tìm Tống lão tam đây. Ông cứ đi trước một bước, ta tới ngay!
+1422	Khoan đã. Tiểu tử, không biết công phu này của ngươi học từ đâu?
+1423	Khụ khụ, xin lỗi, sư phụ ta là cao nhân ẩn thế, chắc chắn ông chưa từng nghe tên đâu, hehe.
+1424	Hừ?
+1425	...(Chậc, bị nhìn thấu rồi sao...)
+1426	Cũng phải cũng phải, vậy lão phu chờ rượu ngon của ngươi đấy!
+1427	(Lão già áo đen này nhìn là biết cao nhân, tiếc là lại dễ lừa như vậy...)
+1428	Thanh Hàn cũng tới à. Vừa hay, cùng tới tửu quán Tống Ký đi!
+1429	Ừm...
+1430	Sao vậy, dạo này cứ tâm sự nặng nề? Đã xảy ra chuyện gì?
+1431	Không có gì...
+1432	(Vẫn không muốn nói với ta sao...)
+1433	A, ở đằng kia...
+1434	/rDấu hỏi đỏ/b chỉ vị trí mục tiêu của cốt truyện chính.
+1435	Qua xem thử đi.
+1436	Trong ký ức của Quân Mạc Tà, đây chính là đại tẩu Quản Thanh Hàn của mình.
+1437	(Tuy nàng chưa qua cửa, nhưng hay tin vị hôn phu Quân Mạc Ưu tử trận, đã kiên quyết lấy thân phận góa phụ dọn vào Quân gia, phụng dưỡng người già... là một nữ tử trọng tình trọng nghĩa.)
+1438	Đúng là một mỹ nhân u buồn...
+1439	Ngươi lại tới làm gì...
+1440	Tiếng sáo của cô thê lương u buồn như vậy, lẽ nào có tâm sự gì?
+1441	Chuyện của ta... không cần ngươi quản...
+1442	(Người đẹp thì ghê gớm lắm à! Ta có lòng muốn tìm hiểu, cô lại chẳng thèm đếm xỉa... Bổn đại sát thủ còn không thèm quản ấy chứ!)
+1443	Quân Mạc Tà, đừng làm càn. Trong lòng Quản Thanh Hàn có bao nhiêu khổ sở, con có hiểu được không!
+1444	Tam thúc?
+1445	Ký ức còn sót lại trong đầu giúp Quân Mạc Tà nhận ra ngay người trung niên ngồi xe lăn này. Hai chữ "Tam thúc" cũng buột miệng thốt ra.
+1446	Ồ? Hiếm khi con còn gọi ta là Tam thúc!
+1447	Huyết Y đại tướng lừng lẫy danh tiếng, đương nhiên phải gọi một tiếng!
+1448	Con đang mỉa mai ta đấy à?!
+1449	Ngàn vạn lần đừng hiểu lầm, cháu chỉ thấy lạ thôi.
+1450	Chân của thúc hình như bị người dùng thủ pháp âm độc phong bế huyệt mạch, lại còn hạ kỳ độc...
+1451	Nhưng trên chiến trường hạ độc thủ kiểu này còn khó hơn giết thúc trực tiếp nhiều, sao lại như vậy?
+1452	Đồ khốn! Chuyện này liên quan gì tới con? Thanh Hàn, dạy dỗ nó cho ta!!
+1453	Mạc Tà, ngươi mau đi đi, đừng làm càn ở đây nữa.
+1454	(Có lòng tốt hỏi han vài câu mà ai cũng chẳng có sắc mặt tốt... Bổn đại sát thủ còn không thèm quản nữa!)
+1455	Vừa rồi mạo muội làm phiền hai vị, cáo từ!
+1456	Quân Mạc Tà hôm nay hình như...
+1457	Như biến thành người khác! Lạ thật...
+1458	Không xong, hình như nó ra ngoài một mình rồi...
+1459	Quân Vô Ý biến sắc!
+1460	Thanh Hàn, Mạc Tà mới có huyền khí tam phẩm, bên ngoài quá nhiều kẻ nhòm ngó tính mạng nó, con... con tốt nhất nên đi theo bảo vệ nó!
+1461	Quản Thanh Hàn gật đầu
+1462	Người thổi sáo ở ngay trong sân này, đi tìm nàng trước đã.
+1463	Chào thiếu gia.
+1464	Ngươi có biết khúc sáo này do ai thổi không?
+1465	Thiếu gia nói đùa rồi, tiếng sáo này ngày nào cũng vấn vương trong sân, như chim oanh rơi lệ... sao người lại không biết...
+1466	Ồ? ......
+1467	Nhận tiền: 500
+1468	Nhận được: /rNước sâm ngọt/bx1
+1469	Nhận được: tiền 2000
+1470	Chưa vội về, ra ngoài dạo chơi đã.
+1471	Quân thiếu gia hôm nay lại định đi tán tỉnh cô nương nào vậy?
+1472	Hộ vệ nhà họ Quân
+1473	Hả???
+1474	...Thôi được, ta nhận.
+1475	Người nói gì cơ?
+1476	Đây chẳng phải Quân thiếu gia sao, hôm nay sao dám ra ngoài một mình thế?
+1477	Thiếu gia đúng là có diễm phúc, sau lưng lúc nào cũng có mỹ nhân theo.
+1478	Hehe, để xem thế giới này đặc sắc ra sao! Đi dạo thôi!
+1479	Quân Mạc Tà?
+1480	Quân Mạc Tà, ngươi sao vậy! Mau tỉnh lại!
+1481	Lẽ, lẽ nào...
+1482	Vừa ra khỏi cửa một lát đã bị ám sát rồi?!
+1483	Mẹ kiếp, ta xui xẻo vậy sao?
+1484	Quân Mạc Tà! Tốt quá, ngươi không sao chứ?
+1485	Ồ? Hóa ra là Thanh Hàn.
+1486	Vừa rồi tự nhiên thấy choáng váng, nên nằm bò ra đất ngủ một lát.
+1487	Ngươi, tên công tử bột nhà ngươi làm việc thật khó hiểu. Làm ta tưởng ngươi bị kẻ xấu...
+1488	Nói đi cũng phải nói lại, lúc nãy Thanh Hàn còn chẳng thèm đếm xỉa ta, sao giờ lại quan tâm ta thế?
+1489	...Nếu không phải Tam thúc Quân Vô Ý của ngươi lo cho an nguy của ngươi, ta đâu tới làm vệ sĩ cho tên vô lại như ngươi!
+1490	Vô, vô lại...?
+1491	(Xem ra Quân Mạc Tà của thế giới này chẳng phải thứ tốt lành gì... bị ghét đến vậy.)
+1492	Đột nhiên vang lên tiếng kêu như lợn bị chọc tiết
+1493	Mạc Tà huynh đệ, cứu mạng với...
+1494	(Cục thịt này là?)
+1495	Trong ký ức còn sót lại của Quân Mạc Tà, cái của nợ tròn như cục thịt này chính là đại thiếu gia Đường gia, một trong các quý tộc thành Thiên Hương: /rĐường Nguyên/b.
+1496	Ồ, đây chẳng phải Đường đại thiếu sao. Tìm ta có việc gì? Đứa nào không có mắt chọc giận huynh?
+1497	Tức chết ta rồi, còn không phải mấy thằng tạp chủng Lý gia, Mạnh gia đó sao!
+1498	Hại ta ở Thiên Kim Đường thua sạch 15 vạn lượng!! Đệ phải cứu ta, không thì cha ta đánh chết ta mất!
+1499	15 vạn lượng cỏn con, Đường đại thiếu đâu phải thua không nổi...
+1500	Không chỉ vậy, ta, ta đem ngọc bội và bảo kiếm gia truyền cầm cố 30 vạn lượng, cũng thua luôn...
+1501	(Ông anh này... cũng quá giỏi phá của rồi?)
+1502	Hai món đó là bảo vật, lẽ nào ta không muốn thắng lại ngay tại chỗ?
+1503	Cho nên... huynh lại tiếp tục đánh bạc??!!
+1504	Đúng thế, lúc đó trên người ta thật chẳng còn thứ gì đáng giá, ta nóng mắt lên... ta ta ta...
+1505	Ta đem vị hôn thê chưa cưới của ta ra đặt cược...
+1506	Á! Đó, đó là con gái Hình bộ thượng thư đấy!
+1507	Nàng đi cùng huynh à?
+1508	Ta... ta không dẫn nàng theo... nhưng ta viết giấy nợ, lấy nàng thế chấp một trăm vạn lượng, cái đó... còn có điểm chỉ của ta...
+1509	Heo! Huynh đúng là con heo! Huynh còn điểm chỉ nữa!... Một trăm vạn lượng đổi bằng vợ huynh đâu?
+1510	Thua rồi... cũng thua luôn... Chúng bắt ta dùng 150 vạn lượng chuộc vợ, trong vòng 3 canh giờ, không thì chúng sẽ đem chuyện này đồn ra ngoài...
+1511	Hu hu hu... Mạc Tà huynh đệ, đệ nhất định phải cứu ta!
+1512	Ta cứu huynh? Huynh bảo ta cứu kiểu gì? Ta lấy đâu ra nhiều bạc thế?
+1513	Đôi mắt ti hí của Đường Nguyên chớp chớp
+1514	Đệ không cần bạc, chúng nói chỉ cần đệ tới đánh với chúng vài ván là trả giấy nợ cho ta!
+1515	Trong mắt Quân Mạc Tà thoáng qua một tia u ám
+1516	(Hừ, muốn lừa ta tới đó, kéo ta làm kẻ thế mạng?)
+1517	(Cũng được, cứ tới xem sao. Với tài cờ bạc của lão tử... hehe, có khi sẽ rất thú vị.)
+1518	Ồ? Chúng thật sự nói vậy? Ta thật sự có mặt mũi lớn vậy sao?
+1519	A... đúng... đúng vậy. Chỉ cần đệ ra mặt, chúng đều phải...
+1520	Được thôi, ta đi với huynh một chuyến!
+1521	Haha! Mạc Tà huynh đệ đúng là huynh đệ tốt!
+1522	Quân Mạc Tà, ngươi thật sự muốn tới Thiên Kim Đường đánh bạc?
+1523	Thanh Hàn cô yên tâm, có ta ở đây sẽ không sao đâu.
+1524	Thiên Kim Đường là nơi thị phi. Ta phải đi theo ngươi để khỏi xảy ra chuyện.
+1525	Hehe, vậy cũng tốt! Chúng ta đi!
+1526	Mạc Tà huynh đệ... đợi ta với...
+1527	Ơ!
+1528	Đây... cảm giác này... lại là Hồng Quân Tháp!
+1529	Rốt cuộc là...
+1530	Phía trước là trọng địa vương phủ, người không phận sự cấm qua lại.
+1531	Phía trước là cấm khu hoàng thành, cấm qua lại.
+1532	Mạc Tà ca ca~~
+1533	Mạc Tà ca ca! Ta, ta quyết định rồi!
+1534	Ồ? Quyết định gì?
+1535	Từ giờ trở đi, ta quyết định bảo vệ huynh sát bên, giống như Thanh Hàn tỷ tỷ, không rời nửa bước!
+1536	Lão nhân gia muội sao lại thích bám theo ta thế?
+1537	Nói, nói bậy gì đó! Hôm qua huynh coi như đã cứu, cứu ta, ta đây gọi là biết biết biết ơn báo đáp... huynh huynh huynh đừng có hiểu lầm vớ vẩn đấy!
+1538	Bớt nói nhảm, cùng đi!
+1539	Ôn thần tới rồi, chạy mau aaa!
+1540	Mạc Tà! Ngươi ra ngoài thế này sẽ bị truy sát đấy!
+1541	Tiểu Nghệ cô nương, Mạc Tà nhà ta trời sinh tính nết vậy, đừng trách.
+1542	Uổng công người ta muốn đối tốt với huynh, đúng là tức, chết, ta, rồi!!
+1543	Tiểu Nghệ đại nhân, ngài có thấy Mạc Tà huynh đệ của ta không?
+1544	Heo!
+1545	Hừ, tức chết ta rồi.
+1546	Không dẫn ta theo thì ta cứ theo! Quân Mạc Tà, đứng lại cho ta!
+1547	Tiểu Nghệ đại nhân, rốt cuộc chuyện này là...
+1548	Lúc này, Quân Mạc Tà đã kiên định cắm rễ ở dị giới này. Bá nghiệp của Dị Thế Tà Quân cũng chính thức bắt đầu từ đây.
+1549	Phù, lần đầu tiên cảm thấy cuộc sống thế này cũng không tệ...
+1550	Độc Cô Tiểu Nghệ cưỡng ép gia nhập đội!
+1551	Cha con họ Quản đang chờ ở chính sảnh, mời Thanh Hàn tiểu thư mau tới.
+1552	Vệ binh nhà họ Quân
+1553	Mọi người trở về trước cổng nhà họ Quân
+1554	Mạc Tà ca ca, huynh giỏi quá, không gì không làm được!!
+1555	Thật không ngờ huynh lại biết ủ rượu thật! Chưa từng nghe huynh nói bao giờ...
+1556	Hehe, những thứ muội không biết còn nhiều lắm!
+1557	Hửm, hôm nay nhà huynh nhiều hộ vệ thế. Có khách tới à?
+1558	Bẩm Quân thiếu gia, cha con họ Quản vừa tới bái phỏng Quân phủ. Quân lão gia đang tiếp ở đại sảnh, còn dặn Thanh Hàn tiểu thư mau tới chính sảnh gặp mặt.
+1559	Cuối cùng... cũng tới rồi sao...
+1560	Sao vậy Thanh Hàn. Lệnh tôn tới chẳng phải rất tốt sao?
+1561	Không có gì... Tóm lại chúng ta cứ vào trong rồi nói.
+1562	Ừm... Tiểu Nghệ, Quân gia có chút việc riêng, muội về nhà nghỉ trước đi. Mai ta lại dẫn muội đi chơi.
+1563	Ồ! Vậy ta về trước, mọi người bảo trọng nhé.
+1564	Trước cổng Quân phủ
+1565	Chào người dân, đây là khu chợ hoàng thành Thiên Hương.
+1566	Đi tiếp về phía đông là khu dân nghèo, hãy cẩn thận.
+1567	Xin lỗi, đoàn xe của công chúa Linh Mộng chuẩn bị xuất hành, nên khu quý tộc hiện cấm qua lại.
+1568	Đi tiếp về phía trước là khu quý tộc hoàng thành Thiên Hương. Vào trong xin chú ý lễ tiết.
+1569	Hoàng thành Thiên Hương sông ngòi đan xen, cũng có thể coi là một kỳ cảnh.
+1570	Công tử quý tộc
+1571	Phố xá thật khí phái.
+1572	Hoàng thành rất lớn, dễ lạc đường. Giờ chúng ta cần đi về phía đông.
+1573	Ra khỏi đây, đi qua khu thành cũ là tới Thiên Kim Đường.
+1574	Nhanh thôi...
+1575	Có thể mua ít đồ tiếp tế ở phố trước để chuẩn bị.
+1576	Trên người ta chỉ mang vài vạn lượng ngân phiếu, mua mấy thứ lặt vặt này cũng bất tiện...
+1577	Ta còn ít bạc vụn, ngươi cứ dùng tạm đi.
+1578	Nhận được: 500 lượng bạc
+1579	Hehe, vẫn là Thanh Hàn nhà ta tốt nhất.
+1580	Bớt nói nhảm, mau lên đường!
+1581	/rQuản Thanh Hàn/b gia nhập đội!
+1582	Giờ phải đi về phía đông, tới Thiên Kim Đường tìm chút niềm vui.
+1583	Chợ này náo nhiệt quá!
+1584	Người qua đường
+1585	Giờ chưa phải lúc về nhà.
+1586	Túy Tiên Lâu nằm ở phía nam khu chợ, chắc Đường Nguyên đang đợi chúng ta trong đó rồi.
+1587	Tuy giờ nhiều nơi có thể tới, nhưng đừng chạy lung tung thì hơn, kẻo lạc đường...
+1588	Giờ chưa phải lúc đi dạo...
+1589	Chậm trễ nữa thì Tiểu Nghệ lại nổi giận cho xem...
+1590	Mạc Tà huynh đệ, hôm nay lẽ ra phải uống với đệ vài chén cho đã, haizz...
+1591	Nói gì vậy, Đường huynh còn phải cẩn thận tránh hình phạt của lệnh tôn, bảo trọng nhé.
+1592	Ôi trời, Mạc Tà huynh đệ, đệ đừng nhắc chuyện đau lòng của ta nữa.
+1593	Hôm nay mất hứng, ca ca xin cáo từ trước.
+1594	A, đúng rồi!
+1595	Mạc Tà ca ca, hôm qua ta về tìm /rLinh Mộng/b tỷ tỷ chơi, tỷ ấy nói tâm trạng rất tệ, hôm nay sẽ tới rừng ngoại thành phía nam giải khuây.
+1596	(Linh Mộng là ai? Hình như nghe ở đâu rồi...)
+1597	Quân Mạc Tà lục lại ký ức còn sót trong cơ thể về Linh Mộng, cuối cùng nhớ ra, công chúa Linh Mộng của đế quốc Thiên Hương hóa ra là người tình trong mộng của mình... không khỏi toát mồ hôi đầm đìa...
+1598	Giờ này tỷ ấy chắc đang ở rừng phía nam thành, đây là cơ hội tuyệt vời đấy, huynh còn không qua xem?
+1599	Tiểu Nghệ cô nương, xưa nay muội ghét nhất ta quấy rầy Linh Mộng tỷ tỷ của muội, hôm nay sao lại quay ra giúp ta?
+1600	A, chuyện này...
+1601	Xì, bản cô nương thích giúp ai thì giúp, dạo này thấy huynh khá thuận mắt nên mở lòng từ bi. Huynh quản ta nhiều thế làm gì!
+1602	Xin lỗi, hôm nay ta không rảnh!
+1603	Huynh, huynh có đi không?!
+1604	Không đi!
+1605	Nói lại lần nữa, huynh có đi không?
+1606	Ối, đi, ta đi!
+1607	Hừ!
+1608	Giờ ra khỏi cửa Nam hoàng thành, tới /rrừng ngoại thành/b thôi!
+1609	(Tiểu nha đầu, ta sợ muội rồi đấy...)
+1610	Còn đứng ngây ra làm gì, từ đây cứ đi thẳng về phía nam là tới!
+1611	Thanh Hàn cũng đi cùng đi.
+1612	Thanh Hàn?
+1613	Thanh Hàn tỷ tỷ!!
+1614	Lúc nãy cô cứ im lặng mãi, có tâm sự gì sao?
+1615	Không, không có gì...
+1616	Giờ còn chưa quen hoàng thành, đừng đi lung tung thì hơn.
+1617	Khu quý tộc đang xây lại, hiện cấm qua lại.
+1618	Vũ khí ta bán rẻ nhất thành Thiên Hương. Có điều cấp không đủ thì không dùng được đâu.
+1619	Thợ rèn Vương Quý
+1620	Ô! Quân thiếu gia xin dừng bước!
+1621	Thợ rèn Vương đại thúc
+1622	Vương đại thúc, gọi chúng ta có việc gì sao?
+1623	Quân thiếu gia, ta thấy bước chân của cậu khác hẳn ngày thường!
+1624	Chắc là công lực tăng tiến nhiều lắm! Hahahaha!
+1625	Cái này mà ông cũng nhìn ra được...
+1626	Đương nhiên, năm xưa Vương đại thúc ta cũng là cao thủ thích khách Thiên Huyền hạng nhất đấy!
+1627	Thích, thích khách!?
+1628	A ha, a ha, a hahahaha. Lỡ miệng nói ra mất rồi. Đừng để ý, giờ ta chỉ làm thợ rèn ở đây thôi. A hahahaha...
+1629	Nào nào, ở đây ta vừa nhập binh khí thượng hạng, toàn hàng mới, tốt hơn binh khí cậu đang cầm nhiều. Quân thiếu gia nhất định phải xem nhé!
+1630	Ừm, binh khí này ta dùng cũng lâu rồi, cũng nên đổi cái mới.
+1631	Quân thiếu gia muốn mua thì cứ nói chuyện với ta là được. À đúng rồi...
+1632	Tiệm y giáp chắc cũng có hàng mới rồi. Nhớ để ý thường xuyên nhé.
+1633	Đa tạ Vương đại thúc nhắc nhở, sau này ta sẽ chú ý mua trang bị mới.
+1634	À, chúng ta còn phải tới Túy Tiên Lâu dự hẹn, xin cáo từ trước.
+1635	Nhưng ta vẫn rất để ý chuyện Vương đại thúc và thích khách!
+1636	Quân Mạc Tà lộ ra ánh mắt sát thủ
+1637	Cô bé, chuyện của người khác biết ít một chút thì sống lâu hơn một chút...
+1638	...Ồ... ừm.
+1639	Chúng ta đi thôi.
+1640	(Đâu cần dọa một cô bé như thế...)
+1641	Chỗ này đúng là chẳng tốt lành gì, chẳng có khách nào tới mua đồ. Vài hôm nữa là ta phá sản mất.
+1642	Người bán hàng rong
+1643	Trực gác ở cái xó này đúng là chán ngắt! Không biết Lan Lan còn nhớ tới ta không.
+1644	Khu chợ thành Thiên Hương là nơi ta thích dạo nhất. Ở đây mua được nhiều thứ hay, thỉnh thoảng còn bán đồ mới nữa.
+1645	Lan Lan
+1646	Ra ngoài chuẩn bị ít quần áo và giáp vẫn rất cần thiết.
+1647	Người bán giáp Vương Phú
+1648	Thuốc tốt cần cho ở nhà lẫn đi xa, chỗ ta có đủ.
+1649	Người bán thuốc Vương Tường
+1650	Là một sát thủ, ngươi có biết cách lấy mạng mục tiêu thật nhanh không?
+1651	Hửm? (Người này lại nhìn ra kiếp trước ta là sát thủ...)
+1652	Hehe, chẳng có gì lạ. Trong chiến đấu hãy dùng kỹ năng nhiều vào.
+1653	Xin hỏi...
+1654	Khỏi hỏi, ánh mắt ngươi lộ sát khí lạnh lẽo, người cùng nghề đều nhìn ra được.
+1655	Ra vậy, các hạ cũng thế.
+1656	Thứ này cho ngươi, coi như quà gặp mặt.
+1657	Nhận được: /rSâm núi trăm năm/bx1
+1658	Đây là thứ gì?
+1659	Hãy nhớ cách ăn mặc này của ta, và cái tên "Sát Thủ Công Hội". Sau này sẽ giúp ích rất nhiều.
+1660	Chuyến này chúng ta phải tới Hoàng Hoa Đường. Mạc Tà, ngươi còn nhớ khu thành cũ từng tới chứ?
+1661	Nhớ. Từ khu chợ đi về phía đông là tới.
+1662	Ừm, tới Hoàng Hoa Đường phải đi qua khu thành cũ. Tới đó ta sẽ chỉ đường.
+1663	Khu thành cũ xưa nay nguy hiểm, muốn mua đồ tiếp tế thì mua ở khu chợ.
+1664	Haizz, hoàng thành này cũng rộng quá rồi... cứ nói thẳng là đi sang phải cho xong.
+1665	Mạc Tà, còn nhớ tửu quán Tống Ký ở đâu chứ?
+1666	Đương nhiên nhớ. Ra khỏi hoàng thành trước, trên bản đồ lớn là tìm thấy!
+1667	Ừm, ra khỏi thành bằng cửa Nam hoàng thành là đường gần nhất.
+1668	Cửa tiệm chắc cũng bán đồ cao cấp hơn rồi, tiện thể để ý một chút cũng tốt...
+1669	Lại được cùng mọi người ra ngoài chơi, tuyệt quá~
+1670	Xuất phát!
+1671	Phía trước nguy hiểm, hãy cường hóa trang bị
+1672	Mở menu game, vào mục trang bị, chọn trang bị muốn cường hóa là được.
+1673	Đồng thời cũng có thể cường hóa kỹ năng
+1674	Cũng mở menu game, vào mục kỹ năng, chọn kỹ năng muốn cường hóa.
+1675	Ba ngày...
+1676	Trôi qua như bay...
+1677	Chỉ chờ ngày hôm nay. Tam thúc, Thanh Hàn, xin thứ lỗi cho ta hành động một mình.
+1678	Ừm, giờ xuất phát thôi, tới /rrừng Thiên Phạt/b phía đông thành Thiên Hương!
+1679	Thành Thiên Hương - Khu chợ
+1680	Muốn tới tửu quán Tống Ký thì phải /rđi ra cửa đông/b mới đúng.
+1681	Đi tiếp về phía đông là ra khỏi thành. Ngoài thành không thuộc phạm vi bảo vệ của vệ binh, xin tự cẩn thận.
+1682	Giỏi lắm Quân Mạc Tà! Cuối cùng ta cũng tóm được ngươi!
+1683	Nghe nói ngươi lại quấy rầy Linh Mộng tỷ tỷ, còn bảo gia gia ngươi tới cầu hôn với hoàng thượng! Lần trước bị đánh chưa đủ hả? Vừa hay hôm nay bản cô nương đích thân giúp ngươi giãn gân giãn cốt!
+1684	(Cô gái này là ai mà dữ thế. Cứ như người quen vậy...)
+1685	Quân Mạc Tà bắt đầu lục lại ký ức
+1686	(Một trong các quý tộc Thiên Hương, đại tiểu thư Độc Cô gia: /rĐộc Cô Tiểu Nghệ/b, là người Quân Mạc Tà sợ nhất.)
+1687	Hóa ra là Độc Cô tiểu thư, lâu rồi không gặp, vẫn khỏe chứ... khụ khụ... ý ta là...
+1688	Tiểu đệ thật ra còn có việc, xin cáo từ trước, hẹn gặp lại!
+1689	Đứng lại! Lẽ nào ngươi định đi lầu xanh?
+1690	Ối! Độc Cô tiểu thư tha mạng, bọn ta chỉ tới Thiên Kim Đường đánh vài ván thôi... ơ!
+1691	Thiên Kim Đường?? Đánh bạc? Ta thật chưa tới bao giờ...
+1692	Này, đánh bạc vui không? Mau dẫn ta đi!
+1693	Cái này, không hay lắm đâu?
+1694	Bớt nói nhảm, mau dẫn ta đi!
+1695	Được! Được, ta dẫn muội đi là được...
+1696	Hihi, thế mới được chứ!
+1697	Hehe... xem ra chỉ có Tiểu Nghệ muội muội mới trị được tên vô lại này.
+1698	Thanh Hàn tỷ tỷ cũng ở đây à! Ha, yên tâm, có ta ở đây, tên Quân Mạc Tà này tuyệt đối không dám bắt nạt Thanh Hàn tỷ tỷ!
+1699	Có điều hôm nay tên này ngoan lạ thường.
+1700	Tiểu Nghệ muội muội đừng nóng vội, Thiên Kim Đường ngay trước mắt rồi.
+1701	Hihi, bên trong chắc chắn vui lắm. Nóng lòng quá đi!
+1702	/rĐộc Cô Tiểu Nghệ/b gia nhập đội!
+1703	Mạc Tà huynh đệ~ đợi ta với~~
+1704	Ối trời ơi!
+1705	Phù... phù... cuối cùng cũng đuổi kịp...
+1706	Đừng tùy tiện dạo sòng bạc thì hơn...
+1707	Giờ chưa cần ra khỏi thành...
+1708	Anh, đừng đánh bạc nữa, đánh nữa là chúng ta không còn nhà ở đâu!
+1709	Em gái
+1710	Không sao, lấy em làm tiền cược, nhất định gỡ lại được!
+1711	Anh trai
+1712	Quân Mạc Tà, hôm nay ngươi lợi hại quá!
+1713	Hehe, đó còn không phải nhờ có hai mỹ nhân trợ giúp sao.
+1714	Haha, đương nhiên rồi. Hôm nay bản cô nương vui, thắng tiền rồi, bản cô nương mời huynh uống rượu ngon nhất nước Thiên Hương!
+1715	Ồ? Rượu ngon nhất nước Thiên Hương?
+1716	Lẽ nào Tiểu Nghệ muội muội nói tới tửu quán /rTống Ký/b ở ngoại thành hoàng thành?
+1717	Đúng đúng~
+1718	Ra khỏi cửa đông hoàng thành, đi thêm một đoạn ngắn là tới!
+1719	Được! Ta phải nếm thử rượu ngon nhất nước Thiên Hương này rốt cuộc có mùi vị gì!
+1720	Thiên Kim Đường không phải chỗ cho tiểu tử nghèo tới. Có điều ngươi có vẻ khá giàu nhỉ.
+1721	Con nghiện
+1722	Cuối cùng cũng có một vị khách quan tới, buôn bán trước cửa sòng bạc này khó thật.
+1723	Người bán tạp hóa
+1724	Nhận được: tiền 500
+1725	Ô, đây chẳng phải Quân thiếu gia sao, bên trong đang chờ cậu đấy, mau mau, mời vào trong~
+1726	Chưởng quỹ Thiên Kim Đường
+1727	Dấu hiệu này cho biết sẽ có trận chiến cấp đầu sỏ, tốt nhất nên lưu game trước.
+1728	Ừm, cứ vào xem sao!
+1729	Vẫn nên giúp gã béo chết tiệt kia trước đã.
+1730	Xin lỗi, đường này không thông!
+1731	Bảo tiêu Thiên Kim Đường
+1732	Quân thiếu gia mời vào trong.
+1733	Quân thiếu gia đại giá quang lâm, tiểu điếm thật rạng rỡ!
+1734	Người đâu, hầu hạ cho chu đáo!
+1735	...Không cần hầu hạ, ta tự vào được.
+1736	Vâng, vâng.
+1737	Quân, Quân Mạc Tà?
+1738	Mạnh Hải Châu
+1739	Quân thiếu gia, ngài tới thật à?
+1740	Hừ, ta tới thì sao?
+1741	(Lạ thật, sao cảm thấy Quân Mạc Tà hôm nay khác hẳn trước kia...)
+1742	Đường béo đâu, Đường Nguyên tới chưa?!
+1743	Tới rồi, ta tới đây!
+1744	Ô, đây chẳng phải Đường Nguyên sao, về nhanh vậy.
+1745	Quân Mạc Tà tới rồi! Mau đưa... cái đó... cho ta!
+1746	Lý Phong lấy ra giấy nợ thế chấp vợ Đường Nguyên
+1747	Dễ thôi, xem Đường công tử nhà ta sốt ruột chưa kìa, đồ ở đây!
+1748	Đường Nguyên giật phắt lấy giấy nợ
+1749	Phù... giờ thì ổn rồi... giờ thì ổn rồi...
+1750	Thứ gì vậy, thần thần bí bí thế?
+1751	Mau cho ta xem~
+1752	Không, không có gì không có gì...
+1753	Đường Nguyên nuốt chửng tờ giấy nợ vào bụng...
+1754	Thằng, béo, chết, tiệt, dám chơi ta? Gan to lắm!
+1755	Tiểu Nghệ muội muội, tha cho hắn đi, đánh nữa là chết người đấy.
+1756	Hừ, hôm nay nể mặt Thanh Hàn tỷ tỷ, tạm tha cho ngươi. Bản cô nương còn phải đánh bạc nữa!
+1757	Đừng nhìn ta cả thế, mọi người cứ tiếp tục~ cứ tiếp tục~
+1758	Đã, đã vậy Đường Nguyên giờ không đánh được nữa, vậy mời Quân thiếu gia chơi với bọn ta vài ván.
+1759	Người đâu, rót trà cho Quân thiếu gia!
+1760	Quân thiếu gia, mời dùng trà~
+1761	Quân Mạc Tà đón lấy chén trà
+1762	Đánh bạc mà còn mời trà, hai vị hà tất khách sáo vậy?
+1763	Xin Quân thiếu gia nhất định uống chén trà này, để Mạnh Hải Châu ta và Lý Phong huynh đệ bày tỏ lòng kính trọng.
+1764	Ồ, vậy sao, hehehe.
+1765	(Trà này nhất định có vấn đề, để ta giám định một phen.)
+1766	Quân Mạc Tà nhấp một ngụm trà nhỏ
+1767	Ừm, quả nhiên là mê huyễn thảo... khiến người ta mất lý trí, tới mức đặt cược điên cuồng trên chiếu bạc... thảo nào Đường béo đem cả vợ ra cược.
+1768	(Hừ, trò vặt vãnh, làm gì được Quân đại sát thủ ta? Chút độc dược này với ta chẳng khác gì bã trà!)
+1769	Quân Mạc Tà uống cạn chén trà độc
+1770	Đám Mạnh Hải Châu nở nụ cười quỷ dị
+1771	Haha, Quân thiếu gia quả nhiên sảng khoái! (Uống trà này rồi, xem ngươi còn oai được tới bao giờ!)
+1772	Xì, bớt khách sáo, mau bắt đầu đi!
+1773	Đúng đó đúng đó, bản cô nương chờ không nổi nữa rồi!
+1774	Được, luật cũ, đánh tài xỉu, một vạn lượng một ván!
+1775	Được được, không giới hạn mức cược!
+1776	Á! Các người chơi lớn vậy?? Ta, ta không có nhiều thế...
+1777	Không sao, Tiểu Nghệ cô nương có thể đặt ít bạc hơn, cược một người thắng là được. Cái này gọi là "đặt theo".
+1778	Hóa ra có thể vậy! Hehe, tiểu tử, hôm nay bản cô nương thấy ngươi khá thuận mắt, đặt theo ngươi luôn!
+1779	Ta đặt ngươi năm... năm lạng!
+1780	Haha, mỹ nhân đặt cược, vận khí tăng vọt! Ta chắc chắn thắng rồi!
+1781	Xì, đó... đó là đương nhiên!
+1782	Tên phá gia chi tử nhà ngươi, cứ lên chiếu bạc là ra bộ dạng này...
+1783	Khụ khụ...
+1784	Bắt đầu đi, ta chơi mệt rồi.
+1785	Mạnh Hải Châu bắt đầu lắc xúc xắc...
+1786	Mạnh Hải Châu gieo ra điểm:
+1787	/r4  5  6/b...
+1788	Hừ hừ, cơ hội của tiểu tử ngươi không lớn đâu.
+1789	Ồ? Vậy sao?
+1790	Quân Mạc Tà bắt đầu lắc xúc xắc...
+1791	Quân Mạc Tà gieo ra điểm:
+1792	/r6  6  6/b...
+1793	Vẫn là ta may hơn chút, một vạn lượng của ngươi ta nhận nhé.
+1794	Nhận được một vạn lượng ngân phiếu
+1795	Mời cô nương, đây là tiền thưởng một ngàn lượng.
+1796	Giỏi lắm Quân Mạc Tà, ván sau ta vẫn đặt ngươi! Cả một ngàn lượng này, đặt hết!
+1797	Quân Mạc Tà! Lần này ta nhất định thắng ngươi!
+1798	Ồ? Vậy thử xem!
+1799	/r6  5  6/b...
+1800	Hừ, lần này xem ngươi làm thế nào!
+1801	Trời linh linh đất linh linh, Độc Cô Tiểu Nghệ mau hiển linh!
+1802	Haha! Lại thắng rồi!
+1803	Ngươi ngươi ngươi... hai lần ra bão, ngươi gian lận! Ngươi chơi bịp!
+1804	Không có tiền thì xuống! Thua không nổi thì đừng chơi!
+1805	Hừ, ta ở ngay bên cạnh hắn, Thanh Hàn tỷ tỷ cũng ở đây, chẳng thấy bịp bợm gì cả!
+1806	Hừ, thua~ không~ nổi~!
+1807	Đánh cũng đủ rồi, chúng ta đi thôi.
+1808	Được, nghe theo Thanh Hàn hết.
+1809	Khoan đã! Bội kiếm và ngọc bội của Đường Nguyên, Quân Mạc Tà, chắc ngươi rất muốn thắng lại cho hắn chứ!
+1810	Haha, các ngươi thật coi ta là kẻ thu mua đồ đồng nát à? Không đánh!
+1811	Cái, cái gì? Không đánh??
+1812	Lẽ nào ngươi muốn lấy thân trả nợ? Hay nhà ngươi còn cô em gái không gả được, muốn ta làm em rể?
+1813	Phụt~ ván này ta không đặt nữa, haha.
+1814	Oa nha nha nha, tức chết ta mất!
+1815	Không đánh cũng phải đánh, xem lần này ta lắc ra bão đây!
+1816	Mạnh Hải Châu tiếp tục lắc xúc xắc...
+1817	Mạnh Hải Châu gieo ra điểm...
+1818	/r1  2  3/b...
+1819	Mạnh Hải Châu ngất xỉu...
+1820	Gọi hắn dậy! Khỏi để tên này chơi xấu!
+1821	Haha, để ta lo!
+1822	Thế này mà còn không tỉnh thì là chết rồi.
+1823	Khụ khụ... lẽ nào gặp ma rồi!
+1824	Tới lượt ta lắc, mở to mắt mà xem cho kỹ!
+1825	Quân Mạc Tà tiếp tục lắc xúc xắc...
+1826	Haha! Phát tài rồi!
+1827	Độc Cô Tiểu Nghệ chộp lấy một vạn lượng ngân phiếu, nhét vào ngực áo mình.
+1828	Quân Mạc Tà, lần này ngươi thắng hoàn toàn là nhờ ta ở bên cạnh đem vận may cho ngươi. Ta lấy nhiều hơn chút, ngươi không để bụng chứ?
+1829	A, không, không để bụng, ta nào dám để bụng.
+1830	Vậy~ ta bốc thêm một nắm nhé?
+1831	Bà cô ơi, tiền đặt theo của muội đã lấy, tiền ăn chia của ta cũng lấy, làm người không thể vô sỉ thế được!
+1832	Khúc khích... bản cô nương chỉ trêu huynh chút thôi, có chút tiền lẻ, nhìn cái bộ keo kiệt của huynh kìa!
+1833	Được rồi được rồi, chúng ta thắng nhiều tiền thế rồi, mau về thôi!
+1834	Khoan đã!
+1835	Sao, ngươi còn muốn chơi xấu?
+1836	Các ngươi tuy thắng bạc, nhưng làm Mạnh huynh đệ của ta bị thương, đâu thể dễ dàng bỏ đi như vậy!
+1837	Ngươi thật không biết lý lẽ, rõ ràng là hắn tự ngất.
+1838	Mọi người xông lên, dạy cho chúng một bài học!
+1839	Gợi ý: trong trận có thể dùng vật phẩm để tiếp tế. Trong menu lệnh chọn "Vật" là dùng được vật phẩm mang theo. Muốn mua thêm vật phẩm tạm thời thì chọn "Mua" trong menu lệnh.
+1840	Hừ, động thủ với lão tử?
+1841	Nơi thị phi không nên ở lâu, tạm đánh ngất bọn chúng đã. Chúng ta mau đi thôi.
+1842	Quân thiếu gia cứ tự nhiên, tiểu nhân vừa rồi chẳng thấy gì cả.
+1843	Quân thiếu gia đi thong thả. Tiểu nhân vừa ngủ quên, chẳng thấy gì cả.
+1844	Tấm bình phong này cách âm rất tốt.
+1845	Ô, Quân thiếu gia, tiểu nhân vừa chợp mắt một lát, ngài đã đi rồi sao?
+1846	Ừm, không tệ, người ở đây đều rất biết điều, sau này sẽ trọng thưởng.
+1847	Ôi trời ơi, tiểu nhân vạn lần không dám nhận. Ngài đi thong thả, đi thong thả~
+1848	Mạnh Hải Châu hôn mê bất tỉnh
+1849	Lý Phong sùi bọt mép
+1850	Đường Nguyên nằm im bất động
+1851	Chỉ có khu quý tộc đang cháy, vào thẳng khu quý tộc từ cửa Tây thôi!
+1852	Vào khu phía đông hoàng thành Thiên Hương?
+1853	Vào
+1854	Không vào
+1855	Thành Thiên Hương sao lại lửa cháy ngút trời thế kia, chắc chắn có chuyện rồi!
+1856	Không đúng, chỉ khu quý tộc có ánh lửa... Kẻ nào to gan đến vậy, chuyên chọn khu quý tộc để đốt!
+1857	Phải mau quay về xem, mong Thanh Hàn và mọi người bình an vô sự.
+1858	Chính là chỗ đó...
+1859	Huyền Huyền đại lục
+1860	Vào đường mòn tửu quán Tống Ký?
+1861	Chỉ có khu quý tộc đang cháy, vào thẳng khu quý tộc từ cửa Tây thôi!
+1862	Vào khu chợ hoàng thành Thiên Hương?
+1863	Khu quý tộc đang xây lại... tạm thời chưa vào được.
+1864	Vào khu quý tộc hoàng thành Thiên Hương?
+1865	Thành Thiên Hương đang nguy cấp, không thể quay lại được.
+1866	Vào rừng ngoại thành?
+1867	Sườn Tây rừng Thiên Phạt đầy chướng khí mê hoặc, không thể đi qua.
+1868	Vào sườn Tây rừng Thiên Phạt?
+1869	Đây là bảo bối của ta, không cho các ngươi xem, cút mau!
+1870	Quý công tử
+1871	...Tinh thần thất thường cả rồi... để ta giúp ngươi giải thoát.
+1872	...Dù ở thế giới này, đạo đức con người vẫn dễ dàng bị tiền bạc đánh gục như vậy...
+1873	Mở rương báu xem thử đi.
+1874	Vị công tử này, giúp ta làm một việc được không?
+1875	Người bí ẩn quái dị
+1876	Ồ? Ngươi cứ nói ra nghe thử.
+1877	Thấy người ăn mặc sang trọng đằng kia không?
+1878	Bảo bối, bảo bối, là của ta, đứa nào cũng đừng hòng lấy, ta phát tài rồi... ta phát tài rồi...
+1879	Người này có vẻ là quý tộc Thiên Hương, vậy mà giữa đường cướp hàng của ta, thật khó hiểu.
+1880	Ta thấy công tử toàn thân toát ra khí tức sát thủ, nên...
+1881	Nên ngươi bảo ta xử hắn?
+1882	Hehe, công tử nhìn thấu thật giỏi...
+1883	Kẻ sa đọa như vậy lẽ ra nên lôi về dạy dỗ cho tốt, tiếc là bổn đại sát thủ không giỏi giáo dục kẻ ác, chỉ giỏi giết kẻ ác.
+1884	Việc này ta làm giúp ngươi.
+1885	Hehe. Tiện thể mở cái rương giúp ta luôn.
+1886	Chưa từng thấy kẻ giàu mà bất nhân như vậy... xin ngài giúp ta đoạt lại hàng hóa.
+1887	Hehe, loại rương báu lớn này nhất định phải dùng Ma Hồn Tinh Phách mới mở được.
+1888	Hehe, không mở được rương phải không. Ngươi đặt thứ này lên rương rồi thử lại xem.
+1889	Ma Hồn Tinh Phách?
+1890	Không sai, loại rương khổng lồ này đều được huyền khí cường hóa đặc biệt, như vậy mới tiện cất giữ đồ quý giá. Người thường không mở được.
+1891	Nhưng Ma Hồn Tinh Phách lại vừa hay triệt tiêu được huyền khí trên rương. Bí mật này, người thường ta không nói cho đâu.
+1892	...Được, ta thử lại xem?
+1893	Mở ra rồi, đồ bên trong coi như quà gặp mặt cho công tử.
+1894	Quả nhiên lại là quà gặp mặt. Thật khiến ta không thể không đề phòng các ngươi.
+1895	...Cuối cùng cũng thành, nếu không phải người ngựa /rĐường gia/b kéo đi cả đám, thật chẳng dễ gì sờ được đồ của lão già nhà họ Đường.
+1896	Thích khách Giáp
+1897	Có điều vẫn mất nhiều huynh đệ như vậy...
+1898	Thích khách Ất
+1899	Hai ngươi nói nhỏ thôi, nếu bị người khác nghe thấy, chúng ta lại phải nhọc công diệt khẩu...
+1900	Thích khách Bính
+1901	(Đường gia? Là nhà Đường Nguyên sao?)
+1902	(Đám người này sát khí nặng như vậy... cứ trốn đi đã!)
+1903	Hai vị cô nương, mau theo ta qua đây, nói nhỏ thôi...
+1904	Quân Mạc Tà, ngươi làm gì vậy...
+1905	Suỵt... nguy hiểm... đừng lên tiếng.
+1906	...Hehe, có viên /rCửu Huyền Đan/b này của Đường gia, đường chủ nhất định sẽ trọng thưởng chúng ta.
+1907	Được ra sức vì đại nghiệp của vị đại nhân kia là vinh quang của /rHuyết Kiếm Đường/b chúng ta.
+1908	Huyết Kiếm Đường? Sao lại...
+1909	Suỵt...
+1910	Lần này tới Đường gia lại không gặp Đường Nguyên, con heo đó chắc béo tới mức một đao cũng không đâm tới tim.
+1911	Lần sau không biết lại tới nhà nào, dù sao cũng chưa tới lượt Quân gia... lão già Quân Chiến Thiên sao mà cứng thế!
+1912	Lần sau tốt nhất là tới Độc Cô gia, đại tiểu thư Độc Cô Tiểu Nghệ nhà đó xinh xắn lắm, gặp được là ôm thẳng về nhà! Hahaha!
+1913	Lũ thích khách chết tiệt! Thích khách thối tha! Tức chết ta rồi!!
+1914	Kẻ nào!!
+1915	Đám thích khách
+1916	...Xem ra chúng ta sắp bị diệt khẩu rồi.
+1917	Xin, xin lỗi...
+1918	Giờ chỉ còn cách ra tay trước!
+1919	Quân Mạc Tà! Sao lại tự mình xông ra!
+1920	Đối phương có cao thủ Ngân Huyền, Quân Mạc Tà gặp nguy rồi! Cùng qua giúp!
+1921	Kẻ tới là ai...
+1922	Bổn đại sát thủ giết người chưa bao giờ xưng danh, chết đi!
+1923	Xì...
+1924	Mấy tên này quả thật lợi hại! Suýt nữa thì...
+1925	Đối phương đều là cao thủ cấp Ngân Huyền, xét thực lực chúng ta tuyệt đối không thể thắng. May mà chúng đều mang thương tích...
+1926	Mọi người không sao chứ?
+1927	Không sao không sao, có Thanh Hàn tỷ tỷ ở đây, chúng ta chẳng sợ bị thương...
+1928	(Thứ gì đây... khí tràng lại mạnh mẽ đến vậy...)
+1929	Nhận được: /rCửu Huyền Đan/b!
+1930	Viên đan này linh khí tỏa khắp, chắc chắn là vật phi phàm. Tạm thời để ta giữ!
+1931	Chuyện hôm nay, không ai được nói ra ngoài.
+1932	Ừm, chuyện Huyết Kiếm Đường, chúng ta vẫn nên tránh xa thì hơn.
+1933	Ồ? Huyết Kiếm Đường có lai lịch gì?
+1934	Ta cũng không rõ lắm, chỉ nghe nói... hễ bị Huyết Kiếm Đường để mắt tới, mất mạng chỉ là chuyện sớm muộn...
+1935	Vậy sao, vậy cứ bảo chúng tới đi! Bổn đại sát thủ tiếp hết!
+1936	Mạc Tà ca ca, huynh giỏi quá, sau này...
+1937	Sau này ta không bắt nạt huynh nữa đâu...
+1938	Vậy, vậy thật cảm ơn muội quá...
+1939	Có điều Thanh Hàn cũng rất lợi hại! Nếu không có cô qua giúp ta...
+1940	Thanh Hàn che miệng cười
+1941	Khiến tim Quân Mạc Tà rung động
+1942	(Một mỹ nhân trẻ tuổi, có tình có nghĩa, trắng trong như bông tuyết thế này...)
+1943	(Lại cam tâm tình nguyện thủ tiết ở Quân gia! Đúng là lãng phí tài nguyên...)
+1944	(Nghĩ bậy gì thế, cái túi da thối của Quân Mạc Tà này! Hồn bay phách tán rồi mà còn sót lại mấy ý nghĩ đen tối!)
+1945	Ngươi... lại nhìn chằm chằm ta nghĩ chuyện bỉ ổi gì đó!
+1946	A, không, không có...
+1947	Vừa đối tốt với ngươi một chút, ngươi lại ra cái bộ dạng này.
+1948	Được rồi! Chúng ta mau về nhà thôi!!
+1949	Rương báu không hề nhúc nhích
+1950	Rương báu này lại bị một luồng huyền khí thần bí bao quanh. Xem ra cách thường không mở được... hay quay về hỏi chủ nhân của rương xem.
+1951	Dùng Ma Hồn Tinh Phách mở rương báu lớn?
+1952	Mở
+1953	Bỏ qua
+1954	Nhận được: /rThần khí Nhẫn Huyền Quy/b!
+1955	Đường mòn tửu quán Tống Ký
+1956	Núi u tịch, nước lững lờ, đúng là lúc đi dã ngoại!
+1957	Đường chủ, đội đoạt đan của chúng ta bị, bị người chặn giết rồi...
+1958	Thích khách Huyết Kiếm Đường
+1959	Cái gì!
+1960	...Vậy Huyền Đan đâu?
+1961	Cũng, cũng bị cướp mất rồi...
+1962	Kẻ nào cướp?
+1963	Nghe một huynh đệ trước lúc chết nói, hình như là thiếu gia nhà họ Quân, Quân Mạc Tà...
+1964	Vậy tại sao ngươi còn đứng đây?
+1965	Lúc Huyền Đan bị cướp, thuộc hạ đang đi tiểu trong rừng, nên...
+1966	Ta hỏi tại sao ngươi còn đứng đây!
+1967	Vâng... tình hình đã bẩm báo, thuộc hạ lập tức tạ tội!
+1968	Phụ hoàng người lại...
+1969	Ai ở đó?
+1970	(A, không xong...)
+1971	Cái mặt công tử bột trắng trẻo này, chẳng có gì đáng soi nữa...
+1972	Hôm sau
+1973	Phù! Ngày thứ hai xuyên không tới đây... thế giới này đúng là thú vị.
+1974	Quân Mạc Tà... khoan đã, cảnh này sao quen mắt thế!
+1975	Hửm, Quân Mạc Tà đâu?
+1976	Hehe, may mà lão tử trốn kịp...
+1977	Độc Cô đại nhân, ngài có thấy Mạc Tà huynh đệ không?
+1978	Ta cũng thấy lạ, giờ này hắn lẽ ra phải đang nằm ườn ngủ nướng trên giường mới đúng.
+1979	Mạc Tà, ngươi lại nằm bò ra đất ngủ à?
+1980	Khụ khụ... về vấn đề này...
+1981	Cô nên đi hỏi hai cái của nợ kia... mà người ở đây ai cũng thích phá cửa xông vào sao...
+1982	Mạc Tà ca ca, mau thu dọn đồ xuất phát, Đường béo nói mời chúng ta ăn đồ ngon!
+1983	Mạc Tà huynh đệ, đi, tới Túy Tiên Lâu. Ca ca đang buồn bực, muốn tìm đệ tâm sự.
+1984	Đường Nguyên, nghe nói hôm qua nhà huynh mất đồ, làm thành Thiên Hương loạn cả lên. Rốt cuộc là chuyện gì?
+1985	Haizz! Tới tửu lâu trước đã, cha ta đã một ngày không cho ta ăn cơm rồi! Đệ xem ta gầy đi chưa này!
+1986	(Biết đâu có liên quan tới viên /rHuyền Đan/b nhặt được hôm qua, qua tìm hiểu tình hình cũng tốt.)
+1987	Được, chúng ta thu dọn chút rồi qua ngay...
+1988	Mạc Tà huynh đệ đúng là huynh đệ tốt của ta! Vậy ta tới Túy Tiên Lâu chuẩn bị trước, mọi người nhanh qua nhé!
+1989	Hai vị mỹ nhân, lát nữa lời của Đường Nguyên có thể liên quan tới chuyện chúng ta gặp hôm qua. Nhớ kỹ không được nói bừa, kẻo lộ tin.
+1990	Ừm, chúng ta sẽ cẩn thận.
+1991	Ta biết rồi
+1992	Chỉ tu luyện một đêm
+1993	Chẳng có mấy ý nghĩa
+1994	Con bé Tiểu Nghệ đó...
+1995	Thật là cô đơn quá...
+1996	Thôi, mau ôn luyện Khai Thiên Tạo Hóa Công đi, muốn thành bá nghiệp dị thế còn nhiều việc phải làm.
+1997	Mạc Tà ca ca! Mạc Tà ca ca!
+1998	Zzz... Zzzz...
+1999	Mạc Tà ca ca, mau dậy đi, đã mấy giờ rồi còn ngủ!
+2000	Đại tiểu thư của ta ơi, làm gì có kiểu làm vệ sĩ như vậy... hơn nữa...
+2001	Muội vào bằng cách nào? Thị nữ ngoài cửa không cản muội sao?
+2002	Ồ, huynh nói thị nữ đó à... cô ta dám cản đường bản tiểu thư, đã bị ta đánh chạy rồi!
+2003	...Ta nói muội này...
+2004	Còn huynh nữa, giờ này còn nằm đất ngủ nướng, người ta còn đang chờ huynh cùng ra ngoài chơi đấy!
+2005	Ta là công tử bột, ngủ nướng một chút cũng không được sao...
+2006	Hơn nữa nếu không phải đêm qua rèn đao cho muội, ta cũng không ngủ tới giờ này!
+2007	Đao? Huynh nói huynh rèn cho ta một thanh đao?
+2008	Không sai, rèn cho muội đấy.
+2009	Thật sao? Mau cho ta xem! Nếu đao không đủ tốt, ta không thèm đâu!
+2010	Hehe, Mạc Tà sản xuất, toàn là hàng tinh phẩm, đảm bảo muội hài lòng!
+2011	Đưa ra /rThần khí Hồng Tụ Thiên Hương/b!
+2012	Oa! Thanh đao đẹp quá!
+2013	Ừm... "Hồng tụ tàng đao"...
+2014	Cho nên đao tên Hồng Tụ... thân ở Thiên Hương, nên gọi là Hồng Tụ Thiên Hương; thanh đao này là danh đao đầu tiên ta rèn trong đời, nên đặt tên là "Hồng Tụ Thiên Hương đệ nhất đao".
+2015	Hồng Tụ Thiên Hương đệ nhất đao... đao tốt, tên cũng hay!
+2016	Thật sự tặng cho ta sao?
+2017	Khụ khụ, đương nhiên.
+2018	(Vốn định để mình dùng, tiếc là giờ chỉ đành cho muội.)
+2019	Mạc Tà ca ca...
+2020	Tiểu Nghệ cúi đầu
+2021	Huynh tặng ta thanh đao tốt thế này, ta lại chẳng có gì tốt để tặng huynh...
+2022	Độc Cô Tiểu Nghệ cắn môi, dường như đã hạ quyết tâm gì đó.
+2023	Tiểu Nghệ dúi cho Quân Mạc Tà một miếng ngọc bội
+2024	Nhận được: /rNgọc bội của Tiểu Nghệ/b!
+2025	Ta... ta tặng huynh... cái này... vậy.
+2026	(Cô bé này đúng là đáng yêu, còn biết có qua có lại)
+2027	Được! Coi như là tấm lòng của Độc Cô tiểu thư. Ta xin nhận.
+2028	(Huynh ấy nhận rồi, vậy có phải là trao đổi tín vật không nhỉ...)
+2029	Ta, ta thử đao...
+2030	Trong phòng chật quá, ra sân trước đã.
+2031	Thỉnh an thiếu gia.
+2032	Ừm.
+2033	Thiếu "đoan trang" và "thanh lịch" thì không thể làm thị nữ nhà họ Quân được.
+2034	Ta thấy cô cũng chẳng đoan trang thanh lịch gì mấy.
+2035	Hả? Vậy, vậy sao... hu hu hu...
+2036	Haizz... thật là lực bất tòng tâm...
+2037	Thiếu gia đừng làm phiền tam gia thì hơn...
+2038	Chào Quân thiếu gia~
+2039	Xin thiếu gia giữ yên lặng trong đại sảnh...
+2040	Quân gia xưa nay là gia tộc có thế lực ở đế quốc Thiên Hương, chỉ là mấy năm nay...
+2041	Nếu đôi chân của Quân tam gia vẫn lành lặn... Quân gia chúng ta đâu tới mức xuống dốc... lão gia cũng không ngày ngày lo âu.
+2042	Mạc Tà... thằng nhóc này không chịu ở yên, chạy lung tung tới đây làm gì!
+2043	Chào thiếu gia...
+2044	A, Mạc Tà, Thanh Hàn, các con về rồi. Mau vào bàn, ra mắt cha con họ Quản.
+2045	Mạc Tà, hai vị đối diện chính là cha con họ Quản, Quản Đông Lưu và Quản Thanh Ba.
+2046	Chào Quản thúc thúc, chào Thanh Ba đệ đệ!
+2047	...Phụ thân.
+2048	Vị này chính là Quân tam công tử Quân Mạc Tà phải không? Quả nhiên là thiếu niên anh tuấn, nhất biểu nhân tài, khí độ bất phàm. Quân tam đệ, Quân gia có người nối nghiệp, thật đáng mừng đáng chúc!
+2049	Quản Đông Lưu
+2050	Hừ, chính là tên công tử bột ngươi? Suốt ngày quấy rầy Thanh Hàn tỷ tỷ của ta?!
+2051	Quản Thanh Ba
+2052	Không sai! Lẽ nào ta quấy rầy Thanh Hàn mà ngươi còn ghen sao?
+2053	Ngươi, ngươi ngươi, ngươi ngươi ngươi...
+2054	Đừng gọi ta nữa, ta không có hứng thú với ngươi.
+2055	Quân Mạc Tà! Xem ta có đánh chết ngươi không!
+2056	Dừng tay! Thanh Ba, không được vô lễ!
+2057	Dù sao đi nữa, nó cũng là em chồng của Thanh Hàn tỷ con!
+2058	Hừ! Tên nhóc này sắp không còn là em chồng của tỷ tỷ con nữa rồi. Chúng ta tới lần này chẳng phải để từ hôn thay tỷ tỷ sao!
+2059	Trong đại sảnh lặng ngắt như tờ
+2060	Khụ khụ, lão phu hơi say rồi, xin phép cáo lui.
+2061	Thanh Ba, cút ra ngoài cho ta!
+2062	Hừ, đi thì đi!
+2063	Năm đó sau khi Mạc Ưu bất ngờ tử trận, vì hạnh phúc của Thanh Hàn, Quân gia từng chủ động đề nghị hủy hôn ước, chỉ vì Thanh Hàn khi ấy kiên quyết, Quân gia mới đồng ý cho Thanh Hàn qua cửa. Từ hôn là chuyện sớm muộn, người hai nhà ai cũng rõ, chỉ chờ một thời cơ, thời cơ xuất hiện một mối lương duyên cho Thanh Hàn!
+2064	Nhưng lần này Quản huynh tới lại có vẻ khác thường.
+2065	Quân Vô Ý mím môi
+2066	Trên mặt hiện lên vẻ cứng rắn
+2067	Rốt cuộc đã xảy ra chuyện gì? Nếu Quản huynh còn coi trọng Quân gia ta thì xin nói thẳng; nếu Quản huynh không muốn nói cũng chẳng sao. Văn thư hòa ly ở ngay trong tay ta, giờ có thể giao cho huynh! Từ nay hai nhà ân đoạn nghĩa tuyệt, không qua lại nữa!
+2068	Quản Đông Lưu trợn mắt há mồm nhìn Quân Vô Ý, hồi lâu sau, chán nản thở dài một hơi, tấm lưng thẳng tắp dường như đột nhiên sụp xuống.
+2069	Quân tam đệ, chuyện này... nói cho cùng... đệ vẫn là không biết thì hơn. Nếu không chỉ uổng công liên lụy Quân gia mà thôi. Tóm lại, Quản Đông Lưu ta tuyệt không phải kẻ vong ân bội nghĩa, điểm này chắc tam đệ cũng rõ.
+2070	Quân Vô Ý ta đâu phải kẻ sợ chuyện.
+2071	Lẽ nào trên đời này lại có kẻ dám ép hôn? Ép con gái Quản gia, con dâu Quân gia phải khuất phục sao?!
+2072	Đây đều là họa do con bé Thanh Hàn tự chuốc lấy!
+2073	Hả? Cha, sao lại là do con tự chuốc lấy?
+2074	Thanh Hàn, con còn nhớ nửa năm trước, ngày giỗ của Mạc Ưu, con tới mộ y quan của Mạc Ưu viếng không?
+2075	Ở đó có gặp một thiếu niên áo xanh lục phải không?
+2076	Trên mặt Quản Thanh Hàn thoáng qua vẻ chán ghét
+2077	Kẻ đó đúng là vô lại hết mức!
+2078	Quản Đông Lưu lắc đầu
+2079	Kẻ đó đúng là vô lại, nhưng kẻ vô lại hết mức ấy lại mang họ Lệ!
+2080	Là con trai duy nhất của Tuyệt Thiên Chí Tôn Lệ Tuyệt Thiên, Lệ Đằng Vân! Cũng là thiếu chủ duy nhất của Huyết Hồn sơn trang ở Thiên Nam!
+2081	Mặt Quản Thanh Hàn lập tức cắt không còn giọt máu! Trắng bệch đến đáng sợ!
+2082	Đại sảnh trong nháy mắt lại chìm vào im lặng tột độ...
+2083	Lệ Đằng Vân sau khi dò hỏi rõ thân phận Thanh Hàn liền lập tức sai người tới Quản gia cầu hôn. Còn nói, nếu không đồng ý, Quản gia và Quân gia sẽ cùng bị diệt vong!
+2084	Lại một lần im lặng chết chóc...
+2085	Hehe, Huyết Hồn sơn trang? Ghê gớm lắm sao?!
+2086	Thiên Nam Huyết Hồn cột chống trời, phương Bắc Phong Tuyết đúc Ngân Thành... nổi danh ngang Phong Tuyết Ngân Thành, thực lực đương nhiên ghê gớm. Cao thủ Thiên Huyền của họ có tới hàng trăm, nghe nói Thần Huyền cũng có mấy vị...
+2087	Ta đã bảo mà, haha, nực cười, nực cười thật!
+2088	Mạc Tà, chuyện này con thấy nực cười đến vậy sao?
+2089	Hừ...
+2090	Đúng là nực cười! Nực cười hết mức! Huyết Hồn sơn trang tới cầu hôn, Quản gia không dám đắc tội Huyết Hồn sơn trang phải không? Cho nên ông bất chấp danh tiết con gái, cứ thế đem con gái mình bán đi như món hàng? Hay đem trao đổi?
+2091	Các ngươi căn bản không biết Huyết Hồn sơn trang đáng sợ thế nào! Trên dưới Quản gia còn hơn một ngàn người! Lẽ nào vì chuyện này mà hy sinh toàn bộ sao?
+2092	Quản Thanh Hàn dựa vào đâu phải hy sinh vì Quản gia các người? Các người có tư cách gì lấy cả đời nàng đổi lấy bình an cho mình?
+2093	Thanh Hàn trước sau vẫn là con gái Quản gia, chuyện này lại do nó mà ra, khi gia tộc không đủ năng lực, hy sinh cũng là chuyện bất đắc dĩ...
+2094	Thanh Hàn đã sớm vào cửa Quân gia. Vậy là người của Quân gia ta, sống là người Quân gia, chết là ma Quân gia.
+2095	Con gái gả đi như bát nước hắt đi, chẳng còn chút quan hệ gì với Quản gia các người!
+2096	Quân tam công tử, còn một chuyện nữa.
+2097	Chuyện gì?
+2098	Mấy hôm trước, Quân tam công tử có từng tới Hoàng Hoa Đường không?
+2099	Ồ? Chuyện này ông cũng biết?
+2100	Quân tam công tử có biết chủ nhân Hoàng Hoa Đường là Phong Tuyết Ngân Thành không?
+2101	Hehe, thì đã sao?
+2102	Hehe, Quân tam công tử gây đại họa rồi. Phong Tuyết Ngân Thành biết ngươi phá hủy Hoàng Hoa Đường, vô cùng tức giận, đã tìm tới Lệ gia của Huyết Hồn sơn trang, nói ba ngày sau sẽ quyết đấu với Quân tam công tử ở rừng Thiên Phạt phía đông thành.
+2103	Hehe, xem ra muốn từ hôn cũng không từ được rồi.
+2104	Quản gia chủ, phiền ông chuyển lời, Lệ gia và cả Phong Tuyết Ngân Thành, Quân mỗ nhận lời, ba ngày sau Quân mỗ tuyệt không lỡ hẹn! Tương lai Quân gia nằm trong tay ta. Nếu đã định phải hủy diệt trong tay ta, ta không ngại sớm hơn một chút!
+2105	Nếu sức mạnh Quân gia không bảo vệ được nàng, vậy trước khi Quân gia diệt vong, ta sẽ tự tay giết nàng! Thà chết cả, tuyệt không chịu nhục!
+2106	Nước mắt Quản Thanh Hàn tuôn trào
+2107	Mặt Quản Thanh Hàn đột nhiên đỏ bừng như lửa đốt, trong lòng bỗng nảy lên một ý nghĩ khiến chính mình gần như không còn chỗ dung thân.
+2108	(Lẽ nào... trước kia hắn đối với ta... lại là thật lòng? Chỉ vì ngại thân phận mới cố tình... như vậy?)
+2109	Mạc Tà nói không sai, Thanh Hàn vẫn là con dâu Quân gia, là người Quân gia! Quyết định của Mạc Tà chính là quyết định của Quân gia ta!
+2110	Xem ra ta nói nhiều cũng vô ích. Bảo trọng! Cáo từ!
+2111	Muộn rồi, mọi người nghỉ đi, ta về phòng đây.
+2112	Mạc Tà...
+2113	Mạc Tà, Quân gia trông cậy cả vào con.
+2114	Đi tiếp về phía đông là khu chợ hoàng thành Thiên Hương.
+2115	Trọng địa hoàng cung, người không phận sự cấm qua lại!
+2116	Đi tiếp về phía đông là ra khỏi thành, xin thượng lộ bình an.
+2117	Kiếm khách trẻ tuổi
+2118	Khu quý tộc thành Thiên Hương khác hẳn các khu khác. Xin chú ý cử chỉ và lễ tiết nhé.
+2119	Thiếu nữ
+2120	Đi tiếp về phía nam là hậu viện Đường gia. Xin công tử dừng bước.
+2121	Thị nữ Đường gia
+2122	Rất ít người biết thưởng cá. Sự thanh nhàn này thật khó có được.
+2123	Công tử u sầu
+2124	Cứ nghĩ tới vị mềm mượt của cá hấp là ta chảy nước miếng.
+2125	Nhận được: Cao dâu tằm x1
+2126	Công tử, dạo này vẫn khỏe chứ?
+2127	Khỏe khỏe. Lần này lại tặng gì đây?
+2128	Hehe, xem ra công tử đã rất quen với thành viên Sát Thủ Công Hội chúng ta rồi!
+2129	Vậy, đưa đây.
+2130	Hehe, e rằng lần này công tử phải thất vọng rồi. Dạo này vật giá quá cao, sống chật vật lắm. Trong tay thật chẳng còn gì để tặng. Chỉ còn mấy bình "Nước sâm ngọt" này thôi. Công tử đừng chê nhé!
+2131	Nhận được: Nước sâm ngọt x10
+2132	Nhìn cái gì mà nhìn, bọn ta đang biểu diễn nghệ thuật trình diễn đấy.
+2133	Người qua đường Giáp
+2134	Có sát khí!
+2135	Huynh chắc chứ?
+2136	Cũng may, sát khí này có vẻ không nhắm vào chúng ta.
+2137	Hê, lần này thích khách đông thật.
+2138	Không biết kẻ nào xui xẻo bị nhiều thích khách để mắt tới vậy.
+2139	Ta cũng cảm thấy được chút ít... tuy không nhắm vào chúng ta, nhưng vẫn nên cẩn thận thì hơn.
+2140	Mau đi thôi, phải mau tìm Linh Mộng tỷ tỷ...
+2141	Nhận được: tiền 1000
+2142	Trên thế giới này, chúng ta thật ra đều chỉ là khách qua đường vội vã.
+2143	Xin lỗi, ta định rời Sát Thủ Công Hội rồi. Ta muốn hối cải. Ta muốn chuộc tội.
+2144	Cái này... nhân huynh làm sao vậy?
+2145	Ừm, làm nghề này đã 5 năm rồi, không biết Tiểu Hoa ở quê có còn chờ ta không, ta muốn về nhà. Mấy bình "Cao dâu tằm" này ta giữ cũng vô dụng. Tặng ngươi đấy.
+2146	Nhận được: Cao dâu tằm x10
+2147	Huynh đệ, thượng lộ bình an.
+2148	Tạm biệt.
+2149	A, Linh Mộng tỷ tỷ!
+2150	Tiểu Nghệ muội muội?!
+2151	Tiểu Nghệ muội muội, sao muội tìm tới đây?
+2152	Sao còn có tên Quân... Quân Mạc Tà đó! Tiểu Nghệ muội muội, sao muội lại đi cùng tên đại vô lại Quân Mạc Tà?
+2153	Linh Mộng tỷ tỷ, thật ra Quân Mạc Tà huynh ấy...
+2154	(Sát khí này... lẽ nào nhắm vào công chúa Linh Mộng!)
+2155	(Nhân lúc chúng chưa ra tay, mau thoát thân thôi...)
+2156	Quân Mạc Tà chắp tay
+2157	Bái kiến công chúa Linh Mộng!
+2158	Hiếm khi Quân tam thiếu khách sáo như vậy. Hôm nay Tiểu Nghệ cũng ở đây, miễn lễ đi.
+2159	Đa tạ công chúa... a đúng rồi...
+2160	Ta còn chút việc, phải đi trước. Công chúa...
+2161	Quân Mạc Tà lại chắp tay
+2162	Xin bảo trọng!
+2163	Mẹ nó. Sát khí sao tự dưng nhắm vào ta thế này, mẹ kiếp, đến lão tử cũng muốn giết, đúng là nằm không cũng trúng đạn! Đừng trốn nữa, cút ra hết đây!
+2164	Có thích khách, mau hộ giá!
+2165	Ồ? Hộ giá? Lũ lính quèn các ngươi hộ nổi sao?
+2166	Công chúa điện hạ, người đã biết chuyện không nên biết, cho nên, đắc tội rồi!
+2167	Không xong, là cao thủ Kim Huyền!
+2168	Tu vi của chúng ta vạn lần không phải đối thủ của Kim Huyền! Làm sao đây!
+2169	Hahahahaha! Làm sao ư? Dễ thôi! Để mạng lại hết đây!
+2170	Chậc...
+2171	Mạc Tà ca ca!
+2172	Chiến đấu không phải cứ dựa vào huyền khí là thắng được! Ta đánh chính, Tiểu Nghệ thừa cơ đánh lén, Thanh Hàn chú ý hỗ trợ!
+2173	Hahahahaha! Họp bàn tác chiến cũng vô dụng, Kim Huyền đủ sức giết tức khắc lũ sâu kiến các ngươi!
+2174	Lên!
+2175	Cái... cái gì!
+2176	Không thể nào, không thể nào... ta là... Kim Huyền...
+2177	Xì.
+2178	Quân, Quân, Quân... ngươi... giết...
+2179	Quân cái rắm, còn không mau chạy!
+2180	Vẫn còn nữa??!!
+2181	Toàn là Kim Huyền... kẻ nào có được đội thích khách khổng lồ thế này!
+2182	Tiểu Nghệ, muội bảo vệ công chúa Linh Mộng chạy trước!
+2183	Nhưng, nhưng mà...
+2184	Đừng nói nhảm nữa, không chạy là không kịp đâu!
+2185	Mắt Tiểu Nghệ đỏ hoe
+2186	...Ừm... Mạc Tà ca ca nhất định phải bảo trọng!
+2187	/rĐộc Cô Tiểu Nghệ/b rời đội
+2188	Thanh Hàn, lát nữa ta bảo cô chạy thì chạy ngay, đừng lo cho ta.
+2189	Lòng Thanh Hàn thắt lại
+2190	Đi mau!
+2191	Quân Mạc Tà đẩy Quản Thanh Hàn ra một chưởng
+2192	Mạc Tà, ngươi nhất định phải cầm cự, Quân gia sẽ lập tức phái người tới cứu ngươi!
+2193	/rQuản Thanh Hàn/b rời đội!
+2194	Ư...
+2195	Hahahaha, tiểu tử ngông cuồng, giờ đừng giãy giụa nữa, bọn ta còn phải đuổi theo công chúa.
+2196	...Hết cách rồi sao... kéo dài được chút thời gian cũng tốt...
+2197	Tiễn ngươi lên đường!
+2198	Quân Mạc Tà ngã xuống vũng máu
+2199	Đã tắt thở
+2200	Hừ, tiểu tử không biết lượng sức.
+2201	Tiếp tục truy sát công chúa, đừng để ả chạy thoát!
+2202	Giết người rồi cứ thế bỏ đi sao?
+2203	Thân pháp nhanh quá... ngươi là ai!
+2204	Thần, Thần Huyền chí tôn??!!
+2205	Mẹ kiếp, lão phu tung hoành giang hồ trăm năm, lần đầu thấy chiêu thức tinh diệu đến vậy. Mà lại do một thiếu gia nhà giàu thi triển.
+2206	Vậy mà các ngươi lại giết nó!!! Lão phu còn chờ nếm rượu ngon của nó đấy!
+2207	Tốt lắm, các ngươi cũng xuống dưới bầu bạn với nó đi!
+2208	Lão già áo đen vừa bước đi
+2209	Ba tên thích khách Kim Huyền đã mất mạng toàn bộ
+2210	Haizz, tiểu tử, /rƯng Bác Không/b ta ra tay chậm một bước rồi.
+2211	Thấy ngươi một đao hạ một tên Kim Huyền, nên đặc biệt muốn xem ngươi đối phó mấy tên Kim Huyền sau thế nào.
+2212	Không ngờ một bước sai thành hận ngàn đời! Để lão phu tự tay chôn cất ngươi!!
+2213	Biến mất rồi??!!!
+2214	Ưng Bác Không ra sức dụi mắt
+2215	Thằng nhóc này cũng tà môn quá rồi!!
+2216	Nhìn kìa! Hắc y nhân! Chính là bọn chúng!
+2217	Quân Mạc Tà đâu? Ngươi đã làm gì Quân Mạc Tà?
+2218	Ta còn đang muốn hỏi đây!
+2219	Thanh Hàn như phát điên túm lấy Ưng Bác Không
+2220	Quân Mạc Tà đâu? Ngươi mau nói đi!! Rõ ràng hắn giao đấu với ba tên thích khách Kim Huyền ở đây!
+2221	Không sai, hắn bị thích khách Kim Huyền một chưởng đánh chết ngay tại đây!
+2222	Cái gì, Mạc Tà ca ca chết rồi?!! Ta, ta...
+2223	Tiểu Nghệ khóc chạy đi
+2224	Sao... sao lại thế này...
+2225	Dám hỏi, tu vi của các hạ không dưới Thần Huyền phải không?
+2226	Hừ, coi như ngươi biết hàng... Thần Huyền chí tôn đường đường như ta, sao có thể ra tay với kẻ dưới cửu phẩm!
+2227	Vậy cháu ta đâu, có phải ngài đã cứu nó đi không?
+2228	Cái này... nói thật, muốn cứu nhưng không kịp, người cũng biến mất không rõ nguyên do!
+2229	Haizz, ông nén bi thương đi...
+2230	Chết rồi... cứ thế mà chết... đến thi thể cũng không còn!!!
+2231	Quân gia cả nhà trung liệt của ta lại tuyệt hậu như vậy!
+2232	Quân Chiến Thiên thần trí hoảng hốt
+2233	Quân Mạc Tà... đứa cháu bảo bối của ta...
+2234	Hehe... hehehehe...
+2235	Quân Chiến Thiên cười thê lương
+2236	Cười đến nước mắt đầy mặt
+2237	Quân lão gia tử...
+2238	Đã vậy, ta còn lưu luyến gì nữa?!
+2239	Đằng nào cũng là kết thúc, sao không để tất cả kẻ đối đầu với Quân gia cùng ta kết thúc?!
+2240	Truyền lệnh xuống! Nổi trống tụ tướng!!! Đêm nay ta sẽ huyết tẩy Thiên Hương!!!
+2241	Hai giọt lệ già
+2242	Lộp độp rơi xuống đất
+2243	Vỡ tan lấp lánh!
+2244	Ta... chết rồi sao...
+2245	Chẳng cảm giác được gì... hehe... không ngờ mạng của Quân đại sát thủ ta lại kết thúc ở dị giới khó hiểu này...
+2246	Ơ? Cảm giác quen thuộc thế này...
+2247	Lại là Hồng Quân Tháp!!
+2248	Vết thương của ta... đang lành lại? Linh khí này đang chữa trị cho ta?
+2249	Vết thương của Quân Mạc Tà đã hoàn toàn hồi phục
+2250	Chuyện gì thế này!
+2251	Thứ trông như cái lò kia hình như đã mở ra...
+2252	Qua xem thử.
+2253	Thanh kiếm này thần quang tỏa khắp, nhưng hễ chạm vào là ta bị bật ra.
+2254	Ngọn lửa này hỗn hỗn độn độn, như có hình lại như vô hình, dù đi xuyên cả người qua cũng không cảm giác gì...
+2255	Lần trước chỗ này đặt bí kíp Khai Thiên Tạo Hóa Công, giờ chẳng còn gì.
+2256	Lại một quyển bí kíp: /r"Âm Dương Độn"/b?
+2257	Trời có càn khôn, đất chia âm dương, âm dương luân hồi mới có vạn vật sinh hóa; thân người lúc ban đầu chẳng qua là hai khí âm dương, tạo hóa mà ra, tạo hóa mà mất, nên có thể ẩn trong âm dương tạo hóa, vạn vật có thể ẩn, thân người cũng có thể, truy tận căn nguyên vẫn ở âm dương...
+2258	Quân Mạc Tà chậm rãi nghiền ngẫm từng chữ trong thiên Âm Dương Độn pháp, chậm rãi thể ngộ. Hắn phát hiện, cái gọi là "Âm Dương Độn" là một môn công pháp vô cùng thực dụng, luyện thành rồi đủ để thân thể tùy lúc tùy nơi ẩn vào bất kỳ vật gì xung quanh; nếu luyện tới đỉnh cao, thậm chí có thể ẩn thân vào không khí! Vào nước một lần độn mấy trăm dặm, vào đất vượt núi băng đèo!
+2259	Đây là pháp quyết lợi hại cỡ nào!
+2260	Hồng Quân Tháp quả nhiên không phải vật tầm thường. Nếu có thêm mấy thứ thế này thì tốt...
+2261	(Nếu ẩn thân rồi đi nhìn trộm mỹ nhân tắm, ví như nhìn trộm vị đại tẩu xinh đẹp của mình...)
+2262	Phi! Quân Mạc Tà, ngươi chết thì chết đi, sao còn để lại nhiều ý nghĩ dơ bẩn hạ lưu thế này ảnh hưởng tới ta! Thật không thể chịu nổi!
+2263	Quân Mạc Tà hoàn toàn không ý thức được bộ công pháp này vĩ đại và hiếm có tới mức nào. Nhận được từ Hồng Quân Tháp, hắn lại thấy là lẽ đương nhiên, thậm chí còn thấy ít...
+2264	Ý nghĩ này nếu để người tu chân ở thế giới khác biết, tin rằng họ sẽ lập tức bi phẫn phun một ngụm máu mà chết: làm người đâu có vô sỉ như vậy...
+2265	Luyện cũng tạm được rồi, thử nghiệm xem sao!
+2266	Ơ--?
+2267	Một luồng cường quang lóe lên, trong đầu Quân Mạc Tà đột nhiên hiện ra từng hàng chữ.
+2268	Máu tươi làm dẫn, linh trí làm bằng, linh hồn hóa lực: Hỗn Độn Hỏa, luyện vạn vật thế gian; Tạo Hóa Lô, thành vô thượng kim đan!
+2269	Tạo Hóa Lô?
+2270	Quân Mạc Tà mơ hồ cảm thấy giữa mình và cái Tạo Hóa Lô hình thù cổ quái kia lại vô cùng thân thiết, như thể hai bên hòa làm một, không thể tách rời.
+2271	Lại một luồng cường quang lóe lên, trong đầu Quân Mạc Tà hiện ra từng tờ đơn thuốc.
+2272	Phương thứ nhất: Huyền Linh Huyết. Máu tươi huyền linh, tụ lại thành hình, ba giọt luyện hóa, chữa lành trăm vết thương.
+2273	Phương thứ hai: Huyền Linh Trí. Trí của huyền linh, ẩn mà khó biết, đo được ba phần, khí xông huyền tiêu.
+2274	Huyền Linh Huyết, Huyền Linh Trí. Hình như ta từng thấy ở thế giới này...
+2275	Phương thứ ba: /rTạo Hóa Đan/b. Máu tươi làm dẫn, linh trí làm bằng, linh hồn hóa lực, luyện vạn vật thế gian tụ vào một đan, đan nhập vào thân, được tạo hóa khai thiên!
+2276	Nhận được: /rHuyền Linh Huyết/b x1
+2277	Nhận được: /rHuyền Linh Trí/b x1
+2278	Nhận được: /rTạo Hóa Đan/b x1
+2279	Haha, lần này lão tử phát tài rồi, phương thứ ba /rTạo Hóa Đan/b có thể /rtăng thuộc tính vĩnh viễn/b!
+2280	Thử ngay bây giờ!
+2281	Mất: /rTạo Hóa Đan/b x1
+2282	Ăn Tạo Hóa Đan xong, cảm giác phẩm cấp huyền khí của mình đã tới đỉnh Kim Huyền! Nếu có thứ này sớm hơn, đám thích khách áo đen kia cũng chẳng làm gì được ta.
+2283	Phải rồi, đám thích khách kia vẫn đang đuổi theo công chúa, phải mau quay về...
+2284	Xem ra Hồng Quân Tháp còn chưa có ý mời ta đi... đồ tốt cứ liên tiếp xuất hiện...
+2285	Tạo Hóa Lô này sau này phải tận dụng cho tốt mới được.
+2286	Quả nhiên... giờ có thể dễ dàng vào Hồng Quân Tháp rồi.
+2287	Nơi này đúng là chỗ luyện công tuyệt hảo, vậy thì ở đây...
+2288	Cái gì, khối tinh thiết kia sao tự bay ra vậy?
+2289	Hình như bị cái thứ giống ngọn lửa kia hút vào...
+2290	Chậc... ngọn lửa quái này... định cướp à...
+2291	Ơ?
+2292	Thân thể bị hút vào ngọn lửa mờ ảo kia, trước mắt tối đen...
+2293	Quân Mạc Tà cảm thấy thân thể mình như hòa làm một với ngọn lửa kia và khối tinh thiết thần kỳ. Bên tai leng keng, trong đầu như có một chiếc búa thợ rèn thần thánh, dùng sức mạnh của thân thể hắn để rèn khối tinh thiết.
+2294	Sau đó lại là huyền khí như dao khắc tỉ mỉ gọt giũa...
+2295	Dần dần, một đôi song đao toàn thân chảy tràn huyền quang đỏ hiện ra trước mắt Quân Mạc Tà.
+2296	Chuôi đao đỏ rực, lưỡi đao sáng loáng, tỏa ra khí tức nhảy nhót mà âm nhu...
+2297	Nhận được: /rThần khí Hồng Tụ Thiên Hương/b!
+2298	Khối tinh thiết này vốn không phải vật thường, qua Hỗn Độn Hỏa rèn luyện liền hóa thành thần binh lợi khí?
+2299	Nếu những vật phi phàm thế này nhiều thêm chút nữa...
+2300	Nhưng trên người ta hình như chẳng còn vật phi phàm nào... chỉ có chỗ bạc này là tạm coi như nguyên liệu kim loại hơi quý... thử xem...
+2301	Khí tức của đôi song đao này... không hợp với ta lắm...
+2302	Sắc đỏ nhảy nhót này... sắc đỏ không yên phận... sắc đỏ không có não...! Lẽ nào...
+2303	Lẽ nào tặng cho Tiểu Nghệ mới hợp!!
+2304	Không nghĩ lung tung nữa... suýt quên mất chuyện lớn.
+2305	Mai là ngày đấu rượu với Tống lão tam rồi, rượu của ta còn chưa ủ...
+2306	Linh khí trong Hồng Quân Tháp này chắc giúp ta ủ rượu được...
+2307	Ta đi tìm nguyên liệu ngay, dùng Tạo Hóa Lô ủ! Xem ra đêm nay chẳng ngủ được bao lâu rồi!
+2308	Ta... trở lại chỗ cũ rồi?
+2309	Thân thể ta đâu...? Sao không nhìn thấy.
+2310	Xem ra Âm Dương Độn thật sự có thể tàng hình.
+2311	Giờ chưa phải lúc vui mừng, mau đi tìm Thanh Hàn và Tiểu Nghệ.
+2312	Họ chắc đã chạy khỏi khu rừng này rồi. Ta cũng nên mau ra ngoài.
+2313	Đi đường này chắc ra thẳng khỏi rừng.
+2314	Có điều hình như đi trên mặt đất không qua được...
+2315	Hehe, Âm Dương Độn vừa hay có đất dụng võ.
+2316	Nhấn phím /r9/b, dùng thử lần nữa xem!
+2317	Từ giờ có thể /rnhấn phím 9/b để mở Âm Dương Độn. Ở trạng thái Âm Dương Độn, có thể xuyên qua mọi chướng ngại, tránh được mọi kẻ địch (trừ kẻ địch trong cốt truyện).
+2318	Quay lại từ đây thì xa quá... nhấn phím 9 mở Âm Dương Độn, đi lối ra phía nam nhanh hơn.
+2319	Rời khu vực này rồi sẽ tạm thời không quay lại được, tiến lên chứ?
+2320	Tiến lên! (tiếp tục cốt truyện)
+2321	Còn bảo vật chưa lấy, dạo thêm chút...
+2322	...Quả nhiên là một cảnh thảm khốc.
+2323	Huyết tẩy hoàng thành... hành động nghịch thiên thế này, đến hoàng đế cũng không làm nổi...
+2324	Phía trước tiếng chém giết không ngừng vọng lại... ta phải xem kẻ nào to gan vậy, rốt cuộc là vì cái gì.
+2325	Chịu sự giày vò sỉ nhục như vậy mà ta không tự sát! Có phải con thấy Tam thúc thật vô dụng? Thật hèn nhát? Chỉ là phế vật?
+2326	Muốn chết thì quá dễ! Dưới đòn đả kích thế này mà sống sót được mới là dũng sĩ thật sự!
+2327	Ai nói ta không muốn chết?
+2328	Nhưng ta không thể chết! Mạc Tà, gia gia con có ba người con trai, đã chết hai! Nếu ta lại chết nữa, gia gia con sẽ thật sự sụp đổ! Như vậy, Quân gia sẽ thật sự xong đời!
+2329	Quân Vô Ý cúi đầu
+2330	Không muốn nói thêm nữa
+2331	Hehe, hehehe...
+2332	Phong Tuyết Ngân Thành? Hahahaha...
+2333	Phong Tuyết Ngân Thành là cái thá gì?
+2334	Về nhà trước đã
+2335	Ôn luyện Khai Thiên Tạo Hóa Công
+2336	Tu luyện thâu đêm suốt sáng...
+2337	Giết! Giết cho ta! Không khai ra kẻ nào giết cháu ta thì đừng hòng sống!
+2338	Dù có đối đầu với hoàng thượng, đối đầu với trời cao, ta cũng phải báo thù cho Quân Mạc Tà!
+2339	Mạc Tà ơi... Mạc Tà ơi! Gia gia còn chưa kịp thương con, con đã ra đi như vậy!
+2340	Mạc Tà vì bảo vệ chúng ta mà chết, nhất định... nhất định có thể...
+2341	Thanh Hàn nước mắt đầm đìa không nói nên lời
+2342	Một luồng ấm áp khó tả
+2343	Dâng lên trong lòng Quân Mạc Tà
+2344	Là thứ tên sát thủ này chưa từng trải qua
+2345	Thậm chí chưa từng nghĩ tới...
+2346	...Gia gia...
+2347	Một tiếng gọi mười mấy năm chưa từng thốt ra
+2348	Cứ thế được gọi lên ở một dị giới
+2349	Có lẽ chính Quân Mạc Tà cũng thấy kinh ngạc
+2350	...Mạc Tà, thật sự là Mạc Tà?!
+2351	Quân Chiến Thiên ôm chầm Mạc Tà vào lòng
+2352	Mạc Tà!!! Con, con chưa chết???!!
+2353	Nhìn ông lão trước mặt bỗng mừng quá độ, bước ra từ tuyệt vọng, ôm chặt lấy mình như ôm báu vật quý giá nhất thiên hạ! Trong những nếp nhăn sâu trên mặt chất chứa sự quan tâm nồng đậm, niềm vui sướng tột cùng khi mất đi rồi lại có được, ngón tay cũng run rẩy. Đôi mắt già lại kích động đến đỏ hoe! Trong lòng Quân Tà rung động dữ dội...
+2354	Trong khoảnh khắc ấy, Quân Tà hoàn toàn chấp nhận thân thể này, chấp nhận gia đình này: từ nay về sau, ta tên là Quân, Mạc, Tà! Ta là người Quân gia! Thiên Hương quốc, thành Thiên Hương, Quân gia! Chính là gia tộc của ta!
+2355	Gia gia...
+2356	Mạc Tà, con về là tốt rồi, về là tốt rồi... trời không tuyệt Quân gia!!
+2357	Mạc Tà... để Tam thúc cũng nhìn con cho kỹ.
+2358	Tam thúc...
+2359	Quân Vô Ý quay mặt đi, lau nước mắt
+2360	Mạc Tà à... con có biết gia gia con nghe tin con chết đau lòng tới mức nào không. Hoàng thành Thiên Hương này suýt chút nữa đã bị ông hủy rồi...
+2361	Chân Tam thúc con đã tàn rồi, con không thể để Tam thúc bớt lo được sao... thằng nhóc, thằng nhóc thối...
+2362	Quân Vô Ý lại quay mặt đi.
+2363	Quản Thanh Hàn càng che miệng
+2364	Nước mắt không ngừng tuôn rơi
+2365	Không nói nên lời
+2366	Thu binh! Nhiệm vụ bắt thích khách lần này kết thúc!!
+2367	Rõ!
+2368	Binh sĩ nhà họ Quân
+2369	Hừ hừ hừ hừ, Quân gia đốt cháy Thiên Hương, oai phong thật đấy!
+2370	Ai, kẻ nào đang nói trong bóng tối!
+2371	Vô Ý huynh, xa cách mười năm, vẫn khỏe chứ!
+2372	Đây... giọng nói này, lẽ nào là...
+2373	Quân Vô Ý biến sắc
+2374	Môi khẽ run rẩy
+2375	Vô Ý, là bọn họ sao...
+2376	Phụ thân. Là bọn họ tới rồi. Chuyện này người không cần ra mặt. Mọi việc để hài nhi tự ứng phó là được.
+2377	Mộ Tuyết Đồng. Xa cách nhiều năm, phong thái của cô vẫn như xưa!
+2378	Huynh cũng vậy, Quân Vô Ý. Tin rằng nếu tiểu thư biết được, nhất định sẽ...
+2379	Mộ Tuyết Đồng
+2380	Mộ Tuyết Đồng mỉm cười vui vẻ
+2381	Khụ khụ, Vô Ý. Mười năm qua sống có như ý không? Huyền khí đã tiến giai tới Địa Huyền rồi chứ? Thật là đáng quý.
+2382	Quân Vô Ý, nửa thân dưới của ngươi tuy tàn rồi, thành phế vật. Nhưng xem ra ngươi cũng nghĩ thoáng đấy. Có được tâm cảnh này cũng không tệ nhỉ.
+2383	Tiêu Hàn
+2384	Các hạ nói đúng trọng tâm thật!
+2385	Tam thúc ta tàn chân cũng chẳng sao, nhưng nếu tàn não như các hạ thì mới thật sự hết thuốc chữa.
+2386	Láo xược! Bổn tọa nghiền chết ngươi cũng như nghiền chết một con kiến!
+2387	Ngươi láo xược! Trước cửa Quân phủ, chỉ cần ta ra lệnh một tiếng, lập tức băm ngươi thành thịt vụn!
+2388	Hahaha, nó lại nói muốn loạn đao chém chết ta! Thật cười chết ta mất.
+2389	Quân Vô Ý, ngươi nói cho nó biết, chưa nói Quân phủ các ngươi có thực lực đó hay không, chỉ nói các ngươi có gan giết ta không?
+2390	Hahaha, ngu muội tới mức nực cười!
+2391	Đệ nhất công tử bột ngu muội Thiên Hương, Quân Mạc Tà thiếu gia, quả nhiên nghe danh không bằng gặp mặt! Bội phục bội phục, đáng thương đáng thương!
+2392	Quân Mạc Tà lửa giận bốc lên
+2393	Nắm chặt nắm đấm
+2394	Mạc Tà... lui xuống!
+2395	Tiêu Hàn, nơi này dù sao cũng là hoàng thành Thiên Hương, ngươi thật quá láo xược, cũng quá đáng lắm rồi!
+2396	Mộ Tuyết Đồng! Chú ý thân phận của ngươi, ngươi không có tư cách quát tháo ta!
+2397	Tiêu huynh lần này vượt đường xa tới đây, lẽ nào chỉ để đấu khẩu với đứa cháu này của ta sao?
+2398	Quân Vô Ý, có người nhờ ta mang tới cho ngươi một câu!
+2399	Quân Vô Ý lập tức run rẩy
+2400	Là nàng!?
+2401	Đúng vậy, tiểu thư vẫn luôn chờ huynh.
+2402	Láo toét! Hóa ra câu tiểu thư nhờ ngươi mang tới là thế này?! Biết vậy năm đó đã giết Quân Vô Ý rồi!
+2403	Tiêu Hàn, đây là ý của chính tiểu thư, nếu ngươi bất mãn thì tự đi tìm tiểu thư mà nói!
+2404	Quân Vô Ý... ngươi nhớ cho kỹ... sớm muộn gì cũng có ngày, Quân gia sẽ bị Tiêu gia chúng ta san bằng!
+2405	Lời ta đã chuyển tới, Vô Ý huynh, huynh bảo trọng!
+2406	Tam thúc, bọn họ là ai?
+2407	Quân Vô Ý thở ra một hơi dài
+2408	Băng phong ba ngàn dặm, gió tuyết đúc Ngân Thành!
+2409	/rPhong Tuyết Ngân Thành/b...?
+2410	Haizz!
+2411	Quân Vô Ý thần sắc có chút hoảng hốt
+2412	Phong Tuyết Ngân Thành...
+2413	Mười năm trước, mười năm trước...
+2414	Quân, Quân Mạc Tà... lão gia nhà ngươi phát điên rồi, đốt thành rồi! Mau đi khuyên đi!
+2415	Cái gì! Lão gia nhà ta?!
+2416	Mạc Tà huynh đệ... lần trước ở sòng bạc là ta không phải, xin các người đừng giết ta!
+2417	Đường Nguyên?
+2418	Mạc, Mạc Tà... huynh đệ...
+2419	Sao lại nằm đây, không sao chứ?
+2420	Bảo bối... bảo bối...
+2421	Bảo bối?
+2422	Mạc Tà huynh đệ, vừa rồi ta bị cầu lửa đánh trúng, bảo bối trong tay văng lên nóc nhà rồi...
+2423	Bị cầu lửa đánh trúng... mà còn đứng dậy được, phòng ngự cũng mạnh quá rồi.
+2424	Vừa hay mới học Âm Dương Độn, ta thử giúp huynh xem.
+2425	Cầm lấy! Tên béo! Sau này đồ quý đừng tùy tiện mang ra ngoài, cầm đi!
+2426	Mất: Nhẫn ngọc 2
+2427	Bảo bối! Bảo bối của ta!
+2428	Cảm ơn! Mạc Tà huynh đệ! Cảm ơn!
+2429	Hừ. Cảm ơn suông là xong sao?
+2430	Đương nhiên đương nhiên, cái này, xin nhận cho!
+2431	Nhận được: Kiếm long văn x1
+2432	Đường công tử hôm nay sao hào phóng thế!
+2433	Không biết lão gia nhà đệ bị sao nữa! Phóng hỏa đốt cả thành Thiên Hương... ta, ta phải mau đi đây! Cáo từ nhé! Mạc Tà huynh đệ!
+2434	Rốt cuộc là chuyện gì thế này?
+2435	Nhận được: Nhẫn ngọc x1
+2436	Haha, quả nhiên là đồ tốt. Ta bảo sao tên béo chết tiệt bị nện mà vẫn không quên tìm bảo bối.
+2437	Haizz, nếu không thấy Đường béo đáng thương thế, ta mới không muốn trả cho hắn!
+2438	Trả "Nhẫn ngọc 2" cho Đường Nguyên
+2439	Đêm nay đã định sẵn là một đêm chém giết!!!
+2440	Trong chốc lát, cả hoàng thành Thiên Hương như ngày tận thế!
+2441	Lửa giận của Quân lão gia tử đã thiêu rụi hoàn toàn cả đế đô!
+2442	Hahahaha, Quân Vô Ý, mùi vị bị hai quân giáp công trên chiến trường không tệ chứ?
+2443	Các ngươi là ai! Thừa nước đục thả câu, lũ tiểu nhân hèn hạ!
+2444	Phi, ta là tiểu nhân hèn hạ? Còn ngươi là thứ gì!
+2445	Nói! Ngươi và Hàn Yên Dao có quan hệ gì!
+2446	...Hóa ra là Phong Tuyết Ngân Thành... hehe, muốn giết muốn mổ tùy các ngươi!
+2447	Muốn chết quách như Quân Mạc Ưu? Không dễ thế đâu!
+2448	Hừ, muốn giày vò ta sao, vậy cứ thử xem! Quân Vô Ý ta sẽ không rên một tiếng!
+2449	Xì...
+2450	Người đâu, móc xương bánh chè của hắn ra cho ta, rồi tiêm độc dược bí chế của ta vào, để hắn vĩnh viễn không đứng dậy được!
+2451	Nỗi nhục này
+2452	Ta vĩnh viễn không quên!
+2453	Mười năm trước
+2454	Yên Dao... sao nàng lại tới đây.
+2455	Vô Ý, lẽ nào chàng không phải vì nỗi nhớ trong lòng mà tới nơi này sao.
+2456	Hàn Yên Dao
+2457	Nơi đây là của chàng và thiếp...
+2458	Ta là Huyết Y đại tướng của đế quốc Thiên Hương, sao có thể cùng quận chúa Phong Tuyết Ngân Thành...
+2459	Gạt bỏ những ràng buộc trống rỗng đó đi. Trong lòng chàng và thiếp đều có nhau, chẳng phải sao...
+2460	Yên Dao...
+2461	Chúng ta có thể mãi mãi bên nhau không...
+2462	Tránh ra! Ta muốn gặp tiểu thư!
+2463	Hàn tiểu thư nói không muốn gặp ngươi.
+2464	Khốn kiếp, ta là vị hôn phu của Hàn Yên Dao! Lẽ nào nàng muốn hủy hôn ước sao!
+2465	Tiêu Hàn, ngươi còn làm loạn thế này, tiểu thư sẽ vĩnh viễn không thích ngươi. Mời về cho!
+2466	Nhất định nàng đã thích người khác! Đợi ta tìm ra là kẻ nào...
+2467	Nhất định khiến hắn sống không bằng chết!
+2468	Gia đình mà ta đã chấp nhận này
+2469	Đã chịu đựng quá nhiều đau khổ
+2470	Ta muốn nụ cười ngây thơ của Tiểu Nghệ mãi mãi còn đó
+2471	Không muốn Thanh Hàn lại rơi lệ thêm lần nữa
+2472	Đã tới lúc giải phóng sức mạnh của Hồng Quân Tháp
+2473	Huyền khí này... Thiên Huyền?! Sao có thể!
+2474	Tam thúc, xin hãy đứng lên, chống đỡ một khoảng trời cho Quân gia!
+2475	Đùa cái gì vậy, nếu ta đứng lên được thì còn ngồi đây làm gì! Ta há chẳng muốn đứng lên ngay bây giờ!
+2476	Cháu không đùa.
+2477	Đây, luồng sức mạnh này là...
+2478	Chân của ta đang hồi phục?!
+2479	Đây chỉ là bước đầu tiên trong bá nghiệp dị thế của cháu. Tam thúc, sau khi đứng lên...
+2480	Hãy cùng cháu san bằng Phong Tuyết Ngân Thành!
+2481	Mọi kẻ đối đầu với Tà Quân ta đều phải chết.
+2482	...Mạc Tà... sức mạnh của con...
+2483	...Được! Tới đi, hôm nay mạng của Tam thúc giao cả cho con!
+2484	Một nụ cười mỉm hiện trên khóe môi Quân Mạc Tà
+2485	Dưới mái tóc thấm đẫm vẻ âm tà
+2486	Đây là nụ cười ngạo thị tất cả
+2487	Nụ cười của Dị Thế Tà Quân!
+2488	Chữa trị cho Quân Vô Ý, bước lên con đường bá nghiệp dị thế?
+2489	Bắt đầu thôi!
+2490	Do dự thêm chút...
+2491	Chân Tam thúc còn chưa chữa khỏi, giờ chưa phải lúc đi lung tung.
+2492	Mạc Tà ca ca... tóm lại huynh không chết là tốt quá rồi, sau này ngày nào ta cũng muốn chơi với huynh!
+2493	Tam thúc, xin thuận theo huyền khí của cháu, điều hòa khí huyết cho tốt.
+2494	Đừng kinh ngạc, huyền khí này mang tạo hóa khai thiên. Hình dạng bên ngoài có thể giống huyền lực các cấp, cũng có thể vô hình. Ta động thì động, ta tĩnh thì tĩnh, thuận theo hơi thở mà biến, nước chảy ắt thành sông...
+2495	Một canh giờ trôi qua...
+2496	......Ừm, cũng sắp xong rồi.
+2497	Xong, xong rồi sao?
+2498	Chưa, còn bước cuối cùng.
+2499	Quân Vô Ý ta xin lập trọng thệ tại đây.
+2500	Mạng này của ta là do hiền điệt Quân Mạc Tà ban cho. Sau khi đứng lên, ta nhất định dốc hết khả năng, chống đỡ một khoảng trời cho Quân gia.
+2501	Nhất định giúp cháu ta Quân Mạc Tà nam chinh bắc chiến, thành tựu bá nghiệp...
+2502	Khóe môi Quân Mạc Tà lại nở nụ cười
+2503	Lời này là thật chứ?
+2504	Vào nước sôi lửa bỏng cũng không từ nan!
+2505	Đứng, đứng dậy được rồi!
+2506	Quả thật không thể tin nổi!
+2507	Thiên Huyền, Vô Ý con ta cũng tiến giai Thiên Huyền rồi! Đứa con ngoan của ta!
+2508	Mười năm rồi!! Đại ca! Nhị ca! Quân Vô Ý ta lại đứng lên được rồi!
+2509	Quân Vô Ý ngửa mặt lên trời hú dài
+2510	Mạc Tà, mạng của Tam thúc từ nay là của con!
+2511	Tam thúc, người một nhà không nói hai lời. Có điều chuyện chân thúc đã lành, đừng nói với người ngoài, át chủ bài càng giấu sâu càng tốt.
+2512	Không sai! Đúng là nên như vậy!
+2513	Thanh Hàn, Mạc Tà. Ta muốn tới một nơi...
+2514	Chân thúc vừa mới lành, nên nghỉ ngơi nhiều mới phải...
+2515	Không biết nơi Tam thúc mong nhớ như vậy là chỗ nào?
+2516	Hoàng Hoa Đường...
+2517	Ơ... Hoàng Hoa Đường...
+2518	Hoàng Hoa Đường?? Là nơi nào vậy?
+2519	Tới nơi rồi giải thích. Việc không thể chậm trễ, chúng ta lên đường ngay!
+2520	Đây, đây là?
+2521	Xin... xin người...
+2522	Cô gái bị trọng thương
+2523	Tỷ tỷ! Tỷ tỷ!
+2524	Bé trai
+2525	Hừ! Con đàn bà thối dám cản việc của lão tử!
+2526	Đốc công Hoàng Hoa Đường
+2527	...Xin các người... tha cho em... em ta, xin, đừng bắt nó làm...
+2528	Tạo nghiệt mà! Đây là đứa thứ mấy trong tháng rồi... đám trẻ này thật đáng thương, haizz...
+2529	Ngươi nói gì? Muốn chết à?!
+2530	A không không không, không có gì không có gì.
+2531	Tỷ tỷ!
+2532	Thằng ranh, đừng nhúc nhích!
+2533	Bé trai cắn một phát vào cánh tay gã đại hán
+2534	Ối! Đau chết ta rồi!
+2535	Tỷ tỷ! Tỷ chảy nhiều máu quá! Mau tìm đại phu tới chữa!
+2536	Thằng ranh, dám cắn ta, đi chết cùng tỷ ngươi đi!
+2537	Gã đại hán đánh chết bé trai bằng một chưởng
+2538	Đệ đệ!!!
+2539	Thiếu nữ bi phẫn gào lên một tiếng, cố gắng bò về phía thân thể nhỏ bé của em trai, nhưng chỉ cố giãy được hai cái là không nhúc nhích được nữa...
+2540	Đôi mắt to từng xinh đẹp trợn trừng, cuối cùng ánh mắt tan rã, nhưng vẫn không chịu nhắm lại...
+2541	Hơi thở tuy đã ngừng, nhưng bàn tay mảnh mai vẫn cố chấp vươn về phía em trai...
+2542	Súc sinh!!!
+2543	Với đứa trẻ nhỏ thế này mà cũng ra tay độc ác như vậy, các ngươi còn nhân tính không? Còn vương pháp công đạo không!
+2544	Bớt lo chuyện bao đồng! Còn dám lải nhải nữa, lão tử cho các ngươi chung kết cục với hai đứa tiện chủng này!
+2545	Vương pháp công đạo? Lão tử chính là vương pháp công đạo!
+2546	Quân Mạc Tà lặng lẽ bước tới bên thi thể cô gái, vuốt mắt cho nàng.
+2547	Một đồng xu lăn ra từ trong ngực cô gái. Quân Mạc Tà cúi đầu nhìn đồng xu dưới chân, ngẩn người...
+2548	Khoảnh khắc này, sát cơ trong lòng bùng lên! Một cảm giác vừa quen vừa lạ chợt xông lên tâm trí, hắn lặng lẽ nhặt đồng xu lên.
+2549	Yên tâm ra đi, ta nhận ủy thác của các ngươi! Vụ giao dịch đầu tiên trong đời này của ta! Có trễ không thiếu, trời xanh có mắt!
+2550	Thanh Hàn, nói vương pháp với đám súc sinh này, cô thấy có ích không?
+2551	Với loại người này, hoặc là mặc kệ chúng.
+2552	Hoặc là diệt ác tận gốc, giết không chừa một tên!
+2553	To gan! Tiểu quỷ ngu muội dám buông lời ngông cuồng, xem lão tử xử lý ngươi!
+2554	Quân Vô Hối à... Mạc Tà bây giờ thật giống ngươi năm xưa...
+2555	Mạc Tà, làm tốt lắm. Đám súc sinh này chết chưa đền hết tội!
+2556	Hai đứa trẻ này thật đáng thương, chôn cất chúng trước đã...
+2557	Mọi người an táng thi thể hai đứa trẻ.
+2558	Tam, khụ khụ, thúc à, Hoàng Hoa Đường này rốt cuộc là nơi nào vậy, mà thúc lại muốn tới đầu tiên!
+2559	Haizz, một giấc mộng đã mười năm, đâu đâu cũng hoang lương, huynh đệ năm xưa đều đã hóa thành nắm đất vàng...
+2560	Hoàng Hoa Đường này là cô nhi viện, rất nhiều góa phụ của các huynh đệ tử trận của ta lẽ ra đang ở đây!
+2561	Cô nhi viện?!
+2562	Cô nhi viện? Chỗ này nhìn kiểu gì cũng không giống cô nhi viện?!
+2563	Thật ra Hoàng Hoa Đường nhiều năm trước đã thành ra thế này... trẻ con bị đưa vào chưa thấy đứa nào sống sót ra ngoài... thỉnh thoảng bên trong vọng ra tiếng trẻ con kêu thảm, người qua đường chẳng ai dám hỏi tới.
+2564	Mấy năm nay, ta sợ Tam thúc quá lo lắng nên không dám nói cho Tam thúc biết, xin lỗi...
+2565	Thanh Hàn, con đã làm cho Quân gia nhiều như vậy, ta đã sớm coi con là người Quân gia. Sao ta có thể trách con được.
+2566	Hừ! Hoàng Hoa Đường bề ngoài là cô nhi viện, sau lưng lại làm nhiều chuyện xấu như vậy. Chúng ta cứu hết bọn trẻ bên trong ra ngay thôi!
+2567	Không sai, ta cũng đang có ý đó!
+2568	Đi, giết vào Hoàng Hoa Đường!
+2569	Sao không có lấy một đứa trẻ nào?
+2570	Cả Hoàng Hoa Đường không thể chỉ có một gian phòng này. Nhất định có cửa ngầm, chúng ta tìm kỹ xem.
+2571	Chỗ này có chút kỳ lạ...
+2572	Hửm? Có một cái cần gạt!
+2573	Gạt cần gạt chứ?
+2574	Gạt!
+2575	Mặc kệ nó.
+2576	Đã gạt cần gạt ẩn...
+2577	Thứ gì đó ở đằng xa đã mở ra
+2578	Ở đó nhất định có cửa ngầm. Qua xem thử!
+2579	Phát hiện một lối đi ngầm, xuống không?
+2580	Xuống
+2581	Không xuống
+2582	Nhận được: Cao dâu tằm x10
+2583	Lúc này đừng ra ngoài thì hơn.
+2584	Nhóc con, sao em lại tới đây?
+2585	Y y...
+2586	Đứa trẻ
+2587	Chuyện gì thế này? Đứa trẻ này bị câm sao?
+2588	Chúng ta đi tiếp về phía trước xem.
+2589	Nhóc con, ai dẫn em tới đây?
+2590	Y... ư...
+2591	Đây, rốt cuộc là chuyện gì?
+2592	Đúng vậy, trẻ con ở đây đều ánh mắt ngây dại, nói cũng không tròn câu.
+2593	Xem ra muốn biết câu trả lời, nhất định phải đi xuống tiếp.
+2594	Mạc Tà.
+2595	Mạc Tà, phía trước chắc chắn nguy hiểm, phải thận trọng, ngàn vạn lần đừng chủ quan.
+2596	Vâng, Tam thúc, cháu biết rồi. Chúng ta tiếp tục tiến lên thôi.
+2597	Kẻ nào dám tự tiện xông vào Hoàng Hoa Đường của lão phu!
+2598	Đường chủ Hoàng Hoa Đường
+2599	Tự tiện xông vào? Lão tử còn tới đập quán đây!
+2600	Hừ! To gan, gan to! Gan to bằng trời! Trời... tóm lại, bắt lấy cho lão phu!
+2601	Ư hô hô ha hahahahaha, đừng tưởng đánh ngã vài tên lâu la là đánh bại được lão phu.
+2602	Nói thật cho các ngươi biết, lão phu là cao thủ Kim Huyền đỉnh cấp! Kim Huyền đỉnh cấp, biết chưa? Nghiền chết các ngươi như nghiền chết lũ kiến!
+2603	Ư hô hô ha hahahahaha, thế nào? Sợ rồi chứ! Nếu giờ các ngươi quỳ xuống xin tha, không chừng lão phu còn tha mạng!
+2604	Ngươi, ngươi là ai!
+2605	Kim Huyền đỉnh cấp, ghê gớm lắm nhỉ!
+2606	Sao... sao lại có cao thủ Thiên Huyền! Lão phu... lão phu...
+2607	Bớt nói nhảm! Nói, Hoàng Hoa Đường này do kẻ nào mở!
+2608	Là... là, là Phong Tuyết Ngân Thành...
+2609	Phong, Tuyết, Ngân, Thành??!!
+2610	Nói, Hoàng Hoa Đường cần những đứa trẻ này làm gì? Sao bọn trẻ trông đều thần trí hoảng hốt?
+2611	Cái, cái này... là, là dùng để luyện công.
+2612	Luyện công?
+2613	Đúng vậy. Vì những bé trai 7, 8 tuổi này nguyên khí trong cơ thể thuần khiết nhất, lại có tiềm năng tăng trưởng vô hạn. Hút nguyên khí của chúng giúp tăng huyền khí, có lợi lớn cho võ công!
+2614	Không ngờ Phong Tuyết Ngân Thành lại dùng...
+2615	Phong Tuyết Ngân Thành độc ác thật, đến trẻ con cũng không tha!
+2616	Lần này vốn định ra tay vì chính nghĩa, kết quả trúng ngay ổ luyện công của Phong Tuyết Ngân Thành... đúng là đỡ cho ta không ít công sức.
+2617	Phong Tuyết Ngân Thành xưa nay tàn độc, tuyệt đối sẽ không để yên. Sau này chúng ta phải cẩn thận hơn...
+2618	Hehe, cứ để Phong Tuyết Ngân Thành và cả Huyết Kiếm Đường cùng tới đi. Bổn đại sát thủ tiếp hết!
+2619	(Tuy thực lực còn kém xa, nhưng không hiểu sao mỗi lần nghe Mạc Tà nói vậy, lòng tin lại tăng lên hẳn...)
+2620	Ở đây có cái rương báu lớn, chắc chắn có bảo bối, hihi.
+2621	Mạc Tà ca ca, mau dùng cái gì Ma Hồn Tinh Phách mở rương báu này ra xem đi!
+2622	Đại tiểu thư của ta, muội chỉ nghĩ tới bảo bối thôi nhỉ...
+2623	Gì chứ, căn bản không khóa mà.
+2624	Nhận được: /rTinh thiết đỏ/bx1
+2625	...Quả nhiên là bảo bối!
+2626	Thứ gì thứ gì vậy?
+2627	Muội xem khối tinh thiết này phát ánh đỏ, chắc chắn là vật hiếm. Có khi là nguyên liệu cực tốt để rèn thần binh lợi khí!
+2628	Oa, thật kìa, ánh đỏ đẹp quá... thích quá...
+2629	Vậy bảo bối này tạm thuộc về ta! Tiểu Nghệ cô nương chắc chắn không để bụng chứ!
+2630	(Mạc Tà dám giành đồ trước mặt Tiểu Nghệ từ bao giờ vậy!)
+2631	Nếu là Mạc Tà ca ca muốn thì cũng không sao...
+2632	Cái gì? Ta không nghe nhầm chứ?
+2633	Xì, tuy thứ này là bản tiểu thư phát hiện trước. Nhưng nể tình huynh đã đã đã hứa ngày nào cũng dẫn ta đi chơi, thứ này phá phá phá lệ tặng tặng tặng huynh đấy...
+2634	(Mà ta hứa với muội bao giờ thế...)
+2635	Sau khi giải quyết xong chuyện Hoàng Hoa Đường
+2636	Nhóm Quân Mạc Tà quay về Quân gia
+2637	Ta nói lão Tống, mời nhiều người tới xem vậy, hôm nay không phải đêm tân hôn của lão đấy chứ?
+2638	Ngươi, thằng nhóc thối nhà ngươi dám nói càn. Ăn nói hỗn hào.
+2639	Bớt nói nhảm, mau mau mời bổn thiếu gia vào bàn, mau mau bắt đầu!
+2640	Thằng nhóc thối, ta xem hôm nay ngươi lấy ra được rượu ngon gì!
+2641	Hehe, tuy rượu của bổn thiếu gia chỉ ủ vài canh giờ, nhưng thắng lão già nhà ông thì vẫn dư sức~
+2642	Chỉ ủ vài canh giờ! Ngươi muốn đùa giỡn lão phu sao?!
+2643	Đâu dám đâu dám. Ngược lại khuyên lão đừng khinh địch, ủ rượu cả đời, cuối cùng thân bại danh liệt thì không hay đâu.
+2644	Ngươi nói cái gì...??!!
+2645	Được rồi được rồi. Các vị, bình tĩnh chớ nóng.
+2646	Cuộc đấu rượu hôm nay để lão phu làm giám khảo! Rượu ngon thiên hạ lão phu gần như đã nếm khắp, rượu nào hơn rượu nào kém, qua cổ họng là biết!
+2647	Tống lão tam, mang rượu của ngươi ra trước đi!
+2648	Hôm nay đã có cao nhân cấp Thần Huyền ở đây, rượu lão phu mang ra là rượu cất giữ hơn 30 năm, có thể nói là kiệt tác đỉnh cao của lão phu, riêng thu thập nguyên liệu đã tốn năm năm!
+2649	Vò rượu mở niêm, hương rượu tỏa ngát
+2650	Mọi người lần lượt nếm thử
+2651	Rồi uống cạn
+2652	Rượu ngon! Quả thật không tệ! Không chỉ hương thơm quyến rũ, vị rượu còn thuần hậu! Lại thêm men say lâng lâng, lão phu từng uống bao loại rượu ngon, chẳng loại nào sánh ngang được rượu này. Đúng là cực phẩm!
+2653	Hehe, không hổ là Thần Huyền chí tôn, tạo nghệ thưởng rượu cũng ở cấp chí tôn!
+2654	Haizz! Vẫn chưa đủ chuyên nghiệp!
+2655	Cái gì! Cái gì mà chưa đủ chuyên nghiệp!!
+2656	Tạp chất lọc chưa sạch, đây là đại kỵ khi ủ rượu đấy!
+2657	Vậy tiếp theo mời Quân Mạc Tà mang rượu của mình ra!
+2658	A, Mạc Tà ca ca, ta không nhớ huynh có mang vò rượu.
+2659	Hehe...
+2660	Mau nhìn kìa! Đằng kia có con heo bay trên trời!
+2661	Nhân lúc này, lấy rượu từ Hồng Quân Tháp ra!
+2662	Heo đâu?
+2663	Không có à? Vậy chắc ta nhìn nhầm, hehe.
+2664	Rượu của ta đã mang ra rồi, các vị, chuẩn bị thưởng thức đi!
+2665	Sao ta không nhớ hắn có mang vò rượu to thế này?
+2666	Mạc Tà ca ca làm việc gì cũng khó hiểu... nhưng lại rất phong độ...
+2667	Mấy chi tiết này đừng để ý nữa...
+2668	Khụ khụ, được, giờ bổn thiếu gia sẽ mở niêm rượu ngon!
+2669	Mọi người đều nhắm mắt...
+2670	Chờ đợi hương rượu...
+2671	Sao không ngửi thấy hương?!
+2672	Đừng vội chứ! Còn chưa mở hết niêm!
+2673	Để bảo quản, ta còn bịt thêm một lớp da thú.
+2674	Tống lão tam tức suýt ngất
+2675	Thằng nhóc thối, cố tình đùa bọn ta sao!
+2676	Hehe, tiếp theo...
+2677	Y--a! Chưa uống người đã say, mở vò hương mười dặm!
+2678	Trời đất, người này điên rồi à!
+2679	Hửm?
+2680	Một mùi vị tuyệt diệu không lời nào tả xiết, như rót đề hồ vào đỉnh đầu, trong chớp mắt tràn ngập cả tiểu viện.
+2681	Mọi người đều sững sờ...
+2682	Lần lượt tiến lên nếm thử, bàn tán...
+2683	Quản Thanh Hàn trợn tròn mắt
+2684	Chưa uống người đã say, mở vò hương mười dặm! Nào chỉ mười dặm...
+2685	Râu Ưng Bác Không bay phấp phới
+2686	Rượu ngon! Đây mới là rượu ngon đệ nhất thiên hạ!
+2687	Độc Cô Tiểu Nghệ rưng rưng nước mắt
+2688	Đây mới là rượu của nam nhi! Mấy ca ca ta đúng là sống uổng rồi!!
+2689	Tống lão tam càng run rẩy toàn thân...
+2690	Ta, ta, ta... hôm nay được uống rượu ngon thế này... đời này không còn gì hối tiếc nữa... Tống lão tam ta... nửa đời trước sống uổng phí rồi...
+2691	Ta nói Tống lão tam, cái tật đập vò rượu nhà mình của ông phải sửa đi.
+2692	Hehe, Tống lão tam, rượu của ngươi thua không oan!
+2693	Tống lão tam ta tâm phục khẩu phục! Sư phụ ở trên, xin nhận của đồ đệ một lạy!
+2694	Miễn lễ miễn lễ~
+2695	(Thu nhận Tống lão tam này là có tay đấm Thiên Huyền rồi. Có điều lão áo đen kia có vẻ còn lớn hơn, hình như là Thần Huyền trong truyền thuyết! Ừm, nghĩ cách thu phục, Quân gia có Thần Huyền chống lưng thì vững vàng hơn nhiều...)
+2696	Đồ nhi Tống lão tam xin cung kính nghe sư phụ dạy bảo!
+2697	(Thành kính quá rồi đấy...)
+2698	A, khụ khụ. Dùng nguyên liệu bình thường nhất ủ ra rượu ngon nhất mới là ủ rượu thực sự.
+2699	Cũng như võ công thế gian, dùng chiêu thức tầm thường nhất phát huy uy lực lớn nhất mới là đỉnh cao võ đạo thực sự!
+2700	Không tệ không tệ, nói có lý lắm.
+2701	(Hehe, lão già áo đen này quả nhiên là kẻ mê võ. Mặc kệ ông là huyền gì, sớm muộn lão tử cũng thu phục ông!)
+2702	Tống lão tam, ông thu dọn chỗ này đi, mai tới thẳng Quân gia ở thành Thiên Hương tìm ta, cứ ở luôn nhà ta, rượu của chúng ta không truyền ra ngoài!!
+2703	Được thôi, cầu còn không được, sáng mai ta tới ngay!
+2704	(Thằng nhóc thối, rượu không truyền ra ngoài, nói cho ta nghe đấy à? Hừ, Quân gia ở Thiên Hương, ta không tin Thần Huyền chí tôn Ưng Bác Không ta tới mà các ngươi dám không cho ta uống rượu!!)
+2705	(Có điều thằng nhóc này thú vị thật, mấy chiêu đao pháp đó quả rất diệu...)
+2706	Được rồi, trời không còn sớm, bọn ta còn có việc, đi trước nhé.
+2707	Tiểu Nghệ, Thanh Hàn, đừng uống nữa, phải về nhà rồi!
+2708	Phía trước là trận chiến BOSS cuối cùng. Khuyên bạn nên lưu game trước. Cảm ơn.
+2709	Xem ra chúng ta tới sớm rồi.
+2710	Tiểu Nghệ, lát nữa muội tránh xa ra. Nếu tình hình không ổn, nhất định phải mau rời khỏi đây.
+2711	Cái gì! Không! Không được. Sao ta có thể để huynh một mình đi quyết đấu chứ.
+2712	(Bỗng nhiên lặng thinh)
+2713	(Hai người cùng không nói gì)
+2714	(Trong không khí dường như có thêm điều gì đó)
+2715	Hahaha~
+2716	Quả nhiên là tên công tử bột phong lưu thành tính. Tìm một nơi không người thế này để hẹn hò! Hahaha~
+2717	Ai? Ra đây!
+2718	Haha, Quân tam thiếu gia. Làm phiền nhã hứng của ngươi rồi, ngại quá, đắc tội nhiều, hahaha.
+2719	Ta tưởng ai. Hóa ra là Phong Tuyết Ngân Thành lừng lẫy danh tiếng. Sao, Lệ gia không tới à? Chủ nhân không có mặt mà các ngươi dám tự ra ngoài, coi chừng về chủ tử không cho ăn cơm đấy.
+2720	Ngươi, ngươi, ngươi dám nói càn!
+2721	Haha, mau gọi chủ tử ngươi ra đây, đừng phí thời gian của ta!
+2722	Ngươi...
+2723	Hừ, để ta xem kẻ nào chán sống mà khẩu khí lớn vậy!
+2724	Quân tam công tử. Ngưỡng mộ đại danh đã lâu, haha. Tại hạ Lệ Đằng Vân. Thất lễ thất lễ.
+2725	Lệ Đằng Vân
+2726	Hừ, hóa ra cũng là một tên công tử bột.
+2727	Hừ, còn mặt mũi nói ta, xem ta đánh bại ngươi trước, chừa cho ngươi cái mạng chó, rồi lôi ngươi tới Quân gia cầu hôn, hahaha.
+2728	Ư... đại hiệp tha mạng. Đại hiệp tha mạng.
+2729	Hừ, tha mạng thì dễ. Ta cũng chừa cho ngươi cái mạng chó. Dẫn đám chó săn của ngươi cút về ổ chó đi. Sau này không được bước ra khỏi Huyết Hồn sơn trang nửa bước, nếu không, ra một lần đánh một lần.
+2730	Đa, đa tạ Quân đại hiệp!
+2731	Mạc Tà ca ca, huynh giỏi quá!
+2732	Ừm, Tiểu Nghệ, chúng ta về nhà thôi.
+2733	Hehe, Tam thúc. Hôm nay trời đẹp thật đấy!
+2734	Mạc Tà, sao con có thể một mình lén chạy ra đây!
+2735	Ừm, Mạc Tà, làm vậy nguy hiểm quá.
+2736	Cái này, hehe, ai nói cháu một mình, chẳng phải còn một tiểu nha đầu đây sao?
+2737	Ai nói ta là tiểu nha đầu! Quân Mạc Tà, có phải huynh lại ngứa da rồi không!
+2738	Hehe, Tam thúc, Thanh Hàn. Lệ gia đã bị cháu đánh chạy rồi, sau này sẽ không còn ai quấy rầy Quân gia chúng ta nữa.
+2739	Ừm, Mạc Tà, giỏi lắm, trước đây Tam thúc trách oan con rồi, là Tam thúc không phải.
+2740	Chuyện gì vậy? Bên thành Thiên Hương có ánh lửa?
+2741	Chúng ta mau về xem thôi
+2742	Bốn người quay về thành Thiên Hương
+2743	Mà thứ đang chờ đợi họ lại là gì đây...
+2744	Phá đảo trò chơi
+2745	Hoang vu thế này, nhìn là biết chẳng phải chỗ tốt lành gì.
+2746	Ừm, lối ra ở đằng kia. Ra khỏi đó là tới trung tâm rừng Thiên Phạt.
+2747	Ra đây đi! Thấy muội rồi.
+2748	Tiểu Nghệ, sao muội tới được đây?
+2749	Ta ta, lúc nãy ta đang dạo chợ, thấy huynh ra khỏi thành nên đi theo.
+2750	Ở đây nguy hiểm, mau về đi.
+2751	Không không, không về. Ta nghe chuyện quyết đấu rồi, ta biết Mạc Tà ca ca làm vậy để không liên lụy Thanh Hàn tỷ tỷ, nhưng, nhưng huynh có biết làm thế rất nguy hiểm không?
+2752	Ta không đi, Mạc Tà ca ca đi đâu, ta theo tới đó.
+2753	Haizz, không cãi lại được muội. Được thôi, nhưng lát nữa lúc quyết đấu, muội đứng xa ra.
+2754	Được. Ta nghe lời Mạc Tà ca ca.
+2755	(Ta, ta bị sao thế này? Sao trong lòng từng đợt từng đợt cảm thấy ấm áp ùa tới? Như thể trong lòng mong Tiểu Nghệ ở lại vậy.)
+2756	/rĐộc Cô Tiểu Nghệ/b gia nhập đội
