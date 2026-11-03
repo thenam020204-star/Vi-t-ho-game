@@ -6,13 +6,21 @@ HERE="$(cd "$(dirname "$0")" && pwd)"
 : "${WORK:=$HOME/hl5work}"
 export WORK
 DIAG=""   # --diag A|B|C|C1 : APK chẩn đoán T13 (xem diag/ và PHAT-HANH-diag.md); mặc định rỗng = build v0.1 y hệt cũ
-if [ "${1:-}" = "--diag" ]; then DIAG="${2:?--diag cần A|B|C|C1}"; shift 2; fi
+PTL=0     # --test-ptload : T17p, thêm đoạn PT_LOAD thử vào guest .so (chỉ dùng được với --diag C hoặc bản thường); ra dist/test/
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --diag) DIAG="${2:?--diag cần A|B|C|C1}"; shift 2;;
+    --test-ptload) PTL=1; shift;;
+    *) break;;
+  esac
+done
+if [ "$PTL" = 1 ]; then case "$DIAG" in ""|C) ;; *) echo "--test-ptload chỉ đi với --diag C (hoặc không diag)"; exit 1;; esac; fi
 case "$DIAG" in ""|A|B|C|C1) ;; *) echo "--diag phải là A|B|C|C1"; exit 1;; esac
 VER="${1:-0.2-hd}"   # v0.2-hd: có patch T9 (texture > 1024); v0.1.1 = commit trước T9
 BT=${BT:-/opt/asdk/android-14}
 ORIG_APK="${ORIG_APK:-$HERE/env/inputs/heroes-lore-5-v1.0.5.apk}"
 [ -f "$WORK/orig.apk" ] || cp "$ORIG_APK" "$WORK/orig.apk"
-B="$WORK/build_apk"; [ -n "$DIAG" ] && B="$WORK/build_diag_$DIAG"; rm -rf "$B"; mkdir -p "$B"
+B="$WORK/build_apk"; [ -n "$DIAG" ] && B="$WORK/build_diag_$DIAG"; [ "$PTL" = 1 ] && B="$WORK/build_ptload${DIAG:+_diag}"; rm -rf "$B"; mkdir -p "$B"
 KS="$HERE/sign/hl5vi.keystore"
 PW=$(sed -n 's/^- mật khẩu (store và key): //p' "$HERE/sign/README.md")
 [ -n "$PW" ] && [ -f "$KS" ] || { echo "thiếu khoá ký"; exit 1; }
@@ -20,6 +28,10 @@ PW=$(sed -n 's/^- mật khẩu (store và key): //p' "$HERE/sign/README.md")
 if [ "$DIAG" != "A" ]; then
 echo "[1] vá guest .so + bridge arm64"
 python3 -I "$HERE/patch/apply_so.py" "$WORK/apk/assets/libHeroesLore5.so" "$B/libHeroesLore5.so"
+if [ "$PTL" = 1 ]; then   # T17p: + đoạn PT_LOAD thử (script tái lập, kiểm byte gốc)
+  python3 -I "$HERE/patch/mk_ptload_test.py" "$B/libHeroesLore5.so" "$B/libHeroesLore5.ptl.so" "$B/ptload_test.tsv"
+  mv "$B/libHeroesLore5.ptl.so" "$B/libHeroesLore5.so"
+fi
 if [ "$DIAG" != "B" ]; then   # B = giữ bridge gốc
 BTSV="$HERE/patch/bridge_patches.tsv"
 case "$DIAG" in
@@ -76,7 +88,10 @@ OUT="$B/HL5-VI-v$VER.apk"
 "$BT/apksigner" verify --verbose "$OUT" | head -8
 "$BT/zipalign" -c -p 4 "$OUT" && echo "zipalign OK"
 sha256sum "$OUT"; ls -l "$OUT"
-if [ -n "$DIAG" ]; then
+if [ "$PTL" = 1 ]; then
+  mkdir -p "$HERE/dist/test"
+  N="HL5-test-ptload${DIAG:+-diag}.apk"; cp "$OUT" "$HERE/dist/test/$N"; echo "-> dist/test/$N"
+elif [ -n "$DIAG" ]; then
   mkdir -p "$HERE/dist/diag"
   case "$DIAG" in C) N="HL5-diag-v$VER.apk";; *) N="HL5-diag-$DIAG-v$VER.apk";; esac   # C = bản đầy đủ + lớp chẩn đoán
   cp "$OUT" "$HERE/dist/diag/$N"; echo "-> dist/diag/$N"

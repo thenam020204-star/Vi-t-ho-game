@@ -1,0 +1,9 @@
+== 1200x540, 700 khung
+zero-fill 0x172000..0x173000 trước khi chạy: toàn 0
+khung đầu có chạm hàm: 34 (cờ canary=1)
+bộ đếm cuối 666 (khung 700); khung lệch (đếm không +1 / điểm ảnh sai): 0; màu lõi đã thấy: ['001F', '07E0', 'F800', 'FFE0']
+khung 99: điểm khác base 16 (ngoài ô 8x8: 0)
+khung 299: điểm khác base 64 (ngoài ô 8x8: 0)
+khung 459: điểm khác base 64 (ngoài ô 8x8: 0)
+khung 699: điểm khác base 64 (ngoài ô 8x8: 0)
+KẾT LUẬN: ĐẠT

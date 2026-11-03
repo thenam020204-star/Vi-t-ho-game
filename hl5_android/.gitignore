@@ -2,3 +2,6 @@ __pycache__/
 dist/diag/*.apk
 !dist/diag/HL5-diag-v0.1.1.apk
 !dist/diag/HL5-diag-v0.2-hd.apk
+dist/test/*.apk
+!dist/test/HL5-test-ptload.apk
+!dist/test/HL5-test-ptload-diag.apk

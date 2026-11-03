@@ -26,3 +26,23 @@ Bản vá bridge của v0.1 đặt `mov w0,#1` sau khi bỏ lệnh cài hook; tr
 ## File chứa gì
 Thông tin máy (model, Android, ABI, kích thước trang bộ nhớ, màn hình, RAM), danh sách file thư viện/dữ liệu của app và kích thước, các mốc khởi động của lần chạy trước (`steps_prev`: onCreate, trước/sau nạp bridge, trước/sau kiểm sha256 và chép asset, trước/sau `nativeOnSurfaceCreated`, khung hình đầu...), ngoại lệ Java nếu có, `ApplicationExitInfo` (Android 11+, gồm tombstone của crash native), và `logcat` của chính app.
 Mốc cuối cùng có trong `steps_prev` cho biết app chết ở bước nào.
+
+## Bản thử loader PT_LOAD (T17p) — `dist/test/`
+Mục đích: menu mới (T17c) cần ~120 KB mã nên phải thêm một đoạn PT_LOAD vào cuối `libHeroesLore5.so`. Bridge đọc ELF này bằng ElfLoader riêng (đã rà tĩnh: `patch/bridge_review.md` mục 10), nhưng chưa ai thử trên máy thật. Hai APK dưới đây = **v0.2-hd y hệt** (cùng chữ Việt, HD, chọn phân giải) + đoạn PT_LOAD thử, không thêm tính năng nào khác.
+
+| Tệp | Nội dung |
+|---|---|
+| `HL5-test-ptload.apk` | v0.2-hd + đoạn PT_LOAD thử |
+| `HL5-test-ptload-diag.apk` | như trên + lớp chẩn đoán (ghi log vào Downloads) |
+
+Dựng lại: `make_apk.sh --test-ptload` và `make_apk.sh --diag C --test-ptload` (bản thường `make_apk.sh` không đổi, vẫn ra đúng `HL5-VI-v0.2-hd.apk`).
+
+**Cài:** gỡ bản HL5 đang cài (cùng tên gói và khoá ký `hl5vi` nên cài đè được, nhưng gỡ cho sạch), cài `HL5-test-ptload-diag.apk` (nên dùng bản diag trước), mở app, vào tới menu chính hoặc vào game.
+
+**Đạt:** (1) game chạy như v0.2-hd (chữ Việt, menu, vào game bình thường); (2) thấy **một chấm vuông nhỏ ở góc TRÊN-TRÁI màn hình**, viền trắng 2 px, lõi 4x4 đổi màu liên tục đỏ -> xanh lá -> xanh dương -> vàng (mỗi màu ~16 khung, chu kỳ vài giây). Chấm to bằng 8x8 điểm của khung logic (HD ÷2 thì 16x16 điểm màn thật), xuất hiện ngay khi game bắt đầu hiện hình (logo/menu cũng có).
+- Viền **trắng** = đoạn mới nạp đúng, vùng zero-fill (bss) đúng, ghi được. Viền **tím hồng (magenta)** = mã chạy nhưng vùng zero-fill không bằng 0 (loader nạp chưa đủ memsz): vẫn là kết quả quan trọng, hãy báo.
+- Lõi đứng yên một màu (không đổi) = bộ đếm không tăng/mã không chạy mỗi khung, hãy báo.
+
+**Không đạt:** app crash/đóng ngay, hoặc game chạy nhưng **không có chấm** (loader không nạp đoạn mới: chữ/chức năng khác vẫn như v0.2-hd). Khi đó gửi các file `HL5_diag_<thời gian>.txt` trong **Downloads** (mở app thêm 1 lần sau khi crash để báo cáo được ghi) và nói rõ là có chấm hay không.
+
+Kiểm trong harness (ánh xạ ELF theo mọi PT_LOAD như bridge): 600x270 và 1200x540, 700 khung, bộ đếm +1 mỗi khung, zero-fill đọc 0, chỉ 8x8 điểm ảnh khác bản gốc (`shots/T17p/`, `harness/t17/check_ptload.py`).
