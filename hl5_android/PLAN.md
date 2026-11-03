@@ -194,6 +194,15 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Thứ tự ưu tiên: T6 (chữ Việt) → T8 tối thiểu (tắt hook chữ của bridge, NEAREST, logic gốc) → T7 tối thiểu (offline, cash shop miễn phí nếu kịp) → T12 (APK ký, cập nhật sha256 `target-assets.json`) → harness chơi thử. T9/T10/T11 sau v0.1.
 - v0.1 đạt khi: APK cài được (arm64), qua tiêu đề → menu → vào game, chữ Việt hiện đúng, không cần mạng; kiểm trong harness + kiểm tĩnh bridge (không có thiết bị thật).
 
+## Lộ trình gộp (người dùng chốt: gộp task, làm một lượt, phát hành 1 lần)
+Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh gần ~300k thì ghi `CÒN LẠI` và quản đốc giao công nhân mới làm nốt CÙNG lượt (không dừng hỏi người dùng giữa chừng, trừ Vướng mắc cần người dùng quyết). Kiểm theo tiêu chí từng task con gốc.
+- [ ] L0. Gộp T17c3a/b/c (quản đốc gộp nhánh worktree, chạy lại inject_menu + check c1/c2/c3 toàn bộ).
+- [ ] L1. **T17c4 + T17c6** (Tinh linh, Nhiệm vụ, bản đồ thật; Cash shop + Chuyên gia + popup StateGame + logic T7: cash miễn phí, hồi sinh offline, chuỗi "Miễn phí"). Có thể chạy song song với L2 (file riêng).
+- [ ] L2. **T17c5** NPC (14 màn).
+- [ ] L3. **T17c7** MainMenu (18 màn, lưới 6 ô T7, Cài đặt 10 mục + Phân giải) + **T16** khung hội thoại HD (mockup `ui_new/dialog/`) — sau L1 (cùng đụng phần T7).
+- [ ] L4. **T14a + T14b** UI cảm ứng (kiểm kê + thay 7 nút mới + tự vẽ DASH, nút bản đồ) + **T11** vẽ lại ảnh chữ Anh (menu/ui/touch/title.mgr, logo "Việt hoá bởi NAM.P", "Tap to Continue", huy hiệu).
+- [ ] L5. **T17c9** tích hợp + phát hành: hồi quy 4 cỡ khung toàn bộ, đo CPU/khung, chặn cổng mạng còn lại (T7 mục 4), build `dist/HL5-VI-v0.3.apk` + diag, PHAT-HANH.md, BAN-GIAO.md. Người dùng thử máy.
+
 ## Quy tắc thay công nhân (người dùng chốt)
 - (Bổ sung sau lỗi của quản đốc) Công nhân bị dừng giữa chừng (hạn mức, lỗi) thì KHÔNG resume nếu không biết chắc ngữ cảnh < 400k: quản đốc commit WIP, ghi trạng thái vào PLAN, giao công nhân mới đọc PLAN + diff WIP.
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
@@ -306,3 +315,4 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [quản đốc] Nghiệm thu T17c2 + T17c1-fix: đạt theo kiểm (check_c2 78 ĐẠT, check_c1 ĐẠT; 20 lần mở/đóng không rò; đoạn 44.3 KB). THIẾU ảnh `shots/T17c2/` (tiêu chí yêu cầu) → bổ sung đầu T17c3. Giao T17c3 cho cùng công nhân (ngữ cảnh 91k < 400k).
 - [công nhân A1] Việc quản đốc giao sau T17c2: ảnh shots/T17c2 (10) đã bổ sung, shots/T17c1 đã có ảnh 3x3 mới. T17c3 CHƯA làm (đọc thử Combo, ghi ghi chú ở dòng T17c3 mục CÒN LẠI) vì dung lượng ngữ cảnh; cần công nhân mới.
 - [người dùng] "Thêm 2 agent làm nốt 2 cái" → chạy song song c3a/c3b/c3c (A1 cây chính, A2/A3 worktree).
+- [người dùng] "Gộp phần nào được thì gộp chung task, làm 1 lượt" → quản đốc gộp phần còn lại thành 4 lượt + 1 lần phát hành (xem mục "Lộ trình gộp").
