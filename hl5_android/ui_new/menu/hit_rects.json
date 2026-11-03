@@ -41936,5 +41936,6309 @@
    ],
    "action": "phím # -> StateMap: chuyển sang bản đồ khu vực (lưới điểm)"
   }
+ ],
+ "menu_chinh_logo_400x240": [
+  {
+   "id": "logo",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "chạm = bỏ qua logo (DrawLogo, StateMainMenu state 2)"
+  }
+ ],
+ "menu_chinh_logo_600x270": [
+  {
+   "id": "logo",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "chạm = bỏ qua logo (DrawLogo, StateMainMenu state 2)"
+  }
+ ],
+ "menu_chinh_logo_800x360": [
+  {
+   "id": "logo",
+   "rect": [
+    0,
+    0,
+    800,
+    360
+   ],
+   "action": "chạm = bỏ qua logo (DrawLogo, StateMainMenu state 2)"
+  }
+ ],
+ "menu_chinh_logo_1200x540": [
+  {
+   "id": "logo",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "chạm = bỏ qua logo (DrawLogo, StateMainMenu state 2)"
+  }
+ ],
+ "menu_chinh_tieu_de_400x240": [
+  {
+   "id": "tap",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "chạm bất kỳ = tiếp tục (DrawTitle: KeyPressed(-5)) -> state 4 menu chính; \"Tap to Continue\" là ẢNH (T11 vẽ lại tiếng Việt)"
+  }
+ ],
+ "menu_chinh_tieu_de_600x270": [
+  {
+   "id": "tap",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "chạm bất kỳ = tiếp tục (DrawTitle: KeyPressed(-5)) -> state 4 menu chính; \"Tap to Continue\" là ẢNH (T11 vẽ lại tiếng Việt)"
+  }
+ ],
+ "menu_chinh_tieu_de_800x360": [
+  {
+   "id": "tap",
+   "rect": [
+    0,
+    0,
+    800,
+    360
+   ],
+   "action": "chạm bất kỳ = tiếp tục (DrawTitle: KeyPressed(-5)) -> state 4 menu chính; \"Tap to Continue\" là ẢNH (T11 vẽ lại tiếng Việt)"
+  }
+ ],
+ "menu_chinh_tieu_de_1200x540": [
+  {
+   "id": "tap",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "chạm bất kỳ = tiếp tục (DrawTitle: KeyPressed(-5)) -> state 4 menu chính; \"Tap to Continue\" là ẢNH (T11 vẽ lại tiếng Việt)"
+  }
+ ],
+ "menu_chinh_luoi6_400x240": [
+  {
+   "id": "tile0",
+   "rect": [
+    8,
+    88,
+    132,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    138,
+    88,
+    262,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    268,
+    88,
+    392,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    8,
+    158,
+    132,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    138,
+    158,
+    262,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    268,
+    158,
+    392,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  }
+ ],
+ "menu_chinh_luoi6_600x270": [
+  {
+   "id": "tile0",
+   "rect": [
+    9,
+    88,
+    199,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    205,
+    88,
+    395,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    401,
+    88,
+    591,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    9,
+    173,
+    199,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    205,
+    173,
+    395,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    401,
+    173,
+    591,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  }
+ ],
+ "menu_chinh_luoi6_800x360": [
+  {
+   "id": "tile0",
+   "rect": [
+    104,
+    157,
+    296,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    304,
+    157,
+    496,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    504,
+    157,
+    696,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    104,
+    245,
+    296,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    304,
+    245,
+    496,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    504,
+    245,
+    696,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  }
+ ],
+ "menu_chinh_luoi6_1200x540": [
+  {
+   "id": "tile0",
+   "rect": [
+    24,
+    170,
+    401,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    411,
+    170,
+    788,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    798,
+    170,
+    1175,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    24,
+    340,
+    401,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    411,
+    340,
+    788,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    798,
+    340,
+    1175,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  }
+ ],
+ "menu_chinh_luoi9_400x240": [
+  {
+   "id": "tile0",
+   "rect": [
+    50,
+    88,
+    146,
+    128
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    152,
+    88,
+    248,
+    128
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    254,
+    88,
+    350,
+    128
+   ],
+   "action": "đặt con trỏ lưới gốc = 2 (Vào kho đồ) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    50,
+    134,
+    146,
+    174
+   ],
+   "action": "đặt con trỏ lưới gốc = 3 (Cập nhật) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    152,
+    134,
+    248,
+    174
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    254,
+    134,
+    350,
+    174
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile6",
+   "rect": [
+    50,
+    180,
+    146,
+    220
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile7",
+   "rect": [
+    152,
+    180,
+    248,
+    220
+   ],
+   "action": "đặt con trỏ lưới gốc = 7 (Cộng đồng) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile8",
+   "rect": [
+    254,
+    180,
+    350,
+    220
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  }
+ ],
+ "menu_chinh_luoi9_600x270": [
+  {
+   "id": "tile0",
+   "rect": [
+    114,
+    88,
+    234,
+    138
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    240,
+    88,
+    360,
+    138
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    366,
+    88,
+    486,
+    138
+   ],
+   "action": "đặt con trỏ lưới gốc = 2 (Vào kho đồ) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    114,
+    144,
+    234,
+    194
+   ],
+   "action": "đặt con trỏ lưới gốc = 3 (Cập nhật) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    240,
+    144,
+    360,
+    194
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    366,
+    144,
+    486,
+    194
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile6",
+   "rect": [
+    114,
+    200,
+    234,
+    250
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile7",
+   "rect": [
+    240,
+    200,
+    360,
+    250
+   ],
+   "action": "đặt con trỏ lưới gốc = 7 (Cộng đồng) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile8",
+   "rect": [
+    366,
+    200,
+    486,
+    250
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  }
+ ],
+ "menu_chinh_luoi9_800x360": [
+  {
+   "id": "tile0",
+   "rect": [
+    209,
+    157,
+    331,
+    208
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    339,
+    157,
+    461,
+    208
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    469,
+    157,
+    591,
+    208
+   ],
+   "action": "đặt con trỏ lưới gốc = 2 (Vào kho đồ) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    209,
+    216,
+    331,
+    267
+   ],
+   "action": "đặt con trỏ lưới gốc = 3 (Cập nhật) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    339,
+    216,
+    461,
+    267
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    469,
+    216,
+    591,
+    267
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile6",
+   "rect": [
+    209,
+    275,
+    331,
+    326
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile7",
+   "rect": [
+    339,
+    275,
+    461,
+    326
+   ],
+   "action": "đặt con trỏ lưới gốc = 7 (Cộng đồng) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile8",
+   "rect": [
+    469,
+    275,
+    591,
+    326
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  }
+ ],
+ "menu_chinh_luoi9_1200x540": [
+  {
+   "id": "tile0",
+   "rect": [
+    219,
+    170,
+    466,
+    273
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    476,
+    170,
+    723,
+    273
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    733,
+    170,
+    980,
+    273
+   ],
+   "action": "đặt con trỏ lưới gốc = 2 (Vào kho đồ) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    219,
+    283,
+    466,
+    386
+   ],
+   "action": "đặt con trỏ lưới gốc = 3 (Cập nhật) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    476,
+    283,
+    723,
+    386
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    733,
+    283,
+    980,
+    386
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile6",
+   "rect": [
+    219,
+    396,
+    466,
+    499
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile7",
+   "rect": [
+    476,
+    396,
+    723,
+    499
+   ],
+   "action": "đặt con trỏ lưới gốc = 7 (Cộng đồng) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile8",
+   "rect": [
+    733,
+    396,
+    980,
+    499
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  }
+ ],
+ "menu_chinh_thoat_400x240": [
+  {
+   "id": "tile0",
+   "rect": [
+    8,
+    88,
+    132,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    138,
+    88,
+    262,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    268,
+    88,
+    392,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    8,
+    158,
+    132,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    138,
+    158,
+    262,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    268,
+    158,
+    392,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    71,
+    120,
+    197,
+    143
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    204,
+    120,
+    329,
+    143
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_thoat_600x270": [
+  {
+   "id": "tile0",
+   "rect": [
+    9,
+    88,
+    199,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    205,
+    88,
+    395,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    401,
+    88,
+    591,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    9,
+    173,
+    199,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    205,
+    173,
+    395,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    401,
+    173,
+    591,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    101,
+    135,
+    297,
+    158
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    304,
+    135,
+    499,
+    158
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_thoat_800x360": [
+  {
+   "id": "tile0",
+   "rect": [
+    104,
+    157,
+    296,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    304,
+    157,
+    496,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    504,
+    157,
+    696,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    104,
+    245,
+    296,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    304,
+    245,
+    496,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    504,
+    245,
+    696,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    137,
+    179,
+    396,
+    208
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    405,
+    179,
+    663,
+    208
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    800,
+    360
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_thoat_1200x540": [
+  {
+   "id": "tile0",
+   "rect": [
+    24,
+    170,
+    401,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    411,
+    170,
+    788,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    798,
+    170,
+    1175,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    24,
+    340,
+    401,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    411,
+    340,
+    788,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    798,
+    340,
+    1175,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    383,
+    269,
+    594,
+    307
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    607,
+    269,
+    817,
+    307
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_cho_400x240": [
+  {
+   "id": "tile0",
+   "rect": [
+    8,
+    88,
+    132,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    138,
+    88,
+    262,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    268,
+    88,
+    392,
+    152
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    8,
+    158,
+    132,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    138,
+    158,
+    262,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    268,
+    158,
+    392,
+    222
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "popup chờ: chặn chạm"
+  }
+ ],
+ "menu_chinh_cho_600x270": [
+  {
+   "id": "tile0",
+   "rect": [
+    9,
+    88,
+    199,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    205,
+    88,
+    395,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    401,
+    88,
+    591,
+    167
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    9,
+    173,
+    199,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    205,
+    173,
+    395,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    401,
+    173,
+    591,
+    252
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "popup chờ: chặn chạm"
+  }
+ ],
+ "menu_chinh_cho_800x360": [
+  {
+   "id": "tile0",
+   "rect": [
+    104,
+    157,
+    296,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    304,
+    157,
+    496,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    504,
+    157,
+    696,
+    237
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    104,
+    245,
+    296,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    304,
+    245,
+    496,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    504,
+    245,
+    696,
+    325
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    800,
+    360
+   ],
+   "action": "popup chờ: chặn chạm"
+  }
+ ],
+ "menu_chinh_cho_1200x540": [
+  {
+   "id": "tile0",
+   "rect": [
+    24,
+    170,
+    401,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    411,
+    170,
+    788,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 1 (Chuyên Gia) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    798,
+    170,
+    1175,
+    330
+   ],
+   "action": "đặt con trỏ lưới gốc = 4 (Cài đặt) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    24,
+    340,
+    401,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 5 (Thành tựu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    411,
+    340,
+    788,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 6 (Trợ giúp) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    798,
+    340,
+    1175,
+    500
+   ],
+   "action": "đặt con trỏ lưới gốc = 8 (Thoát) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "popup chờ: chặn chạm"
+  }
+ ],
+ "menu_chinh_slot_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    337,
+    55,
+    379,
+    78
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    17,
+    37,
+    335,
+    96
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    337,
+    118,
+    379,
+    141
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    17,
+    100,
+    335,
+    159
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    17,
+    163,
+    383,
+    222
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  }
+ ],
+ "menu_chinh_slot_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    463,
+    60,
+    505,
+    83
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    90,
+    37,
+    461,
+    106
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    463,
+    133,
+    505,
+    156
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    90,
+    110,
+    461,
+    179
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    90,
+    183,
+    509,
+    252
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  }
+ ],
+ "menu_chinh_slot_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    610,
+    84,
+    664,
+    113
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    131,
+    55,
+    608,
+    143
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    610,
+    178,
+    664,
+    207
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    131,
+    149,
+    608,
+    237
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    131,
+    243,
+    669,
+    331
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  }
+ ],
+ "menu_chinh_slot_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    931,
+    122,
+    1000,
+    160
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    194,
+    73,
+    929,
+    209
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    931,
+    266,
+    1000,
+    304
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    194,
+    217,
+    929,
+    353
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    194,
+    361,
+    1006,
+    497
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  }
+ ],
+ "menu_chinh_slot_moi_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    337,
+    55,
+    379,
+    78
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    17,
+    37,
+    335,
+    96
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    337,
+    118,
+    379,
+    141
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    17,
+    100,
+    335,
+    159
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    17,
+    163,
+    383,
+    222
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    71,
+    120,
+    197,
+    143
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    204,
+    120,
+    329,
+    143
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_slot_moi_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    463,
+    60,
+    505,
+    83
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    90,
+    37,
+    461,
+    106
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    463,
+    133,
+    505,
+    156
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    90,
+    110,
+    461,
+    179
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    90,
+    183,
+    509,
+    252
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    101,
+    135,
+    297,
+    158
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    304,
+    135,
+    499,
+    158
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_slot_moi_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    610,
+    84,
+    664,
+    113
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    131,
+    55,
+    608,
+    143
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    610,
+    178,
+    664,
+    207
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    131,
+    149,
+    608,
+    237
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    131,
+    243,
+    669,
+    331
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    137,
+    179,
+    396,
+    208
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    405,
+    179,
+    663,
+    208
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    800,
+    360
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_slot_moi_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    931,
+    122,
+    1000,
+    160
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    194,
+    73,
+    929,
+    209
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    931,
+    266,
+    1000,
+    304
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    194,
+    217,
+    929,
+    353
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    194,
+    361,
+    1006,
+    497
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    383,
+    269,
+    594,
+    307
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    607,
+    269,
+    817,
+    307
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_slot_xoa_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    337,
+    55,
+    379,
+    78
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    17,
+    37,
+    335,
+    96
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    337,
+    118,
+    379,
+    141
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    17,
+    100,
+    335,
+    159
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    17,
+    163,
+    383,
+    222
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    71,
+    120,
+    197,
+    143
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    204,
+    120,
+    329,
+    143
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_slot_xoa_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    463,
+    60,
+    505,
+    83
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    90,
+    37,
+    461,
+    106
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    463,
+    133,
+    505,
+    156
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    90,
+    110,
+    461,
+    179
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    90,
+    183,
+    509,
+    252
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    101,
+    135,
+    297,
+    158
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    304,
+    135,
+    499,
+    158
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_slot_xoa_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    610,
+    84,
+    664,
+    113
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    131,
+    55,
+    608,
+    143
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    610,
+    178,
+    664,
+    207
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    131,
+    149,
+    608,
+    237
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    131,
+    243,
+    669,
+    331
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    137,
+    179,
+    396,
+    208
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    405,
+    179,
+    663,
+    208
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    800,
+    360
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_slot_xoa_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "del0",
+   "rect": [
+    931,
+    122,
+    1000,
+    160
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot0",
+   "rect": [
+    194,
+    73,
+    929,
+    209
+   ],
+   "action": "đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "del1",
+   "rect": [
+    931,
+    266,
+    1000,
+    304
+   ],
+   "action": "phím * (*Xoá): popup xoá slot 1 (193) -> Có = xoá dữ liệu slot"
+  },
+  {
+   "id": "slot1",
+   "rect": [
+    194,
+    217,
+    929,
+    353
+   ],
+   "action": "đặt con trỏ slot=1 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData)"
+  },
+  {
+   "id": "slot2",
+   "rect": [
+    194,
+    361,
+    1006,
+    497
+   ],
+   "action": "đặt con trỏ slot=2 + KeyPressed(-5): slot trống -> popup tạo nhân vật mới (NewGame) -> chọn lớp"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    383,
+    269,
+    594,
+    307
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    607,
+    269,
+    817,
+    307
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "menu_chinh_lop_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "class0",
+   "rect": [
+    17,
+    37,
+    102,
+    127
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class1",
+   "rect": [
+    108,
+    37,
+    193,
+    127
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=1; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class2",
+   "rect": [
+    17,
+    133,
+    102,
+    223
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=2; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class3",
+   "rect": [
+    108,
+    133,
+    193,
+    223
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=3; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "ok",
+   "rect": [
+    207,
+    192,
+    375,
+    215
+   ],
+   "action": "KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp)"
+  }
+ ],
+ "menu_chinh_lop_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "class0",
+   "rect": [
+    90,
+    37,
+    187,
+    142
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class1",
+   "rect": [
+    193,
+    37,
+    290,
+    142
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=1; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class2",
+   "rect": [
+    90,
+    148,
+    187,
+    253
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=2; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class3",
+   "rect": [
+    193,
+    148,
+    290,
+    253
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=3; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "ok",
+   "rect": [
+    305,
+    222,
+    501,
+    245
+   ],
+   "action": "KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp)"
+  }
+ ],
+ "menu_chinh_lop_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "class0",
+   "rect": [
+    131,
+    55,
+    256,
+    189
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class1",
+   "rect": [
+    264,
+    55,
+    389,
+    189
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=1; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class2",
+   "rect": [
+    131,
+    197,
+    256,
+    331
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=2; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class3",
+   "rect": [
+    264,
+    197,
+    389,
+    331
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=3; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "ok",
+   "rect": [
+    406,
+    293,
+    660,
+    322
+   ],
+   "action": "KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp)"
+  }
+ ],
+ "menu_chinh_lop_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "class0",
+   "rect": [
+    194,
+    73,
+    384,
+    281
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class1",
+   "rect": [
+    394,
+    73,
+    584,
+    281
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=1; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class2",
+   "rect": [
+    194,
+    291,
+    384,
+    499
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=2; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class3",
+   "rect": [
+    394,
+    291,
+    584,
+    499
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=3; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "ok",
+   "rect": [
+    605,
+    450,
+    995,
+    488
+   ],
+   "action": "KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp)"
+  }
+ ],
+ "menu_chinh_lop_mo_ta_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "class0",
+   "rect": [
+    17,
+    37,
+    102,
+    127
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class1",
+   "rect": [
+    108,
+    37,
+    193,
+    127
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=1; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class2",
+   "rect": [
+    17,
+    133,
+    102,
+    223
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=2; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class3",
+   "rect": [
+    108,
+    133,
+    193,
+    223
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=3; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "ok",
+   "rect": [
+    207,
+    192,
+    375,
+    215
+   ],
+   "action": "KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    47,
+    93,
+    353,
+    165
+   ],
+   "action": "kéo dọc = cuộn mô tả (TouchMoved mới); mô tả vẽ trong hộp CÓ CLIP (sửa lỗi tràn chữ ở DrawStart 0x11d390)"
+  },
+  {
+   "id": "popup_ok",
+   "rect": [
+    47,
+    171,
+    197,
+    194
+   ],
+   "action": "KeyPressed(-5) = NewGame với lớp đã chọn"
+  },
+  {
+   "id": "popup_cancel",
+   "rect": [
+    204,
+    171,
+    353,
+    194
+   ],
+   "action": "huỷ: về chọn lớp"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "chạm ngoài hộp: bỏ qua"
+  }
+ ],
+ "menu_chinh_lop_mo_ta_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "class0",
+   "rect": [
+    90,
+    37,
+    187,
+    142
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class1",
+   "rect": [
+    193,
+    37,
+    290,
+    142
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=1; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class2",
+   "rect": [
+    90,
+    148,
+    187,
+    253
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=2; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class3",
+   "rect": [
+    193,
+    148,
+    290,
+    253
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=3; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "ok",
+   "rect": [
+    305,
+    222,
+    501,
+    245
+   ],
+   "action": "KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    65,
+    117,
+    535,
+    172
+   ],
+   "action": "kéo dọc = cuộn mô tả (TouchMoved mới); mô tả vẽ trong hộp CÓ CLIP (sửa lỗi tràn chữ ở DrawStart 0x11d390)"
+  },
+  {
+   "id": "popup_ok",
+   "rect": [
+    65,
+    178,
+    297,
+    201
+   ],
+   "action": "KeyPressed(-5) = NewGame với lớp đã chọn"
+  },
+  {
+   "id": "popup_cancel",
+   "rect": [
+    304,
+    178,
+    535,
+    201
+   ],
+   "action": "huỷ: về chọn lớp"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "chạm ngoài hộp: bỏ qua"
+  }
+ ],
+ "menu_chinh_lop_mo_ta_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "class0",
+   "rect": [
+    131,
+    55,
+    256,
+    189
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class1",
+   "rect": [
+    264,
+    55,
+    389,
+    189
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=1; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class2",
+   "rect": [
+    131,
+    197,
+    256,
+    331
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=2; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class3",
+   "rect": [
+    264,
+    197,
+    389,
+    331
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=3; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "ok",
+   "rect": [
+    406,
+    293,
+    660,
+    322
+   ],
+   "action": "KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    89,
+    166,
+    711,
+    204
+   ],
+   "action": "kéo dọc = cuộn mô tả (TouchMoved mới); mô tả vẽ trong hộp CÓ CLIP (sửa lỗi tràn chữ ở DrawStart 0x11d390)"
+  },
+  {
+   "id": "popup_ok",
+   "rect": [
+    89,
+    215,
+    396,
+    244
+   ],
+   "action": "KeyPressed(-5) = NewGame với lớp đã chọn"
+  },
+  {
+   "id": "popup_cancel",
+   "rect": [
+    405,
+    215,
+    711,
+    244
+   ],
+   "action": "huỷ: về chọn lớp"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    800,
+    360
+   ],
+   "action": "chạm ngoài hộp: bỏ qua"
+  }
+ ],
+ "menu_chinh_lop_mo_ta_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "class0",
+   "rect": [
+    194,
+    73,
+    384,
+    281
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class1",
+   "rect": [
+    394,
+    73,
+    584,
+    281
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=1; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class2",
+   "rect": [
+    194,
+    291,
+    384,
+    499
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=2; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "class3",
+   "rect": [
+    394,
+    291,
+    584,
+    499
+   ],
+   "action": "đặt con trỏ lớp (2x2 gốc)=3; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp"
+  },
+  {
+   "id": "ok",
+   "rect": [
+    605,
+    450,
+    995,
+    488
+   ],
+   "action": "KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    303,
+    242,
+    897,
+    306
+   ],
+   "action": "kéo dọc = cuộn mô tả (TouchMoved mới); mô tả vẽ trong hộp CÓ CLIP (sửa lỗi tràn chữ ở DrawStart 0x11d390)"
+  },
+  {
+   "id": "popup_ok",
+   "rect": [
+    303,
+    321,
+    594,
+    359
+   ],
+   "action": "KeyPressed(-5) = NewGame với lớp đã chọn"
+  },
+  {
+   "id": "popup_cancel",
+   "rect": [
+    607,
+    321,
+    897,
+    359
+   ],
+   "action": "huỷ: về chọn lớp"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "chạm ngoài hộp: bỏ qua"
+  }
+ ],
+ "menu_chinh_chuyen_gia_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "mode0",
+   "rect": [
+    17,
+    37,
+    163,
+    95
+   ],
+   "action": "đặt con trỏ chế độ=0 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "mode1",
+   "rect": [
+    17,
+    101,
+    163,
+    159
+   ],
+   "action": "đặt con trỏ chế độ=1 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "mode2",
+   "rect": [
+    17,
+    165,
+    163,
+    223
+   ],
+   "action": "đặt con trỏ chế độ=2 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    177,
+    68,
+    375,
+    188
+   ],
+   "action": "kéo dọc = cuộn mô tả"
+  },
+  {
+   "id": "start",
+   "rect": [
+    177,
+    192,
+    375,
+    215
+   ],
+   "action": "KeyPressed(-5) -> StateInExpertMenu (màn chuẩn bị, b2b). Bỏ \"Xem bảng xếp hạng\" (199, cần mạng)"
+  }
+ ],
+ "menu_chinh_chuyen_gia_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "mode0",
+   "rect": [
+    90,
+    37,
+    258,
+    105
+   ],
+   "action": "đặt con trỏ chế độ=0 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "mode1",
+   "rect": [
+    90,
+    111,
+    258,
+    179
+   ],
+   "action": "đặt con trỏ chế độ=1 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "mode2",
+   "rect": [
+    90,
+    185,
+    258,
+    253
+   ],
+   "action": "đặt con trỏ chế độ=2 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    272,
+    68,
+    501,
+    218
+   ],
+   "action": "kéo dọc = cuộn mô tả"
+  },
+  {
+   "id": "start",
+   "rect": [
+    272,
+    222,
+    501,
+    245
+   ],
+   "action": "KeyPressed(-5) -> StateInExpertMenu (màn chuẩn bị, b2b). Bỏ \"Xem bảng xếp hạng\" (199, cần mạng)"
+  }
+ ],
+ "menu_chinh_chuyen_gia_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "mode0",
+   "rect": [
+    131,
+    56,
+    346,
+    142
+   ],
+   "action": "đặt con trỏ chế độ=0 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "mode1",
+   "rect": [
+    131,
+    150,
+    346,
+    236
+   ],
+   "action": "đặt con trỏ chế độ=1 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "mode2",
+   "rect": [
+    131,
+    244,
+    346,
+    330
+   ],
+   "action": "đặt con trỏ chế độ=2 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    363,
+    87,
+    660,
+    287
+   ],
+   "action": "kéo dọc = cuộn mô tả"
+  },
+  {
+   "id": "start",
+   "rect": [
+    363,
+    293,
+    660,
+    322
+   ],
+   "action": "KeyPressed(-5) -> StateInExpertMenu (màn chuẩn bị, b2b). Bỏ \"Xem bảng xếp hạng\" (199, cần mạng)"
+  }
+ ],
+ "menu_chinh_chuyen_gia_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "mode0",
+   "rect": [
+    194,
+    105,
+    519,
+    219
+   ],
+   "action": "đặt con trỏ chế độ=0 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "mode1",
+   "rect": [
+    194,
+    229,
+    519,
+    343
+   ],
+   "action": "đặt con trỏ chế độ=1 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "mode2",
+   "rect": [
+    194,
+    353,
+    519,
+    467
+   ],
+   "action": "đặt con trỏ chế độ=2 + KeyPressed(-5) (DrawExpert/KeyExpert gốc)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    540,
+    110,
+    995,
+    442
+   ],
+   "action": "kéo dọc = cuộn mô tả"
+  },
+  {
+   "id": "start",
+   "rect": [
+    540,
+    450,
+    995,
+    488
+   ],
+   "action": "KeyPressed(-5) -> StateInExpertMenu (màn chuẩn bị, b2b). Bỏ \"Xem bảng xếp hạng\" (199, cần mạng)"
+  }
+ ],
+ "menu_chinh_cai_dat_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "opt0_l",
+   "rect": [
+    323,
+    39,
+    341,
+    57
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt0_r",
+   "rect": [
+    359,
+    39,
+    377,
+    57
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt0",
+   "rect": [
+    17,
+    37,
+    317,
+    59
+   ],
+   "action": "đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt1_l",
+   "rect": [
+    323,
+    63,
+    341,
+    81
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt1_r",
+   "rect": [
+    359,
+    63,
+    377,
+    81
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt1",
+   "rect": [
+    17,
+    61,
+    317,
+    83
+   ],
+   "action": "đặt con trỏ mục=opt1 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt2_l",
+   "rect": [
+    299,
+    87,
+    317,
+    105
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt2_r",
+   "rect": [
+    359,
+    87,
+    377,
+    105
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt2",
+   "rect": [
+    17,
+    85,
+    293,
+    107
+   ],
+   "action": "đặt con trỏ mục=opt2 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt3_0",
+   "rect": [
+    315,
+    111,
+    345,
+    129
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3_1",
+   "rect": [
+    347,
+    111,
+    377,
+    129
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3",
+   "rect": [
+    17,
+    109,
+    309,
+    131
+   ],
+   "action": "đặt con trỏ mục=opt3 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt4_l",
+   "rect": [
+    299,
+    135,
+    317,
+    153
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt4_r",
+   "rect": [
+    359,
+    135,
+    377,
+    153
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt4",
+   "rect": [
+    17,
+    133,
+    293,
+    155
+   ],
+   "action": "đặt con trỏ mục=opt4 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt5_0",
+   "rect": [
+    315,
+    159,
+    345,
+    177
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5_1",
+   "rect": [
+    347,
+    159,
+    377,
+    177
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5",
+   "rect": [
+    17,
+    157,
+    309,
+    179
+   ],
+   "action": "đặt con trỏ mục=opt5 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt6_0",
+   "rect": [
+    251,
+    183,
+    281,
+    201
+   ],
+   "action": "chạm = đặt giá trị 1/1 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_1",
+   "rect": [
+    283,
+    183,
+    313,
+    201
+   ],
+   "action": "chạm = đặt giá trị 1/2 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_2",
+   "rect": [
+    315,
+    183,
+    345,
+    201
+   ],
+   "action": "chạm = đặt giá trị 1/3 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_3",
+   "rect": [
+    347,
+    183,
+    377,
+    201
+   ],
+   "action": "chạm = đặt giá trị 1/4 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6",
+   "rect": [
+    17,
+    181,
+    245,
+    203
+   ],
+   "action": "đặt con trỏ mục=opt6 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "note_restart",
+   "rect": [
+    17,
+    205,
+    383,
+    219
+   ],
+   "action": "chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại"
+  }
+ ],
+ "menu_chinh_cai_dat_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "opt0_l",
+   "rect": [
+    441,
+    39,
+    463,
+    61
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt0_r",
+   "rect": [
+    481,
+    39,
+    503,
+    61
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt0",
+   "rect": [
+    90,
+    37,
+    435,
+    63
+   ],
+   "action": "đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt1_l",
+   "rect": [
+    441,
+    67,
+    463,
+    89
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt1_r",
+   "rect": [
+    481,
+    67,
+    503,
+    89
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt1",
+   "rect": [
+    90,
+    65,
+    435,
+    91
+   ],
+   "action": "đặt con trỏ mục=opt1 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt2_l",
+   "rect": [
+    417,
+    95,
+    439,
+    117
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt2_r",
+   "rect": [
+    481,
+    95,
+    503,
+    117
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt2",
+   "rect": [
+    90,
+    93,
+    411,
+    119
+   ],
+   "action": "đặt con trỏ mục=opt2 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt3_0",
+   "rect": [
+    441,
+    123,
+    471,
+    145
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3_1",
+   "rect": [
+    473,
+    123,
+    503,
+    145
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3",
+   "rect": [
+    90,
+    121,
+    435,
+    147
+   ],
+   "action": "đặt con trỏ mục=opt3 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt4_l",
+   "rect": [
+    417,
+    151,
+    439,
+    173
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt4_r",
+   "rect": [
+    481,
+    151,
+    503,
+    173
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt4",
+   "rect": [
+    90,
+    149,
+    411,
+    175
+   ],
+   "action": "đặt con trỏ mục=opt4 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt5_0",
+   "rect": [
+    441,
+    179,
+    471,
+    201
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5_1",
+   "rect": [
+    473,
+    179,
+    503,
+    201
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5",
+   "rect": [
+    90,
+    177,
+    435,
+    203
+   ],
+   "action": "đặt con trỏ mục=opt5 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt6_0",
+   "rect": [
+    377,
+    207,
+    407,
+    229
+   ],
+   "action": "chạm = đặt giá trị 1/1 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_1",
+   "rect": [
+    409,
+    207,
+    439,
+    229
+   ],
+   "action": "chạm = đặt giá trị 1/2 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_2",
+   "rect": [
+    441,
+    207,
+    471,
+    229
+   ],
+   "action": "chạm = đặt giá trị 1/3 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_3",
+   "rect": [
+    473,
+    207,
+    503,
+    229
+   ],
+   "action": "chạm = đặt giá trị 1/4 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6",
+   "rect": [
+    90,
+    205,
+    371,
+    231
+   ],
+   "action": "đặt con trỏ mục=opt6 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "note_restart",
+   "rect": [
+    90,
+    233,
+    509,
+    247
+   ],
+   "action": "chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại"
+  }
+ ],
+ "menu_chinh_cai_dat_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "opt0_l",
+   "rect": [
+    590,
+    57,
+    613,
+    80
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt0_r",
+   "rect": [
+    637,
+    57,
+    660,
+    80
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt0",
+   "rect": [
+    131,
+    55,
+    581,
+    82
+   ],
+   "action": "đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt1_l",
+   "rect": [
+    590,
+    86,
+    613,
+    109
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt1_r",
+   "rect": [
+    637,
+    86,
+    660,
+    109
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt1",
+   "rect": [
+    131,
+    84,
+    581,
+    111
+   ],
+   "action": "đặt con trỏ mục=opt1 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt2_l",
+   "rect": [
+    566,
+    115,
+    589,
+    138
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt2_r",
+   "rect": [
+    637,
+    115,
+    660,
+    138
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt2",
+   "rect": [
+    131,
+    113,
+    557,
+    140
+   ],
+   "action": "đặt con trỏ mục=opt2 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt3_0",
+   "rect": [
+    586,
+    144,
+    622,
+    167
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3_1",
+   "rect": [
+    624,
+    144,
+    660,
+    167
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3",
+   "rect": [
+    131,
+    142,
+    577,
+    169
+   ],
+   "action": "đặt con trỏ mục=opt3 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt4_l",
+   "rect": [
+    566,
+    173,
+    589,
+    196
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt4_r",
+   "rect": [
+    637,
+    173,
+    660,
+    196
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt4",
+   "rect": [
+    131,
+    171,
+    557,
+    198
+   ],
+   "action": "đặt con trỏ mục=opt4 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt5_0",
+   "rect": [
+    586,
+    202,
+    622,
+    225
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5_1",
+   "rect": [
+    624,
+    202,
+    660,
+    225
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5",
+   "rect": [
+    131,
+    200,
+    577,
+    227
+   ],
+   "action": "đặt con trỏ mục=opt5 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt6_0",
+   "rect": [
+    510,
+    231,
+    546,
+    254
+   ],
+   "action": "chạm = đặt giá trị 1/1 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_1",
+   "rect": [
+    548,
+    231,
+    584,
+    254
+   ],
+   "action": "chạm = đặt giá trị 1/2 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_2",
+   "rect": [
+    586,
+    231,
+    622,
+    254
+   ],
+   "action": "chạm = đặt giá trị 1/3 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_3",
+   "rect": [
+    624,
+    231,
+    660,
+    254
+   ],
+   "action": "chạm = đặt giá trị 1/4 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6",
+   "rect": [
+    131,
+    229,
+    501,
+    256
+   ],
+   "action": "đặt con trỏ mục=opt6 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "note_restart",
+   "rect": [
+    131,
+    258,
+    669,
+    272
+   ],
+   "action": "chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại"
+  }
+ ],
+ "menu_chinh_cai_dat_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "opt0_l",
+   "rect": [
+    911,
+    75,
+    937,
+    101
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt0_r",
+   "rect": [
+    968,
+    75,
+    994,
+    101
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt0",
+   "rect": [
+    194,
+    73,
+    899,
+    103
+   ],
+   "action": "đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt1_l",
+   "rect": [
+    911,
+    107,
+    937,
+    133
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt1_r",
+   "rect": [
+    968,
+    107,
+    994,
+    133
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt1",
+   "rect": [
+    194,
+    105,
+    899,
+    135
+   ],
+   "action": "đặt con trỏ mục=opt1 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt2_l",
+   "rect": [
+    883,
+    139,
+    909,
+    165
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt2_r",
+   "rect": [
+    968,
+    139,
+    994,
+    165
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt2",
+   "rect": [
+    194,
+    137,
+    871,
+    167
+   ],
+   "action": "đặt con trỏ mục=opt2 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt3_0",
+   "rect": [
+    902,
+    171,
+    947,
+    197
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3_1",
+   "rect": [
+    949,
+    171,
+    994,
+    197
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3",
+   "rect": [
+    194,
+    169,
+    890,
+    199
+   ],
+   "action": "đặt con trỏ mục=opt3 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt4_l",
+   "rect": [
+    883,
+    203,
+    909,
+    229
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt4_r",
+   "rect": [
+    968,
+    203,
+    994,
+    229
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt4",
+   "rect": [
+    194,
+    201,
+    871,
+    231
+   ],
+   "action": "đặt con trỏ mục=opt4 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt5_0",
+   "rect": [
+    902,
+    235,
+    947,
+    261
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5_1",
+   "rect": [
+    949,
+    235,
+    994,
+    261
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5",
+   "rect": [
+    194,
+    233,
+    890,
+    263
+   ],
+   "action": "đặt con trỏ mục=opt5 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt6_0",
+   "rect": [
+    808,
+    267,
+    853,
+    293
+   ],
+   "action": "chạm = đặt giá trị 1/1 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_1",
+   "rect": [
+    855,
+    267,
+    900,
+    293
+   ],
+   "action": "chạm = đặt giá trị 1/2 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_2",
+   "rect": [
+    902,
+    267,
+    947,
+    293
+   ],
+   "action": "chạm = đặt giá trị 1/3 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_3",
+   "rect": [
+    949,
+    267,
+    994,
+    293
+   ],
+   "action": "chạm = đặt giá trị 1/4 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6",
+   "rect": [
+    194,
+    265,
+    796,
+    295
+   ],
+   "action": "đặt con trỏ mục=opt6 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "note_restart",
+   "rect": [
+    194,
+    297,
+    1006,
+    316
+   ],
+   "action": "chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại"
+  }
+ ],
+ "menu_chinh_cai_dat_phan_giai_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "opt0_l",
+   "rect": [
+    323,
+    39,
+    341,
+    57
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt0_r",
+   "rect": [
+    359,
+    39,
+    377,
+    57
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt0",
+   "rect": [
+    17,
+    37,
+    317,
+    59
+   ],
+   "action": "đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt1_l",
+   "rect": [
+    323,
+    63,
+    341,
+    81
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt1_r",
+   "rect": [
+    359,
+    63,
+    377,
+    81
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt1",
+   "rect": [
+    17,
+    61,
+    317,
+    83
+   ],
+   "action": "đặt con trỏ mục=opt1 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt2_l",
+   "rect": [
+    299,
+    87,
+    317,
+    105
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt2_r",
+   "rect": [
+    359,
+    87,
+    377,
+    105
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt2",
+   "rect": [
+    17,
+    85,
+    293,
+    107
+   ],
+   "action": "đặt con trỏ mục=opt2 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt3_0",
+   "rect": [
+    315,
+    111,
+    345,
+    129
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3_1",
+   "rect": [
+    347,
+    111,
+    377,
+    129
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3",
+   "rect": [
+    17,
+    109,
+    309,
+    131
+   ],
+   "action": "đặt con trỏ mục=opt3 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt4_l",
+   "rect": [
+    299,
+    135,
+    317,
+    153
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt4_r",
+   "rect": [
+    359,
+    135,
+    377,
+    153
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt4",
+   "rect": [
+    17,
+    133,
+    293,
+    155
+   ],
+   "action": "đặt con trỏ mục=opt4 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt5_0",
+   "rect": [
+    315,
+    159,
+    345,
+    177
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5_1",
+   "rect": [
+    347,
+    159,
+    377,
+    177
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5",
+   "rect": [
+    17,
+    157,
+    309,
+    179
+   ],
+   "action": "đặt con trỏ mục=opt5 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt6_0",
+   "rect": [
+    251,
+    183,
+    281,
+    201
+   ],
+   "action": "chạm = đặt giá trị 1/1 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_1",
+   "rect": [
+    283,
+    183,
+    313,
+    201
+   ],
+   "action": "chạm = đặt giá trị 1/2 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_2",
+   "rect": [
+    315,
+    183,
+    345,
+    201
+   ],
+   "action": "chạm = đặt giá trị 1/3 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_3",
+   "rect": [
+    347,
+    183,
+    377,
+    201
+   ],
+   "action": "chạm = đặt giá trị 1/4 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6",
+   "rect": [
+    17,
+    181,
+    245,
+    203
+   ],
+   "action": "đặt con trỏ mục=opt6 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "note_restart",
+   "rect": [
+    17,
+    205,
+    383,
+    219
+   ],
+   "action": "chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại"
+  }
+ ],
+ "menu_chinh_cai_dat_phan_giai_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "opt0_l",
+   "rect": [
+    441,
+    39,
+    463,
+    61
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt0_r",
+   "rect": [
+    481,
+    39,
+    503,
+    61
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt0",
+   "rect": [
+    90,
+    37,
+    435,
+    63
+   ],
+   "action": "đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt1_l",
+   "rect": [
+    441,
+    67,
+    463,
+    89
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt1_r",
+   "rect": [
+    481,
+    67,
+    503,
+    89
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt1",
+   "rect": [
+    90,
+    65,
+    435,
+    91
+   ],
+   "action": "đặt con trỏ mục=opt1 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt2_l",
+   "rect": [
+    417,
+    95,
+    439,
+    117
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt2_r",
+   "rect": [
+    481,
+    95,
+    503,
+    117
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt2",
+   "rect": [
+    90,
+    93,
+    411,
+    119
+   ],
+   "action": "đặt con trỏ mục=opt2 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt3_0",
+   "rect": [
+    441,
+    123,
+    471,
+    145
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3_1",
+   "rect": [
+    473,
+    123,
+    503,
+    145
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3",
+   "rect": [
+    90,
+    121,
+    435,
+    147
+   ],
+   "action": "đặt con trỏ mục=opt3 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt4_l",
+   "rect": [
+    417,
+    151,
+    439,
+    173
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt4_r",
+   "rect": [
+    481,
+    151,
+    503,
+    173
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt4",
+   "rect": [
+    90,
+    149,
+    411,
+    175
+   ],
+   "action": "đặt con trỏ mục=opt4 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt5_0",
+   "rect": [
+    441,
+    179,
+    471,
+    201
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5_1",
+   "rect": [
+    473,
+    179,
+    503,
+    201
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5",
+   "rect": [
+    90,
+    177,
+    435,
+    203
+   ],
+   "action": "đặt con trỏ mục=opt5 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt6_0",
+   "rect": [
+    377,
+    207,
+    407,
+    229
+   ],
+   "action": "chạm = đặt giá trị 1/1 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_1",
+   "rect": [
+    409,
+    207,
+    439,
+    229
+   ],
+   "action": "chạm = đặt giá trị 1/2 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_2",
+   "rect": [
+    441,
+    207,
+    471,
+    229
+   ],
+   "action": "chạm = đặt giá trị 1/3 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_3",
+   "rect": [
+    473,
+    207,
+    503,
+    229
+   ],
+   "action": "chạm = đặt giá trị 1/4 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6",
+   "rect": [
+    90,
+    205,
+    371,
+    231
+   ],
+   "action": "đặt con trỏ mục=opt6 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "note_restart",
+   "rect": [
+    90,
+    233,
+    509,
+    247
+   ],
+   "action": "chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại"
+  }
+ ],
+ "menu_chinh_cai_dat_phan_giai_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "opt0_l",
+   "rect": [
+    590,
+    57,
+    613,
+    80
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt0_r",
+   "rect": [
+    637,
+    57,
+    660,
+    80
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt0",
+   "rect": [
+    131,
+    55,
+    581,
+    82
+   ],
+   "action": "đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt1_l",
+   "rect": [
+    590,
+    86,
+    613,
+    109
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt1_r",
+   "rect": [
+    637,
+    86,
+    660,
+    109
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt1",
+   "rect": [
+    131,
+    84,
+    581,
+    111
+   ],
+   "action": "đặt con trỏ mục=opt1 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt2_l",
+   "rect": [
+    566,
+    115,
+    589,
+    138
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt2_r",
+   "rect": [
+    637,
+    115,
+    660,
+    138
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt2",
+   "rect": [
+    131,
+    113,
+    557,
+    140
+   ],
+   "action": "đặt con trỏ mục=opt2 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt3_0",
+   "rect": [
+    586,
+    144,
+    622,
+    167
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3_1",
+   "rect": [
+    624,
+    144,
+    660,
+    167
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3",
+   "rect": [
+    131,
+    142,
+    577,
+    169
+   ],
+   "action": "đặt con trỏ mục=opt3 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt4_l",
+   "rect": [
+    566,
+    173,
+    589,
+    196
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt4_r",
+   "rect": [
+    637,
+    173,
+    660,
+    196
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt4",
+   "rect": [
+    131,
+    171,
+    557,
+    198
+   ],
+   "action": "đặt con trỏ mục=opt4 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt5_0",
+   "rect": [
+    586,
+    202,
+    622,
+    225
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5_1",
+   "rect": [
+    624,
+    202,
+    660,
+    225
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5",
+   "rect": [
+    131,
+    200,
+    577,
+    227
+   ],
+   "action": "đặt con trỏ mục=opt5 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt6_0",
+   "rect": [
+    510,
+    231,
+    546,
+    254
+   ],
+   "action": "chạm = đặt giá trị 1/1 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_1",
+   "rect": [
+    548,
+    231,
+    584,
+    254
+   ],
+   "action": "chạm = đặt giá trị 1/2 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_2",
+   "rect": [
+    586,
+    231,
+    622,
+    254
+   ],
+   "action": "chạm = đặt giá trị 1/3 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_3",
+   "rect": [
+    624,
+    231,
+    660,
+    254
+   ],
+   "action": "chạm = đặt giá trị 1/4 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6",
+   "rect": [
+    131,
+    229,
+    501,
+    256
+   ],
+   "action": "đặt con trỏ mục=opt6 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "note_restart",
+   "rect": [
+    131,
+    258,
+    669,
+    272
+   ],
+   "action": "chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại"
+  }
+ ],
+ "menu_chinh_cai_dat_phan_giai_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "opt0_l",
+   "rect": [
+    911,
+    75,
+    937,
+    101
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt0_r",
+   "rect": [
+    968,
+    75,
+    994,
+    101
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt0",
+   "rect": [
+    194,
+    73,
+    899,
+    103
+   ],
+   "action": "đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt1_l",
+   "rect": [
+    911,
+    107,
+    937,
+    133
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt1_r",
+   "rect": [
+    968,
+    107,
+    994,
+    133
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt1",
+   "rect": [
+    194,
+    105,
+    899,
+    135
+   ],
+   "action": "đặt con trỏ mục=opt1 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt2_l",
+   "rect": [
+    883,
+    139,
+    909,
+    165
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt2_r",
+   "rect": [
+    968,
+    139,
+    994,
+    165
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt2",
+   "rect": [
+    194,
+    137,
+    871,
+    167
+   ],
+   "action": "đặt con trỏ mục=opt2 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt3_0",
+   "rect": [
+    902,
+    171,
+    947,
+    197
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3_1",
+   "rect": [
+    949,
+    171,
+    994,
+    197
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt3",
+   "rect": [
+    194,
+    169,
+    890,
+    199
+   ],
+   "action": "đặt con trỏ mục=opt3 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt4_l",
+   "rect": [
+    883,
+    203,
+    909,
+    229
+   ],
+   "action": "KeyPressed(TRÁI) của mục: giảm giá trị"
+  },
+  {
+   "id": "opt4_r",
+   "rect": [
+    968,
+    203,
+    994,
+    229
+   ],
+   "action": "KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4)"
+  },
+  {
+   "id": "opt4",
+   "rect": [
+    194,
+    201,
+    871,
+    231
+   ],
+   "action": "đặt con trỏ mục=opt4 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt5_0",
+   "rect": [
+    902,
+    235,
+    947,
+    261
+   ],
+   "action": "chạm = đặt giá trị BẬT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5_1",
+   "rect": [
+    949,
+    235,
+    994,
+    261
+   ],
+   "action": "chạm = đặt giá trị TẮT (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt5",
+   "rect": [
+    194,
+    233,
+    890,
+    263
+   ],
+   "action": "đặt con trỏ mục=opt5 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "opt6_0",
+   "rect": [
+    808,
+    267,
+    853,
+    293
+   ],
+   "action": "chạm = đặt giá trị 1/1 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_1",
+   "rect": [
+    855,
+    267,
+    900,
+    293
+   ],
+   "action": "chạm = đặt giá trị 1/2 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_2",
+   "rect": [
+    902,
+    267,
+    947,
+    293
+   ],
+   "action": "chạm = đặt giá trị 1/3 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6_3",
+   "rect": [
+    949,
+    267,
+    994,
+    293
+   ],
+   "action": "chạm = đặt giá trị 1/4 (lặp phím PHẢI tới khi khớp)"
+  },
+  {
+   "id": "opt6",
+   "rect": [
+    194,
+    265,
+    796,
+    295
+   ],
+   "action": "đặt con trỏ mục=opt6 (KeyPressed(-5) = đổi giá trị với mục bật/tắt)"
+  },
+  {
+   "id": "note_restart",
+   "rect": [
+    194,
+    297,
+    1006,
+    316
+   ],
+   "action": "chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại"
+  }
+ ],
+ "menu_chinh_thanh_tuu_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "row0",
+   "rect": [
+    17,
+    62,
+    216,
+    100
+   ],
+   "action": "đặt con trỏ thành tựu=0 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row1",
+   "rect": [
+    17,
+    102,
+    216,
+    140
+   ],
+   "action": "đặt con trỏ thành tựu=1 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row2",
+   "rect": [
+    17,
+    142,
+    216,
+    180
+   ],
+   "action": "đặt con trỏ thành tựu=2 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row3",
+   "rect": [
+    17,
+    182,
+    216,
+    220
+   ],
+   "action": "đặt con trỏ thành tựu=3 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "list_scroll",
+   "rect": [
+    17,
+    62,
+    222,
+    220
+   ],
+   "action": "kéo dọc/mũi tên: cuộn danh sách (con trỏ gốc lên/xuống)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    236,
+    104,
+    375,
+    215
+   ],
+   "action": "kéo dọc = cuộn mô tả"
+  }
+ ],
+ "menu_chinh_thanh_tuu_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "row0",
+   "rect": [
+    90,
+    62,
+    319,
+    100
+   ],
+   "action": "đặt con trỏ thành tựu=0 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row1",
+   "rect": [
+    90,
+    102,
+    319,
+    140
+   ],
+   "action": "đặt con trỏ thành tựu=1 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row2",
+   "rect": [
+    90,
+    142,
+    319,
+    180
+   ],
+   "action": "đặt con trỏ thành tựu=2 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row3",
+   "rect": [
+    90,
+    182,
+    319,
+    220
+   ],
+   "action": "đặt con trỏ thành tựu=3 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "list_scroll",
+   "rect": [
+    90,
+    62,
+    325,
+    220
+   ],
+   "action": "kéo dọc/mũi tên: cuộn danh sách (con trỏ gốc lên/xuống)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    339,
+    104,
+    501,
+    245
+   ],
+   "action": "kéo dọc = cuộn mô tả"
+  }
+ ],
+ "menu_chinh_thanh_tuu_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "row0",
+   "rect": [
+    131,
+    84,
+    423,
+    122
+   ],
+   "action": "đặt con trỏ thành tựu=0 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row1",
+   "rect": [
+    131,
+    124,
+    423,
+    162
+   ],
+   "action": "đặt con trỏ thành tựu=1 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row2",
+   "rect": [
+    131,
+    164,
+    423,
+    202
+   ],
+   "action": "đặt con trỏ thành tựu=2 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row3",
+   "rect": [
+    131,
+    204,
+    423,
+    242
+   ],
+   "action": "đặt con trỏ thành tựu=3 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row4",
+   "rect": [
+    131,
+    244,
+    423,
+    282
+   ],
+   "action": "đặt con trỏ thành tựu=4 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row5",
+   "rect": [
+    131,
+    284,
+    423,
+    322
+   ],
+   "action": "đặt con trỏ thành tựu=5 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "list_scroll",
+   "rect": [
+    131,
+    84,
+    432,
+    322
+   ],
+   "action": "kéo dọc/mũi tên: cuộn danh sách (con trỏ gốc lên/xuống)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    449,
+    127,
+    660,
+    322
+   ],
+   "action": "kéo dọc = cuộn mô tả"
+  }
+ ],
+ "menu_chinh_thanh_tuu_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "row0",
+   "rect": [
+    194,
+    109,
+    637,
+    153
+   ],
+   "action": "đặt con trỏ thành tựu=0 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row1",
+   "rect": [
+    194,
+    155,
+    637,
+    199
+   ],
+   "action": "đặt con trỏ thành tựu=1 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row2",
+   "rect": [
+    194,
+    201,
+    637,
+    245
+   ],
+   "action": "đặt con trỏ thành tựu=2 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row3",
+   "rect": [
+    194,
+    247,
+    637,
+    291
+   ],
+   "action": "đặt con trỏ thành tựu=3 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row4",
+   "rect": [
+    194,
+    293,
+    637,
+    337
+   ],
+   "action": "đặt con trỏ thành tựu=4 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row5",
+   "rect": [
+    194,
+    339,
+    637,
+    383
+   ],
+   "action": "đặt con trỏ thành tựu=5 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row6",
+   "rect": [
+    194,
+    385,
+    637,
+    429
+   ],
+   "action": "đặt con trỏ thành tựu=6 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "row7",
+   "rect": [
+    194,
+    431,
+    637,
+    475
+   ],
+   "action": "đặt con trỏ thành tựu=7 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem)"
+  },
+  {
+   "id": "list_scroll",
+   "rect": [
+    194,
+    109,
+    649,
+    475
+   ],
+   "action": "kéo dọc/mũi tên: cuộn danh sách (con trỏ gốc lên/xuống)"
+  },
+  {
+   "id": "desc_scroll",
+   "rect": [
+    670,
+    162,
+    995,
+    488
+   ],
+   "action": "kéo dọc = cuộn mô tả"
+  }
+ ],
+ "menu_chinh_tro_giup_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "row0",
+   "rect": [
+    17,
+    37,
+    377,
+    62
+   ],
+   "action": "đặt con trỏ trợ giúp=0 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row1",
+   "rect": [
+    17,
+    64,
+    377,
+    89
+   ],
+   "action": "đặt con trỏ trợ giúp=1 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row2",
+   "rect": [
+    17,
+    91,
+    377,
+    116
+   ],
+   "action": "đặt con trỏ trợ giúp=2 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row3",
+   "rect": [
+    17,
+    118,
+    377,
+    143
+   ],
+   "action": "đặt con trỏ trợ giúp=3 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row4",
+   "rect": [
+    17,
+    145,
+    377,
+    170
+   ],
+   "action": "đặt con trỏ trợ giúp=4 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row5",
+   "rect": [
+    17,
+    172,
+    377,
+    197
+   ],
+   "action": "đặt con trỏ trợ giúp=5 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "list_scroll",
+   "rect": [
+    17,
+    37,
+    383,
+    197
+   ],
+   "action": "kéo dọc/mũi tên: cuộn danh sách"
+  }
+ ],
+ "menu_chinh_tro_giup_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "row0",
+   "rect": [
+    90,
+    37,
+    503,
+    62
+   ],
+   "action": "đặt con trỏ trợ giúp=0 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row1",
+   "rect": [
+    90,
+    64,
+    503,
+    89
+   ],
+   "action": "đặt con trỏ trợ giúp=1 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row2",
+   "rect": [
+    90,
+    91,
+    503,
+    116
+   ],
+   "action": "đặt con trỏ trợ giúp=2 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row3",
+   "rect": [
+    90,
+    118,
+    503,
+    143
+   ],
+   "action": "đặt con trỏ trợ giúp=3 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row4",
+   "rect": [
+    90,
+    145,
+    503,
+    170
+   ],
+   "action": "đặt con trỏ trợ giúp=4 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row5",
+   "rect": [
+    90,
+    172,
+    503,
+    197
+   ],
+   "action": "đặt con trỏ trợ giúp=5 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row6",
+   "rect": [
+    90,
+    199,
+    503,
+    224
+   ],
+   "action": "đặt con trỏ trợ giúp=6 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row7",
+   "rect": [
+    90,
+    226,
+    503,
+    251
+   ],
+   "action": "đặt con trỏ trợ giúp=7 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "list_scroll",
+   "rect": [
+    90,
+    37,
+    509,
+    251
+   ],
+   "action": "kéo dọc/mũi tên: cuộn danh sách"
+  }
+ ],
+ "menu_chinh_tro_giup_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "row0",
+   "rect": [
+    131,
+    55,
+    660,
+    80
+   ],
+   "action": "đặt con trỏ trợ giúp=0 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row1",
+   "rect": [
+    131,
+    82,
+    660,
+    107
+   ],
+   "action": "đặt con trỏ trợ giúp=1 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row2",
+   "rect": [
+    131,
+    109,
+    660,
+    134
+   ],
+   "action": "đặt con trỏ trợ giúp=2 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row3",
+   "rect": [
+    131,
+    136,
+    660,
+    161
+   ],
+   "action": "đặt con trỏ trợ giúp=3 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row4",
+   "rect": [
+    131,
+    163,
+    660,
+    188
+   ],
+   "action": "đặt con trỏ trợ giúp=4 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row5",
+   "rect": [
+    131,
+    190,
+    660,
+    215
+   ],
+   "action": "đặt con trỏ trợ giúp=5 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row6",
+   "rect": [
+    131,
+    217,
+    660,
+    242
+   ],
+   "action": "đặt con trỏ trợ giúp=6 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row7",
+   "rect": [
+    131,
+    244,
+    660,
+    269
+   ],
+   "action": "đặt con trỏ trợ giúp=7 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row8",
+   "rect": [
+    131,
+    271,
+    660,
+    296
+   ],
+   "action": "đặt con trỏ trợ giúp=8 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row9",
+   "rect": [
+    131,
+    298,
+    660,
+    323
+   ],
+   "action": "đặt con trỏ trợ giúp=9 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "list_scroll",
+   "rect": [
+    131,
+    55,
+    669,
+    323
+   ],
+   "action": "kéo dọc/mũi tên: cuộn danh sách"
+  }
+ ],
+ "menu_chinh_tro_giup_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "row0",
+   "rect": [
+    194,
+    73,
+    994,
+    101
+   ],
+   "action": "đặt con trỏ trợ giúp=0 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row1",
+   "rect": [
+    194,
+    103,
+    994,
+    131
+   ],
+   "action": "đặt con trỏ trợ giúp=1 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row2",
+   "rect": [
+    194,
+    133,
+    994,
+    161
+   ],
+   "action": "đặt con trỏ trợ giúp=2 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row3",
+   "rect": [
+    194,
+    163,
+    994,
+    191
+   ],
+   "action": "đặt con trỏ trợ giúp=3 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row4",
+   "rect": [
+    194,
+    193,
+    994,
+    221
+   ],
+   "action": "đặt con trỏ trợ giúp=4 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row5",
+   "rect": [
+    194,
+    223,
+    994,
+    251
+   ],
+   "action": "đặt con trỏ trợ giúp=5 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row6",
+   "rect": [
+    194,
+    253,
+    994,
+    281
+   ],
+   "action": "đặt con trỏ trợ giúp=6 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row7",
+   "rect": [
+    194,
+    283,
+    994,
+    311
+   ],
+   "action": "đặt con trỏ trợ giúp=7 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row8",
+   "rect": [
+    194,
+    313,
+    994,
+    341
+   ],
+   "action": "đặt con trỏ trợ giúp=8 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row9",
+   "rect": [
+    194,
+    343,
+    994,
+    371
+   ],
+   "action": "đặt con trỏ trợ giúp=9 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row10",
+   "rect": [
+    194,
+    373,
+    994,
+    401
+   ],
+   "action": "đặt con trỏ trợ giúp=10 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row11",
+   "rect": [
+    194,
+    403,
+    994,
+    431
+   ],
+   "action": "đặt con trỏ trợ giúp=11 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row12",
+   "rect": [
+    194,
+    433,
+    994,
+    461
+   ],
+   "action": "đặt con trỏ trợ giúp=12 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "row13",
+   "rect": [
+    194,
+    463,
+    994,
+    491
+   ],
+   "action": "đặt con trỏ trợ giúp=13 + KeyPressed(-5) -> trang nội dung (DrawHelp)"
+  },
+  {
+   "id": "list_scroll",
+   "rect": [
+    194,
+    73,
+    1006,
+    491
+   ],
+   "action": "kéo dọc/mũi tên: cuộn danh sách"
+  }
+ ],
+ "menu_chinh_tro_giup_noi_dung_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "page_scroll",
+   "rect": [
+    17,
+    65,
+    383,
+    193
+   ],
+   "action": "kéo dọc = cuộn trang (TouchMoved mới)"
+  },
+  {
+   "id": "prev",
+   "rect": [
+    17,
+    200,
+    175,
+    223
+   ],
+   "action": "KeyPressed(TRÁI): trang trước (DrawHelp)"
+  },
+  {
+   "id": "next",
+   "rect": [
+    225,
+    200,
+    383,
+    223
+   ],
+   "action": "KeyPressed(PHẢI): trang sau"
+  }
+ ],
+ "menu_chinh_tro_giup_noi_dung_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "page_scroll",
+   "rect": [
+    90,
+    65,
+    509,
+    223
+   ],
+   "action": "kéo dọc = cuộn trang (TouchMoved mới)"
+  },
+  {
+   "id": "prev",
+   "rect": [
+    90,
+    230,
+    274,
+    253
+   ],
+   "action": "KeyPressed(TRÁI): trang trước (DrawHelp)"
+  },
+  {
+   "id": "next",
+   "rect": [
+    325,
+    230,
+    509,
+    253
+   ],
+   "action": "KeyPressed(PHẢI): trang sau"
+  }
+ ],
+ "menu_chinh_tro_giup_noi_dung_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "page_scroll",
+   "rect": [
+    131,
+    84,
+    669,
+    293
+   ],
+   "action": "kéo dọc = cuộn trang (TouchMoved mới)"
+  },
+  {
+   "id": "prev",
+   "rect": [
+    131,
+    302,
+    370,
+    331
+   ],
+   "action": "KeyPressed(TRÁI): trang trước (DrawHelp)"
+  },
+  {
+   "id": "next",
+   "rect": [
+    430,
+    302,
+    669,
+    331
+   ],
+   "action": "KeyPressed(PHẢI): trang sau"
+  }
+ ],
+ "menu_chinh_tro_giup_noi_dung_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "page_scroll",
+   "rect": [
+    194,
+    106,
+    1006,
+    450
+   ],
+   "action": "kéo dọc = cuộn trang (TouchMoved mới)"
+  },
+  {
+   "id": "prev",
+   "rect": [
+    194,
+    461,
+    562,
+    499
+   ],
+   "action": "KeyPressed(TRÁI): trang trước (DrawHelp)"
+  },
+  {
+   "id": "next",
+   "rect": [
+    638,
+    461,
+    1006,
+    499
+   ],
+   "action": "KeyPressed(PHẢI): trang sau"
+  }
+ ],
+ "menu_chinh_ho_tro_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  }
+ ],
+ "menu_chinh_ho_tro_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  }
+ ],
+ "menu_chinh_ho_tro_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  }
+ ],
+ "menu_chinh_ho_tro_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  }
  ]
 }

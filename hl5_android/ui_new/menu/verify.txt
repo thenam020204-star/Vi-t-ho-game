@@ -156,3 +156,78 @@ Kiểm trên TOÀN BỘ dữ liệu thật, 4 khung; "cuộn" = thanh cuộn, kh
   nhãn khu vực (41): nhiều dòng nhất 1 (giới hạn 2) "Đảo Coldcreek - Trung Tâm", chữ 226 px: ĐẠT
   nhãn đảo (bản đồ lớn, 8): rộng nhất 74 px (nhãn tự co theo chữ, kẹp vào khung bản đồ): ĐẠT
 == lỗi bố cục khi dựng ảnh: không ==
+# ===== b2c (mock_b2c.py) =====
+Kiểm trên TOÀN BỘ dữ liệu thật, 4 khung; "cuộn" = thanh cuộn, không cắt chữ.
+== 400x240  font 15px / nhỏ 10px, icon x1 ==
+  tiêu đề cửa sổ (7): rộng nhất 96 px "Chọn lớp nhân vật" <= 326 px: ĐẠT
+  lưới menu chính 6 ô: ô 124x64 px (icon trên chữ dưới); nhãn dài nhất 58 px "Chuyên Gia" <= 120 px (chừa 62): ĐẠT
+  lưới menu chính 9 ô: ô 96x40 px (icon trên chữ dưới); nhãn dài nhất 58 px "Chuyên Gia" <= 92 px (chừa 34): ĐẠT
+  lưới 9 ô: vùng lưới y=88..222 (cao 134), logo x1 + phụ đề: ĐẠT
+  slot: hàng cao 61, chữ dài nhất 138 px "Thời gian chơi 123:59:59" <= 261 px: ĐẠT; 3 dòng x 17 = 51 <= 59: ĐẠT
+  chọn lớp: ô 86x93, tên lớp dài nhất 60 px "Gunslinger" <= 80 px: ĐẠT
+  mô tả ngắn lớp (4): số dòng [4, 3, 3, 3], hộp hiện 7 dòng: vừa, không cần cuộn
+  popup mô tả lớp (4 chuỗi dài nhất menu_text 20-23): số dòng [4, 5, 4, 5], hiện [4, 5, 4, 5], cao popup lớn nhất 184 <= khung 224: ĐẠT; MỌI mô tả hiện đủ, không cuộn, không tràn
+  Chuyên Gia: nút chế độ rộng 149 px, nhãn dài nhất 74 px: ĐẠT; mô tả [3, 1, 3] + ghi chú 2 dòng, hộp hiện 7: vừa
+  cài đặt: 7 mục, hàng cao 23, nhãn dài nhất 62 px "Âm hiệu ứng" <= 222 px (điều khiển rộng nhất 138): ĐẠT
+  cài đặt: ghi chú "Khởi động lại để áp dụng" 109 px <= 360 px: ĐẠT; tổng cao 189 <= 192: ĐẠT
+  thành tựu: 105 tên, nhiều dòng nhất 2 (giới hạn 2) "Vua Tôi Luyện - Kim Tôi Luyện RANK E" (chữ 176 px): ĐẠT; hàng cao 38, hiện 4 hàng/105
+  thành tựu chi tiết: tên nhiều dòng nhất 2 (giới hạn 3) "Vua Tôi Luyện - Kim Tôi Luyện RANK E": ĐẠT; mô tả (104) phân bố dòng 1:9, 2:52, 3:28, 4:4, 5:10, 6:1, hộp hiện 5 dòng, 1 mô tả dài hơn -> cuộn
+  trợ giúp danh sách: 20 bài, tiêu đề dài nhất 108 px "Thông Tin Thẩm Định" <= 354 px: ĐẠT; hiện 7 hàng (cuộn)
+  trợ giúp nội dung (20 bài): phân bố dòng 0:1, 3:3, 4:8, 5:1, 6:1, 10:1, 11:1, 12:2, 15:2, hộp hiện 7 dòng, 6 bài dài hơn -> cuộn; nút Trước/Tiếp 161 px: ĐẠT
+  hỗ trợ/thẩm định: 6 hàng, cao 126 <= 192, giá trị tối đa 1 dòng: ĐẠT
+  popup MainMenu (5 chuỗi): dài nhất 1 dòng -> cao 64 <= 224: ĐẠT
+== 600x270  font 15px / nhỏ 10px, icon x1 ==
+  tiêu đề cửa sổ (7): rộng nhất 96 px "Chọn lớp nhân vật" <= 379 px: ĐẠT
+  lưới menu chính 6 ô: ô 190x79 px (icon trên chữ dưới); nhãn dài nhất 58 px "Chuyên Gia" <= 186 px (chừa 128): ĐẠT
+  lưới menu chính 9 ô: ô 120x50 px (icon trên chữ dưới); nhãn dài nhất 58 px "Chuyên Gia" <= 116 px (chừa 58): ĐẠT
+  lưới 9 ô: vùng lưới y=88..252 (cao 164), logo x1 + phụ đề: ĐẠT
+  slot: hàng cao 71, chữ dài nhất 138 px "Thời gian chơi 123:59:59" <= 314 px: ĐẠT; 3 dòng x 17 = 51 <= 69: ĐẠT
+  chọn lớp: ô 99x108, tên lớp dài nhất 60 px "Gunslinger" <= 93 px: ĐẠT
+  mô tả ngắn lớp (4): số dòng [3, 3, 3, 3], hộp hiện 9 dòng: vừa, không cần cuộn
+  popup mô tả lớp (4 chuỗi dài nhất menu_text 20-23): số dòng [3, 3, 3, 3], hiện [3, 3, 3, 3], cao popup lớn nhất 150 <= khung 254: ĐẠT; MỌI mô tả hiện đủ, không cuộn, không tràn
+  Chuyên Gia: nút chế độ rộng 170 px, nhãn dài nhất 74 px: ĐẠT; mô tả [2, 1, 2] + ghi chú 2 dòng, hộp hiện 9: vừa
+  cài đặt: 7 mục, hàng cao 27, nhãn dài nhất 62 px "Âm hiệu ứng" <= 275 px (điều khiển rộng nhất 138): ĐẠT
+  cài đặt: ghi chú "Khởi động lại để áp dụng" 109 px <= 413 px: ĐẠT; tổng cao 217 <= 222: ĐẠT
+  thành tựu: 105 tên, nhiều dòng nhất 1 (giới hạn 2) "Đấu Sĩ Xương Rồng Biến Dị" (chữ 206 px): ĐẠT; hàng cao 38, hiện 4 hàng/105
+  thành tựu chi tiết: tên nhiều dòng nhất 2 (giới hạn 3) "Vua Tôi Luyện - Kim Tôi Luyện RANK E": ĐẠT; mô tả (104) phân bố dòng 1:11, 2:70, 3:11, 4:5, 5:6, 6:1, hộp hiện 7 dòng, 0 mô tả dài hơn -> cuộn
+  trợ giúp danh sách: 20 bài, tiêu đề dài nhất 108 px "Thông Tin Thẩm Định" <= 407 px: ĐẠT; hiện 8 hàng (cuộn)
+  trợ giúp nội dung (20 bài): phân bố dòng 0:1, 2:1, 3:6, 4:5, 6:1, 10:1, 11:2, 12:1, 13:1, 15:1, hộp hiện 9 dòng, 6 bài dài hơn -> cuộn; nút Trước/Tiếp 187 px: ĐẠT
+  hỗ trợ/thẩm định: 6 hàng, cao 126 <= 222, giá trị tối đa 1 dòng: ĐẠT
+  popup MainMenu (5 chuỗi): dài nhất 1 dòng -> cao 64 <= 254: ĐẠT
+== 800x360  font 15px / nhỏ 10px, icon x2 ==
+  tiêu đề cửa sổ (7): rộng nhất 96 px "Chọn lớp nhân vật" <= 486 px: ĐẠT
+  lưới menu chính 6 ô: ô 192x80 px (icon trên chữ dưới); nhãn dài nhất 58 px "Chuyên Gia" <= 186 px (chừa 128): ĐẠT
+  lưới menu chính 9 ô: ô 122x51 px (icon trên chữ dưới); nhãn dài nhất 58 px "Chuyên Gia" <= 116 px (chừa 58): ĐẠT
+  lưới 9 ô: vùng lưới y=157..326 (cao 169), logo x2 + phụ đề: ĐẠT
+  slot: hàng cao 90, chữ dài nhất 138 px "Thời gian chơi 123:59:59" <= 390 px: ĐẠT; 3 dòng x 17 = 51 <= 88: ĐẠT
+  chọn lớp: ô 127x138, tên lớp dài nhất 60 px "Gunslinger" <= 119 px: ĐẠT
+  mô tả ngắn lớp (4): số dòng [3, 2, 2, 2], hộp hiện 12 dòng: vừa, không cần cuộn
+  popup mô tả lớp (4 chuỗi dài nhất menu_text 20-23): số dòng [2, 3, 2, 2], hiện [2, 3, 2, 2], cao popup lớn nhất 172 <= khung 328: ĐẠT; MỌI mô tả hiện đủ, không cuộn, không tràn
+  Chuyên Gia: nút chế độ rộng 218 px, nhãn dài nhất 74 px: ĐẠT; mô tả [2, 1, 2] + ghi chú 2 dòng, hộp hiện 12: vừa
+  cài đặt: 7 mục, hàng cao 27, nhãn dài nhất 62 px "Âm hiệu ứng" <= 360 px (điều khiển rộng nhất 168): ĐẠT
+  cài đặt: ghi chú "Khởi động lại để áp dụng" 109 px <= 528 px: ĐẠT; tổng cao 217 <= 284: ĐẠT
+  thành tựu: 105 tên, nhiều dòng nhất 1 (giới hạn 2) "Đấu Sĩ Xương Rồng Biến Dị" (chữ 263 px): ĐẠT; hàng cao 38, hiện 6 hàng/105
+  thành tựu chi tiết: tên nhiều dòng nhất 1 (giới hạn 3) "Đấu Sĩ Xương Rồng Biến Dị": ĐẠT; mô tả (104) phân bố dòng 1:19, 2:71, 3:8, 4:6, hộp hiện 10 dòng, 0 mô tả dài hơn -> cuộn
+  trợ giúp danh sách: 20 bài, tiêu đề dài nhất 108 px "Thông Tin Thẩm Định" <= 519 px: ĐẠT; hiện 10 hàng (cuộn)
+  trợ giúp nội dung (20 bài): phân bố dòng 0:1, 2:3, 3:9, 5:1, 9:3, 10:1, 12:2, hộp hiện 12 dòng, 0 bài dài hơn -> cuộn; nút Trước/Tiếp 243 px: ĐẠT
+  hỗ trợ/thẩm định: 6 hàng, cao 126 <= 284, giá trị tối đa 1 dòng: ĐẠT
+  popup MainMenu (5 chuỗi): dài nhất 1 dòng -> cao 83 <= 328: ĐẠT
+== 1200x540  font 18px / nhỏ 15px, icon x3 ==
+  tiêu đề cửa sổ (7): rộng nhất 110 px "Chọn lớp nhân vật" <= 748 px: ĐẠT
+  lưới menu chính 6 ô: ô 377x160 px (icon trên chữ dưới); nhãn dài nhất 67 px "Chuyên Gia" <= 369 px (chừa 302): ĐẠT
+  lưới menu chính 9 ô: ô 247x103 px (icon trên chữ dưới); nhãn dài nhất 67 px "Chuyên Gia" <= 239 px (chừa 172): ĐẠT
+  lưới 9 ô: vùng lưới y=170..500 (cao 330), logo x2 + phụ đề: ĐẠT
+  slot: hàng cao 140, chữ dài nhất 159 px "Thời gian chơi 123:59:59" <= 620 px: ĐẠT; 3 dòng x 20 = 60 <= 138: ĐẠT
+  chọn lớp: ô 192x213, tên lớp dài nhất 70 px "Gunslinger" <= 182 px: ĐẠT
+  mô tả ngắn lớp (4): số dòng [2, 2, 2, 2], hộp hiện 17 dòng: vừa, không cần cuộn
+  popup mô tả lớp (4 chuỗi dài nhất menu_text 20-23): số dòng [3, 3, 3, 3], hiện [3, 3, 3, 3], cao popup lớn nhất 212 <= khung 492: ĐẠT; MỌI mô tả hiện đủ, không cuộn, không tràn
+  Chuyên Gia: nút chế độ rộng 329 px, nhãn dài nhất 85 px: ĐẠT; mô tả [1, 1, 2] + ghi chú 1 dòng, hộp hiện 17: vừa
+  cài đặt: 7 mục, hàng cao 30, nhãn dài nhất 71 px "Âm hiệu ứng" <= 588 px (điều khiển rộng nhất 210): ĐẠT
+  cài đặt: ghi chú "Khởi động lại để áp dụng" 134 px <= 798 px: ĐẠT; tổng cao 243 <= 436: ĐẠT
+  thành tựu: 105 tên, nhiều dòng nhất 1 (giới hạn 2) "Đấu Sĩ Xương Rồng Biến Dị" (chữ 406 px): ĐẠT; hàng cao 44, hiện 8 hàng/105
+  thành tựu chi tiết: tên nhiều dòng nhất 1 (giới hạn 3) "Đấu Sĩ Xương Rồng Biến Dị": ĐẠT; mô tả (104) phân bố dòng 1:68, 2:29, 3:7, hộp hiện 15 dòng, 0 mô tả dài hơn -> cuộn
+  trợ giúp danh sách: 20 bài, tiêu đề dài nhất 124 px "Thông Tin Thẩm Định" <= 786 px: ĐẠT; hiện 14 hàng (cuộn)
+  trợ giúp nội dung (20 bài): phân bố dòng 0:1, 2:11, 3:1, 4:1, 7:1, 8:1, 9:2, 11:2, hộp hiện 17 dòng, 0 bài dài hơn -> cuộn; nút Trước/Tiếp 373 px: ĐẠT
+  hỗ trợ/thẩm định: 6 hàng, cao 144 <= 436, giá trị tối đa 1 dòng: ĐẠT
+  popup MainMenu (5 chuỗi): dài nhất 1 dòng -> cao 108 <= 492: ĐẠT
+== lỗi bố cục khi dựng ảnh: không ==

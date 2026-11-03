@@ -168,7 +168,7 @@ Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ 
 | Hộp thông tin (`w_info`) | hộp mô tả T17b1 + (tuỳ chọn) hàng k–v font nhỏ + dòng phụ; mô tả có mã màu: `}` vàng, `{` xanh, `|` hết màu (GIẢ ĐỊNH màu), `#NN` = số giữ chỗ ("100") hoặc gạch đầu dòng khi theo sau là chữ; tràn → thanh cuộn dọc (kéo dọc = `TouchMoved` mới) |
 | Thanh cuộn ngang | cao `sbw`, rãnh + con trượt cam, rộng con trượt `max(2s+6, track*view/total)` |
 | Popup menu hành động | rộng `round(0.55W)` (SD) / 420 (HD), kẹp `W-2mg`; tiêu đề tên vật phẩm ≤2 dòng (màu phẩm chất); mỗi lựa chọn 1 nút `btnH` cách `gap`; chọn = cam, vô hiệu = xám; nuốt chạm ngoài |
-| Popup gán ô nhanh | hàng ô nhanh = 5 ô + nút đổi bộ (ảnh `ui_new/07_swap.png` thu LANCZOS về `cell`×`cell` = 30/30/50/70, cách ô cuối `gap`, nhãn `1/2`..`2/2` font nhỏ đáy nút; hit `belt_swap`); rộng `max(belt_row + 2*(pad+2s+4), 0.55W)` với `belt_row = 5*cell+4*cg+gap+cell`; tên kỹ năng, nhãn, hàng ô nhanh, nút Huỷ |
+| Popup gán ô nhanh | hàng ô nhanh = 5 ô + nút đổi bộ (ảnh `ui_new/07_swap.png` thu LANCZOS về `cell`×`cell` = 30/30/50/70, cách ô cuối `gap`, nhãn `1/2`..`2/2` font nhỏ ngay DƯỚI nút (không đè icon; hit `belt_swap` gồm cả nhãn); hit `belt_swap`); rộng `max(belt_row + 2*(pad+2s+4), 0.55W)` với `belt_row = 5*cell+4*cg+gap+cell`; tên kỹ năng, nhãn, hàng ô nhanh, nút Huỷ |
 | Popup chi tiết vật phẩm | rộng `round(0.78W)` (SD) / 640 (HD), cao `H-2mg` (HD −40); hộp thông tin đầy đủ + OK |
 
 
@@ -769,3 +769,206 @@ Không đổi lưới nào (kiến trúc A, §13.4): con trỏ gốc của từn
 5. Tab "Khác"/"Giáp" của Mua vật phẩm hiển thị cùng danh sách mẫu; số vật phẩm mỗi tab lấy từ `NpcShop::LoadShopData`.
 6. Popup StateGame hồi sinh/kết quả: các hàng kết quả Chuyên gia (Số màn, Thời gian còn lại, HP còn lại, Điểm số cuối cùng) theo chế độ (Cầm cự/Đua Thời Gian/Đột phá dùng bộ nhãn khác: 331–336); mockup vẽ 1 bộ.
 7. Menu Cash shop `StateCashShop` có thể mở với 3 `type` (đơn/mạng/Expert): offline chỉ dùng single (và expert qua Chuyên gia); cash_network bỏ.
+<!-- B2C -->
+
+## 13. Lô b2c: StateMainMenu (T17b2)
+> Sinh bởi `mock_b2c.py` + `layout_b2c.py` (chạy SAU `mock_menu.py`, `mock_b2a.py`, `mock_b2b.py`). Dùng nguyên `metrics(W,H)` của mục 1. 18 màn x (400x240, `_x3`, 1200x540 + `trung_gian/` 600x270/800x360), tên `menu_chinh_*`. Tổng hợp `tong_hop_b2c.png`; vùng chạm `hit_rects.json`; kiểm tràn `verify.txt` (phần b2c).
+
+### 13.1 Nền và khung chung
+- **Nền thật toàn màn** (MainMenu tự vẽ, không chụp cảnh chơi): đen + dải dung nham `menu.mgr` #8 (333x63) lát ngang, lật dọc ở đáy (x1; x2 khi HD) + logo `sp/imgcom/title.mgr` (#5 HEROES LORE, #3 chữ V, #1 mắt dung nham mờ, #7 bản quyền, #8 "Tap to Continue"). Phụ đề "Khế Ước Hắc Ám" ở mockup là CHỮ (ảnh gốc là tiếng Anh, T11 vẽ lại); "Tap to Continue" vẫn là ảnh gốc tiếng Anh (T11).
+- Các màn cửa sổ (slot, lớp, Chuyên Gia, cài đặt, thành tựu, trợ giúp, hỗ trợ) dùng `w_window` (khung cam, tiêu đề, nút `<` = `KeyPressed(Back)` gốc) làm tối nền thật `dim 95`, KHÔNG có thanh tab.
+- **Lưới menu chính**: ô `tw x th` trong vùng giữa đáy logo và bản quyền; `tw = min((W-2mg-2g)/3, 2.4 th)`, `g = gap+2`; nhãn font thân (15/18 px) vừa ô ở mọi khung (kiểm `verify.txt`); ô cao đủ -> icon `menu.mgr` #19..#27 trên chữ dưới; ô thấp (9 ô ở 400x240) -> icon trái chữ phải. Logo x1 (H<300) / x2.
+- Mô tả/nội dung dài: hộp có CLIP + thanh cuộn khi dài hơn hộp (kéo dọc = `TouchMoved` mới); mô tả lớp (lỗi tràn người dùng đã thấy) vẽ trong hộp popup có clip, hiện đủ ở 4 khung (xem verify).
+
+### 13.2 Lưới/trạng thái logic GỐC giữ nguyên và chỗ lệch
+| Màn (state gốc) | Lưới gốc giữ | Lệch/ghi chú |
+|---|---|---|
+| Menu chính 9 ô (4) | 3x3, con trỏ 0..8 theo thứ tự Bắt đầu, Chuyên Gia, Vào kho đồ, Cập nhật, Cài đặt, Thành tựu, Trợ giúp, Cộng đồng, Thoát | không lệch |
+| Menu chính 6 ô (4, T7) | 3 cột x 2 hàng: Bắt đầu, Chuyên Gia, Cài đặt, Thành tựu, Trợ giúp, Thoát | **LỆCH có chủ ý theo kế hoạch T7**: bỏ ô Kho/Cập nhật/Cộng đồng, số hàng 3 -> 2; con trỏ 0..5 (T7 phải sửa bảng nhảy/số ô; chạm ánh xạ lại ô gốc 0,1,4,5,6,8) |
+| Chọn Slot (5) | 3 slot dọc; chạm slot = OK gốc; `*` = xoá | nút Xoá bấm được thay phím `*` |
+| Chọn lớp (5) | lưới 2x2 (4 lớp) | không lệch; thêm nút OK (= phím OK); mô tả ngắn bên phải |
+| Popup mô tả lớp | StatePopup có OK/Huỷ | mô tả trong hộp cuộn có clip |
+| Chuyên Gia (6) | 3 chế độ dọc (Cầm Cự, Đua Thời Gian, Đột Phá) | bỏ "Xem bảng xếp hạng" (199, cần mạng) |
+| Cài đặt (9) | danh sách dọc có cuộn, mục đổi bằng TRÁI/PHẢI | 7 mục hiển thị: 6 mục gốc + Phân giải (T10); số mục gốc thật là 10 (BAO-CAO §11), mục còn lại xác nhận ở T17c |
+| Thành tựu (10) | danh sách dọc 105 mục + chi tiết | không lệch |
+| Trợ giúp (11) | danh sách 20 bài + trang nội dung | nút Trước/Tiếp thay phím TRÁI/PHẢI |
+| Hỗ trợ (12) | trang tĩnh thông tin thẩm định | không lệch |
+| State 0/1/7/8 (mạng) | - | offline: boot vào state 5/2 (patch 0x99bfc), T7 bỏ; chỉ vẽ popup chờ chung |
+
+Số đo (khung logic; nhãn font thân):
+| khung | ô lưới 6 (tw x th) | ô lưới 9 | slot cao | cài đặt: hàng cao | thành tựu: hàng cao / số hàng hiện | trợ giúp: số hàng hiện |
+|---|---|---|---|---|---|---|
+| 400x240 | 124x64 | 96x40 | 61 | 23 | 38 / 4 | 7 |
+| 600x270 | 190x79 | 120x50 | 71 | 27 | 38 / 4 | 8 |
+| 800x360 | 192x80 | 122x51 | 90 | 27 | 38 / 6 | 10 |
+| 1200x540 | 377x160 | 247x103 | 140 | 30 | 44 / 8 | 14 |
+
+### 13.3 Vùng chạm từng màn (đại diện: phần tử đầu mỗi nhóm; còn lại trong `hit_rects.json`)
+Định dạng `[x0,y0,x1,y1)` theo khung logic, cột = 400x240 / 600x270 / 800x360 / 1200x540.
+
+
+**menu_chinh_logo** (`menu_chinh_logo`): MainMenu state 2 (DrawLogo): huy hiệu 12+ trên nền dung nham
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| logo (1) | `0,0,400,240` | `0,0,600,270` | `0,0,800,360` | `0,0,1200,540` | chạm = bỏ qua logo (DrawLogo, StateMainMenu state 2) |
+
+**menu_chinh_tieu_de** (`menu_chinh_tieu_de`): MainMenu state 3 (DrawTitle): logo + "Tap to Continue" (ảnh)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| tap (1) | `0,0,400,240` | `0,0,600,270` | `0,0,800,360` | `0,0,1200,540` | chạm bất kỳ = tiếp tục (DrawTitle: KeyPressed(-5)) -> state 4 menu chính; "Tap to Continue" là ẢNH (T11 vẽ lại tiếng Việt) |
+
+**menu_chinh_luoi6** (`menu_chinh_luoi6`): MainMenu state 4: menu chính BẢN 6 Ô (theo kế hoạch T7)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| tile (6) | `8,88,132,152` | `9,88,199,167` | `104,157,296,237` | `24,170,401,330` | đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu) |
+
+**menu_chinh_luoi9** (`menu_chinh_luoi9`): MainMenu state 4: menu chính lưới 3x3 GỐC (9 ô, trước T7)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| tile (9) | `50,88,146,128` | `114,88,234,138` | `209,157,331,208` | `219,170,466,273` | đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu) |
+
+**menu_chinh_thoat** (`menu_chinh_thoat`): MainMenu popup: "Bạn có muốn thoát?" (Có/Không)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| tile (6) | `8,88,132,152` | `9,88,199,167` | `104,157,296,237` | `24,170,401,330` | đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu) |
+| popup_yes (1) | `71,120,197,143` | `101,135,297,158` | `137,179,396,208` | `383,269,594,307` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,120,329,143` | `304,135,499,158` | `405,179,663,208` | `607,269,817,307` | con trỏ popup=Không + KeyPressed(-5) |
+
+**menu_chinh_cho** (`menu_chinh_cho`): MainMenu state 0/1/7/8 (mạng): popup chờ (Đang kiểm tra cập nhật)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| tile (6) | `8,88,132,152` | `9,88,199,167` | `104,157,296,237` | `24,170,401,330` | đặt con trỏ lưới gốc = 0 (Bắt đầu) rồi KeyPressed(-5) (StateMainMenu state 4, DrawMainMenu/KeyMainMenu) |
+
+**menu_chinh_slot** (`menu_chinh_slot`): MainMenu state 5 (DrawStart): Chọn Slot, 3 slot (2 có dữ liệu, 1 trống)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| del (2) | `337,55,379,78` | `463,60,505,83` | `610,84,664,113` | `931,122,1000,160` | phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot |
+| slot (3) | `17,37,335,96` | `90,37,461,106` | `131,55,608,143` | `194,73,929,209` | đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData) |
+
+**menu_chinh_slot_moi** (`menu_chinh_slot_moi`): Chọn Slot: popup tạo nhân vật mới (Có/Không)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| del (2) | `337,55,379,78` | `463,60,505,83` | `610,84,664,113` | `931,122,1000,160` | phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot |
+| slot (3) | `17,37,335,96` | `90,37,461,106` | `131,55,608,143` | `194,73,929,209` | đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData) |
+| popup_yes (1) | `71,120,197,143` | `101,135,297,158` | `137,179,396,208` | `383,269,594,307` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,120,329,143` | `304,135,499,158` | `405,179,663,208` | `607,269,817,307` | con trỏ popup=Không + KeyPressed(-5) |
+
+**menu_chinh_slot_xoa** (`menu_chinh_slot_xoa`): Chọn Slot: popup xoá slot (Có/Không)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| del (2) | `337,55,379,78` | `463,60,505,83` | `610,84,664,113` | `931,122,1000,160` | phím * (*Xoá): popup xoá slot 0 (193) -> Có = xoá dữ liệu slot |
+| slot (3) | `17,37,335,96` | `90,37,461,106` | `131,55,608,143` | `194,73,929,209` | đặt con trỏ slot=0 + KeyPressed(-5): slot có dữ liệu -> ContinueGame (LoadSlotData) |
+| popup_yes (1) | `71,120,197,143` | `101,135,297,158` | `137,179,396,208` | `383,269,594,307` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,120,329,143` | `304,135,499,158` | `405,179,663,208` | `607,269,817,307` | con trỏ popup=Không + KeyPressed(-5) |
+
+**menu_chinh_lop** (`menu_chinh_lop`): MainMenu state 5 (DrawStart): Chọn lớp nhân vật (lưới 2x2 gốc + mô tả ngắn)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| class (4) | `17,37,102,127` | `90,37,187,142` | `131,55,256,189` | `194,73,384,281` | đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp |
+| ok (1) | `207,192,375,215` | `305,222,501,245` | `406,293,660,322` | `605,450,995,488` | KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp) |
+
+**menu_chinh_lop_mo_ta** (`menu_chinh_lop_mo_ta`): Chọn lớp: popup mô tả lớp đầy đủ (hộp cuộn có clip) + OK/Huỷ
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| class (4) | `17,37,102,127` | `90,37,187,142` | `131,55,256,189` | `194,73,384,281` | đặt con trỏ lớp (2x2 gốc)=0; chạm lần 2 hoặc OK = KeyPressed(-5) -> popup mô tả lớp |
+| ok (1) | `207,192,375,215` | `305,222,501,245` | `406,293,660,322` | `605,450,995,488` | KeyPressed(-5) -> popup mô tả lớp (StatePopup) rồi OK = NewGame(lớp) |
+| desc_scroll (1) | `47,93,353,165` | `65,117,535,172` | `89,166,711,204` | `303,242,897,306` | kéo dọc = cuộn mô tả (TouchMoved mới); mô tả vẽ trong hộp CÓ CLIP (sửa lỗi tràn chữ ở DrawStart 0x11d390) |
+| popup_ok (1) | `47,171,197,194` | `65,178,297,201` | `89,215,396,244` | `303,321,594,359` | KeyPressed(-5) = NewGame với lớp đã chọn |
+| popup_cancel (1) | `204,171,353,194` | `304,178,535,201` | `405,215,711,244` | `607,321,897,359` | huỷ: về chọn lớp |
+
+**menu_chinh_chuyen_gia** (`menu_chinh_chuyen_gia`): MainMenu state 6 (DrawExpert): chọn chế độ Chuyên Gia
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| mode (3) | `17,37,163,95` | `90,37,258,105` | `131,56,346,142` | `194,105,519,219` | đặt con trỏ chế độ=0 + KeyPressed(-5) (DrawExpert/KeyExpert gốc) |
+| desc_scroll (1) | `177,68,375,188` | `272,68,501,218` | `363,87,660,287` | `540,110,995,442` | kéo dọc = cuộn mô tả |
+| start (1) | `177,192,375,215` | `272,222,501,245` | `363,293,660,322` | `540,450,995,488` | KeyPressed(-5) -> StateInExpertMenu (màn chuẩn bị, b2b). Bỏ "Xem bảng xếp hạng" (199, cần mạng) |
+
+**menu_chinh_cai_dat** (`menu_chinh_cai_dat`): MainMenu state 9 (DrawOption): Cài đặt, 7 mục
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| opt0_l (1) | `323,39,341,57` | `441,39,463,61` | `590,57,613,80` | `911,75,937,101` | KeyPressed(TRÁI) của mục: giảm giá trị |
+| opt0_r (1) | `359,39,377,57` | `481,39,503,61` | `637,57,660,80` | `968,75,994,101` | KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4) |
+| opt (15) | `17,37,317,59` | `90,37,435,63` | `131,55,581,82` | `194,73,899,103` | đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt) |
+| opt1_l (1) | `323,63,341,81` | `441,67,463,89` | `590,86,613,109` | `911,107,937,133` | KeyPressed(TRÁI) của mục: giảm giá trị |
+| opt1_r (1) | `359,63,377,81` | `481,67,503,89` | `637,86,660,109` | `968,107,994,133` | KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4) |
+| opt2_l (1) | `299,87,317,105` | `417,95,439,117` | `566,115,589,138` | `883,139,909,165` | KeyPressed(TRÁI) của mục: giảm giá trị |
+| opt2_r (1) | `359,87,377,105` | `481,95,503,117` | `637,115,660,138` | `968,139,994,165` | KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4) |
+| opt4_l (1) | `299,135,317,153` | `417,151,439,173` | `566,173,589,196` | `883,203,909,229` | KeyPressed(TRÁI) của mục: giảm giá trị |
+| opt4_r (1) | `359,135,377,153` | `481,151,503,173` | `637,173,660,196` | `968,203,994,229` | KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4) |
+| note_restart (1) | `17,205,383,219` | `90,233,509,247` | `131,258,669,272` | `194,297,1006,316` | chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại |
+
+**menu_chinh_cai_dat_phan_giai** (`menu_chinh_cai_dat_phan_giai`): Cài đặt: mục Phân giải 1/1..1/4 (đang chọn 1/3) + ghi chú khởi động lại
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| opt0_l (1) | `323,39,341,57` | `441,39,463,61` | `590,57,613,80` | `911,75,937,101` | KeyPressed(TRÁI) của mục: giảm giá trị |
+| opt0_r (1) | `359,39,377,57` | `481,39,503,61` | `637,57,660,80` | `968,75,994,101` | KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4) |
+| opt (15) | `17,37,317,59` | `90,37,435,63` | `131,55,581,82` | `194,73,899,103` | đặt con trỏ mục=opt0 (KeyPressed(-5) = đổi giá trị với mục bật/tắt) |
+| opt1_l (1) | `323,63,341,81` | `441,67,463,89` | `590,86,613,109` | `911,107,937,133` | KeyPressed(TRÁI) của mục: giảm giá trị |
+| opt1_r (1) | `359,63,377,81` | `481,67,503,89` | `637,86,660,109` | `968,107,994,133` | KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4) |
+| opt2_l (1) | `299,87,317,105` | `417,95,439,117` | `566,115,589,138` | `883,139,909,165` | KeyPressed(TRÁI) của mục: giảm giá trị |
+| opt2_r (1) | `359,87,377,105` | `481,95,503,117` | `637,115,660,138` | `968,139,994,165` | KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4) |
+| opt4_l (1) | `299,135,317,153` | `417,151,439,173` | `566,173,589,196` | `883,203,909,229` | KeyPressed(TRÁI) của mục: giảm giá trị |
+| opt4_r (1) | `359,135,377,153` | `481,151,503,173` | `637,173,660,196` | `968,203,994,229` | KeyPressed(PHẢI) của mục: tăng giá trị (mục Phân giải: t10_step, 1/k vòng 1..4) |
+| note_restart (1) | `17,205,383,219` | `90,233,509,247` | `131,258,669,272` | `194,297,1006,316` | chỉ hiển thị: đổi Phân giải ghi hd_scale.txt, có hiệu lực SAU khi khởi động lại |
+
+**menu_chinh_thanh_tuu** (`menu_chinh_thanh_tuu`): MainMenu state 10 (DrawMission): Thành tựu (danh sách + chi tiết)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| row (4) | `17,62,216,100` | `90,62,319,100` | `131,84,423,122` | `194,109,637,153` | đặt con trỏ thành tựu=0 (DrawMission/KeyMission); chạm hàng đã chọn = không có hành động (chỉ xem) |
+| list_scroll (1) | `17,62,222,220` | `90,62,325,220` | `131,84,432,322` | `194,109,649,475` | kéo dọc/mũi tên: cuộn danh sách (con trỏ gốc lên/xuống) |
+| desc_scroll (1) | `236,104,375,215` | `339,104,501,245` | `449,127,660,322` | `670,162,995,488` | kéo dọc = cuộn mô tả |
+
+**menu_chinh_tro_giup** (`menu_chinh_tro_giup`): MainMenu state 11 (DrawHelp): Trợ giúp, danh sách 20 bài
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| row (6) | `17,37,377,62` | `90,37,503,62` | `131,55,660,80` | `194,73,994,101` | đặt con trỏ trợ giúp=0 + KeyPressed(-5) -> trang nội dung (DrawHelp) |
+| list_scroll (1) | `17,37,383,197` | `90,37,509,251` | `131,55,669,323` | `194,73,1006,491` | kéo dọc/mũi tên: cuộn danh sách |
+
+**menu_chinh_tro_giup_noi_dung** (`menu_chinh_tro_giup_noi_dung`): MainMenu state 11: trang nội dung Trợ giúp (bài dài nhất) + Trước/Tiếp
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| page_scroll (1) | `17,65,383,193` | `90,65,509,223` | `131,84,669,293` | `194,106,1006,450` | kéo dọc = cuộn trang (TouchMoved mới) |
+| prev (1) | `17,200,175,223` | `90,230,274,253` | `131,302,370,331` | `194,461,562,499` | KeyPressed(TRÁI): trang trước (DrawHelp) |
+| next (1) | `225,200,383,223` | `325,230,509,253` | `430,302,669,331` | `638,461,1006,499` | KeyPressed(PHẢI): trang sau |
+
+**menu_chinh_ho_tro** (`menu_chinh_ho_tro`): MainMenu state 12: Hỗ trợ / thông tin thẩm định game
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+
+### 13.4 Giả định cần xác nhận khi implement (T17c)
+1. Icon: ô lưới `menu.mgr` #19..#27 theo thứ tự 9 ô (suy từ hình dạng: kiếm, quỷ sừng, túi, làm mới, bánh răng, "!", "?", mặt cười, tia); 5 icon lớp `menu.mgr` #28..#32 (mockup gán Warrior 29, Rogue 30, Gunslinger 31, Knight 32); khung chân dung dùng vòng `ui_new/03` + icon (gốc vẽ sprite nhân vật; thay ở T17c).
+2. Giá trị mẫu Cài đặt: Nhạc nền/Âm hiệu ứng hiển thị cấp 0–5 (chưa rõ), Tốc độ game/Hiệu ứng = Cao/Trung/Thấp (chuỗi 321–323), Rung/Tự ngắm = BẬT/TẮT; ghi chú "Khởi động lại để áp dụng" lấy từ khối T10 của `vi.bin`. Mục Phân giải vẽ 4 chip 1/1..1/4 (gốc: vòng bằng TRÁI/PHẢI `t10_step`); chạm chip = lặp bước tới khi khớp.
+3. Chuỗi `common_text` 210 trong dữ liệu build vẫn là "Xem ngang"; mockup dùng "Phân giải" (`common_text` 53) như T10 ghi đè lúc chạy.
+4. Mô tả lớp: ngắn = `menu_text` 24–27, đầy đủ = 20–23; điểm số/LV/thời gian chơi/tiến trình thành tựu là SỐ MẪU; tên nhân vật mẫu = `common_text` 9.
+5. Thành tựu: `mission_text[i]` ↔ `mission_list[i]` (i=0 là tiêu đề nhóm); trạng thái đã đạt trong ảnh là mẫu.
+6. Huy hiệu 12+ (Logo) và "Tap to Continue" là ảnh gốc tiếng Anh/Hàn: T11 vẽ lại.
