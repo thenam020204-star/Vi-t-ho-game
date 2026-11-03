@@ -32,7 +32,9 @@ def sc_unlearned():
     A(['OK'], 0xF2, 8) if NEW else c.key('OK', 8); r.step(10); out['after'] = ptrs(); return out
 def sc_clear():
     learn([3, 4]); c.S3(6, 8)
-    A(['OK', 'RIGHT', 'OK'], 0xA0 + 0); A(['LEFT', 'OK', 'OK'] if not NEW else [], 0xC0 + 0) if False else None
+    if NEW: c.tap(0xA0 + 0); c.tap(0xC0 + 0, 5)
+    else:
+        for k in ['OK', 'RIGHT', 'OK']: c.key(k, 3)
     out = {'assigned': ptrs()}
     if NEW: c.tap(0xCA, 6)                                   # sub 0 hoặc 1: nút Bỏ chọn
     else:
