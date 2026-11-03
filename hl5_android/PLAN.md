@@ -114,7 +114,16 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Xuất 3 APK chia đôi lỗi (cùng package, cùng khoá): `diag-A` = APK gốc + lớp chẩn đoán (kiểm lớp chẩn đoán vô hại); `diag-B` = A + patch guest + VFS Việt + vi.bin (KHÔNG vá bridge, hash target-assets cập nhật); `diag-C` = v0.1 đầy đủ + lớp chẩn đoán. Nếu dễ: `diag-C1` = C nhưng bỏ riêng patch NEAREST/viewport (chỉ tắt hook chữ + logic).
   - Tự kiểm tĩnh trước khi xuất: `aapt2 dump badging`, apksigner, baksmali/dex verify; nếu có thể, chạy thử trên emulator/headless ART có sẵn (không bắt buộc). Rà lại khả nghi tĩnh trong v0.1 (sha256 target-assets khớp file đã nén? quyền đọc asset? `p_memsz` vs ElfLoader; patch bridge chồng lấn) và ghi nhận xét.
   - Đầu ra: `make_apk.sh --diag A|B|C|C1` → `dist/diag/*.apk`, `PHAT-HANH-diag.md` (cài lần lượt, cách lấy file log trong Downloads, gửi lại).
-- [ ] T15. Phóng to cửa sổ/tab menu trong game ở HD (sau T10, trước T14b) — Agent: A1 — **Quản đốc nghiệm thu**
+- [ ] T17. **Menu trong game thiết kế mới cho màn lớn** (người dùng chốt, THAY T15: không phóng to; bố cục mới hoàn toàn theo kích thước màn; phát hành MỘT lần khi xong mọi cửa sổ) — **Quản đốc nghiệm thu**
+  - Quyết định 12 (mới): chỉ áp khi HD (khung logic > 600x270); 400x240..600x270 giữ menu gốc y hệt. Menu mới đọc/ghi dữ liệu game qua hàm/trường có sẵn của guest (không nhân bản logic: dùng vật phẩm, trang bị, học kỹ năng… gọi hàm gốc). Chữ 18 px; icon/sprite gốc vẽ ×s NEAREST hoặc ×1 tuỳ mockup.
+  - [ ] T17a. Kiểm kê + khả thi — Agent: A1 — **Quản đốc nghiệm thu**
+    - Liệt kê MỌI cửa sổ/tab/popup trong game (StateInGameMenu, StatePopup, StateCashShop, StateInNpcMenu, StateInExpertMenu, StateNetMenu, …): tên, hàm Draw/Key/Touch/Process, dữ liệu hiển thị (trường/hàm getter cụ thể: danh sách túi đồ, chỉ số nhân vật, kỹ năng, nhiệm vụ, giá…), thao tác (phím/chạm → hàm hành động gốc), trạng thái con (chọn, cuộn, xác nhận). Ảnh harness 600x270 từng cửa sổ (contact sheet `shots/T17/kiemke.png`, đánh số).
+    - Chỗ đặt code: menu mới cần nhiều KB mã C → đánh giá thêm đoạn PT_LOAD mới vào cuối `.so` (bridge ElfLoader có map mọi PT_LOAD? kiểm br.dis, BAO-CAO §9.3/§9.8) so với dồn hàm chết; chứng minh bằng harness + phân tích tĩnh bridge. Cách móc: thay ô vtable `Paint`/Key/Touch theo state (BAO-CAO §12 đã có địa chỉ vtable).
+    - Đầu ra: `BAO-CAO-RE.md` §13 (bảng cửa sổ, API dữ liệu/hành động, phương án code space, rủi ro, ước lượng khối lượng theo cửa sổ). Không patch.
+  - [ ] T17b. Mockup từng cửa sổ ở 1200x540 (và 800x360) theo phong cách `ui_new/` (viền cam/đen) — người dùng duyệt trước khi implement.
+  - [ ] T17c… Implement từng cửa sổ theo mockup (task con do quản đốc chia sau T17a/T17b).
+- [ ] ~~T15. Phóng to~~ (HUỶ theo người dùng; thiết kế §12 giữ để tham khảo, WIP zoom ở `git stash` "T15b zoom WIP")
+  - (cũ) T15. Phóng to cửa sổ/tab menu trong game ở HD (sau T10, trước T14b) — Agent: A1 — **Quản đốc nghiệm thu**
   - Yêu cầu người dùng: tab menu trong game (túi đồ, trang bị, kỹ năng, nhiệm vụ, cửa hàng, popup) quá nhỏ ở ÷2 → phóng to (hệ số nguyên s = max(1, floor(H/270)), vd 1200x540 → ×2), giữ NEAREST, căn giữa.
   - [x] T15a thiết kế — xong, quản đốc duyệt: phương án (a), BAO-CAO §12.
   - [ ] T15b implement theo BAO-CAO §12 (quyết định quản đốc, ghi ngày phiên ccr-706054f3): (1) thứ tự: InGameMenu → Popup (thunk 0x138cb8 giữ cảnh full-res) → CashShop → InNpcMenu → InExpertMenu → NetMenu; MainMenu và Map làm CUỐI, không đạt thì giữ s=1 cho state đó (ghi lý do). (2) Bản phóng bằng CPU trước; a2 (GL phóng qua texcoord) để T15c, chỉ làm khi người dùng báo chậm. (3) Lỗi mô tả lớp tràn: sửa bằng DỮ LIỆU (wrap lại 4 chuỗi mô tả cho hộp 156 px, ≤ 3 dòng, qua override/build_android_vi), không vá clip. (4) s = max(1, floor(H/270)); s=1 thì đường gốc y hệt (so ảnh từng byte ở 600x270).
@@ -163,7 +172,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: T15a ✓ → T15b (công nhân mới)  → T16 → T14a → T14b → T7 → T11.
+- A1: T17a → T17b (mockup, người dùng duyệt) → T17c… → T16 → T14a/T14b → T7 → T11. (T15 huỷ) → T16 → T14a → T14b → T7 → T11.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -244,3 +253,4 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [quản đốc] Người dùng dừng phiên (hết hạn mức). T15a (chỉ thiết kế, không patch) bị dừng giữa chừng: phần đã viết (nếu có) ở BAO-CAO §12 và `$WORK/t15a/`; phiên sau giao lại T15a. Bản phát hành mới nhất vẫn là v0.2-hd (không có patch mới chưa đóng gói).
 - [A1] T15a xong (chờ quản đốc duyệt): chọn phương án (a): bọc `Paint` 8 state bằng wrapper guest vẽ vào FB nhỏ (W/s×H/s, s=max(1,H/270)) qua `Graphic::ChangeFrameBuff` 0x5c020 + phóng NEAREST căn giữa; chạm = chia s ở `onHandleEvent` 0x9831c + chạy `mainKeyPressed` 0x98af0 với kích thước Graphic nhỏ; chữ: hd=0/[69]=11 trong wrapper (15/10 px). Đã kiểm trong harness 1200x540 (menu 3x3, Đặc tính, chạm chọn ô đúng; `harness/t15a_zoom.py`, ảnh `shots/T15a/`). BAO-CAO-RE §12 (so sánh a/b/c, bước T15b, tiêu chí kiểm). Mô tả lớp tràn: do `StateMainMenu::DrawStart` 0x11d390 vẽ DrawText hộp cao 1000 không clip; zoom không sửa, sửa bằng dữ liệu fit (§12.4). Env: setup_env.sh --build OK, APK trùng byte v0.2-hd. Không thêm patch/APK, chưa commit.
 - [quản đốc] Nghiệm thu T15a: đạt (harness 1200x540 menu 3x3 + Đặc tính phóng ×2, chữ 15 px, chạm chọn đúng ô). Quyết định: in-game state trước, MainMenu/Map cuối (không đạt thì s=1); CPU trước, a2 → T15c nếu chậm; mô tả lớp sửa bằng dữ liệu. Giao T15b cho công nhân mới.
+- [người dùng] Không phóng to nữa; dựng lại toàn bộ menu theo kích thước màn: chọn "thiết kế menu mới hoàn toàn" (mockup duyệt trước), "tất cả rồi mới phát hành". → Quản đốc dừng T15b (WIP vào git stash), thêm T17, giao T17a.
