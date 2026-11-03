@@ -22,3 +22,74 @@
   nhãn 9 mục: dài nhất 60 px "Tinh Linh" <= ô menu 3x3 163 px (chừa 103), tab 92 px (chỉ icon)
   popup rộng 480 (chữ 436 px): chuỗi common_text dài nhất theo dòng = 2 dòng -> popup cao 128 <= khung 492: ĐẠT ("Triệu hồi Tinh Linh;Ren, dùng phím;hướng chọ...")
   nút popup 212 px rộng; nhãn dài nhất "Không" 35 px
+# ===== b2a (mock_b2a.py) =====
+Kiểm trên TOÀN BỘ dữ liệu thật, 4 khung; "cuộn" = thanh cuộn, không cắt chữ.
+== 400x240  font 15px / nhỏ 10px, icon x1 ==
+  tab con Kỹ năng 5 tab: nhãn dài nhất 52 px <= 62 px: ĐẠT
+  tab con Đặc tính 4 tab: nhãn dài nhất 46 px <= 81 px: ĐẠT
+  tab con Tinh linh 2 tab: nhãn dài nhất 96 px <= 175 px: ĐẠT
+  tab con Nhiệm vụ 2 tab: nhãn dài nhất 96 px <= 175 px: ĐẠT
+  nhân vật trang chi tiết (13 nhãn): rộng nhất 86 px + giá trị 24 px <= cột 171 px: ĐẠT
+  trang bị (771 tên): nhiều dòng nhất 2 (giới hạn 2) "Trường Thương Trừ Khử Mặt Trời", hộp chữ 163 px: ĐẠT
+  kỹ năng (188): tên rộng nhất 130 px "Thục Luyện Kiếm Một Tay" (<=2 dòng: ĐẠT); mô tả: phân bố số dòng 2:61, 3:38, 4:32, 5:17, 6:27, 7:7, 8:3, 9:3, hộp hiện 4 dòng, 57 mô tả dài hơn -> cuộn dọc có thanh cuộn, không cắt
+  đặc tính: hộp mô tả rộng 192 px, hiện 2 dòng; mô tả dài nhất 10 dòng -> cuộn dọc (thanh cuộn)
+  nhiệm vụ (151): tên rộng nhất 148 px "Thánh Địa Chiến: Con Người" <= hàng danh sách 161 px: ĐẠT
+  nhiệm vụ mô tả: hộp hiện 5 dòng (rộng 162 px); phân bố số dòng 1:20, 2:12, 3:22, 4:24, 5:27, 6:31, 7:9, 8:5, 10:1; 46 mô tả -> cuộn dọc
+  nhiệm vụ tên trong hộp chi tiết: tối đa 1 dòng (giới hạn 2): ĐẠT
+  hệ thống cài đặt: nhãn dài nhất 62 px <= 260 px: ĐẠT; 6 hàng cao 156 <= 168: ĐẠT
+  hệ thống trợ giúp (20 tiêu đề): rộng nhất 108 px "Thông Tin Thẩm Định" <= 137 px: ĐẠT
+  trợ giúp nội dung: hộp hiện 8 dòng, 8 bài dài hơn -> cuộn dọc
+  popup menu: nhãn dài nhất 68 px "Gán phím tắt" <= nút 184 px: ĐẠT
+  popup chọn lớp (5 lựa chọn) cao 172 <= khung 224: ĐẠT
+== 600x270  font 15px / nhỏ 10px, icon x1 ==
+  tab con Kỹ năng 5 tab: nhãn dài nhất 52 px <= 73 px: ĐẠT
+  tab con Đặc tính 4 tab: nhãn dài nhất 46 px <= 94 px: ĐẠT
+  tab con Tinh linh 2 tab: nhãn dài nhất 96 px <= 201 px: ĐẠT
+  tab con Nhiệm vụ 2 tab: nhãn dài nhất 96 px <= 201 px: ĐẠT
+  nhân vật trang chi tiết (13 nhãn): rộng nhất 86 px + giá trị 24 px <= cột 197 px: ĐẠT
+  trang bị (771 tên): nhiều dòng nhất 1 (giới hạn 2) "Trường Thương Trừ Khử Mặt Trời", hộp chữ 216 px: ĐẠT
+  kỹ năng (188): tên rộng nhất 130 px "Thục Luyện Kiếm Một Tay" (<=2 dòng: ĐẠT); mô tả: phân bố số dòng 1:2, 2:81, 3:46, 4:23, 5:27, 6:5, 7:4, hộp hiện 5 dòng, 9 mô tả dài hơn -> cuộn dọc có thanh cuộn, không cắt
+  đặc tính: hộp mô tả rộng 245 px, hiện 4 dòng; mô tả dài nhất 8 dòng -> cuộn dọc (thanh cuộn)
+  nhiệm vụ (151): tên rộng nhất 148 px "Thánh Địa Chiến: Con Người" <= hàng danh sách 187 px: ĐẠT
+  nhiệm vụ mô tả: hộp hiện 7 dòng (rộng 189 px); phân bố số dòng 1:21, 2:19, 3:25, 4:31, 5:35, 6:15, 7:4, 9:1; 1 mô tả -> cuộn dọc
+  nhiệm vụ tên trong hộp chi tiết: tối đa 1 dòng (giới hạn 2): ĐẠT
+  hệ thống cài đặt: nhãn dài nhất 62 px <= 313 px: ĐẠT; 6 hàng cao 156 <= 198: ĐẠT
+  hệ thống trợ giúp (20 tiêu đề): rộng nhất 108 px "Thông Tin Thẩm Định" <= 159 px: ĐẠT
+  trợ giúp nội dung: hộp hiện 9 dòng, 4 bài dài hơn -> cuộn dọc
+  popup menu: nhãn dài nhất 68 px "Gán phím tắt" <= nút 294 px: ĐẠT
+  popup chọn lớp (5 lựa chọn) cao 172 <= khung 254: ĐẠT
+== 800x360  font 15px / nhỏ 10px, icon x2 ==
+  tab con Kỹ năng 5 tab: nhãn dài nhất 52 px <= 95 px: ĐẠT
+  tab con Đặc tính 4 tab: nhãn dài nhất 46 px <= 123 px: ĐẠT
+  tab con Tinh linh 2 tab: nhãn dài nhất 96 px <= 260 px: ĐẠT
+  tab con Nhiệm vụ 2 tab: nhãn dài nhất 96 px <= 260 px: ĐẠT
+  nhân vật trang chi tiết (13 nhãn): rộng nhất 86 px + giá trị 24 px <= cột 251 px: ĐẠT
+  trang bị (771 tên): nhiều dòng nhất 1 (giới hạn 2) "Trường Thương Trừ Khử Mặt Trời", hộp chữ 214 px: ĐẠT
+  kỹ năng (188): tên rộng nhất 130 px "Thục Luyện Kiếm Một Tay" (<=2 dòng: ĐẠT); mô tả: phân bố số dòng 1:10, 2:81, 3:45, 4:27, 5:19, 6:5, 7:1, hộp hiện 7 dòng, 0 mô tả dài hơn -> cuộn dọc có thanh cuộn, không cắt
+  đặc tính: hộp mô tả rộng 266 px, hiện 6 dòng; mô tả dài nhất 7 dòng -> cuộn dọc (thanh cuộn)
+  nhiệm vụ (151): tên rộng nhất 148 px "Thánh Địa Chiến: Con Người" <= hàng danh sách 243 px: ĐẠT
+  nhiệm vụ mô tả: hộp hiện 10 dòng (rộng 242 px); phân bố số dòng 1:23, 2:33, 3:32, 4:50, 5:11, 6:1, 7:1; 0 mô tả -> cuộn dọc
+  nhiệm vụ tên trong hộp chi tiết: tối đa 1 dòng (giới hạn 2): ĐẠT
+  hệ thống cài đặt: nhãn dài nhất 62 px <= 404 px: ĐẠT; 6 hàng cao 192 <= 248: ĐẠT
+  hệ thống trợ giúp (20 tiêu đề): rộng nhất 108 px "Thông Tin Thẩm Định" <= 201 px: ĐẠT
+  trợ giúp nội dung: hộp hiện 12 dòng, 0 bài dài hơn -> cuộn dọc
+  popup menu: nhãn dài nhất 68 px "Gán phím tắt" <= nút 386 px: ĐẠT
+  popup chọn lớp (5 lựa chọn) cao 223 <= khung 328: ĐẠT
+== 1200x540  font 18px / nhỏ 15px, icon x3 ==
+  tab con Kỹ năng 5 tab: nhãn dài nhất 60 px <= 148 px: ĐẠT
+  tab con Đặc tính 4 tab: nhãn dài nhất 53 px <= 190 px: ĐẠT
+  tab con Tinh linh 2 tab: nhãn dài nhất 110 px <= 396 px: ĐẠT
+  tab con Nhiệm vụ 2 tab: nhãn dài nhất 110 px <= 396 px: ĐẠT
+  nhân vật trang chi tiết (13 nhãn): rộng nhất 99 px + giá trị 28 px <= cột 382 px: ĐẠT
+  trang bị (771 tên): nhiều dòng nhất 1 (giới hạn 2) "Trường Thương Trừ Khử Mặt Trời", hộp chữ 379 px: ĐẠT
+  kỹ năng (188): tên rộng nhất 149 px "Thục Luyện Kiếm Một Tay" (<=2 dòng: ĐẠT); mô tả: phân bố số dòng 1:61, 2:72, 3:42, 4:10, 5:3, hộp hiện 12 dòng, 0 mô tả dài hơn -> cuộn dọc có thanh cuộn, không cắt
+  đặc tính: hộp mô tả rộng 438 px, hiện 11 dòng; mô tả dài nhất 5 dòng -> vừa
+  nhiệm vụ (151): tên rộng nhất 170 px "Thánh Địa Chiến: Con Người" <= hàng danh sách 376 px: ĐẠT
+  nhiệm vụ mô tả: hộp hiện 14 dòng (rộng 371 px); phân bố số dòng 1:32, 2:47, 3:61, 4:10, 5:1; 0 mô tả -> cuộn dọc
+  nhiệm vụ tên trong hộp chi tiết: tối đa 1 dòng (giới hạn 2): ĐẠT
+  hệ thống cài đặt: nhãn dài nhất 71 px <= 639 px: ĐẠT; 6 hàng cao 246 <= 388: ĐẠT
+  hệ thống trợ giúp (20 tiêu đề): rộng nhất 124 px "Thông Tin Thẩm Định" <= 308 px: ĐẠT
+  trợ giúp nội dung: hộp hiện 17 dòng, 0 bài dài hơn -> cuộn dọc
+  popup menu: nhãn dài nhất 78 px "Gán phím tắt" <= nút 348 px: ĐẠT
+  popup chọn lớp (5 lựa chọn) cao 292 <= khung 492: ĐẠT
+== lỗi bố cục khi dựng ảnh: không ==

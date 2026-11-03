@@ -136,3 +136,277 @@ Ví dụ (400x240, Túi đồ): close=(11, 11, 36, 31); tab1=(53, 205, 95, 229);
 2. Thêm UI mới (không đổi logic): nút "Sắp xếp" bấm được thay phím `0`; cuộn mô tả bằng kéo dọc (cần `TouchMoved` mới; `KeyPressed` gốc giữ nguyên); popup nuốt chạm ngoài.
 3. Giả định cần xác nhận: số trang túi hiển thị 3 (theo ảnh kiểm kê, `GetSize()=48`); màu 5 mã phẩm chất; cờ `force0` trong engine; thunk vẽ icon ×s; chân dung vòng cam là sprite nhúng mới.
 4. 600x270 và 800x360 là kiểm co giãn bằng công thức (ảnh trong `trung_gian/` và `tong_hop.png`), không phải mốc thiết kế riêng.
+<!-- B2A -->
+
+## 11. Lô b2a: các tab InGameMenu còn lại + chế độ con Túi đồ + popup đặc thù (T17b2)
+> Sinh bởi `mock_b2a.py` + `layout_b2a.py` (chạy SAU `mock_menu.py`). Dùng nguyên `metrics(W,H)` của mục 1 (s, px, spx, lp, pad, gap, cell, pitch, titleH, tabH, btnH, rowH, sbw, barH…); mọi số dưới đây là điểm ảnh khung logic, chia nguyên. Ảnh: `<màn>_400x240[.png|_x3.png]`, `<màn>_1200x540.png`, `trung_gian/<màn>_{600x270,800x360}.png`; tổng hợp `tong_hop_b2a.png`; vùng chạm đầy đủ `hit_rects.json` (khoá `<màn>_<WxH>`); kiểm tràn `verify.txt` (phần b2a).
+
+### 11.1 Lưới/trạng thái logic GỐC giữ nguyên (bằng chứng so.dis; hằng đọc từ `Draw*`/`Key*`)
+Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ nghĩa, chạm = đặt trường con trỏ rồi `KeyPressed(-5)` gốc (kiến trúc A, §13.4). Các hằng dưới đây lấy từ vòng lặp/`cmp` trong hàm gốc (vd `DrawEquipMenu` có vòng 8, `DrawPropertyLine` 3 ô × 4 hàng, `DrawComboMenu` 4 ô + 5 ứng viên, `DrawSkillMenu` 16 ô + 5 tab con); T17c phải đọc lại chính xác offset trường trước khi viết `TouchPressed`.
+| Tab | Lưới gốc giữ | Con trỏ/trạng thái gốc | Chạm → |
+|---|---|---|---|
+| Nhân vật (1) | 4 hàng cộng điểm STR/AGI/VIT/INT; 2 trang (`#` = Chi tiết/Cơ bản): trang Chi tiết 13 chỉ số (ct 33–45) | con trỏ hàng `[this+0xe]`; trái/phải = giảm/tăng điểm tạm (`BackupStatPerformance`), `*` = `CancelApplayStat` | chạm hàng = đặt con trỏ; nút +/− = `KeyPressed(PHẢI/TRÁI)`; nút Chi tiết/Cơ bản = phím `#`; nút Huỷ = phím `*` |
+| Trang bị (3) | 8 ô, 4 cột × 2 hàng (vòng `cmp 8` trong `DrawEquipMenu`); thứ tự giả định theo ảnh gốc: Vũ khí, Mũ, Giáp, Găng / Giày, Khiên, Trang sức, Trang sức | con trỏ ô; OK trên ô có đồ → menu 2 mục Trang bị/Tháo (`Process`: `ClearEquipItem`); ô trống/Trang bị → `OpenEquipFilter` = chế độ con Túi đồ lọc | chạm ô; chạm lần 2 = OK; menu = 2 nút |
+| Kỹ năng (4) | 5 tab con (Tất cả/Đột Kích/Đặc tính/Tinh Linh/Thường), lưới 4 cột × 4 hàng thấy được, cuộn theo hàng (skill_00 có 43 kỹ năng = 11 hàng) | con trỏ ô + hàng cuộn (`KeySkillMenu` ghi `+0xe..+0x12`); trạng thái con 2,3,7–10 (gán ô nhanh, sách kỹ năng, hợp thành…) | chạm ô; chạm lần 2 hoặc nút "Gán phím tắt" = OK; kéo dọc cuộn (mới) |
+| Đặc tính (5) | tab nhánh 4 (3 nhánh theo lớp + "Điểm"), mỗi nhánh lưới 3 cột × 4 hàng (`DrawPropertyLine` ×4, hàng cần 0/4/8/12 điểm), cuộn dọc | con trỏ (hàng, cột); OK = đầu tư 1 điểm | chạm nút; nút "Đầu tư" = OK |
+| Liên kích (6) | 4 ô chuỗi (Hạng 1–4) + dãy ứng viên 5/trang cuộn ngang (`DrawComboMenu`: vòng 4, 5) | ô liên kích chọn `[this+0xe]`, con trỏ ứng viên; OK = `HERO::SetComboSkillBelt` | chạm ô chuỗi → chạm ứng viên; mũi tên = TRÁI/PHẢI; "Bỏ chọn" = phím 0 |
+| Tinh linh (7) | 2 tab con: Cơ bản/Trang bị (2 ô trang bị Tinh linh) | Kỹ năng Tinh Linh: 4 kỹ năng chọn bằng 4 phím hướng (ct 49) | chạm ô; "Sử dụng" = OK |
+| Nhiệm vụ (8) | 2 tab con: Nhiệm vụ hiện tại (danh sách dọc + chi tiết) / Nhánh nhiệm vụ (cây dọc) | con trỏ nhiệm vụ (`KeyQuestMenu` ghi `+0xd..+0x14`) | chạm hàng; OK = theo dõi |
+| Hệ thống (9) | 4 nút dọc: Lưu, Cài đặt, Trợ giúp, Màn hình chính; Cài đặt 6 hàng (Nhạc nền, Âm hiệu ứng, Tốc độ game, Rung, Hiệu ứng, Tự ngắm); Trợ giúp 20 tiêu đề + nội dung | con trỏ; trái/phải đổi giá trị; popup xác nhận → `Process` (`HERO::SaveAll`…) | chạm nút/hàng; mũi tên ◀▶ = TRÁI/PHẢI |
+| **Túi đồ SubState** | `GetSubState()` trong `DrawBagMenu`: **0** lưới 4×4 (T17b1); **1** menu hành động trên vật phẩm (Sử dụng / Gán phím tắt / Vứt bỏ / Phân giải); **2** chọn ô nhanh (`DrawSkillBelt`, con trỏ `[this+0x10]`, 5 ô); **≥3** chế độ lọc: 1 hàng **5 vật phẩm/trang** (`DrawFilterItemInfo`, bước 29 px gốc), `[this+0x10]` = chỉ số tuyệt đối trong danh sách đã lọc, cuộn ngang `DrawScrollHor` (tổng = trường `BagItem+872`); vào bằng `OpenBagFilter/OpenEquipFilter/OpenComposeFilter/OpenSpiritEquipFilter` | | chạm vật phẩm = đặt `[this+0x10]`; mũi tên = TRÁI/PHẢI |
+
+### 11.2 Widget mới (cùng phong cách viền cam/đen, cùng `metrics`)
+| widget | số đo |
+|---|---|
+| Tab con (chữ) | cao `subH = px + 2*(bt+3) + 2`; `n` ô cách nhau 2 px, `tw = (cw-(n-1)*2)//n`, chữ tối đa `tw-2*(bt+3)-2`; chọn = nền cam dọc + viền cam, không chọn = viền xám xanh. Vùng chạm = hình chữ nhật ô |
+| Nút mũi tên | vuông (`cell` ở dãy ứng viên/chọn; `rowH+2s` ở hàng tuỳ chọn); tam giác cam vẽ nguyên thuỷ (cạnh `max(3, size//4)`) |
+| Nút +/− | vuông `ah = rowH + s` (+ giãn thêm ở khung lớn, tối đa `4s`), dấu vẽ bằng khối dày `max(1,s)`; vô hiệu = viền xám |
+| Hàng cộng điểm | cao `ah`, nhãn trái, giá trị phải (vàng; hàng chọn +điểm tạm màu xanh lá), 2 nút +/− sát phải |
+| Cột tóm tắt nhân vật/Tinh linh | khung xám xanh; vòng chân dung `22s+20` (SD) / 84 (HD) + tên/LV/lớp bên phải (bước `lp`), 3 thanh HP/SP/EXP (bước `barH+pad-1`) |
+| Hàng chỉ số k–v | nhãn mờ trái, giá trị phải, vạch mảnh (40,54,76) dưới, bước `slp+2` (font nhỏ) hoặc `lp+2s-1` (font thân) |
+| Ô kỹ năng/nút đặc tính | `w_cell` (icon `icon.mgr` 0–188 ×s) + chấm cấp `max(2,s+1)` px (5 chấm; sáng = đã học) ở đáy ô; chưa học = phủ tối α150 |
+| Hộp thông tin (`w_info`) | hộp mô tả T17b1 + (tuỳ chọn) hàng k–v font nhỏ + dòng phụ; mô tả có mã màu: `}` vàng, `{` xanh, `|` hết màu (GIẢ ĐỊNH màu), `#NN` = số giữ chỗ ("100") hoặc gạch đầu dòng khi theo sau là chữ; tràn → thanh cuộn dọc (kéo dọc = `TouchMoved` mới) |
+| Thanh cuộn ngang | cao `sbw`, rãnh + con trượt cam, rộng con trượt `max(2s+6, track*view/total)` |
+| Popup menu hành động | rộng `round(0.55W)` (SD) / 420 (HD), kẹp `W-2mg`; tiêu đề tên vật phẩm ≤2 dòng (màu phẩm chất); mỗi lựa chọn 1 nút `btnH` cách `gap`; chọn = cam, vô hiệu = xám; nuốt chạm ngoài |
+| Popup gán ô nhanh | rộng `max(5*cell+4*cg + 2*(pad+2s+4), 0.55W)`; tên kỹ năng, nhãn, 5 ô nhanh, nút Huỷ |
+| Popup chi tiết vật phẩm | rộng `round(0.78W)` (SD) / 640 (HD), cao `H-2mg` (HD −40); hộp thông tin đầy đủ + OK |
+
+
+### 11.3 Vùng chạm từng màn (đại diện: phần tử đầu mỗi nhóm; còn lại trong `hit_rects.json`)
+
+Định dạng `[x0,y0,x1,y1)` theo khung logic, cột = 400x240 / 600x270 / 800x360 / 1200x540. Gốc chung của mọi màn: nút `close` (quay lại) + 9 `tab0..tab8` (đổi tab = `SetState(i)` gốc, như T17b1).
+
+
+**nhan_vat** (`nhan_vat`): Nhân vật: cộng điểm (STR/AGI/VIT/INT), tóm tắt
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| tab (9) | `11,205,53,229` | `84,235,132,259` | `122,304,184,340` | `182,463,275,511` | đổi tab: SetState(0) |
+| page_toggle (1) | `23,170,87,193` | `96,200,171,223` | `140,257,234,286` | `206,401,350,439` | phím # -> KeyCharacterMenu: đổi trang Chi tiết/Cơ bản |
+| cancel (1) | `93,170,157,193` | `177,200,252,223` | `243,257,337,286` | `363,401,507,439` | phím * -> StateInGameMenu::CancelApplayStat |
+| minus (4) | `335,56,358,79` | `455,56,481,82` | `595,74,630,109` | `906,95,953,142` | đặt con trỏ=0 + KeyPressed(TRÁI) (giảm điểm tạm) |
+| plus (4) | `360,56,383,79` | `483,56,509,82` | `634,74,669,109` | `959,95,1006,142` | đặt con trỏ=0 + KeyPressed(PHẢI) (tăng điểm, tiêu 1 điểm) |
+| stat (4) | `169,56,335,79` | `264,56,455,82` | `354,74,595,109` | `529,95,906,142` | đặt con trỏ hàng [this+0xe]=0 |
+
+**nhan_vat_co_ban** (`nhan_vat_co_ban`): Nhân vật: trang chi tiết chỉ số (13 hàng)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| page_toggle (1) | `17,176,197,199` | `90,206,296,229` | `131,266,396,295` | `194,413,595,451` | phím # -> đổi trang Cơ bản/Chi tiết |
+
+**trang_bi** (`trang_bi`): Trang bị: 8 ô 4x2 + chi tiết + chỉ số
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| slot (8) | `72,34,102,64` | `145,34,175,64` | `215,51,265,101` | `293,68,363,138` | đặt con trỏ ô trang bị=0 rồi KeyPressed(-5) (ô có đồ: mở menu Trang bị/Tháo; ô trống: OpenEquipFilter) |
+| detail (1) | `203,34,386,145` | `276,34,512,145` | `434,51,673,163` | `600,68,1011,214` | chỉ hiển thị |
+
+**trang_bi_menu** (`trang_bi_menu`): Trang bị: menu Trang bị/Tháo (popup đặc thù)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| slot (8) | `72,34,102,64` | `145,34,175,64` | `215,51,265,101` | `293,68,363,138` | đặt con trỏ ô trang bị=0 rồi KeyPressed(-5) (ô có đồ: mở menu Trang bị/Tháo; ô trống: OpenEquipFilter) |
+| detail (1) | `203,34,386,145` | `276,34,512,145` | `434,51,673,163` | `600,68,1011,214` | chỉ hiển thị |
+| menu (2) | `101,108,299,131` | `146,123,454,146` | `197,164,603,193` | `413,248,787,286` | đặt con trỏ menu=0 rồi KeyPressed(-5) (SubState 1 / SetPopupState gốc) |
+
+**tui_do_chon** (`tui_do_chon`): Chế độ con Túi đồ SubState>=3: chọn vật phẩm lọc (5/trang, cuộn ngang)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| prev (1) | `87,57,117,87` | `186,57,216,87` | `211,76,261,126` | `335,98,405,168` | KeyPressed(TRÁI): lùi 1 vật phẩm ([this+0x10]-1), qua trang khi hết 5 |
+| cand (5) | `121,57,151,87` | `220,57,250,87` | `267,76,317,126` | `413,98,483,168` | đặt [this+0x10] = trang*5+0 rồi KeyPressed(-5) (chạm lần 2 = chọn) |
+| next (1) | `283,57,313,87` | `382,57,412,87` | `539,76,589,126` | `795,98,865,168` | KeyPressed(PHẢI): tiến 1 vật phẩm |
+| hscroll (1) | `121,89,279,97` | `220,89,378,97` | `267,130,533,141` | `413,174,787,188` | chạm/kéo ngang: [this+0x10] theo vị trí (Touch mới) hoặc nút mũi tên |
+| detail (1) | `14,100,386,175` | `87,100,512,205` | `127,146,673,264` | `189,195,1011,410` | chỉ hiển thị |
+| ok (1) | `14,179,198,202` | `87,209,297,232` | `127,270,397,299` | `189,418,596,456` | KeyPressed(-5) = chọn vật phẩm / gán ô (Process gốc: SetEquipItem, ApplyItemCompose, SetHotKeyBelt...) |
+| cancel (1) | `202,179,386,202` | `302,209,512,232` | `403,270,673,299` | `604,418,1011,456` | phím * / back: thoát chế độ con (SetSubState(0)) |
+
+**tui_do_phim_tat** (`tui_do_phim_tat`): Chế độ con Túi đồ SubState 2: gán ô nhanh (5 ô)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| belt (5) | `121,57,151,87` | `220,57,250,87` | `267,76,317,126` | `413,98,483,168` | đặt con trỏ ô nhanh [this+0x10]=0 rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt) |
+| desc_scroll (1) | `17,155,383,172` | `90,155,509,202` | `130,199,670,261` | `192,258,1008,407` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `14,114,386,175` | `87,114,512,205` | `127,157,673,264` | `189,206,1011,410` | chỉ hiển thị |
+| ok (1) | `14,179,198,202` | `87,209,297,232` | `127,270,397,299` | `189,418,596,456` | KeyPressed(-5) = chọn vật phẩm / gán ô (Process gốc: SetEquipItem, ApplyItemCompose, SetHotKeyBelt...) |
+| cancel (1) | `202,179,386,202` | `302,209,512,232` | `403,270,673,299` | `604,418,1011,456` | phím * / back: thoát chế độ con (SetSubState(0)) |
+
+**tui_do_menu** (`tui_do_menu`): Chế độ con Túi đồ SubState 1: menu hành động
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| page (3) | `17,62,49,92` | `90,62,122,92` | `131,84,185,134` | `194,109,270,179` | [this+0xe]=0 (trang), con trỏ [this+0xf]=0 |
+| cell (16) | `54,62,84,92` | `127,62,157,92` | `192,84,242,134` | `279,109,349,179` | con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK) |
+| sort (1) | `185,176,383,199` | `258,206,509,229` | `411,266,669,295` | `586,413,1006,451` | phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem |
+| detail (1) | `185,62,383,172` | `258,62,509,202` | `411,84,669,260` | `586,109,1006,405` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| menu (4) | `101,81,299,104` | `146,96,454,119` | `197,129,603,158` | `413,202,787,240` | đặt con trỏ menu=0 rồi KeyPressed(-5) (SubState 1 / SetPopupState gốc) |
+
+**ky_nang** (`ky_nang`): Kỹ năng: 5 tab con, lưới 4x4 cuộn, mô tả dài nhất
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| subtab (5) | `16,34,88,59` | `88,34,171,59` | `128,51,235,78` | `191,68,353,100` | đổi tab con (5): ghi trường tab con của KeySkillMenu (ví dụ [this+0x11]) rồi vẽ lại |
+| skill (16) | `22,63,52,93` | `95,63,125,93` | `138,84,188,134` | `203,108,273,178` | con trỏ ô=0 (+ hàng cuộn) rồi KeyPressed(-5): chọn; chạm lần 2 = mở menu Gán phím tắt |
+| grid_scroll (1) | `22,63,155,189` | `95,63,228,189` | `138,84,360,296` | `203,108,514,406` | kéo dọc = cuộn hàng (Touch mới; gốc: phím lên/xuống ở hàng 0/3) |
+| desc_scroll (1) | `164,104,383,172` | `237,104,509,202` | `371,126,670,261` | `527,160,1008,407` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `161,63,386,175` | `234,63,512,205` | `368,84,673,264` | `524,108,1011,410` | mô tả: kéo dọc để cuộn |
+| assign (1) | `161,179,386,202` | `234,209,512,232` | `368,270,673,299` | `524,418,1011,456` | KeyPressed(-5) -> popup/SubState gán ô nhanh (HERO::SetHotKeyBelt) |
+
+**ky_nang_phim_tat** (`ky_nang_phim_tat`): Kỹ năng: gán ô nhanh
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| subtab (5) | `16,34,88,59` | `88,34,171,59` | `128,51,235,78` | `191,68,353,100` | đổi tab con (5): ghi trường tab con của KeySkillMenu (ví dụ [this+0x11]) rồi vẽ lại |
+| skill (16) | `22,63,52,93` | `95,63,125,93` | `138,84,188,134` | `203,108,273,178` | con trỏ ô=0 (+ hàng cuộn) rồi KeyPressed(-5): chọn; chạm lần 2 = mở menu Gán phím tắt |
+| grid_scroll (1) | `22,63,155,189` | `95,63,228,189` | `138,84,360,296` | `203,108,514,406` | kéo dọc = cuộn hàng (Touch mới; gốc: phím lên/xuống ở hàng 0/3) |
+| desc_scroll (1) | `164,104,383,172` | `237,104,509,202` | `371,126,670,261` | `527,160,1008,407` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `161,63,386,175` | `234,63,512,205` | `368,84,673,264` | `524,108,1011,410` | mô tả: kéo dọc để cuộn |
+| assign (1) | `161,179,386,202` | `234,209,512,232` | `368,270,673,299` | `524,418,1011,456` | KeyPressed(-5) -> popup/SubState gán ô nhanh (HERO::SetHotKeyBelt) |
+| belt (5) | `121,110,151,140` | `221,125,251,155` | `267,155,317,205` | `413,232,483,302` | đặt con trỏ ô nhanh [this+0x10]=0 rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt) |
+| popup_cancel (1) | `174,146,226,169` | `274,161,326,184` | `356,214,444,243` | `538,314,662,352` | back: thoát SubState 2 |
+
+**dac_tinh** (`dac_tinh`): Đặc tính: 3 nhánh + Điểm, lưới 3x4
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| branch (4) | `15,34,106,59` | `88,34,192,59` | `127,51,262,78` | `189,68,393,100` | đổi nhánh: KeyPropertyMenu (trái/phải ở hàng tab) |
+| node (9) | `81,63,111,93` | `154,63,184,93` | `230,84,280,134` | `330,108,400,178` | con trỏ nút (hàng 0, cột 1) rồi KeyPressed(-5) |
+| grid_scroll (1) | `32,63,168,195` | `105,63,241,201` | `149,84,374,293` | `217,108,531,430` | kéo dọc = cuộn hàng (Touch mới) |
+| desc_scroll (1) | `177,123,383,172` | `250,123,509,202` | `385,145,670,261` | `544,182,1008,407` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `174,82,386,175` | `247,82,512,205` | `382,103,673,264` | `541,130,1011,410` | mô tả: kéo dọc cuộn |
+| invest (1) | `174,179,386,202` | `247,209,512,232` | `382,270,673,299` | `541,418,1011,456` | KeyPressed(-5): đầu tư 1 điểm vào nút (HeroSkillInfo.level++ + CalcStatusComputation) |
+
+**lien_kich** (`lien_kich`): Liên kích: 4 ô chuỗi + 5 ứng viên/trang
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| combo (4) | `117,54,147,84` | `217,54,247,84` | `262,71,312,121` | `407,91,477,161` | đặt ô liên kích [this+0xe]=0 rồi KeyPressed(-5): mở dãy ứng viên (HERO::SetComboSkillBelt khi chọn) |
+| prev (1) | `87,94,117,124` | `186,94,216,124` | `211,133,261,183` | `335,175,405,245` | KeyPressed(TRÁI): lùi ứng viên |
+| cand (5) | `121,94,151,124` | `220,94,250,124` | `267,133,317,183` | `413,175,483,245` | đặt con trỏ ứng viên = trang*5+0 rồi KeyPressed(-5) = HERO::SetComboSkillBelt(slot,skill) |
+| next (1) | `283,94,313,124` | `382,94,412,124` | `539,133,589,183` | `795,175,865,245` | KeyPressed(PHẢI): tiến ứng viên |
+| clear (1) | `14,179,198,202` | `87,209,297,232` | `127,270,397,299` | `189,418,596,456` | phím 0 -> bỏ chọn ô liên kích |
+| ok (1) | `202,179,386,202` | `302,209,512,232` | `403,270,673,299` | `604,418,1011,456` | KeyPressed(-5) |
+
+**tinh_linh** (`tinh_linh`): Tinh linh: Cơ bản/Trang bị
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| subtab (2) | `14,34,199,59` | `87,34,298,59` | `127,51,399,78` | `189,68,599,100` | đổi tab con (2): KeySpiritMenu trái/phải ở hàng tab |
+| slot (2) | `191,84,221,114` | `289,84,319,114` | `386,107,436,157` | `577,136,647,206` | đặt con trỏ ô trang bị Tinh linh=0 + KeyPressed(-5) (gắn: OpenSpiritEquipFilter; gỡ: Process -> ClearEquipItemSpirit) |
+| desc_scroll (1) | `194,159,383,199` | `292,159,509,229` | `389,205,670,296` | `580,266,1008,453` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `191,118,386,202` | `289,118,512,232` | `386,163,673,299` | `577,214,1011,456` | chỉ hiển thị |
+
+**tinh_linh_ky_nang** (`tinh_linh_ky_nang`): Tinh linh: kỹ năng Tinh Linh
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| subtab (2) | `14,34,199,59` | `87,34,298,59` | `127,51,399,78` | `189,68,599,100` | đổi tab con (2): KeySpiritMenu trái/phải ở hàng tab |
+| spskill (4) | `14,63,44,93` | `87,63,117,93` | `127,84,177,134` | `189,108,259,178` | chạm = chọn kỹ năng Tinh linh 0 (4 phím hướng gốc) |
+| desc_scroll (1) | `17,138,383,172` | `90,138,509,202` | `130,182,670,261` | `192,238,1008,407` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `14,97,386,175` | `87,97,512,205` | `127,140,673,264` | `189,186,1011,410` | chỉ hiển thị |
+| use (1) | `14,179,386,202` | `87,209,512,232` | `127,270,673,299` | `189,418,1011,456` | KeyPressed(-5) -> HERO::LearnSpiritSkill / dùng kỹ năng Tinh linh |
+
+**nhiem_vu** (`nhiem_vu`): Nhiệm vụ: danh sách + chi tiết (mô tả dài nhất)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| subtab (2) | `14,34,199,59` | `87,34,298,59` | `127,51,399,78` | `189,68,599,100` | đổi tab con (2): KeyQuestMenu trái/phải |
+| quest (5) | `14,63,193,86` | `87,63,292,86` | `127,84,390,113` | `189,108,587,146` | đặt con trỏ nhiệm vụ=0 (KeyQuestMenu) rồi KeyPressed(-5) = theo dõi (SetMapMode/QuestSetStatus) |
+| desc_scroll (1) | `207,104,383,199` | `306,104,509,229` | `409,126,670,296` | `611,160,1008,453` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `204,63,386,202` | `303,63,512,232` | `406,84,673,299` | `608,108,1011,456` | chi tiết: kéo dọc cuộn |
+
+**nhiem_vu_nhanh** (`nhiem_vu_nhanh`): Nhiệm vụ: nhánh nhiệm vụ
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| subtab (2) | `14,34,199,59` | `87,34,298,59` | `127,51,399,78` | `189,68,599,100` | đổi tab con (2): KeyQuestMenu trái/phải |
+| node (4) | `20,63,380,88` | `93,63,506,88` | `190,84,610,111` | `348,108,852,140` | đặt con trỏ nút nhánh=0 (KeyQuestMenu) + KeyPressed(-5): xem chi tiết |
+
+**he_thong** (`he_thong`): Hệ thống: 4 nút
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| save (1) | `84,57,315,82` | `167,72,431,97` | `230,94,569,127` | `390,153,810,197` | đặt con trỏ=0 + KeyPressed(-5): popup xác nhận -> Process: HERO::SaveAll |
+| option (1) | `84,89,315,114` | `167,104,431,129` | `230,137,569,170` | `390,211,810,255` | đặt con trỏ=1 + KeyPressed(-5): SetSubState(1) |
+| help (1) | `84,121,315,146` | `167,136,431,161` | `230,180,569,213` | `390,269,810,313` | đặt con trỏ=2 + KeyPressed(-5): SetSubState(2/3) |
+| title (1) | `84,153,315,178` | `167,168,431,193` | `230,223,569,256` | `390,327,810,371` | đặt con trỏ=3 + KeyPressed(-5): popup xác nhận -> về màn hình chính |
+
+**he_thong_cai_dat** (`he_thong_cai_dat`): Hệ thống: Cài đặt (6 tuỳ chọn)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| opt0_prev (1) | `292,34,315,57` | `418,34,441,57` | `555,51,584,80` | `858,68,896,106` | đặt con trỏ=0 + KeyPressed(TRÁI) (đổi giá trị tuỳ chọn) |
+| opt0_next (1) | `361,34,384,57` | `487,34,510,57` | `640,51,669,80` | `967,68,1005,106` | đặt con trỏ=0 + KeyPressed(PHẢI) |
+| opt (6) | `14,34,292,57` | `87,34,418,57` | `127,51,555,80` | `189,68,858,106` | đặt con trỏ hàng tuỳ chọn=0 |
+| opt1_prev (1) | `292,60,315,83` | `418,60,441,83` | `555,83,584,112` | `858,109,896,147` | đặt con trỏ=1 + KeyPressed(TRÁI) (đổi giá trị tuỳ chọn) |
+| opt1_next (1) | `361,60,384,83` | `487,60,510,83` | `640,83,669,112` | `967,109,1005,147` | đặt con trỏ=1 + KeyPressed(PHẢI) |
+| opt2_prev (1) | `292,86,315,109` | `418,86,441,109` | `555,115,584,144` | `858,150,896,188` | đặt con trỏ=2 + KeyPressed(TRÁI) (đổi giá trị tuỳ chọn) |
+| opt2_next (1) | `361,86,384,109` | `487,86,510,109` | `640,115,669,144` | `967,150,1005,188` | đặt con trỏ=2 + KeyPressed(PHẢI) |
+| opt3_prev (1) | `292,112,315,135` | `418,112,441,135` | `555,147,584,176` | `858,191,896,229` | đặt con trỏ=3 + KeyPressed(TRÁI) (đổi giá trị tuỳ chọn) |
+| opt3_next (1) | `361,112,384,135` | `487,112,510,135` | `640,147,669,176` | `967,191,1005,229` | đặt con trỏ=3 + KeyPressed(PHẢI) |
+| opt4_prev (1) | `292,138,315,161` | `418,138,441,161` | `555,179,584,208` | `858,232,896,270` | đặt con trỏ=4 + KeyPressed(TRÁI) (đổi giá trị tuỳ chọn) |
+| opt4_next (1) | `361,138,384,161` | `487,138,510,161` | `640,179,669,208` | `967,232,1005,270` | đặt con trỏ=4 + KeyPressed(PHẢI) |
+| opt5_prev (1) | `292,164,315,187` | `418,164,441,187` | `555,211,584,240` | `858,273,896,311` | đặt con trỏ=5 + KeyPressed(TRÁI) (đổi giá trị tuỳ chọn) |
+| opt5_next (1) | `361,164,384,187` | `487,164,510,187` | `640,211,669,240` | `967,273,1005,311` | đặt con trỏ=5 + KeyPressed(PHẢI) |
+
+**he_thong_tro_giup** (`he_thong_tro_giup`): Hệ thống: Trợ giúp (danh sách + nội dung)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| help (7) | `14,34,163,55` | `87,34,258,55` | `127,51,346,76` | `189,68,521,100` | đặt con trỏ danh sách trợ giúp=3 (KeySystemMenu) + KeyPressed(-5) |
+| desc_scroll (1) | `177,63,383,199` | `272,63,509,229` | `365,81,670,296` | `545,103,1008,453` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `174,34,386,202` | `269,34,512,232` | `362,51,673,299` | `542,68,1011,456` | nội dung: kéo dọc cuộn (gốc: phím lên/xuống) |
+
+**he_thong_popup_luu** (`he_thong_popup_luu`): Hệ thống: popup Lưu (popup chung)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| save (1) | `84,57,315,82` | `167,72,431,97` | `230,94,569,127` | `390,153,810,197` | đặt con trỏ=0 + KeyPressed(-5): popup xác nhận -> Process: HERO::SaveAll |
+| option (1) | `84,89,315,114` | `167,104,431,129` | `230,137,569,170` | `390,211,810,255` | đặt con trỏ=1 + KeyPressed(-5): SetSubState(1) |
+| help (1) | `84,121,315,146` | `167,136,431,161` | `230,180,569,213` | `390,269,810,313` | đặt con trỏ=2 + KeyPressed(-5): SetSubState(2/3) |
+| title (1) | `84,153,315,178` | `167,168,431,193` | `230,223,569,256` | `390,327,810,371` | đặt con trỏ=3 + KeyPressed(-5): popup xác nhận -> về màn hình chính |
+| popup_yes (1) | `71,120,197,143` | `101,135,297,158` | `137,179,396,208` | `383,269,594,307` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,120,329,143` | `304,135,499,158` | `405,179,663,208` | `607,269,817,307` | con trỏ popup=Không + KeyPressed(-5) |
+
+**popup_chi_tiet** (`popup_chi_tiet`): Popup đặc thù: chi tiết vật phẩm
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| page (3) | `17,62,49,92` | `90,62,122,92` | `131,84,185,134` | `194,109,270,179` | [this+0xe]=0 (trang), con trỏ [this+0xf]=0 |
+| cell (16) | `54,62,84,92` | `127,62,157,92` | `192,84,242,134` | `279,109,349,179` | con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK) |
+| sort (1) | `185,176,383,199` | `258,206,509,229` | `411,266,669,295` | `586,413,1006,451` | phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem |
+| detail (2) | `185,62,383,172` | `258,62,509,202` | `411,84,669,260` | `586,109,1006,405` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| desc_scroll (1) | `56,58,344,193` | `78,58,522,223` | `104,71,696,293` | `300,113,900,430` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| popup_ok (1) | `149,200,251,223` | `223,230,377,253` | `297,302,502,331` | `495,441,705,479` | KeyPressed(-5) -> SetPopupState(0) |
+
+**popup_chon_lop** (`popup_chon_lop`): Popup đặc thù: chọn lớp (danh sách)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| subtab (2) | `14,34,199,59` | `87,34,298,59` | `127,51,399,78` | `189,68,599,100` | đổi tab con (2): KeyQuestMenu trái/phải |
+| quest (5) | `14,63,193,86` | `87,63,292,86` | `127,84,390,113` | `189,108,587,146` | đặt con trỏ nhiệm vụ=0 (KeyQuestMenu) rồi KeyPressed(-5) = theo dõi (SetMapMode/QuestSetStatus) |
+| desc_scroll (1) | `207,104,383,199` | `306,104,509,229` | `409,126,670,296` | `611,160,1008,453` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `204,63,386,202` | `303,63,512,232` | `406,84,673,299` | `608,108,1011,456` | chi tiết: kéo dọc cuộn |
+| menu (5) | `101,68,299,91` | `146,83,454,106` | `197,111,603,140` | `413,179,787,217` | đặt con trỏ menu=0 rồi KeyPressed(-5) (SubState 1 / SetPopupState gốc) |
+
+**popup_ok_dai** (`popup_ok_dai`): Popup chỉ OK, chuỗi dài nhất
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| save (1) | `84,57,315,82` | `167,72,431,97` | `230,94,569,127` | `390,153,810,197` | đặt con trỏ=0 + KeyPressed(-5): popup xác nhận -> Process: HERO::SaveAll |
+| option (1) | `84,89,315,114` | `167,104,431,129` | `230,137,569,170` | `390,211,810,255` | đặt con trỏ=1 + KeyPressed(-5): SetSubState(1) |
+| help (1) | `84,121,315,146` | `167,136,431,161` | `230,180,569,213` | `390,269,810,313` | đặt con trỏ=2 + KeyPressed(-5): SetSubState(2/3) |
+| title (1) | `84,153,315,178` | `167,168,431,193` | `230,223,569,256` | `390,327,810,371` | đặt con trỏ=3 + KeyPressed(-5): popup xác nhận -> về màn hình chính |
+| popup_ok (1) | `157,137,243,160` | `234,143,366,166` | `312,179,487,208` | `528,279,672,317` | KeyPressed(-5) |
+
+### 11.4 Popup đặc thù InGameMenu
+`SetPopupState` 0xe31b8 có 25 loại, nhưng bảng nhảy chỉ trỏ tới ~14 nhánh dựng chuỗi (`GetCommonText` + `MC_knlSprintk`): thực chất phần lớn là thông báo/xác nhận (popup chung T17b1: Có/Không, OK). Khác popup chung có 3 dạng, đã mockup: (1) **menu hành động** (`tui_do_menu`, `trang_bi_menu`: Sử dụng/Gán phím tắt/Vứt bỏ/Phân giải; Trang bị/Tháo), (2) **chi tiết vật phẩm** có `ItemInfo*` (`popup_chi_tiet`, thay `DrawAutoItemInfoBox` 156 px cố định), (3) **chọn lớp** (`popup_chon_lop`, `ChangeHeroClass`, danh sách `class.dat`); thêm popup gán ô nhanh (`ky_nang_phim_tat`). Popup xác nhận Lưu/Màn hình chính (`he_thong_popup_luu`) và OK dài nhất (`popup_ok_dai`) dùng widget chung. Việc gán chính xác từng loại trong 25 → widget làm ở T17c1 (đọc từng nhánh `SetPopupState`).
+
+### 11.5 Lệch khỏi lưới gốc / giả định / chỗ cần xác nhận khi implement
+1. **Không đổi lưới logic** của tab nào (số ô/hàng/cột/trang giữ như bảng 11.1). Cái mới chỉ là giao diện: nút +/− (thay trái/phải), nút Chi tiết/Cơ bản/Huỷ (thay `#`/`*`), nút Sắp xếp/OK/Huỷ, mũi tên cuộn, kéo dọc cuộn mô tả, thanh cuộn ngang.
+2. Thứ tự 8 ô trang bị (Vũ khí, Mũ, Giáp, Găng / Giày, Khiên, Trang sức ×2) và nhãn 5 tab con Kỹ năng suy từ ảnh gốc + `common_text`; icon kỹ năng = `icon.mgr[chỉ số kỹ năng]` (ảnh mẫu; khi implement dùng đúng hàm icon của `HeroSkillInfo`).
+3. Số trang/hàng cuộn của Kỹ năng/Đặc tính/Nhiệm vụ/Trợ giúp lấy từ dữ liệu (skill_00 = 43 kỹ năng → 11 hàng; quest_0 = 151; help = 20 tiêu đề); số dòng cuộn tối đa kiểm ở T17c.
+4. Màu mã `}` `{` trong mô tả kỹ năng và ý nghĩa `#NN` là giả định (xem 11.2); tra `BFont::DrawText`.
+5. Bộ ô nhanh: 5 ô/bộ (`GetHotKeyBeltType` lặp 5 × 2 bộ); mockup chỉ vẽ 1 bộ, T17c xác nhận cách chọn bộ.
+6. Chân dung Tinh linh lấy `icon.mgr[172]` làm ảnh mẫu; thanh "SP Tinh linh" ở tab Kỹ năng Tinh Linh là nhãn mẫu (năng lượng Tinh linh 5 nấc).
