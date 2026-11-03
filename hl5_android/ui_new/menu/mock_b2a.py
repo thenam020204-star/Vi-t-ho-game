@@ -192,14 +192,34 @@ def w_info(cv, box, name, meta, desc_raw, pos=0, rows=None, extra=None):
         cv.hit('desc_scroll', (ix0, y, ix1, box[3] - 3), 'kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc')
     return total, view
 
-def w_belt(cv, x, y, n=5, sel=None, icons=(), label=None, cellsz=None):
-    """thanh ô nhanh n ô, trả (x1,y1)"""
+SWAP_IMG = None
+def swap_img(sz):
+    """ui_new/07_swap.png (186x186) thu LANCZOS về sz x sz (sz = cell = 20*s+10: 30/30/50/70)"""
+    global SWAP_IMG
+    if SWAP_IMG is None: SWAP_IMG = Image.open(os.path.join(U.REPO, 'ui_new/07_swap.png')).convert('RGBA')
+    return SWAP_IMG.resize((sz, sz), Image.LANCZOS)
+
+def belt_row_w(m, n=5, cellsz=None):
+    """bề rộng cả hàng ô nhanh gồm n ô + nút đổi bộ (ảnh 07, vuông = ô)"""
+    c = cellsz or m.cell
+    return n * c + (n - 1) * m.cg + m.gap + c
+
+def w_belt(cv, x, y, n=5, sel=None, icons=(), label=None, cellsz=None, swap=True, bank=1):
+    """thanh ô nhanh n ô (+ nút đổi bộ ảnh ui_new/07: gốc có 2 bộ x 5 ô), trả (x1,y1)"""
     m = cv.m; c = cellsz or m.cell; g = m.cg
     for i in range(n):
         w_cell(cv, x + i * (c + g), y, (icons[i], 0, '', False) if i < len(icons) and icons[i] is not None else None, selected=(i == sel))
         t = str(i + 1); cv.text(x + i * (c + g) + 2, y + 1, t, m.spx, C['dim'] if i != sel else C['white'], shadow=True)
         cv.hit('belt%d' % i, (x + i * (c + g), y, x + i * (c + g) + c, y + c), 'đặt con trỏ ô nhanh [this+0x10]=%d rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt)' % i)
-    return x + n * (c + g) - g, y + c
+    x1 = x + n * (c + g) - g
+    if swap:
+        sx = x1 + m.gap
+        cv.im.alpha_composite(swap_img(c), (sx, y))
+        t = '%d/2' % bank; tw = U.sw(m.spx, t)
+        cv.text(sx + c // 2, y + c - m.spx - 1, t, m.spx, C['white'], shadow=True, anchor='c', maxw=c)
+        cv.hit('belt_swap', (sx, y, sx + c, y + c), 'đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại')
+        x1 = sx + c
+    return x1, y + c
 
 def w_menu_popup(cv, title, labels, sel=0, disabled=()):
     """popup menu hành động (SubState/Popup dạng danh sách): nền tối + hộp, tiêu đề (tên vật phẩm), mỗi lựa chọn là 1 nút rộng"""
@@ -384,7 +404,7 @@ def screen_picker(m, tabi=1, title_hint=None, mode='filter'):
         cv.text(x1 - 2, y0 + 1 + (m.lp - m.spx) // 2 + 1, pgt, m.spx, C['dim'], anchor='r')
         ty = sy + m.sbw + m.gap + 1
     else:
-        inw = 5 * g['c'] + 4 * g['g']
+        inw = belt_row_w(m, 5, g['c'])
         bx1, by1 = w_belt(cv, (x0 + x1 - inw) // 2, hy, 5, sel=2, icons=[226, 227, None, 211, None], cellsz=g['c'])
         ty = by1 + m.gap + 2
         cv.text((x0 + x1) // 2, ty, ct(54), m.px, C['dim'], anchor='c', maxw=x1 - x0); ty += m.lp + m.gap
@@ -463,7 +483,7 @@ def screen_skill(m, sel=None, assign=False, scrollpos=0):
 def w_belt_popup(cv, name):
     m = cv.m; s = m.s
     cv.alpha_rect((0, 0, m.W, m.H), (0, 0, 0, 120))
-    c = m.cell; n = 5; inw = n * c + (n - 1) * m.cg
+    c = m.cell; n = 5; inw = belt_row_w(m, n, c)
     pw = inw + 2 * (m.pad + 2 * s + 4); pw = max(pw, round(0.55 * m.W) if not m.hd else 420)
     pw = min(pw, m.W - 2 * m.mg)
     ph = 2 * m.pad + 4 * s + m.lp + m.pad + m.lp + 4 + c + m.pad + m.btnH + 2

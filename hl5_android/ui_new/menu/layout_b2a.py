@@ -35,7 +35,7 @@ Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ 
 | Hộp thông tin (`w_info`) | hộp mô tả T17b1 + (tuỳ chọn) hàng k–v font nhỏ + dòng phụ; mô tả có mã màu: `}` vàng, `{` xanh, `|` hết màu (GIẢ ĐỊNH màu), `#NN` = số giữ chỗ ("100") hoặc gạch đầu dòng khi theo sau là chữ; tràn → thanh cuộn dọc (kéo dọc = `TouchMoved` mới) |
 | Thanh cuộn ngang | cao `sbw`, rãnh + con trượt cam, rộng con trượt `max(2s+6, track*view/total)` |
 | Popup menu hành động | rộng `round(0.55W)` (SD) / 420 (HD), kẹp `W-2mg`; tiêu đề tên vật phẩm ≤2 dòng (màu phẩm chất); mỗi lựa chọn 1 nút `btnH` cách `gap`; chọn = cam, vô hiệu = xám; nuốt chạm ngoài |
-| Popup gán ô nhanh | rộng `max(5*cell+4*cg + 2*(pad+2s+4), 0.55W)`; tên kỹ năng, nhãn, 5 ô nhanh, nút Huỷ |
+| Popup gán ô nhanh | hàng ô nhanh = 5 ô + nút đổi bộ (ảnh `ui_new/07_swap.png` thu LANCZOS về `cell`×`cell` = 30/30/50/70, cách ô cuối `gap`, nhãn `1/2`..`2/2` font nhỏ đáy nút; hit `belt_swap`); rộng `max(belt_row + 2*(pad+2s+4), 0.55W)` với `belt_row = 5*cell+4*cg+gap+cell`; tên kỹ năng, nhãn, hàng ô nhanh, nút Huỷ |
 | Popup chi tiết vật phẩm | rộng `round(0.78W)` (SD) / 640 (HD), cao `H-2mg` (HD −40); hộp thông tin đầy đủ + OK |
 '''
 
@@ -69,7 +69,7 @@ def write(out, hits, SCREENS, metrics, FRAMES):
 2. Thứ tự 8 ô trang bị (Vũ khí, Mũ, Giáp, Găng / Giày, Khiên, Trang sức ×2) và nhãn 5 tab con Kỹ năng suy từ ảnh gốc + `common_text`; icon kỹ năng = `icon.mgr[chỉ số kỹ năng]` (ảnh mẫu; khi implement dùng đúng hàm icon của `HeroSkillInfo`).
 3. Số trang/hàng cuộn của Kỹ năng/Đặc tính/Nhiệm vụ/Trợ giúp lấy từ dữ liệu (skill_00 = 43 kỹ năng → 11 hàng; quest_0 = 151; help = 20 tiêu đề); số dòng cuộn tối đa kiểm ở T17c.
 4. Màu mã `}` `{` trong mô tả kỹ năng và ý nghĩa `#NN` là giả định (xem 11.2); tra `BFont::DrawText`.
-5. Bộ ô nhanh: 5 ô/bộ (`GetHotKeyBeltType` lặp 5 × 2 bộ); mockup chỉ vẽ 1 bộ, T17c xác nhận cách chọn bộ.
+5. Bộ ô nhanh: 5 ô/bộ × 2 bộ (`GetHotKeyBeltType` lặp 5 × 2). Mockup vẽ 1 bộ + nút đổi bộ (ảnh `ui_new/07_swap.png`, nhãn `bộ/2`, hit `belt_swap`) ở Túi đồ chọn ô nhanh (SubState 2) và Kỹ năng gán phím tắt. Hàm/phím đổi bộ gốc (vd `HERO::ChangeHotKeyToggle`?) T17c xác nhận.
 6. Chân dung Tinh linh lấy `icon.mgr[172]` làm ảnh mẫu; thanh "SP Tinh linh" ở tab Kỹ năng Tinh Linh là nhãn mẫu (năng lượng Tinh linh 5 nấc).
 ''')
     p = os.path.join(out, 'LAYOUT.md'); t = open(p, encoding='utf-8').read()

@@ -93,3 +93,66 @@ Kiểm trên TOÀN BỘ dữ liệu thật, 4 khung; "cuộn" = thanh cuộn, kh
   popup menu: nhãn dài nhất 78 px "Gán phím tắt" <= nút 348 px: ĐẠT
   popup chọn lớp (5 lựa chọn) cao 292 <= khung 492: ĐẠT
 == lỗi bố cục khi dựng ảnh: không ==
+# ===== b2b (mock_b2b.py) =====
+Kiểm trên TOÀN BỘ dữ liệu thật, 4 khung; "cuộn" = thanh cuộn, không cắt chữ.
+== 400x240  font 15px / nhỏ 10px, icon x1 ==
+  tiêu đề cửa sổ (16): rộng nhất 96 px "Tôi luyện cao cấp" <= 326 px: ĐẠT
+  khay có thanh tiền + tab con: lưới kết thúc y=214 <= 226: ĐẠT
+  tên đồ NPC (item_00..10, bán/mua) (789): nhiều dòng nhất 1 (giới hạn 2) "Trường Thương Trừ Khử Mặt Trời", hộp chữ 213 px: ĐẠT
+  tên sách kỹ năng (item_16/17) (193): nhiều dòng nhất 1 (giới hạn 2) "Tấn Công Tập Trung LV1", hộp chữ 213 px: ĐẠT
+  tên cash (single+expert) (38): nhiều dòng nhất 1 (giới hạn 2) "Nguồn Gốc Nghịch Hành", hộp chữ 213 px: ĐẠT
+  tên bán (có cột trang) (944): nhiều dòng nhất 1 (giới hạn 2) "Chất lỏng nguyên liệu chế biến 1", hộp chữ 184 px: ĐẠT
+  mô tả cash (38): phân bố số dòng 1:7, 2:23, 3:8; hộp hiện 4 dòng; 0 mô tả dài hơn -> cuộn dọc có thanh cuộn, không cắt
+  nhãn giá offline "Bản offline: miễn phí": 120 px <= 227 px: ĐẠT
+  vật liệu chế biến (smith_0): nhãn rộng nhất 99 px "Kim loại ma lực hạ cấp" <= 119 px (font nhỏ), 0 vượt: ĐẠT
+  ô tôi luyện/Orb: chữ dài nhất 170 px "Trường Thương Trừ Khử Mặt Trời" <= 321 px: ĐẠT
+  popup NPC/cash/game (68 chuỗi): dài nhất 3 dòng (+3 dòng tên/giá) -> cao 149 <= khung 224: ĐẠT ("Nếu chuyển vật phẩm trong túi đồ;sang Đồ...")
+  kết quả Chuyên gia: nhãn dài nhất 96 px "Thời gian còn lại" <= 212 px: ĐẠT
+  nhãn khu vực (41): nhiều dòng nhất 2 (giới hạn 2) "Con Tàu Của Kẻ Giáng Lâm", chữ 96 px: ĐẠT
+  nhãn đảo (bản đồ lớn, 8): rộng nhất 69 px (nhãn tự co theo chữ, kẹp vào khung bản đồ): ĐẠT
+== 600x270  font 15px / nhỏ 10px, icon x1 ==
+  tiêu đề cửa sổ (16): rộng nhất 96 px "Tôi luyện cao cấp" <= 379 px: ĐẠT
+  khay có thanh tiền + tab con: lưới kết thúc y=214 <= 256: ĐẠT
+  tên đồ NPC (item_00..10, bán/mua) (789): nhiều dòng nhất 1 (giới hạn 2) "Trường Thương Trừ Khử Mặt Trời", hộp chữ 266 px: ĐẠT
+  tên sách kỹ năng (item_16/17) (193): nhiều dòng nhất 1 (giới hạn 2) "Tấn Công Tập Trung LV1", hộp chữ 266 px: ĐẠT
+  tên cash (single+expert) (38): nhiều dòng nhất 1 (giới hạn 2) "Nguồn Gốc Nghịch Hành", hộp chữ 266 px: ĐẠT
+  tên bán (có cột trang) (944): nhiều dòng nhất 1 (giới hạn 2) "Chất lỏng nguyên liệu chế biến 1", hộp chữ 237 px: ĐẠT
+  mô tả cash (38): phân bố số dòng 1:12, 2:21, 3:5; hộp hiện 6 dòng; 0 mô tả dài hơn -> cuộn dọc có thanh cuộn, không cắt
+  nhãn giá offline "Bản offline: miễn phí": 120 px <= 280 px: ĐẠT
+  vật liệu chế biến (smith_0): nhãn rộng nhất 99 px "Kim loại ma lực hạ cấp" <= 146 px (font nhỏ), 0 vượt: ĐẠT
+  ô tôi luyện/Orb: chữ dài nhất 170 px "Trường Thương Trừ Khử Mặt Trời" <= 374 px: ĐẠT
+  popup NPC/cash/game (68 chuỗi): dài nhất 2 dòng (+3 dòng tên/giá) -> cao 132 <= khung 254: ĐẠT ("Nếu chuyển vật phẩm trong túi đồ;sang Đồ...")
+  kết quả Chuyên gia: nhãn dài nhất 96 px "Thời gian còn lại" <= 352 px: ĐẠT
+  nhãn khu vực (41): nhiều dòng nhất 2 (giới hạn 2) "Con Tàu Của Kẻ Giáng Lâm", chữ 113 px: ĐẠT
+  nhãn đảo (bản đồ lớn, 8): rộng nhất 69 px (nhãn tự co theo chữ, kẹp vào khung bản đồ): ĐẠT
+== 800x360  font 15px / nhỏ 10px, icon x2 ==
+  tiêu đề cửa sổ (16): rộng nhất 96 px "Tôi luyện cao cấp" <= 486 px: ĐẠT
+  khay có thanh tiền + tab con: lưới kết thúc y=325 <= 335: ĐẠT
+  tên đồ NPC (item_00..10, bán/mua) (789): nhiều dòng nhất 1 (giới hạn 2) "Trường Thương Trừ Khử Mặt Trời", hộp chữ 291 px: ĐẠT
+  tên sách kỹ năng (item_16/17) (193): nhiều dòng nhất 1 (giới hạn 2) "Tấn Công Tập Trung LV1", hộp chữ 291 px: ĐẠT
+  tên cash (single+expert) (38): nhiều dòng nhất 1 (giới hạn 2) "Nguồn Gốc Nghịch Hành", hộp chữ 291 px: ĐẠT
+  tên bán (có cột trang) (944): nhiều dòng nhất 1 (giới hạn 2) "Chất lỏng nguyên liệu chế biến 1", hộp chữ 241 px: ĐẠT
+  mô tả cash (38): phân bố số dòng 1:15, 2:20, 3:3; hộp hiện 8 dòng; 0 mô tả dài hơn -> cuộn dọc có thanh cuộn, không cắt
+  nhãn giá offline "Bản offline: miễn phí": 120 px <= 310 px: ĐẠT
+  vật liệu chế biến (smith_0): nhãn rộng nhất 99 px "Kim loại ma lực hạ cấp" <= 160 px (font nhỏ), 0 vượt: ĐẠT
+  ô tôi luyện/Orb: chữ dài nhất 170 px "Trường Thương Trừ Khử Mặt Trời" <= 469 px: ĐẠT
+  popup NPC/cash/game (68 chuỗi): dài nhất 1 dòng (+3 dòng tên/giá) -> cao 134 <= khung 328: ĐẠT ("Độ tôi luyện...")
+  kết quả Chuyên gia: nhãn dài nhất 96 px "Thời gian còn lại" <= 482 px: ĐẠT
+  nhãn khu vực (41): nhiều dòng nhất 1 (giới hạn 2) "Con Tàu Của Kẻ Giáng Lâm", chữ 144 px: ĐẠT
+  nhãn đảo (bản đồ lớn, 8): rộng nhất 69 px (nhãn tự co theo chữ, kẹp vào khung bản đồ): ĐẠT
+== 1200x540  font 18px / nhỏ 15px, icon x3 ==
+  tiêu đề cửa sổ (16): rộng nhất 110 px "Tôi luyện cao cấp" <= 748 px: ĐẠT
+  khay có thanh tiền + tab con: lưới kết thúc y=442 <= 504: ĐẠT
+  tên đồ NPC (item_00..10, bán/mua) (789): nhiều dòng nhất 1 (giới hạn 2) "Trường Thương Trừ Khử Mặt Trời", hộp chữ 469 px: ĐẠT
+  tên sách kỹ năng (item_16/17) (193): nhiều dòng nhất 1 (giới hạn 2) "Tấn Công Tập Trung LV1", hộp chữ 469 px: ĐẠT
+  tên cash (single+expert) (38): nhiều dòng nhất 1 (giới hạn 2) "Nguồn Gốc Nghịch Hành", hộp chữ 469 px: ĐẠT
+  tên bán (có cột trang) (944): nhiều dòng nhất 1 (giới hạn 2) "Chất lỏng nguyên liệu chế biến 1", hộp chữ 398 px: ĐẠT
+  mô tả cash (38): phân bố số dòng 1:30, 2:8; hộp hiện 13 dòng; 0 mô tả dài hơn -> cuộn dọc có thanh cuộn, không cắt
+  nhãn giá offline "Bản offline: miễn phí": 138 px <= 495 px: ĐẠT
+  vật liệu chế biến (smith_0): nhãn rộng nhất 122 px "Kim loại ma lực hạ cấp" <= 250 px (font nhỏ), 0 vượt: ĐẠT
+  ô tôi luyện/Orb: chữ dài nhất 195 px "Trường Thương Trừ Khử Mặt Trời" <= 719 px: ĐẠT
+  popup NPC/cash/game (68 chuỗi): dài nhất 2 dòng (+3 dòng tên/giá) -> cao 188 <= khung 492: ĐẠT ("Nếu chuyển vật phẩm trong túi đồ;sang Đồ...")
+  kết quả Chuyên gia: nhãn dài nhất 110 px "Thời gian còn lại" <= 386 px: ĐẠT
+  nhãn khu vực (41): nhiều dòng nhất 1 (giới hạn 2) "Đảo Coldcreek - Trung Tâm", chữ 226 px: ĐẠT
+  nhãn đảo (bản đồ lớn, 8): rộng nhất 74 px (nhãn tự co theo chữ, kẹp vào khung bản đồ): ĐẠT
+== lỗi bố cục khi dựng ảnh: không ==

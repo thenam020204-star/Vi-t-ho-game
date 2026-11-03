@@ -168,7 +168,7 @@ Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ 
 | Hộp thông tin (`w_info`) | hộp mô tả T17b1 + (tuỳ chọn) hàng k–v font nhỏ + dòng phụ; mô tả có mã màu: `}` vàng, `{` xanh, `|` hết màu (GIẢ ĐỊNH màu), `#NN` = số giữ chỗ ("100") hoặc gạch đầu dòng khi theo sau là chữ; tràn → thanh cuộn dọc (kéo dọc = `TouchMoved` mới) |
 | Thanh cuộn ngang | cao `sbw`, rãnh + con trượt cam, rộng con trượt `max(2s+6, track*view/total)` |
 | Popup menu hành động | rộng `round(0.55W)` (SD) / 420 (HD), kẹp `W-2mg`; tiêu đề tên vật phẩm ≤2 dòng (màu phẩm chất); mỗi lựa chọn 1 nút `btnH` cách `gap`; chọn = cam, vô hiệu = xám; nuốt chạm ngoài |
-| Popup gán ô nhanh | rộng `max(5*cell+4*cg + 2*(pad+2s+4), 0.55W)`; tên kỹ năng, nhãn, 5 ô nhanh, nút Huỷ |
+| Popup gán ô nhanh | hàng ô nhanh = 5 ô + nút đổi bộ (ảnh `ui_new/07_swap.png` thu LANCZOS về `cell`×`cell` = 30/30/50/70, cách ô cuối `gap`, nhãn `1/2`..`2/2` font nhỏ đáy nút; hit `belt_swap`); rộng `max(belt_row + 2*(pad+2s+4), 0.55W)` với `belt_row = 5*cell+4*cg+gap+cell`; tên kỹ năng, nhãn, hàng ô nhanh, nút Huỷ |
 | Popup chi tiết vật phẩm | rộng `round(0.78W)` (SD) / 640 (HD), cao `H-2mg` (HD −40); hộp thông tin đầy đủ + OK |
 
 
@@ -226,7 +226,8 @@ Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ 
 
 | nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
 |---|---|---|---|---|---|
-| belt (5) | `121,57,151,87` | `220,57,250,87` | `267,76,317,126` | `413,98,483,168` | đặt con trỏ ô nhanh [this+0x10]=0 rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt) |
+| belt (5) | `104,57,134,87` | `203,57,233,87` | `239,76,289,126` | `374,98,444,168` | đặt con trỏ ô nhanh [this+0x10]=0 rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt) |
+| belt_swap (1) | `266,57,296,87` | `365,57,395,87` | `511,76,561,126` | `756,98,826,168` | đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại |
 | desc_scroll (1) | `17,155,383,172` | `90,155,509,202` | `130,199,670,261` | `192,258,1008,407` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
 | detail (1) | `14,114,386,175` | `87,114,512,205` | `127,157,673,264` | `189,206,1011,410` | chỉ hiển thị |
 | ok (1) | `14,179,198,202` | `87,209,297,232` | `127,270,397,299` | `189,418,596,456` | KeyPressed(-5) = chọn vật phẩm / gán ô (Process gốc: SetEquipItem, ApplyItemCompose, SetHotKeyBelt...) |
@@ -263,8 +264,9 @@ Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ 
 | desc_scroll (1) | `164,104,383,172` | `237,104,509,202` | `371,126,670,261` | `527,160,1008,407` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
 | detail (1) | `161,63,386,175` | `234,63,512,205` | `368,84,673,264` | `524,108,1011,410` | mô tả: kéo dọc để cuộn |
 | assign (1) | `161,179,386,202` | `234,209,512,232` | `368,270,673,299` | `524,418,1011,456` | KeyPressed(-5) -> popup/SubState gán ô nhanh (HERO::SetHotKeyBelt) |
-| belt (5) | `121,110,151,140` | `221,125,251,155` | `267,155,317,205` | `413,232,483,302` | đặt con trỏ ô nhanh [this+0x10]=0 rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt) |
-| popup_cancel (1) | `174,146,226,169` | `274,161,326,184` | `356,214,444,243` | `538,314,662,352` | back: thoát SubState 2 |
+| belt (5) | `104,110,134,140` | `204,125,234,155` | `239,155,289,205` | `374,232,444,302` | đặt con trỏ ô nhanh [this+0x10]=0 rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt) |
+| belt_swap (1) | `266,110,296,140` | `366,125,396,155` | `511,155,561,205` | `756,232,826,302` | đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại |
+| popup_cancel (1) | `168,146,232,169` | `268,161,332,184` | `346,214,453,243` | `525,314,675,352` | back: thoát SubState 2 |
 
 **dac_tinh** (`dac_tinh`): Đặc tính: 3 nhánh + Điểm, lưới 3x4
 
@@ -408,5 +410,362 @@ Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ 
 2. Thứ tự 8 ô trang bị (Vũ khí, Mũ, Giáp, Găng / Giày, Khiên, Trang sức ×2) và nhãn 5 tab con Kỹ năng suy từ ảnh gốc + `common_text`; icon kỹ năng = `icon.mgr[chỉ số kỹ năng]` (ảnh mẫu; khi implement dùng đúng hàm icon của `HeroSkillInfo`).
 3. Số trang/hàng cuộn của Kỹ năng/Đặc tính/Nhiệm vụ/Trợ giúp lấy từ dữ liệu (skill_00 = 43 kỹ năng → 11 hàng; quest_0 = 151; help = 20 tiêu đề); số dòng cuộn tối đa kiểm ở T17c.
 4. Màu mã `}` `{` trong mô tả kỹ năng và ý nghĩa `#NN` là giả định (xem 11.2); tra `BFont::DrawText`.
-5. Bộ ô nhanh: 5 ô/bộ (`GetHotKeyBeltType` lặp 5 × 2 bộ); mockup chỉ vẽ 1 bộ, T17c xác nhận cách chọn bộ.
+5. Bộ ô nhanh: 5 ô/bộ × 2 bộ (`GetHotKeyBeltType` lặp 5 × 2). Mockup vẽ 1 bộ + nút đổi bộ (ảnh `ui_new/07_swap.png`, nhãn `bộ/2`, hit `belt_swap`) ở Túi đồ chọn ô nhanh (SubState 2) và Kỹ năng gán phím tắt. Hàm/phím đổi bộ gốc (vd `HERO::ChangeHotKeyToggle`?) T17c xác nhận.
 6. Chân dung Tinh linh lấy `icon.mgr[172]` làm ảnh mẫu; thanh "SP Tinh linh" ở tab Kỹ năng Tinh Linh là nhãn mẫu (năng lượng Tinh linh 5 nấc).
+<!-- B2B -->
+
+## 12. Lô b2b: NPC, Cash shop, Chuyên gia, popup StateGame, StateMap (T17b2)
+> Sinh bởi `mock_b2b.py` + `layout_b2b.py` (chạy SAU `mock_menu.py` và `mock_b2a.py`). Dùng nguyên `metrics(W,H)` của mục 1; mọi số là điểm ảnh khung logic, chia nguyên. 30 màn x (400x240, `_x3`, 1200x540 + `trung_gian/` 600x270/800x360): `npc_*` (14), `cash_*` (5), `chuyen_gia_*` (4), `game_*` (5), `ban_do_*` (2). Tổng hợp `tong_hop_b2b.png`; vùng chạm `hit_rects.json` (khoá `<màn>_<WxH>`); kiểm tràn `verify.txt` (phần b2b).
+
+### 12.1 Khung chung của các cửa sổ b2b
+- **Không có thanh tab 9 mục** (NPC/Cash/Chuyên gia/Map là state riêng, không phải tab InGameMenu): cửa sổ = `w_window(tabs=None)` (khung cam, tiêu đề, nút `<` = `KeyPressed(Back)` gốc), vùng nội dung = `content_rect` cao hơn tab của b2a đúng `tabH` (24/24/36/48 px). Tiêu đề = tên chức năng THẬT trong `common_text` (83 Mua kỹ năng, 84 Mua vật phẩm, 85 Bán vật phẩm, 86/87 Tôi luyện thường/cao cấp, 88 Kết hợp Orb, 89 Chế biến thường, 284 Bộ sưu tập, 269 Đồ Giám Vũ Khí, 245 Cửa hàng Cash, 244 Cửa hàng, 195 Màn hình chuẩn bị; `ingame_text` 147/148 bản đồ).
+- **Khay vật phẩm `shelf`** (dùng cho Mua kỹ năng, Mua vật phẩm, Bán, Chế biến, Bộ sưu tập, Cash shop, Cửa hàng Chuyên gia): `[dải tiền]` → `[tab con]` → hàng: `lưới 4x4` (+ thanh cuộn dọc `sbw` hoặc cột trang) | `hộp chi tiết` → `hàng giá` → `nút hành động`.
+  - Dải tiền cao `lp+2s+2` (nhãn "Tiền hiện có" trái, [xu]+số phải; Bộ sưu tập: nhãn "Bộ sưu tập" + đếm; Chế biến: câu gợi ý 135 màu vàng; Cash/Chuyên gia: không có dải).
+  - Tab con (chữ) = `w_subtabs` của b2a: Mua vật phẩm 3 tab (Vũ khí/Giáp/Khác = `common_text` 95/242/96), Bộ sưu tập 4 tab lớp (178–181).
+  - Lưới = **4 cột x 4 hàng nhìn thấy** (như Túi đồ; lưới gốc của NPC là con trỏ 4 cột, cuộn theo hàng), ô `cell`, bước `pitch`; thanh cuộn dọc `sbw` cách lưới 3 px (tổng số hàng mẫu 5/8/6/3); ô `?` = chưa thu thập (Bộ sưu tập), ô trống = gạch xám.
+  - Bán vật phẩm giữ **cột trang** như Túi đồ (`[this+0xe]` trang, `[this+0xf]` ô, 4x4 mỗi trang): `gx = x0 + pitch + gap + 1`, hộp chi tiết bắt đầu `gx + gridW + gap + 1`.
+  - Hộp chi tiết = `w_info` của b2a: tên (≤2 dòng, màu phẩm chất) / loại (dòng phụ) / hàng k–v (Giới hạn cấp, ATK, Tốc độ đánh; Chế biến: nguyên liệu `có/cần`) / mô tả cuộn. **Hàng giá** (cao `max(lp+2, xu*k+2)`, khung xám xanh): [xu]+giá căn phải (vàng; đỏ khi > tiền hiện có); Cash/Chuyên gia: nhãn xanh lá "Bản offline: miễn phí" (từ `common_text` 304 bỏ `^` và dấu chấm). **Nút** `btnH` ở đáy cột chi tiết: nhãn = tên hành động THẬT (83/84/85/150/272; Cash/Chuyên gia "Nhận!" = `common_text` 261), vô hiệu (xám) khi không đủ tiền.
+- **Hàng ô (`w_slot`)** cho Tôi luyện/Orb: panel xám xanh cao `cell+6`; ô `cell` bên trái + nhãn (font nhỏ, mờ) + tên (font thân, màu phẩm chất); ô trống hiện câu hướng dẫn mờ (127 "Không có vật hiến tế."). Chạm = mở chế độ chọn (`OpenBagFilter`), màn chọn = `npc_chon_vat_pham` (hàng 5 vật phẩm/trang như `tui_do_chon` b2a, không thanh tab).
+- **Bảng k–v (`w_statrows`)**: panel, hàng cao `spx+5` (SD) / `px+6` (HD), nhãn mờ trái, giá trị phải, hàng tiền có [xu]. Tôi luyện: Tỉ lệ thành công / Độ tôi luyện / Tiền hiện có / Chi phí; Orb: Tỉ lệ thành công; Chuyên gia: Chế độ / Cấp độ.
+- **Popup**: dùng widget chung T17b1 (`w_popup`) hoặc `w_popup_c` (cùng công thức kích thước, nhưng từng dòng có màu: tên vật phẩm vàng, nhãn giá xanh lá). Popup kết quả Chuyên gia (`w_result`): tiêu đề (Chiến thắng! vàng / Thất bại! đỏ) + vạch + 4 hàng k–v + nút OK; cao `2pad+4s+lp+4+n(lp+2)+pad+btnH+2`.
+- **StateGame**: không có cửa sổ; nền = cảnh chơi tối `dim` 200 (màn chết) hoặc 90 (kết quả), popup giữa màn (như popup chung).
+- **StateMap**: cửa sổ tiêu chuẩn; vùng bản đồ = nội dung trừ hàng nút dưới; bản đồ lớn: ảnh (ở mockup là nền vẽ minh hoạ, **game dùng ảnh bản đồ gốc** vẽ vừa vùng, giữ tỉ lệ), 8 điểm + nhãn tên đảo (`ingame_text` 33–40, nền đen α190) + mũi tên đỏ vị trí; bản đồ khu vực: lưới điểm 3 cột x 4 hàng (ô điểm `10s+12`, nhãn font nhỏ bên phải, tối đa 2 dòng, nền đen α215 che đường nối), ô hiện tại xanh lá, đường nối cam tối `s+1` px; 2 nút dưới: "Tắt/Bật Minimap" (`*`) và "Bản đồ lớn/khu vực" (`#`) (bỏ ký tự gợi ý phím như b1).
+
+Số đo quan trọng (khung logic):
+| khung | nội dung (x0,y0,x1,y1) | dải tiền | tab con | lưới 4x4 (không/ có tab con) | hộp chi tiết bắt đầu x (cuộn / cột trang) |
+|---|---|---|---|---|---|
+| 400x240 | 14,34,386,226 | 21 | 25 | (14,59) / (14,88) 126x126 | 153 / 182 |
+| 600x270 | 87,34,512,256 | 21 | 25 | (87,59) / (87,88) 126x126 | 226 / 255 |
+| 800x360 | 127,51,673,335 | 23 | 27 | (127,80) / (127,113) 212x212 | 357 / 407 |
+| 1200x540 | 189,68,1011,504 | 28 | 32 | (189,104) / (189,144) 298x298 | 510 / 581 |
+
+### 12.2 Lưới/trạng thái logic GỐC giữ nguyên và chỗ lệch
+Không đổi lưới nào (kiến trúc A, §13.4): con trỏ gốc của từng state NPC/Cash/Expert giữ nguyên; chạm = đặt `[this+0xe..0x14]` rồi `KeyPressed(-5)` gốc.
+| Cửa sổ | Lưới gốc giữ | Lệch/ghi chú |
+|---|---|---|
+| Mua kỹ năng (SkillBuy, state 0) | danh sách sách kỹ năng cuộn theo hàng 4 cột (ảnh gốc ô 36: 4 cột); xác nhận `Process` | không lệch; giá chỉ là biểu tượng xu + số (gốc không nhãn) |
+| Mua vật phẩm (ItemBuy, 1) | 3 tab (Vũ khí/Giáp/Khác như ô 37) + lưới 4 cột | không lệch |
+| Bán (ItemSale, 2) | túi đồ 4x4 x trang (như `tui_do`) | thêm nút bán bấm được thay phím OK |
+| Tôi luyện thường/cao cấp (3, 4) | 2 ô chọn (vật phẩm, đá) + 4 hàng thông tin + nút | "Độ tôi luyện" hiển thị `+n > +n+1` là giả định (gốc dạng `00'03'00` chưa rõ nghĩa) |
+| Kết hợp Orb (5) | 3 ô (vật phẩm, Orb, vật hiến tế) + tỉ lệ + nút; phím `0` bỏ vật hiến tế = nút | không lệch |
+| Chế biến (NormalMix, 6) | danh sách công thức 4 cột + nguyên liệu `có/cần` + nút | số ô công thức tối đa kiểm ở T17c |
+| Bộ sưu tập (7) | menu 3 nút (Đồ Giám Vũ Khí/Giáp/Trang sức) + lưới 4x4 `?` x 4 lớp | tab lớp = 4 tab chữ (gốc: phím trái/phải) |
+| Cash shop (state 0) | lưới 4 cột cuộn + popup 4 loại | **bỏ giá tiền thật**: nhãn "Bản offline: miễn phí" + nút "Nhận!"; 4 popup: xác nhận (91 + 304), đã nhận (93), túi đầy (92), khu vực cấm (331) |
+| Chuyên gia: Chuẩn bị (0) / Cửa hàng (1) | 3 nút (Nhân vật, Cửa hàng, Bắt đầu) / lưới 4 cột cash_expert | chế độ (Cầm cự/Đua Thời Gian/Đột phá) hiển thị chỉ đọc (chọn ở MainMenu: b2c) |
+| StateGame popup (SetState 1/2/4…) | hồi sinh Có/Không (260 + 304), xác nhận (293), thành công (350), kết quả Chuyên gia (327/328 + 331–338) | bỏ dòng "Giá gốc … won / phí thông tin" của bản mạng |
+| StateMap (2 chế độ) | lưới điểm khu vực + ảnh đảo; `#`/`*` đổi chế độ/Minimap | ảnh bản đồ gốc thay nền minh hoạ |
+
+### 12.3 Vùng chạm từng màn (đại diện: phần tử đầu mỗi nhóm; còn lại trong `hit_rects.json`)
+Định dạng `[x0,y0,x1,y1)` theo khung logic, cột = 400x240 / 600x270 / 800x360 / 1200x540. Mọi màn có `close` (nút `<`).
+
+
+**npc_mua_ky_nang** (`npc_mua_ky_nang`): NPC Mua kỹ năng (SkillBuy): lưới sách kỹ năng + giá
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,62,150,188` | `90,62,223,188` | `131,84,353,296` | `194,109,505,407` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,62,47,92` | `90,62,120,92` | `131,84,181,134` | `194,109,264,179` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,116,380,170` | `232,116,506,200` | `364,139,666,259` | `518,179,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,62,383,173` | `229,62,509,203` | `361,84,669,262` | `515,109,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | đặt con trỏ=ô + KeyPressed(-5) -> popup xác nhận -> Process: NpcShop::NewShopItemToBag + BagItem::IncreaseMoney(-giá) |
+
+**npc_mua_ky_nang_het_tien** (`npc_mua_ky_nang_het_tien`): NPC Mua kỹ năng: popup không đủ tiền (OK)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,62,150,188` | `90,62,223,188` | `131,84,353,296` | `194,109,505,407` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,62,47,92` | `90,62,120,92` | `131,84,181,134` | `194,109,264,179` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,116,380,170` | `232,116,506,200` | `364,139,666,259` | `518,179,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,62,383,173` | `229,62,509,203` | `361,84,669,262` | `515,109,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | đặt con trỏ=ô + KeyPressed(-5) -> popup (không đủ tiền) |
+| popup_ok (1) | `157,120,243,143` | `234,135,366,158` | `312,179,487,208` | `528,269,672,307` | KeyPressed(-5) |
+
+**npc_mua_vat_pham** (`npc_mua_vat_pham`): NPC Mua vật phẩm (ItemBuy): 3 tab hàng + lưới 4x4 cuộn
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| subtab (3) | `18,62,138,87` | `90,62,228,87` | `131,84,309,111` | `194,109,463,141` | đổi tab: ghi trường tab của Key* gốc rồi vẽ lại |
+| grid_scroll (1) | `17,91,150,217` | `90,91,223,217` | `131,117,353,329` | `194,149,505,447` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,91,47,121` | `90,91,120,121` | `131,117,181,167` | `194,149,264,219` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| detail (1) | `156,91,383,173` | `229,91,509,203` | `361,117,669,262` | `515,149,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | đặt con trỏ=ô + KeyPressed(-5) -> popup xác nhận -> Process: NpcShop::NewShopItemToBag / ItemTable::NewItemToBag |
+
+**npc_mua_vat_pham_xac_nhan** (`npc_mua_vat_pham_xac_nhan`): NPC Mua vật phẩm: popup xác nhận Có/Không
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| subtab (3) | `18,62,138,87` | `90,62,228,87` | `131,84,309,111` | `194,109,463,141` | đổi tab: ghi trường tab của Key* gốc rồi vẽ lại |
+| grid_scroll (1) | `17,91,150,217` | `90,91,223,217` | `131,117,353,329` | `194,149,505,447` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,91,47,121` | `90,91,120,121` | `131,117,181,167` | `194,149,264,219` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| detail (1) | `156,91,383,173` | `229,91,509,203` | `361,117,669,262` | `515,149,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | đặt con trỏ=ô + KeyPressed(-5) -> popup xác nhận -> Process: NpcShop::NewShopItemToBag / ItemTable::NewItemToBag |
+| popup_yes (1) | `71,137,197,160` | `101,152,297,175` | `137,196,396,225` | `383,289,594,327` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,137,329,160` | `304,152,499,175` | `405,196,663,225` | `607,289,817,327` | con trỏ popup=Không + KeyPressed(-5) |
+
+**npc_ban** (`npc_ban`): NPC Bán vật phẩm (ItemSale): túi đồ theo trang + giá bán
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| page (3) | `17,62,49,92` | `90,62,122,92` | `131,84,185,134` | `194,109,270,179` | [this+0xe]=0 (trang), con trỏ [this+0xf]=0 |
+| cell (16) | `54,62,84,92` | `127,62,157,92` | `192,84,242,134` | `279,109,349,179` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| detail (1) | `185,62,383,173` | `258,62,509,203` | `411,84,669,262` | `586,109,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| sell (1) | `185,200,383,223` | `258,230,509,253` | `411,302,669,331` | `586,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: BagItem::DeleteBagItemPosIndex + IncreaseMoney(+giá) |
+
+**npc_toi_luyen** (`npc_toi_luyen`): NPC Tôi luyện thường (LowRefine)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| slot_item (1) | `17,37,383,73` | `90,37,509,73` | `131,55,669,111` | `194,73,1006,149` | chạm = mở chế độ chọn vật phẩm (OpenBagFilter/OpenEquipFilter) -> KeyRefine gốc |
+| slot_stone (1) | `17,77,383,113` | `90,77,509,113` | `131,117,669,173` | `194,157,1006,233` | chạm = mở chế độ chọn đá tôi luyện (OpenBagFilter) |
+| start (1) | `17,200,383,223` | `90,230,509,253` | `131,302,669,331` | `194,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: RefineItem::ApplyItemRefine |
+
+**npc_toi_luyen_cao_cap** (`npc_toi_luyen_cao_cap`): NPC Tôi luyện cao cấp (HighRefine)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| slot_item (1) | `17,37,383,73` | `90,37,509,73` | `131,55,669,111` | `194,73,1006,149` | chạm = mở chế độ chọn vật phẩm (OpenBagFilter/OpenEquipFilter) -> KeyRefine gốc |
+| slot_stone (1) | `17,77,383,113` | `90,77,509,113` | `131,117,669,173` | `194,157,1006,233` | chạm = mở chế độ chọn đá tôi luyện (OpenBagFilter) |
+| start (1) | `17,200,383,223` | `90,230,509,253` | `131,302,669,331` | `194,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: RefineItem::ApplyItemRefine |
+
+**npc_toi_luyen_ket_qua** (`npc_toi_luyen_ket_qua`): NPC Tôi luyện: popup kết quả (OK)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| slot_item (1) | `17,37,383,73` | `90,37,509,73` | `131,55,669,111` | `194,73,1006,149` | chạm = mở chế độ chọn vật phẩm (OpenBagFilter/OpenEquipFilter) -> KeyRefine gốc |
+| slot_stone (1) | `17,77,383,113` | `90,77,509,113` | `131,117,669,173` | `194,157,1006,233` | chạm = mở chế độ chọn đá tôi luyện (OpenBagFilter) |
+| start (1) | `17,200,383,223` | `90,230,509,253` | `131,302,669,331` | `194,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: RefineItem::ApplyItemRefine |
+| popup_ok (1) | `157,120,243,143` | `234,135,366,158` | `312,179,487,208` | `528,269,672,307` | KeyPressed(-5) |
+
+**npc_chon_vat_pham** (`npc_chon_vat_pham`): NPC chế độ chọn vật phẩm (OpenBagFilter, 5/trang)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| prev (1) | `87,60,117,90` | `186,60,216,90` | `211,80,261,130` | `335,103,405,173` | KeyPressed(TRÁI): lùi 1 vật phẩm ([this+0x10]-1) |
+| cand (5) | `121,60,151,90` | `220,60,250,90` | `267,80,317,130` | `413,103,483,173` | đặt [this+0x10] = trang*5+0 rồi KeyPressed(-5) (chạm lần 2 = chọn) |
+| next (1) | `283,60,313,90` | `382,60,412,90` | `539,80,589,130` | `795,103,865,173` | KeyPressed(PHẢI): tiến 1 vật phẩm |
+| hscroll (1) | `121,92,279,100` | `220,92,378,100` | `267,134,533,145` | `413,179,787,193` | chạm/kéo ngang: [this+0x10] theo vị trí (Touch mới) |
+| detail (1) | `17,103,383,196` | `90,103,509,226` | `131,150,669,296` | `194,200,1006,453` | chỉ hiển thị |
+| ok (1) | `17,200,198,223` | `90,230,297,253` | `131,302,397,331` | `194,461,596,499` | KeyPressed(-5) = chọn vật phẩm (Process gốc) |
+| cancel (1) | `202,200,383,223` | `302,230,509,253` | `403,302,669,331` | `604,461,1006,499` | phím * / back: thoát chế độ chọn |
+
+**npc_orb** (`npc_orb`): NPC Kết hợp Orb (OrbCombine): 3 ô + tỉ lệ
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| slot_item (1) | `17,37,383,73` | `90,37,509,73` | `131,55,669,111` | `194,73,1006,149` | chạm = chọn vật phẩm cần kết hợp (OpenBagFilter) |
+| slot_orb (1) | `17,77,383,113` | `90,77,509,113` | `131,117,669,173` | `194,157,1006,233` | chạm = chọn Orb (OpenBagFilter) |
+| slot_sacrifice (1) | `17,117,383,153` | `90,117,509,153` | `131,179,669,235` | `194,241,1006,317` | chạm = chọn vật hiến tế (OpenBagFilter) |
+| clear (1) | `17,200,198,223` | `90,230,297,253` | `131,302,397,331` | `194,461,596,499` | phím 0 -> bỏ vật hiến tế (KeyOrbCombine) |
+| start (1) | `202,200,383,223` | `302,230,509,253` | `403,302,669,331` | `604,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: RefineItem::ApplyOrbCombine |
+
+**npc_che_bien** (`npc_che_bien`): NPC Chế biến thường (NormalMix): công thức + nguyên liệu
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,62,150,188` | `90,62,223,188` | `131,84,353,296` | `194,109,505,407` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,62,47,92` | `90,62,120,92` | `131,84,181,134` | `194,109,264,179` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| detail (1) | `156,62,383,196` | `229,62,509,226` | `361,84,669,296` | `515,109,1006,453` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| mix (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: RefineItem::ApplyNormalMix (+ItemTable::NewItem/DeleteItem) |
+
+**npc_bo_suu_tap** (`npc_bo_suu_tap`): NPC Bộ sưu tập: chọn Đồ Giám (3 nút)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| cat (3) | `86,96,313,121` | `169,111,429,136` | `233,145,567,178` | `390,220,810,264` | đặt con trỏ=0 + KeyPressed(-5) -> vào danh sách Đồ Giám Vũ khí |
+
+**npc_bo_suu_tap_luoi** (`npc_bo_suu_tap_luoi`): NPC Bộ sưu tập: Đồ Giám Vũ Khí (4 lớp, lưới 4x4)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| subtab (4) | `17,62,107,87` | `90,62,193,87` | `131,84,264,111` | `195,109,396,141` | đổi tab: ghi trường tab của Key* gốc rồi vẽ lại |
+| grid_scroll (1) | `17,91,150,217` | `90,91,223,217` | `131,117,353,329` | `194,149,505,447` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,91,47,121` | `90,91,120,121` | `131,117,181,167` | `194,149,264,219` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| detail (1) | `156,91,383,196` | `229,91,509,226` | `361,117,669,296` | `515,149,1006,453` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| register (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận (273) -> Process: HERO::SetCollectionComplete + Mission::CheckCollection |
+
+**npc_bo_suu_tap_dang_ky** (`npc_bo_suu_tap_dang_ky`): NPC Bộ sưu tập: popup đăng ký Có/Không (273)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| subtab (4) | `17,62,107,87` | `90,62,193,87` | `131,84,264,111` | `195,109,396,141` | đổi tab: ghi trường tab của Key* gốc rồi vẽ lại |
+| grid_scroll (1) | `17,91,150,217` | `90,91,223,217` | `131,117,353,329` | `194,149,505,447` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,91,47,121` | `90,91,120,121` | `131,117,181,167` | `194,149,264,219` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| detail (1) | `156,91,383,196` | `229,91,509,226` | `361,117,669,296` | `515,149,1006,453` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| register (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận (273) -> Process: HERO::SetCollectionComplete + Mission::CheckCollection |
+| popup_yes (1) | `71,137,197,160` | `101,143,297,166` | `137,179,396,208` | `383,279,594,317` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,137,329,160` | `304,143,499,166` | `405,179,663,208` | `607,279,817,317` | con trỏ popup=Không + KeyPressed(-5) |
+
+**cash_shop** (`cash_shop`): Cash shop: lưới 4x4 cuộn + nhãn giá offline miễn phí
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,37,150,163` | `90,37,223,163` | `131,55,353,267` | `194,73,505,371` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,37,47,67` | `90,37,120,67` | `131,55,181,105` | `194,73,264,143` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,66,380,170` | `232,66,506,200` | `364,85,666,259` | `518,108,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,37,383,173` | `229,37,509,203` | `361,55,669,262` | `515,73,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: cash miễn phí, bỏ NETWORK::SetProductID/CallWriteData (T7), ItemTable::NewItemToBag |
+
+**cash_popup_mua** (`cash_popup_mua`): Cash shop popup 1/4: xác nhận mua (Có/Không)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,37,150,163` | `90,37,223,163` | `131,55,353,267` | `194,73,505,371` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,37,47,67` | `90,37,120,67` | `131,55,181,105` | `194,73,264,143` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,66,380,170` | `232,66,506,200` | `364,85,666,259` | `518,108,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,37,383,173` | `229,37,509,203` | `361,55,669,262` | `515,73,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: cash miễn phí, bỏ NETWORK::SetProductID/CallWriteData (T7), ItemTable::NewItemToBag |
+| popup_yes (1) | `71,137,197,160` | `101,152,297,175` | `137,196,396,225` | `383,289,594,327` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,137,329,160` | `304,152,499,175` | `405,196,663,225` | `607,289,817,327` | con trỏ popup=Không + KeyPressed(-5) |
+
+**cash_popup_xong** (`cash_popup_xong`): Cash shop popup 2/4: đã nhận (OK)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,37,150,163` | `90,37,223,163` | `131,55,353,267` | `194,73,505,371` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,37,47,67` | `90,37,120,67` | `131,55,181,105` | `194,73,264,143` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,66,380,170` | `232,66,506,200` | `364,85,666,259` | `518,108,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,37,383,173` | `229,37,509,203` | `361,55,669,262` | `515,73,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: cash miễn phí, bỏ NETWORK::SetProductID/CallWriteData (T7), ItemTable::NewItemToBag |
+| popup_ok (1) | `157,128,243,151` | `234,143,366,166` | `312,188,487,217` | `528,279,672,317` | KeyPressed(-5) |
+
+**cash_popup_day** (`cash_popup_day`): Cash shop popup 3/4: túi đồ đầy (OK)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,37,150,163` | `90,37,223,163` | `131,55,353,267` | `194,73,505,371` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,37,47,67` | `90,37,120,67` | `131,55,181,105` | `194,73,264,143` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,66,380,170` | `232,66,506,200` | `364,85,666,259` | `518,108,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,37,383,173` | `229,37,509,203` | `361,55,669,262` | `515,73,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: cash miễn phí, bỏ NETWORK::SetProductID/CallWriteData (T7), ItemTable::NewItemToBag |
+| popup_ok (1) | `157,120,243,143` | `234,135,366,158` | `312,179,487,208` | `528,269,672,307` | KeyPressed(-5) |
+
+**cash_popup_khu_vuc** (`cash_popup_khu_vuc`): Cash shop popup 4/4: khu vực không dùng được (OK)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,37,150,163` | `90,37,223,163` | `131,55,353,267` | `194,73,505,371` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,37,47,67` | `90,37,120,67` | `131,55,181,105` | `194,73,264,143` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,66,380,170` | `232,66,506,200` | `364,85,666,259` | `518,108,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,37,383,173` | `229,37,509,203` | `361,55,669,262` | `515,73,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: cash miễn phí, bỏ NETWORK::SetProductID/CallWriteData (T7), ItemTable::NewItemToBag |
+| popup_ok (1) | `157,120,243,143` | `234,135,366,158` | `312,179,487,208` | `528,269,672,307` | KeyPressed(-5) |
+
+**chuyen_gia_chuan_bi** (`chuyen_gia_chuan_bi`): Chuyên gia: Màn hình chuẩn bị
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| start (1) | `191,200,383,223` | `289,230,509,253` | `386,302,669,331` | `578,461,1006,499` | KeyPressed(-5) -> bắt đầu chế độ Chuyên gia (KeyReady/Process gốc) |
+| char (1) | `191,173,285,196` | `289,203,397,226` | `386,267,524,296` | `578,415,788,453` | đặt con trỏ=0 + KeyPressed(-5) (KeyReady): mở Nhân vật |
+| shop (1) | `289,173,383,196` | `401,203,509,226` | `531,267,669,296` | `796,415,1006,453` | đặt con trỏ=1 + KeyPressed(-5) (KeyReady): SetState(1) Cửa hàng |
+
+**chuyen_gia_cua_hang** (`chuyen_gia_cua_hang`): Chuyên gia: Cửa hàng
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,37,150,163` | `90,37,223,163` | `131,55,353,267` | `194,73,505,371` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,37,47,67` | `90,37,120,67` | `131,55,181,105` | `194,73,264,143` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,66,380,170` | `232,66,506,200` | `364,85,666,259` | `518,108,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,37,383,173` | `229,37,509,203` | `361,55,669,262` | `515,73,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: ItemTable::NewItemToBag (miễn phí offline) |
+
+**chuyen_gia_popup_mua** (`chuyen_gia_popup_mua`): Chuyên gia popup: xác nhận mua (Có/Không)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| grid_scroll (1) | `17,37,150,163` | `90,37,223,163` | `131,55,353,267` | `194,73,505,371` | chạm mũi tên/kéo dọc: cuộn hàng (Touch mới; gốc: phím lên/xuống) |
+| cell (16) | `17,37,47,67` | `90,37,120,67` | `131,55,181,105` | `194,73,264,143` | đặt con trỏ ô=0 rồi KeyPressed(-5) (chạm lần 2 = OK gốc) |
+| desc_scroll (1) | `159,66,380,170` | `232,66,506,200` | `364,85,666,259` | `518,108,1003,414` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
+| detail (1) | `156,37,383,173` | `229,37,509,203` | `361,55,669,262` | `515,73,1006,417` | chỉ hiển thị (chạm = chọn ô tương ứng) |
+| buy (1) | `156,200,383,223` | `229,230,509,253` | `361,302,669,331` | `515,461,1006,499` | KeyPressed(-5) -> popup xác nhận -> Process: ItemTable::NewItemToBag (miễn phí offline) |
+| popup_yes (1) | `71,137,197,160` | `101,152,297,175` | `137,196,396,225` | `383,289,594,327` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,137,329,160` | `304,152,499,175` | `405,196,663,225` | `607,289,817,327` | con trỏ popup=Không + KeyPressed(-5) |
+
+**chuyen_gia_popup_khong_dung** (`chuyen_gia_popup_khong_dung`): Chuyên gia popup: không thể dùng ở chế độ Chuyên gia (OK)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| start (1) | `191,200,383,223` | `289,230,509,253` | `386,302,669,331` | `578,461,1006,499` | KeyPressed(-5) -> bắt đầu chế độ Chuyên gia (KeyReady/Process gốc) |
+| char (1) | `191,173,285,196` | `289,203,397,226` | `386,267,524,296` | `578,415,788,453` | đặt con trỏ=0 + KeyPressed(-5) (KeyReady): mở Nhân vật |
+| shop (1) | `289,173,383,196` | `401,203,509,226` | `531,267,669,296` | `796,415,1006,453` | đặt con trỏ=1 + KeyPressed(-5) (KeyReady): SetState(1) Cửa hàng |
+| popup_ok (1) | `157,120,243,143` | `234,135,366,158` | `312,179,487,208` | `528,269,672,307` | KeyPressed(-5) |
+
+**game_hoi_sinh** (`game_hoi_sinh`): StateGame popup: hồi sinh bằng Bùa (miễn phí offline)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| popup_yes (1) | `71,128,197,151` | `101,143,297,166` | `137,188,396,217` | `383,279,594,317` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,128,329,151` | `304,143,499,166` | `405,188,663,217` | `607,279,817,317` | con trỏ popup=Không + KeyPressed(-5) |
+
+**game_hoi_sinh_xac_nhan** (`game_hoi_sinh_xac_nhan`): StateGame popup: xác nhận dùng Bùa Hồi Sinh
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| popup_yes (1) | `71,120,197,143` | `101,135,297,158` | `137,179,396,208` | `383,269,594,307` | KeyPressed(-5) với con trỏ popup=Có |
+| popup_no (1) | `204,120,329,143` | `304,135,499,158` | `405,179,663,208` | `607,269,817,307` | con trỏ popup=Không + KeyPressed(-5) |
+
+**game_hoi_sinh_xong** (`game_hoi_sinh_xong`): StateGame popup: hồi sinh thành công
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| popup_ok (1) | `157,120,243,143` | `234,135,366,158` | `312,179,487,208` | `528,269,672,307` | KeyPressed(-5) |
+
+**game_chien_thang** (`game_chien_thang`): StateGame popup: Chiến thắng! (kết quả Chuyên gia)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| popup_ok (1) | `157,160,243,183` | `234,175,366,198` | `312,219,487,248` | `528,315,672,353` | KeyPressed(-5) -> thoát màn kết quả (KeyGameOver/KeyExpert) |
+
+**game_that_bai** (`game_that_bai`): StateGame popup: Thất bại! (kết quả Chuyên gia)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| popup_ok (1) | `157,160,243,183` | `234,175,366,198` | `312,219,487,248` | `528,315,672,353` | KeyPressed(-5) -> thoát màn kết quả (KeyGameOver/KeyExpert) |
+
+**ban_do_khu_vuc** (`ban_do_khu_vuc`): StateMap: bản đồ khu vực (lưới điểm)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| node (7) | `143,45,165,67` | `233,49,255,71` | `314,69,346,101` | `468,99,510,141` | chỉ hiển thị (điểm khu vực Central Tower) |
+| minimap (1) | `17,200,198,223` | `90,230,297,253` | `131,302,397,331` | `194,461,596,499` | phím * -> bật/tắt Minimap (StateMap KeyPressed) |
+| toggle (1) | `202,200,383,223` | `302,230,509,253` | `403,302,669,331` | `604,461,1006,499` | phím # -> StateMap: chuyển sang bản đồ lớn (ảnh) |
+
+**ban_do_lon** (`ban_do_lon`): StateMap: bản đồ lớn (ảnh các đảo)
+
+| nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
+|---|---|---|---|---|---|
+| close (1) | `11,11,36,31` | `84,11,109,31` | `122,20,159,46` | `182,29,231,61` | KeyPressed(Back) -> state gốc |
+| zone (8) | `94,105,102,126` | `178,118,186,139` | `241,155,257,182` | `361,232,385,270` | chỉ hiển thị (bản đồ lớn: ảnh + tên khu vực) |
+| toggle (1) | `261,200,383,223` | `370,230,509,253` | `490,302,669,331` | `736,461,1006,499` | phím # -> StateMap: chuyển sang bản đồ khu vực (lưới điểm) |
+
+### 12.4 Giả định cần xác nhận khi implement (T17c)
+1. Số liệu giá / cấp / số lượng / tỉ lệ / `Độ tôi luyện` / đếm Bộ sưu tập trong ảnh là SỐ MẪU; chuỗi, tên, mô tả, vật liệu, tên khu vực là dữ liệu thật đã build. Icon gán theo thứ tự mẫu (`icon.mgr` 203–231); khi implement lấy qua `ItemInfo::DrawIcon` (cần thunk ×s như b1).
+2. Nhãn giá Cash/Chuyên gia: dùng nguyên `common_text` 304 ("Bản offline: miễn phí", bỏ `^` và dấu chấm); nút "Nhận!" = 261 (nghĩa gốc: nhận vật phẩm cash, suy từ vị trí chuỗi); hai popup `cash_popup_mua`/`chuyen_gia_popup_mua` ghép 91 + 304 thay đoạn "Giá gốc … won". Nếu quản đốc muốn nhãn ngắn "Miễn phí" cần thêm 1 chuỗi mới vào dữ liệu.
+3. Ảnh bản đồ lớn trong mockup là nền minh hoạ (không tìm được ảnh thật trong VFS dạng .mgr/PNG; game đọc qua `LoadWorldMapImage`): bố cục chỉ cần vùng chữ nhật + toạ độ tương đối (ISL trong `mock_b2b.py`, lấy theo ảnh gốc ô 60 của `kiemke.png`); toạ độ điểm thật phải đọc từ `DrawWorldMap` ở T17c.
+4. Lưới điểm khu vực: 7 điểm (cột,hàng) lấy theo ảnh gốc ô 59; số điểm/cạnh thật của mỗi vùng đọc từ dữ liệu bản đồ ở T17c.
+5. Tab "Khác"/"Giáp" của Mua vật phẩm hiển thị cùng danh sách mẫu; số vật phẩm mỗi tab lấy từ `NpcShop::LoadShopData`.
+6. Popup StateGame hồi sinh/kết quả: các hàng kết quả Chuyên gia (Số màn, Thời gian còn lại, HP còn lại, Điểm số cuối cùng) theo chế độ (Cầm cự/Đua Thời Gian/Đột phá dùng bộ nhãn khác: 331–336); mockup vẽ 1 bộ.
+7. Menu Cash shop `StateCashShop` có thể mở với 3 `type` (đơn/mạng/Expert): offline chỉ dùng single (và expert qua Chuyên gia); cash_network bỏ.
