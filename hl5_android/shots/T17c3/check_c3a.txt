@@ -1,8 +1,7 @@
 ĐẠT   400x240: kịch bản không lỗi/crash 
 ĐẠT   400x240: gán kỹ năng vào ô chuỗi (chạm == phím): trạng thái/HERO sau chạm == phím gốc
 ĐẠT   400x240: ứng viên chưa học -> popup: trạng thái/HERO sau chạm == phím gốc
-LỖI   400x240: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc  NEW={"assigned": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 1}, "cleared": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 0}}
-      ORIG={"assigned": {"belt": [3, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 1, "ptype": null, "st": 6, "sub": 0}, "cleared": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 0}}
+ĐẠT   400x240: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc
 ĐẠT   400x240: mũi tên trái/phải (cuộn trang ứng viên): trạng thái/HERO sau chạm == phím gốc
 ĐẠT   400x240: đổi ô chuỗi khi đang chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
 ĐẠT   400x240: ô thứ 5 (lớp 1, HERO+0x267>0): trạng thái/HERO sau chạm == phím gốc
@@ -26,8 +25,7 @@ LỖI   400x240: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc 
 ĐẠT   600x270: kịch bản không lỗi/crash 
 ĐẠT   600x270: gán kỹ năng vào ô chuỗi (chạm == phím): trạng thái/HERO sau chạm == phím gốc
 ĐẠT   600x270: ứng viên chưa học -> popup: trạng thái/HERO sau chạm == phím gốc
-LỖI   600x270: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc  NEW={"assigned": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 1}, "cleared": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 0}}
-      ORIG={"assigned": {"belt": [3, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 1, "ptype": null, "st": 6, "sub": 0}, "cleared": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 0}}
+ĐẠT   600x270: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc
 ĐẠT   600x270: mũi tên trái/phải (cuộn trang ứng viên): trạng thái/HERO sau chạm == phím gốc
 ĐẠT   600x270: đổi ô chuỗi khi đang chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
 ĐẠT   600x270: ô thứ 5 (lớp 1, HERO+0x267>0): trạng thái/HERO sau chạm == phím gốc
@@ -51,8 +49,7 @@ LỖI   600x270: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc 
 ĐẠT   1200x540: kịch bản không lỗi/crash 
 ĐẠT   1200x540: gán kỹ năng vào ô chuỗi (chạm == phím): trạng thái/HERO sau chạm == phím gốc
 ĐẠT   1200x540: ứng viên chưa học -> popup: trạng thái/HERO sau chạm == phím gốc
-LỖI   1200x540: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc  NEW={"assigned": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 1}, "cleared": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 0}}
-      ORIG={"assigned": {"belt": [3, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 1, "ptype": null, "st": 6, "sub": 0}, "cleared": {"belt": [255, 255, 255, 255, 255], "cls": "0x15e290", "e": 0, "f": 0, "ptype": null, "st": 6, "sub": 0}}
+ĐẠT   1200x540: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc
 ĐẠT   1200x540: mũi tên trái/phải (cuộn trang ứng viên): trạng thái/HERO sau chạm == phím gốc
 ĐẠT   1200x540: đổi ô chuỗi khi đang chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
 ĐẠT   1200x540: ô thứ 5 (lớp 1, HERO+0x267>0): trạng thái/HERO sau chạm == phím gốc
@@ -73,4 +70,4 @@ LỖI   1200x540: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc
 ĐẠT   1200x540: mở/đóng Liên kích 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
 1200x540: ảnh cảnh sau 20 lần new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
 ĐẠT   1200x540: vùng chạm lien_kich == hit_rects.json (23 mục)
-KẾT LUẬN: KHÔNG ĐẠT (3 lỗi)
+KẾT LUẬN: ĐẠT

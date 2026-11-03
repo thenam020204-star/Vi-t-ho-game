@@ -138,7 +138,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
     - [x] T17c1-fix (xong, chờ nghiệm thu) (làm đầu T17c2): (1) LỖI: ô tên nhân vật ở 3x3 + Nhân vật hiện "Warrior" (tên lớp) thay vì tên nhân vật ("Schurtz" như cửa sổ gốc) — tra đúng getter tên mà DrawCharacterMenu gốc dùng; (2) tiêu đề 3x3 = tên khu vực hiện tại như mockup (tra biến bản đồ mà UI gốc dùng, vd dòng "Central, đường hầm ngầm" của menu gốc); (3) chân dung: dùng sprite/ảnh nhân vật thật nếu menu gốc có vẽ. Kiểm lại bằng check_c1_all.py.
     - [x] T17c2 (xong, chờ nghiệm thu; BAO-CAO §16) Túi đồ (mọi SubState, nút Sắp xếp, đổi bộ ô nhanh) + Trang bị.
     - T17c3 Kỹ năng + Đặc tính + Liên kích — chia 3 task nhỏ (mỗi task 1 công nhân mới, < 300k). Cách làm chung: dò ĐỘNG bằng harness (ghi trường state/HERO sau từng phím, so bản gốc) thay vì đọc hết hàm Draw* nghìn dòng; chỉ đọc disasm đoạn cần (getter, bảng tĩnh). BAO-CAO §17 (mỗi task một tiểu mục).
-      - [ ] T17c3a Liên kích (nhỏ nhất): giải mã bảng ứng viên 4x3 + byte HERO +0x22c/+0x267 (4 hay 5 ô chuỗi); mockup `lien_kich*`.
+      - [x] T17c3a (xong, chờ nghiệm thu; BAO-CAO §17.1) Liên kích (nhỏ nhất): giải mã bảng ứng viên 4x3 + byte HERO +0x22c/+0x267 (4 hay 5 ô chuỗi); mockup `lien_kich*`.
       - [ ] T17c3b Đặc tính (đầu tư): mockup `dac_tinh*`; xác nhận màu mã `}` `{`, `#NN` trong mô tả (dùng chung cho c3c).
       - [ ] T17c3c Kỹ năng (5 tab con, gán phím tắt 2 bộ): mockup `ky_nang*`; xác nhận nhãn 5 tab con.
       - Kiểm mỗi task: thao tác phím + chạm → dữ liệu HERO giống bản gốc; vùng chạm khớp hit_rects; 20 lần mở/đóng không rò; check_c1 + check_c2 (+ check các task c3 trước) vẫn ĐẠT; ảnh `shots/T17c3/` ≤ 4/task.
@@ -196,7 +196,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 
 ## Lộ trình gộp (người dùng chốt: gộp task, làm một lượt, phát hành 1 lần)
 Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh gần ~300k thì ghi `CÒN LẠI` và quản đốc giao công nhân mới làm nốt CÙNG lượt (không dừng hỏi người dùng giữa chừng, trừ Vướng mắc cần người dùng quyết). Kiểm theo tiêu chí từng task con gốc.
-- [ ] L0. Gộp T17c3a/b/c (quản đốc gộp nhánh worktree, chạy lại inject_menu + check c1/c2/c3 toàn bộ).
+- [ ] L0. Gộp T17c3a/b/c (quản đốc gộp nhánh worktree, chạy lại inject_menu + check c1/c2/c3 toàn bộ). Kèm sửa lỗi `bag.c::belt_slot` thiếu offset icon `43*lớp` (icon kỹ năng ô nhanh sai ở lớp ≠ 0; công thức đúng ở `sk_icon` trong combo.c) — làm SAU khi gộp (bag.c dùng chung).
 - [ ] L1. **T17c4 + T17c6** (Tinh linh, Nhiệm vụ, bản đồ thật; Cash shop + Chuyên gia + popup StateGame + logic T7: cash miễn phí, hồi sinh offline, chuỗi "Miễn phí"). Có thể chạy song song với L2 (file riêng).
 - [ ] L2. **T17c5** NPC (14 màn).
 - [ ] L3. **T17c7** MainMenu (18 màn, lưới 6 ô T7, Cài đặt 10 mục + Phân giải) + **T16** khung hội thoại HD (mockup `ui_new/dialog/`) — sau L1 (cùng đụng phần T7).
@@ -316,3 +316,5 @@ Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh g�
 - [công nhân A1] Việc quản đốc giao sau T17c2: ảnh shots/T17c2 (10) đã bổ sung, shots/T17c1 đã có ảnh 3x3 mới. T17c3 CHƯA làm (đọc thử Combo, ghi ghi chú ở dòng T17c3 mục CÒN LẠI) vì dung lượng ngữ cảnh; cần công nhân mới.
 - [người dùng] "Thêm 2 agent làm nốt 2 cái" → chạy song song c3a/c3b/c3c (A1 cây chính, A2/A3 worktree).
 - [người dùng] "Gộp phần nào được thì gộp chung task, làm 1 lượt" → quản đốc gộp phần còn lại thành 4 lượt + 1 lần phát hành (xem mục "Lộ trình gộp").
+- [công nhân A1] T17c3a Liên kích xong (chờ quản đốc nghiệm thu): `engine/menu/combo.c` (state 6; bảng ứng viên 4 lớp + ô thứ 5 của lớp 1 đo bằng hook, nút Bỏ chọn = ứng viên 0, phím 0 gốc không có tác dụng), check_c3a_all + check_c1_all + check_c2_all ĐẠT (3 cỡ, 20 lần mở/đóng không rò), ảnh `shots/T17c3/lien_kich_*` (4), BAO-CAO §17.1; đoạn menu 47,4 KB. Lưu ý: `bag.c::belt_slot` thiếu offset icon `43*lớp` cho lớp khác 0 (xem §17.1).
+- [quản đốc] Nghiệm thu T17c3a: đạt theo kiểm (check_c3a_all + c1 + c2 ĐẠT; đoạn 47.4 KB). Chấp nhận lệch: Bỏ chọn = ứng viên 0 (nút riêng). Lỗi icon ô nhanh bag.c → L0.
