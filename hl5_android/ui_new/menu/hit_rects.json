@@ -1,0 +1,4274 @@
+{
+ "menu3x3_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tile0",
+   "rect": [
+    155,
+    37,
+    227,
+    95
+   ],
+   "action": "đặt con trỏ=0 rồi KeyPressed(-5) gốc (SetState(tab 0))"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    233,
+    37,
+    305,
+    95
+   ],
+   "action": "đặt con trỏ=1 rồi KeyPressed(-5) gốc (SetState(tab 1))"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    311,
+    37,
+    383,
+    95
+   ],
+   "action": "đặt con trỏ=2 rồi KeyPressed(-5) gốc (SetState(tab 2))"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    155,
+    101,
+    227,
+    159
+   ],
+   "action": "đặt con trỏ=3 rồi KeyPressed(-5) gốc (SetState(tab 3))"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    233,
+    101,
+    305,
+    159
+   ],
+   "action": "đặt con trỏ=4 rồi KeyPressed(-5) gốc (SetState(tab 4))"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    311,
+    101,
+    383,
+    159
+   ],
+   "action": "đặt con trỏ=5 rồi KeyPressed(-5) gốc (SetState(tab 5))"
+  },
+  {
+   "id": "tile6",
+   "rect": [
+    155,
+    165,
+    227,
+    223
+   ],
+   "action": "đặt con trỏ=6 rồi KeyPressed(-5) gốc (SetState(tab 6))"
+  },
+  {
+   "id": "tile7",
+   "rect": [
+    233,
+    165,
+    305,
+    223
+   ],
+   "action": "đặt con trỏ=7 rồi KeyPressed(-5) gốc (SetState(tab 7))"
+  },
+  {
+   "id": "tile8",
+   "rect": [
+    311,
+    165,
+    383,
+    223
+   ],
+   "action": "đặt con trỏ=8 rồi KeyPressed(-5) gốc (SetState(tab 8))"
+  }
+ ],
+ "tui_do_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    11,
+    205,
+    53,
+    229
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    53,
+    205,
+    95,
+    229
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    95,
+    205,
+    137,
+    229
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    137,
+    205,
+    179,
+    229
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    179,
+    205,
+    221,
+    229
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    221,
+    205,
+    263,
+    229
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    263,
+    205,
+    305,
+    229
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    305,
+    205,
+    347,
+    229
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    347,
+    205,
+    389,
+    229
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    17,
+    62,
+    49,
+    92
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    17,
+    94,
+    49,
+    124
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    17,
+    126,
+    49,
+    156
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    54,
+    62,
+    84,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    86,
+    62,
+    116,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    118,
+    62,
+    148,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    150,
+    62,
+    180,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    54,
+    94,
+    84,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    86,
+    94,
+    116,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    118,
+    94,
+    148,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    150,
+    94,
+    180,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    54,
+    126,
+    84,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    86,
+    126,
+    116,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    118,
+    126,
+    148,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    150,
+    126,
+    180,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    54,
+    158,
+    84,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    86,
+    158,
+    116,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    118,
+    158,
+    148,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    150,
+    158,
+    180,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    185,
+    176,
+    383,
+    199
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    185,
+    62,
+    383,
+    172
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  }
+ ],
+ "popup_xac_nhan_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    11,
+    205,
+    53,
+    229
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    53,
+    205,
+    95,
+    229
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    95,
+    205,
+    137,
+    229
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    137,
+    205,
+    179,
+    229
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    179,
+    205,
+    221,
+    229
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    221,
+    205,
+    263,
+    229
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    263,
+    205,
+    305,
+    229
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    305,
+    205,
+    347,
+    229
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    347,
+    205,
+    389,
+    229
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    17,
+    62,
+    49,
+    92
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    17,
+    94,
+    49,
+    124
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    17,
+    126,
+    49,
+    156
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    54,
+    62,
+    84,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    86,
+    62,
+    116,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    118,
+    62,
+    148,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    150,
+    62,
+    180,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    54,
+    94,
+    84,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    86,
+    94,
+    116,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    118,
+    94,
+    148,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    150,
+    94,
+    180,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    54,
+    126,
+    84,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    86,
+    126,
+    116,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    118,
+    126,
+    148,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    150,
+    126,
+    180,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    54,
+    158,
+    84,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    86,
+    158,
+    116,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    118,
+    158,
+    148,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    150,
+    158,
+    180,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    185,
+    176,
+    383,
+    199
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    185,
+    62,
+    383,
+    172
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    71,
+    120,
+    197,
+    143
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    204,
+    120,
+    329,
+    143
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "tui_do_mo_ta_400x240": [
+  {
+   "id": "close",
+   "rect": [
+    11,
+    11,
+    36,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    11,
+    205,
+    53,
+    229
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    53,
+    205,
+    95,
+    229
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    95,
+    205,
+    137,
+    229
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    137,
+    205,
+    179,
+    229
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    179,
+    205,
+    221,
+    229
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    221,
+    205,
+    263,
+    229
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    263,
+    205,
+    305,
+    229
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    305,
+    205,
+    347,
+    229
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    347,
+    205,
+    389,
+    229
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    17,
+    62,
+    49,
+    92
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    17,
+    94,
+    49,
+    124
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    17,
+    126,
+    49,
+    156
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    54,
+    62,
+    84,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    86,
+    62,
+    116,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    118,
+    62,
+    148,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    150,
+    62,
+    180,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    54,
+    94,
+    84,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    86,
+    94,
+    116,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    118,
+    94,
+    148,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    150,
+    94,
+    180,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    54,
+    126,
+    84,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    86,
+    126,
+    116,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    118,
+    126,
+    148,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    150,
+    126,
+    180,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    54,
+    158,
+    84,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    86,
+    158,
+    116,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    118,
+    158,
+    148,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    150,
+    158,
+    180,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    185,
+    176,
+    383,
+    199
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    185,
+    62,
+    383,
+    172
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  }
+ ],
+ "menu3x3_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tile0",
+   "rect": [
+    247,
+    37,
+    330,
+    105
+   ],
+   "action": "đặt con trỏ=0 rồi KeyPressed(-5) gốc (SetState(tab 0))"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    336,
+    37,
+    419,
+    105
+   ],
+   "action": "đặt con trỏ=1 rồi KeyPressed(-5) gốc (SetState(tab 1))"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    425,
+    37,
+    508,
+    105
+   ],
+   "action": "đặt con trỏ=2 rồi KeyPressed(-5) gốc (SetState(tab 2))"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    247,
+    111,
+    330,
+    179
+   ],
+   "action": "đặt con trỏ=3 rồi KeyPressed(-5) gốc (SetState(tab 3))"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    336,
+    111,
+    419,
+    179
+   ],
+   "action": "đặt con trỏ=4 rồi KeyPressed(-5) gốc (SetState(tab 4))"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    425,
+    111,
+    508,
+    179
+   ],
+   "action": "đặt con trỏ=5 rồi KeyPressed(-5) gốc (SetState(tab 5))"
+  },
+  {
+   "id": "tile6",
+   "rect": [
+    247,
+    185,
+    330,
+    253
+   ],
+   "action": "đặt con trỏ=6 rồi KeyPressed(-5) gốc (SetState(tab 6))"
+  },
+  {
+   "id": "tile7",
+   "rect": [
+    336,
+    185,
+    419,
+    253
+   ],
+   "action": "đặt con trỏ=7 rồi KeyPressed(-5) gốc (SetState(tab 7))"
+  },
+  {
+   "id": "tile8",
+   "rect": [
+    425,
+    185,
+    508,
+    253
+   ],
+   "action": "đặt con trỏ=8 rồi KeyPressed(-5) gốc (SetState(tab 8))"
+  }
+ ],
+ "tui_do_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    84,
+    235,
+    132,
+    259
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    132,
+    235,
+    180,
+    259
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    180,
+    235,
+    228,
+    259
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    228,
+    235,
+    276,
+    259
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    276,
+    235,
+    323,
+    259
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    323,
+    235,
+    371,
+    259
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    371,
+    235,
+    419,
+    259
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    419,
+    235,
+    467,
+    259
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    467,
+    235,
+    515,
+    259
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    90,
+    62,
+    122,
+    92
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    90,
+    94,
+    122,
+    124
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    90,
+    126,
+    122,
+    156
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    127,
+    62,
+    157,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    159,
+    62,
+    189,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    191,
+    62,
+    221,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    223,
+    62,
+    253,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    127,
+    94,
+    157,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    159,
+    94,
+    189,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    191,
+    94,
+    221,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    223,
+    94,
+    253,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    127,
+    126,
+    157,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    159,
+    126,
+    189,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    191,
+    126,
+    221,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    223,
+    126,
+    253,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    127,
+    158,
+    157,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    159,
+    158,
+    189,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    191,
+    158,
+    221,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    223,
+    158,
+    253,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    258,
+    206,
+    509,
+    229
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    258,
+    62,
+    509,
+    202
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  }
+ ],
+ "popup_xac_nhan_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    84,
+    235,
+    132,
+    259
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    132,
+    235,
+    180,
+    259
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    180,
+    235,
+    228,
+    259
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    228,
+    235,
+    276,
+    259
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    276,
+    235,
+    323,
+    259
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    323,
+    235,
+    371,
+    259
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    371,
+    235,
+    419,
+    259
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    419,
+    235,
+    467,
+    259
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    467,
+    235,
+    515,
+    259
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    90,
+    62,
+    122,
+    92
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    90,
+    94,
+    122,
+    124
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    90,
+    126,
+    122,
+    156
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    127,
+    62,
+    157,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    159,
+    62,
+    189,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    191,
+    62,
+    221,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    223,
+    62,
+    253,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    127,
+    94,
+    157,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    159,
+    94,
+    189,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    191,
+    94,
+    221,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    223,
+    94,
+    253,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    127,
+    126,
+    157,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    159,
+    126,
+    189,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    191,
+    126,
+    221,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    223,
+    126,
+    253,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    127,
+    158,
+    157,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    159,
+    158,
+    189,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    191,
+    158,
+    221,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    223,
+    158,
+    253,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    258,
+    206,
+    509,
+    229
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    258,
+    62,
+    509,
+    202
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    101,
+    135,
+    297,
+    158
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    304,
+    135,
+    499,
+    158
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "tui_do_mo_ta_600x270": [
+  {
+   "id": "close",
+   "rect": [
+    84,
+    11,
+    109,
+    31
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    84,
+    235,
+    132,
+    259
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    132,
+    235,
+    180,
+    259
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    180,
+    235,
+    228,
+    259
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    228,
+    235,
+    276,
+    259
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    276,
+    235,
+    323,
+    259
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    323,
+    235,
+    371,
+    259
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    371,
+    235,
+    419,
+    259
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    419,
+    235,
+    467,
+    259
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    467,
+    235,
+    515,
+    259
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    90,
+    62,
+    122,
+    92
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    90,
+    94,
+    122,
+    124
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    90,
+    126,
+    122,
+    156
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    127,
+    62,
+    157,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    159,
+    62,
+    189,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    191,
+    62,
+    221,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    223,
+    62,
+    253,
+    92
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    127,
+    94,
+    157,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    159,
+    94,
+    189,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    191,
+    94,
+    221,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    223,
+    94,
+    253,
+    124
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    127,
+    126,
+    157,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    159,
+    126,
+    189,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    191,
+    126,
+    221,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    223,
+    126,
+    253,
+    156
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    127,
+    158,
+    157,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    159,
+    158,
+    189,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    191,
+    158,
+    221,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    223,
+    158,
+    253,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    258,
+    206,
+    509,
+    229
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    258,
+    62,
+    509,
+    202
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  }
+ ],
+ "menu3x3_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tile0",
+   "rect": [
+    334,
+    56,
+    440,
+    142
+   ],
+   "action": "đặt con trỏ=0 rồi KeyPressed(-5) gốc (SetState(tab 0))"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    448,
+    56,
+    554,
+    142
+   ],
+   "action": "đặt con trỏ=1 rồi KeyPressed(-5) gốc (SetState(tab 1))"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    562,
+    56,
+    668,
+    142
+   ],
+   "action": "đặt con trỏ=2 rồi KeyPressed(-5) gốc (SetState(tab 2))"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    334,
+    150,
+    440,
+    236
+   ],
+   "action": "đặt con trỏ=3 rồi KeyPressed(-5) gốc (SetState(tab 3))"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    448,
+    150,
+    554,
+    236
+   ],
+   "action": "đặt con trỏ=4 rồi KeyPressed(-5) gốc (SetState(tab 4))"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    562,
+    150,
+    668,
+    236
+   ],
+   "action": "đặt con trỏ=5 rồi KeyPressed(-5) gốc (SetState(tab 5))"
+  },
+  {
+   "id": "tile6",
+   "rect": [
+    334,
+    244,
+    440,
+    330
+   ],
+   "action": "đặt con trỏ=6 rồi KeyPressed(-5) gốc (SetState(tab 6))"
+  },
+  {
+   "id": "tile7",
+   "rect": [
+    448,
+    244,
+    554,
+    330
+   ],
+   "action": "đặt con trỏ=7 rồi KeyPressed(-5) gốc (SetState(tab 7))"
+  },
+  {
+   "id": "tile8",
+   "rect": [
+    562,
+    244,
+    668,
+    330
+   ],
+   "action": "đặt con trỏ=8 rồi KeyPressed(-5) gốc (SetState(tab 8))"
+  }
+ ],
+ "tui_do_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    122,
+    304,
+    184,
+    340
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    184,
+    304,
+    246,
+    340
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    246,
+    304,
+    307,
+    340
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    307,
+    304,
+    369,
+    340
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    369,
+    304,
+    431,
+    340
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    431,
+    304,
+    493,
+    340
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    493,
+    304,
+    554,
+    340
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    554,
+    304,
+    616,
+    340
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    616,
+    304,
+    678,
+    340
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    131,
+    84,
+    185,
+    134
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    131,
+    138,
+    185,
+    188
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    131,
+    192,
+    185,
+    242
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    192,
+    84,
+    242,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    246,
+    84,
+    296,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    300,
+    84,
+    350,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    354,
+    84,
+    404,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    192,
+    138,
+    242,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    246,
+    138,
+    296,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    300,
+    138,
+    350,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    354,
+    138,
+    404,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    192,
+    192,
+    242,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    246,
+    192,
+    296,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    300,
+    192,
+    350,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    354,
+    192,
+    404,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    192,
+    246,
+    242,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    246,
+    246,
+    296,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    300,
+    246,
+    350,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    354,
+    246,
+    404,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    411,
+    266,
+    669,
+    295
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    411,
+    84,
+    669,
+    260
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  }
+ ],
+ "popup_xac_nhan_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    122,
+    304,
+    184,
+    340
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    184,
+    304,
+    246,
+    340
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    246,
+    304,
+    307,
+    340
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    307,
+    304,
+    369,
+    340
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    369,
+    304,
+    431,
+    340
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    431,
+    304,
+    493,
+    340
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    493,
+    304,
+    554,
+    340
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    554,
+    304,
+    616,
+    340
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    616,
+    304,
+    678,
+    340
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    131,
+    84,
+    185,
+    134
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    131,
+    138,
+    185,
+    188
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    131,
+    192,
+    185,
+    242
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    192,
+    84,
+    242,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    246,
+    84,
+    296,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    300,
+    84,
+    350,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    354,
+    84,
+    404,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    192,
+    138,
+    242,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    246,
+    138,
+    296,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    300,
+    138,
+    350,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    354,
+    138,
+    404,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    192,
+    192,
+    242,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    246,
+    192,
+    296,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    300,
+    192,
+    350,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    354,
+    192,
+    404,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    192,
+    246,
+    242,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    246,
+    246,
+    296,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    300,
+    246,
+    350,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    354,
+    246,
+    404,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    411,
+    266,
+    669,
+    295
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    411,
+    84,
+    669,
+    260
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    137,
+    179,
+    396,
+    208
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    405,
+    179,
+    663,
+    208
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    800,
+    360
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "tui_do_mo_ta_800x360": [
+  {
+   "id": "close",
+   "rect": [
+    122,
+    20,
+    159,
+    46
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    122,
+    304,
+    184,
+    340
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    184,
+    304,
+    246,
+    340
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    246,
+    304,
+    307,
+    340
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    307,
+    304,
+    369,
+    340
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    369,
+    304,
+    431,
+    340
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    431,
+    304,
+    493,
+    340
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    493,
+    304,
+    554,
+    340
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    554,
+    304,
+    616,
+    340
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    616,
+    304,
+    678,
+    340
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    131,
+    84,
+    185,
+    134
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    131,
+    138,
+    185,
+    188
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    131,
+    192,
+    185,
+    242
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    192,
+    84,
+    242,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    246,
+    84,
+    296,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    300,
+    84,
+    350,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    354,
+    84,
+    404,
+    134
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    192,
+    138,
+    242,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    246,
+    138,
+    296,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    300,
+    138,
+    350,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    354,
+    138,
+    404,
+    188
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    192,
+    192,
+    242,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    246,
+    192,
+    296,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    300,
+    192,
+    350,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    354,
+    192,
+    404,
+    242
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    192,
+    246,
+    242,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    246,
+    246,
+    296,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    300,
+    246,
+    350,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    354,
+    246,
+    404,
+    296
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    411,
+    266,
+    669,
+    295
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    411,
+    84,
+    669,
+    260
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  }
+ ],
+ "menu3x3_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tile0",
+   "rect": [
+    496,
+    73,
+    659,
+    208
+   ],
+   "action": "đặt con trỏ=0 rồi KeyPressed(-5) gốc (SetState(tab 0))"
+  },
+  {
+   "id": "tile1",
+   "rect": [
+    669,
+    73,
+    832,
+    208
+   ],
+   "action": "đặt con trỏ=1 rồi KeyPressed(-5) gốc (SetState(tab 1))"
+  },
+  {
+   "id": "tile2",
+   "rect": [
+    842,
+    73,
+    1005,
+    208
+   ],
+   "action": "đặt con trỏ=2 rồi KeyPressed(-5) gốc (SetState(tab 2))"
+  },
+  {
+   "id": "tile3",
+   "rect": [
+    496,
+    218,
+    659,
+    353
+   ],
+   "action": "đặt con trỏ=3 rồi KeyPressed(-5) gốc (SetState(tab 3))"
+  },
+  {
+   "id": "tile4",
+   "rect": [
+    669,
+    218,
+    832,
+    353
+   ],
+   "action": "đặt con trỏ=4 rồi KeyPressed(-5) gốc (SetState(tab 4))"
+  },
+  {
+   "id": "tile5",
+   "rect": [
+    842,
+    218,
+    1005,
+    353
+   ],
+   "action": "đặt con trỏ=5 rồi KeyPressed(-5) gốc (SetState(tab 5))"
+  },
+  {
+   "id": "tile6",
+   "rect": [
+    496,
+    363,
+    659,
+    498
+   ],
+   "action": "đặt con trỏ=6 rồi KeyPressed(-5) gốc (SetState(tab 6))"
+  },
+  {
+   "id": "tile7",
+   "rect": [
+    669,
+    363,
+    832,
+    498
+   ],
+   "action": "đặt con trỏ=7 rồi KeyPressed(-5) gốc (SetState(tab 7))"
+  },
+  {
+   "id": "tile8",
+   "rect": [
+    842,
+    363,
+    1005,
+    498
+   ],
+   "action": "đặt con trỏ=8 rồi KeyPressed(-5) gốc (SetState(tab 8))"
+  }
+ ],
+ "tui_do_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    182,
+    463,
+    275,
+    511
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    275,
+    463,
+    368,
+    511
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    368,
+    463,
+    461,
+    511
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    461,
+    463,
+    554,
+    511
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    554,
+    463,
+    646,
+    511
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    646,
+    463,
+    739,
+    511
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    739,
+    463,
+    832,
+    511
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    832,
+    463,
+    925,
+    511
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    925,
+    463,
+    1018,
+    511
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    194,
+    109,
+    270,
+    179
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    194,
+    185,
+    270,
+    255
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    194,
+    261,
+    270,
+    331
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    279,
+    109,
+    349,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    355,
+    109,
+    425,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    431,
+    109,
+    501,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    507,
+    109,
+    577,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    279,
+    185,
+    349,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    355,
+    185,
+    425,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    431,
+    185,
+    501,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    507,
+    185,
+    577,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    279,
+    261,
+    349,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    355,
+    261,
+    425,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    431,
+    261,
+    501,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    507,
+    261,
+    577,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    279,
+    337,
+    349,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    355,
+    337,
+    425,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    431,
+    337,
+    501,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    507,
+    337,
+    577,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    586,
+    413,
+    1006,
+    451
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    586,
+    109,
+    1006,
+    405
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  }
+ ],
+ "popup_xac_nhan_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    182,
+    463,
+    275,
+    511
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    275,
+    463,
+    368,
+    511
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    368,
+    463,
+    461,
+    511
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    461,
+    463,
+    554,
+    511
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    554,
+    463,
+    646,
+    511
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    646,
+    463,
+    739,
+    511
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    739,
+    463,
+    832,
+    511
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    832,
+    463,
+    925,
+    511
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    925,
+    463,
+    1018,
+    511
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    194,
+    109,
+    270,
+    179
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    194,
+    185,
+    270,
+    255
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    194,
+    261,
+    270,
+    331
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    279,
+    109,
+    349,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    355,
+    109,
+    425,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    431,
+    109,
+    501,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    507,
+    109,
+    577,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    279,
+    185,
+    349,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    355,
+    185,
+    425,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    431,
+    185,
+    501,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    507,
+    185,
+    577,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    279,
+    261,
+    349,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    355,
+    261,
+    425,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    431,
+    261,
+    501,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    507,
+    261,
+    577,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    279,
+    337,
+    349,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    355,
+    337,
+    425,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    431,
+    337,
+    501,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    507,
+    337,
+    577,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    586,
+    413,
+    1006,
+    451
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    586,
+    109,
+    1006,
+    405
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  },
+  {
+   "id": "popup_yes",
+   "rect": [
+    383,
+    269,
+    594,
+    307
+   ],
+   "action": "KeyPressed(-5) với con trỏ popup=Có"
+  },
+  {
+   "id": "popup_no",
+   "rect": [
+    607,
+    269,
+    817,
+    307
+   ],
+   "action": "con trỏ popup=Không + KeyPressed(-5)"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "tui_do_mo_ta_1200x540": [
+  {
+   "id": "close",
+   "rect": [
+    182,
+    29,
+    231,
+    61
+   ],
+   "action": "KeyPressed(Back) -> state gốc"
+  },
+  {
+   "id": "tab0",
+   "rect": [
+    182,
+    463,
+    275,
+    511
+   ],
+   "action": "đổi tab: SetState(0)"
+  },
+  {
+   "id": "tab1",
+   "rect": [
+    275,
+    463,
+    368,
+    511
+   ],
+   "action": "đổi tab: SetState(1)"
+  },
+  {
+   "id": "tab2",
+   "rect": [
+    368,
+    463,
+    461,
+    511
+   ],
+   "action": "đổi tab: SetState(2)"
+  },
+  {
+   "id": "tab3",
+   "rect": [
+    461,
+    463,
+    554,
+    511
+   ],
+   "action": "đổi tab: SetState(3)"
+  },
+  {
+   "id": "tab4",
+   "rect": [
+    554,
+    463,
+    646,
+    511
+   ],
+   "action": "đổi tab: SetState(4)"
+  },
+  {
+   "id": "tab5",
+   "rect": [
+    646,
+    463,
+    739,
+    511
+   ],
+   "action": "đổi tab: SetState(5)"
+  },
+  {
+   "id": "tab6",
+   "rect": [
+    739,
+    463,
+    832,
+    511
+   ],
+   "action": "đổi tab: SetState(6)"
+  },
+  {
+   "id": "tab7",
+   "rect": [
+    832,
+    463,
+    925,
+    511
+   ],
+   "action": "đổi tab: SetState(7)"
+  },
+  {
+   "id": "tab8",
+   "rect": [
+    925,
+    463,
+    1018,
+    511
+   ],
+   "action": "đổi tab: SetState(8)"
+  },
+  {
+   "id": "page0",
+   "rect": [
+    194,
+    109,
+    270,
+    179
+   ],
+   "action": "[this+0xe]=0 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page1",
+   "rect": [
+    194,
+    185,
+    270,
+    255
+   ],
+   "action": "[this+0xe]=1 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "page2",
+   "rect": [
+    194,
+    261,
+    270,
+    331
+   ],
+   "action": "[this+0xe]=2 (trang), con trỏ [this+0xf]=0"
+  },
+  {
+   "id": "cell0",
+   "rect": [
+    279,
+    109,
+    349,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=0 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell1",
+   "rect": [
+    355,
+    109,
+    425,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=1 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell2",
+   "rect": [
+    431,
+    109,
+    501,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=2 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell3",
+   "rect": [
+    507,
+    109,
+    577,
+    179
+   ],
+   "action": "con trỏ [this+0xf]=3 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell4",
+   "rect": [
+    279,
+    185,
+    349,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=4 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell5",
+   "rect": [
+    355,
+    185,
+    425,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=5 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell6",
+   "rect": [
+    431,
+    185,
+    501,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=6 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell7",
+   "rect": [
+    507,
+    185,
+    577,
+    255
+   ],
+   "action": "con trỏ [this+0xf]=7 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell8",
+   "rect": [
+    279,
+    261,
+    349,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=8 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell9",
+   "rect": [
+    355,
+    261,
+    425,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=9 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell10",
+   "rect": [
+    431,
+    261,
+    501,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=10 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell11",
+   "rect": [
+    507,
+    261,
+    577,
+    331
+   ],
+   "action": "con trỏ [this+0xf]=11 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell12",
+   "rect": [
+    279,
+    337,
+    349,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=12 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell13",
+   "rect": [
+    355,
+    337,
+    425,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=13 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell14",
+   "rect": [
+    431,
+    337,
+    501,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=14 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "cell15",
+   "rect": [
+    507,
+    337,
+    577,
+    407
+   ],
+   "action": "con trỏ [this+0xf]=15 rồi KeyPressed(-5) (chạm lần 2 = OK)"
+  },
+  {
+   "id": "sort",
+   "rect": [
+    586,
+    413,
+    1006,
+    451
+   ],
+   "action": "phím 0 -> KeyBagMenu(0x30) = BagItem::SortBagItem"
+  },
+  {
+   "id": "detail",
+   "rect": [
+    586,
+    109,
+    1006,
+    405
+   ],
+   "action": "chỉ hiển thị (chạm = chọn ô tương ứng)"
+  }
+ ]
+}

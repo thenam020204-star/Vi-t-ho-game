@@ -1,0 +1,24 @@
+== 400x240  font 15px / nhỏ 10px, icon x1 ==
+  tên vật phẩm (1360): rộng nhất 180 px "Chất lỏng nguyên liệu chế biến 1" (hộp chữ 184 px); nhiều dòng nhất 1 dòng (giới hạn 2): ĐẠT
+  mô tả (chuỗi >=25 ký tự): phân bố số dòng 1:19, 2:201, 3:200, 4:135, 5:1; hộp mô tả hiện 4 dòng; 1 chuỗi dài hơn -> cuộn (thanh cuộn), không cắt
+  nhãn 9 mục: dài nhất 52 px "Tinh Linh" <= ô menu 3x3 72 px (chừa 20), tab 42 px (chỉ icon)
+  popup rộng 280 (chữ 256 px): chuỗi common_text dài nhất theo dòng = 3 dòng -> popup cao 98 <= khung 224: ĐẠT ("Triệu hồi Tinh Linh;Ren, dùng phím;hướng chọ...")
+  nút popup 125 px rộng; nhãn dài nhất "Không" 30 px
+== 600x270  font 15px / nhỏ 10px, icon x1 ==
+  tên vật phẩm (1360): rộng nhất 180 px "Chất lỏng nguyên liệu chế biến 1" (hộp chữ 237 px); nhiều dòng nhất 1 dòng (giới hạn 2): ĐẠT
+  mô tả (chuỗi >=25 ký tự): phân bố số dòng 1:78, 2:262, 3:212, 4:4; hộp mô tả hiện 6 dòng; 0 chuỗi dài hơn -> cuộn (thanh cuộn), không cắt
+  nhãn 9 mục: dài nhất 52 px "Tinh Linh" <= ô menu 3x3 83 px (chừa 31), tab 47 px (chỉ icon)
+  popup rộng 420 (chữ 396 px): chuỗi common_text dài nhất theo dòng = 2 dòng -> popup cao 81 <= khung 254: ĐẠT ("Triệu hồi Tinh Linh;Ren, dùng phím;hướng chọ...")
+  nút popup 195 px rộng; nhãn dài nhất "Không" 30 px
+== 800x360  font 15px / nhỏ 10px, icon x2 ==
+  tên vật phẩm (1360): rộng nhất 180 px "Chất lỏng nguyên liệu chế biến 1" (hộp chữ 241 px); nhiều dòng nhất 1 dòng (giới hạn 2): ĐẠT
+  mô tả (chuỗi >=25 ký tự): phân bố số dòng 1:86, 2:259, 3:209, 4:2; hộp mô tả hiện 8 dòng; 0 chuỗi dài hơn -> cuộn (thanh cuộn), không cắt
+  nhãn 9 mục: dài nhất 52 px "Tinh Linh" <= ô menu 3x3 106 px (chừa 54), tab 61 px (chỉ icon)
+  popup rộng 560 (chữ 526 px): chuỗi common_text dài nhất theo dòng = 2 dòng -> popup cao 100 <= khung 328: ĐẠT ("Triệu hồi Tinh Linh;Ren, dùng phím;hướng chọ...")
+  nút popup 258 px rộng; nhãn dài nhất "Không" 30 px
+== 1200x540  font 18px / nhỏ 15px, icon x3 ==
+  tên vật phẩm (1360): rộng nhất 206 px "Chất lỏng nguyên liệu chế biến 1" (hộp chữ 398 px); nhiều dòng nhất 1 dòng (giới hạn 2): ĐẠT
+  mô tả (chuỗi >=25 ký tự): phân bố số dòng 1:201, 2:349, 3:6; hộp mô tả hiện 13 dòng; 0 chuỗi dài hơn -> cuộn (thanh cuộn), không cắt
+  nhãn 9 mục: dài nhất 60 px "Tinh Linh" <= ô menu 3x3 163 px (chừa 103), tab 92 px (chỉ icon)
+  popup rộng 480 (chữ 436 px): chuỗi common_text dài nhất theo dòng = 2 dòng -> popup cao 128 <= khung 492: ĐẠT ("Triệu hồi Tinh Linh;Ren, dùng phím;hướng chọ...")
+  nút popup 212 px rộng; nhãn dài nhất "Không" 35 px
