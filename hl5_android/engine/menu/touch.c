@@ -6,6 +6,7 @@ int mui_nhit;
 mui_scroll mui_sc[MUI_NSCROLL];
 int mui_last_id = -1;
 int mui_drag = -1;
+int mui_tx, mui_ty;
 
 void mui_hits_reset(void) { mui_nhit = 0; }
 void mui_hit(int id, int x0, int y0, int x1, int y1, int kind, int a, int b) {
@@ -21,7 +22,7 @@ int mui_hit_find(int x, int y) {
     return -1;
 }
 int mui_touch_press(void *self, int cls, int x, int y) {
-    mui_drag = -1;
+    mui_drag = -1; mui_tx = x; mui_ty = y;
     int i = mui_hit_find(x, y);
     if (i < 0) { mui_last_id = -1; return -1; }
     mui_hitrec *h = &mui_hits[i];
@@ -38,7 +39,7 @@ int mui_touch_press(void *self, int cls, int x, int y) {
     return h->kind;
 }
 int mui_touch_move(void *self, int cls, int x, int y) {
-    (void)self; (void)cls; (void)x;
+    (void)self; (void)cls; mui_tx = x; mui_ty = y;
     if (mui_drag < 0) return 0;
     mui_scroll *s = &mui_sc[mui_drag];
     int d = (s->start_y - y) / (s->step > 0 ? s->step : 1), mx = s->total - s->view, p = s->start_pos + d;

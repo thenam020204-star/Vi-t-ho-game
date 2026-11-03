@@ -12,6 +12,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..'))
 SLOTS = [('Paint()', 0x40, 'mui_paint_'), ('TouchPressed(int, int, int)', 0x24, 'mui_tp_'),
          ('TouchMoved(int, int, int)', 0x2c, 'mui_tm_'), ('TouchReleased(int, int, int)', 0x28, 'mui_tr_')]
+HERO_HOOKS = os.path.join(HERE, 'hooks.def')
 START, END = '# >>> T17c menu-vtable', '# <<< T17c menu-vtable'
 
 
@@ -52,6 +53,14 @@ def main():
             elif cur != orig: raise SystemExit('ô %#x của %s::%s = %#x, mong đợi %#x' % (slot, cname, meth, cur, orig))
             rows.append('%x\t%s\t%s\tT17c: vtable %s +%#x (%s) %#x -> thunk %s%s %#x' % (
                 slot, struct.pack('<I', orig).hex(), struct.pack('<I', new).hex(), cname, 8 + off, meth.split('(')[0], orig, pre, c, new))
+    for m_ in re.finditer(r'^HOOK_BL\((0x[0-9a-fA-F]+),\s*(0x[0-9a-fA-F]+),\s*(\w+)\)', open(os.path.join(HERO_HOOKS)).read() if os.path.exists(HERO_HOOKS) else '', re.M):
+        va, tgt, fn = int(m_.group(1), 16), int(m_.group(2), 16), m_.group(3)
+        o = v2off(d, va); cur = struct.unpack_from('<I', d, o)[0]
+        enc = lambda t: 0xEB000000 | (((t - (va + 8)) >> 2) & 0xFFFFFF)
+        new = enc(sym[fn])
+        if cur == new: pass
+        elif cur != enc(tgt): raise SystemExit('lệnh tại %#x = %#x, mong đợi bl %#x (%#x)' % (va, cur, tgt, enc(tgt)))
+        rows.append('%x\t%s\t%s\tT17c2: call-site %#x bl %#x -> bl %s %#x' % (va, struct.pack('<I', enc(tgt)).hex(), struct.pack('<I', new).hex(), va, tgt, fn, sym[fn]))
     hdr = ['# sinh bởi engine/menu/inject_menu.py (T17c): vá ô vtable cho lớp đã bật trong states.def: %s' % (', '.join(enabled) or '(chưa lớp nào: đường gốc y hệt)')]
     open(os.path.join(out, 'menu_patches.tsv'), 'w', encoding='utf-8').write('\n'.join(hdr + rows) + '\n')
     print('menu_patches.tsv: %d dòng, lớp bật: %s' % (len(rows), ' '.join(enabled) or '-'))

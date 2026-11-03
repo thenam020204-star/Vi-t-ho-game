@@ -55,6 +55,8 @@ void mui_pix(int x, int y, u32 rgb) {
     if (x < F.cx0 || x >= F.cx1 || y < F.cy0 || y >= F.cy1) return;
     *((u16 *)(F.base + y * F.bpl) + x) = c565(rgb);
 }
+u32 mui_getpx(int x, int y) { if (x < 0 || y < 0 || x >= F.w || y >= F.h) return 0; return *((u16 *)(F.base + y * F.bpl) + x); }
+void mui_put16(int x, int y, u32 c) { if (x < 0 || y < 0 || x >= F.w || y >= F.h) return; *((u16 *)(F.base + y * F.bpl) + x) = (u16)c; }
 void mui_fill(int x0, int y0, int x1, int y1, u32 rgb) {
     u32 c = c565(rgb);
     for (int y = y0; y < y1; y++) span(y, x0, x1, c);

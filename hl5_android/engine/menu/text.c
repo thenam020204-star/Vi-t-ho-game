@@ -21,6 +21,11 @@ int mui_text_init(void) {
     return 1;
 }
 
+/* mã màu trong chuỗi: BFont gốc (đo ở runtime: &|${}'"`^<[ -> màu) KHÔNG vẽ ký tự mã, chỉ đổi màu cho phần chữ sau */
+static const u8 RC_CODE[11] = {'&', '|', '$', '{', '}', '\'', '"', '`', '^', '<', '['};
+static const u32 RC_COL[11] = {RGB(255, 156, 0), RGB(128, 128, 128), RGB(0, 0, 0), RGB(255, 255, 255), RGB(0, 103, 243), RGB(255, 204, 0),
+                               RGB(0, 176, 255), RGB(106, 59, 143), RGB(223, 0, 37), RGB(132, 221, 16), RGB(64, 64, 64)};
+int mui_code_color(u8 b) { for (int i = 0; i < 11; i++) if (RC_CODE[i] == b) return (int)RC_COL[i]; return -1; }
 static int fidx(int px) { return px >= 18 ? 2 : px <= 10 ? 1 : 0; }
 
 typedef struct { const u8 *F, *adv, *go, *atlas, *raw; int h, aw; } fnt_t;
@@ -34,6 +39,7 @@ static void fnt(fnt_t *f, int px) {
 /* một đơn vị chuỗi: trả số byte; *g = danh sách glyph, *n = số glyph (0 = bỏ qua) */
 static int unit(const u8 *s, int i, int len, u8 *tmp, const u8 **g, int *n) {
     u8 b = s[i];
+    if (b < 0x80 && mui_code_color(b) >= 0) { *n = 0; return 1; }
     if (b >= 0xC9 && i + 1 < len && s[i + 1] >= 0xA1) {
         u32 k = (b - 0xC9) * 94u + (s[i + 1] - 0xA1);
         if (k < (u32)vn_state->nwords) {
@@ -42,6 +48,7 @@ static int unit(const u8 *s, int i, int len, u8 *tmp, const u8 **g, int *n) {
             return 2;
         }
     }
+    if (b == '~' && T.asc['~'] == 0xFF) b = '-';          /* bộ font Việt không có '~' (khoảng "20~36"): thay '-' */
     if (b < 0x80 && T.asc[b] != 0xFF) { tmp[0] = T.asc[b]; *g = tmp; *n = 1; return 1; }
     *n = 0;
     return 1;
@@ -81,7 +88,7 @@ static void glyph(const fnt_t *f, int x, int y, int g, u32 col) {
         }
 }
 
-static int run(int x, int y, const u8 *s, int len, int px, u32 col, int flags, int skip) {
+static int run(int x, int y, const u8 *s, int len, int px, u32 col, int flags, int skip, const u8 *ctx) {
     if (!mui_text_init()) return 0;
     if (len < 0) len = cslen(s);
     fnt_t f; fnt(&f, px);
@@ -93,22 +100,29 @@ static int run(int x, int y, const u8 *s, int len, int px, u32 col, int flags, i
     }
     if (flags & TF_CENTER) x -= w >> 1;
     else if (flags & TF_RIGHT) x -= w;
+    u32 c0 = col;
+    if (ctx) for (const u8 *q = ctx; q < s; q++) { int cc = q[0] < 0x80 ? mui_code_color(q[0]) : -1; if (cc >= 0) c0 = (u32)cc; }
     for (int pass = (flags & TF_SHADOW) ? 0 : 1; pass < 2; pass++) {
         int cx = x + (pass == 0), cy = y + (pass == 0), sk = skip;
+        u32 cur = c0;
         for (int i = 0; i < len;) {
+            u8 b0 = s[i];
             i += unit(s, i, len, tmp, &g, &n);
+            if (!n && b0 < 0x80) { int cc = mui_code_color(b0); if (cc >= 0) cur = (u32)cc; }
             for (int j = 0; j < n; j++) {
                 if (sk && is_space(g[j])) continue;
                 sk = 0;
-                if (!is_space(g[j])) glyph(&f, cx, cy, g[j], pass ? col : C_INK);
+                if (!is_space(g[j])) glyph(&f, cx, cy, g[j], pass ? cur : C_INK);
                 cx += gadv(&f, g[j]);
             }
         }
     }
     return w;
 }
-int mui_text(int x, int y, const u8 *s, int len, int px, u32 col, int flags) { return run(x, y, s, len, px, col, flags, 0); }
-int mui_text_skip(int x, int y, const u8 *s, int len, int px, u32 col, int flags) { return run(x, y, s, len, px, col, flags, 1); }
+int mui_text(int x, int y, const u8 *s, int len, int px, u32 col, int flags) { return run(x, y, s, len, px, col, flags, 0, NULL); }
+int mui_text_skip(int x, int y, const u8 *s, int len, int px, u32 col, int flags) { return run(x, y, s, len, px, col, flags, 1, NULL); }
+/* dòng con của chuỗi `base` (s = base + start): màu khởi đầu = màu mã cuối cùng trước start */
+int mui_text_line(int x, int y, const u8 *base, int start, int len, int px, u32 col, int flags) { return run(x, y, base + start, len, px, col, flags, 1, base); }
 
 /* ngắt dòng theo từ như mockup (U.wrap): token = dấu cách đầu + chữ tới dấu cách kế (dấu cách = byte ' '/';' hoặc glyph đầu của mã từ mode 1/2).
  * Token được thêm vào dòng nếu (rộng dòng + rộng token gồm dấu cách đầu) <= maxw, ngược lại xuống dòng mới (bỏ dấu cách đầu khi vẽ: mui_text_skip).

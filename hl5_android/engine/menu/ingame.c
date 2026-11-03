@@ -23,12 +23,18 @@ const u8 *mui_hint(const u8 *s, int *n) {                 /* bỏ gợi ý phím
     else if (s[0] >= '0' && s[0] <= '9' && s[1] == '.') { s += 2; l -= 2; }
     *n = l; return s;
 }
-static int money_str(int v, u8 *o) {                         /* 1,234,567 */
+int mui_money(int v, u8 *o) {                         /* 1,234,567 */
     u8 t[16]; int n = mui_itoa(v < 0 ? 0 : v, t), k = 0;
     for (int i = 0; i < n; i++) { if (i && (n - i) % 3 == 0) o[k++] = ','; o[k++] = t[i]; }
     o[k] = 0; return k;
 }
 
+/* tên khu vực hiện tại: UI gốc (DrawZone/SetMapMode 0xe553c) = GetInGameText(33 + byte [*(gv+5204)+0x8d]) */
+static const u8 *zone_title(void) {
+    u8 *mp = *(u8 **)(gv + 5204);
+    const u8 *t = mp ? TextMgr_GetInGameText(_pTextMgr, 33 + mp[0x8d]) : NULL;
+    return t ? t : CT(9);
+}
 /* ---------------- phần chung ---------------- */
 static void prelude(void) {                                  /* như InGameMenu::Paint gốc: khôi phục cảnh + làm tối */
     u32 g = _lcdG;
@@ -38,12 +44,29 @@ static void prelude(void) {                                  /* như InGameMenu:
 }
 static void panel(int x0, int y0, int x1, int y1) { mui_frame(x0, y0, x1, y1, L.rad, 0, 1, RGB(14, 22, 34), 230, NULL); }
 
-static void portrait(int x, int y, int pr) {
+/* sprite nhân vật THẬT như DrawCharacterMenu gốc (0xf88b8..0xfa168): cùng nhánh (vũ khí/khiên/lớp) -> cùng tham số DrawSprite (a,b,y bù) */
+static void hero_sprite(int cx, int cy, int r) {
+    u8 *h = HEROP(); u32 g = _lcdG;
+    void *spr; int a = 0, b = 1, dy = 0, cls = h[0x22c] & 3;
+    extern H void *ig_self;
+    if (!ig_self) return;
+    if (!HERO_IsNoneEquipWeapon(h)) {
+        a = 2; b = cls >= 2 ? 2 : 1; dy = cls == 1 ? 3 : 0;
+    } else if (cls == 3 && !HERO_IsNoneEquipShield(h)) { a = 2; b = 2; }
+    spr = CHAR_GetSpritePtr(h);
+    if (!spr) return;
+    int fr = *((s8 *)ig_self + 0x28);
+    Graphic_SetClip(g, cx - r, cy - r, 2 * r, 2 * r);
+    SPRITE_DrawSprite(spr, Graphic_GetFB(g), cx, cy + r * 55 / 100 + dy, a, b, fr, 0);
+    Graphic_ResetClip(g);
+}
+void *ig_self;
+u32 ig_vt;
+void mui_portrait(int x, int y, int pr) {
     mui_m *m = &L; int cx = x + pr / 2, cy = y + pr / 2, R = pr / 2, band = pr / 12 < 2 ? 2 : pr / 12;
     mui_disc(cx, cy, R, C_INK); mui_disc(cx, cy, R - 1, C_ORANGE_DK); mui_disc(cx, cy, R - 2, C_ORANGE);
     mui_disc(cx, cy, R - 2 - band, C_ORANGE_DK); mui_disc(cx, cy, R - 3 - band, C_PANEL);
-    const u8 *g = CUI_SPR(7); int k = m->s + 1 > 3 ? 3 : m->s + 1;
-    mui_gbm(g, cx - (*(const u16 *)(g + 2) * k) / 2, cy - (*(const u16 *)(g + 4) * k) / 2, k, C_WHITE);
+    hero_sprite(cx, cy, R - 2 - band);
 }
 
 /* cột tóm tắt (nhân vật): vòng chân dung + tên/LV/lớp + 3 thanh. Trả y cuối. */
@@ -51,14 +74,14 @@ static int summary(int x0, int y0, int x1, int y1, int lv_first) {
     mui_m *m = &L; u8 *h = HEROP(); int s = m->s, pr = m->hd ? 84 : 22 * s + 20;
     panel(x0, y0, x1, y1);
     int px_ = x0 + m->pad, yy = y0 + m->pad;
-    portrait(px_, yy, pr);
+    mui_portrait(px_, yy, pr);
     int nx = px_ + pr + m->pad / 2 + 2, ty = yy + ((pr - 3 * m->lp) / 2 > 0 ? (pr - 3 * m->lp) / 2 : 0), mw = x1 - nx - m->pad;
     u8 lv[40]; int n = 0; const u8 *l13 = CT(13);
     while (l13[n] && n < 30) { lv[n] = l13[n]; n++; }
     lv[n++] = ' '; n += mui_itoa(h[0x22d], lv + n);
     int cls = h[0x22c] & 3;
     mui_clip(nx, 0, nx + mw, m->Ht);
-    mui_text(nx, ty, h + 536, -1, m->px, C_GOLD, TF_SHADOW);
+    mui_text(nx, ty, CT(9), -1, m->px, C_GOLD, TF_SHADOW);
     mui_text(nx, ty + m->lp * (lv_first ? 1 : 2), lv, n, m->px, C_WHITE, 0);
     mui_text(nx, ty + m->lp * (lv_first ? 2 : 1), CT(178 + cls), -1, m->px, C_DIM, 0);
     mui_clip_reset();
@@ -128,7 +151,7 @@ static void paint_main(void *self, mui_r *body) {
     yy += 1; mui_fill(px_, yy, x0 + sumw - m->pad, yy + 1, C_LINE); yy += m->pad - 1;
     mui_text(px_, yy, CT(19), -1, m->px, C_DIM, 0); yy += m->lp + 1;
     const u8 *coin = CUI_SPR(16); int ch2 = *(const u16 *)(coin + 4) * s, rh = m->lp > ch2 ? m->lp : ch2, cwid = *(const u16 *)(coin + 2) * s;
-    u8 mt[20]; int mn = money_str(BagItem_GetMoney(HERO_GetBagItemPtr(h)), mt);
+    u8 mt[20]; int mn = mui_money(BagItem_GetMoney(HERO_GetBagItemPtr(h)), mt);
     mui_gbm(coin, px_, yy + (rh - ch2) / 2, s, -1);
     mui_clip(px_ + cwid + 4, 0, px_ + bw, m->Ht);
     mui_text(x0 + sumw - m->pad, yy + (rh - m->px) / 2, mt, mn, m->px, C_GOLD, TF_RIGHT);
@@ -293,11 +316,12 @@ static void paint_sys(void *self, mui_r *body) {
 void ig_paint(void *self) {
     mui_m *m = &L; int st = SELF8(self, 0xc);
     prelude();
+    ig_self = self; ig_vt = *(u32 *)self;
     mui_r wr = {m->wx, m->wy, m->wx + m->winW, m->wy + m->winH}, body;
-    if (st == 0) { mui_window(&wr, HEROP() + 536, -1, 0, NULL, 0, &body); paint_main(self, &body); }
+    if (st == 0) { mui_window(&wr, zone_title(), -1, 0, NULL, 0, &body); paint_main(self, &body); }
     else {
         mui_window(&wr, CT(st - 1), -1, MUI_TAB_ICONS, NULL, st - 1, &body);
-        if (st == 1) paint_char(self, &body); else paint_sys(self, &body);
+        if (st == 1) paint_char(self, &body); else if (st == 2) bag_paint(self, &body); else if (st == 3) equip_paint(self, &body); else paint_sys(self, &body);
     }
 }
 
@@ -305,6 +329,8 @@ int ig_touch(void *self, int x, int y) {
     int st = SELF8(self, 0xc), k = mui_touch_press(self, MUI_CLS_INGAME, x, y), id = mui_last_id;
     if (k != HK_CB) return 0;
     if (id >= 0x10 && id < 0x10 + MUI_TAB_ICONS) { if (id - 0x10 + 1 != st) StateInGameMenu_SetState(self, id - 0x10 + 1); mui_sc[0].pos = 0; return 0; }
+    if (st == 2) { bag_cb(self, id); return 0; }
+    if (st == 3) { equip_cb(self, id); return 0; }
     if (st == 9) {
         int sub = SELF8(self, 0xd);
         if (sub == 1 && id >= 0x40 && id < 0x70) {                 /* con trỏ tuỳ chọn gốc: [+0x10] = hàng tuyệt đối, [+0xf] = hàng trong cửa sổ */

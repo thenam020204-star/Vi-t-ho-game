@@ -1,0 +1,82 @@
+ĐẠT   400x240: kịch bản không lỗi/crash 
+ĐẠT   400x240: đổi trang + chọn ô (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: Sắp xếp: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: dùng vật phẩm (menu Sử dụng): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: vứt bỏ -> Có: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: vứt bỏ -> Không: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: gán ô nhanh + đổi bộ: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: trang bị (menu -> danh sách lọc -> chọn): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: tháo (menu): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: danh sách lọc: mũi tên: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: popup chi tiết vật phẩm (loại 10): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: nút < quay lại: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: chạm tab 0 từ Túi đồ -> state 1 == gốc 1
+ĐẠT   400x240: chạm tab 1 từ Túi đồ -> state 2 == gốc 2
+ĐẠT   400x240: chạm tab 2 từ Túi đồ -> state 3 == gốc 3
+ĐẠT   400x240: chạm tab 3 từ Túi đồ -> state 4 == gốc 4
+ĐẠT   400x240: chạm tab 4 từ Túi đồ -> state 5 == gốc 5
+ĐẠT   400x240: chạm tab 5 từ Túi đồ -> state 6 == gốc 6
+ĐẠT   400x240: chạm tab 6 từ Túi đồ -> state 7 == gốc 7
+ĐẠT   400x240: chạm tab 7 từ Túi đồ -> state 8 == gốc 8
+ĐẠT   400x240: chạm tab 8 từ Túi đồ -> state 9 == gốc 9
+ĐẠT   400x240: mở/đóng Túi đồ+Trang bị 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+400x240: ảnh cảnh sau 20 lần mở/đóng new=0988fb5b989b470801428053b0e51c68 orig=0988fb5b989b470801428053b0e51c68
+ĐẠT   400x240: vùng chạm tui_do == hit_rects.json (30 mục)
+LỖI   400x240: vùng chạm tui_do_phim_tat == hit_rects.json (8 mục)  LỆCH [('belt0', [104, 57, 134, 87], [104, 60, 134, 90]), ('belt1', [136, 57, 166, 87], [136, 60, 166, 90]), ('belt2', [168, 57, 198, 87], [168, 60, 198, 90]), ('belt3', [200, 57, 230, 87], [200, 60, 230, 90])]
+LỖI   400x240: vùng chạm trang_bi == hit_rects.json (18 mục)  LỆCH [('slot0', [72, 34, 102, 64], [75, 37, 105, 67]), ('slot1', [104, 34, 134, 64], [107, 37, 137, 67]), ('slot2', [136, 34, 166, 64], [139, 37, 169, 67]), ('slot3', [168, 34, 198, 64], [171, 37, 201, 67])]
+LỖI   400x240: vùng chạm tui_do_chon == hit_rects.json (10 mục)  LỆCH [('prev', [87, 57, 117, 87], [87, 60, 117, 90]), ('next', [283, 57, 313, 87], [283, 60, 313, 90]), ('hscroll', [121, 89, 279, 97], [121, 92, 279, 100]), ('ok', [14, 179, 198, 202], [17, 176, 198, 199])]
+ĐẠT   600x270: kịch bản không lỗi/crash 
+ĐẠT   600x270: đổi trang + chọn ô (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: Sắp xếp: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: dùng vật phẩm (menu Sử dụng): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: vứt bỏ -> Có: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: vứt bỏ -> Không: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: gán ô nhanh + đổi bộ: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: trang bị (menu -> danh sách lọc -> chọn): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: tháo (menu): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: danh sách lọc: mũi tên: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: popup chi tiết vật phẩm (loại 10): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: nút < quay lại: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: chạm tab 0 từ Túi đồ -> state 1 == gốc 1
+ĐẠT   600x270: chạm tab 1 từ Túi đồ -> state 2 == gốc 2
+ĐẠT   600x270: chạm tab 2 từ Túi đồ -> state 3 == gốc 3
+ĐẠT   600x270: chạm tab 3 từ Túi đồ -> state 4 == gốc 4
+ĐẠT   600x270: chạm tab 4 từ Túi đồ -> state 5 == gốc 5
+ĐẠT   600x270: chạm tab 5 từ Túi đồ -> state 6 == gốc 6
+ĐẠT   600x270: chạm tab 6 từ Túi đồ -> state 7 == gốc 7
+ĐẠT   600x270: chạm tab 7 từ Túi đồ -> state 8 == gốc 8
+ĐẠT   600x270: chạm tab 8 từ Túi đồ -> state 9 == gốc 9
+ĐẠT   600x270: mở/đóng Túi đồ+Trang bị 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+600x270: ảnh cảnh sau 20 lần mở/đóng new=7ef6844cf11a087530253127ab989468 orig=7ef6844cf11a087530253127ab989468
+ĐẠT   600x270: vùng chạm tui_do == hit_rects.json (30 mục)
+LỖI   600x270: vùng chạm tui_do_phim_tat == hit_rects.json (8 mục)  LỆCH [('belt0', [203, 57, 233, 87], [203, 60, 233, 90]), ('belt1', [235, 57, 265, 87], [235, 60, 265, 90]), ('belt2', [267, 57, 297, 87], [267, 60, 297, 90]), ('belt3', [299, 57, 329, 87], [299, 60, 329, 90])]
+LỖI   600x270: vùng chạm trang_bi == hit_rects.json (18 mục)  LỆCH [('slot0', [145, 34, 175, 64], [148, 37, 178, 67]), ('slot1', [177, 34, 207, 64], [180, 37, 210, 67]), ('slot2', [209, 34, 239, 64], [212, 37, 242, 67]), ('slot3', [241, 34, 271, 64], [244, 37, 274, 67])]
+LỖI   600x270: vùng chạm tui_do_chon == hit_rects.json (10 mục)  LỆCH [('prev', [186, 57, 216, 87], [186, 60, 216, 90]), ('next', [382, 57, 412, 87], [382, 60, 412, 90]), ('hscroll', [220, 89, 378, 97], [220, 92, 378, 100]), ('ok', [87, 209, 297, 232], [90, 206, 297, 229])]
+ĐẠT   1200x540: kịch bản không lỗi/crash 
+ĐẠT   1200x540: đổi trang + chọn ô (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: Sắp xếp: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: dùng vật phẩm (menu Sử dụng): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: vứt bỏ -> Có: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: vứt bỏ -> Không: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: gán ô nhanh + đổi bộ: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: trang bị (menu -> danh sách lọc -> chọn): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: tháo (menu): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: danh sách lọc: mũi tên: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: popup chi tiết vật phẩm (loại 10): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: nút < quay lại: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: chạm tab 0 từ Túi đồ -> state 1 == gốc 1
+ĐẠT   1200x540: chạm tab 1 từ Túi đồ -> state 2 == gốc 2
+ĐẠT   1200x540: chạm tab 2 từ Túi đồ -> state 3 == gốc 3
+ĐẠT   1200x540: chạm tab 3 từ Túi đồ -> state 4 == gốc 4
+ĐẠT   1200x540: chạm tab 4 từ Túi đồ -> state 5 == gốc 5
+ĐẠT   1200x540: chạm tab 5 từ Túi đồ -> state 6 == gốc 6
+ĐẠT   1200x540: chạm tab 6 từ Túi đồ -> state 7 == gốc 7
+ĐẠT   1200x540: chạm tab 7 từ Túi đồ -> state 8 == gốc 8
+ĐẠT   1200x540: chạm tab 8 từ Túi đồ -> state 9 == gốc 9
+ĐẠT   1200x540: mở/đóng Túi đồ+Trang bị 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+1200x540: ảnh cảnh sau 20 lần mở/đóng new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
+ĐẠT   1200x540: vùng chạm tui_do == hit_rects.json (30 mục)
+LỖI   1200x540: vùng chạm tui_do_phim_tat == hit_rects.json (8 mục)  LỆCH [('belt0', [374, 98, 444, 168], [374, 103, 444, 173]), ('belt1', [450, 98, 520, 168], [450, 103, 520, 173]), ('belt2', [526, 98, 596, 168], [526, 103, 596, 173]), ('belt3', [602, 98, 672, 168], [602, 103, 672, 173])]
+LỖI   1200x540: vùng chạm trang_bi == hit_rects.json (18 mục)  LỆCH [('slot0', [293, 68, 363, 138], [298, 73, 368, 143]), ('slot1', [369, 68, 439, 138], [374, 73, 444, 143]), ('slot2', [445, 68, 515, 138], [450, 73, 520, 143]), ('slot3', [521, 68, 591, 138], [526, 73, 596, 143])]
+LỖI   1200x540: vùng chạm tui_do_chon == hit_rects.json (10 mục)  LỆCH [('prev', [335, 98, 405, 168], [335, 103, 405, 173]), ('next', [795, 98, 865, 168], [795, 103, 865, 173]), ('hscroll', [413, 174, 787, 188], [413, 179, 787, 193]), ('ok', [189, 418, 596, 456], [194, 413, 596, 451])]
+KẾT LUẬN: KHÔNG ĐẠT (9 lỗi)

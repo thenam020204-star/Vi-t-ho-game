@@ -1,0 +1,11 @@
+import sys; sys.path.insert(0, '/home/user/Vi-t-ho-game/hl5_android/harness/t17c2')
+from qlib import *
+W, Hh = int(sys.argv[1]), int(sys.argv[2])
+c = Ctx(W, Hh, 'new', '/tmp/claude-0/q2')
+c.S3(2, 8); c.shot('bag0')
+bag = c.bag(); print('size/count', c.s16(bag+4), c.s16(bag+6), 'cnt@3', [c.b8(bag+0x188+i) for i in range(6)])
+c.key('OK'); c.shot('bag1')
+c.key('RIGHT'); c.key('RIGHT'); c.key('RIGHT'); c.shot('bag1_potion')
+c.S3(3, 8); c.shot('equip0')
+c.key('OK', 6); c.shot('equip_menu')
+c.key('OK', 6); c.shot('equip_pick')

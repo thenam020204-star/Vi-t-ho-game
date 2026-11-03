@@ -25,17 +25,25 @@ void pop_paint(void *self) {
     if (res && *res == -1) return;                         /* đã đóng (như gốc) */
     int t = POP_TYPE(self), nb = POP_NBTN(self), cur = res ? *res : 0, n1, n2;
     mui_r out;
+    if (t == 10) { pop_item(self); return; }                /* chi tiết vật phẩm (c2) */
     if (t == 7) {
         int pw = m->hd ? 420 : (55 * m->W + 50) / 100;
         if (pw > m->W - 2 * m->mg) pw = m->W - 2 * m->mg;
-        int bh = m->btnH, gp = m->gap, ph = 2 * m->pad + nb * bh + (nb - 1) * gp + 4 * m->s;
+        u32 par = *(u32 *)((u8 *)self + 8);
+        const u8 *title = NULL; u16 ts[2], tl[2]; int tn = 0;
+        if (par && ig_vt && *(u32 *)par == ig_vt) title = (par && (GS(par) == 2 || GS(par) == 3)) ? mui_cur_item((void *)par) : NULL;
+        if (title) { title += 24; tn = mui_wrap(m->px, title, -1, pw - 2 * (m->pad + 2 * m->s + 4), ts, tl, 2); }
+        int bh = m->btnH, gp = m->gap, ph = 2 * m->pad + nb * bh + (nb - 1) * gp + 4 * m->s + (tn ? tn * m->lp + m->pad : 0) + (tn ? 2 : 0);
         int x0 = (m->W - pw) / 2, y0 = (m->Ht - ph) / 2, in[4];
         mui_fill_a(0, 0, m->W, m->Ht, C_INK, 120);
         mui_hit(0xFD, 0, 0, m->W, m->Ht, HK_CB, 0, 0);     /* chạm ngoài menu = Back (menu dọc không có nút Huỷ) */
         mui_frame(x0, y0, x0 + pw, y0 + ph, m->rad, 1, m->bt, RGB(14, 22, 34), 248, in);
         mui_hit(0xFE, x0, y0, x0 + pw, y0 + ph, HK_NONE, 0, 0);
+        int yy = in[1] + m->pad + 2 * m->s;
+        for (int i = 0; i < tn; i++) { mui_text_line((m->W) / 2, yy, title, ts[i], tl[i], m->px, C_GOLD, TF_CENTER | TF_SHADOW); yy += m->lp; }
+        if (tn) yy += m->pad;
         for (int i = 0; i < nb; i++) {
-            mui_r b = {in[0] + m->pad + 2 * m->s, in[1] + m->pad + 2 * m->s + i * (bh + gp), in[2] - m->pad - 2 * m->s, 0};
+            mui_r b = {in[0] + m->pad + 2 * m->s, yy + i * (bh + gp), in[2] - m->pad - 2 * m->s, 0};
             b.y1 = b.y0 + bh;
             const u8 *l = mui_hint(BTN(self, i), &n1);
             mui_button(&b, l, n1, i == cur ? 1 : 0, 0xA0 + i);

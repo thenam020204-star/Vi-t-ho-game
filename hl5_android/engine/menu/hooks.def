@@ -1,0 +1,3 @@
+# T17c2: điểm móc call-site (mỗi dòng: HOOK_BL(vaddr_của_lệnh_bl, đích_gốc, hàm_mới_trong_đoạn_menu)); inject_menu.py kiểm lệnh gốc là `bl đích_gốc` rồi sinh dòng so_patches.tsv.
+# CommonUi::DrawItemDiscription 0x777a4: lời gọi BFont::DrawTextLine duy nhất (0x77abc) -> mui_cap_line: ở chế độ bắt (mui_cap_on) sao chép bộ đệm văn bản thay vì vẽ, ngược lại gọi BFont::DrawTextLine gốc (cùng 8 tham số).
+HOOK_BL(0x77abc, 0x41940, mui_cap_line)

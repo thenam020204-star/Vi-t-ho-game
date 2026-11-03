@@ -37,8 +37,33 @@ extern H void StateInGameMenu_SetState(void *self, int s);
 extern H void StateInGameMenu_SetSubState(void *self, int s);
 extern H int BagItem_GetMoney(void *bag);
 extern H void *HERO_GetBagItemPtr(void *hero);
+/* c1-fix: tên khu vực, sprite nhân vật thật, clip */
+extern H const u8 *TextMgr_GetInGameText(u32 tm, int i);
+extern H int HERO_IsNoneEquipWeapon(u8 *hero);
+extern H int HERO_IsNoneEquipShield(u8 *hero);
+extern H void *CHAR_GetSpritePtr(u8 *hero);
+extern H void SPRITE_DrawSprite(void *spr, int fb, int x, int y, int a, int b, int frame, int d);
+extern H void Graphic_SetClip(u32 g, int x, int y, int w, int h);
+extern H void Graphic_ResetClip(u32 g);
 #define HEROP() (*(u8 **)(gv + 5180))
 #define CT(i) TextMgr_GetCommonText(_pTextMgr, (i))
+
+/* ---- guest (c2): Túi đồ / Trang bị / belt ---- */
+extern H int BagItem_GetSize(void *bag);
+extern H int BagItem_GetCount(void *bag);
+extern H u8 *BagItem_GetBagItemPtr(void *bag, int cat, int idx);
+extern H int BagItem_GetBunch(void *bag, int cat, int id);
+extern H int EquipItemInfo_IsEquipIng(void *item);
+extern H void *HERO_GetEquipItemPtr(void *hero);
+extern H u8 *EquipItem_GetEquipItem(void *eq, int slot);
+extern H int HERO_GetHotKeyToggle(void *hero);
+extern H int HERO_GetHotKeyBeltType(void *hero, int slot, int bank);
+extern H int HERO_GetHotKeyBeltSkillIdx(void *hero, int slot, int bank);
+extern H void ItemTable_GetItemTableInfo(void *tbl, void *out, int cat, int id);
+extern H void CommonUi_DrawIcon(void *cui, int fb, int x, int y, int icon, int a, int b, int c, int d);
+extern H void CommonUi_DrawItemDiscription(void *cui, int fb, int x, int y, void *item, int a, int b);
+extern H void BFont_DrawTextLine(void *f, int a1, int a2, int a3, int a4, int a5, const u8 *buf, int a7);
+#define ITEMTABLE() (*(u8 **)(gv + 5132))
 
 /* ---------------- layout (LAYOUT.md §1) ---------------- */
 typedef struct {
@@ -84,6 +109,8 @@ H void mui_rr(int x0, int y0, int x1, int y1, int rad, u32 rgb, int a);         
 H void mui_frame(int x0, int y0, int x1, int y1, int rad, int orange, int thick, u32 fill, int fa, int *in4); /* fill<0: không tô */
 H void mui_gbm(const u8 *gbm, int x, int y, int s, int tint);                     /* GbmImage x s NEAREST; tint<0: màu gốc */
 H void mui_pix(int x, int y, u32 rgb);
+H u32 mui_getpx(int x, int y);                                    /* điểm RGB565 thô (không clip) */
+H void mui_put16(int x, int y, u32 c565);
 H void mui_disc(int cx, int cy, int r, u32 rgb);
 
 /* ---------------- text.c ---------------- */
@@ -95,6 +122,8 @@ H int mui_sw(int px, const u8 *s, int len);                                     
 H int mui_text(int x, int y, const u8 *s, int len, int px, u32 rgb, int flags);   /* trả bề rộng; px 10/15/18 */
 H int mui_wrap(int px, const u8 *s, int len, int maxw, u16 *st, u16 *ln, int maxl); /* số dòng; (st,ln)=byte; dòng đầu bỏ dấu cách đầu */
 H int mui_text_skip(int x, int y, const u8 *s, int len, int px, u32 rgb, int flags); /* như mui_text nhưng bỏ dấu cách đầu dòng */
+H int mui_text_line(int x, int y, const u8 *base, int start, int len, int px, u32 col, int flags);
+H int mui_code_color(u8 b);                                                       /* màu mã BFont (-1 nếu không phải mã) */
 H int mui_ascii(const char *a, u8 *out);                                           /* ASCII -> byte game (chép) */
 
 /* ---------------- widgets.c ---------------- */
@@ -106,6 +135,11 @@ H void mui_bar(int x, int y, int w, const u8 *label, int llen, int val, int mx, 
 H void mui_cell(int x, int y, const u8 *gbm, int count, int rarity_rgb, int equipped, int selected, int hid);
 H void mui_row(const mui_r *r, const u8 *label, int llen, const u8 *value, int vlen, int selected, int hid);
 H int mui_descbox(const mui_r *r, const u8 *name, int nlen, int name_rgb); /* khung + tên + vạch; trả y bắt đầu nội dung */
+H int mui_descbox2(const mui_r *r, const u8 *name, int nlen, int name_rgb, const u8 *meta, int mlen); /* + dòng phụ (font nhỏ, mờ) giữa tên và vạch */
+H void mui_icon(int idx, int x, int y, int s, int tint);          /* icon vật phẩm/kỹ năng theo chỉ số (0..225 sprite, >225 qua guest DrawIcon) x s NEAREST */
+H void mui_cell_i(int x, int y, int icon, int count, int rarity_rgb, int flag, int selected, int hid); /* như mui_cell nhưng theo chỉ số icon (-1 = ô trống) */
+H void mui_arrow(const mui_r *r, int right, int hid);             /* nút mũi tên ◀ ▶ (widget c1 nâng lên dùng chung) */
+H void mui_hscroll(int x0, int y, int x1, int pos, int total, int view);
 H void mui_popup_geom(int nlines, int *pw, int *ph);
 H void mui_popup(const u8 *text, int tlen, int yes_no, const u8 *l1, int n1, const u8 *l2, int n2, mui_r *out);
 #define MUI_TAB_ICONS 9
@@ -136,6 +170,7 @@ H int mui_touch_move(void *self, int cls, int x, int y);
 H int mui_touch_release(void);
 H int mui_key(void *self, int cls, int code);               /* KeyPressed gốc của lớp cls */
 extern H int mui_last_id;              /* id hit gần nhất được chạm */
+extern H int mui_tx, mui_ty;           /* toạ độ chạm gần nhất (press/move) */
 extern H int mui_drag;                 /* scroller đang kéo (-1 không) */
 
 /* ---------------- dispatch.c ---------------- */
@@ -160,11 +195,24 @@ H int ig_move(void *self, int x, int y);
 H void pop_paint(void *self);
 H int pop_touch(void *self, int x, int y);
 H int mui_cslen(const u8 *s);
+H int mui_money(int v, u8 *out);                    /* 1,234,567 */
+H void mui_portrait(int x, int y, int pr);          /* vòng chân dung + sprite nhân vật thật */
 H const u8 *mui_hint(const u8 *s, int *n);       /* bỏ gợi ý phím đầu chuỗi ("#", "*", "d.") */
 extern H int mui_popup_sel;                       /* nút nổi bật của popup Có/Không (0/1) */
 #define GS(self) (*(s8 *)((u8 *)(self) + 0xc))
 #define POP_TYPE(self) (*(s8 *)((u8 *)(self) + 0xe))
 #define POP_NBTN(self) (*(s8 *)((u8 *)(self) + 0x10))
+
+/* ---------------- bag.c (c2) ---------------- */
+H void bag_paint(void *self, const mui_r *body);
+H int bag_cb(void *self, int id);
+H void equip_paint(void *self, const mui_r *body);
+H int equip_cb(void *self, int id);
+H u8 *mui_cur_item(void *igs);                    /* vật phẩm dưới con trỏ (Túi/Trang bị) hoặc NULL */
+extern H u32 ig_vt;                                /* vtable của StateInGameMenu (đặt khi ig_paint chạy) */
+H void pop_item(void *self);                      /* StatePopup loại 10: chi tiết vật phẩm */
+extern H int mui_cap_on;
+H void mui_cap_line(void *f, int a1, int a2, int a3, int a4, int a5, const u8 *buf, int a7);
 
 /* ---------------- dbg.c (chỉ -DMUI_DEBUG) ---------------- */
 #ifdef MUI_DEBUG

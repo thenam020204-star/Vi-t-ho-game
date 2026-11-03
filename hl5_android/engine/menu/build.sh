@@ -20,7 +20,7 @@ if [ "$DBG" = 1 ]; then
   python3 -I gen_dbg_text.py "$OUT/dbg_text.h" >/dev/null
 fi
 OBJS=""
-for f in rt gfx text layout widgets touch dispatch ingame popup dbg; do
+for f in rt gfx text layout widgets touch dispatch ingame popup bag dbg; do
   [ -f $f.c ] || continue
   $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"
 done
@@ -34,7 +34,18 @@ for p in "_pTextMgr|_pTextMgr" "TextMgr::GetCommonText(int)|TextMgr_GetCommonTex
   "TextMgr::DT_GetHelpInfoString(signed char)|TextMgr_DT_GetHelpInfoString" "Graphic::GetFB()|Graphic_GetFB" "Graphic::GetFBOff()|Graphic_GetFBOff" \
   "Graphic::CopyFrameBuffer(int, int)|Graphic_CopyFrameBuffer" "HERO::CalcStatusComputation(unsigned char)|HERO_CalcStatusComputation" \
   "StateInGameMenu::SetState(signed char)|StateInGameMenu_SetState" "StateInGameMenu::SetSubState(signed char)|StateInGameMenu_SetSubState" \
-  "BagItem::GetMoney()|BagItem_GetMoney" "HERO::GetBagItemPtr()|HERO_GetBagItemPtr"; do
+  "BagItem::GetMoney()|BagItem_GetMoney" "HERO::GetBagItemPtr()|HERO_GetBagItemPtr" \
+  "TextMgr::GetInGameText(int)|TextMgr_GetInGameText" "HERO::IsNoneEquipWeapon()|HERO_IsNoneEquipWeapon" "HERO::IsNoneEquipShield()|HERO_IsNoneEquipShield" \
+  "CHAR::GetSpritePtr()|CHAR_GetSpritePtr" "SPRITE::DrawSprite(int, int, int, signed char, signed char, short, unsigned char)|SPRITE_DrawSprite" \
+  "Graphic::SetClip(int, int, int, int)|Graphic_SetClip" "Graphic::ResetClip()|Graphic_ResetClip" \
+  "BagItem::GetSize()|BagItem_GetSize" "BagItem::GetCount()|BagItem_GetCount" "BagItem::GetBagItemPtr(signed char, short)|BagItem_GetBagItemPtr" \
+  "BagItem::GetBagItemTotalBunchCount(signed char, signed char)|BagItem_GetBunch" "EquipItemInfo::IsEquipIng()|EquipItemInfo_IsEquipIng" \
+  "HERO::GetEquipItemPtr()|HERO_GetEquipItemPtr" "EquipItem::GetEquipItem(signed char)|EquipItem_GetEquipItem" "HERO::GetHotKeyToggle()|HERO_GetHotKeyToggle" \
+  "HERO::GetHotKeyBeltType(signed char, signed char)|HERO_GetHotKeyBeltType" "HERO::GetHotKeyBeltSkillIdx(signed char, signed char)|HERO_GetHotKeyBeltSkillIdx" \
+  "ItemTable::GetItemTableInfo(ItemInfo*, signed char, signed char)|ItemTable_GetItemTableInfo" \
+  "CommonUi::DrawIcon(int, int, int, short, unsigned char, unsigned char, int, int)|CommonUi_DrawIcon" \
+  "CommonUi::DrawItemDiscription(int, int, int, ItemInfo*, signed char, unsigned char)|CommonUi_DrawItemDiscription" \
+  "BFont::DrawTextLine(int, int, int, int, int, char*, int, int)|BFont_DrawTextLine"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"

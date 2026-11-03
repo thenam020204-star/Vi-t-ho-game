@@ -1,0 +1,17 @@
+import sys; sys.path.insert(0, '/home/user/Vi-t-ho-game/hl5_android/harness/t17c2')
+from qlib import *
+W, Hh = int(sys.argv[1]), int(sys.argv[2])
+c = Ctx(W, Hh, 'new', '/tmp/claude-0/q3')
+c.S3(2, 8)
+c.key('OK'); c.key('RIGHT'); c.key('RIGHT'); c.key('RIGHT'); c.key('OK', 6); c.shot('menu_pop'); print('pop cls', hex(c.cls()))
+c.key('OK', 8); print('after belt choose: st', c.st(), 'sub', c.sub(), 'cls', hex(c.cls())); c.shot('belt')
+c.key('CLR', 4); c.key('CLR', 4)
+# filter via OpenComposeFilter (0xe9fec)
+c.S3(2, 8)
+c.r.call(0xe9fec, c.top()); c.step(6); print('compose filter sub', c.sub(), 'cursor', c.b8(c.top(),0x10), 'total', c.s16(c.bag()+872)); c.shot('filter')
+# popup 10
+c.S3(2, 8)
+bag = c.bag(); it = c.r.call(0x9b5f4, bag, 0, 3)
+tm = c.g.rd32(BASE + [int(l.split()[0],16) for l in __import__('subprocess').run(['llvm-nm','-C','--defined-only',os.path.expanduser('~/hl5work/apk/assets/libHeroesLore5.so')],capture_output=True,text=True).stdout.splitlines() if l.endswith(' _pTextMgr')][0])
+txt = c.r.call(0x13fa94, tm, 295)
+c.callx(0xe31b8, c.top(), 24, txt, 0, 0, 9, it); c.step(6); c.shot('popup10'); print('pop10 cls', hex(c.cls()))

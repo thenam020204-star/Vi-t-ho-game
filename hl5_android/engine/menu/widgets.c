@@ -151,17 +151,91 @@ void mui_row(const mui_r *r, const u8 *label, int llen, const u8 *value, int vle
     if (hid > 0) mui_hit(hid, r->x0, r->y0, r->x1, r->y1, HK_CB, 0, 0);
 }
 
-/* khung hộp mô tả + tên (tối đa 2 dòng) + vạch; trả y bắt đầu vùng nội dung. (dòng phụ spx do state tự vẽ nếu cần) */
-int mui_descbox(const mui_r *r, const u8 *name, int nlen, int name_rgb) {
+/* khung hộp mô tả + tên (tối đa 2 dòng) + [dòng phụ spx mờ] + vạch; trả y bắt đầu vùng nội dung. */
+int mui_descbox2(const mui_r *r, const u8 *name, int nlen, int name_rgb, const u8 *meta, int mlen) {
     mui_m *m = &L; int in[4];
     mui_frame(r->x0, r->y0, r->x1, r->y1, m->rad, 0, 1, RGB(10, 16, 26), 235, in);
     int p = m->pad / 2 + 1, y = in[1] + p;
     u16 st[2], ln[2];
     int n = mui_wrap(m->px, name, nlen, in[2] - in[0] - 2 * p - m->sbw - 2, st, ln, 2);
-    for (int i = 0; i < n; i++) { mui_text_skip(in[0] + p, y, name + st[i], ln[i], m->px, name_rgb < 0 ? C_WHITE : (u32)name_rgb, TF_SHADOW); y += m->lp; }
+    for (int i = 0; i < n; i++) { mui_text_line(in[0] + p, y, name, st[i], ln[i], m->px, name_rgb < 0 ? C_WHITE : (u32)name_rgb, TF_SHADOW); y += m->lp; }
+    if (meta) {
+        mui_clip(in[0] + p, y, in[2] - p, y + m->slp);
+        mui_text(in[0] + p, y, meta, mlen, m->spx, C_DIM, 0); mui_clip_reset(); y += m->slp;
+    }
     y += 2;
     mui_fill(in[0] + p, y, in[2] - p, y + 1, C_LINE);
     return y + 3;
+}
+int mui_descbox(const mui_r *r, const u8 *name, int nlen, int name_rgb) { return mui_descbox2(r, name, nlen, name_rgb, NULL, 0); }
+
+void mui_icon(int idx, int x, int y, int s, int tint) {
+    static u16 bg[400], px[400];
+    if (idx < 0) return;
+    if (idx <= 225) { mui_gbm(ITEM_ICON(idx), x, y, s, tint); return; }
+    u32 g = _lcdG; int fb = Graphic_GetFB(g);                 /* icon > 225: guest tự vẽ (palette/HSB riêng): vẽ x1 ngay tại chỗ, đọc lại điểm thay đổi, khôi phục nền, phóng x s */
+    for (int i = 0; i < 400; i++) bg[i] = mui_getpx(x + i % 20, y + i / 20);
+    CommonUi_DrawIcon(COMMONUI(), fb, x + 10, y + 10, idx, 0, 255, 100, 18);   /* như DrawBagMenu gốc (0xf7df4): tham số sau icon = 0, 80, 100, 18 */
+    for (int i = 0; i < 400; i++) { px[i] = mui_getpx(x + i % 20, y + i / 20); mui_put16(x + i % 20, y + i / 20, bg[i]); }
+    for (int i = 0; i < 400; i++) {
+        if (px[i] == bg[i]) continue;
+        u32 c = px[i], r = (c >> 11 & 31), gg = (c >> 5 & 63), b = (c & 31);
+        mui_fill(x + (i % 20) * s, y + (i / 20) * s, x + (i % 20) * s + s, y + (i / 20) * s + s, RGB(r << 3 | r >> 2, gg << 2 | gg >> 4, b << 3 | b >> 2));
+    }
+}
+
+void mui_cell_i(int x, int y, int icon, int count, int rarity_rgb, int flag, int selected, int hid) {
+    mui_m *m = &L; int s = m->s, c = m->cell;
+    mui_fill(x, y, x + c, y + c, C_INK);
+    if (selected) mui_vgrad(x + 1, y + 1, x + c - 1, y + c - 1, RGB(250, 160, 36), RGB(196, 96, 12));
+    else mui_vgrad(x + 1, y + 1, x + c - 1, y + c - 1, C_CELL, C_CELL2);
+    if (icon >= 0) {
+        mui_icon(icon, x + (c - 20 * s) / 2, y + (c - 20 * s) / 2, s, -1);
+        int vs = s > 1 ? s : 1;
+        if (rarity_rgb >= 0) mui_fill(x + 1, y + 1, x + c - 1, y + 1 + vs, (u32)rarity_rgb);
+        if (flag) {
+            int fw = 5 * s + 1;
+            mui_fill(x + 1, y + 1 + vs, x + 1 + fw, y + 1 + vs + fw, C_INK);
+            mui_fill(x + 2, y + 2 + vs, x + fw, y + vs + fw, C_GOLD);
+        }
+        if (count > 1) {
+            u8 t[12]; int n = itoa_(count, t);
+            int tw = mui_sw(m->spx, t, n);
+            mui_text(x + c - 2 - tw, y + c - 2 - m->spx, t, n, m->spx, C_WHITE, TF_SHADOW);
+        }
+    }
+    if (selected) {
+        mui_fill(x, y, x + c, y + 1, C_ORANGE_HI); mui_fill(x, y + c - 1, x + c, y + c, C_ORANGE_HI);
+        mui_fill(x, y, x + 1, y + c, C_ORANGE_HI); mui_fill(x + c - 1, y, x + c, y + c, C_ORANGE_HI);
+        mui_fill(x - 1, y - 1, x + c + 1, y, C_INK); mui_fill(x - 1, y + c, x + c + 1, y + c + 1, C_INK);
+        mui_fill(x - 1, y, x, y + c, C_INK); mui_fill(x + c, y, x + c + 1, y + c, C_INK);
+    }
+    if (hid > 0) mui_hit(hid, x, y, x + c, y + c, HK_CB, 0, 0);
+}
+
+void mui_arrow(const mui_r *r, int right, int hid) {      /* nút mũi tên ◀ ▶ (mock w_arrow): khung cam, nền xanh, tam giác cam sáng */
+    mui_m *m = &L; int in[4], cx = (r->x0 + r->x1) / 2, cy = (r->y0 + r->y1) / 2, wd = r->x1 - r->x0, ht = r->y1 - r->y0;
+    int k = (wd < ht ? wd : ht) / 4;
+    if (k < 3) k = 3;
+    mui_frame(r->x0, r->y0, r->x1, r->y1, m->rad, 1, m->bt, (u32)-1, 0, in);
+    mui_vgrad(in[0], in[1], in[2], in[3], RGB(38, 54, 78), RGB(22, 32, 48));
+    int xt = right ? cx + k / 2 + 1 : cx - k / 2 - 1, xb = right ? cx - k / 2 : cx + k / 2, dx = xb > xt ? 1 : -1, n = (xb - xt) * dx;
+    for (int i = 0; i <= n; i++) {
+        int x = xt + dx * i, hh = n ? k * i / n : k;
+        mui_fill(x, cy - hh, x + 1, cy + hh + 1, C_ORANGE_HI);
+    }
+    if (hid) mui_hit(hid, r->x0, r->y0, r->x1, r->y1, HK_CB, 0, 0);
+}
+
+void mui_hscroll(int x0, int y, int x1, int pos, int total, int view) {
+    mui_m *m = &L; int h = m->sbw;
+    mui_fill(x0, y, x1, y + h, C_TRACK); mui_fill(x0, y, x1, y + 1, C_INK);
+    if (total < 1) total = 1;
+    int tw = view >= total ? x1 - x0 : rnd((x1 - x0) * view, total), mn = 2 * m->s + 6;
+    if (tw < mn) tw = mn;
+    int d = total - view < 1 ? 1 : total - view, tx = x0 + rnd((x1 - x0 - tw) * pos, d);
+    if (m->s > 1) mui_rr(tx, y + 1, tx + tw, y + h, 1, C_ORANGE, 255); else mui_fill(tx, y + 1, tx + tw, y + h, C_ORANGE);
+    mui_fill(tx, y + 1, tx + tw, y + 2, C_ORANGE_HI);
 }
 
 void mui_popup_geom(int nlines, int *pw, int *ph) {
