@@ -126,7 +126,11 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
     - Đầu ra: `dist/test/HL5-test-ptload.apk` (+ diag), sha256; ghi cách nhận biết đạt/không đạt vào `PHAT-HANH-diag.md`. Không commit APK lớn khác.
   - [ ] T17b. Mockup (chia 2 bước, người dùng duyệt từng bước) — Agent: A1 — **Quản đốc nghiệm thu**
     - T17b1: bộ widget chung (khung cửa sổ + tiêu đề + nút đóng, thanh tab biểu tượng, nút, hàng danh sách, ô lưới vật phẩm, thanh cuộn, thanh HP/SP/EXP, popup chung có/không, hộp mô tả) + 3 màn mẫu: menu 3x3, Túi đồ, popup xác nhận — ở 400x240 và 1200x540. Vẽ bằng PIL từ sprite/icon THẬT của game (VFS `img/*.mgr`, `sp/...`) và font bitmap thật (15/10 px ở 400x240, 18 px ở HD: `vi.bin`/NAM_P f18), phong cách viền cam/đen `ui_new/`. Chữ Việt dài nhất thật (lấy từ dữ liệu đã build) để chứng minh không tràn. Script tái lập `ui_new/menu/mock_menu.py`, ảnh `ui_new/menu/*.png`, ghi số đo bố cục (px theo khung logic, công thức co giãn) vào `ui_new/menu/LAYOUT.md`.
-    - T17b2 (sau khi người dùng duyệt b1): các cửa sổ còn lại trong bảng §13 (trừ NetMenu).
+    - [x] T17b1 — người dùng duyệt phong cách (icon ×3 ở HD giữ nguyên).
+    - T17b2: các cửa sổ còn lại trong bảng §13 (trừ NetMenu), dùng lại `viui.py`/`mock_menu.py`, cập nhật `LAYOUT.md` + `hit_rects.json` + `verify.txt`, chia lô (trình người dùng sau mỗi lô):
+      - [ ] b2a: các tab InGameMenu còn lại — Nhân vật, Trang bị, Kỹ năng, Đặc tính, Liên kích, Tinh linh, Nhiệm vụ, Hệ thống — + chế độ con Túi đồ (SubState>1) + popup đặc thù InGameMenu (các loại khác popup chung nếu có).
+      - [ ] b2b: NPC (8 cửa sổ: cửa hàng, kết hợp Orb, tôi luyện…), Cash shop, Chuyên gia (2 màn), popup StateGame, StateMap.
+      - [ ] b2c: MainMenu (13 trạng thái ~8 bố cục: menu chính, Cài đặt gồm mục Phân giải, chọn lớp + mô tả lớp, màn chuẩn bị…).
   - (cũ) T17b. Mockup từng cửa sổ ở 1200x540, 800x360 và 400x240 theo phong cách `ui_new/` (viền cam/đen) — người dùng duyệt trước khi implement.
   - [ ] T17c… Implement từng cửa sổ theo mockup (task con do quản đốc chia sau T17a/T17b).
 - [ ] ~~T15. Phóng to~~ (HUỶ theo người dùng; thiết kế §12 giữ để tham khảo, WIP zoom ở `git stash` "T15b zoom WIP")
@@ -269,3 +273,4 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [người dùng] Bản thử PT_LOAD: "Chạy ổn, có chấm trắng tĩnh" → loader thật nạp và chạy code ở đoạn mới, zero-fill đúng (viền trắng; nếu hỏng sẽ là magenta). Chấm tồn tại qua mọi khung (game tải lại toàn màn mỗi khung) → payload chạy mỗi khung; lõi đổi màu chỉ 4x4 logic nên khó thấy — không chặn. Quyết định 5 (PT_LOAD) xác nhận. Giao T17b1.
 - [A1] T17b1 xong (chờ người dùng duyệt): `ui_new/menu/` (`mock_menu.py`+`viui.py`+`layout_doc.py` tái lập; ảnh `menu3x3_`, `tui_do_`, `tui_do_mo_ta_`, `popup_xac_nhan_` ở 400x240 (+`_x3`) và 1200x540, `widgets_*`, `tong_hop.png`, `tong_hop_widgets.png`, `trung_gian/` 600x270+800x360; `LAYOUT.md`, `hit_rects.json`, `verify.txt`). Sprite ui.mgr/icon.mgr + font 15/10/18 + chuỗi Việt THẬT; lưới gốc giữ (3x3, túi 4x4xtrang). Chữ mode 0 (cần cờ force0), icon x1/x2/x3 theo H//180. Chưa tick T17b.
 - [quản đốc] Soát T17b1: đạt để trình người dùng. Trả lời câu hỏi công nhân: (1) duyệt cờ `vn_state.force0` (vẽ mode 0 trong menu mới); (2) chế độ con Túi đồ (SubState>1) → T17b2; (3) màu phẩm chất tra bảng thật ở T17c; (4) chấp nhận nhúng sprite khung chân dung SD/HD vào VFS; (5) số trang túi tối đa kiểm ở T17c. Chờ người dùng duyệt phong cách.
+- [người dùng] Duyệt mockup T17b1 ("Ok, vẽ tiếp các cửa sổ còn lại"). → Giao T17b2 lô b2a.
