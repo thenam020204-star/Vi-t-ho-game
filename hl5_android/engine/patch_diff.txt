@@ -5,7 +5,7 @@
 41510  trước: ldrsb r3, [r5, #0x46]      sau: bl #0xaef98   [vn_th2 -> 0xaef98]
 4170c  trước: ldrsb r3, [r5, #0x46]      sau: bl #0xaefc8   [vn_th3 -> 0xaefc8]
 4178c  trước: ldrsb sl, [r5, #0x46]      sau: bl #0xaeff8   [vn_th4 -> 0xaeff8]
-41804  trước: bl #0x3cf00                sau: bl #0xaf358   [vn_draw -> 0xaf358]
+41804  trước: bl #0x3cf00                sau: bl #0xaf3d4   [vn_draw -> 0xaf3d4]
 88  p_memsz: 0x12d20 -> 0x12e20 (bss tới 0x1705a8; vn_state 0x1704c0..0x170500)
 
 # Thunk (cave A):
@@ -17,7 +17,7 @@ vn_th0 @ 0xaef38:
    aef48: mov r3, #1
    aef4c: mov r4, sp
    aef50: bic sp, sp, #7
-   aef54: bl #0xaf028
+   aef54: bl #0xaf214
    aef58: mov sp, r4
    aef5c: str r0, [sp]
    aef60: pop {r0, r1, r2, r3, r4, sl, ip, lr}
@@ -30,7 +30,7 @@ vn_th1 @ 0xaef68:
    aef78: mov r3, r4
    aef7c: mov r4, sp
    aef80: bic sp, sp, #7
-   aef84: bl #0xaf028
+   aef84: bl #0xaf214
    aef88: mov sp, r4
    aef8c: str r0, [sp, #0xc]
    aef90: pop {r0, r1, r2, r3, r4, sl, ip, lr}
@@ -43,7 +43,7 @@ vn_th2 @ 0xaef98:
    aefa8: mov r3, r7
    aefac: mov r4, sp
    aefb0: bic sp, sp, #7
-   aefb4: bl #0xaf028
+   aefb4: bl #0xaf214
    aefb8: mov sp, r4
    aefbc: str r0, [sp, #0xc]
    aefc0: pop {r0, r1, r2, r3, r4, sl, ip, lr}
@@ -56,7 +56,7 @@ vn_th3 @ 0xaefc8:
    aefd8: mov r3, r7
    aefdc: mov r4, sp
    aefe0: bic sp, sp, #7
-   aefe4: bl #0xaf028
+   aefe4: bl #0xaf214
    aefe8: mov sp, r4
    aefec: str r0, [sp, #0xc]
    aeff0: pop {r0, r1, r2, r3, r4, sl, ip, lr}
@@ -69,7 +69,7 @@ vn_th4 @ 0xaeff8:
    af008: mov r3, r7
    af00c: mov r4, sp
    af010: bic sp, sp, #7
-   af014: bl #0xaf028
+   af014: bl #0xaf214
    af018: mov sp, r4
    af01c: str r0, [sp, #0x14]
    af020: pop {r0, r1, r2, r3, r4, sl, ip, lr}

@@ -1,0 +1,39 @@
+base=0x171000 filesz=14584 memsz=16276 debug=0 reloc=0 classes=
+base=0x171000 filesz=18676 memsz=20388 debug=1 reloc=0 classes=MAIN
+PT_LOAD menu: file off 0x1d7000 vaddr 0x171000 filesz 18676 memsz 20388 (bss 1712); .so 1947892 B
+ĐẠT   K1 400x240 khung 459: build thường (menu release, chưa bật) == v0.2-hd từng byte
+ĐẠT   K2 400x240 khung 459: bản debug (vtable MainMenu đã vá, cờ tắt) == v0.2-hd từng byte
+ĐẠT   K1 400x240 khung 579: build thường (menu release, chưa bật) == v0.2-hd từng byte
+ĐẠT   K2 400x240 khung 579: bản debug (vtable MainMenu đã vá, cờ tắt) == v0.2-hd từng byte
+ĐẠT   K1 400x240 khung 599: build thường (menu release, chưa bật) == v0.2-hd từng byte
+ĐẠT   K2 400x240 khung 599: bản debug (vtable MainMenu đã vá, cờ tắt) == v0.2-hd từng byte
+ĐẠT   K1 600x270 khung 459: build thường (menu release, chưa bật) == v0.2-hd từng byte
+ĐẠT   K2 600x270 khung 459: bản debug (vtable MainMenu đã vá, cờ tắt) == v0.2-hd từng byte
+ĐẠT   K1 600x270 khung 579: build thường (menu release, chưa bật) == v0.2-hd từng byte
+ĐẠT   K2 600x270 khung 579: bản debug (vtable MainMenu đã vá, cờ tắt) == v0.2-hd từng byte
+ĐẠT   K1 600x270 khung 599: build thường (menu release, chưa bật) == v0.2-hd từng byte
+ĐẠT   K2 600x270 khung 599: bản debug (vtable MainMenu đã vá, cờ tắt) == v0.2-hd từng byte
+ĐẠT   K3 400x240 kích thước trang mockup (800, 368) == FB harness 800x368
+K3 400x240: điểm khác mockup 47387 / 294400 (16.10%); khác > 24 mức: 4562 (1.55%)
+ĐẠT   K3 400x240: mui_gbm (icon GbmImage x1) == Graphic::DrawImage của guest từng điểm (20x20, 193 điểm không phải nền)
+ĐẠT   K3 400x240: sai khác lớn (>24 mức) < 8% điểm ảnh (khác chủ yếu do chữ/dữ liệu/icon, xem so_sanh_400x240.png)
+ĐẠT   K5 cấp phát guest trong 20 khung: có trang 0 <= không trang 0 (Paint mới không cấp phát)
+ĐẠT   K4 đã đăng ký 30 vùng chạm (nút 0x20.., ô 0x3F HK_OK, kéo 0x60, popup)
+ĐẠT   K4 chạm nút "Có" (0x21) -> id hit 0x21 (nhận ở TouchPressed mới)
+ĐẠT   K4 chạm ô lưới 1 -> id 0x31
+K4 kéo dọc: pos 0 -> 1 (tổng 5 dòng)
+ĐẠT   K4 kéo dọc hộp mô tả cuộn (TouchMoved -> mui_touch_move)
+K4 chạm ô HK_OK (id 0x3f): KeyPressed gốc được gọi 1 lần, đối số (this,key) = [('0x20233460', -5)]; [this+0x14] 7 -> 0
+ĐẠT   K4 chạm ô HK_OK -> id 0x3F
+ĐẠT   K4 HK_OK: ghi [self+a]=b rồi gọi KeyPressed(-5) GỐC của StateMainMenu đúng 1 lần với this=state trên cùng
+ĐẠT   K3 1200x540 kích thước trang mockup (1500, 604) == FB harness 1500x604
+K3 1200x540: điểm khác mockup 117840 / 906000 (13.01%); khác > 24 mức: 11044 (1.22%)
+ĐẠT   K3 1200x540: mui_gbm (icon GbmImage x1) == Graphic::DrawImage của guest từng điểm (20x20, 193 điểm không phải nền)
+ĐẠT   K3 1200x540: sai khác lớn (>24 mức) < 8% điểm ảnh (khác chủ yếu do chữ/dữ liệu/icon, xem so_sanh_1200x540.png)
+ĐẠT   K5 tĩnh: 219 lệnh bl đều tới đoạn mới hoặc hàm/biến guest đã khai báo (47 ký hiệu guest); 0 blx thanh ghi []
+ĐẠT   K5 0 relocation sau link (release và debug)
+K5 kích thước đoạn: release base=0x171000 filesz=14584 memsz=16276 debug=0 reloc=0 classes= | debug base=0x171000 filesz=18676 memsz=20388 debug=1 reloc=0 classes=MAIN
+ĐẠT   K5 đoạn không liên kết hàm cấp phát guest nào ([])
+K6 từ #4 'Tinh': vn_w tắt=14 (mong 14), bật=23 (mong 23)
+ĐẠT   K6 force0: bật -> bề rộng mode 0 (15 px không nén); tắt -> mode 2 (10 px nén)
+KẾT LUẬN: ĐẠT

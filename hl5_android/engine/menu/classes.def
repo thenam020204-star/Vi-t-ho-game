@@ -1,0 +1,12 @@
+/* MUI_CLASS(IDX, Tên lớp guest, biểu thức trạng thái-khoá của `self`). Mọi lớp có vtable với ô Paint/TouchPressed/TouchMoved/TouchReleased/KeyPressed
+ * (BAO-CAO-RE §13.2). Biểu thức trạng thái = -1000 nghĩa là "chưa xác định" -> inject_menu.py từ chối bật lớp đó cho tới khi gói tương ứng điền.
+ * Trạng thái = GetState() của lớp (đọc từ so.dis): InGameMenu/MainMenu/Expert/CashShop/Game = ldrsb [this+0xc], NpcMenu = [this+0xe];
+ * StatePopup và StateMap không có GetState() (c1/c4 điền khi cần). */
+MUI_CLASS(GAME, StateGame, (*(s8 *)((u8 *)self + 0xc)))
+MUI_CLASS(POPUP, StatePopup, -1000)
+MUI_CLASS(INGAME, StateInGameMenu, (*(s8 *)((u8 *)self + 0xc)))
+MUI_CLASS(NPC, StateInNpcMenu, (*(s8 *)((u8 *)self + 0xe)))
+MUI_CLASS(MAIN, StateMainMenu, (*(s8 *)((u8 *)self + 0xc)))
+MUI_CLASS(EXPERT, StateInExpertMenu, (*(s8 *)((u8 *)self + 0xc)))
+MUI_CLASS(MAP, StateMap, -1000)
+MUI_CLASS(CASH, StateCashShop, (*(s8 *)((u8 *)self + 0xc)))

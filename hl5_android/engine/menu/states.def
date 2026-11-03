@@ -1,0 +1,10 @@
+/* Bảng "bật dần" state -> hàm Paint/Touch/Move mới (X-macro; KHÔNG con trỏ => không relocation):
+ *   MUI_STATE(LỚP, tên, điều_kiện(self), paint, touch, move)
+ *   - Lớp (GAME/POPUP/INGAME/NPC/MAIN/EXPERT/MAP/CASH) chưa có dòng nào => inject_menu.py KHÔNG vá ô vtable của lớp đó (đường gốc y hệt).
+ *   - Lớp có dòng: ô Paint/TouchPressed/TouchMoved/TouchReleased -> thunk (dispatch.c); nếu không dòng nào khớp điều kiện => gọi hàm gốc.
+ *   - Dòng khớp đầu tiên (theo thứ tự file) thắng. paint: void f(void*self); touch/move: int f(void*self,int x,int y).
+ *   - c1..c7 thêm dòng ở đây (và file .c của gói). Gói chưa làm thì không có dòng.
+ * Bản harness (-DMUI_DEBUG): thêm một dòng chỉ dùng cờ mui_flags&MUI_F_DBG (trang widget thử, gắn vào StateMainMenu vì tới được sau ~100 khung harness; bản phát hành KHÔNG có dòng này. */
+#ifdef MUI_DEBUG
+MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
+#endif

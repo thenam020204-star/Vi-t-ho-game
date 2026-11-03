@@ -54,7 +54,9 @@ def build(dirv):
         if w[:1] == '\x01': m, w = 1, w[1:]
         elif w[:1] == '\x02': m, w = 2, w[1:]
         modes.append(m); bodies.append(w)
-    chars = sorted({c for b in bodies for c in b} | {' '})
+    # T17c0: thêm mọi ASCII in được mà bộ font có (số, dấu câu...) để menu mới vẽ số/ký hiệu bằng cùng font (từ điển không dùng, đường cũ không đổi)
+    ascii_extra = {chr(c) for c in range(0x21, 0x7F) if all(chr(c) in f['idx'] and f['w'][f['idx'][chr(c)]] > 0 for f in fonts)}
+    chars = sorted({c for b in bodies for c in b} | {' '} | ascii_extra)
     nch = len(chars); gi = {c: i for i, c in enumerate(chars)}
     assert nch <= 255 and len(words) <= 94 * 55, (nch, len(words))
     sw = fonts[0]['w'][fonts[0]['idx'][' ']] if ' ' in fonts[0]['idx'] else 4

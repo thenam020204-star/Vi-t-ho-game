@@ -41,6 +41,12 @@ static void vn_load(vn_state_t *s) {
     s->status = 1;
 }
 
+/* T17c0: bảo đảm vi.bin đã nạp (thư viện menu gọi trước khi đọc vn_state); trả status (1 sẵn sàng, -1 không có) */
+__attribute__((noinline)) int vn_ensure(void) {
+    if (vn_state->status == 0) vn_load(vn_state);
+    return vn_state->status;
+}
+
 /* mã Việt tại p: trả k hoặc -1 (không phải mã Việt / chưa có dữ liệu) */
 static int vn_code(const u8 *p) {
     vn_state_t *s = vn_state;
@@ -59,7 +65,7 @@ static const u8 *vn_word(vn_state_t *s, int k) {
 
 /* font (0=15px,1=10px,2=18px) và độ nén của một từ */
 static void vn_sel(vn_state_t *s, const u8 *w, int *f, int *tight) {
-    int m = w[0];
+    int m = s->force0 ? 0 : w[0];     /* T17c0: force0 -> luôn mode 0 */
     if (s->hd) {                      /* T10: HD = 18 px; từ đã đánh dấu 10 px (ô chật) dùng 15 px nén, mode 1 dùng 18 px nén */
         if (m == 2) { *f = 0; *tight = 1; } else { *f = 2; *tight = m == 1; }
     }

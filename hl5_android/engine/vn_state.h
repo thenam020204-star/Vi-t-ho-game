@@ -15,5 +15,6 @@ typedef struct {
     int hd;                           /* 1: dùng bộ 18 px (T10: onStartApp đặt khi logic cao >= HD_MIN_H) */
     int k, k0;                        /* T10: ÷k chọn trong Cài đặt (0 = chưa đọc hd_scale.txt), k0 = giá trị lúc đọc đầu */
     u32 t10;                          /* offset khối chuỗi T10 trong vi.bin (0 = không có) */
-} vn_state_t;                         /* 56 B */
+    int force0;                       /* T17c0: 1 = bỏ qua mode nén/10 px baked trong từ (menu mới vẽ chữ mode 0); mặc định 0 */
+} vn_state_t;                         /* 60 B (bss 0x1704c0..0x170500 = 64 B) */
 extern H vn_state_t vn_state[];

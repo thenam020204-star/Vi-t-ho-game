@@ -28,6 +28,14 @@ PW=$(sed -n 's/^- mật khẩu (store và key): //p' "$HERE/sign/README.md")
 if [ "$DIAG" != "A" ]; then
 echo "[1] vá guest .so + bridge arm64"
 python3 -I "$HERE/patch/apply_so.py" "$WORK/apk/assets/libHeroesLore5.so" "$B/libHeroesLore5.so"
+if [ "$PTL" != 1 ]; then   # T17c0: đoạn PT_LOAD thật của menu mới (engine/menu; bản thử T17p dùng cùng vaddr nên loại trừ nhau)
+  echo "[1b] đoạn PT_LOAD menu (engine/menu/build.sh + inject_menu.py + mk_menu_segment.py)"
+  WORK="$WORK" "$HERE/engine/menu/build.sh" "$B/menu" >"$B/menu_build.log" 2>&1 || { cat "$B/menu_build.log"; exit 1; }
+  python3 -I "$HERE/engine/menu/inject_menu.py" "$B/libHeroesLore5.so" "$B/menu"
+  python3 -I "$HERE/patch/apply_so.py" "$B/libHeroesLore5.so" "$B/libHeroesLore5.v.so" "$B/menu/menu_patches.tsv" >/dev/null
+  python3 -I "$HERE/patch/mk_menu_segment.py" "$B/libHeroesLore5.v.so" "$B/libHeroesLore5.so" "$B/menu"
+  rm -f "$B/libHeroesLore5.v.so"
+fi
 if [ "$PTL" = 1 ]; then   # T17p: + đoạn PT_LOAD thử (script tái lập, kiểm byte gốc)
   python3 -I "$HERE/patch/mk_ptload_test.py" "$B/libHeroesLore5.so" "$B/libHeroesLore5.ptl.so" "$B/ptload_test.tsv"
   mv "$B/libHeroesLore5.ptl.so" "$B/libHeroesLore5.so"
