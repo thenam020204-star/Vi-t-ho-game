@@ -1,0 +1,60 @@
+Tiêu đề (MainMenu)|o4/mm_title_20.png
+Menu chính 3x3 (MainMenu DrawMainMenu)|o5/mm_grid_60.png
+Chọn Slot (MainMenu DrawStart)|o5/mm_grid_100.png
+Chọn lớp nhân vật (DrawStart)|o5/mm_grid_140.png
+Popup mô tả lớp (StatePopup)|o5/mm_grid_180.png
+Cài đặt (DrawOption)|o4/mm_upd_30.png
+Thành tựu (DrawMission)|o4/mm_opt_30.png
+Trợ giúp: danh sách (DrawHelp)|o4/mm_mission_30.png
+Trợ giúp: nội dung (DrawHelp)|o4/mm_help_30.png
+Popup xác nhận kết nối (StatePopup trên MainMenu)|o5/mm_net2_140.png
+Màn Đang kết nối (DrawCommunity)|o4/mm_comm_30.png
+InGame 0 Menu 3x3 (DrawMainMenu)|o2/ig0_30.png
+InGame 1 Nhân vật|o2/ig1_30.png
+InGame 1b Nhân vật: Cơ bản (phím #)|o3/char_hash_40.png
+InGame 2 Túi đồ|o2/ig2_30.png
+InGame 2b Túi đồ: có vật phẩm|o3/bag_ok_40.png
+InGame 3 Trang bị|o2/ig3_30.png
+InGame 3b Trang bị: danh sách chọn|o3/equip_ok_40.png
+InGame 4 Kỹ năng|o2/ig4_30.png
+InGame 4b Kỹ năng: tab Đặc tính|o3/skill_r2_40.png
+InGame 4c Kỹ năng: chọn kỹ năng|o3/skill_ok_40.png
+InGame 5 Đặc tính|o2/ig5_30.png
+InGame 5b Đặc tính: chọn ô|o3/prop_ok_40.png
+InGame 6 Liên kích|o2/ig6_30.png
+InGame 6b Liên kích: chọn|o3/combo_ok_40.png
+InGame 7 Tinh linh|o2/ig7_30.png
+InGame 7b Tinh linh: chọn ô|o3/spirit_ok_40.png
+InGame 8 Nhiệm vụ|o2/ig8_30.png
+InGame 8b Nhiệm vụ: nhánh|o3/quest_r_40.png
+InGame 8c Nhiệm vụ: chi tiết|o3/quest_ok_40.png
+InGame 9 Hệ thống|o2/ig9_30.png
+Hệ thống: popup Lưu|o3/sys_save_40.png
+Hệ thống: Cài đặt|o3/sys_opt_40.png
+Hệ thống: Trợ giúp|o3/sys_help_40.png
+Hệ thống: về màn hình chính|o3/sys_title_40.png
+NPC Mua kỹ năng (SkillBuy)|o2/npc0_30.png
+NPC Mua vật phẩm (ItemBuy)|o2/npc1_30.png
+NPC Bán vật phẩm (ItemSale)|o2/npc2_30.png
+NPC Tôi luyện thường (LowRefine)|o2/npc3_30.png
+NPC Tôi luyện cao cấp (HighRefine)|o2/npc4_30.png
+NPC Kết hợp Orb (OrbCombine)|o2/npc5_30.png
+NPC Chế biến (NormalMix)|o2/npc6_30.png
+NPC Bộ sưu tập (Collection)|o2/npc7_30.png
+NPC Mua: popup thiếu tiền|o3/npc0_ok_40.png
+NPC Mua vật phẩm: chọn|o3/npc1_ok_40.png
+NPC Bộ sưu tập: chọn|o3/npc7_ok_40.png
+Cash shop|o2/cash0_30.png
+Cash shop: popup mua|o3/cash_ok_40.png
+Chuyên gia: Chuẩn bị (ExpertMenu Ready)|o2/exp0_30.png
+Net: Vào kho đồ (NetMenu Main)|o2/net0_30.png
+Net: Mua (Buy, state 2)|o3/net_st2_40.png
+Net: Kho (Storage, state 3)|o3/net_st3_40.png
+Net: Hộp thư (MailBox, state 4)|o3/net_st4_40.png
+Net: Chọn slot (ChangeSlot)|o3/net_st5_40.png
+StateGame: popup hồi sinh|o3/game_st1_40.png
+StateGame: Chiến thắng (popup)|o3/game_st2_40.png
+StateGame: Xác nhận hồi sinh|o3/game_st4_40.png
+StateGame: cảnh chơi (HUD)|o3/game_st5_40.png
+Bản đồ thế giới (StateMap lưới)|o2/map0_30.png
+Bản đồ thế giới (StateMap ảnh)|o2/map1_30.png

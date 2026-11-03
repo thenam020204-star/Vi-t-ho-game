@@ -1,0 +1,12 @@
+mm_title|25|20:SHOT
+mm_main|40|3:T11fbe8.5.0,30:SHOT
+mm_start|40|3:T11fbe8.6.0,30:SHOT
+mm_expert|40|3:T11fbe8.7.0,30:SHOT
+mm_opt|40|3:T11fbe8.10.0,30:SHOT
+mm_mission|40|3:T11fbe8.11.0,30:SHOT
+mm_help|40|3:T11fbe8.12.0,30:SHOT
+mm_comm|40|3:T11fbe8.0.0,30:SHOT
+mm_net|40|3:T11fbe8.8.0,30:SHOT
+mm_upd|40|3:T11fbe8.9.0,30:SHOT
+mm_start_ok|70|3:T11fbe8.6.0,15:OK,40:OK,60:SHOT
+mm_start_dn|70|3:T11fbe8.6.0,15:DOWN,25:OK,50:OK,65:SHOT

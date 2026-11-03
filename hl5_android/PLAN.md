@@ -116,10 +116,14 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - Đầu ra: `make_apk.sh --diag A|B|C|C1` → `dist/diag/*.apk`, `PHAT-HANH-diag.md` (cài lần lượt, cách lấy file log trong Downloads, gửi lại).
 - [ ] T17. **Menu trong game thiết kế mới cho màn lớn** (người dùng chốt, THAY T15: không phóng to; bố cục mới hoàn toàn theo kích thước màn; phát hành MỘT lần khi xong mọi cửa sổ) — **Quản đốc nghiệm thu**
   - Quyết định 12 (mới, người dùng sửa): menu mới thay cho MỌI cỡ khung, kể cả 400x240..600x270 (UI gốc làm chữ Việt tràn). Bố cục co giãn theo khung logic (tối thiểu 400x240); ở khung nhỏ dùng chữ 15/10 px, ở HD 18 px. Menu mới đọc/ghi dữ liệu game qua hàm/trường có sẵn của guest (không nhân bản logic: dùng vật phẩm, trang bị, học kỹ năng… gọi hàm gốc). Chữ 18 px; icon/sprite gốc vẽ ×s NEAREST hoặc ×1 tuỳ mockup.
-  - [ ] T17a. Kiểm kê + khả thi — Agent: A1 — **Quản đốc nghiệm thu**
+  - [x] T17a. (xong, chờ quản đốc nghiệm thu; BAO-CAO §13) Kiểm kê + khả thi — Agent: A1 — **Quản đốc nghiệm thu**
     - Liệt kê MỌI cửa sổ/tab/popup trong game (StateInGameMenu, StatePopup, StateCashShop, StateInNpcMenu, StateInExpertMenu, StateNetMenu, …): tên, hàm Draw/Key/Touch/Process, dữ liệu hiển thị (trường/hàm getter cụ thể: danh sách túi đồ, chỉ số nhân vật, kỹ năng, nhiệm vụ, giá…), thao tác (phím/chạm → hàm hành động gốc), trạng thái con (chọn, cuộn, xác nhận). Ảnh harness 600x270 từng cửa sổ (contact sheet `shots/T17/kiemke.png`, đánh số).
     - Chỗ đặt code: menu mới cần nhiều KB mã C → đánh giá thêm đoạn PT_LOAD mới vào cuối `.so` (bridge ElfLoader có map mọi PT_LOAD? kiểm br.dis, BAO-CAO §9.3/§9.8) so với dồn hàm chết; chứng minh bằng harness + phân tích tĩnh bridge. Cách móc: thay ô vtable `Paint`/Key/Touch theo state (BAO-CAO §12 đã có địa chỉ vtable).
     - Đầu ra: `BAO-CAO-RE.md` §13 (bảng cửa sổ, API dữ liệu/hành động, phương án code space, rủi ro, ước lượng khối lượng theo cửa sổ). Không patch.
+  - Quyết định sau T17a (quản đốc): (1) kiến trúc = thay ô vtable `Paint` + `TouchPressed`, GIỮ `KeyPressed`/`Process`/`SetPopupState` gốc (chạm → đặt con trỏ gốc rồi gọi `KeyPressed(-5)`); (2) giữ LƯỚI LOGIC gốc (số mục/cột/trang của con trỏ) — giao diện, cỡ, vị trí, chữ là mới; đổi lưới chỉ khi mockup bắt buộc và quản đốc duyệt; (3) BỎ NetMenu (offline, T7 bỏ ô Kho) — giữ nguyên gốc; (4) MỌI popup thay bằng 1 widget popup chung; (5) code đặt trong PT_LOAD mới (đổi phdr PT_GNU_STACK, vaddr 0x171000) — phải qua bản thử máy thật T17p trước; (6) mockup 2 mốc 400x240 + 1200x540, kiểm 600x270/800x360 bằng co giãn.
+  - [ ] T17p. Bản thử loader PT_LOAD trên máy thật — Agent: A1 — **Quản đốc nghiệm thu**
+    - v0.2-hd + đoạn PT_LOAD mới (dùng `harness/t17/mk_elf_test.py`) chứa một hàm nhỏ được gọi mỗi khung (vd đếm khung, ghi vào biến ở đoạn mới, vùng zero-fill) và có hiệu ứng nhìn thấy vô hại (vd 1 chấm 2x2 px góc màn đổi màu theo bộ đếm) — để người dùng xác nhận loader thật nạp + chạy code ở đoạn mới. Lần luồng bridge ElfLoader (tĩnh) ghi vào `patch/bridge_review.md` mục 10.
+    - Đầu ra: `dist/test/HL5-test-ptload.apk` (+ diag), sha256; ghi cách nhận biết đạt/không đạt vào `PHAT-HANH-diag.md`. Không commit APK lớn khác.
   - [ ] T17b. Mockup từng cửa sổ ở 1200x540, 800x360 và 400x240 theo phong cách `ui_new/` (viền cam/đen) — người dùng duyệt trước khi implement.
   - [ ] T17c… Implement từng cửa sổ theo mockup (task con do quản đốc chia sau T17a/T17b).
 - [ ] ~~T15. Phóng to~~ (HUỶ theo người dùng; thiết kế §12 giữ để tham khảo, WIP zoom ở `git stash` "T15b zoom WIP")
@@ -172,7 +176,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: T17a → T17b (mockup, người dùng duyệt) → T17c… → T16 → T14a/T14b → T7 → T11. (T15 huỷ) → T16 → T14a → T14b → T7 → T11.
+- A1: T17a ✓ → T17p (thử PT_LOAD máy thật) → T17b (mockup, người dùng duyệt) → T17c… → T16 → T14a/T14b → T7 → T11. (T15 huỷ) → T16 → T14a → T14b → T7 → T11.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -255,3 +259,5 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [quản đốc] Nghiệm thu T15a: đạt (harness 1200x540 menu 3x3 + Đặc tính phóng ×2, chữ 15 px, chạm chọn đúng ô). Quyết định: in-game state trước, MainMenu/Map cuối (không đạt thì s=1); CPU trước, a2 → T15c nếu chậm; mô tả lớp sửa bằng dữ liệu. Giao T15b cho công nhân mới.
 - [người dùng] Không phóng to nữa; dựng lại toàn bộ menu theo kích thước màn: chọn "thiết kế menu mới hoàn toàn" (mockup duyệt trước), "tất cả rồi mới phát hành". → Quản đốc dừng T15b (WIP vào git stash), thêm T17, giao T17a.
 - [người dùng] Menu mới thay cả cho màn nhỏ (UI gốc làm chữ Việt tràn) → sửa quyết định 12, T17b mockup thêm 400x240.
+- [A1] T17a xong (chờ quản đốc nghiệm thu): `BAO-CAO-RE.md` §13 + `shots/T17/` (kiemke.png 60 ô, tran_chu_600x270/400x240, elf_pt_load_moi). 8 lớp state, ~41 bố cục, ~140 loại popup; hành động nằm ở `Key*` + `Process()` (nhận kết quả popup) → đề xuất thay `Paint`+`TouchPressed`, giữ `KeyPressed/Process`. PT_LOAD mới (đổi phdr GNU_STACK, vaddr 0x171000) KHẢ THI: ElfLoader bridge duyệt mọi PT_LOAD, không giới hạn; harness chạy được mã trong đoạn mới. Ước ~265 hàm / ~120 KB, chia T17c0..c9. Công cụ: `harness/t17_inv.py` (fork), `harness/t17/*`, `tools/t17/*`. Câu hỏi: NetMenu bỏ?, kiến trúc A?, bản diag thử PT_LOAD?
+- [quản đốc] Nghiệm thu T17a: đạt (§13: 8 state, ~41 bố cục, ~140 popup; PT_LOAD mới chạy trong harness; ước ~265 hàm C / ~120 KB). Chốt 6 quyết định (mục T17). Giao T17p rồi T17b.
