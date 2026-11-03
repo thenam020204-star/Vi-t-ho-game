@@ -124,7 +124,10 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
   - [x] T17p. (xong, chờ quản đốc nghiệm thu; chờ người dùng thử máy) Bản thử loader PT_LOAD trên máy thật — Agent: A1 — **Quản đốc nghiệm thu**
     - v0.2-hd + đoạn PT_LOAD mới (dùng `harness/t17/mk_elf_test.py`) chứa một hàm nhỏ được gọi mỗi khung (vd đếm khung, ghi vào biến ở đoạn mới, vùng zero-fill) và có hiệu ứng nhìn thấy vô hại (vd 1 chấm 2x2 px góc màn đổi màu theo bộ đếm) — để người dùng xác nhận loader thật nạp + chạy code ở đoạn mới. Lần luồng bridge ElfLoader (tĩnh) ghi vào `patch/bridge_review.md` mục 10.
     - Đầu ra: `dist/test/HL5-test-ptload.apk` (+ diag), sha256; ghi cách nhận biết đạt/không đạt vào `PHAT-HANH-diag.md`. Không commit APK lớn khác.
-  - [ ] T17b. Mockup từng cửa sổ ở 1200x540, 800x360 và 400x240 theo phong cách `ui_new/` (viền cam/đen) — người dùng duyệt trước khi implement.
+  - [ ] T17b. Mockup (chia 2 bước, người dùng duyệt từng bước) — Agent: A1 — **Quản đốc nghiệm thu**
+    - T17b1: bộ widget chung (khung cửa sổ + tiêu đề + nút đóng, thanh tab biểu tượng, nút, hàng danh sách, ô lưới vật phẩm, thanh cuộn, thanh HP/SP/EXP, popup chung có/không, hộp mô tả) + 3 màn mẫu: menu 3x3, Túi đồ, popup xác nhận — ở 400x240 và 1200x540. Vẽ bằng PIL từ sprite/icon THẬT của game (VFS `img/*.mgr`, `sp/...`) và font bitmap thật (15/10 px ở 400x240, 18 px ở HD: `vi.bin`/NAM_P f18), phong cách viền cam/đen `ui_new/`. Chữ Việt dài nhất thật (lấy từ dữ liệu đã build) để chứng minh không tràn. Script tái lập `ui_new/menu/mock_menu.py`, ảnh `ui_new/menu/*.png`, ghi số đo bố cục (px theo khung logic, công thức co giãn) vào `ui_new/menu/LAYOUT.md`.
+    - T17b2 (sau khi người dùng duyệt b1): các cửa sổ còn lại trong bảng §13 (trừ NetMenu).
+  - (cũ) T17b. Mockup từng cửa sổ ở 1200x540, 800x360 và 400x240 theo phong cách `ui_new/` (viền cam/đen) — người dùng duyệt trước khi implement.
   - [ ] T17c… Implement từng cửa sổ theo mockup (task con do quản đốc chia sau T17a/T17b).
 - [ ] ~~T15. Phóng to~~ (HUỶ theo người dùng; thiết kế §12 giữ để tham khảo, WIP zoom ở `git stash` "T15b zoom WIP")
   - (cũ) T15. Phóng to cửa sổ/tab menu trong game ở HD (sau T10, trước T14b) — Agent: A1 — **Quản đốc nghiệm thu**
@@ -176,7 +179,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: T17a ✓ → T17p (thử PT_LOAD máy thật) → T17b (mockup, người dùng duyệt) → T17c… → T16 → T14a/T14b → T7 → T11. (T15 huỷ) → T16 → T14a → T14b → T7 → T11.
+- A1: T17a ✓ → T17p ✓ (máy thật đạt) → T17b1 (mockup, người dùng duyệt) → T17c… → T16 → T14a/T14b → T7 → T11. (T15 huỷ) → T16 → T14a → T14b → T7 → T11.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
@@ -263,3 +266,4 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - [quản đốc] Nghiệm thu T17a: đạt (§13: 8 state, ~41 bố cục, ~140 popup; PT_LOAD mới chạy trong harness; ước ~265 hàm C / ~120 KB). Chốt 6 quyết định (mục T17). Giao T17p rồi T17b.
 - [A1] T17p xong (chờ quản đốc nghiệm thu): `patch/mk_ptload_test.py` (phdr[4] -> PT_LOAD 0x171000 filesz 0x1000/memsz 0x2000; móc `bl MC_grpFlushLcd` tại 0x3da08 trong CUSTOM_grpFlushLcd, mỗi khung; payload gọi lại MC_grpFlushLcd rồi nạp chấm 8x8 góc trên-trái bằng bindTextureFromDirect; viền trắng = zero-fill đúng, lõi 4x4 đổi đỏ/xanh lá/xanh dương/vàng mỗi 16 khung) + `make_apk.sh --test-ptload [--diag C]` (build thường vẫn đúng 65569f2a…c898); `bridge_review.md` mục 10: ElfLoader ĐẠT (tĩnh); harness `harness/t17/check_ptload.py` 600x270 và 1200x540 ĐẠT (`shots/T17p/`); `dist/test/HL5-test-ptload.apk` 1993ac12…00ea, `-diag.apk` f44e03e4…ba2b; `PHAT-HANH-diag.md` có mục cách thử/đạt/không đạt. Chưa thử máy thật.
 - [quản đốc] Nghiệm thu T17p: đạt tĩnh + harness (loader nạp mọi p_type==1, map RWX, zero-fill memsz; chấm 8x8 đổi màu 600x270/1200x540; build thường vẫn trùng v0.2-hd). CHỜ người dùng thử `dist/test/HL5-test-ptload.apk` trên máy: đạt → T17b mockup; không đạt → phương án dự phòng (đè thân Draw* cũ).
+- [người dùng] Bản thử PT_LOAD: "Chạy ổn, có chấm trắng tĩnh" → loader thật nạp và chạy code ở đoạn mới, zero-fill đúng (viền trắng; nếu hỏng sẽ là magenta). Chấm tồn tại qua mọi khung (game tải lại toàn màn mỗi khung) → payload chạy mỗi khung; lõi đổi màu chỉ 4x4 logic nên khó thấy — không chặn. Quyết định 5 (PT_LOAD) xác nhận. Giao T17b1.
