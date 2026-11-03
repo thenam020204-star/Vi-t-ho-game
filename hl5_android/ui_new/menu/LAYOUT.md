@@ -227,7 +227,7 @@ Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ 
 | nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
 |---|---|---|---|---|---|
 | belt (5) | `104,57,134,87` | `203,57,233,87` | `239,76,289,126` | `374,98,444,168` | đặt con trỏ ô nhanh [this+0x10]=0 rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt) |
-| belt_swap (1) | `266,57,296,87` | `365,57,395,87` | `511,76,561,126` | `756,98,826,168` | đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại |
+| belt_swap (1) | `266,57,296,99` | `365,57,395,99` | `511,76,561,138` | `756,98,826,185` | đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại |
 | desc_scroll (1) | `17,155,383,172` | `90,155,509,202` | `130,199,670,261` | `192,258,1008,407` | kéo dọc = cuộn mô tả (TouchMoved mới), không đổi trường gốc |
 | detail (1) | `14,114,386,175` | `87,114,512,205` | `127,157,673,264` | `189,206,1011,410` | chỉ hiển thị |
 | ok (1) | `14,179,198,202` | `87,209,297,232` | `127,270,397,299` | `189,418,596,456` | KeyPressed(-5) = chọn vật phẩm / gán ô (Process gốc: SetEquipItem, ApplyItemCompose, SetHotKeyBelt...) |
@@ -265,7 +265,7 @@ Menu mới chỉ đổi giao diện; con trỏ/cuộn/trang giữ nguyên ngữ 
 | detail (1) | `161,63,386,175` | `234,63,512,205` | `368,84,673,264` | `524,108,1011,410` | mô tả: kéo dọc để cuộn |
 | assign (1) | `161,179,386,202` | `234,209,512,232` | `368,270,673,299` | `524,418,1011,456` | KeyPressed(-5) -> popup/SubState gán ô nhanh (HERO::SetHotKeyBelt) |
 | belt (5) | `104,110,134,140` | `204,125,234,155` | `239,155,289,205` | `374,232,444,302` | đặt con trỏ ô nhanh [this+0x10]=0 rồi KeyPressed(-5) (SubState 2 -> HERO::SetHotKeyBelt) |
-| belt_swap (1) | `266,110,296,140` | `366,125,396,155` | `511,155,561,205` | `756,232,826,302` | đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại |
+| belt_swap (1) | `266,110,296,152` | `366,125,396,167` | `511,155,561,217` | `756,232,826,319` | đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại |
 | popup_cancel (1) | `168,146,232,169` | `268,161,332,184` | `346,214,453,243` | `525,314,675,352` | back: thoát SubState 2 |
 
 **dac_tinh** (`dac_tinh`): Đặc tính: 3 nhánh + Điểm, lưới 3x4

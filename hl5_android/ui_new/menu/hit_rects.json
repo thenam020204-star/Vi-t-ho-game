@@ -8348,7 +8348,7 @@
     266,
     57,
     296,
-    87
+    99
    ],
    "action": "đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại"
   },
@@ -8550,7 +8550,7 @@
     365,
     57,
     395,
-    87
+    99
    ],
    "action": "đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại"
   },
@@ -8752,7 +8752,7 @@
     511,
     76,
     561,
-    126
+    138
    ],
    "action": "đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại"
   },
@@ -8954,7 +8954,7 @@
     756,
     98,
     826,
-    168
+    185
    ],
    "action": "đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại"
   },
@@ -12262,7 +12262,7 @@
     266,
     110,
     296,
-    140
+    152
    ],
    "action": "đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại"
   },
@@ -12694,7 +12694,7 @@
     366,
     125,
     396,
-    155
+    167
    ],
    "action": "đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại"
   },
@@ -13126,7 +13126,7 @@
     511,
     155,
     561,
-    205
+    217
    ],
    "action": "đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại"
   },
@@ -13558,7 +13558,7 @@
     756,
     232,
     826,
-    302
+    319
    ],
    "action": "đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại"
   },

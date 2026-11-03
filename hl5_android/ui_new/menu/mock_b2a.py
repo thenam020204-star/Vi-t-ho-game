@@ -216,8 +216,8 @@ def w_belt(cv, x, y, n=5, sel=None, icons=(), label=None, cellsz=None, swap=True
         sx = x1 + m.gap
         cv.im.alpha_composite(swap_img(c), (sx, y))
         t = '%d/2' % bank; tw = U.sw(m.spx, t)
-        cv.text(sx + c // 2, y + c - m.spx - 1, t, m.spx, C['white'], shadow=True, anchor='c', maxw=c)
-        cv.hit('belt_swap', (sx, y, sx + c, y + c), 'đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại')
+        cv.text(sx + c // 2, y + c + 1, t, m.spx, C['white'], shadow=True, anchor='c', maxw=c)        # nhãn DƯỚI nút (không đè icon)
+        cv.hit('belt_swap', (sx, y, sx + c, y + c + m.spx + 2), 'đổi bộ ô nhanh 1<->2 (gốc có 2 bộ x 5 ô; phím/hàm đổi bộ T17c xác nhận, vd HERO::ChangeHotKeyToggle) rồi vẽ lại')
         x1 = sx + c
     return x1, y + c
 
