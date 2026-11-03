@@ -190,6 +190,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - v0.1 đạt khi: APK cài được (arm64), qua tiêu đề → menu → vào game, chữ Việt hiện đúng, không cần mạng; kiểm trong harness + kiểm tĩnh bridge (không có thiết bị thật).
 
 ## Quy tắc thay công nhân (người dùng chốt)
+- (Bổ sung sau lỗi của quản đốc) Công nhân bị dừng giữa chừng (hạn mức, lỗi) thì KHÔNG resume nếu không biết chắc ngữ cảnh < 400k: quản đốc commit WIP, ghi trạng thái vào PLAN, giao công nhân mới đọc PLAN + diff WIP.
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
