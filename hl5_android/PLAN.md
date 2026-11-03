@@ -14,10 +14,9 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Ngoài phạm vi: viết lại bridge từ đầu; âm thanh; hỗ trợ máy dưới Android 10; online thật.
 
 ## Môi trường (mọi task dùng chung)
-- Repo: `/home/user/Vi-t-ho-game`, nhánh `ccr-0532c7e4-lrr5j9`. Code và công cụ đặt trong `hl5_android/`.
-- Thư mục làm việc (không commit, có thể mất khi container khởi động lại):
-  `WORK=/tmp/claude-0/-home-user-Vi-t-ho-game/31266a47-2a55-5b6d-86d1-5e3a70f1f083/scratchpad`
-  - Dựng lại bằng: `WORK=$WORK UP=/root/.claude/uploads/31266a47-2a55-5b6d-86d1-5e3a70f1f083 hl5_android/setup_work.sh`
+- Repo: `/home/user/Vi-t-ho-game`, nhánh hiện tại `ccr-706054f3-ih6lfy` (PR #8, #9 đã merge vào main). Code và công cụ đặt trong `hl5_android/`.
+- Thư mục làm việc (không commit, có thể mất khi container khởi động lại): `WORK=~/hl5work` (mặc định).
+  - Dựng lại bằng 1 lệnh: `hl5_android/env/setup_env.sh --build` (xem BAN-GIAO.md §3; tự kiểm APK dựng lại trùng byte với `dist/HL5-VI-v0.2-hd.apk`).
   - `$WORK/apk/`: APK đã giải nén (`assets/libHeroesLore5.so`, `assets/data.vfs.mp3`, `lib/arm64-v8a/libhl5_arm64_bridge.so`).
   - `$WORK/lgt5/j/res/c/...`: tài nguyên LGT gốc (tiếng Hàn).
   - `$WORK/proj/HL4_project/vi5/`: pipeline Việt hoá LGT. `catalog5.json`, `ids5.json`, `build/overlay/res/c/...` (bản Việt build từ LGT), `build/overlay/vi5/{dict.txt,font.bin,font10.bin}`, `tr_in/HL5_dich_FULL.tsv` (bản dịch của người dùng), `tr_in/thuat-ngu.tsv`, `tr_in/style-guide.md`, `override.tsv`, `fit.tsv`, `build_vi5.py` (class `Encoder`, các hàm `vi_width*`, `wrap_lines`, `check_codes`, `load_fit`…).
@@ -161,7 +160,7 @@ Từ `heroes-lore-5-v1.0.5.apk` (bản Android EA, đã Anh hoá, chạy qua bri
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
 ## Phân công hiện tại
-- A1: TẠM DỪNG — v0.2-hd ✓ → T15a (giao lại) → T15b → T16 → T14a → T14b → T7 → T11.
+- A1: T15a (phiên mới, giao lại từ đầu; dựng env bằng setup_env.sh) → T15b → T16 → T14a → T14b → T7 → T11.
 - A2: (chưa có)
 
 ## Vướng mắc (công nhân ghi vào đây, chờ quản đốc/người dùng quyết)
