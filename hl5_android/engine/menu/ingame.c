@@ -321,7 +321,7 @@ void ig_paint(void *self) {
     if (st == 0) { mui_window(&wr, zone_title(), -1, 0, NULL, 0, &body); paint_main(self, &body); }
     else {
         mui_window(&wr, CT(st - 1), -1, MUI_TAB_ICONS, NULL, st - 1, &body);
-        if (st == 1) paint_char(self, &body); else if (st == 2) bag_paint(self, &body); else if (st == 3) equip_paint(self, &body); else paint_sys(self, &body);
+        if (st == 1) paint_char(self, &body); else if (st == 2) bag_paint(self, &body); else if (st == 3) equip_paint(self, &body); else if (st == 6) combo_paint(self, &body); else paint_sys(self, &body);
     }
 }
 
@@ -331,6 +331,7 @@ int ig_touch(void *self, int x, int y) {
     if (id >= 0x10 && id < 0x10 + MUI_TAB_ICONS) { if (id - 0x10 + 1 != st) StateInGameMenu_SetState(self, id - 0x10 + 1); mui_sc[0].pos = 0; return 0; }
     if (st == 2) { bag_cb(self, id); return 0; }
     if (st == 3) { equip_cb(self, id); return 0; }
+    if (st == 6) { combo_cb(self, id); return 0; }
     if (st == 9) {
         int sub = SELF8(self, 0xd);
         if (sub == 1 && id >= 0x40 && id < 0x70) {                 /* con trỏ tuỳ chọn gốc: [+0x10] = hàng tuyệt đối, [+0xf] = hàng trong cửa sổ */

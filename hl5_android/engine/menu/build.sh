@@ -20,7 +20,7 @@ if [ "$DBG" = 1 ]; then
   python3 -I gen_dbg_text.py "$OUT/dbg_text.h" >/dev/null
 fi
 OBJS=""
-for f in rt gfx text layout widgets touch dispatch ingame popup bag dbg; do
+for f in rt gfx text layout widgets touch dispatch ingame popup bag combo dbg; do
   [ -f $f.c ] || continue
   $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"
 done
@@ -45,7 +45,8 @@ for p in "_pTextMgr|_pTextMgr" "TextMgr::GetCommonText(int)|TextMgr_GetCommonTex
   "ItemTable::GetItemTableInfo(ItemInfo*, signed char, signed char)|ItemTable_GetItemTableInfo" \
   "CommonUi::DrawIcon(int, int, int, short, unsigned char, unsigned char, int, int)|CommonUi_DrawIcon" \
   "CommonUi::DrawItemDiscription(int, int, int, ItemInfo*, signed char, unsigned char)|CommonUi_DrawItemDiscription" \
-  "BFont::DrawTextLine(int, int, int, int, int, char*, int, int)|BFont_DrawTextLine"; do
+  "BFont::DrawTextLine(int, int, int, int, int, char*, int, int)|BFont_DrawTextLine" \
+  "HERO::GetComboSkillBelt(signed char)|HERO_GetComboSkillBelt" "HERO::GetHeroSkillInfoPtr(signed char)|HERO_GetHeroSkillInfoPtr"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"

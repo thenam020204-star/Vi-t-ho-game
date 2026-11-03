@@ -214,6 +214,12 @@ H void pop_item(void *self);                      /* StatePopup loại 10: chi t
 extern H int mui_cap_on;
 H void mui_cap_line(void *f, int a1, int a2, int a3, int a4, int a5, const u8 *buf, int a7);
 
+/* ---------------- combo.c (c3a) ---------------- */
+extern H int HERO_GetComboSkillBelt(void *hero, int i);
+extern H u8 *HERO_GetHeroSkillInfoPtr(void *hero, int i);
+H void combo_paint(void *self, const mui_r *body);
+H int combo_cb(void *self, int id);
+
 /* ---------------- dbg.c (chỉ -DMUI_DEBUG) ---------------- */
 #ifdef MUI_DEBUG
 extern H volatile int mui_dbg_mw, mui_dbg_mh;   /* khung mockup mô phỏng (400x240 / 1200x540) do harness ghi */
