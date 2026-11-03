@@ -196,6 +196,11 @@ static void bag_geo(const mui_r *body, bgeo *g) {
     g->dx = g->gx + m->gridW + m->gap + 1; g->dy = top; g->dx1 = g->x1; g->dy1 = g->y1;
 }
 
+/* mockup new_screen/content_rect của picker, belt, Trang bị: lề tính từ mép cửa sổ (không trừ viền) */
+static void raw_geo(bgeo *g) {
+    mui_m *m = &L;
+    g->x0 = m->wx + m->pad; g->y0 = m->wy + m->titleH + m->pad; g->x1 = m->wx + m->winW - m->pad; g->y1 = m->wy + m->winH - m->tabH - m->pad;
+}
 static void money_strip(const bgeo *g, u8 *bag) {
     mui_m *m = &L; int s = m->s;
     mui_text(g->x0 + 2, g->y0 + 1, CT(19), -1, m->px, C_DIM, 0);
@@ -303,8 +308,8 @@ void bag_paint(void *self, const mui_r *body) {
     int npg = size / 16;
     if (npg < 1) npg = 1;
     if (npg > 6) npg = 6;
-    if (sub >= 3) { paint_picker(self, &g, 0x10, CT(155), CT(56), CT(57), 0); return; }
-    if (sub == 2) { paint_picker(self, &g, 0x10, CT(155), CT(56), CT(57), 1); return; }
+    if (sub >= 3) { bgeo r; raw_geo(&r); paint_picker(self, &r, 0x10, CT(155), CT(56), CT(57), 0); return; }
+    if (sub == 2) { bgeo r; raw_geo(&r); paint_picker(self, &r, 0x10, CT(155), CT(56), CT(57), 1); return; }
     money_strip(&g, bag);
     /* cột trang: n <= 4 ô vuông cách pitch; n > 4 chia đều theo chiều cao lưới */
     int gh = 4 * m->pitch - m->cg, stride = npg <= 4 ? m->pitch : (gh + m->cg) / npg, th = npg <= 4 ? m->cell : stride - m->cg;
@@ -363,7 +368,8 @@ int bag_cb(void *self, int id) {
 /* ================= Trang bị ================= */
 void equip_paint(void *self, const mui_r *body) {
     mui_m *m = &L; int s = m->s, sub = S8(self, 0xd);
-    int x0 = body->x0 + m->pad, y0 = body->y0 + m->pad, x1 = body->x1 - m->pad, y1 = body->y1 - m->pad;
+    bgeo rg; raw_geo(&rg); (void)body;
+    int x0 = rg.x0, y0 = rg.y0, x1 = rg.x1, y1 = rg.y1;
     u8 *h = HEROP(), *bag = BAGP(); void *eq = HERO_GetEquipItemPtr(h);
     if (sub == 1) { bgeo g = {x0, y0, x1, y1, 0, 0, 0, 0, 0, 0, 0}; paint_picker(self, &g, 0xf, CT(112), mui_hint(CT(66), &(int){0}), mui_hint(CT(32), &(int){0}), 0); return; }
     static const u8 EMPTY[8] = {35, 31, 32, 33, 34, 37, 36, 36};    /* ui.mgr: icon ô trống theo ô (bảng 8 byte +31 ở DrawEquipMenu gốc 0x154ae8+0xf0) */
