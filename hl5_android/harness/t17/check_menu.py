@@ -34,7 +34,13 @@ APK_SO = os.path.join(WORK, 'apk/assets/libHeroesLore5.so')
 sh('cd %s/engine && sh build.sh >/dev/null' % REPO)
 log(sh('cd %s/engine/menu && ./build.sh %s/rel' % (REPO, T)).strip())
 log(sh('cd %s/engine/menu && ./build.sh %s/dbg --debug' % (REPO, T)).strip())
-sh('python3 -I %s/patch/apply_so.py %s %s/p.so' % (REPO, APK_SO, T))
+L_ = open(os.path.join(REPO, 'patch/so_patches.tsv'), encoding='utf-8').read().split('\n'); o_ = []; skip_ = False   # bỏ khối vá vtable (inject_menu sinh lại cho từng bản dựng)
+for l_ in L_:
+    if l_.startswith('# >>> T17c menu-vtable'): skip_ = True
+    if not skip_: o_.append(l_)
+    if l_.startswith('# <<< T17c menu-vtable'): skip_ = False
+open(os.path.join(T, 'sp.tsv'), 'w', encoding='utf-8').write('\n'.join(o_))
+sh('python3 -I %s/patch/apply_so.py %s %s/p.so %s/sp.tsv' % (REPO, APK_SO, T, T))
 sh('python3 -I %s/engine/menu/inject_menu.py %s/p.so %s/rel' % (REPO, T, T))
 sh('python3 -I %s/engine/menu/inject_menu.py %s/p.so %s/dbg' % (REPO, T, T))
 sh('python3 -I %s/patch/mk_menu_segment.py %s/p.so %s/rel.so %s/rel' % (REPO, T, T, T))
@@ -204,17 +210,18 @@ dis = subprocess.run('llvm-objdump -d --no-show-raw-insn %s/dbg/menu.elf' % T, s
 nmall = subprocess.run('llvm-nm %s/dbg/menu.elf' % T, shell=True, capture_output=True, text=True).stdout.split('\n')
 seg_lo, seg_hi = 0x171000, MS['mui_seg_end']
 absyms = {int(l.split()[0], 16): l.split()[2] for l in nmall if len(l.split()) == 3 and not (seg_lo <= int(l.split()[0], 16) < seg_hi)}
-bad = []; nbl = 0
+bad = []; nbl = 0; blx_reg = []
 for l in dis.split('\n'):
     m = re.search(r'\t(bl|b|blx|bx|bleq|bne|beq|blt|bgt|ble|bge|bls|bhi|blo|bhs|bmi|bpl)\s+(.*)', l)
     if not m: continue
     op, arg = m.group(1), m.group(2)
-    if op in ('blx',) and not arg.startswith('0x'): bad.append(l)
+    if op in ('blx',) and not arg.startswith('0x'): blx_reg.append(l)
     mm = re.match(r'0x([0-9a-f]+)', arg)
     if mm and op.startswith('bl'):
         t = int(mm.group(1), 16); nbl += 1
         if not (seg_lo <= t < seg_hi) and t not in absyms: bad.append(l)
-ok(not bad, 'K5 tĩnh: %d lệnh bl đều tới đoạn mới hoặc hàm/biến guest đã khai báo (%d ký hiệu guest); 0 blx thanh ghi %s' % (nbl, len(absyms), bad[:3]))
+ok(len(blx_reg) <= 1, 'K5 tĩnh (c1): blx thanh ghi <= 1 (gọi Paint của state cha qua vtable +0x40 trong pop_paint, như StatePopup::Paint gốc): %d' % len(blx_reg))
+ok(not bad, 'K5 tĩnh: %d lệnh bl đều tới đoạn mới hoặc hàm/biến guest đã khai báo (%d ký hiệu guest) %s' % (nbl, len(absyms), bad[:3]))
 info = open(os.path.join(T, 'rel/menu.info')).read().strip(); infd = open(os.path.join(T, 'dbg/menu.info')).read().strip()
 ok('reloc=0' in info and 'reloc=0' in infd, 'K5 0 relocation sau link (release và debug)')
 log('K5 kích thước đoạn: release ' + info + ' | debug ' + infd)

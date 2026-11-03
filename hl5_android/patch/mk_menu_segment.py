@@ -5,13 +5,13 @@
 
 Đổi phdr[4] (PT_GNU_STACK; bridge ElfLoader chỉ đọc p_type==1) -> PT_LOAD {vaddr 0x171000, filesz = menu.bin, memsz = hết bss, flags RWX, align 0x1000},
 nối menu.bin vào cuối file (căn 4 KB). Tái lập, kiểm byte gốc của phdr, thoát lỗi nếu lệch. KHÔNG phụ thuộc cờ --test-ptload (T17p)."""
-import struct, sys, os
+import struct, sys, os, re
 GNU_STACK = struct.pack('<8I', 0x6474e551, 0, 0, 0, 0, 0, 6, 4)
 
 
 def main():
     src, dst, mdir = sys.argv[1:4]
-    info = dict(kv.split('=', 1) for kv in open(os.path.join(mdir, 'menu.info')).read().split())
+    info = dict(re.findall(r'(\w+)=(.*?)(?=\s\w+=|\s*$)', open(os.path.join(mdir, 'menu.info')).read().strip()))
     base, filesz, memsz = int(info['base'], 16), int(info['filesz']), int(info['memsz'])
     blob = open(os.path.join(mdir, 'menu.bin'), 'rb').read()
     assert len(blob) == filesz and memsz >= filesz

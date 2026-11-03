@@ -24,6 +24,22 @@ extern H u8 gv[];                      /* biến toàn cục game (cấu trúc l
 #define ITEM_ICON(i) (COMMONUI() + 180 + 24 * (i))   /* GbmImage của icon vật phẩm i<=225 (CommonUi::DrawIcon 0x7c864) */
 extern H u32 SKIP_COLOR;               /* màu trong suốt của GbmImage (RGB565) */
 
+/* ---- guest (c1): văn bản, Graphic, HERO, StateInGameMenu (địa chỉ gán bởi build.sh --defsym) ---- */
+extern H u32 _pTextMgr;                /* biến chứa TextMgr* */
+extern H const u8 *TextMgr_GetCommonText(u32 tm, int i);
+extern H const u8 *TextMgr_GetHelpTitleString(u32 tm, int i);
+extern H const u8 *TextMgr_DT_GetHelpInfoString(u32 tm, int i);
+extern H int Graphic_GetFB(u32 g);
+extern H int Graphic_GetFBOff(u32 g);
+extern H void Graphic_CopyFrameBuffer(u32 g, int fb, int fboff);
+extern H void HERO_CalcStatusComputation(u8 *hero, int a);
+extern H void StateInGameMenu_SetState(void *self, int s);
+extern H void StateInGameMenu_SetSubState(void *self, int s);
+extern H int BagItem_GetMoney(void *bag);
+extern H void *HERO_GetBagItemPtr(void *hero);
+#define HEROP() (*(u8 **)(gv + 5180))
+#define CT(i) TextMgr_GetCommonText(_pTextMgr, (i))
+
 /* ---------------- layout (LAYOUT.md §1) ---------------- */
 typedef struct {
     int W, Ht, s, hd, px, spx, lp, slp, mg, winH, winW, wx, wy, bt, pad, gap, titleH, tabH, kb,
@@ -68,6 +84,7 @@ H void mui_rr(int x0, int y0, int x1, int y1, int rad, u32 rgb, int a);         
 H void mui_frame(int x0, int y0, int x1, int y1, int rad, int orange, int thick, u32 fill, int fa, int *in4); /* fill<0: không tô */
 H void mui_gbm(const u8 *gbm, int x, int y, int s, int tint);                     /* GbmImage x s NEAREST; tint<0: màu gốc */
 H void mui_pix(int x, int y, u32 rgb);
+H void mui_disc(int cx, int cy, int r, u32 rgb);
 
 /* ---------------- text.c ---------------- */
 #define TF_SHADOW 1
@@ -135,6 +152,19 @@ extern H int mui_drag;                 /* scroller đang kéo (-1 không) */
 #define MUI_F_DBG 2                    /* cờ debug (chỉ bản harness -DMUI_DEBUG): vẽ trang widget */
 extern H volatile u32 mui_flags;
 H int mui_begin(void);                 /* đầu Paint: kiểm FB, cập nhật layout, reset hits, clip */
+
+/* ---------------- ingame.c / popup.c (c1) ---------------- */
+H void ig_paint(void *self);
+H int ig_touch(void *self, int x, int y);
+H int ig_move(void *self, int x, int y);
+H void pop_paint(void *self);
+H int pop_touch(void *self, int x, int y);
+H int mui_cslen(const u8 *s);
+H const u8 *mui_hint(const u8 *s, int *n);       /* bỏ gợi ý phím đầu chuỗi ("#", "*", "d.") */
+extern H int mui_popup_sel;                       /* nút nổi bật của popup Có/Không (0/1) */
+#define GS(self) (*(s8 *)((u8 *)(self) + 0xc))
+#define POP_TYPE(self) (*(s8 *)((u8 *)(self) + 0xe))
+#define POP_NBTN(self) (*(s8 *)((u8 *)(self) + 0x10))
 
 /* ---------------- dbg.c (chỉ -DMUI_DEBUG) ---------------- */
 #ifdef MUI_DEBUG

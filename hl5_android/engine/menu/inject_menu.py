@@ -26,7 +26,7 @@ def v2off(d, va):
 def main():
     so, out = sys.argv[1], sys.argv[2]
     d = open(so, 'rb').read()
-    info = dict(kv.split('=', 1) for kv in open(os.path.join(out, 'menu.info')).read().split())
+    info = dict(re.findall(r'(\w+)=(.*?)(?=\s\w+=|\s*$)', open(os.path.join(out, 'menu.info')).read().strip()))
     enabled = info.get('classes', '').split()
     sym = {l.split()[2]: int(l.split()[0], 16) for l in open(os.path.join(out, 'menu.sym')) if len(l.split()) == 3}
     classes = {}
@@ -50,9 +50,9 @@ def main():
             new = sym[pre + c]
             if cur == new: pass
             elif cur != orig: raise SystemExit('ô %#x của %s::%s = %#x, mong đợi %#x' % (slot, cname, meth, cur, orig))
-            rows.append('%x\t%s\t%s\tT17c0: vtable %s +%#x (%s) %#x -> thunk %s%s %#x' % (
+            rows.append('%x\t%s\t%s\tT17c: vtable %s +%#x (%s) %#x -> thunk %s%s %#x' % (
                 slot, struct.pack('<I', orig).hex(), struct.pack('<I', new).hex(), cname, 8 + off, meth.split('(')[0], orig, pre, c, new))
-    hdr = ['# sinh bởi engine/menu/inject_menu.py (T17c0): vá ô vtable cho lớp đã bật trong states.def: %s' % (', '.join(enabled) or '(chưa lớp nào: đường gốc y hệt)')]
+    hdr = ['# sinh bởi engine/menu/inject_menu.py (T17c): vá ô vtable cho lớp đã bật trong states.def: %s' % (', '.join(enabled) or '(chưa lớp nào: đường gốc y hệt)')]
     open(os.path.join(out, 'menu_patches.tsv'), 'w', encoding='utf-8').write('\n'.join(hdr + rows) + '\n')
     print('menu_patches.tsv: %d dòng, lớp bật: %s' % (len(rows), ' '.join(enabled) or '-'))
     if '--update-repo' in sys.argv:

@@ -20,7 +20,7 @@ if [ "$DBG" = 1 ]; then
   python3 -I gen_dbg_text.py "$OUT/dbg_text.h" >/dev/null
 fi
 OBJS=""
-for f in rt gfx text layout widgets touch dispatch dbg; do
+for f in rt gfx text layout widgets touch dispatch ingame popup dbg; do
   [ -f $f.c ] || continue
   $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"
 done
@@ -30,6 +30,13 @@ sym() { echo "$NM" | grep -F " $1" | awk -v n="$1" '{ l=$0; sub(/^[0-9a-f]+ . /,
 DEFS="--defsym=vn_state=0x1704c0"
 for g in _lcdG gv SKIP_COLOR; do a=$(sym $g); [ -n "$a" ] || { echo "thiếu symbol $g"; exit 1; }; DEFS="$DEFS --defsym=$g=0x$a"; done
 a=$(sym "Graphic::DrawImage(int, int, int, GbmImage*, int)"); DEFS="$DEFS --defsym=Graphic_DrawImage=0x$a"
+for p in "_pTextMgr|_pTextMgr" "TextMgr::GetCommonText(int)|TextMgr_GetCommonText" "TextMgr::GetHelpTitleString(signed char)|TextMgr_GetHelpTitleString" \
+  "TextMgr::DT_GetHelpInfoString(signed char)|TextMgr_DT_GetHelpInfoString" "Graphic::GetFB()|Graphic_GetFB" "Graphic::GetFBOff()|Graphic_GetFBOff" \
+  "Graphic::CopyFrameBuffer(int, int)|Graphic_CopyFrameBuffer" "HERO::CalcStatusComputation(unsigned char)|HERO_CalcStatusComputation" \
+  "StateInGameMenu::SetState(signed char)|StateInGameMenu_SetState" "StateInGameMenu::SetSubState(signed char)|StateInGameMenu_SetSubState" \
+  "BagItem::GetMoney()|BagItem_GetMoney" "HERO::GetBagItemPtr()|HERO_GetBagItemPtr"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
 for c in $(grep -o '^MUI_CLASS([A-Z]*, [A-Za-z]*' classes.def | sed 's/MUI_CLASS([A-Z]*, //'); do
   for m in "Paint()" "KeyPressed(int)" "TouchPressed(int, int, int)" "TouchMoved(int, int, int)" "TouchReleased(int, int, int)"; do

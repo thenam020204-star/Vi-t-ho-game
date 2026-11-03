@@ -129,6 +129,11 @@ void mui_frame(int x0, int y0, int x1, int y1, int rad, int orange, int thick, u
     if (in4) { in4[0] = x0 + j0; in4[1] = y0 + j0; in4[2] = x1 - j0; in4[3] = y1 - j0; }
 }
 
+void mui_disc(int cx, int cy, int r, u32 rgb) {
+    u32 c = c565(rgb);
+    for (int dy = -r; dy <= r; dy++) { int q = isqrt(r * r - dy * dy + r); span(cy + dy, cx - q, cx + q + 1, c); }
+}
+
 /* GbmImage (guest): [0]&15 = 4 (4 bit) hoặc 8; u16 w @2, h @4; paleta u16[] @8; điểm ảnh @0xc. Màu = SKIP_COLOR: trong suốt.
  * Vẽ phóng s lần NEAREST; tint>=0: mọi điểm không trong suốt vẽ màu phẳng tint. */
 void mui_gbm(const u8 *gbm, int x, int y, int s, int tint) {

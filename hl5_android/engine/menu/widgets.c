@@ -9,6 +9,7 @@
 __attribute__((weak)) const u8 *mui_tab_icon(int i) { (void)i; return NULL; }
 __attribute__((weak)) const u8 *mui_icon_back(void) { return NULL; }
 
+int mui_popup_sel;
 static int rnd(int a, int b) { return (2 * a + b) / (2 * b); }   /* round(a/b), a,b > 0 */
 
 void mui_window(const mui_r *r, const u8 *title, int tlen, int ntabs, const u8 *const *unused, int active, mui_r *body) {
@@ -185,8 +186,8 @@ void mui_popup_box(int x0, int y0, int pw, const u8 *text, int tlen, int yes_no,
     mui_r b;
     if (yes_no) {
         int mid = (bx0 + bx1) / 2, gg = m->pad;
-        b.x0 = bx0; b.y0 = by; b.x1 = mid - gg / 2; b.y1 = by + m->btnH; mui_button(&b, l1, n1, 1, 0xF0);
-        b.x0 = mid + gg / 2 + 1; b.x1 = bx1; mui_button(&b, l2, n2, 0, 0xF1);
+        b.x0 = bx0; b.y0 = by; b.x1 = mid - gg / 2; b.y1 = by + m->btnH; mui_button(&b, l1, n1, mui_popup_sel == 0 ? 1 : 0, 0xF0);
+        b.x0 = mid + gg / 2 + 1; b.x1 = bx1; mui_button(&b, l2, n2, mui_popup_sel == 1 ? 1 : 0, 0xF1);
     } else {
         int bw = mui_sw(m->px, l1, n1) + 4 * m->pad;
         if (bw < (bx1 - bx0) / 3) bw = (bx1 - bx0) / 3;
