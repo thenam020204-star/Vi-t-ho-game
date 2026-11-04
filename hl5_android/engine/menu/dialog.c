@@ -130,7 +130,7 @@ static void plate(int x0, int y0, int x1, int y1, int b, const u8 *s, int len, i
 }
 
 /* chân dung GbmImage: cắt (sx0,sy0,sw,sh) -> (dw,dh) NEAREST, lật ngang, alpha 0..255, kẹp (cx0,cy0,cx1,cy1) */
-static void blit(const u8 *gbm, int dx0, int dy0, int dw, int dh, int sx0, int sy0, int sw, int sh, int flip, int alpha,
+static void blit(const u8 *gbm, int dx0, int dy0, int dw, int dh, int sx0, int sy0, int sw, int sh, int flip, int alpha, int tint,
                  int cx0, int cy0, int cx1, int cy1) {
     if (!gbm || dw <= 0 || dh <= 0) return;
     int w = *(const u16 *)(gbm + 2), h = *(const u16 *)(gbm + 4);
@@ -159,6 +159,7 @@ static void blit(const u8 *gbm, int dx0, int dy0, int dw, int dh, int sx0, int s
             int idx = nib ? ((sx & 1) ? row[sx >> 1] & 15 : row[sx >> 1] >> 4) : row[sx];
             u32 c = pal[idx];
             if (c == skip) continue;
+            if (tint >= 0) c = ((tint >> 8) & 0xF800) | ((tint >> 5) & 0x07E0) | ((tint >> 3) & 0x1F);
             if (a5 < 32) {
                 u32 d = mui_getpx(xx, yy), M = 0x07E0F81Fu;
                 u32 v = (((c | (c << 16)) & M) * (u32)a5 + ((d | (d << 16)) & M) * (u32)(32 - a5)) >> 5;
@@ -169,14 +170,25 @@ static void blit(const u8 *gbm, int dx0, int dy0, int dw, int dh, int sx0, int s
     }
 }
 
-static void portrait(const g_t *g, u8 *D, int clip_y1) {
+#define DLG_HALO 0     /* 1 = bản B: thêm quầng tối mềm sau chân dung (người dùng chọn A/B) */
+static void portrait(const g_t *g, u8 *D) {
     u8 *gbm = DPTR(D, 0x24);
-    if (!gbm || g->iw <= 0) return;
-    int t = g->t, in[4];
-    panel(g->fx0, g->fy0, g->fx1, g->fy1, L.rad, t, C_NAVY, 238, in);
-    int ox = DS16(D, 52), oy = DS16(D, 54), q = g->iw * 4 / (g->sw ? g->sw : 1);
-    int y1 = in[3] < clip_y1 ? in[3] : clip_y1;
-    blit(gbm, in[0] + ox * q / 4, in[1] + oy * q / 4, g->iw, g->ih, g->sx0, g->sy0, g->sw, g->sh, DU8(D, 46) == 8, DU8(D, 45), in[0], in[1], in[2], y1);
+    if (!gbm || g->fw <= 0) return;
+    int sc = g->sc, ox = DS16(D, 52) * sc, oy = DS16(D, 54) * sc, flip = DU8(D, 46) == 8, al = DU8(D, 45);
+    int pw = DS16(D, 56), ph = DS16(D, 58), x0 = g->fx + ox, y0 = g->fy + oy, W = L.W, Hh = L.Ht;
+#if DLG_HALO
+    for (int k = 0; k < 6; k++) {          /* quầng: elip chồng dần, alpha thấp */
+        int rx = g->fw / 2 + (6 - k) * sc * 5, ry = g->fh / 2 + (6 - k) * sc * 5, cx = x0 + g->fw / 2, cy = y0 + g->fh / 2;
+        for (int y = cy - ry; y < cy + ry; y++) {
+            int dy = y - cy, w2 = rx * rx - rx * rx * dy * dy / (ry * ry), w = 0;
+            while ((w + 1) * (w + 1) <= w2) w++;
+            mui_fill_a(cx - w, y, cx + w, y + 1, C_INK, 14);
+        }
+    }
+#endif
+    /* bóng đổ (bản A): hình bóng của ảnh, lệch (3,2)*sc, đen alpha ~45% */
+    blit(gbm, x0 + 3 * sc, y0 + 2 * sc, g->fw, g->fh, 0, 0, pw, ph, flip, al * 110 / 255, 0, 0, 0, W, Hh);
+    blit(gbm, x0, y0, g->fw, g->fh, 0, 0, pw, ph, flip, al, -1, 0, 0, W, Hh);
 }
 
 /* HD (H >= 480): chữ thoại luôn mode 0 (18 px thường): bỏ cỡ nén/10 px mà T4 gài sẵn để vừa hộp cũ hẹp; cờ vn_state.force0 (đã duyệt ở T17c0) phải bật CẢ khi vẽ lẫn khi
@@ -218,16 +230,15 @@ void dlg_window(u8 *ep) {
     geom(&g, DPTR(D, 0x24) != NULL, DS8(D, 0x28), lines, lp, DS16(D, 56), DS16(D, 58));
     dlg_S.tick++;
     mui_m *m = &L;
-    panel(g.bx, g.by, g.bx + g.bw, g.by + g.bh, m->rad, g.t, C_NAVY, 218, NULL);
-    portrait(&g, D, m->Ht);
+    panel(g.bx, g.by, g.bx + g.bw, g.by + g.bh, g.b, C_NAVY, 225);
+    portrait(&g, D);                                    /* chân dung vẽ SAU hộp (đè lên) */
     int id = DU8(D, 7);
     if ((u8)(id - 1) <= 253) {
         const u8 *nm = TextMgr_GetNpcNameText(_pTextMgr, id);
         if (nm && nm[0]) {
-            int w = mui_sw(m->px, nm, -1) + 4 * m->pad;
-            if (w < 6 * m->px) w = 6 * m->px;
-            int x0 = g.nx0 ? g.nx0 : g.nx1 - w;
-            plate(x0, g.ny0, x0 + w, g.ny0 + g.plate_h, m->rad, g.t, nm, -1, m->px, C_GOLD);
+            int w = mui_sw(m->px, nm, -1) + 24 * g.b;
+            int x0 = g.nx1 ? g.nx1 - w : g.nx0;
+            plate(x0, g.ny0, x0 + w, g.ny0 + g.plate_h, g.b, nm, -1, m->px, C_GOLD);
         }
     }
     const u8 *text = DPTR(D, 32);
@@ -244,7 +255,7 @@ void dlg_window(u8 *ep) {
     vn_state->force0 = old0;
     if (done && ((dlg_S.tick >> 3) & 1) == 0) {
         int aw = m->px * 2 / 3 + 2, ah = aw * 3 / 4 + 1;
-        tri_down(g.tx + g.tw - aw / 2 - 2, g.by + g.bh - m->pad - g.t - ah - 1, aw, ah, C_ORANGE_HI);
+        tri_down(g.tx + g.tw - aw / 2, g.by + g.bh - 4 * g.b - ah, aw, ah, C_ORANGE_HI);
     }
 }
 
@@ -253,12 +264,11 @@ void dlg_face(u8 *D) {
     u8 *ep = EVENT();
     if (!ep || (u8)(DS8(D, 43) - 1) > 6) return;
     int slot = (int)(D - (ep + 176)) / 60;
-    u8 *C = ep + 176 + 60 * DS8(ep, 172);
-    if (slot == DS8(ep, 172) && DS8(D, 43) == 2) return;           /* vẽ cùng hộp ở dlg_window (chồng lên hộp) */
+    if (slot == DS8(ep, 172) && DS8(D, 43) == 2) return;           /* vẽ ở dlg_window, sau hộp */
     int lines = DS8(D, 8) > 0 ? DS8(D, 8) : DLG_LINES, lp = (s8)BFont_HanFontHeight(_pCFont) + 2;
     g_t g;
     geom(&g, DPTR(D, 0x24) != NULL, DS8(D, 0x28), lines, lp, DS16(D, 56), DS16(D, 58));
-    portrait(&g, D, DS8(C, 43) == 2 ? g.by : L.Ht);                 /* đang có hộp: không che chữ của người đang nói */
+    portrait(&g, D);
 }
 
 /* "#: Skip" gốc = 2 ảnh vẽ ở (0,0): ảnh thứ nhất -> nút "Bỏ qua ▶▶" mới, ảnh thứ hai -> bỏ.
@@ -272,29 +282,17 @@ __asm__(
 );
 H void dlg_skip_a_new(void);
 void dlg_skip_a_new(void) {
-    u8 *ep = EVENT();
     mui_m *m = &L;
-    int px = m->px, pad = m->pad, t = m->s + 1;
-    int w = mui_sw(px, T_SKIP, T_SKIP_N) + 4 * pad + px, h = (px + 2 * (m->bt + 2)) * 7 / 8, x1, y0;
-    int lp = (s8)BFont_HanFontHeight(_pCFont) + 2;
-    u8 *C = ep ? ep + 176 + 60 * DS8(ep, 172) : NULL;
-    if (C && DS8(C, 43) == 2) {          /* gắn mép trên hộp, phía đối diện chân dung (phải; chân dung bên phải -> trái) */
-        g_t g;
-        geom(&g, DPTR(C, 0x24) != NULL, DS8(C, 0x28), DS8(C, 8) > 0 ? DS8(C, 8) : DLG_LINES, lp, DS16(C, 56), DS16(C, 58));
-        int ins = pad + t + 2;
-        if (DPTR(C, 0x24) && DS8(C, 0x28) == 1) x1 = g.bx + ins + w; else x1 = g.bx + g.bw - ins;
-        y0 = g.by - h * 5 / 8;
-    } else { x1 = m->W - m->mg; y0 = m->mg; }
-    int x0 = x1 - w, y1 = y0 + h, in[4];
-    panel(x0, y0, x1, y1, m->rad, t > 2 ? t - 1 : t, C_PANEL, 235, in);
-    mui_clip(x0 + 1, y0 + 1, x1 - 1, y1 - 1);
+    int px = m->px, b = m->Ht >= 480 ? 2 : 1, mg = 8 * m->s;
+    int w = mui_sw(px, T_SKIP, T_SKIP_N) + 20 * b + px, h = px + 10 * b;
+    int x1 = m->W - mg, x0 = x1 - w, y0 = mg, y1 = y0 + h;
+    panel(x0, y0, x1, y1, b, C_NAVY, 225);
     int tw = mui_sw(px, T_SKIP, T_SKIP_N), ah = px * 3 / 5 + 1, aw = ah * 3 / 4 + 1;
     int cx = x0 + (w - (tw + px / 3 + 2 * aw + 1)) / 2;
-    mui_text(cx, y0 + (h - px) / 2, T_SKIP, T_SKIP_N, px, C_GOLD, TF_SHADOW);
+    mui_text(cx, y0 + (h - px) / 2, T_SKIP, T_SKIP_N, px, C_WHITE, TF_SHADOW);
     int ax = cx + tw + px / 3;
     tri_right(ax, y0 + h / 2, aw, ah, C_ORANGE_HI); tri_right(ax + aw + 1, y0 + h / 2, aw, ah, C_ORANGE_HI);
-    mui_clip_reset();
-    int sl = pad / 2 + 2;
+    int sl = m->pad / 2 + 2;
     dlg_S.skip_vis = 1; dlg_S.sx0 = x0 - sl; dlg_S.sy0 = y0 - sl; dlg_S.sx1 = x1 + sl; dlg_S.sy1 = y1 + sl;
 }
 
