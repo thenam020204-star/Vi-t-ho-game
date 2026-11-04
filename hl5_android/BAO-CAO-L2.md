@@ -1,6 +1,6 @@
 # BAO-CAO-L2: T17c5 NPC (công nhân A2, phiên Sonnet)
 
-Trạng thái: **LÀM MỘT PHẦN** (dừng vì ngữ cảnh ~300k, theo luật). Xong và kiểm: Mua kỹ năng, Mua vật phẩm, Bán vật phẩm, Bộ sưu tập (màn menu 3 nút), popup NPC (StatePopup loại 4 có giá). Chưa làm: Tôi luyện thường/cao cấp, Kết hợp Orb, Chế biến, Bộ sưu tập (lưới/đăng ký), màn chọn vật phẩm (picker). Các màn đó vẫn chạy ĐƯỜNG GỐC (không crash: `states.def` chỉ bật state 0/1/2 và 7 khi `[this+0xf]==0`).
+Trạng thái: **LÀM MỘT PHẦN** (phiên 2: đã kiểm đủ 3 cỡ + hồi quy ĐẠT + 64/64 vùng chạm cho phần đã làm; các màn mới còn lại chưa dựng). Xong và kiểm: Mua kỹ năng, Mua vật phẩm, Bán vật phẩm, Bộ sưu tập (màn menu 3 nút), popup NPC (StatePopup loại 4 có giá). Chưa làm: Tôi luyện thường/cao cấp, Kết hợp Orb, Chế biến, Bộ sưu tập (lưới/đăng ký), màn chọn vật phẩm (picker). Các màn đó vẫn chạy ĐƯỜNG GỐC (không crash: `states.def` chỉ bật state 0/1/2 và 7 khi `[this+0xf]==0`).
 
 ## File
 - `engine/menu/npc.c` (mới): `npc_paint/npc_touch/npc_move`, `npcpop_paint/npcpop_touch`. Dòng `npc`, `npcpop` trong `states.def`; `build.sh` thêm biên dịch npc.c + 4 symbol guest (`GetSearchSkillBook`, `NpcShop::GetItemInfo`, `GetCollectionCompleteTotalCount`, `vtable for StateInNpcMenu`); `mui.h` thêm khai báo + macro `NPC_POPUP`; `bag.c` thêm 2 hàm xuất ở cuối file (`npc_item_info`, `npc_rarity`) để dùng lại hộp thông tin vật phẩm.
@@ -28,8 +28,13 @@ Xem mục "Kết quả" cuối file (số liệu chạy cuối).
 6. Popup NPC loại 5 (nhập số lượng; `SetPopupState` 0x1093d8) chưa làm (giữ đường gốc).
 7. Chưa làm: ô sách kỹ năng không vẽ biểu tượng khoá (gốc vẽ khoá, công thức chưa giải mã, không phải `tiền < giá`); hộp thông tin sách kỹ năng dùng `CommonUi::DrawItemDiscription` (không có hàng "Cần cấp" riêng như mockup).
 
-## CÒN LẠI: (các bước cuối chưa xong khi dừng; file đang sửa: engine/menu/npc.c, đã sửa chỉnh vùng chạm tab con/nút bộ sưu tập NHƯNG CHƯA build lại)
-1. `export WORK=~/hl5work_l2; harness/t17c2/build_dev.sh` rồi `python3 -I harness/t17c5/check_c5.py 400 240 new OUT/new` và `... orig OUT/orig`, `python3 harness/t17c5/cmp_c5.py OUT 400x240`, `python3 harness/t17c5/cmp_hits.py OUT/new 400x240` (cũng 1200x540). Lần chạy gần nhất (trước chỉnh): mọi kịch bản ĐẠT (skill_buy, skill_nomoney, item_buy, item_buy_tab1, item_buy_no, sale, sale_page) trừ 2 kịch bản coll_menu/item_buy_btn do lỗi thiết kế kịch bản (đã sửa trong check_c5.py, chưa chạy lại); vùng chạm lệch 6/64 (tab con 1-2 px, nút bộ sưu tập 2 px; đã sửa trong npc.c).
-2. Hồi quy c1, c2, c3a, c3b, c3c: script `/tmp/claude-0/regress.sh` (log `/tmp/claude-0/regress.log`) chưa xong khi dừng; chạy lại từng `harness/t17c*/check_*_all.py` với WORK=~/hl5work_l2.
-3. Chưa chép ảnh vào `shots/L2/` (ảnh nằm ở /tmp/claude-0/c5/new/raw_400x240/*.png sau lần chạy; scratch có thể mất).
-4. Chưa 20 lần mở/đóng NPC (rò) và chưa chạy 1200x540/600x270.
+## Kết quả kiểm (phiên 2, build dev.so xong rồi mới chạy)
+- Sửa vùng chạm tab con (`subtabs` trong npc.c: `tw=(cw-2(n-1))/n`, lề chia đều hai bên, khe 2 px như mockup `w_subtabs`): **64/64 vùng chạm khớp `hit_rects.json`** ở cả 3 cỡ 400x240, 600x270, 1200x540 (`cmp_hits.py`: TONG 64 LECH 0).
+- 9 kịch bản (skill_buy, skill_nomoney, item_buy, item_buy_tab1, item_buy_no, item_buy_btn, sale, sale_page, coll_menu), chạm mới vs phím gốc: **ĐẠT** ở 3 cỡ (trường con trỏ, tiền, túi, kỹ năng, file lưu đều trùng). Gồm 2 kịch bản sửa chưa chạy (coll_menu, item_buy_btn). Số liệu: `shots/L2/check_c5.txt`.
+- 20 lần mở/đóng NPC (loại 0,1,2,7 xen, chạm/phím, `harness/t17c5/check_cycles.py`), 3 cỡ: allocation sống +20 (gốc +21), heap top +3152 (gốc +3152), về đúng lớp cảnh chơi 0x15e150 mọi lần: không rò thêm so với gốc (gốc tự có +1 khối/lần mở NPC).
+- Hồi quy (build dev.so + t17c3/t17c3b mới rồi mới chạy; ghi vào `shots/L2/hoi_quy/`, KHÔNG ghi đè kết quả cũ): c1 ĐẠT, c2 ĐẠT, c3a ĐẠT, c3b ĐẠT, c3c ĐẠT (`shots/L2/hoi_quy/T17c1_check.txt`, `T17c2_check.txt`, `T17c3_check_c3a.txt`, `..._c3b.txt`, `..._c3c.txt`). Chạy bằng `/tmp/claude-0/regress2.sh` (WORK=~/hl5work_l2; cần `harness/t17c3/build_dev.sh` và `t17c3b/build_dev.sh`).
+- Ảnh: `shots/L2/*.png` (9 màn x 3 cỡ, bản mới).
+
+## CÒN LẠI (chưa làm; các màn này vẫn chạy ĐƯỜNG GỐC, không crash)
+Mục 1-6 của danh sách "CÒN LẠI (giao công nhân mới)" ở trên vẫn nguyên: Tôi luyện thường/cao cấp/kết quả (state 3/4), Orb (5), Chế biến (6), Bộ sưu tập lưới/đăng ký (7, `[0xf]` 1..4), picker chọn vật phẩm, popup nhập số lượng (loại 5), cùng vùng chạm 64 -> phần còn lại của `hit_rects.json` (npc_toi_luyen*, npc_orb, npc_che_bien, npc_bo_suu_tap_luoi/dang_ky, npc_chon_vat_pham). Công nhân phiên 2 chỉ hoàn tất kiểm và sửa lệch vùng chạm cho phần đã làm, chưa dựng màn mới.
+Gợi ý bắt đầu với Bộ sưu tập lưới: `DrawCollection` 0x10c804 (dài 0xf50) gọi `HERO::GetCollectionCompleteCount(s8)` 0x86014, `BagItem::GetBagItemTotalBunchCount(s8,s8)` 0x9b6c0, `ItemTable::GetItemTableInfo`, `CommonUi::DrawAutoItemInfoBox/DrawFilterItemInfo`, `DrawScrollHor`. Lệnh kiểm: giống mục "Kết quả" (thêm kịch bản vào `harness/t17c5/check_c5.py` + ánh xạ vào `cmp_hits.py`).

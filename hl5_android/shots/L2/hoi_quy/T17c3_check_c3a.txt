@@ -1,0 +1,73 @@
+ĐẠT   400x240: kịch bản không lỗi/crash 
+ĐẠT   400x240: gán kỹ năng vào ô chuỗi (chạm == phím): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: ứng viên chưa học -> popup: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: mũi tên trái/phải (cuộn trang ứng viên): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: đổi ô chuỗi khi đang chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: ô thứ 5 (lớp 1, HERO+0x267>0): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: lớp 0 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: lớp 1 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: lớp 2 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: lớp 3 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: nút < quay lại: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   400x240: chạm tab 0 từ Liên kích -> state 1 == gốc 1
+ĐẠT   400x240: chạm tab 1 từ Liên kích -> state 2 == gốc 2
+ĐẠT   400x240: chạm tab 2 từ Liên kích -> state 3 == gốc 3
+ĐẠT   400x240: chạm tab 3 từ Liên kích -> state 4 == gốc 4
+ĐẠT   400x240: chạm tab 4 từ Liên kích -> state 5 == gốc 5
+ĐẠT   400x240: chạm tab 5 từ Liên kích -> state 6 == gốc 6
+ĐẠT   400x240: chạm tab 6 từ Liên kích -> state 7 == gốc 7
+ĐẠT   400x240: chạm tab 7 từ Liên kích -> state 8 == gốc 8
+ĐẠT   400x240: chạm tab 8 từ Liên kích -> state 9 == gốc 9
+ĐẠT   400x240: mở/đóng Liên kích 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+400x240: ảnh cảnh sau 20 lần new=0988fb5b989b470801428053b0e51c68 orig=0988fb5b989b470801428053b0e51c68
+ĐẠT   400x240: vùng chạm lien_kich == hit_rects.json (23 mục)
+ĐẠT   600x270: kịch bản không lỗi/crash 
+ĐẠT   600x270: gán kỹ năng vào ô chuỗi (chạm == phím): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: ứng viên chưa học -> popup: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: mũi tên trái/phải (cuộn trang ứng viên): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: đổi ô chuỗi khi đang chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: ô thứ 5 (lớp 1, HERO+0x267>0): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: lớp 0 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: lớp 1 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: lớp 2 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: lớp 3 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: nút < quay lại: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   600x270: chạm tab 0 từ Liên kích -> state 1 == gốc 1
+ĐẠT   600x270: chạm tab 1 từ Liên kích -> state 2 == gốc 2
+ĐẠT   600x270: chạm tab 2 từ Liên kích -> state 3 == gốc 3
+ĐẠT   600x270: chạm tab 3 từ Liên kích -> state 4 == gốc 4
+ĐẠT   600x270: chạm tab 4 từ Liên kích -> state 5 == gốc 5
+ĐẠT   600x270: chạm tab 5 từ Liên kích -> state 6 == gốc 6
+ĐẠT   600x270: chạm tab 6 từ Liên kích -> state 7 == gốc 7
+ĐẠT   600x270: chạm tab 7 từ Liên kích -> state 8 == gốc 8
+ĐẠT   600x270: chạm tab 8 từ Liên kích -> state 9 == gốc 9
+ĐẠT   600x270: mở/đóng Liên kích 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+600x270: ảnh cảnh sau 20 lần new=7ef6844cf11a087530253127ab989468 orig=7ef6844cf11a087530253127ab989468
+ĐẠT   600x270: vùng chạm lien_kich == hit_rects.json (23 mục)
+ĐẠT   1200x540: kịch bản không lỗi/crash 
+ĐẠT   1200x540: gán kỹ năng vào ô chuỗi (chạm == phím): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: ứng viên chưa học -> popup: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: nút Bỏ chọn: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: mũi tên trái/phải (cuộn trang ứng viên): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: đổi ô chuỗi khi đang chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: ô thứ 5 (lớp 1, HERO+0x267>0): trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: lớp 0 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: lớp 1 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: lớp 2 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: lớp 3 chọn ứng viên: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: nút < quay lại: trạng thái/HERO sau chạm == phím gốc
+ĐẠT   1200x540: chạm tab 0 từ Liên kích -> state 1 == gốc 1
+ĐẠT   1200x540: chạm tab 1 từ Liên kích -> state 2 == gốc 2
+ĐẠT   1200x540: chạm tab 2 từ Liên kích -> state 3 == gốc 3
+ĐẠT   1200x540: chạm tab 3 từ Liên kích -> state 4 == gốc 4
+ĐẠT   1200x540: chạm tab 4 từ Liên kích -> state 5 == gốc 5
+ĐẠT   1200x540: chạm tab 5 từ Liên kích -> state 6 == gốc 6
+ĐẠT   1200x540: chạm tab 6 từ Liên kích -> state 7 == gốc 7
+ĐẠT   1200x540: chạm tab 7 từ Liên kích -> state 8 == gốc 8
+ĐẠT   1200x540: chạm tab 8 từ Liên kích -> state 9 == gốc 9
+ĐẠT   1200x540: mở/đóng Liên kích 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+1200x540: ảnh cảnh sau 20 lần new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
+ĐẠT   1200x540: vùng chạm lien_kich == hit_rects.json (23 mục)
+KẾT LUẬN: ĐẠT
