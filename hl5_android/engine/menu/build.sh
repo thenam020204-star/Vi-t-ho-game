@@ -111,7 +111,7 @@ for p in "_pCFont|_pCFont" "BFont::DrawTextField(int, int, int, int, int, char*,
 done
 # T14: symbol guest cho hud.c
 for p in "GMenu::DrawSkillBelt(int, int, int, unsigned char, signed char, short)|GMenu_DrawSkillBelt" "Graphic::DrawEffect(int, int, int, GbmImage*, unsigned char, int, int, int, unsigned char, unsigned char, int)|Graphic_DrawEffect" \
-  "CommonUi::DrawInfoRect(int, int, int, int, int)|CommonUi_DrawInfoRect" "BFont::DrawText(int, int, int, char*, int, int)|BFont_DrawText" "StaticUtil::FileWrite(char*, char*, int)|StaticUtil_FileWrite"; do
+  "CommonUi::DrawInfoRect(int, int, int, int, int)|CommonUi_DrawInfoRect" "BFont::DrawText(int, int, int, char*, int, int)|BFont_DrawText" "StaticUtil::FileWrite(char*, char*, int)|StaticUtil_FileWrite" "StateGame::KeyReleased(int)|StateGame_KeyReleased"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 # L1b/T17c8: symbol guest cho map.c

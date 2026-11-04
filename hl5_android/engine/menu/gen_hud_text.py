@@ -10,7 +10,7 @@ def enc(s):
         if i: out.append(0x20)
         k = words.index(w); out += bytes([0xC9 + k // 94, 0xA1 + k % 94])
     return bytes(out)
-items = [('T_SAVE', 'Lưu'), ('T_DEF', 'Mặc định'), ('T_CANCEL', 'Huỷ'), ('T_TITLE', 'Sửa bố cục nút'), ('T_HINT', 'Kéo nút để di chuyển')]
+items = [('T_SAVE', 'Lưu'), ('T_DEF', 'Mặc định'), ('T_CANCEL', 'Huỷ'), ('T_TITLE', 'Sửa bố cục nút'), ('T_HINT', 'Kéo nút để di chuyển'), ('T_FIX', 'Cố định'), ('T_FOLLOW', 'Theo ngón')]
 out = ['/* sinh bởi gen_hud_text.py (không sửa tay) */']
 for n, s in items:
     b = enc(s); out.append('static const u8 %s[] = {%s};' % (n, ','.join(str(x) for x in b + b'\0'))); out.append('#define %s_N %d' % (n, len(b)))
