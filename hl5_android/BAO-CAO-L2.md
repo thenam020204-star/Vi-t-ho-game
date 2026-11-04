@@ -47,6 +47,17 @@ Xem mục "Kết quả" cuối file (số liệu chạy cuối).
 - Vật phẩm đã chọn: `gv[6912+6]` (s8, >=0 khi có) + con trỏ ItemInfo trong DrawRefine (`[sp+0x50]`, chưa lần nguồn); `RefineItem` (`HERO::GetRefineItemPtr` 0x85468) KHÔNG đổi khi chọn vật phẩm; `R[24]` (s8) = số đá dùng. Hiển thị (DrawRefine 0x1122f0): dòng đá = CT(102/103) + `%d(%d)` = (R[24], tổng túi loại 11 id 10); Tỉ lệ = `min(1000, tbl[(item[0x165])*10+306+6](s16) + 2*R[24])` in `%d.%d%%` (nghìn phân), chỉ khi `gv[6918]>=0` và `R[24]>0` (ngược lại 0.0%); Độ tôi luyện = `%d/10 > %d/10` với `item[0x165]` và +1; Tiền hiện có = `BagItem::GetMoney`; Chi phí = `RefineItem::GetItemRefineMoney(short)` 0x9c844 (khi chưa chọn vật phẩm ra 0/200 tuỳ gốc).
 - Chế biến (6), Orb (5) hàng chính, popup nhập số lượng (loại 5) chưa làm.
 
-## CÒN LẠI (chưa làm; các màn này vẫn chạy ĐƯỜNG GỐC, không crash)
-1. Tôi luyện thường/cao cấp/kết quả (hàng chính, state 3/4 `[0xf]==0`; picker đã xong).
-2. Orb (5) hàng chính. 3. Chế biến (6). 4. Popup nhập số lượng (loại 5, `SetPopupState` 0x1093d8). 5. Vùng chạm npc_toi_luyen*, npc_orb, npc_che_bien. 6. Hồi quy c1-c3 chạy lại sau khi làm xong các màn trên (đã chạy sau phiên 3: c1, c2, c3a, c3b, c3c đều ĐẠT, `shots/L2/hoi_quy/`).
+## Phiên 4 (công nhân L2 lượt mới): Tôi luyện, Orb, Chế biến, popup số lượng — ĐẠT
+Mã WIP đã có sẵn trong `npc.c` (`paint_refine`, `paint_orb`, `paint_mix`, `qty_paint/qty_touch`, cell_tap/npc_touch cho state 3..6); phiên này CHỈ kiểm + mở điều kiện (không sửa mã vẽ). Toàn bộ chạm = ghi trường con trỏ + phím gốc (RNG, tỉ lệ thực, tiền, túi do mã gốc tính; paint chỉ đọc). Tỉ lệ hiển thị (Tôi luyện `tbl[lvl*10+212|312]+2*qty`, Orb `tbl[180+6*cnt]` x2 nếu hiến tế id 9) trùng chữ số của màn gốc ở ảnh so (88.6%, 99.4%, 0.0% sau thất bại, Orb 80.0%).
+- **states.def (điều kiện mới)**: dòng `npc` = state 0..6 (mọi `[0xf]`) hoặc state 7 với `[0xf]` 0..8 (điều kiện WIP của commit 4d1530d); dòng `qty` BỎ comment (`NPC_POPUP5` + nút 1..2).
+- **Kiểm sau khi quản đốc khôi phục build_apk = v0.2-hd thật (so 0b6f32dc…, vfs 207da4ce…; chạy lại LƯỢT NÀY sau 19:15 UTC 04/11; kết quả trước đó bị loại bỏ)**:
+  - `check_c5.py` (thêm kịch bản `ref_res` = popup kết quả Tôi luyện; tổng 30 kịch bản: skill/item/sale/coll/pick cũ + ref_flow, ref_hi, ref_cancel, ref_err, ref_rate, ref_hirate, qty_pop, qty_buy, orb_rate/flow/btn, mix_flow/mixok_btn/mix_btn): chạm mới vs phím gốc, **30/30 trùng ở 400x240, 600x270, 1200x540** (trường con trỏ, tiền, hash túi, kỹ năng, file lưu; có thật sự tôi luyện/ghép Orb/chế biến: tiền -200, hash túi đổi giống nhau hai bên).
+  - `cmp_hits.py` (thêm qty_pop -> `npc_so_luong`, ref_res -> `npc_toi_luyen_ket_qua`): **126/126 vùng chạm khớp hit_rects.json** ở cả 3 cỡ (gồm npc_toi_luyen, npc_toi_luyen_cao_cap, npc_orb, npc_che_bien, npc_so_luong; popup kết quả: popup_ok).
+  - `check_cycles.py` 20 lần mở/đóng (loại 0,1,2,7,3,5,6,4, chạm/phím + picker + popup): mới live +18, heap top +3152; gốc live +19, top +3472; về cảnh chơi mọi lần, 3 cỡ: không rò thêm so gốc.
+  - Hồi quy c1, c2, c3a, c3b, c3c (sau khôi phục build_apk): tất cả KẾT LUẬN ĐẠT (`shots/L2/hoi_quy/`; script tự ghi đè shots/T17c*/check*.txt nên đã git checkout lại bản nghiệm thu).
+- Ảnh: `shots/L2/{ref_flow,ref_hi,ref_cancel,ref_err,ref_rate,ref_hirate,ref_res,qty_pop,qty_buy,orb_*,mix_*}_<cỡ>_new.png`. Số liệu: `shots/L2/check_c5.txt` (mục "Phiên 4").
+- Chưa kiểm/ghi chú: ô sách kỹ năng không có biểu tượng khoá; hộp thông tin ở Chế biến 400x240 bị cắt dòng cuối (clip, có thể cuộn ở gốc? chưa xử lý); orb có hiến tế id khác 9 chỉ kiểm đường nhánh có Bùa Đạt Thành; chưa kiểm Orb khi đã đủ ô.
+- Script dò/kiểm có sửa: `harness/t17c5/check_c5.py` (+ref_res), `cmp_hits.py` (+qty_pop, ref_res).
+
+## CÒN LẠI
+Các mục 1–6 trên đã xong (Phiên 4). Chỉ còn: ảnh soát bằng mắt 600x270 từng màn mới (đã soát 400x240 và 1200x540), hiển thị khoá ở sách kỹ năng, và hộp thông tin Chế biến ở 400x240 (dòng cuối bị cắt).

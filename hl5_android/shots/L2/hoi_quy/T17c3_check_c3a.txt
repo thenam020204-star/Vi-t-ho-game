@@ -20,7 +20,7 @@
 ĐẠT   400x240: chạm tab 7 từ Liên kích -> state 8 == gốc 8
 ĐẠT   400x240: chạm tab 8 từ Liên kích -> state 9 == gốc 9
 ĐẠT   400x240: mở/đóng Liên kích 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
-400x240: ảnh cảnh sau 20 lần new=0988fb5b989b470801428053b0e51c68 orig=0988fb5b989b470801428053b0e51c68
+400x240: ảnh cảnh sau 20 lần new=2a4c648b19af37ed3c12a45435264a32 orig=0988fb5b989b470801428053b0e51c68
 ĐẠT   400x240: vùng chạm lien_kich == hit_rects.json (23 mục)
 ĐẠT   600x270: kịch bản không lỗi/crash 
 ĐẠT   600x270: gán kỹ năng vào ô chuỗi (chạm == phím): trạng thái/HERO sau chạm == phím gốc
@@ -44,7 +44,7 @@
 ĐẠT   600x270: chạm tab 7 từ Liên kích -> state 8 == gốc 8
 ĐẠT   600x270: chạm tab 8 từ Liên kích -> state 9 == gốc 9
 ĐẠT   600x270: mở/đóng Liên kích 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
-600x270: ảnh cảnh sau 20 lần new=7ef6844cf11a087530253127ab989468 orig=7ef6844cf11a087530253127ab989468
+600x270: ảnh cảnh sau 20 lần new=d389c8101b192fd91261a5f2474dc8ff orig=7ef6844cf11a087530253127ab989468
 ĐẠT   600x270: vùng chạm lien_kich == hit_rects.json (23 mục)
 ĐẠT   1200x540: kịch bản không lỗi/crash 
 ĐẠT   1200x540: gán kỹ năng vào ô chuỗi (chạm == phím): trạng thái/HERO sau chạm == phím gốc
@@ -68,6 +68,6 @@
 ĐẠT   1200x540: chạm tab 7 từ Liên kích -> state 8 == gốc 8
 ĐẠT   1200x540: chạm tab 8 từ Liên kích -> state 9 == gốc 9
 ĐẠT   1200x540: mở/đóng Liên kích 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
-1200x540: ảnh cảnh sau 20 lần new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
+1200x540: ảnh cảnh sau 20 lần new=72e805c4d2d44e7b400bc6fbe3256c69 orig=35c707dd4af597d7cb4463ba6c837f12
 ĐẠT   1200x540: vùng chạm lien_kich == hit_rects.json (23 mục)
 KẾT LUẬN: ĐẠT

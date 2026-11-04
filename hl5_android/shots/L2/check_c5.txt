@@ -59,3 +59,11 @@ new
 orig
 {"live": 20, "top": 3152, "live4": 8, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 20, "top": 3152, "live4": 8, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 20, "top": 3152, "live4": 8, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}
 KET LUAN phan da lam: DAT
+
+
+== Phiên 4 (chạy lại sau khi quản đốc khôi phục build_apk = v0.2-hd thật, sau 19:15 UTC 04/11) ==
+check_c5.py 30 kịch bản (thêm ref_flow ref_hi ref_cancel ref_err ref_rate ref_hirate ref_res qty_pop qty_buy orb_rate orb_flow orb_btn mix_flow mixok_btn mix_btn), chạm vs phím gốc: 400x240 TONG LECH 0; 600x270 TONG LECH 0; 1200x540 TONG LECH 0
+cmp_hits.py: 400x240 TONG 126 LECH 0; 600x270 TONG 126 LECH 0; 1200x540 TONG 126 LECH 0 (gồm npc_toi_luyen, _cao_cap, _ket_qua, npc_orb, npc_che_bien, npc_so_luong)
+check_cycles.py 20 lần (loại 0,1,2,7,3,5,6,4), 3 cỡ: mới {live 18, top 3152, back_ok true}, gốc {live 19, top 3472, back_ok true}: không rò thêm
+Hồi quy c1, c2, c3a, c3b, c3c: KẾT LUẬN ĐẠT (hoi_quy/*.txt)
+KET LUAN phiên 4: DAT
