@@ -5,6 +5,8 @@
 
 volatile u32 mui_flags;
 mui_m L;
+int mui_tz;                                   /* T14: chỉ số con trỏ (tham số z) của chạm hiện tại, cho hud.c */
+H void hud_release(void *self, int x, int y, int z);
 
 H void mui_nop_paint(void *self);
 H int mui_nop_touch(void *self, int x, int y);
@@ -86,14 +88,14 @@ static int call_move(int id, void *self, int x, int y) {
     void mui_paint_##I(void *self) { \
         if (!(mui_flags & MUI_F_DISABLE)) { int id = sel(MUI_CLS_##I, self); if (id && mui_begin()) { call_paint(id, self); return; } } \
         N##_Paint(self); } \
-    int mui_tp_##I(void *self, int x, int y, int z) { \
+    int mui_tp_##I(void *self, int x, int y, int z) { mui_tz = z; \
         if (!(mui_flags & MUI_F_DISABLE)) { int id = sel(MUI_CLS_##I, self); if (id && mui_fb_w() > 0) { call_touch(id, self, x, y); return 0; } } \
         return N##_TouchPressed(self, x, y, z); } \
-    int mui_tm_##I(void *self, int x, int y, int z) { \
+    int mui_tm_##I(void *self, int x, int y, int z) { mui_tz = z; \
         if (!(mui_flags & MUI_F_DISABLE)) { int id = sel(MUI_CLS_##I, self); if (id && mui_fb_w() > 0) { call_move(id, self, x, y); return 0; } } \
         return N##_TouchMoved(self, x, y, z); } \
     int mui_tr_##I(void *self, int x, int y, int z) { \
-        if (!(mui_flags & MUI_F_DISABLE)) { int id = sel(MUI_CLS_##I, self); if (id) { mui_touch_release(); return 0; } } \
+        if (!(mui_flags & MUI_F_DISABLE)) { int id = sel(MUI_CLS_##I, self); if (id) { if (MUI_CLS_##I == MUI_CLS_GAME && id == ST_hud + 1) { hud_release(self, x, y, z); return 0; } mui_touch_release(); return 0; } } \
         return N##_TouchReleased(self, x, y, z); }
 #include "classes.def"
 #undef MUI_CLASS

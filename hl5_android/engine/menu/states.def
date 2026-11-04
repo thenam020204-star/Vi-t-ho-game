@@ -33,6 +33,8 @@ MUI_STATE(POPUP, expqty, (EXPERT_POPUP(self, 5) && POP_NBTN(self) >= 1 && POP_NB
 MUI_STATE(GAME, gres, (GS(self) == 2 && *((s8 *)(self) + 0xd) >= 1 && *((s8 *)(self) + 0xd) <= 2), gres_paint, gpop_touch, gpop_move)
 /* T16: hội thoại cốt truyện/NPC (StateGame state 0 khi [EventProc+0x75] != 0): Paint = Paint gốc (khung thoại vẽ bằng điểm móc hooks.def/dialog.c); chạm: nút Bỏ qua -> KeyPressed(35), chạm khác -> KeyPressed(-5) */
 MUI_STATE(GAME, dlg, (GS(self) == 0 && *(u8 **)(gv + 5204) && *(*(u8 **)(gv + 5204) + 0x75)), dlg_paint, dlg_touch, dlg_move)
+/* T14b: HUD chiến đấu mới (StateGame state 0, không hội thoại): Paint gốc + nút mới; chạm dịch về nút gốc; nhấn giữ nút tạm dừng = sửa bố cục (hud.c) */
+MUI_STATE(GAME, hud, (GS(self) == 0), hud_paint, hud_touch, hud_move)
 /* L3/T17c7: MainMenu: state 4 lưới 6 ô; 5 sub 0 slot / sub 1 lớp; 6 sub 0 Chuyên Gia = chọn slot; 9 sub 0 Cài đặt (10 mục); popup lớp = StatePopup loại 8 (cha MainMenu). State 2/3 (logo/tiêu đề), 10/11/12 (Thành tựu/Trợ giúp/Hỗ trợ), 0/1/7/8 (mạng), Cài đặt sub 1: đường gốc. */
 // [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAIN, mm4, (GS(self) == 4), mm_grid_paint, mm_touch, mm_move)
 // [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAIN, mm5a, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 0), mm_slot_paint, mm_touch, mm_move)

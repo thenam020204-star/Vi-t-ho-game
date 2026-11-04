@@ -36,6 +36,7 @@ for f in quest; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS
 for f in map; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1b/T17c8: StateMap
 for f in expert; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Chuyên gia
 for f in mmenu; do [ -f $f.c ] && { $CC $DEF -DMM_DEFAULT_K=$MMK -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L3/T17c7: MainMenu
+for f in hud; do [ -f $f.c ] && { python3 -I gen_hud_art.py "$OUT/hud_art.h"; python3 -I gen_hud_text.py "$OUT/hud_text.h"; $CC $DEF -I"$OUT" -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # T14: HUD chiến đấu
 for f in npc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L2/T17c5: NPC
 # T16: khung hội thoại mới (dialog.c; dlg_text.h sinh từ từ điển $WORK/vi_android/dict.txt)
 if [ -f dialog.c ]; then python3 -I gen_dlg_text.py "$OUT/dlg_text.h"; $CC $DEF -I"$OUT" -c dialog.c -o "$OUT/dialog.o"; OBJS="$OBJS $OUT/dialog.o"; fi
@@ -106,6 +107,11 @@ for p in "_pCFont|_pCFont" "BFont::DrawTextField(int, int, int, int, int, char*,
   "EventProc::Event_DialogWindow(signed char)|EventProc_Event_DialogWindow" "DIALOG_INFO::Draw_Face()|DIALOG_INFO_Draw_Face" \
   "DIALOG_INFO::SetFacePosition(unsigned char, signed char)|DIALOG_INFO_SetFacePosition" \
   "Graphic::DrawImageBlending(int, int, int, GbmImage*, unsigned char, unsigned char, unsigned char, int)|Graphic_DrawImageBlending"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
+# T14: symbol guest cho hud.c
+for p in "GMenu::DrawSkillBelt(int, int, int, unsigned char, signed char, short)|GMenu_DrawSkillBelt" "Graphic::DrawEffect(int, int, int, GbmImage*, unsigned char, int, int, int, unsigned char, unsigned char, int)|Graphic_DrawEffect" \
+  "CommonUi::DrawInfoRect(int, int, int, int, int)|CommonUi_DrawInfoRect" "BFont::DrawText(int, int, int, char*, int, int)|BFont_DrawText" "StaticUtil::FileWrite(char*, char*, int)|StaticUtil_FileWrite"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 # L1b/T17c8: symbol guest cho map.c
