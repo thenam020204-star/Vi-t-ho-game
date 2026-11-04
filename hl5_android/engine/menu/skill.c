@@ -1,6 +1,6 @@
 /* T17c3c: Kỹ năng (InGameMenu state 4): 5 tab con, lưới 4x4 cuộn, hộp mô tả, nút Gán phím tắt, popup chọn ô nhanh (2 bộ, nút đổi bộ).
  * Số đo: ui_new/menu/LAYOUT.md §11 + mock_b2a.py (skill_geom, screen_skill, w_belt_popup). Kiến trúc A (BAO-CAO §13.4): Paint + Touch mới,
- * KeyPressed/Process/SetPopupState GỐC (chạm = ghi trường con trỏ gốc rồi KeyPressed(-5) gốc). BAO-CAO-17c.md: trường, dữ liệu, bằng chứng.
+ * KeyPressed/Process/SetPopupState GỐC (chạm = ghi trường con trỏ gốc rồi KeyPressed(-5) gốc). BAO-CAO-RE.md §17.3: trường, dữ liệu, bằng chứng.
  * Trường StateInGameMenu (KeySkillMenu 0x1039b0 / DrawSkillMenu 0xf115c): +0xd SubState (0 chọn tab con, 1..5 lưới của tab con 0..4, 6 chọn ô nhanh,
  * 7..10 mua/ghép sách: GIỮ đường gốc), +0xe tab con 0..4, +0xf ô trong cửa sổ 0..15, +0x10 chỉ số tuyệt đối (cửa sổ = ([0x10]-[0xf])/4 hàng),
  * +0x11 con trỏ ô nhanh (sub 6), +0x1a/0x1b/0x1c món đang cầm (loại/chỉ số/biểu tượng). */

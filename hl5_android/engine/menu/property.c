@@ -1,6 +1,6 @@
 /* T17c3b: InGameMenu state 5 = Đặc tính (đầu tư điểm). Số đo theo ui_new/menu/LAYOUT.md §11 + mock_b2a.py (screen_prop/prop_geom/w_subtabs/pips/w_info).
  * Kiến trúc A (BAO-CAO §13.4): Paint + Touch mới; KeyPressed/Process/SetPopupState GỐC. Chạm = ghi trường con trỏ gốc rồi KeyPressed(-5).
- * Trạng thái gốc của StateInGameMenu ở tab 5 (dò động + KeyPropertyMenu 0x102bc4, BAO-CAO-17b.md):
+ * Trạng thái gốc của StateInGameMenu ở tab 5 (dò động + KeyPropertyMenu 0x102bc4, BAO-CAO-RE.md §17.2):
  *   +0xd sub: 0 = hàng tab nhánh (TRÁI/PHẢI đổi nhánh), 1..3 = lưới nhánh (sub = nhánh+1; vào bằng PHÍM XUỐNG = SetSubState(nhánh+1) + con trỏ 0)
  *   +0xe nhánh 0..2; +0xf vị trí con trỏ TRONG cửa sổ nhìn (0..11, = 3*hàng+cột); +0x10 chỉ số TUYỆT ĐỐI trong nhánh (0..17); hàng đầu cửa sổ = (+0x10 - +0xf) / 3 (0..2)
  *   OK (-5) ở lưới = KeyPropertyMenu tự kiểm điều kiện rồi SetPopupState(16/17/18) (xác nhận/không đủ điều kiện); đầu tư thật nằm trong Process gốc.
@@ -13,7 +13,6 @@
 #define I8(p, o) (*(s8 *)((u8 *)(p) + (o)))
 #define I16(p, o) (*(s16 *)((u8 *)(p) + (o)))
 
-extern H u8 *HERO_GetHeroSkillInfoPtr(u8 *hero, int i);
 extern H void CommonUi_GetSkillDiscription(void *cui, u8 *out, int a, u8 *info);
 
 #define H_BR 0x30        /* +i (0..3): tab nhánh (3 = ô "Điểm", chỉ nuốt chạm) */

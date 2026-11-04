@@ -7,7 +7,7 @@ import sys, os, json, struct, hashlib, glob
 H = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, H)
 from c1lib import *
 W, Hh, MODE, OUT = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3], sys.argv[4]
-WK = os.path.expanduser('~/hl5work'); os.makedirs(OUT, exist_ok=True)
+WK = os.path.expanduser(os.environ.get('WORK', '~/hl5work')); os.makedirs(OUT, exist_ok=True)
 NEW = MODE == 'new'
 so = WK + ('/t17c1/dev/dev.so' if NEW else '/build_apk/libHeroesLore5.so')
 vfs = WK + ('/t17c1/dev/data.vfs.mp3' if NEW else '/build_apk/data.vfs.mp3')

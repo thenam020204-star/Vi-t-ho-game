@@ -12,6 +12,6 @@ c.r.call(0xe9fec, c.top()); c.step(6); print('compose filter sub', c.sub(), 'cur
 # popup 10
 c.S3(2, 8)
 bag = c.bag(); it = c.r.call(0x9b5f4, bag, 0, 3)
-tm = c.g.rd32(BASE + [int(l.split()[0],16) for l in __import__('subprocess').run(['llvm-nm','-C','--defined-only',os.path.expanduser('~/hl5work/apk/assets/libHeroesLore5.so')],capture_output=True,text=True).stdout.splitlines() if l.endswith(' _pTextMgr')][0])
+tm = c.g.rd32(BASE + [int(l.split()[0],16) for l in __import__('subprocess').run(['llvm-nm','-C','--defined-only',os.path.join(os.path.expanduser(os.environ.get('WORK', '~/hl5work')), 'apk/assets/libHeroesLore5.so')],capture_output=True,text=True).stdout.splitlines() if l.endswith(' _pTextMgr')][0])
 txt = c.r.call(0x13fa94, tm, 295)
 c.callx(0xe31b8, c.top(), 24, txt, 0, 0, 9, it); c.step(6); c.shot('popup10'); print('pop10 cls', hex(c.cls()))

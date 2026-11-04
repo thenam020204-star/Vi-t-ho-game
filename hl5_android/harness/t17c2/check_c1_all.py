@@ -2,7 +2,7 @@
 """T17c1: chạy check_c1.py ở 3 cỡ x 2 mode (new/orig), so kết quả mới với gốc, ghép ảnh so mockup. Dùng: check_c1_all.py [--skip-run]  (kết quả: shots/T17c1/)."""
 import sys, os, json, subprocess, glob
 H = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(H, '..', '..'))
-OUT = os.path.expanduser('~/hl5work_c2/t17c2/out1'); SH = os.path.join(REPO, 'shots/T17c1'); os.makedirs(SH, exist_ok=True)
+OUT = os.path.join(os.path.expanduser(os.environ.get('WORK', '~/hl5work_c2')), 't17c2/out1'); SH = os.path.join(REPO, 'shots/T17c1'); os.makedirs(SH, exist_ok=True); os.makedirs(OUT, exist_ok=True)
 SIZES = [(400, 240), (600, 270), (1200, 540)]
 if '--skip-run' not in sys.argv:
     ps = []

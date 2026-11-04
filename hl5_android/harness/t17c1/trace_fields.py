@@ -7,7 +7,7 @@ from c1lib import *
 from unicorn import UC_HOOK_CODE, UC_HOOK_MEM_READ
 from unicorn.arm_const import *
 so, vfs, scen = sys.argv[1:4]
-W = os.path.expanduser('~/hl5work')
+W = os.path.expanduser(os.environ.get('WORK', '~/hl5work'))
 r = Run(so, vfs, 600, 270, 'trace', W + '/t17c1')
 route(r, 1000)
 g = r.g; uc = g.uc

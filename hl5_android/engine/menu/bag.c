@@ -172,7 +172,8 @@ static void belt_slot(int slot, int *icon, int *count) {
     *icon = -1; *count = 0;
     if (type == 0 && idx >= 0) {
         int (*f)(u8 *, int) = (*(int (***)(u8 *, int))h)[0x24 / 4];
-        *icon = (s8)f(h, idx);
+        int sk = (s8)f(h, idx);   /* GMenu::DrawSkillBeltIcon 0x7d6c0: sk>42 -> sk+130, ngược lại sk + 43*lớp */
+        *icon = sk > 42 ? sk + 130 : I8(h, 0x22c) * 43 + sk;
     } else if (type == 2) {
         for (int i = 0; i < 400; i++) buf[i] = 0;
         ItemTable_GetItemTableInfo(ITEMTABLE(), buf, 11, idx);

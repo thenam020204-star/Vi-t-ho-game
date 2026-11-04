@@ -3,7 +3,7 @@
 import os, sys
 from PIL import Image
 H = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(H, '..', '..'))
-RAW = os.path.expanduser('~/hl5work_c2/t17c2/out2'); SH = os.path.join(REPO, 'shots/T17c2'); MK = os.path.join(REPO, 'ui_new/menu')
+RAW = os.path.join(os.path.expanduser(os.environ.get('WORK', '~/hl5work_c2')), 't17c2/out2'); SH = os.path.join(REPO, 'shots/T17c2'); MK = os.path.join(REPO, 'ui_new/menu')
 os.makedirs(SH, exist_ok=True)
 for f in os.listdir(SH):
     if f.endswith('.png'): os.remove(os.path.join(SH, f))

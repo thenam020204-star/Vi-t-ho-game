@@ -123,7 +123,7 @@ def sc_popup10():
     setup_items(); c.S3(2)
     bag = c.bag(); it = r.call(0x9b5f4, bag, 0, 3)
     import subprocess
-    pt = [int(l.split()[0], 16) for l in subprocess.run(['llvm-nm', '-C', '--defined-only', os.path.expanduser('~/hl5work/apk/assets/libHeroesLore5.so')], capture_output=True, text=True).stdout.splitlines() if l.endswith(' _pTextMgr')][0]
+    pt = [int(l.split()[0], 16) for l in subprocess.run(['llvm-nm', '-C', '--defined-only', os.path.join(os.path.expanduser(os.environ.get('WORK', '~/hl5work')), 'apk/assets/libHeroesLore5.so')], capture_output=True, text=True).stdout.splitlines() if l.endswith(' _pTextMgr')][0]
     txt = r.call(0x13fa94, g.rd32(BASE + pt), 295)
     c.callx(0xe31b8, c.top(), 24, txt, 0, 0, 9, it); r.step(6); c.shot('popup_chi_tiet')
     out = {'p': ptrs()}

@@ -2,7 +2,7 @@
 """T17c3a: chạy check_c3a.py 3 cỡ x 2 mode, so chạm (new) với phím gốc (orig), so vùng chạm với hit_rects.json. Dùng: check_c3a_all.py [--skip-run] [--redo-orig]. Kết quả: shots/T17c3/check_c3a.txt"""
 import sys, os, json, subprocess
 H = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(H, '..', '..'))
-OUT = os.path.expanduser('~/hl5work_c3/t17c3/out'); SH = os.path.join(REPO, 'shots/T17c3'); os.makedirs(SH, exist_ok=True); os.makedirs(OUT, exist_ok=True)
+OUT = os.path.join(os.path.expanduser(os.environ.get('WORK', '~/hl5work_c3')), 't17c3/out'); SH = os.path.join(REPO, 'shots/T17c3'); os.makedirs(SH, exist_ok=True); os.makedirs(OUT, exist_ok=True)
 SIZES = [(400, 240), (600, 270), (1200, 540)]
 if '--skip-run' not in sys.argv:
     ps = []

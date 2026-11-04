@@ -3,7 +3,7 @@
 import os
 from PIL import Image
 H = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(H, '..', '..'))
-RAW = os.path.expanduser('~/hl5work_c3/t17c3/out'); SH = os.path.join(REPO, 'shots/T17c3'); MK = os.path.join(REPO, 'ui_new/menu'); os.makedirs(SH, exist_ok=True)
+RAW = os.path.join(os.path.expanduser(os.environ.get('WORK', '~/hl5work_c3')), 't17c3/out'); SH = os.path.join(REPO, 'shots/T17c3'); MK = os.path.join(REPO, 'ui_new/menu'); os.makedirs(SH, exist_ok=True)
 for f in os.listdir(SH):
     if f.startswith('lien_kich_') and f.endswith('.png'): os.remove(os.path.join(SH, f))
 PICK = [('lien_kich', 400, 240, 'lien_kich'), ('lien_kich', 1200, 540, 'lien_kich'), ('lien_kich_nav', 600, 270, 'lien_kich'), ('lien_kich_5', 600, 270, None)]

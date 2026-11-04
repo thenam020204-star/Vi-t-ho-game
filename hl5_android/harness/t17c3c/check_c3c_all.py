@@ -10,7 +10,8 @@ if '--skip-run' not in sys.argv:
     ps = []
     for (w, h) in SIZES:
         for mode in ('new', 'orig'):
-            if mode == 'orig' and os.path.exists(os.path.join(OUT, 'res_%dx%d_orig.json' % (w, h))) and '--redo-orig' not in sys.argv: continue
+            cache = os.path.join(OUT, 'res_%dx%d_orig.json' % (w, h))   # bỏ cache chuẩn gốc nếu kịch bản kiểm mới hơn (lỗi cũ: cache thiếu 'drag2')
+            if mode == 'orig' and os.path.exists(cache) and os.path.getmtime(cache) > os.path.getmtime(os.path.join(H, 'check_c3c.py')) and '--redo-orig' not in sys.argv: continue
             ps.append(subprocess.Popen([sys.executable, os.path.join(H, 'check_c3c.py'), str(w), str(h), mode, OUT], stdout=open(os.path.join(OUT, 'log_%d_%s.txt' % (w, mode)), 'w'), stderr=subprocess.STDOUT))
     for p in ps: p.wait()
 L = []; BAD = [0]

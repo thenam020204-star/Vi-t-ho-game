@@ -3,8 +3,7 @@
 ĐẠT   400x240: đổi tab con từ lưới (chọn ô + tab 3, 4): trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   400x240: chọn ô lưới (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   400x240: kéo lưới 1 hàng == DOWN x4 rồi UP x3: trạng thái/dữ liệu sau chạm == phím gốc
-LỖI   400x240: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng thái/dữ liệu sau chạm == phím gốc  NEW={"p": {"cls": "0x15e290", "f": [1, 0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "gv": [0], "st": 4, "x2a": 0, "x2c": 0}}
-      ORIG=null
+ĐẠT   400x240: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   400x240: ô -> popup -> Gán phím tắt -> đổi bộ -> gán ô nhanh: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   400x240: gán đè ô nhanh (giữ món cũ) rồi Huỷ: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   400x240: popup mục 2 (Tháo): trạng thái/dữ liệu sau chạm == phím gốc
@@ -35,8 +34,7 @@ LỖI   400x240: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng 
 ĐẠT   600x270: đổi tab con từ lưới (chọn ô + tab 3, 4): trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   600x270: chọn ô lưới (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   600x270: kéo lưới 1 hàng == DOWN x4 rồi UP x3: trạng thái/dữ liệu sau chạm == phím gốc
-LỖI   600x270: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng thái/dữ liệu sau chạm == phím gốc  NEW={"p": {"cls": "0x15e290", "f": [1, 0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "gv": [0], "st": 4, "x2a": 0, "x2c": 0}}
-      ORIG=null
+ĐẠT   600x270: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   600x270: ô -> popup -> Gán phím tắt -> đổi bộ -> gán ô nhanh: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   600x270: gán đè ô nhanh (giữ món cũ) rồi Huỷ: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   600x270: popup mục 2 (Tháo): trạng thái/dữ liệu sau chạm == phím gốc
@@ -67,8 +65,7 @@ LỖI   600x270: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng 
 ĐẠT   1200x540: đổi tab con từ lưới (chọn ô + tab 3, 4): trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   1200x540: chọn ô lưới (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   1200x540: kéo lưới 1 hàng == DOWN x4 rồi UP x3: trạng thái/dữ liệu sau chạm == phím gốc
-LỖI   1200x540: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng thái/dữ liệu sau chạm == phím gốc  NEW={"p": {"cls": "0x15e290", "f": [1, 0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "gv": [0], "st": 4, "x2a": 0, "x2c": 0}}
-      ORIG=null
+ĐẠT   1200x540: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   1200x540: ô -> popup -> Gán phím tắt -> đổi bộ -> gán ô nhanh: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   1200x540: gán đè ô nhanh (giữ món cũ) rồi Huỷ: trạng thái/dữ liệu sau chạm == phím gốc
 ĐẠT   1200x540: popup mục 2 (Tháo): trạng thái/dữ liệu sau chạm == phím gốc
@@ -94,4 +91,4 @@ LỖI   1200x540: kéo xuống 1 hàng rồi kéo lại == 1 phím DOWN: trạng
 1200x540: ảnh cảnh sau 20 lần new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
 ĐẠT   1200x540: vùng chạm ky_nang == hit_rects.json (35 mục)
 ĐẠT   1200x540: vùng chạm ky_nang_phim_tat == hit_rects.json (7 mục)
-KẾT LUẬN: KHÔNG ĐẠT (3 lỗi)
+KẾT LUẬN: ĐẠT
