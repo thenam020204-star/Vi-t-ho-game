@@ -9,12 +9,13 @@ def fl():
     t = c.top(); return [c.s8(t, o) for o in range(0xc, 0x1c)]
 def cstr(a):
     b=bytes(g.uc.mem_read(a,60)); return b.split(b'\0')[0]
+
 print('state0', hex(c.cls()))
 c.r.call(0x42ab8, 0, 0); c.step(10)
 print('cash', hex(c.cls()), fl()); c.shot('cash0')
-for k in ['RIGHT','DOWN','OK','OK']:
+cs=None
+for k in ['RIGHT','DOWN','OK','OK','OK','OK']:
     c.key(k, 6); print(k, hex(c.cls()), fl())
+    c.shot('cash_'+k)
     t=c.top()
-    if c.cls()==0x15e5f0 or True:
-        c.shot('cash_'+k)
-t=c.top(); print('rec', [c.b8(c.u32(c.u32(t+0x14)+4), i) for i in range(48)])
+    if c.cls()==0x15e5b0 or c.cls()==0x15e5f0: print(' msg', cstr(c.u32(t+0x24)) if 0 else '', [hex(c.u32(t+o)) for o in (0x14,0x24)])

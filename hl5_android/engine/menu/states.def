@@ -12,6 +12,8 @@ MUI_STATE(POPUP, pop, ((POP_TYPE(self) >= 1 && POP_TYPE(self) <= 3 && POP_NBTN(s
 MUI_STATE(INGAME, prop, (GS(self) == 5), prop_paint, prop_touch, prop_move)
 /* T17c3c: Kỹ năng (state 4): sub 0 chọn tab con, 1..5 lưới, 6 chọn ô nhanh; sub 7..10 (mua/ghép sách) giữ đường gốc */
 MUI_STATE(INGAME, sk, (GS(self) == 4 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 6), sk_paint, sk_touch, sk_move)
+/* L1/T17c6: Cash shop (state 0) */
+MUI_STATE(CASH, cash, (GS(self) == 0), cash_paint, cash_touch, cash_move)
 #ifdef MUI_DEBUG
 MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
 #endif

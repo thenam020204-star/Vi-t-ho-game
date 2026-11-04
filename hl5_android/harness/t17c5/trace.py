@@ -24,6 +24,7 @@ def hook(uc_, addr, size, ud):
     a = addr - BASE
     if a in funcs: log.append((funcs[a], [uc.reg_read(x) for x in (UC_ARM_REG_R0, UC_ARM_REG_R1, UC_ARM_REG_R2, UC_ARM_REG_R3)]))
 for a in funcs: uc.hook_add(UC_HOOK_CODE, hook, begin=BASE + a, end=BASE + a)
+uc.ctl_flush_tb()
 r.call(0x42b08, 0, typ, 1); c.step(20)
 for a in acts:
     k, _, v = a.partition(':')

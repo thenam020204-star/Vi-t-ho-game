@@ -220,6 +220,11 @@ extern H u8 *HERO_GetHeroSkillInfoPtr(void *hero, int i);
 H void combo_paint(void *self, const mui_r *body);
 H int combo_cb(void *self, int id);
 
+/* ---------------- cash.c (L1/T17c6), t7.c ---------------- */
+H void cash_paint(void *self);
+H int cash_touch(void *self, int x, int y);
+H int cash_move(void *self, int x, int y);
+
 /* ---------------- dbg.c (chỉ -DMUI_DEBUG) ---------------- */
 #ifdef MUI_DEBUG
 extern H volatile int mui_dbg_mw, mui_dbg_mh;   /* khung mockup mô phỏng (400x240 / 1200x540) do harness ghi */

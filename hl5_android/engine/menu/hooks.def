@@ -1,3 +1,8 @@
 # T17c2: điểm móc call-site (mỗi dòng: HOOK_BL(vaddr_của_lệnh_bl, đích_gốc, hàm_mới_trong_đoạn_menu)); inject_menu.py kiểm lệnh gốc là `bl đích_gốc` rồi sinh dòng so_patches.tsv.
 # CommonUi::DrawItemDiscription 0x777a4: lời gọi BFont::DrawTextLine duy nhất (0x77abc) -> mui_cap_line: ở chế độ bắt (mui_cap_on) sao chép bộ đệm văn bản thay vì vẽ, ngược lại gọi BFont::DrawTextLine gốc (cùng 8 tham số).
 HOOK_BL(0x77abc, 0x41940, mui_cap_line)
+# L1/T7: cash shop miễn phí + hồi sinh offline (t7.c). 0xd9330 = bl NETWORK::netConnect(3) trong StateCashShop::Process; 0xd9350 = bl StateCashShop::SetPopupState (đóng popup sau netConnect); 0xdc188 = bl netConnect(5) trong StateGame::Process.
+HOOK_BL(0xd9330, 0xc6428, t7_cash_netconnect)
+HOOK_BL(0xd9350, 0xd7e50, t7_cash_popup)
+HOOK_BL(0xdc188, 0xc6428, t7_game_revive)
+HOOK_BL(0xd9a24, 0xd7e50, t7_cash_confirm)   # KeyPressed: popup xác nhận (loại 2) với chữ "Miễn phí"

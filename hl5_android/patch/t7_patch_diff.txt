@@ -1,0 +1,10 @@
+# L1/T7 diff disasm (cũ -> mới)
+d9988: ldrh fp, [r3, #0x12]         -> mov fp, #0
+d9c2c: ldrheq fp, [r5, #0x14]       -> moveq fp, #0
+d9c30: ldrhne fp, [r5, #0x10]       -> movne fp, #0
+dbf40: bgt #0xdbf70                 -> b #0xdbf88
+
+Lần luồng tới hết hàm bao:
+- KeyPressed 0xd97ac: 3 lệnh ldrh giá -> mov r11,#0, r11 chỉ dùng làm đối số sprintk (0xd99e4 `lsl r3,r11,#16`) rồi SetPopupState(2) -> pop (0xd9a28..0xd9a30). Không rẽ nhánh theo r11.
+- KeyGameOver 0xdbe90: `b 0xdbf88` -> `ldr r0,[r6,r5]` (r6,r5 đã đặt ở 0xdbf24/0xdbf20) -> HERO::Revival() -> mov r0,r4; r1=4; pop {r4-r8,lr}; b StateGame::SetState(int) 0xdbc54 (= đường đã có khi có Bùa). 0xdbf44..0xdbf6c (SetProductID(26)+netConnect(5)) không còn tới được.
+- Điểm móc bl (hooks.def, inject_menu.py): 0xd9330 netConnect(3), 0xd9350 SetPopupState, 0xdc188 netConnect(5) -> t7.c (không gọi MTX/NET; mode khác 3/5 vẫn chuyển cho netConnect gốc).

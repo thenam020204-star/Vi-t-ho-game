@@ -27,6 +27,8 @@ done
 # T17c3b: property.c
 for f in property; do [ -f $f.c ] || continue; $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; done
 for f in skill; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # T17c3c: Kỹ năng
+for f in cash; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c6: Cash shop
+for f in t7; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T7: logic offline
 # --- địa chỉ hàm/biến guest (tra theo tên demangled trong .so gốc; ld.lld --defsym) ---
 NM=$(llvm-nm -C --defined-only "$SO")
 sym() { echo "$NM" | grep -F " $1" | awk -v n="$1" '{ l=$0; sub(/^[0-9a-f]+ . /,"",l); if (l==n) {print $1; exit} }'; }
@@ -57,6 +59,11 @@ for p in "HERO::GetHeroSkillInfoPtr(signed char)|HERO_GetHeroSkillInfoPtr" "Comm
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 a=$(sym "CommonUi::GetSkillDiscription(char*, signed char, HeroSkillInfo*)"); [ -n "$a" ] || { echo "thiếu symbol GetSkillDiscription"; exit 1; }; DEFS="$DEFS --defsym=CommonUi_GetSkillDiscription=0x$a"   # T17c3c
+# L1/T7: symbol guest cho t7.c
+for p in "ItemTable::NewItemToBag(signed char, signed char, short, unsigned char)|ItemTable_NewItemToBag" "StateCashShop::SetPopupState(signed char, char*, int, int, int)|StateCashShop_SetPopupState" \
+  "HERO::Revival()|HERO_Revival" "StateGame::SetState(signed char)|StateGame_SetState" "NETWORK::netConnect(signed char)|NETWORK_netConnect"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
 for c in $(grep -o '^MUI_CLASS([A-Z]*, [A-Za-z]*' classes.def | sed 's/MUI_CLASS([A-Z]*, //'); do
   for m in "Paint()" "KeyPressed(int)" "TouchPressed(int, int, int)" "TouchMoved(int, int, int)" "TouchReleased(int, int, int)"; do

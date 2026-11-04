@@ -61,6 +61,12 @@ af638	d40084e5000097e5d88094e5b77bfeeb0010a0e10800a0e1d07b02eb000097e5e01084e5dc
 41804	bdedffeb	f2b601eb	engine chữ Việt: bl MX_fntDrawString -> bl vn_draw (đường vẽ 2 byte của BFont::DrawText)
 88	202d0100	202e0100	p_memsz PT_LOAD#2 0x12d20 -> 0x12e20: bss thật dài thêm 0x100 B cho vn_state tại 0x1704c0 (hết bss cũ 0x1704a8)
 # <<< vn-engine
+# >>> L1 T7
+d9988	b2b1d3e1	00b0a0e3	T7 cash: giá (rec+18) -> 0: ldrh r11,[r3,#18] -> mov r11,#0 (StateCashShop::KeyPressed, popup xác nhận ghi giá 0)
+d9c2c	b4b1d501	00b0a003	T7 cash: giá (rec+20) -> 0: ldrheq r11,[r5,#20] -> moveq r11,#0
+d9c30	b0b1d511	00b0a013	T7 cash: giá (rec+16) -> 0: ldrhne r11,[r5,#16] -> movne r11,#0
+dbf40	0a0000ca	100000ea	T7 hồi sinh: KeyGameOver `bgt 0xdbf70` (có Bùa -> trừ Bùa) -> `b 0xdbf88` (Revival() + SetState(4) luôn, không cần/không trừ Bùa, không SetProductID(26)+netConnect(5))
+# <<< L1 T7
 # >>> T17c menu-vtable
 # sinh bởi engine/menu/inject_menu.py (T17c): vá ô vtable cho lớp đã bật trong states.def: INGAME, POPUP
 15e2d0	1c6c1000	20571700	T17c: vtable StateInGameMenu +0x48 (Paint) 0x106c1c -> thunk mui_paint_INGAME 0x175720
