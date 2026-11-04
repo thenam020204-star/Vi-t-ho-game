@@ -37,6 +37,7 @@ def sc_popup():
     else: c.key('OK', 5)
     return fl()
 def sc_cycles():
+    for k in range(20): enter(); sel(k % 16, ['RIGHT'] * (k % 4) + ['DOWN'] * ((k % 16) // 4)); [r.key('CLR') or r.step(5) for _ in range(3)]   # khởi động nguội (cấp phát một lần)
     live0 = len(g.heap.sizes); top0 = g.heap.top
     for k in range(20):
         enter(); sel(k % 16, ['RIGHT'] * (k % 4) + ['DOWN'] * ((k % 16) // 4)); c.step(2)
@@ -66,4 +67,4 @@ def sc_buy():
     else: c.key('OK', 5)
     res['popup3'] = fl(); res['after'] = bunch(iid); res['net'] = nets(p0)
     return res
-for nm in (['sel', 'drag', 'popup', 'cycles', 'buy'] if NEW else ['sel', 'drag', 'popup', 'cycles']): c.fork(globals()['sc_' + nm], nm)
+for nm in (os.environ.get('SC', 'sel,drag,popup,cycles,buy' if NEW else 'sel,drag,popup,cycles').split(',')): c.fork(globals()['sc_' + nm], nm)

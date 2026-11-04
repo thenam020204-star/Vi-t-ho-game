@@ -16,11 +16,13 @@ def run(item):
     tp0, b0 = snap(); out = []
     for k in seq:
         if k[0] == 'm' and k[1:].isdigit(): c.wr(c.hero + 6080, struct.pack('<i', int(k[1:]))); continue
+        if k == 'dumpR':
+            rp = c.r.call(0x85468, c.hero); out.append(('R', hex(rp), bytes(c.g.uc.mem_read(rp, 0x30)).hex())); continue
         if k[0] == 't': x, y = k[1:].split(','); c.touch_xy(int(x), int(y), 4)
         else: c.key(k, 4)
         tp, b = snap()
         if tp == tp0: d = {hex(i): (b0[i], b[i]) for i in range(0xc, 0x44) if b0[i] != b[i]}
-        else: d = {'TOP': hex(c.cls()), 'f': list(b[0xc:0x1c]), 'old': hex(tp0), 'new': hex(tp)}
+        else: d = {'TOP': hex(c.cls()), 'f': list(b[0xc:0x14]), 'w': [struct.unpack('<i', b[o:o+4])[0] for o in range(0x14, 0x30, 4)], 'par': hex(struct.unpack('<I', b[8:12])[0]), 'old': hex(tp0)}
         out.append((k, d)); tp0, b0 = tp, b
     if shot: c.step(8); c.shot(shot)
     out.append(('money', struct.unpack('<i', bytes(c.g.uc.mem_read(c.hero + 6080, 4)))[0]))

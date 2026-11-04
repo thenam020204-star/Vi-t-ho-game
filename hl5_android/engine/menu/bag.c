@@ -461,3 +461,7 @@ u8 *mui_cur_item(void *igs) {
     if (st == 3 && S8(igs, 0xd) == 0 && S8(igs, 0xe) >= 0 && S8(igs, 0xe) < 8) return EquipItem_GetEquipItem(HERO_GetEquipItemPtr(HEROP()), S8(igs, 0xe));
     return NULL;
 }
+
+/* L2: xuất cho npc.c (hộp thông tin vật phẩm + màu phẩm chất) */
+void npc_item_info(const mui_r *box, u8 *item, int flag, int scr, const u8 *meta_other) { draw_item_info(box, item, flag, scr, meta_other); }
+int npc_rarity(const u8 *name) { return rarity(name); }

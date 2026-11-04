@@ -3,7 +3,13 @@
 import json, os, sys
 OUT = sys.argv[1]; HR = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'ui_new', 'menu', 'hit_rects.json')))
 bad = 0
-def ld(p): return json.load(open(p)) if os.path.exists(p) else None
+def ld(p):
+    if not os.path.exists(p): return None
+    d = json.load(open(p))
+    def cut(x):   # bỏ 4 byte con trỏ heap (+0x14..0x17) trong dump trường: khác nhau giữa bản dựng
+        if isinstance(x, dict): return {k: ([v[:8]] if k == 'f' else cut(v)) for k, v in x.items()}
+        return x
+    return cut(d)
 for tag in ('400x240', '600x270', '1200x540'):
     d = os.path.join(OUT, 'raw_' + tag)
     for sc in ('sel', 'drag', 'popup', 'cycles'):

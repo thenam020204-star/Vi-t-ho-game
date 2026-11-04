@@ -233,3 +233,14 @@ H void dbg_paint(void *self);
 H int dbg_touch(void *self, int x, int y);
 H int dbg_move(void *self, int x, int y);
 #endif
+
+/* ---------------- npc.c (L2: StateInNpcMenu 8 cửa sổ + popup NPC) ---------------- */
+H void npc_paint(void *self);
+H int npc_touch(void *self, int x, int y);
+H int npc_move(void *self, int x, int y);
+H void npcpop_paint(void *self);
+H int npcpop_touch(void *self, int x, int y);
+H void npc_item_info(const mui_r *box, u8 *item, int flag, int scr, const u8 *meta_other);
+H int npc_rarity(const u8 *name);
+extern H u8 NPC_vtable[];                      /* "vtable for StateInNpcMenu" (nm); ô hàm = +8 */
+#define NPC_POPUP(self) (POP_TYPE(self) == 4 && *(u32 *)(*(u32 *)((u8 *)(self) + 8)) == (u32)NPC_vtable + 8)

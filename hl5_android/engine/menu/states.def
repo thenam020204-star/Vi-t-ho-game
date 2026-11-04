@@ -14,6 +14,9 @@ MUI_STATE(INGAME, prop, (GS(self) == 5), prop_paint, prop_touch, prop_move)
 MUI_STATE(INGAME, sk, (GS(self) == 4 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 6), sk_paint, sk_touch, sk_move)
 /* L1/T17c6: Cash shop (state 0) */
 MUI_STATE(CASH, cash, (GS(self) == 0), cash_paint, cash_touch, cash_move)
+/* L2/T17c5: NPC (StateInNpcMenu [this+0xe]): 0 mua kỹ năng, 1 mua vật phẩm, 2 bán; popup NPC = StatePopup loại 4 có cha là NPC */
+MUI_STATE(NPC, npc, ((*((s8 *)(self) + 0xe) >= 0 && *((s8 *)(self) + 0xe) <= 2) || (*((s8 *)(self) + 0xe) == 7 && *((s8 *)(self) + 0xf) == 0)), npc_paint, npc_touch, npc_move)
+MUI_STATE(POPUP, npcpop, (NPC_POPUP(self) && POP_NBTN(self) >= 1 && POP_NBTN(self) <= 2), npcpop_paint, npcpop_touch, ig_move)
 #ifdef MUI_DEBUG
 MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
 #endif
