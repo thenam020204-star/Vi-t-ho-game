@@ -68,14 +68,30 @@ d9c30	b0b1d511	00b0a013	T7 cash: giá (rec+16) -> 0: ldrhne r11,[r5,#16] -> movn
 dbf40	0a0000ca	100000ea	T7 hồi sinh: KeyGameOver `bgt 0xdbf70` (có Bùa -> trừ Bùa) -> `b 0xdbf88` (Revival() + SetState(4) luôn, không cần/không trừ Bùa, không SetProductID(26)+netConnect(5))
 # <<< L1 T7
 # >>> T17c menu-vtable
-# sinh bởi engine/menu/inject_menu.py (T17c): vá ô vtable cho lớp đã bật trong states.def: INGAME, POPUP
-15e2d0	1c6c1000	20571700	T17c: vtable StateInGameMenu +0x48 (Paint) 0x106c1c -> thunk mui_paint_INGAME 0x175720
-15e2b4	48061000	b0571700	T17c: vtable StateInGameMenu +0x2c (TouchPressed) 0x100648 -> thunk mui_tp_INGAME 0x1757b0
-15e2bc	9c2e0e00	64581700	T17c: vtable StateInGameMenu +0x34 (TouchMoved) 0xe2e9c -> thunk mui_tm_INGAME 0x175864
-15e2b8	982e0e00	18591700	T17c: vtable StateInGameMenu +0x30 (TouchReleased) 0xe2e98 -> thunk mui_tr_INGAME 0x175918
-15e5f0	a08c1300	54551700	T17c: vtable StatePopup +0x48 (Paint) 0x138ca0 -> thunk mui_paint_POPUP 0x175554
-15e5d4	406e1300	b4551700	T17c: vtable StatePopup +0x2c (TouchPressed) 0x136e40 -> thunk mui_tp_POPUP 0x1755b4
-15e5dc	a86b1300	38561700	T17c: vtable StatePopup +0x34 (TouchMoved) 0x136ba8 -> thunk mui_tm_POPUP 0x175638
-15e5d8	a46b1300	bc561700	T17c: vtable StatePopup +0x30 (TouchReleased) 0x136ba4 -> thunk mui_tr_POPUP 0x1756bc
-77abc	9f27ffeb	f50304eb	T17c2: call-site 0x77abc bl 0x41940 -> bl mui_cap_line 0x178a98
+# sinh bởi engine/menu/inject_menu.py (T17c): vá ô vtable cho lớp đã bật trong states.def: CASH, GAME, INGAME, NPC, POPUP
+15e0f0	9c840d00	b05f1700	T17c: vtable StateCashShop +0x48 (Paint) 0xd849c -> thunk mui_paint_CASH 0x175fb0
+15e0d4	7c940d00	00601700	T17c: vtable StateCashShop +0x2c (TouchPressed) 0xd947c -> thunk mui_tp_CASH 0x176000
+15e0dc	847d0d00	74601700	T17c: vtable StateCashShop +0x34 (TouchMoved) 0xd7d84 -> thunk mui_tm_CASH 0x176074
+15e0d8	807d0d00	e8601700	T17c: vtable StateCashShop +0x30 (TouchReleased) 0xd7d80 -> thunk mui_tr_CASH 0x1760e8
+15e190	1cd00d00	7c531700	T17c: vtable StateGame +0x48 (Paint) 0xdd01c -> thunk mui_paint_GAME 0x17537c
+15e174	18e50d00	78561700	T17c: vtable StateGame +0x2c (TouchPressed) 0xde518 -> thunk mui_tp_GAME 0x175678
+15e17c	fcd60d00	f4571700	T17c: vtable StateGame +0x34 (TouchMoved) 0xdd6fc -> thunk mui_tm_GAME 0x1757f4
+15e178	bcdc0d00	50591700	T17c: vtable StateGame +0x30 (TouchReleased) 0xddcbc -> thunk mui_tr_GAME 0x175950
+15e2d0	1c6c1000	585b1700	T17c: vtable StateInGameMenu +0x48 (Paint) 0x106c1c -> thunk mui_paint_INGAME 0x175b58
+15e2b4	48061000	b85b1700	T17c: vtable StateInGameMenu +0x2c (TouchPressed) 0x100648 -> thunk mui_tp_INGAME 0x175bb8
+15e2bc	9c2e0e00	3c5c1700	T17c: vtable StateInGameMenu +0x34 (TouchMoved) 0xe2e9c -> thunk mui_tm_INGAME 0x175c3c
+15e2b8	982e0e00	c05c1700	T17c: vtable StateInGameMenu +0x30 (TouchReleased) 0xe2e98 -> thunk mui_tr_INGAME 0x175cc0
+15e370	5c661100	245d1700	T17c: vtable StateInNpcMenu +0x48 (Paint) 0x11665c -> thunk mui_paint_NPC 0x175d24
+15e354	64e81000	845d1700	T17c: vtable StateInNpcMenu +0x2c (TouchPressed) 0x10e864 -> thunk mui_tp_NPC 0x175d84
+15e35c	c4921000	085e1700	T17c: vtable StateInNpcMenu +0x34 (TouchMoved) 0x1092c4 -> thunk mui_tm_NPC 0x175e08
+15e358	c0921000	8c5e1700	T17c: vtable StateInNpcMenu +0x30 (TouchReleased) 0x1092c0 -> thunk mui_tr_NPC 0x175e8c
+15e5f0	a08c1300	8c591700	T17c: vtable StatePopup +0x48 (Paint) 0x138ca0 -> thunk mui_paint_POPUP 0x17598c
+15e5d4	406e1300	ec591700	T17c: vtable StatePopup +0x2c (TouchPressed) 0x136e40 -> thunk mui_tp_POPUP 0x1759ec
+15e5dc	a86b1300	705a1700	T17c: vtable StatePopup +0x34 (TouchMoved) 0x136ba8 -> thunk mui_tm_POPUP 0x175a70
+15e5d8	a46b1300	f45a1700	T17c: vtable StatePopup +0x30 (TouchReleased) 0x136ba4 -> thunk mui_tr_POPUP 0x175af4
+77abc	9f27ffeb	8e0504eb	T17c2: call-site 0x77abc bl 0x41940 -> bl mui_cap_line 0x1790fc
+d9330	3cb4ffeb	7e9f02eb	T17c2: call-site 0xd9330 bl 0xc6428 -> bl t7_cash_netconnect 0x181130
+d9350	befaffeb	959f02eb	T17c2: call-site 0xd9350 bl 0xd7e50 -> bl t7_cash_popup 0x1811ac
+dc188	a6a8ffeb	2d9402eb	T17c2: call-site 0xdc188 bl 0xc6428 -> bl t7_game_revive 0x181244
+d9a24	09f9ffeb	1d9e02eb	T17c2: call-site 0xd9a24 bl 0xd7e50 -> bl t7_cash_confirm 0x1812a0
 # <<< T17c menu-vtable
