@@ -1,0 +1,28 @@
+400x240 tab     ĐẠT
+400x240 list    ĐẠT
+400x240 map     ĐẠT
+400x240 drag    ĐẠT
+400x240 tree    ĐẠT
+400x240 cycles  LỆCH new={"live": 400, "top": 27120, "img": "6aeea9cd4f0328aafeec337317574024", "cls": "0x15e150"} orig={"live": 400, "top": 27232, "img": "c4990631efb5d68313d7008eb11ee753", "cls": "0x15e150"}
+   cycles: new {'live': 400, 'top': 27120, 'img': '6aeea9cd4f0328aafeec337317574024', 'cls': '0x15e150'} orig {'live': 400, 'top': 27232, 'img': 'c4990631efb5d68313d7008eb11ee753', 'cls': '0x15e150'}
+400x240 vùng chạm nhiem_vu: ĐẠT (9 vùng == hit_rects.json)
+400x240 vùng chạm nhiem_vu_nhanh: ĐẠT (6 vùng == hit_rects.json)
+600x270 tab     ĐẠT
+600x270 list    ĐẠT
+600x270 map     ĐẠT
+600x270 drag    ĐẠT
+600x270 tree    ĐẠT
+600x270 cycles  LỆCH new={"live": 400, "top": 27120, "img": "6cc2feee2f9609ceff70c09965573138", "cls": "0x15e150"} orig={"live": 400, "top": 27232, "img": "d90d00b6f3dc7ab76c0a206de8feb9e7", "cls": "0x15e150"}
+   cycles: new {'live': 400, 'top': 27120, 'img': '6cc2feee2f9609ceff70c09965573138', 'cls': '0x15e150'} orig {'live': 400, 'top': 27232, 'img': 'd90d00b6f3dc7ab76c0a206de8feb9e7', 'cls': '0x15e150'}
+600x270 vùng chạm nhiem_vu: ĐẠT (9 vùng == hit_rects.json)
+600x270 vùng chạm nhiem_vu_nhanh: ĐẠT (6 vùng == hit_rects.json)
+1200x540 tab     ĐẠT
+1200x540 list    ĐẠT
+1200x540 map     ĐẠT
+1200x540 drag    ĐẠT
+1200x540 tree    ĐẠT
+1200x540 cycles  LỆCH new={"live": 400, "top": 27120, "img": "ed8903f2b2fda98037179bd03d5c5ab7", "cls": "0x15e150"} orig={"live": 400, "top": 27232, "img": "c669ffca66cd3cbcb8d4db89b6d93a3b", "cls": "0x15e150"}
+   cycles: new {'live': 400, 'top': 27120, 'img': 'ed8903f2b2fda98037179bd03d5c5ab7', 'cls': '0x15e150'} orig {'live': 400, 'top': 27232, 'img': 'c669ffca66cd3cbcb8d4db89b6d93a3b', 'cls': '0x15e150'}
+1200x540 vùng chạm nhiem_vu: ĐẠT (9 vùng == hit_rects.json)
+1200x540 vùng chạm nhiem_vu_nhanh: ĐẠT (6 vùng == hit_rects.json)
+KẾT LUẬN: CÒN 3 LỆCH

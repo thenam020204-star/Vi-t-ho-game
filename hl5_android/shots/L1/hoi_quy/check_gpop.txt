@@ -1,0 +1,19 @@
+400x240 yes     ĐẠT
+400x240 no      ĐẠT
+400x240 cycles  LỆCH new={"live": 8, "top": 69712, "img": "71eb210e78ba833faaf7e13b2514c6b6", "cls": "0x15e150"} orig={"live": 8, "top": 69712, "img": "2d58d4365cdbaca819f2befa929297e9", "cls": "0x15e150"}
+   cycles: new {'live': 8, 'top': 69712, 'img': '71eb210e78ba833faaf7e13b2514c6b6', 'cls': '0x15e150'} orig {'live': 8, 'top': 69712, 'img': '2d58d4365cdbaca819f2befa929297e9', 'cls': '0x15e150'}
+400x240 vùng chạm game_hoi_sinh: ĐẠT (3 vùng == hit_rects.json)
+400x240 vùng chạm game_hoi_sinh_xong: ĐẠT (2 vùng == hit_rects.json)
+600x270 yes     ĐẠT
+600x270 no      ĐẠT
+600x270 cycles  LỆCH new={"live": 8, "top": 69712, "img": "f06fe9d55fde1705cf8aa5a60cc8df58", "cls": "0x15e150"} orig={"live": 8, "top": 69712, "img": "b41bec7bae30c81aa791e7360c20934f", "cls": "0x15e150"}
+   cycles: new {'live': 8, 'top': 69712, 'img': 'f06fe9d55fde1705cf8aa5a60cc8df58', 'cls': '0x15e150'} orig {'live': 8, 'top': 69712, 'img': 'b41bec7bae30c81aa791e7360c20934f', 'cls': '0x15e150'}
+600x270 vùng chạm game_hoi_sinh: ĐẠT (3 vùng == hit_rects.json)
+600x270 vùng chạm game_hoi_sinh_xong: ĐẠT (2 vùng == hit_rects.json)
+1200x540 yes     ĐẠT
+1200x540 no      ĐẠT
+1200x540 cycles  LỆCH new={"live": 8, "top": 69712, "img": "c669c69505384a737ee47b1255401f25", "cls": "0x15e150"} orig={"live": 8, "top": 69712, "img": "96931c5cf0dd1e3cf754f83e9ad53fb8", "cls": "0x15e150"}
+   cycles: new {'live': 8, 'top': 69712, 'img': 'c669c69505384a737ee47b1255401f25', 'cls': '0x15e150'} orig {'live': 8, 'top': 69712, 'img': '96931c5cf0dd1e3cf754f83e9ad53fb8', 'cls': '0x15e150'}
+1200x540 vùng chạm game_hoi_sinh: ĐẠT (3 vùng == hit_rects.json)
+1200x540 vùng chạm game_hoi_sinh_xong: ĐẠT (2 vùng == hit_rects.json)
+KẾT LUẬN: CÒN 3 LỆCH

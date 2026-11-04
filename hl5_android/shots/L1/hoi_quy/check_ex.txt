@@ -1,0 +1,25 @@
+400x240 ready   ĐẠT
+400x240 char    ĐẠT
+400x240 shop    ĐẠT
+400x240 buy     ĐẠT
+400x240 cycles  ĐẠT
+   cycles: new {'live': 20, 'top': 0, 'img': '42b882b390bb00f8e546941efa8e9f5f', 'cls': '0x15e1f0'} orig {'live': 20, 'top': 0, 'img': 'f30951f1b767bc159652427b8287467f', 'cls': '0x15e1f0'}
+400x240 vùng chạm chuyen_gia_chuan_bi: ĐẠT (4 vùng == hit_rects.json)
+400x240 vùng chạm chuyen_gia_cua_hang: ĐẠT (20 vùng == hit_rects.json)
+600x270 ready   ĐẠT
+600x270 char    ĐẠT
+600x270 shop    ĐẠT
+600x270 buy     ĐẠT
+600x270 cycles  ĐẠT
+   cycles: new {'live': 20, 'top': 0, 'img': '9576357fe36aea27a800805e38ba2b7d', 'cls': '0x15e1f0'} orig {'live': 20, 'top': 0, 'img': '0f798964227654d6418a1a92f9bf920f', 'cls': '0x15e1f0'}
+600x270 vùng chạm chuyen_gia_chuan_bi: ĐẠT (4 vùng == hit_rects.json)
+600x270 vùng chạm chuyen_gia_cua_hang: ĐẠT (20 vùng == hit_rects.json)
+1200x540 ready   ĐẠT
+1200x540 char    ĐẠT
+1200x540 shop    ĐẠT
+1200x540 buy     ĐẠT
+1200x540 cycles  ĐẠT
+   cycles: new {'live': 20, 'top': 0, 'img': 'b83160a38d8772e8d59a7ccc6a91431c', 'cls': '0x15e1f0'} orig {'live': 20, 'top': 0, 'img': '62ec1e1068e54eb9e6acd2b7fb5acd41', 'cls': '0x15e1f0'}
+1200x540 vùng chạm chuyen_gia_chuan_bi: ĐẠT (4 vùng == hit_rects.json)
+1200x540 vùng chạm chuyen_gia_cua_hang: ĐẠT (20 vùng == hit_rects.json)
+KẾT LUẬN: ĐẠT

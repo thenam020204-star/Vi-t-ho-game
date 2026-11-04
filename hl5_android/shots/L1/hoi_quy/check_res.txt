@@ -1,0 +1,16 @@
+400x240 sub1    ĐẠT
+400x240 sub2    ĐẠT
+400x240 cycles  ĐẠT
+   cycles: new {'live': 152, 'top': 0, 'cls': '0x15e3d0'} orig {'live': 152, 'top': 0, 'cls': '0x15e3d0'}
+400x240 vùng chạm hits_res2 popup_ok: ĐẠT (== hit_rects.json game_chien_thang)
+600x270 sub1    ĐẠT
+600x270 sub2    ĐẠT
+600x270 cycles  ĐẠT
+   cycles: new {'live': 152, 'top': 0, 'cls': '0x15e3d0'} orig {'live': 152, 'top': 0, 'cls': '0x15e3d0'}
+600x270 vùng chạm hits_res2 popup_ok: ĐẠT (== hit_rects.json game_chien_thang)
+1200x540 sub1    ĐẠT
+1200x540 sub2    ĐẠT
+1200x540 cycles  ĐẠT
+   cycles: new {'live': 152, 'top': 0, 'cls': '0x15e3d0'} orig {'live': 152, 'top': 0, 'cls': '0x15e3d0'}
+1200x540 vùng chạm hits_res2 popup_ok: ĐẠT (== hit_rects.json game_chien_thang)
+KẾT LUẬN: ĐẠT
