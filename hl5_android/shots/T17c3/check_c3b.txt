@@ -1,0 +1,64 @@
+ĐẠT   400x240: kịch bản không lỗi/crash 
+ĐẠT   400x240: đổi nhánh (chạm tab == TRÁI/PHẢI gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   400x240: vào lưới ở ô (1,1) (chạm == XUỐNG,XUỐNG): trạng thái/dữ liệu == phím gốc
+ĐẠT   400x240: chọn ô hàng 3 + đổi cột (cuộn cửa sổ gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   400x240: đầu tư: chạm ô 2 lần -> xác nhận Có (== OK gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   400x240: đầu tư: nút "Đầu tư" -> xác nhận Có (== OK gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   400x240: đầu tư không đủ điều kiện (popup gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   400x240: nút < quay lại: trạng thái/dữ liệu == phím gốc
+ĐẠT   400x240: kéo cuộn lưới: hàng đầu cửa sổ 1/2/0 (gốc phím: 1), con trỏ hợp lệ: {"p": {"ab": 4, "c11": 0, "cls": "0x15e290", "e": 0, "f": 1, "st": 5, "sub": 1, "top": 1}, "p2": {"ab": 7, "c11": 0, "cls": "0x15e290", "e": 0, "f": 1, "st": 5, "sub": 1, "top": 2}, "p3": {"ab": 7, "c11": 0, "cls": "0x15e290", "e": 0, "f": 7, "st": 5, "sub": 1, "top": 0}}
+ĐẠT   400x240: chạm tab 0 -> state 1 == gốc 1
+ĐẠT   400x240: chạm tab 1 -> state 2 == gốc 2
+ĐẠT   400x240: chạm tab 2 -> state 3 == gốc 3
+ĐẠT   400x240: chạm tab 3 -> state 4 == gốc 4
+ĐẠT   400x240: chạm tab 4 -> state 5 == gốc 5
+ĐẠT   400x240: chạm tab 5 -> state 6 == gốc 6
+ĐẠT   400x240: chạm tab 6 -> state 7 == gốc 7
+ĐẠT   400x240: chạm tab 7 -> state 8 == gốc 8
+ĐẠT   400x240: chạm tab 8 -> state 9 == gốc 9
+ĐẠT   400x240: mở/đóng 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+400x240: ảnh cảnh sau 20 lần mở/đóng new=0988fb5b989b470801428053b0e51c68 orig=0988fb5b989b470801428053b0e51c68
+ĐẠT   400x240: vùng chạm == hit_rects.json dac_tinh (27 mục)
+ĐẠT   600x270: kịch bản không lỗi/crash 
+ĐẠT   600x270: đổi nhánh (chạm tab == TRÁI/PHẢI gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   600x270: vào lưới ở ô (1,1) (chạm == XUỐNG,XUỐNG): trạng thái/dữ liệu == phím gốc
+ĐẠT   600x270: chọn ô hàng 3 + đổi cột (cuộn cửa sổ gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   600x270: đầu tư: chạm ô 2 lần -> xác nhận Có (== OK gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   600x270: đầu tư: nút "Đầu tư" -> xác nhận Có (== OK gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   600x270: đầu tư không đủ điều kiện (popup gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   600x270: nút < quay lại: trạng thái/dữ liệu == phím gốc
+ĐẠT   600x270: kéo cuộn lưới: hàng đầu cửa sổ 1/2/0 (gốc phím: 1), con trỏ hợp lệ: {"p": {"ab": 4, "c11": 0, "cls": "0x15e290", "e": 0, "f": 1, "st": 5, "sub": 1, "top": 1}, "p2": {"ab": 7, "c11": 0, "cls": "0x15e290", "e": 0, "f": 1, "st": 5, "sub": 1, "top": 2}, "p3": {"ab": 7, "c11": 0, "cls": "0x15e290", "e": 0, "f": 7, "st": 5, "sub": 1, "top": 0}}
+ĐẠT   600x270: chạm tab 0 -> state 1 == gốc 1
+ĐẠT   600x270: chạm tab 1 -> state 2 == gốc 2
+ĐẠT   600x270: chạm tab 2 -> state 3 == gốc 3
+ĐẠT   600x270: chạm tab 3 -> state 4 == gốc 4
+ĐẠT   600x270: chạm tab 4 -> state 5 == gốc 5
+ĐẠT   600x270: chạm tab 5 -> state 6 == gốc 6
+ĐẠT   600x270: chạm tab 6 -> state 7 == gốc 7
+ĐẠT   600x270: chạm tab 7 -> state 8 == gốc 8
+ĐẠT   600x270: chạm tab 8 -> state 9 == gốc 9
+ĐẠT   600x270: mở/đóng 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+600x270: ảnh cảnh sau 20 lần mở/đóng new=7ef6844cf11a087530253127ab989468 orig=7ef6844cf11a087530253127ab989468
+ĐẠT   600x270: vùng chạm == hit_rects.json dac_tinh (27 mục)
+ĐẠT   1200x540: kịch bản không lỗi/crash 
+ĐẠT   1200x540: đổi nhánh (chạm tab == TRÁI/PHẢI gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   1200x540: vào lưới ở ô (1,1) (chạm == XUỐNG,XUỐNG): trạng thái/dữ liệu == phím gốc
+ĐẠT   1200x540: chọn ô hàng 3 + đổi cột (cuộn cửa sổ gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   1200x540: đầu tư: chạm ô 2 lần -> xác nhận Có (== OK gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   1200x540: đầu tư: nút "Đầu tư" -> xác nhận Có (== OK gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   1200x540: đầu tư không đủ điều kiện (popup gốc): trạng thái/dữ liệu == phím gốc
+ĐẠT   1200x540: nút < quay lại: trạng thái/dữ liệu == phím gốc
+ĐẠT   1200x540: kéo cuộn lưới: hàng đầu cửa sổ 1/2/0 (gốc phím: 1), con trỏ hợp lệ: {"p": {"ab": 4, "c11": 0, "cls": "0x15e290", "e": 0, "f": 1, "st": 5, "sub": 1, "top": 1}, "p2": {"ab": 7, "c11": 0, "cls": "0x15e290", "e": 0, "f": 1, "st": 5, "sub": 1, "top": 2}, "p3": {"ab": 7, "c11": 0, "cls": "0x15e290", "e": 0, "f": 7, "st": 5, "sub": 1, "top": 0}}
+ĐẠT   1200x540: chạm tab 0 -> state 1 == gốc 1
+ĐẠT   1200x540: chạm tab 1 -> state 2 == gốc 2
+ĐẠT   1200x540: chạm tab 2 -> state 3 == gốc 3
+ĐẠT   1200x540: chạm tab 3 -> state 4 == gốc 4
+ĐẠT   1200x540: chạm tab 4 -> state 5 == gốc 5
+ĐẠT   1200x540: chạm tab 5 -> state 6 == gốc 6
+ĐẠT   1200x540: chạm tab 6 -> state 7 == gốc 7
+ĐẠT   1200x540: chạm tab 7 -> state 8 == gốc 8
+ĐẠT   1200x540: chạm tab 8 -> state 9 == gốc 9
+ĐẠT   1200x540: mở/đóng 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+1200x540: ảnh cảnh sau 20 lần mở/đóng new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
+ĐẠT   1200x540: vùng chạm == hit_rects.json dac_tinh (27 mục)
+KẾT LUẬN: ĐẠT

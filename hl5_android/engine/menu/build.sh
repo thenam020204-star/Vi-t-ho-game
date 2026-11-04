@@ -24,6 +24,8 @@ for f in rt gfx text layout widgets touch dispatch ingame popup bag combo dbg; d
   [ -f $f.c ] || continue
   $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"
 done
+# T17c3b: property.c
+for f in property; do [ -f $f.c ] || continue; $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; done
 # --- địa chỉ hàm/biến guest (tra theo tên demangled trong .so gốc; ld.lld --defsym) ---
 NM=$(llvm-nm -C --defined-only "$SO")
 sym() { echo "$NM" | grep -F " $1" | awk -v n="$1" '{ l=$0; sub(/^[0-9a-f]+ . /,"",l); if (l==n) {print $1; exit} }'; }
@@ -47,6 +49,10 @@ for p in "_pTextMgr|_pTextMgr" "TextMgr::GetCommonText(int)|TextMgr_GetCommonTex
   "CommonUi::DrawItemDiscription(int, int, int, ItemInfo*, signed char, unsigned char)|CommonUi_DrawItemDiscription" \
   "BFont::DrawTextLine(int, int, int, int, int, char*, int, int)|BFont_DrawTextLine" \
   "HERO::GetComboSkillBelt(signed char)|HERO_GetComboSkillBelt" "HERO::GetHeroSkillInfoPtr(signed char)|HERO_GetHeroSkillInfoPtr"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
+# T17c3b: symbol guest cho property.c
+for p in "HERO::GetHeroSkillInfoPtr(signed char)|HERO_GetHeroSkillInfoPtr" "CommonUi::GetSkillDiscription(char*, signed char, HeroSkillInfo*)|CommonUi_GetSkillDiscription"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
