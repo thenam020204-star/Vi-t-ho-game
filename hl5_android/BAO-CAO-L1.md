@@ -10,7 +10,10 @@ WORK `~/hl5work_l1` (bản sao `~/hl5work_l0`). Harness `harness/l1/` (`build_de
 | Cash shop UI (`engine/menu/cash.c`, StateCashShop state 0) + chuỗi "Miễn phí" + popup xác nhận/đã nhận | XONG, kiểm ĐẠT 3 cỡ |
 | Tinh linh (2 tab + bộ lọc trang bị) (`spirit.c`, InGameMenu state 7) | XONG, kiểm ĐẠT 3 cỡ (`shots/L1/check_sp.txt`, mục 6) |
 | Popup StateGame: hồi sinh Có/Không + hồi sinh thành công (`gpop.c`, StateGame state 1 và 4) | XONG, kiểm ĐẠT 3 cỡ (`shots/L1/check_gpop.txt`, mục 7) |
-| Nhiệm vụ (2 tab), popup kết quả StateGame (state 2 Expert / thắng-thua), Chuyên gia (2 màn + popup), bản đồ khu vực + bản đồ lớn (StateMap) | CHƯA LÀM (dò thêm ở mục 5 CÒN LẠI) |
+| Nhiệm vụ (2 tab, `quest.c`, InGameMenu state 8) | XONG, kiểm ĐẠT (`shots/L1/check_q.txt`, chạy lại ở `shots/L1/hoi_quy/`) |
+| Chuyên gia (`expert.c`: chuẩn bị + cửa hàng) + popup `expop` (Có/Không) + `expqty` (nhập số lượng, dùng widget `qty` của L2) | XONG, kiểm ĐẠT 3 cỡ (mục 8); dòng states.def `expert/expop/expqty` đã BẬT |
+| Màn kết quả Expert (StateGame state 2 sub 1 + sub 2, `gpop.c::gres_paint`) | XONG, kiểm ĐẠT 3 cỡ (mục 9); dòng states.def `gres` mới |
+| Popup xác nhận dùng Bùa (CT 293), bản đồ (StateMap) | CHƯA LÀM (xem mục 5) |
 
 ## 1. Cash shop miễn phí (t7.c + hooks.def + so_patches.tsv khối `L1 T7`)
 Luồng gốc: `StateCashShop::KeyPressed` 0xd97ac (OK) -> `SetPopupState(2)` xác nhận -> `Process` 0xd9218 sau "Có" gọi `NETWORK::netConnect(3)` -> máy chủ trả vật phẩm (`ProcPacket_Shop`). Offline:
@@ -55,6 +58,21 @@ Chưa làm: popup xác nhận dùng Bùa (`game_hoi_sinh_xac_nhan`, CT 293: đư
 
 ### 4b. Dòng thêm ở lượt này (Tinh linh + popup StateGame)
 - `states.def`: 2 dòng (`spirit`, `gpop`) + chú thích, trước `#ifdef MUI_DEBUG`. `build.sh`: 2 dòng biên dịch (`for f in spirit`, `for f in gpop`) + 1 khối `--defsym` (Battle::Paint, HERO::GetSpiritInfoPtr, HERO::GetEquipItemSpiritPtr, EquipItemSpirit::GetEquipItemSpirit) trước dòng `vn_ensure`. `mui.h`: khai báo `spirit_*`/`gpop_*` cuối file. `bag.c` (file chung): thêm 2 hàm cuối `spirit_pick_paint/spirit_pick_cb`. File mới: `engine/menu/spirit.c`, `gpop.c`, `l1ui.h` (helper: tab con, panel, mô tả cuộn), `harness/l1/check_sp.py/compare_sp.py/check_gpop.py/compare_gpop.py/probe_sp2.py/probe_sp3.py/probe_txt2.py/probe_q.py`. Không đổi `classes.def`, `hooks.def`, `so_patches.tsv` (lớp GAME đã có; dòng vá vtable StateGame do `inject_menu.py --update-repo` sinh khi quản đốc gộp). Build thử: `harness/l1/build_dev.sh` (không `--debug`: `gen_dbg_text.py` cần `mgr` không có trong cây này).
+
+## 8. Chuyên gia (`expert.c`) + popup (lượt 4)
+Kiến trúc A (Paint + Touch mới; KeyPressed/Process/SetPopupState gốc). `states.def`: `MUI_STATE(EXPERT, expert, GS==0||GS==1, ...)`, `MUI_STATE(POPUP, expop, EXPERT_POPUP(self,4) ...)` (dùng `npcpop_*` của L2), `MUI_STATE(POPUP, expqty, EXPERT_POPUP(self,5) ...)` (dùng `qty_paint/qty_touch` của L2; dòng `qty` của L2 KHÔNG đụng, vẫn comment). Trường (dò `probe_ex*.py`, KeyReady 0xe1818 / KeyShop 0xe16b0): xem đầu `expert.c`. Chế độ = s8 gv[6457] (1 Cầm cự / 2 Đua Thời Gian / 3 Đột phá). Cửa hàng: 3 vật phẩm loại 11 id 11+i (`ItemTable::GetItemTableInfo`), giá `ItemInfo+0x30` TRẢ bằng tiền game (không đủ -> popup CT 90).
+Sửa lượt này: hình học nội dung cửa sổ thu `s+2` (không phải `2*bt+1`) và hàng tiền ở chân hộp chi tiết cao `lp+3s-1` để 3 cỡ khớp `hit_rects.json` (trước đó 1200x540 lệch 2 px).
+Kiểm (`harness/l1/check_ex.py` + `compare_ex.py`, kịch bản: ready, char, shop (chọn ô, mua thiếu tiền -> popup), buy (cấp 1000 tiền, mua ô 1: popup số lượng loại 5 -> Có/Không loại 4 -> popup xong loại 2; tiền 1000 -> 750, vật phẩm 0 -> 1), cycles (20 lần mở/đóng)): trường +0xc..+0x13 mọi bước == phím gốc ở 400x240, 600x270, 1200x540; vùng chạm chuẩn bị (start/char/shop/close) + cửa hàng (16 ô, grid_scroll, detail, buy, close) == `hit_rects.json` (`chuyen_gia_chuan_bi`, `chuyen_gia_cua_hang`). Ảnh `shots/L1/chuyen_gia_*`.
+Lệch mockup (cần duyệt): vật phẩm thật của cửa hàng là 3 bình thuốc loại 11 (mockup minh hoạ 8 vật phẩm khác); màn chuẩn bị chỉ hiện 2 hàng (Chế độ, Cấp độ).
+
+## 9. Màn kết quả Expert (`gpop.c::gres_paint`, StateGame state 2)
+Đọc từ mã máy `StateGame::DrawExpert` 0xda9c8 / `KeyExpert` 0xdbcc8 / `SetState(sb,sb)` 0xda410 (`+0xc` state, `+0xe` tham số = r2, `+0xd` sub, `+0xf` bộ đếm hoạt hình; SetState đặt `+0xd=+0xf=0`) và hai nơi gọi trong `EventProc::Event_UiEngineer` 0x6c27c (0x6c3cc: SetState(2, tham số=lệnh-5) + SetSubState(0) = thắng/thua; 0x6c434: SetState(2, 6) + SetSubState(2) = bảng kết quả):
+- sub 0 = biểu ngữ ảnh "Success"/"Fail" (ảnh game: GIỮ đường gốc, KeyExpert OK khi `+0xf`>7 -> sub 1).
+- sub 1 = hộp 170x88: tiêu đề IGT(329) thắng (`+0xe`==0) / IGT(330) thua; dòng `IGT(326) " " IGT(322+chế độ) IGT(327 thắng|328 thua)`; OK = KeyExpert -> rời (SetState(0), về menu Chuyên gia; nếu byte gv[6476]==1 chỉ SetState(0)).
+- sub 2 = hộp 170x172: tiêu đề IGT(337); số hàng = chế độ (gv[6457]); nhãn hàng i = IGT(base+i), base {1:331, 2:332, 3:334}; giá trị `%d`: chế độ 1 `{gv[6460]}`, 2 `{gv[6468], gv[6464]}`, 3 `{gv[6472], gv[6468], gv[6464]}`; điểm cuối IGT(338) = gv[5156+4*(chế độ-1)] (chèn dấu phẩy). Hoạt hình: Paint gốc tăng `+0xf` (trần 40), hàng i hiện khi `+0xf`>3+6i, điểm khi >6n+6, số thật khi `+0xf`>=40 (trước đó chữ số xáo trộn bằng Rand: Paint mới dùng chữ số giả xác định, KHÔNG gọi Rand); KeyExpert OK: `+0xf`<=39 -> đặt 40, ngược lại rời.
+Paint mới (sub 1..2): `Battle::Paint` + làm tối + hộp kiểu `w_result` (mockup `game_chien_thang`); Touch dùng `gpop_touch` (OK id 0xF2 = KeyPressed(-5)). `states.def`: `MUI_STATE(GAME, gres, GS==2 && sub 1..2, gres_paint, gpop_touch, gpop_move)`.
+Kiểm (`check_res.py` + `compare_res.py`, tạo trạng thái bằng SetState(2,e)+SetSubState(sub), chế độ 1..3, thắng/thua, OK giữa hoạt hình/OK thoát, 20 lần mở/đóng): trường +0xc..+0x13 == bản gốc ở các mốc 6/16/36/46 khung; vùng chạm popup_ok (sub 2 chế độ 3 = 4 hàng như mockup) == `hit_rects.json` `game_chien_thang`. Sub 1 (1 dòng) thấp hơn mockup nên nút OK cao hơn (không so). Ảnh `shots/L1/game_ket_qua_*`.
+Lệch mockup: mockup vẽ 4 hàng giả (Số màn, Thời gian, HP, Điểm); thật chỉ có `chế độ` hàng + điểm (tên nhãn lấy đúng IGT gốc). Màu nhãn điểm gốc đỏ, mới dùng DIM + giá trị vàng.
 
 ## 5. CÒN LẠI (làm tiếp ở lượt sau)
 Lượt L1 (phiên 2) dừng vì hạn ngữ cảnh sau Tinh linh + popup hồi sinh; Nhiệm vụ cần gieo dữ liệu nhiệm vụ trước khi dò (mục dưới), Chuyên gia + StateMap + màn kết quả chưa mở. Lệnh dựng/kiểm: `WORK=~/hl5work_l1 bash harness/l1/build_dev.sh`, rồi `harness/l1/check_*.py W H new|orig|off OUT` (3 cỡ x chế độ song song, ~12 phút, nhớ `compare_*.py OUT`).

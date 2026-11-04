@@ -1,0 +1,31 @@
+== 400x240
+  ĐẠT  có thông điệp (gốc 1, mới 1)
+  ĐẠT  C1 1/1 thông điệp giống nhau từng byte (id tên + chuỗi), gốc=1 mới=1
+     số trang mỗi thông điệp  gốc: [1]
+     số trang mỗi thông điệp  mới: [1]
+  ĐẠT  C2 trang liên tục, số trang mới trong [gốc, 3*gốc+1]; tổng trang gốc=1 mới=1
+  ĐẠT  C3 hình học (v2: hộp tới lề màn, chữ sau phần chân dung che, rộng >= 150): hộp [92, 183, 300, 53], vùng chữ [139, 190, 241]
+  ĐẠT  C4 không có điểm chữ trắng ngoài vùng chữ (1 ảnh trang, 0 điểm lạ)
+  ĐẠT  C5 cấp phát sống/đỉnh trong hoạt cảnh: gốc +3/+47424, mới +3/+47424
+  ĐẠT  C6 cờ tắt == gốc: thông điệp/trang/khung giống hệt; 1 ảnh trang, 0 khác byte
+== 600x270
+  ĐẠT  có thông điệp (gốc 1, mới 1)
+  ĐẠT  C1 1/1 thông điệp giống nhau từng byte (id tên + chuỗi), gốc=1 mới=1
+     số trang mỗi thông điệp  gốc: [1]
+     số trang mỗi thông điệp  mới: [1]
+  ĐẠT  C2 trang liên tục, số trang mới trong [gốc, 3*gốc+1]; tổng trang gốc=1 mới=1
+  ĐẠT  C3 hình học (v2: hộp tới lề màn, chữ sau phần chân dung che, rộng >= 150): hộp [92, 213, 500, 53], vùng chữ [139, 220, 441]
+  ĐẠT  C4 không có điểm chữ trắng ngoài vùng chữ (1 ảnh trang, 0 điểm lạ)
+  ĐẠT  C5 cấp phát sống/đỉnh trong hoạt cảnh: gốc +3/+47424, mới +3/+47424
+  ĐẠT  C6 cờ tắt == gốc: thông điệp/trang/khung giống hệt; 1 ảnh trang, 0 khác byte
+== 1200x540
+  ĐẠT  có thông điệp (gốc 1, mới 1)
+  ĐẠT  C1 1/1 thông điệp giống nhau từng byte (id tên + chuỗi), gốc=1 mới=1
+     số trang mỗi thông điệp  gốc: [1]
+     số trang mỗi thông điệp  mới: [1]
+  ĐẠT  C2 trang liên tục, số trang mới trong [gốc, 3*gốc+1]; tổng trang gốc=1 mới=1
+  ĐẠT  C3 hình học (v2: hộp tới lề màn, chữ sau phần chân dung che, rộng >= 150): hộp [183, 448, 1001, 84], vùng chữ [278, 460, 882]
+  ĐẠT  C4 không có điểm chữ trắng ngoài vùng chữ (1 ảnh trang, 0 điểm lạ)
+  ĐẠT  C5 cấp phát sống/đỉnh trong hoạt cảnh: gốc +3/+47424, mới +3/+47424
+  ĐẠT  C6 cờ tắt == gốc: thông điệp/trang/khung giống hệt; 1 ảnh trang, 0 khác byte
+KẾT LUẬN: ĐẠT

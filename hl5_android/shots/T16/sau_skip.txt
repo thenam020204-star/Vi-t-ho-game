@@ -1,0 +1,3 @@
+400x240: điểm lệch ngoài {dải trên 34px, hộp+bảng tên, chân dung}: 764 (bbox (18, 34, 122, 43)); cùng cảnh/cùng chữ (hash e75_zero_at 5 khung cả hai)
+600x270: điểm lệch ngoài {dải trên 34px, hộp+bảng tên, chân dung}: 0 (bbox None); cùng cảnh/cùng chữ (hash e75_zero_at 5 khung cả hai)
+400x240: phần lệch còn lại bbox (18,34,122,43) là đỉnh tóc chân dung (cao 220 ở màn 240, đỉnh y~20; mặt nạ chân dung bắt đầu ở 0.18H nên chừa dải 34..43) -> do chân dung vẽ khác (bóng đổ), không phải cảnh.

@@ -1,0 +1,7 @@
+Hồi quy T17c2 trên bản có T16: ảnh cảnh sau 20 lần mở/đóng Túi đồ + Trang bị lệch gốc (vd 400x240 orig=0988fb5b)
+NGUYÊN NHÂN (chứng cứ: ketqua.txt, so_anh_<cỡ>.png, harness/t16/hoi_quy.py + hoi_quy_cmp.py):
+1. Cảnh ở khung 1000 của harness T17c2 vẫn là hoạt cảnh mở đầu (e75=1, đang ở khung "#: Skip"). Lệch đã có NGAY TRƯỚC khi mở Túi đồ lần nào (mốc 'start' khác nhau cả 3 cỡ) và ở mọi mốc (k0,k9,end).
+2. Điểm lệch chỉ nằm ở HAI vùng: nhãn "# Skip" gốc (góc trên trái: 400x240 (0,0,58,22), 1200x540 (5,0,48,18)) và nút "Bỏ qua >>" mới của T16 (góc trên phải: 400x240 (323,8,392,33), 1200x540 (1079,24,1176,62)). Ngoài hai vùng 0 điểm lệch (cảnh, hero, Túi đồ đóng sạch) ở cả 3 cỡ. Tức EventSkipDraw bị T16 thay chủ ý (hooks 0x68058/0x68094), không phải L1/quest/spirit/gpop, không phải trạng thái bị đổi.
+3. Cờ MUI_F_DISABLE (mode off, cùng dev.so): md5 TRÙNG gốc ở mọi mốc, 3 cỡ -> hook T16 tắt đúng.
+4. Bẫy harness: ~/hl5work/build_apk/libHeroesLore5.so (chuẩn "orig" của qlib/t16lib) đã bị ghi đè bằng bản v0.3-test2 lúc 14:25 04/11 (sha 670cbbff). "Gốc" thật = assets của dist/HL5-VI-v0.2-hd.apk -> đặt HL5_ORIG=<thư mục chứa libHeroesLore5.so + data.vfs.mp3 v0.2-hd> (đã thêm vào qlib.py/t16lib.py). Với orig = v0.3-test2, so sánh menu-vs-menu không còn ý nghĩa.
+KẾT LUẬN: lệch là THIẾT KẾ (nút Bỏ qua mới), không phải lỗi. Cảnh nền trùng từng pixel.
