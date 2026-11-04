@@ -2,3 +2,4 @@ __pycache__/
 .claude/worktrees/
 hl5_android/export/
 hl5_android/dist/test/HL5-VI-v0.2-hd-nokiabgm.apk
+hl5_android/dist/test/HL5-VI-v0.2-hd-bgmwav.apk
