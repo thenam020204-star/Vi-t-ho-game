@@ -9,9 +9,12 @@ c = Ctx(W, Hh, MODE, OUT); NEW = c.NEW; r = c.r; g = c.g
 def f():
     cls0 = c.cls(); r.call(0x85448, c.hero)
     g.uc.mem_write(c.hero + 6080, struct.pack('<i', 100000))
+    tbl = g.rd32(c.gv + 5132)
+    for cat, id_, n_ in ((0, 19, 1), (0, 20, 1), (5, 20, 1), (11, 10, 3), (18, 8, 3), (13, 38, 10), (13, 17, 10), (13, 40, 10)):
+        for _ in range(n_): r.call(0xa321c, tbl, cat, id_, 1, 1)
     live0 = len(g.heap.sizes); top0 = g.heap.top; trace = []
     for k in range(20):
-        typ = (0, 1, 2, 7, 3, 5)[k % 6]
+        typ = (0, 1, 2, 7, 3, 5, 6, 4)[k % 8]
         r.call(0x42b08, 0, typ, 1); c.step(8)
         if k % 2 == 0:
             if NEW:
@@ -20,7 +23,16 @@ def f():
                     if hid in h: c.tap(hid, 3)
             else: c.key('RIGHT', 3); c.key('OK', 3)
             if typ in (0, 1, 2): c.key('OK', 3)           # có thể bật popup
-        if typ in (3, 5, 7) and k % 2 == 1:
+        if typ in (3, 4, 5, 6):                      # L2/T17c5c: hàng chính (chạm / phím) + picker + popup số lượng
+            if NEW:
+                h = c.hits()
+                for hid in ((0xB0, 0xC0, 0xB1) if typ != 6 else (0x41, 0x42)):
+                    if hid in c.hits(): c.tap(hid, 3)
+            else:
+                if typ == 6: c.key('RIGHT', 3); c.key('OK', 3)
+                else: c.key('OK', 3); c.key('OK', 3); c.key('DOWN', 3); c.key('OK', 3)
+            if c.cls() != cls0 and c.cls() != 0x15e330: c.key('RIGHT', 3); c.key('OK', 3)
+        if typ in (7,) and k % 2 == 1:
             c.key('OK', 3)
             if typ == 7: c.key('DOWN', 3); c.key('RIGHT', 3); c.key('OK', 3)
             c.key('RIGHT', 3)

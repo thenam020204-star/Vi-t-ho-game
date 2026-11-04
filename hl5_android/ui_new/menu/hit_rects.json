@@ -48240,5 +48240,221 @@
    ],
    "action": "KeyPressed(Back) -> state gốc"
   }
+ ],
+ "npc_so_luong_400x240": [
+  {
+   "id": "popup_ok",
+   "rect": [
+    77,
+    136,
+    198,
+    159
+   ],
+   "action": "KeyPressed(-5): xác nhận số lượng (Process gốc)"
+  },
+  {
+   "id": "popup_huy",
+   "rect": [
+    202,
+    136,
+    323,
+    159
+   ],
+   "action": "KeyPressed(Back/CLR): huỷ"
+  },
+  {
+   "id": "tru10",
+   "rect": [
+    77,
+    107,
+    123,
+    130
+   ],
+   "action": "KeyPressed(XUỐNG): -10 (gốc: kẹp ở 1)"
+  },
+  {
+   "id": "tru1",
+   "rect": [
+    127,
+    107,
+    150,
+    130
+   ],
+   "action": "KeyPressed(TRÁI): -1 (vòng)"
+  },
+  {
+   "id": "cong1",
+   "rect": [
+    250,
+    107,
+    273,
+    130
+   ],
+   "action": "KeyPressed(PHẢI): +1 (vòng)"
+  },
+  {
+   "id": "cong10",
+   "rect": [
+    277,
+    107,
+    323,
+    130
+   ],
+   "action": "KeyPressed(LÊN): +10"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    400,
+    240
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "npc_so_luong_600x270": [
+  {
+   "id": "popup_ok",
+   "rect": [
+    111,
+    151,
+    298,
+    174
+   ],
+   "action": "KeyPressed(-5): xác nhận số lượng (Process gốc)"
+  },
+  {
+   "id": "popup_huy",
+   "rect": [
+    302,
+    151,
+    489,
+    174
+   ],
+   "action": "KeyPressed(Back/CLR): huỷ"
+  },
+  {
+   "id": "tru10",
+   "rect": [
+    111,
+    122,
+    157,
+    145
+   ],
+   "action": "KeyPressed(XUỐNG): -10 (gốc: kẹp ở 1)"
+  },
+  {
+   "id": "tru1",
+   "rect": [
+    161,
+    122,
+    184,
+    145
+   ],
+   "action": "KeyPressed(TRÁI): -1 (vòng)"
+  },
+  {
+   "id": "cong1",
+   "rect": [
+    416,
+    122,
+    439,
+    145
+   ],
+   "action": "KeyPressed(PHẢI): +1 (vòng)"
+  },
+  {
+   "id": "cong10",
+   "rect": [
+    443,
+    122,
+    489,
+    145
+   ],
+   "action": "KeyPressed(LÊN): +10"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    600,
+    270
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
+ ],
+ "npc_so_luong_1200x540": [
+  {
+   "id": "popup_ok",
+   "rect": [
+    385,
+    295,
+    596,
+    333
+   ],
+   "action": "KeyPressed(-5): xác nhận số lượng (Process gốc)"
+  },
+  {
+   "id": "popup_huy",
+   "rect": [
+    604,
+    295,
+    815,
+    333
+   ],
+   "action": "KeyPressed(Back/CLR): huỷ"
+  },
+  {
+   "id": "tru10",
+   "rect": [
+    385,
+    245,
+    461,
+    283
+   ],
+   "action": "KeyPressed(XUỐNG): -10 (gốc: kẹp ở 1)"
+  },
+  {
+   "id": "tru1",
+   "rect": [
+    469,
+    245,
+    507,
+    283
+   ],
+   "action": "KeyPressed(TRÁI): -1 (vòng)"
+  },
+  {
+   "id": "cong1",
+   "rect": [
+    693,
+    245,
+    731,
+    283
+   ],
+   "action": "KeyPressed(PHẢI): +1 (vòng)"
+  },
+  {
+   "id": "cong10",
+   "rect": [
+    739,
+    245,
+    815,
+    283
+   ],
+   "action": "KeyPressed(LÊN): +10"
+  },
+  {
+   "id": "popup_modal",
+   "rect": [
+    0,
+    0,
+    1200,
+    540
+   ],
+   "action": "chạm ngoài hộp: bỏ qua (không đóng)"
+  }
  ]
 }

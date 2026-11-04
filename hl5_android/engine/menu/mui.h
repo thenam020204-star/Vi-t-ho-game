@@ -245,6 +245,9 @@ H int npc_rarity(const u8 *name);
 H void npc_pick_paint(void *self, int x0, int y0, int x1, int y1, int curoff, const u8 *hint);
 H int npc_pick_cb(void *self, int id, int curoff);
 extern H u8 NPC_vtable[];                      /* "vtable for StateInNpcMenu" (nm); ô hàm = +8 */
+#define NPC_POPUP5(self) (POP_TYPE(self) == 5 && *(u32 *)((u8 *)(self) + 8) && *(u32 *)(*(u32 *)((u8 *)(self) + 8)) == (u32)NPC_vtable + 8)   /* L2: nhập số lượng */
+H void qty_paint(void *self);
+H int qty_touch(void *self, int x, int y);
 #define NPC_POPUP(self) (POP_TYPE(self) == 4 && *(u32 *)(*(u32 *)((u8 *)(self) + 8)) == (u32)NPC_vtable + 8)
 
 /* ---------------- spirit.c (L1/T17c4) ---------------- */
@@ -261,3 +264,10 @@ H int gpop_move(void *self, int x, int y);
 H void quest_paint(void *self);
 H int quest_touch(void *self, int x, int y);
 H int quest_move(void *self, int x, int y);
+
+/* ---------------- expert.c (L1/T17c6: Chuyên gia) ---------------- */
+H void expert_paint(void *self);
+H int expert_touch(void *self, int x, int y);
+H int expert_move(void *self, int x, int y);
+extern H u8 EXPERT_vtable[];                   /* "vtable for StateInExpertMenu" (nm); ô hàm = +8 */
+#define EXPERT_POPUP(self, t) (POP_TYPE(self) == (t) && *(u32 *)((u8 *)(self) + 8) && *(u32 *)(*(u32 *)((u8 *)(self) + 8)) == (u32)EXPERT_vtable + 8)   /* L1: popup của Chuyên gia (loại 4 Có/Không, 5 nhập số lượng): dùng lại widget npcpop/qty của L2 */

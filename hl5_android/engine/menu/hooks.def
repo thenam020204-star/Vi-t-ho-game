@@ -6,3 +6,15 @@ HOOK_BL(0xd9330, 0xc6428, t7_cash_netconnect)
 HOOK_BL(0xd9350, 0xd7e50, t7_cash_popup)
 HOOK_BL(0xdc188, 0xc6428, t7_game_revive)
 HOOK_BL(0xd9a24, 0xd7e50, t7_cash_confirm)   # KeyPressed: popup xác nhận (loại 2) với chữ "Miễn phí"
+# T16/dialog.c: khung hội thoại mới. 0x6f5c4 = bl DIALOG_INFO::SetFacePosition cuối EventProc::Event_SituateDialogText (ghi hình học hộp/chữ); 0x6df6c, 0x6dfa4 = bl EventProc::Event_DialogWindow
+# trong Event_Draw (hộp + chữ + tên); 0x6df44, 0x6df7c = bl DIALOG_INFO::Draw_Face (chân dung); 0x68058, 0x68094 = hai bl Graphic::DrawImageBlending trong EventProc::EventSkipDraw (ảnh "#: Skip" -> nút Bỏ qua).
+HOOK_BL(0x6f5c4, 0x6f370, dlg_setface)
+HOOK_BL(0x6df6c, 0x6afd0, dlg_window)
+HOOK_BL(0x6dfa4, 0x6afd0, dlg_window)
+HOOK_BL(0x6df44, 0x6dd1c, dlg_face)
+HOOK_BL(0x6df7c, 0x6dd1c, dlg_face)
+HOOK_BL(0x68058, 0x5ae20, dlg_skip_a)
+HOOK_BL(0x68094, 0x5ae20, dlg_skip_b)
+# T16/dialog.c: Event_Key nhánh hội thoại ([this+0xa8]==57): 0x6d39c = bl BFont::IsTextFieldDrawComplete, 0x6d408 = bl BFont::GetTextFieldPageLen (bọc bằng cờ vn_state.force0 ở HD)
+HOOK_BL(0x6d39c, 0x4112c, dlg_iscomplete)
+HOOK_BL(0x6d408, 0x41080, dlg_pagelen)

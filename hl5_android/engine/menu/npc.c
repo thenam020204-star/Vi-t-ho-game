@@ -258,6 +258,159 @@ static void paint_collgrid(void *self) {
     (void)in;
 }
 
+/* ---------------- 3/4: Tôi luyện thường/cao cấp; 5: Kết hợp Orb; 6: Chế biến thường (L2/T17c5c) ----------------
+ * Tôi luyện/Orb: [0xf] 0 = hàng chính ([0x10] 0..2 / 0..3), 1.. = picker. Vật phẩm chọn = s8 gv[6918] -> mục túi = *(u32*)(bag+4*(idx+122)) (+0x14 = ItemInfo*, +0x12 = s16 chỉ số).
+ * Tôi luyện: [0x18] s8 = số đá dùng; đá = (11,10) thường / (18,8) cao cấp; tỉ lệ = min(1000, s16 ItemTable[lvl*10 + 212 | 312] + 2*[0x18]) nghìn phân, lvl = s8 item[0x165] (+1 sau khi thành công);
+ *   chi phí = RefineItem::GetItemRefineMoney(mục+0x12). Orb: [0x19] id Orb (cat 12), [0x1a] id vật hiến tế (cat 18, id 9 nhân đôi tỉ lệ); tỉ lệ = min(1000, s16 ItemTable[180 + 6*cnt] (x2 nếu hiến tế 9)),
+ *   cnt = số ô Orb trong item[0x169..] bằng loại ((id-1)%13)+1, số ô = s8 item[0x168].
+ * Chế biến: công thức = HERO::GetMixSmithTableInfoPtr(s16 [0xc]*8 + [0x10]) (lưới logic 2 hàng x 4 cột = 8 công thức, [0x10] 0..7); kết quả cat s8 [+0x126] (<0 = ô trống) id [+0x127]; n = [+0x11c] nguyên liệu,
+ *   nguyên liệu i: cat [+0x11d+i], id [+0x120+i], cần [+0x123+i]. */
+extern H void *HERO_GetRefineItemPtr(void *hero);
+extern H int RefineItem_GetItemRefineMoney(void *ri, int id);
+extern H u8 *HERO_GetMixSmithTableInfoPtr(void *hero, int i);
+enum { H_ROW = 0xB0, H_CLEAR = 0x94 };
+static u8 ib2[400];
+
+static u8 *sel_entry(void) {                                             /* mục túi của vật phẩm đã chọn (gv[6918]) hoặc NULL */
+    int idx = (s8)gv[6918]; if (idx < 0) return NULL;
+    return *(u8 **)(BAGP() + 4 * (idx + 122));
+}
+static void panel(int x0, int y0, int x1, int y1) { int in[4]; mui_frame(x0, y0, x1, y1, L.rad, 0, 1, RGB(14, 22, 34), 230, in); }
+/* hàng ô (mock w_slot): ô + nhãn nhỏ + tên; hid = vùng chạm cả hàng; trả y dưới hàng */
+static int slot_row(int y, const u8 *label, const u8 *name, int icon, int rar, int sel, int dim, int hid) {
+    mui_m *m = &L; int rh = m->cell + 6, x0 = G.x0, x1 = G.x1;
+    panel(x0, y, x1, y + rh);
+    mui_cell_i(x0 + 3, y + 3, icon, 0, rar, 0, sel, 0);
+    int tx = x0 + 3 + m->cell + m->pad, ty = y + (rh - (m->spx + m->px + 2)) / 2;
+    mui_clip(tx, y, x1 - m->pad, y + rh);
+    mui_text(tx, ty, label, -1, m->spx, C_DIM, 0);
+    mui_text(tx, ty + m->spx + 2, name, -1, m->px, dim ? C_DIM : C_WHITE, rar >= 0 && !dim ? TF_SHADOW : 0);
+    mui_clip_reset();
+    mui_hit(hid, x0, y, x1, y + rh, HK_CB, 0, 0);
+    return y + rh;
+}
+static void coin_numf(int xr, int y, int v, u32 col, int f) {
+    u8 t[16]; int n = mui_money(v, t), w = mui_sw(f, t, n);                  /* mock w_statrows: xu luôn x1 */
+    const u8 *coin = CUI_SPR(16); int cw = *(const u16 *)(coin + 2), ch = *(const u16 *)(coin + 4);
+    mui_text(xr, y, t, n, f, col, TF_RIGHT);
+    mui_gbm(coin, xr - w - 3 - cw, y + (f - ch) / 2, 1, -1);
+}
+/* bảng nhãn-giá trị (mock w_statrows): rows[i] = nhãn, giá trị chữ (hoặc coin >=0), màu; trả y dưới bảng */
+typedef struct { const u8 *lab; const u8 *val; int nval, coin; u32 col; } srow_t;
+static int statrows(int y0, const srow_t *rows, int n) {
+    mui_m *m = &L; int f = m->hd ? m->px : m->spx, step = f + (m->hd ? 6 : 5), p = m->pad / 2 + 1, x0 = G.x0, x1 = G.x1, h = 2 * p + 2 + n * step;
+    panel(x0, y0, x1, y0 + h);
+    for (int i = 0; i < n; i++) {
+        int y = y0 + p + 1 + i * step;
+        mui_clip(x0 + p + 2, y, x0 + (x1 - x0) / 2 + p, y + step);
+        mui_text(x0 + p + 2, y, rows[i].lab, -1, f, C_DIM, 0);
+        mui_clip_reset();
+        if (rows[i].coin >= 0) coin_numf(x1 - p - 2, y, rows[i].coin, rows[i].col, f);
+        else mui_text(x1 - p - 2, y, rows[i].val, rows[i].nval, f, rows[i].col, TF_RIGHT);
+    }
+    return y0 + h;
+}
+static int pct_str(int v, u8 *t) { int n = mui_itoa(v / 10, t); t[n++] = '.'; t[n++] = '0' + v % 10; t[n++] = '%'; return n; }
+
+static void paint_refine(void *self) {
+    mui_m *m = &L; int st = S8(self, 0xe), hi = st == 4, row = S8(self, 0x10), qty = S8(self, 0x18), money = BagItem_GetMoney(BAGP());
+    u8 *e = sel_entry(), *it = e ? *(u8 **)(e + 0x14) : NULL;
+    if (!it) e = NULL;
+    frame_money(self, CT(86 + hi), 0);
+    int cat = hi ? 18 : 11, sid = hi ? 8 : 10, have = BagItem_GetBagItemTotalBunchCount(BAGP(), cat, sid), y = G.y0;
+    y = slot_row(y, CT(101), it ? it + 24 : CT(155), it ? I16(it, 22) : -1, it ? npc_rarity(it + 24) : -1, row == 0, !it, H_ROW) + m->gap;
+    u8 nm[64]; int nn;
+    clr(); ItemTable_GetItemTableInfo(ITEMTABLE(), ib, cat, sid);
+    if (qty > 0) {
+        const u8 *sn = ib + 24; nn = 0;
+        while (sn[nn] && nn < 40) { nm[nn] = sn[nn]; nn++; }
+        nm[nn++] = ' '; nm[nn++] = 'x'; nn += mui_itoa(qty, nm + nn); nm[nn++] = '/'; nn += mui_itoa(have, nm + nn); nm[nn] = 0;
+        y = slot_row(y, CT(102 + hi), nm, I16(ib, 22), -1, row == 1, 0, H_ROW + 1) + m->gap;
+    } else y = slot_row(y, CT(102 + hi), have > 0 ? CT(110) : CT(111), -1, -1, row == 1, 1, H_ROW + 1) + m->gap;
+    u8 rt[24], lv[32]; int rn, ln, lvl = it ? (s8)it[0x165] : 0, rate = 0;
+    if (it && qty > 0) { rate = I16(ITEMTABLE(), lvl * 10 + (hi ? 312 : 212)) + 2 * qty; if (rate > 1000) rate = 1000; }
+    rn = pct_str(rate, rt);
+    if (it) {                                                     /* gốc: "%d/10>%d/10" (cùng quy ước "Độ tôi luyện n/10" trong hộp thông tin vật phẩm) */
+        ln = mui_itoa(lvl, lv); lv[ln++] = '/'; lv[ln++] = '1'; lv[ln++] = '0'; lv[ln++] = ' '; lv[ln++] = '>'; lv[ln++] = ' ';
+        ln += mui_itoa(lvl + 1, lv + ln); lv[ln++] = '/'; lv[ln++] = '1'; lv[ln++] = '0';
+    } else { lv[0] = '-'; ln = 1; }
+    srow_t rows[4] = {{CT(104), rt, rn, -1, rate > 0 ? C_GREEN : C_DIM}, {CT(105), lv, ln, -1, it ? C_WHITE : C_DIM}, {CT(19), 0, 0, money, C_GOLD},
+                      {CT(106), 0, 0, e ? RefineItem_GetItemRefineMoney(HERO_GetRefineItemPtr(HEROP()), I16(e, 0x12)) : 0, C_GOLD}};
+    statrows(y, rows, 4);
+    mui_r b = {G.x0, G.by, G.x1, G.y1};
+    mui_button(&b, CT(107), -1, 1, H_BUY);
+}
+
+static void paint_orb(void *self) {
+    mui_m *m = &L; int row = S8(self, 0x10), orb = S8(self, 0x19), sac = S8(self, 0x1a);
+    u8 *e = sel_entry(), *it = e ? *(u8 **)(e + 0x14) : NULL;
+    frame_money(self, CT(88), 0);
+    int y = G.y0;
+    y = slot_row(y, CT(122), it ? it + 24 : CT(155), it ? I16(it, 22) : -1, it ? npc_rarity(it + 24) : -1, row == 0, !it, H_ROW) + m->gap;
+    if (orb >= 0) { clr(); ItemTable_GetItemTableInfo(ITEMTABLE(), ib, 12, orb); y = slot_row(y, CT(123), ib + 24, I16(ib, 22), -1, row == 1, 0, H_ROW + 1) + m->gap; }
+    else y = slot_row(y, CT(123), CT(155), -1, -1, row == 1, 1, H_ROW + 1) + m->gap;
+    if (sac >= 0) { clr(); ItemTable_GetItemTableInfo(ITEMTABLE(), ib, 18, sac); y = slot_row(y, CT(124), ib + 24, I16(ib, 22), -1, row == 2, 0, H_ROW + 2) + m->gap; }
+    else y = slot_row(y, CT(124), CT(127), -1, -1, row == 2, 1, H_ROW + 2) + m->gap;
+    int rate = 0;
+    if (it && orb >= 0) {
+        int n = (s8)it[0x168], cnt = 0, ty = (orb - 1) % 13 + 1;
+        for (int k = 0; k < n; k++) if ((s8)it[0x169 + k] == ty) cnt++;
+        rate = I16(ITEMTABLE(), 180 + 6 * cnt);
+        if (sac == 9) rate *= 2;
+        if (rate > 1000) rate = 1000;
+    }
+    u8 rt[24]; int rn = pct_str(rate, rt);
+    srow_t rows[1] = {{CT(104), rt, rn, -1, rate > 0 ? C_GREEN : C_DIM}};
+    statrows(y, rows, 1);
+    int hw = (G.x1 - G.x0 - m->gap) / 2, n1; const u8 *l1 = mui_hint(CT(130), &n1);
+    mui_r b0 = {G.x0, G.by, G.x0 + hw, G.y1}, b1 = {G.x1 - hw, G.by, G.x1, G.y1};
+    mui_button(&b0, l1, n1, sac >= 0 ? 0 : 3, H_CLEAR);
+    mui_button(&b1, CT(88), -1, 1, H_BUY);
+}
+
+static u8 *mix_rec(void *self, int cell) {                              /* bản ghi công thức của ô (0..7) hoặc NULL (ô ngoài lưới logic) */
+    if (cell < 0 || cell > 7) return NULL;
+    return HERO_GetMixSmithTableInfoPtr(HEROP(), (s8)(I16(self, 0xc) * 8 + cell));
+}
+static void paint_mix(void *self) {
+    mui_m *m = &L; int cur = S8(self, 0x10);
+    frame_money(self, CT(89), 0);
+    int sh = m->lp + 2 * m->s + 2;
+    mui_text(G.x0 + 2, G.y0 + 1, CT(135), -1, m->px, C_GOLD, 0);
+    mui_fill(G.x0, G.y0 + sh - 1, G.x1, G.y0 + sh, C_ORANGE_DK);
+    G.ty = G.y0 + sh + m->gap; grid_geo(1);
+    mui_scrollbar(G.sbx, G.gy, G.gy + 4 * m->pitch - m->cg, 0, 4, 4);
+    for (int k = 0; k < 16; k++) {
+        u8 *r = mix_rec(self, k); int icon = -1, rar = -1;
+        if (r && (s8)r[0x126] >= 0) { clr(); ItemTable_GetItemTableInfo(ITEMTABLE(), ib, (s8)r[0x126], (s8)r[0x127]); icon = I16(ib, 22); rar = npc_rarity(ib + 24); }
+        mui_cell_i(G.gx + (k % 4) * m->pitch, G.gy + (k / 4) * m->pitch, icon, 0, rar, 0, k == cur, H_CELL + k);
+    }
+    u8 *r = mix_rec(self, cur); int valid = r && (s8)r[0x126] >= 0, n = valid ? r[0x11c] : 0, by = G.by;
+    if (n > 3) n = 3;
+    mui_r box = {G.dx, G.gy, G.x1, by - m->gap};
+    if (valid) {
+        int f = m->hd ? m->px : m->spx, step = f + (m->hd ? 6 : 5), p = m->pad / 2 + 1, h = 2 * p + 2 + n * step, y0 = box.y1 - h;
+        clr(); ItemTable_GetItemTableInfo(ITEMTABLE(), ib, (s8)r[0x126], (s8)r[0x127]);
+        if (n > 0) {
+            mui_r ib_box = {box.x0, box.y0, box.x1, y0 - m->gap};
+            npc_item_info(&ib_box, ib, 0, 0, NULL);
+            panel(box.x0, y0, box.x1, box.y1);
+            for (int i = 0; i < n; i++) {
+                int cat = (s8)r[0x11d + i], id = (s8)r[0x120 + i], need = r[0x123 + i], have = BagItem_GetBagItemTotalBunchCount(BAGP(), cat, id), y = y0 + p + 1 + i * step;
+                clr(); ItemTable_GetItemTableInfo(ITEMTABLE(), ib2, cat, id);
+                u8 t[16]; int tn = mui_itoa(have, t); t[tn++] = '/'; tn += mui_itoa(need, t + tn);
+                int vw = mui_sw(f, t, tn);
+                mui_clip(box.x0 + p + 2, y, box.x1 - p - vw - 6, y + step);
+                mui_text(box.x0 + p + 2, y, ib2 + 24, -1, f, C_DIM, 0);
+                mui_clip_reset();
+                mui_text(box.x1 - p - 2, y, t, tn, f, have >= need ? C_GREEN : RGB(255, 96, 80), TF_RIGHT);
+            }
+        } else npc_item_info(&box, ib, 0, 0, NULL);
+    } else npc_item_info(&box, NULL, 0, 0, NULL);
+    mui_r b = {G.dx, by, G.x1, G.y1};
+    mui_button(&b, CT(150), -1, valid ? 1 : 3, H_BUY);
+}
+
 /* ---------------- Paint / Touch ---------------- */
 /* picker: trả offset con trỏ (0 = không phải picker) */
 static int pick_off(void *self, const u8 **title) {
@@ -274,6 +427,9 @@ void npc_paint(void *self) {
     case 0: paint_skillbuy(self); break;
     case 1: paint_itembuy(self); break;
     case 2: paint_sale(self); break;
+    case 3: case 4: paint_refine(self); break;
+    case 5: paint_orb(self); break;
+    case 6: paint_mix(self); break;
     case 7: if (S8(self, 0xf) == 0) paint_collmenu(self); else paint_collgrid(self); break;
     }
 }
@@ -281,6 +437,7 @@ int npc_move(void *self, int x, int y) { return mui_touch_move(self, MUI_CLS_NPC
 
 static void cell_tap(void *self, int k) {
     int st = S8(self, 0xe);
+    if (st == 6) { if (k > 7) return; if (S8(self, 0x10) == k) mui_key(self, MUI_CLS_NPC, -5); else S8(self, 0x10) = k; return; }
     if (st == 7 && S8(self, 0xf) != 0) {
         int f = S8(self, 0xf), cat = S8(self, 0x10), cur = S8(self, 0x12), top = S8(self, 0x13) - cur, tidx, icat, count, ntab;
         coll_idx(self, &tidx, &icat, &count, &ntab);
@@ -307,6 +464,11 @@ int npc_touch(void *self, int x, int y) {
     else if (id >= H_TAB && id < H_TAB + 3 && st == 1) { S8(self, 0xf) = 0; S8(self, 0x10) = id - H_TAB; }
     else if (id >= H_TAB && id < H_TAB + 5 && st == 7 && S8(self, 0xf) != 0 && S8(self, 0x10) < 2) { S8(self, 0xf) = 1 + S8(self, 0x10); S8(self, 0x11) = id - H_TAB; }
     else if (id >= H_PAGE && id < H_PAGE + 4 && st == 2) { S8(self, 0xf) = 0; S8(self, 0x10) = id - H_PAGE; }
+    else if (id >= H_ROW && id < H_ROW + 3 && (st == 3 || st == 4 || st == 5)) { S8(self, 0x10) = id - H_ROW; mui_key(self, MUI_CLS_NPC, -5); }
+    else if (id == H_CLEAR && st == 5) mui_key(self, MUI_CLS_NPC, 48);
+    else if (id == H_BUY && (st == 3 || st == 4)) { S8(self, 0x10) = 2; mui_key(self, MUI_CLS_NPC, -5); }
+    else if (id == H_BUY && st == 5) { S8(self, 0x10) = 3; mui_key(self, MUI_CLS_NPC, -5); }
+    else if (id == H_BUY && st == 6) mui_key(self, MUI_CLS_NPC, -5);
     else if (id == H_BUY) {
         if (st == 1 && S8(self, 0xf) == 0) S8(self, 0xf) = 1;
         if (st == 2 && S8(self, 0xf) == 0) S8(self, 0xf) = 1;
@@ -349,5 +511,55 @@ int npcpop_touch(void *self, int x, int y) {
     s8 *res = *(s8 **)((u8 *)self + 0x14); int nb = POP_NBTN(self);
     int k = mui_touch_press(self, MUI_CLS_POPUP, x, y), id = mui_last_id;
     if (k == HK_CB && id >= 0xA0 && id < 0xA0 + nb && res) { *res = id - 0xA0; mui_key(self, MUI_CLS_POPUP, -5); }
+    return 0;
+}
+
+/* ---------------- popup NPC loại 5 = nhập số lượng (StatePopup, cha = NPC): *[+0x14] = số lượng hiện tại 1..max, max = int [+0x20]; gốc: PHẢI/TRÁI +-1 (vòng), LÊN/XUỐNG +-10, OK xác nhận
+ * (ghi NPC[0x18] / dùng ở Process), CLR huỷ. Chạm = phím gốc tương ứng (không có mockup riêng: bố cục theo ngôn ngữ popup chung; số đo ghi ở LAYOUT.md "npc_so_luong"). ---------------- */
+enum { Q_OK = 0xA0, Q_NO = 0xA1, Q_M10 = 0xA2, Q_M1 = 0xA3, Q_P1 = 0xA4, Q_P10 = 0xA5 };
+void qty_paint(void *self) {
+    mui_m *m = &L; u32 par = *(u32 *)((u8 *)self + 8);
+    if (par) { void (**vt)(void *) = *(void (***)(void *))par; vt[0x40 / 4]((void *)par); }
+    if (!mui_begin()) return;
+    s8 *res = *(s8 **)((u8 *)self + 0x14);
+    if (!res) return;
+    int v = *res, mx = I32(self, 0x20), n1, st = par ? S8((void *)par, 0xe) : -1;
+    const u8 *l1 = mui_hint((u8 *)self + 0x43c, &n1), *cap = st == 1 ? CT(84) : st == 2 ? CT(85) : st == 3 ? CT(102) : st == 4 ? CT(103) : NULL;
+    int sq = m->btnH, pw = m->hd ? 460 : (66 * m->W + 50) / 100, in[4], tx = m->pad + 2 * m->s + 4;
+    if (pw > m->W - 2 * m->mg) pw = m->W - 2 * m->mg;
+    int ph = 2 * m->pad + 4 * m->s + (cap ? m->lp + m->gap : 0) + sq + m->pad + sq;
+    int x0 = (m->W - pw) / 2, y0 = (m->Ht - ph) / 2;
+    mui_fill_a(0, 0, m->W, m->Ht, C_INK, 120);
+    mui_hit(0xFE, 0, 0, m->W, m->Ht, HK_NONE, 0, 0);
+    mui_frame(x0, y0, x0 + pw, y0 + ph, m->rad, 1, m->bt, RGB(14, 22, 34), 248, in);
+    int yy = in[1] + m->pad + 2 * m->s, xl = in[0] + tx - m->pad, xr = in[2] - tx + m->pad;
+    if (cap) { mui_text((in[0] + in[2]) / 2, yy, cap, -1, m->px, C_DIM, TF_CENTER); yy += m->lp + m->gap; }
+    int bw = 2 * sq, g = m->gap, x = xl;
+    mui_r r;
+    r = (mui_r){x, yy, x + bw, yy + sq}; mui_button(&r, (const u8 *)"-10", 3, 0, Q_M10); x += bw + g;
+    r = (mui_r){x, yy, x + sq, yy + sq}; mui_arrow(&r, 0, Q_M1); x += sq + g;
+    int fx1 = xr - bw - g - sq - g;
+    { int fin[4]; mui_frame(x, yy, fx1, yy + sq, m->rad, 0, 1, RGB(10, 16, 26), 235, fin);
+      u8 t[24]; int n = mui_itoa(v, t); t[n++] = '/'; n += mui_itoa(mx, t + n);
+      mui_text((x + fx1) / 2, yy + (sq - m->px) / 2, t, n, m->px, C_GOLD, TF_CENTER | TF_SHADOW); }
+    x = fx1 + g;
+    r = (mui_r){x, yy, x + sq, yy + sq}; mui_arrow(&r, 1, Q_P1); x += sq + g;
+    r = (mui_r){x, yy, xr, yy + sq}; mui_button(&r, (const u8 *)"+10", 3, 0, Q_P10);
+    yy += sq + m->pad;
+    int hw = (xr - xl - g) / 2;
+    r = (mui_r){xl, yy, xl + hw, yy + sq}; mui_button(&r, l1, n1, 1, Q_OK);
+    r = (mui_r){xr - hw, yy, xr, yy + sq}; mui_button(&r, CT(57), -1, 0, Q_NO);
+}
+int qty_touch(void *self, int x, int y) {
+    int k = mui_touch_press(self, MUI_CLS_POPUP, x, y), id = mui_last_id;
+    if (k != HK_CB) return 0;
+    switch (id) {
+    case Q_OK: mui_key(self, MUI_CLS_POPUP, -5); break;
+    case Q_NO: mui_key(self, MUI_CLS_POPUP, -16); break;
+    case Q_M10: mui_key(self, MUI_CLS_POPUP, -2); break;
+    case Q_M1: mui_key(self, MUI_CLS_POPUP, -3); break;
+    case Q_P1: mui_key(self, MUI_CLS_POPUP, -4); break;
+    case Q_P10: mui_key(self, MUI_CLS_POPUP, -1); break;
+    }
     return 0;
 }

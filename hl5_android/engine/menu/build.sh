@@ -32,7 +32,10 @@ for f in t7; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $O
 for f in spirit; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Tinh linh
 for f in gpop; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c6: popup StateGame
 for f in quest; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Nhiệm vụ
+for f in expert; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Chuyên gia
 for f in npc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L2/T17c5: NPC
+# T16: khung hội thoại mới (dialog.c; dlg_text.h sinh từ từ điển $WORK/vi_android/dict.txt)
+if [ -f dialog.c ]; then python3 -I gen_dlg_text.py "$OUT/dlg_text.h"; $CC $DEF -I"$OUT" -c dialog.c -o "$OUT/dialog.o"; OBJS="$OBJS $OUT/dialog.o"; fi
 # --- địa chỉ hàm/biến guest (tra theo tên demangled trong .so gốc; ld.lld --defsym) ---
 NM=$(llvm-nm -C --defined-only "$SO")
 sym() { echo "$NM" | grep -F " $1" | awk -v n="$1" '{ l=$0; sub(/^[0-9a-f]+ . /,"",l); if (l==n) {print $1; exit} }'; }
@@ -62,8 +65,16 @@ done
 for p in "StateInNpcMenu::GetSearchSkillBook(signed char*)|NPC_GetSearchSkillBook" "NpcShop::GetItemInfo(ItemInfo*, signed char)|NpcShop_GetItemInfo" "HERO::GetCollectionCompleteTotalCount()|HERO_GetCollectionCompleteTotalCount" "vtable for StateInNpcMenu|NPC_vtable"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
+# L1/T17c6: symbol guest cho expert.c (vtable StateInExpertMenu: nhận diện popup có cha là Chuyên gia)
+for p in "vtable for StateInExpertMenu|EXPERT_vtable"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
 # L2/T17c5b: symbol guest cho npc.c (Bộ sưu tập lưới)
 for p in "HERO::IsCollectionComplete(signed char, signed char)|HERO_IsCollectionComplete" "HERO::GetCollectionCompleteCount(signed char)|HERO_GetCollectionCompleteCount" "BagItem::GetBagItemTotalBunchCount(signed char, signed char)|BagItem_GetBagItemTotalBunchCount"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
+# L2/T17c5c: symbol guest cho npc.c (Tôi luyện/Orb/Chế biến)
+for p in "HERO::GetRefineItemPtr()|HERO_GetRefineItemPtr" "RefineItem::GetItemRefineMoney(short)|RefineItem_GetItemRefineMoney" "HERO::GetMixSmithTableInfoPtr(signed char)|HERO_GetMixSmithTableInfoPtr"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 # T17c3b: symbol guest cho property.c
@@ -78,6 +89,15 @@ for p in "ItemTable::NewItemToBag(signed char, signed char, short, unsigned char
 done
 # L1/T17c4: symbol guest cho spirit.c
 for p in "Battle::Paint()|Battle_Paint" "HERO::GetSpiritInfoPtr()|HERO_GetSpiritInfoPtr" "HERO::GetEquipItemSpiritPtr()|HERO_GetEquipItemSpiritPtr" "EquipItemSpirit::GetEquipItemSpirit(signed char)|EquipItemSpirit_GetEquipItemSpirit"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
+# T16: symbol guest cho dialog.c (BFont, EventProc/DIALOG_INFO, _pCFont)
+for p in "_pCFont|_pCFont" "BFont::DrawTextField(int, int, int, int, int, char*, int, int, int, int)|BFont_DrawTextField" \
+  "BFont::IsTextFieldDrawComplete(int, int, char*, int, int, int)|BFont_IsTextFieldDrawComplete" "BFont::HanFontHeight()|BFont_HanFontHeight" \
+  "BFont::GetTextFieldPageLen(int, int, char*)|BFont_GetTextFieldPageLen" "BFont::SetColor(int)|BFont_SetColor" "BFont::SetColorFixed(unsigned char)|BFont_SetColorFixed" "TextMgr::GetNpcNameText(int)|TextMgr_GetNpcNameText" \
+  "EventProc::Event_DialogWindow(signed char)|EventProc_Event_DialogWindow" "DIALOG_INFO::Draw_Face()|DIALOG_INFO_Draw_Face" \
+  "DIALOG_INFO::SetFacePosition(unsigned char, signed char)|DIALOG_INFO_SetFacePosition" \
+  "Graphic::DrawImageBlending(int, int, int, GbmImage*, unsigned char, unsigned char, unsigned char, int)|Graphic_DrawImageBlending"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"

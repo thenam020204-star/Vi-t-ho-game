@@ -609,6 +609,19 @@ Không đổi lưới nào (kiến trúc A, §13.4): con trỏ gốc của từn
 | popup_yes (1) | `71,137,197,160` | `101,143,297,166` | `137,179,396,208` | `383,279,594,317` | KeyPressed(-5) với con trỏ popup=Có |
 | popup_no (1) | `204,137,329,160` | `304,143,499,166` | `405,179,663,208` | `607,279,817,317` | con trỏ popup=Không + KeyPressed(-5) |
 
+**npc_so_luong** (L2, KHÔNG có mockup riêng: bố cục viết trong `engine/menu/npc.c` `qty_paint`, số đo đo từ build, `hit_rects.json` khoá `npc_so_luong_<khung>`, 3 khung 400x240/600x270/1200x540): popup NPC loại 5 = nhập số lượng (StatePopup, cha = NPC; dùng ở Tôi luyện (đá), Mua/Bán vật phẩm xếp chồng). Hộp giữa màn hình rộng 66% (hd 460), dòng tiêu đề (tên cửa sổ cha: CT84/85/102/103), hàng `[-10] [◀] [giá trị/tối đa] [▶] [+10]`, hàng `[OK] [Huỷ]`; chiều cao nút = `btnH`. Chạm = phím gốc: ◀ TRÁI(-1, vòng), ▶ PHẢI(+1, vòng), -10 XUỐNG, +10 LÊN, OK -5, Huỷ CLR (-16).
+
+| nhóm | 400x240 | 600x270 | 1200x540 | hành động |
+|---|---|---|---|---|
+| tru10 | `77,107,123,130` | `111,122,157,145` | `385,245,461,283` | KeyPressed(XUỐNG) |
+| tru1 | `127,107,150,130` | `161,122,184,145` | `469,245,507,283` | KeyPressed(TRÁI) |
+| cong1 | `250,107,273,130` | `416,122,439,145` | `693,245,731,283` | KeyPressed(PHẢI) |
+| cong10 | `277,107,323,130` | `443,122,489,145` | `739,245,815,283` | KeyPressed(LÊN) |
+| popup_ok | `77,136,198,159` | `111,151,298,174` | `385,295,596,333` | KeyPressed(-5) |
+| popup_huy | `202,136,323,159` | `302,151,489,174` | `604,295,815,333` | KeyPressed(CLR) |
+
+Ghi chú L2 (Tôi luyện / Orb / Chế biến): dựng theo mockup `scr_refine/scr_orb/scr_mix`; khác mockup (dữ liệu thật): Tôi luyện hàng đá = "tên đá xSL/có", Độ tôi luyện = `n/10 > n+1/10` (như gốc); Orb nút "Bỏ vật hiến tế" vẽ mờ khi chưa có vật hiến tế (vẫn chạm được); Chế biến: lưới logic gốc 2 hàng x 4 cột = 8 công thức/cửa hàng (ô 8..15 trống, chạm bỏ qua), nguyên liệu = bảng `có/cần` dưới hộp thông tin (xanh khi đủ, đỏ khi thiếu), ô công thức chưa học (cat < 0) để trống.
+
 **cash_shop** (`cash_shop`): Cash shop: lưới 4x4 cuộn + nhãn giá offline miễn phí
 
 | nhóm (số phần tử) | 400x240 | 600x270 | 800x360 | 1200x540 | hành động |
