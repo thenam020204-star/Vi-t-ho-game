@@ -29,6 +29,8 @@ for f in property; do [ -f $f.c ] || continue; $CC $DEF -c $f.c -o "$OUT/$f.o"; 
 for f in skill; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # T17c3c: Kỹ năng
 for f in cash; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c6: Cash shop
 for f in t7; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T7: logic offline
+for f in spirit; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Tinh linh
+for f in gpop; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c6: popup StateGame
 for f in npc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L2/T17c5: NPC
 # --- địa chỉ hàm/biến guest (tra theo tên demangled trong .so gốc; ld.lld --defsym) ---
 NM=$(llvm-nm -C --defined-only "$SO")
@@ -67,6 +69,10 @@ a=$(sym "CommonUi::GetSkillDiscription(char*, signed char, HeroSkillInfo*)"); [ 
 # L1/T7: symbol guest cho t7.c
 for p in "ItemTable::NewItemToBag(signed char, signed char, short, unsigned char)|ItemTable_NewItemToBag" "StateCashShop::SetPopupState(signed char, char*, int, int, int)|StateCashShop_SetPopupState" \
   "HERO::Revival()|HERO_Revival" "StateGame::SetState(signed char)|StateGame_SetState" "NETWORK::netConnect(signed char)|NETWORK_netConnect"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
+# L1/T17c4: symbol guest cho spirit.c
+for p in "Battle::Paint()|Battle_Paint" "HERO::GetSpiritInfoPtr()|HERO_GetSpiritInfoPtr" "HERO::GetEquipItemSpiritPtr()|HERO_GetEquipItemSpiritPtr" "EquipItemSpirit::GetEquipItemSpirit(signed char)|EquipItemSpirit_GetEquipItemSpirit"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"

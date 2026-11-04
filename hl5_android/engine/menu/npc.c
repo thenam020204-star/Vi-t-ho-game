@@ -56,7 +56,7 @@ static void frame_money(void *self, const u8 *title, int strip) {
 }
 
 static void subtabs(void *self, int n, int active, const u8 *const *lab) {
-    mui_m *m = &L; int sh = m->px + 2 * (m->bt + 3) + 2, g2 = m->gap / 2, ox = m->bt, w = (G.x1 - G.x0 - 2 * ox - (n - 1) * g2) / n;
+    mui_m *m = &L; int sh = m->px + 2 * (m->bt + 3) + 2, g2 = 2, cw = G.x1 - G.x0, w = (cw - (n - 1) * g2) / n, ox = (cw - n * w - (n - 1) * g2) / 2;
     for (int i = 0; i < n; i++) {
         mui_r r = {G.x0 + ox + i * (w + g2), G.ty, G.x0 + ox + i * (w + g2) + w, G.ty + sh};
         mui_button(&r, lab[i], -1, i == active ? 1 : 0, H_TAB + i);

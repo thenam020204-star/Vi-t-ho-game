@@ -465,3 +465,7 @@ u8 *mui_cur_item(void *igs) {
 /* L2: xuất cho npc.c (hộp thông tin vật phẩm + màu phẩm chất) */
 void npc_item_info(const mui_r *box, u8 *item, int flag, int scr, const u8 *meta_other) { draw_item_info(box, item, flag, scr, meta_other); }
 int npc_rarity(const u8 *name) { return rarity(name); }
+
+/* L1/T17c4: Tinh linh sub 2 (bộ lọc trang bị Tinh linh = OpenSpiritEquipFilter, con trỏ +0x10) dùng lại picker của Túi */
+void spirit_pick_paint(void *self) { bgeo r; raw_geo(&r); paint_picker(self, &r, 0x10, CT(155), CT(56), CT(57), 0); }
+int spirit_pick_cb(void *self, int id) { return pick_cb(self, id, 0x10); }

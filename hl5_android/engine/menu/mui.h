@@ -244,3 +244,13 @@ H void npc_item_info(const mui_r *box, u8 *item, int flag, int scr, const u8 *me
 H int npc_rarity(const u8 *name);
 extern H u8 NPC_vtable[];                      /* "vtable for StateInNpcMenu" (nm); ô hàm = +8 */
 #define NPC_POPUP(self) (POP_TYPE(self) == 4 && *(u32 *)(*(u32 *)((u8 *)(self) + 8)) == (u32)NPC_vtable + 8)
+
+/* ---------------- spirit.c (L1/T17c4) ---------------- */
+H void spirit_paint(void *self);
+H int spirit_touch(void *self, int x, int y);
+H int spirit_move(void *self, int x, int y);
+
+/* ---------------- gpop.c (L1/T17c6: popup StateGame) ---------------- */
+H void gpop_paint(void *self);
+H int gpop_touch(void *self, int x, int y);
+H int gpop_move(void *self, int x, int y);
