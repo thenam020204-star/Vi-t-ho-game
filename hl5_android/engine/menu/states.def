@@ -8,6 +8,8 @@
 /* T17c1: InGameMenu lưới 3x3 (0), Nhân vật (1), Hệ thống (9); popup chung loại 1-3 (1-2 nút) và 7 (menu dọc) */
 MUI_STATE(INGAME, ig, (GS(self) == 0 || GS(self) == 1 || GS(self) == 2 || GS(self) == 3 || GS(self) == 9), ig_paint, ig_touch, ig_move)
 MUI_STATE(POPUP, pop, ((POP_TYPE(self) >= 1 && POP_TYPE(self) <= 3 && POP_NBTN(self) >= 1 && POP_NBTN(self) <= 2) || (POP_TYPE(self) == 7 && POP_NBTN(self) >= 1 && POP_NBTN(self) <= 6) || (POP_TYPE(self) == 10 && *(u8 **)((u8 *)(self) + 0x814))), pop_paint, pop_touch, ig_move)
+/* T17c3c: Kỹ năng (state 4): sub 0 chọn tab con, 1..5 lưới, 6 chọn ô nhanh; sub 7..10 (mua/ghép sách) giữ đường gốc */
+MUI_STATE(INGAME, sk, (GS(self) == 4 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 6), sk_paint, sk_touch, sk_move)
 #ifdef MUI_DEBUG
 MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
 #endif
