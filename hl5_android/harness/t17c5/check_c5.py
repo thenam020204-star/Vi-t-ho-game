@@ -29,9 +29,16 @@ def act(a):
         if os.environ.get('DBG'): print('TAP', hex(hid), 'cls', hex(c.cls()), sorted(h.keys())[:6], file=sys.stderr, flush=True)
         c.tap(hid, 4)
     elif a[0] == 'key': c.key(a[1], 4)
+    elif a[0] == 'keys':
+        for k in a[1]: c.key(k, 4)
 def run(typ, seq, m=100000, name=None):
     def f():
-        g.uc.mem_write(c.hero + 6080, struct.pack('<i', m)); r.call(0x42b08, 0, typ, 1); c.step(15)
+        g.uc.mem_write(c.hero + 6080, struct.pack('<i', m))
+        if name and name.startswith('pick'):
+            tbl = g.rd32(c.gv + 5132)
+            for cat, id_, n_ in ((0, 19, 1), (0, 20, 1), (5, 20, 1), (11, 10, 3)):
+                for _ in range(n_): r.call(0xa321c, tbl, cat, id_, 1, 1)
+        r.call(0x42b08, 0, typ, 1); c.step(15)
         out = [snap()]
         if NEW and name: json.dump({str(k): v for k, v in c.hits().items()}, open(os.path.join(OUT, 'hits_%s_%s.json' % (name, tag)), 'w'))
         for a in seq:
@@ -39,6 +46,7 @@ def run(typ, seq, m=100000, name=None):
             if x is not None: act(x)
             out.append(snap())
         if name: c.step(4); c.shot(name)
+        if NEW and name: json.dump({str(k): v for k, v in c.hits().items()}, open(os.path.join(OUT, 'hitsend_%s_%s.json' % (name, tag)), 'w'))
         return out
     return f
 K = lambda k: ('key', k)
@@ -54,6 +62,12 @@ SC = {
  'sale': (2, [(KS('OK', 'RIGHT', 'RIGHT', 'RIGHT'), T(H_CELL + 3)), (K('OK'), T(H_CELL + 3)), (K('OK'), T(POP))]),
  'sale_page': (2, [(K('DOWN'), T(H_PAGE + 1)), (KS('OK'), T(H_CELL + 0)), (K('OK'), T(H_CELL + 0))]),
  'coll_menu': (7, [(KS('DOWN', 'OK'), T(H_CELL + 1))]),
+ 'coll_grid': (7, [(K('OK'), T(H_CELL + 0)), (K('RIGHT'), T(H_TAB + 1)), (KS('DOWN', 'RIGHT'), T(H_CELL + 1)), (KS('DOWN', 'DOWN', 'DOWN'), T(H_CELL + 13)), (K('LEFT'), T(H_CELL + 12)), (K('OK'), T(H_CELL + 12))]),
+ 'coll_acc': (7, [(KS('DOWN', 'DOWN', 'OK'), T(H_CELL + 2)), (K('RIGHT'), T(H_CELL + 1)), (KS('DOWN', 'DOWN'), T(H_CELL + 9))]),
+ 'coll_arm': (7, [(KS('DOWN', 'OK'), T(H_CELL + 1)), (KS('RIGHT', 'RIGHT', 'RIGHT'), T(H_TAB + 3)), (K('DOWN'), T(H_CELL + 0))]),
+ 'pick_ref': (3, [(K('OK'), K('OK')), (K('RIGHT'), T(0xC0 + 1)), (K('OK'), T(0xC0 + 1))]),
+ 'pick_cancel': (4, [(K('OK'), K('OK')), (K('CLR'), T(0xC9))]),
+ 'pick_coll': (7, [(KS('OK', 'DOWN', 'RIGHT', 'RIGHT', 'OK'), KS('OK', 'DOWN', 'RIGHT', 'RIGHT', 'OK')), (K('OK'), T(0xC0)), (K('OK'), T(POP))]),
 }
 for name, spec in SC.items():
     if only and name not in only: continue

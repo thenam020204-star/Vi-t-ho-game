@@ -31,6 +31,7 @@ for f in cash; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS 
 for f in t7; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T7: logic offline
 for f in spirit; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Tinh linh
 for f in gpop; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c6: popup StateGame
+for f in quest; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Nhiệm vụ
 for f in npc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L2/T17c5: NPC
 # --- địa chỉ hàm/biến guest (tra theo tên demangled trong .so gốc; ld.lld --defsym) ---
 NM=$(llvm-nm -C --defined-only "$SO")
@@ -59,6 +60,10 @@ for p in "_pTextMgr|_pTextMgr" "TextMgr::GetCommonText(int)|TextMgr_GetCommonTex
 done
 # L2/T17c5: symbol guest cho npc.c
 for p in "StateInNpcMenu::GetSearchSkillBook(signed char*)|NPC_GetSearchSkillBook" "NpcShop::GetItemInfo(ItemInfo*, signed char)|NpcShop_GetItemInfo" "HERO::GetCollectionCompleteTotalCount()|HERO_GetCollectionCompleteTotalCount" "vtable for StateInNpcMenu|NPC_vtable"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
+# L2/T17c5b: symbol guest cho npc.c (Bộ sưu tập lưới)
+for p in "HERO::IsCollectionComplete(signed char, signed char)|HERO_IsCollectionComplete" "HERO::GetCollectionCompleteCount(signed char)|HERO_GetCollectionCompleteCount" "BagItem::GetBagItemTotalBunchCount(signed char, signed char)|BagItem_GetBagItemTotalBunchCount"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 # T17c3b: symbol guest cho property.c

@@ -1,43 +1,61 @@
-L2/T17c5 NPC (Mua ky nang, Mua vat pham, Ban, Bo suu tap menu, popup NPC) - build dev.so ngay truoc khi chay
+L2/T17c5 phien 3: NPC Mua ky nang/Mua vat pham/Ban/Bo suu tap (menu+luoi 4 tab Vu khi/5 tab Giap/Trang suc)/picker chon vat pham (Tôi luyện/Orb/Bo suu tap)/popup NPC. Build dev.so xong roi moi chay.
 == 400x240
+DAT coll_acc 4
+DAT coll_arm 4
+DAT coll_grid 7
 DAT coll_menu 2
 DAT item_buy 5
 DAT item_buy_btn 4
 DAT item_buy_no 5
 DAT item_buy_tab1 6
+DAT pick_cancel 3
+DAT pick_coll 4
+DAT pick_ref 4
 DAT sale 4
 DAT sale_page 4
 DAT skill_buy 5
 DAT skill_nomoney 3
 TONG LECH 0
-TONG 64 LECH 0
+TONG 86 LECH 0
 == 600x270
+DAT coll_acc 4
+DAT coll_arm 4
+DAT coll_grid 7
 DAT coll_menu 2
 DAT item_buy 5
 DAT item_buy_btn 4
 DAT item_buy_no 5
 DAT item_buy_tab1 6
+DAT pick_cancel 3
+DAT pick_coll 4
+DAT pick_ref 4
 DAT sale 4
 DAT sale_page 4
 DAT skill_buy 5
 DAT skill_nomoney 3
 TONG LECH 0
-TONG 64 LECH 0
+TONG 86 LECH 0
 == 1200x540
+DAT coll_acc 4
+DAT coll_arm 4
+DAT coll_grid 7
 DAT coll_menu 2
 DAT item_buy 5
 DAT item_buy_btn 4
 DAT item_buy_no 5
 DAT item_buy_tab1 6
+DAT pick_cancel 3
+DAT pick_coll 4
+DAT pick_ref 4
 DAT sale 4
 DAT sale_page 4
 DAT skill_buy 5
 DAT skill_nomoney 3
 TONG LECH 0
-TONG 64 LECH 0
-== 20 lan mo/dong NPC (loai 0,1,2,7; harness/t17c5/check_cycles.py), 3 co
+TONG 86 LECH 0
+== 20 lan mo/dong (loai 0,1,2,7,3,5; luoi/picker; check_cycles.py), 3 co
 new
-{"live": 20, "top": 3152, "live4": 4, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 20, "top": 3152, "live4": 4, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 20, "top": 3152, "live4": 4, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}
+{"live": 19, "top": 3152, "live4": 7, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 19, "top": 3152, "live4": 7, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 19, "top": 3152, "live4": 7, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}
 orig
-{"live": 21, "top": 3152, "live4": 5, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 21, "top": 3152, "live4": 5, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 21, "top": 3152, "live4": 5, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}
-KET LUAN phan da lam: DAT (cac man chua lam van duong goc)
+{"live": 20, "top": 3152, "live4": 8, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 20, "top": 3152, "live4": 8, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}{"live": 20, "top": 3152, "live4": 8, "top4": 3152, "back_ok": true, "cls0": "0x15e150"}
+KET LUAN phan da lam: DAT

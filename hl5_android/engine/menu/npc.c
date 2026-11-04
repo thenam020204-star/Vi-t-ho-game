@@ -18,6 +18,9 @@
 
 extern H int NPC_GetSearchSkillBook(void *self, s8 *out);
 extern H int NpcShop_GetItemInfo(void *shop, void *out, int slot);
+extern H int HERO_IsCollectionComplete(void *hero, int cls, int idx);
+extern H int HERO_GetCollectionCompleteCount(void *hero, int cls);
+extern H int BagItem_GetBagItemTotalBunchCount(void *bag, int cat, int id);
 
 enum { H_CELL = 0x40, H_TAB = 0x70, H_PAGE = 0x78, H_BUY = 0x90, H_DETAIL = 0x91, H_SCR = 0x92 };
 static u8 ib[400];                                     /* ItemInfo tạm (kích thước ItemInfo 312) */
@@ -191,19 +194,101 @@ static void paint_collmenu(void *self) {
     (void)in;
 }
 
+/* ---------------- 7 (lưới): Bộ sưu tập [0xf] 1..2 = hàng tab (Vũ khí 4 tab / Giáp 5 tab), 3 = Trang sức (không tab, lưới), 4..5 = con trỏ trong lưới (Vũ khí/Giáp)
+ * [0x10] loại 0..2, [0x11] tab; [0x12] con trỏ trong cửa sổ 0..15, [0x13] chỉ số tuyệt đối; đỉnh cửa sổ = [0x13]-[0x12].
+ * lớp bảng tidx = tab (Vũ khí) / 4+tab (Giáp) / 9; loại vật phẩm cat = tab / 5+tab / 10; số mục = (s8)gv[6498+42*tidx]; id = (s8)gv[6499+42*tidx+idx];
+ * đã đăng ký = HERO::IsCollectionComplete(tidx, idx); có trong túi = BagItem::GetBagItemTotalBunchCount(cat, id) > 0 (đăng ký được). ---------------- */
+static void coll_idx(void *self, int *tidx, int *cat, int *count, int *ntab) {
+    int c = S8(self, 0x10), t = S8(self, 0x11);
+    if (c == 0) { *tidx = t; *cat = t; *ntab = 4; }
+    else if (c == 1) { *tidx = 4 + t; *cat = 5 + t; *ntab = 5; }
+    else { *tidx = 9; *cat = 10; *ntab = 0; }
+    if (*tidx < 0 || *tidx > 9) *tidx = 0;
+    *count = (s8)gv[6498 + 42 * *tidx];
+}
+static int coll_item(int tidx, int cat, int idx, int *owned, int *done) {      /* ItemInfo vào ib; trả id */
+    int id = (s8)gv[6499 + 42 * tidx + idx];
+    clr(); ItemTable_GetItemTableInfo(ITEMTABLE(), ib, cat, id);
+    *owned = BagItem_GetBagItemTotalBunchCount(BAGP(), cat, id) > 0;
+    *done = HERO_IsCollectionComplete(HEROP(), tidx, idx) & 255;
+    return id;
+}
+static void paint_collgrid(void *self) {
+    mui_m *m = &L; int f = S8(self, 0xf), cat = S8(self, 0x10), tab = S8(self, 0x11), cur = S8(self, 0x12), ab = S8(self, 0x13);
+    int tidx, icat, count, ntab, in[4]; u8 t[24]; int n, foc = f >= 3;
+    coll_idx(self, &tidx, &icat, &count, &ntab);
+    frame_money(self, CT(269 + (cat < 0 || cat > 2 ? 0 : cat)), 0);
+    int sh = m->lp + 2 * m->s + 2;
+    mui_text(G.x0 + 2, G.y0 + 1, CT(284), -1, m->px, C_DIM, 0);
+    n = mui_itoa(HERO_GetCollectionCompleteCount(HEROP(), tidx), t); t[n++] = '/'; n += mui_itoa(count, t + n);
+    mui_text(G.x1 - 2, G.y0 + 1, t, n, m->px, C_GOLD, TF_RIGHT);
+    mui_fill(G.x0, G.y0 + sh - 1, G.x1, G.y0 + sh, C_ORANGE_DK);
+    G.ty = G.y0 + sh + m->gap;
+    if (ntab) {
+        const u8 *lab[5];
+        for (int i = 0; i < ntab; i++) lab[i] = CT((cat == 0 ? 178 : 277) + i);
+        subtabs(self, ntab, tab, lab);
+    }
+    grid_geo(1);
+    int rows = (count + 3) / 4, top = ab - cur;
+    if (top < 0) top = 0;
+    mui_scrollbar(G.sbx, G.gy, G.gy + 4 * m->pitch - m->cg, top / 4, rows < 4 ? 4 : rows, 4);
+    for (int k = 0; k < 16; k++) {
+        int idx = top + k, x = G.gx + (k % 4) * m->pitch, y = G.gy + (k / 4) * m->pitch, sel = foc && k == cur;
+        if (idx >= count) { mui_cell_i(x, y, -1, 0, -1, 0, 0, H_CELL + k); continue; }
+        int owned, done; coll_item(tidx, icat, idx, &owned, &done);
+        if (done || owned) {
+            mui_cell_i(x, y, I16(ib, 22), 0, -1, 0, sel, H_CELL + k);
+            if (!done) mui_fill_a(x + 1, y + 1, x + m->cell - 1, y + m->cell - 1, C_CELL, 150);
+        } else {
+            mui_cell_i(x, y, -1, 0, -1, 0, sel, H_CELL + k);
+            int w = mui_sw(m->px, (const u8 *)"?", 1);
+            mui_text(x + (m->cell - w) / 2, y + (m->cell - m->px) / 2, (const u8 *)"?", 1, m->px, sel ? C_WHITE : C_DIM, 0);
+        }
+    }
+    int ok = 0; u8 *sel = NULL;
+    if (foc && ab >= 0 && ab < count) {
+        int owned, done; coll_item(tidx, icat, ab, &owned, &done);
+        if (owned || done) sel = ib;
+        ok = owned && !done;
+    }
+    price_button(self, CT(272), 0, ok, 0);
+    mui_r box = {G.dx, G.gy, G.x1, G.by - m->gap};
+    npc_item_info(&box, sel, 0, 0, NULL);
+    (void)in;
+}
+
 /* ---------------- Paint / Touch ---------------- */
+/* picker: trả offset con trỏ (0 = không phải picker) */
+static int pick_off(void *self, const u8 **title) {
+    int st = S8(self, 0xe), f = S8(self, 0xf);
+    if ((st == 3 || st == 4) && f == 1) { *title = CT(86 + st - 3); return 0x11; }
+    if (st == 5 && f >= 1 && f <= 3) { *title = CT(88); return 0x11; }
+    if (st == 7 && (f == 6 || f == 7 || f == 8)) { int c = S8(self, 0x10); *title = CT(269 + (c < 0 || c > 2 ? 0 : c)); return 0x14; }
+    return 0;
+}
 void npc_paint(void *self) {
+    const u8 *tt; int po = pick_off(self, &tt);
+    if (po) { frame_money(self, tt, 0); npc_pick_paint(self, G.x0, G.y0, G.x1, G.y1, po, CT(155)); return; }
     switch (S8(self, 0xe)) {
     case 0: paint_skillbuy(self); break;
     case 1: paint_itembuy(self); break;
     case 2: paint_sale(self); break;
-    case 7: paint_collmenu(self); break;
+    case 7: if (S8(self, 0xf) == 0) paint_collmenu(self); else paint_collgrid(self); break;
     }
 }
 int npc_move(void *self, int x, int y) { return mui_touch_move(self, MUI_CLS_NPC, x, y); }
 
 static void cell_tap(void *self, int k) {
     int st = S8(self, 0xe);
+    if (st == 7 && S8(self, 0xf) != 0) {
+        int f = S8(self, 0xf), cat = S8(self, 0x10), cur = S8(self, 0x12), top = S8(self, 0x13) - cur, tidx, icat, count, ntab;
+        coll_idx(self, &tidx, &icat, &count, &ntab);
+        if (top + k >= count) return;
+        if (f >= 3 && cur == k) { mui_key(self, MUI_CLS_NPC, -5); return; }
+        if (f < 3) S8(self, 0xf) = 3 + f;
+        S8(self, 0x12) = k; S8(self, 0x13) = top + k; (void)cat; return;
+    }
     if (st == 7) { S8(self, 0x10) = k; mui_key(self, MUI_CLS_NPC, -5); return; }
     if (st == 0) { if (S8(self, 0x10) == k) mui_key(self, MUI_CLS_NPC, -5); else S8(self, 0x10) = k; }
     else if (st == 1) {
@@ -217,12 +302,15 @@ static void cell_tap(void *self, int k) {
 int npc_touch(void *self, int x, int y) {
     int k = mui_touch_press(self, MUI_CLS_NPC, x, y), id = mui_last_id, st = S8(self, 0xe);
     if (k != HK_CB) return 0;
+    { const u8 *tt; int po = pick_off(self, &tt); if (po) { npc_pick_cb(self, id, po); return 0; } }
     if (id >= H_CELL && id < H_CELL + 16) cell_tap(self, id - H_CELL);
     else if (id >= H_TAB && id < H_TAB + 3 && st == 1) { S8(self, 0xf) = 0; S8(self, 0x10) = id - H_TAB; }
+    else if (id >= H_TAB && id < H_TAB + 5 && st == 7 && S8(self, 0xf) != 0 && S8(self, 0x10) < 2) { S8(self, 0xf) = 1 + S8(self, 0x10); S8(self, 0x11) = id - H_TAB; }
     else if (id >= H_PAGE && id < H_PAGE + 4 && st == 2) { S8(self, 0xf) = 0; S8(self, 0x10) = id - H_PAGE; }
     else if (id == H_BUY) {
         if (st == 1 && S8(self, 0xf) == 0) S8(self, 0xf) = 1;
         if (st == 2 && S8(self, 0xf) == 0) S8(self, 0xf) = 1;
+        if (st == 7 && S8(self, 0xf) >= 1 && S8(self, 0xf) <= 2) S8(self, 0xf) += 3;
         mui_key(self, MUI_CLS_NPC, -5);
     }
     return 0;

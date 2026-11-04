@@ -15,12 +15,14 @@ MUI_STATE(INGAME, sk, (GS(self) == 4 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(s
 /* L1/T17c6: Cash shop (state 0) */
 MUI_STATE(CASH, cash, (GS(self) == 0), cash_paint, cash_touch, cash_move)
 /* L2/T17c5: NPC (StateInNpcMenu [this+0xe]): 0 mua kỹ năng, 1 mua vật phẩm, 2 bán; popup NPC = StatePopup loại 4 có cha là NPC */
-MUI_STATE(NPC, npc, ((*((s8 *)(self) + 0xe) >= 0 && *((s8 *)(self) + 0xe) <= 2) || (*((s8 *)(self) + 0xe) == 7 && *((s8 *)(self) + 0xf) == 0)), npc_paint, npc_touch, npc_move)
+MUI_STATE(NPC, npc, ((*((s8 *)(self) + 0xe) >= 0 && *((s8 *)(self) + 0xe) <= 2) || (*((s8 *)(self) + 0xe) == 7 && *((s8 *)(self) + 0xf) >= 0 && *((s8 *)(self) + 0xf) <= 8) || ((*((s8 *)(self) + 0xe) == 3 || *((s8 *)(self) + 0xe) == 4) && *((s8 *)(self) + 0xf) == 1) || (*((s8 *)(self) + 0xe) == 5 && *((s8 *)(self) + 0xf) >= 1 && *((s8 *)(self) + 0xf) <= 3)), npc_paint, npc_touch, npc_move)
 MUI_STATE(POPUP, npcpop, (NPC_POPUP(self) && POP_NBTN(self) >= 1 && POP_NBTN(self) <= 2), npcpop_paint, npcpop_touch, ig_move)
 /* L1/T17c4: Tinh linh (InGameMenu state 7): sub 0 tab con, 1 ô trang bị, 2 bộ lọc, 3 kỹ năng; sub 4 giữ đường gốc */
 MUI_STATE(INGAME, spirit, (GS(self) == 7 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 3), spirit_paint, spirit_touch, spirit_move)
 /* L1/T17c6: popup StateGame: 1 = hồi sinh Có/Không, 4 = hồi sinh thành công (Paint gốc rồi popup đè) */
 MUI_STATE(GAME, gpop, (GS(self) == 1 || GS(self) == 4), gpop_paint, gpop_touch, gpop_move)
+/* L1/T17c4: Nhiệm vụ (InGameMenu state 8): sub 0 tab con, 1 danh sách, 2 cây nhánh, 3 chi tiết; sub 4 (phần thưởng) và 5/6 (bản đồ) giữ đường gốc */
+MUI_STATE(INGAME, quest, (GS(self) == 8 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 3), quest_paint, quest_touch, quest_move)
 #ifdef MUI_DEBUG
 MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
 #endif

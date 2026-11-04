@@ -328,15 +328,16 @@ void bag_paint(void *self, const mui_r *body) {
     mui_button(&sb, t, n, 0, 0); mui_hit(H_SORT, sb.x0, sb.y0, sb.x1, sb.y1, HK_KEY, 48, 0);
 }
 
+static int pick_cls = MUI_CLS_INGAME;                       /* L2: lớp nhận phím (NPC dùng lại picker) */
 static int pick_cb(void *self, int id, int curoff) {       /* chạm danh sách lọc (chung Túi sub>=3 và Trang bị sub 1) */
     u8 *bag = BAGP(); int total = I16(bag, 872), cur = S8(self, curoff);
     if (id >= H_CAND && id < H_CAND + 5) {
         int idx = (cur / 5) * 5 + (id - H_CAND);
         if (idx >= total) return 1;
-        if (idx == cur) mui_key(self, MUI_CLS_INGAME, -5);
+        if (idx == cur) mui_key(self, pick_cls, -5);
         else { S8(self, curoff) = idx; reset_filter_view(); }
-    } else if (id == H_PREV) mui_key(self, MUI_CLS_INGAME, -3);
-    else if (id == H_NEXT) mui_key(self, MUI_CLS_INGAME, -4);
+    } else if (id == H_PREV) mui_key(self, pick_cls, -3);
+    else if (id == H_NEXT) mui_key(self, pick_cls, -4);
     else if (id == H_HSCR && total > 0) {
         int c = L.cell, x0 = 0, w = 5 * c + 4 * L.cg, idx;
         for (int i = mui_nhit - 1; i >= 0; i--) if (mui_hits[i].id == H_HSCR) { x0 = mui_hits[i].x0; break; }
@@ -469,3 +470,10 @@ int npc_rarity(const u8 *name) { return rarity(name); }
 /* L1/T17c4: Tinh linh sub 2 (bộ lọc trang bị Tinh linh = OpenSpiritEquipFilter, con trỏ +0x10) dùng lại picker của Túi */
 void spirit_pick_paint(void *self) { bgeo r; raw_geo(&r); paint_picker(self, &r, 0x10, CT(155), CT(56), CT(57), 0); }
 int spirit_pick_cb(void *self, int id) { return pick_cb(self, id, 0x10); }
+
+/* L2/T17c5: picker của NPC (Tôi luyện/Orb/Bộ sưu tập) dùng lại danh sách lọc của Túi; khung (x0,y0,x1,y1) = vùng nội dung NPC */
+void npc_pick_paint(void *self, int x0, int y0, int x1, int y1, int curoff, const u8 *hint) {
+    bgeo g = {x0, y0, x1, y1, 0, 0, 0, 0, 0, 0, 0};
+    paint_picker(self, &g, curoff, hint, CT(56), CT(57), 0);
+}
+int npc_pick_cb(void *self, int id, int curoff) { int r; pick_cls = MUI_CLS_NPC; r = pick_cb(self, id, curoff); pick_cls = MUI_CLS_INGAME; return r; }

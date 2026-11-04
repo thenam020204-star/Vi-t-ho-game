@@ -11,7 +11,7 @@ def f():
     g.uc.mem_write(c.hero + 6080, struct.pack('<i', 100000))
     live0 = len(g.heap.sizes); top0 = g.heap.top; trace = []
     for k in range(20):
-        typ = (0, 1, 2, 7)[k % 4]
+        typ = (0, 1, 2, 7, 3, 5)[k % 6]
         r.call(0x42b08, 0, typ, 1); c.step(8)
         if k % 2 == 0:
             if NEW:
@@ -20,11 +20,15 @@ def f():
                     if hid in h: c.tap(hid, 3)
             else: c.key('RIGHT', 3); c.key('OK', 3)
             if typ in (0, 1, 2): c.key('OK', 3)           # có thể bật popup
+        if typ in (3, 5, 7) and k % 2 == 1:
+            c.key('OK', 3)
+            if typ == 7: c.key('DOWN', 3); c.key('RIGHT', 3); c.key('OK', 3)
+            c.key('RIGHT', 3)
         for _ in range(8):
             if c.cls() == cls0: break
             r.key('CLR'); r.step(5)
         trace.append(hex(c.cls()))
-        if k == 3: live4 = len(g.heap.sizes) - live0; top4 = g.heap.top - top0
+        if k == 5: live4 = len(g.heap.sizes) - live0; top4 = g.heap.top - top0
     r.step(10)
     return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'live4': live4, 'top4': top4, 'back_ok': all(t == hex(cls0) for t in trace), 'cls0': hex(cls0)}
 c.fork(f, 'cycles')
