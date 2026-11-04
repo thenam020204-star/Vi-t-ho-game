@@ -44,8 +44,8 @@ static void paint_ready(void *self) {
     l1_prelude();
     mui_r wr = {m->wx, m->wy, m->wx + m->winW, m->wy + m->winH}, body;
     mui_window(&wr, CT(195), -1, 0, NULL, 0, &body);
-    int x0 = m->wx + m->pad, y0 = m->wy + m->titleH + m->pad, x1 = m->wx + m->winW - m->pad - (2 * m->bt + 1), y1 = m->wy + m->winH - m->pad - (2 * m->bt + 1);   /* khớp mockup (hit_rects.json): nội dung thu 2bt+1 so với cash.c */
-    int cw = x1 - x0 + 2 * m->bt + 1, lw = (cw * 46 + 50) / 100, g = m->gap + 2 + (m->hd && m->s >= 2);
+    int x0 = m->wx + m->pad, y0 = m->wy + m->titleH + m->pad, x1 = m->wx + m->winW - m->pad - (m->s + 2), y1 = m->wy + m->winH - m->pad - (m->s + 2);   /* khớp mockup (hit_rects.json): nội dung thu s+2 (3/4/5 px ở s=1/2/3) */
+    int cw = x1 - x0 + m->s + 2, lw = (cw * 46 + 50) / 100, g = m->gap + 2 + (m->hd && m->s >= 2);
     /* cột trái: tóm tắt nhân vật (như InGameMenu: vòng chân dung, tên, LV, lớp, 3 thanh) */
     l1_panel(x0, y0, x0 + lw, y1);
     int pr = m->hd ? 84 : 22 * s + 20, px_ = x0 + m->pad, yy = y0 + m->pad;
@@ -95,7 +95,7 @@ static void paint_shop(void *self) {
     l1_prelude();
     mui_r wr = {m->wx, m->wy, m->wx + m->winW, m->wy + m->winH}, body;
     mui_window(&wr, CT(244), -1, 0, NULL, 0, &body);
-    int x0 = m->wx + m->pad, y0 = m->wy + m->titleH + m->pad, x1 = m->wx + m->winW - m->pad - (2 * m->bt + 1), y1 = m->wy + m->winH - m->pad - (2 * m->bt + 1);   /* khớp mockup (hit_rects.json): nội dung thu 2bt+1 so với cash.c */
+    int x0 = m->wx + m->pad, y0 = m->wy + m->titleH + m->pad, x1 = m->wx + m->winW - m->pad - (m->s + 2), y1 = m->wy + m->winH - m->pad - (m->s + 2);   /* khớp mockup (hit_rects.json): nội dung thu s+2 (3/4/5 px ở s=1/2/3) */
     int gx = x0 + m->bt + 2, gy = y0 + m->bt + 2;
     mui_hit(H_SCR, gx, gy, gx + m->gridW + 3 + m->sbw, gy + m->gridW, HK_NONE, 0, 0);
     for (int r = 0; r < 4; r++)
@@ -104,7 +104,7 @@ static void paint_shop(void *self) {
             mui_cell_i(gx + c * m->pitch, gy + r * m->pitch, it ? I16(it, 22) : -1, 0, -1, 0, k == win, H_CELL + k);
         }
     mui_scrollbar(gx + m->gridW + 3, gy, gy + m->gridW, 0, 4, 4);
-    int dx0 = gx + m->gridW + 3 + m->sbw + m->gap + 2, by = y1 - m->btnH, pr = m->lp + 2, py = by - m->gap - pr;
+    int dx0 = gx + m->gridW + 3 + m->sbw + m->gap + 2, by = y1 - m->btnH, pr = m->lp + 3 * m->s - 1, py = by - m->gap - pr;
     mui_r box = {dx0, gy, x1, py - m->gap};
     u8 *it = shop_item(ab);
     npc_item_info(&box, it, 0, 0, NULL);

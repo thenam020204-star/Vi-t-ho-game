@@ -4,13 +4,15 @@ H = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, H)
 from c2lib import *
 from hl5libc import save_png
 WK = os.path.expanduser(os.environ.get('WORK', '~/hl5work_c2'))
-WK0 = os.path.expanduser('~/hl5work')            # bản gốc (chỉ đọc): build_apk/libHeroesLore5.so = v0.2-hd
+WK0 = os.path.expanduser('~/hl5work')
+# bản gốc v0.2-hd: build_apk của ~/hl5work đã bị ghi đè bằng bản v0.3-test2 (14:25 04/11) => đặt HL5_ORIG=thư mục chứa libHeroesLore5.so + data.vfs.mp3 của v0.2-hd (giải nén assets của dist/HL5-VI-v0.2-hd.apk)
+ORIGD = os.path.expanduser(os.environ.get('HL5_ORIG', WK0 + '/build_apk'))            # bản gốc (chỉ đọc): build_apk/libHeroesLore5.so = v0.2-hd
 
 class Ctx:
     def __init__(self, W, Hh, mode, outdir, boot_to=1000):
         self.W, self.H, self.mode = W, Hh, mode; self.NEW = mode == 'new'
-        so = WK + '/t17c2/dev/dev.so' if self.NEW else WK0 + '/build_apk/libHeroesLore5.so'
-        vfs = WK + '/t17c2/dev/data.vfs.mp3' if self.NEW else WK0 + '/build_apk/data.vfs.mp3'
+        so = WK + '/t17c2/dev/dev.so' if self.NEW else ORIGD + '/libHeroesLore5.so'
+        vfs = WK + '/t17c2/dev/data.vfs.mp3' if self.NEW else ORIGD + '/data.vfs.mp3'
         self.tag = '%dx%d' % (W, Hh); self.out = outdir; os.makedirs(outdir, exist_ok=True)
         self.r = Run(so, vfs, W, Hh, 'c2_%s_%s_%d' % (self.tag, mode, os.getpid()), WK + '/t17c2')
         route(self.r, boot_to)

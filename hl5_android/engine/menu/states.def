@@ -29,6 +29,8 @@ MUI_STATE(EXPERT, expert, (GS(self) == 0 || GS(self) == 1), expert_paint, expert
 /* L1/T17c6: popup của Chuyên gia (StatePopup cha = StateInExpertMenu): loại 4 Có/Không + loại 5 nhập số lượng, dùng widget npcpop/qty (npc.c) */
 MUI_STATE(POPUP, expop, (EXPERT_POPUP(self, 4) && POP_NBTN(self) >= 1 && POP_NBTN(self) <= 2), npcpop_paint, npcpop_touch, ig_move)
 MUI_STATE(POPUP, expqty, (EXPERT_POPUP(self, 5) && POP_NBTN(self) >= 1 && POP_NBTN(self) <= 2), qty_paint, qty_touch, ig_move)
+/* L1/T17c6: StateGame state 2 (Expert) sub 1 hộp thắng/thua, sub 2 bảng kết quả; sub 0 (biểu ngữ ảnh) giữ gốc */
+MUI_STATE(GAME, gres, (GS(self) == 2 && *((s8 *)(self) + 0xd) >= 1 && *((s8 *)(self) + 0xd) <= 2), gres_paint, gpop_touch, gpop_move)
 /* T16: hội thoại cốt truyện/NPC (StateGame state 0 khi [EventProc+0x75] != 0): Paint = Paint gốc (khung thoại vẽ bằng điểm móc hooks.def/dialog.c); chạm: nút Bỏ qua -> KeyPressed(35), chạm khác -> KeyPressed(-5) */
 MUI_STATE(GAME, dlg, (GS(self) == 0 && *(u8 **)(gv + 5204) && *(*(u8 **)(gv + 5204) + 0x75)), dlg_paint, dlg_touch, dlg_move)
 #ifdef MUI_DEBUG

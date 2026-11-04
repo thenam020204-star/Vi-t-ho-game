@@ -1,0 +1,27 @@
+== 400x240
+  trai (thông điệp 5): hộp game (DIALOG_INFO) x,y,w,h=[117, 183, 275, 53] ; hộp mockup (công thức) [117, 168, 275, 68] ; chênh x +0 y +15 w +0 h -15
+    hộp        game (135, 161, 392, 236)  mock (168, 146, 392, 236)   chênh (game - mock): x0 -33 y0 +15 x1 +0 y1 +0, cao -15
+    bảng tên   game None  mock None
+    nút Bỏ qua game (323, 8, 392, 33)  mock (322, 8, 392, 33)   chênh (game - mock): x0 +1 y0 +0 x1 +0 y1 +0, cao +0
+  phai (thông điệp 12): hộp game (DIALOG_INFO) x,y,w,h=[8, 183, 275, 53] ; hộp mockup (công thức) [8, 168, 275, 68] ; chênh x +0 y +15 w +0 h -15
+    hộp        game (8, 161, 268, 236)  mock (8, 146, 237, 236)   chênh (game - mock): x0 +0 y0 +15 x1 +31 y1 +0, cao -15
+    bảng tên   game None  mock None
+    nút Bỏ qua game (323, 8, 392, 33)  mock (322, 8, 392, 33)   chênh (game - mock): x0 +1 y0 +0 x1 +0 y1 +0, cao +0
+== 600x270
+  trai (thông điệp 5): hộp game (DIALOG_INFO) x,y,w,h=[117, 213, 475, 53] ; hộp mockup (công thức) [117, 198, 475, 68] ; chênh x +0 y +15 w +0 h -15
+    hộp        game (135, 191, 592, 266)  mock (168, 176, 592, 266)   chênh (game - mock): x0 -33 y0 +15 x1 +0 y1 +0, cao -15
+    bảng tên   game None  mock None
+    nút Bỏ qua game (523, 8, 592, 33)  mock (522, 8, 592, 33)   chênh (game - mock): x0 +1 y0 +0 x1 +0 y1 +0, cao +0
+  phai (thông điệp 12): hộp game (DIALOG_INFO) x,y,w,h=[8, 213, 475, 53] ; hộp mockup (công thức) [8, 198, 475, 68] ; chênh x +0 y +15 w +0 h -15
+    hộp        game (8, 191, 468, 266)  mock (8, 176, 437, 266)   chênh (game - mock): x0 +0 y0 +15 x1 +31 y1 +0, cao -15
+    bảng tên   game None  mock None
+    nút Bỏ qua game (523, 8, 592, 33)  mock (522, 8, 592, 33)   chênh (game - mock): x0 +1 y0 +0 x1 +0 y1 +0, cao +0
+== 1200x540
+  trai (thông điệp 5): hộp game (DIALOG_INFO) x,y,w,h=[233, 448, 951, 84] ; hộp mockup (công thức) [233, 436, 951, 96] ; chênh x +0 y +12 w +0 h -12
+    hộp        game (266, 416, 1184, 532)  mock (337, 404, 1184, 532)   chênh (game - mock): x0 -71 y0 +12 x1 +0 y1 +0, cao -12
+    bảng tên   game None  mock (1146, 502, 1167, 515)
+    nút Bỏ qua game (1079, 24, 1176, 62)  mock (1087, 16, 1184, 54)   chênh (game - mock): x0 -8 y0 +8 x1 -8 y1 +8, cao +0
+  phai (thông điệp 12): hộp game (DIALOG_INFO) x,y,w,h=[16, 448, 951, 84] ; hộp mockup (công thức) [16, 436, 951, 96] ; chênh x +0 y +12 w +0 h -12
+    hộp        game (16, 416, 940, 532)  mock (16, 404, 874, 532)   chênh (game - mock): x0 +0 y0 +12 x1 +66 y1 +0, cao -12
+    bảng tên   game None  mock (933, 496, 967, 532)
+    nút Bỏ qua game (1079, 24, 1176, 62)  mock (1087, 16, 1184, 54)   chênh (game - mock): x0 -8 y0 +8 x1 -8 y1 +8, cao +0

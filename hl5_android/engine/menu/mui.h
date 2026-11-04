@@ -259,6 +259,7 @@ H int spirit_move(void *self, int x, int y);
 H void gpop_paint(void *self);
 H int gpop_touch(void *self, int x, int y);
 H int gpop_move(void *self, int x, int y);
+H void gres_paint(void *self);   /* StateGame state 2 sub 1..2 (kết quả Expert) */
 
 /* ---------------- quest.c (L1/T17c4: Nhiệm vụ) ---------------- */
 H void quest_paint(void *self);

@@ -84,6 +84,7 @@ SC = {
  'pick_ref': (3, [(K('OK'), K('OK')), (K('RIGHT'), T(0xC0 + 1)), (K('OK'), T(0xC0 + 1))]),
  'pick_cancel': (4, [(K('OK'), K('OK')), (K('CLR'), T(0xC9))]),
  'ref_flow': (3, [(K('OK'), T(H_ROW)), (K('OK'), T(C0)), (KS('DOWN', 'OK'), T(H_ROW + 1)), (K('RIGHT'), T(Q_P1)), (K('OK'), T(POP)), (KS('DOWN', 'OK'), T(H_BUY)), (K('OK'), T(POP)), (K('OK'), T(POP))]),
+ 'ref_res': (3, [(K('OK'), T(H_ROW)), (K('OK'), T(C0)), (KS('DOWN', 'OK'), T(H_ROW + 1)), (K('RIGHT'), T(Q_P1)), (K('OK'), T(POP)), (KS('DOWN', 'OK'), T(H_BUY)), (K('OK'), T(POP))]),
  'qty_pop': (3, [(K('OK'), T(H_ROW)), (K('OK'), T(C0)), (KS('DOWN', 'OK'), T(H_ROW + 1)), (K('RIGHT'), T(Q_P1))]),
  'ref_hi': (4, [(K('OK'), T(H_ROW)), (K('OK'), T(C0)), (KS('DOWN', 'OK'), T(H_ROW + 1)), (K('UP'), T(Q_P10)), (K('LEFT'), T(Q_M1)), (K('OK'), T(POP)), (KS('DOWN', 'OK'), T(H_BUY)), (K('OK'), T(POP)), (K('OK'), T(POP))]),
  'ref_cancel': (3, [(K('OK'), T(H_ROW)), (K('OK'), T(C0)), (KS('DOWN', 'OK'), T(H_ROW + 1)), (K('RIGHT'), T(Q_P1)), (K('CLR'), T(Q_NO)), (KS('DOWN', 'OK'), T(H_BUY)), (K('OK'), T(POP))]),

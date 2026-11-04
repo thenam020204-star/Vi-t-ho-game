@@ -7,14 +7,15 @@ sys.path.insert(0, os.path.join(H, '..', 't17c1')); sys.path.insert(0, os.path.j
 from c1lib import Run, ROUTE, BASE
 from hl5libc import save_png
 WK = os.path.expanduser(os.environ.get('WORK', '~/hl5work_t16')); WK0 = os.path.expanduser('~/hl5work')
+ORIGD = os.path.expanduser(os.environ.get('HL5_ORIG', WK0 + '/build_apk'))   # gốc v0.2-hd (xem qlib.py của t17c2)
 GV = 0x16a238
 
 class Dlg:
     def __init__(self, W, Hh, mode, tag='t16'):
         self.W, self.H, self.mode = W, Hh, mode
         newso = mode in ('new', 'off')
-        so = WK + '/t16/dev/dev.so' if newso else WK0 + '/build_apk/libHeroesLore5.so'
-        vfs = WK + '/t16/dev/data.vfs.mp3' if newso else WK0 + '/build_apk/data.vfs.mp3'
+        so = WK + '/t16/dev/dev.so' if newso else ORIGD + '/libHeroesLore5.so'
+        vfs = WK + '/t16/dev/data.vfs.mp3' if newso else ORIGD + '/data.vfs.mp3'
         self.r = Run(so, vfs, W, Hh, '%s_%dx%d_%s_%d' % (tag, W, Hh, mode, os.getpid()), WK + '/t16')
         self.sym = {}
         if newso:

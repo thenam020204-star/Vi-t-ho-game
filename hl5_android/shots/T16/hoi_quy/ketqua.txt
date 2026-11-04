@@ -1,0 +1,21 @@
+== 400x240
+  start  orig=83a409ff off=83a409ff new=59b9ae1b   off==orig: True   new==orig: False
+  k0     orig=79d4c7ba off=79d4c7ba new=93d1c57b   off==orig: True   new==orig: False
+  k9     orig=940bf18a off=940bf18a new=cbf10555   off==orig: True   new==orig: False
+  end    orig=0988fb5b off=0988fb5b new=2a4c648b   off==orig: True   new==orig: False
+  before: vùng lệch trái(nhãn Skip gốc)=(0, 0, 58, 22) phải(nút Bỏ qua mới)=(323, 8, 392, 33); lệch NGOÀI hai vùng: None
+  after: vùng lệch trái(nhãn Skip gốc)=(0, 0, 58, 21) phải(nút Bỏ qua mới)=(323, 8, 392, 33); lệch NGOÀI hai vùng: None
+== 600x270
+  start  orig=17065725 off=17065725 new=ef67ffe1   off==orig: True   new==orig: False
+  k0     orig=fffcd42a off=fffcd42a new=609dfe50   off==orig: True   new==orig: False
+  k9     orig=6cc1eec9 off=6cc1eec9 new=397d5cfe   off==orig: True   new==orig: False
+  end    orig=7ef6844c off=7ef6844c new=d389c810   off==orig: True   new==orig: False
+  before: vùng lệch trái(nhãn Skip gốc)=(0, 0, 59, 21) phải(nút Bỏ qua mới)=(523, 8, 592, 33); lệch NGOÀI hai vùng: None
+  after: vùng lệch trái(nhãn Skip gốc)=(0, 0, 59, 21) phải(nút Bỏ qua mới)=(523, 8, 592, 33); lệch NGOÀI hai vùng: None
+== 1200x540
+  start  orig=e82217ac off=e82217ac new=45dd247a   off==orig: True   new==orig: False
+  k0     orig=76baf9cc off=76baf9cc new=24bf1c87   off==orig: True   new==orig: False
+  k9     orig=d21cd414 off=d21cd414 new=92dd54d7   off==orig: True   new==orig: False
+  end    orig=35c707dd off=35c707dd new=72e805c4   off==orig: True   new==orig: False
+  before: vùng lệch trái(nhãn Skip gốc)=(5, 0, 48, 18) phải(nút Bỏ qua mới)=(1079, 24, 1176, 62); lệch NGOÀI hai vùng: None
+  after: vùng lệch trái(nhãn Skip gốc)=(5, 0, 48, 18) phải(nút Bỏ qua mới)=(1079, 24, 1176, 62); lệch NGOÀI hai vùng: None
