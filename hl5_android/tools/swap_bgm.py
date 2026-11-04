@@ -5,9 +5,10 @@
 
 OGG_DIR chứa bgm_00.ogg .. bgm_20.ogg (Vorbis). Mọi mục VFS khác và mọi file APK khác giữ nguyên từng byte,
 giữ thứ tự và kiểu nén của từng mục zip (data.vfs.mp3 phải STORED vì Java mở bằng AssetFileDescriptor +
-MediaPlayer.setDataSource(fd, off, len)). Chữ ký cũ (META-INF/*.SF|RSA|MF) bị bỏ; sau đó zipalign -p 4 + apksigner.
+MediaPlayer.setDataSource(fd, off, len)). Cập nhật sha256 của data.vfs.mp3 trong assets/target-assets.json
+(Java TargetAssets so sha256 khi chép asset; lệch -> "Asset fingerprint mismatch"). Chữ ký cũ (META-INF/*.SF|RSA|MF) bị bỏ; sau đó zipalign -p 4 + apksigner.
 """
-import sys, os, zipfile, struct
+import sys, os, zipfile, struct, json, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from vfs_pack import djb2, read_vfs, write_vfs
 
@@ -26,15 +27,23 @@ for i in range(21):
     ent[idx[h]][1] = new
 out = write_vfs(ent)
 assert len(read_vfs(out)) == len(ent)
+ta = json.loads(zin.read('assets/target-assets.json'))
+assert 'data.vfs.mp3' in ta
+assert ta['data.vfs.mp3'] == hashlib.sha256(vfs).hexdigest(), 'target-assets.json của APK vào không khớp VFS'
+ta['data.vfs.mp3'] = hashlib.sha256(out).hexdigest()
 zout = zipfile.ZipFile(dst, 'w')
 for zi in zin.infolist():
     if zi.filename.startswith('META-INF/') and zi.filename.rsplit('.', 1)[-1] in ('SF', 'RSA', 'MF', 'EC', 'DSA'):
         continue
-    data = out if zi.filename == 'assets/data.vfs.mp3' else zin.read(zi.filename)
+    data = {'assets/data.vfs.mp3': out, 'assets/target-assets.json': json.dumps(ta).encode()}.get(zi.filename) or zin.read(zi.filename)
     ni = zipfile.ZipInfo(zi.filename, zi.date_time)
     ni.compress_type = zi.compress_type; ni.external_attr = zi.external_attr
     zout.writestr(ni, data)
 zout.close()
 z = zipfile.ZipFile(dst)
 assert z.getinfo('assets/data.vfs.mp3').compress_type == zipfile.ZIP_STORED
+chk = json.loads(z.read('assets/target-assets.json'))
+for k, h in chk.items():
+    assert hashlib.sha256(z.read('assets/' + k)).hexdigest() == h, 'sha256 lệch: ' + k
+print('target-assets.json khớp:', chk)
 print('VFS %d -> %d B, %d mục; ghi %s' % (len(vfs), len(out), len(ent), dst))
