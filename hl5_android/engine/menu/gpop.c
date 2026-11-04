@@ -17,6 +17,7 @@ static const u8 *strip_key(const u8 *s, int *n) {          /* bỏ gợi ý phí
     *n = l; return s;
 }
 static int find(const u8 *s, u8 ch) { for (int i = 0; s[i]; i++) if (s[i] == ch) return i; return -1; }
+extern H int BagItem_GetBagItemTotalBunchCount(void *bag, int cat, int id);
 static int rfind(const u8 *s, u8 ch) { int r = -1; for (int i = 0; s[i]; i++) if (s[i] == ch) r = i; return r; }
 
 static void box(const u8 *l1, int n1, const u8 *l2, int yes_no, const u8 *b1, int nb1, const u8 *b2, int nb2, int sel) {
@@ -55,7 +56,9 @@ void gpop_paint(void *self) {
         const u8 *off = CT(304); int n1, n2;
         if (off[0] == '^') off++;
         const u8 *yes = strip_key(CT(50), &n1), *no = strip_key(CT(51), &n2);
-        box(CT(260), -1, off, 1, yes, n1, no, n2, S8(self, 0xe) == 1);
+        if (BagItem_GetBagItemTotalBunchCount(HERO_GetBagItemPtr(HEROP()), 18, 23) > 0)      /* gốc DrawGameOver 0xdbbac: có Bùa Hồi Sinh (loại 18, id 23) -> CT(292+1), không có -> DrawOverText (260 + giá) */
+            box(CT(293), -1, NULL, 1, yes, n1, no, n2, S8(self, 0xe) == 1);          /* popup xác nhận dùng Bùa (game_hoi_sinh_xac_nhan) */
+        else box(CT(260), -1, off, 1, yes, n1, no, n2, S8(self, 0xe) == 1);
     } else {
         const u8 *t = CT(350); int k = find(t, ';'), k2 = rfind(t, ';'), n1;      /* "thông báo;;&Nhãn nút" */
         const u8 *lab = k2 >= 0 ? t + k2 + 1 : CT(56);

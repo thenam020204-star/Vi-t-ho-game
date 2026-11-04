@@ -87,5 +87,5 @@ def sc_cycles():
             if c.cls() == 0x15e150: break
             r.key('CLR'); r.step(5)
     r.step(10)
-    return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'img': hashlib.md5(r.shot()).hexdigest(), 'cls': hex(c.cls())}
+    return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'img': hashlib.md5(r.shot()).hexdigest(), 'mimg': c.mimg(), 'cls': hex(c.cls())}
 for nm in os.environ.get('SC', 'tab,equip,skill,cycles').split(','): c.fork(globals()['sc_' + nm], nm)

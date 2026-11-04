@@ -20,6 +20,7 @@ if [ "$DBG" = 1 ]; then
   python3 -I gen_dbg_text.py "$OUT/dbg_text.h" >/dev/null
 fi
 OBJS=""
+MMK=$(python3 -I -c "import sys; sys.path.insert(0,'../../patch'); import hd_cfg; print(hd_cfg.DEFAULT_K)")   # L3: k mặc định (hd_cfg.py)
 for f in rt gfx text layout widgets touch dispatch ingame popup bag combo dbg; do
   [ -f $f.c ] || continue
   $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"
@@ -32,7 +33,9 @@ for f in t7; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $O
 for f in spirit; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Tinh linh
 for f in gpop; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c6: popup StateGame
 for f in quest; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Nhiệm vụ
+for f in map; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1b/T17c8: StateMap
 for f in expert; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Chuyên gia
+for f in mmenu; do [ -f $f.c ] && { $CC $DEF -DMM_DEFAULT_K=$MMK -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L3/T17c7: MainMenu
 for f in npc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L2/T17c5: NPC
 # T16: khung hội thoại mới (dialog.c; dlg_text.h sinh từ từ điển $WORK/vi_android/dict.txt)
 if [ -f dialog.c ]; then python3 -I gen_dlg_text.py "$OUT/dlg_text.h"; $CC $DEF -I"$OUT" -c dialog.c -o "$OUT/dialog.o"; OBJS="$OBJS $OUT/dialog.o"; fi
@@ -77,6 +80,11 @@ done
 for p in "HERO::GetRefineItemPtr()|HERO_GetRefineItemPtr" "RefineItem::GetItemRefineMoney(short)|RefineItem_GetItemRefineMoney" "HERO::GetMixSmithTableInfoPtr(signed char)|HERO_GetMixSmithTableInfoPtr"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
+# L3/T17c7: symbol guest cho mmenu.c (SlotInfo, MenuText, NumKeyToNaviKey, vtable StateMainMenu)
+for p in "SlotInfo::GetHeroClass()|SlotInfo_GetHeroClass" "SlotInfo::GetHeroLevel()|SlotInfo_GetHeroLevel" "SlotInfo::GetPlayTime()|SlotInfo_GetPlayTime" "TextMgr::GetMenuText(int)|TextMgr_GetMenuText" "StaticUtil::NumKeyToNaviKey(int)|StaticUtil_NumKeyToNaviKey" "vtable for StateMainMenu|MAIN_vtable"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
+DEFS="$DEFS --defsym=StaticUtil_FileRead=0x1416e0"
 # T17c3b: symbol guest cho property.c
 for p in "HERO::GetHeroSkillInfoPtr(signed char)|HERO_GetHeroSkillInfoPtr" "CommonUi::GetSkillDiscription(char*, signed char, HeroSkillInfo*)|CommonUi_GetSkillDiscription"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
@@ -100,6 +108,8 @@ for p in "_pCFont|_pCFont" "BFont::DrawTextField(int, int, int, int, int, char*,
   "Graphic::DrawImageBlending(int, int, int, GbmImage*, unsigned char, unsigned char, unsigned char, int)|Graphic_DrawImageBlending"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
+# L1b/T17c8: symbol guest cho map.c
+a=$(sym "StateMap::DrawZone()"); [ -n "$a" ] || { echo "thiếu symbol StateMap::DrawZone"; exit 1; }; DEFS="$DEFS --defsym=StateMap_DrawZone=0x$a"
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
 for c in $(grep -o '^MUI_CLASS([A-Z]*, [A-Za-z]*' classes.def | sed 's/MUI_CLASS([A-Z]*, //'); do
   for m in "Paint()" "KeyPressed(int)" "TouchPressed(int, int, int)" "TouchMoved(int, int, int)" "TouchReleased(int, int, int)"; do

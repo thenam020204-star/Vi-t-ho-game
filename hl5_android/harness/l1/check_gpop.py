@@ -24,6 +24,12 @@ def sc_yes():
     if NEW: c.tap(0xF2, 6)
     else: c.key('OK', 6)
     out['after_ok'] = fl(); return out
+def sc_bua():       # có Bùa Hồi Sinh trong túi (loại 18 id 23): popup xác nhận CT(293)
+    c.callx(0xa321c, c.u32(c.gv + 5132), 18, 23, 2, 1)
+    go(1); out = {'s1': fl()}; c.shot('gp1x'); dump('gp1x'); c.wr(c.hero + 0xf0, [5, 0, 0, 0])
+    if NEW: c.tap(0xF0, 6)
+    else: c.key('OK', 6)
+    out['after_yes'] = fl(); c.step(10); out['later'] = fl(); return out
 def sc_no():
     go(1); out = {'s1': fl()}
     if NEW: c.tap(0xF1, 6)
@@ -38,5 +44,5 @@ def sc_cycles():
     live0 = len(g.heap.sizes); top0 = g.heap.top
     for k in range(20): one()
     r.step(10)
-    return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'img': hashlib.md5(r.shot()).hexdigest(), 'cls': hex(c.cls())}
-for nm in os.environ.get('SC', 'yes,no,cycles').split(','): c.fork(globals()['sc_' + nm], nm)
+    return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'img': hashlib.md5(r.shot()).hexdigest(), 'mimg': c.mimg(), 'cls': hex(c.cls())}
+for nm in os.environ.get('SC', 'yes,no,bua,cycles').split(','): c.fork(globals()['sc_' + nm], nm)

@@ -33,6 +33,15 @@ MUI_STATE(POPUP, expqty, (EXPERT_POPUP(self, 5) && POP_NBTN(self) >= 1 && POP_NB
 MUI_STATE(GAME, gres, (GS(self) == 2 && *((s8 *)(self) + 0xd) >= 1 && *((s8 *)(self) + 0xd) <= 2), gres_paint, gpop_touch, gpop_move)
 /* T16: hội thoại cốt truyện/NPC (StateGame state 0 khi [EventProc+0x75] != 0): Paint = Paint gốc (khung thoại vẽ bằng điểm móc hooks.def/dialog.c); chạm: nút Bỏ qua -> KeyPressed(35), chạm khác -> KeyPressed(-5) */
 MUI_STATE(GAME, dlg, (GS(self) == 0 && *(u8 **)(gv + 5204) && *(*(u8 **)(gv + 5204) + 0x75)), dlg_paint, dlg_touch, dlg_move)
+/* L3/T17c7: MainMenu: state 4 lưới 6 ô; 5 sub 0 slot / sub 1 lớp; 6 sub 0 Chuyên Gia = chọn slot; 9 sub 0 Cài đặt (10 mục); popup lớp = StatePopup loại 8 (cha MainMenu). State 2/3 (logo/tiêu đề), 10/11/12 (Thành tựu/Trợ giúp/Hỗ trợ), 0/1/7/8 (mạng), Cài đặt sub 1: đường gốc. */
+MUI_STATE(MAIN, mm4, (GS(self) == 4), mm_grid_paint, mm_touch, mm_move)
+MUI_STATE(MAIN, mm5a, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 0), mm_slot_paint, mm_touch, mm_move)
+MUI_STATE(MAIN, mm5b, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 1), mm_class_paint, mm_touch, mm_move)
+MUI_STATE(MAIN, mm6, (GS(self) == 6 && *((s8 *)(self) + 0xd) == 0), mm_slot_paint, mm_touch, mm_move)
+MUI_STATE(MAIN, mm9, (GS(self) == 9 && *((s8 *)(self) + 0xd) == 0), mm_option_paint, mm_touch, mm_move)
+MUI_STATE(POPUP, mmpop, (MAIN_POPUP8(self) && POP_NBTN(self) == 2), mmpop_paint, mmpop_touch, mmpop_move)
+/* L1b/T17c8: StateMap: chế độ 0 bản đồ lớn / 1 khu vực (ctor tham số 1 = [+0xd]==1 chỉ vẽ ảnh: giữ đường gốc) */
+MUI_STATE(MAP, map, ((GS(self) == 0 || GS(self) == 1) && *((s8 *)(self) + 0xd) == 0), map_paint, map_touch, map_move)
 #ifdef MUI_DEBUG
 MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
 #endif

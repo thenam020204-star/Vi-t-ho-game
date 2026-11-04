@@ -46,7 +46,7 @@ def sc_cycles():
             r.key('CLR'); r.step(5)
     r.step(10)
     import hashlib
-    return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'img': hashlib.md5(r.shot()).hexdigest(), 'cls': hex(c.cls())}
+    return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'img': hashlib.md5(r.shot()).hexdigest(), 'mimg': c.mimg(), 'cls': hex(c.cls())}
 def sc_buy():
     p0 = logpos(); enter(); res = {}
     rec = r.rdb(c.u32(c.u32(c.top() + 0x14) + 4) + 24 * 4, 24); iid = rec[8]; res['rec'] = list(rec)

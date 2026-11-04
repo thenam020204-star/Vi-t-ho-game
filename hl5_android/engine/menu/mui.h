@@ -272,3 +272,21 @@ H int expert_touch(void *self, int x, int y);
 H int expert_move(void *self, int x, int y);
 extern H u8 EXPERT_vtable[];                   /* "vtable for StateInExpertMenu" (nm); ô hàm = +8 */
 #define EXPERT_POPUP(self, t) (POP_TYPE(self) == (t) && *(u32 *)((u8 *)(self) + 8) && *(u32 *)(*(u32 *)((u8 *)(self) + 8)) == (u32)EXPERT_vtable + 8)   /* L1: popup của Chuyên gia (loại 4 Có/Không, 5 nhập số lượng): dùng lại widget npcpop/qty của L2 */
+
+/* ---------------- mmenu.c (L3/T17c7: StateMainMenu) ---------------- */
+H void mm_grid_paint(void *self);
+H void mm_slot_paint(void *self);
+H void mm_class_paint(void *self);
+H void mm_option_paint(void *self);
+H int mm_touch(void *self, int x, int y);
+H int mm_move(void *self, int x, int y);
+H void mmpop_paint(void *self);
+H int mmpop_touch(void *self, int x, int y);
+H int mmpop_move(void *self, int x, int y);
+H int mm_navkey(int key);
+extern H u8 MAIN_vtable[];                     /* "vtable for StateMainMenu" (nm); ô hàm = +8 */
+#define MAIN_POPUP8(self) (POP_TYPE(self) == 8 && *(u32 *)((u8 *)(self) + 8) && *(u32 *)(*(u32 *)((u8 *)(self) + 8)) == (u32)MAIN_vtable + 8)   /* L3: popup mô tả lớp (loại 8, cha = MainMenu) */
+/* ---------------- map.c (L1b/T17c8: StateMap) ---------------- */
+H void map_paint(void *self);
+H int map_touch(void *self, int x, int y);
+H int map_move(void *self, int x, int y);

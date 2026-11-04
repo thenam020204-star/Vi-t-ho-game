@@ -9,7 +9,7 @@ for tag in ('400x240', '600x270', '1200x540'):
     for sc in ('tab', 'list', 'map', 'drag', 'tree', 'cycles'):
         n, o = ld(os.path.join(d, 'sc_%s_%s_new.json' % (sc, tag))), ld(os.path.join(d, 'sc_%s_%s_orig.json' % (sc, tag)))
         ok = n is not None and n == o
-        if sc == 'cycles' and n and o: ok = n['live'] == o['live'] and n['top'] <= o['top'] and n['cls'] == o['cls'] and n['img'] == o['img']   # gốc tự rò khi mở chi tiết (LoadNpcBody); mới phải không rò hơn gốc
+        if sc == 'cycles' and n and o: ok = n['live'] == o['live'] and n['top'] <= o['top'] and n['cls'] == o['cls'] and n.get('mimg') == o.get('mimg')   # so ảnh có mặt nạ 2 vùng hộp thoại T16 (img = hash toàn ảnh, chỉ tham khảo)   # gốc tự rò khi mở chi tiết (LoadNpcBody); mới phải không rò hơn gốc
         print('%s %-7s %s' % (tag, sc, 'ĐẠT' if ok else 'LỆCH new=%s orig=%s' % (json.dumps(n)[:400], json.dumps(o)[:400]))); bad += not ok
         if sc == 'cycles' and n: print('   cycles: new', n, 'orig', o)
     for hf, key, spec in (('hits_q', 'nhiem_vu', [('subtab', 0x30, 2), ('quest', 0x20, 5), ('desc_scroll', 0xE0), ('detail', 0x3D)]),
