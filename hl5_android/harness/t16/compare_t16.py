@@ -42,8 +42,8 @@ for sz in sizes:
     for m in mn:
         bx, by, bw, bh = m['box']; tx, ty, tw = m['tx']
         if not (0 <= bx and bx + bw <= W and 0 <= by and by + bh <= H and bx <= tx and tx + tw <= bx + bw and by <= ty and tw > 0): g_ok = False
-        if bw < min(400, W - 16) or abs(bw * 100 // W - 72) > 3 and bw != W - 16 and bw != 400: g_ok = False
-    check(g_ok and len(mn) > 0, 'C3 hình học: hộp %s, vùng chữ %s' % (mn[0]['box'] if mn else '-', mn[0]['tx'] if mn else '-'))
+        if tw < 150 or bw < 250: g_ok = False
+    check(g_ok and len(mn) > 0, 'C3 hình học (v2: hộp tới lề màn, chữ sau phần chân dung che, rộng >= 150): hộp %s, vùng chữ %s' % (mn[0]['box'] if mn else '-', mn[0]['tx'] if mn else '-'))
     # C4: tràn chữ
     bad = 0; tot = 0
     for f in sorted(glob.glob(os.path.join(D, 'msg*_%s_new.png' % sz))):

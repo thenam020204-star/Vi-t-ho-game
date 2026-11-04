@@ -985,3 +985,6 @@ Số đo (khung logic; nhãn font thân):
 4. Mô tả lớp: ngắn = `menu_text` 24–27, đầy đủ = 20–23; điểm số/LV/thời gian chơi/tiến trình thành tựu là SỐ MẪU; tên nhân vật mẫu = `common_text` 9.
 5. Thành tựu: `mission_text[i]` ↔ `mission_list[i]` (i=0 là tiêu đề nhóm); trạng thái đã đạt trong ảnh là mẫu.
 6. Huy hiệu 12+ (Logo) và "Tap to Continue" là ảnh gốc tiếng Anh/Hàn: T11 vẽ lại.
+
+## 14. T16: khung hội thoại (bố cục v2)
+Xem BAO-CAO-T16.md §2 (công thức theo W x H: sc = clamp(82%H / cao ảnh, 1..3), lề 8*sc, che 30% bề rộng ảnh, viền b = 2 nếu H>=480 else 1). Nút "Bỏ qua": góc trên phải màn, lề 8*s, rộng = chữ + 20b + px, cao = px + 10b (vùng chạm nới pad/2+2).

@@ -20,7 +20,7 @@ base = d.state(); base_fr = r.fr
 skip_rect = None
 if mode == 'new':
     a = BASE + d.sym['dlg_S']; v = struct.unpack('<6i', bytes(r.g.uc.mem_read(a, 24)))
-    skip_rect = v[1:6] if v[1] else None
+    skip_rect = v[2:6] if v[1] else None
 res = dict(base=dict((k, v) for k, v in base.items() if k != 'text'), base_text=base['text'].hex(), skip_rect=skip_rect)
 
 def settle(n=300):
@@ -28,6 +28,7 @@ def settle(n=300):
     for i in range(n):
         d.step(1)
         if t is None and not d.e75(): t = i
+    d.shot(os.path.join(out, 'skip_%dx%d_%s_%s.png' % (W, Hh, mode, os.getpid())))
     return t, hashlib.md5(bytes(r.shot())).hexdigest()[:12]
 
 def scen(name, fn):
