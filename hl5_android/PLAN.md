@@ -251,6 +251,10 @@ Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test7.apk` (sha25
 - [ ] L1b / StateMap: `engine/menu/map.c` (117 dòng), classes.def MAP = [+0xc] (đang về -1000), dòng `map`, `harness/l1/probe_map.py`, `check_map.py`, `compare_map.py`; mặt nạ cycles đã viết trong harness/l1 (chưa chạy). Còn: popup xác nhận dùng Bùa (0xdc188, `probe_bua.py`).
 - [ ] Khi bật lại: bỏ comment, dựng dev, kiểm ĐẠT rồi mới đóng APK.
 
+### 2b. Menu con còn giao diện cũ (người dùng báo sau test7) — L6
+- [ ] L6a kiểm kê: mọi (lớp, state, sub, loại popup) tới được mà dispatch rơi về đường gốc (Paint gốc), kèm ảnh + đường tới; đã biết: Kỹ năng sub 7..10 (mua/ghép sách), Tinh linh sub 4, Nhiệm vụ sub 4/5/6, MainMenu ngoài mm4/5/6/9 (Thành tựu, Trợ giúp, Quản lý dữ liệu, mm6/mm9 sub≠0), popup loại khác, StateGame state 2 sub 0, nút ↺ CommonUi gốc còn hiện. Báo cáo BAO-CAO-L6.md.
+- [ ] L6b..: làm theo danh sách L6a (theo lô, công nhân mới mỗi lô).
+
 ### 3. Việc nhỏ còn sót (đã nghiệm thu phần chính)
 - [ ] L2 NPC: soát mắt 600x270; khoá ô sách kỹ năng; hộp thông tin Chế biến 400x240 cắt dòng cuối; Orb với vật hiến tế khác id 9 / đã đủ ô; đối chiếu Orb 80.0%.
 - [x] L1: popup xác nhận Bùa — KHÔNG KHẢ THI/không cần: SetPopupState loại 1/2 là mã chết ở bản Android (3 nơi gọi đều loại 0); hồi sinh thật dùng gpop.c (ĐẠT).
@@ -419,3 +423,4 @@ Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 d
 - [quản đốc] L3 NGHIỆM THU (BAO-CAO-L3.md, công nhân dừng 175k): MainMenu mới (lưới 6 ô, slot, lớp, popup lớp, Chuyên gia, Cài đặt 10 mục + Phân giải 1/1..1/4, popup thoát) — chạm = phím gốc 3 cỡ, off 21/21, hồi quy c1 ĐẠT, cash ĐẠT trừ hash ảnh cycles (lệch HUD đã biết, mục 1). Còn: soát mắt 600x270 slot/lớp; nút ↺ (CommonUi touch cancel gốc) vẫn hiện góc phải trên ở Cài đặt 1200x540; t16 chưa chạy lại. Chờ L1b rồi dựng test7.
 - [quản đốc] L1b NGHIỆM THU (BAO-CAO-L1.md mục L1b, công nhân dừng 316k): StateMap mới (MAP=[+0xc], bản đồ lớn/khu vực, chạm điểm, Minimap, cuộn) chạm = gốc 3 cỡ, cycles map ĐẠT, c1 97/97, compare_cash 400x240 ĐẠT; skip_intro trong qlib (lệch cycles cũ là do khung thoại T16). Popup Bùa = mã chết. CÒN (hạ tầng kiểm): mặt nạ HUD T14 cho cycles q/sp/cash, gpop cycles sau skip_intro (thiếu vùng chạm 0xF0), check_cash 600/1200, soát mắt 400x240 khu vực. Dựng test7 (L3 + L1b).
 - [quản đốc] Bản thử v0.3-test7: dist/test/HL5-VI-v0.3-test7.apk sha256 497015d3d774847b512390ec1562cab883019462c0dfc5f43cfd87d62719dda1 (.so ef4a40e1…, 2 lần dựng trùng byte, vtable 57 dòng, lớp CASH EXPERT GAME INGAME MAIN MAP NPC POPUP); hậu kỳ ảnh Việt + BGM, ký/verify/align OK; harness từ APK qua menu chính mới tới cảnh chơi 800x360 + 400x240 không lỗi (số đo CPU = test6). build_apk đã trả về gốc.
+- [người dùng] test7: 'vẫn còn các menu con' (giao diện cũ). [quản đốc] Giao công nhân Sonnet MỚI L6a kiểm kê (WORK ~/hl5work_l6) rồi làm lô đầu nếu còn ngữ cảnh.
