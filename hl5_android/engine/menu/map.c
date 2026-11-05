@@ -1,5 +1,6 @@
 /* L1b/T17c8: StateMap (bản đồ lớn state 0 / bản đồ khu vực state 1) theo ui_new/menu/LAYOUT.md (ban_do_lon_*, ban_do_khu_vuc_*, hit_rects.json: close, toggle, minimap).
- * Kiến trúc A: Paint + Touch mới; KeyPressed/Process/SetMapMode gốc (phím '#' = 35 đổi chế độ, '*' = 42 bật/tắt Minimap, CLR = đóng). Chạm = đúng phím gốc (HK_KEY).
+ * Kiến trúc A: Paint + Touch mới; KeyPressed/Process/SetMapMode gốc. Phím gốc (MapModeKeyPressed 0x1253d4): '*' (42) bật/tắt Minimap (+0xd==0, cả 2 chế độ); chế độ khu vực (+0xc==1): '#' (35) -> bản đồ lớn, UP/DOWN/LEFT/RIGHT cuộn lưới;
+ * bản đồ lớn (+0xc==0): LEFT/RIGHT (-3/-4) đổi điểm +0x1b, OK (-5) -> chế độ khu vực ('#' KHÔNG làm gì ở bản đồ lớn); CLR = đóng. Chạm = đúng phím/hàm gốc (HK_KEY; chạm điểm = TouchWorldMapPoint gốc).
  * Trường (đọc từ mã máy, BAO-CAO-L1 mục 11): +0xc chế độ (0 bản đồ lớn / 1 khu vực), +0xd tham số ctor (1 = chỉ vẽ ảnh bản đồ: giữ đường gốc), +0xe/+0x10 s16 camera,
  *   +0x1a s8 khu vực người chơi đang ở (0..7), +0x1b s8 con trỏ khu vực (0..7, phím trái/phải đổi), +0x46/+0x48 s16 = 480x320 kích thước ảnh thế giới (SetMapMode),
  *   ảnh thế giới = 26 GbmImage 24 B tại +76 (0,1 = dải tiêu đề "THE ORBIS ISLANDS"; 2..25 = lưới 6 cột x 4 hàng ô 80x80, DrawWorldMap 0x123618),
@@ -13,33 +14,42 @@
 #define H_STAR 0x30
 #define H_HASH 0x31
 extern H void StateMap_DrawZone(void *self);
+extern H void StateMap_TouchWorldMapPoint(void *self, int i);      /* 0x1232d0 (s8 i): chạm điểm i của bản đồ lớn */
+#define H_PT 0x40                       /* 0x40..0x47: chạm điểm khu vực i (bản đồ lớn) */
+#define H_PAN_U 0x50                    /* bản đồ khu vực: dải trên = UP (-1), dải dưới = DOWN (-2) (như TouchPressed gốc) */
+#define H_PAN_D 0x51
+#define MAXW 2560
 
 typedef struct { const u16 *pal; const u8 *pix; int stride, nib, w, h; } mtile;
+static u8 xcol[MAXW], xlx[MAXW];        /* bảng cột -> (ô, x trong ô), tính một lần mỗi khung (BSS tĩnh, không cấp phát) */
 
-/* ảnh thế giới 480x320 phóng NEAREST vào (x0,y0,dw,dh), cắt theo clip hiện hành */
+/* ảnh thế giới 480x320 phóng NEAREST vào (x0,y0,dw,dh) */
 static void world_blit(void *self, int x0, int y0, int dw, int dh) {
     mtile T[24]; int WW = S16(self, 70), WH = S16(self, 72);
-    if (WW <= 0 || WH <= 0 || dw <= 0 || dh <= 0) return;
+    if (WW <= 0 || WH <= 0 || dw <= 0 || dh <= 0 || dw > MAXW) return;
     for (int i = 0; i < 24; i++) {
         const u8 *g = (const u8 *)self + 76 + 24 * (2 + i);
         T[i].w = *(const u16 *)(g + 2); T[i].h = *(const u16 *)(g + 4);
         T[i].pal = *(const u16 *const *)(g + 8); T[i].pix = *(const u8 *const *)(g + 0xc);
         T[i].nib = (g[0] & 15) == 4; T[i].stride = T[i].nib ? (T[i].w + 1) >> 1 : T[i].w;
     }
+    for (int dx = 0; dx < dw; dx++) {
+        int sx = dx * WW / dw, col = sx / 80, lx = sx - col * 80; if (col > 5) { col = 5; lx = sx - 400; }
+        xcol[dx] = (u8)col; xlx[dx] = (u8)lx;
+    }
     int fw = mui_fb_w(), fh = mui_fb_h(); u32 skip = SKIP_COLOR & 0xffff;
+    int dxa = x0 < 0 ? -x0 : 0, dxb = x0 + dw > fw ? fw - x0 : dw;
     for (int dy = 0; dy < dh; dy++) {
         int yy = y0 + dy; if (yy < 0 || yy >= fh) continue;
-        int sy = dy * WH / dh, row = sy / 80, ly = sy - row * 80; if (row > 3) row = 3;
-        u16 *dst = 0;
-        for (int dx = 0; dx < dw; dx++) {
-            int xx = x0 + dx; if (xx < 0 || xx >= fw) continue;
-            int sx = dx * WW / dw, col = sx / 80, lx = sx - col * 80; if (col > 5) col = 5;
-            const mtile *t = &T[row * 6 + col];
+        int sy = dy * WH / dh, row = sy / 80, ly = sy - row * 80; if (row > 3) { row = 3; ly = sy - 240; }
+        const mtile *tr = &T[row * 6];
+        for (int dx = dxa; dx < dxb; dx++) {
+            const mtile *t = &tr[xcol[dx]]; int lx = xlx[dx];
             if (!t->pal || !t->pix || lx >= t->w || ly >= t->h) continue;
             const u8 *rw = t->pix + ly * t->stride;
             int idx = t->nib ? ((lx & 1) ? rw[lx >> 1] & 15 : rw[lx >> 1] >> 4) : rw[lx];
             u32 c = t->pal[idx]; if (c == skip) continue;
-            (void)dst; mui_put16(xx, yy, c);
+            mui_put16(x0 + dx, yy, c);
         }
     }
 }
@@ -88,13 +98,26 @@ void map_paint(void *self) {
             mui_disc(cx, cy, 2 * s, C_INK);
             mui_fill_a(lx, ly, lx + tw, ly + m->spx + 2, C_INK, 190);
             mui_text(lx + 3, ly + 1, nm, -1, m->spx, i == sel ? C_GOLD : C_WHITE, 0);
+            { int hx0 = lx < cx - 2 * s - 3 ? lx : cx - 2 * s - 3, hx1 = lx + tw > cx + 2 * s + 3 ? lx + tw : cx + 2 * s + 3;
+              mui_hit(H_PT + i, hx0 < rg.x0 ? rg.x0 : hx0, cy - 2 * s - 3 < rg.y0 ? rg.y0 : cy - 2 * s - 3, hx1 > rg.x1 ? rg.x1 : hx1, ly + m->spx + 2 > rg.y1 ? rg.y1 : ly + m->spx + 2, HK_CB, 0, 0); }   /* chạm điểm = TouchWorldMapPoint gốc; chạm điểm đang chọn = OK gốc */
         }
         if (sel >= 0 && sel < 8) { u8 *e = (u8 *)self + 0x2e8 + 8 * sel; red_arrow(ix + *(s16 *)e * dw / WW, iy + *(s16 *)(e + 2) * dh / WH - 2 * s - 3, s); }
     } else {
         mui_fill_a(rg.x0, rg.y0, rg.x1, rg.y1, C_INK, 204);
         Graphic_SetClip(g, rg.x0, rg.y0, rw, rh);
-        StateMap_DrawZone(self);                         /* gốc: tiêu đề khu vực + lưới mảnh sprite + mũi tên vị trí (tỉ lệ 1:1) */
+        {   /* DrawZone gốc căn nội dung theo tâm màn (Graphic +0x4c/+0x50 nửa rộng/cao, +0x54/+0x58 rộng/cao): đặt tạm tâm = tâm vùng bản đồ rồi trả lại */
+            int *G = (int *)(u32)g, s0 = G[0x4c / 4], s1 = G[0x50 / 4], s2 = G[0x54 / 4], s3 = G[0x58 / 4];
+            int cx = rg.x0 + rw / 2, cy = rg.y0 + rh / 2;
+            int dX = cx - s0, dY = cy - s1;              /* DrawZone gốc: khi đứng yên dùng offset +0x2a/+0x2c lưu sẵn (tính theo tâm màn), khi đang trượt tính lại = đích - nửa màn: lệch đúng (dX,dY) cả hai trường hợp */
+            G[0x4c / 4] = cx; G[0x50 / 4] = cy; G[0x54 / 4] = 2 * cx; G[0x58 / 4] = 2 * cy;
+            S16(self, 0x2a) -= dX; S16(self, 0x2c) -= dY;
+            StateMap_DrawZone(self);                     /* gốc: tiêu đề khu vực + lưới mảnh sprite + mũi tên vị trí (tỉ lệ 1:1) */
+            S16(self, 0x2a) += dX; S16(self, 0x2c) += dY;
+            G[0x4c / 4] = s0; G[0x50 / 4] = s1; G[0x54 / 4] = s2; G[0x58 / 4] = s3;
+        }
         Graphic_ResetClip(g);
+        mui_hit(H_PAN_U, rg.x0, rg.y0, rg.x1, rg.y0 + rh / 3, HK_KEY, -1, 0);        /* như TouchPressed gốc: dải trên/dưới = cuộn lưới khu vực */
+        mui_hit(H_PAN_D, rg.x0, rg.y1 - rh / 3, rg.x1, rg.y1, HK_KEY, -2, 0);
     }
     mui_clip_reset();
     /* hàng nút dưới */
@@ -107,11 +130,23 @@ void map_paint(void *self) {
         t = mui_hint(TextMgr_GetInGameText(_pTextMgr, 147), &n);
         mui_button(&b, t, n, 1, 0); mui_hit(H_HASH, b.x0, b.y0, b.x1, b.y1, HK_KEY, 35, 0);
     } else {
+        int hw = (x1 - x0 - m->gap) / 2; mui_r a = {x0, by, x0 + hw, by + m->btnH};       /* gốc ở bản đồ lớn cũng có '*' Minimap (nhãn góc trái) */
+        int fl = *(s8 *)(*(u8 **)(gv + 5200) + 4224);
+        t = mui_hint(TextMgr_GetInGameText(_pTextMgr, fl ? 150 : 149), &n);
+        mui_button(&a, t, n, 0, 0); mui_hit(H_STAR, a.x0, a.y0, a.x1, a.y1, HK_KEY, 42, 0);
         t = mui_hint(TextMgr_GetInGameText(_pTextMgr, 148), &n);
         int bw = mui_sw(m->px, t, n) + 4 * m->pad; if (bw < (x1 - x0) / 3) bw = (x1 - x0) / 3;
         mui_r b = {x1 - bw, by, x1, by + m->btnH};
-        mui_button(&b, t, n, 1, 0); mui_hit(H_HASH, b.x0, b.y0, b.x1, b.y1, HK_KEY, 35, 0);
+        mui_button(&b, t, n, 1, 0); mui_hit(H_HASH, b.x0, b.y0, b.x1, b.y1, HK_KEY, -5, 0);   /* bản đồ lớn: OK gốc (-5) = sang bản đồ khu vực ('#' chỉ hoạt động ở chế độ khu vực) */
     }
 }
-int map_touch(void *self, int x, int y) { mui_touch_press(self, MUI_CLS_MAP, x, y); return 0; }
+int map_touch(void *self, int x, int y) {
+    int k = mui_touch_press(self, MUI_CLS_MAP, x, y), id = mui_last_id;
+    if (k != HK_CB) return 0;
+    if (id >= H_PT && id < H_PT + 8) {                    /* y hệt MapModeTouchPressed gốc: điểm đang chọn -> OK (MapModeKeyPressed(-5)); khác -> TouchWorldMapPoint(i) */
+        int i = id - H_PT;
+        if (S8(self, 0x1b) == i) mui_key(self, MUI_CLS_MAP, -5); else StateMap_TouchWorldMapPoint(self, i);
+    }
+    return 0;
+}
 int map_move(void *self, int x, int y) { return mui_touch_move(self, MUI_CLS_MAP, x, y); }

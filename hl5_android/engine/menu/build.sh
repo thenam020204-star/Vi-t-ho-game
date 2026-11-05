@@ -116,6 +116,7 @@ for p in "GMenu::DrawSkillBelt(int, int, int, unsigned char, signed char, short)
 done
 # L1b/T17c8: symbol guest cho map.c
 a=$(sym "StateMap::DrawZone()"); [ -n "$a" ] || { echo "thiếu symbol StateMap::DrawZone"; exit 1; }; DEFS="$DEFS --defsym=StateMap_DrawZone=0x$a"
+a=$(sym "StateMap::TouchWorldMapPoint(signed char)"); [ -n "$a" ] || { echo "thiếu symbol StateMap::TouchWorldMapPoint"; exit 1; }; DEFS="$DEFS --defsym=StateMap_TouchWorldMapPoint=0x$a"
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
 for c in $(grep -o '^MUI_CLASS([A-Z]*, [A-Za-z]*' classes.def | sed 's/MUI_CLASS([A-Z]*, //'); do
   for m in "Paint()" "KeyPressed(int)" "TouchPressed(int, int, int)" "TouchMoved(int, int, int)" "TouchReleased(int, int, int)"; do

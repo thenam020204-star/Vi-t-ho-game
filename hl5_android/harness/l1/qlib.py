@@ -4,6 +4,7 @@ H = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, H)
 from c2lib import *
 from hl5libc import save_png
 WK = os.path.expanduser(os.environ.get('WORK', '~/hl5work_l1'))
+DEV = os.path.expanduser(os.environ.get('DEVDIR', WK + '/l1/dev'))   # thư mục dev.so (DEVDIR để dựng song song)
 WK0 = os.path.expanduser('~/hl5work')            # bản gốc (chỉ đọc)
 ORIGD = os.path.expanduser(os.environ.get('HL5_ORIG', WK0 + '/orig_v02hd'))   # v0.2-hd thật (không dựa build_apk)
 
@@ -18,14 +19,14 @@ def masked_md5(rgb, W, Hh):
 class Ctx:
     def __init__(self, W, Hh, mode, outdir, boot_to=1000):
         self.W, self.H, self.mode = W, Hh, mode; self.NEW = mode == 'new'
-        so = WK + '/l1/dev/dev.so' if self.NEW else ORIGD + '/libHeroesLore5.so'
-        vfs = WK + '/l1/dev/data.vfs.mp3' if self.NEW else ORIGD + '/data.vfs.mp3'
+        so = DEV + '/dev.so' if self.NEW else ORIGD + '/libHeroesLore5.so'
+        vfs = DEV + '/data.vfs.mp3' if self.NEW else ORIGD + '/data.vfs.mp3'
         self.tag = '%dx%d' % (W, Hh); self.out = outdir; os.makedirs(outdir, exist_ok=True)
         self.r = Run(so, vfs, W, Hh, 'c2_%s_%s_%d' % (self.tag, mode, os.getpid()), WK + '/l1')
         route(self.r, boot_to)
         self.g = self.r.g; self.sym = {}
         if self.NEW:
-            for l in open(WK + '/l1/dev/menu/menu.sym'):
+            for l in open(DEV + '/menu/menu.sym'):
                 p = l.split()
                 if len(p) == 3: self.sym[p[2]] = int(p[0], 16)
         self.gv = BASE + 0x16a238

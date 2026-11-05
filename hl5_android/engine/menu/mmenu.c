@@ -292,6 +292,7 @@ int mmpop_touch(void *self, int x, int y) {
 int mmpop_move(void *self, int x, int y) { return mui_touch_move(self, MUI_CLS_POPUP, x, y); }
 
 /* ---------------- state 9 sub 0: Cài đặt (10 mục thật) ---------------- */
+static int g_orh = 20;                                          /* bước hàng (px) của danh sách Cài đặt lần vẽ cuối (kéo dọc) */
 static const s8 OTYPE[10] = {1, 1, 2, 0, 4, 0, 0, 3, -1, 5};
 static const u8 *olabel(int i, int *n) {
     *n = -1;
@@ -321,7 +322,8 @@ void mm_option_paint(void *self) {
     dimwin(CT(170), &c);
     if (top < 0) top = 0;
     int note_h = m->slp + 2, rh = m->lp + 10, avail = (c.y1 - c.y0 - note_h - 2 - 6 * g) / 7;
-    if (rh > avail) rh = avail;
+    if (rh > avail) rh = avail; else if (avail > rh) rh = avail < rh + 12 ? avail : rh + 12;   /* lấp đầy cửa sổ (tối đa +12 px/hàng) */
+    g_orh = rh + g;
     int y = c.y0, x0 = c.x0, x1 = c.x1;
     for (int r = 0; r < 7 && top + r < 10; r++, y += rh + g) {
         int i = top + r, sel = r == row, ty = OTYPE[i], n, ch = rh - 4, cy = y + 2, used = 0;
@@ -396,7 +398,7 @@ int mm_touch(void *self, int x, int y) {
 int mm_move(void *self, int x, int y) {
     (void)x;
     if (S8(self, 0xc) == 9 && g_move_id == 1) {                     /* kéo dọc danh sách Cài đặt = phím LÊN/XUỐNG theo hàng */
-        int rh = L.lp + 10, d = (g_move_y0 - y) / rh;
+        int rh = g_orh > 0 ? g_orh : L.lp + 10, d = (g_move_y0 - y) / rh;
         while (g_move_acc < d) { mui_key(self, MUI_CLS_MAIN, -2); g_move_acc++; }
         while (g_move_acc > d) { mui_key(self, MUI_CLS_MAIN, -1); g_move_acc--; }
     }

@@ -141,7 +141,7 @@ def sc_hits():
     out = {}
     def snap(name): out[name] = {str(k): v[:4] for k, v in c.hits().items()}
     snap('grid'); grid_to(0); snap('slot'); c.tap(0x20, 5); snap('class')
-    c.tap(0x30, 4); c.tap(0x30, 5); snap('classpop')
+    c.tap(0x30, 5); snap("classpop")
     return out
 def sc_hits2():
     out = {}

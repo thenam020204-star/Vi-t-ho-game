@@ -43,7 +43,7 @@ MUI_STATE(MAIN, mm6, (GS(self) == 6 && *((s8 *)(self) + 0xd) == 0), mm_slot_pain
 MUI_STATE(MAIN, mm9, (GS(self) == 9 && *((s8 *)(self) + 0xd) == 0), mm_option_paint, mm_touch, mm_move)
 MUI_STATE(POPUP, mmpop, (MAIN_POPUP8(self) && POP_NBTN(self) == 2), mmpop_paint, mmpop_touch, mmpop_move)
 /* L1b/T17c8: StateMap: chế độ 0 bản đồ lớn / 1 khu vực (ctor tham số 1 = [+0xd]==1 chỉ vẽ ảnh: giữ đường gốc) */
-// [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAP, map, ((GS(self) == 0 || GS(self) == 1) && *((s8 *)(self) + 0xd) == 0), map_paint, map_touch, map_move)
+MUI_STATE(MAP, map, ((GS(self) == 0 || GS(self) == 1) && *((s8 *)(self) + 0xd) == 0), map_paint, map_touch, map_move)
 #ifdef MUI_DEBUG
 MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
 #endif

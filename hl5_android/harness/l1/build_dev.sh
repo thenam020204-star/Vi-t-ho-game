@@ -4,7 +4,7 @@
 set -e
 HERE="$(cd "$(dirname "$0")" && pwd)"; REPO="$(cd "$HERE/../.." && pwd)"
 : "${WORK:=$HOME/hl5work_l1}"; export WORK
-D="$WORK/l1/dev"; mkdir -p "$D"
+D="${DEVDIR:-$WORK/l1/dev}"; mkdir -p "$D"
 DBG=""; [ "$1" = "--debug" ] && DBG="--debug"
 (cd "$REPO/engine" && sh build.sh >/dev/null)
 "$REPO/engine/menu/build.sh" "$D/menu" $DBG
