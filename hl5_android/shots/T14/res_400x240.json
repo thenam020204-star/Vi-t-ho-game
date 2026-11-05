@@ -17,7 +17,8 @@
    384,
    171,
    200,
-   229
+   229,
+   68
   ],
   "cy": [
    200,
@@ -32,7 +33,8 @@
    39,
    14,
    14,
-   14
+   14,
+   172
   ],
   "d": [
    57,
@@ -47,9 +49,11 @@
    28,
    24,
    24,
-   24
+   24,
+   84
   ],
   "want": [
+   1,
    1,
    1,
    1,
@@ -142,6 +146,12 @@
     0,
     277,
     30
+   ],
+   [
+    0,
+    0,
+    0,
+    0
    ]
   ],
   "edit": 0,
@@ -339,8 +349,20 @@
   },
   "PAUSE": {
    "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
     "StateGame::KeyPressed",
     "Battle::KeyPressed",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk",
     "StateInGameMenu::SetState",
     "StateInGameMenu::SetQuestTree"
    ],
@@ -416,24 +438,24 @@
  },
  "edit": {
   "edit_before": 0,
-  "edit_after_hold": 0,
-  "edit_after_release": 0,
+  "edit_after_hold": 1,
+  "edit_after_release": 1,
   "att_moved_to": [
-   370,
-   200
+   140,
+   30
   ],
   "att_target": [
    140,
    30
   ],
   "att_clamped": [
-   370,
-   200
+   372,
+   212
   ],
   "att_r": 28,
   "s1_after_overlap_try": [
    288,
-   200
+   213
   ],
   "s1_before": [
    288,
@@ -441,18 +463,21 @@
   ],
   "after_save": {
    "edit": 0,
-   "custom": 0,
+   "custom": 1,
    "att": [
-    370,
-    200
+    372,
+    211
    ]
   },
-  "file": null,
+  "file": [
+   "/hud_layout.dat",
+   62
+  ],
   "reloaded": {
-   "custom": 0,
+   "custom": 1,
    "att": [
-    370,
-    200
+    372,
+    211
    ],
    "same": true
   }
@@ -787,10 +812,10 @@
   "DAT S5    new=['StateGame::KeyPressed', 'Battle::KeyPressed', 'HERO::HitedProc', 'HERO::RestoreColorBack', 'StateGame::endProcess', 'HERO::EventEndProc'] orig@[379, 85]=['StateGame::KeyPressed', 'Battle::KeyPressed', 'HERO::HitedProc', 'HERO::RestoreColorBack', 'StateGame::endProcess', 'HERO::EventEndProc']",
   "DAT SWAP  new=['StateGame::KeyPressed', 'Battle::KeyPressed', 'HERO::ChangeHotKeyToggle', 'HERO::HitedProc', 'HERO::RestoreColorBack', 'StateGame::endProcess'] orig@[224, 213]=['StateGame::KeyPressed', 'Battle::KeyPressed', 'HERO::ChangeHotKeyToggle', 'HERO::HitedProc', 'HERO::RestoreColorBack', 'StateGame::endProcess']",
   "DAT DASH  new=['HERO::SetAttackMotion', 'HERO::SetNextState', 'HERO::SetDashFlag', 'HERO::SetDashCheckFrame', 'HERO::HitedProc', 'HERO::RestoreColorBack'] orig@[382, 154]=['HERO::SetAttackMotion', 'HERO::SetNextState', 'HERO::SetDashFlag', 'HERO::SetDashCheckFrame', 'HERO::HitedProc', 'HERO::RestoreColorBack']",
-  "DAT PAUSE new=['StateGame::KeyPressed', 'Battle::KeyPressed', 'StateInGameMenu::SetState', 'StateInGameMenu::SetQuestTree'] orig@[382, 45]=['StateGame::KeyPressed', 'Battle::KeyPressed', 'StateInGameMenu::SetState', 'StateInGameMenu::SetQuestTree']",
+  "LECH PAUSE new=['HERO::HitedProc', 'HERO::RestoreColorBack', 'StateGame::endProcess', 'HERO::EventEndProc', 'HERO::SetSkipFrame', 'HERO::SetIsForwardMove'] orig@[382, 45]=['StateGame::KeyPressed', 'Battle::KeyPressed', 'StateInGameMenu::SetState', 'StateInGameMenu::SetQuestTree']",
   "DAT MAP   new=['StateGame::KeyPressed', 'Battle::KeyPressed', 'StateMap::SetMapMode', 'StateMap::SetWorldMapMotion'] orig@[162, 15]=['StateGame::KeyPressed', 'Battle::KeyPressed', 'StateMap::SetMapMode', 'StateMap::SetWorldMapMotion']",
   "DAT SHOP  new=['StateGame::KeyPressed', 'Battle::KeyPressed', 'Battle::SetSystemMsgUi', 'CommonUi::SetSystemMsgUi', 'HERO::HitedProc', 'HERO::RestoreColorBack'] orig@[212, 15]=['StateGame::KeyPressed', 'Battle::KeyPressed', 'Battle::SetSystemMsgUi', 'CommonUi::SetSystemMsgUi', 'HERO::HitedProc', 'HERO::RestoreColorBack']",
   "DAT SAVE  new=['StateGame::KeyPressed', 'Battle::KeyPressed', 'HERO::SaveAll', 'HERO::SaveHeroData', 'HERO::SaveBagData', 'Battle::SetSystemMsgUi'] orig@[262, 15]=['StateGame::KeyPressed', 'Battle::KeyPressed', 'HERO::SaveAll', 'HERO::SaveHeroData', 'HERO::SaveBagData', 'Battle::SetSystemMsgUi']"
  ],
- "all_same": true
+ "all_same": false
 }

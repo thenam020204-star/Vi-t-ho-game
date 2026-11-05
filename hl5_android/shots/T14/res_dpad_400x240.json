@@ -1,0 +1,170 @@
+{
+ "size": [
+  400,
+  240
+ ],
+ "dpad": {
+  "dmode": 0,
+  "dk": 0,
+  "fvis": 0,
+  "want13": 1,
+  "cx": 68,
+  "cy": 172,
+  "d": 84,
+  "fcx": 0
+ },
+ "fixed": {
+  "N": {
+   "dk": 1,
+   "dk_mid": 1,
+   "fvis": 0,
+   "dx": 0,
+   "dy": -20,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "NE": {
+   "dk": 9,
+   "dk_mid": 9,
+   "fvis": 0,
+   "dx": 189,
+   "dy": 0,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "E": {
+   "dk": 8,
+   "dk_mid": 8,
+   "fvis": 0,
+   "dx": 189,
+   "dy": 0,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "SE": {
+   "dk": 10,
+   "dk_mid": 10,
+   "fvis": 0,
+   "dx": 189,
+   "dy": 0,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "S": {
+   "dk": 2,
+   "dk_mid": 2,
+   "fvis": 0,
+   "dx": 0,
+   "dy": 68,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "SW": {
+   "dk": 6,
+   "dk_mid": 6,
+   "fvis": 0,
+   "dx": -155,
+   "dy": -28,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "W": {
+   "dk": 4,
+   "dk_mid": 4,
+   "fvis": 0,
+   "dx": -155,
+   "dy": -28,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "NW": {
+   "dk": 5,
+   "dk_mid": 5,
+   "fvis": 0,
+   "dx": -155,
+   "dy": -28,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  }
+ },
+ "follow": {
+  "N": {
+   "dk": 1,
+   "dk_mid": 1,
+   "fvis": 1,
+   "dx": 0,
+   "dy": -20,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "NE": {
+   "dk": 9,
+   "dk_mid": 9,
+   "fvis": 1,
+   "dx": 189,
+   "dy": 0,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "E": {
+   "dk": 8,
+   "dk_mid": 8,
+   "fvis": 1,
+   "dx": 189,
+   "dy": 0,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "SE": {
+   "dk": 10,
+   "dk_mid": 10,
+   "fvis": 1,
+   "dx": 189,
+   "dy": 0,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "S": {
+   "dk": 2,
+   "dk_mid": 2,
+   "fvis": 1,
+   "dx": 0,
+   "dy": 68,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "SW": {
+   "dk": 6,
+   "dk_mid": 6,
+   "fvis": 1,
+   "dx": -155,
+   "dy": -28,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "W": {
+   "dk": 4,
+   "dk_mid": 4,
+   "fvis": 1,
+   "dx": -155,
+   "dy": -28,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  },
+  "NW": {
+   "dk": 5,
+   "dk_mid": 5,
+   "fvis": 1,
+   "dx": -155,
+   "dy": -28,
+   "dk_after_release": 0,
+   "fvis_after": 0
+  }
+ },
+ "swap": {
+  "N": 1,
+  "E": 8,
+  "SE": 10,
+  "deadzone": 0
+ }
+}

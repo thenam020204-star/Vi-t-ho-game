@@ -37,16 +37,16 @@ def tap(r, log, x, y, n1=1):
     log.clear(); r.touch(x, y, up=False); r.step(n1); a = list(log); log.clear()
     r.g.call(r.touchf, r.g.env, 0, 20, x, y, 0); r.step(1); b = list(log)
     return sig(a + b), r.cls()
-NM = ['ATT', 'S0', 'S1', 'S2', 'S3', 'S4', 'S5', 'SWAP', 'DASH', 'PAUSE', 'MAP', 'SHOP', 'SAVE']
+NM = ['ATT', 'S0', 'S1', 'S2', 'S3', 'S4', 'S5', 'SWAP', 'DASH', 'PAUSE', 'MAP', 'SHOP', 'SAVE', 'DPAD']
 res = {'size': [W, Hh]}
 r, log = start('new'); S = r.sym['S'] if 'S' in r.sym else None
 Sa = BASE + r.sym['S'] if False else None
 sa = r.sym['S']; g = r.g
 def rdS(off, n): return bytes(g.uc.mem_read(BASE + sa + off, n)) if sa < BASE else bytes(g.uc.mem_read(sa + off, n))
 def snap():
-    cx = struct.unpack('<13i', rdS(68, 52)); cy = struct.unpack('<13i', rdS(120, 52)); d = struct.unpack('<13i', rdS(172, 52)); want = list(rdS(1, 13))
-    old = [struct.unpack('<4h', rdS(224 + 8 * i, 8)) for i in range(13)]
-    return dict(cx=cx, cy=cy, d=d, want=want, old=old, edit=rdS(16, 1)[0], custom=rdS(19, 1)[0], sel=struct.unpack('<i', rdS(56, 4))[0])
+    cx = struct.unpack('<14i', rdS(84, 56)); cy = struct.unpack('<14i', rdS(140, 56)); d = struct.unpack('<14i', rdS(196, 56)); want = list(rdS(1, 14))
+    old = [struct.unpack('<4h', rdS(252 + 8 * i, 8)) for i in range(14)]
+    return dict(cx=cx, cy=cy, d=d, want=want, old=old, edit=rdS(17, 1)[0], custom=rdS(20, 1)[0], sel=struct.unpack('<i', rdS(72, 4))[0])
 r.step(2); st = snap(); res['new_layout'] = st
 shot(r, os.path.join(OUT, 'hud_new_%dx%d.png' % (W, Hh)))
 def newtap(i):
@@ -82,7 +82,7 @@ def edit_test():
     st_dir = r.g.a.storage; fn = [os.path.join(dp, f) for dp, _, fs in os.walk(st_dir) for f in fs if f == 'hud_layout.dat']
     out['file'] = [fn[0].replace(st_dir, ''), os.path.getsize(fn[0])] if fn else None
     # đọc lại: ép nạp lại từ tệp
-    g.uc.mem_write(BASE + sa + 18, b'\0\0'); g.uc.mem_write(BASE + sa + 44, struct.pack('<ii', 0, 0)); r.step(3)
+    g.uc.mem_write(BASE + sa + 19, b'\0\0'); g.uc.mem_write(BASE + sa + 60, struct.pack('<ii', 0, 0)); r.step(3)
     s7 = snap(); out['reloaded'] = dict(custom=s7['custom'], att=[s7['cx'][0], s7['cy'][0]], same=(s7['cx'] == s6['cx'] and s7['cy'] == s6['cy']))
     return out
 res['edit'] = fork_do(edit_test)

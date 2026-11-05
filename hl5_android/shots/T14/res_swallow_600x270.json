@@ -1,0 +1,530 @@
+{
+ "size": [
+  600,
+  270
+ ],
+ "pts": [
+  [
+   "ATT",
+   596,
+   202
+  ],
+  [
+   "S0",
+   467,
+   255
+  ],
+  [
+   "S1",
+   499,
+   242
+  ],
+  [
+   "S2",
+   531,
+   196
+  ],
+  [
+   "S3",
+   537,
+   196
+  ],
+  [
+   "S5",
+   591,
+   127
+  ],
+  [
+   "SWAP",
+   411,
+   230
+  ],
+  [
+   "DASH",
+   597,
+   196
+  ],
+  [
+   "PAUSE",
+   567,
+   32
+  ],
+  [
+   "MAP",
+   149,
+   2
+  ],
+  [
+   "SHOP",
+   199,
+   2
+  ],
+  [
+   "SAVE",
+   249,
+   2
+  ]
+ ],
+ "new": {
+  "ATT": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "S0": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "S1": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "S2": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "S3": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "S5": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "SWAP": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "DASH": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "PAUSE": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "MAP": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "SHOP": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "SAVE": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound"
+   ],
+   "cls": 1433936,
+   "fired": []
+  }
+ },
+ "orig": {
+  "ATT": {
+   "sig": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "HERO::PickUpMapItem",
+    "HERO::UseSkill",
+    "HERO::SetIsComboSkill",
+    "HERO::SetIsComboDefault",
+    "HERO::IncreaseCurComboDefaultMotionCnt",
+    "HERO::SetCurActSkillIdx",
+    "HERO::SetAttackMotion",
+    "HERO::SetNextState",
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "HERO::UseSkill",
+    "HERO::SetAttackMotion"
+   ]
+  },
+  "S0": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "S1": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "S2": {
+   "sig": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed"
+   ]
+  },
+  "S3": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "S5": {
+   "sig": [
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": []
+  },
+  "SWAP": {
+   "sig": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "HERO::ChangeHotKeyToggle",
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "HERO::ChangeHotKeyToggle"
+   ]
+  },
+  "DASH": {
+   "sig": [
+    "HERO::SetAttackMotion",
+    "HERO::SetNextState",
+    "HERO::SetDashFlag",
+    "HERO::SetDashCheckFrame",
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": [
+    "HERO::SetAttackMotion",
+    "HERO::SetDashFlag"
+   ]
+  },
+  "PAUSE": {
+   "sig": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "StateInGameMenu::SetState",
+    "StateInGameMenu::SetQuestTree"
+   ],
+   "cls": 1434256,
+   "fired": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "StateInGameMenu::SetState"
+   ]
+  },
+  "MAP": {
+   "sig": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "StateMap::SetMapMode",
+    "StateMap::SetWorldMapMotion"
+   ],
+   "cls": 1434736,
+   "fired": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "StateMap::SetMapMode"
+   ]
+  },
+  "SHOP": {
+   "sig": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "Battle::SetSystemMsgUi",
+    "CommonUi::SetSystemMsgUi",
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "Battle::SetSystemMsgUi",
+    "CommonUi::SetSystemMsgUi"
+   ]
+  },
+  "SAVE": {
+   "sig": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "HERO::SaveAll",
+    "HERO::SaveHeroData",
+    "HERO::SaveBagData",
+    "Battle::SetSystemMsgUi",
+    "CommonUi::SetSystemMsgUi",
+    "HERO::HitedProc",
+    "HERO::RestoreColorBack",
+    "StateGame::endProcess",
+    "HERO::EventEndProc",
+    "HERO::SetSkipFrame",
+    "HERO::SetIsForwardMove",
+    "HERO::SetCurActSkillIdx",
+    "HERO::CreaseAllFrame",
+    "HERO::PlayEffSound",
+    "Battle::KeyReleased",
+    "HERO::KeyRelease",
+    "HERO::SetMoveKeyChk"
+   ],
+   "cls": 1433936,
+   "fired": [
+    "StateGame::KeyPressed",
+    "Battle::KeyPressed",
+    "HERO::SaveAll",
+    "Battle::SetSystemMsgUi",
+    "CommonUi::SetSystemMsgUi"
+   ]
+  }
+ },
+ "swallow_ok": true,
+ "orig_fires": {
+  "ATT": true,
+  "S0": false,
+  "S1": false,
+  "S2": true,
+  "S3": false,
+  "S5": false,
+  "SWAP": true,
+  "DASH": true,
+  "PAUSE": true,
+  "MAP": true,
+  "SHOP": true,
+  "SAVE": true
+ }
+}

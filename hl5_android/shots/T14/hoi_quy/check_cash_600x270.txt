@@ -1,0 +1,6 @@
+600x270 sel     ĐẠT
+600x270 drag    ĐẠT
+600x270 popup   ĐẠT
+600x270 cycles  LỆCH new={"live": 80, "top": 320, "img": "6dbff81e0c38080530a5078b57c151d8", "mimg": "833f99daf794c191
+600x270 buy     ĐẠT (id 9, trước 0, sau 5, NET=[])
+600x270 vùng chạm: ĐẠT (16 ô + grid_scroll + close == hit_rects.json)

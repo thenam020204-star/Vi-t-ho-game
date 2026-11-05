@@ -47,7 +47,7 @@ static struct {
 
 static const s16 DOX[NB] = {31, 145, 113, 81, 50, 31, 21, 190, 17, 17, 0, 0, 0, 0};
 static const s16 DOY[NB] = {40, 27, 40, 61, 86, 119, 155, 27, 86, -45, 0, 0, 0, 0};
-static const s16 DD[NB] = {66, 40, 40, 40, 40, 40, 40, 34, 38, 32, 28, 28, 28, 96};
+static const s16 DD[NB] = {66, 40, 40, 40, 40, 40, 40, 34, 36, 32, 28, 28, 28, 96};
 static const s16 OSZ[NB] = {60, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30};   /* cỡ vùng chạm gốc (để co giãn kéo) */
 
 /* ---------------- bố cục ---------------- */
@@ -249,7 +249,7 @@ static void draw_btn(int i) {
     case B_SAVE: art(4, cx, cy, D, br); break;
     case B_MAP: art(2, cx, cy, D, br); mapicon(cx, cy, D); break;
     case B_DASH: {
-        u8 t[8]; int px = S.f16 >= 28 ? 18 : S.f16 >= 22 ? 15 : 10;
+        u8 t[8]; int px = S.f16 >= 28 ? 22 : S.f16 >= 22 ? 15 : 10;
         art(2, cx, cy, D, br); mui_ascii("DASH", t);
         mui_text(cx, cy - px / 2, t, -1, px, RGB(246, 200, 70), TF_CENTER | TF_SHADOW); break;
     }
@@ -341,7 +341,13 @@ static void xlat(int i, int x, int y, int *ox, int *oy) {   /* điểm trên nú
     *ox = clampi(ocx + (x - S.cx[i]) * OSZ[i] / S.d[i], o->x0, o->x1 - 1);
     *oy = clampi(ocy + (y - S.cy[i]) * OSZ[i] / S.d[i], o->y0, o->y1 - 1);
 }
-int hud_touch(void *self, int x, int y) {
+/* T14b: đường chạm thứ hai của guest = mainKeyPressed 0x98af0: sau vtable TouchPressed (0x98be4) đọc lại gv+0xf4/0xf8 (x,y đã lưu bởi BaseState::TouchPress 0x42d80)
+ * rồi so với vùng cố định (W>240: x>=W-36, y 30..60 => KeyPressed(-16) menu, 0x98d8c; x>=W-40, y 70..95 + gv[0x243] => KeyPressed(35), 0x98c94).
+ * Cách chặn: khi hud xử lý chạm, ghi đè gv+0xf4/0xf8 = toạ độ đã dịch (nút mới) hoặc -9999 (nuốt). Cờ MUI_F_DISABLE => hud_touch không chạy => nguyên vẹn. */
+static void legacy_xy(int x, int y) { *(int *)(gv + 0xf4) = x; *(int *)(gv + 0xf8) = y; }
+static int hud_touch_in(void *self, int x, int y);
+int hud_touch(void *self, int x, int y) { legacy_xy(-9999, -9999); return hud_touch_in(self, x, y); }
+static int hud_touch_in(void *self, int x, int y) {
     int z = mui_tz & 3;
     if (S.edit) { S.cap[z] = -2; edit_press(x, y); return 0; }
     int i = hit_new(x, y);
@@ -351,10 +357,10 @@ int hud_touch(void *self, int x, int y) {
         S.cap[z] = (s8)(i + 1);
         if (i == B_PAUSE) { S.hold = 1; S.t0 = S.pc; S.hx = x; S.hy = y; return 0; }
         int ox, oy; xlat(i, x, y, &ox, &oy);
-        StateGame_TouchPressed(self, ox, oy, mui_tz); return 0;
+        legacy_xy(ox, oy); StateGame_TouchPressed(self, ox, oy, mui_tz); return 0;
     }
     if (in_old(x, y)) { S.cap[z] = -2; return 0; }
-    S.cap[z] = -1;
+    S.cap[z] = -1; legacy_xy(x, y);
     StateGame_TouchPressed(self, x, y, mui_tz); return 0;
 }
 int hud_move(void *self, int x, int y) {
@@ -380,7 +386,8 @@ void hud_release(void *self, int x, int y, int z) {
         if (c == B_PAUSE) {
             if (!S.hold) return;                              /* đã vào sửa bố cục / kéo ra ngoài */
             S.hold = 0; xlat(c, x, y, &ox, &oy);
-            StateGame_TouchPressed(self, ox, oy, z); StateGame_TouchReleased(self, ox, oy, z); return;
+            StateGame_TouchPressed(self, ox, oy, z); StateGame_TouchReleased(self, ox, oy, z);
+            gv[0x241] = 1; mui_key(self, MUI_CLS_GAME, -16); return;   /* bản gốc: mainKeyPressed 0x98d8c (g[0x241]=1, KeyPressed(-16)) ngay sau TouchPressed khi chạm trong x>=W-36, y 30..60 */
         }
         xlat(c, x, y, &ox, &oy);
         StateGame_TouchReleased(self, ox, oy, z); return;
