@@ -51,3 +51,17 @@ File sửa/thêm T14b: engine/menu/hud.c (legacy_xy, hud_touch_in, nhánh nhả 
 2. Chạy lại bộ kiểm đầy đủ sau chỉnh DD/px DASH (cosmetic), kiểm đổi độ phân giải giữ tỉ lệ bố cục, kiểm chế độ MUI_F_DISABLE bằng chạy ('off' của t16lib), và mặt nạ vùng nút cho 'cycles' của check_cash.
 3. Vùng '#' (gv[0x243]) chưa nuốt; chữ DASH 1200x540 còn nhỏ.
 4. Hạ tầng phát hành: ghép vtable theo quy trình cũ (hooks.def thêm 12 dòng; hàng hud trong states.def).
+
+## T14c: tối ưu vẽ HUD combat (lag) — công nhân Sonnet, WORK ~/hl5work_t14c
+**Đã làm** (`engine/menu/hud.c`, `gen_hud_art.py`): hoàn thiện WIP: ảnh nút phóng DỰNG MỘT LẦN theo (id, cỡ D) vào bộ đệm tĩnh `POOL` (bss 2,5 MiB, cấp phát bump, KHÔNG malloc; xoá khi đổi cỡ màn trong `lay_apply`; tối đa 16 mục, thực dùng 9), mỗi khung chỉ chép/trộn từng hàng theo khoảng alpha>0, ghi thẳng framebuffer (con trỏ+stride lấy 1 lần/khung), công thức trộn giữ nguyên; ô kỹ năng đọc/ghi FB trực tiếp; dpad dựng sẵn nền + 8 lớp phủ (không còn duyệt bbox/mui_fill_a mỗi khung); biểu tượng ô dùng bảng chỉ số. Ảnh nguồn GIỮ 116 px (03-06), đổi bộ 186->136, emblem 512->144 (WIP trước nhúng 160-264 px, đã bỏ); RGBA8 nhân alpha. Hệ quả: đoạn menu filesz 234028 -> 594572 B, bss 31828 -> 2654076 B (.so 2523788 B). Dev .so đã kiểm: `~/hl5work_t14c/t16/dev/dev.so` (bản HUD cũ để so: `.../t16/dev_before/`, dựng từ commit 6b487ae).
+**Đo CPU guest/khung combat** (`perf_hud.py`, 20 khung sau khung 1300; số = tổng byte khối cơ bản guest chạy mỗi khung, triệu; xấp xỉ chi phí CPU, không phải thời gian tường; HUD off = cờ MUI_F_DISABLE; chi tiết `shots/T14/t14c_perf.txt`):
+| cỡ | gốc | HUD off | HUD cũ (test5) | HUD mới | mới so gốc | cũ so gốc |
+|---|---|---|---|---|---|---|
+| 400x240 | 38,15 | 38,15 | 47,37 | 37,66 | -1,3% | +24,2% |
+| 600x270 | 59,84 | 59,84 | 72,38 | 59,95 | +0,2% | +20,9% |
+| 800x360 | 101,61 | 101,60 | 123,63 | 103,41 | +1,8% | +21,7% |
+| 1200x540 | 218,64 | 218,63 | 272,33 | 226,02 | +3,4% | +24,6% |
+Mục tiêu <= ~10% ở 800x360: ĐẠT (+1,8%, từ +21,7%). Lệnh trong đoạn menu/khung: 800x360 6,24M -> 1,18M; 1200x540 14,2M -> 2,59M. (Ở 400x240 thấp hơn gốc vì HUD mới thay các lần vẽ ảnh gốc.) Chưa đo thời gian tường trên máy thật.
+**Kiểm lại (3 cỡ 400x240/600x270/1200x540, `shots/T14/t14c_kiem.txt`):** check_t14: 12/13 nút giống chữ ký gốc, PAUSE 'LECH' (chạm hoãn tới lúc nhả, như đã chấp nhận ở T14b), kết quả y hệt res_*.json T14b (rows, swallow_ok, all_same), sửa bố cục (giữ, kéo, kẹp, chặn đè, Lưu/đọc lại/Mặc định/Huỷ) ĐẠT; check_swallow 3 cỡ swallow_ok True; check_dpad 3 cỡ x 2 chế độ phím đúng, số đo hero y hệt T14b (vẫn không đi chéo, đó là T14d); check_leak: số khối sống mới == gốc từng mốc (5542-5544), top chênh hằng số +688 B => không rò; chế độ `off` (mui_flags=1): 4 ảnh (3 khung + sau chạm) giống gốc TỪNG BYTE ở 3 cỡ (script nằm ngoài repo, logic: `to_play 1300`, so `shot()` orig vs off). Ảnh trước/sau: HUD mới chỉ khác nút do lọc vùng thay bilinear (mềm hơn chút, cùng bố cục); 800x360: 18064/288000 điểm khác, chỉ quanh nút.
+**Ảnh:** `shots/T14/t14c_*` (8 file: so trước/sau 800x360 và 1200x540, hud 400x240/600x270, dpad, edit 1200x540, perf, kiem).
+**CÒN LẠI:** (1) chữ DASH 1200x540 vẫn nhỏ (mui_text chỉ có phông 10/15/18, cần phóng chữ bằng bộ đệm; chưa làm); (2) đo thời gian tường/FPS trên máy thật (người dùng); (3) có thể giảm bss/filesz (ảnh RGBA 4 B/điểm, 360 KB) nếu cần; (4) compare hồi quy check_cash/t16 không chạy lại ở T14c (HUD thay đổi chỉ trong hud.c); (5) hạ tầng phát hành (vtable, build_apk) do quản đốc.

@@ -1,0 +1,18 @@
+T14c perf: blk_all_per_frame = tong byte khoi co ban guest chay moi khung (xap xi chi phi CPU guest), ins_menu = lenh trong doan menu; 20 khung lien sau khung 1300 (canh choi)
+dev=HUD moi T14c, dev_before=HUD cu (6b487ae, test5)
+dev {"W": 800, "H": 360, "mode": "new", "frames": 20, "ins_menu_per_frame": 1184353, "blk_all_per_frame": 103411070}
+dev_before {"W": 1200, "H": 540, "mode": "new", "frames": 20, "ins_menu_per_frame": 14168170, "blk_all_per_frame": 272326278}
+dev {"W": 1200, "H": 540, "mode": "new", "frames": 20, "ins_menu_per_frame": 2590521, "blk_all_per_frame": 226015682}
+dev_before {"W": 400, "H": 240, "mode": "new", "frames": 20, "ins_menu_per_frame": 3036980, "blk_all_per_frame": 47365379}
+dev_before {"W": 600, "H": 270, "mode": "new", "frames": 20, "ins_menu_per_frame": 3866843, "blk_all_per_frame": 72376314}
+dev {"W": 400, "H": 240, "mode": "new", "frames": 20, "ins_menu_per_frame": 611336, "blk_all_per_frame": 37662803}
+dev_before {"W": 800, "H": 360, "mode": "new", "frames": 20, "ins_menu_per_frame": 6239559, "blk_all_per_frame": 123631894}
+dev {"W": 600, "H": 270, "mode": "new", "frames": 20, "ins_menu_per_frame": 760512, "blk_all_per_frame": 59950990}
+dev {"W": 800, "H": 360, "mode": "off", "frames": 20, "ins_menu_per_frame": 454, "blk_all_per_frame": 101604322}
+dev {"W": 1200, "H": 540, "mode": "off", "frames": 20, "ins_menu_per_frame": 454, "blk_all_per_frame": 218630834}
+dev {"W": 400, "H": 240, "mode": "off", "frames": 20, "ins_menu_per_frame": 454, "blk_all_per_frame": 38148123}
+dev {"W": 600, "H": 270, "mode": "off", "frames": 20, "ins_menu_per_frame": 454, "blk_all_per_frame": 59839606}
+dev {"W": 800, "H": 360, "mode": "orig", "frames": 20, "ins_menu_per_frame": 0, "blk_all_per_frame": 101609606}
+dev {"W": 1200, "H": 540, "mode": "orig", "frames": 20, "ins_menu_per_frame": 0, "blk_all_per_frame": 218638718}
+dev {"W": 400, "H": 240, "mode": "orig", "frames": 20, "ins_menu_per_frame": 0, "blk_all_per_frame": 38153407}
+dev {"W": 600, "H": 270, "mode": "orig", "frames": 20, "ins_menu_per_frame": 0, "blk_all_per_frame": 59844890}

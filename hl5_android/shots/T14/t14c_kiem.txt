@@ -1,0 +1,42 @@
+1200 540 True
+400 240 True
+600 270 True
+== t14 400x240
+LECH PAUSE new=['HERO::HitedProc', 'HERO::RestoreColorBack', 'StateGame::endProcess', 'HERO::EventEndProc', 'HERO::SetSkipFrame', 'HERO::SetIsForwardMove'] orig@[382, 45]=['StateGame::KeyPressed', 'Ba
+edit {'edit_before': 0, 'edit_after_hold': 1, 'edit_after_release': 1, 'att_moved_to': [140, 30], 'att_target': [140, 30], 'att_clamped': [372, 212], 'att_r': 28, 's1_after_overlap_try': [288, 213], '
+edit2 {'moved_x': 370, 'default_ok': True, 'cancel_edit': 0, 'cancel_custom': 0, 'att_after_cancel': [370, 200], 'att_default': [370, 200]}
+ALL_SAME False
+== swallow 400x240
+400 240 swallow_ok True pts [('ATT', 341, 172), ('S1', 274, 187), ('S3', 337, 141), ('S4', 356, 108), ('SWAP', 236, 200), ('DASH', 367, 141), ('PAUSE'
+== dpad 400x240
+fixed dk_ok True {'N': (1, 0, -20), 'NE': (9, 189, 0), 'E': (8, 189, 0), 'SE': (10, 189, 0), 'S': (2, 0, 68), 'SW': (6, -155, -28), 'W': (4, -155, -28), 'NW': (5, -155, -28)}
+follow dk_ok True {'N': (1, 0, -20), 'NE': (9, 189, 0), 'E': (8, 189, 0), 'SE': (10, 189, 0), 'S': (2, 0, 68), 'SW': (6, -155, -28), 'W': (4, -155, -28), 'NW': (5, -155, -28)}
+swap {'N': 1, 'E': 8, 'SE': 10, 'deadzone': 0} expect N1 E8 SE10 dz0
+== t14 600x270
+LECH PAUSE new=['HERO::HitedProc', 'HERO::RestoreColorBack', 'StateGame::endProcess', 'HERO::EventEndProc', 'HERO::SetSkipFrame', 'HERO::SetIsForwardMove'] orig@[582, 45]=['StateGame::KeyPressed', 'Ba
+edit {'edit_before': 0, 'edit_after_hold': 1, 'edit_after_release': 1, 'att_moved_to': [240, 45], 'att_target': [240, 45], 'att_clamped': [567, 237], 'att_r': 33, 's1_after_overlap_try': [471, 239], '
+edit2 {'moved_x': 300, 'default_ok': True, 'cancel_edit': 0, 'cancel_custom': 0, 'att_after_cancel': [565, 224], 'att_default': [565, 224]}
+ALL_SAME False
+== swallow 600x270
+600 270 swallow_ok True pts [('ATT', 596, 202), ('S0', 467, 255), ('S1', 499, 242), ('S2', 531, 196), ('S3', 537, 196), ('S5', 591, 127), ('SWAP', 411
+== dpad 600x270
+fixed dk_ok True {'N': (1, 0, -20), 'NE': (9, 189, 0), 'E': (8, 189, 0), 'SE': (10, 189, 0), 'S': (2, 0, 68), 'SW': (6, -155, -28), 'W': (4, -155, -28), 'NW': (5, -155, -28)}
+follow dk_ok True {'N': (1, 0, -20), 'NE': (9, 189, 0), 'E': (8, 189, 0), 'SE': (10, 189, 0), 'S': (2, 0, 68), 'SW': (6, -155, -28), 'W': (4, -155, -28), 'NW': (5, -155, -28)}
+swap {'N': 1, 'E': 8, 'SE': 10, 'deadzone': 0} expect N1 E8 SE10 dz0
+== t14 1200x540
+LECH PAUSE new=['HERO::HitedProc', 'HERO::RestoreColorBack', 'StateGame::endProcess', 'HERO::EventEndProc', 'HERO::SetSkipFrame', 'HERO::SetIsForwardMove'] orig@[1182, 45]=['StateGame::KeyPressed', 'B
+edit {'edit_before': 0, 'edit_after_hold': 1, 'edit_after_release': 1, 'att_moved_to': [540, 180], 'att_target': [540, 180], 'att_clamped': [1134, 474], 'att_r': 66, 's1_after_overlap_try': [942, 478]
+edit2 {'moved_x': 600, 'default_ok': True, 'cancel_edit': 0, 'cancel_custom': 0, 'att_after_cancel': [1130, 448], 'att_default': [1130, 448]}
+ALL_SAME False
+== swallow 1200x540
+1200 540 swallow_ok True pts [('ATT', 1196, 472), ('S0', 1042, 500), ('S1', 1074, 487), ('S5', 1191, 372), ('SWAP', 1011, 500), ('DASH', 1197, 466), (
+== dpad 1200x540
+fixed dk_ok True {'N': (1, 0, -20), 'NE': (9, 189, 0), 'E': (8, 189, 0), 'SE': (10, 189, 0), 'S': (2, 0, 68), 'SW': (6, -155, -28), 'W': (4, -155, -28), 'NW': (5, -155, -28)}
+follow dk_ok True {'N': (1, 0, -20), 'NE': (9, 189, 0), 'E': (8, 189, 0), 'SE': (10, 189, 0), 'S': (2, 0, 68), 'SW': (6, -155, -28), 'W': (4, -155, -28), 'NW': (5, -155, -28)}
+swap {'N': 1, 'E': 8, 'SE': 10, 'deadzone': 0} expect N1 E8 SE10 dz0
+leak 400x240 new [[5542, 542207728], [5542, 542207728], [5544, 542207728], [5543, 542207728], [5543, 542207728]]
+leak 400x240 orig [[5542, 542207040], [5542, 542207040], [5544, 542207040], [5543, 542207040], [5543, 542207040]]
+leak 600x270 new [[5542, 542471728], [5542, 542471728], [5544, 542471728], [5543, 542471728], [5543, 542471728]]
+leak 600x270 orig [[5542, 542471040], [5542, 542471040], [5544, 542471040], [5543, 542471040], [5543, 542471040]]
+leak 1200x540 new [[5542, 544415728], [5544, 544415728], [5542, 544415728], [5542, 544415728], [5542, 544415728]]
+leak 1200x540 orig [[5542, 544415040], [5542, 544415040], [5544, 544415040], [5543, 544415040], [5543, 544415040]]
