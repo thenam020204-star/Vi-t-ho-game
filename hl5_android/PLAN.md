@@ -229,7 +229,7 @@ Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh g�
 
 ## VIỆC CÒN LẠI (cập nhật 05/11/2026, sau bản v0.3-test4) — đọc mục này trước khi giao việc
 
-Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test4.apk` (sha256 d020696f…). Toàn bộ môi trường + thư mục work đã sao lưu trong `backup/` (khôi phục: `backup/README.md`). Gốc so sánh harness: `~/hl5work/orig_v02hd` (sau mỗi `make_apk.sh` phải chép lại vào `build_apk/`). Không còn công nhân nào chạy.
+Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test6.apk` (sha256 8ab75ff4…, HUD tối ưu T14c). Toàn bộ môi trường + thư mục work đã sao lưu trong `backup/` (khôi phục: `backup/README.md`). Gốc so sánh harness: `~/hl5work/orig_v02hd` (sau mỗi `make_apk.sh` phải chép lại vào `build_apk/`). Không còn công nhân nào chạy.
 
 ### 0. Chờ người dùng
 - [x] Phản hồi chơi thử v0.3-test4: ỔN (ngoài lag combat test5, xem T14c).
@@ -243,7 +243,7 @@ Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test4.apk` (sha25
 - [ ] Chạy lại bộ kiểm T14 đầy đủ sau khi thu DASH 38->36 (`harness/t14/check_t14.py`, `check_dpad.py`, `check_swallow.py`, `check_leak.py`, 3 cỡ) + chế độ `off` (cờ tắt = gốc).
 - [ ] Lưu bố cục ở cỡ này, đọc ở cỡ khác (`hud_layout.dat` theo phần nghìn màn).
 - [ ] Nuốt chạm vùng '#' (`gv[0x243]`, x>=W-40, y 70..95) khi chạm chỗ trống.
-- [ ] (T14c, ƯU TIÊN; cỡ chính = 1/3: 800x360/720x360) Lag HUD ở 1/1 + nút nhoè: xem Nhật ký cuối. Chữ DASH ở 1200x540 còn nhỏ (đổi cỡ 18->22 không ăn: xem `gen_hud_text.py`/hud.c).
+- [x] (T14c xong, test6) Lag HUD ở 1/1 + nút nhoè: xem Nhật ký cuối. Chữ DASH ở 1200x540 còn nhỏ (đổi cỡ 18->22 không ăn: xem `gen_hud_text.py`/hud.c).
 - [ ] Mặt nạ vùng HUD khi so ảnh `cycles` (check_cash/... lệch hash do HUD mới; live/top/state = gốc).
 
 ### 2. Menu đang dở (đã TẮT trong states.def/hooks.def/classes.def bằng comment '[tạm dừng L3/L1b: chưa kiểm]'; mã giữ nguyên)
@@ -413,3 +413,4 @@ Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 d
 - [người dùng 05/11] test4 ổn; chân dung bản A; không cần ảnh >=256 px (chỉ chơi 1/3); đi chéo: cách rẻ nhất. [quản đốc] Giao 2 công nhân Sonnet MỚI song song: T14c (tối ưu HUD, WORK ~/hl5work_t14c, báo cáo BAO-CAO-T14.md mục T14c) và T14d (đi chéo thật: CHỈ nghiên cứu mã máy + thử bằng harness trong WORK riêng ~/hl5work_t14d, không sửa file repo dùng chung trừ BAO-CAO-T14d.md và harness/t14d/).
 - [người dùng 05/11] Tạm ngưng đi chéo (T14d dừng, chưa có kết quả/báo cáo, không file nào đổi); giao A1 (công nhân T14c) làm luôn T18 nội suy 60 fps SAU T14c (T18a nghiên cứu -> BAO-CAO-T18.md, rồi T18b nếu khả thi, cờ mặc định tắt).
 - [quản đốc] Nghiên cứu kiến trúc nội suy (Fix Your Timestep, ASW/AppSW, frame generation, mod 60 fps) -> chốt thiết kế T18 ở T18-THIET-KE.md, đã gửi A1 (làm sau T14c).
+- [quản đốc] T14c NGHIỆM THU: HUD mới 800x360 +1,8% CPU guest so gốc (test5 +21,7%); check_t14/dpad/swallow/leak/off ĐẠT 3 cỡ; còn: chữ DASH 1200x540 nhỏ, chưa chạy lại check_cash/check_t16. Bản thử v0.3-test6: dist/test/HL5-VI-v0.3-test6.apk sha256 8ab75ff41da2d1182e0396e125863c455cd6b702f707d9035604f946e5477171 (.so 9e9a094e…, 2 lần dựng trùng byte, vtable 48 dòng, PT_LOAD menu memsz 3,2 MB: bridge ElfLoader cấp/zero theo memsz, BAO-CAO-RE §9.8); hậu kỳ ảnh Việt + BGM, ký/verify/align OK; harness từ APK tới cảnh chơi 800x360 + 400x240 không lỗi, số đo trùng bản dev (shots/T14/test6_800x360_canhchoi.png). build_apk chưa trả về gốc (orig_v02hd giữ riêng, harness dùng ORIGD). A1 sang T18.
