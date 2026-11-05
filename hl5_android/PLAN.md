@@ -232,8 +232,10 @@ Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh g�
 Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test4.apk` (sha256 d020696f…). Toàn bộ môi trường + thư mục work đã sao lưu trong `backup/` (khôi phục: `backup/README.md`). Gốc so sánh harness: `~/hl5work/orig_v02hd` (sau mỗi `make_apk.sh` phải chép lại vào `build_apk/`). Không còn công nhân nào chạy.
 
 ### 0. Chờ người dùng
-- [ ] Phản hồi chơi thử v0.3-test4 trên máy thật (dpad 2 chế độ, vị trí nút, HUD; hội thoại NPC; các màn NPC/Chuyên gia).
-- [ ] Chọn chân dung hội thoại bản A (bóng đổ, đang dùng) hay B (thêm quầng tối, `DLG_HALO`).
+- [x] Phản hồi chơi thử v0.3-test4: ỔN (ngoài lag combat test5, xem T14c).
+- [x] Chân dung hội thoại: chốt bản A (bóng đổ, đang dùng); bỏ bản B.
+- [x] Ảnh nút >=256 px: KHÔNG cần (người dùng chỉ chơi ở 1/3 => tối ưu/kiểm ưu tiên cỡ 1/3, vd 800x360 trên màn 2400x1080).
+- [x] Đi chéo thật: người dùng chốt "cách nào rẻ thì làm" (không yêu cầu chuẩn hoá tốc độ chéo).
 - [ ] Dịch xong bộ ảnh chữ (`export/anh_chu`, danh sách `ui_new/anh_chu/DANH_SACH.tsv`) để làm T11.
 
 ### 1. UI combat (T14) — ưu tiên theo người dùng
@@ -241,7 +243,7 @@ Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test4.apk` (sha25
 - [ ] Chạy lại bộ kiểm T14 đầy đủ sau khi thu DASH 38->36 (`harness/t14/check_t14.py`, `check_dpad.py`, `check_swallow.py`, `check_leak.py`, 3 cỡ) + chế độ `off` (cờ tắt = gốc).
 - [ ] Lưu bố cục ở cỡ này, đọc ở cỡ khác (`hud_layout.dat` theo phần nghìn màn).
 - [ ] Nuốt chạm vùng '#' (`gv[0x243]`, x>=W-40, y 70..95) khi chạm chỗ trống.
-- [ ] (T14c, ƯU TIÊN) Lag HUD ở 1/1 + nút nhoè: xem Nhật ký cuối. Chữ DASH ở 1200x540 còn nhỏ (đổi cỡ 18->22 không ăn: xem `gen_hud_text.py`/hud.c).
+- [ ] (T14c, ƯU TIÊN; cỡ chính = 1/3: 800x360/720x360) Lag HUD ở 1/1 + nút nhoè: xem Nhật ký cuối. Chữ DASH ở 1200x540 còn nhỏ (đổi cỡ 18->22 không ăn: xem `gen_hud_text.py`/hud.c).
 - [ ] Mặt nạ vùng HUD khi so ảnh `cycles` (check_cash/... lệch hash do HUD mới; live/top/state = gốc).
 
 ### 2. Menu đang dở (đã TẮT trong states.def/hooks.def/classes.def bằng comment '[tạm dừng L3/L1b: chưa kiểm]'; mã giữ nguyên)
@@ -407,3 +409,4 @@ Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 d
 - [quản đốc] Bản thử v0.3-test5: dist/test/HL5-VI-v0.3-test5.apk sha256 f2f207fae9d49e1b4f2e09a2dc9627130a83961fed78c5775bd56d3f515ff96f = test4 (.so 94a6c987… trùng) + T19 lượt 1 (vi/dich_lai.tsv 121 dòng: hết tao/mày, rà K03880–K05354). Build Việt: roundtrip 0, quá dài 0; ký/verify/align OK; chạy tới cảnh chơi 600x270 không lỗi. build_apk trả về gốc.
 - [người dùng] test5 lag/đơ khi combat ở 1/1 (1/3, 1/4 cũng lag hơn); kết luận: do UI combat mới. [quản đốc] Đo harness 600x270 1900 khung: test4 195.4/204.2 s vs test5 196.6/202.7 s (dịch lại KHÔNG ảnh hưởng: .so trùng, vi.bin +1 từ, căn lề VFS như nhau). Nguyên nhân HUD: hud.c art() phóng bilinear + trộn alpha TỪNG điểm ảnh MỖI khung qua mui_getpx/mui_put16, dpad mui_fill_a cả ô + 8 tam giác duyệt bbox; cỡ nút theo H/270 => 1/1 gấp 16 lần số điểm ảnh của 1/4. Giao T14c tối ưu (bộ đệm ảnh đã phóng, ghi thẳng framebuffer, bỏ vùng trong suốt).
 - [quản đốc] Người dùng báo hạn mức 99%: DỪNG T14c giữa chừng (TaskStop), chưa có báo cáo/perf.txt. WIP đã commit: hud.c (bộ đệm ảnh phóng, ghi thẳng FB, dpad dựng sẵn), gen_hud_art.py (nhúng ảnh to hơn để hết nhoè), harness/t14/perf_hud.py, shot_states.py, so_pixel.py, net_crop.py, ảnh shots/T14/net_{600x270,1200x540,2400x1080}.png. CHƯA dựng/kiểm => test5 vẫn là bản phát hành thử mới nhất (HUD cũ, lag ở 1/1). Phiên sau: công nhân MỚI đọc diff hud.c/gen_hud_art.py so commit 'WIP T14c' trước, dựng dev, chạy perf_hud.py (trước/sau 4 cỡ), check_t14/dpad/swallow/leak, xem ảnh net_*, rồi đóng test6. Ảnh nguồn 03–06 chỉ 116 px: xin người dùng bản >=256 px.
+- [người dùng 05/11] test4 ổn; chân dung bản A; không cần ảnh >=256 px (chỉ chơi 1/3); đi chéo: cách rẻ nhất. [quản đốc] Giao 2 công nhân Sonnet MỚI song song: T14c (tối ưu HUD, WORK ~/hl5work_t14c, báo cáo BAO-CAO-T14.md mục T14c) và T14d (đi chéo thật: CHỈ nghiên cứu mã máy + thử bằng harness trong WORK riêng ~/hl5work_t14d, không sửa file repo dùng chung trừ BAO-CAO-T14d.md và harness/t14d/).
