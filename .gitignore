@@ -1,4 +1,3 @@
 __pycache__/
 .claude/worktrees/
-hl5_android/export/
 hl5_android/engine/out/*.tmp

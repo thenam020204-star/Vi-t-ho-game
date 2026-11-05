@@ -1,0 +1,19 @@
+ẢNH CÓ CHỮ + LOGO — Heroes Lore 5 (bản Android v1.0.5), 81 ảnh
+
+goc/         ảnh gốc đúng kích thước (PNG trong suốt). Vẽ lại bản Việt trên các file này, GIỮ NGUYÊN TÊN FILE.
+x4/          cùng ảnh phóng 4 lần (chỉ để xem, không cần sửa).
+TONG_HOP.png tất cả trên một trang (phóng 2 lần).
+DANH_SACH.tsv: tên file, kho ảnh trong game (.mgr) + số thứ tự ảnh, kích thước, số màu tối đa, chữ hiện tại, ghi chú.
+
+Khi vẽ lại:
+1. Nên giữ đúng kích thước (rộng x cao). Nếu cần to hơn thì được, nhưng ảnh sẽ được vẽ CĂN GIỮA tại cùng điểm cũ,
+   nên nới đều hai bên.
+2. Nền trong suốt giữ trong suốt (alpha 0). Không dùng bán trong suốt (chỉ có trong suốt hoàn toàn hoặc đặc).
+3. Số màu: ảnh 8 bpp tối đa 254 màu; ảnh 4 bpp tối đa 15 màu (xem cột so_mau_toi_da). Vượt thì mình sẽ tự giảm màu.
+4. Màu hồng cánh sen thuần (255,0,255) là màu trong suốt của game — đừng dùng nó làm màu thật.
+5. Ảnh png_xxxxxxxx = huy hiệu phân loại nội dung của bản Android (PNG thường, không giới hạn màu).
+6. Ảnh nào không muốn đổi thì không cần gửi lại. Logo EA/828 có thể thay bằng logo "Việt hoá bởi NAM.P".
+7. Chữ "Level Up!!" (sp_imgcom_eff__03..09) hiện từng chữ một; "COVENANT OF DARKNESS" (title__14..18) cũng vậy,
+   title__19 là dòng đầy đủ.
+
+Gửi lại: nén thư mục goc/ (chỉ những ảnh đã vẽ) thành zip.

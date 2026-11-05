@@ -1,0 +1,82 @@
+tep_png	kho_anh	so_anh	rong	cao	bpp	so_mau_toi_da	chu_hien_tai	ghi_chu
+sp_imgcom_title__03.png	c/sp/imgcom/title.mgr	3	44	53	8	254	V	chữ V của logo (giữ hoặc vẽ lại cùng logo)
+sp_imgcom_title__05.png	c/sp/imgcom/title.mgr	5	120	57	8	254	HEROES LORE	logo tiêu đề (khung chính)
+sp_imgcom_title__06.png	c/sp/imgcom/title.mgr	6	112	49	8	254	HEROES LORE	logo tiêu đề (khung phụ/nhạt)
+sp_imgcom_title__07.png	c/sp/imgcom/title.mgr	7	187	10	4	15	© 2011 Electronic Arts Inc. All Rights Reserved	dòng bản quyền màn tiêu đề
+sp_imgcom_title__08.png	c/sp/imgcom/title.mgr	8	94	25	4	15	Tap to Continue	nút màn tiêu đề (Android)
+sp_imgcom_title__09.png	c/sp/imgcom/title.mgr	9	86	24	4	15	Press Any Key	nút màn tiêu đề (bàn phím)
+sp_imgcom_title__14.png	c/sp/imgcom/title.mgr	14	24	14	4	15	COVE	mảnh "COVENANT OF DARKNESS" (hiện từng mảnh)
+sp_imgcom_title__15.png	c/sp/imgcom/title.mgr	15	24	14	4	15	NANT	mảnh
+sp_imgcom_title__16.png	c/sp/imgcom/title.mgr	16	24	14	4	15	OF	mảnh
+sp_imgcom_title__17.png	c/sp/imgcom/title.mgr	17	24	14	4	15	DARK	mảnh
+sp_imgcom_title__18.png	c/sp/imgcom/title.mgr	18	28	14	4	15	NESS	mảnh
+sp_imgcom_title__19.png	c/sp/imgcom/title.mgr	19	124	14	4	15	COVENANT OF DARKNESS	dòng phụ đề đầy đủ
+sp_imgcom_ealogo__00.png	c/sp/imgcom/ealogo.mgr	0	106	109	8	254	EA (mờ 1)	logo NSX, 3 khung hiện dần
+sp_imgcom_ealogo__01.png	c/sp/imgcom/ealogo.mgr	1	106	106	8	254	EA (mờ 2)	logo NSX
+sp_imgcom_ealogo__02.png	c/sp/imgcom/ealogo.mgr	2	103	101	8	254	EA	logo NSX (rõ) — bản J2ME đã thay bằng "Việt hoá bởi NAM.P"
+sp_imgcom_828_lg__05.png	c/sp/imgcom/828_lg.mgr	5	45	18	4	15	828 (logo)	logo 828mobile
+sp_imgcom_828_lg__13.png	c/sp/imgcom/828_lg.mgr	13	108	13	4	15	www.828mobile.co.kr	địa chỉ web
+sp_imgcom_828_kt__13.png	c/sp/imgcom/828_kt.mgr	13	108	13	4	15	(như 828_lg 13)	bản KT
+sp_imgcom_828_sk__13.png	c/sp/imgcom/828_sk.mgr	13	108	13	4	15	(như 828_lg 13)	bản SK
+img_menu__09.png	c/img/menu.mgr	9	17	17	4	15	KR	nhãn nhỏ
+img_menu__12.png	c/img/menu.mgr	12	103	121	4	15	AGES 12+	huy hiệu phân loại tuổi
+img_menu__13.png	c/img/menu.mgr	13	103	121	4	15	GAMBLING	huy hiệu phân loại
+img_menu__14.png	c/img/menu.mgr	14	168	15	4	15	Ancient raid on Sanctuary...	đoạn mở đầu
+img_menu__15.png	c/img/menu.mgr	15	195	29	4	15	Humans and Neved ended the war. / Peace returned to Orbis...	đoạn mở đầu, 2 dòng
+img_menu__16.png	c/img/menu.mgr	16	169	29	4	15	Did a god send this disaster / to end a pointless war?	đoạn mở đầu, 2 dòng
+img_menu__17.png	c/img/menu.mgr	17	58	14	4	15	I say...	đoạn mở đầu
+img_menu__18.png	c/img/menu.mgr	18	192	50	8	254	No such god exists / in this world.	đoạn mở đầu, khung nền tối
+img_menu__33.png	c/img/menu.mgr	33	62	29	8	254	TRIAL VERSION	bản dùng thử
+img_gmenu__18.png	c/img/gmenu.mgr	18	35	21	4	15	miss	chữ bay khi đánh trượt
+img_gmenu__19.png	c/img/gmenu.mgr	19	35	19	4	15	block	chữ bay khi đỡ
+img_gmenu__36.png	c/img/gmenu.mgr	36	65	20	4	15	Time Left	nhãn thời gian
+img_gmenu__38.png	c/img/gmenu.mgr	38	91	44	8	254	Success / 공략 성공!	kết quả nhiệm vụ
+img_gmenu__39.png	c/img/gmenu.mgr	39	75	46	8	254	Failed / 공략 실패!	kết quả nhiệm vụ
+img_gmenu__44.png	c/img/gmenu.mgr	44	59	22	8	254	#: SKIP	nút bỏ qua
+img_gmenu__46.png	c/img/gmenu.mgr	46	80	13	4	15	LOADING...	màn tải
+img_ui__04.png	c/img/ui.mgr	4	35	5	4	15	CLOSE	nhãn nhỏ 35x5
+img_ui__44.png	c/img/ui.mgr	44	27	7	4	15	INFO	nhãn nhỏ
+img_ui__53.png	c/img/ui.mgr	53	25	8	4	15	Notice	nhãn thông báo
+img_touch__09.png	c/img/touch.mgr	9	36	18	8	254	DASH	nút DASH (thường)
+img_touch__10.png	c/img/touch.mgr	10	36	18	8	254	DASH	nút DASH (nhấn)
+img_worldmap__00.png	c/img/worldmap.mgr	0	146	22	8	254	THE ORBIS ISLANDS	tiêu đề bản đồ thế giới
+img_icon__85.png	c/img/icon.mgr	85	20	20	4	15	破	biểu tượng kỹ năng có chữ Hán
+sp_imgcom_eff__03.png	c/sp/imgcom/eff.mgr	3	17	19	4	15	L	chữ "Level Up!!" từng chữ
+sp_imgcom_eff__04.png	c/sp/imgcom/eff.mgr	4	16	14	8	254	e	
+sp_imgcom_eff__05.png	c/sp/imgcom/eff.mgr	5	13	12	4	15	v	
+sp_imgcom_eff__06.png	c/sp/imgcom/eff.mgr	6	11	19	4	15	l	
+sp_imgcom_eff__07.png	c/sp/imgcom/eff.mgr	7	18	20	4	15	U	
+sp_imgcom_eff__08.png	c/sp/imgcom/eff.mgr	8	18	20	4	15	p	
+sp_imgcom_eff__09.png	c/sp/imgcom/eff.mgr	9	16	18	4	15	!!	
+sp_img5_000__43.png	c/sp/img5/000.mgr	43	34	12	4	15	SP MAX	nhãn hiệu ứng
+sp_img5_000__44.png	c/sp/img5/000.mgr	44	38	11	4	15	S.ARMOR	nhãn hiệu ứng
+sp_img5_001__37.png	c/sp/img5/001.mgr	37	32	12	4	15	EVADE	
+sp_img5_001__38.png	c/sp/img5/001.mgr	38	61	11	4	15	COMBO SPEED	
+sp_img5_001__39.png	c/sp/img5/001.mgr	39	31	13	4	15	SPEED	
+sp_img5_001__43.png	c/sp/img5/001.mgr	43	37	11	4	15	POISON	
+sp_img5_002__48.png	c/sp/img5/002.mgr	48	61	11	4	15	COMBO SPEED	
+sp_img5_002__49.png	c/sp/img5/002.mgr	49	55	13	4	15	ADD DAMAGE	
+sp_img5_002__50.png	c/sp/img5/002.mgr	50	43	11	4	15	HIT RATE	
+sp_img5_003__38.png	c/sp/img5/003.mgr	38	34	13	4	15	RESIST	
+sp_img5_003__39.png	c/sp/img5/003.mgr	39	29	11	4	15	BLOCK	
+sp_img5_003__40.png	c/sp/img5/003.mgr	40	61	11	4	15	COMBO SPEED	
+sp_img5_003__41.png	c/sp/img5/003.mgr	41	35	13	4	15	HP MAX	
+sp_img5_003__42.png	c/sp/img5/003.mgr	42	46	13	4	15	COUNTER	
+sp_img5_003__43.png	c/sp/img5/003.mgr	43	50	13	4	15	INVINCIBLE	
+sp_img5_021__43.png	c/sp/img5/021.mgr	43	66	12	4	15	FIRE ENCHANT	
+sp_img5_021__44.png	c/sp/img5/021.mgr	44	71	12	4	15	STUN ENCHANT	
+sp_img5_021__45.png	c/sp/img5/021.mgr	45	58	11	4	15	ICE ENCHANT	
+sp_img5_021__46.png	c/sp/img5/021.mgr	46	51	12	4	15	RESIST ALL	
+sp_img5_021__50.png	c/sp/img5/021.mgr	50	96	17	4	15	spirits attack!!	
+png_3449f457.png	VFS khoá djb2 3449f457 (tên gốc chưa rõ)	-	45	53	PNG	PNG	TEST	huy hiệu phân loại nội dung (bản Android)
+png_34ed8c9a.png	VFS khoá djb2 34ed8c9a (tên gốc chưa rõ)	-	45	53	PNG	PNG	CRIME	huy hiệu phân loại nội dung (bản Android)
+png_61a72a7a.png	VFS khoá djb2 61a72a7a (tên gốc chưa rõ)	-	45	53	PNG	PNG	12+	huy hiệu phân loại nội dung (bản Android)
+png_61dd73fd.png	VFS khoá djb2 61dd73fd (tên gốc chưa rõ)	-	45	53	PNG	PNG	15+	huy hiệu phân loại nội dung (bản Android)
+png_6213bd80.png	VFS khoá djb2 6213bd80 (tên gốc chưa rõ)	-	45	53	PNG	PNG	18+	huy hiệu phân loại nội dung (bản Android)
+png_638cf99c.png	VFS khoá djb2 638cf99c (tên gốc chưa rõ)	-	45	53	PNG	PNG	SEX	huy hiệu phân loại nội dung (bản Android)
+png_6e27dfc8.png	VFS khoá djb2 6e27dfc8 (tên gốc chưa rõ)	-	45	53	PNG	PNG	FEAR	huy hiệu phân loại nội dung (bản Android)
+png_9100da70.png	VFS khoá djb2 9100da70 (tên gốc chưa rõ)	-	45	53	PNG	PNG	ALL	huy hiệu phân loại nội dung (bản Android)
+png_9cdfd372.png	VFS khoá djb2 9cdfd372 (tên gốc chưa rõ)	-	45	53	PNG	PNG	GAMBLE	huy hiệu phân loại nội dung (bản Android)
+png_abf2efff.png	VFS khoá djb2 abf2efff (tên gốc chưa rõ)	-	45	53	PNG	PNG	VIOLENT	huy hiệu phân loại nội dung (bản Android)
+png_ac396adc.png	VFS khoá djb2 ac396adc (tên gốc chưa rõ)	-	45	53	PNG	PNG	DRUGS	huy hiệu phân loại nội dung (bản Android)
+png_bc7e21cc.png	VFS khoá djb2 bc7e21cc (tên gốc chưa rõ)	-	45	53	PNG	PNG	LANG.	huy hiệu phân loại nội dung (bản Android)
