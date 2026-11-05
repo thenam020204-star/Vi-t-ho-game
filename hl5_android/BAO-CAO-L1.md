@@ -117,7 +117,7 @@ Mã máy: `StateGame::Process` 0xdbfec nhánh state 1: `GetPopupState` ([+0x12])
 
 ### 11.4 Hồi quy
 - c1 (`harness/t17c2/check_c1_all.py` bản sao ghi ra `~/hl5work_l1b/c1out`, không đụng shots/T17c1; dev = devmap): 97 mục ĐẠT, 0 LỖI, 3 cỡ (ảnh cuối lệch = HUD T14 như đã biết).
-- cash: cycles ở 11.1; sel/drag/popup 400x240: xem dòng "cash full" bên dưới nếu có.
+- cash: cycles ở 11.1; `compare_cash.py` sel/drag/popup + vùng chạm (16 ô, grid_scroll, close == hit_rects.json) ở 400x240: ĐẠT (chỉ 400x240, 600x270 và 1200x540 chưa chạy lại lượt này).
 
 ### 11.5 File đổi (L1b)
 `engine/menu/map.c`, `classes.def` (MAP), `states.def` (dòng `map` bật), `build.sh` (+1 defsym TouchWorldMapPoint), `harness/l1/{qlib.py (DEVDIR, skip_intro), build_dev.sh (DEVDIR), check_map.py, compare_map.py, check_{q,sp,cash,gpop}.py (skip_intro), run_cycles.sh (gpop dùng off)}`, `shots/L1b/` (dọn còn 8 ảnh + 1 txt). Không đụng hud.c, mmenu.c, hooks.def, mm*/mmpop, PLAN.md.

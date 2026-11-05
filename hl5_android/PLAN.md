@@ -253,7 +253,7 @@ Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test6.apk` (sha25
 
 ### 3. Việc nhỏ còn sót (đã nghiệm thu phần chính)
 - [ ] L2 NPC: soát mắt 600x270; khoá ô sách kỹ năng; hộp thông tin Chế biến 400x240 cắt dòng cuối; Orb với vật hiến tế khác id 9 / đã đủ ô; đối chiếu Orb 80.0%.
-- [ ] L1: popup xác nhận Bùa (xem mục 2).
+- [x] L1: popup xác nhận Bùa — KHÔNG KHẢ THI/không cần: SetPopupState loại 1/2 là mã chết ở bản Android (3 nơi gọi đều loại 0); hồi sinh thật dùng gpop.c (ĐẠT).
 - [ ] T16 hội thoại: bản B chưa chụp; chưa thử NPC đứng nói chuyện / thoại nhiều trang ngoài hoạt cảnh.
 - [ ] T7: chặn nốt `netConnect` (0xd93b4, 0xc64bc, 0x11b344/364/6a8, 0x11f378, 0x120e48, 0x1218f8/970, 0x121c28).
 - [ ] Gộp BAO-CAO-L1/L2/T14/T16 (+L3) vào BAO-CAO-RE.md.
@@ -417,3 +417,4 @@ Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 d
 - [quản đốc] T18a XONG (BAO-CAO-T18.md, công nhân dừng 216k): paint = 98–99% CPU guest/tick (800x360: 101,6 M byte khối/tick), một khung trung gian ≈ một tick; paint thêm sạch trừ Monster::IncreaseTempFrame (0xb66c4/0xbee5c, phải chặn); camera X = Map+0xc0/c8/d0/d8 (Y +0xc4..dc chưa dò), chỉ camera => hero giật -> mốc 1 phải gồm camera + hero (OBJECT+4/+8); bridge tải texture chỉ khi CUSTOM_grpFlushLcd, nativeLoop mỗi vsync, timer theo vsync. CHẶN: cần số đo ms/tick trên máy người dùng (ở 1/3): >45 ms thì T18b vô ích. Đề xuất: bản đo (hiện ms/tick + fps góc màn) trước khi làm T18b.
 - [người dùng 05/11] GÁC LẠI T18 (nội suy; T18a xong, chờ số đo máy, chưa làm T18b) -> làm tiếp UI dở (VIỆC CÒN LẠI mục 2). [quản đốc] Giao 2 công nhân Sonnet MỚI song song: L3 (T17c7 MainMenu, WORK ~/hl5work_l3, BAO-CAO-L3.md) và L1b (StateMap + popup Bùa, WORK ~/hl5work_l1b, thêm mục L1b vào BAO-CAO-L1.md). Mỗi người chỉ bỏ comment / sửa dòng states.def/hooks.def/classes.def/build.sh/mui.h của mình.
 - [quản đốc] L3 NGHIỆM THU (BAO-CAO-L3.md, công nhân dừng 175k): MainMenu mới (lưới 6 ô, slot, lớp, popup lớp, Chuyên gia, Cài đặt 10 mục + Phân giải 1/1..1/4, popup thoát) — chạm = phím gốc 3 cỡ, off 21/21, hồi quy c1 ĐẠT, cash ĐẠT trừ hash ảnh cycles (lệch HUD đã biết, mục 1). Còn: soát mắt 600x270 slot/lớp; nút ↺ (CommonUi touch cancel gốc) vẫn hiện góc phải trên ở Cài đặt 1200x540; t16 chưa chạy lại. Chờ L1b rồi dựng test7.
+- [quản đốc] L1b NGHIỆM THU (BAO-CAO-L1.md mục L1b, công nhân dừng 316k): StateMap mới (MAP=[+0xc], bản đồ lớn/khu vực, chạm điểm, Minimap, cuộn) chạm = gốc 3 cỡ, cycles map ĐẠT, c1 97/97, compare_cash 400x240 ĐẠT; skip_intro trong qlib (lệch cycles cũ là do khung thoại T16). Popup Bùa = mã chết. CÒN (hạ tầng kiểm): mặt nạ HUD T14 cho cycles q/sp/cash, gpop cycles sau skip_intro (thiếu vùng chạm 0xF0), check_cash 600/1200, soát mắt 400x240 khu vực. Dựng test7 (L3 + L1b).
