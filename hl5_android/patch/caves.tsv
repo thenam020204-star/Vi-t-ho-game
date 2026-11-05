@@ -3,4 +3,4 @@ bss	0x1704c0	64	vn_state	vn.c	sau .bss cũ (0x1704a8); cần p_memsz +0x100 (pat
 cave B	0x14afb4	2436	đã dùng 881 B (0x14afb4..0x14b325)	t10.c	AndroidService::AndroidService C2 (chết, refscan §9.3); còn trống 1555 B
 PT_LOAD thử	0x171000	0x2000 (filesz 0x1000)	payload T17p ~0x128 B + bảng màu; zero-fill 0x172000..0x173000 (bộ đếm, canary, điểm ảnh)	mk_ptload_test.py	CHỈ bản --test-ptload (dist/test/); phdr[4] PT_GNU_STACK -> PT_LOAD; móc 0x3da08 (bl MC_grpFlushLcd). Không có trong bản thường
 cave A	0xaef38	2620	đã dùng 1881 B (0xaef38..0xaf691)	vn.c	Map::MapMove_back (chết, refscan 0 tham chiếu); còn trống 739 B
-PT_LOAD menu	0x171000	memsz 117048 (filesz 107716)	mã+rodata+bss thư viện menu mới	engine/menu/*	phdr[4] PT_GNU_STACK -> PT_LOAD (patch/mk_menu_segment.py); lớp bật: CASH EXPERT GAME INGAME NPC POPUP
+PT_LOAD menu	0x171000	memsz 265856 (filesz 234028)	mã+rodata+bss thư viện menu mới	engine/menu/*	phdr[4] PT_GNU_STACK -> PT_LOAD (patch/mk_menu_segment.py); lớp bật: CASH EXPERT GAME INGAME NPC POPUP
