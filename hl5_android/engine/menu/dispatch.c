@@ -4,6 +4,8 @@
 #include "mui.h"
 
 volatile u32 mui_flags;
+volatile u32 mui_drawn;                       /* L6b: Paint ngoài cùng của khung này do menu mới vẽ (cui.c ẩn ↺ + vòng xám) */
+static int mui_depth;                         /* độ sâu thunk Paint (popup gọi Paint của state cha qua vtable) */
 mui_m L;
 int mui_tz;                                   /* T14: chỉ số con trỏ (tham số z) của chạm hiện tại, cho hud.c */
 H void hud_release(void *self, int x, int y, int z);
@@ -85,9 +87,10 @@ static int call_move(int id, void *self, int x, int y) {
 
 /* thunk cho từng lớp (chỉ gắn vào vtable những lớp có dòng; xem inject_menu.py) */
 #define MUI_CLASS(I, N, E) \
-    void mui_paint_##I(void *self) { \
-        if (!(mui_flags & MUI_F_DISABLE)) { int id = sel(MUI_CLS_##I, self); if (id && mui_begin()) { call_paint(id, self); return; } } \
-        N##_Paint(self); } \
+    void mui_paint_##I(void *self) { int nw = 0; mui_depth++; \
+        if (!(mui_flags & MUI_F_DISABLE)) { int id = sel(MUI_CLS_##I, self); if (id && mui_begin()) { call_paint(id, self); nw = 1; } } \
+        if (!nw) N##_Paint(self); \
+        if (--mui_depth <= 0) { mui_depth = 0; mui_drawn = nw; } } \
     int mui_tp_##I(void *self, int x, int y, int z) { mui_tz = z; \
         if (!(mui_flags & MUI_F_DISABLE)) { int id = sel(MUI_CLS_##I, self); if (id && mui_fb_w() > 0) { call_touch(id, self, x, y); return 0; } } \
         return N##_TouchPressed(self, x, y, z); } \

@@ -41,6 +41,12 @@ MUI_STATE(MAIN, mm5a, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 0), mm_slot_pai
 MUI_STATE(MAIN, mm5b, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 1), mm_class_paint, mm_touch, mm_move)
 MUI_STATE(MAIN, mm6, (GS(self) == 6 && *((s8 *)(self) + 0xd) == 0), mm_slot_paint, mm_touch, mm_move)
 MUI_STATE(MAIN, mm9, (GS(self) == 9 && *((s8 *)(self) + 0xd) == 0), mm_option_paint, mm_touch, mm_move)
+/* L6b: MainMenu 6 sub 1 (Chuyên Gia chọn chế độ), 10 (Thành tựu) */
+MUI_STATE(MAIN, mm6b, (GS(self) == 6 && *((s8 *)(self) + 0xd) == 1), mm_expert_paint, mm2_touch, mm2_move)
+MUI_STATE(MAIN, mm10, (GS(self) == 10), mm_mission_paint, mm2_touch, mm2_move)
+MUI_STATE(MAIN, mm11, (GS(self) == 11 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 1), mm_help_paint, mm2_touch, mm2_move)
+/* L6b: popup nhiệm vụ (StatePopup loại 9, QuestMgr::QuestStatusList) */
+MUI_STATE(POPUP, qpop, (POP_TYPE(self) == 9 && POP_NBTN(self) >= 1 && POP_NBTN(self) <= 2), qpop_paint, qpop_touch, ig_move)
 MUI_STATE(POPUP, mmpop, (MAIN_POPUP8(self) && POP_NBTN(self) == 2), mmpop_paint, mmpop_touch, mmpop_move)
 /* L1b/T17c8: StateMap: chế độ 0 bản đồ lớn / 1 khu vực (ctor tham số 1 = [+0xd]==1 chỉ vẽ ảnh: giữ đường gốc) */
 MUI_STATE(MAP, map, ((GS(self) == 0 || GS(self) == 1) && *((s8 *)(self) + 0xd) == 0), map_paint, map_touch, map_move)

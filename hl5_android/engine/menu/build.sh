@@ -37,6 +37,7 @@ for f in map; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $
 for f in expert; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L1/T17c4: Chuyên gia
 for f in mmenu; do [ -f $f.c ] && { $CC $DEF -DMM_DEFAULT_K=$MMK -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L3/T17c7: MainMenu
 for f in hud; do [ -f $f.c ] && { python3 -I gen_hud_art.py "$OUT/hud_art.h"; python3 -I gen_hud_text.py "$OUT/hud_text.h"; $CC $DEF -I"$OUT" -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # T14: HUD chiến đấu
+for f in mm2 qpop cui; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L6b: MainMenu Chuyên Gia/Thành tựu/Trợ giúp, popup nhiệm vụ, ẩn ↺
 for f in npc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L2/T17c5: NPC
 # T16: khung hội thoại mới (dialog.c; dlg_text.h sinh từ từ điển $WORK/vi_android/dict.txt)
 if [ -f dialog.c ]; then python3 -I gen_dlg_text.py "$OUT/dlg_text.h"; $CC $DEF -I"$OUT" -c dialog.c -o "$OUT/dialog.o"; OBJS="$OBJS $OUT/dialog.o"; fi
@@ -117,6 +118,11 @@ done
 # L1b/T17c8: symbol guest cho map.c
 a=$(sym "StateMap::DrawZone()"); [ -n "$a" ] || { echo "thiếu symbol StateMap::DrawZone"; exit 1; }; DEFS="$DEFS --defsym=StateMap_DrawZone=0x$a"
 a=$(sym "StateMap::TouchWorldMapPoint(signed char)"); [ -n "$a" ] || { echo "thiếu symbol StateMap::TouchWorldMapPoint"; exit 1; }; DEFS="$DEFS --defsym=StateMap_TouchWorldMapPoint=0x$a"
+# L6b: symbol guest cho mm2.c / qpop.c / cui.c
+for p in "CommonUi::DrawTouchFeedbackSprite()|CommonUi_DrawTouchFeedbackSprite" "CommonUi::DrawTouchCancelUi()|CommonUi_DrawTouchCancelUi" "Mission::GetLength()|Mission_GetLength" \
+  "Mission::GetMissionTablePtr(short)|Mission_GetMissionTablePtr" "Mission::IsCompleteMission(short)|Mission_IsCompleteMission" "QuestMgr::DrawNpcBody(short, short)|QuestMgr_DrawNpcBody"; do
+  a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
+done
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
 for c in $(grep -o '^MUI_CLASS([A-Z]*, [A-Za-z]*' classes.def | sed 's/MUI_CLASS([A-Z]*, //'); do
   for m in "Paint()" "KeyPressed(int)" "TouchPressed(int, int, int)" "TouchMoved(int, int, int)" "TouchReleased(int, int, int)"; do

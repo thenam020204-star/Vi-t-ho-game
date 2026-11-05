@@ -404,3 +404,8 @@ int mm_move(void *self, int x, int y) {
     }
     return mui_touch_move(self, MUI_CLS_MAIN, x, y);
 }
+
+/* L6b: xuất khung chung cho mm2.c (Chuyên Gia chọn chế độ / Thành tựu / Trợ giúp) */
+void mm_dimwin(const u8 *title, mui_r *c) { dimwin(title, c); }
+void mm_tilebox(int x0, int y0, int x1, int y1, int sel) { tilebox(x0, y0, x1, y1, sel); }
+void mm_panel(int x0, int y0, int x1, int y1) { panel(x0, y0, x1, y1, NULL); }

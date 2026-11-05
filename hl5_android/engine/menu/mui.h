@@ -290,3 +290,17 @@ extern H u8 MAIN_vtable[];                     /* "vtable for StateMainMenu" (nm
 H void map_paint(void *self);
 H int map_touch(void *self, int x, int y);
 H int map_move(void *self, int x, int y);
+/* ---------------- L6b: mm2.c (MainMenu: Chuyên Gia chọn chế độ, Thành tựu, Trợ giúp), qpop.c (popup nhiệm vụ loại 9), cui.c (ẩn ↺ + vòng xám) ---------------- */
+H void mm_dimwin(const u8 *title, mui_r *c);
+H void mm_tilebox(int x0, int y0, int x1, int y1, int sel);
+H void mm_panel(int x0, int y0, int x1, int y1);
+H void mm_expert_paint(void *self);
+H void mm_mission_paint(void *self);
+H void mm_help_paint(void *self);
+H int mm2_touch(void *self, int x, int y);
+H int mm2_move(void *self, int x, int y);
+H void qpop_paint(void *self);
+H int qpop_touch(void *self, int x, int y);
+extern H volatile u32 mui_drawn;                  /* 1 = Paint của state trên cùng khung này do menu mới vẽ (đặt ở thunk Paint ngoài cùng) */
+H void l6_hide_fb(void *cui);
+H void l6_hide_cancel(void *cui);
