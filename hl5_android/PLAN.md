@@ -252,7 +252,7 @@ Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test7.apk` (sha25
 - [ ] Khi bật lại: bỏ comment, dựng dev, kiểm ĐẠT rồi mới đóng APK.
 
 ### 2b. Menu con còn giao diện cũ (người dùng báo sau test7) — L6
-- [ ] L6a kiểm kê: mọi (lớp, state, sub, loại popup) tới được mà dispatch rơi về đường gốc (Paint gốc), kèm ảnh + đường tới; đã biết: Kỹ năng sub 7..10 (mua/ghép sách), Tinh linh sub 4, Nhiệm vụ sub 4/5/6, MainMenu ngoài mm4/5/6/9 (Thành tựu, Trợ giúp, Quản lý dữ liệu, mm6/mm9 sub≠0), popup loại khác, StateGame state 2 sub 0, nút ↺ CommonUi gốc còn hiện. Báo cáo BAO-CAO-L6.md.
+- [x] L6a kiểm kê (BAO-CAO-L6.md): mọi (lớp, state, sub, loại popup) tới được mà dispatch rơi về đường gốc (Paint gốc), kèm ảnh + đường tới; đã biết: Kỹ năng sub 7..10 (mua/ghép sách), Tinh linh sub 4, Nhiệm vụ sub 4/5/6, MainMenu ngoài mm4/5/6/9 (Thành tựu, Trợ giúp, Quản lý dữ liệu, mm6/mm9 sub≠0), popup loại khác, StateGame state 2 sub 0, nút ↺ CommonUi gốc còn hiện. Báo cáo BAO-CAO-L6.md.
 - [ ] L6b..: làm theo danh sách L6a (theo lô, công nhân mới mỗi lô).
 
 ### 3. Việc nhỏ còn sót (đã nghiệm thu phần chính)
@@ -426,3 +426,4 @@ Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 d
 - [người dùng] test7: 'vẫn còn các menu con' (giao diện cũ). [quản đốc] Giao công nhân Sonnet MỚI L6a kiểm kê (WORK ~/hl5work_l6) rồi làm lô đầu nếu còn ngữ cảnh.
 - [người dùng] Gửi 3 ảnh test7 còn giao diện cũ (shots/L6/nguoidung_*): (1) Chuyên Gia — chọn chế độ (Cầm cự / Đua thời gian / Đột phá / Xem bảng xếp hạng), lưới 3+1 ô nhãn đè nhau; (2) Thành tựu (danh sách + Nhận!); (3) popup nhiệm vụ trong game (tiêu đề nhiệm vụ, chân dung, mô tả cuộn, nút 'Xem phần thưởng' / OK / X). Kèm: nút ↺ gốc góc phải, vòng tròn xám trên giữa, nửa nút trắng mép trái. => ƯU TIÊN L6b.
 - [người dùng] Nửa nút tròn trắng mép trái KHÔNG phải của game (của máy) -> bỏ qua.
+- [quản đốc] L6a NGHIỆM THU (BAO-CAO-L6.md, dừng 244k): còn cũ = MainMenu 6/1 Chuyên Gia chế độ, 10 Thành tựu, 11 Trợ giúp, 9/1 Quản lý dữ liệu; StatePopup loại 9 (nhiệm vụ, QuestMgr), 0, 6; InGame Kỹ năng 7..10, Tinh linh 4, Nhiệm vụ 4/5/6; Map chỉ-ảnh; Game 2/0, 3 (LOADING giữ gốc). ↺ = CommonUi::DrawTouchCancelUi 0x73ce8, vòng xám = DrawTouchFeedbackSprite 0x73c50, cả hai vẽ trong mainPaint sau Paint state. Lô: L6b (Chuyên Gia 6/1, Thành tựu, popup 9, ẩn ↺/vòng xám, + Trợ giúp), L6c (Quản lý dữ liệu, Kỹ năng 7..10, Tinh linh 4, Nhiệm vụ 4/5/6), L6d (popup 0/6, Map chỉ-ảnh, Game 2/0). Giao L6b cho công nhân MỚI.
