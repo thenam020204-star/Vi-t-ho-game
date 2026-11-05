@@ -38,12 +38,13 @@ static struct {
     s8 cap[4];
     u8 dmode, dmode_sv, dk, fvis;       /* dmode 0 = dpad cố định, 1 = theo ngón; dk = bit phím đang giữ (1 lên 2 xuống 4 trái 8 phải); fvis = dpad theo ngón đang hiện */
     int fcx, fcy, dd;
-    int pc, t0, hx, hy, W, Ht, f16, sel, gx, gy, bpl, nac, pool_used, itab_s, dpD;
-    u8 *fb;
+    int pc, t0, hx, hy, W, Ht, f16, sel, gx, gy;
     int cx[NB], cy[NB], d[NB];
     rr old[NB];
     s16 pm[NB][2];
     u16 snap[6][SLOT * SLOT], spr[6][SLOT * SLOT];
+    int bpl, nac, pool_used, itab_s, dpD;     /* T14c: thêm CUỐI struct để giữ offset (check_t14 đọc cx@84, d@196, old@252, pm@364) */
+    u8 *fb;
 } S;
 
 static const s16 DOX[NB] = {31, 145, 113, 81, 50, 31, 21, 190, 17, 17, 0, 0, 0, 0};
@@ -151,23 +152,41 @@ int hud_belt(void *hero, int b, int c, int d, int e, int f, int g) {
 /* ---------------- vẽ ---------------- */
 /* T14c: ảnh phóng dựng MỘT lần khi đổi (id ảnh, cỡ D) rồi chỉ chép/trộn mỗi khung. Bộ nhớ: POOL tĩnh (bss), cấp phát bump, xoá khi đổi cỡ màn (lay_apply).
  * Mỗi mục: col (RGB565 đã nội suy, nhân alpha) + al (alpha 8 bit) + [xs,xe) khoảng alpha>0 của từng hàng. Công thức trộn giữ NGUYÊN so với bản cũ (bit-exact). */
-#define POOL_B (2 << 20)
+#define POOL_B (5 << 19)    /* 2,5 MiB bss; dùng thật ~1,3 MB ở 2400x1080 */
 #define NAC 16
 typedef struct { s16 id, D; u16 *col; u8 *al; s16 *xs, *xe; } ac_t;
 static u8 POOL[POOL_B] __attribute__((aligned(4)));
 static ac_t AC[NAC];
 static void *pal(int n) { n = (n + 3) & ~3; if (S.pool_used + n > POOL_B) return NULL; void *p = POOL + S.pool_used; S.pool_used += n; return p; }
-static void art_src(int id, const u16 **C, const u8 **A, int *s) {
+static void art_src(int id, const u8 **P, int *s) {
     switch (id) {
-    case 0: *C = ART_EMB_C; *A = ART_EMB_A; *s = ART_EMB_S; break;
-    case 1: *C = ART_GLOW_C; *A = ART_GLOW_A; *s = ART_GLOW_S; break;
-    case 2: *C = ART_FRAME_C; *A = ART_FRAME_A; *s = ART_FRAME_S; break;
-    case 3: *C = ART_PAUSE_C; *A = ART_PAUSE_A; *s = ART_PAUSE_S; break;
-    case 4: *C = ART_SAVE_C; *A = ART_SAVE_A; *s = ART_SAVE_S; break;
-    case 5: *C = ART_SHOP_C; *A = ART_SHOP_A; *s = ART_SHOP_S; break;
-    default: *C = ART_SWAP_C; *A = ART_SWAP_A; *s = ART_SWAP_S; break;
+    case 0: *P = ART_EMB_P; *s = ART_EMB_S; break;
+    case 1: *P = ART_GLOW_P; *s = ART_GLOW_S; break;
+    case 2: *P = ART_FRAME_P; *s = ART_FRAME_S; break;
+    case 3: *P = ART_PAUSE_P; *s = ART_PAUSE_S; break;
+    case 4: *P = ART_SAVE_P; *s = ART_SAVE_S; break;
+    case 5: *P = ART_SHOP_P; *s = ART_SHOP_S; break;
+    default: *P = ART_SWAP_P; *s = ART_SWAP_S; break;
     }
 }
+/* điểm (dx,dy) của ảnh D x D từ nguồn s x s (RGBA8 nhân alpha): D < s lọc trung bình vùng (thu nhỏ), D == s chép, D > s bilinear (chỉ khi màn rất lớn / dự phòng) -> o[0..3] = r,g,b,a 0..255 */
+static void sample(const u8 *P, int s, int D, int dx, int dy, int *o) {
+    if (D == s) { const u8 *q = P + (dy * s + dx) * 4; o[0] = q[0]; o[1] = q[1]; o[2] = q[2]; o[3] = q[3]; return; }
+    if (D < s) {
+        int x0 = dx * s / D, x1 = ((dx + 1) * s + D - 1) / D, y0 = dy * s / D, y1 = ((dy + 1) * s + D - 1) / D;
+        if (x1 > s) x1 = s;
+        if (y1 > s) y1 = s;
+        int n = (x1 - x0) * (y1 - y0), a0 = 0, a1 = 0, a2 = 0, a3 = 0;
+        for (int y = y0; y < y1; y++) for (int x = x0; x < x1; x++) { const u8 *q = P + (y * s + x) * 4; a0 += q[0]; a1 += q[1]; a2 += q[2]; a3 += q[3]; }
+        o[0] = (a0 + n / 2) / n; o[1] = (a1 + n / 2) / n; o[2] = (a2 + n / 2) / n; o[3] = (a3 + n / 2) / n; return;
+    }
+    int step = ((s - 1) << 16) / (D - 1), sx = dx * step, sy = dy * step;
+    int ix = sx >> 16, fx = (sx >> 8) & 255, iy = sy >> 16, fy = (sy >> 8) & 255, ix1 = ix + 1 < s ? ix + 1 : ix, iy1 = iy + 1 < s ? iy + 1 : iy;
+    int w00 = (256 - fx) * (256 - fy) >> 8, w01 = fx * (256 - fy) >> 8, w10 = (256 - fx) * fy >> 8, w11 = 256 - w00 - w01 - w10;
+    const u8 *q0 = P + (iy * s + ix) * 4, *q1 = P + (iy * s + ix1) * 4, *q2 = P + (iy1 * s + ix) * 4, *q3 = P + (iy1 * s + ix1) * 4;
+    for (int k = 0; k < 4; k++) o[k] = (q0[k] * w00 + q1[k] * w01 + q2[k] * w10 + q3[k] * w11) >> 8;
+}
+static const u8 BAY[16] = {0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5};
 static ac_t *ac_get(int id, int D) {
     for (int i = 0; i < S.nac; i++) if (AC[i].id == id && AC[i].D == D) return &AC[i];
     if (D < 4 || D > 2000 || S.nac >= NAC) return NULL;
@@ -176,47 +195,37 @@ static ac_t *ac_get(int id, int D) {
     q->col = pal(D * D * 2); q->al = pal(D * D); q->xs = pal(D * 2); q->xe = pal(D * 2);
     if (!q->col || !q->al || !q->xs || !q->xe) { S.pool_used = sv; return NULL; }
     q->id = (s16)id; q->D = (s16)D; S.nac++;
-    const u16 *C; const u8 *A; int s; art_src(id, &C, &A, &s);
-    int step = ((s - 1) << 16) / (D - 1), sy = 0;
-    for (int dy = 0; dy < D; dy++, sy += step) {
-        int iy = sy >> 16, fy = (sy >> 8) & 255, iy1 = iy + 1 < s ? iy + 1 : iy, sx = 0, xs = D, xe = 0;
-        for (int dx = 0; dx < D; dx++, sx += step) {
-            int ix = sx >> 16, fx = (sx >> 8) & 255, ix1 = ix + 1 < s ? ix + 1 : ix;
-            int p00 = iy * s + ix, p01 = iy * s + ix1, p10 = iy1 * s + ix, p11 = iy1 * s + ix1;
-            int w00 = (256 - fx) * (256 - fy) >> 8, w01 = fx * (256 - fy) >> 8, w10 = (256 - fx) * fy >> 8, w11 = 256 - w00 - w01 - w10;
-            int a = (A[p00] * w00 + A[p01] * w01 + A[p10] * w10 + A[p11] * w11) >> 8;
-            u32 c0 = C[p00], c1 = C[p01], c2 = C[p10], c3 = C[p11];
-            int r = ((c0 >> 11) * w00 + (c1 >> 11) * w01 + (c2 >> 11) * w10 + (c3 >> 11) * w11) >> 8;
-            int g = (((c0 >> 5) & 63) * w00 + ((c1 >> 5) & 63) * w01 + ((c2 >> 5) & 63) * w10 + ((c3 >> 5) & 63) * w11) >> 8;
-            int bl = ((c0 & 31) * w00 + (c1 & 31) * w01 + (c2 & 31) * w10 + (c3 & 31) * w11) >> 8;
-            if (a < 0) a = 0;
-            q->al[dy * D + dx] = (u8)a; q->col[dy * D + dx] = (u16)((r << 11) | (g << 5) | bl);
-            if (a > 0) { if (dx < xs) xs = dx; xe = dx + 1; }
+    const u8 *P; int s; art_src(id, &P, &s);
+    for (int dy = 0; dy < D; dy++) {
+        int xs = D, xe = 0;
+        for (int dx = 0; dx < D; dx++) {
+            int o[4], t = BAY[(dy & 3) * 4 + (dx & 3)];
+            sample(P, s, D, dx, dy, o);
+            int r = (o[0] + (t >> 1)) >> 3, g = (o[1] + (t >> 2)) >> 2, bl = (o[2] + (t >> 1)) >> 3;     /* dither Bayer 4x4 khi lượng tử hoá 565 (1 lần) */
+            if (r > 31) r = 31;
+            if (g > 63) g = 63;
+            if (bl > 31) bl = 31;
+            q->al[dy * D + dx] = (u8)o[3]; q->col[dy * D + dx] = (u16)((r << 11) | (g << 5) | bl);
+            if (o[3] > 0) { if (dx < xs) xs = dx; xe = dx + 1; }
         }
         q->xs[dy] = (s16)xs; q->xe[dy] = (s16)xe;
     }
     return q;
 }
-static void art_slow(int id, int cx, int cy, int D, int bright) {   /* đường cũ (không bộ đệm): chỉ khi POOL hết chỗ */
-    const u16 *C; const u8 *A; int s; art_src(id, &C, &A, &s);
+static void art_slow(int id, int cx, int cy, int D, int bright) {   /* đường không bộ đệm: chỉ khi POOL hết chỗ (màn cực lớn) */
+    const u8 *P; int s; art_src(id, &P, &s);
     if (D < 4) return;
-    int x0 = cx - D / 2, y0 = cy - D / 2, step = ((s - 1) << 16) / (D - 1), sy = 0;
-    for (int dy = 0; dy < D; dy++, sy += step) {
+    int x0 = cx - D / 2, y0 = cy - D / 2;
+    for (int dy = 0; dy < D; dy++) {
         int y = y0 + dy;
         if (y < 0 || y >= S.Ht) continue;
-        int iy = sy >> 16, fy = (sy >> 8) & 255, iy1 = iy + 1 < s ? iy + 1 : iy, sx = 0;
-        for (int dx = 0; dx < D; dx++, sx += step) {
-            int x = x0 + dx;
+        for (int dx = 0; dx < D; dx++) {
+            int x = x0 + dx, o[4];
             if (x < 0 || x >= S.W) continue;
-            int ix = sx >> 16, fx = (sx >> 8) & 255, ix1 = ix + 1 < s ? ix + 1 : ix;
-            int p00 = iy * s + ix, p01 = iy * s + ix1, p10 = iy1 * s + ix, p11 = iy1 * s + ix1;
-            int w00 = (256 - fx) * (256 - fy) >> 8, w01 = fx * (256 - fy) >> 8, w10 = (256 - fx) * fy >> 8, w11 = 256 - w00 - w01 - w10;
-            int a = (A[p00] * w00 + A[p01] * w01 + A[p10] * w10 + A[p11] * w11) >> 8;
+            sample(P, s, D, dx, dy, o);
+            int a = o[3];
             if (a <= 0) continue;
-            u32 c0 = C[p00], c1 = C[p01], c2 = C[p10], c3 = C[p11];
-            int r = ((c0 >> 11) * w00 + (c1 >> 11) * w01 + (c2 >> 11) * w10 + (c3 >> 11) * w11) >> 8;
-            int g = (((c0 >> 5) & 63) * w00 + ((c1 >> 5) & 63) * w01 + ((c2 >> 5) & 63) * w10 + ((c3 >> 5) & 63) * w11) >> 8;
-            int bl = ((c0 & 31) * w00 + (c1 & 31) * w01 + (c2 & 31) * w10 + (c3 & 31) * w11) >> 8;
+            int r = o[0] >> 3, g = o[1] >> 2, bl = o[2] >> 3;
             u32 dp = mui_getpx(x, y);
             int ia = 255 - a;
             int rr_ = r + (((dp >> 11) * ia) >> 8), gg = g + ((((dp >> 5) & 63) * ia) >> 8), bb = bl + (((dp & 31) * ia) >> 8);
@@ -421,7 +430,7 @@ static void dpad_dir(void *self, int x, int y) {
 }
 static int pressed(int i) { for (int k = 0; k < 4; k++) if (S.cap[k] == i + 1) return 1; return 0; }
 static void draw_btn(int i) {
-    int cx = S.cx[i], cy = S.cy[i], D = S.d[i], br = pressed(i) ? 70 : 0;
+    int cx = S.cx[i], cy = S.cy[i], D = S.d[i], br = pressed(i) ? 40 : 0;
     switch (i) {
     case B_ATT: art(pressed(i) ? 1 : 0, cx, cy, D, 0); break;
     case B_DPAD: draw_dpad(cx, cy, D); break;

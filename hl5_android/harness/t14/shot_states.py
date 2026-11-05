@@ -10,11 +10,12 @@ def dump(n): open('%s_%s.rgb' % (pre, n), 'wb').write(bytes(r.shot()))
 def hold(name, x, y, fr=3):
     r.touch(x, y, up=False); r.step(fr); dump(name); r.g.call(r.touchf, r.g.env, 0, 20, x, y, 0); r.step(3)
 dump('idle')
+c = 78 * f // 16; cx, cy = c, Hh - c; D = 96 * f // 16
+for n, (a, b) in dict(N=(0, -1), NE=(1, -1), E=(1, 0), SE=(1, 1), S=(0, 1), SW=(-1, 1), W=(-1, 0), NW=(-1, -1)).items():
+    hold('dp' + n, cx + a * D * 35 // 100, cy + b * D * 35 // 100)
+r.step(10)
 ax, ay = pos(31, 40); hold('att', ax, ay)
 s0x, s0y = pos(145, 27); hold('s0', s0x, s0y)
 dx_, dy_ = pos(17, 86); hold('dash', dx_, dy_)
 px_, py_ = W - 17 * 115 // 100 * f // 16, 45 * f // 16; hold('pause', px_, py_, 4)
 r.step(30)
-c = 78 * f // 16; cx, cy = c, Hh - c; D = 96 * f // 16
-for n, (a, b) in dict(N=(0, -1), NE=(1, -1), E=(1, 0), SE=(1, 1), S=(0, 1), SW=(-1, 1), W=(-1, 0), NW=(-1, -1)).items():
-    hold('dp' + n, cx + a * D * 35 // 100, cy + b * D * 35 // 100)
