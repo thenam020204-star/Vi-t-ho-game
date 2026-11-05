@@ -229,7 +229,7 @@ Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh g�
 
 ## VIỆC CÒN LẠI (cập nhật 05/11/2026, sau bản v0.3-test4) — đọc mục này trước khi giao việc
 
-Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test6.apk` (sha256 8ab75ff4…, HUD tối ưu T14c). Toàn bộ môi trường + thư mục work đã sao lưu trong `backup/` (khôi phục: `backup/README.md`). Gốc so sánh harness: `~/hl5work/orig_v02hd` (sau mỗi `make_apk.sh` phải chép lại vào `build_apk/`). Không còn công nhân nào chạy.
+Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test7.apk` (sha256 497015d3…, = test6 + MainMenu L3 + StateMap L1b). Toàn bộ môi trường + thư mục work đã sao lưu trong `backup/` (khôi phục: `backup/README.md`). Gốc so sánh harness: `~/hl5work/orig_v02hd` (sau mỗi `make_apk.sh` phải chép lại vào `build_apk/`). Không còn công nhân nào chạy.
 
 ### 0. Chờ người dùng
 - [x] Phản hồi chơi thử v0.3-test4: ỔN (ngoài lag combat test5, xem T14c).
@@ -418,3 +418,4 @@ Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 d
 - [người dùng 05/11] GÁC LẠI T18 (nội suy; T18a xong, chờ số đo máy, chưa làm T18b) -> làm tiếp UI dở (VIỆC CÒN LẠI mục 2). [quản đốc] Giao 2 công nhân Sonnet MỚI song song: L3 (T17c7 MainMenu, WORK ~/hl5work_l3, BAO-CAO-L3.md) và L1b (StateMap + popup Bùa, WORK ~/hl5work_l1b, thêm mục L1b vào BAO-CAO-L1.md). Mỗi người chỉ bỏ comment / sửa dòng states.def/hooks.def/classes.def/build.sh/mui.h của mình.
 - [quản đốc] L3 NGHIỆM THU (BAO-CAO-L3.md, công nhân dừng 175k): MainMenu mới (lưới 6 ô, slot, lớp, popup lớp, Chuyên gia, Cài đặt 10 mục + Phân giải 1/1..1/4, popup thoát) — chạm = phím gốc 3 cỡ, off 21/21, hồi quy c1 ĐẠT, cash ĐẠT trừ hash ảnh cycles (lệch HUD đã biết, mục 1). Còn: soát mắt 600x270 slot/lớp; nút ↺ (CommonUi touch cancel gốc) vẫn hiện góc phải trên ở Cài đặt 1200x540; t16 chưa chạy lại. Chờ L1b rồi dựng test7.
 - [quản đốc] L1b NGHIỆM THU (BAO-CAO-L1.md mục L1b, công nhân dừng 316k): StateMap mới (MAP=[+0xc], bản đồ lớn/khu vực, chạm điểm, Minimap, cuộn) chạm = gốc 3 cỡ, cycles map ĐẠT, c1 97/97, compare_cash 400x240 ĐẠT; skip_intro trong qlib (lệch cycles cũ là do khung thoại T16). Popup Bùa = mã chết. CÒN (hạ tầng kiểm): mặt nạ HUD T14 cho cycles q/sp/cash, gpop cycles sau skip_intro (thiếu vùng chạm 0xF0), check_cash 600/1200, soát mắt 400x240 khu vực. Dựng test7 (L3 + L1b).
+- [quản đốc] Bản thử v0.3-test7: dist/test/HL5-VI-v0.3-test7.apk sha256 497015d3d774847b512390ec1562cab883019462c0dfc5f43cfd87d62719dda1 (.so ef4a40e1…, 2 lần dựng trùng byte, vtable 57 dòng, lớp CASH EXPERT GAME INGAME MAIN MAP NPC POPUP); hậu kỳ ảnh Việt + BGM, ký/verify/align OK; harness từ APK qua menu chính mới tới cảnh chơi 800x360 + 400x240 không lỗi (số đo CPU = test6). build_apk đã trả về gốc.
