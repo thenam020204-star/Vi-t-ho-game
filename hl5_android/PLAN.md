@@ -1,5 +1,8 @@
 # PLAN: HL5 Android: Việt hoá + logic HD + cash shop miễn phí
 
+> **ĐỌC TRƯỚC (05/11/2026):** nguồn sự thật là mục **"VIỆC CÒN LẠI"** (gần cuối file, trước Nhật ký) và dòng Nhật ký cuối. Checklist / Lộ trình / Phân công phía dưới là LỊCH SỬ — thứ tự cũ T15→T16→T14→T7→T11 đã bị thay. Chỉ nhánh `ccr-706054f3-ih6lfy` có bản này; `main` là bản cũ. Không chạy setup_env.sh cũ; khôi phục môi trường từ `backup/` (backup/README.md). Prompt khởi đầu: `hl5_android/PROMPT-KHOI-DAU.md`.
+
+
 > Quản đốc = Opus (phiên chính). Công nhân = Sonnet 5.5. Đây là nguồn sự thật. Đọc hết mục "Quyết định thiết kế" và "Môi trường" trước khi làm.
 > Tài liệu kỹ thuật chi tiết (đã kiểm chứng): `hl5_android/BAO-CAO-RE.md`.
 
