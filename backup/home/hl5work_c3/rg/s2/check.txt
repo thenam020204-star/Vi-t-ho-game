@@ -1,0 +1,82 @@
+ĐẠT   400x240: kịch bản không lỗi/crash 
+ĐẠT   400x240: đổi trang + chọn ô (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: Sắp xếp: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: dùng vật phẩm (menu Sử dụng): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: vứt bỏ -> Có: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: vứt bỏ -> Không: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: gán ô nhanh + đổi bộ: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: trang bị (menu -> danh sách lọc -> chọn): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: tháo (menu): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: danh sách lọc: mũi tên: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: popup chi tiết vật phẩm (loại 10): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: nút < quay lại: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   400x240: chạm tab 0 từ Túi đồ -> state 1 == gốc 1
+ĐẠT   400x240: chạm tab 1 từ Túi đồ -> state 2 == gốc 2
+ĐẠT   400x240: chạm tab 2 từ Túi đồ -> state 3 == gốc 3
+ĐẠT   400x240: chạm tab 3 từ Túi đồ -> state 4 == gốc 4
+ĐẠT   400x240: chạm tab 4 từ Túi đồ -> state 5 == gốc 5
+ĐẠT   400x240: chạm tab 5 từ Túi đồ -> state 6 == gốc 6
+ĐẠT   400x240: chạm tab 6 từ Túi đồ -> state 7 == gốc 7
+ĐẠT   400x240: chạm tab 7 từ Túi đồ -> state 8 == gốc 8
+ĐẠT   400x240: chạm tab 8 từ Túi đồ -> state 9 == gốc 9
+ĐẠT   400x240: mở/đóng Túi đồ+Trang bị 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+400x240: ảnh cảnh sau 20 lần mở/đóng new=0988fb5b989b470801428053b0e51c68 orig=0988fb5b989b470801428053b0e51c68
+ĐẠT   400x240: vùng chạm tui_do == hit_rects.json (30 mục)
+ĐẠT   400x240: vùng chạm tui_do_phim_tat == hit_rects.json (8 mục)
+ĐẠT   400x240: vùng chạm trang_bi == hit_rects.json (18 mục)
+ĐẠT   400x240: vùng chạm tui_do_chon == hit_rects.json (10 mục)
+ĐẠT   600x270: kịch bản không lỗi/crash 
+ĐẠT   600x270: đổi trang + chọn ô (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: Sắp xếp: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: dùng vật phẩm (menu Sử dụng): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: vứt bỏ -> Có: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: vứt bỏ -> Không: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: gán ô nhanh + đổi bộ: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: trang bị (menu -> danh sách lọc -> chọn): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: tháo (menu): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: danh sách lọc: mũi tên: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: popup chi tiết vật phẩm (loại 10): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: nút < quay lại: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   600x270: chạm tab 0 từ Túi đồ -> state 1 == gốc 1
+ĐẠT   600x270: chạm tab 1 từ Túi đồ -> state 2 == gốc 2
+ĐẠT   600x270: chạm tab 2 từ Túi đồ -> state 3 == gốc 3
+ĐẠT   600x270: chạm tab 3 từ Túi đồ -> state 4 == gốc 4
+ĐẠT   600x270: chạm tab 4 từ Túi đồ -> state 5 == gốc 5
+ĐẠT   600x270: chạm tab 5 từ Túi đồ -> state 6 == gốc 6
+ĐẠT   600x270: chạm tab 6 từ Túi đồ -> state 7 == gốc 7
+ĐẠT   600x270: chạm tab 7 từ Túi đồ -> state 8 == gốc 8
+ĐẠT   600x270: chạm tab 8 từ Túi đồ -> state 9 == gốc 9
+ĐẠT   600x270: mở/đóng Túi đồ+Trang bị 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+600x270: ảnh cảnh sau 20 lần mở/đóng new=7ef6844cf11a087530253127ab989468 orig=7ef6844cf11a087530253127ab989468
+ĐẠT   600x270: vùng chạm tui_do == hit_rects.json (30 mục)
+ĐẠT   600x270: vùng chạm tui_do_phim_tat == hit_rects.json (8 mục)
+ĐẠT   600x270: vùng chạm trang_bi == hit_rects.json (18 mục)
+ĐẠT   600x270: vùng chạm tui_do_chon == hit_rects.json (10 mục)
+ĐẠT   1200x540: kịch bản không lỗi/crash 
+ĐẠT   1200x540: đổi trang + chọn ô (chạm == phím): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: Sắp xếp: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: dùng vật phẩm (menu Sử dụng): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: vứt bỏ -> Có: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: vứt bỏ -> Không: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: gán ô nhanh + đổi bộ: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: trang bị (menu -> danh sách lọc -> chọn): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: tháo (menu): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: danh sách lọc: mũi tên: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: popup chi tiết vật phẩm (loại 10): trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: nút < quay lại: trạng thái/dữ liệu sau chạm == phím gốc
+ĐẠT   1200x540: chạm tab 0 từ Túi đồ -> state 1 == gốc 1
+ĐẠT   1200x540: chạm tab 1 từ Túi đồ -> state 2 == gốc 2
+ĐẠT   1200x540: chạm tab 2 từ Túi đồ -> state 3 == gốc 3
+ĐẠT   1200x540: chạm tab 3 từ Túi đồ -> state 4 == gốc 4
+ĐẠT   1200x540: chạm tab 4 từ Túi đồ -> state 5 == gốc 5
+ĐẠT   1200x540: chạm tab 5 từ Túi đồ -> state 6 == gốc 6
+ĐẠT   1200x540: chạm tab 6 từ Túi đồ -> state 7 == gốc 7
+ĐẠT   1200x540: chạm tab 7 từ Túi đồ -> state 8 == gốc 8
+ĐẠT   1200x540: chạm tab 8 từ Túi đồ -> state 9 == gốc 9
+ĐẠT   1200x540: mở/đóng Túi đồ+Trang bị 20 lần: allocation sống +80 (gốc +80), heap top +0 (gốc +0), state cuối 0x15e150
+1200x540: ảnh cảnh sau 20 lần mở/đóng new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
+ĐẠT   1200x540: vùng chạm tui_do == hit_rects.json (30 mục)
+ĐẠT   1200x540: vùng chạm tui_do_phim_tat == hit_rects.json (8 mục)
+ĐẠT   1200x540: vùng chạm trang_bi == hit_rects.json (18 mục)
+ĐẠT   1200x540: vùng chạm tui_do_chon == hit_rects.json (10 mục)
+KẾT LUẬN: ĐẠT

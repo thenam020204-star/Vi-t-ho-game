@@ -1,0 +1,14 @@
+== t17c1/check_c1_all.py
+Traceback (most recent call last):
+FileNotFoundError: [Errno 2] No such file or directory: '/root/hl5work_l0/t17c1/out/log_400_new.txt'
+== t17c2/check_c1_all.py
+Traceback (most recent call last):
+FileNotFoundError: [Errno 2] No such file or directory: '/root/hl5work_l0/t17c2/out1/log_400_new.txt'
+== t17c2/check_c2_all.py
+KẾT LUẬN: ĐẠT
+== t17c3/check_c3a_all.py
+KẾT LUẬN: ĐẠT
+== t17c3b/check_c3b_all.py
+KẾT LUẬN: ĐẠT
+== t17c3c/check_c3c_all.py
+KẾT LUẬN: ĐẠT

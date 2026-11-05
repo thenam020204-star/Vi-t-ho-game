@@ -1,0 +1,47 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: 37G+X2kXw6Bew7mqzDV2EjsOTRk=
+X-Android-APK-Signed: 2, 3
+
+Name: AndroidManifest.xml
+SHA1-Digest: Dh5PWyXptVLjh+0O5rNrgyIyf4A=
+
+Name: assets/data.vfs.mp3
+SHA1-Digest: 9NXA8U8yec1djaCE9vh0/9JEmaA=
+
+Name: assets/libHeroesLore5.so
+SHA1-Digest: /eMrmRaRxJPXIAAsHtxfCf4bClw=
+
+Name: assets/mtouchdevice.txt
+SHA1-Digest: L7/gfbNFUYsFArddsQfTg292TRk=
+
+Name: assets/target-assets.json
+SHA1-Digest: 5F1LMUnBv1zQNgIbjvhi/y6c1hE=
+
+Name: classes.dex
+SHA1-Digest: PRZAuizdpVsbs/FJl1FrBD+xpcw=
+
+Name: classes2.dex
+SHA1-Digest: ndvfqrJveUxzdK0pXGFJreymqp0=
+
+Name: lib/arm64-v8a/libhl5_arm64_bridge.so
+SHA1-Digest: mgkEgNJlS3D/JDYqJo3IcaItxU0=
+
+Name: lib/armeabi-v7a/libHeroesLore5.so
+SHA1-Digest: T0mZfRL9jeDuFIa+TLpaH9ufS3s=
+
+Name: lib/armeabi-v7a/libhl5_arm64_bridge.so
+SHA1-Digest: MxibG8DtzEUtsOWO6eqJVB6n+38=
+
+Name: lib/armeabi/libHeroesLore5.so
+SHA1-Digest: 1XEqWtF7DMmX9MH7IRQlR3tpLZA=
+
+Name: res/drawable/icon.png
+SHA1-Digest: nISAuePaecDotDjxUFe48JLdzCw=
+
+Name: res/layout/main.xml
+SHA1-Digest: Jh2w2KqqarUBg/h0f18LAPwpV/Q=
+
+Name: resources.arsc
+SHA1-Digest: aq6r+XTsk2nJd5eMNMWUGyB5TJ8=
+

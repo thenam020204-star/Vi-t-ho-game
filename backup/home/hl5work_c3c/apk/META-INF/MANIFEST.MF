@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+
+Name: AndroidManifest.xml
+SHA1-Digest: XTl1MExPbVK/TVVweHxivB6Q/m4=
+
+Name: assets/data.vfs.mp3
+SHA1-Digest: 5AjcE1dtEuvymb8/tg7kfpsPyDc=
+
+Name: assets/libHeroesLore5.so
+SHA1-Digest: f+XyVpmqY89HAdyjI6SstW5Df3s=
+
+Name: assets/mtouchdevice.txt
+SHA1-Digest: GK4D67TeLPrxg17+faYhDNx35Zc=
+
+Name: assets/target-assets.json
+SHA1-Digest: Uxs5snUYTh+MrrMqG9SWln5gMU0=
+
+Name: classes.dex
+SHA1-Digest: uYKyhhp9+KRGN6+Ya5cj2aUrESQ=
+
+Name: classes2.dex
+SHA1-Digest: SdCf5owbzsK/YZUPcx8Jfv92hww=
+
+Name: lib/arm64-v8a/libhl5_arm64_bridge.so
+SHA1-Digest: FU+QtL7dgty91w3nQ8UwmmDL5RQ=
+
+Name: lib/armeabi-v7a/libHeroesLore5.so
+SHA1-Digest: f+XyVpmqY89HAdyjI6SstW5Df3s=
+
+Name: lib/armeabi-v7a/libhl5_arm64_bridge.so
+SHA1-Digest: Hp2WvUIDCnoYEy9yj9HcXkHBR+k=
+
+Name: lib/armeabi/libHeroesLore5.so
+SHA1-Digest: f+XyVpmqY89HAdyjI6SstW5Df3s=
+
+Name: res/drawable/icon.png
+SHA1-Digest: J5JvV56YEKvna/UTAy41fkzGOPo=
+
+Name: res/layout/main.xml
+SHA1-Digest: bkeQHcEJQDGHXFbEhNaycy/iAUQ=
+
+Name: resources.arsc
+SHA1-Digest: XqM8t8HhtaVrXAlOzDHGxvFCF/g=
+

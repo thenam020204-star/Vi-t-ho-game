@@ -1,0 +1,374 @@
+BOOT 1 nativeInitKernel
+BOOT 2 nativeInitDisplay 1200x540
+glTexImage2D tex=1 2048x1024 fmt=0x1907 type=0x8363
+BOOT 3 storage
+BOOT 4 VFS
+BOOT 5 audio
+BOOT 6 start
+JNIC getModel
+JNIC initMTX
+JNI static call initMTX (unhandled)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+LOG[4] LoadEffectSound()
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/LOCAL.sav fl=0x241 -> 10
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x241 -> 11
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 12
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x2 -> 13
+JNIC getMin
+JNI static call getMin (unhandled)
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 14
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 15
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x2 -> 16
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 17
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 18
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x2 -> 19
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 20
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 21
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x2 -> 22
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 23
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x0 -> 24
+open /root/hl5work_c3/t17c3/run_c2_1200x540_new_5065/st/kickass fl=0x2 -> 25
+LOG[4] volume =1 _volume[volume]=10
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)

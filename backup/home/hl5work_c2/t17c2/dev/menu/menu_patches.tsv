@@ -1,0 +1,22 @@
+# sinh bởi engine/menu/inject_menu.py (T17c): vá ô vtable cho lớp đã bật trong states.def: CASH, INGAME, NPC, POPUP
+15e0f0	9c840d00	305d1700	T17c: vtable StateCashShop +0x48 (Paint) 0xd849c -> thunk mui_paint_CASH 0x175d30
+15e0d4	7c940d00	805d1700	T17c: vtable StateCashShop +0x2c (TouchPressed) 0xd947c -> thunk mui_tp_CASH 0x175d80
+15e0dc	847d0d00	f45d1700	T17c: vtable StateCashShop +0x34 (TouchMoved) 0xd7d84 -> thunk mui_tm_CASH 0x175df4
+15e0d8	807d0d00	685e1700	T17c: vtable StateCashShop +0x30 (TouchReleased) 0xd7d80 -> thunk mui_tr_CASH 0x175e68
+15e2d0	1c6c1000	5c581700	T17c: vtable StateInGameMenu +0x48 (Paint) 0x106c1c -> thunk mui_paint_INGAME 0x17585c
+15e2b4	48061000	ec581700	T17c: vtable StateInGameMenu +0x2c (TouchPressed) 0x100648 -> thunk mui_tp_INGAME 0x1758ec
+15e2bc	9c2e0e00	a0591700	T17c: vtable StateInGameMenu +0x34 (TouchMoved) 0xe2e9c -> thunk mui_tm_INGAME 0x1759a0
+15e2b8	982e0e00	545a1700	T17c: vtable StateInGameMenu +0x30 (TouchReleased) 0xe2e98 -> thunk mui_tr_INGAME 0x175a54
+15e370	5c661100	b45a1700	T17c: vtable StateInNpcMenu +0x48 (Paint) 0x11665c -> thunk mui_paint_NPC 0x175ab4
+15e354	64e81000	185b1700	T17c: vtable StateInNpcMenu +0x2c (TouchPressed) 0x10e864 -> thunk mui_tp_NPC 0x175b18
+15e35c	c4921000	a05b1700	T17c: vtable StateInNpcMenu +0x34 (TouchMoved) 0x1092c4 -> thunk mui_tm_NPC 0x175ba0
+15e358	c0921000	285c1700	T17c: vtable StateInNpcMenu +0x30 (TouchReleased) 0x1092c0 -> thunk mui_tr_NPC 0x175c28
+15e5f0	a08c1300	90561700	T17c: vtable StatePopup +0x48 (Paint) 0x138ca0 -> thunk mui_paint_POPUP 0x175690
+15e5d4	406e1300	f0561700	T17c: vtable StatePopup +0x2c (TouchPressed) 0x136e40 -> thunk mui_tp_POPUP 0x1756f0
+15e5dc	a86b1300	74571700	T17c: vtable StatePopup +0x34 (TouchMoved) 0x136ba8 -> thunk mui_tm_POPUP 0x175774
+15e5d8	a46b1300	f8571700	T17c: vtable StatePopup +0x30 (TouchReleased) 0x136ba4 -> thunk mui_tr_POPUP 0x1757f8
+77abc	9f27ffeb	ee0404eb	T17c2: call-site 0x77abc bl 0x41940 -> bl mui_cap_line 0x178e7c
+d9330	3cb4ffeb	6c9e02eb	T17c2: call-site 0xd9330 bl 0xc6428 -> bl t7_cash_netconnect 0x180ce8
+d9350	befaffeb	839e02eb	T17c2: call-site 0xd9350 bl 0xd7e50 -> bl t7_cash_popup 0x180d64
+dc188	a6a8ffeb	1b9302eb	T17c2: call-site 0xdc188 bl 0xc6428 -> bl t7_game_revive 0x180dfc
+d9a24	09f9ffeb	0b9d02eb	T17c2: call-site 0xd9a24 bl 0xd7e50 -> bl t7_cash_confirm 0x180e58
