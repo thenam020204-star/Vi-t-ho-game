@@ -8,7 +8,7 @@ DEV = os.path.expanduser(os.environ.get('DEVDIR', WK + '/l1/dev'))   # thư mụ
 WK0 = os.path.expanduser('~/hl5work')            # bản gốc (chỉ đọc)
 ORIGD = os.path.expanduser(os.environ.get('HL5_ORIG', WK0 + '/orig_v02hd'))   # v0.2-hd thật (không dựa build_apk)
 
-# L1b: mặt nạ so ảnh sau khởi động (hộp thoại T16: nhãn '# Skip' gốc góc trên trái -> nút 'Bỏ qua' góc trên phải); đo bằng ảnh new vs orig ngay sau boot (khung 1000)
+# L1b: mặt nạ 2 vùng Skip (chỉ đúng ở ảnh ngay sau boot; xem Ctx.skip_intro cho cycles)
 SKIP_MASKS = {(400, 240): [(0, 0, 57, 21), (323, 8, 391, 32)], (600, 270): [(0, 0, 58, 20), (523, 8, 591, 32)], (1200, 540): [(5, 0, 47, 17), (1079, 24, 1175, 61)]}
 def masked_md5(rgb, W, Hh):
     b = bytearray(rgb)
@@ -47,6 +47,11 @@ class Ctx:
         for k, v in saved.items(): uc.reg_write(k, v)
         uc.reg_write(UC_ARM_REG_SP, sp0); uc.reg_write(UC_ARM_REG_LR, lr0)
         return res
+    def skip_intro(self):
+        """L1b: bỏ hoạt cảnh mở đầu ('#' x6 + 200 khung) -> cảnh popup nhiệm vụ GỐC giống hệt new/orig (0 điểm lệch, khác hoạt cảnh có hộp thoại T16 mới); dùng trước so ảnh `cycles`"""
+        self.step(10)
+        for _ in range(6): self.key('HASH', 20)
+        self.step(200)
     def mimg(self): return masked_md5(self.r.shot(), self.W, self.H)
     def lcdg(self): return self.g.rd32(BASE + 0x16a210)
     # ---- đọc ----

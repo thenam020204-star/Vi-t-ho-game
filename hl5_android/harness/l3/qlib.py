@@ -7,6 +7,14 @@ WK = os.path.expanduser(os.environ.get('WORK', '~/hl5work_l3'))
 WK0 = os.path.expanduser('~/hl5work')            # bản gốc (chỉ đọc)
 ORIGD = os.path.expanduser(os.environ.get('HL5_ORIG', WK0 + '/orig_v02hd'))   # v0.2-hd thật (không dựa build_apk)
 
+# mặt nạ 2 vùng Skip/Bỏ qua (chép từ harness/l1/qlib.py của L1b; chỉ để so ảnh cycles)
+SKIP_MASKS = {(400, 240): [(0, 0, 57, 21), (323, 8, 391, 32)], (600, 270): [(0, 0, 58, 20), (523, 8, 591, 32)], (1200, 540): [(5, 0, 47, 17), (1079, 24, 1175, 61)]}
+def masked_md5(rgb, W, Hh):
+    b = bytearray(rgb)
+    for x0, y0, x1, y1 in SKIP_MASKS.get((W, Hh), []):
+        for y in range(y0, y1 + 1): b[(y * W + x0) * 3:(y * W + x1 + 1) * 3] = bytes(3 * (x1 - x0 + 1))
+    return hashlib.md5(bytes(b)).hexdigest()
+
 class Ctx:
     def __init__(self, W, Hh, mode, outdir, boot_to=1000):
         self.W, self.H, self.mode = W, Hh, mode; self.NEW = mode == 'new'
@@ -38,6 +46,7 @@ class Ctx:
         for k, v in saved.items(): uc.reg_write(k, v)
         uc.reg_write(UC_ARM_REG_SP, sp0); uc.reg_write(UC_ARM_REG_LR, lr0)
         return res
+    def mimg(self): return masked_md5(self.r.shot(), self.W, self.H)
     def lcdg(self): return self.g.rd32(BASE + 0x16a210)
     # ---- đọc ----
     def b8(self, a, o=0): return bytes(self.g.uc.mem_read(a + o, 1))[0]

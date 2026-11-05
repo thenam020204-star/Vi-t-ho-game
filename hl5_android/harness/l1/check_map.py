@@ -75,6 +75,7 @@ def sc_close():
     else: c.key('CLR', 6)
     out['after'] = fl(); c.step(10); out['later'] = fl(); return out
 def sc_cycles():
+    c.skip_intro()
     for k in range(10):
         enter(); c.key('HASH', 6); c.key('CLR', 6); c.step(10)
     live0 = len(g.heap.sizes); top0 = g.heap.top
@@ -84,6 +85,6 @@ def sc_cycles():
         if k % 3 == 0: star()
         if k % 4 == 3: to_big(); to_zone()
         c.key('CLR', 6); c.step(10)
-    r.step(10)
+    r.step(10); c.shot('cyc_end')
     return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'cls': hex(c.cls()), 'mimg': c.mimg()}
 for nm in os.environ.get('SC', 'toggle,star,cursor,pt,pan,mtouch,close,cycles').split(','): c.fork(globals()['sc_' + nm], nm)

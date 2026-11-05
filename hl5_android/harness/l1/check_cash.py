@@ -37,6 +37,7 @@ def sc_popup():
     else: c.key('OK', 5)
     return fl()
 def sc_cycles():
+    c.skip_intro()
     for k in range(20): enter(); sel(k % 16, ['RIGHT'] * (k % 4) + ['DOWN'] * ((k % 16) // 4)); [r.key('CLR') or r.step(5) for _ in range(3)]   # khởi động nguội (cấp phát một lần)
     live0 = len(g.heap.sizes); top0 = g.heap.top
     for k in range(20):
@@ -44,7 +45,7 @@ def sc_cycles():
         for _ in range(6):
             if c.cls() == 0x15e150: break
             r.key('CLR'); r.step(5)
-    r.step(10)
+    r.step(10); c.shot("cyc_end")
     import hashlib
     return {'live': len(g.heap.sizes) - live0, 'top': g.heap.top - top0, 'img': hashlib.md5(r.shot()).hexdigest(), 'mimg': c.mimg(), 'cls': hex(c.cls())}
 def sc_buy():

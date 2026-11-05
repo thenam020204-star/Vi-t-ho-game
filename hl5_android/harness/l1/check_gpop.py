@@ -36,6 +36,7 @@ def sc_no():
     else: c.key('RIGHT', 4); c.key('OK', 6)
     out['after_no'] = fl(); c.step(10); out['later'] = fl(); return out
 def sc_cycles():
+    c.skip_intro()
     def one():
         go(1)
         if NEW: c.tap(0xF0, 4); c.tap(0xF2, 4)

@@ -86,6 +86,7 @@ def sc_tree():
     else: keys('UP')
     c.step(40); out['pan2'] = fl(); return out
 def sc_cycles():
+    c.skip_intro()
     for k in range(20): enter(); [r.key('CLR') or r.step(5) for _ in range(4)]
     live0 = len(g.heap.sizes); top0 = g.heap.top
     for k in range(20):

@@ -1,0 +1,34 @@
+400x240 toggle  ĐẠT
+400x240 star    ĐẠT
+400x240 cursor  ĐẠT
+400x240 pt      ĐẠT
+400x240 pan     ĐẠT
+400x240 mtouch  ĐẠT
+400x240 close   ĐẠT
+400x240 cycles  LỆCH new={"live": 1160, "top": 21056, "cls": "0x15e150", "mimg": "9ce6b8f062722d92550beeb29b9e90d9"} orig={"live": 1160, "top": 21056, "cls": "0x15e150", "mimg": "bba342e849d2c35dcbaf0ce932cac63e"}
+   cycles: new {'live': 1160, 'top': 21056, 'cls': '0x15e150', 'mimg': '9ce6b8f062722d92550beeb29b9e90d9'} orig {'live': 1160, 'top': 21056, 'cls': '0x15e150', 'mimg': 'bba342e849d2c35dcbaf0ce932cac63e'}
+400x240 vùng chạm ban_do_khu_vuc: ĐẠT (3 vùng == hit_rects.json)
+400x240 vùng chạm ban_do_lon: ĐẠT (2 vùng == hit_rects.json)
+600x270 toggle  ĐẠT
+600x270 star    ĐẠT
+600x270 cursor  ĐẠT
+600x270 pt      ĐẠT
+600x270 pan     ĐẠT
+600x270 mtouch  ĐẠT
+600x270 close   ĐẠT
+600x270 cycles  LỆCH new={"live": 1160, "top": 21056, "cls": "0x15e150", "mimg": "f89cced0f651fe2cfd0a9fb737f9ba85"} orig={"live": 1160, "top": 21056, "cls": "0x15e150", "mimg": "c3fca2c7cd3c4f3b29e2f0a2866caf69"}
+   cycles: new {'live': 1160, 'top': 21056, 'cls': '0x15e150', 'mimg': 'f89cced0f651fe2cfd0a9fb737f9ba85'} orig {'live': 1160, 'top': 21056, 'cls': '0x15e150', 'mimg': 'c3fca2c7cd3c4f3b29e2f0a2866caf69'}
+600x270 vùng chạm ban_do_khu_vuc: ĐẠT (3 vùng == hit_rects.json)
+600x270 vùng chạm ban_do_lon: ĐẠT (2 vùng == hit_rects.json)
+1200x540 toggle  ĐẠT
+1200x540 star    ĐẠT
+1200x540 cursor  ĐẠT
+1200x540 pt      ĐẠT
+1200x540 pan     ĐẠT
+1200x540 mtouch  ĐẠT
+1200x540 close   ĐẠT
+1200x540 cycles  LỆCH new={"live": 1160, "top": 21056, "cls": "0x15e150", "mimg": "ccf7f521cec760b206a076abe9cd9e29"} orig={"live": 1160, "top": 21056, "cls": "0x15e150", "mimg": "d8506169e499655532e3dc561b784cca"}
+   cycles: new {'live': 1160, 'top': 21056, 'cls': '0x15e150', 'mimg': 'ccf7f521cec760b206a076abe9cd9e29'} orig {'live': 1160, 'top': 21056, 'cls': '0x15e150', 'mimg': 'd8506169e499655532e3dc561b784cca'}
+1200x540 vùng chạm ban_do_khu_vuc: ĐẠT (3 vùng == hit_rects.json)
+1200x540 vùng chạm ban_do_lon: ĐẠT (2 vùng == hit_rects.json)
+KẾT LUẬN: CÒN 3 LỆCH
