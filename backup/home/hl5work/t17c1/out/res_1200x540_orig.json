@@ -1,0 +1,238 @@
+{
+ "char": {
+  "after_cancel": {
+   "base": [
+    12,
+    8,
+    10,
+    6
+   ],
+   "pend": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "pts": 0,
+   "shown": [
+    12,
+    8,
+    10,
+    6
+   ]
+  },
+  "plus_row0": {
+   "base": [
+    13,
+    8,
+    10,
+    6
+   ],
+   "pend": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "pts": 0,
+   "shown": [
+    13,
+    8,
+    10,
+    6
+   ]
+  },
+  "plus_row2": {
+   "base": [
+    13,
+    8,
+    11,
+    6
+   ],
+   "pend": [
+    1,
+    0,
+    1,
+    0
+   ],
+   "pts": 0,
+   "shown": [
+    13,
+    8,
+    11,
+    6
+   ]
+  },
+  "start": {
+   "base": [
+    12,
+    8,
+    10,
+    6
+   ],
+   "pend": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "pts": 0,
+   "shown": [
+    12,
+    8,
+    10,
+    6
+   ]
+  },
+  "sub_after_hash": 1
+ },
+ "charcls1": {
+  "sub": 1
+ },
+ "charcls2": {
+  "sub": 1
+ },
+ "cycles": {
+  "cls": "0x15e150",
+  "img": "35c707dd4af597d7cb4463ba6c837f12",
+  "live": 80,
+  "top": 0
+ },
+ "menu3": {
+  "hits": {},
+  "state": 0
+ },
+ "save_no": {
+  "files_new": {},
+  "nbtn": 2,
+  "popup_cls": "0x15e5b0",
+  "res": 0,
+  "top_after": "0x15e290",
+  "type": 2
+ },
+ "save_yes": {
+  "files_new": {
+   "LOCAL.sav": "65463e120fff:63",
+   "kickass": "5cf0f1f8f53b:15396"
+  },
+  "nbtn": 2,
+  "popup_cls": "0x15e5b0",
+  "res": 0,
+  "top_after": "0x15e290",
+  "type": 2
+ },
+ "sys": {
+  "help_cur": 3,
+  "opt0": [
+   1,
+   1,
+   9,
+   1,
+   0,
+   1
+  ],
+  "opt1": [
+   1,
+   0,
+   9,
+   0,
+   0,
+   1
+  ],
+  "opt2": [
+   1,
+   1,
+   9,
+   0,
+   0,
+   1
+  ],
+  "sub_back": 0,
+  "sub_help": 2,
+  "sub_opt": 1
+ },
+ "tab0": {
+  "state": 1
+ },
+ "tab1": {
+  "state": 2
+ },
+ "tab2": {
+  "state": 3
+ },
+ "tab3": {
+  "state": 4
+ },
+ "tab4": {
+  "state": 5
+ },
+ "tab5": {
+  "state": 6
+ },
+ "tab6": {
+  "state": 7
+ },
+ "tab7": {
+  "state": 8
+ },
+ "tab8": {
+  "state": 9
+ },
+ "tabs": {
+  "done": 1
+ },
+ "tile0": {
+  "cls": true,
+  "popup": "0x15e290",
+  "state": 1,
+  "sub": 0
+ },
+ "tile1": {
+  "cls": true,
+  "popup": "0x15e290",
+  "state": 2,
+  "sub": 0
+ },
+ "tile2": {
+  "cls": true,
+  "popup": "0x15e290",
+  "state": 3,
+  "sub": 0
+ },
+ "tile3": {
+  "cls": true,
+  "popup": "0x15e290",
+  "state": 4,
+  "sub": 0
+ },
+ "tile4": {
+  "cls": true,
+  "popup": "0x15e290",
+  "state": 5,
+  "sub": 0
+ },
+ "tile5": {
+  "cls": true,
+  "popup": "0x15e290",
+  "state": 6,
+  "sub": 0
+ },
+ "tile6": {
+  "cls": true,
+  "popup": "0x15e5b0",
+  "state": 0,
+  "sub": 0
+ },
+ "tile7": {
+  "cls": true,
+  "popup": "0x15e290",
+  "state": 8,
+  "sub": 0
+ },
+ "tile8": {
+  "cls": true,
+  "popup": "0x15e290",
+  "state": 9,
+  "sub": 0
+ }
+}

@@ -1,0 +1,2848 @@
+[
+{
+"id": 0,
+"ko": "매도우 힐 3",
+"kind": "mapname",
+"src": "scn:e0000_scn:0",
+"cap": 254
+},
+{
+"id": 55,
+"ko": "수레바퀴섬, 주둔지",
+"kind": "mapname",
+"src": "scn:e0001_scn:0",
+"cap": 254
+},
+{
+"id": 159,
+"ko": "유적의 심층",
+"kind": "mapname",
+"src": "scn:e0002_scn:0",
+"cap": 254
+},
+{
+"id": 197,
+"ko": "이름없는 섬, 선착장",
+"kind": "mapname",
+"src": "scn:e0003_scn:0",
+"cap": 254
+},
+{
+"id": 301,
+"ko": "이름없는 섬, 크래드의 집",
+"kind": "mapname",
+"src": "scn:e0006_scn:0",
+"cap": 254
+},
+{
+"id": 494,
+"ko": "웨이즈가의 배 내부",
+"kind": "mapname",
+"src": "scn:e0008_scn:0",
+"cap": 254
+},
+{
+"id": 521,
+"ko": "매도우힐, 프로비던스",
+"kind": "mapname",
+"src": "scn:e0009_scn:0",
+"cap": 254
+},
+{
+"id": 543,
+"ko": "실내",
+"kind": "mapname",
+"src": "scn:e0010_scn:0",
+"cap": 14
+},
+{
+"id": 562,
+"ko": "뇌수의 동굴3",
+"kind": "mapname",
+"src": "scn:e0011_scn:0",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 617,
+"ko": "검은바위섬, 선주주둔지",
+"kind": "mapname",
+"src": "scn:e0012_scn:0",
+"cap": 254
+},
+{
+"id": 662,
+"ko": "팔리아스, 유적동굴1",
+"kind": "mapname",
+"src": "scn:e0014_scn:0",
+"cap": 254
+},
+{
+"id": 728,
+"ko": "공화국 군함",
+"kind": "mapname",
+"src": "scn:e0016_scn:0",
+"cap": 254
+},
+{
+"id": 884,
+"ko": "팔리아스, 정착지 여관",
+"kind": "mapname",
+"src": "scn:e0022_scn:0",
+"cap": 254
+},
+{
+"id": 1030,
+"ko": "매도우힐 1",
+"kind": "mapname",
+"src": "scn:e0025_scn:0",
+"cap": 254
+},
+{
+"id": 1035,
+"ko": "매도우힐 3",
+"kind": "mapname",
+"src": "scn:e0026_scn:0",
+"cap": 254
+},
+{
+"id": 1048,
+"ko": "매도우힐, 주둔지",
+"kind": "mapname",
+"src": "scn:e0027_scn:0",
+"cap": 254
+},
+{
+"id": 1074,
+"ko": "매도우힐 2",
+"kind": "mapname",
+"src": "scn:e0028_scn:0",
+"cap": 254
+},
+{
+"id": 1081,
+"ko": "프로비던스, 여관",
+"kind": "mapname",
+"src": "scn:e0030_scn:0",
+"cap": 254
+},
+{
+"id": 1121,
+"ko": "뇌수의 동굴 1",
+"kind": "mapname",
+"src": "scn:e0031_scn:0",
+"cap": 254
+},
+{
+"id": 1122,
+"ko": "뇌수의 동굴 2",
+"kind": "mapname",
+"src": "scn:e0032_scn:0",
+"cap": 254
+},
+{
+"id": 1161,
+"ko": "매도우힐 지하시설1",
+"kind": "mapname",
+"src": "scn:e0035_scn:0",
+"cap": 254
+},
+{
+"id": 1162,
+"ko": "매도우힐 지하시설2",
+"kind": "mapname",
+"src": "scn:e0036_scn:0",
+"cap": 254
+},
+{
+"id": 1163,
+"ko": "매도우힐 지하시설3",
+"kind": "mapname",
+"src": "scn:e0037_scn:0",
+"cap": 254
+},
+{
+"id": 1305,
+"ko": "아눈 섬, 리온",
+"kind": "mapname",
+"src": "scn:e0043_scn:0",
+"cap": 254
+},
+{
+"id": 1635,
+"ko": "수레바퀴섬 1",
+"kind": "mapname",
+"src": "scn:e0050_scn:0",
+"cap": 254
+},
+{
+"id": 1636,
+"ko": "수레바퀴섬 2",
+"kind": "mapname",
+"src": "scn:e0051_scn:0",
+"cap": 254
+},
+{
+"id": 1637,
+"ko": "수레바퀴섬, 선착장",
+"kind": "mapname",
+"src": "scn:e0052_scn:0",
+"cap": 254
+},
+{
+"id": 1638,
+"ko": "수레바퀴섬 유적1",
+"kind": "mapname",
+"src": "scn:e0053_scn:0",
+"cap": 254
+},
+{
+"id": 1639,
+"ko": "수레바퀴섬 유적2",
+"kind": "mapname",
+"src": "scn:e0054_scn:0",
+"cap": 254
+},
+{
+"id": 1645,
+"ko": "이름없는 섬 1",
+"kind": "mapname",
+"src": "scn:e0056_scn:0",
+"cap": 254
+},
+{
+"id": 1646,
+"ko": "이름없는 섬 2",
+"kind": "mapname",
+"src": "scn:e0057_scn:0",
+"cap": 254
+},
+{
+"id": 1647,
+"ko": "이름없는 섬, 크레드의 집",
+"kind": "mapname",
+"src": "scn:e0058_scn:0",
+"cap": 254
+},
+{
+"id": 1656,
+"ko": "크래드의 집",
+"kind": "mapname",
+"src": "scn:e0059_scn:0",
+"cap": 254
+},
+{
+"id": 1773,
+"ko": "검은바위섬, 선착장",
+"kind": "mapname",
+"src": "scn:e0060_scn:0",
+"cap": 254
+},
+{
+"id": 1798,
+"ko": "검은바위섬 1",
+"kind": "mapname",
+"src": "scn:e0061_scn:0",
+"cap": 254
+},
+{
+"id": 1800,
+"ko": "검은바위섬 2",
+"kind": "mapname",
+"src": "scn:e0062_scn:0",
+"speaker": "안톤",
+"cap": 254
+},
+{
+"id": 1802,
+"ko": "검은바위섬, 인간주둔지",
+"kind": "mapname",
+"src": "scn:e0063_scn:0",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 2188,
+"ko": "뇌수의 동굴1",
+"kind": "mapname",
+"src": "scn:e0070_scn:0",
+"cap": 254
+},
+{
+"id": 2189,
+"ko": "뇌수의 동굴2",
+"kind": "mapname",
+"src": "scn:e0071_scn:0",
+"cap": 254
+},
+{
+"id": 2210,
+"ko": "선주종의 배",
+"kind": "mapname",
+"src": "scn:e0074_scn:0",
+"cap": 22
+},
+{
+"id": 2278,
+"ko": "팔리아스 3",
+"kind": "mapname",
+"src": "scn:e0075_scn:0",
+"cap": 254
+},
+{
+"id": 2295,
+"ko": "팔리아스, 유적 동굴1",
+"kind": "mapname",
+"src": "scn:e0076_scn:0",
+"cap": 254
+},
+{
+"id": 2296,
+"ko": "팔리아스, 유적 동굴2",
+"kind": "mapname",
+"src": "scn:e0077_scn:0",
+"cap": 254
+},
+{
+"id": 2302,
+"ko": "팔리아스, 유적 동굴3",
+"kind": "mapname",
+"src": "scn:e0078_scn:0",
+"cap": 254
+},
+{
+"id": 2315,
+"ko": "매도우힐, 주둔지지하1",
+"kind": "mapname",
+"src": "scn:e0082_scn:0",
+"cap": 254
+},
+{
+"id": 2325,
+"ko": "매도우힐, 주둔지지하2",
+"kind": "mapname",
+"src": "scn:e0083_scn:0",
+"cap": 254
+},
+{
+"id": 2329,
+"ko": "매도우힐, 주둔지지하3",
+"kind": "mapname",
+"src": "scn:e0084_scn:0",
+"cap": 254
+},
+{
+"id": 2330,
+"ko": "반란군의 함",
+"kind": "mapname",
+"src": "scn:e0085_scn:0",
+"cap": 254
+},
+{
+"id": 2331,
+"ko": "뮤리아스, 베쓰무라",
+"kind": "mapname",
+"src": "scn:e0088_scn:0",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 2392,
+"ko": "뮤리아스 3",
+"kind": "mapname",
+"src": "scn:e0089_scn:0",
+"cap": 254
+},
+{
+"id": 2393,
+"ko": "뮤리아스 1",
+"kind": "mapname",
+"src": "scn:e0090_scn:0",
+"cap": 254
+},
+{
+"id": 2394,
+"ko": "뮤리아스 2",
+"kind": "mapname",
+"src": "scn:e0091_scn:0",
+"cap": 254
+},
+{
+"id": 2395,
+"ko": "뮤리아스, 포로수용소1",
+"kind": "mapname",
+"src": "scn:e0092_scn:0",
+"cap": 254
+},
+{
+"id": 2397,
+"ko": "뮤리아스, 포로수용소2",
+"kind": "mapname",
+"src": "scn:e0093_scn:0",
+"cap": 254
+},
+{
+"id": 2404,
+"ko": "뮤리아스, 포로수용소3",
+"kind": "mapname",
+"src": "scn:e0094_scn:0",
+"cap": 254
+},
+{
+"id": 2407,
+"ko": "뮤리아스, 포로수용소4",
+"kind": "mapname",
+"src": "scn:e0095_scn:0",
+"cap": 254
+},
+{
+"id": 2411,
+"ko": "뮤리아스, 포로수용소5",
+"kind": "mapname",
+"src": "scn:e0096_scn:0",
+"cap": 254
+},
+{
+"id": 2414,
+"ko": "이름없는섬, 비밀통로1",
+"kind": "mapname",
+"src": "scn:e0099_scn:0",
+"cap": 254
+},
+{
+"id": 2441,
+"ko": "이름없는섬, 비밀통로2",
+"kind": "mapname",
+"src": "scn:e0100_scn:0",
+"cap": 254
+},
+{
+"id": 2450,
+"ko": "팔리아스, 선착장",
+"kind": "mapname",
+"src": "scn:e0101_scn:0",
+"cap": 254
+},
+{
+"id": 2490,
+"ko": "팔리아스, 정착지",
+"kind": "mapname",
+"src": "scn:e0103_scn:0",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 2626,
+"ko": "아눈섬, 리온",
+"kind": "mapname",
+"src": "scn:e0104_scn:0",
+"cap": 254
+},
+{
+"id": 2734,
+"ko": "아눈섬, 리온 여관",
+"kind": "mapname",
+"src": "scn:e0105_scn:0",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 2787,
+"ko": "핀디아스, 선착장",
+"kind": "mapname",
+"src": "scn:e0106_scn:0",
+"cap": 254
+},
+{
+"id": 2791,
+"ko": "핀디아스 1",
+"kind": "mapname",
+"src": "scn:e0107_scn:0",
+"cap": 254
+},
+{
+"id": 2792,
+"ko": "핀디아스 2",
+"kind": "mapname",
+"src": "scn:e0108_scn:0",
+"cap": 254
+},
+{
+"id": 2796,
+"ko": "핀디아스 3",
+"kind": "mapname",
+"src": "scn:e0109_scn:0",
+"cap": 254
+},
+{
+"id": 2797,
+"ko": "핀디아스 신전1",
+"kind": "mapname",
+"src": "scn:e0110_scn:0",
+"cap": 254
+},
+{
+"id": 2812,
+"ko": "핀디아스 신전2",
+"kind": "mapname",
+"src": "scn:e0111_scn:0",
+"cap": 254
+},
+{
+"id": 2813,
+"ko": "핀디아스 신전3",
+"kind": "mapname",
+"src": "scn:e0112_scn:0",
+"cap": 254
+},
+{
+"id": 2814,
+"ko": "신전의 덫",
+"kind": "mapname",
+"src": "scn:e0113_scn:0",
+"cap": 254
+},
+{
+"id": 2815,
+"ko": "핀디아스 신전4",
+"kind": "mapname",
+"src": "scn:e0116_scn:0",
+"cap": 254
+},
+{
+"id": 2816,
+"ko": "베쓰무라, 민가",
+"kind": "mapname",
+"src": "scn:e0117_scn:0",
+"cap": 254
+},
+{
+"id": 2887,
+"ko": "아눈 섬 1",
+"kind": "mapname",
+"src": "scn:e0126_scn:0",
+"cap": 254
+},
+{
+"id": 2888,
+"ko": "아눈 섬 2",
+"kind": "mapname",
+"src": "scn:e0127_scn:0",
+"cap": 254
+},
+{
+"id": 2889,
+"ko": "아눈 섬 3",
+"kind": "mapname",
+"src": "scn:e0128_scn:0",
+"cap": 254
+},
+{
+"id": 2890,
+"ko": "리온, 지하시설1",
+"kind": "mapname",
+"src": "scn:e0129_scn:0",
+"cap": 254
+},
+{
+"id": 2891,
+"ko": "리온, 지하시설2",
+"kind": "mapname",
+"src": "scn:e0130_scn:0",
+"cap": 254
+},
+{
+"id": 2892,
+"ko": "리온, 지하시설3",
+"kind": "mapname",
+"src": "scn:e0131_scn:0",
+"cap": 254
+},
+{
+"id": 2893,
+"ko": "리온, 지하시설4",
+"kind": "mapname",
+"src": "scn:e0132_scn:0",
+"cap": 254
+},
+{
+"id": 2910,
+"ko": "리온, 지하시설5",
+"kind": "mapname",
+"src": "scn:e0133_scn:0",
+"cap": 254
+},
+{
+"id": 2911,
+"ko": "리온, 지하시설6",
+"kind": "mapname",
+"src": "scn:e0134_scn:0",
+"cap": 254
+},
+{
+"id": 2912,
+"ko": "성지, 선착장",
+"kind": "mapname",
+"src": "scn:e0135_scn:0",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 3008,
+"ko": "성지 1",
+"kind": "mapname",
+"src": "scn:e0136_scn:0",
+"cap": 254
+},
+{
+"id": 3010,
+"ko": "성지 2",
+"kind": "mapname",
+"src": "scn:e0137_scn:0",
+"cap": 254
+},
+{
+"id": 3033,
+"ko": "성지 3",
+"kind": "mapname",
+"src": "scn:e0138_scn:0",
+"cap": 254
+},
+{
+"id": 3034,
+"ko": "성역의 중심 1",
+"kind": "mapname",
+"src": "scn:e0139_scn:0",
+"speaker": "안톤",
+"cap": 254
+},
+{
+"id": 3052,
+"ko": "성역의 중심, 좌측길1",
+"kind": "mapname",
+"src": "scn:e0140_scn:0",
+"cap": 254
+},
+{
+"id": 3053,
+"ko": "성역의 중심, 좌측길2",
+"kind": "mapname",
+"src": "scn:e0141_scn:0",
+"cap": 254
+},
+{
+"id": 3054,
+"ko": "성역의 중심 2",
+"kind": "mapname",
+"src": "scn:e0142_scn:0",
+"cap": 254
+},
+{
+"id": 3055,
+"ko": "성역의 중심 3",
+"kind": "mapname",
+"src": "scn:e0143_scn:0",
+"cap": 254
+},
+{
+"id": 3056,
+"ko": "성역의 중심 4",
+"kind": "mapname",
+"src": "scn:e0144_scn:0",
+"cap": 254
+},
+{
+"id": 3057,
+"ko": "성역의 중심 5",
+"kind": "mapname",
+"src": "scn:e0145_scn:0",
+"cap": 254
+},
+{
+"id": 3058,
+"ko": "성역의 중심 6",
+"kind": "mapname",
+"src": "scn:e0146_scn:0",
+"cap": 254
+},
+{
+"id": 3109,
+"ko": "민가",
+"kind": "mapname",
+"src": "scn:e0163_scn:0",
+"cap": 254
+},
+{
+"id": 3225,
+"ko": "여관",
+"kind": "mapname",
+"src": "scn:e0167_scn:0",
+"cap": 254
+},
+{
+"id": 3266,
+"ko": "공방",
+"kind": "mapname",
+"src": "scn:e0168_scn:0",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 3321,
+"ko": "리온, 스트레이츠의 집",
+"kind": "mapname",
+"src": "scn:e0169_scn:0",
+"cap": 254
+},
+{
+"id": 3381,
+"ko": "리온, 중앙 건물",
+"kind": "mapname",
+"src": "scn:e0170_scn:0",
+"cap": 254
+},
+{
+"id": 3382,
+"ko": "고블린 섬, 선착장",
+"kind": "mapname",
+"src": "scn:e0171_scn:0",
+"cap": 254
+},
+{
+"id": 3394,
+"ko": "고블린 섬",
+"kind": "mapname",
+"src": "scn:e0172_scn:0",
+"cap": 254
+},
+{
+"id": 3395,
+"ko": "고블린 주둔지",
+"kind": "mapname",
+"src": "scn:e0173_scn:0",
+"cap": 254
+},
+{
+"id": 3396,
+"ko": "고블린 동굴 1",
+"kind": "mapname",
+"src": "scn:e0174_scn:0",
+"cap": 254
+},
+{
+"id": 3397,
+"ko": "고블린 동굴 2",
+"kind": "mapname",
+"src": "scn:e0175_scn:0",
+"cap": 254
+},
+{
+"id": 3401,
+"ko": "고블린 동굴 3",
+"kind": "mapname",
+"src": "scn:e0176_scn:0",
+"cap": 254
+},
+{
+"id": 3405,
+"ko": "팔리아스1",
+"kind": "mapname",
+"src": "scn:e0177_scn:0",
+"cap": 254
+},
+{
+"id": 3406,
+"ko": "팔리아스2",
+"kind": "mapname",
+"src": "scn:e0178_scn:0",
+"cap": 254
+},
+{
+"id": 3470,
+"ko": "팔리아스3",
+"kind": "mapname",
+"src": "scn:e0180_scn:0",
+"cap": 254
+},
+{
+"id": 3527,
+"ko": "매도우힐, 인간주둔지",
+"kind": "mapname",
+"src": "scn:n0001_scn:0",
+"cap": 254
+},
+{
+"id": 3532,
+"ko": "뮤리아스, 베스무라",
+"kind": "mapname",
+"src": "scn:n0002_scn:0",
+"cap": 254
+},
+{
+"id": 3961,
+"ko": "선박 내부",
+"kind": "mapname",
+"src": "scn:n0025_scn:0",
+"cap": 14
+},
+{
+"id": 3989,
+"ko": "아눈 서쪽, 어둠의 숲",
+"kind": "mapname",
+"src": "scn:n0028_scn:0",
+"cap": 254
+},
+{
+"id": 3990,
+"ko": "검은바위 섬 1",
+"kind": "mapname",
+"src": "scn:n0029_scn:0",
+"cap": 254
+},
+{
+"id": 3995,
+"ko": "검은바위 섬 2",
+"kind": "mapname",
+"src": "scn:n0030_scn:0",
+"speaker": "안톤",
+"cap": 254
+},
+{
+"id": 3999,
+"ko": "검은바위 섬, 선주주둔지",
+"kind": "mapname",
+"src": "scn:n0031_scn:0",
+"cap": 254
+},
+{
+"id": 4094,
+"ko": "수레바퀴 섬 1",
+"kind": "mapname",
+"src": "scn:n0039_scn:0",
+"cap": 254
+},
+{
+"id": 4096,
+"ko": "수레바퀴 섬 2",
+"kind": "mapname",
+"src": "scn:n0040_scn:0",
+"cap": 254
+},
+{
+"id": 4098,
+"ko": "수레바퀴섬 유적 1",
+"kind": "mapname",
+"src": "scn:n0041_scn:0",
+"cap": 254
+},
+{
+"id": 4101,
+"ko": "수레바퀴섬 유적 2",
+"kind": "mapname",
+"src": "scn:n0042_scn:0",
+"cap": 254
+},
+{
+"id": 4109,
+"ko": "팔리아스 신전 1",
+"kind": "mapname",
+"src": "scn:n0043_scn:0",
+"cap": 254
+},
+{
+"id": 4131,
+"ko": "팔리아스 신전 2",
+"kind": "mapname",
+"src": "scn:n0044_scn:0",
+"cap": 254
+},
+{
+"id": 4132,
+"ko": "팔리아스 신전 3",
+"kind": "mapname",
+"src": "scn:n0045_scn:0",
+"cap": 254
+},
+{
+"id": 4145,
+"ko": "팔리아스 신전 4",
+"kind": "mapname",
+"src": "scn:n0046_scn:0",
+"cap": 254
+},
+{
+"id": 4178,
+"ko": "팔리아스 1",
+"kind": "mapname",
+"src": "scn:n0047_scn:0",
+"cap": 254
+},
+{
+"id": 4180,
+"ko": "팔리아스 2",
+"kind": "mapname",
+"src": "scn:n0048_scn:0",
+"cap": 254
+},
+{
+"id": 4196,
+"ko": "팔리아스 유적동굴 1",
+"kind": "mapname",
+"src": "scn:n0050_scn:0",
+"cap": 254
+},
+{
+"id": 4197,
+"ko": "팔리아스 유적동굴 2",
+"kind": "mapname",
+"src": "scn:n0051_scn:0",
+"cap": 254
+},
+{
+"id": 4204,
+"ko": "팔리아스 유적동굴 3",
+"kind": "mapname",
+"src": "scn:n0052_scn:0",
+"cap": 254
+},
+{
+"id": 4217,
+"ko": "핀디아스, 동굴 1",
+"kind": "mapname",
+"src": "scn:n0056_scn:0",
+"cap": 254
+},
+{
+"id": 4218,
+"ko": "핀디아스, 동굴 3",
+"kind": "mapname",
+"src": "scn:n0057_scn:0",
+"cap": 254
+},
+{
+"id": 4219,
+"ko": "핀디아스 봉인지 1",
+"kind": "mapname",
+"src": "scn:n0058_scn:0",
+"cap": 254
+},
+{
+"id": 4221,
+"ko": "핀디아스 봉인지 2",
+"kind": "mapname",
+"src": "scn:n0059_scn:0",
+"cap": 254
+},
+{
+"id": 4222,
+"ko": "핀디아스 봉인지 3",
+"kind": "mapname",
+"src": "scn:n0060_scn:0",
+"cap": 254
+},
+{
+"id": 4223,
+"ko": "봉인지의 덫",
+"kind": "mapname",
+"src": "scn:n0061_scn:0",
+"cap": 254
+},
+{
+"id": 4227,
+"ko": "핀디아스 신전 4",
+"kind": "mapname",
+"src": "scn:n0064_scn:0",
+"cap": 254
+},
+{
+"id": 4283,
+"ko": "이름없는 섬, 비밀통로1",
+"kind": "mapname",
+"src": "scn:n0076_scn:0",
+"cap": 254
+},
+{
+"id": 4288,
+"ko": "이름없는 섬, 비밀통로2",
+"kind": "mapname",
+"src": "scn:n0077_scn:0",
+"cap": 254
+},
+{
+"id": 4289,
+"ko": "리온, 지하시설 1",
+"kind": "mapname",
+"src": "scn:n0078_scn:0",
+"cap": 254
+},
+{
+"id": 4290,
+"ko": "리온, 지하시설 2",
+"kind": "mapname",
+"src": "scn:n0079_scn:0",
+"cap": 254
+},
+{
+"id": 4291,
+"ko": "리온, 지하시설 3",
+"kind": "mapname",
+"src": "scn:n0080_scn:0",
+"cap": 254
+},
+{
+"id": 4292,
+"ko": "리온, 지하시설 4",
+"kind": "mapname",
+"src": "scn:n0081_scn:0",
+"cap": 254
+},
+{
+"id": 4293,
+"ko": "리온, 지하시설 5",
+"kind": "mapname",
+"src": "scn:n0082_scn:0",
+"cap": 254
+},
+{
+"id": 4294,
+"ko": "리온, 지하시설 6",
+"kind": "mapname",
+"src": "scn:n0083_scn:0",
+"cap": 254
+},
+{
+"id": 4299,
+"ko": "매도우 힐 1",
+"kind": "mapname",
+"src": "scn:n0085_scn:0",
+"cap": 254
+},
+{
+"id": 4300,
+"ko": "매도우 힐, 인간주둔지",
+"kind": "mapname",
+"src": "scn:n0086_scn:0",
+"cap": 254
+},
+{
+"id": 4307,
+"ko": "매도우힐, 주둔지지하4",
+"kind": "mapname",
+"src": "scn:n0090_scn:0",
+"cap": 254
+},
+{
+"id": 4310,
+"ko": "매도우힐, 지하 3",
+"kind": "mapname",
+"src": "scn:n0091_scn:0",
+"cap": 254
+},
+{
+"id": 4311,
+"ko": "매도우힐, 지하 2",
+"kind": "mapname",
+"src": "scn:n0092_scn:0",
+"cap": 254
+},
+{
+"id": 4325,
+"ko": "성역의 중심, 우측길1",
+"kind": "mapname",
+"src": "scn:n0105_scn:0",
+"cap": 254
+},
+{
+"id": 4326,
+"ko": "성역의 중심, 우측길2",
+"kind": "mapname",
+"src": "scn:n0106_scn:0",
+"cap": 254
+},
+{
+"id": 4327,
+"ko": "성역의 중심, 우측길3",
+"kind": "mapname",
+"src": "scn:n0107_scn:0",
+"cap": 254
+},
+{
+"id": 4332,
+"ko": "수레바퀴 섬, 선착장",
+"kind": "mapname",
+"src": "scn:n0114_scn:0",
+"cap": 254
+},
+{
+"id": 4349,
+"ko": "이름없는섬, 크래드의 집",
+"kind": "mapname",
+"src": "scn:n0116_scn:0",
+"cap": 254
+},
+{
+"id": 4956,
+"ko": "리온, 여관",
+"kind": "mapname",
+"src": "scn:n0126_scn:0",
+"cap": 254
+},
+{
+"id": 5255,
+"ko": "베쓰무라",
+"kind": "mapname",
+"src": "scn:n0145_scn:0",
+"cap": 254
+},
+{
+"id": 5259,
+"ko": "비밀방",
+"kind": "mapname",
+"src": "scn:n0149_scn:0",
+"cap": 254
+},
+{
+"id": 5281,
+"ko": "베쓰무라, 비밀장소",
+"kind": "mapname",
+"src": "scn:n0150_scn:0",
+"cap": 254
+},
+{
+"id": 5282,
+"ko": "베쓰무라, 비밀방",
+"kind": "mapname",
+"src": "scn:n0151_scn:0",
+"cap": 254
+},
+{
+"id": 5283,
+"ko": "배신자들의 거점",
+"kind": "mapname",
+"src": "scn:n0153_scn:0",
+"cap": 254
+},
+{
+"id": 5298,
+"ko": "동굴",
+"kind": "mapname",
+"src": "scn:n0154_scn:0",
+"cap": 254
+},
+{
+"id": 5310,
+"ko": "인간들의 배",
+"kind": "mapname",
+"src": "scn:n0155_scn:0",
+"cap": 254
+},
+{
+"id": 5319,
+"ko": "수레바퀴 섬 인간 주둔지",
+"kind": "mapname",
+"src": "scn:n0156_scn:0",
+"cap": 254
+},
+{
+"id": 5321,
+"ko": "리온, 실내",
+"kind": "mapname",
+"src": "scn:n0158_scn:0",
+"cap": 254
+},
+{
+"id": 5402,
+"ko": "사운드 테스트",
+"kind": "mapname",
+"src": "scn:n0162_scn:0",
+"cap": 254
+},
+{
+"id": 5419,
+"ko": "티르",
+"kind": "name",
+"src": "name:0",
+"cap": 6
+},
+{
+"id": 5420,
+"ko": "루레인",
+"kind": "name",
+"src": "name:1",
+"cap": 6
+},
+{
+"id": 5421,
+"ko": "케프네스",
+"kind": "name",
+"src": "name:2",
+"cap": 11
+},
+{
+"id": 5422,
+"ko": "브리안",
+"kind": "name",
+"src": "name:3",
+"cap": 11
+},
+{
+"id": 5423,
+"ko": "크레드",
+"kind": "name",
+"src": "name:4",
+"cap": 12
+},
+{
+"id": 5424,
+"ko": "엘렌",
+"kind": "name",
+"src": "name:5",
+"cap": 12
+},
+{
+"id": 5425,
+"ko": "그라함",
+"kind": "name",
+"src": "name:6",
+"cap": 12
+},
+{
+"id": 5426,
+"ko": "루칸",
+"kind": "name",
+"src": "name:7",
+"cap": 11
+},
+{
+"id": 5427,
+"ko": "래비",
+"kind": "name",
+"src": "name:8",
+"cap": 11
+},
+{
+"id": 5428,
+"ko": "이자벨",
+"kind": "name",
+"src": "name:9",
+"cap": 12
+},
+{
+"id": 5429,
+"ko": "앨리스",
+"kind": "name",
+"src": "name:10",
+"cap": 12
+},
+{
+"id": 5430,
+"ko": "누아다",
+"kind": "name",
+"src": "name:11",
+"cap": 11
+},
+{
+"id": 5431,
+"ko": "노덴스",
+"kind": "name",
+"src": "name:12",
+"cap": 12
+},
+{
+"id": 5432,
+"ko": "브레스",
+"kind": "name",
+"src": "name:13",
+"cap": 12
+},
+{
+"id": 5433,
+"ko": "디어드리",
+"kind": "name",
+"src": "name:14",
+"cap": 12
+},
+{
+"id": 5434,
+"ko": "도적1",
+"kind": "name",
+"src": "name:15",
+"cap": 12
+},
+{
+"id": 5435,
+"ko": "도적2",
+"kind": "name",
+"src": "name:16",
+"cap": 12
+},
+{
+"id": 5436,
+"ko": "도적3",
+"kind": "name",
+"src": "name:17",
+"cap": 12
+},
+{
+"id": 5437,
+"ko": "상인",
+"kind": "name",
+"src": "name:19",
+"cap": 12
+},
+{
+"id": 5438,
+"ko": "대장장이",
+"kind": "name",
+"src": "name:20",
+"cap": 12
+},
+{
+"id": 5439,
+"ko": "엔지니어",
+"kind": "name",
+"src": "name:21",
+"cap": 12
+},
+{
+"id": 5440,
+"ko": "소환술사",
+"kind": "name",
+"src": "name:22",
+"cap": 12
+},
+{
+"id": 5441,
+"ko": "여관관리인",
+"kind": "name",
+"src": "name:23",
+"cap": 12
+},
+{
+"id": 5442,
+"ko": "남자",
+"kind": "name",
+"src": "name:24",
+"cap": 12
+},
+{
+"id": 5443,
+"ko": "여자",
+"kind": "name",
+"src": "name:25",
+"cap": 12
+},
+{
+"id": 5444,
+"ko": "소년",
+"kind": "name",
+"src": "name:26",
+"cap": 12
+},
+{
+"id": 5445,
+"ko": "소녀",
+"kind": "name",
+"src": "name:27",
+"cap": 12
+},
+{
+"id": 5446,
+"ko": "노인",
+"kind": "name",
+"src": "name:28",
+"cap": 12
+},
+{
+"id": 5447,
+"ko": "선장",
+"kind": "name",
+"src": "name:29",
+"cap": 12
+},
+{
+"id": 5448,
+"ko": "병사",
+"kind": "name",
+"src": "name:30",
+"cap": 12
+},
+{
+"id": 5449,
+"ko": "엔리코",
+"kind": "name",
+"src": "name:31",
+"cap": 12
+},
+{
+"id": 5450,
+"ko": "연구원",
+"kind": "name",
+"src": "name:32",
+"cap": 12
+},
+{
+"id": 5451,
+"ko": "연금술사",
+"kind": "name",
+"src": "name:33",
+"cap": 12
+},
+{
+"id": 5452,
+"ko": "스트레이츠",
+"kind": "name",
+"src": "name:34",
+"cap": 12
+},
+{
+"id": 5453,
+"ko": "에리나",
+"kind": "name",
+"src": "name:35",
+"cap": 12
+},
+{
+"id": 5454,
+"ko": "안톤",
+"kind": "name",
+"src": "name:36",
+"cap": 12
+},
+{
+"id": 5455,
+"ko": "알리사",
+"kind": "name",
+"src": "name:37",
+"cap": 12
+},
+{
+"id": 5456,
+"ko": "슈르츠",
+"kind": "name",
+"src": "name:38",
+"cap": 12
+},
+{
+"id": 5457,
+"ko": "고블린",
+"kind": "name",
+"src": "name:39",
+"cap": 12
+},
+{
+"id": 5458,
+"ko": "제임스",
+"kind": "name",
+"src": "name:40",
+"cap": 12
+},
+{
+"id": 5459,
+"ko": "엔야",
+"kind": "name",
+"src": "name:41",
+"cap": 12
+},
+{
+"id": 5460,
+"ko": "알렉스",
+"kind": "name",
+"src": "name:42",
+"cap": 12
+},
+{
+"id": 5461,
+"ko": "창고",
+"kind": "name",
+"src": "name:44",
+"cap": 7
+},
+{
+"id": 5462,
+"ko": "의무병",
+"kind": "name",
+"src": "name:45",
+"cap": 12
+},
+{
+"id": 6883,
+"ko": "공화국 보병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:0:1",
+"cap": 13
+},
+{
+"id": 6884,
+"ko": "공화국 사수",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:3:1",
+"cap": 13
+},
+{
+"id": 6885,
+"ko": "공화국 기갑병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:6:1",
+"cap": 13
+},
+{
+"id": 6886,
+"ko": "공화국 일병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:9:1",
+"cap": 13
+},
+{
+"id": 6887,
+"ko": "공화국 상병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:10:1",
+"cap": 13
+},
+{
+"id": 6888,
+"ko": "공화국 병장",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:11:1",
+"cap": 13
+},
+{
+"id": 6889,
+"ko": "야전지휘관",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:12:1",
+"cap": 13
+},
+{
+"id": 6890,
+"ko": "듣는자들",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:15:1",
+"cap": 13
+},
+{
+"id": 6891,
+"ko": "지뢰",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:16:1",
+"cap": 13
+},
+{
+"id": 6892,
+"ko": "자동포대 ",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:18:1",
+"cap": 13
+},
+{
+"id": 6893,
+"ko": "자동포대",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:20:1",
+"cap": 13
+},
+{
+"id": 6894,
+"ko": "은폐형 포대",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:22:1",
+"cap": 13
+},
+{
+"id": 6895,
+"ko": "해골마법사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:23:1",
+"cap": 13
+},
+{
+"id": 6896,
+"ko": "자동박격포",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:26:1",
+"cap": 13
+},
+{
+"id": 6897,
+"ko": "오토마톤",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:28:1",
+"cap": 13
+},
+{
+"id": 6898,
+"ko": "네베드 보병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:30:1",
+"cap": 13
+},
+{
+"id": 6899,
+"ko": "패잔병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:31:1",
+"cap": 13
+},
+{
+"id": 6900,
+"ko": "네베드 전사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:32:1",
+"cap": 13
+},
+{
+"id": 6901,
+"ko": "배신자",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:35:1",
+"cap": 13
+},
+{
+"id": 6902,
+"ko": "네베드 마법사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:37:1",
+"cap": 13
+},
+{
+"id": 6903,
+"ko": "저주술사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:39:1",
+"cap": 13
+},
+{
+"id": 6904,
+"ko": "라이칸",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:41:1",
+"cap": 13
+},
+{
+"id": 6905,
+"ko": "나무귀신",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:44:1",
+"cap": 13
+},
+{
+"id": 6906,
+"ko": "오염된 나무령",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:45:1",
+"cap": 13
+},
+{
+"id": 6907,
+"ko": "강화 소환수",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:48:1",
+"cap": 13
+},
+{
+"id": 6908,
+"ko": "매직트랩",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:50:1",
+"cap": 13
+},
+{
+"id": 6909,
+"ko": "골렘",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:53:1",
+"cap": 13
+},
+{
+"id": 6910,
+"ko": "스켈레톤",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:55:1",
+"cap": 13
+},
+{
+"id": 6911,
+"ko": "해골전사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:57:1",
+"cap": 13
+},
+{
+"id": 6912,
+"ko": "좀비",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:61:1",
+"cap": 13
+},
+{
+"id": 6913,
+"ko": "굴",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:63:1",
+"cap": 13
+},
+{
+"id": 6914,
+"ko": "악몽의 전사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:65:1",
+"cap": 13
+},
+{
+"id": 6915,
+"ko": "악령",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:67:1",
+"cap": 13
+},
+{
+"id": 6916,
+"ko": "해파리",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:70:1",
+"cap": 13
+},
+{
+"id": 6917,
+"ko": "타락한 자",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:72:1",
+"cap": 13
+},
+{
+"id": 6918,
+"ko": "타락한 전사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:74:1",
+"cap": 13
+},
+{
+"id": 6919,
+"ko": "타락한 마법사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:77:1",
+"cap": 13
+},
+{
+"id": 6920,
+"ko": "타락한 소환사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:79:1",
+"cap": 13
+},
+{
+"id": 6921,
+"ko": "악몽의 기사",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:81:1",
+"cap": 13
+},
+{
+"id": 6922,
+"ko": "오염된 소환수",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:84:1",
+"cap": 13
+},
+{
+"id": 6923,
+"ko": "소환된 좀비",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:85:1",
+"cap": 13
+},
+{
+"id": 6924,
+"ko": "소환된 굴",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:87:1",
+"cap": 13
+},
+{
+"id": 6925,
+"ko": "악마",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:88:1",
+"cap": 13
+},
+{
+"id": 6926,
+"ko": "데몬로드",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:91:1",
+"cap": 13
+},
+{
+"id": 6927,
+"ko": "시체 골렘",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:94:1",
+"cap": 13
+},
+{
+"id": 6928,
+"ko": "퇴화한 고대종",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:96:1",
+"cap": 13
+},
+{
+"id": 6929,
+"ko": "고대종",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:97:1",
+"cap": 13
+},
+{
+"id": 6930,
+"ko": "고대갑주병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:102:1",
+"cap": 13
+},
+{
+"id": 6931,
+"ko": "고대전투병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:106:1",
+"cap": 13
+},
+{
+"id": 6932,
+"ko": "유충",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:109:1",
+"cap": 13
+},
+{
+"id": 6933,
+"ko": "바질리스크",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:112:1",
+"cap": 13
+},
+{
+"id": 6934,
+"ko": "뒤틀린 라이칸",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:115:1",
+"cap": 13
+},
+{
+"id": 6935,
+"ko": "달팽이",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:118:1",
+"cap": 13
+},
+{
+"id": 6936,
+"ko": "불의 정령",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:119:1",
+"cap": 13
+},
+{
+"id": 6937,
+"ko": "하급불정령",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:122:1",
+"cap": 13
+},
+{
+"id": 6938,
+"ko": "하급얼음정령",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:124:1",
+"cap": 13
+},
+{
+"id": 6939,
+"ko": "화염정령",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:126:1",
+"cap": 13
+},
+{
+"id": 6940,
+"ko": "빙결정령",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:128:1",
+"cap": 13
+},
+{
+"id": 6941,
+"ko": "고블린 사수",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:132:1",
+"cap": 13
+},
+{
+"id": 6942,
+"ko": "고블린 리더",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:134:1",
+"cap": 13
+},
+{
+"id": 6943,
+"ko": "야생 소환수",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:137:1",
+"cap": 13
+},
+{
+"id": 6944,
+"ko": "웜",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:142:1",
+"cap": 13
+},
+{
+"id": 6945,
+"ko": "박스",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:149:1",
+"cap": 13
+},
+{
+"id": 6946,
+"ko": "정예병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:152:1",
+"cap": 13
+},
+{
+"id": 6947,
+"ko": "기갑병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:153:1",
+"cap": 13
+},
+{
+"id": 6948,
+"ko": "고블린아머",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:157:1",
+"cap": 13
+},
+{
+"id": 6949,
+"ko": "포병",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:158:1",
+"cap": 13
+},
+{
+"id": 6950,
+"ko": "뇌전",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:162:1",
+"cap": 13
+},
+{
+"id": 6951,
+"ko": "죽음의 구",
+"kind": "enemy",
+"src": "rec:E/_ESDAT_0:165:1",
+"cap": 13
+},
+{
+"id": 6952,
+"ko": "입",
+"kind": "enemy",
+"src": "rec:E/_BSDAT_0:14:0",
+"cap": 11
+},
+{
+"id": 6953,
+"ko": "촉수",
+"kind": "enemy",
+"src": "rec:E/_BSDAT_0:15:0",
+"cap": 11
+},
+{
+"id": 6954,
+"ko": "가짜 누아다",
+"kind": "enemy",
+"src": "rec:E/_BSDAT_0:20:0",
+"cap": 11
+},
+{
+"id": 6955,
+"ko": "HP를 200까지 천천히 회복한다.",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:0:10",
+"cap": 29
+},
+{
+"id": 6956,
+"ko": "불과 냉기를 막는 옷. 군수품.",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:1:12",
+"cap": 29
+},
+{
+"id": 6957,
+"ko": "(없음)",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:2:1",
+"cap": 14
+},
+{
+"id": 6958,
+"ko": "없음",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:2:12",
+"cap": 29
+},
+{
+"id": 6959,
+"ko": "HP를 800까지 천천히 회복한다.",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:6:14",
+"cap": 29
+},
+{
+"id": 6960,
+"ko": "HP를 200까지 단숨에 회복한다.",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:11:12",
+"cap": 29
+},
+{
+"id": 6961,
+"ko": "27레벨 투구",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:12:16",
+"cap": 29
+},
+{
+"id": 6962,
+"ko": "28레벨 갑옷",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:13:18",
+"cap": 29
+},
+{
+"id": 6963,
+"ko": "레벨 25 장갑",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:17:20",
+"cap": 29
+},
+{
+"id": 6964,
+"ko": "레벨 26 신발",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:18:18",
+"cap": 29
+},
+{
+"id": 6965,
+"ko": "최대 HP 상승",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:22:16",
+"cap": 29
+},
+{
+"id": 6966,
+"ko": "SP/MP를 40 회복한다.",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:31:14",
+"cap": 29
+},
+{
+"id": 6967,
+"ko": "SP/MP를 80 회복한다.",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:36:12",
+"cap": 29
+},
+{
+"id": 6968,
+"ko": "골렘의 동력원",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:49:17",
+"cap": 29
+},
+{
+"id": 6969,
+"ko": "HP회복 속도 증가",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:52:16",
+"cap": 29
+},
+{
+"id": 6970,
+"ko": "마법으로 강화한 폭탄. ",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:53:15",
+"cap": 29
+},
+{
+"id": 6971,
+"ko": "마법이 깃든 돌",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:62:10",
+"cap": 29
+},
+{
+"id": 6972,
+"ko": "레벨 47 투구",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_1:3:18",
+"cap": 29
+},
+{
+"id": 6973,
+"ko": "레벨 45 장갑",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_1:7:18",
+"cap": 29
+},
+{
+"id": 6974,
+"ko": "설명",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_1:8:12",
+"cap": 29
+},
+{
+"id": 6975,
+"ko": "레벨 46 신발",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_1:12:18",
+"cap": 29
+},
+{
+"id": 6976,
+"ko": "레벨 52 투구",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_1:17:16",
+"cap": 29
+},
+{
+"id": 6977,
+"ko": "레벨 50 장갑",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_1:22:14",
+"cap": 29
+},
+{
+"id": 6978,
+"ko": "레벨 51 신발",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_1:27:16",
+"cap": 29
+},
+{
+"id": 6979,
+"ko": "마법으로 강화한 폭탄",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_1:53:15",
+"cap": 29
+},
+{
+"id": 6980,
+"ko": "레벨 67 투구",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_2:3:16",
+"cap": 29
+},
+{
+"id": 6981,
+"ko": "레벨 65 장갑",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_2:7:18",
+"cap": 29
+},
+{
+"id": 6982,
+"ko": "레벨 66 신발",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_2:12:16",
+"cap": 29
+},
+{
+"id": 6983,
+"ko": "레벨 75 투구",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_2:17:18",
+"cap": 29
+},
+{
+"id": 6984,
+"ko": "레벨 73 장갑",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_2:22:20",
+"cap": 29
+},
+{
+"id": 6985,
+"ko": "레벨 74 신발",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_2:27:18",
+"cap": 29
+},
+{
+"id": 6986,
+"ko": "마법력강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:0",
+"cap": 10
+},
+{
+"id": 6987,
+"ko": "소환수의; 공격력; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:13",
+"cap": 22
+},
+{
+"id": 6988,
+"ko": "교감도강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:36",
+"cap": 10
+},
+{
+"id": 6989,
+"ko": "소환수의; 회복력; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:49",
+"cap": 22
+},
+{
+"id": 6990,
+"ko": "체력강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:72",
+"cap": 8
+},
+{
+"id": 6991,
+"ko": "소환수의; 소환시간; 연장",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:83",
+"cap": 24
+},
+{
+"id": 6992,
+"ko": "정신력강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:108",
+"cap": 10
+},
+{
+"id": 6993,
+"ko": "소환수의; SP최대; 증가",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:121",
+"cap": 22
+},
+{
+"id": 6994,
+"ko": "베놈의; 원거리공격; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:151",
+"cap": 28
+},
+{
+"id": 6995,
+"ko": "베놈의; 중독 효과; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:183",
+"cap": 28
+},
+{
+"id": 6996,
+"ko": "베놈의; 저주 증가; 오러 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:0:221",
+"cap": 28
+},
+{
+"id": 6997,
+"ko": "헤지호그의; 원거리공격; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:1:151",
+"cap": 28
+},
+{
+"id": 6998,
+"ko": "헤지호그의; 반사 효과; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:1:191",
+"cap": 28
+},
+{
+"id": 6999,
+"ko": " 헤",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:1:232",
+"cap": 28
+},
+{
+"id": 7000,
+"ko": "소환수의;회복력;강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:2:49",
+"cap": 22
+},
+{
+"id": 7001,
+"ko": "그래비티의; 원거리공격; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:2:149",
+"cap": 28
+},
+{
+"id": 7002,
+"ko": "!그",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:2:186",
+"cap": 28
+},
+{
+"id": 7003,
+"ko": "쇼커의; 원거리공격; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:3:149",
+"cap": 28
+},
+{
+"id": 7004,
+"ko": "쇼커의; 스턴 효과; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:3:181",
+"cap": 28
+},
+{
+"id": 7005,
+"ko": "쇼커의; MP회복; 오러 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:3:219",
+"cap": 28
+},
+{
+"id": 7006,
+"ko": "세이프가드; 회복력을; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:4:149",
+"cap": 28
+},
+{
+"id": 7007,
+"ko": "세이프가드; 실드효과를; 강화",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:4:183",
+"cap": 28
+},
+{
+"id": 7008,
+"ko": "!세",
+"kind": "guardian",
+"src": "rec:NPC/NPCUI_GUARDIANSHOP_DAT:4:225",
+"cap": 28
+},
+{
+"id": 7134,
+"ko": "망각의 저주",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:0:0",
+"cap": 11
+},
+{
+"id": 7135,
+"ko": "환수A공격",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:6:0",
+"cap": 11
+},
+{
+"id": 7136,
+"ko": "베놈의;기본공격력;강화",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:6:33",
+"cap": 28
+},
+{
+"id": 7137,
+"ko": "환수B공격",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:10:0",
+"cap": 11
+},
+{
+"id": 7138,
+"ko": "헤지호그의;기본공격력;강화",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:10:33",
+"cap": 28
+},
+{
+"id": 7139,
+"ko": "환수C공격",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:14:0",
+"cap": 11
+},
+{
+"id": 7140,
+"ko": "그래비티의;기본공격력;강화",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:14:33",
+"cap": 28
+},
+{
+"id": 7141,
+"ko": "환수D공격",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:18:0",
+"cap": 11
+},
+{
+"id": 7142,
+"ko": "쇼커의;기본공격력;강화",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:18:33",
+"cap": 28
+},
+{
+"id": 7143,
+"ko": "환수E공격",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:22:0",
+"cap": 11
+},
+{
+"id": 7144,
+"ko": "세이프가드;기본공격력;강화",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:22:33",
+"cap": 28
+},
+{
+"id": 7145,
+"ko": "정신강화",
+"kind": "summon",
+"src": "rec:HDAT/_H_SS:29:0",
+"cap": 11
+},
+{
+"id": 7146,
+"ko": "수레바퀴섬",
+"kind": "mapname",
+"src": "map:_MAP_M_000:0",
+"cap": 14
+},
+{
+"id": 7147,
+"ko": "선착장",
+"kind": "mapname",
+"src": "map:_MAP_M_000:1",
+"cap": 14
+},
+{
+"id": 7148,
+"ko": "필드1",
+"kind": "mapname",
+"src": "map:_MAP_M_001:1",
+"cap": 14
+},
+{
+"id": 7149,
+"ko": "필드2",
+"kind": "mapname",
+"src": "map:_MAP_M_002:1",
+"cap": 14
+},
+{
+"id": 7150,
+"ko": "인간주둔지",
+"kind": "mapname",
+"src": "map:_MAP_M_003:1",
+"cap": 14
+},
+{
+"id": 7151,
+"ko": "이름없는섬",
+"kind": "mapname",
+"src": "map:_MAP_M_004:0",
+"cap": 14
+},
+{
+"id": 7152,
+"ko": "크래드의집",
+"kind": "mapname",
+"src": "map:_MAP_M_006:1",
+"cap": 14
+},
+{
+"id": 7153,
+"ko": "검은바위섬",
+"kind": "mapname",
+"src": "map:_MAP_M_008:0",
+"cap": 14
+},
+{
+"id": 7154,
+"ko": "선주주둔지",
+"kind": "mapname",
+"src": "map:_MAP_M_012:1",
+"cap": 14
+},
+{
+"id": 7155,
+"ko": "필드3",
+"kind": "mapname",
+"src": "map:_MAP_M_017:1",
+"cap": 14
+},
+{
+"id": 7156,
+"ko": "인간점령도시",
+"kind": "mapname",
+"src": "map:_MAP_M_018:1",
+"cap": 14
+},
+{
+"id": 7157,
+"ko": "핀디아스",
+"kind": "mapname",
+"src": "map:_MAP_M_022:0",
+"cap": 14
+},
+{
+"id": 7158,
+"ko": "아눈섬",
+"kind": "mapname",
+"src": "map:_MAP_M_026:0",
+"cap": 14
+},
+{
+"id": 7159,
+"ko": "선주도시",
+"kind": "mapname",
+"src": "map:_MAP_M_026:1",
+"cap": 14
+},
+{
+"id": 7160,
+"ko": "매도우힐",
+"kind": "mapname",
+"src": "map:_MAP_M_037:0",
+"cap": 14
+},
+{
+"id": 7161,
+"ko": "도시",
+"kind": "mapname",
+"src": "map:_MAP_M_040:1",
+"cap": 14
+},
+{
+"id": 7162,
+"ko": "핌鴨",
+"kind": "mapname",
+"src": "map:_MAP_M_045:1",
+"cap": 14,
+"note": "nghi rác/không hiển thị: giữ nguyên nếu vô nghĩa"
+},
+{
+"id": 7163,
+"ko": "던전1-1",
+"kind": "mapname",
+"src": "map:_MAP_M_047:1",
+"cap": 14
+},
+{
+"id": 7164,
+"ko": "던전1-2",
+"kind": "mapname",
+"src": "map:_MAP_M_048:1",
+"cap": 14
+},
+{
+"id": 7165,
+"ko": "던전1-3",
+"kind": "mapname",
+"src": "map:_MAP_M_049:1",
+"cap": 14
+},
+{
+"id": 7166,
+"ko": "던전2-1",
+"kind": "mapname",
+"src": "map:_MAP_M_050:1",
+"cap": 14
+},
+{
+"id": 7167,
+"ko": "던전2-2",
+"kind": "mapname",
+"src": "map:_MAP_M_051:1",
+"cap": 14
+},
+{
+"id": 7168,
+"ko": "던전2-3",
+"kind": "mapname",
+"src": "map:_MAP_M_052:1",
+"cap": 14
+},
+{
+"id": 7169,
+"ko": "핀디아스1",
+"kind": "mapname",
+"src": "map:_MAP_M_053:0",
+"cap": 14
+},
+{
+"id": 7170,
+"ko": "던전1층",
+"kind": "mapname",
+"src": "map:_MAP_M_053:1",
+"cap": 14
+},
+{
+"id": 7171,
+"ko": "던전2층",
+"kind": "mapname",
+"src": "map:_MAP_M_054:1",
+"cap": 14
+},
+{
+"id": 7172,
+"ko": "핀디아스2",
+"kind": "mapname",
+"src": "map:_MAP_M_056:0",
+"cap": 14
+},
+{
+"id": 7173,
+"ko": "던전1",
+"kind": "mapname",
+"src": "map:_MAP_M_056:1",
+"cap": 14
+},
+{
+"id": 7174,
+"ko": "던전2",
+"kind": "mapname",
+"src": "map:_MAP_M_057:1",
+"cap": 14
+},
+{
+"id": 7175,
+"ko": "던전3",
+"kind": "mapname",
+"src": "map:_MAP_M_058:1",
+"cap": 14
+},
+{
+"id": 7176,
+"ko": "포로수용소_1층_a",
+"kind": "mapname",
+"src": "map:_MAP_M_062:1",
+"cap": 16
+},
+{
+"id": 7177,
+"ko": "포로수용소_1층_b",
+"kind": "mapname",
+"src": "map:_MAP_M_063:1",
+"cap": 16
+},
+{
+"id": 7178,
+"ko": "포로수용소_2층",
+"kind": "mapname",
+"src": "map:_MAP_M_064:1",
+"cap": 14
+},
+{
+"id": 7179,
+"ko": "포로수용소_지하1층",
+"kind": "mapname",
+"src": "map:_MAP_M_065:1",
+"cap": 18
+},
+{
+"id": 7180,
+"ko": "포로수용소_지하2층",
+"kind": "mapname",
+"src": "map:_MAP_M_066:1",
+"cap": 18
+},
+{
+"id": 7181,
+"ko": "매도우힐1",
+"kind": "mapname",
+"src": "map:_MAP_M_067:0",
+"cap": 14
+},
+{
+"id": 7182,
+"ko": "지하1층",
+"kind": "mapname",
+"src": "map:_MAP_M_067:1",
+"cap": 14
+},
+{
+"id": 7183,
+"ko": "지하2층",
+"kind": "mapname",
+"src": "map:_MAP_M_068:1",
+"cap": 14
+},
+{
+"id": 7184,
+"ko": "지하3층",
+"kind": "mapname",
+"src": "map:_MAP_M_069:1",
+"cap": 14
+},
+{
+"id": 7185,
+"ko": "매도우힐2",
+"kind": "mapname",
+"src": "map:_MAP_M_070:0",
+"cap": 14
+},
+{
+"id": 7186,
+"ko": "던전3층",
+"kind": "mapname",
+"src": "map:_MAP_M_072:1",
+"cap": 14
+},
+{
+"id": 7187,
+"ko": "검은바위섬1",
+"kind": "mapname",
+"src": "map:_MAP_M_073:0",
+"cap": 14
+},
+{
+"id": 7188,
+"ko": "던전_지하1층",
+"kind": "mapname",
+"src": "map:_MAP_M_075:1",
+"cap": 14
+},
+{
+"id": 7189,
+"ko": "던전_지하2층",
+"kind": "mapname",
+"src": "map:_MAP_M_076:1",
+"cap": 14
+},
+{
+"id": 7190,
+"ko": "비밀통로1",
+"kind": "mapname",
+"src": "map:_MAP_M_077:1",
+"cap": 14
+},
+{
+"id": 7191,
+"ko": "비밀통로2",
+"kind": "mapname",
+"src": "map:_MAP_M_078:1",
+"cap": 14
+},
+{
+"id": 7192,
+"ko": "보스룸",
+"kind": "mapname",
+"src": "map:_MAP_M_079:0",
+"cap": 14
+},
+{
+"id": 7193,
+"ko": "1_크래드의집",
+"kind": "mapname",
+"src": "map:_MAP_M_084:1",
+"cap": 14
+},
+{
+"id": 7194,
+"ko": "인간",
+"kind": "mapname",
+"src": "map:_MAP_M_089:1",
+"cap": 7
+},
+{
+"id": 7195,
+"ko": "선주",
+"kind": "mapname",
+"src": "map:_MAP_M_090:1",
+"cap": 7
+},
+{
+"id": 7196,
+"ko": "보스이벤트룸",
+"kind": "mapname",
+"src": "map:_MAP_M_091:0",
+"cap": 14
+},
+{
+"id": 7197,
+"ko": "mn핌",
+"kind": "mapname",
+"src": "map:_MAP_M_095:1",
+"cap": 14
+},
+{
+"id": 7198,
+"ko": "최종",
+"kind": "mapname",
+"src": "map:_MAP_M_096:0",
+"cap": 14
+},
+{
+"id": 7282,
+"ko": "네트워크",
+"kind": "name",
+"src": "name:44",
+"cap": 12
+},
+{
+"id": 7301,
+"ko": "가나다라마바사",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:7:12",
+"cap": 29
+},
+{
+"id": 7302,
+"ko": "HP 회복 속도를 상승",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:23:16",
+"cap": 29
+},
+{
+"id": 7303,
+"ko": "라임벨 세트의 슈트",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:28:16",
+"cap": 29
+},
+{
+"id": 7304,
+"ko": "드레이크 세트의 모자",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:47:20",
+"cap": 29
+},
+{
+"id": 7305,
+"ko": "드레이크 세트의 갑옷",
+"kind": "combine",
+"src": "rec:NPC/_NPCUI_COMBINE_DAT_0:48:18",
+"cap": 29
+}
+]

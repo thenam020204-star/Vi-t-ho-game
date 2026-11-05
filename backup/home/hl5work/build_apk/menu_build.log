@@ -1,0 +1,5 @@
+ingame.c:66:12: warning: unused variable 'm' [-Wunused-variable]
+   66 |     mui_m *m = &L; int cx = x + pr / 2, cy = y + pr / 2, R = pr / 2, band = pr / 12 < 2 ? 2 : pr / 12;
+      |            ^
+1 warning generated.
+base=0x171000 filesz=234028 memsz=265856 debug=0 reloc=0 classes=CASH EXPERT GAME INGAME NPC POPUP 

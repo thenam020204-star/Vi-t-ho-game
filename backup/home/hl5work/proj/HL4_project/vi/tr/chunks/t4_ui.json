@@ -1,0 +1,2422 @@
+[
+{
+"id": 5463,
+"ko": "{게임시작",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:0"
+},
+{
+"id": 5464,
+"ko": "{창고접속",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:1"
+},
+{
+"id": 5465,
+"ko": "{환경설정",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:2"
+},
+{
+"id": 5466,
+"ko": "{게임방법",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:3"
+},
+{
+"id": 5467,
+"ko": "{게임문의",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:4"
+},
+{
+"id": 5468,
+"ko": "{게임종료",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:5"
+},
+{
+"id": 5469,
+"ko": "{달성과제",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:6"
+},
+{
+"id": 5470,
+"ko": "여기에 저장하시겠습니까?",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:7"
+},
+{
+"id": 5471,
+"ko": "이대로 진행하시겠습니까?",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:8"
+},
+{
+"id": 5472,
+"ko": "게임을 계속 진행하시겠습니까?",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:9"
+},
+{
+"id": 5473,
+"ko": "데이터를 초기화 하시겠습니까?",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:10"
+},
+{
+"id": 5474,
+"ko": "휴먼",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:11",
+"cap": 7
+},
+{
+"id": 5475,
+"ko": "네베드",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:12",
+"cap": 7
+},
+{
+"id": 5476,
+"ko": "워리어",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:13",
+"cap": 7
+},
+{
+"id": 5477,
+"ko": "건슬링어",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:14",
+"cap": 11
+},
+{
+"id": 5478,
+"ko": "파이터",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:15",
+"cap": 7
+},
+{
+"id": 5479,
+"ko": "소서러",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:16",
+"cap": 7
+},
+{
+"id": 5480,
+"ko": "네베드 종족이 살던;오르비스 군도에 나타난;새로운 종족.;이들이 어디에서,;무슨 이유로 대규모로;이주해 왔는지는;알려져 있지 않다.;오르비스 군도의;차가운 북쪽 섬에;자리잡은 이들은,;살아남기 위해;증기와 화약으로;강철의 문명을;건설하며 싸워왔다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:17"
+},
+{
+"id": 5481,
+"ko": "먼 옛날부터;오르비스 군도에 머물던;선주 종족.;강림자에게 이어받은;환수와 마법을 부리는;정신 문명이;고도로 발달되어 있다.;인구수가 적은 그들은;북쪽의 섬들을;인간에게 양도하고,;온화한 남쪽의 섬에서;신이 잠들어 있는 땅;성지의 비밀을;천년동안 지키고 있었다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:18"
+},
+{
+"id": 5482,
+"ko": "자신의 키보다 큰;대검을 사용하는;공화국의 기사들.;고도로 발전시킨 검술로;육체의 능력을;극한까지 끌어내어;사용한다.;네트워크에 진입시;공격계를 육성했다면;어썰트워리어로,;방어계를 육성했다면;암즈나이트로;각각 발전한다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:19"
+},
+{
+"id": 5483,
+"ko": "공화국의 신무기,;총을 사용하는 기사들.;총을 자기 몸처럼 다루며;폭탄과 중화기 사용에도;숙달되어 있는,;공화국의;스페셜리스트다.;네트워크에 진입시;총기계를 육성했다면;건마스터로,;암즈계를 육성했다면;크레이지암즈로;각각 발전한다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:20"
+},
+{
+"id": 5484,
+"ko": "마력을 검에,;혹은 자신의 몸에;깃들게 하여 싸우는;네베드의 전사들.;마력을 다루는 기술은;이들에게 인간에게는;불가능한 능력을 준다.;네트워크에 진입시;공격계를 육성했다면;버서커로,;강화계를 육성했다면;서먼나이트로;각각 발전한다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:21"
+},
+{
+"id": 5485,
+"ko": "마력을 순수하게;파괴의 힘으로;구현하는 자들.;네베드 중에서도;소수인 강대한 능력자는;혼자서 전세를 뒤바꿀;정도의 힘을 지닌다.;네트워크에 진입시;공격계를 육성했다면;엘리멘탈로드로,;소환계를 육성했다면;소울마스터로;각각 발전한다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:22"
+},
+{
+"id": 5486,
+"ko": "게임을 종료하시겠습니까?",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:25"
+},
+{
+"id": 5487,
+"ko": "네베드를 플레이하시려면;실제 현금 1000원의;추가정보이용료;(통화료별도)가 부과됩니다.;아이템 구매 중 일부 시간이 소요 될 수 있으므로 강제종료 하지 마세요.;접속하시겠습니까?",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:26"
+},
+{
+"id": 5488,
+"ko": "상태보기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:7"
+},
+{
+"id": 5489,
+"ko": "인벤토리",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:8"
+},
+{
+"id": 5490,
+"ko": "장비",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:9"
+},
+{
+"id": 5491,
+"ko": "스킬",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:10"
+},
+{
+"id": 5492,
+"ko": "암즈",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:11"
+},
+{
+"id": 5493,
+"ko": "시스템",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:13"
+},
+{
+"id": 5494,
+"ko": "근력",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:19"
+},
+{
+"id": 5495,
+"ko": "민첩",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:20"
+},
+{
+"id": 5496,
+"ko": "체력",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:21"
+},
+{
+"id": 5497,
+"ko": "정신",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:22"
+},
+{
+"id": 5498,
+"ko": "스탯포인트가 부족합니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:31"
+},
+{
+"id": 5499,
+"ko": "확인",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:32",
+"cap": 7
+},
+{
+"id": 5500,
+"ko": "선택된 장비를 착용하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:35"
+},
+{
+"id": 5501,
+"ko": "선택된 장비를 분해하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:36"
+},
+{
+"id": 5502,
+"ko": "선택된 장비를 버리시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:37"
+},
+{
+"id": 5503,
+"ko": "위의 아이템들이 생성되었습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:38"
+},
+{
+"id": 5504,
+"ko": "분해 실패하였습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:39"
+},
+{
+"id": 5505,
+"ko": "스킬등록이 해제 되었습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:40"
+},
+{
+"id": 5506,
+"ko": "스킬등록이 되어 있지 않습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:41"
+},
+{
+"id": 5507,
+"ko": "장착 불가능한 아이템입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:42"
+},
+{
+"id": 5508,
+"ko": "세이브",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:43"
+},
+{
+"id": 5509,
+"ko": "옵션",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:44"
+},
+{
+"id": 5510,
+"ko": "도움말",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:45"
+},
+{
+"id": 5511,
+"ko": "메인메뉴",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:46"
+},
+{
+"id": 5512,
+"ko": "저장하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:51"
+},
+{
+"id": 5513,
+"ko": "저장되었습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:52"
+},
+{
+"id": 5514,
+"ko": "저장없이 종료하면;데이터가 사라집니다.;이대로 끝내시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:53"
+},
+{
+"id": 5515,
+"ko": "투구",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:54"
+},
+{
+"id": 5516,
+"ko": "갑옷",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:55"
+},
+{
+"id": 5517,
+"ko": "장갑",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:56"
+},
+{
+"id": 5518,
+"ko": "신발",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:57"
+},
+{
+"id": 5519,
+"ko": "양손검",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:58"
+},
+{
+"id": 5520,
+"ko": "핸드건",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:59"
+},
+{
+"id": 5521,
+"ko": "지팡이",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:60",
+"cap": 22
+},
+{
+"id": 5522,
+"ko": "장신구",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:61"
+},
+{
+"id": 5523,
+"ko": "판매하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:62"
+},
+{
+"id": 5524,
+"ko": "장착된 장비를 해제하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:63"
+},
+{
+"id": 5525,
+"ko": "뇌제",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:64",
+"cap": 14
+},
+{
+"id": 5526,
+"ko": "금강",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:65",
+"cap": 14
+},
+{
+"id": 5527,
+"ko": "정령",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:66",
+"cap": 14
+},
+{
+"id": 5528,
+"ko": "사신",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:67",
+"cap": 14
+},
+{
+"id": 5529,
+"ko": "영제",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:68",
+"cap": 14
+},
+{
+"id": 5530,
+"ko": "속박",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:69",
+"cap": 14
+},
+{
+"id": 5531,
+"ko": "결의",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:70",
+"cap": 14
+},
+{
+"id": 5532,
+"ko": "투신",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:71",
+"cap": 14
+},
+{
+"id": 5533,
+"ko": "공명",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:72",
+"cap": 14
+},
+{
+"id": 5534,
+"ko": "흡혈",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:73",
+"cap": 14
+},
+{
+"id": 5535,
+"ko": "현자",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:74",
+"cap": 14
+},
+{
+"id": 5536,
+"ko": "마두",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:75"
+},
+{
+"id": 5537,
+"ko": "폭풍",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:76",
+"cap": 14
+},
+{
+"id": 5538,
+"ko": "아이템을 분해하였습니다",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:77"
+},
+{
+"id": 5539,
+"ko": "장착하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:80"
+},
+{
+"id": 5540,
+"ko": "장착해제하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:81"
+},
+{
+"id": 5541,
+"ko": "이미 장착된 부품입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:82"
+},
+{
+"id": 5542,
+"ko": "장착 아이템입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:83"
+},
+{
+"id": 5543,
+"ko": "저장할 수 없는 지역입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:84"
+},
+{
+"id": 5544,
+"ko": "구르기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:85"
+},
+{
+"id": 5545,
+"ko": "면역성",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:86"
+},
+{
+"id": 5546,
+"ko": "기계기술",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:87"
+},
+{
+"id": 5547,
+"ko": "격발",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:88"
+},
+{
+"id": 5548,
+"ko": "|긴급회피 동작. 방향키를;2회 연타하여 사용.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:89"
+},
+{
+"id": 5549,
+"ko": "|블록 성공 시 상태;이상을 완전히 방어",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:90"
+},
+{
+"id": 5550,
+"ko": "|장비 아이템을 분해해서;제련석,포션,재료등을 획득",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:91"
+},
+{
+"id": 5551,
+"ko": "|장전되어 있는;암즈탄 발사}(SP10)",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:92"
+},
+{
+"id": 5552,
+"ko": "자연회복력",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:93"
+},
+{
+"id": 5553,
+"ko": "텔레포트",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:94"
+},
+{
+"id": 5554,
+"ko": "연금술",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:95",
+"cap": 22
+},
+{
+"id": 5555,
+"ko": "|= 시간이 흐르면;= HP와 SP가;= 천천히 회복",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:96"
+},
+{
+"id": 5556,
+"ko": "|= 짧은 순간이동;= 방향키를 2회;= 연타하여 사용",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:97"
+},
+{
+"id": 5557,
+"ko": "|= 장비 아이템을;= 변환하여 오브,;= 재료 등을 획득",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:98"
+},
+{
+"id": 5558,
+"ko": "레벨이 부족하여;장착할 수 없습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:99"
+},
+{
+"id": 5559,
+"ko": "현재 난이도에서는;더이상 스킬포인트를;투자할 수 없습니다",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:100"
+},
+{
+"id": 5560,
+"ko": "가방에 물품이 많아;보상을 받을 수 없습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:101"
+},
+{
+"id": 5561,
+"ko": "부활하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:102"
+},
+{
+"id": 5562,
+"ko": "캐쉬아이템을;사용하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:103"
+},
+{
+"id": 5563,
+"ko": "가방이 +1되었습니다",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:104"
+},
+{
+"id": 5564,
+"ko": "더이상 가방을;확장할 수 없습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:105"
+},
+{
+"id": 5565,
+"ko": "부활의서를 구입하시겠습니까?;(현금100원이 결제됩니다)",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:106"
+},
+{
+"id": 5566,
+"ko": "퀘스트아이템은;버릴 수 없습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:107"
+},
+{
+"id": 5567,
+"ko": "아이템을; 분해할 수 없는 지역입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:108"
+},
+{
+"id": 5568,
+"ko": "인벤토리가 가득찼습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:109"
+},
+{
+"id": 5569,
+"ko": "실제 현금 100원의;추가정보이용료;(통화료별도)가 부과됩니다.;아이템 구매 중 일부 시간이 소요 될 수 있으므로 강제종료 하지 마세요.;부활의서를 구입하시겠습니까?;",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_TXT:110"
+},
+{
+"id": 5570,
+"ko": "포인트 투자",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:0"
+},
+{
+"id": 5571,
+"ko": "스킬등록",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:1"
+},
+{
+"id": 5572,
+"ko": "등록취소",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:2"
+},
+{
+"id": 5573,
+"ko": "상세보기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:3"
+},
+{
+"id": 5574,
+"ko": "장비장착",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:4"
+},
+{
+"id": 5575,
+"ko": "분해하기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:5"
+},
+{
+"id": 5576,
+"ko": "버리기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:6"
+},
+{
+"id": 5577,
+"ko": "장비해제",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:11"
+},
+{
+"id": 5578,
+"ko": "내리기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:12"
+},
+{
+"id": 5579,
+"ko": "올리기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:13"
+},
+{
+"id": 5580,
+"ko": "취소",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:14"
+},
+{
+"id": 5581,
+"ko": "구입하기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:15"
+},
+{
+"id": 5582,
+"ko": "사용하기",
+"kind": "menu",
+"src": "tdf:GMenu/_GMENU_SUB_TXT:16"
+},
+{
+"id": 5583,
+"ko": "아이템구입",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:2"
+},
+{
+"id": 5584,
+"ko": "아이템판매",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:3"
+},
+{
+"id": 5585,
+"ko": "조합하기",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:9"
+},
+{
+"id": 5586,
+"ko": "마법부여",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:10"
+},
+{
+"id": 5587,
+"ko": "제련하기",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:11"
+},
+{
+"id": 5588,
+"ko": "고급제련",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:12",
+"cap": 22
+},
+{
+"id": 5589,
+"ko": "아이템합성",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:13"
+},
+{
+"id": 5590,
+"ko": "조합할 물품을 선택하십시오.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:14"
+},
+{
+"id": 5591,
+"ko": "일반조합",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:15",
+"cap": 22
+},
+{
+"id": 5592,
+"ko": "특수조합",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:16"
+},
+{
+"id": 5593,
+"ko": "재료가 부족합니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:17"
+},
+{
+"id": 5594,
+"ko": "조합이 성공했습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:18"
+},
+{
+"id": 5595,
+"ko": "조합에 실패했습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:19"
+},
+{
+"id": 5596,
+"ko": "소지금이 부족합니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:20"
+},
+{
+"id": 5597,
+"ko": "%s 접속시;통화료가 부과됩니다.;접속하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:21"
+},
+{
+"id": 5598,
+"ko": "서버 응답을 기다리는 중",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:22"
+},
+{
+"id": 5599,
+"ko": "아이템 정보 요청중입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:23"
+},
+{
+"id": 5600,
+"ko": "돈 요청중입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:24"
+},
+{
+"id": 5601,
+"ko": "선택된 장비를;싱글 창고에 옮기겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:25"
+},
+{
+"id": 5602,
+"ko": "장비가 이동되었습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:26"
+},
+{
+"id": 5603,
+"ko": "싱글창고로 아이템을 내렸습니다.;업데이트 중입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:28"
+},
+{
+"id": 5604,
+"ko": "무작동 5분 경과하였습니다.;서버와의 접속이 끊어졌습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:29"
+},
+{
+"id": 5605,
+"ko": "선택된 장비를;%s 창고에 옮기겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:30"
+},
+{
+"id": 5606,
+"ko": "선택된 아이템을 버리시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:31"
+},
+{
+"id": 5607,
+"ko": "구매하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:32"
+},
+{
+"id": 5608,
+"ko": "제련석이 없습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:34"
+},
+{
+"id": 5609,
+"ko": "제련에 성공하였습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:35"
+},
+{
+"id": 5610,
+"ko": "제련에 실패하였습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:36"
+},
+{
+"id": 5611,
+"ko": "제련에 실패하여;해당 장비가 파손되었습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:37"
+},
+{
+"id": 5612,
+"ko": "장비가 합성되었습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:38"
+},
+{
+"id": 5613,
+"ko": "같은 종류의 장비만;합성이 가능합니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:39"
+},
+{
+"id": 5614,
+"ko": "동일한 장비입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:40"
+},
+{
+"id": 5615,
+"ko": "장착된 아이템입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:41"
+},
+{
+"id": 5616,
+"ko": "이미 결합된 오브타입과;동일 오브만 결합가능합니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:43"
+},
+{
+"id": 5617,
+"ko": "오브결합에 성공하였습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:44"
+},
+{
+"id": 5618,
+"ko": "오브결합에 실패하였습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:45"
+},
+{
+"id": 5619,
+"ko": "오브결합에 실패하여;결합된 오브가;초기화되었습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:46"
+},
+{
+"id": 5620,
+"ko": "오브결합에 실패하여;해당장비가 파괴되었습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:47"
+},
+{
+"id": 5621,
+"ko": "선택된 제물아이템이;대상아이템과 동일합니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:48"
+},
+{
+"id": 5622,
+"ko": "현재 장비에는 더이상;오브를 결합할 수 없습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:49"
+},
+{
+"id": 5623,
+"ko": "베놈",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:50",
+"cap": 11
+},
+{
+"id": 5624,
+"ko": "헤지호그",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:51",
+"cap": 11
+},
+{
+"id": 5625,
+"ko": "그래비티",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:52",
+"cap": 11
+},
+{
+"id": 5626,
+"ko": "쇼커",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:53",
+"cap": 11
+},
+{
+"id": 5627,
+"ko": "세이프가드",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:54",
+"cap": 11
+},
+{
+"id": 5628,
+"ko": "포인트가 부족합니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:55"
+},
+{
+"id": 5629,
+"ko": "이미 최대값입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:56"
+},
+{
+"id": 5630,
+"ko": "슬롯 정보 서버에 저장중입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:57"
+},
+{
+"id": 5631,
+"ko": "슬롯 정보 요청중입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:58"
+},
+{
+"id": 5632,
+"ko": "팔 수 없는 아이템입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:59"
+},
+{
+"id": 5633,
+"ko": "돈이 부족합니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:60"
+},
+{
+"id": 5634,
+"ko": "%d 캐쉬가 필요합니다.;결제 방법을 선택해주세요",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:61"
+},
+{
+"id": 5635,
+"ko": "휴대폰결제",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:62"
+},
+{
+"id": 5636,
+"ko": "KOIN 결제",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:63"
+},
+{
+"id": 5637,
+"ko": "현금 %d원의 정보이용료가 부과 됩니다.;결제하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:64"
+},
+{
+"id": 5638,
+"ko": "캐쉬템 구입중입니다.;(강제 종료시 아이템이;사라질 수 있습니다)",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:65"
+},
+{
+"id": 5639,
+"ko": "를(을) 구입하였습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:66"
+},
+{
+"id": 5640,
+"ko": "KOIN 정보 요청중입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:67"
+},
+{
+"id": 5641,
+"ko": "보유: %d.%d%dKOIN;차감: %d.%d%dKOIN;^(100원 = 1 KOIN);%d.%d%dKOIN이 차감됩니다.;결제하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:68"
+},
+{
+"id": 5642,
+"ko": "인벤토리가 가득찼습니다. ",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:69"
+},
+{
+"id": 5643,
+"ko": "SMS 요청중입니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:70"
+},
+{
+"id": 5644,
+"ko": "제물을 선택하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:71"
+},
+{
+"id": 5645,
+"ko": "더 이상 강화할수없습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:72"
+},
+{
+"id": 5646,
+"ko": "구매 하였습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:73"
+},
+{
+"id": 5647,
+"ko": "판매 하였습니다.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:74"
+},
+{
+"id": 5648,
+"ko": "서버 응답 요청중",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:75"
+},
+{
+"id": 5649,
+"ko": "인벤토리를 충분히 비워주세요.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:76"
+},
+{
+"id": 5650,
+"ko": "실제 현금 %d원의;추가정보이용료;(통화료별도)가 부과 됩니다.;아이템 구매 중 일부 시간이 소요 될 수 있으므로 강제종료 하지 마세요.",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:77"
+},
+{
+"id": 5651,
+"ko": "획득!",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:0"
+},
+{
+"id": 5652,
+"ko": "경험치",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:2"
+},
+{
+"id": 5653,
+"ko": "스탯포인트 +",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:3"
+},
+{
+"id": 5654,
+"ko": "스킬포인트 +",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:4"
+},
+{
+"id": 5655,
+"ko": "진화포인트 +",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:5"
+},
+{
+"id": 5656,
+"ko": "소환수보유한도 +1",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:6"
+},
+{
+"id": 5657,
+"ko": "암즈슬롯 +1",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:7"
+},
+{
+"id": 5658,
+"ko": "구르기/텔레포트 스킬오픈",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:8"
+},
+{
+"id": 5659,
+"ko": "연금술/기계공학 스킬오픈",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:9"
+},
+{
+"id": 5660,
+"ko": "연금술사 합성오픈",
+"kind": "menu",
+"src": "tdf:NPC/_EVENT_POP_TXT:10"
+},
+{
+"id": 5661,
+"ko": "정식판 등록",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_FREE_TXT:0"
+},
+{
+"id": 5662,
+"ko": "정식판으로 전환 하시겠습니까?;(정보이용료 4000원과 소정의 통화료가 부과됩니다.)",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_FREE_TXT:1"
+},
+{
+"id": 5663,
+"ko": "무료 체험 버전에서는;사용할 수 없는 메뉴",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_FREE_TXT:2"
+},
+{
+"id": 5664,
+"ko": "본 게임은 게임 이용시;별도의 비용이 발생하지;않는 단독형 게임이지만;유료 아이템 구매,캐릭터;복구 이용시 통화료 및;정보이용료가 부과됩니다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_UseInfo_TXT:0"
+},
+{
+"id": 5665,
+"ko": "고객정보활용동의",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_UseInfo_TXT:1"
+},
+{
+"id": 5666,
+"ko": "1. 제공받는자:(유)일렉트로닉아츠코리아 (TEL)02-559-8787;2. 개인정보제공목적:사후컨텐츠 관리, 고객관리, 홍보 sms발송;3. 제공하는개인정보의항목:휴대폰기종, 전화번호, 성별, 연령;4. 개인정보의보유,이용기간:게임다운로드 시점부터 1년간 보관;본인은 위에 기재된 개인정보를 LG텔레콤이 위와같이 제공함에 대하여 고지받았으며 이를 충분히 이해하고 동의합니다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_UseInfo_TXT:2"
+},
+{
+"id": 5667,
+"ko": "휴대폰의 S/W 버전을 최신버전으로 유지하셔야 원활한 게임진행을 하실 수 있습니다.",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_UseInfo_TXT:3"
+},
+{
+"id": 5668,
+"ko": "기본 인터페이스",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:0"
+},
+{
+"id": 5669,
+"ko": "이동: 방향키,2,4,6,8;(한쪽연타시 특수이동);조사/대화: OZ,5;단축키: 1,3,5,7,9,0;(회복아이템,스킬 등록);단축벨트교체: #;미니맵보기: *;메뉴: CLR;퀵세이브: 통화키;프리미엄상점: 우상단기능키;;붉은게이지: 체력(HP);파란게이지: 기력(SP);노란게이지: 경험치",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:1"
+},
+{
+"id": 5670,
+"ko": "휴먼 소개",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:2"
+},
+{
+"id": 5671,
+"ko": "캐릭터이름: 티르;워리어:대검/암즈;건슬링어:더블건/암즈;;HP: 휴식시 회복;SP: 공격,피격시 축적;특수이동: 구르기;암즈의 육성:;엔지니어 NPC에게;각종 부품을 사서 부착;암즈의 사용:;탄창스킬로 장전하여;격발 스킬로 발사;장전된 탄환을 소모",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:3"
+},
+{
+"id": 5672,
+"ko": "네베드 소개",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:4"
+},
+{
+"id": 5673,
+"ko": "캐릭터이름: 루레인;파이터:대검/소환수;소서러:지팡이/소환수;;HP: 자동으로 소량 회복;SP: 자동으로 소량 회복;특수이동: 순간이동;환수의 육성과 사용:;전투로 획득한 육성치로;소환술사 NPC를 통해;소환수의 능력을 강화;;환수스킬로 소환,;재사용으로 복귀",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:5"
+},
+{
+"id": 5674,
+"ko": "능력치 육성",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:6"
+},
+{
+"id": 5675,
+"ko": "레벨업 할 때 마다 4포인트씩;주어지는 스탯포인트로;능력치를 육성할 수 있습니다.;힘: 근공,저항 증가;정신: 마공,SP 증가;건강: HP,방어력 증가;민첩: 원공,회피 증가;ATK: 공격력;대검은 물리공격력,;건은 원거리공격력,;지팡이는 마법공격력 표시;;P.DEF: 물리 방어력;M.DEF: 마법 방어력;RES: 마법에 대한 저항력;ACC: 물리공격 명중률;BLK: 블럭 능력;DOD: 회피 능력;CRI: 크리티컬 능력",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:7"
+},
+{
+"id": 5676,
+"ko": "스킬 육성",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:8"
+},
+{
+"id": 5677,
+"ko": "레벨업 할 때 마다 1포인트씩;주어지는 스킬포인트로;스킬을 육성할 수 있습니다.;;스킬은 클래스마다;2가지 계열, 계열당 9개로;총 18개가 존재합니다.;스킬은 최대 20레벨까지;육성이 가능합니다.;;고난도의 스킬을 배우려면;전단계의 스킬을 익히고;동일 계열의 스킬을 일정;수준 이상 육성해야 합니다.;액티브 스킬은 1,3,5,7,9,0;단축키에 등록해 사용합니다.;패시브 스킬은 항상;효과가 적용됩니다.;암즈와 소환수는;메뉴의 암즈,소환수 항목에서;등록해 사용합니다.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:9"
+},
+{
+"id": 5678,
+"ko": "캐릭터의 장비",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:10"
+},
+{
+"id": 5679,
+"ko": "장비의 장착레벨을 충족해야;장착할 수 있습니다.;;장비의 접두어 2글자가;장비의 성능을 결정하며,;합성을 통해 장비의 성능과;외형을 섞을 수 있습니다.;옵션이 1개면 레어,;2개면 에픽이며 이 또한;합성을 통해 다른 장비에; 옮기는 것이 가능합니다.;;단 유물, 전설급 장비는;합성이 불가능합니다.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:11"
+},
+{
+"id": 5680,
+"ko": "퀘스트의 진행",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:12"
+},
+{
+"id": 5681,
+"ko": "사냥을 하고 캐릭터를;육성하면서 퀘스트를;수행해 나가야 합니다.;;휴먼과 네베드는;서로 다른 시나리오를 따라;메인 퀘스트가 진행됩니다.;또한 마을에서는 시나리오와;별개인 서브퀘스트를;수행할 수 있습니다.;;시나리오 진행으로 인해;완료가 불가능해진 퀘스트는;자동으로 삭제 됩니다.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:13"
+},
+{
+"id": 5682,
+"ko": "아이템의 조합",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:14"
+},
+{
+"id": 5683,
+"ko": "제련:;제련석을 소모하며, 실패시;장비가 파괴될 수 있습니다.;;합성:;두개의 장비를 섞어;새로운 장비를 만듭니다.;일반조합:;대장장이가 다루는 아이템을;조합할 수 있습니다.;;특수조합:;조합서와 재료를 사용하며,;실패확률이 존재합니다.;오브결합:;한 장비에 한 종류의 오브만;결합할 수 있습니다.;단계가 올라갈수록 장비가;파괴될 확률이 높아집니다.;싱글에서는 최대 3개의;오브까지만 결합됩니다.;조합, 또는 제련중에 게임을;종료하시면 세이브 파일이;손상될 수 있으니 주의하세요.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:15"
+},
+{
+"id": 5684,
+"ko": "유료 접속 서비스",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:16"
+},
+{
+"id": 5685,
+"ko": "프리미엄 상점:;게임플레이중;우측상단 기능키를 눌러;프리미엄상점에 접속합니다.;프리미엄 상점에서는;더 좋은 성능의 아이템을;현금구입할 수 있습니다.;창고:;메인메뉴, 또는 마을에 있는;창고 NPC를 통해;창고에 접속합니다.;대전 플레이용 데이터가;자동 업로드 되며, 슬롯간의;아이템 이동이 가능합니다.;복구: 데이터 복구시;퀘스트와 인벤토리는;초기화 됩니다.;(네베드 구입 후;어플을 새로 받으면;네베드 구입은 다시;과금되지 않습니다.)",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:17"
+},
+{
+"id": 5686,
+"ko": "대전 플레이",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:18"
+},
+{
+"id": 5687,
+"ko": "대전 플레이는;별도의 어플을 필요로 합니다.;;육성한 캐릭터를 창고 접속,;등록하여 다른 플레이어와;대전을 하거나;아이템을 거래할 수 있습니다.;대전방식은 실시간 턴제이며,;자신이 원하는 종족의;구성원이 되어 유적쟁탈전,;길드전에 참여하거나,;;최대 3인파티로 몬스터 파티를;사냥할 수도 있습니다. ",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:19"
+},
+{
+"id": 5688,
+"ko": "정보이용료",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:20"
+},
+{
+"id": 5689,
+"ko": "본 게임은 게임 이용시;별도의 비용이 발생하지;않는 단독형 게임이지만;유료 아이템 구매, 캐릭터 복구;이용시 통화료 및;정보이용료가 부과됩니다.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:21"
+},
+{
+"id": 5690,
+"ko": "청소년 요금제",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:22"
+},
+{
+"id": 5691,
+"ko": "청소년 요금 한도가;초과 될 경우;무선인터넷이 차단 되어;게임이 원활히 네트워크;접속을 하실 수 없습니다.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:23"
+},
+{
+"id": 5692,
+"ko": "게임 문의",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:24"
+},
+{
+"id": 5693,
+"ko": "일렉트로닉아츠코리아(유);[Homepage];www.eamobile.co.kr;[E-Mail];support@eamobile.co.kr;[TEL]02-559-8787;[VER] 1.0.1",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:25"
+},
+{
+"id": 5694,
+"ko": "게임 심의 정보",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:26"
+},
+{
+"id": 5695,
+"ko": "제품명           영웅서기4;=                   환영의가면;;이용등급         전체이용가;;;제작년월일       2009.12.2;상호             일렉트로닉아츠;=                  코리아(유);;등급분류번호   CC-NM-;=                  091202-005호;;신고번호         1999-000001 ",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:27"
+},
+{
+"id": 5696,
+"ko": "전화를 거시겠습니까?;(02-559-8787)",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:28"
+},
+{
+"id": 5697,
+"ko": "레이에게 보스추적을 부탁하면 보스의 위치가 미니맵에 표시됩니다.",
+"kind": "tip",
+"src": "tip:0",
+"cap": 254
+},
+{
+"id": 5698,
+"ko": "동료들과 면담을 통해 소울링크를 걸면 동료의 레벨을 올릴 수 있습니다.",
+"kind": "tip",
+"src": "tip:1",
+"cap": 254
+},
+{
+"id": 5699,
+"ko": "대검으로 전투할 때 5키 또는 7키를 길게 누르면 강한 공격을 합니다.",
+"kind": "tip",
+"src": "tip:2",
+"cap": 254
+},
+{
+"id": 5700,
+"ko": "특정한 나무/책장/광석 등을 공격하면 재료를 얻을 수 있습니다.",
+"kind": "tip",
+"src": "tip:3",
+"cap": 254
+},
+{
+"id": 5701,
+"ko": "무기/투구/갑옷은 장비스킨과 마도스톤으로 후거스가 생산합니다.",
+"kind": "tip",
+"src": "tip:4",
+"cap": 254
+},
+{
+"id": 5702,
+"ko": "신발/장갑/액세서리는 구입할 수 있고 사냥으로 획득할 수도 있습니다.",
+"kind": "tip",
+"src": "tip:5",
+"cap": 254
+},
+{
+"id": 5703,
+"ko": "마을에는 밤이 되어야 나타나는 암상인들이 존재합니다.",
+"kind": "tip",
+"src": "tip:6",
+"cap": 254
+},
+{
+"id": 5704,
+"ko": "모든 몬스터들은 각각의 습성에 따라 일정한 시간과 날씨에 출몰합니다.",
+"kind": "tip",
+"src": "tip:7",
+"cap": 254
+},
+{
+"id": 5705,
+"ko": "보스들은 일정한 경로를 어슬렁대며 전투 중에 도망을 가기도 합니다.",
+"kind": "tip",
+"src": "tip:8",
+"cap": 254
+},
+{
+"id": 5706,
+"ko": "레이에게 기우제나 기청제를 부탁하면 날씨를 바꿀 수 있습니다.",
+"kind": "tip",
+"src": "tip:9",
+"cap": 254
+},
+{
+"id": 5707,
+"ko": "장비스킨은 엔지 / 마도스톤은 마도사 3형제를 통해 조합할 수 있습니다.",
+"kind": "tip",
+"src": "tip:10",
+"cap": 254
+},
+{
+"id": 5708,
+"ko": "장비스킨은 생산될 장비의 외모와 종족을 결정합니다.",
+"kind": "tip",
+"src": "tip:11",
+"cap": 254
+},
+{
+"id": 5709,
+"ko": "종족 상성은 아주 중요합니다! 극상성이면 보너스 데미지를 주지요.",
+"kind": "tip",
+"src": "tip:12",
+"cap": 254
+},
+{
+"id": 5710,
+"ko": "컨트롤이 어렵다면 키냥냥을 통해 스킬단축키를 구매할 수 있어요.",
+"kind": "tip",
+"src": "tip:13",
+"cap": 254
+},
+{
+"id": 5711,
+"ko": "월드맵을 이동하거나 침대에서 잠을 잘 때에는 시간이 흐릅니다.",
+"kind": "tip",
+"src": "tip:14",
+"cap": 254
+},
+{
+"id": 5712,
+"ko": "기상캐스터 퀘스트를 완료하면 모든 지역의 날씨가 표시됩니다.",
+"kind": "tip",
+"src": "tip:15",
+"cap": 254
+},
+{
+"id": 5713,
+"ko": "염색사를 통해 장비의 컬러를 자유롭게 바꿀 수 있습니다.",
+"kind": "tip",
+"src": "tip:16",
+"cap": 254
+},
+{
+"id": 5714,
+"ko": "마도스톤은 생산될 장비의 성능과 옵션을 결정합니다.",
+"kind": "tip",
+"src": "tip:17",
+"cap": 254
+},
+{
+"id": 5715,
+"ko": "옵션스크롤은 옵션이 붙은 장비를 통해 추출할 수 있습니다.",
+"kind": "tip",
+"src": "tip:18",
+"cap": 254
+},
+{
+"id": 5716,
+"ko": "반드시 카이의 특성을 관리하여 자신만의 스타일로 강화시키세요.",
+"kind": "tip",
+"src": "tip:19",
+"cap": 254
+},
+{
+"id": 5717,
+"ko": "동료들의 레벨을 올려야 네트워크에서 강한 방어진을 구축할 수 있어요.",
+"kind": "tip",
+"src": "tip:20",
+"cap": 254
+},
+{
+"id": 5718,
+"ko": "엔딩을 보면 EXPERT 모드가 열립니다.",
+"kind": "tip",
+"src": "tip:21",
+"cap": 254
+},
+{
+"id": 5719,
+"ko": "엔지의 레벨을 올리면 엔지가 조합하는 장비스킨의 종류가 늘어납니다.",
+"kind": "tip",
+"src": "tip:22",
+"cap": 254
+},
+{
+"id": 5720,
+"ko": "레이의 레벨을 올리면 각종 기원의 성공확률이 상승합니다.",
+"kind": "tip",
+"src": "tip:23",
+"cap": 254
+},
+{
+"id": 5721,
+"ko": "리키의 레벨을 올리면 리키가 조합하는 특성의 종류가 늘어납니다.",
+"kind": "tip",
+"src": "tip:24",
+"cap": 254
+},
+{
+"id": 5722,
+"ko": "무기/투구/갑옷을 하나의 종족으로 맞추면 보너스 상성률을 얻습니다.",
+"kind": "tip",
+"src": "tip:25",
+"cap": 254
+},
+{
+"id": 5723,
+"ko": "각성제를 마시면 일정시간 MP가 소모되지 않아요.",
+"kind": "tip",
+"src": "tip:26",
+"cap": 254
+},
+{
+"id": 5724,
+"ko": "빛나는 구슬을 얻었다면 와일드윙에서 아이템 정보를 종종 확인해 보세요.",
+"kind": "tip",
+"src": "tip:27",
+"cap": 254
+},
+{
+"id": 5725,
+"ko": "조심하세요! 화상을 입어 몸이 붉게 변했을 때는 2배의 데미지를 받습니다.",
+"kind": "tip",
+"src": "tip:28",
+"cap": 254
+},
+{
+"id": 5726,
+"ko": "조심하세요! 눈사람이 되면 공격을 할 수 없으며 이동속도가 느려집니다.",
+"kind": "tip",
+"src": "tip:29",
+"cap": 254
+},
+{
+"id": 5727,
+"ko": "조심하세요! 몬스터의 방귀를 맞으면 허리주머니가 열리지 않습니다.",
+"kind": "tip",
+"src": "tip:30",
+"cap": 254
+},
+{
+"id": 5728,
+"ko": "모든 물약은 허리주머니에 장착해야 전투 중에 사용할 수 있습니다.",
+"kind": "tip",
+"src": "tip:31",
+"cap": 254
+},
+{
+"id": 5729,
+"ko": "짐가방이 부족하다면 와일드윙 선장실의 창고를 이용하세요.",
+"kind": "tip",
+"src": "tip:32",
+"cap": 254
+},
+{
+"id": 5730,
+"ko": "사냥한 몬스터들은 몬스터도감에 자동으로 등록됩니다.",
+"kind": "tip",
+"src": "tip:33",
+"cap": 254
+},
+{
+"id": 5731,
+"ko": "보스들은 마도스톤의 주 재료인 마도원석을 드랍합니다.",
+"kind": "tip",
+"src": "tip:34",
+"cap": 254
+},
+{
+"id": 5732,
+"ko": "줍거나 구입한 아이템들은 짐가방으로 들어갑니다.",
+"kind": "tip",
+"src": "tip:35",
+"cap": 254
+},
+{
+"id": 5733,
+"ko": "후거스/레이/마도사3형제가 생산한 아이템들은 창고로 들어갑니다.",
+"kind": "tip",
+"src": "tip:36",
+"cap": 254
+},
+{
+"id": 5734,
+"ko": "전투가 어렵다면 등급이 높은 마도스톤으로 장비를 생산해 보세요.",
+"kind": "tip",
+"src": "tip:37",
+"cap": 254
+},
+{
+"id": 5735,
+"ko": "모그의 보물상자/퀘스트/장비스킨 등으로 모험에 쓸 돈을 마련하세요.",
+"kind": "tip",
+"src": "tip:38",
+"cap": 254
+},
+{
+"id": 5736,
+"ko": "몬스터가 길을 막는다면 대쉬/롤링/워프로 빠져나올 수 있습니다.",
+"kind": "tip",
+"src": "tip:39",
+"cap": 254
+},
+{
+"id": 7199,
+"ko": "획",
+"kind": "bin",
+"src": "bin:775d4",
+"cap": 3
+},
+{
+"id": 7200,
+"ko": "쌍",
+"kind": "bin",
+"src": "bin:775f0",
+"cap": 3
+},
+{
+"id": 7201,
+"ko": "네트웍",
+"kind": "bin",
+"src": "bin:7771c",
+"cap": 7
+},
+{
+"id": 7202,
+"ko": "준비중",
+"kind": "bin",
+"src": "bin:77724",
+"cap": 7
+},
+{
+"id": 7203,
+"ko": "완료",
+"kind": "bin",
+"src": "bin:7772c",
+"cap": 7
+},
+{
+"id": 7204,
+"ko": "등록중",
+"kind": "bin",
+"src": "bin:7773c",
+"cap": 7
+},
+{
+"id": 7205,
+"ko": "접속중",
+"kind": "bin",
+"src": "bin:77744",
+"cap": 7
+},
+{
+"id": 7206,
+"ko": "$일반",
+"kind": "bin",
+"src": "bin:78a45",
+"cap": 20
+},
+{
+"id": 7207,
+"ko": "레어",
+"kind": "bin",
+"src": "bin:78a5a",
+"cap": 19
+},
+{
+"id": 7208,
+"ko": "에픽",
+"kind": "bin",
+"src": "bin:78a6e",
+"cap": 19
+},
+{
+"id": 7209,
+"ko": "유물",
+"kind": "bin",
+"src": "bin:78a82",
+"cap": 19
+},
+{
+"id": 7210,
+"ko": "전설",
+"kind": "bin",
+"src": "bin:78a96",
+"cap": 19
+},
+{
+"id": 7211,
+"ko": "세트",
+"kind": "bin",
+"src": "bin:78aaa",
+"cap": 21
+},
+{
+"id": 7212,
+"ko": "대전전용",
+"kind": "bin",
+"src": "bin:78e80",
+"cap": 19
+},
+{
+"id": 7213,
+"ko": "목적",
+"kind": "bin",
+"src": "bin:797fd",
+"cap": 9
+},
+{
+"id": 7214,
+"ko": "의뢰주",
+"kind": "bin",
+"src": "bin:79807",
+"cap": 9
+},
+{
+"id": 7215,
+"ko": "보상",
+"kind": "bin",
+"src": "bin:79811",
+"cap": 10
+},
+{
+"id": 7216,
+"ko": "전체",
+"kind": "bin",
+"src": "bin:79828",
+"cap": 9
+},
+{
+"id": 7217,
+"ko": "무기",
+"kind": "bin",
+"src": "bin:79832",
+"cap": 9
+},
+{
+"id": 7218,
+"ko": "방어구",
+"kind": "bin",
+"src": "bin:7983c",
+"cap": 9
+},
+{
+"id": 7219,
+"ko": "소모품",
+"kind": "bin",
+"src": "bin:79846",
+"cap": 9
+},
+{
+"id": 7220,
+"ko": "레시피",
+"kind": "bin",
+"src": "bin:79850",
+"cap": 9
+},
+{
+"id": 7221,
+"ko": "재료",
+"kind": "bin",
+"src": "bin:7985a",
+"cap": 9
+},
+{
+"id": 7222,
+"ko": "오브",
+"kind": "bin",
+"src": "bin:79864",
+"cap": 7
+},
+{
+"id": 7223,
+"ko": "카드",
+"kind": "bin",
+"src": "bin:79878",
+"cap": 9
+},
+{
+"id": 7224,
+"ko": "|가방수",
+"kind": "bin",
+"src": "bin:79884",
+"cap": 11
+},
+{
+"id": 7225,
+"ko": "성지/드림랜드",
+"kind": "bin",
+"src": "bin:79898",
+"cap": 19
+},
+{
+"id": 7226,
+"ko": "매도우 힐",
+"kind": "bin",
+"src": "bin:798ac",
+"cap": 19
+},
+{
+"id": 7227,
+"ko": "아눈",
+"kind": "bin",
+"src": "bin:798d4",
+"cap": 19
+},
+{
+"id": 7228,
+"ko": "수레바퀴 섬",
+"kind": "bin",
+"src": "bin:79910",
+"cap": 19
+},
+{
+"id": 7229,
+"ko": "가 생성되었습니다",
+"kind": "bin",
+"src": "bin:799b8",
+"cap": 19
+},
+{
+"id": 7230,
+"ko": "아이템 분해후 돈;",
+"kind": "bin",
+"src": "bin:799d4",
+"cap": 19
+},
+{
+"id": 7231,
+"ko": "아이템 분해후 오브가 1개 생성되었습니다",
+"kind": "bin",
+"src": "bin:799e8",
+"cap": 39
+},
+{
+"id": 7232,
+"ko": "개 생성되었습니다",
+"kind": "bin",
+"src": "bin:79a10",
+"cap": 19
+},
+{
+"id": 7233,
+"ko": "%s%s이(가) %d%s",
+"kind": "bin",
+"src": "bin:79a24",
+"cap": 15
+},
+{
+"id": 7234,
+"ko": "아이템 분해후;",
+"kind": "bin",
+"src": "bin:79a34",
+"cap": 15
+},
+{
+"id": 7235,
+"ko": "아이템 분해후 제련석이;",
+"kind": "bin",
+"src": "bin:79a44",
+"cap": 23
+},
+{
+"id": 7236,
+"ko": "아이템 분해후 포션이;",
+"kind": "bin",
+"src": "bin:79a5c",
+"cap": 23
+},
+{
+"id": 7237,
+"ko": ";아이템입니다",
+"kind": "bin",
+"src": "bin:79acc",
+"cap": 15
+},
+{
+"id": 7238,
+"ko": "%d/10 강화",
+"kind": "bin",
+"src": "bin:79aec",
+"cap": 11
+},
+{
+"id": 7239,
+"ko": "&#|:등록취소",
+"kind": "bin",
+"src": "bin:79b54",
+"cap": 15
+},
+{
+"id": 7240,
+"ko": "메인",
+"kind": "bin",
+"src": "bin:79c70",
+"cap": 7
+},
+{
+"id": 7241,
+"ko": "서브",
+"kind": "bin",
+"src": "bin:79c78",
+"cap": 7
+},
+{
+"id": 7242,
+"ko": "|소지금",
+"kind": "bin",
+"src": "bin:79ca4",
+"cap": 7
+},
+{
+"id": 7243,
+"ko": "{인증 오류!!",
+"kind": "bin",
+"src": "bin:7a5a0",
+"cap": 15
+},
+{
+"id": 7244,
+"ko": "이용안내",
+"kind": "bin",
+"src": "bin:7a5b4",
+"cap": 11
+},
+{
+"id": 7245,
+"ko": "부활석사용",
+"kind": "bin",
+"src": "bin:7a5e0",
+"cap": 11
+},
+{
+"id": 7246,
+"ko": "긴급 부활",
+"kind": "bin",
+"src": "bin:7a5ec",
+"cap": 11
+},
+{
+"id": 7247,
+"ko": "메인메뉴로",
+"kind": "bin",
+"src": "bin:7a5f8",
+"cap": 11
+},
+{
+"id": 7248,
+"ko": "&우상키;= |SHOP",
+"kind": "bin",
+"src": "bin:7a62c",
+"cap": 15
+},
+{
+"id": 7249,
+"ko": "슬롯부족",
+"kind": "bin",
+"src": "bin:7a648",
+"cap": 11
+},
+{
+"id": 7250,
+"ko": "&#|:복구",
+"kind": "bin",
+"src": "bin:7b044",
+"cap": 11
+},
+{
+"id": 7251,
+"ko": "`H먁H`",
+"kind": "bin",
+"src": "bin:7b3b2",
+"cap": 6
+},
+{
+"id": 7252,
+"ko": "서버와 접속이 종료되었습니다",
+"kind": "bin",
+"src": "bin:7b560",
+"cap": 31
+},
+{
+"id": 7253,
+"ko": "판매하기",
+"kind": "bin",
+"src": "bin:7b5f0",
+"cap": 11
+},
+{
+"id": 7254,
+"ko": "구매하기",
+"kind": "bin",
+"src": "bin:7b5fc",
+"cap": 11
+},
+{
+"id": 7255,
+"ko": "합성",
+"kind": "bin",
+"src": "bin:7b658",
+"cap": 7
+},
+{
+"id": 7256,
+"ko": "소모비용",
+"kind": "bin",
+"src": "bin:7b660",
+"cap": 11
+},
+{
+"id": 7257,
+"ko": "조합",
+"kind": "bin",
+"src": "bin:7b6b0",
+"cap": 7
+},
+{
+"id": 7258,
+"ko": "필요아이템",
+"kind": "bin",
+"src": "bin:7b6b8",
+"cap": 11
+},
+{
+"id": 7259,
+"ko": "부여",
+"kind": "bin",
+"src": "bin:7b6d4",
+"cap": 7
+},
+{
+"id": 7260,
+"ko": "%d/10강화-> %d/10강화",
+"kind": "bin",
+"src": "bin:7b6ec",
+"cap": 23
+},
+{
+"id": 7261,
+"ko": "성능 +%d ~ +%d 증가",
+"kind": "bin",
+"src": "bin:7b704",
+"cap": 19
+},
+{
+"id": 7262,
+"ko": "가방%d",
+"kind": "bin",
+"src": "bin:7b72c",
+"cap": 7
+},
+{
+"id": 7263,
+"ko": "대전",
+"kind": "bin",
+"src": "bin:7b74c",
+"cap": 7
+},
+{
+"id": 7264,
+"ko": "방어구1",
+"kind": "bin",
+"src": "bin:7b8c8",
+"cap": 9
+},
+{
+"id": 7265,
+"ko": "방어구2",
+"kind": "bin",
+"src": "bin:7b8d2",
+"cap": 9
+},
+{
+"id": 7266,
+"ko": "암즈파츠",
+"kind": "bin",
+"src": "bin:7b904",
+"cap": 9
+},
+{
+"id": 7267,
+"ko": "암즈탄환",
+"kind": "bin",
+"src": "bin:7b90e",
+"cap": 9
+},
+{
+"id": 7268,
+"ko": "대상",
+"kind": "bin",
+"src": "bin:7bb1a",
+"cap": 9
+},
+{
+"id": 7269,
+"ko": "성능",
+"kind": "bin",
+"src": "bin:7bb78",
+"cap": 9
+},
+{
+"id": 7270,
+"ko": "스킨",
+"kind": "bin",
+"src": "bin:7bb82",
+"cap": 9
+},
+{
+"id": 7271,
+"ko": "&1:동의함",
+"kind": "bin",
+"src": "bin:7cbe0",
+"cap": 11
+},
+{
+"id": 7272,
+"ko": "&2:거부함",
+"kind": "bin",
+"src": "bin:7cbec",
+"cap": 11
+},
+{
+"id": 7273,
+"ko": "배경음",
+"kind": "bin",
+"src": "bin:14002d4",
+"cap": 19
+},
+{
+"id": 7274,
+"ko": "효과음",
+"kind": "bin",
+"src": "bin:14002e8",
+"cap": 19
+},
+{
+"id": 7275,
+"ko": "게임속도",
+"kind": "bin",
+"src": "bin:14002fc",
+"cap": 19
+},
+{
+"id": 7276,
+"ko": "진동",
+"kind": "bin",
+"src": "bin:1400310",
+"cap": 19
+},
+{
+"id": 7277,
+"ko": "시선이동",
+"kind": "bin",
+"src": "bin:1400324",
+"cap": 19
+},
+{
+"id": 7278,
+"ko": "크리티컬",
+"kind": "bin",
+"src": "bin:1400338",
+"cap": 19
+},
+{
+"id": 7279,
+"ko": "투구표시",
+"kind": "bin",
+"src": "bin:140034c",
+"cap": 19
+},
+{
+"id": 7280,
+"ko": "타격효과",
+"kind": "bin",
+"src": "bin:1400360",
+"cap": 19
+},
+{
+"id": 7281,
+"ko": "자동타켓",
+"kind": "bin",
+"src": "bin:1400374",
+"cap": 19
+},
+{
+"id": 7283,
+"ko": "{네트워크창고",
+"kind": "menu",
+"src": "tdf:tdf/_tdf_MENU_TXT:1"
+},
+{
+"id": 7284,
+"ko": "네트워크 접속시;통화료가 부과됩니다.;접속하시겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:21"
+},
+{
+"id": 7285,
+"ko": "선택된 장비를;네트워크 창고에 옮기겠습니까?",
+"kind": "menu",
+"src": "tdf:GMenu/_NPCUI_TXT:30"
+},
+{
+"id": 7286,
+"ko": "이동: 방향키,2,4,6,8;(한쪽연타시 특수이동);조사/대화: 확인,5;단축키: 1,3,5,7,9,0;(회복아이템,스킬 등록);단축벨트교체: #;미니맵보기: *;메뉴: CLR;퀵세이브: 통화키;프리미엄상점: 우상단기능키;;붉은게이지: 체력(HP);파란게이지: 기력(SP);노란게이지: 경험치",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:1"
+},
+{
+"id": 7287,
+"ko": "프리미엄 상점:;게임플레이중;우측상단 기능키를 눌러;프리미엄상점에 접속합니다.;프리미엄 상점에서는;더 좋은 성능의 아이템을;현금구입할 수 있습니다.;네트워크 창고:;메인메뉴, 또는 마을에 있는;네트워크NPC를 통해;네트워크 창고에 접속합니다.;네트워크 플레이용 데이터가;자동 업로드 되며, 슬롯간의;아이템 이동이 가능합니다.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:17"
+},
+{
+"id": 7288,
+"ko": "네트워크 플레이",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:18"
+},
+{
+"id": 7289,
+"ko": "네트워크 플레이는;별도의 어플을 필요로 합니다.;;육성한 캐릭터를 네트워크에;등록하여 다른 플레이어와;대전을 하거나;아이템을 거래할 수 있습니다.;대전방식은 실시간 턴제이며,;자신이 원하는 종족의;구성원이 되어 유적쟁탈전,;길드전에 참여하거나,;;최대 3인파티로 몬스터 파티를;사냥할 수도 있습니다. ",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:19"
+},
+{
+"id": 7290,
+"ko": "본 게임은 네트워크 데이터;사용량에 따라 기본 통신료 외;1패킷(512BYTES)당 0원의;추가 정보 이용료가;부과됩니다.;해외에서 네트워크 이용 시;해외요금이 적용 됩니다.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:21"
+},
+{
+"id": 7291,
+"ko": "기타",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:22"
+},
+{
+"id": 7292,
+"ko": "멀티태스킹 지원 단말에서는;통화 중 또는 멀티태스킹 Key;구동 시 어플리케이션이 일시;정지되지 않을 수 있습니다.;{LG-KV2100, LG-KV4200|기종은;휠키 사용시 정상적으로;작동되지 않을 수 있습니다.",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:23"
+},
+{
+"id": 7293,
+"ko": "일렉트로닉아츠코리아(유);[Homepage];www.eamobile.co.kr;[E-Mail];support@eamobile.co.kr;[TEL];02-559-8700",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:25"
+},
+{
+"id": 7294,
+"ko": "제품명           영웅서기4;=                   환영의가면;;이용등급         전체이용가;;;제작연원일       2009.12.2;상호             일렉트로닉아츠;=                  코리아(유);;등급분류번호   CC-NM-;=                  091202-005호;;신고번호         1999-000001 ",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:27"
+},
+{
+"id": 7295,
+"ko": "전화를 거시겠습니까?;(02-559-8700)",
+"kind": "help",
+"src": "tdf:tdf/_tdf_HELP:28"
+},
+{
+"id": 7308,
+"ko": "네트워크전용;아이템입니다",
+"kind": "bin",
+"src": "bin:183b78",
+"cap": 27
+},
+{
+"id": 7309,
+"ko": "&OK|:전화걸기",
+"kind": "bin",
+"src": "bin:183d40",
+"cap": 15
+},
+{
+"id": 7310,
+"ko": "대기화면에 설정된 컨텐츠를 화면설정에서 해제하셔야 정상적인 컨텐츠 이용이 가능합니다.",
+"kind": "bin",
+"src": "bin:184614",
+"cap": 87
+},
+{
+"id": 7311,
+"ko": "&OK|:확인",
+"kind": "bin",
+"src": "bin:185ce0",
+"cap": 11
+},
+{
+"id": 7312,
+"ko": "SMS 수신에 동의하시겠습니까?",
+"kind": "bin",
+"src": "bin:1870b0",
+"cap": 51
+},
+{
+"id": 7313,
+"ko": "Ngm젭C",
+"kind": "bin",
+"src": "bin:18861a",
+"cap": 6
+},
+{
+"id": 7314,
+"ko": "대화속도",
+"kind": "bin",
+"src": "bin:18883c",
+"cap": 19
+}
+]

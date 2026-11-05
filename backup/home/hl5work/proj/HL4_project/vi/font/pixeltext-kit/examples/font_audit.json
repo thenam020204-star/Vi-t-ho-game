@@ -1,0 +1,55 @@
+{
+ "10px": {
+  "height": 10,
+  "cap": 7,
+  "x_height": 5,
+  "baseline": 7,
+  "chars": 227,
+  "ambiguous_groups": [
+   "AÀÁÂÃĂẢẤẦẨẪẮẰẲẴ",
+   "EÈÉÊẺẼẾỀỂỄ",
+   "IÌÍĨỈ",
+   "OÒÓÔÕỔỖ",
+   "UÙÚŨ",
+   "YÝỲ",
+   "âẩ",
+   "êễ",
+   "ôỗ",
+   "ƠỚỜỠ",
+   "ƯỮ",
+   "ẠẬẶ",
+   "ầẫ",
+   "ắằẳẵ",
+   "ẸỆ",
+   "ỐỒ",
+   "ỪỬ"
+  ],
+  "ambiguous_count": 71
+ },
+ "13px": {
+  "height": 12,
+  "cap": 7,
+  "x_height": 5,
+  "baseline": 9,
+  "chars": 230,
+  "ambiguous_groups": [
+   "!！",
+   ",;",
+   ":：",
+   "?？"
+  ],
+  "ambiguous_count": 8
+ },
+ "15px": {
+  "height": 15,
+  "cap": 8,
+  "x_height": 5,
+  "baseline": 12,
+  "chars": 227,
+  "ambiguous_groups": [
+   ",‚",
+   "0O"
+  ],
+  "ambiguous_count": 4
+ }
+}

@@ -1,0 +1,16 @@
+MIDlet-1: Heroes Lore 5_r9_VI,/icon.png,hl4.midp.HL4Midlet
+MIDlet-Name: Heroes Lore 5_r9_VI
+MIDlet-Vendor: EA Mobile Korea (port)
+MIDlet-Version: 1.0.0
+MIDlet-Icon: /icon.png
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+HL4-Platform: LGT
+Nokia-MIDlet-Canvas-Scaling-Orientation-Switch: false
+MIDlet-Touch-Support: false
+HL4-FPS: 25
+HL5-LSK: CLR
+HL4-AID: 00032870
+HL4-PID: PD151088
+MIDlet-Jar-URL: HL5_LGT_r9_VI.jar
+MIDlet-Jar-Size: 5370961

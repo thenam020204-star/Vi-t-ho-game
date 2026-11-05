@@ -1,0 +1,107 @@
+ID	Max px	Mode	Ghi chú (độ rộng ô đo bằng máy dò tràn chữ; line = một dòng, wrap = được xuống dòng)
+K00333	42	small	menu chính: Chuyên gia
+K00337	42	small	menu chính: Thành tựu (cũng là tiêu đề)
+K00338	42	small	menu chính: Trợ giúp
+K00191	44	small	menu trong game: Nhân vật
+K00192	44	small	menu trong game: Túi đồ
+K00193	44	small	menu trong game: Trang bị
+K00194	30	small	menu trong game + tab Kỹ năng (ô tab ~30 px)
+K00195	30	small	menu trong game + tab Đặc tính
+K00196	42	small	menu trong game: Liên kích
+K00197	31	small	menu trong game + tab Tinh Linh
+K00198	44	small	menu trong game: Nhiệm vụ
+K00199	44	small	menu trong game: Hệ thống
+K00066	26	small	tab Tất cả
+K00228	30	small	tab Thường
+K00245	30	small	tab đặc tính
+K00246	30	small	tab đặc tính
+K00247	30	small	tab đặc tính
+K00365	72	line	cài đặt (trước ô giá trị)
+K00366	72	line	cài đặt
+K00367	72	line	cài đặt
+K00368	72	line	cài đặt
+K00369	72	line	cài đặt
+K00370	72	line	cài đặt
+K00344	44	line	chọn lớp (ô 48)
+K00345	44	line	chọn lớp
+K00346	44	line	chọn lớp
+K00347	44	line	chọn lớp
+K00592	76	line	nút Xem phần thưởng
+K00509	76	small	tab nhiệm vụ
+K00510	56	small	tab nhiệm vụ
+K00605	66	line	gợi ý bản đồ nhỏ (góc dưới trái)
+K00606	66	line	gợi ý bản đồ nhỏ
+K00603	68	line	gợi ý bản đồ thế giới (góc dưới phải)
+K02721	118	line	
+K00506	58	line	tên đảo trên bản đồ thế giới (sát mép)
+K00501	74	line	tên đảo
+K00502	52	line	tên đảo
+K00503	42	line	tên đảo
+K00504	62	line	tên đảo
+G:mission_list.f0	86	soft	tên thành tựu trong danh sách (dòng không chọn bị cắt ở ô x)
+K00215	38	small	bảng so sánh trang bị, cột phải
+K00216	38	small	
+K00217	38	small	
+K00222	50	small	bảng so sánh trang bị, cột trái
+K00223	50	small	
+K00447	95	wrap	trang Thông tin thẩm định (cột giá trị)
+K00453	95	wrap	
+K00448	58	line	trang Thông tin thẩm định (cột nhãn)
+K00450	58	line	trang Thông tin thẩm định (cột nhãn)
+K00452	58	line	trang Thông tin thẩm định (cột nhãn)
+K00454	58	line	trang Thông tin thẩm định (cột nhãn)
+K00455	58	line	trang Thông tin thẩm định (cột nhãn)
+K00446	58	line	trang Thông tin thẩm định (cột nhãn)
+K00468	62	wrap	nhãn điểm trên bản đồ khu vực
+K00469	62	wrap	nhãn điểm trên bản đồ khu vực
+K00470	62	wrap	nhãn điểm trên bản đồ khu vực
+K00471	62	wrap	nhãn điểm trên bản đồ khu vực
+K00472	62	wrap	nhãn điểm trên bản đồ khu vực
+K00473	62	wrap	nhãn điểm trên bản đồ khu vực
+K00474	62	wrap	nhãn điểm trên bản đồ khu vực
+K00475	62	wrap	nhãn điểm trên bản đồ khu vực
+K00476	62	wrap	nhãn điểm trên bản đồ khu vực
+K00477	62	wrap	nhãn điểm trên bản đồ khu vực
+K00478	62	wrap	nhãn điểm trên bản đồ khu vực
+K00479	62	wrap	nhãn điểm trên bản đồ khu vực
+K00480	62	wrap	nhãn điểm trên bản đồ khu vực
+K00481	62	wrap	nhãn điểm trên bản đồ khu vực
+K00482	62	wrap	nhãn điểm trên bản đồ khu vực
+K00483	62	wrap	nhãn điểm trên bản đồ khu vực
+K00484	62	wrap	nhãn điểm trên bản đồ khu vực
+K00485	62	wrap	nhãn điểm trên bản đồ khu vực
+K00486	62	wrap	nhãn điểm trên bản đồ khu vực
+K00487	62	wrap	nhãn điểm trên bản đồ khu vực
+K00488	62	wrap	nhãn điểm trên bản đồ khu vực
+K00489	62	wrap	nhãn điểm trên bản đồ khu vực
+K00490	62	wrap	nhãn điểm trên bản đồ khu vực
+K00491	62	wrap	nhãn điểm trên bản đồ khu vực
+K00492	62	wrap	nhãn điểm trên bản đồ khu vực
+K00493	62	wrap	nhãn điểm trên bản đồ khu vực
+K00494	62	wrap	nhãn điểm trên bản đồ khu vực
+K00495	62	wrap	nhãn điểm trên bản đồ khu vực
+K00496	62	wrap	nhãn điểm trên bản đồ khu vực
+K00497	62	wrap	nhãn điểm trên bản đồ khu vực
+K00498	62	wrap	nhãn điểm trên bản đồ khu vực
+K00499	62	wrap	nhãn điểm trên bản đồ khu vực
+K00500	62	wrap	nhãn điểm trên bản đồ khu vực
+K00228	26	small	tab Thường
+K00332	44	small	menu chính
+K00336	44	small	menu chính
+K00340	44	small	menu chính
+K00602	74	line	nút Xem trên bản đồ
+K00219	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00220	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00221	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00224	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00225	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00226	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00227	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00101	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00102	58	line	trang #Chi tiết nhân vật (cột nhãn)
+K00103	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00104	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00105	58	small	trang #Chi tiết nhân vật (cột nhãn)
+K00214	50	small	bảng so sánh trang bị, cột trái
+K00229	116	rewrap	ô gợi ý kỹ năng Tinh Linh (game tự ngắt dòng ở ~120 px)
+K00233	72	line	menu thao tác vật phẩm

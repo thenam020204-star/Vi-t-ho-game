@@ -1,0 +1,27 @@
+=== CLASS ===
+  file                fontpkg/fontcus.class
+  class file version  47.0  (Java 1.3 - safe for CLDC/KVM)
+  preverified         YES - CLDC StackMap present
+
+=== EXTERNAL API REFERENCES ===
+  OK       java/lang/Integer.<init>(I)V                               CLDC 1.0
+  OK       java/lang/Object.<init>()V                                 CLDC 1.0
+  OK       java/lang/String.charAt(I)C                                CLDC 1.0
+  OK       java/lang/String.length()I                                 CLDC 1.0
+  OK       java/lang/String.valueOf(C)Ljava/lang/String;              CLDC 1.0
+  OK       java/lang/System.arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V CLDC 1.0
+  OK       java/util/Hashtable.<init>()V                              CLDC 1.0
+  OK       java/util/Hashtable.put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; CLDC 1.0
+  OK       javax/microedition/lcdui/Graphics.drawRGB([IIIIIIIZ)V      MIDP 2.0 ONLY
+  OK       javax/microedition/lcdui/Graphics.drawRegion(Ljavax/microedition/lcdui/Image;IIIIIIII)V MIDP 2.0 ONLY
+  OK       javax/microedition/lcdui/Graphics.getColor()I              MIDP 1.0
+  OK       javax/microedition/lcdui/Image.createRGBImage([IIIZ)Ljavax/microedition/lcdui/Image; MIDP 2.0 ONLY
+
+  NOTE: 3 MIDP 2.0-only calls (same as the original class - not a regression).
+        All of them sit behind try/catch + atlasOk, so a MIDP 1.0 device
+        degrades instead of crashing, but glyphs will not render there.
+
+=== BINARY COMPATIBILITY vs ORIGINAL ===
+  20 public/protected members in original, 20 kept -> BINARY COMPATIBLE
+
+RESULT: PASS - no compatibility violations

@@ -1,0 +1,27 @@
+[1] vá guest .so + bridge arm64
+áp 58 patch -> /root/hl5work_c1/build_apk/libHeroesLore5.so
+[1b] đoạn PT_LOAD menu (engine/menu/build.sh + inject_menu.py + mk_menu_segment.py)
+menu_patches.tsv: 8 dòng, lớp bật: INGAME POPUP
+PT_LOAD menu: file off 0x1d7000 vaddr 0x171000 filesz 27080 memsz 28776 (bss 1696); .so 1956296 B
+áp 10 patch -> /root/hl5work_c1/build_apk/bridge_arm64.so
+[2] VFS Việt + vi.bin
+48307 byte {'words': 4788, 'chars': 198, 'sizes': [3560, 2640, 4580], 'spaceW': 4}
+common_text rec 210: '05cee320cef5' -> '05cde020cde1' (Phân giải)
+đã thay 1, thêm 1, 16369193 byte
+[3-4] target-assets.json + zip (giữ thứ tự và kiểu nén của APK gốc)
+{'libHeroesLore5.so': 'aea60c60ab1d95c4f9d15f1837ae04c95c4b5f464958b39f28bae0df3a243bb6', 'data.vfs.mp3': 'b414d0181bcada7ebcf2177fd1988e8467334ed64c8d8365c2ec06e217efbc68'}
+[5] zipalign + apksigner
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=46601 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Djavax.net.ssl.trustStoreType=JKS -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=46601 -Dhttp.nonProxyHosts=localhost|127.0.0.1|::1|127.*|0.*|::|169.254.*|api.anthropic.com|api-staging.anthropic.com|api-pr-preview.anthropic.com|mcp-proxy.anthropic.com|mcp-proxy-staging.anthropic.com|registry.npmjs.org|jsr.io|npm.jsr.io|pypi.org|files.pythonhosted.org|index.crates.io|proxy.golang.org|host.docker.internal|10.*|172.16.*|172.17.*|172.18.*|172.19.*|172.20.*|172.21.*|172.22.*|172.23.*|172.24.*|172.25.*|172.26.*|172.27.*|172.28.*|172.29.*|172.30.*|172.31.*|192.168.*|100.64.0.0/10|*.svc.cluster.local|*.svc.cluster.local -Djdk.http.auth.tunneling.disabledSchemes= -Djdk.http.auth.proxying.disabledSchemes=
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+zipalign OK
+1d724821ceb91d24c7dd04839722afed370e94fe7940435ffb3505909881e4e0  /root/hl5work_c1/build_apk/HL5-VI-v0.3-c1test.apk
+-rw-r--r-- 1 root root 22684830 Nov  3 18:53 /root/hl5work_c1/build_apk/HL5-VI-v0.3-c1test.apk
+-> dist/HL5-VI-v0.3-c1test.apk

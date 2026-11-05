@@ -1,0 +1,3838 @@
+[
+{
+"id": 5737,
+"ko": "케프네스를 찾아라",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:0:2",
+"cap": 22
+},
+{
+"id": 5738,
+"ko": "방향키나 2468키로 이동하여 케프네스의 연설장소로 가보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:0:20",
+"cap": 75
+},
+{
+"id": 5739,
+"ko": "메인퀘스트",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:0:77",
+"cap": 22
+},
+{
+"id": 5740,
+"ko": "검",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:1:2",
+"cap": 22
+},
+{
+"id": 5741,
+"ko": "`붉은사자대검{을 가져다 주자…",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:1:5",
+"cap": 75
+},
+{
+"id": 5742,
+"ko": "프로비던스: 슈르츠",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:1:36",
+"cap": 22
+},
+{
+"id": 5743,
+"ko": "선주종 마법사가 쓰는 지팡이 '블러디 완드{를 모아오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:2:9",
+"cap": 75
+},
+{
+"id": 5744,
+"ko": "검은바위주둔지:병사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:2:63",
+"cap": 22
+},
+{
+"id": 5745,
+"ko": "암즈개량",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:3:2",
+"cap": 22
+},
+{
+"id": 5746,
+"ko": "암즈 슬롯 확장에 필요한 `시바스 앰블렘{을 구해오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:3:11",
+"cap": 75
+},
+{
+"id": 5747,
+"ko": "리온: 스트레이츠",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:3:63",
+"cap": 22
+},
+{
+"id": 5748,
+"ko": "리온: 크래드",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:4:63",
+"cap": 22
+},
+{
+"id": 5749,
+"ko": "뮤리아스의 건물 3층에 올라가려면 }디펜스 이어링{이 필요하다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:5:9",
+"cap": 75
+},
+{
+"id": 5750,
+"ko": "베쓰무라 실내",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:5:70",
+"cap": 22
+},
+{
+"id": 5751,
+"ko": "정찰임무",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:6:2",
+"cap": 22
+},
+{
+"id": 5752,
+"ko": "주둔지 주변의 선주종 패잔병을 물리친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:6:11",
+"cap": 75
+},
+{
+"id": 5753,
+"ko": "주둔지: 브리안",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:6:51",
+"cap": 22
+},
+{
+"id": 5754,
+"ko": "(종속퀘)",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:7:2",
+"cap": 22
+},
+{
+"id": 5755,
+"ko": "유적조사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:10:2",
+"cap": 22
+},
+{
+"id": 5756,
+"ko": "수레바퀴 섬 동쪽에 있는 유적을 조사해 보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:10:11",
+"cap": 75
+},
+{
+"id": 5757,
+"ko": "주둔지: 케프네스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:10:55",
+"cap": 22
+},
+{
+"id": 5758,
+"ko": "크래드를 찾아라",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:11:2",
+"cap": 22
+},
+{
+"id": 5759,
+"ko": "집 밖에 있을 크래드를 만나서 이야기를 들어보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:11:18",
+"cap": 75
+},
+{
+"id": 5760,
+"ko": "이름없는섬:크래드",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:11:66",
+"cap": 22
+},
+{
+"id": 5761,
+"ko": "엘렌을 구하라",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:12:2",
+"cap": 22
+},
+{
+"id": 5762,
+"ko": "엘렌을 노리는 몬스터들을 전멸시키자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:12:16",
+"cap": 75
+},
+{
+"id": 5763,
+"ko": "엘렌을 찾아라",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:13:2",
+"cap": 22
+},
+{
+"id": 5764,
+"ko": "엘렌을 찾아보자. 이름없는 섬 동쪽 어딘가에 있다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:13:16",
+"cap": 75
+},
+{
+"id": 5765,
+"ko": "이름없는섬:엘렌",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:13:65",
+"cap": 22
+},
+{
+"id": 5766,
+"ko": "약 재료 수집",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:14:2",
+"cap": 22
+},
+{
+"id": 5767,
+"ko": "백련초 10개를 모아 크래드에게 가져다 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:14:15",
+"cap": 75
+},
+{
+"id": 5768,
+"ko": "가면 제작",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:15:2",
+"cap": 22
+},
+{
+"id": 5769,
+"ko": "크래드가 부탁한 가면 제작 재료를 구해서 위장용 가면을 만들자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:15:12",
+"cap": 75
+},
+{
+"id": 5770,
+"ko": "가면재료1",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:16:2",
+"cap": 22
+},
+{
+"id": 5771,
+"ko": "가면에 필요한 매우얇은가죽을 10개 모아서 크래드에게 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:16:12",
+"cap": 75
+},
+{
+"id": 5772,
+"ko": "가면재료2",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:17:2",
+"cap": 22
+},
+{
+"id": 5773,
+"ko": "가면에 필요한 아교를 10개 모아서 크래드에게 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:17:12",
+"cap": 75
+},
+{
+"id": 5774,
+"ko": "매도우 힐로",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:18:2",
+"cap": 22
+},
+{
+"id": 5775,
+"ko": "매도우 힐로 갈 방법을 찾아 주둔지에 가보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:18:14",
+"cap": 75
+},
+{
+"id": 5776,
+"ko": "프로비던스에 있는 여관으로 가서 이자벨을 만날 방법을 찾자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:19:9",
+"cap": 75
+},
+{
+"id": 5777,
+"ko": "프로비던스:이자벨",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:19:68",
+"cap": 22
+},
+{
+"id": 5778,
+"ko": "매도우 힐 어딘가에 있는 케프네스를 찾자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:20:11",
+"cap": 75
+},
+{
+"id": 5779,
+"ko": "매도우힐:케프네스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:20:52",
+"cap": 22
+},
+{
+"id": 5780,
+"ko": "검은 바위 섬",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:21:2",
+"cap": 19
+},
+{
+"id": 5781,
+"ko": "검은 바위 섬에 있는 던전으로 가서 케프네스의 부하를 구출하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:21:15",
+"cap": 75
+},
+{
+"id": 5782,
+"ko": "추가병력 합류",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:22:2",
+"cap": 22
+},
+{
+"id": 5783,
+"ko": "배를 타기위해 군수물자를 빼돌리던 병사를 이용해보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:22:16",
+"cap": 75
+},
+{
+"id": 5784,
+"ko": "고블린 약탈",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:23:2",
+"cap": 22
+},
+{
+"id": 5785,
+"ko": "통행증을 얻기 위해 고블린에게서 군수물자를 되찾아 가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:23:14",
+"cap": 75
+},
+{
+"id": 5786,
+"ko": "주둔지: 안톤",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:23:70",
+"cap": 22
+},
+{
+"id": 5787,
+"ko": "팔리아스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:26:2",
+"cap": 14
+},
+{
+"id": 5788,
+"ko": "팔리아스로 가서 케프네스의 부하를 한 명 더 구출하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:26:11",
+"cap": 75
+},
+{
+"id": 5789,
+"ko": "선주종 주둔지의 선착장으로 가서 탈 수 있는 배를 찾아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:27:14",
+"cap": 75
+},
+{
+"id": 5790,
+"ko": "배의 부품",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:28:2",
+"cap": 22
+},
+{
+"id": 5791,
+"ko": "배를 수리하기 위해 부품을 가진 큰 몬스터를 찾아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:28:12",
+"cap": 75
+},
+{
+"id": 5792,
+"ko": "탈출",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:29:2",
+"cap": 22
+},
+{
+"id": 5793,
+"ko": "루칸과 합류하러 돌아가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:29:7",
+"cap": 75
+},
+{
+"id": 5794,
+"ko": "팔리아스: 루칸",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:29:33",
+"cap": 22
+},
+{
+"id": 5795,
+"ko": "케프네스 구출",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:30:2",
+"cap": 22
+},
+{
+"id": 5796,
+"ko": "매도우 힐로 돌아가서 케프네스를 구출하자. ",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:30:16",
+"cap": 75
+},
+{
+"id": 5797,
+"ko": "주둔지 침입",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:31:2",
+"cap": 22
+},
+{
+"id": 5798,
+"ko": "케프네스가 감금되어 있는 던전에 침입해야 한다. 장교를 잡아 보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:31:14",
+"cap": 75
+},
+{
+"id": 5799,
+"ko": "유물 탈취",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:32:2",
+"cap": 22
+},
+{
+"id": 5800,
+"ko": "브리안이 뮤리아스로 빼돌리고 있는 유물을 탈취하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:32:12",
+"cap": 75
+},
+{
+"id": 5801,
+"ko": "프로비던스로",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:33:2",
+"cap": 22
+},
+{
+"id": 5802,
+"ko": "프로비던스로 가서 브리안이 빼돌리는 배를 찾아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:33:15",
+"cap": 75
+},
+{
+"id": 5803,
+"ko": "추격",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:34:2",
+"cap": 22
+},
+{
+"id": 5804,
+"ko": "브리안의 배를 따라잡은 후 유물을 찾아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:34:7",
+"cap": 75
+},
+{
+"id": 5805,
+"ko": "이름없는 섬",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:35:2",
+"cap": 19
+},
+{
+"id": 5806,
+"ko": "기절한 엘렌을 이름없는 섬의 크래드의 집으로 데려가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:35:14",
+"cap": 75
+},
+{
+"id": 5807,
+"ko": "크래드",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:36:2",
+"cap": 22
+},
+{
+"id": 5808,
+"ko": "선착장으로 가기 전에 크래드를 만나보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:36:9",
+"cap": 75
+},
+{
+"id": 5809,
+"ko": "포로수용소",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:37:2",
+"cap": 22
+},
+{
+"id": 5810,
+"ko": "뮤리아스에 있는 포로수용소로 가서 브리안을 찾아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:37:13",
+"cap": 75
+},
+{
+"id": 5811,
+"ko": "선착장으로",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:38:2",
+"cap": 22
+},
+{
+"id": 5812,
+"ko": "이름없는 섬의 선착장으로 가서 루레인을 만나 배를 타자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:38:13",
+"cap": 75
+},
+{
+"id": 5813,
+"ko": "이름없는섬:루레인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:38:68",
+"cap": 22
+},
+{
+"id": 5814,
+"ko": "도주",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:39:2",
+"cap": 22
+},
+{
+"id": 5815,
+"ko": "루레인을 데리고 이름없는 섬까지 도망치자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:39:7",
+"cap": 75
+},
+{
+"id": 5816,
+"ko": "습격",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:40:2",
+"cap": 22
+},
+{
+"id": 5817,
+"ko": "집 밖으로 나가서 습격자를 물리치자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:40:7",
+"cap": 75
+},
+{
+"id": 5818,
+"ko": "비밀통로",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:41:2",
+"cap": 22
+},
+{
+"id": 5819,
+"ko": "비밀통로를 통해 선착장까지 도망치자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:41:11",
+"cap": 75
+},
+{
+"id": 5820,
+"ko": "여관에 있는 엘렌의 상태를 확인해 보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:42:7",
+"cap": 75
+},
+{
+"id": 5821,
+"ko": "팔리아스:엘렌",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:42:46",
+"cap": 22
+},
+{
+"id": 5822,
+"ko": "마을에 있는 루레인을 찾아 이야기를 나누자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:43:9",
+"cap": 75
+},
+{
+"id": 5823,
+"ko": "팔리아스:루레인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:43:52",
+"cap": 22
+},
+{
+"id": 5824,
+"ko": "엘렌의 약",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:44:2",
+"cap": 22
+},
+{
+"id": 5825,
+"ko": "이름없는 섬으로 돌아가 엘렌의 약을 가져오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:44:12",
+"cap": 75
+},
+{
+"id": 5826,
+"ko": "루레인을 찾아라",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:45:2",
+"cap": 22
+},
+{
+"id": 5827,
+"ko": "루레인이 날 찾는다고 한다. 만나보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:45:18",
+"cap": 75
+},
+{
+"id": 5828,
+"ko": "팔리아스: 루레인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:45:55",
+"cap": 22
+},
+{
+"id": 5829,
+"ko": "피신",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:46:2",
+"cap": 22
+},
+{
+"id": 5830,
+"ko": "엘렌을 데리고 아눈 섬으로 피신하자. 선찬장으로 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:46:7",
+"cap": 75
+},
+{
+"id": 5831,
+"ko": "팔리아스: 디어드리",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:46:60",
+"cap": 22
+},
+{
+"id": 5832,
+"ko": "결판",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:47:2",
+"cap": 22
+},
+{
+"id": 5833,
+"ko": "아눈 섬 어딘가에 있는 루레인과 이야기하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:47:7",
+"cap": 75
+},
+{
+"id": 5834,
+"ko": "아눈섬: 루레인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:47:50",
+"cap": 22
+},
+{
+"id": 5835,
+"ko": "핀디아스에 있을 브리안을 찾아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:48:9",
+"cap": 75
+},
+{
+"id": 5836,
+"ko": "핀디아스: 브리안",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:48:44",
+"cap": 22
+},
+{
+"id": 5837,
+"ko": "핀디아스의 신전",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:49:2",
+"cap": 22
+},
+{
+"id": 5838,
+"ko": "핀디아스 동쪽 끝에 있는 신전을 찾아가자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:49:18",
+"cap": 75
+},
+{
+"id": 5839,
+"ko": "꿈의 탐색",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:50:2",
+"cap": 22
+},
+{
+"id": 5840,
+"ko": "꼬마 브리안을 따라가 무슨 일이 일어났는지 알아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:50:12",
+"cap": 75
+},
+{
+"id": 5841,
+"ko": "매도우힐:꼬마브리안",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:50:64",
+"cap": 22
+},
+{
+"id": 5842,
+"ko": "주둔지",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:51:2",
+"cap": 14
+},
+{
+"id": 5843,
+"ko": "매도우 힐의 주둔지로 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:51:9",
+"cap": 75
+},
+{
+"id": 5844,
+"ko": "프로비던스로 가서 이자벨을 만난다",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:52:9",
+"cap": 75
+},
+{
+"id": 5845,
+"ko": "매도우힐:이자벨",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:52:43",
+"cap": 22
+},
+{
+"id": 5846,
+"ko": "꼬마 브리안을 찾고 누아다를 생포하러 가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:53:9",
+"cap": 75
+},
+{
+"id": 5847,
+"ko": "비밀",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:54:2",
+"cap": 22
+},
+{
+"id": 5848,
+"ko": "매도우 힐로 돌아가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:54:7",
+"cap": 75
+},
+{
+"id": 5849,
+"ko": "진실",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:55:2",
+"cap": 22
+},
+{
+"id": 5850,
+"ko": "꼬마 브리안을 따라 프로비던스 여관 지하로 가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:55:7",
+"cap": 75
+},
+{
+"id": 5851,
+"ko": "듣는 자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:56:2",
+"cap": 22
+},
+{
+"id": 5852,
+"ko": "다시 한 번 매도우 힐의 주둔지로 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:56:10",
+"cap": 75
+},
+{
+"id": 5853,
+"ko": "포로수용소로 가서 케프네스가 숨겨 놓고 있는 것을 찾아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:57:13",
+"cap": 75
+},
+{
+"id": 5854,
+"ko": "포로수용소 침입",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:58:2",
+"cap": 22
+},
+{
+"id": 5855,
+"ko": "포로수용소의 입구에 걸린 방어마법을 해제할 방법을 찾아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:58:18",
+"cap": 75
+},
+{
+"id": 5856,
+"ko": "베스무라에 있다는 엔리코라는 사람을 찾자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:59:9",
+"cap": 75
+},
+{
+"id": 5857,
+"ko": "베스무라: 엔리코",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:59:50",
+"cap": 22
+},
+{
+"id": 5858,
+"ko": "마력기관",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:60:2",
+"cap": 14
+},
+{
+"id": 5859,
+"ko": "고대전투병에게서 마력기관 15개를 얻어 엔리코에게 가져다주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:60:11",
+"cap": 75
+},
+{
+"id": 5860,
+"ko": "아눈 섬",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:61:2",
+"cap": 22
+},
+{
+"id": 5861,
+"ko": "아눈 섬으로 돌아가서 엘렌을 찾는다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:61:10",
+"cap": 75
+},
+{
+"id": 5862,
+"ko": "리온 조사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:62:2",
+"cap": 22
+},
+{
+"id": 5863,
+"ko": "불타는 도시를 조사해서 엘렌을 찾는다",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:62:12",
+"cap": 75
+},
+{
+"id": 5864,
+"ko": "아눈섬:엘렌",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:62:49",
+"cap": 22
+},
+{
+"id": 5865,
+"ko": "구출",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:63:2",
+"cap": 22
+},
+{
+"id": 5866,
+"ko": "던전 최하층으로 가서 엘렌과 루레인을 구한다",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:63:7",
+"cap": 75
+},
+{
+"id": 5867,
+"ko": "던전탈출",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:64:2",
+"cap": 22
+},
+{
+"id": 5868,
+"ko": "아눈 섬의 던전을 탈출하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:64:11",
+"cap": 75
+},
+{
+"id": 5869,
+"ko": "성지",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:65:2",
+"cap": 14
+},
+{
+"id": 5870,
+"ko": "케프네스와의 결전을 위해 성지로 가자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:65:7",
+"cap": 75
+},
+{
+"id": 5871,
+"ko": "지연작전",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:66:2",
+"cap": 22
+},
+{
+"id": 5872,
+"ko": "병력이 후퇴할 시간을 번다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:66:11",
+"cap": 75
+},
+{
+"id": 5873,
+"ko": "성지: 그라함",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:66:38",
+"cap": 22
+},
+{
+"id": 5874,
+"ko": "성역의 중심",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:67:2",
+"cap": 22
+},
+{
+"id": 5875,
+"ko": "성지 중앙에 있는 신전을 찾아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:67:14",
+"cap": 75
+},
+{
+"id": 5876,
+"ko": "전이장치",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:68:2",
+"cap": 22
+},
+{
+"id": 5877,
+"ko": "신전 왼편으로 가서 전이 장치를 작동시키자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:68:11",
+"cap": 75
+},
+{
+"id": 5878,
+"ko": "케프네스를 찾아 신전 최하층까지 가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:69:11",
+"cap": 75
+},
+{
+"id": 5879,
+"ko": "횡령자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:70:2",
+"cap": 22
+},
+{
+"id": 5880,
+"ko": "군수물자를 빼돌리는 병사를 찾아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:70:9",
+"cap": 75
+},
+{
+"id": 5881,
+"ko": "주둔지: 병사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:70:46",
+"cap": 22
+},
+{
+"id": 5882,
+"ko": "제련",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:71:2",
+"cap": 7
+},
+{
+"id": 5883,
+"ko": "주둔지의 대장장이를 만나보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:71:7",
+"cap": 75
+},
+{
+"id": 5884,
+"ko": "주둔지: 대장장이",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:71:37",
+"cap": 22
+},
+{
+"id": 5885,
+"ko": "주둔지의 대장장이에게 고급제련석을 가지고 가보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:72:11",
+"cap": 75
+},
+{
+"id": 5886,
+"ko": "마석",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:73:2",
+"cap": 14
+},
+{
+"id": 5887,
+"ko": "소환수로부터 마석 10개를 모아가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:73:7",
+"cap": 75
+},
+{
+"id": 5888,
+"ko": "주둔지: 상인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:73:42",
+"cap": 22
+},
+{
+"id": 5889,
+"ko": "고문관",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:74:2",
+"cap": 22
+},
+{
+"id": 5890,
+"ko": "일반조합으로 단열복을 조합하여 그라함에게 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:74:9",
+"cap": 75
+},
+{
+"id": 5891,
+"ko": "주둔지: 그라함",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:74:57",
+"cap": 22
+},
+{
+"id": 5892,
+"ko": "탄환조달",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:75:2",
+"cap": 22
+},
+{
+"id": 5893,
+"ko": "크래드에게 화약5개를 가져다 주고 암즈 탄환을 얻자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:75:11",
+"cap": 75
+},
+{
+"id": 5894,
+"ko": "이름없는섬: 크래드",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:75:62",
+"cap": 22
+},
+{
+"id": 5895,
+"ko": "`그라디우스{를 가져다 주자…",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:76:5",
+"cap": 75
+},
+{
+"id": 5896,
+"ko": "브로커",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:77:2",
+"cap": 22
+},
+{
+"id": 5897,
+"ko": "엔지니어 이용이 가능한 증명서를 얻기 위해 오토마톤 부품을 수집하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:77:9",
+"cap": 75
+},
+{
+"id": 5898,
+"ko": "검은바위주둔지: 브로커",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:77:77",
+"cap": 22
+},
+{
+"id": 5899,
+"ko": "상이군인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:78:2",
+"cap": 22
+},
+{
+"id": 5900,
+"ko": "소개장을 가지고 매도우 힐에 있는 복지전문가를 만나보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:78:11",
+"cap": 75
+},
+{
+"id": 5901,
+"ko": "프로비던스: 실내",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:78:67",
+"cap": 22
+},
+{
+"id": 5902,
+"ko": "임무",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:79:2",
+"cap": 22
+},
+{
+"id": 5903,
+"ko": "웨이드 가의 사병 20명을 처치하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:79:7",
+"cap": 75
+},
+{
+"id": 5904,
+"ko": "편지배달",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:80:2",
+"cap": 22
+},
+{
+"id": 5905,
+"ko": "프로비던스의 알리사에게 편지 전달하고 의뢰한 병사에게 보고하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:80:11",
+"cap": 75
+},
+{
+"id": 5906,
+"ko": "선주종 마법사가 쓰는 에반스틱비드를 구해오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:81:9",
+"cap": 75
+},
+{
+"id": 5907,
+"ko": "뮤리아스의 건물 3층에 올라가려면 }스트렝스 이어링{이 필요하다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:82:9",
+"cap": 75
+},
+{
+"id": 5908,
+"ko": "해적소굴",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:83:2",
+"cap": 14
+},
+{
+"id": 5909,
+"ko": "항로에 출몰하는 해적을 처리하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:83:11",
+"cap": 75
+},
+{
+"id": 5910,
+"ko": "뮤리아스: 남자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:83:44",
+"cap": 22
+},
+{
+"id": 5911,
+"ko": "해적소탕",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:84:2",
+"cap": 22
+},
+{
+"id": 5912,
+"ko": "고블린 리더를 찾아서 제거하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:84:11",
+"cap": 75
+},
+{
+"id": 5913,
+"ko": "해적소굴 선착장: 남자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:84:42",
+"cap": 22
+},
+{
+"id": 5914,
+"ko": "탈출계획",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:85:2",
+"cap": 22
+},
+{
+"id": 5915,
+"ko": "뮤리아스에 있는 선주종의 탈출을 돕기 위해 제임스를 만나자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:85:11",
+"cap": 75
+},
+{
+"id": 5916,
+"ko": "뮤리아스: 알렉스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:85:70",
+"cap": 22
+},
+{
+"id": 5917,
+"ko": "변장",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:86:2",
+"cap": 22
+},
+{
+"id": 5918,
+"ko": "변장을 위해 매우 얇은 가죽 10개를 모아다 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:86:7",
+"cap": 75
+},
+{
+"id": 5919,
+"ko": "뮤리아스: 제임스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:86:54",
+"cap": 22
+},
+{
+"id": 5920,
+"ko": "배편",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:87:2",
+"cap": 22
+},
+{
+"id": 5921,
+"ko": "팔리아스로 가기 위한 배를 얻기 위해 골렘의 심장 10개를 모으자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:87:7",
+"cap": 75
+},
+{
+"id": 5922,
+"ko": "배반자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:88:2",
+"cap": 13
+},
+{
+"id": 5923,
+"ko": "알렉스라는 배반자를 찾아주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:88:9",
+"cap": 75
+},
+{
+"id": 5924,
+"ko": "뮤리아스: 병사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:88:39",
+"cap": 22
+},
+{
+"id": 5925,
+"ko": "암즈 부품 조달",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:89:2",
+"cap": 22
+},
+{
+"id": 5926,
+"ko": "크래드의 집에서 암즈 부품을 제작할 수 있는 금형을 찾아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:89:17",
+"cap": 75
+},
+{
+"id": 5927,
+"ko": "팔리아스: 알렉스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:89:77",
+"cap": 22
+},
+{
+"id": 5928,
+"ko": "도면",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:90:2",
+"cap": 14
+},
+{
+"id": 5929,
+"ko": "크래드의 집에서 암즈 개량을 위한 도면을 찾아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:90:7",
+"cap": 75
+},
+{
+"id": 5930,
+"ko": "미아",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:91:2",
+"cap": 22
+},
+{
+"id": 5931,
+"ko": "사라진 아이를 찾아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:91:7",
+"cap": 75
+},
+{
+"id": 5932,
+"ko": "팔리아스 정착지",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:91:31",
+"cap": 22
+},
+{
+"id": 5933,
+"ko": "마석을 10개 구해주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:92:7",
+"cap": 75
+},
+{
+"id": 5934,
+"ko": "팔리아스: 연금술사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:92:29",
+"cap": 22
+},
+{
+"id": 5935,
+"ko": "총",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:93:2",
+"cap": 22
+},
+{
+"id": 5936,
+"ko": "대장장이에게 건조형을 구해다 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:93:5",
+"cap": 75
+},
+{
+"id": 5937,
+"ko": "팔리아스: 대장장이",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:93:40",
+"cap": 22
+},
+{
+"id": 5938,
+"ko": "에리나의 부탁",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:94:2",
+"cap": 22
+},
+{
+"id": 5939,
+"ko": "검은바위 섬에서 실종되었다는 동생의 흔적을 찾아주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:94:16",
+"cap": 75
+},
+{
+"id": 5940,
+"ko": "팔리아스: 에리나",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:94:69",
+"cap": 22
+},
+{
+"id": 5941,
+"ko": "열쇠제작",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:95:2",
+"cap": 22
+},
+{
+"id": 5942,
+"ko": "열쇠 제작에 필요한 강철을 모아다 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:95:11",
+"cap": 75
+},
+{
+"id": 5943,
+"ko": "아눈섬: 대장장이",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:95:50",
+"cap": 22
+},
+{
+"id": 5944,
+"ko": "가족",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:96:2",
+"cap": 22
+},
+{
+"id": 5945,
+"ko": "포로수용소에서 실종된 사람을 찾아주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:96:7",
+"cap": 75
+},
+{
+"id": 5946,
+"ko": "베쓰무라: 꼬마",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:96:46",
+"cap": 22
+},
+{
+"id": 5947,
+"ko": "배를 수리하는데 필요한 떡갈나무를 모아주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:97:7",
+"cap": 75
+},
+{
+"id": 5948,
+"ko": "베쓰무라: 엔지니어",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:97:51",
+"cap": 22
+},
+{
+"id": 5949,
+"ko": "암즈 슬롯 확장에 필요한 }스트롱 이어링{을 구해오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:98:11",
+"cap": 75
+},
+{
+"id": 5950,
+"ko": " 성지 방어1",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:0:2",
+"cap": 22
+},
+{
+"id": 5951,
+"ko": "선착장을 점령하고 있는 공화국 사수들을 물리친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:0:14",
+"cap": 75
+},
+{
+"id": 5952,
+"ko": " 성지 방어2",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:1:2",
+"cap": 22
+},
+{
+"id": 5953,
+"ko": "성지 동쪽으로 도망간 인간 정예병을 물리치자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:1:14",
+"cap": 75
+},
+{
+"id": 5954,
+"ko": " 노덴스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:2:2",
+"cap": 22
+},
+{
+"id": 5955,
+"ko": "신전 안에 있는 노덴스에게 상황을 보고하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:2:10",
+"cap": 75
+},
+{
+"id": 5956,
+"ko": "성역: 노덴스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:2:53",
+"cap": 22
+},
+{
+"id": 5957,
+"ko": " 수호자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:3:2",
+"cap": 22
+},
+{
+"id": 5958,
+"ko": "브레스를 만나 성지에서 일어난 일을 전하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:3:10",
+"cap": 75
+},
+{
+"id": 5959,
+"ko": "리온: 브레스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:3:53",
+"cap": 22
+},
+{
+"id": 5960,
+"ko": " 탈주",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:4:2",
+"cap": 22
+},
+{
+"id": 5961,
+"ko": "선착장까지 가는 길을 뚫는다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:4:8",
+"cap": 75
+},
+{
+"id": 5962,
+"ko": " 활로1",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:5:2",
+"cap": 22
+},
+{
+"id": 5963,
+"ko": "길을 막고 있는 인간 병사를 모두 처리한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:5:9",
+"cap": 75
+},
+{
+"id": 5964,
+"ko": " 활로2",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:6:2",
+"cap": 22
+},
+{
+"id": 5965,
+"ko": "길을 막고 있는 인간 기갑병을 처리한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:6:9",
+"cap": 75
+},
+{
+"id": 5966,
+"ko": " 활로3 ",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:7:2",
+"cap": 22
+},
+{
+"id": 5967,
+"ko": "길을 막고 있는 멍청해 보이는 인간 병사를 처리하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:7:10",
+"cap": 75
+},
+{
+"id": 5968,
+"ko": " 선박 탈취",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:8:2",
+"cap": 22
+},
+{
+"id": 5969,
+"ko": "배 안에 있는 인간 병사들을 물리치고 제어권을 뺏는다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:8:13",
+"cap": 75
+},
+{
+"id": 5970,
+"ko": " 연금술사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:9:2",
+"cap": 22
+},
+{
+"id": 5971,
+"ko": "리온의 연금술사를 만나서 배의 준비를 돕자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:9:12",
+"cap": 75
+},
+{
+"id": 5972,
+"ko": "리온: 연금술사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:9:55",
+"cap": 22
+},
+{
+"id": 5973,
+"ko": " 대장장이",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:10:2",
+"cap": 22
+},
+{
+"id": 5974,
+"ko": "리온의 대장장이를 만나서 무기의 준비를 돕자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:10:12",
+"cap": 75
+},
+{
+"id": 5975,
+"ko": "리온: 대장장이",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:10:57",
+"cap": 22
+},
+{
+"id": 5976,
+"ko": " 방어 준비 이후",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:11:2",
+"cap": 22
+},
+{
+"id": 5977,
+"ko": "무기와 배의 준비가 끝나면 브레스를 찾아가 보고하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:11:18",
+"cap": 75
+},
+{
+"id": 5978,
+"ko": "리온 중앙건물: 브레스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:11:70",
+"cap": 22
+},
+{
+"id": 5979,
+"ko": " 불의 정령석",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:12:2",
+"cap": 22
+},
+{
+"id": 5980,
+"ko": "하급 불의 정령으로부터 불의 정령석을 5개를 모은다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:12:15",
+"cap": 75
+},
+{
+"id": 5981,
+"ko": " 웜의 껍질",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:13:2",
+"cap": 22
+},
+{
+"id": 5982,
+"ko": "웜의 껍질 10개를 수집하여 대장장이에게 준다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:13:13",
+"cap": 75
+},
+{
+"id": 5983,
+"ko": " 스트레이츠",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:14:2",
+"cap": 22
+},
+{
+"id": 5984,
+"ko": "리온에 있는 스트레이츠를 찾아 마석을 대신할 물건에 대해 알아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:14:14",
+"cap": 75
+},
+{
+"id": 5985,
+"ko": " 악령",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:15:2",
+"cap": 22
+},
+{
+"id": 5986,
+"ko": "아눈 섬 서쪽 숲에서 악령을 잡아 녹색가루 10개를 모으자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:15:8",
+"cap": 75
+},
+{
+"id": 5987,
+"ko": " 퇴각",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:16:2",
+"cap": 22
+},
+{
+"id": 5988,
+"ko": "검은 바위 섬의 주둔지로 가서 병력을 데리고 오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:16:8",
+"cap": 75
+},
+{
+"id": 5989,
+"ko": " 검은 바위 섬으로",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:17:2",
+"cap": 22
+},
+{
+"id": 5990,
+"ko": "선착장으로 가서 검은 바위 섬으로 가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:17:20",
+"cap": 75
+},
+{
+"id": 5991,
+"ko": " 괴물들",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:18:2",
+"cap": 22
+},
+{
+"id": 5992,
+"ko": "주둔지에 있는 괴물들을 처리하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:18:10",
+"cap": 75
+},
+{
+"id": 5993,
+"ko": " 사라진 병사들",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:19:2",
+"cap": 22
+},
+{
+"id": 5994,
+"ko": "사라진 네베드 병사들을 찾아보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:19:17",
+"cap": 75
+},
+{
+"id": 5995,
+"ko": " 흔적들",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:20:2",
+"cap": 22
+},
+{
+"id": 5996,
+"ko": "단서가 될만한 것을 찾아 주둔지의 막사들을 조사해보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:20:10",
+"cap": 75
+},
+{
+"id": 5997,
+"ko": " 의문의 동굴",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:21:2",
+"cap": 22
+},
+{
+"id": 5998,
+"ko": "검은 바위 섬의 동굴을 조사해 보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:21:15",
+"cap": 75
+},
+{
+"id": 5999,
+"ko": " 소환수?",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:22:2",
+"cap": 22
+},
+{
+"id": 6000,
+"ko": "인간들이 소환수를 데려간 동굴 최하층으로 가본다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:22:11",
+"cap": 75
+},
+{
+"id": 6001,
+"ko": " 카드키 입수",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:23:2",
+"cap": 22
+},
+{
+"id": 6002,
+"ko": "인간 병사를 잡아 카드키를 얻자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:23:15",
+"cap": 75
+},
+{
+"id": 6003,
+"ko": " 탈출",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:24:2",
+"cap": 22
+},
+{
+"id": 6004,
+"ko": "동굴을 빠져나가 선착장까지 가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:24:8",
+"cap": 75
+},
+{
+"id": 6005,
+"ko": " 보고",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:25:2",
+"cap": 22
+},
+{
+"id": 6006,
+"ko": "브레스를 만나 검은 바위 섬에서 있었던 일을 보고하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:25:8",
+"cap": 75
+},
+{
+"id": 6007,
+"ko": "아눈섬: 브레스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:25:61",
+"cap": 22
+},
+{
+"id": 6008,
+"ko": " 생존자의 증언",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:26:2",
+"cap": 22
+},
+{
+"id": 6009,
+"ko": "브레스를 따라 생존자를 만나러 가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:26:17",
+"cap": 75
+},
+{
+"id": 6010,
+"ko": " 불길한 징조",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:27:2",
+"cap": 22
+},
+{
+"id": 6011,
+"ko": "수레바퀴 섬의 신전을 조사한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:27:15",
+"cap": 75
+},
+{
+"id": 6012,
+"ko": " 에리나",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:28:2",
+"cap": 22
+},
+{
+"id": 6013,
+"ko": "팔리아스로 가서 에리나를 만난다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:28:10",
+"cap": 75
+},
+{
+"id": 6014,
+"ko": " 고블린 소굴",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:29:2",
+"cap": 22
+},
+{
+"id": 6015,
+"ko": "비밀항로를 막고 있는 고블린들을 처치하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:29:15",
+"cap": 75
+},
+{
+"id": 6016,
+"ko": "해적선착장: 에리나",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:29:57",
+"cap": 22
+},
+{
+"id": 6017,
+"ko": " 고블린 소탕",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:30:2",
+"cap": 22
+},
+{
+"id": 6018,
+"ko": "고블린 소굴에서 리더로 보이는 고블린들을 찾아 제거하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:30:15",
+"cap": 75
+},
+{
+"id": 6019,
+"ko": " 수레바퀴섬의 신전",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:31:2",
+"cap": 22
+},
+{
+"id": 6020,
+"ko": "수레바퀴 섬의 동쪽에 있는 신전으로 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:31:21",
+"cap": 75
+},
+{
+"id": 6021,
+"ko": " 팔리아스의 신전",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:32:2",
+"cap": 22
+},
+{
+"id": 6022,
+"ko": "팔리아스의 정착지에 있는 신전에 들어가 봉인지의 위치에 대해 알아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:32:19",
+"cap": 75
+},
+{
+"id": 6023,
+"ko": " 팔리아스의 봉인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:33:2",
+"cap": 22
+},
+{
+"id": 6024,
+"ko": "팔리아스 서쪽에 있는 봉인에 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:33:19",
+"cap": 75
+},
+{
+"id": 6025,
+"ko": " 팔리아스 사건 보고",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:34:2",
+"cap": 22
+},
+{
+"id": 6026,
+"ko": "브레스를 만나 팔리아스의 사건을 보고한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:34:22",
+"cap": 75
+},
+{
+"id": 6027,
+"ko": " 추적 ",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:35:2",
+"cap": 22
+},
+{
+"id": 6028,
+"ko": "도망친 가디언을 쫓아 팔리아스 동쪽 해안으로 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:35:9",
+"cap": 75
+},
+{
+"id": 6029,
+"ko": " 핀디아스의 봉인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:36:2",
+"cap": 22
+},
+{
+"id": 6030,
+"ko": "핀디아스의 봉인에 침입자가 없는지 확인하고 수호물을 강화한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:36:19",
+"cap": 75
+},
+{
+"id": 6031,
+"ko": " 수호물 강화",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:37:2",
+"cap": 22
+},
+{
+"id": 6032,
+"ko": "수호물 강화를 위해 악마의 피를 모아야 한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:37:15",
+"cap": 75
+},
+{
+"id": 6033,
+"ko": " 핀디아스의 침입자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:38:2",
+"cap": 22
+},
+{
+"id": 6034,
+"ko": "핀디아스 동굴의 침입자를 추적하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:38:21",
+"cap": 75
+},
+{
+"id": 6035,
+"ko": " 누아다 구출",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:39:2",
+"cap": 22
+},
+{
+"id": 6036,
+"ko": "누아다가 살아 있다고 한다. 어디에 있는지 알아내야한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:39:15",
+"cap": 75
+},
+{
+"id": 6037,
+"ko": " 인간 반역자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:40:2",
+"cap": 22
+},
+{
+"id": 6038,
+"ko": "크래드가 데리고 있다는 인간 반역자를 만나보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:40:15",
+"cap": 75
+},
+{
+"id": 6039,
+"ko": " 포로수용소",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:41:2",
+"cap": 22
+},
+{
+"id": 6040,
+"ko": "뮤리아스 동쪽의 포로수용소로 가서 누아다를 구출하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:41:14",
+"cap": 75
+},
+{
+"id": 6041,
+"ko": " 포로 구출",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:42:2",
+"cap": 22
+},
+{
+"id": 6042,
+"ko": "포로수용소 안에 갇혀있는 네베드 포로들을 구출한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:42:13",
+"cap": 75
+},
+{
+"id": 6043,
+"ko": " 소환수 구출",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:43:2",
+"cap": 22
+},
+{
+"id": 6044,
+"ko": "포로수용소 안에 갇혀있는 소환수들을 구출한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:43:15",
+"cap": 75
+},
+{
+"id": 6045,
+"ko": " 크리스탈",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:44:2",
+"cap": 22
+},
+{
+"id": 6046,
+"ko": "크리스탈이라는 것에 대해 알아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:44:12",
+"cap": 75
+},
+{
+"id": 6047,
+"ko": " 크래드",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:45:2",
+"cap": 22
+},
+{
+"id": 6048,
+"ko": "티르를 따라 크래드를 만나러 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:45:10",
+"cap": 75
+},
+{
+"id": 6049,
+"ko": " 탈출로 확보",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:46:2",
+"cap": 22
+},
+{
+"id": 6050,
+"ko": " 다른 길",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:47:2",
+"cap": 22
+},
+{
+"id": 6051,
+"ko": "선착장으로 가는 다른 길을 물어보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:47:11",
+"cap": 75
+},
+{
+"id": 6052,
+"ko": " 비밀 통로",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:48:2",
+"cap": 22
+},
+{
+"id": 6053,
+"ko": "비밀통로를 따라 탈출하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:48:13",
+"cap": 75
+},
+{
+"id": 6054,
+"ko": " 다시 비밀통로",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:49:2",
+"cap": 22
+},
+{
+"id": 6055,
+"ko": "크래드의 집을 통해 다시 한 번 비밀통로로 들어간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:49:17",
+"cap": 75
+},
+{
+"id": 6056,
+"ko": " 포로수용소 사건 보고.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:50:2",
+"cap": 22
+},
+{
+"id": 6057,
+"ko": "아눈 섬으로 돌아가 브레스에게 포로수용소의 일을 보고하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:50:25",
+"cap": 75
+},
+{
+"id": 6058,
+"ko": " 아눈 신전",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:51:2",
+"cap": 22
+},
+{
+"id": 6059,
+"ko": "아눈 섬의 신전에 들어가서 시험을 마저 통과하고 온다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:51:13",
+"cap": 75
+},
+{
+"id": 6060,
+"ko": " 크리스탈의 단서",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:52:2",
+"cap": 22
+},
+{
+"id": 6061,
+"ko": "티르에게서 크리스탈에 대해 알아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:52:19",
+"cap": 75
+},
+{
+"id": 6062,
+"ko": "티르 (팔리아스)",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:52:56",
+"cap": 22
+},
+{
+"id": 6063,
+"ko": " 브레스의 호출 ",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:53:2",
+"cap": 22
+},
+{
+"id": 6064,
+"ko": "아눈 섬으로 가서 브레스를 만나자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:53:18",
+"cap": 75
+},
+{
+"id": 6065,
+"ko": "핀디아스의 침입자를 저지하러 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:54:21",
+"cap": 75
+},
+{
+"id": 6066,
+"ko": " 매도우 힐의 연구소",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:55:2",
+"cap": 22
+},
+{
+"id": 6067,
+"ko": "매도우 힐에 있는 연구소에 침입한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:55:22",
+"cap": 75
+},
+{
+"id": 6068,
+"ko": " 주둔지 정찰",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:56:2",
+"cap": 22
+},
+{
+"id": 6069,
+"ko": "주둔지 지하로부터 연구소에 침입하는 길을 찾는다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:56:15",
+"cap": 75
+},
+{
+"id": 6070,
+"ko": " 침입로",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:57:2",
+"cap": 22
+},
+{
+"id": 6071,
+"ko": "주둔지 지하 2층의 문을 열 열쇠를 찾자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:57:10",
+"cap": 75
+},
+{
+"id": 6072,
+"ko": " 아눈 섬",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:58:2",
+"cap": 22
+},
+{
+"id": 6073,
+"ko": "아눈 섬으로 돌아간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:58:11",
+"cap": 75
+},
+{
+"id": 6074,
+"ko": " 크리스탈 파괴",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:59:2",
+"cap": 22
+},
+{
+"id": 6075,
+"ko": "엘렌을 아눈 섬 봉인 최하층으로 데려가서 파괴한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:59:17",
+"cap": 75
+},
+{
+"id": 6076,
+"ko": " 팔리아스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:60:2",
+"cap": 22
+},
+{
+"id": 6077,
+"ko": "마지막 남은 마을. 팔리아스의 정착지로 가본다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:60:12",
+"cap": 75
+},
+{
+"id": 6078,
+"ko": " 팔리아스 방어전1",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:61:2",
+"cap": 22
+},
+{
+"id": 6079,
+"ko": "팔리아스 서쪽의 적들을 막아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:61:20",
+"cap": 75
+},
+{
+"id": 6080,
+"ko": " 팔리아스 방어전2",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:62:2",
+"cap": 22
+},
+{
+"id": 6081,
+"ko": "팔라아스 동쪽에 나타난 적들을 막아내자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:62:20",
+"cap": 75
+},
+{
+"id": 6082,
+"ko": " 성지",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:63:2",
+"cap": 22
+},
+{
+"id": 6083,
+"ko": "성지의 신전 앞까지 가서 티르를 만난다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:63:8",
+"cap": 75
+},
+{
+"id": 6084,
+"ko": "성지: 티르",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:63:47",
+"cap": 22
+},
+{
+"id": 6085,
+"ko": " 전이 장치",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:64:2",
+"cap": 22
+},
+{
+"id": 6086,
+"ko": "성지 신전의 서쪽으로 가서 전이 장치를 가동시킨다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:64:13",
+"cap": 75
+},
+{
+"id": 6087,
+"ko": " 케프네스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:65:2",
+"cap": 22
+},
+{
+"id": 6088,
+"ko": "케프네스를 물리치러 간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:65:12",
+"cap": 75
+},
+{
+"id": 6089,
+"ko": "제물",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:66:2",
+"cap": 11
+},
+{
+"id": 6090,
+"ko": "`블랙로빈{을 하나 가져다 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:66:7",
+"cap": 75
+},
+{
+"id": 6091,
+"ko": "팔리아스:대장장이",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:66:38",
+"cap": 22
+},
+{
+"id": 6092,
+"ko": "핀디아스의 제단에 `데몬블레이드{를 바친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:67:7",
+"cap": 75
+},
+{
+"id": 6093,
+"ko": "핀디아스 던전 제단",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:67:50",
+"cap": 22
+},
+{
+"id": 6094,
+"ko": "핀디아스의 제단에 ^카메론슈트{를 바친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:68:7",
+"cap": 75
+},
+{
+"id": 6095,
+"ko": "핀디아스의 제단에 `스타사파이어{를 바친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:69:7",
+"cap": 75
+},
+{
+"id": 6096,
+"ko": "보급부대",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:70:2",
+"cap": 22
+},
+{
+"id": 6097,
+"ko": "맵 어딘가에 있는 상인을 찾아온다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:70:11",
+"cap": 75
+},
+{
+"id": 6098,
+"ko": "성지: 병사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:70:45",
+"cap": 22
+},
+{
+"id": 6099,
+"ko": "정보전",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:71:2",
+"cap": 22
+},
+{
+"id": 6100,
+"ko": "인간 병사들이 가지고 있는 군사문서를 빼앗아 온다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:71:9",
+"cap": 75
+},
+{
+"id": 6101,
+"ko": "제련에 대한 설명을 듣는다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:72:7",
+"cap": 75
+},
+{
+"id": 6102,
+"ko": "리온: 병사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:72:34",
+"cap": 22
+},
+{
+"id": 6103,
+"ko": "고급제련석을 가져간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:73:11",
+"cap": 75
+},
+{
+"id": 6104,
+"ko": "리온: 남자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:73:34",
+"cap": 22
+},
+{
+"id": 6105,
+"ko": "데빈로빈을 하나 가져다 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:74:7",
+"cap": 75
+},
+{
+"id": 6106,
+"ko": "갑옷을 변환해 갑옷조형을 하나 가져가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:75:9",
+"cap": 75
+},
+{
+"id": 6107,
+"ko": "리온: 상인",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:75:49",
+"cap": 22
+},
+{
+"id": 6108,
+"ko": "소환수를 관리하기 위해 마석 5개를 조합해 가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:76:9",
+"cap": 75
+},
+{
+"id": 6109,
+"ko": "마석 추가 조달",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:77:2",
+"cap": 22
+},
+{
+"id": 6110,
+"ko": "마석을 더 얻기 위해 스트레이츠를 만나자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:77:17",
+"cap": 75
+},
+{
+"id": 6111,
+"ko": "녹색가루를 모은 후 대장장이를 통해 마석을 조합해 보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:78:11",
+"cap": 75
+},
+{
+"id": 6112,
+"ko": "유품",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:79:2",
+"cap": 14
+},
+{
+"id": 6113,
+"ko": "유족을 찾아 유품을 전해주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:79:7",
+"cap": 75
+},
+{
+"id": 6114,
+"ko": "어딘가에 있을 유가족",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:79:36",
+"cap": 22
+},
+{
+"id": 6115,
+"ko": "총화기",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:80:2",
+"cap": 22
+},
+{
+"id": 6116,
+"ko": "화약을 얻게 되면 가져다 주자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:80:9",
+"cap": 75
+},
+{
+"id": 6117,
+"ko": "팔리아스:일반 병사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:80:39",
+"cap": 22
+},
+{
+"id": 6118,
+"ko": "도망자들",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:81:2",
+"cap": 22
+},
+{
+"id": 6119,
+"ko": "아눈 섬 동쪽의 숨겨진 동굴을 조사해 보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:81:11",
+"cap": 75
+},
+{
+"id": 6120,
+"ko": "배신자들",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:82:2",
+"cap": 22
+},
+{
+"id": 6121,
+"ko": "숨겨진 동굴의 마법사들로부터 배신자에 대한 단서를 모으자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:82:11",
+"cap": 75
+},
+{
+"id": 6122,
+"ko": "두목",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:83:2",
+"cap": 22
+},
+{
+"id": 6123,
+"ko": "아눈 섬 동쪽 숨겨진 동굴에 있는 배신자들의 두목을 처리하자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:83:7",
+"cap": 75
+},
+{
+"id": 6124,
+"ko": "이능력자들",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:84:2",
+"cap": 22
+},
+{
+"id": 6125,
+"ko": "이상한 능력을 가졌다는 인간 병사들이 수레바퀴 섬에 있다고 한다. 처리해보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:84:13",
+"cap": 75
+},
+{
+"id": 6126,
+"ko": "팔리아스:병사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:84:89",
+"cap": 22
+},
+{
+"id": 6127,
+"ko": "폭탄 제작",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:85:2",
+"cap": 22
+},
+{
+"id": 6128,
+"ko": "마력 폭탄을 조합해 오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:85:12",
+"cap": 75
+},
+{
+"id": 6129,
+"ko": "폭탄 설치",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:86:2",
+"cap": 22
+},
+{
+"id": 6130,
+"ko": "적의 보급을 방해하기 위해 수레바퀴 섬으로 가서 폭탄을 설치하고 오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:86:12",
+"cap": 75
+},
+{
+"id": 6131,
+"ko": "수레바퀴 섬의 인간 주둔지에 있는 기밀문서를 가져오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:87:9",
+"cap": 75
+},
+{
+"id": 6132,
+"ko": "골렘의 심장",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:88:2",
+"cap": 14
+},
+{
+"id": 6133,
+"ko": "팔리아스의 대장장이를 통해 골렘의 심장을 조합해 가자. ",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:88:14",
+"cap": 75
+},
+{
+"id": 6134,
+"ko": "팔리아스:연금술사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:88:69",
+"cap": 22
+},
+{
+"id": 6135,
+"ko": "소환수 관리",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:89:2",
+"cap": 22
+},
+{
+"id": 6136,
+"ko": "소환수 관리를 위해 마석을 가져가자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:89:14",
+"cap": 75
+},
+{
+"id": 6137,
+"ko": "광증",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:90:2",
+"cap": 22
+},
+{
+"id": 6138,
+"ko": "팔리아스 서쪽으로 도망친 아이를 찾자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:90:7",
+"cap": 75
+},
+{
+"id": 6139,
+"ko": "팔리아스: 병사",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:90:45",
+"cap": 22
+},
+{
+"id": 6140,
+"ko": "스트레이츠에게 크래드에 대해 물어보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:91:9",
+"cap": 75
+},
+{
+"id": 6141,
+"ko": "괴물들",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:92:2",
+"cap": 22
+},
+{
+"id": 6142,
+"ko": "괴물들에게서 마력기관을 20개 모아간다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:92:9",
+"cap": 75
+},
+{
+"id": 6143,
+"ko": "팔리아스: 남자",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:92:48",
+"cap": 22
+},
+{
+"id": 6144,
+"ko": "핀디아스의 제단에 `스톰블링거{를 바친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:93:7",
+"cap": 75
+},
+{
+"id": 6145,
+"ko": "뮤리아스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:94:2",
+"cap": 14
+},
+{
+"id": 6146,
+"ko": "에리나에게 베쓰무라의 비밀방에 대해 물어보자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:94:11",
+"cap": 75
+},
+{
+"id": 6147,
+"ko": "베스무라",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:95:2",
+"cap": 22
+},
+{
+"id": 6148,
+"ko": "베스무라의 비밀 방을 탐색한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:95:11",
+"cap": 75
+},
+{
+"id": 6149,
+"ko": "서브퀘스트",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:95:42",
+"cap": 22
+},
+{
+"id": 6150,
+"ko": "핀디아스의 제단에 `배리어슈트{를 바친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:96:7",
+"cap": 75
+},
+{
+"id": 6151,
+"ko": "핀디아스의 제단에 `새도우완드{를 바친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:97:7",
+"cap": 75
+},
+{
+"id": 6152,
+"ko": "핀디아스의 제단에 마석을 바친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:98:7",
+"cap": 75
+},
+{
+"id": 7009,
+"ko": "대검공격= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:0:0",
+"cap": 14
+},
+{
+"id": 7010,
+"ko": "{양손검의;기본 콤보공격",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:0:43",
+"cap": 44
+},
+{
+"id": 7011,
+"ko": "반동의영검= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:1:0",
+"cap": 14
+},
+{
+"id": 7012,
+"ko": "{연타로 추가타;가능한 띄우기;공격 }SP30",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:1:45",
+"cap": 44
+},
+{
+"id": 7013,
+"ko": "기절의검= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:2:0",
+"cap": 14
+},
+{
+"id": 7014,
+"ko": "{적을 공격하여;높은 확률로;스턴",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:2:43",
+"cap": 44
+},
+{
+"id": 7015,
+"ko": "유린의검= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:3:0",
+"cap": 14
+},
+{
+"id": 7016,
+"ko": "{빠른 공격 후;후방으로 회피",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:3:43",
+"cap": 44
+},
+{
+"id": 7017,
+"ko": "찰라의영검= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:4:0",
+"cap": 14
+},
+{
+"id": 7018,
+"ko": "{입력지속으로;}SP를 모아{;강력한 일격",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:4:45",
+"cap": 44
+},
+{
+"id": 7019,
+"ko": "철의주먹= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:5:0",
+"cap": 14
+},
+{
+"id": 7020,
+"ko": "{암즈로 2콤보;직접 타격",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:5:43",
+"cap": 44
+},
+{
+"id": 7021,
+"ko": "= 회전의영검",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:6:0",
+"cap": 14
+},
+{
+"id": 7022,
+"ko": "{연타로 추가타;가능한 범위;공격 }SP30",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:6:45",
+"cap": 44
+},
+{
+"id": 7023,
+"ko": "= 관통의영검",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:7:0",
+"cap": 14
+},
+{
+"id": 7024,
+"ko": "{추가타 가능한;돌격기 }SP30",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:7:45",
+"cap": 44
+},
+{
+"id": 7025,
+"ko": "= 격노",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:8:0",
+"cap": 14
+},
+{
+"id": 7026,
+"ko": "{짧은시간동안;SP 자동 생성",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:8:39",
+"cap": 44
+},
+{
+"id": 7027,
+"ko": "= 금강귀",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:9:0",
+"cap": 14
+},
+{
+"id": 7028,
+"ko": "{모아둔 }SP를;전부 소모{하여;방어력 극대화",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:9:41",
+"cap": 44
+},
+{
+"id": 7029,
+"ko": "약화의검= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:10:0",
+"cap": 14
+},
+{
+"id": 7030,
+"ko": "{강한 일격으로;적의 방어도를;감소",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:10:43",
+"cap": 44
+},
+{
+"id": 7031,
+"ko": "압도의검= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:11:0",
+"cap": 14
+},
+{
+"id": 7032,
+"ko": "{적을 위축시켜;둔화시키는;공격",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:11:43",
+"cap": 44
+},
+{
+"id": 7033,
+"ko": "= |강타연마",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:12:0",
+"cap": 14
+},
+{
+"id": 7034,
+"ko": "{크리티컬 확률;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:12:44",
+"cap": 44
+},
+{
+"id": 7035,
+"ko": "|철벽방어= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:13:0",
+"cap": 14
+},
+{
+"id": 7036,
+"ko": "{블록 성공률;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:13:44",
+"cap": 44
+},
+{
+"id": 7037,
+"ko": "|분노축적= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:14:0",
+"cap": 14
+},
+{
+"id": 7038,
+"ko": "{블록시 SP축적;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:14:44",
+"cap": 44
+},
+{
+"id": 7039,
+"ko": "= |체질개선",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:15:0",
+"cap": 14
+},
+{
+"id": 7040,
+"ko": "{마법 저항과;물약의 회복량;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S000:15:44",
+"cap": 44
+},
+{
+"id": 7041,
+"ko": "사격= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:0:0",
+"cap": 14
+},
+{
+"id": 7042,
+"ko": "{더블건의;기본 공격",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:0:39",
+"cap": 44
+},
+{
+"id": 7043,
+"ko": "산탄사격= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:1:0",
+"cap": 14
+},
+{
+"id": 7044,
+"ko": "{전방을 향해;넓은 영역사격",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:1:43",
+"cap": 44
+},
+{
+"id": 7045,
+"ko": "동시사격= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:2:0",
+"cap": 14
+},
+{
+"id": 7046,
+"ko": "{더블건을 모아;더 강력한 사격",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:2:43",
+"cap": 44
+},
+{
+"id": 7047,
+"ko": "급소사격= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:3:0",
+"cap": 14
+},
+{
+"id": 7048,
+"ko": "{치명상을 입혀;출혈을 유도",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:3:43",
+"cap": 44
+},
+{
+"id": 7049,
+"ko": "크리티컬샷= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:4:0",
+"cap": 14
+},
+{
+"id": 7050,
+"ko": "{암즈사격으로;스턴을 유도;}SP20",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:4:45",
+"cap": 44
+},
+{
+"id": 7051,
+"ko": "에이밍샷= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:5:0",
+"cap": 14
+},
+{
+"id": 7052,
+"ko": "{정확히 조준해;필살 공격;}SP30",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:5:43",
+"cap": 44
+},
+{
+"id": 7053,
+"ko": "암즈트랩= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:6:0",
+"cap": 14
+},
+{
+"id": 7054,
+"ko": "{암즈 탄환으로;폭탄을 설치;}SP20",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:6:43",
+"cap": 44
+},
+{
+"id": 7055,
+"ko": "= 더블암즈샷",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:7:0",
+"cap": 14
+},
+{
+"id": 7056,
+"ko": "{암즈 탄을 2개;연속 사격;}SP20",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:7:45",
+"cap": 44
+},
+{
+"id": 7057,
+"ko": "= 차징암즈샷",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:8:0",
+"cap": 14
+},
+{
+"id": 7058,
+"ko": "}SP를 모아{;필살 암즈사격",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:8:45",
+"cap": 44
+},
+{
+"id": 7059,
+"ko": "= 은신",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:9:0",
+"cap": 14
+},
+{
+"id": 7060,
+"ko": "{몸을 숨긴채;이동 가능",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:9:39",
+"cap": 44
+},
+{
+"id": 7061,
+"ko": "= 광폭",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:10:0",
+"cap": 14
+},
+{
+"id": 7062,
+"ko": "{모아둔 SP를;}전부 소모{하여;사격속도 극대화",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:10:39",
+"cap": 44
+},
+{
+"id": 7063,
+"ko": "= 지축",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:11:0",
+"cap": 14
+},
+{
+"id": 7064,
+"ko": "{하체 고정으로;암즈사격의;공격력 극대화",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:11:39",
+"cap": 44
+},
+{
+"id": 7065,
+"ko": "|회피증가= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:12:0",
+"cap": 14
+},
+{
+"id": 7066,
+"ko": "{회피 능력;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:12:44",
+"cap": 44
+},
+{
+"id": 7067,
+"ko": "|암즈강화= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:13:0",
+"cap": 14
+},
+{
+"id": 7068,
+"ko": "{암즈 공격력;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:13:44",
+"cap": 44
+},
+{
+"id": 7069,
+"ko": "|속사= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:14:0",
+"cap": 14
+},
+{
+"id": 7070,
+"ko": "{스킬 쿨타임;단축 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:14:40",
+"cap": 44
+},
+{
+"id": 7071,
+"ko": "= |집중력",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:15:0",
+"cap": 14
+},
+{
+"id": 7072,
+"ko": "{원거리 공격력;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S001:15:42",
+"cap": 44
+},
+{
+"id": 7073,
+"ko": "마검공격= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:1:0",
+"cap": 14
+},
+{
+"id": 7074,
+"ko": "{마나를 담아;콤보공격 }SP6",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:1:43",
+"cap": 44
+},
+{
+"id": 7075,
+"ko": "= 양단",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:2:0",
+"cap": 14
+},
+{
+"id": 7076,
+"ko": "{화염의 검으로;일도 양단;}SP9",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:2:39",
+"cap": 44
+},
+{
+"id": 7077,
+"ko": "= 관통",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:3:0",
+"cap": 14
+},
+{
+"id": 7078,
+"ko": "{빙결의 검으로;돌격공격 }SP9",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:3:39",
+"cap": 44
+},
+{
+"id": 7079,
+"ko": "= 소울웨이브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:4:0",
+"cap": 14
+},
+{
+"id": 7080,
+"ko": "{소환된 환수와;융합하여;필살공격 }SP30",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:4:45",
+"cap": 44
+},
+{
+"id": 7081,
+"ko": "텔레포트소드= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:5:0",
+"cap": 14
+},
+{
+"id": 7082,
+"ko": "{추적 텔레포트;공격 }SP18",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:5:47",
+"cap": 44
+},
+{
+"id": 7083,
+"ko": "= 절륜",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:6:0",
+"cap": 14
+},
+{
+"id": 7084,
+"ko": "{대지를 흔들어;범위공격}SP18",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:6:39",
+"cap": 44
+},
+{
+"id": 7085,
+"ko": "프레임인첸트= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:7:0",
+"cap": 14
+},
+{
+"id": 7086,
+"ko": "{화염검을 발동;}SP12",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:7:47",
+"cap": 44
+},
+{
+"id": 7087,
+"ko": "아이스인첸트= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:8:0",
+"cap": 14
+},
+{
+"id": 7088,
+"ko": "{빙결검을 발동;}SP12",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:8:47",
+"cap": 44
+},
+{
+"id": 7089,
+"ko": "기합= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:9:0",
+"cap": 14
+},
+{
+"id": 7090,
+"ko": "{HP와 SP회복;일정시간 증가;}SP9",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:9:39",
+"cap": 44
+},
+{
+"id": 7091,
+"ko": "= 헤이스트",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:10:0",
+"cap": 14
+},
+{
+"id": 7092,
+"ko": "{스킬 쿨타임과;SP의 소모량;감소 }SP9",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:10:43",
+"cap": 44
+},
+{
+"id": 7093,
+"ko": "= 환수 합신",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:11:0",
+"cap": 14
+},
+{
+"id": 7094,
+"ko": "{소환된 환수와;융합하여;육체강화 }SP30",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:11:44",
+"cap": 44
+},
+{
+"id": 7095,
+"ko": "|적마안= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:12:0",
+"cap": 14
+},
+{
+"id": 7096,
+"ko": "{크리티컬 위력;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:12:42",
+"cap": 44
+},
+{
+"id": 7097,
+"ko": "|야성= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:13:0",
+"cap": 14
+},
+{
+"id": 7098,
+"ko": "{HP와 회복력;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:13:40",
+"cap": 44
+},
+{
+"id": 7099,
+"ko": "|동체시력= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:14:0",
+"cap": 14
+},
+{
+"id": 7100,
+"ko": "|치명타회피= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:15:0",
+"cap": 14
+},
+{
+"id": 7101,
+"ko": "{크리티컬로;피격될 확률;감소 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S002:15:46",
+"cap": 44
+},
+{
+"id": 7102,
+"ko": "빙결의단도= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:0:0",
+"cap": 14
+},
+{
+"id": 7103,
+"ko": "{전방으로;얼음화살 발사;}SP2",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:0:45",
+"cap": 44
+},
+{
+"id": 7104,
+"ko": "정화의구= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:1:0",
+"cap": 14
+},
+{
+"id": 7105,
+"ko": "{화염 폭발로;범위공격 }SP3",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:1:43",
+"cap": 44
+},
+{
+"id": 7106,
+"ko": "암흑= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:2:0",
+"cap": 14
+},
+{
+"id": 7107,
+"ko": "{암흑의 구를;전방으로 발사;}SP3",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:2:39",
+"cap": 44
+},
+{
+"id": 7108,
+"ko": "빙결의검= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:3:0",
+"cap": 14
+},
+{
+"id": 7109,
+"ko": "{얼음 송곳으로;전방공격;}SP16",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:3:43",
+"cap": 44
+},
+{
+"id": 7110,
+"ko": "정화의장벽= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:4:0",
+"cap": 14
+},
+{
+"id": 7111,
+"ko": "{화염의 영역을;생성 }SP16",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:4:45",
+"cap": 44
+},
+{
+"id": 7112,
+"ko": "= 빙결의대지",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:5:0",
+"cap": 14
+},
+{
+"id": 7113,
+"ko": "{얼음 송곳을;연속하여 소환;}SP32",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:5:45",
+"cap": 44
+},
+{
+"id": 7114,
+"ko": "= 정화의심판",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:6:0",
+"cap": 14
+},
+{
+"id": 7115,
+"ko": "{넓은 범위에;화염낙하 }SP32",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:6:45",
+"cap": 44
+},
+{
+"id": 7116,
+"ko": "쇠약의저주= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:7:0",
+"cap": 14
+},
+{
+"id": 7117,
+"ko": "{적의 공격력을;감소 }SP8",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:7:45",
+"cap": 44
+},
+{
+"id": 7118,
+"ko": "= 반사의저주",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:8:0",
+"cap": 14
+},
+{
+"id": 7119,
+"ko": "{적을 역대미지;상태로 }SP8",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:8:45",
+"cap": 44
+},
+{
+"id": 7120,
+"ko": "환수흡수= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:9:0",
+"cap": 14
+},
+{
+"id": 7121,
+"ko": "{환수를 흡수해;HP와 SP 회복;}SP0",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:9:43",
+"cap": 44
+},
+{
+"id": 7122,
+"ko": "= 환수특공",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:10:0",
+"cap": 14
+},
+{
+"id": 7123,
+"ko": "{환수를 자폭시켜;범위공격 }SP21",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:10:43",
+"cap": 44
+},
+{
+"id": 7124,
+"ko": "= 환수증폭",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:11:0",
+"cap": 14
+},
+{
+"id": 7125,
+"ko": "{환수와 합신해;환수 공격력과;적중증가 }SP21",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:11:43",
+"cap": 44
+},
+{
+"id": 7126,
+"ko": "|마법강화= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:12:0",
+"cap": 14
+},
+{
+"id": 7127,
+"ko": "{최대 SP와;SP회복량;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:12:44",
+"cap": 44
+},
+{
+"id": 7128,
+"ko": "|저주강화= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:13:0",
+"cap": 14
+},
+{
+"id": 7129,
+"ko": "{마법 적중률;증가 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:13:44",
+"cap": 44
+},
+{
+"id": 7130,
+"ko": "|흡혈환수= ",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:14:0",
+"cap": 14
+},
+{
+"id": 7131,
+"ko": "{사냥을 통해;환수의 HP SP;회복 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:14:44",
+"cap": 44
+},
+{
+"id": 7132,
+"ko": "= |마법단련",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:15:0",
+"cap": 14
+},
+{
+"id": 7133,
+"ko": "{스킬 쿨타임과;SP소모량;감소 패시브",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:15:44",
+"cap": 44
+},
+{
+"id": 7296,
+"ko": "임즈 슬롯 확장에 필요한 `시바스 앰블렘{을 구해오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:3:11",
+"cap": 75
+},
+{
+"id": 7297,
+"ko": "임즈 슬롯 확장에 필요한 }스트롱 이어링{을 구해오자.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_0_DAT:98:11",
+"cap": 75
+},
+{
+"id": 7298,
+"ko": "성지에 침입한 인간 병사들을 물리친다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:0:14",
+"cap": 75
+},
+{
+"id": 7299,
+"ko": "아눈 섬: 브레스",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:3:53",
+"cap": 22
+},
+{
+"id": 7300,
+"ko": "브레스를 만나 포로수용소의 일을 이야기 한다.",
+"kind": "quest",
+"src": "rec:NPC/_QUEST_1_DAT:50:25",
+"cap": 75
+},
+{
+"id": 7306,
+"ko": "{환수와 합신해;공격과 방어;강화 }SP21",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:10:43",
+"cap": 44
+},
+{
+"id": 7307,
+"ko": "{환수와 합신해;쿨타임과 마법;적중증가}SP21",
+"kind": "skill",
+"src": "rec:HDAT/_H_S003:11:43",
+"cap": 44
+}
+]

@@ -1,0 +1,45 @@
+import hl4.core.Smaf;
+import java.io.File;
+import java.nio.file.Files;
+
+/**
+ * HL5 build-time audio conversion: every SMAF clip (*.mmf) of res/c/snd becomes a plain J2ME file
+ * (.mid for score tracks, .wav for PCM tracks) plus a stub under the original name
+ * ("HL4SND\0" + resource path of the converted file) that the MIDlet resolves at play time.
+ *
+ * usage: SndConvert5 <srcSndDir> <outSndDir> <resourcePathPrefix e.g. /res/c/snd/>
+ */
+public class SndConvert5 {
+    public static void main(String[] a) throws Exception {
+        File in = new File(a[0]), out = new File(a[1]);
+        out.mkdirs();
+        String rp = a[2];
+        int n = 0, mid = 0, wav = 0, fail = 0;
+        StringBuffer list = new StringBuffer();
+        long before = 0, after = 0;
+        File[] fs = in.listFiles();
+        java.util.Arrays.sort(fs);
+        for (File f : fs) {
+            if (!f.getName().endsWith(".mmf")) continue;
+            byte[] d = Files.readAllBytes(f.toPath());
+            before += d.length;
+            Smaf.Converted c = Smaf.convert(d);
+            if (c == null || c.data == null) {
+                System.out.println("  cannot convert " + f.getName() + " (kept as SMAF)");
+                fail++;
+                continue;
+            }
+            String base = f.getName().substring(0, f.getName().length() - 4);
+            String ext = Smaf.MIDI.equals(c.type) ? ".mid" : ".wav";
+            if (ext.equals(".mid")) mid++; else wav++;
+            Files.write(new File(out, base + ext).toPath(), c.data);
+            byte[] stub = ("HL4SND\0" + rp + base + ext).getBytes("ISO-8859-1");
+            Files.write(new File(out, f.getName()).toPath(), stub);
+            list.append(rp).append(base).append(ext).append('\n');
+            after += c.data.length + stub.length;
+            n++;
+        }
+        Files.write(new File(out, "list.txt").toPath(), list.toString().getBytes("ISO-8859-1"));
+        System.out.println("sound: " + n + " clips -> " + mid + " .mid + " + wav + " .wav (" + fail + " failed), " + before + " -> " + after + " bytes");
+    }
+}

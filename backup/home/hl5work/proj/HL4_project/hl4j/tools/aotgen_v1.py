@@ -1,0 +1,577 @@
+#!/usr/bin/env python3
+"""
+Static Thumb -> Java translator for hot loop regions (build time).
+
+usage: aotgen.py --bin FILE --base ADDR --class NAME --out FILE.java PROFILE[@PROFBASE]...
+
+The image is the raw code file mapped at --base (LGT: binary.mod .text section extracted to a
+file, KTF: client.bin). Profiles are "hexaddr count" lines (addresses relative to PROFBASE).
+
+Each region is a strongly connected set of basic blocks (a loop nest) that contains no calls,
+returns, indirect branches or host calls. Semantics mirror hl4.cpu.Cpu.execThumb exactly.
+"""
+import argparse, struct, collections, sys
+
+p = argparse.ArgumentParser()
+p.add_argument('--bin', required=True)
+p.add_argument('--base', required=True)
+p.add_argument('--fileoff', default='0')
+p.add_argument('--size', default='0')
+p.add_argument('--class', dest='cls', required=True)
+p.add_argument('--out', required=True)
+p.add_argument('--coverage', type=float, default=0.995)
+p.add_argument('--maxregions', type=int, default=400)
+p.add_argument('--maxinsns', type=int, default=400)
+p.add_argument('--exclude', action='append', default=[], help='lo-hi hex address range to never translate')
+p.add_argument('profiles', nargs='+')
+args = p.parse_args()
+
+BASE = int(args.base, 0)
+raw = open(args.bin, 'rb').read()
+off = int(args.fileoff, 0)
+size = int(args.size, 0) or (len(raw) - off)
+code = raw[off:off + size]
+END = BASE + len(code)
+
+
+def h16(a):
+    if a < BASE or a + 2 > END:
+        return None
+    return struct.unpack_from('<H', code, a - BASE)[0]
+
+
+# ---------------------------------------------------------------------------
+# decoding into categories
+
+def is_barrier(op):
+    """Instructions that cannot be part of a region (control transfer out of function / host)."""
+    top = op >> 11
+    if top in (29, 30, 31):  # BL/BLX halves
+        return True
+    if (op >> 10) == 0x11:  # hi-reg ops
+        o = (op >> 8) & 3
+        rd = (op & 7) | ((op >> 4) & 8)
+        if o == 3:
+            return True  # BX/BLX
+        if o in (0, 2) and rd == 15:
+            return True
+    if top in (22, 23):
+        sub = (op >> 8) & 15
+        if sub in (0xC, 0xD) and (op & 0x100):
+            return True  # POP {pc}
+        if sub not in (0x0, 0x4, 0x5, 0xC, 0xD):
+            return True
+    if top in (26, 27):
+        cc = (op >> 8) & 15
+        if cc in (0xE, 0xF):
+            return True
+    return False
+
+
+def branch_info(a, op):
+    """Returns (kind, target) kind: None (not a branch), 'b' unconditional, 'bcc' conditional."""
+    top = op >> 11
+    if top == 28:
+        off11 = op & 0x7FF
+        if off11 & 0x400:
+            off11 -= 0x800
+        return 'b', a + 4 + off11 * 2
+    if top in (26, 27):
+        cc = (op >> 8) & 15
+        if cc >= 0xE:
+            return None, None
+        imm = op & 0xFF
+        if imm & 0x80:
+            imm -= 0x100
+        return 'bcc', a + 4 + imm * 2
+    return None, None
+
+
+# ---------------------------------------------------------------------------
+# profile
+
+hot = collections.Counter()
+for spec in args.profiles:
+    if '@' in spec:
+        path, pb = spec.split('@')
+        pb = int(pb, 0)
+    else:
+        path, pb = spec, 0
+    for line in open(path):
+        parts = line.split()
+        if len(parts) != 2:
+            continue
+        a = int(parts[0], 16) + pb
+        hot[a] += int(parts[1])
+total = sum(hot.values())
+print('profile total', total, file=sys.stderr)
+
+
+# ---------------------------------------------------------------------------
+# local CFG exploration around a hot address
+
+EXCL = [tuple(int(x, 16) for x in e.split('-')) for e in args.exclude]
+
+
+def excluded(a):
+    return any(lo <= a < hi for lo, hi in EXCL)
+
+
+def explore(start, window=0x1000):
+    """Explore instructions reachable from start (within window) without crossing barriers.
+    Returns dict addr -> list of successor addrs (instruction level)."""
+    succ = {}
+    todo = [start]
+    lo, hi = start - window, start + window
+    while todo:
+        a = todo.pop()
+        if a in succ or a < lo or a >= hi:
+            continue
+        op = h16(a)
+        if op is None:
+            succ[a] = None
+            continue
+        if is_barrier(op) or excluded(a):
+            succ[a] = None  # barrier: not includable
+            continue
+        kind, tgt = branch_info(a, op)
+        if kind == 'b':
+            s = [tgt]
+        elif kind == 'bcc':
+            s = [a + 2, tgt]
+        else:
+            s = [a + 2]
+        succ[a] = s
+        todo.extend(s)
+    return succ
+
+
+def scc_containing(succ, node):
+    """Nodes that are reachable from node and can reach node (instruction graph)."""
+    fwd = set()
+    stack = [node]
+    while stack:
+        x = stack.pop()
+        if x in fwd or succ.get(x) is None:
+            continue
+        fwd.add(x)
+        for y in succ[x]:
+            stack.append(y)
+    pred = collections.defaultdict(list)
+    for x, ss in succ.items():
+        if ss is None:
+            continue
+        for y in ss:
+            pred[y].append(x)
+    bwd = set()
+    stack = [node]
+    while stack:
+        x = stack.pop()
+        if x in bwd or succ.get(x) is None:
+            continue
+        bwd.add(x)
+        for y in pred[x]:
+            stack.append(y)
+    return fwd & bwd
+
+
+regions = []
+covered = set()
+acc = 0
+for a, cnt in hot.most_common():
+    if acc >= total * args.coverage or len(regions) >= args.maxregions:
+        break
+    if a in covered:
+        continue
+    op = h16(a)
+    if op is None or is_barrier(op):
+        continue
+    succ = explore(a)
+    nodes = scc_containing(succ, a)
+    if len(nodes) < 2:
+        continue
+    if len(nodes) > args.maxinsns:
+        continue
+    if nodes & covered:
+        continue
+    regions.append((nodes, succ))
+    covered |= nodes
+    for x in nodes:
+        acc += hot.get(x, 0)
+print('regions', len(regions), 'coverage %.3f' % (acc / total if total else 0), file=sys.stderr)
+
+
+# ---------------------------------------------------------------------------
+# code generation
+
+def reg(r):
+    return 'r%d' % r
+
+
+def gen_insn(a, op, out, labels, region_nodes, block_of):
+    """Emit Java for instruction at a. Branch handling returns True if control ends here."""
+    top = op >> 11
+    rd = op & 7
+    rs = (op >> 3) & 7
+    E = out.append
+    pcval = a + 4
+    if top == 0:  # LSL imm
+        imm = (op >> 6) & 31
+        if imm == 0:
+            E('%s = %s; n = %s < 0; z = %s == 0;' % (reg(rd), reg(rs), reg(rd), reg(rd)))
+        else:
+            E('{ int t = %s; C = ((t >>> %d) & 1) != 0; t <<= %d; %s = t; n = t < 0; z = t == 0; }' % (reg(rs), 32 - imm, imm, reg(rd)))
+    elif top == 1:  # LSR imm
+        imm = (op >> 6) & 31
+        if imm == 0:
+            E('{ C = %s < 0; %s = 0; n = false; z = true; }' % (reg(rs), reg(rd)))
+        else:
+            E('{ int t = %s; C = ((t >>> %d) & 1) != 0; t >>>= %d; %s = t; n = t < 0; z = t == 0; }' % (reg(rs), imm - 1, imm, reg(rd)))
+    elif top == 2:  # ASR imm
+        imm = (op >> 6) & 31
+        if imm == 0:
+            E('{ int t = %s; C = t < 0; t >>= 31; %s = t; n = t < 0; z = t == 0; }' % (reg(rs), reg(rd)))
+        else:
+            E('{ int t = %s; C = ((t >> %d) & 1) != 0; t >>= %d; %s = t; n = t < 0; z = t == 0; }' % (reg(rs), imm - 1, imm, reg(rd)))
+    elif top == 3:  # ADD/SUB reg/imm3
+        x = (op >> 6) & 7
+        b = str(x) if (op & 0x400) else reg(x)
+        if (op & 0x200) == 0:
+            E('{ int a = %s, b = %s, t = a + b; n = t < 0; z = t == 0; C = (t ^ 0x80000000) < (a ^ 0x80000000); v = ((a ^ t) & (b ^ t)) < 0; %s = t; }' % (reg(rs), b, reg(rd)))
+        else:
+            E('{ int a = %s, b = %s, t = a - b; n = t < 0; z = t == 0; C = (a ^ 0x80000000) >= (b ^ 0x80000000); v = ((a ^ b) & (a ^ t)) < 0; %s = t; }' % (reg(rs), b, reg(rd)))
+    elif top == 4:  # MOV imm
+        r = (op >> 8) & 7
+        imm = op & 0xFF
+        E('%s = %d; n = false; z = %s;' % (reg(r), imm, 'true' if imm == 0 else 'false'))
+    elif top == 5:  # CMP imm
+        r = (op >> 8) & 7
+        imm = op & 0xFF
+        E('{ int a = %s, t = a - %d; n = t < 0; z = t == 0; C = (a ^ 0x80000000) >= (%d ^ 0x80000000); v = ((a ^ %d) & (a ^ t)) < 0; }' % (reg(r), imm, imm, imm))
+    elif top == 6:  # ADD imm8
+        r = (op >> 8) & 7
+        imm = op & 0xFF
+        E('{ int a = %s, t = a + %d; n = t < 0; z = t == 0; C = (t ^ 0x80000000) < (a ^ 0x80000000); v = ((a ^ t) & (%d ^ t)) < 0; %s = t; }' % (reg(r), imm, imm, reg(r)))
+    elif top == 7:  # SUB imm8
+        r = (op >> 8) & 7
+        imm = op & 0xFF
+        E('{ int a = %s, t = a - %d; n = t < 0; z = t == 0; C = (a ^ 0x80000000) >= (%d ^ 0x80000000); v = ((a ^ %d) & (a ^ t)) < 0; %s = t; }' % (reg(r), imm, imm, imm, reg(r)))
+    elif top == 8:
+        if (op & 0x400) == 0:
+            gen_alu(op, E)
+        else:
+            o = (op >> 8) & 3
+            d = (op & 7) | ((op >> 4) & 8)
+            m = (op >> 3) & 15
+            src = ('%d' % pcval) if m == 15 else reg(m)
+            if o == 0:
+                E('%s = %s + %s;' % (reg(d), reg(d), src))
+            elif o == 1:
+                E('{ int a = %s, b = %s, t = a - b; n = t < 0; z = t == 0; C = (a ^ 0x80000000) >= (b ^ 0x80000000); v = ((a ^ b) & (a ^ t)) < 0; }' % (reg(d) if d != 15 else str(pcval), src))
+            elif o == 2:
+                E('%s = %s;' % (reg(d), src))
+    elif top == 9:  # LDR literal
+        r = (op >> 8) & 7
+        addr = (pcval & ~3) + ((op & 0xFF) << 2)
+        E('%s = M.read32(%d);' % (reg(r), addr))
+    elif top in (10, 11):
+        ro = (op >> 6) & 7
+        sub = (op >> 9) & 7
+        ad = '(%s + %s)' % (reg(rs), reg(ro))
+        if sub == 0:
+            E('M.write32(%s & ~3, %s);' % (ad, reg(rd)))
+        elif sub == 1:
+            E('M.write16(%s & ~1, %s);' % (ad, reg(rd)))
+        elif sub == 2:
+            E('M.write8(%s, %s);' % (ad, reg(rd)))
+        elif sub == 3:
+            E('%s = (byte) M.read8(%s);' % (reg(rd), ad))
+        elif sub == 4:
+            E('%s = Cpu.ldrRot(M, %s);' % (reg(rd), ad))
+        elif sub == 5:
+            E('%s = M.read16(%s & ~1);' % (reg(rd), ad))
+        elif sub == 6:
+            E('%s = M.read8(%s);' % (reg(rd), ad))
+        else:
+            E('%s = (short) M.read16(%s & ~1);' % (reg(rd), ad))
+    elif top == 12:
+        E('M.write32((%s + %d) & ~3, %s);' % (reg(rs), ((op >> 6) & 31) << 2, reg(rd)))
+    elif top == 13:
+        E('%s = Cpu.ldrRot(M, %s + %d);' % (reg(rd), reg(rs), ((op >> 6) & 31) << 2))
+    elif top == 14:
+        E('M.write8(%s + %d, %s);' % (reg(rs), (op >> 6) & 31, reg(rd)))
+    elif top == 15:
+        E('%s = M.read8(%s + %d);' % (reg(rd), reg(rs), (op >> 6) & 31))
+    elif top == 16:
+        E('M.write16((%s + %d) & ~1, %s);' % (reg(rs), ((op >> 6) & 31) << 1, reg(rd)))
+    elif top == 17:
+        E('%s = M.read16((%s + %d) & ~1);' % (reg(rd), reg(rs), ((op >> 6) & 31) << 1))
+    elif top == 18:
+        r = (op >> 8) & 7
+        E('M.write32((r13 + %d) & ~3, %s);' % ((op & 0xFF) << 2, reg(r)))
+    elif top == 19:
+        r = (op >> 8) & 7
+        E('%s = Cpu.ldrRot(M, r13 + %d);' % (reg(r), (op & 0xFF) << 2))
+    elif top == 20:
+        r = (op >> 8) & 7
+        E('%s = %d;' % (reg(r), (pcval & ~3) + ((op & 0xFF) << 2)))
+    elif top == 21:
+        r = (op >> 8) & 7
+        E('%s = r13 + %d;' % (reg(r), (op & 0xFF) << 2))
+    elif top in (22, 23):
+        sub = (op >> 8) & 15
+        if sub == 0:
+            if op & 0x80:
+                E('r13 -= %d;' % ((op & 0x7F) << 2))
+            else:
+                E('r13 += %d;' % ((op & 0x7F) << 2))
+        elif sub in (4, 5):
+            lst = op & 0xFF
+            cnt = bin(lst).count('1') + (1 if op & 0x100 else 0)
+            E('{ int ad = r13 - %d; r13 = ad; ad &= ~3;' % (cnt * 4))
+            for i in range(8):
+                if lst & (1 << i):
+                    E('  M.write32(ad, %s); ad += 4;' % reg(i))
+            if op & 0x100:
+                E('  M.write32(ad, r14);')
+            E('}')
+        elif sub in (0xC, 0xD):
+            lst = op & 0xFF
+            E('{ int ad = r13 & ~3;')
+            for i in range(8):
+                if lst & (1 << i):
+                    E('  %s = M.read32(ad); ad += 4;' % reg(i))
+            E('  r13 = ad; }')
+    elif top == 24:  # STMIA
+        lst = op & 0xFF
+        r = (op >> 8) & 7
+        E('{ int ad = %s & ~3;' % reg(r))
+        for i in range(8):
+            if lst & (1 << i):
+                E('  M.write32(ad, %s); ad += 4;' % reg(i))
+        E('  %s = %s + %d; }' % (reg(r), reg(r), bin(lst).count('1') * 4))
+    elif top == 25:  # LDMIA
+        lst = op & 0xFF
+        r = (op >> 8) & 7
+        E('{ int base = %s, ad = base & ~3;' % reg(r))
+        for i in range(8):
+            if lst & (1 << i):
+                E('  %s = M.read32(ad); ad += 4;' % reg(i))
+        if not (lst & (1 << r)):
+            E('  %s = base + %d;' % (reg(r), bin(lst).count('1') * 4))
+        E('}')
+    else:
+        raise Exception('unexpected op %04x at %x' % (op, a))
+
+
+def gen_alu(op, E):
+    rd = op & 7
+    rm = (op >> 3) & 7
+    o = (op >> 6) & 15
+    d, m = reg(rd), reg(rm)
+    nz = 'n = %s < 0; z = %s == 0;' % (d, d)
+    if o == 0:
+        E('%s &= %s; %s' % (d, m, nz))
+    elif o == 1:
+        E('%s ^= %s; %s' % (d, m, nz))
+    elif o in (2, 3, 4, 7):
+        # register specified shift (amount = low byte)
+        body = {
+            2: 'if (amt < 32) { C = ((val >>> (32 - amt)) & 1) != 0; val <<= amt; } else if (amt == 32) { C = (val & 1) != 0; val = 0; } else { C = false; val = 0; }',
+            3: 'if (amt < 32) { C = ((val >>> (amt - 1)) & 1) != 0; val >>>= amt; } else if (amt == 32) { C = val < 0; val = 0; } else { C = false; val = 0; }',
+            4: 'if (amt < 32) { C = ((val >> (amt - 1)) & 1) != 0; val >>= amt; } else { C = val < 0; val >>= 31; }',
+            7: 'int a5 = amt & 31; if (a5 == 0) { C = val < 0; } else { val = (val >>> a5) | (val << (32 - a5)); C = val < 0; }',
+        }[o]
+        E('{ int amt = %s & 0xFF, val = %s; if (amt != 0) { %s } %s = val; %s }' % (m, d, body, d, nz))
+    elif o == 5:  # ADC
+        E('{ int a = %s, b = %s; long u = (a & 0xFFFFFFFFL) + (b & 0xFFFFFFFFL) + (C ? 1 : 0); int t = (int) u; n = t < 0; z = t == 0; C = (u >>> 32) != 0; v = ((a ^ t) & (b ^ t)) < 0; %s = t; }' % (d, m, d))
+    elif o == 6:  # SBC
+        E('{ int a = %s, b = %s; long u = (a & 0xFFFFFFFFL) + ((~b) & 0xFFFFFFFFL) + (C ? 1 : 0); int t = (int) u; n = t < 0; z = t == 0; C = (u >>> 32) != 0; v = ((a ^ b) & (a ^ t)) < 0; %s = t; }' % (d, m, d))
+    elif o == 8:  # TST
+        E('{ int t = %s & %s; n = t < 0; z = t == 0; }' % (d, m))
+    elif o == 9:  # NEG
+        E('{ int b = %s, t = 0 - b; n = t < 0; z = t == 0; C = (0 ^ 0x80000000) >= (b ^ 0x80000000); v = ((0 ^ b) & (0 ^ t)) < 0; %s = t; }' % (m, d))
+    elif o == 10:  # CMP
+        E('{ int a = %s, b = %s, t = a - b; n = t < 0; z = t == 0; C = (a ^ 0x80000000) >= (b ^ 0x80000000); v = ((a ^ b) & (a ^ t)) < 0; }' % (d, m))
+    elif o == 11:  # CMN
+        E('{ int a = %s, b = %s, t = a + b; n = t < 0; z = t == 0; C = (t ^ 0x80000000) < (a ^ 0x80000000); v = ((a ^ t) & (b ^ t)) < 0; }' % (d, m))
+    elif o == 12:
+        E('%s |= %s; %s' % (d, m, nz))
+    elif o == 13:
+        E('%s = %s * %s; %s' % (d, m, d, nz))
+    elif o == 14:
+        E('%s &= ~%s; %s' % (d, m, nz))
+    else:
+        E('%s = ~%s; %s' % (d, m, nz))
+
+
+COND = {
+    0x0: 'z', 0x1: '!z', 0x2: 'C', 0x3: '!C', 0x4: 'n', 0x5: '!n', 0x6: 'v', 0x7: '!v',
+    0x8: '(C && !z)', 0x9: '(!C || z)', 0xA: '(n == v)', 0xB: '(n != v)', 0xC: '(!z && n == v)', 0xD: '(z || n != v)',
+}
+
+
+def gen_region(idx, nodes):
+    nodes = sorted(nodes)
+    # block leaders: region entries, branch targets, instructions after branches
+    leaders = set()
+    node_set = set(nodes)
+    for a in nodes:
+        op = h16(a)
+        kind, tgt = branch_info(a, op)
+        if kind:
+            if tgt in node_set:
+                leaders.add(tgt)
+            if a + 2 in node_set:
+                leaders.add(a + 2)
+    # entries: nodes with predecessors outside region (or fallthrough from outside)
+    preds = collections.defaultdict(set)
+    allsucc = {}
+    for a in nodes:
+        op = h16(a)
+        kind, tgt = branch_info(a, op)
+        s = [tgt] if kind == 'b' else ([a + 2, tgt] if kind == 'bcc' else [a + 2])
+        allsucc[a] = s
+        for y in s:
+            preds[y].add(a)
+    leaders.add(nodes[0])
+    # any node could be entered from outside if some outside instruction branches to it; we mark
+    # as entries: leaders that are targets from outside + first node. We conservatively make every
+    # leader an entry (entries only take effect when the interpreter reaches that pc).
+    leaders = sorted(leaders)
+    label = {a: i for i, a in enumerate(leaders)}
+    lines = []
+    L = lines.append
+    L('    static int r%d(Cpu c, int entry) {' % idx)
+    L('        final Memory M = c.m;')
+    L('        final int[] R = c.r;')
+    L('        int r0 = R[0], r1 = R[1], r2 = R[2], r3 = R[3], r4 = R[4], r5 = R[5], r6 = R[6], r7 = R[7];')
+    L('        int r8 = R[8], r9 = R[9], r10 = R[10], r11 = R[11], r12 = R[12], r13 = R[13], r14 = R[14];')
+    L('        boolean n = c.n, z = c.z, C = c.c, v = c.v;')
+    L('        long ic = 0;')
+    L('        int next;')
+    L('        int lb = entry;')
+    L('        loop: while (true) {')
+    L('            switch (lb) {')
+    for bi, start in enumerate(leaders):
+        # block: from start until next leader or branch end
+        L('            case %d: {' % bi)
+        a = start
+        body = []
+        count = 0
+        terminated = False
+        while True:
+            op = h16(a)
+            count += 1
+            kind, tgt = branch_info(a, op)
+            if kind == 'b':
+                body_ic = count
+                gen_exit_or_goto(body, tgt, label, node_set)
+                terminated = True
+                break
+            if kind == 'bcc':
+                cc = (op >> 8) & 15
+                body.append('if (%s) { ic += %d; %s }' % (COND[cc], count, goto_str(tgt, label, node_set)))
+                # fallthrough
+                nxt = a + 2
+                body.append('ic += %d;' % count)
+                count = 0
+                if nxt in label:
+                    body.append(goto_str(nxt, label, node_set, fall=(bi + 1 < len(leaders) and leaders[bi + 1] == nxt)))
+                elif nxt not in node_set:
+                    body.append(goto_str(nxt, label, node_set))
+                else:
+                    raise Exception('fallthrough into non-leader?')
+                terminated = True
+                break
+            gen_insn(a, op, body, label, node_set, None)
+            nxt = a + 2
+            if nxt in label or nxt not in node_set:
+                body.append('ic += %d;' % count)
+                body.append(goto_str(nxt, label, node_set, fall=(nxt in label and bi + 1 < len(leaders) and leaders[bi + 1] == nxt)))
+                terminated = True
+                break
+            a = nxt
+        if not terminated:
+            raise Exception('unterminated block')
+        # fix unconditional branch ic
+        out = []
+        for ln in body:
+            out.append(ln)
+        # insert ic for the 'b' case
+        for ln in out:
+            L('                ' + ln.replace('@IC@', str(count)))
+        L('            }')
+    L('            default: throw new CpuException("bad region label");')
+    L('            }')
+    L('        }')
+    L('        R[0] = r0; R[1] = r1; R[2] = r2; R[3] = r3; R[4] = r4; R[5] = r5; R[6] = r6; R[7] = r7;')
+    L('        R[8] = r8; R[9] = r9; R[10] = r10; R[11] = r11; R[12] = r12; R[13] = r13; R[14] = r14;')
+    L('        c.n = n; c.z = z; c.c = C; c.v = v;')
+    L('        c.icount += ic;')
+    L('        return next;')
+    L('    }')
+    return lines, leaders
+
+
+def goto_str(tgt, label, node_set, fall=False):
+    if tgt in label:
+        if fall:
+            return '/* fall through */'
+        return 'lb = %d; continue loop;' % label[tgt]
+    return 'next = %d; break loop;' % (tgt | 1)
+
+
+def gen_exit_or_goto(body, tgt, label, node_set):
+    body.append('ic += @IC@;')
+    body.append(goto_str(tgt, label, node_set))
+
+
+out = []
+O = out.append
+O('package hl4.aot;')
+O('')
+O('import hl4.cpu.Aot;')
+O('import hl4.cpu.Cpu;')
+O('import hl4.cpu.CpuException;')
+O('import hl4.cpu.Memory;')
+O('')
+O('/** Generated by tools/aotgen.py - statically translated hot Thumb regions. Do not edit. */')
+O('public final class %s implements Aot {' % args.cls)
+entries = []
+bodies = []
+lo = min(min(n) for n, _ in regions) if regions else BASE
+hi = max(max(n) for n, _ in regions) + 2 if regions else BASE + 2
+for i, (nodes, succ) in enumerate(regions):
+    lines, leaders = gen_region(i, nodes)
+    bodies.extend(lines)
+    for li, a in enumerate(leaders):
+        entries.append((a, (i << 8) | li))
+O('    static final int BASE = %d;' % lo)
+O('    static final int SIZE = %d;' % ((hi - lo) // 2))
+O('    static final int[] ENTRIES = {')
+for a, v in entries:
+    O('        %d, %d,' % (a, v + 1))
+O('    };')
+O('    private int[] map;')
+O('    public int base() { return BASE; }')
+O('    public int[] map() {')
+O('        if (map == null) {')
+O('            map = new int[SIZE];')
+O('            for (int i = 0; i < ENTRIES.length; i += 2) map[(ENTRIES[i] - BASE) >> 1] = ENTRIES[i + 1];')
+O('        }')
+O('        return map;')
+O('    }')
+O('    public int run(int id, Cpu c) {')
+O('        id -= 1;')
+O('        int entry = id & 0xFF;')
+O('        switch (id >> 8) {')
+for i in range(len(regions)):
+    O('            case %d: return r%d(c, entry);' % (i, i))
+O('        }')
+O('        throw new CpuException("bad region " + id);')
+O('    }')
+out.extend(bodies)
+O('}')
+open(args.out, 'w').write('\n'.join(out) + '\n')
+print('wrote', args.out, len(regions), 'regions', len(entries), 'entries', file=sys.stderr)

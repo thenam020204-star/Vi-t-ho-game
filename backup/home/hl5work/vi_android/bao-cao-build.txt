@@ -1,0 +1,14 @@
+BÁO CÁO BUILD ANDROID VI
+câu catalog 14284 | đã thay 14282 | file ghi 260 | từ điển 4788 / 5076 (LGT cũ 4548)
+thống kê: K không có bản dịch (giữ Anh)=2; LỆCH SỐ đã dịch lại (A)=8; đã thay=14282
+roundtrip lỗi: 0 | khung/số bản ghi lệch: 0 | dòng A mới thêm (LECHSO/LECHMA): 0 | VFS: data.vfs.mp3 OK (2205 mục, +5 entry không tên theo hash)
+từ điển OK
+== QUÁ DÀI: 0 ==
+== LỆCH SỐ: 0 ==
+== LỆCH MÃ: 0 ==
+== THIẾU GLYPH: 0 ==
+== CẦN RÚT GỌN: 0 ==
+== NEW CHƯA DỊCH: 0 ==
+== K CHƯA DỊCH: 2 ==
+  K00239 c/csv/common_text.dat rec 61 off 0 ps 1
+  K07780 c/map/00089.scn idx 129

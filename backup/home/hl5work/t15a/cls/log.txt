@@ -1,0 +1,24 @@
+f722 DrawText5 r=['0x200015c0', 300, 36] st=['0x200685f3', 1, 25, '0xffffff'] str=b'\xce\xbc \xce\xbe \xcc\xdb \xcb\xf8\x00\x16\xcd\xe5 \xcb\xe3 \xcd' lr=_ZN13StateMainMenu9DrawStartEv+0x1d0
+f722 DrawText9 r=['0x200015c0', 300, 36] st=[1000, '0x200685f3', 0, 0] str=b'\xce\xbc \xce\xbe \xcc\xdb \xcb\xf8\x00\x16\xcd\xe5 \xcb\xe3 \xcd' lr=_ZN5BFont8DrawTextEiiiPci+0x5c
+f722 DrawText6b r=['0x200015c0', 248, 94] st=['0x20068617', 1, '0xffffff', '0xffffff'] str= lr=_ZN13StateMainMenu9DrawStartEv+0x54c
+f722 DrawText9 r=['0x200015c0', 248, 94] st=[1000, '0x20068617', 0, 0] str= lr=_ZN5BFont8DrawTextEiiiPcii+0x64
+f722 DrawText6b r=['0x200015c0', 356, 94] st=['0x2006861b', 1, '0x808080', 100] str= lr=_ZN13StateMainMenu9DrawStartEv+0x350
+f722 DrawText9 r=['0x200015c0', 356, 94] st=[1000, '0x2006861b', 0, 0] str= lr=_ZN5BFont8DrawTextEiiiPcii+0x64
+f722 DrawText6b r=['0x200015c0', 248, 152] st=['0x2006861f', 1, '0x808080', 100] str= lr=_ZN13StateMainMenu9DrawStartEv+0x350
+f722 DrawText9 r=['0x200015c0', 248, 152] st=[1000, '0x2006861f', 0, 0] str= lr=_ZN5BFont8DrawTextEiiiPcii+0x64
+f722 DrawText6b r=['0x200015c0', 356, 152] st=['0x20068623', 1, '0x808080', 100] str= lr=_ZN13StateMainMenu9DrawStartEv+0x350
+f722 DrawText9 r=['0x200015c0', 356, 152] st=[1000, '0x20068623', 0, 0] str= lr=_ZN5BFont8DrawTextEiiiPcii+0x64
+f722 DrawText6a r=['0x200015c0', 224, 187] st=[156, '0x201dbef9', 0, 0] str=b'\xda\xf1 \xdf\xd3 \xcc\xee/\xdf\xd4 \xcb\xe8 \xcb\xdb;\xcb\xdc' lr=_ZN13StateMainMenu9DrawStartEv+0x454
+f722 DrawText9 r=['0x200015c0', 224, 187] st=[156, '0x201dbef9', 0, 0] str=b'\xda\xf1 \xdf\xd3 \xcc\xee/\xdf\xd4 \xcb\xe8 \xcb\xdb;\xcb\xdc' lr=_ZN5BFont8DrawTextEiiiiPci+0x5c
+f723 DrawText5 r=['0x200015c0', 300, 36] st=['0x200685f3', 1, 25, '0xffffff'] str=b'\xce\xbc \xce\xbe \xcc\xdb \xcb\xf8\x00\x16\xcd\xe5 \xcb\xe3 \xcd' lr=_ZN13StateMainMenu9DrawStartEv+0x1d0
+f723 DrawText9 r=['0x200015c0', 300, 36] st=[1000, '0x200685f3', 0, 0] str=b'\xce\xbc \xce\xbe \xcc\xdb \xcb\xf8\x00\x16\xcd\xe5 \xcb\xe3 \xcd' lr=_ZN5BFont8DrawTextEiiiPci+0x5c
+f723 DrawText6b r=['0x200015c0', 248, 94] st=['0x20068617', 1, '0xffffff', '0xffffff'] str= lr=_ZN13StateMainMenu9DrawStartEv+0x54c
+f723 DrawText9 r=['0x200015c0', 248, 94] st=[1000, '0x20068617', 0, 0] str= lr=_ZN5BFont8DrawTextEiiiPcii+0x64
+f723 DrawText6b r=['0x200015c0', 356, 94] st=['0x2006861b', 1, '0x808080', 100] str= lr=_ZN13StateMainMenu9DrawStartEv+0x350
+f723 DrawText9 r=['0x200015c0', 356, 94] st=[1000, '0x2006861b', 0, 0] str= lr=_ZN5BFont8DrawTextEiiiPcii+0x64
+f723 DrawText6b r=['0x200015c0', 248, 152] st=['0x2006861f', 1, '0x808080', 100] str= lr=_ZN13StateMainMenu9DrawStartEv+0x350
+f723 DrawText9 r=['0x200015c0', 248, 152] st=[1000, '0x2006861f', 0, 0] str= lr=_ZN5BFont8DrawTextEiiiPcii+0x64
+f723 DrawText6b r=['0x200015c0', 356, 152] st=['0x20068623', 1, '0x808080', 100] str= lr=_ZN13StateMainMenu9DrawStartEv+0x350
+f723 DrawText9 r=['0x200015c0', 356, 152] st=[1000, '0x20068623', 0, 0] str= lr=_ZN5BFont8DrawTextEiiiPcii+0x64
+f723 DrawText6a r=['0x200015c0', 224, 187] st=[156, '0x201dbef9', 0, 0] str=b'\xda\xf1 \xdf\xd3 \xcc\xee/\xdf\xd4 \xcb\xe8 \xcb\xdb;\xcb\xdc' lr=_ZN13StateMainMenu9DrawStartEv+0x454
+f723 DrawText9 r=['0x200015c0', 224, 187] st=[156, '0x201dbef9', 0, 0] str=b'\xda\xf1 \xdf\xd3 \xcc\xee/\xdf\xd4 \xcb\xe8 \xcb\xdb;\xcb\xdc' lr=_ZN5BFont8DrawTextEiiiiPci+0x5c

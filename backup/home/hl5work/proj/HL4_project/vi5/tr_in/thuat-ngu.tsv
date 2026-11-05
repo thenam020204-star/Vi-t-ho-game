@@ -1,0 +1,209 @@
+Goc	Dich	Loai	Ghi chu
+슈르츠	Schurtz	nhan vat	Nam chinh
+렌	Ren	nhan vat	Nu chinh, Tinh Linh; luon goi Schurtz voi kinh ngu "ngai Schurtz"/"Schurtz-nim"
+에블린	Evelyn	nhan vat	Ke Thua Gia
+티아나	Tiana	nhan vat	Ke Thua Gia, em gai Kris
+테오도로	Theodoro	nhan vat	Ke Thua Gia, hoc gia, phan dien cuoi
+아일린	Aileen	nhan vat	Ke Thua Gia, "Thanh Nu khu 9"
+마르크	Marc	nhan vat	Ke Thua Gia phan dien / trung ten NPC thuong K00781
+루퍼스	Lupus	nhan vat	Ke Thua Gia cua Ke Nghe, doi dau Schurtz
+크리스	Kris	nhan vat	Anh trai Tiana, khong phai Ke Thua Gia
+티르	Tir	nhan vat	Nhan vat chinh phan truoc (Heroes Lore 4)
+루레인	Lurain	nhan vat	Nhan vat chinh phan truoc, ho ve Neved
+케프네스	Kefnes	nhan vat	Phan dien, tay sai Co Than
+크래드	Creed	nhan vat	NPC ten rieng
+알프레드	Alfred	nhan vat	NPC ten rieng
+이자벨	Isabelle	nhan vat	NPC ten rieng
+래비	Raby	nhan vat	NPC ten rieng, phien am chua chac chan
+엘렌	Ellen	nhan vat	NPC ten rieng
+그라함	Graham	nhan vat	NPC ten rieng
+로건	Logan	nhan vat	NPC ten rieng
+제이크	Jake	nhan vat	NPC ten rieng
+엔야	Enya	nhan vat	NPC ten rieng
+일반병	lính thường	nhan vat/chuc danh
+일반병2	lính thường 2	nhan vat/chuc danh
+일반지휘관	chỉ huy thường	nhan vat/chuc danh
+용병	lính đánh thuê	nhan vat/chuc danh
+용병2	lính đánh thuê 2	nhan vat/chuc danh
+용병리더	đội trưởng lính đánh thuê	nhan vat/chuc danh
+네베드병	lính Neved	nhan vat/chuc danh
+네베드병2	lính Neved 2	nhan vat/chuc danh
+아이템상인	thương nhân vật phẩm	nhan vat/chuc danh
+떠돌이상인	thương nhân lang thang	nhan vat/chuc danh
+대장장이	thợ rèn	nhan vat/chuc danh
+여관관리인	quản lý quán trọ	nhan vat/chuc danh
+신비조사회	Hội Điều Tra Bí Ẩn	to chuc
+관리인	người quản lý	nhan vat/chuc danh
+하녀	a hoàn	nhan vat/chuc danh
+스킬마스터	Sư Phụ Kỹ Năng	nhan vat/chuc danh
+공단원	đoàn viên	nhan vat/chuc danh	chua ro nghia 공단, giu tam dich chung
+고대신	Cổ Thần	to chuc/khai niem	Ancient God, phe phan dien chinh
+듣는자	Kẻ Nghe	to chuc/khai niem	the Listener(s)
+계승자	Kế Thừa Giả	to chuc/khai niem	Successor
+정령	Tinh Linh	to chuc/khai niem	Spirit
+네베드	Neved	to chuc/khai niem	phe/chung toc
+혁명군	Quân Cách Mạng	to chuc/khai niem
+실버힐	Silverhill	dia danh
+오르비스	Orbis	dia danh	quan dao boi canh chinh
+공격력	ATK	chi so
+방어력	DEF	chi so
+물리방어력	DEF vật lý	chi so
+마법방어력	DEF phép	chi so
+명중률	tỉ lệ trúng	chi so
+회피	né tránh	chi so
+크리티컬	chí mạng	chi so
+경험치	EXP	chi so
+체력	HP	chi so
+마나	MP	chi so
+정령게이지	thanh năng lượng Tinh Linh	chi so
+레벨	cấp độ	chi so
+힘	sức mạnh	chi so	chi so goc STR
+민첩	nhanh nhẹn	chi so	chi so goc AGI
+지능	trí tuệ	chi so	chi so goc INT
+등급	hạng	item
+일반	thường	item rarity
+고급	cao cấp	item rarity
+희귀	hiếm	item rarity
+영웅	anh hùng	item rarity	dùng trong mã màu `영웅|
+전설	huyền thoại	item rarity	dùng trong mã màu ^전설|
+신화	thần thoại	item rarity
+세트	bộ	item rarity	dùng trong mã màu <세트|
+오브	Orb	item	giữ nguyên "Orb" (đá cường hoá)
+강화	cường hoá	he thong
+합성	hợp thành	he thong
+제작	chế tạo	he thong
+분해	phân giải	he thong
+판매	bán	he thong
+구매	mua	he thong
+장착	trang bị	he thong
+해제	tháo	he thong
+가방	túi đồ	he thong
+창고	kho đồ	he thong
+퀘스트	nhiệm vụ	he thong
+길드	bang hội	he thong
+스킬	kỹ năng	he thong
+패시브	bị động	he thong
+액티브	chủ động	he thong
+쿨타임	thời gian hồi	he thong
+지속시간	thời gian duy trì	he thong
+재사용	tái sử dụng	he thong	dùng cho hồi chiêu
+피해	sát thương	he thong
+방어	phòng thủ	he thong
+공격	tấn công	he thong
+조합	chế biến	he thong	khac 합성/hop thanh va 제작/che tao
+제련	tôi luyện	he thong	
+결합	kết hợp	he thong	
+소켓	Socket	item	giu nguyen tieng Anh
+노멀	thường	item rarity	he rarity thu 2 song song voi 일반/영웅/전설/세트 - CAN NAM XAC NHAN
+레어	hiếm	item rarity	he rarity thu 2 - CAN NAM XAC NHAN
+에픽	sử thi	item rarity	he rarity thu 2 - CAN NAM XAC NHAN
+고대종	Cổ Chủng	nhan vat/khai niem	khac 고대신/Co Than
+강림자	Kẻ Giáng Lâm	nhan vat/khai niem	
+수호자	Hộ Vệ	nhan vat/chuc danh	
+반군	Quân Nổi Dậy	to chuc	khac 혁명군/Quan Cach Mang
+테오도어	Theodoro	nhan vat	bien the chinh ta cua 테오도로, dich thong nhat Theodoro - CAN NAM XAC NHAN cung 1 nhan vat
+Rockville	Rockville	dia danh	
+Bernal	Bernal	dia danh	
+Kingsport	Kingsport	dia danh	
+Coldcreek	Coldcreek	dia danh	
+Meadowhill	Meadowhill	dia danh	
+Trident	Trident	dia danh	
+Irem	Irem	dia danh	
+Levan	Levan	to chuc/dia danh	nhom Quan Cach Mang
+Ernest	Ernest	nhan vat	
+Ridmeyer	Ridmeyer	nhan vat	
+Kaz	Kaz	nhan vat	
+Alex	Alex	nhan vat	Alex van Riedmaier
+Altena	Altena	dia danh	
+워리어	Warrior	lop nhan vat	giu tieng Anh, thong nhat A/B/C1/C2
+로그	Rogue	lop nhan vat	giu tieng Anh
+건슬링어	Gunslinger	lop nhan vat	giu tieng Anh
+나이트	Knight	lop nhan vat	giu tieng Anh - CHI khi la ten LOP nhan vat, KHONG dung cho tu chung "기사" (ky si quai vat/NPC)
+소서러	Sorcerer	lop nhan vat	giu tieng Anh
+기사	Kỵ Sĩ	danh tu chung	tu chung chi hiep si/ky si (khac lop 나이트/Knight)
+클래스	class	he thong	giu tieng Anh
+사신	Sứ Thần	rune	
+영제	Linh Đế	rune	
+속박	Trói Buộc	rune	
+결의	Quyết Ý	rune	
+투신	Đấu Thần	rune	
+공명	Cộng Hưởng	rune	
+현자	Hiền Giả	rune	
+마도	Ma Đạo	rune	
+폭풍	Bão Tố	rune	
+뇌제	Lôi Đế	rune	
+금강	Kim Cang	rune	
+흡혈	Hấp Huyết	rune	
+드레이크	Drake	set trang bi	giu tieng Anh
+나이트메어	Nightmare	set trang bi	giu tieng Anh (khac 나이트/Knight)
+피닉스	Phoenix	set trang bi	
+엔젤윙	Angel Wing	set trang bi	
+드래곤본	Dragonbone	set trang bi	
+와이어트	Wyatt	set trang bi/ten rieng	
+워헤드	Warhead	set trang bi	
+드래곤	Dragon	set trang bi	
+지크문드	Siegmund	set trang bi/ten rieng	
+로크세트	Roc Set	set trang bi	
+가시나무	Gai Nhọn	set trang bi	
+푸른비룡	Phi Long Xanh	set trang bi	
+폭군쟈칼	Dã Can Bạo Chúa	set trang bi	
+아체야키	Acheyaki	set trang bi	chua ro nguon goc, phien am tam
+센트럴	Central	dia danh	
+모이투라	Moytura	dia danh	
+론베르크	Lonberg	nhan vat/gia toc	gia toc ren vu khi
+살리실리아	Salicylia	vat lieu	
+아미노페나	Aminophena	vat lieu	
+웨이드 가	nhà Wade	gia toc	phan dien
+베인 가	nhà Baine	gia toc	gia toc cua Schurtz
+슈우	Schu	biet danh	cach goi than mat Schurtz
+카스틀러	Castler	nhan vat	gia chu tre nha Ernest
+방주	Phương Chu	dia danh
+강림자의 방주	Phương Chu của Kẻ Giáng Lâm	dia danh
+흑의병	lính Áo Đen	phe	quan cua Ke Nghe
+선주종	Tiên Chủng	chung toc
+알테나	Altena	khai niem	vu khi/than toi thuong do Ke Nghe tao ra
+프로비던스	Providence	dia danh	trai tre mo coi cua Schurtz
+황혼섬	đảo Hoàng Hôn	dia danh
+황혼의 다리	Cầu Hoàng Hôn	dia danh
+비명길	Con Đường Thét Gào	dia danh
+교리의 관	Điện Giáo Lý	dia danh
+기원의 관	Điện Khởi Nguyên	dia danh
+성지	Thánh Địa	dia danh
+성지전쟁	Thánh Địa Chiến	su kien
+설녀	Tuyết Nữ	quai vat
+영혼석	Đá Linh Hồn	vat pham
+영혼가루	Bột Linh Hồn	vat pham
+수호석	Đá Hộ Vệ	vat pham
+악몽의 주인	Chúa Tể Ác Mộng	biet danh	alias Co Than
+네오 그라함 호	thuyền Neo Graham	ten tau
+정령마력	Linh lực	chi so
+태세	Thế	ky nang
+광산조합	Công Đoàn Mỏ	to chuc	
+광산 협회	Hiệp Hội Mỏ	to chuc	
+센트럴 타워	Tháp Central	dia danh	
+9번가의 성녀	Thánh Nữ khu 9	danh hieu	
+의회	Nghị Hội	to chuc	
+공화국	Cộng Hoà	quoc gia	
+얼어붙은 바다	Biển Băng	dia danh	
+브리안	Brian	nhan vat	ten cu cua Tir
+솔티안	Soltian	nhan vat	Ke Giang Lam
+테오	Theo	biet danh	goi tat Theodoro
+누아다	Nuada	nhan vat	
+베쓰무라	Bethmura	dia danh	
+위그드라실	Yggdrasil	khai niem	
+인도자	Kẻ Dẫn Đường	danh xung	Creed
+감시자	Kẻ Giám Sát	danh xung	
+엘바니움	Elbanium	vat pham	
+이터니움	Eternium	vat pham	
+마석	Đá phép	vat pham	
+룬스톤	Đá Rune	vat pham	
+크리티컬 구	Cầu Chí Mạng	co che	Rogue/Knight
+돌진	Đột Kích	ky nang	
+축지	Súc Địa	ky nang	
+연계기	Liên Kích	co che	
+아이스웜	Giun Băng	quai vat	
+그림리퍼	Grim Reaper	quai vat	
+광휘의 열쇠	Chìa Khoá Quang Huy	vat pham	
+무황껍질	Vỏ Vô Hoàng	vat pham	
+고위사도	Sứ Đồ Cấp Cao	danh xung	
+강림자의 교단	Giáo Đoàn Kẻ Giáng Lâm	to chuc	

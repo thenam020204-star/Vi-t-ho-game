@@ -1,0 +1,3435 @@
+[
+{
+"id": 1,
+"ko": "뭐하는 거야, 티르!",
+"kind": "dialog",
+"src": "scn:e0000_scn:1",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 2,
+"ko": "다리가...",
+"kind": "dialog",
+"src": "scn:e0000_scn:2",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 3,
+"ko": "이러다가 붙잡히겠어!",
+"kind": "dialog",
+"src": "scn:e0000_scn:3",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 4,
+"ko": "너.. 너라도 먼저가!!",
+"kind": "dialog",
+"src": "scn:e0000_scn:4",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 5,
+"ko": "웃기지마!",
+"kind": "dialog",
+"src": "scn:e0000_scn:5",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 6,
+"ko": "꼬맹이들이 애먹이기는...",
+"kind": "dialog",
+"src": "scn:e0000_scn:6",
+"speaker": "도적1",
+"cap": 254
+},
+{
+"id": 7,
+"ko": "이 살인마들!",
+"kind": "dialog",
+"src": "scn:e0000_scn:7",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 8,
+"ko": "나라고 좋아서 강도짓 하는줄 아냐? 먹고 살기 힘드니까 어쩔 수 없잖아.",
+"kind": "dialog",
+"src": "scn:e0000_scn:8",
+"speaker": "도적1",
+"cap": 254
+},
+{
+"id": 9,
+"ko": "거 후딱 해치우지 뭔 말이 그렇게 많아?",
+"kind": "dialog",
+"src": "scn:e0000_scn:9",
+"speaker": "도적2",
+"cap": 254
+},
+{
+"id": 10,
+"ko": "영 찝찝한데.. 그냥 놔주면 안되나?",
+"kind": "dialog",
+"src": "scn:e0000_scn:10",
+"speaker": "도적3",
+"cap": 254
+},
+{
+"id": 11,
+"ko": "헛소리 하지마. 우리 얼굴을 다 봤는데, 신고라도 하면...",
+"kind": "dialog",
+"src": "scn:e0000_scn:11",
+"speaker": "도적2",
+"cap": 254
+},
+{
+"id": 12,
+"ko": "들었지? 뭐 나쁘게 생각하지는 마라.",
+"kind": "dialog",
+"src": "scn:e0000_scn:12",
+"speaker": "도적1",
+"cap": 254
+},
+{
+"id": 13,
+"ko": "아무도, 아무도 없어요!? 누가 좀 도와주세요! 사람 살려요!",
+"kind": "dialog",
+"src": "scn:e0000_scn:13",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 14,
+"ko": "포기하라니까.",
+"kind": "dialog",
+"src": "scn:e0000_scn:14",
+"speaker": "도적1",
+"cap": 254
+},
+{
+"id": 15,
+"ko": "`누구라도 좋으니까!",
+"kind": "dialog",
+"src": "scn:e0000_scn:15",
+"cap": 254
+},
+{
+"id": 16,
+"ko": "`제발!",
+"kind": "dialog",
+"src": "scn:e0000_scn:16",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 17,
+"ko": "`도와줘요!",
+"kind": "dialog",
+"src": "scn:e0000_scn:17",
+"cap": 254
+},
+{
+"id": 18,
+"ko": "... 어라?",
+"kind": "dialog",
+"src": "scn:e0000_scn:18",
+"speaker": "도적1",
+"cap": 254
+},
+{
+"id": 19,
+"ko": "뭐, 뭐야 이놈은!?",
+"kind": "dialog",
+"src": "scn:e0000_scn:19",
+"speaker": "도적3",
+"cap": 254
+},
+{
+"id": 20,
+"ko": "경계 할 필요 없다. 해칠 생각은 없으니까.",
+"kind": "dialog",
+"src": "scn:e0000_scn:20",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 21,
+"ko": "그.. 그 말을 어떻게 믿죠?",
+"kind": "dialog",
+"src": "scn:e0000_scn:21",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 22,
+"ko": "너는 아니군. 그러면...",
+"kind": "dialog",
+"src": "scn:e0000_scn:22",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 23,
+"ko": "너인가.",
+"kind": "dialog",
+"src": "scn:e0000_scn:23",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 24,
+"ko": "저... 말인가요?",
+"kind": "dialog",
+"src": "scn:e0000_scn:24",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 25,
+"ko": "`날 부른 목소리가 맞군.;이름이 뭐지?",
+"kind": "dialog",
+"src": "scn:e0000_scn:25",
+"cap": 254
+},
+{
+"id": 26,
+"ko": "티르, 저 사람이 무슨 말을 하는거야?",
+"kind": "dialog",
+"src": "scn:e0000_scn:26",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 27,
+"ko": "넌 안 들려? 저 사람이 말하는 게...",
+"kind": "dialog",
+"src": "scn:e0000_scn:27",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 28,
+"ko": "아니... 그 아이에게는 안 들릴 거다.",
+"kind": "dialog",
+"src": "scn:e0000_scn:28",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 29,
+"ko": "티르라고 했나.",
+"kind": "dialog",
+"src": "scn:e0000_scn:29",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 30,
+"ko": "너에게는 특별한 힘이 있다.",
+"kind": "dialog",
+"src": "scn:e0000_scn:30",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 31,
+"ko": "그 힘을 날 위해서 쓸 생각이 있나?",
+"kind": "dialog",
+"src": "scn:e0000_scn:31",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 32,
+"ko": "아저씨를 위해서?",
+"kind": "dialog",
+"src": "scn:e0000_scn:32",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 33,
+"ko": "... 아저씨는 뭘 할 건데요?",
+"kind": "dialog",
+"src": "scn:e0000_scn:33",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 34,
+"ko": "이 녀석, 난 아저씨가 아니야.",
+"kind": "dialog",
+"src": "scn:e0000_scn:34",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 35,
+"ko": "뭐.. 일단 새로운 세상을 만들 거라고 해둘까.",
+"kind": "dialog",
+"src": "scn:e0000_scn:35",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 36,
+"ko": "새로운 세상?",
+"kind": "dialog",
+"src": "scn:e0000_scn:36",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 37,
+"ko": "그래.",
+"kind": "dialog",
+"src": "scn:e0000_scn:37",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 38,
+"ko": "전쟁으로 살 땅을 잃고 쫓겨나서 방황하지 않아도 되는..",
+"kind": "dialog",
+"src": "scn:e0000_scn:38",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 39,
+"ko": "강도를 만날 일도, 강도에게 부모가 살해당하는 일도 없는 세상.",
+"kind": "dialog",
+"src": "scn:e0000_scn:39",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 40,
+"ko": "그걸 어떻게...!?",
+"kind": "dialog",
+"src": "scn:e0000_scn:40",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 41,
+"ko": "브리안, 같이 갈 거지?",
+"kind": "dialog",
+"src": "scn:e0000_scn:41",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 42,
+"ko": "나.. 나는..",
+"kind": "dialog",
+"src": "scn:e0000_scn:42",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 43,
+"ko": "티르, 그 아이는...",
+"kind": "dialog",
+"src": "scn:e0000_scn:43",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 44,
+"ko": "브리안도 같이 가지 않는다면 싫어요!",
+"kind": "dialog",
+"src": "scn:e0000_scn:44",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 45,
+"ko": "뭐, 상관없겠지. 좋다.",
+"kind": "dialog",
+"src": "scn:e0000_scn:45",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 46,
+"ko": "둘 다 따라와라. 우선 뭐라도 좀 먹는 게 좋겠구나.",
+"kind": "dialog",
+"src": "scn:e0000_scn:46",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 47,
+"ko": "아저씨 이름은 뭐죠?",
+"kind": "dialog",
+"src": "scn:e0000_scn:47",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 48,
+"ko": "아저씨 아니라니까.",
+"kind": "dialog",
+"src": "scn:e0000_scn:48",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 49,
+"ko": "일일이 나한테 말을 할 필요는 없어. 네가 하는 생각이 전달되니까.",
+"kind": "dialog",
+"src": "scn:e0000_scn:49",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 50,
+"ko": "아직.. 믿을 수가 없어요.",
+"kind": "dialog",
+"src": "scn:e0000_scn:50",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 51,
+"ko": "그것도 연습해 두는 게 좋겠군. 난 }케프네스{라고 한다.",
+"kind": "dialog",
+"src": "scn:e0000_scn:51",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 52,
+"ko": "... 케프네스.. 아저씨...",
+"kind": "dialog",
+"src": "scn:e0000_scn:52",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 53,
+"ko": "그러니까 아저씨가 아니...",
+"kind": "dialog",
+"src": "scn:e0000_scn:53",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 54,
+"ko": "후.. 그냥 멋대로 해라.",
+"kind": "dialog",
+"src": "scn:e0000_scn:54",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 56,
+"ko": "티르...",
+"kind": "dialog",
+"src": "scn:e0001_scn:1",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 57,
+"ko": "티르!",
+"kind": "dialog",
+"src": "scn:e0001_scn:2",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 58,
+"ko": "... 소리 지르긴..",
+"kind": "dialog",
+"src": "scn:e0001_scn:3",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 59,
+"ko": "기껏 깨워주러 왔더니.. 아직까지 자고 있으면 어떻게 해?",
+"kind": "dialog",
+"src": "scn:e0001_scn:4",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 60,
+"ko": "표정은 또 왜 그 모양이야? 멍해가지고..",
+"kind": "dialog",
+"src": "scn:e0001_scn:5",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 61,
+"ko": "꿈을 좀 꿨어.. <10년 전{의 꿈.",
+"kind": "dialog",
+"src": "scn:e0001_scn:6",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 62,
+"ko": "10년전? 케프네스님을 만난거 말이야?",
+"kind": "dialog",
+"src": "scn:e0001_scn:7",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 63,
+"ko": "그러고 보니 10년이나 지났나...",
+"kind": "dialog",
+"src": "scn:e0001_scn:9",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 64,
+"ko": "기억이 나는군. 네가 억지를 부리지 않았으면 나는 여기있지 않겠지.",
+"kind": "dialog",
+"src": "scn:e0001_scn:10",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 65,
+"ko": "뭐, 별로 고마워 할 필요는 없어. 친구잖아?",
+"kind": "dialog",
+"src": "scn:e0001_scn:11",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 66,
+"ko": "고마워하기는. 너야말로 내가 데리고 나오지 않았으면 거기서 죽었을걸?",
+"kind": "dialog",
+"src": "scn:e0001_scn:12",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 67,
+"ko": "하하, 그런가?",
+"kind": "dialog",
+"src": "scn:e0001_scn:13",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 68,
+"ko": "이제 곧 연설 시작이야. 안 갈거냐?",
+"kind": "dialog",
+"src": "scn:e0001_scn:14",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 69,
+"ko": "가야지.",
+"kind": "dialog",
+"src": "scn:e0001_scn:15",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 70,
+"ko": "난 먼저 가있는다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:16",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 71,
+"ko": "그럼 아저씨... 아니 대장을 찾아 볼까.",
+"kind": "dialog",
+"src": "scn:e0001_scn:17",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 72,
+"ko": "<방향키{를 사용하여;<상, 하, 좌, 우{로;이동할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:18",
+"cap": 254
+},
+{
+"id": 73,
+"ko": "방향키 대신;&2, }4, `6, <8키{도 각각;&상, }좌, `우, <하{에 대응됩니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:19",
+"cap": 254
+},
+{
+"id": 74,
+"ko": "&케프네스를 찾아라;$...........{퀘스트 입수!",
+"kind": "dialog",
+"src": "scn:e0001_scn:20",
+"cap": 254
+},
+{
+"id": 75,
+"ko": "<원하는 위치{를 터치하여;해당 위치로 이동할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:21",
+"cap": 254
+},
+{
+"id": 76,
+"ko": "음.. 벌써 시작했나.",
+"kind": "dialog",
+"src": "scn:e0001_scn:22",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 77,
+"ko": "... 우리는 지금까지 }선주종{에게 착취를 당하고 살아왔다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:23",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 78,
+"ko": "남쪽의 넓고 비옥한 땅을 차지한 그들이, 우리에게..",
+"kind": "dialog",
+"src": "scn:e0001_scn:24",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 79,
+"ko": "북쪽의 척박한 땅만을 허락해준 후로 수백년 간.",
+"kind": "dialog",
+"src": "scn:e0001_scn:25",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 80,
+"ko": "인간들은 좀 더 나은 땅을 위해 싸워야 했고...",
+"kind": "dialog",
+"src": "scn:e0001_scn:26",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 81,
+"ko": "선주종들은 그것을 즐기며 우리의 혼란을 부추겨 왔다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:27",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 82,
+"ko": "오랜 혼란끝에 우리가 합심하여 공화국을 이루고 내가 지도자로 선출되자..",
+"kind": "dialog",
+"src": "scn:e0001_scn:28",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 83,
+"ko": "놈들은 나를 암살하려는 파렴치한 짓까지 서슴치 않았다..",
+"kind": "dialog",
+"src": "scn:e0001_scn:29",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 84,
+"ko": "이 땅에 뒤늦게 자리 잡았다는 이유만으로 인간들은 서로 싸워야 하는가?",
+"kind": "dialog",
+"src": "scn:e0001_scn:30",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 85,
+"ko": "이 땅에 먼저 있었다는 이유만으로 선주종은 우릴 내려다 볼 수 있는가?",
+"kind": "dialog",
+"src": "scn:e0001_scn:31",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 86,
+"ko": "우리는 언제까지 그 거만한 선주종들의 손아귀에 놀아나며 살아야 하는가?",
+"kind": "dialog",
+"src": "scn:e0001_scn:32",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 87,
+"ko": "제군들은 누구나 그런 의문을 가슴에 품어 봤을 것이다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:33",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 88,
+"ko": "내가 대답해 주겠다. 그것은 이제 끝이다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:34",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 89,
+"ko": "우리는 자유를 찾기위한 전쟁을 시작했다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:35",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 90,
+"ko": "이것은 성전이다, 그리고..",
+"kind": "dialog",
+"src": "scn:e0001_scn:36",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 91,
+"ko": "우리는 이 섬을 점령하여 위대한 승리로 가는 한 걸음을 내디뎠다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:37",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 92,
+"ko": "나는 여러분에게 약속한다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:38",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 93,
+"ko": "우리는 이 성전을 승리로 이끌 것이며!",
+"kind": "dialog",
+"src": "scn:e0001_scn:39",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 94,
+"ko": "이 성전이 끝나는 날!",
+"kind": "dialog",
+"src": "scn:e0001_scn:40",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 95,
+"ko": "어떤 인간도 굶주리지 않고, 가난에 눌려 강도가 되는 일도 없는..",
+"kind": "dialog",
+"src": "scn:e0001_scn:41",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 96,
+"ko": "새로운 세상이 건설될 것임을!",
+"kind": "dialog",
+"src": "scn:e0001_scn:42",
+"speaker": "케프네스",
+"cap": 254
+},
+{
+"id": 97,
+"ko": "우워어어어어어어엇!",
+"kind": "dialog",
+"src": "scn:e0001_scn:43",
+"cap": 254
+},
+{
+"id": 98,
+"ko": "&케프네스를 찾아라;$...........{퀘스트 완료!",
+"kind": "dialog",
+"src": "scn:e0001_scn:44",
+"cap": 254
+},
+{
+"id": 99,
+"ko": "그럼 대기하도록. <정기 정찰 시간{이다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:45",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 100,
+"ko": "정찰입니까?",
+"kind": "dialog",
+"src": "scn:e0001_scn:46",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 101,
+"ko": "아직 <선주종의 패잔병{들도 남아 있고, 며칠 후에 있을 <그 작전{도 있으니까 경계를 느슨히 할 수 없다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:47",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 102,
+"ko": "그런 정찰에 준위님이 직접 나가십니까?",
+"kind": "dialog",
+"src": "scn:e0001_scn:48",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 103,
+"ko": "인력이 부족하니 할 수 없잖아.",
+"kind": "dialog",
+"src": "scn:e0001_scn:49",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 104,
+"ko": "모처럼 부관도 왔는데 믿고 맡겨보는 건?",
+"kind": "dialog",
+"src": "scn:e0001_scn:50",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 105,
+"ko": "됐어. 첫날은 그냥 대기해.",
+"kind": "dialog",
+"src": "scn:e0001_scn:51",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 106,
+"ko": "고지식하기는..",
+"kind": "dialog",
+"src": "scn:e0001_scn:52",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 107,
+"ko": "&정찰임무;$...........{퀘스트 입수!",
+"kind": "dialog",
+"src": "scn:e0001_scn:53",
+"cap": 254
+},
+{
+"id": 108,
+"ko": "이쪽이 오늘 새로 부임한 부관이야. }그라함{이다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:54",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 109,
+"ko": "아. }이자벨{이 말했던 그 사람인가? 사촌이라던.",
+"kind": "dialog",
+"src": "scn:e0001_scn:55",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 110,
+"ko": "안녕하십니까!",
+"kind": "dialog",
+"src": "scn:e0001_scn:56",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 111,
+"ko": "이자벨은 잘 있나?",
+"kind": "dialog",
+"src": "scn:e0001_scn:57",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 112,
+"ko": "지금은 }매도우 힐{의 }프로비던스{에 와 계실 겁니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:58",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 113,
+"ko": "거기에 가문이 운영하는 여관이 있어서...",
+"kind": "dialog",
+"src": "scn:e0001_scn:59",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 114,
+"ko": "그래도 <약혼녀{라고 생각이 나기는 하나 보지?",
+"kind": "dialog",
+"src": "scn:e0001_scn:60",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 115,
+"ko": "어허흠... 흠..",
+"kind": "dialog",
+"src": "scn:e0001_scn:61",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 116,
+"ko": "이 친구 왠지 군기가 빠진 것 같지 않아?",
+"kind": "dialog",
+"src": "scn:e0001_scn:62",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 117,
+"ko": "그.. 그렇지 않습니다!",
+"kind": "dialog",
+"src": "scn:e0001_scn:63",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 118,
+"ko": "말 돌리기는.. 뭐 탐탁치 않으면 테스트 해보겠어?",
+"kind": "dialog",
+"src": "scn:e0001_scn:64",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 119,
+"ko": "<기본적인 게임 방법{에 대해 질문해 봐.",
+"kind": "dialog",
+"src": "scn:e0001_scn:65",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 120,
+"ko": "질문한다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:66",
+"cap": 254
+},
+{
+"id": 121,
+"ko": "좋아, 그럼 교육 상태를 테스트 해볼까?",
+"kind": "dialog",
+"src": "scn:e0001_scn:67",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 122,
+"ko": "질문하지 않는다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:68",
+"cap": 254
+},
+{
+"id": 123,
+"ko": "뭐 기본적인 건 교육 받고 왔겠지. 됐어.",
+"kind": "dialog",
+"src": "scn:e0001_scn:69",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 124,
+"ko": "기본 전투",
+"kind": "dialog",
+"src": "scn:e0001_scn:70",
+"cap": 254
+},
+{
+"id": 125,
+"ko": "기본적으로 }5키{에 등록되어 있는 }일반 공격{을 사용해 적을 섬멸해야 합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:71",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 126,
+"ko": "}워리어{는 }최대 3콤보{까지 근접공격하고, <건슬링어{는 <원거리 사격{이 가능합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:72",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 127,
+"ko": "적을 }공격{하거나 적에게 }피격{당하면 분노, 즉 <SP{가 증가하며, 이를 통해 더 <강력한 스킬{을 사용할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:73",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 128,
+"ko": "SP는 최대 100까지 모을 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:74",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 129,
+"ko": "스탯과 스킬",
+"kind": "dialog",
+"src": "scn:e0001_scn:75",
+"cap": 254
+},
+{
+"id": 130,
+"ko": "}사냥{이나 }퀘스트{로 <경험치{를 얻어 <레벨업{ 할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:76",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 131,
+"ko": "레벨업을 하면 }4점의 스탯포인트{와 <1점의 스킬포인트{를 받아 강해질 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:77",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 132,
+"ko": "메뉴의 }상태{ 화면에서 스탯포인트로 &근력, }체력, `민첩, <정신{ 능력치를 증가시킬 수 있으며..",
+"kind": "dialog",
+"src": "scn:e0001_scn:78",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 133,
+"ko": "&근력{은 &물리공격과 저항{, }체력{은 }HP와 방어력{, `민첩{은 `원거리공격{과 `회피{, <정신{은 <SP와 특수 공격{에 관여합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:79",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 134,
+"ko": "또한, 메뉴의 상태화면에서 <스킬포인트{로 새로운 스킬을 익힐 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:80",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 135,
+"ko": "<액티브 스킬{은 <단축키{에 등록하여 사용하며, &패시브 스킬{은 익히면 자신에게 &항상 적용{됩니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:81",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 136,
+"ko": "단축키 사용",
+"kind": "dialog",
+"src": "scn:e0001_scn:82",
+"cap": 254
+},
+{
+"id": 137,
+"ko": "}액티브 스킬{이나 }아이템{은 <단축키{에 등록하여 사용할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:83",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 138,
+"ko": "<1, 3, 5, 7, 9, 0키{에 원하는 }스킬{이나 }포션{등의 아이템을 등록해두면",
+"kind": "dialog",
+"src": "scn:e0001_scn:84",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 139,
+"ko": "전투중 해당 키로 빠르게 사용할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:85",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 140,
+"ko": "또한 6개의 단축키로 부족할 경우 <#키{로 }벨트를 전환{하여 최대 12개의 스킬 또는 아이템을 등록할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:86",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 141,
+"ko": "긴급 회피",
+"kind": "dialog",
+"src": "scn:e0001_scn:87",
+"cap": 254
+},
+{
+"id": 142,
+"ko": "한 방향 이동키를 }빠르게 2회 연타{하면 <긴급회피{ 합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:88",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 143,
+"ko": "방향키 방향으로 구르며, 잠시동안의 }무적시간{을 갖습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:89",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 144,
+"ko": "또한, 구르기를 }도중에 캔슬{하여 <스킬을 사용{하는 고급 컨트롤도 가능합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:90",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 145,
+"ko": "구르기를 캔슬하면 구른 <반대 방향으로 공격{을 하기 때문에, 거리를 벌리며 공격할 때 적합합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:91",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 146,
+"ko": "장비 교체",
+"kind": "dialog",
+"src": "scn:e0001_scn:92",
+"cap": 254
+},
+{
+"id": 147,
+"ko": "메뉴의 <장비{화면에서 }무기, 투구, 갑옷, 장갑, 신발{를 교체할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:93",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 148,
+"ko": "장비는 }상점{에서 구매하거나, }적이 떨어트린 것{을 줍거나, }대장장이{의 조합을 통해 얻을 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:94",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 149,
+"ko": "그만한다",
+"kind": "dialog",
+"src": "scn:e0001_scn:95",
+"cap": 254
+},
+{
+"id": 150,
+"ko": "흠...",
+"kind": "dialog",
+"src": "scn:e0001_scn:96",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 151,
+"ko": "됐어. 더 난처하게 만들고 싶진 않군.",
+"kind": "dialog",
+"src": "scn:e0001_scn:97",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 152,
+"ko": "<단축벨트{에 등록된 }액티브 스킬{이나 }아이템{을 터치해 사용하는 것이 전투의 기본입니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:98",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 153,
+"ko": "적을 터치하면 기본적으로 }세번째 단축슬롯{에 등록되어 있는 }일반 공격{을 사용해 적을 자동 공격합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:99",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 154,
+"ko": "또한 6개의 단축키로 부족할 경우 <회색영역을 터치{하여 }벨트를 전환{, 최대 12개의 스킬 또는 아이템을 등록할 수 있습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:100",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 155,
+"ko": "&근력{은 &물리공격{, }체력{은 }방어력{, `민첩{은 `원거리공격{과 `회피{, <정신{은 <SP{나 <저항{에 관여합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:101",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 156,
+"ko": "<액티브 스킬{은 <단축벨트{에 등록하여 사용하며, &패시브 스킬{은 익히면 자신에게 &항상 적용{됩니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:102",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 157,
+"ko": "한 방향을 }빠르게 2회 터치{하거나 한 방향 이동키를 }빠르게 2회 연타{하면 <긴급회피{ 합니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:103",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 158,
+"ko": "터치 방향, 또는 방향키 방향으로 구르며, 잠시동안의 }무적시간{을 갖습니다.",
+"kind": "dialog",
+"src": "scn:e0001_scn:104",
+"speaker": "그라함",
+"cap": 254
+},
+{
+"id": 160,
+"ko": "엄청난 마력이다... 뭐하는 물건이지?",
+"kind": "dialog",
+"src": "scn:e0002_scn:1",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 161,
+"ko": "뭔가를 가둬놓기 위한건가?",
+"kind": "dialog",
+"src": "scn:e0002_scn:2",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 162,
+"ko": "브리안? 여기는 뭐하러 왔어?",
+"kind": "dialog",
+"src": "scn:e0002_scn:3",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 163,
+"ko": "너를..",
+"kind": "dialog",
+"src": "scn:e0002_scn:4",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 164,
+"ko": "막기 위해서다.",
+"kind": "dialog",
+"src": "scn:e0002_scn:5",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 165,
+"ko": "뭐? 무슨 소리야?",
+"kind": "dialog",
+"src": "scn:e0002_scn:6",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 166,
+"ko": "설명할 시간이 없어. 일시적으로 <링크{를 끊어놨지만...",
+"kind": "dialog",
+"src": "scn:e0002_scn:7",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 167,
+"ko": "케프네스는 곧 이상한 점을 눈치채겠지.",
+"kind": "dialog",
+"src": "scn:e0002_scn:8",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 168,
+"ko": "아니 이미 눈치 챘을지도...",
+"kind": "dialog",
+"src": "scn:e0002_scn:9",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 169,
+"ko": "무슨 소릴 하는거야, 브리안?",
+"kind": "dialog",
+"src": "scn:e0002_scn:10",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 170,
+"ko": "이미 주문은 완성되었어. 곧 알게 될거야.",
+"kind": "dialog",
+"src": "scn:e0002_scn:11",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 171,
+"ko": "주문이 발동되기 전에 이 몸은, 움직일 수 없게 해두지.",
+"kind": "dialog",
+"src": "scn:e0002_scn:12",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 172,
+"ko": "이 바보가!! 자기 팔에 뭐하는 짓이야!",
+"kind": "dialog",
+"src": "scn:e0002_scn:13",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 173,
+"ko": "출혈이.. 이대로 있다간 죽겠어!",
+"kind": "dialog",
+"src": "scn:e0002_scn:14",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 174,
+"ko": "후.. 미안하다.. 이제..",
+"kind": "dialog",
+"src": "scn:e0002_scn:15",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 175,
+"ko": "꿈에서.. 깨어나라.",
+"kind": "dialog",
+"src": "scn:e0002_scn:16",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 176,
+"ko": "크으윽!!??",
+"kind": "dialog",
+"src": "scn:e0002_scn:17",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 177,
+"ko": "브.. 브리안.. 그 얼굴은...?",
+"kind": "dialog",
+"src": "scn:e0002_scn:18",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 178,
+"ko": "무슨.. 무슨 짓을 한거야!!",
+"kind": "dialog",
+"src": "scn:e0002_scn:19",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 179,
+"ko": "네가 보고 있는 그대로.. 너의 몸을 빼앗은 거야.",
+"kind": "dialog",
+"src": "scn:e0002_scn:20",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 180,
+"ko": "그런.. 그런 일을 평범한 인간인 네가 할 수 있을리가!",
+"kind": "dialog",
+"src": "scn:e0002_scn:21",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 181,
+"ko": "그래.. 빌어먹을 평범한 인간이었지 난.",
+"kind": "dialog",
+"src": "scn:e0002_scn:22",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 182,
+"ko": "그래서 이런 마법을 찾기 위해 정말 오랜 시간을 들였다.",
+"kind": "dialog",
+"src": "scn:e0002_scn:23",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 183,
+"ko": "그리고 이제 난, 평범하지 않아.",
+"kind": "dialog",
+"src": "scn:e0002_scn:24",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 184,
+"ko": "브리안.. 무슨.. 장난치지마..!",
+"kind": "dialog",
+"src": "scn:e0002_scn:25",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 185,
+"ko": "크으윽.. 브리안...!",
+"kind": "dialog",
+"src": "scn:e0002_scn:26",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 186,
+"ko": "이런 느낌이었군.. 듣는 자라는 것은.",
+"kind": "dialog",
+"src": "scn:e0002_scn:27",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 187,
+"ko": "너나, 케프네스나 항상 이런 힘을 가지고 나를, 다른 병사들을..",
+"kind": "dialog",
+"src": "scn:e0002_scn:28",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 188,
+"ko": "평범한... 인간 취급했던 건가?",
+"kind": "dialog",
+"src": "scn:e0002_scn:29",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 189,
+"ko": "아니야.. 그럴리가 없잖아, 브리안..",
+"kind": "dialog",
+"src": "scn:e0002_scn:30",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 190,
+"ko": "나를... 배신한거야? 진심으로..?",
+"kind": "dialog",
+"src": "scn:e0002_scn:31",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 191,
+"ko": "네가 얘기했지? 그 몸, 출혈때문에 곧 죽을 거야.",
+"kind": "dialog",
+"src": "scn:e0002_scn:32",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 192,
+"ko": "무리하지 말고.. 얌전히 죽음을 기다려.",
+"kind": "dialog",
+"src": "scn:e0002_scn:33",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 193,
+"ko": "왜! 어째서! 왜 나를 배신하는 거야!?",
+"kind": "dialog",
+"src": "scn:e0002_scn:34",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 194,
+"ko": "나는.. 내 꿈을 배신하고 싶지 않을 뿐이야.",
+"kind": "dialog",
+"src": "scn:e0002_scn:35",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 195,
+"ko": "브.. 리..",
+"kind": "dialog",
+"src": "scn:e0002_scn:36",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 196,
+"ko": "작별이다, 친구여...",
+"kind": "dialog",
+"src": "scn:e0002_scn:37",
+"speaker": "브리안",
+"cap": 254
+},
+{
+"id": 198,
+"ko": "오빠! 오빠!",
+"kind": "dialog",
+"src": "scn:e0003_scn:1",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 199,
+"ko": "시끄럽네. 무슨 일이야?",
+"kind": "dialog",
+"src": "scn:e0003_scn:2",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 200,
+"ko": "^싸늘하다...",
+"kind": "dialog",
+"src": "scn:e0003_scn:3",
+"cap": 254
+},
+{
+"id": 201,
+"ko": "^여긴.. 어디지?",
+"kind": "dialog",
+"src": "scn:e0003_scn:4",
+"cap": 254
+},
+{
+"id": 202,
+"ko": "여긴.. 크래드가 있는 섬.. 어떻게..",
+"kind": "dialog",
+"src": "scn:e0003_scn:5",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 203,
+"ko": "또 기절했나.. 젠장.",
+"kind": "dialog",
+"src": "scn:e0003_scn:6",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 204,
+"ko": "일단.. 엘렌을 크래드에게 데려다 줘야겠군.",
+"kind": "dialog",
+"src": "scn:e0003_scn:7",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 205,
+"ko": "&이름없는 섬;$...........{퀘스트 입수!",
+"kind": "dialog",
+"src": "scn:e0003_scn:8",
+"cap": 254
+},
+{
+"id": 206,
+"ko": "이 사람 죽는 거 아냐?",
+"kind": "dialog",
+"src": "scn:e0004_scn:1",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 207,
+"ko": "모르겠다. 피를 너무 많이 흘린 데다가...",
+"kind": "dialog",
+"src": "scn:e0004_scn:2",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 208,
+"ko": "이 <오른팔{은 영영 못 쓰겠는데.",
+"kind": "dialog",
+"src": "scn:e0004_scn:3",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 209,
+"ko": "왜... 어째서 날...",
+"kind": "dialog",
+"src": "scn:e0004_scn:4",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 210,
+"ko": "저.. 저건 말로만 듣던 헛소리!?!?",
+"kind": "dialog",
+"src": "scn:e0004_scn:5",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 211,
+"ko": "정말 잠꼬대랑은 느낌이 다르네!?",
+"kind": "dialog",
+"src": "scn:e0004_scn:6",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 212,
+"ko": "무장을 보니 군인인 것 같은데...",
+"kind": "dialog",
+"src": "scn:e0004_scn:7",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 213,
+"ko": "이 근처에서 전투를 했다는 이야기는 없었단 말이지.",
+"kind": "dialog",
+"src": "scn:e0004_scn:8",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 214,
+"ko": "게다가 이 얼굴은...",
+"kind": "dialog",
+"src": "scn:e0004_scn:9",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 215,
+"ko": "아는 사람?",
+"kind": "dialog",
+"src": "scn:e0004_scn:10",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 216,
+"ko": "아니다. 기분 탓이겠지.",
+"kind": "dialog",
+"src": "scn:e0004_scn:11",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 217,
+"ko": "^으아아아아아아아아아!!",
+"kind": "dialog",
+"src": "scn:e0004_scn:12",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 218,
+"ko": "죽을 만들어 봤는데 이 사람 먹을 수 있을까?",
+"kind": "dialog",
+"src": "scn:e0004_scn:13",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 219,
+"ko": "위험한 고비를 넘겼으니 유동식은 괜찮겠지만...",
+"kind": "dialog",
+"src": "scn:e0004_scn:14",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 220,
+"ko": "네가 만든거라 먹을 수 없을지도..",
+"kind": "dialog",
+"src": "scn:e0004_scn:15",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 221,
+"ko": "오빠!",
+"kind": "dialog",
+"src": "scn:e0004_scn:16",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 222,
+"ko": "쉿, 쉿. 환자 앞이야.",
+"kind": "dialog",
+"src": "scn:e0004_scn:17",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 223,
+"ko": "칫. 자, 먹어 봐요..",
+"kind": "dialog",
+"src": "scn:e0004_scn:18",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 224,
+"ko": "오빠, 약도 지금 먹여야 해?",
+"kind": "dialog",
+"src": "scn:e0004_scn:19",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 225,
+"ko": "아니, 일단 수술을 좀 하자.",
+"kind": "dialog",
+"src": "scn:e0004_scn:20",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 226,
+"ko": "수술?",
+"kind": "dialog",
+"src": "scn:e0004_scn:21",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 227,
+"ko": "팔을 달아야지. 넌 좀 나가있어라, 미성년자 관람불가다.",
+"kind": "dialog",
+"src": "scn:e0004_scn:22",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 228,
+"ko": "무슨 소리를 하는 건지...",
+"kind": "dialog",
+"src": "scn:e0004_scn:23",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 229,
+"ko": "좀 아플거야, 젊은친구.",
+"kind": "dialog",
+"src": "scn:e0004_scn:24",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 230,
+"ko": "팔에서 느껴지는 고통따위.",
+"kind": "dialog",
+"src": "scn:e0004_scn:25",
+"cap": 254
+},
+{
+"id": 231,
+"ko": "나에게는...",
+"kind": "dialog",
+"src": "scn:e0004_scn:26",
+"cap": 254
+},
+{
+"id": 232,
+"ko": "깨어났다!?!?",
+"kind": "dialog",
+"src": "scn:e0004_scn:27",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 233,
+"ko": "여기는...",
+"kind": "dialog",
+"src": "scn:e0004_scn:28",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 234,
+"ko": "잠깐, 잠깐만요!",
+"kind": "dialog",
+"src": "scn:e0004_scn:29",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 235,
+"ko": "오빠! 오빠! 어서 와봐, 깨어났어!",
+"kind": "dialog",
+"src": "scn:e0004_scn:30",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 236,
+"ko": ".. 그래도 생각보다 회복이 빠른 편이었어.",
+"kind": "dialog",
+"src": "scn:e0004_scn:31",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 237,
+"ko": "에헴, 다 내가 간호를 잘해서 그런거야!",
+"kind": "dialog",
+"src": "scn:e0004_scn:32",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 238,
+"ko": "여긴 어딥니까? 당신들은..?",
+"kind": "dialog",
+"src": "scn:e0004_scn:33",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 239,
+"ko": "여긴 <성지 남쪽의 작은 섬{이야.",
+"kind": "dialog",
+"src": "scn:e0004_scn:34",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 240,
+"ko": "난 }크래드{고, 내 뒤의 덜렁이는 동생. }엘렌{이다.",
+"kind": "dialog",
+"src": "scn:e0004_scn:35",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 241,
+"ko": "성지 남쪽..? 제가 어떻게 여기에 있는거죠?",
+"kind": "dialog",
+"src": "scn:e0004_scn:36",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 242,
+"ko": "<2주 전{에 바닷가에 떠밀려 왔어. 전혀 기억이 없나?",
+"kind": "dialog",
+"src": "scn:e0004_scn:37",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 243,
+"ko": "2주.. 분명히 유적 조사를 갔다가...",
+"kind": "dialog",
+"src": "scn:e0004_scn:38",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 244,
+"ko": "거울, 거울 없습니까?",
+"kind": "dialog",
+"src": "scn:e0004_scn:39",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 245,
+"ko": "꿈이... 아니었구나...",
+"kind": "dialog",
+"src": "scn:e0004_scn:40",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 246,
+"ko": "하하... 하하하...",
+"kind": "dialog",
+"src": "scn:e0004_scn:41",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 247,
+"ko": "꿈이 아니었어.. 정말 날 배신했구나.",
+"kind": "dialog",
+"src": "scn:e0004_scn:42",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 248,
+"ko": "정말 죽이려고 했구나 나를..",
+"kind": "dialog",
+"src": "scn:e0004_scn:43",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 249,
+"ko": "잠깐 혼자 있게 두자.",
+"kind": "dialog",
+"src": "scn:e0004_scn:44",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 250,
+"ko": "어째서.. 어째서 이런 짓을, 브리안...",
+"kind": "dialog",
+"src": "scn:e0004_scn:45",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 251,
+"ko": "정신감응도 되지 않아... 능력은 완전히 잃어버린건가.",
+"kind": "dialog",
+"src": "scn:e0004_scn:46",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 252,
+"ko": "팔... 무겁다?",
+"kind": "dialog",
+"src": "scn:e0004_scn:47",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 253,
+"ko": "<기계{인가.. 이건 뭐지...?",
+"kind": "dialog",
+"src": "scn:e0004_scn:48",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 254,
+"ko": "안돼, 침착하자.",
+"kind": "dialog",
+"src": "scn:e0004_scn:49",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 255,
+"ko": "정신차려라, 티르..! 아직 살아있고, 몸도 아직 움직인다.",
+"kind": "dialog",
+"src": "scn:e0004_scn:50",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 256,
+"ko": "아직 안끝났어.. 빼앗긴 것은 되찾으면 돼.",
+"kind": "dialog",
+"src": "scn:e0004_scn:51",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 257,
+"ko": "일단 <상황을 파악{하는 것이 우선이야.",
+"kind": "dialog",
+"src": "scn:e0004_scn:52",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 258,
+"ko": "<크래드{.. 라고 했던가..",
+"kind": "dialog",
+"src": "scn:e0004_scn:53",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 259,
+"ko": "&크레드를 찾아라;$...........{퀘스트 입수!",
+"kind": "dialog",
+"src": "scn:e0004_scn:54",
+"cap": 254
+},
+{
+"id": 260,
+"ko": "<지병{ 같은 거야. 가끔씩 이렇게 쓰러지니까 신경 쓸 것 없어.",
+"kind": "dialog",
+"src": "scn:e0004_scn:55",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 261,
+"ko": "그렇다면 다행이지만.. 주변에 몬스터가 꽤 있던데 혼자 나다니게 둬도 됩니까?",
+"kind": "dialog",
+"src": "scn:e0004_scn:56",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 262,
+"ko": "음..? 늘어났어?",
+"kind": "dialog",
+"src": "scn:e0004_scn:57",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 263,
+"ko": "|(약먹는 주기도 짧아지고.. 몬스터의 출현도 마음에 걸리는군.)",
+"kind": "dialog",
+"src": "scn:e0004_scn:58",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 264,
+"ko": "|(역시.. 인간들이 성지의 }마법근원|을 파괴한 것에 영향을 받는 걸지도..)",
+"kind": "dialog",
+"src": "scn:e0004_scn:59",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 265,
+"ko": "뭐라고 하셨어요?",
+"kind": "dialog",
+"src": "scn:e0004_scn:60",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 266,
+"ko": "혼잣말이야. 신경쓰지마.",
+"kind": "dialog",
+"src": "scn:e0004_scn:61",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 267,
+"ko": "그보다 티르. <치료비{는 어떻게 갚을거야? 그 팔도 제법 돈덩어리라고.",
+"kind": "dialog",
+"src": "scn:e0004_scn:62",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 268,
+"ko": "저.. 40mm 유탄 발사기는 제 의사가...",
+"kind": "dialog",
+"src": "scn:e0004_scn:63",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 269,
+"ko": "의사의 의사야.",
+"kind": "dialog",
+"src": "scn:e0004_scn:64",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 270,
+"ko": "뭐.. 솔직히 어느정도 마음에 들기도 하니까..",
+"kind": "dialog",
+"src": "scn:e0004_scn:65",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 271,
+"ko": "하지만 아시다시피 제가 몸만 떠내려 와서요. 가진 건 거의 없습니다.",
+"kind": "dialog",
+"src": "scn:e0004_scn:66",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 272,
+"ko": "목숨을 구해주신 보답까지, 나중에..",
+"kind": "dialog",
+"src": "scn:e0004_scn:67",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 273,
+"ko": "나중은 됐고.. 당장 몸으로 때워주는 게 더 고맙겠는걸.",
+"kind": "dialog",
+"src": "scn:e0004_scn:68",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 274,
+"ko": "그렇게 얘기 안 해도 도울 일 있으면 도와드릴 수 있는데...",
+"kind": "dialog",
+"src": "scn:e0004_scn:69",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 275,
+"ko": "오케이, 좋아. 합의 본거다.",
+"kind": "dialog",
+"src": "scn:e0004_scn:70",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 276,
+"ko": "엘렌이 지병때문에 먹는 약이 있는데.. 슬슬 떨어져 가거든.",
+"kind": "dialog",
+"src": "scn:e0004_scn:71",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 277,
+"ko": "약 재료인 <백련초{를 <10개{ 정도만 모아다 줘. 몬스터가 늘어났다니 쉽게 구할 수 있을거야.",
+"kind": "dialog",
+"src": "scn:e0004_scn:72",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 278,
+"ko": "&약 재료;$...........{퀘스트 입수!",
+"kind": "dialog",
+"src": "scn:e0004_scn:73",
+"cap": 254
+},
+{
+"id": 279,
+"ko": "엘렌!",
+"kind": "dialog",
+"src": "scn:e0004_scn:74",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 280,
+"ko": "다행히.. 그냥 탈진한 것 같군. 어떻게 된 거지?",
+"kind": "dialog",
+"src": "scn:e0004_scn:75",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 281,
+"ko": "그게.. }프로비던스{에서 우연히 만났어요. 절 찾아 가출했다더군요.",
+"kind": "dialog",
+"src": "scn:e0004_scn:76",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 282,
+"ko": "문제는 그 다음인데.. 배안에서 갑자기 왔어요. 이 섬으로.",
+"kind": "dialog",
+"src": "scn:e0004_scn:77",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 283,
+"ko": "엘렌이.. 뭔가 빛났던 것 같기도..",
+"kind": "dialog",
+"src": "scn:e0004_scn:78",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 284,
+"ko": "그거 }마법{ 아닌가요? 크래드, 엘렌이 마법을 사용할 수 있었어요?",
+"kind": "dialog",
+"src": "scn:e0004_scn:79",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 285,
+"ko": "저건 누구죠?",
+"kind": "dialog",
+"src": "scn:e0004_scn:80",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 286,
+"ko": "널 찾아온 사람이야.",
+"kind": "dialog",
+"src": "scn:e0004_scn:81",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 287,
+"ko": "|(팔리아스.. }래비|를 구할때 만난 여자다. 그땐 가면을 쓰고 있었으니.. 날 기억하진 못하겠지.)",
+"kind": "dialog",
+"src": "scn:e0004_scn:82",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 288,
+"ko": "나한테 무슨 볼일이지, }선주종{?",
+"kind": "dialog",
+"src": "scn:e0004_scn:83",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 289,
+"ko": "그 호칭은 기분 나쁘니 그만둬 주시죠. <루레인{입니다.",
+"kind": "dialog",
+"src": "scn:e0004_scn:84",
+"speaker": "???",
+"cap": 254
+},
+{
+"id": 290,
+"ko": "}티르{다... 루레인이라고?",
+"kind": "dialog",
+"src": "scn:e0004_scn:85",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 291,
+"ko": "그래, 기억이 나는군. }누아다의 동생{. 선주종의 }제 2계승자{ 였지?",
+"kind": "dialog",
+"src": "scn:e0004_scn:86",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 292,
+"ko": "인간들은 그렇게 알고 있나요? 상관없긴 하지만. 제 }오라버니{의 행방을 알고 싶어요.",
+"kind": "dialog",
+"src": "scn:e0004_scn:87",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 293,
+"ko": "내가 왜 그걸 알려줘야 하지?",
+"kind": "dialog",
+"src": "scn:e0004_scn:88",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 294,
+"ko": "}반역자{라고 들었는 데요.",
+"kind": "dialog",
+"src": "scn:e0004_scn:89",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 295,
+"ko": "오해일 뿐만 아니라 사실이라고 해도 너에게 알려줄 의무는 없어.",
+"kind": "dialog",
+"src": "scn:e0004_scn:90",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 296,
+"ko": "시끄러워! 환자도 있으니까 싸울거면 나가서 싸워!",
+"kind": "dialog",
+"src": "scn:e0004_scn:91",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 297,
+"ko": "죄송합니다.",
+"kind": "dialog",
+"src": "scn:e0004_scn:92",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 298,
+"ko": "브리안, 우리는...",
+"kind": "dialog",
+"src": "scn:e0005_scn:4",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 299,
+"ko": "친구잖아.. 난 그렇게 믿었는데...",
+"kind": "dialog",
+"src": "scn:e0005_scn:5",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 300,
+"ko": "너도 날 친구라고 한다면.. 어째서!!! 어째서야!!",
+"kind": "dialog",
+"src": "scn:e0005_scn:7",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 302,
+"ko": "전쟁은 계속되는 중이지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:1",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 303,
+"ko": "인간들은 }성지{ 공격에 성공했고, 그곳의 }마법 근원{도 파괴했어.",
+"kind": "dialog",
+"src": "scn:e0006_scn:2",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 304,
+"ko": "다만 거기는 점령군이 있을 곳이 아니라 일단 부수기만 한 상태지만.",
+"kind": "dialog",
+"src": "scn:e0006_scn:3",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 305,
+"ko": "나도 물어보고 싶은데, 자네. <브리안{이지?",
+"kind": "dialog",
+"src": "scn:e0006_scn:4",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 306,
+"ko": "아닙... 아니..",
+"kind": "dialog",
+"src": "scn:e0006_scn:5",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 307,
+"ko": "맞을지도 모르겠군요.",
+"kind": "dialog",
+"src": "scn:e0006_scn:6",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 308,
+"ko": "그게 무슨 소리야?",
+"kind": "dialog",
+"src": "scn:e0006_scn:7",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 309,
+"ko": "안 믿으실 겁니다. 그보다 어떻게 이 얼굴을 아시는 거죠?",
+"kind": "dialog",
+"src": "scn:e0006_scn:8",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 310,
+"ko": "군에 소속된 사람 같아서 좀 조사를 하러 다녔어.",
+"kind": "dialog",
+"src": "scn:e0006_scn:9",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 311,
+"ko": "친구이자 상사인 <티르를 찌르고 도망친{ 걸로 되어 있던데? 현상금도 있고...",
+"kind": "dialog",
+"src": "scn:e0006_scn:10",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 312,
+"ko": "사실인가?",
+"kind": "dialog",
+"src": "scn:e0006_scn:11",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 313,
+"ko": "사실을 말하면 믿지 못하실 겁니다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:12",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 314,
+"ko": "듣고나서 결정하지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:13",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 315,
+"ko": "저는 브리안이 아닙니다. 제가 티르 예요.",
+"kind": "dialog",
+"src": "scn:e0006_scn:14",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 316,
+"ko": "브리안이 어떤... 마법을 써서 저와 몸을 바꾼거죠.",
+"kind": "dialog",
+"src": "scn:e0006_scn:15",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 317,
+"ko": "날 놀리는 건 아니지? 몸을 바꾸는 마법이라니..",
+"kind": "dialog",
+"src": "scn:e0006_scn:16",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 318,
+"ko": "그말이 사실이면 하루 이틀만의 일은 아니겠군.",
+"kind": "dialog",
+"src": "scn:e0006_scn:17",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 319,
+"ko": "네?",
+"kind": "dialog",
+"src": "scn:e0006_scn:18",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 320,
+"ko": "마법에 대해서는 조금 아는데, 그런 마법은 들어본 기억이 없어. 흔한 건 아닐테고.",
+"kind": "dialog",
+"src": "scn:e0006_scn:19",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 321,
+"ko": "그럼 그 마법을 아는 선주종을 찾고, 그에 대해 알아내고, 직접 쓰지는 못할테니 사용할 방법을 찾고.",
+"kind": "dialog",
+"src": "scn:e0006_scn:20",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 322,
+"ko": "게다가 인간이 다른 방법으로 마법을 사용한다는 건 간단한 일이 아니야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:21",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 323,
+"ko": "제법 오랜시간, 준비했다는 말이 되는 거지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:22",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 324,
+"ko": "브리안... 아니 티르는 지금 뭘 하고 있습니까?",
+"kind": "dialog",
+"src": "scn:e0006_scn:23",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 325,
+"ko": "성지 점령 때 큰 공을 세워서 거의 영웅이 되었지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:24",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 326,
+"ko": "지금은 아마 }뮤리아스{에 있지 않을까?",
+"kind": "dialog",
+"src": "scn:e0006_scn:25",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 327,
+"ko": "인간측이 }성지{의 }마법 근원{을 파괴해 좀 더 유리해 졌지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:26",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 328,
+"ko": "곧 또다시 공격을 시도하지 않을까?",
+"kind": "dialog",
+"src": "scn:e0006_scn:27",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 329,
+"ko": "원래 팔은 상처가 썩고 있어서 할 수 없이 잘랐어.",
+"kind": "dialog",
+"src": "scn:e0006_scn:28",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 330,
+"ko": "그건 내 작품인데 마침 하나가 남아서 붙였지. 진짜 팔이랑 별 차이는 못 느낄거야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:29",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 331,
+"ko": "강도도 꽤 높아서 대부분의 무기는 막을 수 있어.",
+"kind": "dialog",
+"src": "scn:e0006_scn:30",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 332,
+"ko": "이런 팔을 본 기억이 있는데...",
+"kind": "dialog",
+"src": "scn:e0006_scn:31",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 333,
+"ko": "선주종의 왕자 }누아다 아케트리브{의...?",
+"kind": "dialog",
+"src": "scn:e0006_scn:32",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 334,
+"ko": "아, 본적 있어? 맞아. 그거랑 동형이야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:33",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 335,
+"ko": "여분으로 만들어 놓은 건데 누아다는 실종 되었으니까 쓸 일이 없겠다 싶어서..",
+"kind": "dialog",
+"src": "scn:e0006_scn:34",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 336,
+"ko": "|(}누아다 아케트리브|.. 대장을 암살하려다 실패해서 지금 }뮤리아스|에 투옥되어 있는 자다..)",
+"kind": "dialog",
+"src": "scn:e0006_scn:35",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 337,
+"ko": "당신.. 선주종의 편입니까?",
+"kind": "dialog",
+"src": "scn:e0006_scn:36",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 338,
+"ko": "난 누구의 편도 아니라네. 누아다에게는 신세를 진 게 있어서 만들어 줬을 뿐이야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:37",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 339,
+"ko": "맘에 안들어도 이제 못 떼. 정 붙이라고.",
+"kind": "dialog",
+"src": "scn:e0006_scn:38",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 340,
+"ko": "난 뭐 그냥 할 일 없는 학자지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:39",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 341,
+"ko": "마법을 연구해서 <자동기계{를 만들어 볼까 하는 생각에 머물고 있다고 해두지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:40",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 342,
+"ko": "경비기계를 말하는 겁니까?",
+"kind": "dialog",
+"src": "scn:e0006_scn:41",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 343,
+"ko": "아니, 그런 정도가 아니라.. 자네 팔 같은 거.",
+"kind": "dialog",
+"src": "scn:e0006_scn:42",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 344,
+"ko": "거기도 <마법{이 도입되어 있는 셈인데. 그냥 기계로는 그렇게 작고 정교한 동작을 못 시켜.",
+"kind": "dialog",
+"src": "scn:e0006_scn:43",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 345,
+"ko": "그렇게 대단한 사람 아니니 너무 궁금해 하지 말게. 쑥쓰럽구만.",
+"kind": "dialog",
+"src": "scn:e0006_scn:44",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 346,
+"ko": "2주간의 전황",
+"kind": "dialog",
+"src": "scn:e0006_scn:45",
+"cap": 254
+},
+{
+"id": 347,
+"ko": "기계팔에 대해서",
+"kind": "dialog",
+"src": "scn:e0006_scn:46",
+"cap": 254
+},
+{
+"id": 348,
+"ko": "크래드에 대해서",
+"kind": "dialog",
+"src": "scn:e0006_scn:47",
+"cap": 254
+},
+{
+"id": 349,
+"ko": "이제 되었다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:48",
+"cap": 254
+},
+{
+"id": 350,
+"ko": "아, 그래.",
+"kind": "dialog",
+"src": "scn:e0006_scn:49",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 351,
+"ko": "참, 그 팔은 누아다 거랑은 다르게 <특수 기능{이 붙어 있어. 듣고 싶을 때 말해.",
+"kind": "dialog",
+"src": "scn:e0006_scn:50",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 352,
+"ko": "&크레드를 찾아라;$...........{퀘스트 완료!",
+"kind": "dialog",
+"src": "scn:e0006_scn:51",
+"cap": 254
+},
+{
+"id": 353,
+"ko": "좀 진정은 되었나?",
+"kind": "dialog",
+"src": "scn:e0006_scn:52",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 354,
+"ko": "몇 가지 묻고 싶은 것이 있습니다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:53",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 355,
+"ko": "뭘 묻고 싶은데?",
+"kind": "dialog",
+"src": "scn:e0006_scn:54",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 356,
+"ko": "유탄의 발사",
+"kind": "dialog",
+"src": "scn:e0006_scn:55",
+"cap": 254
+},
+{
+"id": 357,
+"ko": "게임중 메뉴의 <ARMS{항목이 활성화가 되어있을 거야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:56",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 358,
+"ko": "발사는 간단해, <격발{ 스킬을 단축키에 등록하고 발사하면 되지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:57",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 359,
+"ko": "기억해 둬야 할 점은 <탄환{이 있어야한다는 점, 약간의 <SP{를 소모한다는 점, 그리고...",
+"kind": "dialog",
+"src": "scn:e0006_scn:58",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 360,
+"ko": "공격력이 너의 <정신력{과 <마법공격력 증폭 옵션{에 비례한다는 점이야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:59",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 361,
+"ko": "그렇군요.. 40mm 유탄은 일종의 마법탄이니까.",
+"kind": "dialog",
+"src": "scn:e0006_scn:60",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 362,
+"ko": "보통 인간은 마증 옵션을 버리지만, 날 믿고 한번 투자해봐.",
+"kind": "dialog",
+"src": "scn:e0006_scn:61",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 363,
+"ko": "쉽게 믿기 어려운데요..",
+"kind": "dialog",
+"src": "scn:e0006_scn:62",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 364,
+"ko": "부품의 교체",
+"kind": "dialog",
+"src": "scn:e0006_scn:63",
+"cap": 254
+},
+{
+"id": 365,
+"ko": "도시에 나가면 <엔지니어{들한테서 이런 저런 <부품{을 사서 좀 강화시켜 봐.",
+"kind": "dialog",
+"src": "scn:e0006_scn:64",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 366,
+"ko": "블록의 확률이나 능력치 증가는 물론이고..",
+"kind": "dialog",
+"src": "scn:e0006_scn:65",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 367,
+"ko": "다양한 효과를 가진 <마법탄의 탄창{들도 조립할 수 있어.",
+"kind": "dialog",
+"src": "scn:e0006_scn:66",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 368,
+"ko": "다만 부품들 가격이 좀 쎄서.. 내 능력으로는 기본 탄창 하나도 벅차더군.",
+"kind": "dialog",
+"src": "scn:e0006_scn:67",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 369,
+"ko": "남의 팔에, 취미 생활치곤 과하게 투자 하셨군요.",
+"kind": "dialog",
+"src": "scn:e0006_scn:68",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 370,
+"ko": "로망이거든.",
+"kind": "dialog",
+"src": "scn:e0006_scn:69",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 371,
+"ko": "탄창의 교체",
+"kind": "dialog",
+"src": "scn:e0006_scn:70",
+"cap": 254
+},
+{
+"id": 372,
+"ko": "게임 중 메뉴의 <ARMS{에서, <탄창 부품{을 단축키에 등록할 수 있어.",
+"kind": "dialog",
+"src": "scn:e0006_scn:71",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 373,
+"ko": "그걸 사용하면 화면 <좌측상단{에 현재 장전된 탄창이 바뀌지.",
+"kind": "dialog",
+"src": "scn:e0006_scn:72",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 374,
+"ko": "그 상태에서 격발, 하면 현재 장전된 탄창의 탄이 나가.",
+"kind": "dialog",
+"src": "scn:e0006_scn:73",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 375,
+"ko": "탄창만 바꾼다고 바로 발사되는 게 아니라는 것, 명심하고.",
+"kind": "dialog",
+"src": "scn:e0006_scn:74",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 376,
+"ko": "탄창이 장전되어 있어도 해당 마법탄이 부족하면 안 나가.",
+"kind": "dialog",
+"src": "scn:e0006_scn:75",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 377,
+"ko": "... <탄창 교체{ 후 <격발{.. 복잡하네요.",
+"kind": "dialog",
+"src": "scn:e0006_scn:76",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 378,
+"ko": "위력은 보증한다니까. 다양한 탄을 쓰게 되면 }기갑병기{와도 싸울 수 있을 걸?",
+"kind": "dialog",
+"src": "scn:e0006_scn:77",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 379,
+"ko": "다양한 탄을 쓰게 되도 기갑병기는 피하고 싶습니다만..",
+"kind": "dialog",
+"src": "scn:e0006_scn:78",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 380,
+"ko": "알 것 같다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:79",
+"cap": 254
+},
+{
+"id": 381,
+"ko": "군인이니까 그리 어려운 점은 없을 거야. 중화기 사용은 기본소양이었지?",
+"kind": "dialog",
+"src": "scn:e0006_scn:80",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 382,
+"ko": "나쁘지 않군요.. 밸런스도 좋고..",
+"kind": "dialog",
+"src": "scn:e0006_scn:81",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 383,
+"ko": "흐음.. 몸이 근질근질한 모양이로군. &기본탄{을 몇개 줄테니 몸을 좀 움직여 볼텐가?",
+"kind": "dialog",
+"src": "scn:e0006_scn:82",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 384,
+"ko": "나가는 김에 우리 <덜렁이{도 좀 데려와 주면 고맙고.",
+"kind": "dialog",
+"src": "scn:e0006_scn:83",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 385,
+"ko": "아.. }엘렌{이라고 하셨죠?",
+"kind": "dialog",
+"src": "scn:e0006_scn:84",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 386,
+"ko": "그러고보니, 절 간호해 준 게 그 아이인가요?",
+"kind": "dialog",
+"src": "scn:e0006_scn:85",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 387,
+"ko": "으으음.. 그걸 간호라고 할 수 있다면 말이지..",
+"kind": "dialog",
+"src": "scn:e0006_scn:86",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 388,
+"ko": "저도 고맙다는 인사 정도는 하고 싶으니, 잠깐 다녀오겠습니다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:87",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 389,
+"ko": "아까 뭐 <산딸기{라도 따온다고 나갔으니까 <남쪽 해안가{로 나가보면 찾을 수 있을거야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:88",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 390,
+"ko": "알았습니다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:89",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 391,
+"ko": "&엘렌을 찾아라;$...........{퀘스트 완료!",
+"kind": "dialog",
+"src": "scn:e0006_scn:90",
+"cap": 254
+},
+{
+"id": 392,
+"ko": "그 팔, 군용 표준인 <40mm 유탄발사기{가 달려있어.",
+"kind": "dialog",
+"src": "scn:e0006_scn:91",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 393,
+"ko": "멋지지?",
+"kind": "dialog",
+"src": "scn:e0006_scn:92",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 394,
+"ko": "어째서 그런 걸...!?",
+"kind": "dialog",
+"src": "scn:e0006_scn:93",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 395,
+"ko": "기절해 있는 동안.. 계속 헛소리를 하더군.",
+"kind": "dialog",
+"src": "scn:e0006_scn:94",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 396,
+"ko": "좌절과 분노가 느껴지는..",
+"kind": "dialog",
+"src": "scn:e0006_scn:95",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 397,
+"ko": "깨어나면, 힘이 필요한 사람일 것 같다는 직감이 들었다네.",
+"kind": "dialog",
+"src": "scn:e0006_scn:96",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 398,
+"ko": "내 직감은.. 대충 맞은 것 같은데. 어때?",
+"kind": "dialog",
+"src": "scn:e0006_scn:97",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 399,
+"ko": "그렇게 까지.. 생각해 주신 겁니까..",
+"kind": "dialog",
+"src": "scn:e0006_scn:98",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 400,
+"ko": "거기에 약간은 내 취미.",
+"kind": "dialog",
+"src": "scn:e0006_scn:99",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 401,
+"ko": "그리고 또 약간은 남자의 로망.",
+"kind": "dialog",
+"src": "scn:e0006_scn:100",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 402,
+"ko": "어디까지가 진심인지..",
+"kind": "dialog",
+"src": "scn:e0006_scn:101",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 403,
+"ko": "어쨌든 40mm 유탄의 위력은 진짜야. 군인이라면 알겠지만.",
+"kind": "dialog",
+"src": "scn:e0006_scn:102",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 404,
+"ko": "사용법을 알려 줄테니, 유용하게 쓰라고.",
+"kind": "dialog",
+"src": "scn:e0006_scn:103",
+"speaker": "크레드",
+"cap": 254
+},
+{
+"id": 405,
+"ko": "근데 티르 오빠는? 언제까지 여기에 있을 거예요?",
+"kind": "dialog",
+"src": "scn:e0006_scn:104",
+"speaker": "엘렌",
+"cap": 254
+},
+{
+"id": 406,
+"ko": "글쎄다. 오래 있지는 않을 것 같은데.",
+"kind": "dialog",
+"src": "scn:e0006_scn:105",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 407,
+"ko": "우웅... 그럼 돌아 올 거죠?",
+"kind": "dialog",
+"src": "scn:e0006_scn:106",
+"speaker": "엘렌",
+"cap": 254
+},
+{
+"id": 408,
+"ko": "생각해 볼게. 그보다 앞을 똑바로 안 보면 넘어진다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:107",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 409,
+"ko": "피이. 제가 어린 앤줄 알아요?",
+"kind": "dialog",
+"src": "scn:e0006_scn:108",
+"speaker": "엘렌",
+"cap": 254
+},
+{
+"id": 410,
+"ko": "그러게 넘어진다니까...",
+"kind": "dialog",
+"src": "scn:e0006_scn:109",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 411,
+"ko": "야.. 어디 다친거야?",
+"kind": "dialog",
+"src": "scn:e0006_scn:110",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 412,
+"ko": "엘렌! 정신 차려봐!",
+"kind": "dialog",
+"src": "scn:e0006_scn:111",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 413,
+"ko": "|(누아다는.. 함께 이동하지 못했다면 브리안에게 잡힌거야.)",
+"kind": "dialog",
+"src": "scn:e0006_scn:112",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 414,
+"ko": "|(<뮤리아스|, 아마도 <포로수용소|. 혼자 힘으로 침입하기는 어려울 거고..)",
+"kind": "dialog",
+"src": "scn:e0006_scn:113",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 415,
+"ko": "|(당장은 대장과 연락할 방법이 없다. 루칸과 래비도 마찬가지.)",
+"kind": "dialog",
+"src": "scn:e0006_scn:114",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 416,
+"ko": "|(연락이 되어도 지금으로썬 뭐가 뭔지도 모르겠어.)",
+"kind": "dialog",
+"src": "scn:e0006_scn:115",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 417,
+"ko": "부탁드려요. 저는 오라버니를 구하고 싶어요. 저에게는 유일하게 남은 }가족{입니다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:116",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 418,
+"ko": "`이 여자를 이용해야 한다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:117",
+"cap": 254
+},
+{
+"id": 419,
+"ko": "내가 그걸 알려준다면, 나에게 뭘 해줄 거지?",
+"kind": "dialog",
+"src": "scn:e0006_scn:118",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 420,
+"ko": "당신이 반역자라면 망명을 허용해 줄 생각이었습니다만.",
+"kind": "dialog",
+"src": "scn:e0006_scn:119",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 421,
+"ko": "아니라면 가치가 없겠네요. 뭘 원하시죠?",
+"kind": "dialog",
+"src": "scn:e0006_scn:120",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 422,
+"ko": "혹시 }육체를 교환하는 마법{에 대해 알고 있나?",
+"kind": "dialog",
+"src": "scn:e0006_scn:121",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 423,
+"ko": "들어본 적은 없습니다. 원한다면 조사해 드릴 수는 있어요.",
+"kind": "dialog",
+"src": "scn:e0006_scn:122",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 424,
+"ko": "도움이 안되는 구만. 뭐 좋아. 누아다는 <뮤리아스{에 있는 <포로수용소{에 있다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:123",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 425,
+"ko": "날 거기에 데려다 줄 수 있나?",
+"kind": "dialog",
+"src": "scn:e0006_scn:124",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 426,
+"ko": "이유를 물어봐도 될까요.",
+"kind": "dialog",
+"src": "scn:e0006_scn:125",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 427,
+"ko": "사적인 일이야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:126",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 428,
+"ko": "순간이동은 불가능하지만 배를 빌려드릴 수는 있습니다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:127",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 429,
+"ko": "그럼 그 정도로 타협해주지. <포로수용소{에 있겠지만 어디에 있는지는 나도 정확히 몰라.",
+"kind": "dialog",
+"src": "scn:e0006_scn:128",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 430,
+"ko": "그 이후는, 직접 찾아봐야 할거야.",
+"kind": "dialog",
+"src": "scn:e0006_scn:129",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 431,
+"ko": "충분합니다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:130",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 432,
+"ko": "혼자 갈 건가?",
+"kind": "dialog",
+"src": "scn:e0006_scn:131",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 433,
+"ko": "이쪽도, 사적인 일이라서. <선착장{에서 기다리고 있겠습니다.",
+"kind": "dialog",
+"src": "scn:e0006_scn:132",
+"speaker": "루레인",
+"cap": 254
+},
+{
+"id": 434,
+"ko": "제길, 개운하질 못하군 요즘은...",
+"kind": "dialog",
+"src": "scn:e0006_scn:133",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 435,
+"ko": "}누아다의 말{.. 역시 크래드에게 전해줘야 겠어.",
+"kind": "dialog",
+"src": "scn:e0006_scn:134",
+"speaker": "티르",
+"cap": 254
+},
+{
+"id": 436,
+"ko": "&이름없는 섬;$...........{퀘스트 완료!",
+"kind": "dialog",
+"src": "scn:e0006_scn:135",
+"cap": 254
+},
+{
+"id": 437,
+"ko": "&포로수용소;$...........{퀘스트 입수!",
+"kind": "dialog",
+"src": "scn:e0006_scn:136",
+"cap": 254
+},
+{
+"id": 438,
+"ko": "&크래드;$...........{퀘스트 입수!",
+"kind": "dialog",
+"src": "scn:e0006_scn:137",
+"cap": 254
+}
+]

@@ -1,0 +1,204 @@
+ko	vi	loai	ghi_chu
+티르	Tir	nhân vật	nam chính tuyến Người
+루레인	Lurain	nhân vật	nữ chính tuyến Nebed
+케프네스	Kepnes	nhân vật	phản diện; Tir gọi "Chỉ huy" (대장)
+브리안	Brian	nhân vật	bạn thân Tir
+크레드	Cred	nhân vật	cả hai cách viết 크레드/크래드 đều là Cred
+크래드	Cred	nhân vật
+엘렌	Ellen	nhân vật	bé gái
+그라함	Graham	nhân vật
+루칸	Lucan	nhân vật	Guardian
+래비	Ravi	nhân vật	Guardian, giọng cổ
+이자벨	Isabel	nhân vật
+앨리스	Alice	nhân vật	kẻ biến hình
+누아다	Nuada	nhân vật	anh Lurain
+노덴스	Nodens	nhân vật	cha Lurain, Thủ Hộ Giả đời 14
+브레스	Bres	nhân vật	Trưởng lão, cha Deirdre
+디어드리	Deirdre	nhân vật	bạn thân Lurain
+엔리코	Enrico	nhân vật
+스트레이츠	Straitz	nhân vật
+에리나	Erina	nhân vật
+안톤	Anton	nhân vật
+알리사	Alisa	nhân vật
+슈르츠	Schurz	nhân vật	cậu bé thiên tài
+제임스	James	nhân vật
+엔야	Enya	nhân vật
+알렉스	Alex	nhân vật
+다누	Danu	nhân vật	mẹ Lurain
+레스	Res	nhân vật	Thủ Hộ Giả đời đầu
+누아다 아케트리브	Nuada Airgetlám	nhân vật
+도적	Tên cướp	nhân vật	도적1/2/3 → Tên cướp 1/2/3
+상인	Thương nhân	nhân vật
+대장장이	Thợ rèn	nhân vật
+엔지니어	Kỹ sư	nhân vật
+소환술사	Triệu hồi sư	nhân vật
+여관관리인	Chủ quán trọ	nhân vật
+남자	Người đàn ông	nhân vật
+여자	Người phụ nữ	nhân vật
+소년	Cậu bé	nhân vật
+소녀	Cô bé	nhân vật
+노인	Ông lão	nhân vật
+선장	Thuyền trưởng	nhân vật
+병사	Binh sĩ	nhân vật
+연구원	Nhà nghiên cứu	nhân vật
+연금술사	Nhà giả kim	nhân vật
+고블린	Goblin	nhân vật/quái
+창고	Kho	nhân vật	NPC tên "Kho" (đùa tên), giữ nguyên câu đùa
+네트워크	Mạng	nhân vật	NPC tên "Mạng"
+의무병	Quân y	nhân vật
+공화국	Cộng Hòa quốc	phe	"quân Cộng Hòa", "lính Cộng Hòa"; 본국 → bản quốc
+의회	Nghị hội	phe
+웨이즈	Wade	phe	웨이즈/웨이드 가(문) → gia tộc Wade
+웨이드	Wade	phe
+베인	Bain	phe	베인 가문 → gia tộc Bain
+네베드	Nebed	chủng tộc
+인간	con người / loài người	chủng tộc	tùy câu
+휴먼	Human	chủng tộc	UI
+선주종	Tiên Trú tộc	chủng tộc	cách người Cộng Hòa gọi Nebed, sắc thái miệt thị; 선주족 cũng vậy
+고대종	Cổ tộc	chủng tộc
+고대신	Cổ Thần	thực thể
+가디언	Guardian	thực thể	tôi tớ Cổ Thần (Lucan, Ravi...), KHÁC 수호자
+수호자	Thủ Hộ Giả	danh hiệu	chức vị của Nebed; 수호자님 → Thủ Hộ Giả đại nhân
+수호자 후보	ứng viên Thủ Hộ Giả	danh hiệu
+장로	Trưởng lão	danh hiệu
+계승자	người kế vị	danh hiệu	제2계승자 → Người kế vị thứ hai
+듣는 자	Kẻ Lắng Nghe	danh hiệu	số nhiều: các Kẻ Lắng Nghe; KHÔNG dùng "Thính giả"
+강림자	Giáng Lâm Giả	danh hiệu
+솔티안	Soltian	danh hiệu
+구원자	Đấng Cứu Thế	danh hiệu
+변신자	Kẻ Biến Hình	danh hiệu	변신능력자 cũng vậy
+이능력자	dị năng giả	danh hiệu
+악몽의 사도	Sứ Đồ Ác Mộng	danh hiệu
+악몽을 창조하는 자	Đấng Sáng Tạo Ác Mộng	danh hiệu
+악몽을 잣는 자	Kẻ Dệt Ác Mộng	danh hiệu
+꿈을 잣는 자	Kẻ Dệt Mộng	danh hiệu
+악몽의 주인	Chủ Nhân Ác Mộng	danh hiệu
+이그나이	Ignai	thực thể
+크리스탈	Crystal	vật phẩm cốt truyện
+속삭임	Lời Thì Thầm	khái niệm
+정신감응	thần giao cách cảm	khái niệm
+정신 지배	khống chế tâm trí	khái niệm
+부활의 달	Trăng Phục Sinh	khái niệm
+대홍수	Đại Hồng Thủy	khái niệm
+성전	Thánh chiến	khái niệm
+소환수	triệu hồi thú	khái niệm
+신수	Thần thú	khái niệm
+마석	Ma thạch	vật phẩm
+오브	Orb	vật phẩm
+제련석	Đá tinh luyện	vật phẩm	고급제련석 → Đá tinh luyện cao cấp
+제련	tinh luyện	hệ thống
+조합	chế tạo	hệ thống	조합서 → Sách công thức
+합성	hợp thành	hệ thống
+분해	phân giải	hệ thống
+마법부여	phù phép	hệ thống
+암즈	Arms	hệ thống	vũ khí tay giả của người
+의수	tay giả	vật phẩm	기계팔 → tay máy
+통행증	giấy thông hành	vật phẩm
+가면	mặt nạ	vật phẩm
+붉은사자대검	Hồng Sư Đại Kiếm	vật phẩm
+준위	Chuẩn úy	quân hàm	준위님 → (ngài) Chuẩn úy
+하사	Thượng sĩ	quân hàm
+병장	Trung sĩ	quân hàm
+상병	Hạ sĩ	quân hàm
+일병	Binh nhất	quân hàm
+이병	Binh nhì	quân hàm
+대장	Chỉ huy	chức vụ	khi Tir/lính gọi Kepnes; Lucan gọi Kepnes "Đại ca"
+사령관	Tư lệnh	chức vụ	임시사령관 → Tư lệnh lâm thời; 최고사령관 → Tổng tư lệnh
+부관	phó quan	chức vụ
+워리어	Warrior	lớp
+건슬링어	Gunslinger	lớp	건슬링거 cũng vậy
+파이터	Fighter	lớp
+소서러	Sorcerer	lớp
+오르비스	Orbis	địa danh	오르비스 군도 → quần đảo Orbis
+매도우 힐	Meadow Hill	địa danh	매도우힐 cũng vậy
+프로비던스	Providence	địa danh
+수레바퀴 섬	đảo Bánh Xe	địa danh	수레바퀴섬
+이름없는 섬	Đảo Vô Danh	địa danh	이름없는섬
+검은바위 섬	đảo Hắc Thạch	địa danh	검은바위섬, 검은 바위 섬
+팔리아스	Falias	địa danh
+뮤리아스	Murias	địa danh
+핀디아스	Findias	địa danh
+아눈	Annun	địa danh	아눈 섬 → đảo Annun
+리온	Rion	địa danh
+베쓰무라	Bethmura	địa danh	베스무라 cũng vậy
+고블린 섬	đảo Goblin	địa danh
+뇌수의 동굴	hang Lôi Thú	địa danh
+성지	Thánh Địa	địa danh
+성역의 중심	Trung tâm Thánh Vực	địa danh
+어둠의 숲	Rừng Bóng Tối	địa danh
+포로수용소	trại tù binh	địa danh
+선착장	bến tàu	địa danh
+주둔지	doanh trại	địa danh	인간주둔지 → doanh trại loài người; 선주주둔지 → doanh trại Tiên Trú
+유적	di tích	địa danh
+신전	thần điện	địa danh
+봉인지	phong ấn địa	địa danh
+여관	quán trọ	địa danh
+HP	HP	chỉ số
+MP	MP	chỉ số
+SP	SP	chỉ số
+근력	Sức mạnh	chỉ số	UI chật: STR
+체력	Thể lực	chỉ số	UI chật: VIT (체력 cũng có thể nghĩa HP/sức lực tùy câu)
+민첩	Nhanh nhẹn	chỉ số	UI chật: AGI
+정신	Tinh thần	chỉ số	UI chật: INT
+레벨	cấp	chỉ số	UI: Lv
+퀘스트	nhiệm vụ	hệ thống	퀘스트 입수 → Nhận nhiệm vụ; 퀘스트 완료 → Hoàn thành nhiệm vụ
+스킬	kỹ năng	hệ thống
+세이브	lưu game	hệ thống
+지하시설	Cơ sở ngầm	địa danh	
+유적동굴	Hang di tích	địa danh	
+비밀통로	Mật đạo	địa danh	
+정착지	Khu định cư	địa danh	
+던전	Hầm ngục	địa danh	
+민가	Nhà dân	địa danh	
+공방	Xưởng	địa danh	
+보스룸	Phòng Boss	địa danh	
+비밀방	Phòng bí mật	địa danh	
+군함	Chiến hạm	vật thể	
+반란군	phản quân	phe	
+기갑병	Cơ giáp binh	quái	
+보병	Bộ binh	quái	
+사수	Xạ thủ	quái	
+포병	Pháo binh	quái	
+정예병	Lính tinh nhuệ	quái	
+패잔병	Tàn binh	quái	
+야전지휘관	Chỉ huy dã chiến	quái	
+배신자	Kẻ phản bội	quái/khái niệm	
+저주술사	Chú thuật sư	quái	
+타락한 자	Kẻ sa đọa	quái	
+악령	Ác linh	quái	
+악마	Ác ma	quái	
+라이칸	Lycan	quái	
+골렘	Golem	quái	골렘의 심장 → Trái tim Golem
+웜	Worm	quái	웜의 껍질 → Vỏ Worm
+오토마톤	Automaton	quái	
+바질리스크	Basilisk	quái	
+스켈레톤	Skeleton	quái	해골 → khô lâu
+정령	Tinh linh	quái	불의 정령 → Tinh linh lửa; 불의 정령석 → Hỏa linh thạch
+베놈	Venom	triệu hồi thú	
+헤지호그	Hedgehog	triệu hồi thú	
+그래비티	Gravity	triệu hồi thú	
+쇼커	Shocker	triệu hồi thú	
+세이프가드	Safeguard	triệu hồi thú	
+환수	huyễn thú	khái niệm	(幻獸) khác 소환수 triệu hồi thú
+마법력	pháp lực	chỉ số	
+마력	ma lực	khái niệm	
+교감도	giao cảm	chỉ số	
+오러	hào quang	khái niệm	
+쿨타임	hồi chiêu	hệ thống	
+크리티컬	chí mạng	hệ thống	
+스턴	choáng	hệ thống	
+포션	Bình máu	vật phẩm	
+탄창	Băng đạn	vật phẩm	
+군수물자	Quân nhu	vật phẩm	
+배표	Vé tàu	vật phẩm	
+백련초	Bạch Liên Thảo	vật phẩm	
+단열복	Áo cách nhiệt	vật phẩm	
+아교	Keo da	vật phẩm	
+화약	Thuốc súng	vật phẩm	
+카드키	Thẻ khóa	vật phẩm	
+블러디 완드	Bloody Wand	vật phẩm	
+글라디우스	Gladius	vật phẩm	
+드레이크	Drake	vật phẩm	
+라임벨	Limebell	vật phẩm	
+대검공격	Đại Kiếm Kích	kỹ năng	
+철의주먹	Thiết Quyền	kỹ năng	

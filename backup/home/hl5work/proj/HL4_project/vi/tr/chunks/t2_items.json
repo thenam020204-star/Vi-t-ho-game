@@ -1,0 +1,5112 @@
+[
+{
+"id": 6153,
+"ko": "아렌",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:0:1",
+"cap": 14
+},
+{
+"id": 6154,
+"ko": "비스",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:1:1",
+"cap": 14
+},
+{
+"id": 6155,
+"ko": "챠라",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:2:1",
+"cap": 14
+},
+{
+"id": 6156,
+"ko": "데빈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:3:1",
+"cap": 14
+},
+{
+"id": 6157,
+"ko": "에반",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:4:1",
+"cap": 14
+},
+{
+"id": 6158,
+"ko": "플류",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:5:1",
+"cap": 14
+},
+{
+"id": 6159,
+"ko": "게인",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:6:1",
+"cap": 14
+},
+{
+"id": 6160,
+"ko": "하웬",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:7:1",
+"cap": 14
+},
+{
+"id": 6161,
+"ko": "이즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:8:1",
+"cap": 14
+},
+{
+"id": 6162,
+"ko": "잭",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:9:1",
+"cap": 14
+},
+{
+"id": 6163,
+"ko": "칸",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:10:1",
+"cap": 14
+},
+{
+"id": 6164,
+"ko": "로젠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:11:1",
+"cap": 14
+},
+{
+"id": 6165,
+"ko": "매츠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:12:1",
+"cap": 14
+},
+{
+"id": 6166,
+"ko": "네오",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:13:1",
+"cap": 14
+},
+{
+"id": 6167,
+"ko": "오렌",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:14:1",
+"cap": 14
+},
+{
+"id": 6168,
+"ko": "피아",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:15:1",
+"cap": 14
+},
+{
+"id": 6169,
+"ko": "켄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:16:1",
+"cap": 14
+},
+{
+"id": 6170,
+"ko": "레닌",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:17:1",
+"cap": 14
+},
+{
+"id": 6171,
+"ko": "시온",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:18:1",
+"cap": 14
+},
+{
+"id": 6172,
+"ko": "테오",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_00_DAT:19:1",
+"cap": 14
+},
+{
+"id": 6173,
+"ko": "양철반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:0:1",
+"cap": 14
+},
+{
+"id": 6174,
+"ko": "구리반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:1:1",
+"cap": 14
+},
+{
+"id": 6175,
+"ko": "근성의반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:2:1",
+"cap": 14
+},
+{
+"id": 6176,
+"ko": "회복의반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:3:1",
+"cap": 14
+},
+{
+"id": 6177,
+"ko": "맹공의반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:4:1",
+"cap": 14
+},
+{
+"id": 6178,
+"ko": "힘의반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:5:1",
+"cap": 14
+},
+{
+"id": 6179,
+"ko": "집중의반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:6:1",
+"cap": 14
+},
+{
+"id": 6180,
+"ko": "정신의반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:7:1",
+"cap": 14
+},
+{
+"id": 6181,
+"ko": "민첩의반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:8:1",
+"cap": 14
+},
+{
+"id": 6182,
+"ko": "총명의반지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:9:1",
+"cap": 14
+},
+{
+"id": 6183,
+"ko": "스트렝스이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:10:1",
+"cap": 14
+},
+{
+"id": 6184,
+"ko": "에이밍이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:11:1",
+"cap": 14
+},
+{
+"id": 6185,
+"ko": "스트롱이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:12:1",
+"cap": 14
+},
+{
+"id": 6186,
+"ko": "컨센트이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:13:1",
+"cap": 14
+},
+{
+"id": 6187,
+"ko": "디펜스이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:14:1",
+"cap": 14
+},
+{
+"id": 6188,
+"ko": "배리어이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:15:1",
+"cap": 14
+},
+{
+"id": 6189,
+"ko": "카오스이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:16:1",
+"cap": 14
+},
+{
+"id": 6190,
+"ko": "스마트이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:17:1",
+"cap": 14
+},
+{
+"id": 6191,
+"ko": "라이트이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:18:1",
+"cap": 14
+},
+{
+"id": 6192,
+"ko": "버서크이어링",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:19:1",
+"cap": 14
+},
+{
+"id": 6193,
+"ko": "시바스엠블렘",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:20:1",
+"cap": 14
+},
+{
+"id": 6194,
+"ko": "기간틱엠블렘",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:21:1",
+"cap": 14
+},
+{
+"id": 6195,
+"ko": "셰이드엠블렘",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:22:1",
+"cap": 14
+},
+{
+"id": 6196,
+"ko": "알테닉엠블렘",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_07_DAT:23:1",
+"cap": 14
+},
+{
+"id": 6197,
+"ko": "포션",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:0:1",
+"cap": 9
+},
+{
+"id": 6198,
+"ko": "HP를 200까지;천천히 회복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:0:10",
+"cap": 53
+},
+{
+"id": 6199,
+"ko": "퀵포션",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:1:1",
+"cap": 14
+},
+{
+"id": 6200,
+"ko": "HP를 200까지;단숨에 회복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:1:12",
+"cap": 53
+},
+{
+"id": 6201,
+"ko": "하이포션",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:2:1",
+"cap": 14
+},
+{
+"id": 6202,
+"ko": "HP를 800까지;천천히 회복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:2:14",
+"cap": 53
+},
+{
+"id": 6203,
+"ko": "과일쥬스",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:3:1",
+"cap": 14
+},
+{
+"id": 6204,
+"ko": "SP를;40만큼 회복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:3:14",
+"cap": 53
+},
+{
+"id": 6205,
+"ko": "포도주",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:4:1",
+"cap": 14
+},
+{
+"id": 6206,
+"ko": "SP를;80만큼 회복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:4:12",
+"cap": 53
+},
+{
+"id": 6207,
+"ko": "상태회복약",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:5:1",
+"cap": 14
+},
+{
+"id": 6208,
+"ko": "상태이상을;모두 제거",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:5:16",
+"cap": 53
+},
+{
+"id": 6209,
+"ko": "제련석",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:6:1",
+"cap": 14
+},
+{
+"id": 6210,
+"ko": "무기/방어구를;강화하는 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:6:12",
+"cap": 53
+},
+{
+"id": 6211,
+"ko": "배탑승권",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:7:1",
+"cap": 14
+},
+{
+"id": 6212,
+"ko": "다른 섬으로;이동하는;배의 탑승권",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:7:14",
+"cap": 53
+},
+{
+"id": 6213,
+"ko": "HP를 800까지;단숨에 회복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:8:12",
+"cap": 53
+},
+{
+"id": 6214,
+"ko": "암즈탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:9:1",
+"cap": 14
+},
+{
+"id": 6215,
+"ko": "일반타격용;암즈탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:9:12",
+"cap": 53
+},
+{
+"id": 6216,
+"ko": "섬광탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:10:1",
+"cap": 14
+},
+{
+"id": 6217,
+"ko": "명중률을;저하시키는;추가효과의;암즈탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:10:12",
+"cap": 53
+},
+{
+"id": 6218,
+"ko": "소이탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:11:1",
+"cap": 14
+},
+{
+"id": 6219,
+"ko": "적을;발화시키는;추가효과의;암즈탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:11:12",
+"cap": 53
+},
+{
+"id": 6220,
+"ko": "체인탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:12:1",
+"cap": 14
+},
+{
+"id": 6221,
+"ko": "적을;당겨오는;추가효과의;암즈탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:12:12",
+"cap": 53
+},
+{
+"id": 6222,
+"ko": "구속탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:13:1",
+"cap": 14
+},
+{
+"id": 6223,
+"ko": "적의 이동을;방해하는;추가효과의;암즈탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:13:12",
+"cap": 53
+},
+{
+"id": 6224,
+"ko": "엘릭서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:15:1",
+"cap": 14
+},
+{
+"id": 6225,
+"ko": "HP/MP/SP를;단숨에;모두 회복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:15:12",
+"cap": 53
+},
+{
+"id": 6226,
+"ko": "부활의서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:16:1",
+"cap": 14
+},
+{
+"id": 6227,
+"ko": "게임오버;상태에서;완전히 부활",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:16:14",
+"cap": 53
+},
+{
+"id": 6228,
+"ko": "스킬초기화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:17:1",
+"cap": 14
+},
+{
+"id": 6229,
+"ko": "투자된;스킬포인트를;초기화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:17:16",
+"cap": 53
+},
+{
+"id": 6230,
+"ko": "스탯초기화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:18:1",
+"cap": 14
+},
+{
+"id": 6231,
+"ko": "투자된;스탯포인트를;초기화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:18:16",
+"cap": 53
+},
+{
+"id": 6232,
+"ko": "여행가방",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:19:1",
+"cap": 14
+},
+{
+"id": 6233,
+"ko": "인벤토리를;확장;(최대5가방)",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:19:14",
+"cap": 53
+},
+{
+"id": 6234,
+"ko": "오토루팅",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:20:1",
+"cap": 14
+},
+{
+"id": 6235,
+"ko": "10시간동안;아이템을;자동획득",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:20:14",
+"cap": 53
+},
+{
+"id": 6236,
+"ko": "달성의부적",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:21:1",
+"cap": 14
+},
+{
+"id": 6237,
+"ko": "오브결합시;제물로;사용하면;확률이 증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:21:16",
+"cap": 53
+},
+{
+"id": 6238,
+"ko": "역행의기원",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:22:1",
+"cap": 14
+},
+{
+"id": 6239,
+"ko": "장비에서;오브를 분리",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:22:16",
+"cap": 53
+},
+{
+"id": 6240,
+"ko": "소켓확장",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:23:1",
+"cap": 14
+},
+{
+"id": 6241,
+"ko": "장비의;오브소켓을;1개 추가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:23:14",
+"cap": 53
+},
+{
+"id": 6242,
+"ko": "고급제련석",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:24:1",
+"cap": 14
+},
+{
+"id": 6243,
+"ko": "무기/방어구를;높은 확률로;강화하는 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:24:16",
+"cap": 53
+},
+{
+"id": 6244,
+"ko": "작은보물함",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:25:1",
+"cap": 14
+},
+{
+"id": 6245,
+"ko": "랜덤하게;아이템을 획득",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:25:16",
+"cap": 53
+},
+{
+"id": 6246,
+"ko": "보물함",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:26:1",
+"cap": 14
+},
+{
+"id": 6247,
+"ko": "큰보물함",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:27:1",
+"cap": 14
+},
+{
+"id": 6248,
+"ko": "오래된보물함",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:28:1",
+"cap": 14
+},
+{
+"id": 6249,
+"ko": "초기화세트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:29:1",
+"cap": 14
+},
+{
+"id": 6250,
+"ko": "투자된;스탯포인트와;스킬포인트를;모두 초기화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_08_DAT:29:16",
+"cap": 53
+},
+{
+"id": 6251,
+"ko": "투구조형",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:0:1",
+"cap": 14
+},
+{
+"id": 6252,
+"ko": "투구를;만들기 위한;기본 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:0:14",
+"cap": 53
+},
+{
+"id": 6253,
+"ko": "갑옷조형",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:1:1",
+"cap": 14
+},
+{
+"id": 6254,
+"ko": "갑옷을;만들기 위한;기본 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:1:14",
+"cap": 53
+},
+{
+"id": 6255,
+"ko": "장갑조형",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:2:1",
+"cap": 14
+},
+{
+"id": 6256,
+"ko": "장갑을;만들기 위한;기본 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:2:14",
+"cap": 53
+},
+{
+"id": 6257,
+"ko": "신발조형",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:3:1",
+"cap": 14
+},
+{
+"id": 6258,
+"ko": "신발을;만들기 위한;기본 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:3:14",
+"cap": 53
+},
+{
+"id": 6259,
+"ko": "검조형",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:4:1",
+"cap": 14
+},
+{
+"id": 6260,
+"ko": "검을;만들기 위한;기본 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:4:12",
+"cap": 53
+},
+{
+"id": 6261,
+"ko": "건조형",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:5:1",
+"cap": 14
+},
+{
+"id": 6262,
+"ko": "건을;만들기 위한;기본 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:5:12",
+"cap": 53
+},
+{
+"id": 6263,
+"ko": "스태프조형",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:6:1",
+"cap": 14
+},
+{
+"id": 6264,
+"ko": "지팡이를;만들기 위한;기본 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:6:16",
+"cap": 53
+},
+{
+"id": 6265,
+"ko": "질긴가죽",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:7:1",
+"cap": 14
+},
+{
+"id": 6266,
+"ko": "방어구의 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:7:14",
+"cap": 53
+},
+{
+"id": 6267,
+"ko": "두꺼운가죽",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:8:1",
+"cap": 14
+},
+{
+"id": 6268,
+"ko": "화약",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:9:1",
+"cap": 14
+},
+{
+"id": 6269,
+"ko": "총기의 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:9:10",
+"cap": 53
+},
+{
+"id": 6270,
+"ko": "섬광가루",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:10:1",
+"cap": 14
+},
+{
+"id": 6271,
+"ko": "강철",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:11:1",
+"cap": 14
+},
+{
+"id": 6272,
+"ko": "검과;방어구의 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:11:10",
+"cap": 53
+},
+{
+"id": 6273,
+"ko": "구리",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:12:1",
+"cap": 14
+},
+{
+"id": 6274,
+"ko": "한철",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:13:1",
+"cap": 14
+},
+{
+"id": 6275,
+"ko": "자수정",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:14:1",
+"cap": 14
+},
+{
+"id": 6276,
+"ko": "장신구의 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:14:12",
+"cap": 53
+},
+{
+"id": 6277,
+"ko": "사파이어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:15:1",
+"cap": 14
+},
+{
+"id": 6278,
+"ko": "다이아몬드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:16:1",
+"cap": 14
+},
+{
+"id": 6279,
+"ko": "강화가죽",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:17:1",
+"cap": 14
+},
+{
+"id": 6280,
+"ko": "경화가죽",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:18:1",
+"cap": 14
+},
+{
+"id": 6281,
+"ko": "떡갈나무",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:19:1",
+"cap": 14
+},
+{
+"id": 6282,
+"ko": "지팡이의 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:19:14",
+"cap": 53
+},
+{
+"id": 6283,
+"ko": "흑단나무",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:20:1",
+"cap": 14
+},
+{
+"id": 6284,
+"ko": "푸른용액",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:21:1",
+"cap": 14
+},
+{
+"id": 6285,
+"ko": "과일주스의;재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:21:14",
+"cap": 53
+},
+{
+"id": 6286,
+"ko": "붉은용액",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:22:1",
+"cap": 14
+},
+{
+"id": 6287,
+"ko": "포션의 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:22:14",
+"cap": 53
+},
+{
+"id": 6288,
+"ko": "녹색용액",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:23:1",
+"cap": 14
+},
+{
+"id": 6289,
+"ko": "특수한 용액",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:23:14",
+"cap": 53
+},
+{
+"id": 6290,
+"ko": "금빛용액",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:24:1",
+"cap": 14
+},
+{
+"id": 6291,
+"ko": "벽조목",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:25:1",
+"cap": 14
+},
+{
+"id": 6292,
+"ko": "고급 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:25:12",
+"cap": 53
+},
+{
+"id": 6293,
+"ko": "스타더스트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:26:1",
+"cap": 14
+},
+{
+"id": 6294,
+"ko": "경화웜가죽",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:27:1",
+"cap": 14
+},
+{
+"id": 6295,
+"ko": "정련된마석",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:28:1",
+"cap": 14
+},
+{
+"id": 6296,
+"ko": "흑철",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_09_DAT:29:1",
+"cap": 14
+},
+{
+"id": 6297,
+"ko": "로크헬름",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:0:1",
+"cap": 14
+},
+{
+"id": 6298,
+"ko": "레벨39 투구; 투구조형10; 질긴가죽8; 강철6",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:0:14",
+"cap": 53
+},
+{
+"id": 6299,
+"ko": "배리어슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:1:1",
+"cap": 14
+},
+{
+"id": 6300,
+"ko": "레벨40 갑옷; 갑옷조형11; 질긴가죽11; 강철8",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:1:16",
+"cap": 53
+},
+{
+"id": 6301,
+"ko": "블러디크로우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:2:1",
+"cap": 14
+},
+{
+"id": 6302,
+"ko": "레벨37 장갑; 장갑조형9; 경화가죽8; 강철6",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:2:18",
+"cap": 53
+},
+{
+"id": 6303,
+"ko": "그랜드워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:3:1",
+"cap": 14
+},
+{
+"id": 6304,
+"ko": "레벨38 신발; 신발조형10; 질긴가죽8; 구리6",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:3:16",
+"cap": 53
+},
+{
+"id": 6305,
+"ko": "그라디우스",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:4:1",
+"cap": 14
+},
+{
+"id": 6306,
+"ko": "레벨29 검; 검조형11; 구리19; 벽조목7",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:4:16",
+"cap": 53
+},
+{
+"id": 6307,
+"ko": "블랙로빈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:5:1",
+"cap": 14
+},
+{
+"id": 6308,
+"ko": "레벨29 건; 건조형11; 화약19; 벽조목7",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:5:14",
+"cap": 53
+},
+{
+"id": 6309,
+"ko": "블러디완드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:6:1",
+"cap": 14
+},
+{
+"id": 6310,
+"ko": "레벨29 지팡이; 스태프조형11; 떡갈나무19; 벽조목7",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:6:16",
+"cap": 53
+},
+{
+"id": 6311,
+"ko": "나이트메어아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:7:1",
+"cap": 14
+},
+{
+"id": 6312,
+"ko": "레벨68 갑옷; 갑옷조형19; 두꺼운가죽20; 흑철13",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:7:20",
+"cap": 53
+},
+{
+"id": 6313,
+"ko": "엔젤윙아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:8:1",
+"cap": 14
+},
+{
+"id": 6314,
+"ko": "레벨76 갑옷; 갑옷조형21; 두꺼운가죽22; 구리15",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:8:16",
+"cap": 53
+},
+{
+"id": 6315,
+"ko": "붉은사자갑옷",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:9:1",
+"cap": 14
+},
+{
+"id": 6316,
+"ko": "레벨48 갑옷; 갑옷조형13; 강화가죽14; 구리9",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:9:18",
+"cap": 53
+},
+{
+"id": 6317,
+"ko": "라임벨슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:10:1",
+"cap": 14
+},
+{
+"id": 6318,
+"ko": "레벨53 갑옷; 갑옷조형15; 강화가죽15; 강철10",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:10:16",
+"cap": 53
+},
+{
+"id": 6319,
+"ko": "스톰블링거",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:11:1",
+"cap": 14
+},
+{
+"id": 6320,
+"ko": "레벨48 검; 검조형18; 강철32; 스타더스트12",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:11:16",
+"cap": 53
+},
+{
+"id": 6321,
+"ko": "해리어롱바렐",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:12:1",
+"cap": 14
+},
+{
+"id": 6322,
+"ko": "레벨48 건; 건조형18; 화약32; 스타더스트12",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:12:18",
+"cap": 53
+},
+{
+"id": 6323,
+"ko": "섀도우완드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:13:1",
+"cap": 14
+},
+{
+"id": 6324,
+"ko": "레벨48 지팡이; 스태프조형18; 떡갈나무32; 스타더스트12",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:13:16",
+"cap": 53
+},
+{
+"id": 6325,
+"ko": "와이어트햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:14:1",
+"cap": 14
+},
+{
+"id": 6326,
+"ko": "레벨61 투구; 투구조형16; 강화가죽13; 강철10",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:14:16",
+"cap": 53
+},
+{
+"id": 6327,
+"ko": "골렘스킨아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:15:1",
+"cap": 14
+},
+{
+"id": 6328,
+"ko": "레벨62 갑옷; 갑옷조형17; 강화가죽18; 한철12",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:15:18",
+"cap": 53
+},
+{
+"id": 6329,
+"ko": "테러글러브",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:16:1",
+"cap": 14
+},
+{
+"id": 6330,
+"ko": "레벨59 장갑; 장갑조형15; 질긴가죽12; 한철9",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:16:16",
+"cap": 53
+},
+{
+"id": 6331,
+"ko": "그랜디쉬",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:17:1",
+"cap": 14
+},
+{
+"id": 6332,
+"ko": "레벨60 신발; 신발조형15; 두꺼운가죽13; 한철10",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:17:14",
+"cap": 53
+},
+{
+"id": 6333,
+"ko": "붉은사자대검",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:18:1",
+"cap": 14
+},
+{
+"id": 6334,
+"ko": "레벨64 검; 검조형24; 한철42; 경화웜가죽16",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:18:18",
+"cap": 53
+},
+{
+"id": 6335,
+"ko": "썬더버드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:19:1",
+"cap": 14
+},
+{
+"id": 6336,
+"ko": "레벨64 건; 건조형24; 섬광가루42; 경화웜가죽16",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:19:14",
+"cap": 53
+},
+{
+"id": 6337,
+"ko": "메테오스틱",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:20:1",
+"cap": 14
+},
+{
+"id": 6338,
+"ko": "레벨64 지팡이; 스태프조형24; 흑단나무42; 경화웜가죽16",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:20:16",
+"cap": 53
+},
+{
+"id": 6339,
+"ko": "드래곤본건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:21:1",
+"cap": 14
+},
+{
+"id": 6340,
+"ko": "레벨74 장갑; 장갑조형19; 경화가죽16; 흑철12",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:21:20",
+"cap": 53
+},
+{
+"id": 6341,
+"ko": "드래곤본워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:22:1",
+"cap": 14
+},
+{
+"id": 6342,
+"ko": "레벨75 신발; 신발조형19; 경화가죽16; 흑철12",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:22:18",
+"cap": 53
+},
+{
+"id": 6343,
+"ko": "드래곤본헬름",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:23:1",
+"cap": 14
+},
+{
+"id": 6344,
+"ko": "레벨76 투구; 투구조형20; 두꺼운가죽16; 흑철12",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:23:18",
+"cap": 53
+},
+{
+"id": 6345,
+"ko": "드래곤본아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:24:1",
+"cap": 14
+},
+{
+"id": 6346,
+"ko": "레벨77 갑옷; 갑옷조형22; 경화가죽22; 흑철15",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:24:18",
+"cap": 53
+},
+{
+"id": 6347,
+"ko": "데몬블레이드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:25:1",
+"cap": 14
+},
+{
+"id": 6348,
+"ko": "레벨70 검; 검조형26; 흑철46; 정련된마석17",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:25:18",
+"cap": 53
+},
+{
+"id": 6349,
+"ko": "팔켄매그넘",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:26:1",
+"cap": 14
+},
+{
+"id": 6350,
+"ko": "레벨70 건; 건조형26; 섬광가루46; 정련된마석17",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:26:16",
+"cap": 53
+},
+{
+"id": 6351,
+"ko": "스타사파이어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:27:1",
+"cap": 14
+},
+{
+"id": 6352,
+"ko": "레벨70 지팡이; 스태프조형26; 흑단나무46; 정련된마석17",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:27:18",
+"cap": 53
+},
+{
+"id": 6353,
+"ko": "레벨1 장신구; 양철반지1; 자수정24; 사파이어24",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:28:20",
+"cap": 53
+},
+{
+"id": 6354,
+"ko": "레벨1 장신구; 양철반지1; 자수정24; 다이아몬드24",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:29:18",
+"cap": 53
+},
+{
+"id": 6355,
+"ko": "레벨1 장신구; 양철반지1; 사파이어24; 다이아몬드24",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:30:18",
+"cap": 53
+},
+{
+"id": 6356,
+"ko": "레벨1 장신구; 구리반지1; 자수정24; 사파이어24",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:31:18",
+"cap": 53
+},
+{
+"id": 6357,
+"ko": "레벨1 장신구; 구리반지1; 자수정24; 다이아몬드24",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:32:18",
+"cap": 53
+},
+{
+"id": 6358,
+"ko": "레벨1 장신구; 구리반지1; 사파이어24; 다이아몬드24",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:33:18",
+"cap": 53
+},
+{
+"id": 6359,
+"ko": "레벨1 장신구; 양철반지1; 자수정24; 정련된마석8",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:34:18",
+"cap": 53
+},
+{
+"id": 6360,
+"ko": "레벨1 장신구; 양철반지1; 사파이어24; 정련된마석8",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:35:18",
+"cap": 53
+},
+{
+"id": 6361,
+"ko": "레벨1 장신구; 구리반지1; 자수정24; 정련된마석8",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:36:18",
+"cap": 53
+},
+{
+"id": 6362,
+"ko": "레벨1 장신구; 구리반지1; 사파이어24; 정련된마석8",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_10_DAT:37:18",
+"cap": 53
+},
+{
+"id": 6363,
+"ko": "무기 공격력을;높여주는 오브.;모든 무기용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:0:10",
+"cap": 53
+},
+{
+"id": 6364,
+"ko": "물리방어력을;높여주는 오브.;모든 방어구용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:1:10",
+"cap": 53
+},
+{
+"id": 6365,
+"ko": "마법방어력을;높여주는 오브.;모든 방어구용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:2:10",
+"cap": 53
+},
+{
+"id": 6366,
+"ko": "명중 능력을;높여주는 오브.;장갑/무기 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:3:10",
+"cap": 53
+},
+{
+"id": 6367,
+"ko": "회피 능력을;높여주는 오브.;신발 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:4:10",
+"cap": 53
+},
+{
+"id": 6368,
+"ko": "크리티컬률을;높여주는 오브.;장갑/무기 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:5:10",
+"cap": 53
+},
+{
+"id": 6369,
+"ko": "기절확률을;낮춰주는 오브.;투구/갑옷 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:6:10",
+"cap": 53
+},
+{
+"id": 6370,
+"ko": "HP최대치를;높여주는 오브.;갑옷 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:7:10",
+"cap": 53
+},
+{
+"id": 6371,
+"ko": "HP회복량을;높여주는 오브.;신발 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:8:10",
+"cap": 53
+},
+{
+"id": 6372,
+"ko": "공격시 HP를;흡수하는 오브.;장갑/무기 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:9:10",
+"cap": 53
+},
+{
+"id": 6373,
+"ko": "소모SP를;줄여주는 오브.;투구 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:10:10",
+"cap": 53
+},
+{
+"id": 6374,
+"ko": "마도",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:11:1",
+"cap": 14
+},
+{
+"id": 6375,
+"ko": "마법 저항력을;높여주는 오브.;투구 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:11:10",
+"cap": 53
+},
+{
+"id": 6376,
+"ko": "스킬 쿨타임을;줄여주는 오브.;신발/무기 전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_11_DAT:12:10",
+"cap": 53
+},
+{
+"id": 6377,
+"ko": "백련초",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:0:1",
+"cap": 14
+},
+{
+"id": 6378,
+"ko": "약 재료로;쓰이는;귀한 풀",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:0:12",
+"cap": 53
+},
+{
+"id": 6379,
+"ko": "매우얇은가죽",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:1:1",
+"cap": 14
+},
+{
+"id": 6380,
+"ko": "가면의 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:1:18",
+"cap": 53
+},
+{
+"id": 6381,
+"ko": "아교",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:2:1",
+"cap": 14
+},
+{
+"id": 6382,
+"ko": "가면",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:3:1",
+"cap": 14
+},
+{
+"id": 6383,
+"ko": "뒤집어쓰면;다른 사람처럼;보이는 가면",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:3:10",
+"cap": 53
+},
+{
+"id": 6384,
+"ko": "군수물자",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:4:1",
+"cap": 14
+},
+{
+"id": 6385,
+"ko": "식량이;들어있는 듯한;상자",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:4:14",
+"cap": 53
+},
+{
+"id": 6386,
+"ko": "하급통행증",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:5:1",
+"cap": 14
+},
+{
+"id": 6387,
+"ko": "공화국 군함;1회용 탑승권",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:5:16",
+"cap": 53
+},
+{
+"id": 6388,
+"ko": "중급통행증",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:6:1",
+"cap": 14
+},
+{
+"id": 6389,
+"ko": "공화국 군함;왕복 탑승권",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:6:16",
+"cap": 53
+},
+{
+"id": 6390,
+"ko": "상급통행증",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:7:1",
+"cap": 14
+},
+{
+"id": 6391,
+"ko": "공화국 군함;영구 탑승권",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:7:16",
+"cap": 53
+},
+{
+"id": 6392,
+"ko": "타륜",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:8:1",
+"cap": 14
+},
+{
+"id": 6393,
+"ko": "배를;움직이는데;필요한 부품",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:8:10",
+"cap": 53
+},
+{
+"id": 6394,
+"ko": "루레인의 증표",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:9:1",
+"cap": 14
+},
+{
+"id": 6395,
+"ko": "선주종의;마을에;출입하기 위한;증표",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:9:19",
+"cap": 53
+},
+{
+"id": 6396,
+"ko": "빨간약",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:10:1",
+"cap": 14
+},
+{
+"id": 6397,
+"ko": "엘렌이 먹는;정체불명의 약",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:10:12",
+"cap": 53
+},
+{
+"id": 6398,
+"ko": "몬스터들의;체내에 있는;특수기관",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:11:14",
+"cap": 53
+},
+{
+"id": 6399,
+"ko": "수호석",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:12:1",
+"cap": 14
+},
+{
+"id": 6400,
+"ko": "방어결계를;통과시켜주는;마력의 돌",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:12:12",
+"cap": 53
+},
+{
+"id": 6401,
+"ko": "단열복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:13:1",
+"cap": 14
+},
+{
+"id": 6402,
+"ko": "군수품.;불과 냉기를;막는 옷;",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:13:12",
+"cap": 53
+},
+{
+"id": 6403,
+"ko": "소개장",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:14:1",
+"cap": 14
+},
+{
+"id": 6404,
+"ko": "매도우 힐의;복지사에게;전달할 편지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:14:12",
+"cap": 53
+},
+{
+"id": 6405,
+"ko": "증명서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:15:1",
+"cap": 14
+},
+{
+"id": 6406,
+"ko": "암즈 부품의;구매에;필요한 문서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:15:12",
+"cap": 53
+},
+{
+"id": 6407,
+"ko": "편지",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:16:1",
+"cap": 14
+},
+{
+"id": 6408,
+"ko": "배달을;부탁받은;편지묶음",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:16:10",
+"cap": 53
+},
+{
+"id": 6409,
+"ko": "골렘의 심장;값비싼 물건",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:17:17",
+"cap": 53
+},
+{
+"id": 6410,
+"ko": "변장도구",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:18:1",
+"cap": 14
+},
+{
+"id": 6411,
+"ko": "다른 사람처럼;꾸밀 수 있는;도구 모음",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:18:14",
+"cap": 53
+},
+{
+"id": 6412,
+"ko": "크래드가 만든;암즈의 도면",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:19:10",
+"cap": 53
+},
+{
+"id": 6413,
+"ko": "불의 정령석",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:20:1",
+"cap": 14
+},
+{
+"id": 6414,
+"ko": "화염정령의;체내에 있는;뜨거운 돌",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:20:17",
+"cap": 53
+},
+{
+"id": 6415,
+"ko": "웜의 껍질",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:21:1",
+"cap": 14
+},
+{
+"id": 6416,
+"ko": "웜으로부터;얻을 수 있는;단단한 껍질",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:21:15",
+"cap": 53
+},
+{
+"id": 6417,
+"ko": "녹색가루",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:22:1",
+"cap": 14
+},
+{
+"id": 6418,
+"ko": "악령이;소멸할 때;남기는;녹색가루",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:22:14",
+"cap": 53
+},
+{
+"id": 6419,
+"ko": "카드키",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:23:1",
+"cap": 14
+},
+{
+"id": 6420,
+"ko": "뇌수의 동굴;내부에;잠겨진 문에;사용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:23:12",
+"cap": 53
+},
+{
+"id": 6421,
+"ko": "열쇠머리",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:24:1",
+"cap": 14
+},
+{
+"id": 6422,
+"ko": "열쇠의 조각.;사용하려면;열쇠몸통 필요",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:24:14",
+"cap": 53
+},
+{
+"id": 6423,
+"ko": "열쇠몸통",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:25:1",
+"cap": 14
+},
+{
+"id": 6424,
+"ko": "열쇠의 조각.;사용하려면;열쇠머리 필요",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:25:14",
+"cap": 53
+},
+{
+"id": 6425,
+"ko": "완전한 열쇠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:26:1",
+"cap": 14
+},
+{
+"id": 6426,
+"ko": "수레바퀴 동굴;내부의;잠겨진 문에;사용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:26:17",
+"cap": 53
+},
+{
+"id": 6427,
+"ko": "수호자의 열쇠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:27:1",
+"cap": 14
+},
+{
+"id": 6428,
+"ko": "팔리아스;정착지의;신전 출입가능",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:27:19",
+"cap": 53
+},
+{
+"id": 6429,
+"ko": "신전의 기록",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:28:1",
+"cap": 14
+},
+{
+"id": 6430,
+"ko": "봉인지의;위치가 기록된;고문서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:28:17",
+"cap": 53
+},
+{
+"id": 6431,
+"ko": "무기의 제조에;필요한 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:29:10",
+"cap": 53
+},
+{
+"id": 6432,
+"ko": "감옥열쇠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:30:1",
+"cap": 14
+},
+{
+"id": 6433,
+"ko": "포로수용소;수감실;개방용 열쇠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:30:14",
+"cap": 53
+},
+{
+"id": 6434,
+"ko": "감옥열쇠2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:31:1",
+"cap": 14
+},
+{
+"id": 6435,
+"ko": "아눈신전열쇠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:32:1",
+"cap": 14
+},
+{
+"id": 6436,
+"ko": "아눈섬 리온의;신전 출입가능",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:32:18",
+"cap": 53
+},
+{
+"id": 6437,
+"ko": "연구소열쇠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:33:1",
+"cap": 14
+},
+{
+"id": 6438,
+"ko": "매도우 힐;지하로 가는;통로개방 열쇠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:33:16",
+"cap": 53
+},
+{
+"id": 6439,
+"ko": "계급장",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:34:1",
+"cap": 14
+},
+{
+"id": 6440,
+"ko": "인간족 상인을;이용 가능",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:34:12",
+"cap": 53
+},
+{
+"id": 6441,
+"ko": "만능열쇠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:35:1",
+"cap": 14
+},
+{
+"id": 6442,
+"ko": "대부분의;금고를;개방 가능",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:35:14",
+"cap": 53
+},
+{
+"id": 6443,
+"ko": "좋은책",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:36:1",
+"cap": 14
+},
+{
+"id": 6444,
+"ko": "크래드의;소장품",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:36:12",
+"cap": 53
+},
+{
+"id": 6445,
+"ko": "크래드의 일기",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:37:1",
+"cap": 14
+},
+{
+"id": 6446,
+"ko": "크래드의;연구기록",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:37:19",
+"cap": 53
+},
+{
+"id": 6447,
+"ko": "보고서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:38:1",
+"cap": 14
+},
+{
+"id": 6448,
+"ko": "포로수용소;근처의;시체에서;발견된 문서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:38:12",
+"cap": 53
+},
+{
+"id": 6449,
+"ko": "배표",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:39:1",
+"cap": 14
+},
+{
+"id": 6450,
+"ko": "군선의;1회용 탑승권",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:39:10",
+"cap": 53
+},
+{
+"id": 6451,
+"ko": "오토마톤부품",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:40:1",
+"cap": 14
+},
+{
+"id": 6452,
+"ko": "비싸보이는;기계부품",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:40:18",
+"cap": 53
+},
+{
+"id": 6453,
+"ko": "마력의 핵",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:41:1",
+"cap": 14
+},
+{
+"id": 6454,
+"ko": "특별히 조합한;마력의 핵",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:41:15",
+"cap": 53
+},
+{
+"id": 6455,
+"ko": "금형",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:42:1",
+"cap": 14
+},
+{
+"id": 6456,
+"ko": "암즈 부품을;제작하는데;필요한 장비",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:42:10",
+"cap": 53
+},
+{
+"id": 6457,
+"ko": "달펜던트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:43:1",
+"cap": 14
+},
+{
+"id": 6458,
+"ko": "하얀돌로 만든;달모양의;펜던트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:43:14",
+"cap": 53
+},
+{
+"id": 6459,
+"ko": "군사문서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:44:1",
+"cap": 14
+},
+{
+"id": 6460,
+"ko": "인간군의;명령서.",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:44:14",
+"cap": 53
+},
+{
+"id": 6461,
+"ko": "전사한 병사의;물건",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:45:10",
+"cap": 53
+},
+{
+"id": 6462,
+"ko": "배신의 증표",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:46:1",
+"cap": 14
+},
+{
+"id": 6463,
+"ko": "배신자들의;소지품",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:46:17",
+"cap": 53
+},
+{
+"id": 6464,
+"ko": "마력 폭탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:47:1",
+"cap": 14
+},
+{
+"id": 6465,
+"ko": "큰 위력을;가진 폭탄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:47:15",
+"cap": 53
+},
+{
+"id": 6466,
+"ko": "기밀문서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:48:1",
+"cap": 14
+},
+{
+"id": 6467,
+"ko": "인간군의;중요한 문서",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:48:14",
+"cap": 53
+},
+{
+"id": 6468,
+"ko": "기폭장치",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:49:1",
+"cap": 14
+},
+{
+"id": 6469,
+"ko": "마력 폭탄의;핵심 부품",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:49:14",
+"cap": 53
+},
+{
+"id": 6470,
+"ko": "악마의 피",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:50:1",
+"cap": 14
+},
+{
+"id": 6471,
+"ko": "마력의 핵을;만드는데;필요한 재료",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_12_DAT:50:15",
+"cap": 53
+},
+{
+"id": 6472,
+"ko": "네트워크전용",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_13_DAT:0:1",
+"cap": 14
+},
+{
+"id": 6473,
+"ko": "네트워크 전용 아이템입니다.",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_13_DAT:0:18",
+"cap": 53
+},
+{
+"id": 6474,
+"ko": "근강화LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:0:1",
+"cap": 14
+},
+{
+"id": 6475,
+"ko": "근접공격력과;명중률 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:0:15",
+"cap": 53
+},
+{
+"id": 6476,
+"ko": "근강화LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:1:1",
+"cap": 14
+},
+{
+"id": 6477,
+"ko": "근강화LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:2:1",
+"cap": 14
+},
+{
+"id": 6478,
+"ko": "추가장갑LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:3:1",
+"cap": 14
+},
+{
+"id": 6479,
+"ko": "기본 방어력;강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:3:17",
+"cap": 53
+},
+{
+"id": 6480,
+"ko": "추가장갑LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:4:1",
+"cap": 14
+},
+{
+"id": 6481,
+"ko": "추가장갑LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:5:1",
+"cap": 14
+},
+{
+"id": 6482,
+"ko": "원강화LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:6:1",
+"cap": 14
+},
+{
+"id": 6483,
+"ko": "암즈공격력과;회피율 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:6:15",
+"cap": 53
+},
+{
+"id": 6484,
+"ko": "원강화LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:7:1",
+"cap": 14
+},
+{
+"id": 6485,
+"ko": "원강화LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:8:1",
+"cap": 14
+},
+{
+"id": 6486,
+"ko": "블럭강화LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:9:1",
+"cap": 14
+},
+{
+"id": 6487,
+"ko": "피격시;블록확률 증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:9:17",
+"cap": 53
+},
+{
+"id": 6488,
+"ko": "블럭강화LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:10:1",
+"cap": 14
+},
+{
+"id": 6489,
+"ko": "블럭강화LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:11:1",
+"cap": 14
+},
+{
+"id": 6490,
+"ko": "스파이크LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:12:1",
+"cap": 14
+},
+{
+"id": 6491,
+"ko": "블록시 때때로;대미지를 반사",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:12:17",
+"cap": 53
+},
+{
+"id": 6492,
+"ko": "스파이크LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:13:1",
+"cap": 14
+},
+{
+"id": 6493,
+"ko": "스파이크LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:14:1",
+"cap": 14
+},
+{
+"id": 6494,
+"ko": "톱날LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:15:1",
+"cap": 14
+},
+{
+"id": 6495,
+"ko": "철의주먹 스킬;공격력 증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:15:13",
+"cap": 53
+},
+{
+"id": 6496,
+"ko": "톱날LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:16:1",
+"cap": 14
+},
+{
+"id": 6497,
+"ko": "톱날LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:17:1",
+"cap": 14
+},
+{
+"id": 6498,
+"ko": "반동감소LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:18:1",
+"cap": 14
+},
+{
+"id": 6499,
+"ko": "물리공격의;명중률 증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:18:17",
+"cap": 53
+},
+{
+"id": 6500,
+"ko": "반동감소LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:19:1",
+"cap": 14
+},
+{
+"id": 6501,
+"ko": "반동감소LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:20:1",
+"cap": 14
+},
+{
+"id": 6502,
+"ko": "쇼크LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:21:1",
+"cap": 14
+},
+{
+"id": 6503,
+"ko": "크리티컬의;발생확률 증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:21:13",
+"cap": 53
+},
+{
+"id": 6504,
+"ko": "쇼크LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:22:1",
+"cap": 14
+},
+{
+"id": 6505,
+"ko": "쇼크LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:23:1",
+"cap": 14
+},
+{
+"id": 6506,
+"ko": "기본탄창LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:24:1",
+"cap": 14
+},
+{
+"id": 6507,
+"ko": "일반 타격용;암즈탄 장전",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:24:17",
+"cap": 53
+},
+{
+"id": 6508,
+"ko": "기본탄창LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:25:1",
+"cap": 14
+},
+{
+"id": 6509,
+"ko": "기본탄창LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:26:1",
+"cap": 14
+},
+{
+"id": 6510,
+"ko": "섬광탄창LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:27:1",
+"cap": 14
+},
+{
+"id": 6511,
+"ko": "명중률 저하의;암즈탄 장전",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:27:17",
+"cap": 53
+},
+{
+"id": 6512,
+"ko": "섬광탄창LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:28:1",
+"cap": 14
+},
+{
+"id": 6513,
+"ko": "섬광탄창LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:29:1",
+"cap": 14
+},
+{
+"id": 6514,
+"ko": "소이탄창LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:30:1",
+"cap": 14
+},
+{
+"id": 6515,
+"ko": "발화효과의;암즈탄 장전",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:30:17",
+"cap": 53
+},
+{
+"id": 6516,
+"ko": "소이탄창LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:31:1",
+"cap": 14
+},
+{
+"id": 6517,
+"ko": "소이탄창LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:32:1",
+"cap": 14
+},
+{
+"id": 6518,
+"ko": "체인탄창LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:33:1",
+"cap": 14
+},
+{
+"id": 6519,
+"ko": "적을 당겨오는;암즈탄 장전",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:33:17",
+"cap": 53
+},
+{
+"id": 6520,
+"ko": "체인탄창LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:34:1",
+"cap": 14
+},
+{
+"id": 6521,
+"ko": "체인탄창LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:35:1",
+"cap": 14
+},
+{
+"id": 6522,
+"ko": "구속탄창LV1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:36:1",
+"cap": 14
+},
+{
+"id": 6523,
+"ko": "이동을 늦추는;암즈탄 장전",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:36:17",
+"cap": 53
+},
+{
+"id": 6524,
+"ko": "구속탄창LV2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:37:1",
+"cap": 14
+},
+{
+"id": 6525,
+"ko": "구속탄창LV3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_14_DAT:38:1",
+"cap": 14
+},
+{
+"id": 6526,
+"ko": "마법력 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:0:1",
+"cap": 14
+},
+{
+"id": 6527,
+"ko": "소환수의;마법력 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:0:15",
+"cap": 28
+},
+{
+"id": 6528,
+"ko": "방어력 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:1:1",
+"cap": 14
+},
+{
+"id": 6529,
+"ko": "소환수의;방어력 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:1:15",
+"cap": 28
+},
+{
+"id": 6530,
+"ko": "체력 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:2:1",
+"cap": 14
+},
+{
+"id": 6531,
+"ko": "소환수의;체력 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:2:13",
+"cap": 28
+},
+{
+"id": 6532,
+"ko": "교감도 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:3:1",
+"cap": 14
+},
+{
+"id": 6533,
+"ko": "소환수의;교감도 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:3:15",
+"cap": 28
+},
+{
+"id": 6534,
+"ko": "뇌격",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:4:1",
+"cap": 4
+},
+{
+"id": 6535,
+"ko": "베놈의;원거리 뇌격;강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:4:8",
+"cap": 28
+},
+{
+"id": 6536,
+"ko": "맹독",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:5:1",
+"cap": 8
+},
+{
+"id": 6537,
+"ko": "뇌격의;중독 효과;강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:5:8",
+"cap": 28
+},
+{
+"id": 6538,
+"ko": "저주의 오러",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:6:1",
+"cap": 11
+},
+{
+"id": 6539,
+"ko": "소환시;소환자의;저주 증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:6:15",
+"cap": 28
+},
+{
+"id": 6540,
+"ko": "헤지호그의;원거리 뇌격;강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:7:8",
+"cap": 28
+},
+{
+"id": 6541,
+"ko": "되돌리기",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:8:1",
+"cap": 8
+},
+{
+"id": 6542,
+"ko": "뇌격의;반사화 저주;효과 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:8:12",
+"cap": 28
+},
+{
+"id": 6543,
+"ko": "강화의 오러",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:9:1",
+"cap": 11
+},
+{
+"id": 6544,
+"ko": "소환시;소환자의;HP/SP증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:9:15",
+"cap": 28
+},
+{
+"id": 6545,
+"ko": "그래비티의;원거리 뇌격;강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:10:8",
+"cap": 28
+},
+{
+"id": 6546,
+"ko": "슬로우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:11:1",
+"cap": 8
+},
+{
+"id": 6547,
+"ko": "뇌격의;슬로우 저주;효과 강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:11:10",
+"cap": 28
+},
+{
+"id": 6548,
+"ko": "마법의 오러",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:12:1",
+"cap": 11
+},
+{
+"id": 6549,
+"ko": "소환시;소환자의;저항 증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:12:15",
+"cap": 28
+},
+{
+"id": 6550,
+"ko": "쇼커의;원거리 뇌격;강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:13:8",
+"cap": 28
+},
+{
+"id": 6551,
+"ko": "스턴",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:14:1",
+"cap": 8
+},
+{
+"id": 6552,
+"ko": "뇌격의;스턴 효과;강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:14:8",
+"cap": 28
+},
+{
+"id": 6553,
+"ko": "마력의 오러",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:15:1",
+"cap": 11
+},
+{
+"id": 6554,
+"ko": "소환시;소환자의;SP회복증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:15:15",
+"cap": 28
+},
+{
+"id": 6555,
+"ko": "회복",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:16:1",
+"cap": 4
+},
+{
+"id": 6556,
+"ko": "세이프가드;회복 효과;강화",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:16:8",
+"cap": 28
+},
+{
+"id": 6557,
+"ko": "실드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:17:1",
+"cap": 8
+},
+{
+"id": 6558,
+"ko": "회복시;마법방어;증가 효과",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:17:8",
+"cap": 28
+},
+{
+"id": 6559,
+"ko": "보호의 오러",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:18:1",
+"cap": 11
+},
+{
+"id": 6560,
+"ko": "소환시;소환자의;방어력 증가",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_15_DAT:18:15",
+"cap": 28
+},
+{
+"id": 6561,
+"ko": "머리띠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:0:0",
+"cap": 14
+},
+{
+"id": 6562,
+"ko": "피더햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:1:0",
+"cap": 14
+},
+{
+"id": 6563,
+"ko": "써클릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:2:0",
+"cap": 14
+},
+{
+"id": 6564,
+"ko": "고글",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:3:0",
+"cap": 14
+},
+{
+"id": 6565,
+"ko": "헤드기어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:4:0",
+"cap": 14
+},
+{
+"id": 6566,
+"ko": "헌팅캡",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:5:0",
+"cap": 14
+},
+{
+"id": 6567,
+"ko": "헤비헬름",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:6:0",
+"cap": 14
+},
+{
+"id": 6568,
+"ko": "리더스햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:7:0",
+"cap": 14
+},
+{
+"id": 6569,
+"ko": "웜즈캡",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:8:0",
+"cap": 14
+},
+{
+"id": 6570,
+"ko": "윙기어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:9:0",
+"cap": 14
+},
+{
+"id": 6571,
+"ko": "빅혼헬름",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:10:0",
+"cap": 14
+},
+{
+"id": 6572,
+"ko": "메인기어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:11:0",
+"cap": 14
+},
+{
+"id": 6573,
+"ko": "벨아이",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:12:0",
+"cap": 14
+},
+{
+"id": 6574,
+"ko": "드레이크햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:13:0",
+"cap": 14
+},
+{
+"id": 6575,
+"ko": "붉은사자투구",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:14:0",
+"cap": 14
+},
+{
+"id": 6576,
+"ko": "라임벨아이",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:15:0",
+"cap": 14
+},
+{
+"id": 6577,
+"ko": "나이트메어햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:16:0",
+"cap": 14
+},
+{
+"id": 6578,
+"ko": "엔젤윙헬름",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:17:0",
+"cap": 14
+},
+{
+"id": 6579,
+"ko": "오오라마스크",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:19:0",
+"cap": 14
+},
+{
+"id": 6580,
+"ko": "에이전트아이",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:20:0",
+"cap": 14
+},
+{
+"id": 6581,
+"ko": "아르테미스햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:21:0",
+"cap": 14
+},
+{
+"id": 6582,
+"ko": "빙해의투구",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:22:0",
+"cap": 14
+},
+{
+"id": 6583,
+"ko": "바하무트헬름",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:23:0",
+"cap": 14
+},
+{
+"id": 6584,
+"ko": "사기타리스햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:24:0",
+"cap": 14
+},
+{
+"id": 6585,
+"ko": "다크써클릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:27:0",
+"cap": 14
+},
+{
+"id": 6586,
+"ko": "다크엔젤햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:28:0",
+"cap": 14
+},
+{
+"id": 6587,
+"ko": "블러디아이",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:29:0",
+"cap": 14
+},
+{
+"id": 6588,
+"ko": "라이트닝기어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:30:0",
+"cap": 14
+},
+{
+"id": 6589,
+"ko": "바솔로뮤햇",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:31:0",
+"cap": 14
+},
+{
+"id": 6590,
+"ko": "카이얀헬름",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:32:0",
+"cap": 14
+},
+{
+"id": 6591,
+"ko": "워헤드기어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:33:0",
+"cap": 14
+},
+{
+"id": 6592,
+"ko": "드래곤헬름",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:34:0",
+"cap": 14
+},
+{
+"id": 6593,
+"ko": "팬텀스카우터",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:35:0",
+"cap": 14
+},
+{
+"id": 6594,
+"ko": "카오스벨아이",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:36:0",
+"cap": 14
+},
+{
+"id": 6595,
+"ko": "피닉스기어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:37:0",
+"cap": 14
+},
+{
+"id": 6596,
+"ko": "홀리윙기어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:38:0",
+"cap": 14
+},
+{
+"id": 6597,
+"ko": "예비투구",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_0_SD:39:0",
+"cap": 14
+},
+{
+"id": 6598,
+"ko": "가죽옷",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:0:0",
+"cap": 14
+},
+{
+"id": 6599,
+"ko": "로브",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:1:0",
+"cap": 14
+},
+{
+"id": 6600,
+"ko": "가죽갑옷",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:2:0",
+"cap": 14
+},
+{
+"id": 6601,
+"ko": "아머코트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:3:0",
+"cap": 14
+},
+{
+"id": 6602,
+"ko": "패딩아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:4:0",
+"cap": 14
+},
+{
+"id": 6603,
+"ko": "패딩슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:5:0",
+"cap": 14
+},
+{
+"id": 6604,
+"ko": "풀아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:6:0",
+"cap": 14
+},
+{
+"id": 6605,
+"ko": "다크코트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:7:0",
+"cap": 14
+},
+{
+"id": 6606,
+"ko": "컴뱃슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:8:0",
+"cap": 14
+},
+{
+"id": 6607,
+"ko": "벨슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:9:0",
+"cap": 14
+},
+{
+"id": 6608,
+"ko": "체인아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:10:0",
+"cap": 14
+},
+{
+"id": 6609,
+"ko": "자칼슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:11:0",
+"cap": 14
+},
+{
+"id": 6610,
+"ko": "젬아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:12:0",
+"cap": 14
+},
+{
+"id": 6611,
+"ko": "드레이크슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:13:0",
+"cap": 14
+},
+{
+"id": 6612,
+"ko": "오오라슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:19:0",
+"cap": 14
+},
+{
+"id": 6613,
+"ko": "에이전트코트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:20:0",
+"cap": 14
+},
+{
+"id": 6614,
+"ko": "아르테미스코트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:21:0",
+"cap": 14
+},
+{
+"id": 6615,
+"ko": "빙해의갑옷",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:22:0",
+"cap": 14
+},
+{
+"id": 6616,
+"ko": "바하무트아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:23:0",
+"cap": 14
+},
+{
+"id": 6617,
+"ko": "사기타리스코트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:24:0",
+"cap": 14
+},
+{
+"id": 6618,
+"ko": "섀도우슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:27:0",
+"cap": 14
+},
+{
+"id": 6619,
+"ko": "버서커흉갑",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:28:0",
+"cap": 14
+},
+{
+"id": 6620,
+"ko": "터미네스아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:29:0",
+"cap": 14
+},
+{
+"id": 6621,
+"ko": "헤인츠코트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:30:0",
+"cap": 14
+},
+{
+"id": 6622,
+"ko": "스폰아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:31:0",
+"cap": 14
+},
+{
+"id": 6623,
+"ko": "글로리안코트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:32:0",
+"cap": 14
+},
+{
+"id": 6624,
+"ko": "카메론슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:33:0",
+"cap": 14
+},
+{
+"id": 6625,
+"ko": "알클레인아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:34:0",
+"cap": 14
+},
+{
+"id": 6626,
+"ko": "팔바티슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:35:0",
+"cap": 14
+},
+{
+"id": 6627,
+"ko": "팬텀윙슈트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:36:0",
+"cap": 14
+},
+{
+"id": 6628,
+"ko": "홀리윈드아머",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:37:0",
+"cap": 14
+},
+{
+"id": 6629,
+"ko": "시바의흉갑",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:38:0",
+"cap": 14
+},
+{
+"id": 6630,
+"ko": "예비갑옷",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_1_SD:39:0",
+"cap": 14
+},
+{
+"id": 6631,
+"ko": "천장갑",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:0:0",
+"cap": 14
+},
+{
+"id": 6632,
+"ko": "가죽장갑",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:1:0",
+"cap": 14
+},
+{
+"id": 6633,
+"ko": "글러브",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:2:0",
+"cap": 14
+},
+{
+"id": 6634,
+"ko": "크로우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:3:0",
+"cap": 14
+},
+{
+"id": 6635,
+"ko": "패딩핸드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:4:0",
+"cap": 14
+},
+{
+"id": 6636,
+"ko": "건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:5:0",
+"cap": 14
+},
+{
+"id": 6637,
+"ko": "윙글러브",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:6:0",
+"cap": 14
+},
+{
+"id": 6638,
+"ko": "헤비암",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:7:0",
+"cap": 14
+},
+{
+"id": 6639,
+"ko": "라이트암",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:8:0",
+"cap": 14
+},
+{
+"id": 6640,
+"ko": "사슬장갑",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:9:0",
+"cap": 14
+},
+{
+"id": 6641,
+"ko": "윙건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:10:0",
+"cap": 14
+},
+{
+"id": 6642,
+"ko": "벨핸드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:11:0",
+"cap": 14
+},
+{
+"id": 6643,
+"ko": "풀건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:12:0",
+"cap": 14
+},
+{
+"id": 6644,
+"ko": "드레이크글러브",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:13:0",
+"cap": 14
+},
+{
+"id": 6645,
+"ko": "붉은사자장갑",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:14:0",
+"cap": 14
+},
+{
+"id": 6646,
+"ko": "라임벨암",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:15:0",
+"cap": 14
+},
+{
+"id": 6647,
+"ko": "나이트메어핸드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:16:0",
+"cap": 14
+},
+{
+"id": 6648,
+"ko": "엔젤윙건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:17:0",
+"cap": 14
+},
+{
+"id": 6649,
+"ko": "오오라크로우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:19:0",
+"cap": 14
+},
+{
+"id": 6650,
+"ko": "에이전트암",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:20:0",
+"cap": 14
+},
+{
+"id": 6651,
+"ko": "아르테미스핸드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:21:0",
+"cap": 14
+},
+{
+"id": 6652,
+"ko": "빙해의건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:22:0",
+"cap": 14
+},
+{
+"id": 6653,
+"ko": "바하무트건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:23:0",
+"cap": 14
+},
+{
+"id": 6654,
+"ko": "사기타리스핸드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:24:0",
+"cap": 14
+},
+{
+"id": 6655,
+"ko": "데몬암즈건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:27:0",
+"cap": 14
+},
+{
+"id": 6656,
+"ko": "샤이닝핸드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:28:0",
+"cap": 14
+},
+{
+"id": 6657,
+"ko": "레논건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:29:0",
+"cap": 14
+},
+{
+"id": 6658,
+"ko": "버서커건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:30:0",
+"cap": 14
+},
+{
+"id": 6659,
+"ko": "사이킥크로우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:31:0",
+"cap": 14
+},
+{
+"id": 6660,
+"ko": "데스스나이퍼",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:32:0",
+"cap": 14
+},
+{
+"id": 6661,
+"ko": "오우거건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:33:0",
+"cap": 14
+},
+{
+"id": 6662,
+"ko": "로지스건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:34:0",
+"cap": 14
+},
+{
+"id": 6663,
+"ko": "홀리건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:35:0",
+"cap": 14
+},
+{
+"id": 6664,
+"ko": "팬텀건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:36:0",
+"cap": 14
+},
+{
+"id": 6665,
+"ko": "오메가윙건틀릿",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:37:0",
+"cap": 14
+},
+{
+"id": 6666,
+"ko": "예비장갑",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_2_SD:39:0",
+"cap": 14
+},
+{
+"id": 6667,
+"ko": "천신발",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:0:0",
+"cap": 14
+},
+{
+"id": 6668,
+"ko": "가죽신발",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:1:0",
+"cap": 14
+},
+{
+"id": 6669,
+"ko": "경갑부츠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:2:0",
+"cap": 14
+},
+{
+"id": 6670,
+"ko": "섀도우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:3:0",
+"cap": 14
+},
+{
+"id": 6671,
+"ko": "빅워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:4:0",
+"cap": 14
+},
+{
+"id": 6672,
+"ko": "라이트풋",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:5:0",
+"cap": 14
+},
+{
+"id": 6673,
+"ko": "롱그리브",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:6:0",
+"cap": 14
+},
+{
+"id": 6674,
+"ko": "헤비워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:7:0",
+"cap": 14
+},
+{
+"id": 6675,
+"ko": "로키슈즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:8:0",
+"cap": 14
+},
+{
+"id": 6676,
+"ko": "윈드워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:9:0",
+"cap": 14
+},
+{
+"id": 6677,
+"ko": "벨레그",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:10:0",
+"cap": 14
+},
+{
+"id": 6678,
+"ko": "록섀도우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:11:0",
+"cap": 14
+},
+{
+"id": 6679,
+"ko": "비스트풋",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:12:0",
+"cap": 14
+},
+{
+"id": 6680,
+"ko": "드레이크슈즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:13:0",
+"cap": 14
+},
+{
+"id": 6681,
+"ko": "붉은사자신발",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:14:0",
+"cap": 14
+},
+{
+"id": 6682,
+"ko": "라임벨레그",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:15:0",
+"cap": 14
+},
+{
+"id": 6683,
+"ko": "나이트메어슈즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:16:0",
+"cap": 14
+},
+{
+"id": 6684,
+"ko": "엔젤윙워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:17:0",
+"cap": 14
+},
+{
+"id": 6685,
+"ko": "오오라레그",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:19:0",
+"cap": 14
+},
+{
+"id": 6686,
+"ko": "에이전트그리브",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:20:0",
+"cap": 14
+},
+{
+"id": 6687,
+"ko": "아르테미스워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:21:0",
+"cap": 14
+},
+{
+"id": 6688,
+"ko": "빙해의신발",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:22:0",
+"cap": 14
+},
+{
+"id": 6689,
+"ko": "바하무트워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:23:0",
+"cap": 14
+},
+{
+"id": 6690,
+"ko": "사기타리스슈즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:24:0",
+"cap": 14
+},
+{
+"id": 6691,
+"ko": "파빌리온슈즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:27:0",
+"cap": 14
+},
+{
+"id": 6692,
+"ko": "언노운섀도우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:28:0",
+"cap": 14
+},
+{
+"id": 6693,
+"ko": "그랜디쉬부츠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:29:0",
+"cap": 14
+},
+{
+"id": 6694,
+"ko": "데몬풋츠워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:30:0",
+"cap": 14
+},
+{
+"id": 6695,
+"ko": "홀리윈드워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:31:0",
+"cap": 14
+},
+{
+"id": 6696,
+"ko": "팬텀스파이크",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:32:0",
+"cap": 14
+},
+{
+"id": 6697,
+"ko": "레퀴드슈즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:33:0",
+"cap": 14
+},
+{
+"id": 6698,
+"ko": "로드웜슈즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:34:0",
+"cap": 14
+},
+{
+"id": 6699,
+"ko": "라이트닝슈즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:35:0",
+"cap": 14
+},
+{
+"id": 6700,
+"ko": "아크고렘부츠",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:36:0",
+"cap": 14
+},
+{
+"id": 6701,
+"ko": "포세이돈워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:37:0",
+"cap": 14
+},
+{
+"id": 6702,
+"ko": "가이아스워커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:38:0",
+"cap": 14
+},
+{
+"id": 6703,
+"ko": "예비신발",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_3_SD:39:0",
+"cap": 14
+},
+{
+"id": 6704,
+"ko": "롱소드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:0:0",
+"cap": 14
+},
+{
+"id": 6705,
+"ko": "브레이커",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:1:0",
+"cap": 14
+},
+{
+"id": 6706,
+"ko": "참마도",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:2:0",
+"cap": 14
+},
+{
+"id": 6707,
+"ko": "바스타드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:3:0",
+"cap": 14
+},
+{
+"id": 6708,
+"ko": "무영검",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:4:0",
+"cap": 14
+},
+{
+"id": 6709,
+"ko": "환두대도",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:5:0",
+"cap": 14
+},
+{
+"id": 6710,
+"ko": "톱날검",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:6:0",
+"cap": 14
+},
+{
+"id": 6711,
+"ko": "블레이드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:7:0",
+"cap": 14
+},
+{
+"id": 6712,
+"ko": "세이버",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:8:0",
+"cap": 14
+},
+{
+"id": 6713,
+"ko": "마도학살검",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:13:0",
+"cap": 14
+},
+{
+"id": 6714,
+"ko": "디스트로이어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:14:0",
+"cap": 14
+},
+{
+"id": 6715,
+"ko": "마도진혼검",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:15:0",
+"cap": 14
+},
+{
+"id": 6716,
+"ko": "크리스터",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:16:0",
+"cap": 14
+},
+{
+"id": 6717,
+"ko": "비슈느",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:17:0",
+"cap": 14
+},
+{
+"id": 6718,
+"ko": "진마도학살검",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:18:0",
+"cap": 14
+},
+{
+"id": 6719,
+"ko": "패왕신검",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:19:0",
+"cap": 14
+},
+{
+"id": 6720,
+"ko": "칠지도",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:20:0",
+"cap": 14
+},
+{
+"id": 6721,
+"ko": "디바인세이버",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:21:0",
+"cap": 14
+},
+{
+"id": 6722,
+"ko": "알케인",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:22:0",
+"cap": 14
+},
+{
+"id": 6723,
+"ko": "진마도진혼검",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:23:0",
+"cap": 14
+},
+{
+"id": 6724,
+"ko": "알테나블레이드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:24:0",
+"cap": 14
+},
+{
+"id": 6725,
+"ko": "검예비",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_4_SD:25:0",
+"cap": 14
+},
+{
+"id": 6726,
+"ko": "콜드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:0:0",
+"cap": 14
+},
+{
+"id": 6727,
+"ko": "로빈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:1:0",
+"cap": 14
+},
+{
+"id": 6728,
+"ko": "호크아이",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:3:0",
+"cap": 14
+},
+{
+"id": 6729,
+"ko": "카이트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:4:0",
+"cap": 14
+},
+{
+"id": 6730,
+"ko": "해리어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:5:0",
+"cap": 14
+},
+{
+"id": 6731,
+"ko": "벌처",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:6:0",
+"cap": 14
+},
+{
+"id": 6732,
+"ko": "팔콘",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:7:0",
+"cap": 14
+},
+{
+"id": 6733,
+"ko": "하피",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:8:0",
+"cap": 14
+},
+{
+"id": 6734,
+"ko": "더블엘터",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:13:0",
+"cap": 14
+},
+{
+"id": 6735,
+"ko": "마스터팔켄",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:14:0",
+"cap": 14
+},
+{
+"id": 6736,
+"ko": "소울크로우",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:15:0",
+"cap": 14
+},
+{
+"id": 6737,
+"ko": "플로라",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:16:0",
+"cap": 14
+},
+{
+"id": 6738,
+"ko": "썬더볼트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:17:0",
+"cap": 14
+},
+{
+"id": 6739,
+"ko": "템페스트",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:18:0",
+"cap": 14
+},
+{
+"id": 6740,
+"ko": "알펜로즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:19:0",
+"cap": 14
+},
+{
+"id": 6741,
+"ko": "데스리미터",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:20:0",
+"cap": 14
+},
+{
+"id": 6742,
+"ko": "진알펜로즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:21:0",
+"cap": 14
+},
+{
+"id": 6743,
+"ko": "카이져스톰",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:22:0",
+"cap": 14
+},
+{
+"id": 6744,
+"ko": "블랙홀슈터",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:23:0",
+"cap": 14
+},
+{
+"id": 6745,
+"ko": "알테나암즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:24:0",
+"cap": 14
+},
+{
+"id": 6746,
+"ko": "건예비",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_5_SD:25:0",
+"cap": 14
+},
+{
+"id": 6747,
+"ko": "숏스태프",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:0:0",
+"cap": 14
+},
+{
+"id": 6748,
+"ko": "블루완드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:1:0",
+"cap": 14
+},
+{
+"id": 6749,
+"ko": "스틱비드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:2:0",
+"cap": 14
+},
+{
+"id": 6750,
+"ko": "스태프",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:3:0",
+"cap": 14
+},
+{
+"id": 6751,
+"ko": "마나스틱",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:4:0",
+"cap": 14
+},
+{
+"id": 6752,
+"ko": "레드완드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:5:0",
+"cap": 14
+},
+{
+"id": 6753,
+"ko": "배틀스틱",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:6:0",
+"cap": 14
+},
+{
+"id": 6754,
+"ko": "마인비드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:7:0",
+"cap": 14
+},
+{
+"id": 6755,
+"ko": "풀스태프",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:8:0",
+"cap": 14
+},
+{
+"id": 6756,
+"ko": "비너스",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:13:0",
+"cap": 14
+},
+{
+"id": 6757,
+"ko": "스타티어즈",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:14:0",
+"cap": 14
+},
+{
+"id": 6758,
+"ko": "갤럭시안비드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:15:0",
+"cap": 14
+},
+{
+"id": 6759,
+"ko": "홀리완드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:16:0",
+"cap": 14
+},
+{
+"id": 6760,
+"ko": "제네시스",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:17:0",
+"cap": 14
+},
+{
+"id": 6761,
+"ko": "루인스태프",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:18:0",
+"cap": 14
+},
+{
+"id": 6762,
+"ko": "플루토",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:19:0",
+"cap": 14
+},
+{
+"id": 6763,
+"ko": "펠레노르",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:20:0",
+"cap": 14
+},
+{
+"id": 6764,
+"ko": "진플루토",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:21:0",
+"cap": 14
+},
+{
+"id": 6765,
+"ko": "헤븐즈도어",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:22:0",
+"cap": 14
+},
+{
+"id": 6766,
+"ko": "코어오브헬",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:23:0",
+"cap": 14
+},
+{
+"id": 6767,
+"ko": "알테나로드",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:24:0",
+"cap": 14
+},
+{
+"id": 6768,
+"ko": "지팡이예비",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_6_SD:25:0",
+"cap": 14
+},
+{
+"id": 6769,
+"ko": "HP회복 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:2:0",
+"cap": 14
+},
+{
+"id": 6770,
+"ko": "물약회복 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:4:0",
+"cap": 14
+},
+{
+"id": 6771,
+"ko": "특수공격 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:5:0",
+"cap": 14
+},
+{
+"id": 6772,
+"ko": "근접공격 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:6:0",
+"cap": 14
+},
+{
+"id": 6773,
+"ko": "원거리공격 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:7:0",
+"cap": 14
+},
+{
+"id": 6774,
+"ko": "마법공격 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:8:0",
+"cap": 14
+},
+{
+"id": 6775,
+"ko": "물리방어 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:9:0",
+"cap": 14
+},
+{
+"id": 6776,
+"ko": "마법방어 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:10:0",
+"cap": 14
+},
+{
+"id": 6777,
+"ko": "명중 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:11:0",
+"cap": 14
+},
+{
+"id": 6778,
+"ko": "회피 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:12:0",
+"cap": 14
+},
+{
+"id": 6779,
+"ko": "크리티컬 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:13:0",
+"cap": 14
+},
+{
+"id": 6780,
+"ko": "HP회복 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:15:0",
+"cap": 14
+},
+{
+"id": 6781,
+"ko": "HP흡수 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:16:0",
+"cap": 14
+},
+{
+"id": 6782,
+"ko": "SP소모 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:19:0",
+"cap": 14
+},
+{
+"id": 6783,
+"ko": "물약회복 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:20:0",
+"cap": 14
+},
+{
+"id": 6784,
+"ko": "특수공격 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:21:0",
+"cap": 14
+},
+{
+"id": 6785,
+"ko": "근접공격 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:22:0",
+"cap": 14
+},
+{
+"id": 6786,
+"ko": "원거리공격 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:23:0",
+"cap": 14
+},
+{
+"id": 6787,
+"ko": "마법공격 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:24:0",
+"cap": 14
+},
+{
+"id": 6788,
+"ko": "물리방어 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:25:0",
+"cap": 14
+},
+{
+"id": 6789,
+"ko": "마법방어 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:26:0",
+"cap": 14
+},
+{
+"id": 6790,
+"ko": "명중 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:27:0",
+"cap": 14
+},
+{
+"id": 6791,
+"ko": "회피 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:28:0",
+"cap": 14
+},
+{
+"id": 6792,
+"ko": "직격 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:29:0",
+"cap": 14
+},
+{
+"id": 6793,
+"ko": "블록 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:30:0",
+"cap": 14
+},
+{
+"id": 6794,
+"ko": "크리티컬 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:31:0",
+"cap": 14
+},
+{
+"id": 6795,
+"ko": "크리데미지 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:32:0",
+"cap": 14
+},
+{
+"id": 6796,
+"ko": "기절저항 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:33:0",
+"cap": 14
+},
+{
+"id": 6797,
+"ko": "HP회복 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:35:0",
+"cap": 14
+},
+{
+"id": 6798,
+"ko": "HP흡수 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:36:0",
+"cap": 14
+},
+{
+"id": 6799,
+"ko": "SP소모 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:39:0",
+"cap": 14
+},
+{
+"id": 6800,
+"ko": "물약회복 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:40:0",
+"cap": 14
+},
+{
+"id": 6801,
+"ko": "특수공격 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:41:0",
+"cap": 14
+},
+{
+"id": 6802,
+"ko": "근접공격 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:42:0",
+"cap": 14
+},
+{
+"id": 6803,
+"ko": "원거리공격 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:43:0",
+"cap": 14
+},
+{
+"id": 6804,
+"ko": "마법공격 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:44:0",
+"cap": 14
+},
+{
+"id": 6805,
+"ko": "물리방어 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:45:0",
+"cap": 14
+},
+{
+"id": 6806,
+"ko": "마법방어 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:46:0",
+"cap": 14
+},
+{
+"id": 6807,
+"ko": "명중 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:47:0",
+"cap": 14
+},
+{
+"id": 6808,
+"ko": "회피 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:48:0",
+"cap": 14
+},
+{
+"id": 6809,
+"ko": "직격 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:49:0",
+"cap": 14
+},
+{
+"id": 6810,
+"ko": "블록 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:50:0",
+"cap": 14
+},
+{
+"id": 6811,
+"ko": "크리티컬 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:51:0",
+"cap": 14
+},
+{
+"id": 6812,
+"ko": "크리데미지 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:52:0",
+"cap": 14
+},
+{
+"id": 6813,
+"ko": "기절저항 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:53:0",
+"cap": 14
+},
+{
+"id": 6814,
+"ko": "직격 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:54:0",
+"cap": 14
+},
+{
+"id": 6815,
+"ko": "블록 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:55:0",
+"cap": 14
+},
+{
+"id": 6816,
+"ko": "크리데미지 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:56:0",
+"cap": 14
+},
+{
+"id": 6817,
+"ko": "기절저항 L3",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:57:0",
+"cap": 14
+},
+{
+"id": 6818,
+"ko": "저항 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:58:0",
+"cap": 14
+},
+{
+"id": 6819,
+"ko": "슬로우발동 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:59:0",
+"cap": 14
+},
+{
+"id": 6820,
+"ko": "화염발동 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:60:0",
+"cap": 14
+},
+{
+"id": 6821,
+"ko": "결빙(냉기) L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:61:0",
+"cap": 14
+},
+{
+"id": 6822,
+"ko": "중독 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:62:0",
+"cap": 14
+},
+{
+"id": 6823,
+"ko": "스턴발동 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:63:0",
+"cap": 14
+},
+{
+"id": 6824,
+"ko": "넉백발동 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:64:0",
+"cap": 14
+},
+{
+"id": 6825,
+"ko": "데미지반사 L1",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:65:0",
+"cap": 14
+},
+{
+"id": 6826,
+"ko": "저항 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:66:0",
+"cap": 14
+},
+{
+"id": 6827,
+"ko": "슬로우발동 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:67:0",
+"cap": 14
+},
+{
+"id": 6828,
+"ko": "화염발동 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:68:0",
+"cap": 14
+},
+{
+"id": 6829,
+"ko": "결빙(냉기) L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:69:0",
+"cap": 14
+},
+{
+"id": 6830,
+"ko": "중독 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:70:0",
+"cap": 14
+},
+{
+"id": 6831,
+"ko": "스턴발동 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:71:0",
+"cap": 14
+},
+{
+"id": 6832,
+"ko": "넉백발동 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:72:0",
+"cap": 14
+},
+{
+"id": 6833,
+"ko": "데미지반사 L2",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:73:0",
+"cap": 14
+},
+{
+"id": 6834,
+"ko": "레벨제한감소",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:74:0",
+"cap": 14
+},
+{
+"id": 6835,
+"ko": "HP회복 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:76:0",
+"cap": 14
+},
+{
+"id": 6836,
+"ko": "HP흡수 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:77:0",
+"cap": 14
+},
+{
+"id": 6837,
+"ko": "SP소모 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:79:0",
+"cap": 14
+},
+{
+"id": 6838,
+"ko": "SP회복 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:80:0",
+"cap": 14
+},
+{
+"id": 6839,
+"ko": "SP분노 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:81:0",
+"cap": 14
+},
+{
+"id": 6840,
+"ko": "근접공격 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:83:0",
+"cap": 14
+},
+{
+"id": 6841,
+"ko": "원거리공격 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:84:0",
+"cap": 14
+},
+{
+"id": 6842,
+"ko": "마법공격 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:85:0",
+"cap": 14
+},
+{
+"id": 6843,
+"ko": "물리방어 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:86:0",
+"cap": 14
+},
+{
+"id": 6844,
+"ko": "마법방어 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:87:0",
+"cap": 14
+},
+{
+"id": 6845,
+"ko": "명중 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:88:0",
+"cap": 14
+},
+{
+"id": 6846,
+"ko": "회피 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:89:0",
+"cap": 14
+},
+{
+"id": 6847,
+"ko": "직격 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:90:0",
+"cap": 14
+},
+{
+"id": 6848,
+"ko": "블록 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:91:0",
+"cap": 14
+},
+{
+"id": 6849,
+"ko": "크리티컬 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:92:0",
+"cap": 14
+},
+{
+"id": 6850,
+"ko": "크리데미지 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:93:0",
+"cap": 14
+},
+{
+"id": 6851,
+"ko": "기절저항 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:94:0",
+"cap": 14
+},
+{
+"id": 6852,
+"ko": "저항 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:95:0",
+"cap": 14
+},
+{
+"id": 6853,
+"ko": "넉백발동 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:96:0",
+"cap": 14
+},
+{
+"id": 6854,
+"ko": "슬로우발동 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:97:0",
+"cap": 14
+},
+{
+"id": 6855,
+"ko": "스턴발동 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:98:0",
+"cap": 14
+},
+{
+"id": 6856,
+"ko": "화염발동 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:99:0",
+"cap": 14
+},
+{
+"id": 6857,
+"ko": "결빙(냉기) L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:100:0",
+"cap": 14
+},
+{
+"id": 6858,
+"ko": "중독 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:101:0",
+"cap": 14
+},
+{
+"id": 6859,
+"ko": "데미지반사 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:102:0",
+"cap": 14
+},
+{
+"id": 6860,
+"ko": "저주 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:103:0",
+"cap": 14
+},
+{
+"id": 6861,
+"ko": "쿨타임 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:104:0",
+"cap": 14
+},
+{
+"id": 6862,
+"ko": "사격/마법 L4",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:105:0",
+"cap": 14
+},
+{
+"id": 6863,
+"ko": "양손검 보완",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:106:0",
+"cap": 14
+},
+{
+"id": 6864,
+"ko": "사격/마법 보완",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:107:0",
+"cap": 14
+},
+{
+"id": 6865,
+"ko": "무기공격력 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:108:0",
+"cap": 14
+},
+{
+"id": 6866,
+"ko": "물리방어력 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:109:0",
+"cap": 14
+},
+{
+"id": 6867,
+"ko": "마법방어력 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:110:0",
+"cap": 14
+},
+{
+"id": 6868,
+"ko": "명중 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:111:0",
+"cap": 14
+},
+{
+"id": 6869,
+"ko": "회피 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:112:0",
+"cap": 14
+},
+{
+"id": 6870,
+"ko": "크리티컬 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:113:0",
+"cap": 14
+},
+{
+"id": 6871,
+"ko": "기절저항 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:114:0",
+"cap": 14
+},
+{
+"id": 6872,
+"ko": "HP회복 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:116:0",
+"cap": 14
+},
+{
+"id": 6873,
+"ko": "HP흡수 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:117:0",
+"cap": 14
+},
+{
+"id": 6874,
+"ko": "SP소모 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:118:0",
+"cap": 14
+},
+{
+"id": 6875,
+"ko": "저항 +",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:119:0",
+"cap": 14
+},
+{
+"id": 6876,
+"ko": "쿨타임감소",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_OPTION:120:0",
+"cap": 14
+},
+{
+"id": 6877,
+"ko": "드레이크셋",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_SET_OPTION:0:0",
+"cap": 12
+},
+{
+"id": 6878,
+"ko": "붉은사자셋",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_SET_OPTION:1:0",
+"cap": 12
+},
+{
+"id": 6879,
+"ko": "라임벨셋",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_SET_OPTION:2:0",
+"cap": 12
+},
+{
+"id": 6880,
+"ko": "나이트메어셋",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_SET_OPTION:3:0",
+"cap": 12
+},
+{
+"id": 6881,
+"ko": "엔젤윙셋",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_SET_OPTION:4:0",
+"cap": 12
+},
+{
+"id": 6882,
+"ko": "드래곤본셋",
+"kind": "item",
+"src": "rec:ITM/DAT/_ITM_SET_OPTION:5:0",
+"cap": 12
+}
+]

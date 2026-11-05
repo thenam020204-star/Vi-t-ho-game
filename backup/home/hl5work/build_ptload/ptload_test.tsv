@@ -1,0 +1,4 @@
+# sinh bởi patch/mk_ptload_test.py (T17p, chỉ bản thử --test-ptload; KHÔNG nằm trong so_patches.tsv)
+# vaddr	byte gốc	byte mới	lý do
+3da08	b42b04eb	7ccd04eb	T17p: bl MC_grpFlushLcd -> bl payload 0x171000 (PT_LOAD thử)
+# phdr[4] (file off 0xb4): PT_GNU_STACK -> PT_LOAD off=0x1d7000 va=0x171000 filesz=0x1000 memsz=0x2000 flags=7 align=0x1000
