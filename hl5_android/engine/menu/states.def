@@ -36,12 +36,12 @@ MUI_STATE(GAME, dlg, (GS(self) == 0 && *(u8 **)(gv + 5204) && *(*(u8 **)(gv + 52
 /* T14b: HUD chiến đấu mới (StateGame state 0, không hội thoại): Paint gốc + nút mới; chạm dịch về nút gốc; nhấn giữ nút tạm dừng = sửa bố cục (hud.c) */
 MUI_STATE(GAME, hud, (GS(self) == 0), hud_paint, hud_touch, hud_move)
 /* L3/T17c7: MainMenu: state 4 lưới 6 ô; 5 sub 0 slot / sub 1 lớp; 6 sub 0 Chuyên Gia = chọn slot; 9 sub 0 Cài đặt (10 mục); popup lớp = StatePopup loại 8 (cha MainMenu). State 2/3 (logo/tiêu đề), 10/11/12 (Thành tựu/Trợ giúp/Hỗ trợ), 0/1/7/8 (mạng), Cài đặt sub 1: đường gốc. */
-// [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAIN, mm4, (GS(self) == 4), mm_grid_paint, mm_touch, mm_move)
-// [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAIN, mm5a, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 0), mm_slot_paint, mm_touch, mm_move)
-// [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAIN, mm5b, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 1), mm_class_paint, mm_touch, mm_move)
-// [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAIN, mm6, (GS(self) == 6 && *((s8 *)(self) + 0xd) == 0), mm_slot_paint, mm_touch, mm_move)
-// [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAIN, mm9, (GS(self) == 9 && *((s8 *)(self) + 0xd) == 0), mm_option_paint, mm_touch, mm_move)
-// [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(POPUP, mmpop, (MAIN_POPUP8(self) && POP_NBTN(self) == 2), mmpop_paint, mmpop_touch, mmpop_move)
+MUI_STATE(MAIN, mm4, (GS(self) == 4), mm_grid_paint, mm_touch, mm_move)
+MUI_STATE(MAIN, mm5a, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 0), mm_slot_paint, mm_touch, mm_move)
+MUI_STATE(MAIN, mm5b, (GS(self) == 5 && *((s8 *)(self) + 0xd) == 1), mm_class_paint, mm_touch, mm_move)
+MUI_STATE(MAIN, mm6, (GS(self) == 6 && *((s8 *)(self) + 0xd) == 0), mm_slot_paint, mm_touch, mm_move)
+MUI_STATE(MAIN, mm9, (GS(self) == 9 && *((s8 *)(self) + 0xd) == 0), mm_option_paint, mm_touch, mm_move)
+MUI_STATE(POPUP, mmpop, (MAIN_POPUP8(self) && POP_NBTN(self) == 2), mmpop_paint, mmpop_touch, mmpop_move)
 /* L1b/T17c8: StateMap: chế độ 0 bản đồ lớn / 1 khu vực (ctor tham số 1 = [+0xd]==1 chỉ vẽ ảnh: giữ đường gốc) */
 // [tạm dừng L3/L1b: chưa kiểm] MUI_STATE(MAP, map, ((GS(self) == 0 || GS(self) == 1) && *((s8 *)(self) + 0xd) == 0), map_paint, map_touch, map_move)
 #ifdef MUI_DEBUG
