@@ -42,6 +42,9 @@ def load_K():
         if c[4].strip(): tr[c[0]] = c[4].replace('\\n', '\n')
     for c in read_tsv(os.path.join(V5, 'override.tsv'), 3):
         if c[2].strip(): tr[c[0]] = c[2].replace('\\n', '\n')
+    # T19: dịch lại (xưng hô, câu cứng) — trong repo, đè lên mọi nguồn trên. Cột: ID, Tieng Han, Tieng Viet cu, Tieng Viet moi, Ghi chu
+    for c in read_tsv(os.path.join(HERE, 'dich_lai.tsv'), 4):
+        if c[3].strip(): tr[c[0]] = c[3].replace('\\n', '\n')
     return tr
 
 

@@ -267,6 +267,11 @@ Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test4.apk` (sha25
 - [ ] T18b Phương án ưu tiên = nội suy NGỮ NGHĨA: giữ logic 22 Hz (KHÔNG đổi tốc độ game), lưu vị trí trước/sau của camera + đối tượng mỗi tick, giữa hai tick vẽ lại bằng mainPaint với vị trí nội suy theo thời gian thực (alpha = t/khoảng tick), khôi phục vị trí thật trước tick logic kế; HUD mới (hud.c) vẽ 60 fps độc lập. Có cờ bật/tắt trong Cài đặt (mặc định tắt cho tới khi người dùng thử). Phương án dự phòng: trộn khung (blend) ở bridge — rẻ nhưng nhoè, chỉ dùng nếu (a) bất khả thi.
 - [ ] T18c Kiểm: cờ tắt = gốc từng byte; cờ bật: logic (trạng thái, HP, vị trí sau N tick) trùng gốc; không cấp phát trong vòng vẽ; đo thời gian CPU mỗi khung; người dùng thử trên máy thật (cảm giác mượt, độ trễ chạm).
 
+### 7. Dịch lại xưng hô + câu cứng (T19) — người dùng yêu cầu 05/11
+Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 dòng dùng "tao/mày"). Bản sửa trong repo: `vi/dich_lai.tsv` (ID, Tieng Han, Tieng Viet cu, Tieng Viet moi, Ghi chu) — `vi/build_android_vi.py` đọc sau override.tsv. Bảng xưng hô + tiến độ: `vi/XUNG_HO.md`. WORK riêng ~/hl5work_dich (vi_android là bản sao).
+- [ ] B1 bảng xưng hô theo tiếng Hàn (반말/존댓말); B2 sửa toàn bộ tao/mày; B3 rà 6244 dòng hội thoại theo thứ tự .scn (nhiều lượt công nhân, mỗi lượt <=200k, tiếp từ TIẾN ĐỘ).
+- [ ] Sau cùng: rà Nhiệm vụ / Hướng dẫn / Mẹo; dựng APK thử để người dùng đọc trong game.
+
 ## Nhật ký
 - [quản đốc] Lập PLAN.md; các phân tích nền nằm trong BAO-CAO-RE.md §1–7; harness + 4 patch offline đã xong.
 - [A1] T1 xong: `vi/extract_android.py` -> `vi/android_catalog.json` 14298 câu (scn 7163 / 218 file, dat 7135 / 85 file gồm 5 file VFS không tên); roundtrip 0 lỗi, chạy lại giống hệt. Lưu ý `tools/scn.py:parse` chọn sai hit ở vài file (00154...), dùng `extract_android.parse_scn/build_scn`.
