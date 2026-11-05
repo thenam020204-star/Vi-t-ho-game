@@ -224,6 +224,43 @@ Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh g�
 - [A1/T12] ĐÃ XỬ LÝ (quản đốc chọn b, khoá tạo ở sign/, xem sign/README.md). Ghi chú cũ: không có khoá ký. PLAN.md dòng 46 ghi `hl5_android/sign/hl5vi.keystore` (mật khẩu ở `sign/README.md`), nhưng thư mục `sign/` không tồn tại, và `find / -name '*.keystore'` không thấy file nào; BAO-CAO-RE.md cũng không ghi alias/mật khẩu. Không tạo khoá, không viết make_apk.sh/APK. Cần quản đốc/người dùng: (a) cung cấp keystore + alias + mật khẩu, hoặc (b) cho phép tạo khoá mới bằng keytool (khi đó ghi `sign/README.md`).
 - [A1/T9] (1) Cửa sổ trong game (Túi đồ/Trang bị/Liên kích/popup, ~180 px) cố định cỡ 400x240: ở ÷2 trông nhỏ, canh giữa; phóng to = vẽ lại `StateInGameMenu::Draw*`, KHÔNG làm. (2) Bản đồ nhỏ hơn màn bị canh giữa với viền đen (`Map::LoadData` 0xb27a4..0xb2c04, `Map::MapSet` 0xafac0); bản đồ đầu ≈1090x960 px nên ÷2 (1200x540) chừa ~55 px mỗi bên, ÷1 chừa ~650 px; map ngoài trời sáng sẽ lộ viền. Lấp viền = vẽ nền lặp, lớn, chưa làm. (3) HIỆU NĂNG: thời gian guest ~ tuyến tính theo số điểm ảnh (harness: 70/96/152/258/1209 s mỗi 1000 khung ở 400x240/600x270/800x360/1200x540/2400x1080); guest chạy trong Unicorn trên máy nên ÷2 ≈ 2,7 lần v0.1.1 (÷4 = 600x270): cần người dùng thử máy thật trước khi đặt mặc định ÷2, giữ ÷3/÷4 chọn được.
 
+## VIỆC CÒN LẠI (cập nhật 05/11/2026, sau bản v0.3-test4) — đọc mục này trước khi giao việc
+
+Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test4.apk` (sha256 d020696f…). Toàn bộ môi trường + thư mục work đã sao lưu trong `backup/` (khôi phục: `backup/README.md`). Gốc so sánh harness: `~/hl5work/orig_v02hd` (sau mỗi `make_apk.sh` phải chép lại vào `build_apk/`). Không còn công nhân nào chạy.
+
+### 0. Chờ người dùng
+- [ ] Phản hồi chơi thử v0.3-test4 trên máy thật (dpad 2 chế độ, vị trí nút, HUD; hội thoại NPC; các màn NPC/Chuyên gia).
+- [ ] Chọn chân dung hội thoại bản A (bóng đổ, đang dùng) hay B (thêm quầng tối, `DLG_HALO`).
+- [ ] Dịch xong bộ ảnh chữ (`export/anh_chu`, danh sách `ui_new/anh_chu/DANH_SACH.tsv`) để làm T11.
+
+### 1. UI combat (T14) — ưu tiên theo người dùng
+- [ ] Đi chéo thật: game gốc chỉ 4 hướng (2 phím chéo = đi ngang). Cần tra mã di chuyển hero (OBJECT/HERO update, đọc cờ phím) và vá cho nhận chéo; nếu không khả thi thì báo người dùng.
+- [ ] Chạy lại bộ kiểm T14 đầy đủ sau khi thu DASH 38->36 (`harness/t14/check_t14.py`, `check_dpad.py`, `check_swallow.py`, `check_leak.py`, 3 cỡ) + chế độ `off` (cờ tắt = gốc).
+- [ ] Lưu bố cục ở cỡ này, đọc ở cỡ khác (`hud_layout.dat` theo phần nghìn màn).
+- [ ] Nuốt chạm vùng '#' (`gv[0x243]`, x>=W-40, y 70..95) khi chạm chỗ trống.
+- [ ] Chữ DASH ở 1200x540 còn nhỏ (đổi cỡ 18->22 không ăn: xem `gen_hud_text.py`/hud.c).
+- [ ] Mặt nạ vùng HUD khi so ảnh `cycles` (check_cash/... lệch hash do HUD mới; live/top/state = gốc).
+
+### 2. Menu đang dở (đã TẮT trong states.def/hooks.def/classes.def bằng comment '[tạm dừng L3/L1b: chưa kiểm]'; mã giữ nguyên)
+- [ ] L3 / T17c7 MainMenu: `engine/menu/mmenu.c` (404 dòng), hook 0x11fc00 mm_navkey, dòng mm4/mm5a/mm5b/mm6/mm9/mmpop, `harness/l3/` (check_mm/compare_mm đang viết). Còn: Cài đặt đủ 10 mục thật + Phân giải (T10), kiểm 3 cỡ, hồi quy c1 + cash. Chưa có BAO-CAO-L3.md.
+- [ ] L1b / StateMap: `engine/menu/map.c` (117 dòng), classes.def MAP = [+0xc] (đang về -1000), dòng `map`, `harness/l1/probe_map.py`, `check_map.py`, `compare_map.py`; mặt nạ cycles đã viết trong harness/l1 (chưa chạy). Còn: popup xác nhận dùng Bùa (0xdc188, `probe_bua.py`).
+- [ ] Khi bật lại: bỏ comment, dựng dev, kiểm ĐẠT rồi mới đóng APK.
+
+### 3. Việc nhỏ còn sót (đã nghiệm thu phần chính)
+- [ ] L2 NPC: soát mắt 600x270; khoá ô sách kỹ năng; hộp thông tin Chế biến 400x240 cắt dòng cuối; Orb với vật hiến tế khác id 9 / đã đủ ô; đối chiếu Orb 80.0%.
+- [ ] L1: popup xác nhận Bùa (xem mục 2).
+- [ ] T16 hội thoại: bản B chưa chụp; chưa thử NPC đứng nói chuyện / thoại nhiều trang ngoài hoạt cảnh.
+- [ ] T7: chặn nốt `netConnect` (0xd93b4, 0xc64bc, 0x11b344/364/6a8, 0x11f378, 0x120e48, 0x1218f8/970, 0x121c28).
+- [ ] Gộp BAO-CAO-L1/L2/T14/T16 (+L3) vào BAO-CAO-RE.md.
+
+### 4. Ảnh chữ (T11) — sau khi người dùng dịch
+- [ ] Vẽ lại ảnh chữ Anh còn lại (menu/ui/touch/title.mgr, "Tap to Continue", huy hiệu) từ bản dịch; dòng "Việt hoá bởi NAM.P" trên màn tiêu đề.
+
+### 5. Phát hành (L5)
+- [ ] Gộp vào `make_apk.sh`: BGM từ `env/inputs/bgm` (swap_bgm), ảnh Việt `patch/mk_vi_images.py`, cập nhật `target-assets.json` — bỏ bước hậu kỳ tay.
+- [ ] Quy trình ghép vtable (xoá khối -> make_apk -> apply_so -> inject_menu --update-repo -> dựng lại, .so trùng byte) mỗi lần địa chỉ đổi.
+- [ ] Phát hành `dist/HL5-VI-v0.3.apk` + bản diag, viết PHAT-HANH.md, BAN-GIAO.md; kiểm cuối 3 cỡ + hồi quy toàn bộ.
+
 ## Nhật ký
 - [quản đốc] Lập PLAN.md; các phân tích nền nằm trong BAO-CAO-RE.md §1–7; harness + 4 patch offline đã xong.
 - [A1] T1 xong: `vi/extract_android.py` -> `vi/android_catalog.json` 14298 câu (scn 7163 / 218 file, dat 7135 / 85 file gồm 5 file VFS không tên); roundtrip 0 lỗi, chạy lại giống hệt. Lưu ý `tools/scn.py:parse` chọn sai hit ở vài file (00154...), dùng `extract_android.parse_scn/build_scn`.
