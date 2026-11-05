@@ -1,0 +1,26 @@
+=== t17c1/check_c1_all.py 04:41:53
+rc=0
+ĐẠT   1200x540: vùng chạm he_thong_tro_giup == hit_rects.json (5 mục)
+ĐẠT   1200x540: vùng chạm he_thong_popup_luu == hit_rects.json (2 mục)
+KẾT LUẬN: ĐẠT
+=== t17c2/check_c2_all.py 04:47:36
+rc=0
+ĐẠT   1200x540: vùng chạm trang_bi == hit_rects.json (18 mục)
+ĐẠT   1200x540: vùng chạm tui_do_chon == hit_rects.json (10 mục)
+KẾT LUẬN: ĐẠT
+=== t17c3/check_c3a_all.py 04:52:54
+rc=0
+1200x540: ảnh cảnh sau 20 lần new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
+ĐẠT   1200x540: vùng chạm lien_kich == hit_rects.json (23 mục)
+KẾT LUẬN: ĐẠT
+=== t17c3b/check_c3b_all.py 04:57:33
+rc=0
+1200x540: ảnh cảnh sau 20 lần mở/đóng new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
+ĐẠT   1200x540: vùng chạm == hit_rects.json dac_tinh (27 mục)
+KẾT LUẬN: ĐẠT
+=== t17c3c/check_c3c_all.py 05:02:26
+rc=0
+ĐẠT   1200x540: vùng chạm ky_nang == hit_rects.json (35 mục)
+ĐẠT   1200x540: vùng chạm ky_nang_phim_tat == hit_rects.json (7 mục)
+KẾT LUẬN: ĐẠT
+ALLDONE

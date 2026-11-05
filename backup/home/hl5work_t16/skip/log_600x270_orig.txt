@@ -1,0 +1,1 @@
+{"base": {"e75": 1, "cur": 0, "st": 2, "name": 16, "lines": 3, "page": 0, "speed": 1, "prog": 6, "tx": [8, 227, 584], "box": [0, 221, 600, 49], "face": 0, "side": 0, "s6e0": 0, "s6e1": 1, "a4": 0}, "base_text": "e9c420cbe020cfb620dde920cfad20cec120dbf120dad820cfe420cfd22c20d2d42e", "skip_rect": null}

@@ -1,0 +1,31 @@
+== 400x240
+  ĐẠT  có thông điệp (gốc 18, mới 18)
+  ĐẠT  C1 18/18 thông điệp giống nhau từng byte (id tên + chuỗi), gốc=18 mới=18
+     số trang mỗi thông điệp  gốc: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+     số trang mỗi thông điệp  mới: [1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  ĐẠT  C2 trang liên tục, số trang mới trong [gốc, 3*gốc+1]; tổng trang gốc=18 mới=19
+  ĐẠT  C3 hình học (v2: hộp tới lề màn, chữ sau phần chân dung che, rộng >= 150): hộp [8, 183, 384, 53], vùng chữ [20, 190, 360]
+  ĐẠT  C4 không có điểm chữ trắng ngoài vùng chữ (19 ảnh trang, 0 điểm lạ)
+  ĐẠT  C5 cấp phát sống/đỉnh trong hoạt cảnh: gốc +1552/+461744, mới +1552/+461744
+  ĐẠT  C6 cờ tắt == gốc: thông điệp/trang/khung giống hệt; 18 ảnh trang, 0 khác byte
+== 600x270
+  ĐẠT  có thông điệp (gốc 18, mới 18)
+  ĐẠT  C1 18/18 thông điệp giống nhau từng byte (id tên + chuỗi), gốc=18 mới=18
+     số trang mỗi thông điệp  gốc: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+     số trang mỗi thông điệp  mới: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  ĐẠT  C2 trang liên tục, số trang mới trong [gốc, 3*gốc+1]; tổng trang gốc=18 mới=18
+  ĐẠT  C3 hình học (v2: hộp tới lề màn, chữ sau phần chân dung che, rộng >= 150): hộp [8, 213, 584, 53], vùng chữ [20, 220, 560]
+  ĐẠT  C4 không có điểm chữ trắng ngoài vùng chữ (18 ảnh trang, 0 điểm lạ)
+  ĐẠT  C5 cấp phát sống/đỉnh trong hoạt cảnh: gốc +1552/+461744, mới +1552/+461744
+  ĐẠT  C6 cờ tắt == gốc: thông điệp/trang/khung giống hệt; 18 ảnh trang, 0 khác byte
+== 1200x540
+  ĐẠT  có thông điệp (gốc 18, mới 18)
+  ĐẠT  C1 18/18 thông điệp giống nhau từng byte (id tên + chuỗi), gốc=18 mới=18
+     số trang mỗi thông điệp  gốc: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+     số trang mỗi thông điệp  mới: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  ĐẠT  C2 trang liên tục, số trang mới trong [gốc, 3*gốc+1]; tổng trang gốc=18 mới=18
+  ĐẠT  C3 hình học (v2: hộp tới lề màn, chữ sau phần chân dung che, rộng >= 150): hộp [24, 444, 1152, 84], vùng chữ [48, 456, 1104]
+  ĐẠT  C4 không có điểm chữ trắng ngoài vùng chữ (18 ảnh trang, 0 điểm lạ)
+  ĐẠT  C5 cấp phát sống/đỉnh trong hoạt cảnh: gốc +1552/+461744, mới +1552/+461744
+  ĐẠT  C6 cờ tắt == gốc: thông điệp/trang/khung giống hệt; 18 ảnh trang, 0 khác byte
+KẾT LUẬN: ĐẠT

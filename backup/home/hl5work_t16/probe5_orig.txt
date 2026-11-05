@@ -1,0 +1,7 @@
+skips 2 [(1106, 16), (1309, 11)]
+fr 9000 e75 1
+count 5 hero 0x20284ea0 x 280 y 872
+1 x,y (512, 656) raw 0002900200ff0005ffffffffffffffff04000100
+2 x,y (480, 640) raw e001800200ff0005ffffffffffffffff04ff0100
+3 x,y (496, 640) raw f0018002071a0004ff0c00ffffffffff04000100
+4 x,y (320, 768) raw 40010003071a0b0400ff01ffffffffff04010000

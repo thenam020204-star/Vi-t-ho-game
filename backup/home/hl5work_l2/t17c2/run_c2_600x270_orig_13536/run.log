@@ -1,0 +1,1288 @@
+BOOT 1 nativeInitKernel
+BOOT 2 nativeInitDisplay 600x270
+glTexImage2D tex=1 1024x512 fmt=0x1907 type=0x8363
+BOOT 3 storage
+BOOT 4 VFS
+BOOT 5 audio
+BOOT 6 start
+JNIC getModel
+JNIC initMTX
+JNI static call initMTX (unhandled)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+LOG[4] LoadEffectSound()
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/LOCAL.sav fl=0x241 -> 10
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x241 -> 11
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 12
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x2 -> 13
+JNIC getMin
+JNI static call getMin (unhandled)
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 14
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 15
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x2 -> 16
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 17
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 18
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x2 -> 19
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 20
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 21
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x2 -> 22
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 23
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 24
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x2 -> 25
+LOG[4] volume =1 _volume[volume]=10
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 26
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 27
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 28
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+LOG[4] PlaySound(resIndex=16,  isLoop=0,  isBGM=1,  isNewPlay=0)
+LOG[4] res_freeBGMSound()
+LOG[4] StopBgmSound()
+LOG[4] timeBgmInit()
+LOG[4] FreeBGMSound()
+LOG[4] PlayBgmSound(resIndex=16, isLoop=0)
+LOG[4] res_loadBGMSound(idx=16)
+LOG[4] res_freeBGMSound()
+LOG[4] StopBgmSound()
+LOG[4] timeBgmInit()
+LOG[4] FreeBGMSound()
+LOG[4] LoadBGMSound( bgmIndex = 16 )
+JNIC getVolume
+JNIC putMusicClip
+JNI static call putMusicClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+LOG[4] timeBgmInit()
+LOG[4] PlayBgmSound(resIndex=16, isLoop=0)
+JNIC setMusicVolume
+JNI static call setMusicVolume (unhandled)
+JNIC clipPlayMusic
+JNI static call clipPlayMusic (unhandled)
+LOG[4] ### MC_mdaPlay (Loop = ?) is done successfully.
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+LOG[4] PlaySound(resIndex=20,  isLoop=1,  isBGM=1,  isNewPlay=0)
+LOG[4] res_freeBGMSound()
+LOG[4] StopBgmSound()
+JNIC clipStopMusic
+JNI static call clipStopMusic (unhandled)
+LOG[4] timeBgmInit()
+LOG[4] FreeBGMSound()
+JNIC clipFreeMusic
+JNI static call clipFreeMusic (unhandled)
+LOG[4] PlayBgmSound(resIndex=20, isLoop=1)
+LOG[4] res_loadBGMSound(idx=20)
+LOG[4] res_freeBGMSound()
+LOG[4] StopBgmSound()
+LOG[4] timeBgmInit()
+LOG[4] FreeBGMSound()
+LOG[4] LoadBGMSound( bgmIndex = 20 )
+JNIC getVolume
+JNIC putMusicClip
+JNI static call putMusicClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+LOG[4] timeBgmInit()
+LOG[4] PlayBgmSound(resIndex=20, isLoop=1)
+JNIC setMusicVolume
+JNI static call setMusicVolume (unhandled)
+JNIC clipPlayMusic
+JNI static call clipPlayMusic (unhandled)
+LOG[4] ### MC_mdaPlay (Loop = ?) is done successfully.
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 29
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 30
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 31
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x0 -> 32
+open /root/hl5work_l2/t17c2/run_c2_600x270_orig_13536/st/kickass fl=0x2 -> 33
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+LOG[4] res_freeBGMSound()
+LOG[4] StopBgmSound()
+JNIC clipStopMusic
+JNI static call clipStopMusic (unhandled)
+LOG[4] timeBgmInit()
+LOG[4] FreeBGMSound()
+JNIC clipFreeMusic
+JNI static call clipFreeMusic (unhandled)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+LOG[4] res_freeBGMSound()
+LOG[4] StopBgmSound()
+LOG[4] timeBgmInit()
+LOG[4] FreeBGMSound()
+JNIC freeMemory
+LOG[4] PlaySound(resIndex=2,  isLoop=0,  isBGM=0,  isNewPlay=0)
+LOG[4] PlayEffSound(resIndex=2, isLoop=0)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+LOG[4] PlayLoadedEffect(resIndex=2, isLoop=0)
+LOG[4] volume =1 _volume[volume]=10
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC clipPlaySound
+JNI static call clipPlaySound (unhandled)
+LOG[4] PlaySound(resIndex=1,  isLoop=0,  isBGM=0,  isNewPlay=0)
+LOG[4] PlayEffSound(resIndex=1, isLoop=0)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+LOG[4] PlayLoadedEffect(resIndex=1, isLoop=0)
+LOG[4] volume =1 _volume[volume]=10
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC clipPlaySound
+JNI static call clipPlaySound (unhandled)
+LOG[4] PlaySound(resIndex=2,  isLoop=0,  isBGM=0,  isNewPlay=0)
+LOG[4] PlayEffSound(resIndex=2, isLoop=0)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+LOG[4] PlayLoadedEffect(resIndex=2, isLoop=0)
+LOG[4] volume =1 _volume[volume]=10
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC clipPlaySound
+JNI static call clipPlaySound (unhandled)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC freeMemory
+JNIC freeMemory
+LOG[4] PlaySound(resIndex=6,  isLoop=1,  isBGM=1,  isNewPlay=0)
+LOG[4] res_freeBGMSound()
+LOG[4] StopBgmSound()
+LOG[4] timeBgmInit()
+LOG[4] FreeBGMSound()
+LOG[4] PlayBgmSound(resIndex=6, isLoop=1)
+LOG[4] res_loadBGMSound(idx=6)
+LOG[4] res_freeBGMSound()
+LOG[4] StopBgmSound()
+LOG[4] timeBgmInit()
+LOG[4] FreeBGMSound()
+LOG[4] LoadBGMSound( bgmIndex = 6 )
+JNIC getVolume
+JNIC putMusicClip
+JNI static call putMusicClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+LOG[4] timeBgmInit()
+LOG[4] PlayBgmSound(resIndex=6, isLoop=1)
+JNIC setMusicVolume
+JNI static call setMusicVolume (unhandled)
+JNIC clipPlayMusic
+JNI static call clipPlayMusic (unhandled)
+LOG[4] ### MC_mdaPlay (Loop = ?) is done successfully.

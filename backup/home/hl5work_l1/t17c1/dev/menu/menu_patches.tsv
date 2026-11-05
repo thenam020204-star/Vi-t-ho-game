@@ -1,0 +1,18 @@
+# sinh bởi engine/menu/inject_menu.py (T17c): vá ô vtable cho lớp đã bật trong states.def: CASH, INGAME, POPUP
+15e0f0	9c840d00	d45a1700	T17c: vtable StateCashShop +0x48 (Paint) 0xd849c -> thunk mui_paint_CASH 0x175ad4
+15e0d4	7c940d00	245b1700	T17c: vtable StateCashShop +0x2c (TouchPressed) 0xd947c -> thunk mui_tp_CASH 0x175b24
+15e0dc	847d0d00	985b1700	T17c: vtable StateCashShop +0x34 (TouchMoved) 0xd7d84 -> thunk mui_tm_CASH 0x175b98
+15e0d8	807d0d00	0c5c1700	T17c: vtable StateCashShop +0x30 (TouchReleased) 0xd7d80 -> thunk mui_tr_CASH 0x175c0c
+15e2d0	1c6c1000	7c571700	T17c: vtable StateInGameMenu +0x48 (Paint) 0x106c1c -> thunk mui_paint_INGAME 0x17577c
+15e2b4	48061000	0c581700	T17c: vtable StateInGameMenu +0x2c (TouchPressed) 0x100648 -> thunk mui_tp_INGAME 0x17580c
+15e2bc	9c2e0e00	c0581700	T17c: vtable StateInGameMenu +0x34 (TouchMoved) 0xe2e9c -> thunk mui_tm_INGAME 0x1758c0
+15e2b8	982e0e00	74591700	T17c: vtable StateInGameMenu +0x30 (TouchReleased) 0xe2e98 -> thunk mui_tr_INGAME 0x175974
+15e5f0	a08c1300	b0551700	T17c: vtable StatePopup +0x48 (Paint) 0x138ca0 -> thunk mui_paint_POPUP 0x1755b0
+15e5d4	406e1300	10561700	T17c: vtable StatePopup +0x2c (TouchPressed) 0x136e40 -> thunk mui_tp_POPUP 0x175610
+15e5dc	a86b1300	94561700	T17c: vtable StatePopup +0x34 (TouchMoved) 0x136ba8 -> thunk mui_tm_POPUP 0x175694
+15e5d8	a46b1300	18571700	T17c: vtable StatePopup +0x30 (TouchReleased) 0x136ba4 -> thunk mui_tr_POPUP 0x175718
+77abc	9f27ffeb	570404eb	T17c2: call-site 0x77abc bl 0x41940 -> bl mui_cap_line 0x178c20
+d9330	3cb4ffeb	d19d02eb	T17c2: call-site 0xd9330 bl 0xc6428 -> bl t7_cash_netconnect 0x180a7c
+d9350	befaffeb	e89d02eb	T17c2: call-site 0xd9350 bl 0xd7e50 -> bl t7_cash_popup 0x180af8
+dc188	a6a8ffeb	809202eb	T17c2: call-site 0xdc188 bl 0xc6428 -> bl t7_game_revive 0x180b90
+d9a24	09f9ffeb	709c02eb	T17c2: call-site 0xd9a24 bl 0xd7e50 -> bl t7_cash_confirm 0x180bec

@@ -1,0 +1,22 @@
+tự do tại khung 1170 e75 0 free 150 67s
+sự kiện 1 xy (512, 656) type 0 id 255 +7 5 cờ+18 1
+sự kiện 2 xy (480, 640) type 0 id 255 +7 5 cờ+18 1
+sự kiện 3 xy (609, 592) type 7 id 26 +7 4 cờ+18 0
+sự kiện 4 xy (320, 768) type 7 id 26 +7 4 cờ+18 0
+hero 377 728 dir 2
+  thử sự kiện 1 hướng 0 -> e75 1 st 2 name 1 text e0aa20cfb220cba920dee820cccd20cc
+  thử sự kiện 1 hướng 1 -> e75 1 st 2 name 1 text e0aa20cfb220cba920dee820cccd20cc
+  thử sự kiện 1 hướng 2 -> e75 1 st 2 name 1 text e0aa20cfb220cba920dee820cccd20cc
+  thử sự kiện 1 hướng 3 -> e75 1 st 2 name 1 text e0aa20cfb220cba920dee820cccd20cc
+  thử sự kiện 2 hướng 0 -> e75 1 st 2 name 1 text e0aa20cfb220cba920dee820cccd20cc
+  thử sự kiện 2 hướng 1 -> e75 1 st 2 name 1 text e0aa20cfb220cba920dee820cccd20cc
+  thử sự kiện 2 hướng 2 -> e75 1 st 2 name 1 text e0aa20cfb220cba920dee820cccd20cc
+  thử sự kiện 2 hướng 3 -> e75 1 st 2 name 1 text e0aa20cfb220cba920dee820cccd20cc
+  thử sự kiện 3 hướng 0 -> e75 0 st 0 name 0 text 
+  thử sự kiện 3 hướng 1 -> e75 0 st 0 name 0 text 
+  thử sự kiện 3 hướng 2 -> e75 0 st 0 name 0 text 
+  thử sự kiện 3 hướng 3 -> e75 0 st 0 name 0 text 
+  thử sự kiện 4 hướng 0 -> e75 0 st 0 name 0 text 
+  thử sự kiện 4 hướng 1 -> e75 0 st 0 name 0 text 
+  thử sự kiện 4 hướng 2 -> e75 0 st 0 name 0 text 
+  thử sự kiện 4 hướng 3 -> e75 0 st 0 name 0 text 

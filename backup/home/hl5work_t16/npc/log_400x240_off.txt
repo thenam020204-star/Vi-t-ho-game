@@ -1,0 +1,7 @@
+tự do tại khung 1170 e75 0 free 150 453s
+sự kiện 1 xy (512, 656) type 0 id 255 +7 5 cờ+18 1
+sự kiện 2 xy (480, 640) type 0 id 255 +7 5 cờ+18 1
+sự kiện 3 xy (609, 592) type 7 id 26 +7 4 cờ+18 0
+sự kiện 4 xy (320, 768) type 7 id 26 +7 4 cờ+18 0
+hero 377 728 dir 2
+400x240 off: 1 thông điệp, 1 trang, heap (5543, 542207728) -> (5546, 542255152)

@@ -1,0 +1,149 @@
+BOOT 1 nativeInitKernel
+BOOT 2 nativeInitDisplay 400x240
+glTexImage2D tex=1 512x256 fmt=0x1907 type=0x8363
+BOOT 3 storage
+BOOT 4 VFS
+BOOT 5 audio
+BOOT 6 start
+JNIC getModel
+JNIC initMTX
+JNI static call initMTX (unhandled)
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueAssetNameFromID
+JNIC freeMemory
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+JNIC getUniqueNumberFromStrings
+JNIC getUniqueAssetNameFromID
+LOG[4] LoadEffectSound()
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)
+JNIC getVolume
+JNIC putSoundClip
+JNI static call putSoundClip (unhandled)
+LOG[4] MC_mdaClipPutDataByFile is Success!
+JNIC setSoundVolume
+JNI static call setSoundVolume (unhandled)

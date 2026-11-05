@@ -1,0 +1,5 @@
+1500 e75 1 skips 10
+2000 e75 1 skips 22
+2500 e75 1 skips 30
+3000 e75 1 skips 30
+3500 e75 1 skips 30

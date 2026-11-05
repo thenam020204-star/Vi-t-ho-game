@@ -1,0 +1,50 @@
+{
+ "W": 600,
+ "H": 270,
+ "mode": "new",
+ "frames": 1193,
+ "msgs": [
+  {
+   "name": 1,
+   "text": "e0aa20cfb220cba920dee820cccd20ccb02e20cddf20dbac20dcaa20cbcb2e",
+   "pages": {
+    "0": 1186
+   },
+   "first": 1186,
+   "box": [
+    92,
+    213,
+    500,
+    53
+   ],
+   "tx": [
+    139,
+    220,
+    441
+   ],
+   "lines": 3,
+   "face": true,
+   "side": 0,
+   "done": {
+    "0": {
+     "frame": 1191,
+     "prog": 7,
+     "speed": 1000
+    }
+   }
+  }
+ ],
+ "heap0": [
+  5543,
+  542471728
+ ],
+ "heap1": [
+  5546,
+  542519152
+ ],
+ "secs": 553,
+ "npc": {
+  "idx": 1,
+  "dir": 0
+ }
+}

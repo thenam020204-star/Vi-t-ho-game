@@ -1,0 +1,100 @@
+ĐẠT   400x240: kịch bản không lỗi/crash 
+ĐẠT   400x240: chạm ô 0 (3x3) -> state 1 == phím gốc 1
+ĐẠT   400x240: chạm ô 1 (3x3) -> state 2 == phím gốc 2
+ĐẠT   400x240: chạm ô 2 (3x3) -> state 3 == phím gốc 3
+ĐẠT   400x240: chạm ô 3 (3x3) -> state 4 == phím gốc 4
+ĐẠT   400x240: chạm ô 4 (3x3) -> state 5 == phím gốc 5
+ĐẠT   400x240: chạm ô 5 (3x3) -> state 6 == phím gốc 6
+ĐẠT   400x240: chạm ô 6 (3x3) -> state 0 == phím gốc 0
+ĐẠT   400x240: chạm ô 7 (3x3) -> state 8 == phím gốc 8
+ĐẠT   400x240: chạm ô 8 (3x3) -> state 9 == phím gốc 9
+ĐẠT   400x240: char: dữ liệu HERO/tuỳ chọn sau thao tác chạm == phím gốc
+ĐẠT   400x240: sys: dữ liệu HERO/tuỳ chọn sau thao tác chạm == phím gốc
+ĐẠT   400x240: save_yes: tệp lưu ghi == gốc  new={'LOCAL.sav': '65463e120fff:63', 'kickass': '5cf0f1f8f53b:15396'} orig={'LOCAL.sav': '65463e120fff:63', 'kickass': '5cf0f1f8f53b:15396'}
+ĐẠT   400x240: save_yes: popup là StatePopup loại 2, 2 nút
+ĐẠT   400x240: save_no: tệp lưu ghi == gốc  new={} orig={}
+ĐẠT   400x240: save_no: popup là StatePopup loại 2, 2 nút
+ĐẠT   400x240: chạm tab 0 -> state 1 == gốc 1
+ĐẠT   400x240: chạm tab 1 -> state 2 == gốc 2
+ĐẠT   400x240: chạm tab 2 -> state 3 == gốc 3
+ĐẠT   400x240: chạm tab 3 -> state 4 == gốc 4
+ĐẠT   400x240: chạm tab 4 -> state 5 == gốc 5
+ĐẠT   400x240: chạm tab 5 -> state 6 == gốc 6
+ĐẠT   400x240: chạm tab 6 -> state 7 == gốc 7
+ĐẠT   400x240: chạm tab 7 -> state 8 == gốc 8
+ĐẠT   400x240: chạm tab 8 -> state 9 == gốc 9
+ĐẠT   400x240: mở/đóng 20 lần: allocation sống +80 (gốc +80), state cuối 0x15e150
+400x240: ảnh cảnh sau 20 lần mở/đóng new=0988fb5b989b470801428053b0e51c68 orig=0988fb5b989b470801428053b0e51c68
+ĐẠT   600x270: kịch bản không lỗi/crash 
+ĐẠT   600x270: chạm ô 0 (3x3) -> state 1 == phím gốc 1
+ĐẠT   600x270: chạm ô 1 (3x3) -> state 2 == phím gốc 2
+ĐẠT   600x270: chạm ô 2 (3x3) -> state 3 == phím gốc 3
+ĐẠT   600x270: chạm ô 3 (3x3) -> state 4 == phím gốc 4
+ĐẠT   600x270: chạm ô 4 (3x3) -> state 5 == phím gốc 5
+ĐẠT   600x270: chạm ô 5 (3x3) -> state 6 == phím gốc 6
+ĐẠT   600x270: chạm ô 6 (3x3) -> state 0 == phím gốc 0
+ĐẠT   600x270: chạm ô 7 (3x3) -> state 8 == phím gốc 8
+ĐẠT   600x270: chạm ô 8 (3x3) -> state 9 == phím gốc 9
+ĐẠT   600x270: char: dữ liệu HERO/tuỳ chọn sau thao tác chạm == phím gốc
+ĐẠT   600x270: sys: dữ liệu HERO/tuỳ chọn sau thao tác chạm == phím gốc
+ĐẠT   600x270: save_yes: tệp lưu ghi == gốc  new={'LOCAL.sav': '65463e120fff:63', 'kickass': '5cf0f1f8f53b:15396'} orig={'LOCAL.sav': '65463e120fff:63', 'kickass': '5cf0f1f8f53b:15396'}
+ĐẠT   600x270: save_yes: popup là StatePopup loại 2, 2 nút
+ĐẠT   600x270: save_no: tệp lưu ghi == gốc  new={} orig={}
+ĐẠT   600x270: save_no: popup là StatePopup loại 2, 2 nút
+ĐẠT   600x270: chạm tab 0 -> state 1 == gốc 1
+ĐẠT   600x270: chạm tab 1 -> state 2 == gốc 2
+ĐẠT   600x270: chạm tab 2 -> state 3 == gốc 3
+ĐẠT   600x270: chạm tab 3 -> state 4 == gốc 4
+ĐẠT   600x270: chạm tab 4 -> state 5 == gốc 5
+ĐẠT   600x270: chạm tab 5 -> state 6 == gốc 6
+ĐẠT   600x270: chạm tab 6 -> state 7 == gốc 7
+ĐẠT   600x270: chạm tab 7 -> state 8 == gốc 8
+ĐẠT   600x270: chạm tab 8 -> state 9 == gốc 9
+ĐẠT   600x270: mở/đóng 20 lần: allocation sống +80 (gốc +80), state cuối 0x15e150
+600x270: ảnh cảnh sau 20 lần mở/đóng new=7ef6844cf11a087530253127ab989468 orig=7ef6844cf11a087530253127ab989468
+ĐẠT   1200x540: kịch bản không lỗi/crash 
+ĐẠT   1200x540: chạm ô 0 (3x3) -> state 1 == phím gốc 1
+ĐẠT   1200x540: chạm ô 1 (3x3) -> state 2 == phím gốc 2
+ĐẠT   1200x540: chạm ô 2 (3x3) -> state 3 == phím gốc 3
+ĐẠT   1200x540: chạm ô 3 (3x3) -> state 4 == phím gốc 4
+ĐẠT   1200x540: chạm ô 4 (3x3) -> state 5 == phím gốc 5
+ĐẠT   1200x540: chạm ô 5 (3x3) -> state 6 == phím gốc 6
+ĐẠT   1200x540: chạm ô 6 (3x3) -> state 0 == phím gốc 0
+ĐẠT   1200x540: chạm ô 7 (3x3) -> state 8 == phím gốc 8
+ĐẠT   1200x540: chạm ô 8 (3x3) -> state 9 == phím gốc 9
+ĐẠT   1200x540: char: dữ liệu HERO/tuỳ chọn sau thao tác chạm == phím gốc
+ĐẠT   1200x540: sys: dữ liệu HERO/tuỳ chọn sau thao tác chạm == phím gốc
+ĐẠT   1200x540: save_yes: tệp lưu ghi == gốc  new={'LOCAL.sav': '65463e120fff:63', 'kickass': '5cf0f1f8f53b:15396'} orig={'LOCAL.sav': '65463e120fff:63', 'kickass': '5cf0f1f8f53b:15396'}
+ĐẠT   1200x540: save_yes: popup là StatePopup loại 2, 2 nút
+ĐẠT   1200x540: save_no: tệp lưu ghi == gốc  new={} orig={}
+ĐẠT   1200x540: save_no: popup là StatePopup loại 2, 2 nút
+ĐẠT   1200x540: chạm tab 0 -> state 1 == gốc 1
+ĐẠT   1200x540: chạm tab 1 -> state 2 == gốc 2
+ĐẠT   1200x540: chạm tab 2 -> state 3 == gốc 3
+ĐẠT   1200x540: chạm tab 3 -> state 4 == gốc 4
+ĐẠT   1200x540: chạm tab 4 -> state 5 == gốc 5
+ĐẠT   1200x540: chạm tab 5 -> state 6 == gốc 6
+ĐẠT   1200x540: chạm tab 6 -> state 7 == gốc 7
+ĐẠT   1200x540: chạm tab 7 -> state 8 == gốc 8
+ĐẠT   1200x540: chạm tab 8 -> state 9 == gốc 9
+ĐẠT   1200x540: mở/đóng 20 lần: allocation sống +80 (gốc +80), state cuối 0x15e150
+1200x540: ảnh cảnh sau 20 lần mở/đóng new=35c707dd4af597d7cb4463ba6c837f12 orig=35c707dd4af597d7cb4463ba6c837f12
+ĐẠT   400x240: vùng chạm menu3x3 (9 ô + nút <) == hit_rects.json []
+ĐẠT   400x240: vùng chạm nhan_vat == hit_rects.json (18 mục)
+ĐẠT   400x240: vùng chạm he_thong == hit_rects.json (4 mục)
+ĐẠT   400x240: vùng chạm he_thong_cai_dat == hit_rects.json (12 mục)
+ĐẠT   400x240: vùng chạm he_thong_tro_giup == hit_rects.json (5 mục)
+ĐẠT   400x240: vùng chạm he_thong_popup_luu == hit_rects.json (2 mục)
+ĐẠT   600x270: vùng chạm menu3x3 (9 ô + nút <) == hit_rects.json []
+ĐẠT   600x270: vùng chạm nhan_vat == hit_rects.json (18 mục)
+ĐẠT   600x270: vùng chạm he_thong == hit_rects.json (4 mục)
+ĐẠT   600x270: vùng chạm he_thong_cai_dat == hit_rects.json (12 mục)
+ĐẠT   600x270: vùng chạm he_thong_tro_giup == hit_rects.json (5 mục)
+ĐẠT   600x270: vùng chạm he_thong_popup_luu == hit_rects.json (2 mục)
+ĐẠT   1200x540: vùng chạm menu3x3 (9 ô + nút <) == hit_rects.json []
+ĐẠT   1200x540: vùng chạm nhan_vat == hit_rects.json (18 mục)
+ĐẠT   1200x540: vùng chạm he_thong == hit_rects.json (4 mục)
+ĐẠT   1200x540: vùng chạm he_thong_cai_dat == hit_rects.json (12 mục)
+ĐẠT   1200x540: vùng chạm he_thong_tro_giup == hit_rects.json (5 mục)
+ĐẠT   1200x540: vùng chạm he_thong_popup_luu == hit_rects.json (2 mục)
+KẾT LUẬN: ĐẠT
