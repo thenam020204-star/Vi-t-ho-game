@@ -42,7 +42,7 @@ for ip in SP:
     cur['ipms'] = ip * 1000.0
     t0 = r.g.vclock; tk0, fl0 = r.ticks, r.flushes; m0 = st_rd(r, 'n_mid'); lag0 = st_rd(r, 'n_tick_lag'); sk0 = st_rd(r, 'n_skip'); base = r.g.vclock; tkp = r.ticks
     while r.g.vclock - t0 < SEC * 1000:
-        k = -(-(r.g.vclock - base) // 16.667); r.g.vclock = int(round(base + k * 16.667)) if k * 16.667 + base > r.g.vclock else r.g.vclock + 1
+        k = int((r.g.vclock - base) // 16.667) + 1; r.g.vclock = max(r.g.vclock + 1, int(round(base + k * 16.667)))     # vsync kế TIẾP THEO (bản cũ có thể không tiến thời gian -> loop lặp tại cùng ms)
         if r.ticks != tkp: tkp = r.ticks; tickwatch()
         r.g.frame = r.fr; r.g.call(r.loop, r.g.env, 0); r.fr += 1
     dt = (r.g.vclock - t0) / 1000.0; tk = r.ticks - tk0; fl = r.flushes - fl0
