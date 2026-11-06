@@ -14,6 +14,13 @@ def charge(ins, extra_ms=0.0):
     acc['ms'] += ins / cur['ipms'] + extra_ms
     k = int(acc['ms']); acc['ms'] -= k; r.g.vclock += k
 uc = r.g.uc
+# harness hl5libc.ftime cộng 1 ms vào đồng hồ ẢO mỗi lần gọi (MC_knlCurrentTime): mỗi tick ~8-12 lần => thêm ~10 ms ảo/tick KHÔNG có thật => bỏ (đồng hồ chỉ tiến theo chi phí mô hình + vsync)
+if os.environ.get('FTIME_ADV', '0') != '1':
+    for a_, (nm_, fn_) in list(r.g.handlers.items()):
+        if nm_ == 'ftime':
+            def ft(uc=uc, g=r.g):
+                t = g.vclock; uc.mem_write(uc.reg_read(UC_ARM_REG_R0), struct.pack('<IHhh', t // 1000, t % 1000, 0, 0)); return 0
+            r.g.handlers[a_] = (nm_, ft)
 host_paint_ms = MCC * CALL_US / 1000.0 + MCMB / BW * 1000.0
 for addr, ins, ex in ((0x987c0, PAINT, host_paint_ms), (0x98a78, PROC, 0.0), (0xafc54, MM, 0.0)):
     uc.hook_add(UC_HOOK_CODE, (lambda ins, ex: lambda uc, a, s, u: charge(ins, ex))(ins, ex), begin=BASE + addr, end=BASE + addr)
