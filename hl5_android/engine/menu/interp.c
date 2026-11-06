@@ -60,7 +60,8 @@ static inline int sdiff(u32 a, u32 b) { return (int)(a - b); }
 static void flag_load(void) {
     char b[4] = {0, 0, 0, 0};
     int n = StaticUtil_FileRead("interp.txt", b, 2);
-    I.flag = (n > 0 && b[0] == '1' && (n < 2 || (u8)b[1] <= ' ')) ? F_ON : F_OFF;
+    /* người dùng 06/11: nội suy BẬT mặc định. Chỉ tệp ghi '0' mới tắt; không có tệp / nội dung khác = bật. */
+    I.flag = (n > 0 && b[0] == '0' && (n < 2 || (u8)b[1] <= ' ')) ? F_OFF : F_ON;
 }
 /* cho mục Cài đặt (đề xuất): bật/tắt + ghi tệp. Có hiệu lực từ tick kế. */
 H void interp_set(int on) {
