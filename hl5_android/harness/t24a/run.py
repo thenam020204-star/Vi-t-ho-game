@@ -41,7 +41,7 @@ def rec(res, label, n, ev, nmeas=20, meas_at=0):
         if m: d['bytes'].append(LT.stop())
         d['md5'].append(hashlib.md5(r.shot()).hexdigest())
     res[label] = d
-    json.dump(res, open('%s/%s_%dx%d.json' % (OUT, TAG, W, Hh), 'w'))
+    json.dump(res, open('%s/%s_%dx%d.json' % (OUT, TAG + ('mmb' if ONLY and 'mmb' in ONLY else ''), W, Hh), 'w'))
     print(label, 'fr', r.fr, 'bytes/frame', (sum(d['bytes']) // max(1, len(d['bytes']))), flush=True)
 def goto(fr, ev):
     while r.fr < fr: frame(ev)
@@ -54,7 +54,7 @@ if want('mm'):
 if ONLY and 'mmb' in ONLY:       # menu chính lưới (select_b ở khung 560) và ô/slot (select_c, 700): cửa sổ riêng, tiến trình riêng
     goto(560, EV); rec(res, 'mm_b', 100, EV)
     goto(700, EV); rec(res, 'mm_c', 100, EV)
-    json.dump(res, open('%s/%s_%dx%d.json' % (OUT, TAG, W, Hh), 'w')); sys.exit(0)
+    json.dump(res, open('%s/%s_%dx%d.json' % (OUT, TAG + 'mmb', W, Hh), 'w')); sys.exit(0)
 goto(895, EV)
 if want('cut'):
     pid = os.fork()

@@ -154,9 +154,8 @@ int hud_belt(void *hero, int b, int c, int d, int e, int f, int g) {
  * Mỗi mục: col (RGB565 đã nội suy, nhân alpha) + al (alpha 8 bit) + [xs,xe) khoảng alpha>0 của từng hàng. Công thức trộn giữ NGUYÊN so với bản cũ (bit-exact). */
 #define POOL_B (5 << 19)    /* 2,5 MiB bss; dùng thật ~1,3 MB ở 2400x1080 */
 #define NAC 16
-typedef struct { s16 id, D; u16 *col; u8 *al; s16 *xs, *xe; s16 *rn; } ac_t;      /* T24a: rn = tối đa AR_RUNS đoạn (đầu, cuối) alpha == 255 dài >= AR_MIN mỗi hàng -> host memcpy */
-#define AR_RUNS 4
-#define AR_MIN 12
+/* T24a: mỗi điểm 1 từ u32: bit 0..15 = màu nhân alpha (565), bit 16..23 = ia = 255 - alpha, bit 24 = 1 nếu cần chặn tràn (clamp) hoặc alpha == 0 (đường chậm). Nút HUD hầu như không có đoạn alpha == 255 (đo: 0-0,2%) nên không dùng memcpy. */
+typedef struct { s16 id, D; u32 *w; s16 *xs, *xe; } ac_t;
 static u8 POOL[POOL_B] __attribute__((aligned(4)));
 static ac_t AC[NAC];
 static void *pal(int n) { n = (n + 3) & ~3; if (S.pool_used + n > POOL_B) return NULL; void *p = POOL + S.pool_used; S.pool_used += n; return p; }
@@ -194,8 +193,8 @@ static ac_t *ac_get(int id, int D) {
     if (D < 4 || D > 2000 || S.nac >= NAC) return NULL;
     int sv = S.pool_used;
     ac_t *q = &AC[S.nac];
-    q->col = pal(D * D * 2); q->al = pal(D * D); q->xs = pal(D * 2); q->xe = pal(D * 2); q->rn = pal(D * AR_RUNS * 4);
-    if (!q->col || !q->al || !q->xs || !q->xe || !q->rn) { S.pool_used = sv; return NULL; }
+    q->w = pal(D * D * 4); q->xs = pal(D * 2); q->xe = pal(D * 2);
+    if (!q->w || !q->xs || !q->xe) { S.pool_used = sv; return NULL; }
     q->id = (s16)id; q->D = (s16)D; S.nac++;
     const u8 *P; int s; art_src(id, &P, &s);
     for (int dy = 0; dy < D; dy++) {
@@ -207,18 +206,11 @@ static ac_t *ac_get(int id, int D) {
             if (r > 31) r = 31;
             if (g > 63) g = 63;
             if (bl > 31) bl = 31;
-            q->al[dy * D + dx] = (u8)o[3]; q->col[dy * D + dx] = (u16)((r << 11) | (g << 5) | bl);
+            { int a = o[3], ia = 255 - a, unsafe = a == 0 || r + ((31 * ia) >> 8) > 31 || g + ((63 * ia) >> 8) > 63 || bl + ((31 * ia) >> 8) > 31;
+              q->w[dy * D + dx] = (u32)((r << 11) | (g << 5) | bl) | ((u32)ia << 16) | ((u32)unsafe << 24); }
             if (o[3] > 0) { if (dx < xs) xs = dx; xe = dx + 1; }
         }
         q->xs[dy] = (s16)xs; q->xe[dy] = (s16)xe;
-        s16 *rn = q->rn + dy * 2 * AR_RUNS; int nr = 0, x = xs;
-        for (int k = 0; k < 2 * AR_RUNS; k++) rn[k] = 0;
-        while (x < xe && nr < AR_RUNS) {
-            if (q->al[dy * D + x] != 255) { x++; continue; }
-            int e = x; while (e < xe && q->al[dy * D + e] == 255) e++;
-            if (e - x >= AR_MIN) { rn[2 * nr] = (s16)x; rn[2 * nr + 1] = (s16)e; nr++; }
-            x = e;
-        }
     }
     return q;
 }
@@ -244,18 +236,25 @@ static void art_slow(int id, int cx, int cy, int D, int bright) {   /* đường
         }
     }
 }
-static void art_row(u16 *d, const u16 *c, const u8 *al, int xs, int xe) {      /* điểm [xs,xe) của một hàng: đúng vòng cũ (bỏ a == 0, a == 255 chép, còn lại pha màu) */
+static void art_row(u16 *d, const u32 *wp, int xs, int xe) {      /* điểm [xs,xe) của một hàng: bit-exact với công thức cũ; điểm "an toàn" pha màu song song 2 làn (r,b) + g, cộng thẳng vào 565 */
+    const u32 M = 0x001F001Fu;
     for (int x = xs; x < xe; x++) {
-        u32 a = al[x];
-        if (!a) continue;
-        u32 s = c[x];
-        if (a == 255) { d[x] = (u16)s; continue; }
-        u32 dp = d[x], ia = 255 - a;
-        u32 r = (s >> 11) + (((dp >> 11) * ia) >> 8), g = ((s >> 5) & 63) + ((((dp >> 5) & 63) * ia) >> 8), b = (s & 31) + (((dp & 31) * ia) >> 8);
-        if (r > 31) r = 31;
-        if (g > 63) g = 63;
-        if (b > 31) b = 31;
-        d[x] = (u16)((r << 11) | (g << 5) | b);
+        u32 w = wp[x];
+        u32 dp = d[x];
+        if (w >> 24) {
+            u32 a = 255 - ((w >> 16) & 255);
+            if (!a) continue;
+            u32 s = w & 0xffff, ia = 255 - a;
+            u32 r = (s >> 11) + (((dp >> 11) * ia) >> 8), g = ((s >> 5) & 63) + ((((dp >> 5) & 63) * ia) >> 8), b = (s & 31) + (((dp & 31) * ia) >> 8);
+            if (r > 31) r = 31;
+            if (g > 63) g = 63;
+            if (b > 31) b = 31;
+            d[x] = (u16)((r << 11) | (g << 5) | b);
+            continue;
+        }
+        u32 ia = (w >> 16) & 255, rb = ((dp >> 11) | ((dp & 31) << 16)) * ia, g = ((dp >> 5) & 63) * ia;
+        rb = (rb >> 8) & M;
+        d[x] = (u16)((rb << 11) + (rb >> 16) + (((g >> 8) & 63) << 5) + w);
     }
 }
 static void art(int id, int cx, int cy, int D, int bright) {
@@ -270,25 +269,14 @@ static void art(int id, int cx, int cy, int D, int bright) {
         if (xs < -x0) xs = -x0;
         if (xe > W - x0) xe = W - x0;
         if (xs >= xe) continue;
-        u16 *d = (u16 *)(S.fb + (y0 + dy) * S.bpl) + x0; const u16 *c = q->col + dy * D; const u8 *al = q->al + dy * D;
+        u16 *d = (u16 *)(S.fb + (y0 + dy) * S.bpl) + x0; const u32 *wp = q->w + dy * D;
         if (!bright) {
-            const s16 *rn = q->rn + dy * 2 * AR_RUNS; int x = xs;
-            for (int k = 0; k < AR_RUNS && x < xe; k++) {          /* đoạn đặc (alpha 255): vòng pha màu cho phần trước, memcpy cho đoạn */
-                int ra = rn[2 * k], rb = rn[2 * k + 1];
-                if (rb <= ra) break;
-                if (ra < xs) ra = xs;
-                if (rb > xe) rb = xe;
-                if (rb - ra < AR_MIN) continue;
-                if (ra > x) art_row(d, c, al, x, ra);
-                host_memcpy(d + ra, c + ra, (u32)(rb - ra) * 2);
-                x = rb;
-            }
-            if (x < xe) art_row(d, c, al, x, xe);
+            art_row(d, wp, xs, xe);
         } else {
             for (int x = xs; x < xe; x++) {
-                int a = al[x];
+                int ia = (wp[x] >> 16) & 255, a = 255 - ia;
                 if (!a) continue;
-                u32 s = c[x], dp = d[x]; int ia = 255 - a;
+                u32 s = wp[x] & 0xffff, dp = d[x];
                 int rr_ = (int)(s >> 11) + (((dp >> 11) * ia) >> 8), gg = (int)((s >> 5) & 63) + ((((dp >> 5) & 63) * ia) >> 8), bb = (int)(s & 31) + (((dp & 31) * ia) >> 8);
                 rr_ += (31 - rr_) * bright * a >> 16; gg += (63 - gg) * bright * a >> 16; bb += (31 - bb) * bright * a >> 16;
                 d[x] = (u16)((clampi(rr_, 0, 31) << 11) | (clampi(gg, 0, 63) << 5) | clampi(bb, 0, 31));
