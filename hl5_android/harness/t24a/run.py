@@ -12,7 +12,7 @@ from unicorn import UC_HOOK_BLOCK
 from hl5libc import KEYS as KEYS_
 W, Hh, TAG = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3]
 ONLY = sys.argv[4].split(',') if len(sys.argv) > 4 else None     # tập con: mm,cut,play | mmb (riêng)
-OUT = os.path.expanduser('~/hl5work_t24a/out'); os.makedirs(OUT, exist_ok=True)
+OUT = os.path.expanduser('~/hl5work_t24a/out2'); os.makedirs(OUT, exist_ok=True)
 c = Ctx(W, Hh, 'new', OUT, boot_to=0); r = c.r; uc = c.g.uc
 EV = {}
 for it in ROUTE.split(','):
