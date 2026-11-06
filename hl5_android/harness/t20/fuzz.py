@@ -54,8 +54,9 @@ for it in range(N):
         uc.mem_write(pC, struct.pack('<14I', *[v & 0xffffffff for v in c]))
         src_ptr = pD if mode == 'same' else pS
         c0 = counters()
-        g.call(which, pD, dx, dy, w, h, src_ptr, sx, sy, pC, key)
-        outs.append((bytes(uc.mem_read(buf, POOL * 2 + 0x400)), bytes(uc.mem_read(structs, 0x200)), counters()))
+        try: g.call(which, pD, dx, dy, w, h, src_ptr, sx, sy, pC, key); exc = 0
+        except Exception as e_: exc = 1; stats['exc'] = stats.get('exc', 0) + 1     # hàm gốc có thể lỗi bộ nhớ khi trường FbInfo bị ghi đè (alias): bản hook phải lỗi y hệt
+        outs.append((bytes(uc.mem_read(buf, POOL * 2 + 0x400)) + bytes([exc]), bytes(uc.mem_read(structs, 0x200)), counters()))
         if which == fbc: stats['kinds'][mode] = stats['kinds'].get(mode, 0) + 1
         if which == fbc and counters()['n_fast'] > c0['n_fast']: stats['fast'] += 1
         # tái dùng cùng tham số ngẫu nhiên: setfb(SRC..) gọi rnd -> đã cố định 'depth' (rnd.random()<2 luôn đúng) nhưng tiêu thụ 1 giá trị: giữ đồng bộ bằng cách tính trước
