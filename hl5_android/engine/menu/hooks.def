@@ -35,3 +35,8 @@ HOOK_BL(0xdcff0, 0x41d78, hud_text_tab)
 HOOK_BL(0x98858, 0x73c50, l6_hide_fb)
 HOOK_BL(0x98a4c, 0x73c50, l6_hide_fb)
 HOOK_BL(0x98880, 0x73ce8, l6_hide_cancel)
+# T18b/interp.c: nội suy khung hình (cờ interp.txt, mặc định TẮT => interp_entry/settimer/tick_paint/inc_temp chuyển thẳng về hàm gốc). 0x99dfc = bl MC_knlCurrentTime đầu TimerCb (T18)
+HOOK_BL(0x99dfc, 0x146da0, interp_entry)   # T18
+HOOK_BL(0x99f90, 0x36100, interp_settimer)   # T18: bl CUSTOM_extSetTimer cuối tick thường
+HOOK_BL(0x99fa4, 0x987c0, interp_tick_paint)   # T18: bl mainPaint (nhánh KeyPressed != 0)
+HOOK_BL(0xbee5c, 0xb66c4, interp_inc_temp)   # T18: Monster::Draw gọi Monster::IncreaseTempFrame
