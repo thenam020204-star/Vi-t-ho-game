@@ -229,7 +229,7 @@ Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh g�
 
 ## VIỆC CÒN LẠI (cập nhật 05/11/2026, sau bản v0.3-test4) — đọc mục này trước khi giao việc
 
-Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test7.apk` (sha256 497015d3…, = test6 + MainMenu L3 + StateMap L1b). Toàn bộ môi trường + thư mục work đã sao lưu trong `backup/` (khôi phục: `backup/README.md`). Gốc so sánh harness: `~/hl5work/orig_v02hd` (sau mỗi `make_apk.sh` phải chép lại vào `build_apk/`). Không còn công nhân nào chạy.
+Trạng thái: bản thử mới nhất `dist/test/HL5-VI-v0.3-test8.apk` (sha256 a404289b…, = test7 + L6b). Toàn bộ môi trường + thư mục work đã sao lưu trong `backup/` (khôi phục: `backup/README.md`). Gốc so sánh harness: `~/hl5work/orig_v02hd` (sau mỗi `make_apk.sh` phải chép lại vào `build_apk/`). Không còn công nhân nào chạy.
 
 ### 0. Chờ người dùng
 - [x] Phản hồi chơi thử v0.3-test4: ỔN (ngoài lag combat test5, xem T14c).
@@ -430,3 +430,4 @@ Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 d
 - [người dùng 05:30 VN 06/11] TẠM NGƯNG, tiếp tục 08:00 VN. [quản đốc] Dừng công nhân L6b giữa chừng (TaskStop; đang sửa dispatch.c + cui.c). WIP đã commit: mm2.c (Chuyên Gia 6/1 + Thành tựu/Trợ giúp?), qpop.c (popup nhiệm vụ loại 9), cui.c (ẩn ↺/vòng xám, đang viết dở), sửa dispatch.c/hooks.def/states.def/mmenu.c/mui.h/build.sh, harness/l6b/, ảnh shots/L6/l6b_*. CHƯA KIỂM — không đóng APK. Phiên sau: công nhân MỚI đọc diff 'WIP L6b' + BAO-CAO-L6 (mục L6b nếu có), làm tiếp L6b (KHÔNG resume công nhân cũ).
 - [quản đốc 08:00 VN 06/11] Tiếp tục theo lịch: môi trường còn, git sạch. Giao công nhân Sonnet MỚI làm tiếp L6b từ commit WIP a21e634 (WORK ~/hl5work_l6).
 - [quản đốc] L6b NGHIỆM THU (BAO-CAO-L6 mục L6b, dừng 148k): Chuyên Gia 6/1 (lưới 3+1), Thành tựu (10), Trợ giúp (11), popup nhiệm vụ loại 9 (qpop.c), ẩn ↺/vòng xám khi Paint mới vẽ khung (cui.c); check_l6b 108/108 new/off == orig 3 cỡ, check_mm ĐẠT, c1 97/97, cash 400x240 ĐẠT (cycles chỉ lệch hash ảnh). Lưu ý: dựng đầu đã ghi đè ~/hl5work/t16/test7 (symlink) — APK test7 không ảnh hưởng. Dựng test8.
+- [quản đốc] Bản thử v0.3-test8: dist/test/HL5-VI-v0.3-test8.apk sha256 a404289b5794d0a3acac9b0577f1f6132dbb9fe16f15949593e91a70bc1f3610 (.so 7edfad21…, 2 lần dựng trùng byte, vtable 60 dòng); hậu kỳ ảnh Việt + BGM, ký/verify/align OK; harness từ APK tới cảnh chơi 800x360 không lỗi. build_apk trả về gốc. Tiếp: L6c.
