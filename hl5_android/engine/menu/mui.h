@@ -109,8 +109,17 @@ H void mui_rr(int x0, int y0, int x1, int y1, int rad, u32 rgb, int a);         
 H void mui_frame(int x0, int y0, int x1, int y1, int rad, int orange, int thick, u32 fill, int fa, int *in4); /* fill<0: không tô */
 H void mui_gbm(const u8 *gbm, int x, int y, int s, int tint);                     /* GbmImage x s NEAREST; tint<0: màu gốc */
 H void mui_pix(int x, int y, u32 rgb);
-H u32 mui_getpx(int x, int y);                                    /* điểm RGB565 thô (không clip) */
-H void mui_put16(int x, int y, u32 c565);
+#define MUI_CACHE_PX 458752
+extern H u16 mui_cache[MUI_CACHE_PX];     /* bộ đệm ảnh dùng chung (896 KB bss, T24a) */
+extern H int mui_cache_owner;             /* ai đang giữ: 0 chưa, 1 dialog.c, 2 mmenu.c (bên nào thấy owner != mình thì coi bộ đệm của mình đã mất) */
+H void mui_hash(const u8 *p, int n, u32 *h1, u32 *h2);   /* băm 2 x 32 bit */
+H const u16 *mui_lut(u32 c565, int a5);   /* bảng tra 65536 mục: điểm -> điểm pha màu phẳng (c565, a5/32), y hệt công thức span_a (khe LRU, dựng lần đầu ~4M byte-khối) */
+/* T24a: trạng thái khung hình (đọc/ghi inline cho vòng nóng) + host_memcpy */
+typedef struct { u8 *base; int bpl, w, h, cx0, cy0, cx1, cy1, ok; } mui_fbinfo;
+extern H mui_fbinfo mui_F;
+extern H void *host_memcpy(void *d, const void *s, u32 n);   /* PLT memcpy của guest (0x30110) -> memcpy host: gần như miễn phí so với vòng guest */
+static inline u32 mui_getpx(int x, int y) { if (x < 0 || y < 0 || x >= mui_F.w || y >= mui_F.h) return 0; return *((u16 *)(mui_F.base + y * mui_F.bpl) + x); }   /* điểm RGB565 thô (không clip rect, có kiểm biên FB) */
+static inline void mui_put16(int x, int y, u32 c) { if (x < 0 || y < 0 || x >= mui_F.w || y >= mui_F.h) return; *((u16 *)(mui_F.base + y * mui_F.bpl) + x) = (u16)c; }
 H void mui_disc(int cx, int cy, int r, u32 rgb);
 
 /* ---------------- text.c ---------------- */

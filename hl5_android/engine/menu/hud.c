@@ -154,7 +154,9 @@ int hud_belt(void *hero, int b, int c, int d, int e, int f, int g) {
  * Mỗi mục: col (RGB565 đã nội suy, nhân alpha) + al (alpha 8 bit) + [xs,xe) khoảng alpha>0 của từng hàng. Công thức trộn giữ NGUYÊN so với bản cũ (bit-exact). */
 #define POOL_B (5 << 19)    /* 2,5 MiB bss; dùng thật ~1,3 MB ở 2400x1080 */
 #define NAC 16
-typedef struct { s16 id, D; u16 *col; u8 *al; s16 *xs, *xe; } ac_t;
+typedef struct { s16 id, D; u16 *col; u8 *al; s16 *xs, *xe; s16 *rn; } ac_t;      /* T24a: rn = tối đa AR_RUNS đoạn (đầu, cuối) alpha == 255 dài >= AR_MIN mỗi hàng -> host memcpy */
+#define AR_RUNS 4
+#define AR_MIN 12
 static u8 POOL[POOL_B] __attribute__((aligned(4)));
 static ac_t AC[NAC];
 static void *pal(int n) { n = (n + 3) & ~3; if (S.pool_used + n > POOL_B) return NULL; void *p = POOL + S.pool_used; S.pool_used += n; return p; }
@@ -192,8 +194,8 @@ static ac_t *ac_get(int id, int D) {
     if (D < 4 || D > 2000 || S.nac >= NAC) return NULL;
     int sv = S.pool_used;
     ac_t *q = &AC[S.nac];
-    q->col = pal(D * D * 2); q->al = pal(D * D); q->xs = pal(D * 2); q->xe = pal(D * 2);
-    if (!q->col || !q->al || !q->xs || !q->xe) { S.pool_used = sv; return NULL; }
+    q->col = pal(D * D * 2); q->al = pal(D * D); q->xs = pal(D * 2); q->xe = pal(D * 2); q->rn = pal(D * AR_RUNS * 4);
+    if (!q->col || !q->al || !q->xs || !q->xe || !q->rn) { S.pool_used = sv; return NULL; }
     q->id = (s16)id; q->D = (s16)D; S.nac++;
     const u8 *P; int s; art_src(id, &P, &s);
     for (int dy = 0; dy < D; dy++) {
@@ -209,6 +211,14 @@ static ac_t *ac_get(int id, int D) {
             if (o[3] > 0) { if (dx < xs) xs = dx; xe = dx + 1; }
         }
         q->xs[dy] = (s16)xs; q->xe[dy] = (s16)xe;
+        s16 *rn = q->rn + dy * 2 * AR_RUNS; int nr = 0, x = xs;
+        for (int k = 0; k < 2 * AR_RUNS; k++) rn[k] = 0;
+        while (x < xe && nr < AR_RUNS) {
+            if (q->al[dy * D + x] != 255) { x++; continue; }
+            int e = x; while (e < xe && q->al[dy * D + e] == 255) e++;
+            if (e - x >= AR_MIN) { rn[2 * nr] = (s16)x; rn[2 * nr + 1] = (s16)e; nr++; }
+            x = e;
+        }
     }
     return q;
 }
@@ -234,6 +244,20 @@ static void art_slow(int id, int cx, int cy, int D, int bright) {   /* đường
         }
     }
 }
+static void art_row(u16 *d, const u16 *c, const u8 *al, int xs, int xe) {      /* điểm [xs,xe) của một hàng: đúng vòng cũ (bỏ a == 0, a == 255 chép, còn lại pha màu) */
+    for (int x = xs; x < xe; x++) {
+        u32 a = al[x];
+        if (!a) continue;
+        u32 s = c[x];
+        if (a == 255) { d[x] = (u16)s; continue; }
+        u32 dp = d[x], ia = 255 - a;
+        u32 r = (s >> 11) + (((dp >> 11) * ia) >> 8), g = ((s >> 5) & 63) + ((((dp >> 5) & 63) * ia) >> 8), b = (s & 31) + (((dp & 31) * ia) >> 8);
+        if (r > 31) r = 31;
+        if (g > 63) g = 63;
+        if (b > 31) b = 31;
+        d[x] = (u16)((r << 11) | (g << 5) | b);
+    }
+}
 static void art(int id, int cx, int cy, int D, int bright) {
     if (D < 4) return;
     ac_t *q = S.fb ? ac_get(id, D) : NULL;
@@ -248,18 +272,18 @@ static void art(int id, int cx, int cy, int D, int bright) {
         if (xs >= xe) continue;
         u16 *d = (u16 *)(S.fb + (y0 + dy) * S.bpl) + x0; const u16 *c = q->col + dy * D; const u8 *al = q->al + dy * D;
         if (!bright) {
-            for (int x = xs; x < xe; x++) {
-                u32 a = al[x];
-                if (!a) continue;
-                u32 s = c[x];
-                if (a == 255) { d[x] = (u16)s; continue; }
-                u32 dp = d[x], ia = 255 - a;
-                u32 r = (s >> 11) + (((dp >> 11) * ia) >> 8), g = ((s >> 5) & 63) + ((((dp >> 5) & 63) * ia) >> 8), b = (s & 31) + (((dp & 31) * ia) >> 8);
-                if (r > 31) r = 31;
-                if (g > 63) g = 63;
-                if (b > 31) b = 31;
-                d[x] = (u16)((r << 11) | (g << 5) | b);
+            const s16 *rn = q->rn + dy * 2 * AR_RUNS; int x = xs;
+            for (int k = 0; k < AR_RUNS && x < xe; k++) {          /* đoạn đặc (alpha 255): vòng pha màu cho phần trước, memcpy cho đoạn */
+                int ra = rn[2 * k], rb = rn[2 * k + 1];
+                if (rb <= ra) break;
+                if (ra < xs) ra = xs;
+                if (rb > xe) rb = xe;
+                if (rb - ra < AR_MIN) continue;
+                if (ra > x) art_row(d, c, al, x, ra);
+                host_memcpy(d + ra, c + ra, (u32)(rb - ra) * 2);
+                x = rb;
             }
+            if (x < xe) art_row(d, c, al, x, xe);
         } else {
             for (int x = xs; x < xe; x++) {
                 int a = al[x];

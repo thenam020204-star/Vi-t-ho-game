@@ -41,36 +41,83 @@ static void blit(const u8 *g, int x, int y, int k, int flipv, int alpha) {   /* 
     int w = gw(g), h = gh(g);
     const u16 *pal = *(const u16 *const *)(g + 8); const u8 *pix = *(const u8 *const *)(g + 0xc);
     if (!pal || !pix) return;
-    int nib = (g[0] & 15) == 4, stride = nib ? (w + 1) >> 1 : w;
+    /* T24a: cùng kết quả như vòng put16/getpx từng điểm (kiểm biên FB; alpha: (c*a + d*(255-a))/255 từng kênh, chia 255 bằng nhân 32897 >> 23, đúng với mọi tử số < 66000; ở đây <= 16065) nhưng
+     * chỉ duyệt phần nhìn thấy, con trỏ hàng, không gọi hàm. */
+    int nib = (g[0] & 15) == 4, stride = nib ? (w + 1) >> 1 : w, W = mui_F.w, Hh = mui_F.h, bpl = mui_F.bpl;
     u32 skip = SKIP_COLOR & 0xffff;
+    int sxa = x >= 0 ? 0 : (-x) / k, sxb = (W - x + k - 1) / k;
+    if (sxb > w) sxb = w;
     for (int sy = 0; sy < h; sy++) {
+        int yy0 = y + sy * k;
+        if (yy0 >= Hh || yy0 + k <= 0) continue;
+        int dya = yy0 < 0 ? -yy0 : 0, dyb = yy0 + k > Hh ? Hh - yy0 : k, nr = dyb - dya;
+        u8 *r0 = mui_F.base + (yy0 + dya) * bpl;
         const u8 *row = pix + (flipv ? h - 1 - sy : sy) * stride;
-        for (int sx = 0; sx < w; sx++) {
+        for (int sx = sxa; sx < sxb; sx++) {
             int idx = nib ? ((sx & 1) ? row[sx >> 1] & 15 : row[sx >> 1] >> 4) : row[sx];
             u32 c = pal[idx];
             if (c == skip) continue;
-            for (int dy = 0; dy < k; dy++)
-                for (int dx = 0; dx < k; dx++) {
-                    int xx = x + sx * k + dx, yy = y + sy * k + dy;
-                    if (alpha >= 255) mui_put16(xx, yy, c);
-                    else {
-                        u32 d = mui_getpx(xx, yy);
-                        int r = (((c >> 11) & 31) * alpha + ((d >> 11) & 31) * (255 - alpha)) / 255, gg = (((c >> 5) & 63) * alpha + ((d >> 5) & 63) * (255 - alpha)) / 255,
-                            b = ((c & 31) * alpha + (d & 31) * (255 - alpha)) / 255;
-                        mui_put16(xx, yy, (r << 11) | (gg << 5) | b);
+            int xx0 = x + sx * k, dxa = xx0 < 0 ? -xx0 : 0, dxb = xx0 + k > W ? W - xx0 : k;
+            u16 *p = (u16 *)r0 + xx0;
+            if (alpha >= 255) {
+                for (int r = 0; r < nr; r++, p = (u16 *)((u8 *)p + bpl)) for (int i = dxa; i < dxb; i++) p[i] = (u16)c;
+            } else {
+                u32 cr = ((c >> 11) & 31) * alpha, cg = ((c >> 5) & 63) * alpha, cb = (c & 31) * alpha, ia = 255 - alpha;
+                for (int r = 0; r < nr; r++, p = (u16 *)((u8 *)p + bpl))
+                    for (int i = dxa; i < dxb; i++) {
+                        u32 d = p[i];
+                        u32 rr = ((cr + ((d >> 11) & 31) * ia) * 32897u) >> 23, gg = ((cg + ((d >> 5) & 63) * ia) * 32897u) >> 23, b = ((cb + (d & 31) * ia) * 32897u) >> 23;
+                        p[i] = (u16)((rr << 11) | (gg << 5) | b);
                     }
-                }
+            }
         }
     }
 }
 static int logo_k(void) { return L.Ht < 300 ? 1 : 2; }
-static void bg(void) {                                         /* nền: đen + dải dung nham menu.mgr #8 lát ngang, lật dọc ở đáy (mm_bg) */
+static void bg_slow(void) {                                    /* nền: đen + dải dung nham menu.mgr #8 lát ngang, lật dọc ở đáy (mm_bg) */
     mui_m *m = &L; const u8 *lava = MIMG(8);
     mui_fill(0, 0, m->W, m->Ht, C_INK);
     int k = m->hd ? 2 : 1, lw = gw(lava) * k;
     if (lw <= 0) return;
     int x = (m->W - lw) / 2; x -= (x / lw + 1) * lw;
     for (; x < m->W; x += lw) { blit(lava, x, 0, k, 0, 255); blit(lava, x, m->Ht - gh(lava) * k, k, 1, 255); }
+}
+/* T24a: nền đã dựng được giữ trong mui_cache (chỉ các hàng của dải trên + dải dưới; hàng giữa đen): mỗi khung chép bằng host memcpy + một mui_fill đen.
+ * Khoá: kích thước màn, k, ảnh nguồn (con trỏ, kích thước) và BĂM nội dung điểm ảnh + bảng màu => ảnh khác vào cùng địa chỉ cũng dựng lại. Chỉ dùng khi clip = cả màn (bg_slow
+ * tô đen theo clip nhưng blit không theo clip). */
+static struct { int valid, W, Ht, k, nA, nB, w, h, nib; const u8 *pix; const u16 *pal; u32 h1, h2, h3, h4; } BG;
+static int bg(void) {         /* 1 = đã dựng lại bằng đường cũ & chụp (bộ đệm mới), 0 = chép từ bộ đệm, -1 = không dùng bộ đệm */
+    mui_m *m = &L; const u8 *lava = MIMG(8);
+    int W = m->W, Ht = m->Ht, k = m->hd ? 2 : 1, w = gw(lava), h = gh(lava);
+    const u16 *pal = lava ? *(const u16 *const *)(lava + 8) : NULL; const u8 *pix = lava ? *(const u8 *const *)(lava + 0xc) : NULL;
+    int band = h * k, nA, nB;
+    if (!pal || !pix || w <= 0 || h <= 0 || mui_F.cx0 != 0 || mui_F.cy0 != 0 || mui_F.cx1 != W || mui_F.cy1 != Ht || mui_F.w != W || mui_F.h != Ht) { bg_slow(); return -1; }
+    if (band > Ht) band = Ht;
+    if (2 * band <= Ht) { nA = band; nB = band; } else { nA = Ht; nB = 0; }
+    if ((nA + nB) * W > MUI_CACHE_PX) { bg_slow(); return -1; }
+    int nib = (lava[0] & 15) == 4, stride = nib ? (w + 1) >> 1 : w;
+    u32 a1, a2, a3, a4;
+    mui_hash(pix, stride * h, &a1, &a2); mui_hash((const u8 *)pal, nib ? 32 : 512, &a3, &a4);
+    if (mui_cache_owner != 2) { BG.valid = 0; mui_cache_owner = 2; }
+    int bpl = mui_F.bpl;
+    if (!(BG.valid && BG.W == W && BG.Ht == Ht && BG.k == k && BG.nA == nA && BG.nB == nB && BG.w == w && BG.h == h && BG.nib == nib && BG.pix == pix && BG.pal == pal &&
+          BG.h1 == a1 && BG.h2 == a2 && BG.h3 == a3 && BG.h4 == a4)) {
+        bg_slow();                                             /* dựng bằng đường cũ rồi chụp các hàng */
+        if (bpl == 2 * W) { host_memcpy(mui_cache, mui_F.base, (u32)nA * W * 2); if (nB) host_memcpy(mui_cache + nA * W, mui_F.base + (Ht - nB) * bpl, (u32)nB * W * 2); }
+        else {
+            for (int y = 0; y < nA; y++) host_memcpy(mui_cache + y * W, mui_F.base + y * bpl, (u32)W * 2);
+            for (int y = 0; y < nB; y++) host_memcpy(mui_cache + (nA + y) * W, mui_F.base + (Ht - nB + y) * bpl, (u32)W * 2);
+        }
+        BG.valid = 1; BG.W = W; BG.Ht = Ht; BG.k = k; BG.nA = nA; BG.nB = nB; BG.w = w; BG.h = h; BG.nib = nib; BG.pix = pix; BG.pal = pal; BG.h1 = a1; BG.h2 = a2; BG.h3 = a3; BG.h4 = a4;
+        return 1;
+    }
+    if (bpl == 2 * W) { host_memcpy(mui_F.base, mui_cache, (u32)nA * W * 2); if (nB) host_memcpy(mui_F.base + (Ht - nB) * bpl, mui_cache + nA * W, (u32)nB * W * 2); }
+    else {
+        for (int y = 0; y < nA; y++) host_memcpy(mui_F.base + y * bpl, mui_cache + y * W, (u32)W * 2);
+        for (int y = 0; y < nB; y++) host_memcpy(mui_F.base + (Ht - nB + y) * bpl, mui_cache + (nA + y) * W, (u32)W * 2);
+    }
+    if (nB) mui_fill(0, nA, W, Ht - nB, C_INK);
+    return 0;
 }
 static void logo(int cx, int y, int k) {
     const u8 *hl = timg(5), *v = timg(3), *eye = timg(1);
@@ -83,6 +130,67 @@ static void logo(int cx, int y, int k) {
 static void copyright(void) {
     const u8 *c = timg(7); int k = L.Ht < 360 ? 1 : 2;
     if (c) blit(c, (L.W - gw(c) * k) / 2, L.Ht - gh(c) * k - (L.mg / 2 > 2 ? L.mg / 2 : 2), k, 0, 255);
+}
+/* T24a: tiêu đề + logo + bản quyền (bg, logo, copyright) là tĩnh: chụp vùng chữ nhật của logo (mắt alpha 150 + chữ) và của bản quyền SAU khi vẽ trên nền đã giữ, khung sau chép lại.
+ * Khoá = kích thước màn + k + lề + băm nội dung 4 ảnh + (nền không vừa dựng lại trong khung này). Bộ nhớ: tiếp sau dải nền trong mui_cache (cần vừa, không thì vẽ như cũ). */
+static struct { int valid, W, Ht, k, kc, mg, cx, ly; int r[2][4]; u32 h1, h2; } LG;
+static void gfold(const u8 *g, u32 *h1, u32 *h2) {
+    u32 a = 0, b = 0, c = 0, d = 0;
+    if (g) {
+        int w = gw(g), h = gh(g), nib = (g[0] & 15) == 4, stride = nib ? (w + 1) >> 1 : w;
+        const u16 *pal = *(const u16 *const *)(g + 8); const u8 *pix = *(const u8 *const *)(g + 0xc);
+        if (pal && pix) { mui_hash(pix, stride * h, &a, &b); mui_hash((const u8 *)pal, nib ? 32 : 512, &c, &d); a ^= (u32)pix; c ^= (u32)pal; }
+        a ^= (u32)w << 8 ^ (u32)h << 20 ^ (u32)nib;
+    }
+    *h1 = (*h1 * 0x01000193u) ^ a ^ (c << 1); *h2 = ((*h2 << 5 | *h2 >> 27) + b) ^ d ^ (c >> 3);
+}
+static int rect_clip(int *x0, int *y0, int *x1, int *y1, int W, int Ht) {
+    if (*x0 < 0) *x0 = 0;
+    if (*y0 < 0) *y0 = 0;
+    if (*x1 > W) *x1 = W;
+    if (*y1 > Ht) *y1 = Ht;
+    return *x0 < *x1 && *y0 < *y1;
+}
+static void backdrop(int k) {
+    mui_m *m = &L; int W = m->W, Ht = m->Ht, cx = W / 2, y = m->mg, kc = Ht < 360 ? 1 : 2, bpl = mui_F.bpl;
+    int st = bg();
+    const u8 *hl = timg(5), *v = timg(3), *eye = timg(1), *cp = timg(7);
+    if (st < 0 || !hl || !v) { LG.valid = 0; logo(cx, y, k); copyright(); return; }
+    int gap = 2 * k, tw = (gw(hl) + gw(v)) * k + gap, lx = cx - tw / 2;
+    int r[2][4];                                              /* [0] logo (hợp mắt + chữ), [1] bản quyền */
+    r[0][0] = lx; r[0][1] = y; r[0][2] = lx + tw; r[0][3] = y + gh(hl) * k;
+    { int vy = y + (gh(hl) - gh(v)) * k / 2; if (vy < r[0][1]) r[0][1] = vy; if (vy + gh(v) * k > r[0][3]) r[0][3] = vy + gh(v) * k; }
+    if (eye) {
+        int ex = cx - gw(eye) * k / 2, ey = y + (gh(hl) * k - gh(eye) * k) / 2 + 4 * k;
+        if (ex < r[0][0]) r[0][0] = ex;
+        if (ex + gw(eye) * k > r[0][2]) r[0][2] = ex + gw(eye) * k;
+        if (ey < r[0][1]) r[0][1] = ey;
+        if (ey + gh(eye) * k > r[0][3]) r[0][3] = ey + gh(eye) * k;
+    }
+    int ok0 = rect_clip(&r[0][0], &r[0][1], &r[0][2], &r[0][3], W, Ht), ok1 = 0;
+    r[1][0] = r[1][1] = r[1][2] = r[1][3] = 0;
+    if (cp) { r[1][0] = (W - gw(cp) * kc) / 2; r[1][2] = r[1][0] + gw(cp) * kc; r[1][3] = Ht - (m->mg / 2 > 2 ? m->mg / 2 : 2); r[1][1] = r[1][3] - gh(cp) * kc; r[1][3] = r[1][1] + gh(cp) * kc; ok1 = rect_clip(&r[1][0], &r[1][1], &r[1][2], &r[1][3], W, Ht); }
+    int ofs0 = (BG.nA + BG.nB) * W, sz0 = ok0 ? (r[0][2] - r[0][0]) * (r[0][3] - r[0][1]) : 0, sz1 = ok1 ? (r[1][2] - r[1][0]) * (r[1][3] - r[1][1]) : 0;
+    if (ofs0 + sz0 + sz1 > MUI_CACHE_PX || (!ok0 && !ok1)) { LG.valid = 0; logo(cx, y, k); copyright(); return; }
+    u32 h1 = 0x811c9dc5u, h2 = 0x9e3779b9u;
+    gfold(hl, &h1, &h2); gfold(v, &h1, &h2); gfold(eye, &h1, &h2); gfold(cp, &h1, &h2);
+    if (st == 0 && LG.valid && LG.W == W && LG.Ht == Ht && LG.k == k && LG.kc == kc && LG.mg == m->mg && LG.cx == cx && LG.h1 == h1 && LG.h2 == h2) {
+        u16 *src = mui_cache + ofs0;
+        for (int i = 0; i < 2; i++) {
+            if (i == 0 ? !ok0 : !ok1) continue;
+            int rw = r[i][2] - r[i][0];
+            for (int yy = r[i][1]; yy < r[i][3]; yy++, src += rw) host_memcpy((u16 *)(mui_F.base + yy * bpl) + r[i][0], src, (u32)rw * 2);
+        }
+        return;
+    }
+    logo(cx, y, k); copyright();
+    u16 *dst = mui_cache + ofs0;
+    for (int i = 0; i < 2; i++) {
+        if (i == 0 ? !ok0 : !ok1) continue;
+        int rw = r[i][2] - r[i][0];
+        for (int yy = r[i][1]; yy < r[i][3]; yy++, dst += rw) host_memcpy(dst, (u16 *)(mui_F.base + yy * bpl) + r[i][0], (u32)rw * 2);
+    }
+    LG.valid = 1; LG.W = W; LG.Ht = Ht; LG.k = k; LG.kc = kc; LG.mg = m->mg; LG.cx = cx; LG.h1 = h1; LG.h2 = h2;
 }
 static void dimwin(const u8 *title, mui_r *c) {                 /* nền + làm tối + cửa sổ cam (mmwin) */
     mui_m *m = &L; mui_r wr = {m->wx, m->wy, m->wx + m->winW, m->wy + m->winH}, body;
@@ -103,7 +211,7 @@ static int rnd(int a, int b) { return (2 * a + b) / (2 * b); }
 /* ---------------- state 4: lưới 6 ô ---------------- */
 void mm_grid_paint(void *self) {
     mui_m *m = &L; int s = m->s, k = logo_k(), cur = S8(self, 0xe);
-    bg(); logo(m->W / 2, m->mg, k); copyright();
+    backdrop(k);
     const u8 *hl = timg(5), *cp = timg(7);
     int top = m->mg + gh(hl) * k + 2 * k + m->lp + m->gap, ckk = m->Ht < 360 ? 1 : 2;
     int bot = m->Ht - gh(cp) * ckk - (m->mg / 2 > 2 ? m->mg / 2 : 2) - m->gap, g = m->gap + 2, rows = 2;

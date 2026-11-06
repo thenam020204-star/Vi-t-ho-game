@@ -170,6 +170,133 @@ static void blit(const u8 *gbm, int dx0, int dy0, int dw, int dh, int sx0, int s
     }
 }
 
+/* T24a: bộ đệm chân dung đã phóng + lật (u16, màu trong suốt = SKIP_COLOR) + bảng đoạn đục theo hàng. Dựng khi (con trỏ, kích thước, lật, NỘI DUNG ảnh nguồn) đổi;
+ * nội dung kiểm bằng băm 64 bit của mảng điểm ảnh + so sánh các mục bảng màu thực sự được lấy mẫu (mỗi khung ~35 k lệnh cho 155x220) => không bao giờ vẽ ảnh cũ khi
+ * game nạp ảnh khác vào cùng địa chỉ. 2 khe (người nói + người còn lại cùng hiện), mỗi khe 196608 điểm (384 KB trong mui_cache); lớn hơn / > 1023 hàng -> đường cũ từng điểm.
+ * Vẽ: đoạn đục liền -> host memcpy (>= 32 điểm) hoặc vòng ngắn; bóng (tint, alpha < 32) -> bảng tra mui_lut (cùng công thức pha màu); fade-in (alpha < 252, không tint) -> công thức cũ. */
+#define PC_PX 196608
+#define PC_ROWS 1024
+#define PC_RMAX 8192
+typedef struct {
+    const u8 *gbm, *pix; const u16 *pal;
+    int w, h, nib, dw, dh, pw, ph, flip, valid, norun, nused;
+    u32 h1, h2, tick;
+    u8 ul[256]; u16 palc[256];
+    u16 rowi[PC_ROWS + 1]; u16 rs[2 * PC_RMAX];
+} pc_t;
+static pc_t pcs[2];
+static u32 pc_tick;
+
+static int pc_fresh(const pc_t *e) {                       /* ảnh nguồn còn y hệt lúc dựng? */
+    u32 a, b;
+    int stride = e->nib ? (e->w + 1) >> 1 : e->w;
+    mui_hash(e->pix, stride * e->h, &a, &b);
+    if (a != e->h1 || b != e->h2) return 0;
+    for (int i = 0; i < e->nused; i++) if (e->pal[e->ul[i]] != e->palc[e->ul[i]]) return 0;
+    return 1;
+}
+static void pc_build(pc_t *e, int slot) {
+    u16 *img = mui_cache + slot * PC_PX;
+    int w = e->w, h = e->h, dw = e->dw, dh = e->dh, sw = e->pw, sh = e->ph, flip = e->flip, nib = e->nib, stride = nib ? (w + 1) >> 1 : w;
+    u16 skip = (u16)(SKIP_COLOR & 0xffff);
+    u8 seen[256];
+    for (int i = 0; i < 256; i++) seen[i] = 0;
+    for (int x = 0; x < dw; x++) {
+        int sx = ((2 * x + 1) * sw) / (2 * dw);
+        if (flip) sx = sw - 1 - sx;
+        dlg_S.xs[x] = (s16)sx;
+    }
+    int nr = 0;
+    e->norun = 0;
+    for (int y = 0; y < dh; y++) {
+        int sy = ((2 * y + 1) * sh) / (2 * dh);
+        u16 *o = img + y * dw;
+        e->rowi[y] = (u16)nr;
+        if (sy < 0 || sy >= h) { for (int x = 0; x < dw; x++) o[x] = skip; continue; }
+        const u8 *row = e->pix + sy * stride;
+        int in = 0, st = 0;
+        for (int x = 0; x < dw; x++) {
+            int sx = dlg_S.xs[x], op = 0;
+            u16 c = skip;
+            if (sx >= 0 && sx < w) {
+                int idx = nib ? ((sx & 1) ? row[sx >> 1] & 15 : row[sx >> 1] >> 4) : row[sx];
+                seen[idx] = 1; c = e->pal[idx];
+                op = c != skip;
+            }
+            o[x] = c;
+            if (op && !in) { in = 1; st = x; }
+            else if (!op && in) { in = 0; if (nr < PC_RMAX) { e->rs[2 * nr] = (u16)st; e->rs[2 * nr + 1] = (u16)(x - st); nr++; } else e->norun = 1; }
+        }
+        if (in) { if (nr < PC_RMAX) { e->rs[2 * nr] = (u16)st; e->rs[2 * nr + 1] = (u16)(dw - st); nr++; } else e->norun = 1; }
+    }
+    e->rowi[dh] = (u16)nr;
+    e->nused = 0;
+    for (int i = 0; i < 256; i++) if (seen[i]) { e->ul[e->nused++] = (u8)i; e->palc[i] = e->pal[i]; }
+    mui_hash(e->pix, stride * h, &e->h1, &e->h2);
+    e->valid = 1;
+}
+static pc_t *pc_get(const u8 *gbm, int dw, int dh, int pw, int ph, int flip, int *slot) {
+    if (mui_cache_owner != 1) { pcs[0].valid = pcs[1].valid = 0; mui_cache_owner = 1; }
+    int w = *(const u16 *)(gbm + 2), h = *(const u16 *)(gbm + 4);
+    const u16 *pal = *(const u16 *const *)(gbm + 8);
+    const u8 *pix = *(const u8 *const *)(gbm + 0xc);
+    int nib = (gbm[0] & 15) == 4, k = -1;
+    for (int i = 0; i < 2; i++) {
+        pc_t *e = &pcs[i];
+        if (e->valid && e->gbm == gbm && e->pal == pal && e->pix == pix && e->w == w && e->h == h && e->nib == nib && e->dw == dw && e->dh == dh && e->pw == pw && e->ph == ph && e->flip == flip) { k = i; break; }
+    }
+    if (k >= 0 && !pc_fresh(&pcs[k])) { pcs[k].valid = 0; }
+    if (k < 0 || !pcs[k].valid) {
+        if (k < 0) k = pcs[0].valid == 0 ? 0 : pcs[1].valid == 0 ? 1 : (pcs[0].tick <= pcs[1].tick ? 0 : 1);
+        pc_t *e = &pcs[k];
+        e->gbm = gbm; e->pal = pal; e->pix = pix; e->w = w; e->h = h; e->nib = nib; e->dw = dw; e->dh = dh; e->pw = pw; e->ph = ph; e->flip = flip;
+        pc_build(e, k);
+    }
+    pcs[k].tick = ++pc_tick;
+    *slot = k;
+    return &pcs[k];
+}
+static inline u32 tint565(int tint) { return ((tint >> 8) & 0xF800) | ((tint >> 5) & 0x07E0) | ((tint >> 3) & 0x1F); }
+static void pc_piece(u16 *d, const u16 *s, int n, int a5, int tint, u32 tc, const u16 *lt) {
+    if (lt) { for (int i = 0; i < n; i++) d[i] = lt[d[i]]; return; }
+    if (a5 >= 32) {
+        if (tint >= 0) { for (int i = 0; i < n; i++) d[i] = (u16)tc; }
+        else if (n >= 32) host_memcpy(d, s, (u32)n * 2);
+        else for (int i = 0; i < n; i++) d[i] = s[i];
+        return;
+    }
+    for (int i = 0; i < n; i++) {                              /* pha màu theo công thức cũ */
+        u32 c = tint >= 0 ? tc : s[i], dd = d[i], M = 0x07E0F81Fu;
+        u32 v = (((c | (c << 16)) & M) * (u32)a5 + ((dd | (dd << 16)) & M) * (u32)(32 - a5)) >> 5;
+        v &= M; d[i] = (u16)((v | (v >> 16)) & 0xffff);
+    }
+}
+/* như blit() cũ với (sx0,sy0)=(0,0), kẹp toàn màn; vẽ từ bộ đệm */
+static void pc_draw(const pc_t *e, int slot, int dx0, int dy0, int alpha, int tint) {
+    const u16 *img = mui_cache + slot * PC_PX;
+    int W = mui_F.w, Hh = mui_F.h, dw = e->dw, dh = e->dh, a5 = (alpha + 4) >> 3;
+    u32 tc = tint >= 0 ? tint565(tint) : 0;
+    u16 skip = (u16)(SKIP_COLOR & 0xffff);
+    const u16 *lt = (a5 < 32 && tint >= 0) ? mui_lut(tc, a5) : NULL;
+    int ya = dy0 < 0 ? -dy0 : 0, yb = dy0 + dh > Hh ? Hh - dy0 : dh;
+    int xlo = dx0 < 0 ? -dx0 : 0, xhi = dx0 + dw > W ? W - dx0 : dw;
+    if (xlo >= xhi) return;
+    for (int y = ya; y < yb; y++) {
+        u16 *drow = (u16 *)(mui_F.base + (dy0 + y) * mui_F.bpl) + dx0;
+        const u16 *srow = img + y * dw;
+        if (!e->norun) {
+            for (int r = e->rowi[y], re = e->rowi[y + 1]; r < re; r++) {
+                int a = e->rs[2 * r], b = a + e->rs[2 * r + 1];
+                if (a < xlo) a = xlo;
+                if (b > xhi) b = xhi;
+                if (a < b) pc_piece(drow + a, srow + a, b - a, a5, tint, tc, lt);
+            }
+        } else {
+            for (int x = xlo; x < xhi; x++) if (srow[x] != skip) pc_piece(drow + x, srow + x, 1, a5, tint, tc, lt);
+        }
+    }
+}
+
 #define DLG_HALO 0     /* 1 = bản B: thêm quầng tối mềm sau chân dung (người dùng chọn A/B) */
 static void portrait(const g_t *g, u8 *D) {
     u8 *gbm = DPTR(D, 0x24);
@@ -186,7 +313,18 @@ static void portrait(const g_t *g, u8 *D) {
         }
     }
 #endif
-    /* bóng đổ (bản A): hình bóng của ảnh, lệch (3,2)*sc, đen alpha ~45% */
+    if (g->fw > 700 || g->fh <= 0) return;                   /* như blit(): dw > 700 / dh <= 0 -> không vẽ */
+    {
+        const u16 *pal = *(const u16 *const *)(gbm + 8); const u8 *pix = *(const u8 *const *)(gbm + 0xc);
+        if (!pal || !pix) return;
+    }
+    if (g->fw * g->fh <= PC_PX && g->fh <= PC_ROWS) {
+        int slot; pc_t *e = pc_get(gbm, g->fw, g->fh, pw, ph, flip, &slot);
+        /* bóng đổ (bản A): hình bóng của ảnh, lệch (3,2)*sc, đen alpha ~45% */
+        pc_draw(e, slot, x0 + 3 * sc, y0 + 2 * sc, al * 110 / 255, 0);
+        pc_draw(e, slot, x0, y0, al, -1);
+        return;
+    }
     blit(gbm, x0 + 3 * sc, y0 + 2 * sc, g->fw, g->fh, 0, 0, pw, ph, flip, al * 110 / 255, 0, 0, 0, W, Hh);
     blit(gbm, x0, y0, g->fw, g->fh, 0, 0, pw, ph, flip, al, -1, 0, 0, W, Hh);
 }
