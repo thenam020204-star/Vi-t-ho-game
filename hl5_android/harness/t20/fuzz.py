@@ -20,12 +20,13 @@ for it in range(N):
     dw, dh = rnd.randint(6, 36), rnd.randint(6, 30); sw, sh = rnd.randint(6, 36), rnd.randint(6, 30)
     dstr = dw * es + rnd.choice([0, 0, 0, 2, 4, 12]); sstr = sw * es + rnd.choice([0, 0, 0, 2, 4, 12])
     if rnd.random() < 0.04: dstr = max(1, dw * es - rnd.randint(1, 5))     # stride nhỏ hơn hàng (vô lý nhưng phải trùng)
-    mode = rnd.choice(['sep', 'sep', 'sep', 'sep', 'adj', 'same', 'ovl', 'blk'])
+    mode = rnd.choice(['sep', 'sep', 'sep', 'sep', 'adj', 'same', 'ovl', 'blk', 'alias'])
     if mode == 'blk': sw = dw; sh = rnd.randint(dh, 36); sstr = dstr = dw * es
     dsz, ssz = dstr * dh + 64, sstr * sh + 64
     if mode == 'sep': dbase = buf + 0x100; sbase = buf + POOL + 0x100
     elif mode == 'adj': dbase = buf + 0x100 + 0x200; sbase = dbase + dstr * dh + rnd.randint(-48, 48) - rnd.randint(0, sstr * sh)     # sát nhau / chồng nhẹ quanh biên bao
     elif mode == 'blk': dbase = buf + 0x100; sbase = buf + POOL + 0x100
+    elif mode == 'alias': dbase = buf + 0x100; sbase = buf + POOL + 0x100     # FbInfo/ctx nằm TRONG vùng đích: hàm gốc đọc lại trường bị ghi
     elif mode == 'same': dbase = sbase = buf + 0x100
     else: dbase = buf + 0x100 + rnd.randint(0, 600); sbase = buf + 0x100 + rnd.randint(0, 600)
     dx, dy = rnd.randint(-8, dw - 1), rnd.randint(-8, dh - 1); sx, sy = rnd.randint(-8, sw - 1), rnd.randint(-8, sh - 1)
@@ -40,15 +41,20 @@ for it in range(N):
     if rnd.random() < 0.3:   # nhiều điểm trùng màu key để nhánh key có tác dụng
         data = data.replace(struct.pack('<H', 0x1234 & 0xffff), b'\x34\x12') if False else bytes(b if rnd.random() > .02 else (0x34 if i % 2 == 0 else 0x12) for i, b in enumerate(data))
     outs = []
+    pD, pS, pC = DST, SRC, CTX
+    if mode == 'alias':
+        sz = dstr * dh; pl = [buf + 0x100 + (rnd.randint(0, max(sz - 0x40, 4)) & ~3) for _ in range(3)]; pl.sort(key=lambda x: rnd.random())
+        pD, pS, pC = pl if rnd.random() < .5 else (pl[0], SRC, CTX)
+        if rnd.random() < .3: pC = CTX
     for which in (orig, fbc):
         uc.mem_write(buf, data); uc.mem_write(structs, b'\x00' * 0x200)
-        setfb(DST, dw, dh, dstr, depth, dbase); setfb(SRC, sw, sh, sstr, depth, sbase)
-        if mode == 'same': setfb(SRC, dw, dh, dstr, depth, dbase)
+        setfb(pD, dw, dh, dstr, depth, dbase); setfb(pS, sw, sh, sstr, depth, sbase)
+        if mode == 'same': setfb(pS, dw, dh, dstr, depth, dbase)
         c = [0] * 14; c[1], c[2], c[3], c[4] = cx0, cy0, cx1, cy1; c[7] = keyc; c[8] = alpha; c[11] = cb; c[12] = 0
-        uc.mem_write(CTX, struct.pack('<14I', *[v & 0xffffffff for v in c]))
-        src_ptr = DST if mode == 'same' else SRC
+        uc.mem_write(pC, struct.pack('<14I', *[v & 0xffffffff for v in c]))
+        src_ptr = pD if mode == 'same' else pS
         c0 = counters()
-        g.call(which, DST, dx, dy, w, h, src_ptr, sx, sy, CTX, key)
+        g.call(which, pD, dx, dy, w, h, src_ptr, sx, sy, pC, key)
         outs.append((bytes(uc.mem_read(buf, POOL * 2 + 0x400)), bytes(uc.mem_read(structs, 0x200)), counters()))
         if which == fbc: stats['kinds'][mode] = stats['kinds'].get(mode, 0) + 1
         if which == fbc and counters()['n_fast'] > c0['n_fast']: stats['fast'] += 1
