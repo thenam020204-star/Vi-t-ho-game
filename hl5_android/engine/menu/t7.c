@@ -24,7 +24,16 @@ void t7_cash_netconnect(void *net, int mode) {
     u8 *recs = *(u8 **)(*(u8 **)(self + 0x14) + 4);
     u8 *rec = recs + 24 * (*(s8 *)(self + 15));
     int cnt = rec[9]; if (cnt <= 0) cnt = 1;
-    ItemTable_NewItemToBag(ITEMTABLE(), 18, (s8)rec[8], cnt, 1);
+    /* T22: rec[+8] là id trong item_18 (bản "cash" chỉ để hiển thị). Vật phẩm tiêu hao thật nằm ở loại 11
+     * (chỉ loại 11 mới uống được / gán phím tắt). Bằng chứng: StateCashShop::Process 0xd9304..0xd9404:
+     * mua rec[8]==31 (Magic Stone loại 18) thì kiểm số lượng (11,15) trong túi => máy chủ cấp (11,15).
+     * Không có mã nào dùng (18,34)/(18,30) (quét toàn bộ so.dis). Tên/mô tả trùng: 18/34 Elixir = 11/8 Elixir,
+     * 18/30 Protection Charm = 11/14, 18/31 Magic Stone = 11/15. Các id 18 khác giữ nguyên (game dùng trực tiếp). */
+    int cat = 18, id = (s8)rec[8];
+    if (id == 34) { cat = 11; id = 8; }
+    else if (id == 30) { cat = 11; id = 14; }
+    else if (id == 31) { cat = 11; id = 15; }
+    ItemTable_NewItemToBag(ITEMTABLE(), cat, id, cnt, 1);
     t7_bought = 1;
 }
 void t7_cash_popup(void *self, int type, const u8 *text, int a, int b, int c) {
