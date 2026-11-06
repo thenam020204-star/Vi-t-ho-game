@@ -42,3 +42,6 @@ HOOK_BL(0x99fa4, 0x987c0, interp_tick_paint)   # T18: bl mainPaint (nhánh KeyPr
 HOOK_BL(0xbee5c, 0xb66c4, interp_inc_temp)   # T18: Monster::Draw gọi Monster::IncreaseTempFrame
 # T20/fbcopy.c: bl internalGrpCopyFrameBuffer duy nhất (trong MC_grpCopyFrameBuffer 0x14506c) -> chép khối bằng host memcpy; nhánh lạ gọi hàm gốc
 HOOK_BL(0x1450a4, 0x144cdc, fbcopy)   # T20
+# T21/camc.c (quản đốc): 0x451c4 = bl Map::Paint trong Battle::Paint (vòng sáng dưới chân hero sau nền map); 0x4581c = bl HERO::RestoreColorBack (hết phần vẽ thế giới: dịch khung khi camera kẹp mép + map đệm tối có đom đóm)
+HOOK_BL(0x451c4, 0xb129c, camc_map_paint)   # T21
+HOOK_BL(0x4581c, 0x910c8, camc_world_done)   # T21

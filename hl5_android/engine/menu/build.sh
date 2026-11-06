@@ -41,6 +41,7 @@ for f in mm2 qpop cui; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS
 for f in l6c; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L6c: bản đồ thế giới Nhiệm vụ sub 5/6, Kỹ năng 7..10, Tinh linh 4, Quản lý dữ liệu
 for f in interp; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # T18b: nội suy khung hình (interp.c)
 for f in fbcopy; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # T20: internalGrpCopyFrameBuffer -> memcpy host theo hàng (fbcopy.c)
+for f in camc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # T21: camera giữa + map đệm + vòng sáng hero (camc.c)
 for f in npc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L2/T17c5: NPC
 # T16: khung hội thoại mới (dialog.c; dlg_text.h sinh từ từ điển $WORK/vi_android/dict.txt)
 if [ -f dialog.c ]; then python3 -I gen_dlg_text.py "$OUT/dlg_text.h"; $CC $DEF -I"$OUT" -c dialog.c -o "$OUT/dialog.o"; OBJS="$OBJS $OUT/dialog.o"; fi
@@ -135,6 +136,7 @@ for p in "MC_knlCurrentTime|MC_knlCurrentTime" "CUSTOM_extSetTimer|CUSTOM_extSet
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 a=$(sym "internalGrpCopyFrameBuffer(int, int, int, int, int, int, int, int, _MC_GrpContext*, unsigned char)"); [ -n "$a" ] || { echo "thiếu internalGrpCopyFrameBuffer"; exit 1; }; DEFS="$DEFS --defsym=internalGrpCopyFrameBuffer=0x$a --defsym=host_memcpy=0x30110"   # T20: host_memcpy = PLT memcpy (add ip,pc,#0x100000; add ip,ip,#0x2e000; ldr pc,[ip,#0x68c]! -> GOT 0x15e7a4 = R_ARM_JUMP_SLOT memcpy)
+for p in "Map::Paint()|Map_Paint" "HERO::RestoreColorBack()|HERO_RestoreColorBack"; do a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"; done   # T21
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
 for c in $(grep -o '^MUI_CLASS([A-Z]*, [A-Za-z]*' classes.def | sed 's/MUI_CLASS([A-Z]*, //'); do
   for m in "Paint()" "KeyPressed(int)" "TouchPressed(int, int, int)" "TouchMoved(int, int, int)" "TouchReleased(int, int, int)"; do
