@@ -82,6 +82,33 @@ static void fill_buffer(fbi_t *f, int x0, int y0, int x1, int y1, int wx0, int w
         put_a(f, sx - 1, sy - 1, a / 5, x0, y0, x1, y1); put_a(f, sx + 1, sy + 1, a / 5, x0, y0, x1, y1); put_a(f, sx + 1, sy - 1, a / 5, x0, y0, x1, y1); put_a(f, sx - 1, sy + 1, a / 5, x0, y0, x1, y1);
     }
 }
+/* Chế độ 1: vẽ lại CHÍNH MAP (nền, không vật thể) phản chiếu qua mép, tối 25%.
+ * Nguồn = FBOff (bộ đệm vòng nền map; vật thể vẽ vào FB, không vào FBOff). Ánh xạ theo Map::Update 0xb10bc:
+ * ox = [Map+0xd8] mod W, oy = [Map+0xdc] mod H, rung s16 [Map+282]/[Map+284]; điểm màn (sx,sy) trước khi dịch = FBOff[(sx - r282 + ox) mod W][(sy - r284 + oy) mod H]. */
+static int refl(int v, int n) { int p = 2 * n; int m = v % p; if (m < 0) m += p; return m < n ? m : p - 1 - m; }
+static inline int wrapi(int v, int n) { v %= n; return v < 0 ? v + n : v; }
+static void fill_mirror(fbi_t *f, const fbi_t *off, const u8 *map, int x0, int y0, int x1, int y1, int wx0, int wy0, int camx, int camy, u32 t) {
+    if (x0 < 0) x0 = 0; if (y0 < 0) y0 = 0; if (x1 > f->w) x1 = f->w; if (y1 > f->h) y1 = f->h;
+    if (x0 >= x1 || y0 >= y1) return;
+    int W = f->w, Hh = f->h, mw = s16at(map, 112), mh = s16at(map, 114);
+    if (!off || off->depth != 16 || off->w != W || off->h != Hh || mw <= 0 || mh <= 0) { fill_buffer(f, x0, y0, x1, y1, wx0, wy0, t); return; }
+    int ox = wrapi(s32at(map, 0xd8), W), oy = wrapi(s32at(map, 0xdc), Hh), rx = s16at(map, 282), ry = s16at(map, 284);
+    if (!bgrow_ok) { for (int i = 0; i < MAXW; i++) bgrow[i] = BG565; bgrow_ok = 1; }
+    for (int y = y0; y < y1; y++) {
+        u16 *dst = (u16 *)(f->data + y * f->stride);
+        int sy = refl(wy0 + y, mh) - camy;                       /* hàng màn (trước dịch) chứa hàng thế giới phản chiếu */
+        if (sy < 0 || sy >= Hh) { host_memcpy(dst + x0, bgrow, (u32)(x1 - x0) * 2); continue; }
+        const u16 *src = (const u16 *)(off->data + wrapi(sy - ry + oy, Hh) * off->stride);
+        int wx = wx0 + x0, r = refl(wx, mw), dir = (wrapi(wx, 2 * mw) < mw) ? 1 : -1;
+        for (int x = x0; x < x1; x++) {
+            int sx = r - camx;
+            u16 p = (sx >= 0 && sx < W) ? src[wrapi(sx - rx + ox, W)] : (u16)BG565;
+            dst[x] = (u16)(p - ((p >> 2) & 0x39E7));              /* tối 25% (từng kênh) */
+            r += dir; if (r >= mw) { r = mw - 1; dir = -1; } else if (r < 0) { r = 0; dir = 1; }
+        }
+    }
+}
+H int camc_mode = 1;                   /* 0 = nền tối + đom đóm, 1 = phản chiếu chính map (không vật thể) — người dùng chọn 06/11 */
 /* dịch khung hình (dx>0: sang phải, dy>0: xuống) */
 static void shift_fb(fbi_t *f, int dx, int dy) {
     int w = f->w, h = f->h, n = w - (dx < 0 ? -dx : dx);
@@ -119,6 +146,14 @@ void camc_world_done(void *hero) {
     int wx0 = camx - dx, wy0 = camy - dy;                /* thế giới của điểm màn (0,0) sau khi dịch */
     /* mọi điểm màn nằm NGOÀI biên map (toạ độ thế giới < 0 hoặc >= kích thước map) = map đệm; gồm cả dải đen bản gốc tự tô khi map hẹp hơn màn (1200x540) */
     int lx = -wx0, rx = mw - wx0, ty = -wy0, by = mh - wy0;
+    if (camc_mode == 1) {
+        const fbi_t *off = (const fbi_t *)Graphic_GetFBOff(_lcdG);
+        if (lx > 0) fill_mirror(f, off, map, 0, 0, lx, SH, wx0, wy0, camx, camy, t);
+        if (rx < SW) fill_mirror(f, off, map, rx, 0, SW, SH, wx0, wy0, camx, camy, t);
+        if (ty > 0) fill_mirror(f, off, map, lx > 0 ? lx : 0, 0, rx < SW ? rx : SW, ty, wx0, wy0, camx, camy, t);
+        if (by < SH) fill_mirror(f, off, map, lx > 0 ? lx : 0, by, rx < SW ? rx : SW, SH, wx0, wy0, camx, camy, t);
+        return;
+    }
     if (lx > 0) fill_buffer(f, 0, 0, lx, SH, wx0, wy0, t);
     if (rx < SW) fill_buffer(f, rx, 0, SW, SH, wx0, wy0, t);
     if (ty > 0) fill_buffer(f, 0, 0, SW, ty, wx0, wy0, t);

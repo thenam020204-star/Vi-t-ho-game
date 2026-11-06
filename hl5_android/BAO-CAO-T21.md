@@ -22,4 +22,5 @@ Kiểm `harness/t21/check_t21.py` (fork cùng trạng thái; `shots/T21/check_*.
 | 600x270 | ĐẠT | ĐẠT (dx 228) | ĐẠT |
 | 1200x540 | không áp dụng (map hẹp hơn màn → luôn kẹp, dx 215) | ĐẠT (dx 472) | ĐẠT |
 Ảnh: `shots/T21/` (mép trái gốc/mới, 1200x540, phóng vòng sáng).
-CÒN: phương án "vẽ chính map đó không vật thể" chưa làm (người dùng cho chọn, mặc định nền tối đom đóm); chưa có mục bật/tắt trong Cài đặt; chưa đo CPU ở mép (tô nền bằng memcpy hàng, đom đóm vài chục điểm); chưa thử cùng T18 (interp.txt bật) trên máy thật.
+**Chế độ 1 (mặc định theo người dùng 06/11): vẽ lại CHÍNH MAP không vật thể** — phản chiếu nền map qua mép, tối 25%. Nguồn = FBOff (bộ đệm vòng nền; vật thể vẽ vào FB). Ánh xạ theo `Map::Update` 0xb10bc: ox = [Map+0xd8] mod W, oy = [Map+0xdc] mod H, rung s16 [Map+282]/[Map+284]; điểm màn (sx,sy) = FBOff[(sx−r282+ox) mod W][(sy−r284+oy) mod H]. Kiểm lại A/B/D 3 cỡ ĐẠT (`shots/T21/check_phan_chieu_*.json`, ảnh `phan_chieu_*`). `camc_mode` 0 = nền tối đom đóm (giữ làm phương án).
+CÒN: chưa có mục bật/tắt trong Cài đặt; chưa đo CPU ở mép (tô nền bằng memcpy hàng, đom đóm vài chục điểm); chưa thử cùng T18 (interp.txt bật) trên máy thật.
