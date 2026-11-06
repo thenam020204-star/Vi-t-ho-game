@@ -21,7 +21,7 @@ while r.fr < END:
     n0 = tc[0]; sd.clear()
     r.step(1)
     ep = r.rd(GV + 5204); e75 = r.rdb(ep + 0x75)[0] if ep else -1
-    top = r.top(); st = r.b8(top, 0xc) if False else r.rdb(top + 0xc)[0]; sub = r.rdb(top + 0xd)[0]
+    top = r.top(); st = r.rdb(top + 0xc)[0] if top else -1; sub = r.rdb(top + 0xd)[0] if top else -1
     hero = r.rd(GV + 5180)
     if r.fr % 10 == 0 or '-v' in sys.argv:
         print(r.fr, 'tc', tc[0] - n0, 'e75', e75, 'state', st, sub, 'cls %x' % r.cls(), 'timer', sd[:2], 'vclock', g.vclock)

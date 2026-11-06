@@ -8,6 +8,7 @@ from qlib import *
 from unicorn import UC_HOOK_BLOCK, UC_HOOK_CODE
 from unicorn.arm_const import *
 import hl5run
+from hl5libc import KEYS as KEYS_
 SO_DIS = os.path.expanduser('~/hl5work/so.dis')
 STUB = hl5run.STUB if hasattr(hl5run, 'STUB') else None
 
@@ -97,3 +98,48 @@ class Prof:
     def nm(self, f):
         if f == -1: return '?'
         return self.name(f) if f in self.fe else '0x%x' % f
+
+PHASES = ['mainKeyPressed()', 'mainStateMgr()', 'mainProcess()', 'mainPaint()', 'mainEndProcess()', 'CUSTOM_grpFlushLcd', 'TimerCb(_MCTimer*, void*)']
+class Light:
+    """chỉ đếm tổng byte-khối (rẻ), không phân tích hàm"""
+    def __init__(self, c): self.uc = c.g.uc; self.total = 0; self.h = None
+    def hook(self, uc, a, s, _): self.total += s
+    def start(self): self.total = 0; self.h = self.uc.hook_add(UC_HOOK_BLOCK, self.hook); self.uc.ctl_flush_tb()
+    def stop(self):
+        if self.h is not None: self.uc.hook_del(self.h); self.h = None
+
+class Timeline:
+    """chạy tuần tự các khung; cửa sổ chi tiết (Prof) + khung nhẹ (Light). events: {frame: [phím]}; self.series: [(frame, total)]"""
+    def __init__(self, c):
+        self.c = c; self.r = c.r; self.P = Prof(c); self.L = Light(c); self.series = []; self.windows = {}; self.ev = {}; self.held = set()
+    def addroute(self, lo=0, hi=10**9):
+        for it in ROUTE.split(','):
+            f, k = it.split(':'); f = int(f)
+            if lo <= f < hi: self.ev.setdefault(f, []).append(k)
+    def frame(self, light=None):
+        r = self.r
+        for k in self.ev.get(r.fr, []):
+            if k.startswith('+'): r.g.call(r.keyf, r.g.env, 0, 2, KEYS_[k[1:]] & 0xffffffff, 0)       # giữ
+            elif k.startswith('-') and k[1:] in KEYS_: r.g.call(r.keyf, r.g.env, 0, 3, KEYS_[k[1:]] & 0xffffffff, 0)   # nhả
+            else: r.key(k)
+        r.step(1)
+    def run_light(self, n, tag=''):
+        self.L.start()
+        for _ in range(n):
+            t0 = self.L.total; fr = self.r.fr; self.frame(); self.series.append((fr, self.L.total - t0, tag))
+        self.L.stop()
+    def window(self, label, n):
+        """n khung chi tiết; trả snapshot trung bình/khung + chuỗi phase mỗi khung (phase = inclusive theo byte-khối)"""
+        P = self.P; P.start(); per = []; fr0 = self.r.fr
+        pha = [(ph, f) for f, nm in zip(P.addrs, P.names) for ph in PHASES if nm == ph]
+        pm = 0
+        for i in range(n):
+            before = {f: P.incl[f] for _, f in pha}
+            t0 = P.total; fr = self.r.fr
+            self.frame()
+            row = {'frame': fr, 'total': P.total - t0}
+            for ph, f in pha: row[ph] = P.incl[f] - before[f]
+            m = sum(v for f, v in P.excl.items() if f >= 0x171000); row['menu_excl'] = m - pm; pm = m
+            per.append(row); self.series.append((fr, row['total'], label))
+        P.stop(); snap = P.snapshot(n)
+        self.windows[label] = dict(n=n, fr0=fr0, snap=snap, per=per); return self.windows[label]
