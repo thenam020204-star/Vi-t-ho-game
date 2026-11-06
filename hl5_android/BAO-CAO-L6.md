@@ -56,3 +56,29 @@ Cả hai do `mainPaint` (0x987c4) vẽ SAU Paint của state, nên giao diện m
 ## CÒN LẠI
 - L6b chưa làm (theo luật ngữ cảnh). Chưa chụp loại 6; chưa lần ra nơi tạo loại 12/13/14 và `Event_PlayerGetRepay`; chưa xác nhận động việc state 7/8/12 và NetMenu không tới được; nghi vấn System sub 3 và MainMenu 6 sub 2 (dòng 20) chưa đối chiếu.
 - Chạy harness chậm (mỗi lần khởi động ~vài phút CPU ở 600x270); dùng `tail --pid` để chờ thay vì vòng sleep.
+
+## L6b (công nhân Sonnet, làm tiếp từ WIP a21e634; WORK ~/hl5work_l6)
+Trạng thái: **XONG (1)-(4) + Trợ giúp (5), kiểm ĐẠT**. Không commit, không đóng APK. Dev .so: `~/hl5work_l6/l3/dev/dev.so` (`WORK=~/hl5work_l6 bash harness/l3/build_dev.sh`).
+Lưu ý môi trường: `~/hl5work_l6/l3/dev` trước đây là symlink tới `~/hl5work/t16/test7`; lần dựng đầu đã ghi đè dev.so/p.so/sp.tsv/menu của test7 (KHÔNG phải APK dist). Đã thay symlink bằng thư mục thật; test7 nay chứa bản L6b (dựng lại từ dist APK nếu cần).
+
+### Đã làm (WIP đã soát, dựng và chạy được, không phải sửa mã)
+- `engine/menu/mm2.c`: MainMenu state 6 sub 1 Chuyên Gia (lưới 3+1, nhãn `tile_label` tự ngắt dòng/cỡ nhỏ, không đè), state 10 Thành tựu (điểm a/b, thanh %, 7 hàng, chip Nhận!, ▲▼ + thanh cuộn), state 11 Trợ giúp (sub 0 danh sách, sub 1 nội dung cuộn). Chỉ Paint + Touch mới; KeyPressed/Process gốc. Chạm = ghi trường rồi gọi phím gốc (OK/UP/DOWN/Back).
+- `engine/menu/qpop.c`: StatePopup loại 9 (nhiệm vụ): tiêu đề, X, chân dung gốc `QuestMgr::DrawNpcBody`, trạng thái/khu vực/loại, mô tả cuộn, nút Xem phần thưởng/OK.
+- `engine/menu/cui.c` + `hooks.def` (0x98858, 0x98a4c, 0x98880) + cờ `mui_drawn` ở thunk Paint ngoài cùng (`dispatch.c`, tính độ sâu cho popup gọi Paint cha): ẩn vòng xám và ↺ CHỈ khi Paint mới đã vẽ khung; rơi về gốc/cờ MUI_F_DISABLE thì vẽ như gốc. Back: mọi khung mới dùng cửa sổ chung (`widgets.c`, nút "<" = phím Back gốc) hoặc X (qpop), nên Back vẫn tương đương. Vùng chạm ↺ không có nút điều khiển khác đặt đè.
+- states.def: mm6b, mm10, mm11, qpop; mmenu.c xuất `mm_dimwin/mm_tilebox/mm_panel`; build.sh thêm symbol QuestMgr/Mission/CommonUi.
+
+### Kiểm (3 cỡ 400x240 / 600x270 / 1200x540)
+| Mục | Kết quả |
+|---|---|
+| `harness/l6b/check_l6b.py` new/off vs orig (v0.2-hd): 4 chế độ Chuyên Gia, nav, Back; Thành tựu hàng/OK/▲▼/cuộn vòng/Back; Trợ giúp hàng/OK/Back x2/▲▼; popup nhiệm vụ X / Xem phần thưởng 2 lần / OK | 108/108 ĐẠT, 0 lệch (`shots/L6/l6b_check_l6b.txt`) |
+| check_mm (L3) x3 cỡ new/off/orig | ĐẠT, kết luận ĐẠT (`l6b_check_mm.txt`) |
+| c1 (reg_c1_l6b) x3 cỡ | 97 ĐẠT, 0 LỖI (`l6b_hoi_quy_c1.txt`) |
+| cash 400x240 | sel/drag/popup/buy/vùng chạm ĐẠT; `cycles`: live/top/cls == gốc, CHỈ hash ảnh khác (đã biết từ L3: HUD mới/hook T16; nay thêm ↺/vòng bị ẩn ở cash) (`l6b_check_cash_400.txt`) |
+| Không cấp phát trong paint | qpop/mm2 chỉ dùng bộ đệm static (bss) và mảng stack; không gọi calloc/malloc |
+Ảnh (11): `shots/L6/l6b_{expert,mission}_{400x240,1200x540}_new`, `l6b_help1_400x240_new`, `l6b_help_600x270_new`, `l6b_mission_tap_600x270_{new,off}` (off = ↺ gốc còn hiện, new = đã ẩn), `l6b_quest_{400x240,600x270,1200x540}_new`.
+
+### CÒN LẠI
+- Soát mắt trên máy thật; cash 600x270/1200x540 chưa chạy lại (chỉ 400x240); hit-test so mockup cho 3 màn mới chưa có (không có mockup).
+- Chuỗi Trợ giúp còn tiếng Anh ("Class/Warrior...") là dữ liệu dịch, không thuộc UI.
+- Chưa làm L6c/L6d (Quản lý dữ liệu, Kỹ năng 7..10, Tinh linh 4, Nhiệm vụ 4/5/6, popup loại 0/6...). ↺ vẫn hiện ở các màn còn gốc (đúng thiết kế).
+- Chưa có ảnh nhấn mạnh popup nhiệm vụ trên Back vật lý; chưa gộp vào dist/test8.
