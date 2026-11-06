@@ -210,6 +210,15 @@ Mỗi lượt = 1 task gộp, giao cho công nhân mới; nếu ngữ cảnh g�
 - (Bổ sung sau lỗi của quản đốc) Công nhân bị dừng giữa chừng (hạn mức, lỗi) thì KHÔNG resume nếu không biết chắc ngữ cảnh < 400k: quản đốc commit WIP, ghi trạng thái vào PLAN, giao công nhân mới đọc PLAN + diff WIP.
 - Một công nhân làm tiếp nhiều task liên tiếp (SendMessage) cho tới khi ngữ cảnh của nó vượt **400k token**; khi đó quản đốc thay bằng công nhân mới (đọc lại PLAN.md). Công nhân phải ghi trạng thái dở dang vào PLAN.md trước khi bị thay.
 
+## Quy tắc tạm ngưng (người dùng chốt 06/11/2026) — áp dụng mỗi lần người dùng nói "tạm ngưng"
+1. **Dừng công nhân ở điểm an toàn**: báo công nhân ghi mục "CÒN LẠI" vào báo cáo của nó rồi dừng (TaskStop nếu không phản hồi). Không để công nhân chạy ngầm khi đã tạm ngưng.
+2. **Lưu WIP**: quản đốc commit mọi thay đổi (kể cả file chưa track) với message `WIP <task> (tạm ngưng)` và push. Không chạy make_apk/inject `--update-repo` dở dang; nếu đang build thì chép lại `~/hl5work/orig_v02hd/*` vào `~/hl5work/build_apk/`.
+3. **Ghi trạng thái**: thêm 1 dòng Nhật ký: task đang dở, commit WIP, WORK dir, giờ tiếp tục (giờ VN = UTC+7), id lịch hẹn. Cập nhật VIỆC CÒN LẠI nếu thứ tự đổi.
+4. **Đặt lịch tiếp tục** (send_later/create_trigger vào chính phiên này) theo giờ người dùng nói; nội dung lịch phải tự đủ: việc gì, commit WIP nào, WORK nào, công nhân MỚI (không resume công nhân cũ), kiểm gì, nghiệm thu gì. Lịch đã đặt thì không tự đổi khi người dùng chỉ đổi lịch khác.
+5. **Ping giữ cache mỗi 50 phút** (cache 1 giờ): send_later 50 phút, nối chuỗi. Lượt ping chỉ: `git status` (sạch thì thôi), đặt ping kế tiếp nếu sự kiện kế tiếp còn > 50 phút, trả lời 1 dòng. KHÔNG đọc file lớn, KHÔNG giao việc, KHÔNG build. Ngừng ping khi đã tới giờ tiếp tục hoặc người dùng bảo dừng.
+6. **Khi tiếp tục**: kiểm môi trường (container mới thì khôi phục theo backup/README.md), `git pull`, đọc dòng Nhật ký cuối + VIỆC CÒN LẠI, rồi giao công nhân mới.
+7. Trước khi kết thúc mỗi lượt: không còn thay đổi chưa commit/push.
+
 ## Phân công hiện tại
 - A1: T17a ✓ → T17p ✓ → T17b ✓ (chờ người dùng duyệt b2c) → T17c0 → c1 → … → c9 → T16 → T14a/T14b → T11. (T7 gộp vào T17c6/c7/c9)
 - (cũ) A1: T17b1 (mockup, người dùng duyệt) → T17c… → T16 → T14a/T14b → T7 → T11. (T15 huỷ) → T16 → T14a → T14b → T7 → T11.
@@ -433,3 +442,4 @@ Nguồn: HL5_dich_FULL.tsv (10134 dòng, 6244 hội thoại cốt truyện; 64 d
 - [quản đốc] Bản thử v0.3-test8: dist/test/HL5-VI-v0.3-test8.apk sha256 a404289b5794d0a3acac9b0577f1f6132dbb9fe16f15949593e91a70bc1f3610 (.so 7edfad21…, 2 lần dựng trùng byte, vtable 60 dòng); hậu kỳ ảnh Việt + BGM, ký/verify/align OK; harness từ APK tới cảnh chơi 800x360 không lỗi. build_apk trả về gốc. Tiếp: L6c.
 - [người dùng 08:54 VN 06/11] TẠM NGƯNG tới 12:00 VN. [quản đốc] Dừng công nhân L6c giữa chừng (đang xếp hàng chạy hồi quy). WIP đã commit: l6c.c (mới), sửa quest.c/bag.c/mui.h/build.sh/states.def, harness/l6c/, ảnh shots/L6/l6c_* (Nhiệm vụ phần thưởng + bản đồ 0/1, Kỹ năng sub 8/10), BAO-CAO-L6 mục L6c (nếu có). CHƯA nghiệm thu — không đóng APK. Phiên sau: công nhân MỚI đọc diff 'WIP L6c' + BAO-CAO-L6, làm tiếp L6c (KHÔNG resume).
 - [người dùng] Task nội suy (T18b mốc 1 camera + hero, theo T18-THIET-KE.md + BAO-CAO-T18) làm lúc 10:00 VN (đã đặt lịch, WORK ~/hl5work_t18); lịch 12:00 VN (L6c) giữ nguyên.
+- [06/11 08:57 VN] [người dùng] Ping giữ cache mỗi 50 phút; quản đốc viết 'Quy tắc tạm ngưng' (mục riêng trên). Ping đầu 09:48 VN (trig_01QSdVpo5pwjcBaW2x44d3oW); T18 10:00 VN, L6c 12:00 VN giữ nguyên.
