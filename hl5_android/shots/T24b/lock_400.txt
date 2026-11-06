@@ -1,0 +1,6 @@
+khung 1400 khác 0 đầu tiên []
+khoi_dong  base 22.60 M  new 6.78 M  x3.33
+tieu_de    base 33.02 M  new 19.58 M  x1.69
+chon_lop   base 30.07 M  new 30.03 M  x1.00
+hoat_canh  base 11.41 M  new 9.00 M  x1.27
+tat_ca     base 20.65 M  new 13.75 M  x1.50

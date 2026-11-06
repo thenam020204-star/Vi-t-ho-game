@@ -61,6 +61,14 @@ def main():
         if cur == new: pass
         elif cur != enc(tgt): raise SystemExit('lệnh tại %#x = %#x, mong đợi bl %#x (%#x)' % (va, cur, tgt, enc(tgt)))
         rows.append('%x\t%s\t%s\tT17c2: call-site %#x bl %#x -> bl %s %#x' % (va, struct.pack('<I', enc(tgt)).hex(), struct.pack('<I', new).hex(), va, tgt, fn, sym[fn]))
+    # T24b: HOOK_B(vaddr, từ_lệnh_gốc, hàm): thay MỘT lệnh (thường là lệnh đầu hàm) bằng `b hàm`; kiểm từ lệnh gốc đúng như khai báo.
+    for m_ in re.finditer(r'^HOOK_B\((0x[0-9a-fA-F]+),\s*(0x[0-9a-fA-F]+),\s*(\w+)\)', open(os.path.join(HERO_HOOKS)).read() if os.path.exists(HERO_HOOKS) else '', re.M):
+        va, word, fn = int(m_.group(1), 16), int(m_.group(2), 16), m_.group(3)
+        o = v2off(d, va); cur = struct.unpack_from('<I', d, o)[0]
+        new = 0xEA000000 | (((sym[fn] - (va + 8)) >> 2) & 0xFFFFFF)
+        if cur == new: pass
+        elif cur != word: raise SystemExit('lệnh tại %#x = %#x, mong đợi %#x' % (va, cur, word))
+        rows.append('%x\t%s\t%s\tT24b: lệnh %#x (%#x) -> b %s %#x' % (va, struct.pack('<I', word).hex(), struct.pack('<I', new).hex(), va, word, fn, sym[fn]))
     hdr = ['# sinh bởi engine/menu/inject_menu.py (T17c): vá ô vtable cho lớp đã bật trong states.def: %s' % (', '.join(enabled) or '(chưa lớp nào: đường gốc y hệt)')]
     open(os.path.join(out, 'menu_patches.tsv'), 'w', encoding='utf-8').write('\n'.join(hdr + rows) + '\n')
     print('menu_patches.tsv: %d dòng, lớp bật: %s' % (len(rows), ' '.join(enabled) or '-'))

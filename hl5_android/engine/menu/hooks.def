@@ -45,3 +45,7 @@ HOOK_BL(0x1450a4, 0x144cdc, fbcopy)   # T20
 # T21/camc.c (quản đốc): 0x451c4 = bl Map::Paint trong Battle::Paint (vòng sáng dưới chân hero sau nền map); 0x4581c = bl HERO::RestoreColorBack (hết phần vẽ thế giới: dịch khung khi camera kẹp mép + map đệm tối có đom đóm)
 HOOK_BL(0x451c4, 0xb129c, camc_map_paint)   # T21
 HOOK_BL(0x4581c, 0x910c8, camc_world_done)   # T21
+# T24b/gfxfast.c (quản đốc): MC_grpFillRect 0x1456a4 lệnh đầu `push {r4-r11,lr}` (0xe92d4ff0) -> b fillrect_entry (đường nhanh alpha>254/không callback/16-32 bit; còn lại chạy push gốc rồi về 0x1456a8)
+HOOK_B(0x1456a4, 0xe92d4ff0, fillrect_entry)   # T24b
+HOOK_B(0x4e684, 0xe92d4ff0, fillalpha_entry)   # T24b: Graphic::FillRectAlpha lệnh đầu push {r4-r11,lr} -> bảng kênh 16 bit (32 bit: đường gốc)
+HOOK_B(0x500e8, 0xe92d4ff0, cfbb_entry)   # T24b: Graphic::ChangeFrameBufferBlending565 -> 3 bảng kênh (tint toàn màn hoạt cảnh/map)
