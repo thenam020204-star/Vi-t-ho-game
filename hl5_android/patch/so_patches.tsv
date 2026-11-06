@@ -106,15 +106,15 @@ d9330	3cb4ffeb	a7a302eb	T17c2: call-site 0xd9330 bl 0xc6428 -> bl t7_cash_netcon
 d9350	befaffeb	caa302eb	T17c2: call-site 0xd9350 bl 0xd7e50 -> bl t7_cash_popup 0x182280
 dc188	a6a8ffeb	629802eb	T17c2: call-site 0xdc188 bl 0xc6428 -> bl t7_game_revive 0x182318
 d9a24	09f9ffeb	52a202eb	T17c2: call-site 0xd9a24 bl 0xd7e50 -> bl t7_cash_confirm 0x182374
-6f5c4	69ffffeb	e8a604eb	T17c2: call-site 0x6f5c4 bl 0x6f370 -> bl dlg_setface 0x19916c
-6df6c	17f4ffeb	46ad04eb	T17c2: call-site 0x6df6c bl 0x6afd0 -> bl dlg_window 0x19948c
-6dfa4	09f4ffeb	38ad04eb	T17c2: call-site 0x6dfa4 bl 0x6afd0 -> bl dlg_window 0x19948c
-6df44	74ffffeb	cfae04eb	T17c2: call-site 0x6df44 bl 0x6dd1c -> bl dlg_face 0x199a88
-6df7c	66ffffeb	c1ae04eb	T17c2: call-site 0x6df7c bl 0x6dd1c -> bl dlg_face 0x199a88
-68058	70cbffeb	e1c304eb	T17c2: call-site 0x68058 bl 0x5ae20 -> bl dlg_skip_a 0x198fe4
-68094	61cbffeb	d8c304eb	T17c2: call-site 0x68094 bl 0x5ae20 -> bl dlg_skip_b 0x198ffc
-6d39c	624fffeb	41af04eb	T17c2: call-site 0x6d39c bl 0x4112c -> bl dlg_iscomplete 0x1990a8
-6d408	1c4fffeb	42af04eb	T17c2: call-site 0x6d408 bl 0x41080 -> bl dlg_pagelen 0x199118
+6f5c4	69ffffeb	46a704eb	T17c2: call-site 0x6f5c4 bl 0x6f370 -> bl dlg_setface 0x1992e4
+6df6c	17f4ffeb	a4ad04eb	T17c2: call-site 0x6df6c bl 0x6afd0 -> bl dlg_window 0x199604
+6dfa4	09f4ffeb	96ad04eb	T17c2: call-site 0x6dfa4 bl 0x6afd0 -> bl dlg_window 0x199604
+6df44	74ffffeb	2daf04eb	T17c2: call-site 0x6df44 bl 0x6dd1c -> bl dlg_face 0x199c00
+6df7c	66ffffeb	1faf04eb	T17c2: call-site 0x6df7c bl 0x6dd1c -> bl dlg_face 0x199c00
+68058	70cbffeb	3fc404eb	T17c2: call-site 0x68058 bl 0x5ae20 -> bl dlg_skip_a 0x19915c
+68094	61cbffeb	36c404eb	T17c2: call-site 0x68094 bl 0x5ae20 -> bl dlg_skip_b 0x199174
+6d39c	624fffeb	9faf04eb	T17c2: call-site 0x6d39c bl 0x4112c -> bl dlg_iscomplete 0x199220
+6d408	1c4fffeb	a0af04eb	T17c2: call-site 0x6d408 bl 0x41080 -> bl dlg_pagelen 0x199290
 11fc00	b88300eb	50a201eb	T17c2: call-site 0x11fc00 bl 0x140ae8 -> bl mm_navkey 0x188548
 4492c	31ec00eb	ff1a05eb	T17c2: call-site 0x4492c bl 0x7f9f8 -> bl hud_belt 0x18b530
 7fc84	a76dffeb	a12d04eb	T17c2: call-site 0x7fc84 bl 0x5b328 -> bl hud_fx_frame 0x18b310
@@ -134,6 +134,6 @@ dcff0	6093fdeb	adb802eb	T17c2: call-site 0xdcff0 bl 0x41d78 -> bl hud_text_tab 0
 99fa4	05faffeb	6de403eb	T17c2: call-site 0x99fa4 bl 0x987c0 -> bl interp_tick_paint 0x193160
 bee5c	18deffeb	b55103eb	T17c2: call-site 0xbee5c bl 0xb66c4 -> bl interp_inc_temp 0x193538
 1450a4	0cffffeb	b83901eb	T17c2: call-site 0x1450a4 bl 0x144cdc -> bl fbcopy 0x19378c
-451c4	34b001eb	0d3e05eb	T17c2: call-site 0x451c4 bl 0xb129c -> bl camc_map_paint 0x194a00
+451c4	34b001eb	6b3e05eb	T17c2: call-site 0x451c4 bl 0xb129c -> bl camc_map_paint 0x194b78
 4581c	292e01eb	f83805eb	T17c2: call-site 0x4581c bl 0x910c8 -> bl camc_world_done 0x193c04
 # <<< T17c menu-vtable
