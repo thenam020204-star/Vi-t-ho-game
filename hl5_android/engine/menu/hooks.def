@@ -40,3 +40,5 @@ HOOK_BL(0x99dfc, 0x146da0, interp_entry)   # T18
 HOOK_BL(0x99f90, 0x36100, interp_settimer)   # T18: bl CUSTOM_extSetTimer cuối tick thường
 HOOK_BL(0x99fa4, 0x987c0, interp_tick_paint)   # T18: bl mainPaint (nhánh KeyPressed != 0)
 HOOK_BL(0xbee5c, 0xb66c4, interp_inc_temp)   # T18: Monster::Draw gọi Monster::IncreaseTempFrame
+# T20/fbcopy.c: bl internalGrpCopyFrameBuffer duy nhất (trong MC_grpCopyFrameBuffer 0x14506c) -> chép khối bằng host memcpy; nhánh lạ gọi hàm gốc
+HOOK_BL(0x1450a4, 0x144cdc, fbcopy)   # T20
