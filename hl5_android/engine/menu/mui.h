@@ -304,3 +304,12 @@ H int qpop_touch(void *self, int x, int y);
 extern H volatile u32 mui_drawn;                  /* 1 = Paint của state trên cùng khung này do menu mới vẽ (đặt ở thunk Paint ngoài cùng) */
 H void l6_hide_fb(void *cui);
 H void l6_hide_cancel(void *cui);
+
+/* ---------------- L6c: l6c.c ---------------- */
+H void qmap_paint(void *self);
+H int qmap_touch(void *self, int x, int y);
+H void sk_pick_paint(void *self, int x0, int y0, int x1, int y1, const u8 *hint);
+H int sk_pick_cb(void *self, int id);
+H void skc_paint(void *self);
+H int skc_touch(void *self, int x, int y);
+extern H u8 *BagItem_GetBagItemPtrS(void *bag, int idx);

@@ -477,3 +477,7 @@ void npc_pick_paint(void *self, int x0, int y0, int x1, int y1, int curoff, cons
     paint_picker(self, &g, curoff, hint, CT(56), CT(57), 0);
 }
 int npc_pick_cb(void *self, int id, int curoff) { int r; pick_cls = MUI_CLS_NPC; r = pick_cb(self, id, curoff); pick_cls = MUI_CLS_INGAME; return r; }
+
+/* L6c: Kỹ năng sub 10 (lọc vật phẩm ghép = OpenComposeFilter, con trỏ s8 [+0x12]) dùng lại picker của Túi */
+void sk_pick_paint(void *self, int x0, int y0, int x1, int y1, const u8 *hint) { bgeo g = {x0, y0, x1, y1, 0, 0, 0, 0, 0, 0, 0}; paint_picker(self, &g, 0x12, hint, CT(56), CT(57), 0); }
+int sk_pick_cb(void *self, int id) { return pick_cb(self, id, 0x12); }

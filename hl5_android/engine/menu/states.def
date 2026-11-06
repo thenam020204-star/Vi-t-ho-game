@@ -23,7 +23,7 @@ MUI_STATE(INGAME, spirit, (GS(self) == 7 && *((s8 *)(self) + 0xd) >= 0 && *((s8 
 /* L1/T17c6: popup StateGame: 1 = hồi sinh Có/Không, 4 = hồi sinh thành công (Paint gốc rồi popup đè) */
 MUI_STATE(GAME, gpop, (GS(self) == 1 || GS(self) == 4), gpop_paint, gpop_touch, gpop_move)
 /* L1/T17c4: Nhiệm vụ (InGameMenu state 8): sub 0 tab con, 1 danh sách, 2 cây nhánh, 3 chi tiết; sub 4 (phần thưởng) và 5/6 (bản đồ) giữ đường gốc */
-MUI_STATE(INGAME, quest, (GS(self) == 8 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 3), quest_paint, quest_touch, quest_move)
+MUI_STATE(INGAME, quest, (GS(self) == 8 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 4), quest_paint, quest_touch, quest_move)
 /* L1/T17c6: Chuyên gia (StateInExpertMenu): state 0 chuẩn bị, 1 cửa hàng */
 MUI_STATE(EXPERT, expert, (GS(self) == 0 || GS(self) == 1), expert_paint, expert_touch, expert_move)
 /* L1/T17c6: popup của Chuyên gia (StatePopup cha = StateInExpertMenu): loại 4 Có/Không + loại 5 nhập số lượng, dùng widget npcpop/qty (npc.c) */
@@ -50,6 +50,10 @@ MUI_STATE(POPUP, qpop, (POP_TYPE(self) == 9 && POP_NBTN(self) >= 1 && POP_NBTN(s
 MUI_STATE(POPUP, mmpop, (MAIN_POPUP8(self) && POP_NBTN(self) == 2), mmpop_paint, mmpop_touch, mmpop_move)
 /* L1b/T17c8: StateMap: chế độ 0 bản đồ lớn / 1 khu vực (ctor tham số 1 = [+0xd]==1 chỉ vẽ ảnh: giữ đường gốc) */
 MUI_STATE(MAP, map, ((GS(self) == 0 || GS(self) == 1) && *((s8 *)(self) + 0xd) == 0), map_paint, map_touch, map_move)
+/* L6c: Nhiệm vụ sub 4 (phần thưởng; quest.c) và sub 5/6 (bản đồ thế giới: Paint gốc + nút mới; l6c.c) */
+MUI_STATE(INGAME, qmap, (GS(self) == 8 && (*((s8 *)(self) + 0xd) == 5 || *((s8 *)(self) + 0xd) == 6)), qmap_paint, qmap_touch, ig_move)
+/* L6c: Kỹ năng sub 8 (Hợp thành: 2 ô + nút) và sub 10 (chọn vật phẩm ghép: picker); sub 7 (ô nhanh), 9 (Chế biến) còn gốc */
+MUI_STATE(INGAME, skc, (GS(self) == 4 && (*((s8 *)(self) + 0xd) == 8 || *((s8 *)(self) + 0xd) == 10)), skc_paint, skc_touch, ig_move)
 #ifdef MUI_DEBUG
 MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
 #endif

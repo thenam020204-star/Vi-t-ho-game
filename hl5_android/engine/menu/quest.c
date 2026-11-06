@@ -23,6 +23,7 @@
 #define H_NODE 0x40     /* +0..11 */
 #define H_DETAIL 0x3D
 #define H_BTN 0x50      /* +0,1 */
+static int g_lastsub;                                   /* L6c: sub của khung trước (đặt lại cuộn mô tả khi đổi mô tả <-> phần thưởng) */
 static int qdrag_y, qdrag_n, qdrag_kind, qdrag_p;       /* kéo: kind 1 = danh sách, 2 = cây; n = số phím đã gửi; p = bước (px) */
 
 static int half_even(int cw) { int f = cw / 2; return (cw & 1) && (f & 1) ? f + 1 : f; }     /* round(cw*0.5) kiểu Python */
@@ -44,12 +45,17 @@ static void paint_detail(void *self, u8 *q, int sel, const mui_r *box, int sub) 
     y = mui_descbox2(box, rc + 4, -1, -1, meta, mn);
     mui_hit(H_DETAIL, box->x0, box->y0, box->x1, box->y1, HK_NONE, 0, 0);
     mui_r in = *box;
-    if (sub == 3) in.y1 = box->y1 - m->btnH - m->gap;
-    l1_desc(&in, y, rc + 0x20, 0, 0);
-    if (sub == 3) {
+    if (sub >= 3) in.y1 = box->y1 - m->btnH - m->gap;
+    if (sub == 4) {                                   /* L6c: phần thưởng = văn bản QuestMgr::setQuestViewInfo(1) ở qm+28 (như drawQuestInfo gốc); nền tối: mã màu $ -> vàng, | -> trắng (như qpop) */
+        static u8 rwd[520]; const u8 *d = q + 28; int n = mui_cslen(d); while (n > 0 && d[n - 1] == ';') n--; if (n > 512) n = 512;
+        for (int i = 0; i < n; i++) rwd[i] = d[i] == '$' ? '\'' : d[i] == '|' ? '{' : d[i];
+        rwd[n] = 0; l1_desc(&in, y, rwd, 0, g_lastsub != 4);
+    } else l1_desc(&in, y, rc + 0x20, 0, g_lastsub == 4);
+    g_lastsub = sub;
+    if (sub >= 3) {
         int g = m->gap, bw = (box->x1 - box->x0 - 6 - g) / 2, by = box->y1 - 3 - m->btnH, bn;
         mui_r b = {box->x0 + 3, by, box->x0 + 3 + bw, by + m->btnH};
-        const u8 *t0 = mui_hint(IGT(132), &bn);
+        const u8 *t0 = mui_hint(IGT(sub == 4 ? 133 : 132), &bn);
         mui_button(&b, t0, bn, S8(self, 0x11) == 0 ? 1 : 0, 0); mui_hit(H_BTN, b.x0, b.y0, b.x1, b.y1, HK_CB, 0, 0);
         b.x0 = b.x1 + g; b.x1 = box->x1 - 3;
         const u8 *t1 = mui_hint(IGT(147), &bn);
@@ -142,7 +148,7 @@ int quest_touch(void *self, int x, int y) {
     if (id == H_SUB || id == H_SUB + 1) {
         int want = id - H_SUB;
         if (want == e) return 0;
-        if (sub != 0) { if (sub == 3) mui_key(self, MUI_CLS_INGAME, K_BACK); if (S8(self, 0xd) != 0) mui_key(self, MUI_CLS_INGAME, K_BACK); }
+        if (sub != 0) { if (sub >= 3) mui_key(self, MUI_CLS_INGAME, K_BACK); if (S8(self, 0xd) != 0) mui_key(self, MUI_CLS_INGAME, K_BACK); }
         mui_key(self, MUI_CLS_INGAME, want ? K_RIGHT : K_LEFT);
     } else if (id >= H_ROW && id < H_ROW + 12) {
         u8 *q = QM(); int cnt = Q_CNT(q), nfit, rowh, x0, y0, x1, y1; (void)x0; (void)y0;
@@ -156,14 +162,14 @@ int quest_touch(void *self, int x, int y) {
         int a = first + (id - H_ROW);
         qdrag_kind = 1; qdrag_y = y; qdrag_n = 0; qdrag_p = rowh + 2;
         if (a >= cnt) return 0;
-        if (sub == 3) mui_key(self, MUI_CLS_INGAME, K_BACK), sub = S8(self, 0xd);
+        if (sub >= 3) mui_key(self, MUI_CLS_INGAME, K_BACK), sub = S8(self, 0xd);
         if (sub == 0) mui_key(self, MUI_CLS_INGAME, K_DOWN);
         else if (sub == 1 && a == S8(self, 0x10)) { mui_key(self, MUI_CLS_INGAME, -5); return 0; }
         if (S8(self, 0xd) == 1) goto_row(self, a);
     } else if (id >= H_NODE && id < H_NODE + 12) {
         qdrag_kind = 2; qdrag_y = y; qdrag_n = 0; qdrag_p = L.lp + 2 * L.s + 6 + L.gap + 2;
     } else if (id == H_BTN || id == H_BTN + 1) {
-        if (sub != 3) return 0;
+        if (sub < 3) return 0;
         S8(self, 0x11) = id - H_BTN; mui_key(self, MUI_CLS_INGAME, -5);
     } else if (id == 0xE0 && 0) { }
     return 0;
@@ -175,7 +181,7 @@ int quest_move(void *self, int x, int y) {
         if (qdrag_kind == 2) {
             if (S8(self, 0xd) == 0) mui_key(self, MUI_CLS_INGAME, K_DOWN);
             if (S8(self, 0xd) != 2) return r;
-        } else if (S8(self, 0xd) == 0 || S8(self, 0xd) == 3) return r;
+        } else if (S8(self, 0xd) == 0 || S8(self, 0xd) >= 3) return r;
         while (qdrag_n < rows) { mui_key(self, MUI_CLS_INGAME, K_UP); qdrag_n++; }
         while (qdrag_n > rows) { mui_key(self, MUI_CLS_INGAME, K_DOWN); qdrag_n--; }
     }

@@ -38,6 +38,7 @@ for f in expert; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJ
 for f in mmenu; do [ -f $f.c ] && { $CC $DEF -DMM_DEFAULT_K=$MMK -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L3/T17c7: MainMenu
 for f in hud; do [ -f $f.c ] && { python3 -I gen_hud_art.py "$OUT/hud_art.h"; python3 -I gen_hud_text.py "$OUT/hud_text.h"; $CC $DEF -I"$OUT" -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # T14: HUD chiến đấu
 for f in mm2 qpop cui; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L6b: MainMenu Chuyên Gia/Thành tựu/Trợ giúp, popup nhiệm vụ, ẩn ↺
+for f in l6c; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L6c: bản đồ thế giới Nhiệm vụ sub 5/6, Kỹ năng 7..10, Tinh linh 4, Quản lý dữ liệu
 for f in npc; do [ -f $f.c ] && { $CC $DEF -c $f.c -o "$OUT/$f.o"; OBJS="$OBJS $OUT/$f.o"; }; done   # L2/T17c5: NPC
 # T16: khung hội thoại mới (dialog.c; dlg_text.h sinh từ từ điển $WORK/vi_android/dict.txt)
 if [ -f dialog.c ]; then python3 -I gen_dlg_text.py "$OUT/dlg_text.h"; $CC $DEF -I"$OUT" -c dialog.c -o "$OUT/dialog.o"; OBJS="$OBJS $OUT/dialog.o"; fi
@@ -123,6 +124,8 @@ for p in "CommonUi::DrawTouchFeedbackSprite()|CommonUi_DrawTouchFeedbackSprite" 
   "Mission::GetMissionTablePtr(short)|Mission_GetMissionTablePtr" "Mission::IsCompleteMission(short)|Mission_IsCompleteMission" "QuestMgr::DrawNpcBody(short, short)|QuestMgr_DrawNpcBody"; do
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
+a=$(sym "StateInGameMenu::MapModeKeyPressed(int)"); [ -n "$a" ] || { echo "thiếu MapModeKeyPressed"; exit 1; }; DEFS="$DEFS --defsym=StateInGameMenu_MapModeKeyPressed=0x$a"   # L6c
+a=$(sym "BagItem::GetBagItemPtr(short)"); [ -n "$a" ] || { echo "thiếu BagItem::GetBagItemPtr(short)"; exit 1; }; DEFS="$DEFS --defsym=BagItem_GetBagItemPtrS=0x$a"   # L6c
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
 for c in $(grep -o '^MUI_CLASS([A-Z]*, [A-Za-z]*' classes.def | sed 's/MUI_CLASS([A-Z]*, //'); do
   for m in "Paint()" "KeyPressed(int)" "TouchPressed(int, int, int)" "TouchMoved(int, int, int)" "TouchReleased(int, int, int)"; do
