@@ -139,7 +139,7 @@ for p in "MC_knlCurrentTime|MC_knlCurrentTime" "CUSTOM_extSetTimer|CUSTOM_extSet
 done
 a=$(sym "internalGrpCopyFrameBuffer(int, int, int, int, int, int, int, int, _MC_GrpContext*, unsigned char)"); [ -n "$a" ] || { echo "thiếu internalGrpCopyFrameBuffer"; exit 1; }; DEFS="$DEFS --defsym=internalGrpCopyFrameBuffer=0x$a --defsym=host_memcpy=0x30110"   # T20: host_memcpy = PLT memcpy (add ip,pc,#0x100000; add ip,ip,#0x2e000; ldr pc,[ip,#0x68c]! -> GOT 0x15e7a4 = R_ARM_JUMP_SLOT memcpy)
 for p in "Map::Paint()|Map_Paint" "HERO::RestoreColorBack()|HERO_RestoreColorBack"; do a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"; done   # T21
-DEFS="$DEFS --defsym=MC_grpFillRect_cont=0x1456a8 --defsym=FillRectAlpha_cont=0x4e688 --defsym=CFBB565_cont=0x500ec"   # T24b: lệnh thứ 2 của MC_grpFillRect (sau push gốc)
+DEFS="$DEFS --defsym=MC_grpFillRect_cont=0x1456a8 --defsym=FillRectAlpha_cont=0x4e688 --defsym=CFBB565_cont=0x500ec --defsym=CharSprEffect_cont=0x48348 --defsym=ParticleMgr_paintParticles=0xcda70"   # T24b: lệnh thứ 2 của MC_grpFillRect (sau push gốc)
 a=$(grep -E ' vn_ensure$' ../out/vn.sym | awk '{print $1}'); [ -n "$a" ] || { echo "thiếu vn_ensure (build.sh của engine chạy trước)"; exit 1; }; DEFS="$DEFS --defsym=vn_ensure=0x$a"
 for c in $(grep -o '^MUI_CLASS([A-Z]*, [A-Za-z]*' classes.def | sed 's/MUI_CLASS([A-Z]*, //'); do
   for m in "Paint()" "KeyPressed(int)" "TouchPressed(int, int, int)" "TouchMoved(int, int, int)" "TouchReleased(int, int, int)"; do

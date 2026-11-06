@@ -49,3 +49,6 @@ HOOK_BL(0x4581c, 0x910c8, camc_world_done)   # T21
 HOOK_B(0x1456a4, 0xe92d4ff0, fillrect_entry)   # T24b
 HOOK_B(0x4e684, 0xe92d4ff0, fillalpha_entry)   # T24b: Graphic::FillRectAlpha lệnh đầu push {r4-r11,lr} -> bảng kênh 16 bit (32 bit: đường gốc)
 HOOK_B(0x500e8, 0xe92d4ff0, cfbb_entry)   # T24b: Graphic::ChangeFrameBufferBlending565 -> 3 bảng kênh (tint toàn màn hoạt cảnh/map)
+# T25/interp.c (quản đốc): nội suy mọi đối tượng + camera sự kiện; khung trung gian khôi phục CHAR+0xe0..e7 (CharSprEffect) và ParticleMgr +0xf8/+0x100
+HOOK_B(0x48344, 0xe92d4030, interp_csr_entry)   # T25: CHAR::CharSprEffect lệnh đầu push {r4,r5,lr}
+HOOK_BL(0x45804, 0xcda70, interp_particles)   # T25: Battle::Paint -> ParticleMgr::paintParticles
