@@ -1,0 +1,31 @@
+400x240 grid           ĐẠT 
+400x240 slot_class     ĐẠT 
+400x240 class_cancel   ĐẠT 
+400x240 back           ĐẠT 
+400x240 expert         ĐẠT 
+400x240 opt            ĐẠT 
+400x240 cycles         ĐẠT new={'live': 0, 'top': 0, 'f': [4, 0], 'cls': '0x15e3d0'} orig={'live': 0, 'top': 0, 'f': [4, 0], 'cls': '0x15e3d0'}
+400x240 nav            ĐẠT [1, 4, 0, 5, 8, 6, 5, 0, 5, 0, 5, 6]
+400x240 vùng chạm      ĐẠT (6 ô + close + slot2 + 4 lớp + ok + popup ok/huỷ/desc == hit_rects.json)
+400x240 vùng chạm opt  ĐẠT (close == hit_rects; 7 hàng/chip: số mục khác mockup — xem báo cáo)
+600x270 grid           ĐẠT 
+600x270 slot_class     ĐẠT 
+600x270 class_cancel   ĐẠT 
+600x270 back           ĐẠT 
+600x270 expert         ĐẠT 
+600x270 opt            ĐẠT 
+600x270 cycles         ĐẠT new={'live': 0, 'top': 0, 'f': [4, 0], 'cls': '0x15e3d0'} orig={'live': 0, 'top': 0, 'f': [4, 0], 'cls': '0x15e3d0'}
+600x270 nav            ĐẠT [1, 4, 0, 5, 8, 6, 5, 0, 5, 0, 5, 6]
+600x270 vùng chạm      ĐẠT (6 ô + close + slot2 + 4 lớp + ok + popup ok/huỷ/desc == hit_rects.json)
+600x270 vùng chạm opt  ĐẠT (close == hit_rects; 7 hàng/chip: số mục khác mockup — xem báo cáo)
+1200x540 grid           ĐẠT 
+1200x540 slot_class     ĐẠT 
+1200x540 class_cancel   ĐẠT 
+1200x540 back           ĐẠT 
+1200x540 expert         ĐẠT 
+1200x540 opt            ĐẠT 
+1200x540 cycles         ĐẠT new={'live': 0, 'top': 0, 'f': [4, 0], 'cls': '0x15e3d0'} orig={'live': 0, 'top': 0, 'f': [4, 0], 'cls': '0x15e3d0'}
+1200x540 nav            ĐẠT [1, 4, 0, 5, 8, 6, 5, 0, 5, 0, 5, 6]
+1200x540 vùng chạm      ĐẠT (6 ô + close + slot2 + 4 lớp + ok + popup ok/huỷ/desc == hit_rects.json)
+1200x540 vùng chạm opt  ĐẠT (close == hit_rects; 7 hàng/chip: số mục khác mockup — xem báo cáo)
+KẾT LUẬN: ĐẠT

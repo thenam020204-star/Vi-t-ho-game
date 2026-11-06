@@ -128,6 +128,7 @@ for p in "CommonUi::DrawTouchFeedbackSprite()|CommonUi_DrawTouchFeedbackSprite" 
   a=$(sym "${p%%|*}"); [ -n "$a" ] || { echo "thiếu symbol ${p%%|*}"; exit 1; }; DEFS="$DEFS --defsym=${p##*|}=0x$a"
 done
 a=$(sym "StateInGameMenu::MapModeKeyPressed(int)"); [ -n "$a" ] || { echo "thiếu MapModeKeyPressed"; exit 1; }; DEFS="$DEFS --defsym=StateInGameMenu_MapModeKeyPressed=0x$a"   # L6c
+a=$(sym "ItemTable::GetItemTableLength(signed char)"); [ -n "$a" ] || { echo "thiếu GetItemTableLength"; exit 1; }; DEFS="$DEFS --defsym=ItemTable_GetItemTableLength=0x$a"   # L6c
 a=$(sym "BagItem::GetBagItemPtr(short)"); [ -n "$a" ] || { echo "thiếu BagItem::GetBagItemPtr(short)"; exit 1; }; DEFS="$DEFS --defsym=BagItem_GetBagItemPtrS=0x$a"   # L6c
 # T18b: symbol guest cho interp.c
 for p in "MC_knlCurrentTime|MC_knlCurrentTime" "CUSTOM_extSetTimer|CUSTOM_extSetTimer" "CUSTOM_grpFlushLcd|CUSTOM_grpFlushLcd" "mainPaint()|mainPaint" "Map::MapMove()|Map_MapMove" \

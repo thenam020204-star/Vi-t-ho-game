@@ -313,3 +313,7 @@ H int sk_pick_cb(void *self, int id);
 H void skc_paint(void *self);
 H int skc_touch(void *self, int x, int y);
 extern H u8 *BagItem_GetBagItemPtrS(void *bag, int idx);
+H void sp4_paint(void *self);
+H int sp4_touch(void *self, int x, int y);
+H void mmd_paint(void *self);
+H int mmd_touch(void *self, int x, int y);

@@ -116,6 +116,7 @@ def opt_step(i):
     else:
         for _ in range(i): c.key('DOWN', 2)
         if i != 8: c.key('RIGHT', 3)
+        else: c.key('OK', 3)                       # L6c: chạm hàng nhãn đang chọn = OK gốc (TouchOption 0x118a08)
         if i == 9: c.key('RIGHT', 3)
 def oval(i): return c.s8(GV, 142 if i == 7 else 132 + i)
 def sc_opt():

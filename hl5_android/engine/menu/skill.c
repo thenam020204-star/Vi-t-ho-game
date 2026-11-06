@@ -21,6 +21,7 @@ extern H void *ig_self;
 #define H_BELT 0xB0      /* +i 0..4 */
 #define H_SWAP 0xB5
 #define H_CANCEL 0xC9
+#define H_CLEAR 0xC8
 #define H_DETAIL 0xE0
 #define H_DESC 0xE1
 
@@ -211,7 +212,7 @@ void sk_paint(void *self) {
         mui_button(&b, bt, bn, 1, 0); mui_hit(H_ASSIGN, b.x0, b.y0, b.x1, b.y1, HK_CB, 0, 0);
     }
     /* popup chọn ô nhanh (sub 6) */
-    if (sub == 6) {
+    if (sub == 6 || sub == 7) {                                        /* L6c: sub 7 = quản lý ô nhanh (KeySkillMenu 0x103f5c): cùng popup ô nhanh, không món cầm; OK = xoá ô; Back -> lưới */
         int c = m->cell, cg = m->cg, inw = 5 * c + 4 * cg + m->gap + c, in[4];
         int pw = inw + 2 * (m->pad + 2 * s + 4), minw = m->hd ? 420 : (55 * m->W + 50) / 100;
         if (pw < minw) pw = minw;
@@ -223,9 +224,9 @@ void sk_paint(void *self) {
         sent e; sk_ent(h, tab, cur >= 0 && cur < N ? cur : 0, &e);
         int y = in[1] + m->pad + 2 * s, mw = pw - 2 * (m->pad + 2 * s + 4);
         mui_clip(m->W / 2 - mw / 2, y, m->W / 2 + mw / 2, y + m->lp);
-        mui_text(m->W / 2, y, e.skill >= 0 ? *(const u8 **)(sk_info(h, e.skill) + 4) : CT(6), -1, m->px, C_GOLD, TF_CENTER | TF_SHADOW);
+        mui_text(m->W / 2, y, sub == 7 ? CT(54) : e.skill >= 0 ? *(const u8 **)(sk_info(h, e.skill) + 4) : CT(6), -1, m->px, C_GOLD, TF_CENTER | TF_SHADOW);
         mui_clip_reset(); y += m->lp + 2;
-        int tn; const u8 *tt = mui_hint(CT(54), &tn);
+        int tn; const u8 *tt = mui_hint(sub == 7 ? CT(153) : CT(54), &tn);
         mui_clip(m->W / 2 - mw / 2, y, m->W / 2 + mw / 2, y + m->lp);
         mui_text(m->W / 2, y, tt, tn, m->px, C_DIM, TF_CENTER); mui_clip_reset(); y += m->lp + 4;
         int bx = (m->W - inw) / 2, sel = S8(self, 0x11);
@@ -239,6 +240,13 @@ void sk_paint(void *self) {
         u8 t[4]; t[0] = '1' + (bank & 1); t[1] = '/'; t[2] = '2'; mui_text(sx + c / 2, y + c + 1, t, 3, m->spx, C_WHITE, TF_CENTER | TF_SHADOW);
         mui_hit(H_SWAP, sx, y, sx + c, y + c + m->spx + 2, HK_KEY, 35, 0);
         y += c + m->pad;
+        if (sub == 7) {                                                /* [Bỏ chọn] = OK gốc (SetHotKeyBelt(-1)); [Huỷ] = Back */
+            int hw = (inw - cg) / 2, bx0 = (m->W - inw) / 2, ln; const u8 *lb = mui_hint(CT(153), &ln);
+            mui_r b0 = {bx0, y, bx0 + hw, y + m->btnH}, b1 = {bx0 + hw + cg, y, bx0 + inw, y + m->btnH};
+            mui_button(&b0, lb, ln, 1, 0); mui_hit(H_CLEAR, b0.x0, b0.y0, b0.x1, b0.y1, HK_KEY, -5, 0);
+            mui_button(&b1, CT(57), -1, 0, 0); mui_hit(H_CANCEL, b1.x0, b1.y0, b1.x1, b1.y1, HK_KEY, -16, 0);
+            return;
+        }
         int bw = mui_sw(m->px, CT(57), -1) + 4 * m->pad;
         if (bw < inw / 3) bw = inw / 3;
         mui_r cb = {(m->W - bw) / 2, y, (m->W + bw) / 2, y + m->btnH};
@@ -254,7 +262,11 @@ int sk_touch(void *self, int x, int y) {
         if (id >= H_BELT && id < H_BELT + 5) { S8(self, 0x11) = id - H_BELT; mui_key(self, MUI_CLS_INGAME, -5); }
         return 0;
     }
-    if (sub > 6) return 0;
+    if (sub == 7) {                                                   /* như TouchSkillMenu gốc (cùng nhánh 0xfecc0 với sub 6): ô khác con trỏ -> chọn; đúng ô con trỏ -> OK */
+        if (id >= H_BELT && id < H_BELT + 5) { if (S8(self, 0x11) != id - H_BELT) S8(self, 0x11) = id - H_BELT; else mui_key(self, MUI_CLS_INGAME, -5); }
+        return 0;
+    }
+    if (sub > 7) return 0;
     u8 *h = HEROP();
     if (id >= H_SUB && id < H_SUB + 5) {                              /* như (Back, TRÁI/PHẢI * i, XUỐNG) của gốc: vào lưới của tab con i, con trỏ ô 0 */
         S8(self, 0xe) = id - H_SUB; StateInGameMenu_SetSubState(self, id - H_SUB + 1);

@@ -1,0 +1,16 @@
+400x240 sel     ĐẠT
+400x240 drag    ĐẠT
+400x240 popup   ĐẠT
+400x240 cycles  LỆCH new={"live": 80, "top": 320, "img": "050ee9b1c36d3f1fc687aacedb0e4771", "mimg": "324fc2a228b8fe65fa939b198a4bb0e7", "cls": "0x15e150"} orig={"live": 80, "top": 320, "img": "27705556147dc172ba5079389ee2e27c", "mimg": "02697c83254abba7c2e7613e7467c620", "cls": "0x15e150"}
+   cycles: new {'live': 80, 'top': 320, 'img': '050ee9b1c36d3f1fc687aacedb0e4771', 'mimg': '324fc2a228b8fe65fa939b198a4bb0e7', 'cls': '0x15e150'} orig {'live': 80, 'top': 320, 'img': '27705556147dc172ba5079389ee2e27c', 'mimg': '02697c83254abba7c2e7613e7467c620', 'cls': '0x15e150'}
+400x240 buy     ĐẠT (id 9, trước 0, sau 5, NET=[])
+400x240 vùng chạm: ĐẠT (16 ô + grid_scroll + close == hit_rects.json)
+600x270 sel     LỆCH new=null orig=null
+600x270 drag    LỆCH new=null orig=null
+600x270 popup   LỆCH new=null orig=null
+600x270 cycles  LỆCH new=null orig=null
+1200x540 sel     LỆCH new=null orig=null
+1200x540 drag    LỆCH new=null orig=null
+1200x540 popup   LỆCH new=null orig=null
+1200x540 cycles  LỆCH new=null orig=null
+KẾT LUẬN: CÒN 9 LỆCH

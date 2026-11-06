@@ -384,7 +384,7 @@ int mm_touch(void *self, int x, int y) {
     } else if (st == 9) {
         if (id == H_UP) mui_key(self, MUI_CLS_MAIN, -1);
         else if (id == H_DN) mui_key(self, MUI_CLS_MAIN, -2);
-        else if (id >= H_ROW && id < H_ROW + 7) { opt_do(self, id); g_move_id = 1; }
+        else if (id >= H_ROW && id < H_ROW + 7) { int same = id - H_ROW == S8(self, 0xe) && OTYPE[S8(self, 0xf)] == -1; opt_do(self, id); g_move_id = 1; if (same) mui_key(self, MUI_CLS_MAIN, -5); }   /* L6c: hàng nhãn (Quản lý dữ liệu) đang chọn + chạm lại = OK gốc (TouchOption 0x118a08) */
         else if (id >= H_L && id < H_L + 7) { opt_do(self, H_ROW + (id - H_L)); mui_key(self, MUI_CLS_MAIN, -3); }
         else if (id >= H_R && id < H_R + 7) { opt_do(self, H_ROW + (id - H_R)); mui_key(self, MUI_CLS_MAIN, -4); }
         else if (id >= H_CHIP && id < H_CHIP + 56) {

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """L6c: kiểm các menu con mới (chạm) vs gốc v0.2-hd (phím / chạm gốc). Dùng: check_l6c.py W H MODE OUTDIR [PART]  (MODE new|orig|off; 'off' = dev.so + cờ MUI_F_DISABLE).
-PART: quest (Nhiệm vụ sub 4/5/6) | skill | spirit | data. Kết quả OUTDIR/raw_<WxH>/sc_<tên>_<WxH>_<mode>.json"""
+PART: quest (Nhiệm vụ sub 4/5/6) | skill (sub 8/10) | skill2 (sub 7, 9) | spirit | data. Kết quả OUTDIR/raw_<WxH>/sc_<tên>_<WxH>_<mode>.json"""
 import sys, os, json
 os.environ.setdefault('WORK', os.path.expanduser('~/hl5work_l6'))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'l3'))
@@ -15,6 +15,7 @@ HW, HH = W // 2, Hh // 2
 def fl():
     t = c.top(); return {'cls': hex(c.cls()), 'f': [c.s8(t, o) for o in range(0xc, 0x15)], 'm': [c.s8(t, o) for o in (0x2e, 0x41, 0x6c)], 'pan': [c.s16(t + o) for o in (0x34, 0x36, 0x38, 0x3a)], 'sk': [c.s16(t + 0x2a), c.s16(t + 0x2c)]}
 def sc(name, fn):
+    if os.environ.get('ONLY') and name not in os.environ['ONLY'].split(','): return
     pid = os.fork()
     if pid: os.waitpid(pid, 0); return
     try: d = fn()
@@ -162,3 +163,177 @@ def sk10_cancel():
     out['b'] = fl(); return out
 if PART == 'skill':
     for nm, fn in [('s8', sk8_shot), ('s8a', sk8_slot(0)), ('s8b', sk8_slot(1)), ('s8s', sk8_start), ('s8c', sk8_clr), ('s8k', sk8_back), ('s10k', sk10_back), ('s10c', sk10_cancel)]: sc(nm, fn)
+
+# ---------------- Kỹ năng sub 7 (quản lý ô nhanh) và sub 9 (Chế biến) ----------------
+def belt():
+    h = c.hero; out = []
+    for bank in (0, 1):
+        for slot in range(5): out.append((c.r.call(0x84f3c, h, slot, bank) & 255, c.r.call(0x84f54, h, slot, bank) & 255))
+    return out + [c.r.call(0x84ef0, h) & 255]
+def sk7_enter():
+    c.S3(4, 8); t = c.top(); h = c.hero
+    for slot, bank, ty, ix in ((1, 0, 0, 0), (2, 0, 0, 1), (1, 1, 0, 2)): c.callx(0x84f1c, h, slot, bank, ty, ix)
+    c.r.call(0xe2eb8, t, 7); c.wr(t + 0xe, [0]); c.wr(t + 0xf, [0]); c.wr(t + 0x10, [0]); c.wr(t + 0x11, [0]); c.step(4)
+def f7(extra=None):
+    d = fl(); d['belt'] = belt(); d['pop'] = popi()
+    return d
+def sk7_shot():
+    sk7_enter(); shot('sk7'); return {'in': f7()}
+def sk7_sel():                       # chạm ô 2 từ con trỏ 0: chỉ đổi con trỏ (như TouchSkillMenu)
+    sk7_enter()
+    if NEW: tap(0xB2)
+    else: keys('RIGHT', 'RIGHT')
+    return {'a': f7()}
+def sk7_clear():                     # chọn ô 1 rồi chạm lần 2 = OK gốc (xoá ô)
+    sk7_enter(); out = {}
+    if NEW: tap(0xB1)
+    else: keys('RIGHT')
+    out['sel'] = f7()
+    if NEW: tap(0xB1)
+    else: keys('OK')
+    out['ok'] = f7(); return out
+def sk7_clrbtn():                    # nút "Bỏ chọn" = OK gốc
+    sk7_enter()
+    if NEW: tap(0xB1)
+    else: keys('RIGHT')
+    if NEW: tap(0xC8)
+    else: keys('OK')
+    return {'a': f7()}
+def sk7_swap():
+    sk7_enter()
+    if NEW: tap(0xB5)
+    else: keys(35)
+    return {'a': f7()}
+def sk7_back():
+    sk7_enter()
+    if NEW: tap(0xC9)
+    else: keys('CLR')
+    return {'a': f7()}
+def sk7_wrap():                      # LEFT từ ô 0 vòng sang ô 4 (phím gốc; mới: chạm ô 4 = đổi con trỏ)
+    sk7_enter()
+    if NEW: tap(0xB4)
+    else: keys('LEFT')
+    return {'a': f7()}
+if PART == 'skill2':
+    for nm, fn in [('s7', sk7_shot), ('s7s', sk7_sel), ('s7c', sk7_clear), ('s7b', sk7_clrbtn), ('s7w', sk7_swap), ('s7k', sk7_back), ('s7l', sk7_wrap)]: sc(nm, fn)
+
+def sk9_enter(cur=0):
+    c.S3(4, 8); t = c.top(); arr = c.u32(c.hero + 0x308)
+    for i in range(0, 116, 2): c.wr(arr + i, [1])
+    c.r.call(0xe2eb8, t, 9); c.wr(t + 0x11, [cur & 3]); c.wr(t + 0x12, [cur]); c.step(4)
+def cellxy(k): return (HW - 50 + (k % 4) * 30, HH - 45 + (k // 4) * 30)
+def f9():
+    d = fl(); d['pop'] = popi(); d['g19'] = c.b8(c.gv, 6464 + 19); return d
+def sk9_shot():
+    sk9_enter(6); shot('sk9'); return {'in': f9()}
+def sk9_cell():
+    sk9_enter(0); out = {}
+    for k in (5, 5, 2):
+        if NEW: tap(0xD8 + k)
+        else: c.touch_xy(*cellxy(k), 4)
+        out['k%d' % k] = f9()
+    return out
+def sk9_ok():
+    sk9_enter(0)
+    if NEW: tap(0xEA)
+    else: keys('OK')
+    return {'a': f9()}
+def sk9_up():
+    sk9_enter(1); out = {}
+    for i in range(3):
+        if NEW: tap(0xE8)
+        else: c.touch_xy(HW + 78, HH - 49, 4)
+        out['u%d' % i] = f9()
+    return out
+def sk9_dn():
+    sk9_enter(5); out = {}
+    for i in range(3):
+        if NEW: tap(0xE9)
+        else: c.touch_xy(HW + 78, HH - 7, 4)
+        out['d%d' % i] = f9()
+    return out
+def sk9_wrap():
+    sk9_enter(113); out = {}                    # gần cuối: ▼ vòng về đầu; ▲ từ đầu vòng về cuối
+    for i in range(3):
+        if NEW: tap(0xE9)
+        else: c.touch_xy(HW + 78, HH - 7, 4)
+        out['d%d' % i] = f9()
+    for i in range(2):
+        if NEW: tap(0xE8)
+        else: c.touch_xy(HW + 78, HH - 49, 4)
+        out['u%d' % i] = f9()
+    return out
+def sk9_back():
+    sk9_enter(0)
+    if NEW: tap(1)
+    else: keys('CLR')
+    return {'a': f9()}
+if PART == 'skill2':
+    for nm, fn in [('s9', sk9_shot), ('s9c', sk9_cell), ('s9o', sk9_ok), ('s9u', sk9_up), ('s9d', sk9_dn), ('s9w', sk9_wrap), ('s9k', sk9_back)]: sc(nm, fn)
+
+# ---------------- Tinh linh sub 4 ----------------
+def sp_ptr(): return c.r.call(0x853dc, c.hero)
+def sp4_enter(cur=0):
+    c.S3(7, 8); t = c.top(); p = sp_ptr()
+    for i in range(0, 16, 2): c.wr(p + 22 + i, [1])
+    c.r.call(0xe2eb8, t, 4); c.wr(t + 0xf, [1]); c.wr(t + 0x10, [cur]); c.step(4)
+def f4():
+    d = fl(); p = sp_ptr(); d['sp'] = list(bytes(c.g.uc.mem_read(p, 6))); d['pop'] = popi(); d['g19'] = c.b8(c.gv, 6464 + 19); return d
+def sp4_shot():
+    sp4_enter(2); shot('sp4'); return {'in': f4()}
+def sp4_cell():
+    sp4_enter(0); out = {}
+    for k in (5, 5, 2):
+        if NEW: tap(0xB0 + k)
+        else: c.touch_xy(HW - 50 + (k % 4) * 30, HH - 45 + (k // 4) * 30, 4)
+        out['k%d' % k] = f4()
+    return out
+def sp4_ok():
+    sp4_enter(2)
+    if NEW: tap(0xC4)
+    else: keys('OK')
+    return {'a': f4()}
+def sp4_ok_unlearned():
+    sp4_enter(1)
+    if NEW: tap(0xC4)
+    else: keys('OK')
+    return {'a': f4()}
+def sp4_back():
+    sp4_enter(0)
+    if NEW: tap(1)
+    else: keys('CLR')
+    return {'a': f4()}
+if PART == 'spirit':
+    for nm, fn in [('p4', sp4_shot), ('p4c', sp4_cell), ('p4o', sp4_ok), ('p4u', sp4_ok_unlearned), ('p4k', sp4_back)]: sc(nm, fn)
+
+# ---------------- Quản lý dữ liệu (MainMenu state 9 sub 1) ----------------
+def kseq(ks):
+    for k in ks: c.key(k, 3)
+def d_enter():
+    if NEW: c.tap(0x10 + [0, 1, 4, 5, 6, 8].index(4), 5)
+    else: kseq(['DOWN', 'RIGHT', 'OK']); c.step(2)
+    c.wr(c.gv + 141, [1]); t = c.top()
+    if NEW:
+        while c.s8(t, 0xf) < 8: c.tap(0x91, 2)
+        c.tap(0x50 + c.s8(t, 0xe), 4)
+    else:
+        for _ in range(8): c.key('DOWN', 2)
+        c.key('OK', 4)
+def fd():
+    t = c.top(); d = {'cls': hex(c.cls()), 'f': [c.s8(t, o) for o in range(0xc, 0x14)]}
+    if c.cls() == 0x15e5b0: res = c.u32(t + 0x14); d['pop'] = {'t': c.s8(t, 0xe), 'nb': c.s8(t, 0x10), 'res': c.s8(res) if res else None}
+    return d
+def d_shot(): d_enter(); shot('data'); return {'in': fd()}
+def d_ok():
+    d_enter(); out = {'in': fd()}
+    if NEW: tap(0xD0)
+    else: c.touch_xy(HW, HH + 1, 4)
+    out['a'] = fd(); return out
+def d_back():
+    d_enter()
+    if NEW: tap(1)
+    else: keys('CLR')
+    return {'a': fd()}
+if PART == 'data':
+    c.step(700); c.key('OK', 10)
+    for nm, fn in [('d', d_shot), ('dok', d_ok), ('dk', d_back)]: sc(nm, fn)

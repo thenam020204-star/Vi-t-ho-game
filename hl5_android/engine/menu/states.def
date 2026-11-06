@@ -11,7 +11,7 @@ MUI_STATE(POPUP, pop, ((POP_TYPE(self) >= 1 && POP_TYPE(self) <= 3 && POP_NBTN(s
 /* T17c3b: Đặc tính (InGameMenu tab 5) */
 MUI_STATE(INGAME, prop, (GS(self) == 5), prop_paint, prop_touch, prop_move)
 /* T17c3c: Kỹ năng (state 4): sub 0 chọn tab con, 1..5 lưới, 6 chọn ô nhanh; sub 7..10 (mua/ghép sách) giữ đường gốc */
-MUI_STATE(INGAME, sk, (GS(self) == 4 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 6), sk_paint, sk_touch, sk_move)
+MUI_STATE(INGAME, sk, (GS(self) == 4 && *((s8 *)(self) + 0xd) >= 0 && *((s8 *)(self) + 0xd) <= 7), sk_paint, sk_touch, sk_move)
 /* L1/T17c6: Cash shop (state 0) */
 MUI_STATE(CASH, cash, (GS(self) == 0), cash_paint, cash_touch, cash_move)
 /* L2/T17c5: NPC (StateInNpcMenu [this+0xe]): 0 mua kỹ năng, 1 mua vật phẩm, 2 bán; popup NPC = StatePopup loại 4 có cha là NPC */
@@ -52,8 +52,12 @@ MUI_STATE(POPUP, mmpop, (MAIN_POPUP8(self) && POP_NBTN(self) == 2), mmpop_paint,
 MUI_STATE(MAP, map, ((GS(self) == 0 || GS(self) == 1) && *((s8 *)(self) + 0xd) == 0), map_paint, map_touch, map_move)
 /* L6c: Nhiệm vụ sub 4 (phần thưởng; quest.c) và sub 5/6 (bản đồ thế giới: Paint gốc + nút mới; l6c.c) */
 MUI_STATE(INGAME, qmap, (GS(self) == 8 && (*((s8 *)(self) + 0xd) == 5 || *((s8 *)(self) + 0xd) == 6)), qmap_paint, qmap_touch, ig_move)
-/* L6c: Kỹ năng sub 8 (Hợp thành: 2 ô + nút) và sub 10 (chọn vật phẩm ghép: picker); sub 7 (ô nhanh), 9 (Chế biến) còn gốc */
-MUI_STATE(INGAME, skc, (GS(self) == 4 && (*((s8 *)(self) + 0xd) == 8 || *((s8 *)(self) + 0xd) == 10)), skc_paint, skc_touch, ig_move)
+/* L6c: Kỹ năng sub 8 (Hợp thành: 2 ô + nút) và sub 10 (chọn vật phẩm ghép: picker); sub 9 (Chế biến) thêm ở L6c; sub 7 (quản lý ô nhanh) nằm trong dòng sk (<= 7) */
+MUI_STATE(INGAME, skc, (GS(self) == 4 && (*((s8 *)(self) + 0xd) == 8 || *((s8 *)(self) + 0xd) == 9 || *((s8 *)(self) + 0xd) == 10)), skc_paint, skc_touch, ig_move)
+/* L6c: Tinh linh sub 4 (chọn kỹ năng Tinh linh) */
+MUI_STATE(INGAME, sp4, (GS(self) == 7 && *((s8 *)(self) + 0xd) == 4), sp4_paint, sp4_touch, ig_move)
+/* L6c: MainMenu 9 sub 1 (Quản lý dữ liệu) */
+MUI_STATE(MAIN, mm9d, (GS(self) == 9 && *((s8 *)(self) + 0xd) == 1), mmd_paint, mmd_touch, mm2_move)
 #ifdef MUI_DEBUG
 MUI_STATE(MAIN, dbg, (mui_flags & MUI_F_DBG), dbg_paint, dbg_touch, dbg_move)
 #endif
