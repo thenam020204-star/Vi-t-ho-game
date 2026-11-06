@@ -24,3 +24,13 @@ Kiểm `harness/t21/check_t21.py` (fork cùng trạng thái; `shots/T21/check_*.
 Ảnh: `shots/T21/` (mép trái gốc/mới, 1200x540, phóng vòng sáng).
 **Chế độ 1 (mặc định theo người dùng 06/11): vẽ lại CHÍNH MAP không vật thể** — phản chiếu nền map qua mép, tối 25%. Nguồn = FBOff (bộ đệm vòng nền; vật thể vẽ vào FB). Ánh xạ theo `Map::Update` 0xb10bc: ox = [Map+0xd8] mod W, oy = [Map+0xdc] mod H, rung s16 [Map+282]/[Map+284]; điểm màn (sx,sy) = FBOff[(sx−r282+ox) mod W][(sy−r284+oy) mod H]. Kiểm lại A/B/D 3 cỡ ĐẠT (`shots/T21/check_phan_chieu_*.json`, ảnh `phan_chieu_*`). `camc_mode` 0 = nền tối đom đóm (giữ làm phương án).
 CÒN: chưa có mục bật/tắt trong Cài đặt; chưa đo CPU ở mép (tô nền bằng memcpy hàng, đom đóm vài chục điểm); chưa thử cùng T18 (interp.txt bật) trên máy thật.
+
+## Cập nhật 06/11: người dùng báo map đệm phản chiếu "lag quá" → mặc định ĐEN TRƠN (camc_mode 2)
+Mục tiêu người dùng: hero không bị khuất khi vào góc map. Giữ dịch khung; phần ngoài map tô đen bằng một host memcpy mỗi hàng (hàng đen static trong bss). Đo `harness/t21/perf_t21.py` (byte-khối/khung, 30 khung ở mép trái sau 90 tick LEFT, có ctl_flush_tb):
+| Chế độ | 800x360 | 1200x540 |
+|---|---|---|
+| tắt | 10,86 M | 17,54 M |
+| đen trơn (mặc định) | 11,03 M (+1,5%) | 17,73 M (+1,1%) |
+| tối + đom đóm | 11,19 M (+3,0%) | 18,09 M (+3,1%) |
+| phản chiếu map | 39,10 M (×3,6) | 100,14 M (×5,7) |
+Kiểm A/B/D lại 3 cỡ ĐẠT (`shots/T21/check_den_*.json`, ảnh `den_tron_mep_trai_600x270.png`). Mode 0/1 giữ trong mã, không dùng.
